@@ -1,4 +1,4 @@
-# The Twelve-Pillar Protocol v29
+# The Twelve-Pillar Protocol
 
 > A non-extractive civilizational operating system — separating survival, markets, and governance into structurally independent lanes.
 
@@ -38,7 +38,7 @@ Each pillar has one job. The architecture is intentionally modular so no single 
 11. **Information Commons & Trust Transparency** — Real-time aggregate dashboards with privacy protection
 12. **Resilience, Regeneration & Adaptation** — Reserves, redundancy, repair, and long-range adaptation
 
-## Document set (v29, Session 6)
+## Document set
 
 This repository contains the complete synchronized document set:
 
@@ -48,24 +48,24 @@ This repository contains the complete synchronized document set:
 | [`White_Paper.pdf`](./White_Paper.pdf) | 14 | Plain-language public explanation. Start here. |
 | [`Technical_Reference.pdf`](./Technical_Reference.pdf) | 8 | Systems map with flow diagrams. For reviewers and collaborators. |
 | [`Threat_Register.pdf`](./Threat_Register.pdf) | 15 | Adversarial risk model. 15 threats, all addressed. |
-| [`Patch_Log.pdf`](./Patch_Log.pdf) | 12 | Change and mitigation history. 14 patches across 6 sessions. |
+| [`Patch_Log.pdf`](./Patch_Log.pdf) | 12 | Change and mitigation history. 14 patches. |
 | [`Acceptance_Protocol.pdf`](./Acceptance_Protocol.pdf) | 3 | Process for moving patches from design to operation. |
-| [`Audit_Note.pdf`](./Audit_Note.pdf) | 1 | Document integrity verification and session summary. |
+| [`Audit_Note.pdf`](./Audit_Note.pdf) | 1 | Document integrity verification. |
 
 **Total: 162 pages.** The White Paper (14pp) is the recommended entry point.
 
 ## Hardening history
 
-The system has been adversarially stress-tested across six sessions:
+The system has been adversarially stress-tested:
 
-| Session | Threats addressed | Key findings |
-|---|---|---|
-| S1 | T-001 Shadow Convertibility, T-002 Identity Exploits, T-004 Incentive Collapse, T-007 Definition Drift | Four patches now ACTIVE |
-| S2 | T-005 Governance Throughput, T-006 Measurement Lag, T-008 Bureaucratic Elite Formation, T-011 Narrative Surface | Dual-queue CRP, PCRP first-responder authority, diversity controls, failure doctrine |
-| S3 | T-012–T-015 (Interface threats) | Compound tests revealed triple-deadlock risk; oracle independence requirement; demand-context flag |
-| S4 | T-009 Grace Exploitation Loop | Graduated renewal intensity; CR slow-decay; hardship attestation collusion detection |
-| S5 | T-016 Formal Acceptance Process Capture | Evidence farming, sign-off deadlock, urgency exploit, audit capture all patched |
-| S6 | T-017 Bootstrap Problem | One-time founding instrument (P-014) resolves P-013 circular dependency; acceptance sequence unblocked |
+| Threats addressed | Key findings |
+|---|---|
+| T-001 Shadow Convertibility, T-002 Identity Exploits, T-004 Incentive Collapse, T-007 Definition Drift | Four patches now ACTIVE |
+| T-005 Governance Throughput, T-006 Measurement Lag, T-008 Bureaucratic Elite Formation, T-011 Narrative Surface | Dual-queue CRP, PCRP first-responder authority, diversity controls, failure doctrine |
+| T-012–T-015 (Interface threats) | Compound tests revealed triple-deadlock risk; oracle independence requirement; demand-context flag |
+| T-009 Grace Exploitation Loop | Graduated renewal intensity; CR slow-decay; hardship attestation collusion detection |
+| T-016 Formal Acceptance Process Capture | Evidence farming, sign-off deadlock, urgency exploit, audit capture all patched |
+| T-017 Bootstrap Problem | One-time founding instrument (P-014) resolves P-013 circular dependency; acceptance sequence unblocked |
 
 **Current status: 4 patches ACTIVE, 10 PROPOSED, 1 FOUNDING instrument.** The design is complete. What remains is pilot evidence.
 

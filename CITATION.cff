@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "The Twelve-Pillar Protocol v29"
+title: "The Twelve-Pillar Protocol"
 message: "If you use or reference this work, please cite it using this metadata."
 type: software
 authors:
@@ -14,8 +14,7 @@ abstract: >
   through EC (Enterprise Currency), and implements capture-resistant civic
   governance through DW/CR (Deliberation Weight / Civic Record). Includes
   a complete adversarial threat register (15 threats), patch log (14 patches),
-  formal acceptance protocol, and bootstrap resolution across six hardening
-  sessions.
+  and formal acceptance protocol.
 keywords:
   - constitutional design
   - governance systems
@@ -28,5 +27,4 @@ keywords:
   - humane floor
   - instrument separation
 license: CC-BY-4.0
-version: "v29-session6"
-date-released: "2026-04-08"
+date-released: "2026-04-09"
