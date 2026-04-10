@@ -1,10 +1,10 @@
-# Threat Register v29
+# Threat Register
 
-**Running adversarial control layer aligned to the v29 master protocol · Updated: Session 2 (T-005, T-006, T-008 addressed; statuses updated)**
+**Running adversarial control layer aligned to the master protocol · Updated: Session 2 (T-005, T-006, T-008 addressed; statuses updated)**
 
 ---
 
-**Purpose.** This register tracks the adversarial risks identified during the current hardening cycle and aligns them to the v29 master. It is the running control layer for red-team work, not a replacement for the master protocol.
+**Purpose.** This register tracks the adversarial risks identified during the current hardening cycle and aligns them to the master protocol. It is the running control layer for red-team work, not a replacement for the master protocol.
 
 **Status key.** 
 - **OPEN** = not yet structurally addressed. 
@@ -236,11 +236,11 @@
 - **Status:** ADDRESSED* (P-014)
 - **Risk Score:** 5×3×(6-3)=45
 - **Note on threat class:** T-017 is a third-order threat: it does not attack the system directly (first order) or the patch acceptance process (second order, T-016). It attacks the ability to activate the patch that hardens the acceptance process. It is an existential threat to system evolution if unresolved — the entire PROPOSED patch stack is permanently frozen without it.
-- **Mechanism:** P-013 governs the FAP — the acceptance process that would normally activate it. Using FAP v1 (the unhardened process) to activate P-013 (the hardening patch) is structurally incoherent: the evidence standard, audit independence requirements, and sign-off concentration controls that P-013 introduces are not operative during its own activation. This creates three specific exploits: (1) Procedural Objection Loop — any actor can correctly object that FAP v1 does not satisfy P-013's standards, blocking activation indefinitely with technically valid objections. (2) Exception-as-Precedent — a founding exception to activate P-013, if not explicitly sealed, becomes authority for urgency bypass of other patches. (3) Founding Capture Window — during the FAP v1 activation process, before P-013's controls are operative, the sign-off cluster can be populated with intellectual cousins.
+- **Mechanism:** P-013 governs the Formal Acceptance Protocol — the acceptance process that would normally activate it. Using the unhardened process to activate P-013 (the hardening patch) is structurally incoherent: the evidence standard, audit independence requirements, and sign-off concentration controls that P-013 introduces are not operative during its own activation. This creates three specific exploits: (1) Procedural Objection Loop — any actor can correctly object that the prior acceptance process does not satisfy P-013's standards, blocking activation indefinitely with technically valid objections. (2) Exception-as-Precedent — a founding exception to activate P-013, if not explicitly sealed, becomes authority for urgency bypass of other patches. (3) Founding Capture Window — during the prior activation process, before P-013's controls are operative, the sign-off cluster can be populated with intellectual cousins.
 - **Impact:** Without resolution: all 10 PROPOSED patches remain frozen permanently. The system is locked at its current design state. With uncontrolled resolution: a founding exception normalizes urgency bypass, defeating P-013's core purpose before it takes effect.
 - **Detection:** D=3 — the bootstrap problem is logically visible once the FAP and P-013 are examined together. It does not require adversarial action to surface.
 - **Mitigation direction:** P-014 PROPOSED: 5-stage founding instrument with 14-day pre-activation disclosure, heightened 5-member panel with external conflict verification and adversarial member, substitute evidence standard (desk review + red-team analysis), permanent sealing with Tier 2 non-precedent statement, mandatory post-activation audit within 90 days. See Annex AH.
-- **Residual risk:** Desk review case selection; founding panel capture during 14-day window; post-activation audit self-reference if activation was compromised. All mitigated by adversarial member, external verification, and FAP v1 fallback during any suspension.
+- **Residual risk:** Desk review case selection; founding panel capture during 14-day window; post-activation audit self-reference if activation was compromised. All mitigated by adversarial member, external verification, and Formal Acceptance Protocol fallback during any suspension.
 - **Compound linkages:** T-017 × T-016 (bootstrap paradox is the exploit surface T-016 bad actors use for indefinite delay). T-017 × T-011 (bootstrap paradox is a narrative attack surface — P-014 converts it into a transparency demonstration).
 
 ---

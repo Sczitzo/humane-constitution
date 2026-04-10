@@ -1,10 +1,10 @@
-# The Twelve-Pillar Protocol v27 - Diagrammed Technical Reference
+# The Twelve-Pillar Protocol - Diagrammed Technical Reference
 
 **Revised technical reference built on the predecessor diagrammed edition**
 
 ---
 
-This file preserves the predecessor technical reference's section order and purpose while adding v27 overlays for system integrity, the distributed immune function, and the identity scale gate.
+This file preserves the predecessor technical reference's section order and purpose while adding overlays for system integrity, the distributed immune function, and the identity scale gate.
 
 **Diagram note:** Because the predecessor diagrams were embedded in PDF pages, this revised edition preserves the section structure and interpretation notes, then adds text-rendered diagram supplements that make the new overlays explicit and downloadable.
 
@@ -17,7 +17,7 @@ A concise systems map of the refined constitutional draft: instruments, pillars,
 
 **Purpose:** give reviewers and collaborators a fast technical orientation without making them read the full constitutional draft first.
 
-**Reading rule:** EC is the only true currency. LC, the civic layer (DW + CR), and SQ are non-money instruments. No conversion or indirect market may collapse the boundaries. The v27 clarifications also add a visible system-integrity overlay: stewardship without coercion, system humility, incentive clarity, simplicity, and identity limits. Use the master draft for operative language, annex details, thresholds, and full legal wording.
+**Reading rule:** EC is the only true currency. LC, the civic layer (DW + CR), and SQ are non-money instruments. No conversion or indirect market may collapse the boundaries. These clarifications also add a visible system-integrity overlay: stewardship without coercion, system humility, incentive clarity, simplicity, and identity limits. Use the master draft for operative language, annex details, thresholds, and full legal wording.
 
 **How to read this reference:** Each diagram isolates one part of the system. Together they show the protocol as a constrained operating system rather than a single policy bundle. Boxes indicate institutions or instruments. Arrows indicate allowed movement or escalation. Orange and red areas indicate scarcity, contestation, or emergency friction.
 
@@ -32,7 +32,7 @@ See the diagram below, then read the three short interpretation notes.
 
 **Failure watch:** indirect convertibility through wrappers, queue sales, loyalty schemes, or side contracts.
 
-**V27 note:** earlier references to CC should now be read as the civic layer, split into DW for bounded agenda-setting and CR for service eligibility.
+Earlier references to CC should now be read as the civic layer, split into DW for bounded agenda-setting and CR for service eligibility.
 
 ---
 
@@ -75,7 +75,7 @@ See the diagram below, then read the three short interpretation notes.
 ### 5. Identity and Status Ladder
 **Design note:** separate humane protection, service onboarding, ordinary residency, and civic activation.
 
-**Key implication:** the humane floor exists before perfect identity certainty; the civic layer arrives later. V27 adds an explicit scale gate: the protocol cannot claim safe full-scale deployment until identity reliability, fraud resistance, and recovery performance have been proven in live pilots.
+**Key implication:** the humane floor exists before perfect identity certainty; the civic layer arrives later. This revision adds an explicit scale gate: the protocol cannot claim safe full-scale deployment until identity reliability, fraud resistance, and recovery performance have been proven in live pilots.
 
 **Failure watch:** status hardening into a caste system or residency being bought indirectly.
 
@@ -88,7 +88,7 @@ See the diagram below, then read the three short interpretation notes.
 
 **Failure watch:** CRP capture or judicial deference that nullifies the redundancy.
 
-**V27 note:** the protocol's anti-capture 'immune system' is distributed across constitutional invariants, transparency, oversight operations, red-teaming, judicial review, and public challenge rights rather than concentrated in one office.
+The protocol's anti-capture 'immune system' is distributed across constitutional invariants, transparency, oversight operations, red-teaming, judicial review, and public challenge rights rather than concentrated in one office.
 
 ---
 
@@ -123,7 +123,7 @@ See the diagram below, then read the three short interpretation notes.
 
 ---
 
-## Diagram Supplement - v27 Overlays
+## Diagram Supplement
 
 ### System-integrity overlay
 ```
@@ -157,15 +157,15 @@ See the diagram below, then read the three short interpretation notes.
 
 ---
 
-# Twelve-Pillar Protocol v29 - Technical Reference Sync Addendum
+# Twelve-Pillar Protocol - Technical Reference Sync Addendum
 
-**No-loss technical companion bridge aligned to the current v29 master**
+**No-loss technical companion bridge aligned to the current master**
 
 ---
 
-**Purpose.** This addendum converts the existing diagrammed technical reference into a v29-aligned no-loss edition. The predecessor technical reference remains fully preserved. This addendum does not replace the earlier diagrams or orientation notes; it adds the hardening overlays that now matter for system review.
+**Purpose.** This addendum converts the existing diagrammed technical reference into an aligned no-loss edition. The predecessor technical reference remains fully preserved. This addendum does not replace the earlier diagrams or orientation notes; it adds the hardening overlays that now matter for system review.
 
-**v29 overlays reviewers must now apply.**
+**Additional overlays reviewers must now apply.**
 1. **System integrity layer:** sits across the protocol: stewardship, system humility, incentive clarity, simplicity constraints, and identity limitations.
 2. **Distributed immune function:** anti-capture immune function is distributed across constitutional invariants, oversight execution, transparency, review architecture, and red-team operations rather than concentrated in a single pillar.
 3. **Explicit identity scale gate:** the system cannot scale safely without a proven, non-coercive identity solution with acceptable fraud control and humane recovery.

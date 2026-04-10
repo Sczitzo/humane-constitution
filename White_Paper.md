@@ -1,10 +1,10 @@
-# The Twelve-Pillar Protocol v27 - Public White Paper Edition
+# The Twelve-Pillar Protocol - Public White Paper Edition
 
 **Revised public edition built on the predecessor white paper**
 
 ---
 
-This edition preserves the predecessor white paper's role, sequence, and argument while updating the civic-layer naming, adding the v27 clarifiers, and making the moral and institutional limits more explicit.
+This edition preserves the predecessor white paper's role, sequence, and argument while updating the civic-layer naming, adding the clarifiers, and making the moral and institutional limits more explicit.
 
 **Reader note:** The public white paper remains a plain-language map of the protocol. It now makes clearer that the measurement layer constrains what can be delivered, not who is worthy of life, and that full-scale legitimacy depends on a proven non-coercive identity stack.
 
@@ -240,17 +240,17 @@ The protocol is not a utopia machine. It is an attempt to build a civic operatin
 
 ---
 
-# Twelve-Pillar Protocol v29 - White Paper Sync Addendum
+# Twelve-Pillar Protocol - White Paper Sync Addendum
 
-**No-loss public edition bridge aligned to the current v29 master**
+**No-loss public edition bridge aligned to the current master**
 
 ---
 
-**Purpose.** This addendum converts the existing public white paper into a v29-aligned no-loss edition. The predecessor white paper remains fully preserved. Nothing in the predecessor public narrative is deleted by this addendum; the added material only clarifies the hardening work completed after v27.
+**Purpose.** This addendum converts the existing public white paper into an aligned no-loss edition. The predecessor white paper remains fully preserved. Nothing in the predecessor public narrative is deleted by this addendum; the added material only clarifies the hardening work completed since the initial edition.
 
-**What changed in v29.** The public-facing model is still the same at its core: survival, markets, and governance must not ride on the same rail. What v29 adds is a more explicit acknowledgment of adversarial pressure. The system now names four hardening fronts that matter for public credibility: shadow convertibility, incentive collapse, identity exploitation, and political definition drift.
+**What changed in this edition.** The public-facing model is still the same at its core: survival, markets, and governance must not ride on the same rail. What this revision adds is a more explicit acknowledgment of adversarial pressure. The system now names four hardening fronts that matter for public credibility: shadow convertibility, incentive collapse, identity exploitation, and political definition drift.
 
-**Public interpretation rule.** The current white paper should now be read with these v29 clarifications: (1) the Resource & Capacity System measures capacity, not human worth; (2) the system's anti-capture function is distributed rather than localized in one watchdog body; (3) identity remains a gating condition for scale and must remain non-coercive; and (4) the protocol is a civic operating system, not a final answer to corruption, domination, or moral failure.
+**Public interpretation rule.** The current white paper should now be read with these clarifications: (1) the Resource & Capacity System measures capacity, not human worth; (2) the system's anti-capture function is distributed rather than localized in one watchdog body; (3) identity remains a gating condition for scale and must remain non-coercive; and (4) the protocol is a civic operating system, not a final answer to corruption, domination, or moral failure.
 
 **Hardening themes now in scope.** 
 - **Shadow convertibility** is treated as containable but not fully erasable; the goal is to eliminate scalable arbitrage while tolerating low-level human behavior. 
@@ -258,13 +258,13 @@ The protocol is not a utopia machine. It is an attempt to build a civic operatin
 - **Identity** is treated as an adversarial surface; the humane floor survives even where higher-consequence powers must pause under uncertainty. 
 - **Definition drift** is treated as a constitutional threat; protected terms require visible governance and cannot be changed by technical laundering.
 
-**Document set note.** The authoritative set is now six documents: the v29 master protocol, threat register, patch log, public white paper, corpus audit note, and diagrammed technical reference. The master remains the primary source of truth. The white paper remains the front door for public understanding and should be updated only in ways that stay consistent with the master.
+**Document set note.** The authoritative set is now six documents: the master protocol, threat register, patch log, public white paper, corpus audit note, and diagrammed technical reference. The master remains the primary source of truth. The white paper remains the front door for public understanding and should be updated only in ways that stay consistent with the master.
 
 ---
 
 ### 1. Civic Layer Naming: CC → DW + CR
 
-The earlier white paper refers to 'CC' (Civic Influence Ledger) as a single instrument. The v29 master protocol refactored this into two separate tracks (Annex Z):
+The earlier white paper refers to 'CC' (Civic Influence Ledger) as a single instrument. The master protocol refactored this into two separate tracks (Annex Z):
 
 | Prior Term | New Term | What It Does | What It Is Not |
 | :--- | :--- | :--- | :--- |

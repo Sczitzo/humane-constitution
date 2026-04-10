@@ -1,24 +1,24 @@
-# The Twelve-Pillar Protocol v29
+# The Twelve-Pillar Protocol
 
-**Integrated master edition built on v27**
+**Integrated master edition**
 
 ---
 
-**Build integrity statement:** this v29 file preserves the full v27 constitutional working text and adds the v28/v29 hardening layers as integrated controlling annex material. It is not a restart, not a reduction, and not a replacement summary.
+**Build integrity statement:** this file preserves the full predecessor constitutional working text and adds the hardening layers as integrated controlling annex material. It is not a restart, not a reduction, and not a replacement summary.
 
 ### Authoritative document set (current)
-1. **Master Protocol v29** — primary constitutional source of truth.
-2. **Threat Register v2** — living adversarial model and control inventory.
-3. **Patch Log v2** — change ledger and risk traceability record.
-4. **Public White Paper v29** — public-facing explanatory document aligned to the master.
-5. **Diagrammed Technical Reference v29** — visual system map aligned to the master.
+1. **Master Protocol** — primary constitutional source of truth.
+2. **Threat Register** — living adversarial model and control inventory.
+3. **Patch Log** — change ledger and risk traceability record.
+4. **Public White Paper** — public-facing explanatory document aligned to the master.
+5. **Diagrammed Technical Reference** — visual system map aligned to the master.
 
 ### Merge note
-v27 remains the full predecessor body. The annexes below incorporate the hardening decisions developed after v27: shadow-convertibility containment, incentive stabilization, layered identity assurance, and anti-drift definition governance. Where these annexes conflict with looser earlier wording, these annexes control.
+The predecessor text remains the full constitutional body. The annexes below incorporate the hardening decisions developed since: shadow-convertibility containment, incentive stabilization, layered identity assurance, and anti-drift definition governance. Where these annexes conflict with looser earlier wording, these annexes control.
 
 ---
 
-# ANNEX AB. V29 Hardening Integration and Control Addendum
+# ANNEX AB. Hardening Integration and Control Addendum
 
 **Purpose.** This annex integrates the first red-team hardening cycle into the master protocol without deleting predecessor content. It formalizes the running-document discipline, names the highest-priority threats, and converts the recent design decisions into controlling constitutional and operational language.
 
@@ -71,9 +71,9 @@ The next red-team queue, to be continued through the running documents, is prior
 
 ---
 
-# The Twelve-Pillar Protocol v27
+# The Twelve-Pillar Protocol
 
-**Revised constitutional working edition built on v26**
+**Revised constitutional working edition**
 
 ---
 
@@ -409,7 +409,7 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 
 ### Life Access Ledger (LC) - baseline settings
 - **Issuance cadence:** daily micro-issuance indexed to verified capacity with a conservative buffer.
-- **Essential basket v1:** food staples + basic prepared food allowance; water/utilities baseline; basic shelter/heat; basic clothing; essential healthcare/medicines including crisis mental-health care, annual baseline mental-health assessment access, and continuity of treatment for diagnosed conditions; basic local transit.
+- **Essential basket (initial):** food staples + basic prepared food allowance; water/utilities baseline; basic shelter/heat; basic clothing; essential healthcare/medicines including crisis mental-health care, annual baseline mental-health assessment access, and continuity of treatment for diagnosed conditions; basic local transit.
 - **Constitutional Survival Minimum (Tier 1 floor):** the protocol may not narrow below the founding schedule for caloric sufficiency, potable water, weather-safe shelter, emergency medical stabilization, basic sanitation/hygiene, crisis mental-health stabilization, and continuity for essential medicines.
 - **Expiration:** each daily tranche carries 72-hour rolling validity; unused expired LC returns automatically to the capacity pool.
 - **Transferability:** non-transferable by default.
@@ -1807,7 +1807,7 @@ If any earlier section of this Protocol implies a single civic weighting ledger,
 
 ---
 
-## REVISION ADDENDUM - V27 CLARITY AND LEGIBILITY NOTES
+## REVISION ADDENDUM — CLARITY AND LEGIBILITY NOTES
 **Purpose.** This addendum preserves continuity with the predecessor drafts while improving legibility for readers moving from the earlier 3-currency / 7-pillar framing into the hardened 12-pillar protocol.
 
 **Legacy-to-current mapping**
@@ -1816,12 +1816,12 @@ If any earlier section of this Protocol implies a single civic weighting ledger,
 - Earlier references to the "Immune System" should be read as the distributed anti-capture function now carried by Pillar 1 constraints, Pillar 10 oversight execution, Pillar 11 transparency, Annexes A-C threat operations, and the judicial architecture.
 
 **Reader note**
-- The v27 clarifications do not relax non-convertibility, unconditional survival, identity privacy limits, or change-control safeguards.
+- These clarifications do not relax non-convertibility, unconditional survival, identity privacy limits, or change-control safeguards.
 - They exist to make the protocol easier to explain, audit, and teach without returning to softer constitutional boundaries.
 
 ---
 
-# Twelve-Pillar Protocol v29 — Session 2 Hardening Clauses
+# Twelve-Pillar Protocol — Session 2 Hardening Clauses
 
 **ANNEX AC — Session 2 Hardening Clauses**
 
@@ -1972,11 +1972,11 @@ The following threats remain in the hardening queue following Session 2:
 - **Ombuds Office concentration risk** (open question from P-008) — who audits the auditors of elite formation?
 - **T-006 cross-threat validation** — PCRP authority at Regional Executive Body level assessed for T-008 elite formation risk.
 
-*This annex is part of the Twelve-Pillar Protocol v29 document set. It must be integrated into the Master Protocol before public distribution. Where this annex conflicts with earlier language, this annex governs. The patch log extension (P-005, P-006, P-008) and threat register additions (T-005, T-006, T-008) are companion documents to this annex.*
+*This annex is part of the Twelve-Pillar Protocol document set. It must be integrated into the Master Protocol before public distribution. Where this annex conflicts with earlier language, this annex governs. The patch log extension (P-005, P-006, P-008) and threat register additions (T-005, T-006, T-008) are companion documents to this annex.*
 
 ---
 
-# Twelve-Pillar Protocol v29 — Annex AD
+# Twelve-Pillar Protocol — Annex AD
 
 **ANNEX AD — Narrative Attack Surface Hardening (P-011)**
 
@@ -2053,7 +2053,7 @@ White Paper updates for P-011 activation are governed as Tier 3 operational chan
 
 ---
 
-# Twelve-Pillar Protocol v29 — Annex AE
+# Twelve-Pillar Protocol — Annex AE
 
 **ANNEX AE — Compound Interface Tests (Session 3) + P-012 Interface Hardening**
 
@@ -2149,7 +2149,7 @@ The P-004 definition drift controls (Annex AB5) are extended to procedural accum
 
 ---
 
-# Twelve-Pillar Protocol v29 — Annex AF
+# Twelve-Pillar Protocol — Annex AF
 
 **ANNEX AF — Grace Exploitation Loop Hardening (P-009)**
 
@@ -2226,7 +2226,7 @@ P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpo
 
 ---
 
-# Twelve-Pillar Protocol v29 — Annex AG
+# Twelve-Pillar Protocol — Annex AG
 
 **ANNEX AG — Formal Acceptance Process Integrity (P-013 / T-016)**
 
@@ -2320,11 +2320,11 @@ The four FAP sign-off authorities collectively constitute a new institutional cl
 
 ---
 
-# Twelve-Pillar Protocol v29 — Annex AH
+# Twelve-Pillar Protocol — Annex AH
 
 **ANNEX AH — Bootstrap Resolution: P-013 First-Mover Activation (P-014 / T-017)**
 
-**Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard FAP v1 activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE. Status: PROPOSED.
+**Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard Formal Acceptance Protocol activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE. Status: PROPOSED.
 
 **Constitutional anchor.** P-014 is explicitly modeled on the provisional authority framework in Annexes N and U2: explicit disclosure, public challenge window, time-limited authority, mandatory review, and non-transferable founding status. This makes P-014 coherent with the protocol's existing constitutional theory rather than introducing a foreign mechanism.
 
@@ -2337,7 +2337,7 @@ P-014 is not a standing patch. It is a one-time founding instrument with a singl
 
 ### AH2. Stage 1 — Pre-Activation Disclosure (14 Days)
 Before any activation steps proceed, the following must be published and a 14-day public challenge window must close:
-- **Full circular dependency analysis:** a written explanation of why FAP v1 cannot coherently activate P-013, what the bootstrap problem is, and why no other resolution path is available.
+- **Full circular dependency analysis:** a written explanation of why the standard Formal Acceptance Protocol cannot coherently activate P-013, what the bootstrap problem is, and why no other resolution path is available.
 - **Founding exception statement from the Threat Register Owner:** 'We are using a founding exception. Here is why no other option is available. Here is what this exception cannot be used for. Here is what happens if we get it wrong.'
 - **Proposed activation panel composition** with full conflict disclosures — published before sign-off begins, not after.
 - **Public challenge window of 14 days.** Any person, institution, or qualifying petition may file a written challenge. All challenges are addressed in published written responses before activation proceeds. No challenge is dismissed without a written substantive response.
@@ -2345,7 +2345,7 @@ Before any activation steps proceed, the following must be published and a 14-da
 The 14-day pre-activation disclosure is itself a narrative defense: it converts the bootstrap paradox from a vulnerability into a public demonstration of system integrity. The hostile framing 'the system cannot fix itself' is rebutted by the published record of the system identifying and resolving its own problem transparently, with public challenge rights.
 
 ### AH3. Stage 2 — Heightened Activation Panel
-Instead of FAP v1's four standard sign-off authorities, P-014 uses a purpose-built founding panel of five members:
+Instead of the standard four sign-off authorities, P-014 uses a purpose-built founding panel of five members:
 
 | Seat | Selection Method | Independence Requirement |
 | :--- | :--- | :--- |
@@ -2360,11 +2360,11 @@ Instead of FAP v1's four standard sign-off authorities, P-014 uses a purpose-bui
 - Panel decisions require 4 of 5 votes. The dissenting member's analysis is published in full and enters the permanent activation record.
 
 ### AH4. Stage 3 — Substitute Evidence Standard
-Since P-013 cannot be piloted through the process it governs, a substitute evidence standard replaces the FAP v1 pilot evidence requirement:
+Since P-013 cannot be piloted through the process it governs, a substitute evidence standard replaces the standard pilot evidence requirement:
 - **Desk review of real-world analogues.** At minimum three case studies of acceptance process capture in comparable governance systems. For each: what exploit was used; what P-013 clauses would have prevented it; what residual risk remains. Cases must be selected by the adversarial panel member and published for independent scrutiny.
 - **Adversarial red-team analysis.** The adversarial panel member produces a written analysis of how P-013 itself could be exploited after activation — what loopholes remain, what the next threat ID should be. This is published in full.
 - **Scope-limitation certification.** The panel certifies that P-013's clauses do not expand the power of any existing institution beyond what is necessary to close the identified exploits in T-016. Any clause that appears to expand institutional power beyond this scope must be specifically justified or removed before activation.
-- **Sunset compatibility check.** The panel confirms P-013 is compatible with the 8-quarter founding auto-expiry rules in Annexes N and U2 — and that if P-013 is somehow wrong, FAP v2 provides a correction path.
+- **Sunset compatibility check.** The panel confirms P-013 is compatible with the 8-quarter founding auto-expiry rules in Annexes N and U2 — and that if P-013 is somehow wrong, the standard Formal Acceptance Protocol provides a correction path.
 
 ### AH5. Stage 4 — Activation and Permanent Sealing
 Upon 4/5 panel sign-off following completed Stage 3:
@@ -2373,7 +2373,7 @@ Upon 4/5 panel sign-off following completed Stage 3:
 - The full activation record is published immediately: all pre-activation disclosures, panel compositions, conflict attestations, challenge responses, adversarial dissent, desk review cases, red-team analysis, and scope certification.
 - The non-precedent statement is embedded in the activation record with Tier 2 protection. It cannot be removed or modified without H-2 amendment process.
 - The mandatory post-activation audit (AH6) is commissioned immediately with a 90-day deadline.
-- P-006 and P-009 immediately enter FAP v2 pilot stage as first-priority patches — the sequencing dependency is resolved.
+- P-006 and P-009 immediately enter the Formal Acceptance Protocol pilot stage as first-priority patches — the sequencing dependency is resolved.
 
 ### AH6. Stage 5 — Post-Activation Audit (Within 90 Days)
 A retrospective audit of the P-014 activation is conducted within 90 days using P-013's own now-operative standards (including the adversarial member requirement from AG3):
@@ -2384,7 +2384,7 @@ A retrospective audit of the P-014 activation is conducted within 90 days using 
 
 **If audit finds activation was sound:** Published confirmation. P-014 activation record is permanently sealed. P-013 ACTIVE status is confirmed.
 
-**If audit finds activation was compromised:** Published finding. P-013 is immediately suspended (not revoked). P-013 is re-submitted through FAP v2 as now operative. P-014 non-precedent status is reaffirmed — the compromise does not authorize any other founding exception; it only re-opens P-013's specific activation.
+**If audit finds activation was compromised:** Published finding. P-013 is immediately suspended (not revoked). P-013 is re-submitted through the now-operative Formal Acceptance Protocol. P-014 non-precedent status is reaffirmed — the compromise does not authorize any other founding exception; it only re-opens P-013's specific activation.
 
 ### AH7. Sequencing After P-013 Activation
 The bootstrap resolution clears the path for the full acceptance sequence. Immediate priorities once P-013 reaches ACTIVE:
@@ -2392,12 +2392,12 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | Step | Action | Gate |
 | :--- | :--- | :--- |
 | 1 | P-013 ACTIVE via P-014 | P-014 AH5 sign-off + sealing |
-| 2 | P-006 (PCRP) enters FAP v2 pilot stage | First-priority per FAP priority order |
-| 3 | P-009 (Grace exploitation) enters FAP v2 pilot stage | First-priority — closes T-008 bypass |
+| 2 | P-006 (PCRP) enters Formal Acceptance Protocol pilot stage | First-priority per FAP priority order |
+| 3 | P-009 (Grace exploitation) enters Formal Acceptance Protocol pilot stage | First-priority — closes T-008 bypass |
 | 4 | P-008 legibility gap audit bootstrap micro-patch activated | Expedited 2-authority sign-off (AG6) |
-| 5 | P-005 and P-011 enter FAP v2 pilot stage | Pre-launch gates for governance and narrative |
-| 6 | P-012 enters FAP v2 pilot stage | Interface hardening — requires P-005/006 data |
-| 7 | Full P-008 package enters FAP v2 pilot stage | Requires legibility gap data from bootstrap |
+| 5 | P-005 and P-011 enter Formal Acceptance Protocol pilot stage | Pre-launch gates for governance and narrative |
+| 6 | P-012 enters Formal Acceptance Protocol pilot stage | Interface hardening — requires P-005/006 data |
+| 7 | Full P-008 package enters Formal Acceptance Protocol pilot stage | Requires legibility gap data from bootstrap |
 
 ---
 

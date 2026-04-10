@@ -1,19 +1,19 @@
-# v29 Corpus Audit Note
+# Corpus Audit Note
 
 **Session 6 Complete — Bootstrap resolved; acceptance sequence unblocked**
 
 ---
 
-This document verifies the integrity of the current v29 document set.
+This document verifies the integrity of the current document set.
 
 | Document | Pages | Session | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| Master Protocol v29 | ~111 | S6 | **CURRENT** | Annexes AB–AH. P-001 through P-014 clauses. |
-| White Paper v29 | 14 | S4 | **CURRENT** | AD6 pre-launch gate satisfied. |
+| Master Protocol | ~111 | S6 | **CURRENT** | Annexes AB–AH. P-001 through P-014 clauses. |
+| White Paper | 14 | S4 | **CURRENT** | AD6 pre-launch gate satisfied. |
 | Diagrammed Technical Reference | 8 | S4 | **CURRENT** | 5 session diagrams. |
-| Threat Register v29 | ~15 | S6 | **CURRENT** | T-001 through T-017. All addressed. None OPEN. |
-| Patch Log v29 | ~12 | S6 | **CURRENT** | P-001 through P-014. P-001–004 ACTIVE. P-005–013 PROPOSED. P-014 |
-| FAP v3 | ~3 | S6 | **CURRENT** | Bootstrap amendment added. P-014 is sole path for P-013 activation. |
+| Threat Register | ~15 | S6 | **CURRENT** | T-001 through T-017. All addressed. None OPEN. |
+| Patch Log | ~12 | S6 | **CURRENT** | P-001 through P-014. P-001–004 ACTIVE. P-005–013 PROPOSED. P-014 |
+| Formal Acceptance Protocol | ~3 | S6 | **CURRENT** | Bootstrap amendment added. P-014 is sole path for P-013 activation. |
 | Corpus Audit Note | 1 | S6 | **CURRENT** | This document. |
 
 ### Session 6 summary.
