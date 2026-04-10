@@ -67,6 +67,7 @@ This repository contains the complete synchronized document set:
 | [`Acceptance_Protocol.pdf`](./Acceptance_Protocol.pdf) | 3 | Process for moving patches from design to operation. |
 | [`Audit_Note.pdf`](./Audit_Note.pdf) | 1 | Document integrity verification. |
 | [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) | — | Plain-language summary of citizen rights and protections. |
+| [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md) | — | 8 simulated narrative attacks with structural responses and residual risks. |
 
 **Total: 162 pages** (PDFs). The White Paper (14pp) is the recommended entry point. The White Paper (14pp) is the recommended entry point.
 
@@ -113,7 +114,7 @@ The system is **defensible and documented**. It is not yet **scale-ready**. Scal
 
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
 - [x] CFRL one-page publication — see [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md)
-- [ ] Adversarial narrative simulation
+- [x] Adversarial narrative simulation — see [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md)
 - [ ] Annual compound simulation
 - [ ] Legitimate founding coalition
 
