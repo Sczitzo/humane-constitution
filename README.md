@@ -68,6 +68,7 @@ This repository contains the complete synchronized document set:
 | [`Audit_Note.pdf`](./Audit_Note.pdf) | 1 | Document integrity verification. |
 | [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) | — | Plain-language summary of citizen rights and protections. |
 | [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md) | — | 8 simulated narrative attacks with structural responses and residual risks. |
+| [`Annual_Compound_Simulation.md`](./Annual_Compound_Simulation.md) | — | Month-by-month operational year stress-test across all twelve pillars. |
 
 **Total: 162 pages** (PDFs). The White Paper (14pp) is the recommended entry point. The White Paper (14pp) is the recommended entry point.
 
@@ -115,7 +116,7 @@ The system is **defensible and documented**. It is not yet **scale-ready**. Scal
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
 - [x] CFRL one-page publication — see [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md)
 - [x] Adversarial narrative simulation — see [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md)
-- [ ] Annual compound simulation
+- [x] Annual compound simulation — see [`Annual_Compound_Simulation.md`](./Annual_Compound_Simulation.md)
 - [ ] Legitimate founding coalition
 
 The Formal Acceptance Protocol defines the pathway from design to operation.
