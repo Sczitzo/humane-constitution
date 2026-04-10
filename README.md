@@ -1,6 +1,21 @@
 # The Twelve-Pillar Protocol
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 > A non-extractive civilizational operating system — separating survival, markets, and governance into structurally independent lanes.
+
+## Contents
+
+- [What this is](#what-this-is)
+- [The core separation](#the-core-separation)
+- [The twelve pillars](#the-twelve-pillars)
+- [Document set](#document-set)
+- [Hardening history](#hardening-history)
+- [What this system is not](#what-this-system-is-not)
+- [What will go wrong](#what-will-go-wrong-pre-committed)
+- [Scale readiness](#scale-readiness)
+- [How to engage](#how-to-engage)
+- [License](#license)
 
 ## What this is
 
@@ -95,11 +110,11 @@ The system's commitment: every failure in these categories is published publicly
 
 The system is **defensible and documented**. It is not yet **scale-ready**. Scale readiness requires:
 
-- Formal acceptance of PROPOSED patches (pilot evidence required)
-- CFRL one-page publication
-- Adversarial narrative simulation
-- Annual compound simulation
-- Legitimate founding coalition
+- [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
+- [ ] CFRL one-page publication
+- [ ] Adversarial narrative simulation
+- [ ] Annual compound simulation
+- [ ] Legitimate founding coalition
 
 The Formal Acceptance Protocol defines the pathway from design to operation.
 
