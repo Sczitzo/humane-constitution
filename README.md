@@ -9,8 +9,11 @@
 - [What this is](#what-this-is)
 - [The core separation](#the-core-separation)
 - [The twelve pillars](#the-twelve-pillars)
+- [Pillar authority flow](#pillar-authority-flow)
 - [Document set](#document-set)
+- [Technical specifications](#technical-specifications)
 - [Hardening history](#hardening-history)
+- [Security and attack surface](#security-and-attack-surface)
 - [What this system is not](#what-this-system-is-not)
 - [What will go wrong](#what-will-go-wrong-pre-committed)
 - [Scale readiness](#scale-readiness)
@@ -53,6 +56,68 @@ Each pillar has one job. The architecture is intentionally modular so no single 
 11. **Information Commons & Trust Transparency** — Real-time aggregate dashboards with privacy protection
 12. **Resilience, Regeneration & Adaptation** — Reserves, redundancy, repair, and long-range adaptation
 
+## Pillar authority flow
+
+The diagram below shows how authority and enforcement relationships flow between the twelve pillars. Arrows indicate dependency or oversight direction. The non-convertibility enforcement layer sits between all instrument lanes and is not controlled by any single pillar.
+
+```mermaid
+flowchart TD
+    P1["**Pillar 1**\nConstitutional Invariants\n& Rights"]:::tier1
+    P2["**Pillar 2**\nPersonhood, Identity\n& Continuity"]:::tier2
+    P3["**Pillar 3**\nResource & Capacity\nSystem (RCS / Oracle)"]:::tier2
+    P4["**Pillar 4**\nLife Support Layer\n(LC Delivery)"]:::tier2
+    P5["**Pillar 5**\nMonetary Architecture\n(EC / LC / DW+CR / SQ)"]:::tier2
+    P6["**Pillar 6**\nLand, Housing\n& Commons"]:::tier3
+    P7["**Pillar 7**\nEnterprise &\nProduction Platform"]:::tier3
+    P8["**Pillar 8**\nContribution &\nCapability Development"]:::tier3
+    P9["**Pillar 9**\nCivic Deliberation\n& Decision Systems"]:::tier3
+    P10["**Pillar 10**\nOperations &\nService Delivery"]:::tier3
+    P11["**Pillar 11**\nInformation Commons\n& Trust Transparency"]:::tier3
+    P12["**Pillar 12**\nResilience, Regeneration\n& Adaptation"]:::tier3
+    NCE["**Non-Convertibility\nEnforcement Layer**\n(ledger-enforced)"]:::nce
+
+    %% Tier 1 constrains everything
+    P1 -->|"invariant constraints"| P2
+    P1 -->|"invariant constraints"| P3
+    P1 -->|"invariant constraints"| P4
+    P1 -->|"invariant constraints"| P5
+    P1 -->|"invariant constraints"| P9
+
+    %% Identity gates access
+    P2 -->|"identity confirmation"| P4
+    P2 -->|"identity confirmation"| P5
+    P2 -->|"identity confirmation"| P9
+
+    %% Oracle drives issuance
+    P3 -->|"verified capacity"| P4
+    P3 -->|"verified capacity"| P5
+    P3 -->|"scarcity signal"| P10
+
+    %% Monetary architecture enforces lanes
+    P5 --- NCE
+    NCE -->|"LC delivery gate"| P4
+    NCE -->|"EC market gate"| P7
+    NCE -->|"DW/CR civic gate"| P9
+
+    %% Operations executes
+    P4 -->|"delivery execution"| P10
+    P7 -->|"production data"| P3
+    P8 -->|"contribution records"| P9
+    P9 -->|"decisions"| P10
+    P10 -->|"service data"| P11
+    P11 -->|"transparency audit"| P1
+    P12 -->|"resilience reserve"| P4
+    P12 -->|"resilience reserve"| P10
+    P6 -->|"use-rights registry"| P5
+
+    classDef tier1 fill:#1a1a2e,color:#e0e0e0,stroke:#4a4a8a,stroke-width:2px
+    classDef tier2 fill:#16213e,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
+    classDef tier3 fill:#0f3460,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
+    classDef nce fill:#533483,color:#ffffff,stroke:#9d4edd,stroke-width:2px,stroke-dasharray:4 2
+```
+
+**Reading the diagram:** Pillar 1 (dark, top) constrains all other pillars — it is the only pillar that cannot be amended by any in-system process. The Non-Convertibility Enforcement Layer (purple, dashed) is not a pillar; it is a ledger-level constraint that sits between all instrument lanes. No single pillar controls it.
+
 ## Document set
 
 This repository contains the complete synchronized document set:
@@ -79,6 +144,61 @@ This repository contains the complete synchronized document set:
 
 **Note:** The core documentation has been converted to high-fidelity Markdown for better readability and version control. Original PDFs are available in the [`archive/`](./archive/) directory.
 
+
+## Technical specifications
+
+Formal system specifications, invariant documentation, and simulation scaffolds are available in:
+
+| Resource | Purpose |
+|---|---|
+| [`docs/INVARIANTS.md`](./docs/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
+| [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Includes demurrage function, issuance constraints, oracle consensus rules, and parameter table. |
+| [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Includes four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
+
+## Security and attack surface
+
+The three highest-severity failure modes, their mechanisms, and the algorithmic mitigations in place:
+
+### 1. The Oracle Problem (T-020 / T-021) — Critical
+
+**Mechanism:** The LC issuance system depends on oracle nodes measuring real-world physical capacity. Two nodes can satisfy every formal criterion for independence (separate institutions, separate funders, separate governance) while sharing the same epistemological foundation — the same statistical tradition, peer-review standards, and conception of valid evidence. When this happens, their errors are correlated: a coordinated actor who shifts the dominant methodology standard corrupts the measurement system without touching any data directly.
+
+**Algorithmic mitigation (P-017 / Annex AL):**
+- Minimum three oracle nodes required
+- Nodes must differ on all three dimensions simultaneously: epistemological foundation, data generation process, and standards provenance
+- At least one node must use direct physical sampling (ground-truth, Tier 3) — this node cannot share standards provenance with institutional statistical nodes
+- Error independence test required: nodes must produce materially different error structures, not merely formally different methodologies
+- Anti-monoculture trigger: if ≥3 nodes share a standards body, independent review is mandatory
+
+**Residual risk:** The definition of "fundamentally different methodology" is itself a protected term (P-004 / Annex AL) — but whoever influences that definition retains indirect leverage. This is documented as an open residual risk, not a resolved problem.
+
+---
+
+### 2. Above-Ledger Bypass / Shadow Convertibility (T-001) — Critical
+
+**Mechanism:** The non-convertibility constraint is enforced at the ledger layer. Off-ledger transactions — proxy LC redemption, service-for-LC exchanges, informal barter at instrument boundaries — are not preventable by ledger rules alone. A motivated actor can approximate LC-to-EC conversion without technically touching the ledger: pay someone in goods to redeem LC on their behalf, or build a service market that prices itself in LC-equivalent units.
+
+**Algorithmic mitigation (P-001 / Annex AJ):**
+- LC redemption is non-delegable: biometric or equivalent identity confirmation required at delivery point (Tier 2 assurance minimum)
+- Cluster anomaly detection: statistical monitoring for redemption patterns inconsistent with individual use
+- Broker signature detection: behavioral patterns characteristic of proxy-redemption networks flagged for Ombuds review
+- LC-only essential access: certain essential services only accessible via LC redemption, not EC purchase — reduces the conversion incentive by narrowing what EC can buy in the survival lane
+
+**Residual risk:** Detection depends on statistical anomaly thresholds. A sufficiently distributed, low-frequency proxy network may fall below detection bounds. Explicit leakage tolerance accepted in P-001; T-001 remains PARTIAL status.
+
+---
+
+### 3. Electoral Cycle Capture / Hostile Successor Government (T-022) — Critical
+
+**Mechanism:** A hostile successor government can legally dismantle the constitutional architecture through legitimate processes: refusing to fund LC delivery infrastructure, appointing non-compliant oracle administrators, passing legislation that redefines protected terms below the constitutional amendment threshold, or simply allowing administrative hollowing — the system remains on paper while operational capacity is systematically defunded.
+
+**Algorithmic mitigation (P-018):**
+- Entrenchment ladder: LC floor provisions require progressively higher supermajorities to amend as time-in-operation increases
+- LC floor minimum persistence: no successor government may reduce LC below CSM in fewer than N legislative cycles [FOUNDING COMMITMENT: N]
+- Administrative hollowing triggers: defined operational metrics (delivery throughput, oracle response time, enforcement rate) that, when breached, automatically activate the Pre-Confirmation Response Protocol (PCRP) regardless of political direction
+- Transition protocol: mandatory handoff documentation, independent audit of operational capacity, and public status report required before any change-of-government that affects Pillar 4 or Pillar 10 operations
+
+**Residual risk:** The entrenchment ladder and persistence requirements are only as durable as the constitutional text that contains them. A sufficiently determined successor government with a large enough legislative majority can repeal the constitutional text itself. This is the recursion of T-017 (bootstrap problem) — resolved founding legitimacy does not prevent future delegitimation.
 
 ## Hardening history
 
