@@ -126,11 +126,9 @@ This repository contains the complete synchronized document set:
 |---|---|
 | [`Master_Protocol.md`](./Master_Protocol.md) | Primary constitutional source of truth. Operative language, all annexes. |
 | [`White_Paper.md`](./White_Paper.md) | Plain-language public explanation. Start here. |
-| [`Technical_Reference.md`](./Technical_Reference.md) | Systems map with flow diagrams. For reviewers and collaborators. |
 | [`Threat_Register.md`](./Threat_Register.md) | Adversarial risk model. 25 threat IDs (23 active, 2 retired) — 4 ACTIVE, 12 PROPOSED, 7 OPEN. T-017/P-014 is the FOUNDING instrument. |
 | [`Patch_Log.md`](./Patch_Log.md) | Change and mitigation history. 21 patches — 4 ACTIVE, 16 PROPOSED, 1 FOUNDING (P-014). |
 | [`Acceptance_Protocol.md`](./Acceptance_Protocol.md) | Process for moving patches from design to operation. |
-| [`Audit_Note.md`](./Audit_Note.md) | Document integrity verification. |
 | [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) | Plain-language summary of citizen rights and protections. |
 | [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
 | [`REGISTER_DISCLOSURE_PROTOCOL.md`](./REGISTER_DISCLOSURE_PROTOCOL.md) | Annex AO — public/restricted bifurcation framework for the Threat Register. |
@@ -140,9 +138,7 @@ This repository contains the complete synchronized document set:
 | [`ANNEX_AK.md`](./ANNEX_AK.md) | Annex AK — identity asymmetric error doctrine: fraud/exclusion rate targets, decision rule, recalibration process. |
 | [`ANNEX_AL.md`](./ANNEX_AL.md) | Annex AL — methodology-class definitions for oracle independence: P-004 protected definitions, three canonical classes with worked examples, anti-monoculture trigger, annual audit. Pre-launch gate for P-017. |
 | [`ANNEX_AR.md`](./ANNEX_AR.md) | Annex AR — contract-commitment architecture parameters: release thresholds, deployment windows, force majeure caps, inspector pool governance. |
-| [`ANNEX_REGISTRY.md`](./ANNEX_REGISTRY.md) | Annex Registry — navigation index for all ~30 referenced annexes: standalone file status, embedded location, pending/blocking gate status. |
-
-**Note:** The core documentation has been converted to high-fidelity Markdown for better readability and version control. Original PDFs are available in the [`archive/`](./archive/) directory.
+**Note:** The core documentation is maintained in Markdown for readability and version control.
 
 
 ## Technical specifications
