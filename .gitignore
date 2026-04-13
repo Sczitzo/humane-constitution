@@ -52,3 +52,4 @@ annex_*.pdf
 *_final.pdf
 *_s[0-9].pdf
 outreach/
+.claude/

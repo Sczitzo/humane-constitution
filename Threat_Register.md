@@ -14,7 +14,7 @@
 
 **Scoring convention.** Risk Score = I × L × (6 − D) where I = Impact, L = Likelihood, D = Detectability (each 1–5; higher D = more detectable = lower risk multiplier).
 
-**Disclosure policy.** This register is bifurcated per the Register Disclosure Protocol (see `REGISTER_DISCLOSURE_PROTOCOL.md`). Specific detection thresholds, timing windows, and operational exploit paths are published only in the Restricted Annex, available to auditors, oversight panels, and adversarial panel members. This public version records threat categories, mechanisms, mitigations, and risk scores. The restricted version adds precise calibration data. Both versions must remain consistent; any discrepancy is treated as a T-007 definition-drift event.
+**Disclosure policy.** This register is bifurcated per the Register Disclosure Protocol (see `docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md`). Specific detection thresholds, timing windows, and operational exploit paths are published only in the Restricted Annex, available to auditors, oversight panels, and adversarial panel members. This public version records threat categories, mechanisms, mitigations, and risk scores. The restricted version adds precise calibration data. Both versions must remain consistent; any discrepancy is treated as a T-007 definition-drift event.
 
 ---
 

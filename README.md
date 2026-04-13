@@ -120,7 +120,7 @@ flowchart TD
 
 ## Document set
 
-This repository contains the complete synchronized document set:
+### Core documents
 
 | Document | Purpose |
 |---|---|
@@ -130,26 +130,30 @@ This repository contains the complete synchronized document set:
 | [`Patch_Log.md`](./Patch_Log.md) | Change and mitigation history. 21 patches — 4 ACTIVE, 16 PROPOSED, 1 FOUNDING (P-014). |
 | [`Acceptance_Protocol.md`](./Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 | [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) | Plain-language summary of citizen rights and protections. |
-| [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
-| [`REGISTER_DISCLOSURE_PROTOCOL.md`](./REGISTER_DISCLOSURE_PROTOCOL.md) | Annex AO — public/restricted bifurcation framework for the Threat Register. |
-| [`Annual_Compound_Simulation.md`](./Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across all twelve pillars. |
-| [`ANNEX_AI.md`](./ANNEX_AI.md) | Annex AI — Ombuds Office constitution: mandate, independence requirements, manufactured-flag authority, meta-capture prevention. Pre-launch gate for P-015. |
-| [`ANNEX_AJ.md`](./ANNEX_AJ.md) | Annex AJ — above-ledger bypass worked examples across all three instrument boundaries. |
-| [`ANNEX_AK.md`](./ANNEX_AK.md) | Annex AK — identity asymmetric error doctrine: fraud/exclusion rate targets, decision rule, recalibration process. |
-| [`ANNEX_AL.md`](./ANNEX_AL.md) | Annex AL — methodology-class definitions for oracle independence: P-004 protected definitions, three canonical classes with worked examples, anti-monoculture trigger, annual audit. Pre-launch gate for P-017. |
-| [`ANNEX_AR.md`](./ANNEX_AR.md) | Annex AR — contract-commitment architecture parameters: release thresholds, deployment windows, force majeure caps, inspector pool governance. |
-**Note:** The core documentation is maintained in Markdown for readability and version control.
 
+### Technical specifications (`docs/`)
 
-## Technical specifications
-
-Formal system specifications, invariant documentation, and simulation scaffolds are available in:
-
-| Resource | Purpose |
+| Document | Purpose |
 |---|---|
 | [`docs/INVARIANTS.md`](./docs/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
-| [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Includes demurrage function, issuance constraints, oracle consensus rules, and parameter table. |
-| [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Includes four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
+| [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Demurrage function, issuance constraints, oracle consensus rules, parameter table. |
+| [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
+| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across all twelve pillars. |
+| [`docs/P014_Preactivation_Disclosure.md`](./docs/P014_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
+| [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
+
+### Annexes (`docs/annexes/`)
+
+Standalone annexes function as pre-launch blocking gates for specific patches. A patch cannot move to ACTIVE until its blocking annex is complete.
+
+| Annex | Purpose | Blocks |
+|---|---|---|
+| [`docs/annexes/ANNEX_AI.md`](./docs/annexes/ANNEX_AI.md) | Ombuds Office constitution: mandate, independence requirements, manufactured-flag authority, meta-capture prevention. | P-015 |
+| [`docs/annexes/ANNEX_AJ.md`](./docs/annexes/ANNEX_AJ.md) | Above-ledger bypass worked examples across all three instrument boundaries. | T-001 open problem |
+| [`docs/annexes/ANNEX_AK.md`](./docs/annexes/ANNEX_AK.md) | Identity asymmetric error doctrine: fraud/exclusion rate targets, decision rule, recalibration process. | P-016 |
+| [`docs/annexes/ANNEX_AL.md`](./docs/annexes/ANNEX_AL.md) | Methodology-class definitions for oracle independence: P-004 protected definitions, three canonical classes, anti-monoculture trigger, annual audit. | P-017 |
+| [`docs/annexes/ANNEX_AR.md`](./docs/annexes/ANNEX_AR.md) | Contract-commitment architecture parameters: release thresholds, deployment windows, force majeure caps, inspector pool governance. | P-023 |
+| [`docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md`](./docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md) | Annex AO — public/restricted bifurcation framework for the Threat Register. | P-021 |
 
 ## Security and attack surface
 
@@ -243,8 +247,8 @@ The system is **defensible and documented**. It is not yet **scale-ready**. Scal
 
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
 - [x] CFRL one-page publication — see [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md)
-- [x] Adversarial narrative simulation — see [`Adversarial_Narrative_Simulation.md`](./Adversarial_Narrative_Simulation.md)
-- [x] Annual compound simulation — see [`Annual_Compound_Simulation.md`](./Annual_Compound_Simulation.md)
+- [x] Adversarial narrative simulation — see [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md)
+- [x] Annual compound simulation — see [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md)
 - [ ] Legitimate founding coalition
 
 The Formal Acceptance Protocol defines the pathway from design to operation.
