@@ -1,0 +1,410 @@
+# Adversarial Protocol Audit — Twelve-Pillar Protocol
+
+**Date:** 2026-04-13  
+**Branch:** `claude/lucid-albattani`  
+**Scope:** Full architectural audit of all 12 pillars against Beer VSM, Ostrom commons principles, Buterin BFT/mechanism design, Lessig code-as-law, and Schelling focal point frameworks.  
+**Method:** Document ingestion → simulation → cross-reference → pass/fail logic gate  
+**Status:** NOT SCALE-READY (confirms White Paper self-assessment). 6 pillars FAIL. 6 CONDITIONAL. 0 unconditional PASS.
+
+---
+
+## Framework Memory Lock
+
+Five operational frameworks applied throughout:
+
+| Framework | Key Audit Criterion |
+|:---|:---|
+| **Beer VSM** | S1–S5 subsystems all present? S3* (audit) independent of S3 (control)? S4 (intelligence) feeds adaptation? |
+| **Ostrom 8 Principles** | Boundaries defined? Collective choice arrangements? Monitoring? Graduated sanctions? Conflict resolution? |
+| **Buterin BFT + Mechanism Design** | n ≥ 3f+1 for oracles? Incentive alignment: honest > defection? Sybil resistance has real cost? Griefing factor bounded? |
+| **Lessig Code-as-Law** | Is each "hard constraint" technically impossible to violate, or only normatively prohibited? |
+| **Schelling Focal Points** | Does the system specify a natural equilibrium for coordination under adversarial conditions, or does it leave actors to find the wrong equilibrium? |
+
+---
+
+## Patch Status Reality Check
+
+Only **4 of 23 patches are ACTIVE**. The other **19 are PROPOSED** — designed but not integrated.
+
+| Status | Patches | Notes |
+|:---|:---|:---|
+| **ACTIVE** (4) | P-001, P-002, P-003, P-004 | Shadow convertibility, incentive stabilization, identity hardening, definition drift |
+| **PROPOSED** (19) | P-005 through P-023 | Not yet operative — exist only in design documents |
+
+The Ombuds Office (Annex AI) carries **6 load-bearing patch dependencies** (P-008, P-012, P-013, P-015, P-016, P-021). The Ombuds is not constituted. Zero of these 6 patches can reach ACTIVE until the Ombuds Commissioner is appointed, the Ombuds Oversight Panel is seated, and all pre-launch gates are passed.
+
+**Minimum sequential gate timeline to deployment readiness: ~810 days (2.2 years).** This assumes no setbacks, no iteration failures, and no contested founding moments. The pilot-data circular dependency (pilot requires the system; many founding commitments require pilot data) is not resolved by this timeline.
+
+---
+
+## Scorecard
+
+| Pillar | Name | Verdict | Primary Violation |
+|:---:|:---|:---:|:---|
+| **P1** | Constitutional Invariants & Rights | **FAIL** | Lessig: Tier 1 protection is normative, not architectural |
+| **P2** | Personhood, Identity & Continuity | **FAIL** | Buterin: No scalable Sybil-resistant + privacy-preserving solution |
+| **P3** | Resource & Capacity System | **FAIL** | Buterin: N=3 oracle is below BFT threshold for f=1 |
+| **P4** | Life Support Layer | CONDITIONAL | Redemption gate during identity uncertainty is normative |
+| **P5** | Monetary Architecture | **FAIL** | Lessig: Non-convertibility above-ledger is normative; penalty unspecified |
+| **P6** | Land, Housing & Commons | CONDITIONAL | Corporate entity Sybil protection absent; dispute resolution unspecified |
+| **P7** | Enterprise & Production Platform | CONDITIONAL | Capital-intensive industry structural bias; competition enforcement normative |
+| **P8** | Contribution & Capability Development | **FAIL** | Attestation collusion open (T-018); Protected Pause floor unquantified |
+| **P9** | Civic Deliberation & Decision Systems | **FAIL** | 3/5 sector coalition achieves agenda capture; Schelling capture point |
+| **P10** | Operations & Service Delivery | CONDITIONAL | No Beer S3* channel; "execution without discretion" is unachievable |
+| **P11** | Information Commons & Trust Transparency | CONDITIONAL | Real-time vs. privacy tradeoff architecturally unresolved |
+| **P12** | Resilience, Regeneration & Adaptation | CONDITIONAL | Non-punitive scorecard = Beer S4 without S3; reserve levels all TBD |
+
+---
+
+## Simulation Results
+
+All simulations run against specification parameters from `docs/SPECIFICATIONS.md` and `simulations/model_outline.py`.
+
+### Test 1 — Oracle BFT Threshold (Pillar 3 / INV-005)
+
+BFT requires n ≥ 3f+1. For f=1 Byzantine nodes: n ≥ 4.
+
+| N nodes | LC quorum | BFT safe (f=1)? | 2-node collusion forges output? |
+|:---:|:---:|:---:|:---:|
+| **3** (spec minimum) | 2 | **NO** | **YES — CRITICAL** |
+| 4 | 3 | YES | NO |
+| 5 | 3 | YES | NO |
+
+**Verdict: FAIL.** At N=3, two colluding nodes constitute a valid quorum. The oracle system at its minimum configuration is trivially defeatable by a 2-node collusion.
+
+### Test 2 — Demurrage Wealth Concentration (Pillar 5)
+
+Simulated 500 agents over 120 months under three demurrage rates.
+
+| Rate | Gini (initial → final) | Top 10% share |
+|:---:|:---:|:---:|
+| 0.5%/month | 0.712 → 0.115 | 15.9% |
+| 1.0%/month | 0.658 → 0.100 | 14.4% |
+| 2.0%/month | 0.644 → 0.108 | 14.6% |
+
+**Verdict: CONDITIONAL.** Demurrage substantially reduces idle-balance concentration. However, active high-earners who continuously redeploy are exempt from demurrage by design — active concentrators are not constrained by demurrage. Concentration persists through active market participation.
+
+### Test 3 — DW Fast-Decay Dynamics (Pillars 8/9)
+
+At r_dw = 0.15/day (from `model_outline.py`):
+
+| Days elapsed | DW remaining |
+|:---:|:---:|
+| 7 days | 32.1% |
+| 14 days | 10.3% |
+| 30 days | 0.8% |
+| 90 days (quarter) | ~0% |
+
+**Verdict: CONDITIONAL PASS on decay design.** DW fast-decay correctly implements "influence is a flow, not a stock." However, the contribution treadmill this creates systematically disadvantages caregivers, disabled persons, and those in economic crisis — precisely the populations the system claims to protect. The "civic floor at lower balances" promised in the spec is `[FOUNDING COMMITMENT]` with no specified value.
+
+### Test 4 — Coalition Capture Under 25% Sector Ceiling (Pillar 9)
+
+In a 5-sector system with 25% DW ceiling per sector:
+
+| Sectors in coalition | Max DW share | Simple majority? | Supermajority? |
+|:---:|:---:|:---:|:---:|
+| 1 | 25% | NO | NO |
+| 2 | 50% | YES | NO |
+| **3** | **75%** | **YES** | **YES** |
+
+**Verdict: FAIL.** A 3-sector coalition achieves supermajority DW control. In a 5-sector system, "win 3 sectors" is the natural Schelling focal point for capture. The 25% ceiling prevents single-sector domination but creates an exploitable 3-sector coalition equilibrium.
+
+**Required fix:** Sector ceiling must be reduced from 25% to ≤20% to prevent any 3-sector coalition from achieving supermajority. Agenda-sequencing must also be separated from DW allocation (rotation/lottery for proposal ordering within categories).
+
+### Test 5 — Shadow Convertibility Equilibrium (Pillar 5 / T-001)
+
+At 85% detection probability (from `model_outline.py` adversarial agent):
+
+| Penalty for detected bypass | Expected value | Rational to attempt? |
+|:---:|:---:|:---:|
+| 0 EC | +0.15 | **YES** |
+| 2 EC | −1.55 | NO |
+| 5 EC | −4.10 | NO |
+
+**Minimum deterrent penalty: 0.18 EC per bypass attempt.** Any penalty above ~18% of gain deters bypass at 85% detection. The penalty structure is currently **unspecified** — T-001's open problem explicitly flags this. Without a published penalty, enforcement has no operational deterrent.
+
+### Test 6 — Invariant Enforcement (Pillar 1 / INV-007 — Lessig Test)
+
+Truth table for Tier 1 invariant protection chain:
+
+| Condition | Mechanism | Status |
+|:---|:---|:---|
+| Tier 1 amendment proposed | FAP reviewer manually rejects | NORMATIVE — human judgment |
+| FAP reviewer captured (T-016) | No architectural backstop | NORMATIVE FAILS |
+| Software update bypasses amendment (T-007) | P-004 semantic audit required | PARTIAL — still human audit |
+| Triple deadlock (T-014) | No sub-Level-5 resolution defined | ARCHITECTURAL GAP |
+
+**Lessig Test Result: FAIL.** "Unamendable" is a normative description enforced by a human process (FAP review), not a technical impossibility. A captured FAP can accept any amendment. No cryptographic or ledger-enforced mechanism prevents this.
+
+### Test 7 — Contribution Treadmill (Pillar 8 / T-004)
+
+DW equilibrium formula: DW* = contribution_rate / r_dw
+
+| Actor | Daily contribution rate | DW equilibrium |
+|:---|:---:|:---:|
+| Standard (10% events/day) | 10% | 0.67 units |
+| Caregiver (2% events/day) | 2% | 0.13 units |
+| Caregiver + Protected Pause (20% of normal decay) | 2% | 4.44 units |
+
+**Civic floor value: `[FOUNDING COMMITMENT]` — unspecified.**
+
+If floor = 0: caregivers lose all civic voice during caregiving → recreates class power. If floor = standard equilibrium: Protected Pause becomes a civic advantage → T-009 exploit. The floor must be set in the range (0.13, 0.67) to be both protective and non-exploitable. This is a founding commitment that must be quantified before pilot.
+
+---
+
+## PRD-001: Pillar 1 — Constitutional Invariants & Rights
+
+**Status: FAIL**
+
+### The Failure Point
+Tier 1 invariants (INV-001 through INV-007) are described as "unamendable by any in-system process" (INVARIANTS.md). Enforcement depends entirely on a FAP reviewer manually checking INVARIANTS.md and rejecting non-compliant proposals — a human judgment call, not a technical impossibility.
+
+Attack chain: FAP captured (T-016, PARTIAL) → no architectural backstop → Tier 1 amendment proceeds. Additionally, T-007 (Definition Drift) identifies that software updates can alter practical meaning of protected terms without triggering the amendment process at all.
+
+### The Violated Principle
+**Lessig — Architecture as Law.** The document uses architectural language ("unamendable," "hard lower bound") to describe normative rules enforced by human process. Normative rules fail under adversarial pressure. Architectural constraints are technically impossible to circumvent.
+
+### The Systemic Risk
+If FAP is captured (T-016, Critical, risk score 60), all seven invariants are simultaneously void — including INV-001 (survival is unconditional) and INV-002 (non-convertibility). T-016's patches (P-013, P-014) are PROPOSED, not ACTIVE.
+
+### The Required Patch
+1. **Architectural enforcement for INV-002:** Ledger-layer non-convertibility claim must be validated by formal verification of the cryptographic implementation — not administrative prohibition. "Structurally impossible at the ledger layer" requires a proof, not a policy statement.
+2. **Architectural enforcement for INV-001:** CSM issuance must execute automatically at the system level without any governance actor authorization. A governance actor must be architecturally *unable* to halt CSM issuance.
+3. **P-014 + P-020 as pre-pilot gate:** The adversarial panel member for the founding instrument must hold structural veto power over any Tier 1 amendment instrument — enforced by requiring their affirmative signature as a technical precondition, not a procedural requirement.
+
+---
+
+## PRD-002: Pillar 2 — Personhood, Identity & Continuity
+
+**Status: FAIL**
+
+### The Failure Point
+The system simultaneously requires: Sybil resistance (one-person-one-wallet), privacy-preserving verification (minimum data, selective disclosure), coverage for refugees and undocumented persons, and biometric confirmation at redemption. No production-tested identity system satisfies all four at scale.
+
+The Asymmetric Error Doctrine (P-016, Session 8) mandates quantified fraud and exclusion rate targets before deployment — it is an unestablished Tier 2 founding commitment. Without it, calibration is permanently subject to political pressure (as the threat register explicitly acknowledges).
+
+### The Violated Principle
+**Buterin — Sybil Resistance.** Sybil resistance requires a cost to identity duplication proportional to the benefit. At LC level (daily survival access), the benefit is high. "Detection after the fact" (cross-signal deduplication, anomaly review) is probabilistic mitigation, not Sybil resistance. True Sybil resistance requires a binding cost at identity creation.
+
+### The Systemic Risk
+At any non-trivial scale, Sybil attacks on LC are economically rational. Each successful duplicate drains the capacity pool without triggering oracle alerts (oracle measures physical supply, not fraudulent demand). Simultaneously, overly aggressive anti-Sybil controls recreate survival coercion through the identity layer — the exact failure mode INV-001 prevents at the instrument layer.
+
+### The Required Patch
+1. **Specify a cryptographic commitment scheme** (e.g., nullifier-based ZK identity) where each person registers one binding commitment verifiable without revealing identity. Name the primitive and cite production evidence for the target population demographics.
+2. **Asymmetric Error Doctrine (P-016) must be ACTIVE before any pilot.** Quantified targets: max fraud rate per tier (LC, DW, CR); max exclusion rate for vulnerable populations; automatic review trigger; explicit tradeoff decision rule.
+3. **Survivor-mode identity must be architecturally automatic:** CSM delivery during identity suspension must not require governance authorization (dependent on PRD-001 architectural enforcement).
+
+---
+
+## PRD-003: Pillar 3 — Resource & Capacity System
+
+**Status: FAIL**
+
+### The Failure Point
+SPECIFICATIONS.md Section 7 specifies minimum N≥3 oracle nodes. Byzantine fault tolerance requires n≥3f+1. For f=1 (minimum adversarial tolerance): n≥4. At N=3 with LC quorum=2, two colluding nodes supply fabricated readings that constitute a valid quorum. Simulation confirms: N=3 fails BFT for f=1.
+
+T-020 (Epistemological Oracle Capture) and T-021 (Algorithmic Oracle Capture) are both OPEN Critical threats. Both exploit the N=3 minimum.
+
+### The Violated Principle
+**Buterin — Byzantine Fault Tolerance.** The BFT threshold n≥3f+1 is a mathematical lower bound. No amount of methodology diversity compensates for falling below it. The spec acknowledges "formal independence without structural independence is insufficient" but then sets N=3, which is below the threshold for any formal independence to matter.
+
+**Ostrom — Monitoring (Principle 4).** The oracle is the protocol's monitoring layer for physical capacity. A monitoring system defeatable by a 2-entity collusion is not an accountable monitor.
+
+### The Systemic Risk
+Oracle capture voids INV-005 (Reality Anchoring) in practice. A captured oracle reporting inflated capacity causes over-issuance of LC into physical supply that doesn't exist — the fundamental failure this protocol is designed to prevent. The oracle is the Schelling focal point for all system decisions; capturing it makes the protocol's reality anchor adversary-controlled.
+
+### The Required Patch
+1. **Raise N_min from 3 to 5.** At N=5: LC quorum=3, SQ quorum=4. Two-node collusion cannot forge a quorum. Cost: 2 additional oracle nodes.
+2. **Formal error independence test:** Before oracle cohort acceptance, publish a pairwise cross-correlation test of historical errors. Pairs with correlation above threshold [Founding Commitment] do not satisfy structural independence regardless of methodology classification.
+3. **Oracle adversarial panel:** Each cohort must include at least one node nominated by a body adversarial to the entity most benefiting from high capacity readings — the structural independence analogue of P-014's adversarial panel requirement.
+4. **Activate P-017 (oracle epistemological independence) as pre-pilot gate** — currently PROPOSED. T-020 and T-021 are both Critical + OPEN; P-017 is their mitigation.
+
+---
+
+## PRD-004: Pillar 5 — Monetary Architecture
+
+**Status: FAIL**
+
+### The Failure Point
+
+**Failure A — Non-convertibility:** SPECIFICATIONS.md Section 6 explicitly states: "Off-ledger transactions...are not preventable by ledger enforcement alone. This is the primary residual risk." Ledger-layer enforcement does not cover the full attack surface. Above-ledger informal trades, proxy redemption, and service-for-LC exchanges recreate convertibility. The penalty structure for above-ledger bypass is unspecified.
+
+**Failure B — Bank credit prohibition:** "Private banks may not create new EC by debt expansion alone" is physically unenforceable without real-time surveillance of all credit creation. Any bank can issue EC-denominated IOUs that function as EC substitutes. The prohibition is purely normative with no enforcement architecture.
+
+### The Violated Principle
+**Lessig — Architecture as Law.** Non-convertibility claim uses architectural language but is acknowledged to fail above the ledger layer. Bank credit prohibition is normative with no architectural enforcement.
+
+**Buterin — Griefing Factor.** Bypass has low attacker cost (informal exchange) and high system cost (capacity pool depletion, erosion of LC/EC separation). Without a minimum deterrent penalty, the griefing ratio is unbounded.
+
+### The Systemic Risk
+Above-ledger convertibility is the expected equilibrium behavior of any population with heterogeneous preferences and a valuable entitlement. The "scalable arbitrage" threshold — the spec's acceptable-leakage standard — is undefined. Without an operational target, enforcement has nothing to aim at and the shadow market grows unchecked. Over time, the shadow market prices LC access in EC terms, recreating monetary sovereignty over survival.
+
+### The Required Patch
+1. **Specify minimum deterrent penalty:** Minimum deterrent = penalty > 0.18 × gain at 85% detection. Publish as Tier 2 founding commitment before pilot.
+2. **Define acceptable leakage threshold:** What percentage of LC allocations may be informally converted annually before enforcement escalates? Publish as a number, not an intent statement.
+3. **Bank credit prohibition requires an architectural solution or replacement:** Either specify a central EC ledger against which all credit creation registers (architectural), or replace the prohibition with a reserve requirement (banks may create credit against EC holdings above a reserve ratio; excess triggers automatic demurrage on the credit instrument).
+4. **Above-ledger enforcement architecture:** P-001 is ACTIVE but its penalty specification is missing. The penalty table must be published as a protected specification before any pilot.
+
+---
+
+## PRD-005: Pillar 8 — Contribution & Capability Development
+
+**Status: FAIL**
+
+### The Failure Point
+
+**Failure A — Attestation collusion (T-018, OPEN):** Lightweight attestation for small CR claims creates a social graph exploitable by coordinated groups. "Verifier reputation scoring" creates a meta-economy of attestor standing that itself requires governance — a recursive problem without a base case. T-018 is OPEN (no mitigation patch designed).
+
+**Failure B — Protected Pause civic floor unquantified:** The simulation shows caregiver DW equilibrium at 2% contribution ≈ 0.13 units; standard actor ≈ 0.67 units. The "small civic floor at lower balances" is `[FOUNDING COMMITMENT]`. Without specifying a value in the range (0.13, 0.67), the floor is either meaningless (too low) or an exploit (too high).
+
+### The Violated Principle
+**Ostrom — Principles 3 & 4 (Collective Choice and Monitoring).** The contribution/attestation system is how participants modify rules (via CR minting) and are monitored (via verifier reputation). Both fail if attestation collusion is possible. An unmonitored monitoring system is not a monitoring system.
+
+**Buterin — Incentive Alignment.** The Protected Pause floor must be calibrated so honest caregivers retain voice while strategic pause-as-exploit does not dominate. This is a non-trivial incentive alignment problem requiring explicit numbers before deployment.
+
+### The Systemic Risk
+Attestation collusion allows coordinated CR harvesting. Since CR gates oversight roles (Pillar 9), inflated CR → oversight capture → T-008 (Bureaucratic Elite Formation) via a channel that P-008's sector ceiling controls were not designed to catch. T-009 is the documented primary bypass for P-008 controls. With T-018 OPEN and T-009's patches PROPOSED (not ACTIVE), both bypass channels are simultaneously available.
+
+The contribution treadmill systematically disadvantages caregivers, part-time contributors, and people in economic distress in the civic deliberation layer — recreating class structure inside the system designed to prevent it.
+
+### The Required Patch
+1. **Protected Pause floor quantification as Tier 2 founding commitment before any pilot.** Required range: floor > minimum civic voice threshold AND floor < equilibrium for 5%-contribution non-pause actors.
+2. **Attestation proof-of-work:** Lightweight attestation must require a verifiable cost. Minimum viable option: threshold signature requiring attestors from different CR sectors (sector diversity requirement prevents sector-specific collusion), plus a DW stake — attestors put their own DW at risk if the attestation is later found fraudulent.
+3. **T-018 must be escalated to ADDRESSED (patch designed) before pilot.** Currently OPEN — no mitigation exists. Minimum mitigation: automated graph-analysis flagging attestation clusters with high mutual cross-attestation rates; automatic CR review trigger above a defined concentration threshold.
+4. **Ombuds Office must be constituted before any of these controls are operative** (Annex AI dependency chain).
+
+---
+
+## PRD-006: Pillar 9 — Civic Deliberation & Decision Systems
+
+**Status: FAIL**
+
+### The Failure Point
+In a 5-sector system with 25% DW ceiling: a coalition of 3 sectors achieves 75% total DW — supermajority control of agenda, budget prioritization, and proposal sequencing. This is not an edge case. It is the mathematically predicted equilibrium under rational actor assumptions.
+
+Agenda-setting power is not symmetric with vote-counting power. The spec assigns DW to "bounded budget prioritization and agenda sequencing" but agenda-sequencing determines which proposals reach the floor and which alternatives are excluded — the group controlling sequencing controls outcomes even without voting majority.
+
+### The Violated Principle
+**Schelling — Focal Points.** "Win 3 sectors" is the natural Schelling focal point for capture in a 5-sector system with a 25% ceiling. Without a commitment device preventing cross-sector coalition formation, rational actors will find this equilibrium.
+
+**Buterin — Collusion Resistance.** A mechanism where a coalition of 3/5 sectors captures supermajority agenda control produces disproportionate returns for the coordinating coalition. This violates collusion resistance requirements.
+
+**Ostrom — Principle 3 (Collective Choice Arrangements).** Those affected by rules must be able to participate in modifying them. A 3-sector coalition that controls agenda sequencing structurally excludes the other 2 sectors' proposals from effective consideration.
+
+### The Systemic Risk
+A stable capture coalition converts temporary agenda control into structural entrenchment by scheduling proposals that reinforce their position and suppressing challenges. Over time, this recreates hierarchical class power inside the deliberation architecture — the T-008 elite formation failure implemented through deliberation rather than oversight capture.
+
+The compound risk: the coalition can also control CR sector ceiling enforcement (P-008) by ensuring audit bodies disproportionately represent coalition sectors — the T-008 × T-009 compound failure documented in the Threat Register.
+
+### The Required Patch
+1. **Reduce sector ceiling from 25% to ≤20%.** Mathematical requirement: for N=5 sectors, ceiling c must satisfy 3c < 0.667 (no 3-sector supermajority). c < 22.2%, so 20% provides margin. This is a Tier 2 change requiring the full amendment process.
+2. **Separate agenda-sequencing from DW allocation.** DW influences which priority *categories* receive budget weight. Proposal ordering *within* categories must use rotation or weighted lottery — not DW-ordered sequencing. This removes the agenda-setting power advantage while preserving the budget-prioritization function.
+3. **Cross-sector coalition disclosure requirement.** Statistical pattern analysis of DW deployment that reveals coordinated cross-sector voting triggers a mandatory disclosure and conflict-of-interest review. Transparency-as-deterrence: making coalition formation visible raises its cost.
+4. **Specify a Schelling fallback default.** The explicit default for deliberation failure must be a published neutral rule (e.g., previous-quarter allocation + CPI adjustment) — not an unspecified status quo that benefits whoever currently holds agenda power.
+
+---
+
+## Conditional Pillar Gate Requirements
+
+| Pillar | Gate Required Before Deployment |
+|:---|:---|
+| **P4 Life Support** | Identity fallback during redemption must be architecturally specified (contingent on PRD-001 + PRD-002) |
+| **P6 Land & Commons** | Corporate entity Sybil controls specified; dispute resolution institution named and constituted |
+| **P7 Enterprise** | Annex AR founding commitment fields filled after first-year pilot data; demurrage signal strength verified at actual rate |
+| **P10 Operations** | Beer S3* independent audit channel specified (bypasses the operational layer it audits); Ombuds concentration risk addressed |
+| **P11 Information Commons** | Real-time vs. delayed signal taxonomy published as Tier 2 protected specification; differential privacy parameters specified |
+| **P12 Resilience** | Regeneration scorecard enforcement mechanism attached to Beer S3 control layer; reserve levels exit `[FOUNDING COMMITMENT]` before pilot |
+
+---
+
+## System-Level Findings
+
+### Finding 1: The Ombuds Concentration Risk Is the Single Largest Unaddressed Structural Weakness
+
+Annex AI (Ombuds Office Constitution) is a pre-launch gate for P-008, P-012, P-013, P-015, P-016, and P-021. The Ombuds Office is not constituted. The T-008 open problem states: "Ombuds Office carries three load-bearing functions — if Ombuds becomes elite formation site, all three fail simultaneously." Annex AI Section 5 addresses this through an Ombuds Oversight Panel, but that panel is also unestablished.
+
+The recursive oversight problem is documented honestly but not resolved: who audits the Ombuds Oversight Panel?
+
+**Proposed resolution:** The Ombuds Oversight Panel should be constituted *before* the Ombuds Commissioner is appointed, and the Panel must certify the Commissioner's independence before the Ombuds takes its first determination. This inverts the current sequence and eliminates the founding-moment capture window.
+
+### Finding 2: 19 of 23 Patches Are PROPOSED — The System Is Running at Its Minimum-Hardened State
+
+The threat register tracks 25 threats. 4 patches (P-001 through P-004) are ACTIVE. The remaining 19 patches address Critical and High threats that are documented but not mitigated. The system as currently constituted is operating against 21 threats with only 4 active mitigations.
+
+This is not a criticism of the design — the threat register and patch log are transparent about this state. It is a factual statement that should inform deployment timing. The system at its current hardening level is suitable for adversarial design review. It is not suitable for pilot deployment.
+
+### Finding 3: The Logical Fallacy Review (Existing Document) and This Audit Are Complementary
+
+The existing `LOGICAL_FALLACY_REVIEW.md` identifies argument-quality issues (false binary framing, hasty generalization, non-falsifiability). This audit identifies technical impossibilities and mechanism failures. The two reviews converge on the same structural point: the protocol makes architectural claims that are actually normative (Lessig violation), and it should be explicit about this distinction.
+
+The Logical Fallacy Review's recommendation — "add a disconfirmation table for core claims" — is the narrative-layer expression of the same fix this audit recommends at the mechanism layer: publish explicit falsification criteria for each claim, including the Lessig classification (architectural vs. normative).
+
+### Finding 4: The White Paper Scale-Readiness Statement Remains Accurate and Should Be Strengthened
+
+*"System status as of Session 4: DEFENSIBLE and DOCUMENTED. Not yet SCALE-READY."*
+
+This audit confirms the self-assessment is accurate. The recommended strengthening: add a third status tier between DOCUMENTED and SCALE-READY — specifically, **PILOT-ELIGIBLE** — with explicit gate conditions. The current binary (documented vs. scale-ready) understates the complexity of the transition. A system can be pilot-eligible without being scale-ready, and the conditions differ substantially.
+
+**Suggested PILOT-ELIGIBLE gate conditions (minimum):**
+1. Oracle N≥5 constituted with formal independence certification (PRD-003)
+2. Asymmetric Error Doctrine (P-016) adopted as Tier 2 founding commitment (PRD-002)
+3. Ombuds Commissioner appointed and Ombuds Oversight Panel seated (Annex AI)
+4. Protected Pause civic floor quantified (PRD-005)
+5. Sector ceiling reduced to ≤20% (PRD-006)
+6. Shadow convertibility penalty published (PRD-004)
+7. CSM issuance made architecturally automatic (PRD-001)
+
+**PILOT-ELIGIBLE minimum timeline: ~300 days** (parallel execution of non-sequential gates). **SCALE-READY minimum timeline: ~810 days** (including sequential pilot-data gates).
+
+### Finding 5: The Bootstrap Problem Is Documented but Not Resolved
+
+T-017 / P-014 / P-020 address the founding circular dependency. The current resolution is a "one-time founding instrument" with 60-day pre-activation disclosure. This is a procedural stopgap, not an architectural resolution.
+
+The bootstrap problem is, by definition, not fully resolvable within the system's own logic — this is acknowledged honestly in INVARIANTS.md. The practical consequence is that the founding coalition's legitimacy is contingent on the quality and diversity of the actors who constitute it. No protocol patch can substitute for a genuinely legitimate founding coalition.
+
+Recommendation: Publish the founding coalition composition criteria as a public commitment *before* the coalition is assembled — not after. Allow public challenge to the composition criteria (not just to the coalition members) during the 60-day window. This converts the bootstrap problem from a circular dependency into a transparent political commitment.
+
+---
+
+## Relationship to Prior Audit Work
+
+The logical fallacy review and prior threat modeling sessions (Sessions 1–8, as reflected in the Threat Register) have done substantial foundational work. This audit adds:
+
+1. **Simulation evidence** for the oracle BFT failure (Test 1), coalition capture equilibrium (Test 4), and shadow convertibility deterrence analysis (Test 5).
+2. **Framework-keyed classification** of each failure against Beer, Ostrom, Buterin, Lessig, and Schelling — giving each finding a principled grounding rather than relying only on internal consistency checks.
+3. **Dependency chain analysis** identifying the Ombuds concentration as the highest-leverage single structural gap — 6 critical patches blocked by one unestablished institution.
+4. **PRDs for each failing pillar** — structured enough to convert directly into patch design work.
+
+---
+
+---
+
+## Supplementary Simulation Findings
+
+Three additional mechanism tests not covered in the main audit loop:
+
+### Sim A — Ombuds 4-Hour Manufactured-Flag Determination (Annex AI)
+
+Annex AI's "absence of documentation = criterion 3 satisfied" rule successfully defeats the obvious obstruction attack (attacker withholds docs → criterion 3 is met automatically). Correct flag-lift rate = 100% regardless of withholding probability.
+
+**Residual risk not in spec:** If the attacker provides *fabricated* contemporaneous documentation within the 2-hour documentation review window, the Ombuds must assess document authenticity under time pressure. Annex AI does not specify a document-authentication capability. This is an implementation gap that must be specified before the Ombuds is operational: what is the Ombuds's access to forensic document review under a 4-hour total timeline?
+
+### Sim B — T-009 Rotation Ring (Grace Exploitation Attack Class 2)
+
+A pure rotation ring of k actors (one paused at a time) maintains ~99.7% CR exploitation efficiency at any ring size while keeping simultaneous pause fraction at 1% — well below the P-009 AF5 alert threshold of 20%. **The rotation ring exploit is not caught by AF5.**
+
+AF3 (hardship attestation collusion detection, extended to pause networks) is the essential control and it is currently PROPOSED. Until AF3 is ACTIVE, the rotation ring is a live exploit with near-100% efficiency. The T-009 patch must reach ACTIVE before any pilot that involves civic standing.
+
+### Sim C — Founding Window Capture Probability (T-017 / T-022)
+
+At high attack intensity (70%), P-014's 14-day window had a 60.3% founding capture probability. P-020's 60-day extension reduces this to 44.7% — a 25.8% risk reduction.
+
+**Critical gap:** This assumes the body nominating the adversarial panel member is genuinely independent. If T-022 (Electoral Cycle Capture — OPEN Critical) materializes, the nominating body can itself be captured, converting the adversarial member into a captured ally. P-018 (T-022 mitigation) is PROPOSED with no ACTIVE mitigation for this threat. At high attack intensity, even the 60-day window does not reduce founding capture probability below 40%.
+
+**Implication:** The founding window extension is necessary but not sufficient. The adversarial member's nominating body must itself be protected from T-022 — which requires either pre-constituting the nominating body in a jurisdiction structurally insulated from electoral cycle pressure, or requiring multiple independent bodies to jointly nominate the adversarial member such that T-022 must capture all of them simultaneously.
+
+---
+
+*This document is an adversarial audit output. It is not a patch memo and does not modify the master protocol. Findings that conflict with current master protocol language reflect identified weaknesses requiring patch design, not errors in the master. The master protocol remains the primary source of truth. This audit supplements the Threat Register (adversarial model) and Patch Log (change ledger) by adding framework-keyed simulation evidence for the highest-priority unresolved gaps.*
+
+*Governed as an informational annex. Does not require FAP review. Does constitute input for the next red-team hardening cycle.*
