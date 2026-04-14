@@ -408,3 +408,167 @@ At high attack intensity (70%), P-014's 14-day window had a 60.3% founding captu
 *This document is an adversarial audit output. It is not a patch memo and does not modify the master protocol. Findings that conflict with current master protocol language reflect identified weaknesses requiring patch design, not errors in the master. The master protocol remains the primary source of truth. This audit supplements the Threat Register (adversarial model) and Patch Log (change ledger) by adding framework-keyed simulation evidence for the highest-priority unresolved gaps.*
 
 *Governed as an informational annex. Does not require FAP review. Does constitute input for the next red-team hardening cycle.*
+
+---
+
+---
+
+## Deep Audit — Phase 2: Annex-Level Findings
+
+*Phase 2 extends the initial audit by examining Annex AJ (above-ledger bypass patterns), Annex AK (identity AED framework), Annex AL (oracle methodology-class definitions), and the Annual Compound Simulation (Sessions 1–8 including Scenario A and B stress tests). Four additional simulation findings (Sim D through Sim H) are produced; four additional structural findings are documented below.*
+
+---
+
+### Sim D — Oracle Methodology-Class Coverage Under Minimum-Diversity Rule
+
+**Setup:** Annex AL (pre-launch gate for P-017) defines methodology-class diversity. P-017's current language requires "at least one node from a fundamentally different methodology class" — effective minimum: **2 classes**. Test: can SQ activation quorum be met entirely from the dominant class?
+
+| N | SQ quorum | Dominant class max (2-class floor) | Quorum achievable from 1 class? |
+|:---:|:---:|:---:|:---:|
+| **3** | **2** | **2** | **YES — FAIL** |
+| 4 | 3 | 3 | YES — FAIL |
+| 5 | 4 | 4 | YES — FAIL |
+| 7 | 5 | 6 | YES — FAIL |
+| 9 | 6 | 8 | YES — FAIL |
+
+**Finding: The 2-class minimum fails at every N.** With one minority node and N-1 dominant-class nodes, the dominant class always equals or exceeds the SQ activation quorum.
+
+**Fix: Require 3-class minimum.** With 3 classes and N=5, maximum dominant class = N-2 = 3 < SQ quorum = 4. Minority class exclusion from quorum becomes architecturally impossible. This requires raising both the oracle floor (PRD-003: N≥5) and the methodology floor (3 classes vs. 2). These two fixes are interdependent — P-017 must be updated in parallel with PRD-003's N_min raise.
+
+**Compound effect:** PRD-003's BFT failure and this class-diversity failure operate simultaneously. At N=3, a 2-node colluding coalition both (a) forges a valid BFT quorum and (b) is permitted to be same-methodology-class. Both failure modes converge on the same attack: two nodes, same funding source, same training data, same error structure, constitute a valid oracle consensus with zero structural diversity protection.
+
+---
+
+### Sim E — Exclusion Monitoring vs. Minimum-Data Principle (Contradiction)
+
+**Setup:** Annex AK Section 3 requires monitoring exclusion rates at enrollment attempt points — specifically, tracking individuals who attempted but failed to enroll. Pillar 2 requires "minimum data collection" and "no record of non-enrolled persons without consent."
+
+| Monitoring approach | AK compliant | Pillar 2 compliant |
+|:---|:---:|:---:|
+| Track individual failed enrollment attempts | YES | **NO** |
+| Track only successful enrollments | NO | YES |
+| Aggregate count only (no individual links) | NO | YES |
+| Federated advocacy org self-reporting | YES | YES |
+| Population census cross-reference | YES | **NO** |
+
+**Single AK+P2-compatible path: federated advocacy org self-reporting.**
+
+**Critical flaw in the compatible path:** Self-reported exclusion rates from advocacy organisations are unverifiable. AK Section 3 requires "review triggers when exclusion rate exceeds [FOUNDING COMMITMENT]" — but an unverifiable self-report cannot operationally trigger this review mechanism. The trigger requires a trusted exclusion measurement, not a contested advocacy claim.
+
+**Structural contradiction:** AK exclusion monitoring requires surveillance of failed enrollment attempts (data collection P2 prohibits). The only P2-compatible measurement path is unverifiable and cannot enforce AK's own targets. This is not a gap resolvable by founding commitment parameter selection — it requires architectural reconciliation between two incompatible design commitments.
+
+**Required resolution:** Either (a) define a Privacy-Preserving Enrollment Monitoring protocol using cryptographic commitments (ZK proofs of attempt-without-identity) that satisfies both AK and P2 simultaneously, or (b) formally acknowledge that AK exclusion monitoring operates in a P2-exception carve-out with a narrowly defined data retention window and mandatory deletion schedule. Neither option is currently specified.
+
+---
+
+### Sim F — Civic Legibility Gap (Annual Compound Simulation Scenario B)
+
+**Setup:** Scenario B (Year 4 pilot compound stress test) revealed a 61-percentage-point gap in agenda comprehension between the top and bottom DW quintiles. Comprehension probability is correlated with DW balance (more engagement = more understanding = higher DW). DW voting weight is also correlated with comprehension. Compounding effect:
+
+| Quintile | Comprehension | DW Share | Effective agenda influence |
+|:---|:---:|:---:|:---:|
+| Bottom 20% (Q1) | 23% | 6% | 0.014 |
+| Q2 | 41% | 12% | 0.049 |
+| Q3 | 58% | 18% | 0.104 |
+| Q4 | 72% | 24% | 0.173 |
+| Top 20% (Q5) | 84% | 40% | 0.336 |
+
+**Effective agenda influence ratio (Q5/Q1): 24.3×.** The highest-DW actors simultaneously understand the agenda better and deploy more weight — they exert twenty-four times the effective agenda influence of the lowest quintile.
+
+**The violated principle:** P-008 sets *sector* diversity ceilings for DW concentration. It does not set *legibility* floors. A population that participates without understanding is not exercising civic voice — it is noise that amplifies existing social influence. The 44% of DW voters reporting "not sure what they voted on" (Scenario B) represent DW weight captured by the actors who set the deliberation frame.
+
+**Missing specification:** No legibility standard exists in the current protocol. The Annual Compound Simulation flagged this explicitly: "a civic legibility review is recommended as a mandatory CRP step." That recommendation is not formalized as a patch or founding commitment.
+
+**Required patch:** Specify a Civic Legibility Standard (CLS) as a pre-activation gate for each deliberation cycle:
+1. Comprehension threshold: minimum percentage of DW-weighted participants must demonstrate issue comprehension before binding vote (threshold value: [FOUNDING COMMITMENT]).
+2. Legibility budget: mandatory plain-language summary of each proposal produced by a P2-compliant independent drafting process before the DW allocation window opens.
+3. Legibility monitoring: Pillar 11 dashboard tracks per-cycle comprehension rates; cycles falling below threshold trigger a mandatory re-deliberation period with targeted outreach to low-comprehension quintiles.
+
+---
+
+### Sim G — COMMITTED State Demurrage Test Coverage Gap
+
+**Setup:** P-023 (Contract-Commitment Architecture / Annex AR) states that EC committed to escrow continues to accumulate demurrage — "discipline is the point." Test suite analysis of `simulations/test_demurrage.py` reveals that the COMMITTED state does not modify `days_idle` (confirmed by `test_demurrage_other_states_do_not_affect_days_idle`). A wallet entering escrow with `days_idle = 0` never reaches the idle threshold regardless of escrow duration.
+
+| Days in escrow | Test behavior (balance) | P-023 claim behavior (balance) | Divergence |
+|:---:|:---:|:---:|:---:|
+| 30 | 100.00 | 99.00 | 0.99 |
+| 40 | 100.00 | 89.58 | 10.42 |
+| 60 | **100.00** | **73.34** | **26.66** |
+| 90 | 100.00 | 54.34 | 45.66 |
+
+**At 60-day escrow: test shows 0% decay; P-023 claims ~26% decay.**
+
+**The failure is a specification/implementation gap, not a test bug.** The test correctly documents the current demurrage implementation's behavior. The prose of P-023 makes a design claim the implementation does not support. Either:
+- (a) The demurrage function must be updated to increment `days_idle` in COMMITTED state — and the test must be updated to verify this — or
+- (b) P-023's prose must be corrected to accurately describe actual behavior: escrow is a demurrage-exempt state.
+
+Resolution choice is a design decision with significant incentive consequences. If COMMITTED is demurrage-exempt, actors strategically commit EC before the idle threshold to avoid decay — converting escrow into a demurrage-avoidance mechanism. If COMMITTED accrues demurrage, long-term contracting becomes high-risk for low-liquidity actors. Neither consequence is currently analyzed in P-023 or Annex AR.
+
+---
+
+### Sim H — Oracle Consensus Test Coverage Gap
+
+**Setup:** `simulations/test_model_outline.py` tests `OracleNode.read_capacity()` at the single-node level only. The consensus mechanism (`OracleSubsystem.get_consensus_capacity()`) has no test coverage.
+
+**Reproduction of missing test cases:**
+
+```
+Attack: 2 colluding nodes report 40% inflated capacity
+
+N=3 (quorum=2): consensus = 140.0  ← 40% inflation accepted as valid
+N=5 (quorum=3): consensus =  99.0  ← honest majority prevails
+Conservative hold (1 of 3 nodes active): consensus = None  ← correct behavior
+```
+
+**Missing tests (all absent from test_model_outline.py):**
+1. Multi-node consensus under normal operation (median of valid readings)
+2. 2-of-3 colluding node fabrication → inflated consensus accepted as valid
+3. N=5 honest-majority protection (colluding pair defeated)
+4. Conservative hold path (quorum not met → None returned)
+5. Methodology-class composition of quorum nodes
+
+**The test suite currently provides coverage only at the component level (single node reads), not at the system level (consensus behavior).** PRD-003's oracle BFT finding is not testable against the current test suite — there is no test that would fail even if the BFT vulnerability is present.
+
+---
+
+## Phase 2 System-Level Findings
+
+### Finding 6: AK and P2 Are in Structural Contradiction — Neither Can Be Fully Satisfied by Parameter Selection
+
+The Asymmetric Error Doctrine (Annex AK) requires measurement of failed enrollment attempts. Pillar 2's minimum-data principle prohibits collecting records of non-enrolled persons. These are not competing values resolvable by weighting — they make mutually exclusive data-collection demands. The only P2-compatible measurement path (advocacy self-reporting) is unverifiable and cannot operationally enforce AK's own targets.
+
+This finding elevates P-016 (Annex AK) from a "PROPOSED Tier 2 founding commitment" to a **pre-pilot architectural design problem**. The founding coalition cannot simply fill in numeric targets — it must first resolve the data-collection architecture contradiction before the targets are meaningful.
+
+### Finding 7: The Oracle Methodology-Class Floor Compounds the BFT Floor
+
+PRD-003 identifies that N=3 fails BFT (requires N≥5). Sim D now adds: P-017's 2-class minimum fails to guarantee class diversity in the SQ activation quorum at any N. Both fixes are required simultaneously:
+- **PRD-003 fix:** Raise N_min from 3 to 5
+- **New P-017 fix:** Raise class floor from 2 to 3
+
+With N=5 and 3-class floor: dominant class max = 3 < SQ quorum = 4. BFT is satisfied and class diversity in quorum is guaranteed simultaneously. The two requirements are compatible and mutually reinforcing at N=5.
+
+**Gate order matters:** P-017 is a pre-launch gate for P-003's SQ activation mechanism. P-017 must be updated with the 3-class floor before P-003 can be declared operative. Currently both are PROPOSED.
+
+### Finding 8: The Test Suite Cannot Detect Its Two Most Critical Mechanism Failures
+
+Two of the three highest-priority protocol failures identified in this audit are invisible to the current test suite:
+
+1. **Oracle BFT failure at N=3** — no consensus test exists; only single-node reads are tested (Sim H)
+2. **COMMITTED state demurrage behavior** — the test implements behavior contradicting P-023's design claim (Sim G)
+
+A test suite that cannot fail when the mechanism fails is not a safety net — it is documentation of the happy path. Before any pilot, the test suite requires two additions:
+- Multi-node oracle consensus tests covering colluding nodes, quorum failure, and conservative hold
+- COMMITTED state demurrage test with an explicit assertion on whether `days_idle` increments during escrow
+
+These are implementation gaps, not design changes. But because they are untested, the current codebase may implement either behavior — and the audit cannot determine which without running the simulation against a live system.
+
+### Finding 9: The Civic Legibility Gap Is an Unspecified Pillar 8/9 Interaction
+
+The 61-point comprehension gap between DW quintiles (Sim F, 24.3× effective influence ratio) arises from the interaction of two system features that each appear reasonable in isolation:
+- DW rewards contribution (Pillar 8) — appropriate design
+- DW allocates agenda weight (Pillar 9) — appropriate design
+
+The interaction produces a third effect neither pillar specifies: those who contribute most *also* understand the agenda most *also* have the most agenda weight. Comprehension correlates with DW because the activities that generate DW also generate issue familiarity. This is a legitimate-participation advantage being converted into agenda capture through information asymmetry — not through deliberate design, but through an unspecified interaction.
+
+No pillar currently specifies a legibility standard. The Annual Compound Simulation identifies this as a "recommended CRP step" without formalizing it. Until a Civic Legibility Standard is specified with a minimum comprehension threshold, a legibility budget requirement, and Pillar 11 monitoring metrics, the DW system is partially functioning as an information-asymmetry amplifier rather than a civic voice equalizer.
