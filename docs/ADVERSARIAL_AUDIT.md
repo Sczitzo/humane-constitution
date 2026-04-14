@@ -631,20 +631,23 @@ Gates 1 through 3 are prerequisite for any others. Gates 4 through 6 can run in 
 
 **Setup:** P-023 (Contract-Commitment Architecture / Annex AR) states that EC committed to escrow continues to accumulate demurrage — "discipline is the point." Test suite analysis of `simulations/test_demurrage.py` reveals that the COMMITTED state does not modify `days_idle` (confirmed by `test_demurrage_other_states_do_not_affect_days_idle`). A wallet entering escrow with `days_idle = 0` never reaches the idle threshold regardless of escrow duration.
 
-| Days in escrow | Test behavior (balance) | P-023 claim behavior (balance) | Divergence |
-|:---:|:---:|:---:|:---:|
-| 30 | 100.00 | 99.00 | 0.99 |
-| 40 | 100.00 | 89.58 | 10.42 |
-| 60 | **100.00** | **73.34** | **26.66** |
-| 90 | 100.00 | 54.34 | 45.66 |
+**Rate correction (per codex review):** `test_demurrage.py` line 48 explicitly confirms the operative daily rate: `r = CONFIG["demurrage_rate_monthly"] / 30 = 0.01 / 30 ≈ 0.000333`. An earlier version of this table incorrectly used `r = 0.01` per day (the monthly rate applied as if daily), overstating divergence by 26×. The corrected table:
 
-**At 60-day escrow: test shows 0% decay; P-023 claims ~26% decay.**
+| Days in escrow | Test behavior (COMMITTED) | P-023 claim behavior (IDLE equiv.) | Divergence |
+|:---:|:---:|:---:|:---:|
+| 30 | 100.0000 | 99.9667 | 0.0333 |
+| 60 | **100.0000** | **98.9720** | **1.0280** |
+| 90 | 100.0000 | 97.9872 | 2.0128 |
+| 180 | 100.0000 | 95.0912 | 4.9088 |
+| 365 | 100.0000 | 89.4044 | 10.5956 |
+
+**At 60-day escrow: divergence is ~1.03 EC on a 100 EC balance (~1.0%), not ~26.7% as previously stated.** At 1M EC escrow for 60 days, the underapplied demurrage is ~10,280 EC — material at scale, but not the 1st-order crisis suggested by the erroneous rate.
 
 **The failure is a specification/implementation gap, not a test bug.** The test correctly documents the current demurrage implementation's behavior. The prose of P-023 makes a design claim the implementation does not support. Either:
 - (a) The demurrage function must be updated to increment `days_idle` in COMMITTED state — and the test must be updated to verify this — or
 - (b) P-023's prose must be corrected to accurately describe actual behavior: escrow is a demurrage-exempt state.
 
-Resolution choice is a design decision with significant incentive consequences. If COMMITTED is demurrage-exempt, actors strategically commit EC before the idle threshold to avoid decay — converting escrow into a demurrage-avoidance mechanism. If COMMITTED accrues demurrage, long-term contracting becomes high-risk for low-liquidity actors. Neither consequence is currently analyzed in P-023 or Annex AR.
+Resolution choice is a design decision with real incentive consequences. If COMMITTED is demurrage-exempt, actors strategically commit EC before the idle threshold to avoid decay — converting escrow into a demurrage-avoidance mechanism. If COMMITTED accrues demurrage, long-term contracting becomes higher-cost for low-liquidity actors. Neither consequence is currently analyzed in P-023 or Annex AR. The question is unresolved, not the arithmetic.
 
 ---
 
@@ -702,7 +705,7 @@ A test suite that cannot fail when the mechanism fails is not a safety net — i
 - Multi-node oracle consensus tests covering colluding nodes, quorum failure, and conservative hold
 - COMMITTED state demurrage test with an explicit assertion on whether `days_idle` increments during escrow
 
-These are implementation gaps, not design changes. But because they are untested, the current codebase may implement either behavior — and the audit cannot determine which without running the simulation against a live system.
+These are implementation gaps, not design changes. **Magnitude note (Sim G correction):** At the correct daily rate (`demurrage_rate_monthly / 30 ≈ 0.000333`), the 60-day escrow divergence between test behavior and P-023 claim is ~1.03 EC per 100 EC — not ~26.7 EC as an earlier draft of this table showed. The earlier draft incorrectly applied the monthly rate as a daily rate (26× overstatement). The structural contradiction is unchanged: the test explicitly shows `days_idle` is frozen in COMMITTED state, which means no demurrage accrues regardless of duration. At 1M EC held in escrow for 60 days, the underapplied demurrage is ~10,280 EC. The design question — whether escrow is demurrage-exempt or not — remains unresolved and unspecified in P-023 and Annex AR.
 
 ### Finding 9: The Civic Legibility Gap Is an Unspecified Pillar 8/9 Interaction
 
