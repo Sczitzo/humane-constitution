@@ -127,10 +127,11 @@ class OracleNode:
 
     def __init__(self, node_id: int, methodology_class: str,
                  accuracy: float, failure_rate: float):
-        assert methodology_class in self.METHODOLOGY_CLASSES, (
-            f"Invalid methodology class: {methodology_class}. "
-            "Annex AL requires diversity across all three classes."
-        )
+        if methodology_class not in self.METHODOLOGY_CLASSES:
+            raise ValueError(
+                f"Invalid methodology class: {methodology_class}. "
+                "Annex AL requires diversity across all three classes."
+            )
         self.node_id = node_id
         self.methodology_class = methodology_class
         self.accuracy = accuracy
