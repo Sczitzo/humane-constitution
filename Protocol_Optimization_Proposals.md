@@ -6,7 +6,7 @@
 **Scope:** Derived from ingestion of `White_Paper.md`, `Master_Protocol.md`, `Threat_Register.md`, `Patch_Log.md`, `docs/ADVERSARIAL_AUDIT.md`, and all files in `docs/annexes/`. This document is advisory — **no authoritative file has been modified**.
 **Existing audit acknowledgment:** Phases 1–3 of `docs/ADVERSARIAL_AUDIT.md` (6 PRDs, 7 sims, 14 findings) are not duplicated here. This document addresses holes the existing audit has *confirmed but not closed*, plus pathologies the existing audit has *not yet named*.
 
-**Continuity note:** This proposal memo preserves the legacy pillar shorthand used when it was authored. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**.
+**Continuity note:** This proposal memo preserves some legacy pillar shorthand in prose where chronology matters. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**; file-path scaffolding below follows that current naming where practical.
 
 ---
 
@@ -124,18 +124,22 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 - **[SCAFFOLDING ARCHITECTURE]**
   ```
-  /pillars/
-    P0_subsidiarity/
-      consent.md
-      nested_authority.md
+  /founding/
+    order/
+      README.md
+      subsidiarity_rule.md
+      consent_protocol.md
       exit_protocol.md
-    P1_rights_rule_of_law/
-    P2_personhood/
-    P3_physics_reserves/
-    P4_survival/
-    P5_markets_commons/
-    P6_civic_layer/
-    P7_transparency_scanning/
+      reentry_protocol.md
+      jurisdictional_scales.md
+  /articles/
+    article_i_rights_rule_of_law/
+    article_ii_personhood_identity_continuity/
+    article_iii_physics_reserves/
+    article_iv_survival/
+    article_v_markets_commons_public_finance/
+    article_vi_civic_layer_deliberation/
+    article_vii_transparency_environmental_scanning/
   /legacy/
     pillar_mapping_v12_to_v7.md    # preserves traceability
   ```
@@ -170,7 +174,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 - **[SCAFFOLDING ARCHITECTURE]**
   ```
-  /pillars/P3_physics_reserves/
+  /articles/article_iii_physics_reserves/
     oracle/
       n_floor.md                    # cryptographic pre-commitment to N_min = 5
       methodology_class_registry.md
@@ -272,7 +276,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 - **[SCAFFOLDING ARCHITECTURE]**
   ```
-  /pillars/P0_subsidiarity/
+  /founding/order/
     subsidiarity_rule.md            # smallest-unit-first decision rule
     consent_protocol.md             # founding consent event requirements
     exit_protocol.md                # two-year graceful unwind
@@ -309,7 +313,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 - **[SCAFFOLDING ARCHITECTURE]**
   ```
-  /pillars/P3_physics_reserves/
+  /articles/article_iii_physics_reserves/
     fallback/
       quorum_loss_rule.md             # max-conservative default
       reb_narrowed_authority.md
@@ -418,7 +422,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 - **[SCAFFOLDING ARCHITECTURE]**
   ```
-  /pillars/P6_civic_layer/
+  /articles/article_vi_civic_layer_deliberation/
     attestation/
       stake_at_risk.md
       slashing_rule.md

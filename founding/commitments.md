@@ -41,9 +41,9 @@
 | **FC-100** | `ORACLE_QUORUM_LOSS_RESTORATION_WINDOW` | 1 | 14 | days of verification after quorum restoration | Proposal 6 crisis fallback — prevents flash-recovery from being exploited as normalization pathway | Pillar 3 fallback files |
 | **FC-110** | `TIER1_AMENDMENT_SIGNATURES_MIN` | 1 | 7 of 9 | cryptographic signatures from dispersed key-holders | M-of-N threshold for Tier 1 amendment per Proposal 1; 9 geographically distributed holders; 7 required; allows 2 captured/lost without breakage | `/architecture/amendment_protocol.md` |
 | **FC-111** | `TIER1_AMENDMENT_TIMELOCK_DAYS` | 1 | 180 | days | Minimum wall-clock delay between proposal and effect; survives political cycles | `/architecture/amendment_protocol.md` |
-| **FC-120** | `P0_EXIT_SUPERMAJORITY_THRESHOLD` | 1 | 2/3 | fraction of resident personhood | Required to initiate jurisdictional exit under P0 (Proposal 5); prevents transient-pluralities from triggering structural discontinuity | `/pillars/P0_subsidiarity/exit_protocol.md` |
-| **FC-121** | `P0_EXIT_UNWIND_DAYS` | 1 | 730 | days (2 years) | Graceful-exit unwind window; LC continuity preserved for individuals during unwind | `/pillars/P0_subsidiarity/exit_protocol.md` |
-| **FC-122** | `P0_SUBSIDIARITY_SCALES` | 1 | household / neighborhood (≤500) / locality (≤5,000) / region (≤500,000) / federation | personhood counts | Scale-tier definitions for subsidiarity routing | `/pillars/P0_subsidiarity/jurisdictional_scales.md` |
+| **FC-120** | `P0_EXIT_SUPERMAJORITY_THRESHOLD` | 1 | 2/3 | fraction of resident personhood | Required to initiate jurisdictional exit under P0 (Proposal 5); prevents transient-pluralities from triggering structural discontinuity | `/founding/order/exit_protocol.md` |
+| **FC-121** | `P0_EXIT_UNWIND_DAYS` | 1 | 730 | days (2 years) | Graceful-exit unwind window; LC continuity preserved for individuals during unwind | `/founding/order/exit_protocol.md` |
+| **FC-122** | `P0_SUBSIDIARITY_SCALES` | 1 | household / neighborhood (≤500) / locality (≤5,000) / region (≤500,000) / federation | personhood counts | Scale-tier definitions for subsidiarity routing | `/founding/order/jurisdictional_scales.md` |
 
 ---
 

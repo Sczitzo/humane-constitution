@@ -128,7 +128,7 @@ flowchart TD
 | [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Demurrage function, issuance constraints, oracle consensus rules, parameter table. |
 | [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
 | [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture; preserves legacy pillar numbering where noted and maps through the `Master_Protocol.md` §III crosswalk. |
-| [`docs/P014_Preactivation_Disclosure.md`](./docs/P014_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
+| [`docs/Founding_Preactivation_Disclosure.md`](./docs/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
 | [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
