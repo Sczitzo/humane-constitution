@@ -1,6 +1,8 @@
 # Annual Compound Simulation
 
-*A structured walkthrough of how the protocol behaves over a full year of operation — covering delivery cycles, scarcity events, governance processes, patch progression, and compounding interactions between pillars.*
+*A structured walkthrough of how the protocol behaves over a full year of operation — covering delivery cycles, scarcity events, governance processes, patch progression, and compounding interactions across the constitutional architecture.*
+
+**Continuity note:** This simulation preserves legacy pillar terminology where the scenarios were originally authored. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**.
 
 This is not a prediction. It is a stress-test: running the system through a plausible operational year to expose timing conflicts, resource dependencies, and compound failure modes not visible in static design review.
 

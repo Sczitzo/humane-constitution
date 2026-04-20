@@ -4,6 +4,8 @@
 **Purpose:** Closes Proposal 4 of `Protocol_Optimization_Proposals.md`. Every `[FOUNDING COMMITMENT]` placeholder across Master Protocol, White Paper, Threat Register, Patch Log, and Annexes resolves to a value in this file.
 **Amendment:** Tier 1 commitments require H-3 refounding authority. Tier 2 commitments follow the ordinary amendment ladder with public redlines. Tier 3 commitments follow ordinary reasonableness review.
 
+**Naming note:** The live constitutional presentation uses **one Founding Order** and **Articles I-VII**. The "Affected docs" column may still use legacy pillar or `P0` shorthand for traceability.
+
 ---
 
 ## Commitment Table

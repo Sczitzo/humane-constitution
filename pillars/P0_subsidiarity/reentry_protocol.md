@@ -1,4 +1,4 @@
-# P0 — Re-Entry Protocol
+# Founding Order — Re-Entry Protocol
 
 **Status:** ACTIVE — Proposal 5 close-out, 2026-04-18
 **Authority:** Tier 1 (symmetric to exit; FC-120 / FC-122).

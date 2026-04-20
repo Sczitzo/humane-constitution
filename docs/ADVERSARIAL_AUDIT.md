@@ -1,10 +1,12 @@
-# Adversarial Protocol Audit — Twelve-Pillar Protocol
+# Adversarial Protocol Audit — The Humane Constitution
 
 **Date:** 2026-04-13  
 **Branch:** `claude/lucid-albattani`  
 **Scope:** Full architectural audit of all 12 pillars against Beer VSM, Ostrom commons principles, Buterin BFT/mechanism design, Lessig code-as-law, and Schelling focal point frameworks.  
 **Method:** Document ingestion → simulation → cross-reference → pass/fail logic gate  
 **Status:** NOT SCALE-READY (confirms White Paper self-assessment). 6 pillars FAIL. 6 CONDITIONAL. 0 unconditional PASS.
+
+**Continuity note:** This audit preserves the legacy twelve-pillar framing as-authored. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**; see `Master_Protocol.md` §III for the authoritative crosswalk.
 
 ---
 

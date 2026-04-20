@@ -1,4 +1,9 @@
-# The Twelve-Pillar Protocol
+# The Humane Constitution
+
+**Constitution for a Humane Civilization**  
+*A Charter of Human Dignity, Stewardship, and Non-Coercive Order*
+
+**Continuity note:** This project was previously released as *The Twelve-Pillar Protocol*. Legacy references remain in historical materials and crosswalk notes.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -8,8 +13,8 @@
 
 - [What this is](#what-this-is)
 - [The core separation](#the-core-separation)
-- [The seven pillars (on a subsidiarity foundation)](#the-seven-pillars-on-a-subsidiarity-foundation)
-- [Pillar authority flow](#pillar-authority-flow)
+- [The current architecture](#the-current-architecture)
+- [Architecture flow](#architecture-flow)
 - [Document set](#document-set)
 - [Technical specifications](#technical-specifications)
 - [Hardening history](#hardening-history)
@@ -22,7 +27,7 @@
 
 ## What this is
 
-The Twelve-Pillar Protocol is a constitutional systems design for a society in which **survival is unconditional**, **markets remain productive**, and **governance cannot be purchased**. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This protocol is an attempt to escape that failure mode by design.
+The Humane Constitution is a constitutional systems design for a society in which **survival is unconditional**, **markets remain productive**, and **governance cannot be purchased**. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.
 
 This is not a political manifesto. It is a systems engineering document — with threat modeling, adversarial red-teaming, patch logs, and version control. It has been stress-tested against bad actors, institutional capture, measurement failure, and its own internal contradictions.
 
@@ -41,91 +46,66 @@ The walls between these lanes are the system. Not the instruments themselves.
 
 EC is public money rather than privately created bank money. It is primarily digital, secured with cryptographic methods, and paired with physical cash or equivalent offline instruments for resilience and privacy.
 
-## The seven pillars (on a subsidiarity foundation)
+## The current architecture
 
-> *Proposal 2 close-out (2026-04-18): the operational architecture was restructured from twelve pillars into **Seven Pillars on a P0 subsidiarity foundation** (v13). The project name "Twelve-Pillar Protocol" is retained for continuity of external reference. The v12 → v13 crosswalk lives in [`Master_Protocol.md`](./Master_Protocol.md) §III.*
+The live constitutional presentation uses **one Founding Order** and **seven Articles of Constitutional Order**. The earlier `Seven Pillars + P0` shorthand survives only as legacy `v13` traceability in crosswalk tables and patch history.
 
-Each pillar has one job. The architecture is intentionally modular so no single office, ledger, or emergency process can silently absorb the others. **Pillar 0** reads through every operational pillar: decisions default to the smallest competent scale, and federation-scale action requires affirmative justification.
+- **Founding Order — Subsidiarity, Consent & Exit** — The constitutional foundation: smallest-competent scale by default, affirmative consent to join, and graceful exit without forfeiture.
+- **Article I — Rights & Rule of Law** — Tier 1 invariants, due process, non-coercion, and rule-bound execution.
+- **Article II — Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, and dependent protection without surveillance scoring.
+- **Article III — Physics & Reserves** — Polycentric measurement of real capacity plus the reserves that buffer shocks and measurement error.
+- **Article IV — Survival** — The Life Access Ledger as both constitutional survival instrument and actual delivery path.
+- **Article V — Markets, Commons & Public Finance** — EC, housing and land use-rights, enterprise, public banking rails, and commons revenue under one economic surface.
+- **Article VI — Civic Layer & Deliberation** — Civic instruments, contribution recognition, and bounded public prioritization.
+- **Article VII — Transparency & Environmental Scanning** — Public dashboards, independent audit visibility, and external-world scanning.
 
-0. **Subsidiarity, Consent & Exit (P0)** — Smallest-competent-scale default (household → neighborhood ≤500 → locality ≤5,000 → region ≤500,000 → federation); affirmative 2/3 consent to join; 2/3 exit supermajority with a 730-day graceful unwind preserving LC continuity; no exit tax, no forfeiture
-1. **Rights & Rule of Law** — Tier 1 invariants (dignity, due process, non-coercion, separation-of-concerns) and rule-bound execution of those rights under a published discretion taxonomy
-2. **Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, without surveillance
-3. **Physics & Reserves** — Polycentric measurement of what society can actually deliver, paired with strategic resilience reserves (food, water, energy, medicines) that buffer measurement error and supply shocks
-4. **Survival (LC Instrument + Delivery)** — The Life Access Ledger as instrument AND its delivery to people as actual access, under non-transferability and anti-coercion rules; the Constitutional Survival Minimum (Annex Y) is the floor
-5. **Markets, Commons & Public Finance** — EC as the single general-purpose currency; housing/land as use-rights; enterprise under anti-monopoly constraints; the Public Finance & Commons Revenue (PFCR) function funding public operations through non-extractive structural revenue rather than taxes on survival or ordinary labor
-6. **Civic Layer (DW/CR + Deliberation)** — DW and CR as non-monetary civic instruments; the contribution acts that mint them; the deliberation processes that consume them — one closed loop, with rotation, caps, and anti-capture weighting
-7. **Transparency & Environmental Scanning** — Real-time aggregate dashboards (the audit channel, genuinely independent of Pillar 1 control) plus Beer-VSM S4 external-world scanning for emerging risks that could destabilize measurement assumptions or the survival floor
+## Architecture flow
 
-## Pillar authority flow
-
-The diagram below shows how authority and enforcement relationships flow between the Seven Pillars on the P0 subsidiarity foundation. Arrows indicate dependency or oversight direction. The non-convertibility enforcement layer sits between all instrument lanes and is not controlled by any single pillar. P0 reads through every operational pillar: decisions default to the smallest competent scale.
+The diagram below shows how the current Founding Order and Articles I-VII relate internally. Legacy `v13` shorthand (`P0`, `P1–P7`) and older `v12` pillar references in historical materials resolve through the crosswalk in `Master_Protocol.md` §III.
 
 ```mermaid
 flowchart TD
-    P0["**P0**\nSubsidiarity, Consent & Exit\n(smallest-competent-scale default)"]:::p0
-    P1["**Pillar 1**\nRights & Rule of Law\n(Tier 1 invariants)"]:::tier1
-    P2["**Pillar 2**\nPersonhood, Identity\n& Continuity"]:::tier2
-    P3["**Pillar 3**\nPhysics & Reserves\n(Oracle + Strategic Reserves)"]:::tier2
-    P4["**Pillar 4**\nSurvival\n(LC Instrument + Delivery)"]:::tier2
-    P5["**Pillar 5**\nMarkets, Commons\n& Public Finance (EC + PFCR)"]:::tier2
-    P6["**Pillar 6**\nCivic Layer\n(DW/CR + Deliberation)"]:::tier3
-    P7["**Pillar 7**\nTransparency\n& Environmental Scanning (S3*/S4)"]:::tier3
-    NCE["**Non-Convertibility\nEnforcement Layer**\n(ledger-enforced)"]:::nce
+    FO["**Founding Order**\nSubsidiarity,\nConsent & Exit"]:::foundation
+    A1["**Article I**\nRights & Rule\nof Law"]:::tier1
+    A2["**Article II**\nPersonhood,\nIdentity & Continuity"]:::tier2
+    A3["**Article III**\nPhysics &\nReserves"]:::tier2
+    A4["**Article IV**\nSurvival\n(LC Instrument + Delivery)"]:::tier2
+    A5["**Article V**\nMarkets, Commons\n& Public Finance"]:::tier3
+    A6["**Article VI**\nCivic Layer\n& Deliberation"]:::tier3
+    A7["**Article VII**\nTransparency &\nEnvironmental Scanning"]:::tier3
 
-    %% P0 reads through every pillar
-    P0 -.->|"scale default"| P1
-    P0 -.->|"scale default"| P4
-    P0 -.->|"scale default"| P5
-    P0 -.->|"scale default"| P6
+    FO -->|"smallest competent scale,\nconsent, exit"| A1
+    FO -->|"smallest competent scale,\nconsent, exit"| A2
+    FO -->|"smallest competent scale,\nconsent, exit"| A3
+    FO -->|"smallest competent scale,\nconsent, exit"| A4
+    FO -->|"smallest competent scale,\nconsent, exit"| A5
+    FO -->|"smallest competent scale,\nconsent, exit"| A6
+    FO -->|"smallest competent scale,\nconsent, exit"| A7
 
-    %% Tier 1 constrains everything
-    P1 -->|"invariant constraints"| P2
-    P1 -->|"invariant constraints"| P3
-    P1 -->|"invariant constraints"| P4
-    P1 -->|"invariant constraints"| P5
-    P1 -->|"invariant constraints"| P6
+    A1 -->|"constitutional constraints"| A2
+    A1 -->|"constitutional constraints"| A3
+    A1 -->|"constitutional constraints"| A4
+    A1 -->|"constitutional constraints"| A5
+    A1 -->|"constitutional constraints"| A6
+    A1 -->|"constitutional constraints"| A7
 
-    %% Identity gates access
-    P2 -->|"identity confirmation"| P4
-    P2 -->|"identity confirmation"| P5
-    P2 -->|"identity confirmation"| P6
+    A2 -->|"identity continuity\nand eligibility signals"| A4
+    A2 -->|"identity continuity\nand eligibility signals"| A6
+    A3 -->|"capacity limits,\nscarcity signals, reserves"| A4
+    A3 -->|"physical constraints"| A5
+    A4 -->|"delivery outcomes"| A7
+    A5 -->|"production, housing,\npublic-finance flows"| A3
+    A6 -->|"priorities, service eligibility,\nlegitimacy inputs"| A5
+    A7 -->|"audit visibility"| A1
+    A7 -->|"public accountability"| A5
 
-    %% Physics drives issuance
-    P3 -->|"verified capacity"| P4
-    P3 -->|"verified capacity"| P5
-    P3 -->|"scarcity signal (SQ)"| P4
-
-    %% Instrument lanes enforced by NCE
-    P4 --- NCE
-    P5 --- NCE
-    P6 --- NCE
-    NCE -->|"LC non-transferability"| P4
-    NCE -->|"EC market lane"| P5
-    NCE -->|"DW/CR civic lane"| P6
-
-    %% PFCR funding cross-flows
-    P5 -->|"PFCR public funding"| P4
-    P5 -->|"use-rights registry"| P5
-
-    %% Civic loop
-    P6 -->|"deliberation outputs"| P1
-    P6 -->|"deliberation outputs"| P5
-
-    %% Transparency & scanning (audit channel genuinely independent of P1)
-    P4 -.->|"aggregate data"| P7
-    P5 -.->|"aggregate data"| P7
-    P6 -.->|"aggregate data"| P7
-    P7 -->|"S3* audit / S4 signals"| P1
-    P7 -->|"environmental scanning"| P3
-
-    classDef p0 fill:#2d1b3d,color:#ffffff,stroke:#9d4edd,stroke-width:2px,stroke-dasharray:6 3
+    classDef foundation fill:#254336,color:#f2f2e6,stroke:#6b8f71,stroke-width:2px
     classDef tier1 fill:#1a1a2e,color:#e0e0e0,stroke:#4a4a8a,stroke-width:2px
     classDef tier2 fill:#16213e,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
     classDef tier3 fill:#0f3460,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
-    classDef nce fill:#533483,color:#ffffff,stroke:#9d4edd,stroke-width:2px,stroke-dasharray:4 2
 ```
 
-**Reading the diagram:** **P0** (purple dashed, top) is the subsidiarity foundation — a read-through constraint rather than an operational lane; every pillar resolves to the smallest competent scale by default. **Pillar 1** (dark) constrains all operational pillars — it is the only pillar that cannot be amended by any in-system process. The **Non-Convertibility Enforcement Layer** (purple, dashed) is not a pillar; it is a ledger-level constraint that sits between the LC (P4), EC (P5), and DW/CR (P6) instrument lanes. No single pillar controls it. **Pillar 7**'s audit channel is genuinely independent of P1 control — this is the Beer-VSM S3/S3* split enforced structurally.
+**Reading the diagram:** The **Founding Order** establishes scale, consent, and exit defaults across the entire architecture. **Article I** constrains every operational article constitutionally. The instrument-level non-convertibility rules are enforced within the architecture itself rather than by a separate sovereign pillar.
 
 ## Document set
 
@@ -147,7 +127,7 @@ flowchart TD
 | [`docs/INVARIANTS.md`](./docs/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
 | [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Demurrage function, issuance constraints, oracle consensus rules, parameter table. |
 | [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
-| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across all seven pillars on the P0 foundation (authored under v12 nomenclature; see v12→v13 crosswalk in `Master_Protocol.md` §III). |
+| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture; preserves legacy pillar numbering where noted and maps through the `Master_Protocol.md` §III crosswalk. |
 | [`docs/P014_Preactivation_Disclosure.md`](./docs/P014_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
 | [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
@@ -205,7 +185,7 @@ The three highest-severity failure modes, their mechanisms, and the algorithmic 
 - Entrenchment ladder: LC floor provisions require progressively higher supermajorities to amend as time-in-operation increases
 - LC floor minimum persistence: no successor government may reduce LC below CSM in fewer than N legislative cycles [FOUNDING COMMITMENT: N]
 - Administrative hollowing triggers: defined operational metrics (delivery throughput, oracle response time, enforcement rate) that, when breached, automatically activate the Pre-Confirmation Response Protocol (PCRP) regardless of political direction
-- Transition protocol: mandatory handoff documentation, independent audit of operational capacity, and public status report required before any change-of-government that affects Pillar 4 or Pillar 10 operations
+- Transition protocol: mandatory handoff documentation, independent audit of operational capacity, and public status report required before any change-of-government that affects survival delivery or rule-bound execution operations
 
 **Residual risk:** The entrenchment ladder and persistence requirements are only as durable as the constitutional text that contains them. A sufficiently determined successor government with a large enough legislative majority can repeal the constitutional text itself. This is the recursion of T-017 (bootstrap problem) — resolved founding legitimacy does not prevent future delegitimation.
 

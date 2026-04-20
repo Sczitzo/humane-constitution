@@ -11,7 +11,7 @@
 - [ ] Consistent with existing patches and clauses
 - [ ] Incentive analysis considered — what behavior does this create?
 - [ ] Bad actor stress test — how would a motivated actor exploit this?
-- [ ] Integration notes — what does this affect across the twelve pillars?
+- [ ] Integration notes — what does this affect across the current Founding Order + Articles I-VII architecture?
 
 ## Related issues
 

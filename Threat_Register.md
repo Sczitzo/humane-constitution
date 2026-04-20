@@ -1,27 +1,25 @@
 # Threat Register
 
+**Current constitutional presentation:** *The Humane Constitution* uses **one Founding Order** and **Articles I–VII**. Historical references below may still use legacy v13 shorthand (`P0`, `P1–P7`) or older v12 pillar numbers.
+
 **Running adversarial control layer aligned to the master protocol · Updated: Session 8 (Red Team — T-018 through T-023 added; T-001/T-002/T-017 updated; Register Disclosure Protocol introduced)**
 
 ---
 
 **Purpose.** This register tracks the adversarial risks identified during the current hardening cycle and aligns them to the master protocol. It is the running control layer for red-team work, not a replacement for the master protocol.
 
-**Pillar nomenclature note (Proposal 2 close-out, 2026-04-18).** The operational architecture was restructured from twelve pillars into **Seven Pillars + P0** (v13). Threat entries in this register authored before the restructure continue to reference v12 pillar numbers (e.g., "Pillar 11 dashboard", "Pillar 10 operations", "Pillar 5 compliance matrix"). Those references resolve to v13 pillars via the crosswalk in `Master_Protocol.md` §III:
+**Architecture nomenclature note (Proposal 2 continuity).** Threat entries in this register may use one of three naming layers:
 
-| v12 reference | v13 pillar |
-| :--- | :--- |
-| Pillar 1 (Constitutional Invariants) | P1. Rights & Rule of Law |
-| Pillar 2 (Personhood) | P2. Personhood & Continuity |
-| Pillar 3 (RCS) | P3. Physics & Reserves |
-| Pillar 4 (Life Support / LC delivery) | P4. Survival (LC Instrument + Delivery) |
-| Pillar 5 (Monetary Architecture) | split: LC→P4, EC→P5, DW/CR→P6 |
-| Pillar 6 (Land/Housing/Commons) | P5. Markets, Commons & Public Finance |
-| Pillar 7 (Enterprise) | P5. Markets, Commons & Public Finance |
-| Pillar 8 (Contribution/Capability) | P6. Civic Layer |
-| Pillar 9 (Civic Deliberation) | P6. Civic Layer |
-| Pillar 10 (Operations/Oversight) | P1. Rights & Rule of Law (rule-bound execution) |
-| Pillar 11 (Transparency) | P7. Transparency & Environmental Scanning |
-| Pillar 12 (PFCR) | P5. Markets, Commons & Public Finance |
+| Current presentation | Legacy v13 shorthand | Legacy v12 reference |
+| :--- | :--- | :--- |
+| Founding Order — Subsidiarity, Consent & Exit | P0. Subsidiarity, Consent & Exit | *(none — absent layer)* |
+| Article I — Rights & Rule of Law | P1. Rights & Rule of Law | Pillar 1 + execution portion of Pillar 10 |
+| Article II — Personhood, Identity & Continuity | P2. Personhood & Continuity | Pillar 2 |
+| Article III — Physics & Reserves | P3. Physics & Reserves | Pillar 3 |
+| Article IV — Survival | P4. Survival (LC Instrument + Delivery) | Pillar 4 + LC portion of Pillar 5 |
+| Article V — Markets, Commons & Public Finance | P5. Markets, Commons & Public Finance | EC portion of Pillar 5 + Pillars 6, 7, and 12 |
+| Article VI — Civic Layer & Deliberation | P6. Civic Layer (DW/CR + Deliberation) | DW/CR portion of Pillar 5 + Pillars 8 and 9 |
+| Article VII — Transparency & Environmental Scanning | P7. Transparency & Environmental Scanning | Pillar 11 + Beer S4 scanning |
 
 Inline references are preserved as-authored for audit traceability; the mapping above is authoritative.
 

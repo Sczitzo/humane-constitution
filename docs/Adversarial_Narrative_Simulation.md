@@ -162,7 +162,7 @@ Each scenario includes:
 
 ## N-008 | "This is too complex to ever work"
 
-**The attack:** The system has twelve pillars, seventeen threats, fourteen patches, multiple currencies, and a 111-page master document. Real governance is simple. This is academic complexity cosplaying as a solution.
+**The attack:** The system has seven pillars plus a foundation layer, seventeen threats, fourteen patches, multiple instruments, and a 111-page master document. Real governance is simple. This is academic complexity cosplaying as a solution.
 
 **Emotional hook:** Legitimate preference for simplicity; reasonable suspicion of over-engineered solutions; fatigue with systems that produce more documentation than outcomes.
 
@@ -171,7 +171,7 @@ Each scenario includes:
 **Grain of truth:** Complexity is a genuine implementation risk. Complex systems fail in complex ways and are harder to correct when they do.
 
 **Structural response:**
-- The modular architecture means individual pillars can be implemented independently. The full twelve-pillar system is not required on day one.
+- The modular architecture means individual constitutional components can be implemented independently. The full Founding Order + Articles I-VII architecture is not required on day one.
 - The Citizen-Facing Rights Layer is one page. Operational complexity does not require citizen-facing complexity.
 - The complexity exists because simpler designs failed — the threat register documents why.
 - Version control, patch logs, and formal acceptance procedures are complexity-management tools, not complexity generators.

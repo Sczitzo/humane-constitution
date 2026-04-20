@@ -1,4 +1,4 @@
-# Twelve-Pillar Protocol
+# The Humane Constitution
 
 **Formal Acceptance Protocol (Amended by P-013 / AG; Bootstrap resolved by P-014 / AH; Founding window extended by P-020 / AH2)**
 
@@ -81,3 +81,27 @@ The following items must be complete before any patch can move from PROPOSED to 
 **Note on ordering:** The Ombuds gates (rows 1–3) must be cleared before P-015 can be activated. The methodology-class gates (rows 4–6) must be cleared before P-017 can be activated. The AED gate (row 7) must be cleared before P-016 can be activated. The contract-commitment gate (row 8) must be cleared before P-023 can be activated. None of these gates are on the critical path for P-006 or P-009 (Priority 1 and 2 above) — the initial launch sequence can proceed while the later gates are being prepared.
 
 The P-014 gate (row 9) is on the critical path for everything — P-013 must be ACTIVE before the standard FAP governs any patch activation.
+
+---
+
+### Structural Precondition Gate — Tier 1 Invariant Protection (P-034 / Annex AV)
+
+**Operative as of P-034 ACTIVE. Applies to every FAP intake after P-013 ACTIVE.**
+
+**AV1 — Two-key intake requirement for Tier-1-touching patches:**  
+Any patch proposal that carries the tag `modifies_tier1=True` — meaning the proposal, if adopted, would directly modify, reinterpret, or operationally constrain any Tier 1 invariant defined in `docs/INVARIANTS.md` — must carry a valid cryptographic attestation from the standing adversarial panel member before FAP intake is opened. A proposal submitted without the attestation is returned to the submitter at intake. No invariant analysis is performed; no technical review begins; no rejection record citing an invariant ID is created. The proposal is treated as administratively incomplete.
+
+**AV2 — FAP reviewer authority is explicitly excluded:**  
+The FAP reviewer holds no authority to waive, defer, or conditionally admit a `modifies_tier1=True` proposal that lacks the required attestation. The absence of the attestation is a structural precondition, not a procedural formality. A reviewer who admits such a proposal without the attestation has acted outside their authority; the admission is void and the proposal must be withdrawn.
+
+**AV3 — Adversarial panel member designation:**  
+The standing adversarial panel member for AV1 purposes is the same body designated under AH2.3 (the oppose-coalition nominating body). Once P-013 is ACTIVE, the panel member must be seated before any `modifies_tier1=True` proposal may be submitted. If no adversarial panel member is seated, no Tier-1-touching proposals may enter the FAP queue — the queue position is held open indefinitely.
+
+**AV4 — Attestation contents:**  
+A valid attestation must include: (a) the patch ID; (b) the specific invariant IDs the panel member assessed; (c) the panel member's determination that the proposal does not constitute an in-system amendment to any Tier 1 invariant; (d) a cryptographic signature from the adversarial panel member's registered key; (e) a timestamp within 90 days of the submission date. An attestation that determined the proposal *does* constitute a Tier 1 amendment is a rejection attestation — it is published in the audit log and the proposal is closed without further review.
+
+**AV5 — Beer S3* independence:**  
+The adversarial panel member performing attestation is structurally independent of the FAP reviewer (S3 — operational control). The panel member is nominated by an oppose-coalition body per AH2.3 and receives no compensation from, holds no appointment by, and has no reporting relationship to the FAP administrative body. This satisfies the Beer VSM S3* requirement: the audit channel cannot be collapsed into the operational control channel by any in-system actor. The FAP reviewer's endorsement of a proposal has no bearing on the adversarial panel member's attestation decision.
+
+**AV6 — Buterin incentive alignment:**  
+The adversarial panel member's role carries an explicit penalty for defection: any attestation later found (by the Ombuds Plenum, by 4-of-5 supermajority) to have improperly admitted a proposal that materially violates a Tier 1 invariant triggers: (a) permanent removal of the panel member; (b) forfeiture of the panel member seat back to the oppose-coalition nominating body for re-appointment; (c) publication of a defection finding in the audit log citing the panel member's name and the specific invariant violated. Honest attestation (including rejection attestations) carries no penalty. Defection is costly; honest behavior is safe. The payoff matrix favors honest operation.

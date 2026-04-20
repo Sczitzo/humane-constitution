@@ -1,6 +1,6 @@
-# Contributing to the Twelve-Pillar Protocol
+# Contributing to The Humane Constitution
 
-The Twelve-Pillar Protocol is a constitutional systems design that separates survival, markets, and civic governance into structurally independent, non-convertible lanes. It is developed using adversarial red-teaming — every threat has a mechanism, a risk score, and a patch with a documented residual risk.
+The Humane Constitution is a constitutional systems design that separates survival, markets, and civic governance into structurally independent, non-convertible lanes. It is developed using adversarial red-teaming — every threat has a mechanism, a risk score, and a patch with a documented residual risk.
 
 This is an open design project. The design is not finished. The most valuable thing you can do is find what we missed.
 
@@ -14,7 +14,7 @@ This is an open design project. The design is not finished. The most valuable th
 
 **If you want the operative language:** Read [`Master_Protocol.md`](./Master_Protocol.md).
 
-**If you want to understand the hardening methodology:** Read [`Patch_Log.md`](./Patch_Log.md) — 21 patches, each with the threat it addresses, the new risk it introduces, and its residual risk.
+**If you want to understand the hardening methodology:** Read [`Patch_Log.md`](./Patch_Log.md) — 26 patches, each with the threat it addresses, the new risk it introduces, and its residual risk.
 
 ---
 
@@ -74,7 +74,7 @@ Every threat follows the same structure:
 
 ```
 T-XXX — [Threat Name]
-- Layer: which pillar or mechanism is targeted
+- Layer: which article, legacy pillar, or mechanism is targeted
 - Severity: Critical / High / Med-High / Medium
 - Risk Score: I × L × (6 - D)
 - Mechanism: how the attack works
@@ -96,7 +96,7 @@ Substantive contributions are reviewed against:
 1. **Consistency** — does this conflict with existing active patches or constitutional invariants?
 2. **Incentive analysis** — what behavior does this create? Who benefits and who is harmed?
 3. **Bad actor stress test** — how would a motivated, well-resourced actor exploit this?
-4. **Integration notes** — what does this affect across all twelve pillars?
+4. **Integration notes** — what does this affect across the current Founding Order + Articles I-VII architecture?
 
 ---
 

@@ -1,4 +1,4 @@
-# P0 — Exit Protocol
+# Founding Order — Exit Protocol
 
 **Status:** ACTIVE — Proposal 5 close-out, 2026-04-18
 **Authority:** Tier 1 (FC-120 supermajority threshold, FC-121 unwind window).

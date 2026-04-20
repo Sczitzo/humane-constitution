@@ -6,6 +6,8 @@
 **Scope:** Derived from ingestion of `White_Paper.md`, `Master_Protocol.md`, `Threat_Register.md`, `Patch_Log.md`, `docs/ADVERSARIAL_AUDIT.md`, and all files in `docs/annexes/`. This document is advisory — **no authoritative file has been modified**.
 **Existing audit acknowledgment:** Phases 1–3 of `docs/ADVERSARIAL_AUDIT.md` (6 PRDs, 7 sims, 14 findings) are not duplicated here. This document addresses holes the existing audit has *confirmed but not closed*, plus pathologies the existing audit has *not yet named*.
 
+**Continuity note:** This proposal memo preserves the legacy pillar shorthand used when it was authored. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**.
+
 ---
 
 ## A. Executive Audit Verdict

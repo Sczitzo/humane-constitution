@@ -1,4 +1,4 @@
-# P0 — Consent Protocol
+# Founding Order — Consent Protocol
 
 **Status:** ACTIVE — Proposal 5 close-out, 2026-04-18
 **Authority:** Tier 1 (consent-of-founding rule; FC-122 scales).
@@ -38,7 +38,7 @@ The roll-call-equivalent is designed to prevent manufactured majorities through 
 
 | Scale | Who consents | Consent procedure |
 | :--- | :--- | :--- |
-| **Individual / Personhood** | The individual for themselves | Individual protocol-participation act; published to individual's civic record. Individual consent is a pre-condition for Pillar 2 identity registration. |
+| **Individual / Personhood** | The individual for themselves | Individual protocol-participation act; published to individual's civic record. Individual consent is a pre-condition for Article II identity registration. |
 | **Household** | Each personhood in the household, individually | No household-level vote; the household is a unit of residence, not of political authority. |
 | **Neighborhood** | 2/3 of eligible resident-personhood in the neighborhood | Published neighborhood roll; 90-day notice; 60-day deliberation; published vote. |
 | **Locality** | 2/3 of eligible resident-personhood in the locality | As neighborhood, at larger scale. Locality consent typically requires component neighborhoods to have consented. |

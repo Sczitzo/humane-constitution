@@ -1,4 +1,4 @@
-# P0 — Subsidiarity Rule
+# Founding Order — Subsidiarity Rule
 
 **Status:** ACTIVE — Proposal 5 close-out, 2026-04-18
 **Authority:** Tier 1 (default rule; FC-122 scales anchor the rule).
@@ -71,9 +71,9 @@ The following matters are **federation-scale by construction** and do not go thr
 | Cross-regional dispute resolution | Not competent at any scale below federation by definition |
 | Amendment protocol operations | Federation-scale by construction |
 | Drift chain operations | Federation-scale by construction |
-| P0 exit events | Federation-scale by construction (federation scope is being reduced) |
+| Founding Order exit events | Federation-scale by construction (federation scope is being reduced) |
 | Measurement methodology-class definitions (Annex AL §3) | Federation-scale to ensure oracle interoperability |
-| Identity assurance standards (Pillar 2 / Annex AK) | Federation-scale to prevent identity arbitrage |
+| Identity assurance standards (Article II / Annex AK) | Federation-scale to prevent identity arbitrage |
 | Adversarial oracle seat standards | Federation-scale; rotating seats are regional but the standards are federal |
 
 This list is exhaustive. Matters not on this list go through the escalation test. Extensions to the list require Tier 1 amendment — the intent is that the federation's standing reach is small and every extension carries a public justification.
@@ -100,7 +100,7 @@ This principle is not merely rhetorical — it is enforceable under the Federate
 
 ---
 
-## Relationship to Other P0 Rules
+## Relationship to Other Founding Order Rules
 
 - **Consent** (consent_protocol.md) — Units that have not consented to the protocol are not bound by federation rules at all. Subsidiarity applies within the consented scope.
 - **Exit** (exit_protocol.md) — A unit that believes federation rules have overstepped subsidiarity has, in the last resort, the right of exit. Subsidiarity is the internal protection; exit is the external.

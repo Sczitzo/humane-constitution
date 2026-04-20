@@ -1,7 +1,7 @@
-# INVARIANTS.md — Constitutional Invariants of the Twelve-Pillar Protocol
+# INVARIANTS.md — Constitutional Invariants of The Humane Constitution
 
 **Status:** Tier 1 Protected (unamendable by any supermajority; amendment requires full constitutional refounding under P-014 procedure)  
-**Source authority:** Master_Protocol.md, Pillar 1  
+**Source authority:** Master_Protocol.md, Article I  
 **Last reviewed:** See Patch_Log.md
 
 ---
@@ -98,16 +98,20 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:**
 - Tier 1 (invariants): unamendable by any in-system process
+  - **Two-key architectural precondition (P-034):** Any patch proposal tagged `modifies_tier1=True` must carry a cryptographic attestation from the standing adversarial panel member (nominated per AH2.3) before it enters FAP intake. The FAP reviewer's authority does not include the ability to override the absence of this attestation. Absence = automatic non-reviewable rejection at intake. A captured or mistaken FAP reviewer cannot unilaterally admit a Tier-1-touching proposal.
 - Tier 2 (founding commitments): amendable by supermajority + adversarial panel
 - Tier 3 (operational parameters): amendable by standard FAP
 
-**Why this is load-bearing:** An amendable invariant is not an invariant. The amendment pathway itself becomes an attack surface. Tier 1 protection converts an invariant from a policy commitment to a structural constraint.
+**Why this is load-bearing:** An amendable invariant is not an invariant. The amendment pathway itself becomes an attack surface. Tier 1 protection converts an invariant from a policy commitment to a structural constraint. Without the two-key precondition, a single captured FAP reviewer constitutes the entire enforcement gate — a single point of failure that voids all seven invariants simultaneously (T-016). The precondition adds a structurally independent second key that no in-system actor can override.
 
 **Attack vectors that target this invariant:** T-007, T-016, T-022
 
 ---
 
 ## Invariant Violation Detection
+
+**Structural precondition check (P-034 — applied before all items below):**  
+Any patch tagged `modifies_tier1=True` must carry a valid cryptographic attestation from the standing adversarial panel member before it can be accepted for review. If the attestation is absent or invalid, the patch is returned to the submitter without any invariant analysis. The FAP reviewer has no authority to waive this precondition.
 
 Any patch proposal submitted to FAP is evaluated against this document before technical review. A proposal that:
 

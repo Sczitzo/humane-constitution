@@ -1,5 +1,7 @@
 # Patch Log
 
+**Current constitutional presentation:** *The Humane Constitution* uses **one Founding Order** and **Articles I–VII**. Historical patch entries may still use legacy v13 shorthand (`P0`, `P1–P7`) or older v12 pillar numbers where those terms were part of the original integration record.
+
 **Running change ledger aligned to the master protocol · Updated: Session 9 economic-governance integration (P-029 through P-033 added)**
 
 ---
@@ -8,22 +10,18 @@
 
 **Rule.** The patch log is not a substitute for the master. The master holds the law-like text; the patch log explains how and why the hardening evolved.
 
-**Pillar nomenclature note (Proposal 2 close-out, 2026-04-18).** The operational architecture was restructured from twelve pillars into **Seven Pillars + P0** (v13). Patch entries authored before the restructure continue to reference v12 pillar numbers in dependencies and integration sections (e.g., "Pillar 10 demand-context register", "Pillar 11 dashboard", "Pillar 8 / Annex K4"). Those references resolve to v13 pillars via the crosswalk in `Master_Protocol.md` §III:
+**Architecture nomenclature note (Proposal 2 continuity).** Patch entries in this log may use one of three naming layers:
 
-| v12 reference | v13 pillar |
-| :--- | :--- |
-| Pillar 1 (Constitutional Invariants) | P1. Rights & Rule of Law |
-| Pillar 2 (Personhood) | P2. Personhood & Continuity |
-| Pillar 3 (RCS) | P3. Physics & Reserves |
-| Pillar 4 (Life Support / LC delivery) | P4. Survival (LC Instrument + Delivery) |
-| Pillar 5 (Monetary Architecture) | split: LC→P4, EC→P5, DW/CR→P6 |
-| Pillar 6 (Land/Housing/Commons) | P5. Markets, Commons & Public Finance |
-| Pillar 7 (Enterprise) | P5. Markets, Commons & Public Finance |
-| Pillar 8 (Contribution/Capability) | P6. Civic Layer |
-| Pillar 9 (Civic Deliberation) | P6. Civic Layer |
-| Pillar 10 (Operations/Oversight) | P1. Rights & Rule of Law (rule-bound execution) |
-| Pillar 11 (Transparency) | P7. Transparency & Environmental Scanning |
-| Pillar 12 (PFCR) | P5. Markets, Commons & Public Finance |
+| Current presentation | Legacy v13 shorthand | Legacy v12 reference |
+| :--- | :--- | :--- |
+| Founding Order — Subsidiarity, Consent & Exit | P0. Subsidiarity, Consent & Exit | *(none — absent layer)* |
+| Article I — Rights & Rule of Law | P1. Rights & Rule of Law | Pillar 1 + execution portion of Pillar 10 |
+| Article II — Personhood, Identity & Continuity | P2. Personhood & Continuity | Pillar 2 |
+| Article III — Physics & Reserves | P3. Physics & Reserves | Pillar 3 |
+| Article IV — Survival | P4. Survival (LC Instrument + Delivery) | Pillar 4 + LC portion of Pillar 5 |
+| Article V — Markets, Commons & Public Finance | P5. Markets, Commons & Public Finance | EC portion of Pillar 5 + Pillars 6, 7, and 12 |
+| Article VI — Civic Layer & Deliberation | P6. Civic Layer (DW/CR + Deliberation) | DW/CR portion of Pillar 5 + Pillars 8 and 9 |
+| Article VII — Transparency & Environmental Scanning | P7. Transparency & Environmental Scanning | Pillar 11 + Beer S4 scanning |
 
 Inline dependencies are preserved as-authored for audit traceability; the mapping above is authoritative.
 
@@ -69,6 +67,7 @@ Inline dependencies are preserved as-authored for audit traceability; the mappin
 | P-031 | PRD-009 / dynastic capture | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
 | P-032 | PRD-009 / rent extraction | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
 | P-033 | PRD-008 / enterprise governance | **ACTIVE** | High | Worker-owned and mission-locked enterprise preference: financing, procurement, and succession pathways structurally favor stewardship forms over absentee control. |
+| P-034 | T-016 / INV-007 single-point-of-failure | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
 
 ---
 
@@ -116,6 +115,37 @@ Inline dependencies are preserved as-authored for audit traceability; the mappin
 - **Clauses integrated:** natural monopolies moved to a separate regulated-utility track; outside capital claims must be capped, redeemable, sunset, or otherwise bounded.
 - **Dependencies:** procurement rules, cooperative finance tools, public venture / buyout facilities, and utility-governance charter.
 - **New risks introduced:** preferential treatment could be gamed by sham cooperatives. Mitigated by governance-proof requirements, payout constraints, and beneficial-ownership transparency.
+
+---
+
+### P-034 — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement
+
+**Threat addressed:** T-016 (FAP capture), INV-007 single-point-of-failure  
+**Audit finding:** PRD-001 / Phase 1 Pillar 1 adversarial audit; confirmed still open in Phase 4 follow-up check  
+**Status:** ACTIVE | **Priority:** Critical | **Annex:** AV (Acceptance_Protocol.md §Structural Precondition Gate)
+
+**Problem diagnosed:**  
+The prior INV-007 enforcement relied on a single FAP reviewer checking patch proposals against INVARIANTS.md before intake. This is a single point of failure: a captured, compromised, or mistaken reviewer can admit a Tier-1-touching proposal simply by not flagging the violation. The Beer VSM logic gate test (Phase 1) confirmed this: the normative model collapses to `defect → bypass` because the reviewer is both S3 (operational control) and the entire S3* (audit channel). A single captured actor voids all seven invariants simultaneously.
+
+**Introduced design — two-key architectural precondition (Annex AV):**
+- Any patch tagged `modifies_tier1=True` must carry cryptographic attestation from the standing adversarial panel member before FAP intake opens.
+- The FAP reviewer's authority is explicitly scoped to exclude the ability to waive or override the absence of attestation.
+- The adversarial panel member is nominated by the oppose-coalition body (AH2.3), not the founding coalition — structurally independent of FAP administration.
+- Defection penalty: improper admission attestation → permanent removal + forfeiture of seat to oppose-coalition nominating body + public defection finding. Honest attestation (including rejections) carries no penalty. The payoff matrix favors honest behavior.
+
+**Beer VSM fix:** S3* (adversarial panel attestation) is now structurally independent of S3 (FAP reviewer). Collapsing S3* into S3 is architecturally impossible — the adversarial panel member holds a key the FAP reviewer does not control.
+
+**Buterin incentive alignment fix:** Defection (improper admission) is costly (removal + public record). Honesty is safe. The reviewer incentive is also corrected: a reviewer who admits a proposal that lacks attestation has acted outside their authority — no benefit accrues, only liability.
+
+**Clauses integrated:** INV-007 mechanical boundary (amended), INVARIANTS.md §Invariant Violation Detection (precondition block added), Acceptance_Protocol.md §AV1–AV6.
+
+**Dependencies:** Adversarial panel member must be seated (per AH2.3) before any `modifies_tier1=True` proposal may be submitted. P-034 becomes operational the moment the adversarial panel member's key is registered.
+
+**New risks introduced:**
+- If the adversarial panel member seat goes vacant, no Tier-1-touching proposals can advance. Mitigated: vacancy is observable and not covert; it is a conservative failure mode (proposals stall, not wrongly admitted).
+- Oppose-coalition nominating body could itself be captured. Mitigated: AH2.3 qualifications exclude organizations with funding relationships with the founding coalition; three-year lookback applies.
+
+**Residual risk (acknowledged):** The adversarial panel member can be defected through external pressure not covered by the internal penalty structure (coercion, external blackmail). This is documented as a known residual rather than a resolved problem. Physical-world coercion cannot be fully eliminated by protocol design; conservative failure mode (panel member refuses to attest rather than attesting fraudulently) is the design target.
 
 ## Session 1 Patches — Detailed Entries
 
@@ -653,7 +683,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
   - **Proposal 9** — Attestation stake (P-024) integrates with new P6 Civic Layer contribution minting.
   - **PFCR (P-029 through P-033)** — commons-revenue and anti-dynasty architecture land in new P5 Markets, Commons & Public Finance.
 - **Dependencies:** v12 → v13 crosswalk must be published and stable before any downstream documents (annexes, PRDs) are rewritten. Legacy mapping table is the authoritative bridge during the transition.
-- **New risks introduced:** Consolidation concentrates four former pillars into new P5; this increases the attack surface of any single P5-integrity failure. Mitigation: new P5 contains explicit internal boundaries (EC vs housing-commons vs enterprise vs PFCR) with non-convertibility rules between them, and the Pillar interface table specifies the inputs each sub-function may accept. A second risk is naming drift — "Twelve-Pillar Protocol" as external project identity versus "Seven Pillars + P0" as operational reality. Mitigation: the project name is retained for continuity; §III is the authoritative operational definition; external communications will transition on a case-by-case basis.
+- **New risks introduced:** Consolidation concentrates four former pillars into new P5; this increases the attack surface of any single P5-integrity failure. Mitigation: new P5 contains explicit internal boundaries (EC vs housing-commons vs enterprise vs PFCR) with non-convertibility rules between them, and the Pillar interface table specifies the inputs each sub-function may accept. A second risk is naming drift — older *Twelve-Pillar Protocol* references can imply a different active architecture than the current *Humane Constitution* public title and `Seven Pillars + P0` operational model. Mitigation: legacy references are explicitly marked as historical; §III is the authoritative operational definition; public-facing materials now use the new title directly.
 - **Residual risk:** Annexes authored under v12 structure may reference pillar numbers that now span multiple v13 pillars (e.g., an Annex referencing "Pillar 5" could mean LC, EC, or DW/CR depending on context). Mitigation is the crosswalk banner in the Threat Register and Patch Log, plus the Master Protocol §III crosswalk table. A future housekeeping pass will rewrite inline annex references to v13.
 - **Compound linkages:** P-027 × P-026 (P0 + 7-pillar collapse is one conceptual move — subsidiarity provides the foundation; consolidation removes redundant capture targets); P-027 × P-017 (oracle architecture in new P3 inherits the N=5/3-class/adversarial-seat requirements); P-027 × P-029 (PFCR function lands in new P5, not as a separate pillar); P-027 × P-008 (reduced pillar count reduces elite-formation surface area by eliminating redundant institutional homes).
 - **Auto-close clause:** P-027 is standing. The seven-pillar structure itself is Tier 1 architectural. Any subsequent collapse (e.g., to six or fewer) or expansion (to eight or more) requires Tier 1 amendment (7-of-9, 180-day timelock). Content within pillars may be amended by ordinary process subject to the existing Tier classifications of each clause.

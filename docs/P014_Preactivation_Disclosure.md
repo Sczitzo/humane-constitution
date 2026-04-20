@@ -1,6 +1,6 @@
 # P-014 Pre-Activation Disclosure
 
-**Twelve-Pillar Protocol — Founding Instrument: P-013 Bootstrap Resolution**
+**The Humane Constitution — Founding Instrument: P-013 Bootstrap Resolution**
 
 **Published by:** Threat Register Owner  
 **Challenge window opens:** April 10, 2026  
@@ -145,4 +145,4 @@ P-014 is being invoked once, for P-013 only, because no other process was availa
 
 ---
 
-*This document is part of the Twelve-Pillar Protocol document set. The Master Protocol and Annexes AH and AH2 govern in all cases. Challenge window: April 10, 2026 through June 9, 2026 (60 days, per P-020 / AH2.1). Structural challenges extend the window by 14 days if unanswered.*
+*This document is part of The Humane Constitution document set. The Master Protocol and Annexes AH and AH2 govern in all cases. Challenge window: April 10, 2026 through June 9, 2026 (60 days, per P-020 / AH2.1). Structural challenges extend the window by 14 days if unanswered.*

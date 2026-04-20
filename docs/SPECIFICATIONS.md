@@ -9,7 +9,9 @@
 
 ## 1. System Overview
 
-The Twelve-Pillar Protocol operates three primary instrument lanes and one emergency instrument. Each lane is a bounded state machine with defined issuance conditions, transition rules, decay functions, and termination states. The lanes are non-convertible by design; the non-convertibility constraint is enforced at the ledger layer, not at the application layer. EC may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
+The Humane Constitution operates three primary instrument lanes and one emergency instrument. Each lane is a bounded state machine with defined issuance conditions, transition rules, decay functions, and termination states. The lanes are non-convertible by design; the non-convertibility constraint is enforced at the ledger layer, not at the application layer. EC may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
+
+**Naming note:** The live constitutional presentation uses **one Founding Order** and **Articles I-VII**. Legacy `v13` shorthand (`P0`, `P1–P7`) and older `v12` references may still appear below where technical traceability requires them.
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -71,7 +73,7 @@ Transitions:
 
 ### 2.3 Demurrage Function
 
-Demurrage is a time-decay and carrying charge applied to idle EC balances. It is not assessed on survival access, ordinary labor, or basic household exchange. Charged EC is split between retirement and Pillar 12 Public Finance & Commons Revenue (PFCR) receipts under a published routing rule.
+Demurrage is a time-decay and carrying charge applied to idle EC balances. It is not assessed on survival access, ordinary labor, or basic household exchange. Charged EC is split between retirement and Public Finance & Commons Revenue (PFCR) receipts under a published routing rule.
 
 ```
 Let:
@@ -459,8 +461,8 @@ Measurement drift defense:
 | Reserve window (CSM×pop×days) | 45 days | FC-070 | Tier 1 |
 | Tier 1 amendment signatures (M-of-N) | 7 of 9 | FC-110 | Tier 1 (recursive) |
 | Tier 1 amendment timelock | 180 days | FC-111 | Tier 1 (recursive) |
-| P0 exit supermajority threshold | 2/3 | FC-120 | Tier 1 |
-| P0 exit unwind window | 730 days | FC-121 | Tier 1 |
+| Founding Order exit supermajority threshold | 2/3 | FC-120 | Tier 1 |
+| Founding Order exit unwind window | 730 days | FC-121 | Tier 1 |
 
 ---
 

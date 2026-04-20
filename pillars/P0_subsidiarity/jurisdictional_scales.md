@@ -1,4 +1,4 @@
-# P0 — Jurisdictional Scales (FC-122)
+# Founding Order — Jurisdictional Scales (FC-122)
 
 **Status:** ACTIVE — Proposal 5 close-out, 2026-04-18
 **Authority:** Tier 1 (FC-122).
@@ -33,7 +33,7 @@
   - Local SQ adaptation within federation envelopes (a locality may set a stricter SQ than the regional or federal baseline for its own residents but not a looser one).
   - Local CRP representation (one or more delegates depending on population).
   - Municipal-equivalent civic process — public works, local resource stewardship, first-tier civic dispute resolution.
-  - **Entry-tier exit eligibility:** Locality is the smallest scale that may invoke the P0 exit protocol. Sub-locality units (households, neighborhoods) may exit only by joining a unit that is itself exiting, or by individual relocation during another unit's unwind.
+  - **Entry-tier exit eligibility:** Locality is the smallest scale that may invoke the Founding Order exit protocol. Sub-locality units (households, neighborhoods) may exit only by joining a unit that is itself exiting, or by individual relocation during another unit's unwind.
 - **Representation:** Locality-level delegates to regional CRP; one or more depending on population. Delegates are bound by published local instruction and subject to recall per local rule.
 - **Above-locality: escalation rule.** Matters involving two or more localities within a region are addressed at regional scale. Matters with cross-regional effect are addressed at federation scale only.
 
@@ -46,7 +46,7 @@
   - Regional measurement infrastructure (oracle cohort support — Annex AL cohort siting is typically regional).
   - Regional enforcement (Annex AJ §4 Enforcement Panel is constituted with regional representation).
   - Regional CRP delegation to federation scale.
-  - Regional P0 consent coordination when multiple localities within the region consent together.
+  - Regional Founding Order consent coordination when multiple localities within the region consent together.
 - **Representation:** Regional delegates to federation CRP per the federation apportionment rule (see Master Protocol §VIII).
 - **Above-region: escalation rule.** Matters that affect two or more regions — EC/LC non-convertibility, Tier 1 invariants, cross-regional dispute resolution, inter-regional infrastructure — are federation-scale by construction.
 
@@ -152,4 +152,4 @@ Administrative rules (boundary redrawing procedures, transition timelines, split
 
 ---
 
-*This document is part of Pillar 0 — Subsidiarity, Consent & Exit. It is the numerical anchor for FC-122 and the operational basis for every pillar's scale defaults.*
+*This document is part of the Founding Order — Subsidiarity, Consent & Exit. It is the numerical anchor for FC-122 and the operational basis for every article's scale defaults.*

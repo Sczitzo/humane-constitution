@@ -1,4 +1,9 @@
-# The Twelve-Pillar Protocol - Public White Paper Edition
+# The Humane Constitution - Public White Paper Edition
+
+**Constitution for a Humane Civilization**  
+*A Charter of Human Dignity, Stewardship, and Non-Coercive Order*
+
+**Continuity note:** This project was previously released as *The Twelve-Pillar Protocol*. Legacy references remain where historical traceability matters.
 
 **Revised public edition built on the predecessor white paper**
 
@@ -10,7 +15,7 @@ This edition preserves the predecessor white paper's role, sequence, and argumen
 
 ---
 
-## THE TWELVE-PILLAR PROTOCOL
+## THE HUMANE CONSTITUTION
 **Public White Paper Edition A flow-based civic operating system for unconditional survival, productive markets, and capture-resistant governance**
 
 ### What this paper is
@@ -71,8 +76,8 @@ The old proposal spoke about three currencies. The refined design is cleaner: on
 **What it does:** guarantees baseline essentials.
 **What it is not:** cash, collateral, a status marker, or a store of value.
 
-#### CC | Civic Influence Ledger
-**What it does:** bounded civic weighting for agenda setting, jury pools, and public prioritization.
+#### DW / CR | Civic Layer
+**What it does:** bounded civic weighting for agenda setting, jury pools, service roles, and public prioritization.
 **What it is not:** money, reputation rank, or a license to rule.
 
 #### SQ | Scarcity Quotas
@@ -87,7 +92,7 @@ The old proposal spoke about three currencies. The refined design is cleaner: on
 | :--- | :--- | :--- |
 | **Daily life** | **LC** | You can obtain baseline food, heat, shelter support, healthcare, and transit without needing market cash first. |
 | **Markets** | **EC** | You price goods, pay wages, sign contracts, save for projects, and trade with others. |
-| **Civic life** | **CC** | Your verified stewardship gives you bounded voice, but no ability to buy privileges. |
+| **Civic life** | **DW / CR** | Your verified stewardship gives you bounded voice, but no ability to buy privileges. |
 | **Emergencies** | **SQ** | When there is real shortage, access is rationed openly instead of letting price spikes decide who gets through. |
 
 ---
@@ -103,7 +108,7 @@ EC is public money rather than privately created bank money. Basic banking rails
 
 | Common fear | Protocol response |
 | :--- | :--- |
-| **A hidden social credit system** | CC cannot buy rights, goods, immunity, housing priority, or dignity. Human worth is never measured. |
+| **A hidden social credit system** | DW and CR cannot buy rights, goods, immunity, housing priority, or dignity. Human worth is never measured. |
 | **A command economy** | EC still runs markets, pricing, contracts, enterprise formation, and innovation. The protocol constrains power, not all trade. |
 | **A welfare bureaucracy with no limits** | LC is grounded in measured capacity, clear basket rules, and reviewable scarcity procedures. |
 | **A surveillance state** | Identity and dashboards must use minimum necessary data, selective disclosure, and aggregation thresholds. |
@@ -112,22 +117,29 @@ EC is public money rather than privately created bank money. Basic banking rails
 
 ---
 
-## 4. The seven pillars (on a subsidiarity foundation)
-The pillars are not slogans. They are separation-of-concerns rules for a civic operating system. Each pillar is narrow enough to be audited and broad enough to matter.
+## 4. The Founding Order and Seven Articles
+The architecture is not a slogan set. It is a constitutional separation-of-concerns design. The **Founding Order** establishes who consents, at what scale, and how they leave. The **Articles** then define the operating logic of the constitutional order.
 
-*Proposal 2 close-out (2026-04-18): the operational architecture was restructured from twelve pillars into **Seven Pillars on a P0 subsidiarity foundation**. Five pairs of v12 pillars described the same function at different altitudes and were consolidated; three previously-absent foundations — subsidiarity, consent/exit, and external-world environmental scanning — were added. The project name "Twelve-Pillar Protocol" is retained for continuity of external reference; the v12 → v13 crosswalk lives in `Master_Protocol.md` §III for traceability.*
+*Proposal 2 close-out (2026-04-18): the operational architecture was restructured from twelve pillars into a consolidated architecture first expressed in `v13` shorthand as `Seven Pillars + P0`. The public-facing constitutional presentation now uses **one Founding Order** and **seven Articles of Constitutional Order**. The underlying structure is unchanged; only the naming frame has been constitutionalized. Legacy v12 and v13 references remain in the master crosswalk for traceability.*
 
-### The seven pillars at a glance
-Each pillar has one job. The architecture is intentionally modular so that no single office, ledger, or emergency process can silently absorb the others. **Pillar 0** reads through every operational pillar: decisions default to the smallest competent scale, and federation-scale action requires affirmative justification.
+### The constitutional structure at a glance
+Each article has one job. The architecture is intentionally modular so that no single office, ledger, or emergency process can silently absorb the others. The **Founding Order** reads through every article: decisions default to the smallest competent scale, and federation-scale action requires affirmative justification.
 
-0. **Subsidiarity, Consent & Exit (P0)**: Defines the smallest competent scale for every decision (household → neighborhood → locality → region → federation), the affirmative consent act by which units join the protocol, and the graceful-exit pathway by which they leave. The foundation layer that makes every operational pillar non-coercive by construction.
-1. **Rights & Rule of Law**: Locks the Tier 1 non-negotiables — dignity, due process, non-coercion, hard separation of functions — and binds execution to those rights. Oversight of execution lives here because rights and their enforcement are one function. Audit independence is preserved by institutional separation from Pillar 7.
-2. **Personhood, Identity & Continuity**: Protects one-personhood, recovery, guardianship, and dependent continuity without normalizing surveillance scoring.
-3. **Physics & Reserves**: Measures what society can actually deliver in food, energy, care, shelter, medicines, and other essentials — AND maintains the strategic reserves that buffer measurement error and supply shocks. Measurement and buffering are one capacity function at different time-scales.
-4. **Survival (LC Instrument + Delivery)**: Turns the Life Access Ledger into actual access to essentials. Both the instrument and its delivery live here — one definition, one attack surface, no semantic gap for drift attacks to exploit.
-5. **Markets, Commons & Public Finance**: EC as the single general-purpose currency, housing and land as use-rights rather than speculative ownership, enterprise under anti-monopoly constraints, and the Public Finance & Commons Revenue function that funds public operations through non-extractive structural revenue rather than taxes on survival or ordinary labor. The four faces of the economic surface, unified.
-6. **Civic Layer (DW/CR + Deliberation)**: DW and CR as non-monetary civic instruments, the contribution acts that mint them, and the deliberation processes that consume them — one closed loop. Runs the public prioritization process with rotation, caps, and anti-capture weighting; recognizes care-based and informal contributions without tying worth to output.
-7. **Transparency & Environmental Scanning**: Publishes real-time aggregate dashboards (the audit channel, genuinely independent of Pillar 1 control) AND scans the world outside the protocol's operational scope for emerging risks that would destabilize measurement assumptions or the survival floor.
+**Founding Order — Subsidiarity, Consent & Exit**: Defines the smallest competent scale for every decision (household → neighborhood → locality → region → federation), the affirmative consent act by which units join the constitutional order, and the graceful-exit pathway by which they leave. This is the foundation that makes every article non-coercive by construction.
+
+**Article I — Rights & Rule of Law**: Locks the Tier 1 non-negotiables — dignity, due process, non-coercion, and hard separation of functions — and binds execution to those rights. Oversight of execution lives here because rights and their enforcement are one function. Audit independence is preserved by institutional separation from Article VII.
+
+**Article II — Personhood, Identity & Continuity**: Protects one-personhood, recovery, guardianship, and dependent continuity without normalizing surveillance scoring.
+
+**Article III — Physics & Reserves**: Measures what society can actually deliver in food, energy, care, shelter, medicines, and other essentials — and maintains the strategic reserves that buffer measurement error and supply shocks. Measurement and buffering are one capacity function at different time-scales.
+
+**Article IV — Survival**: Turns the Life Access Ledger into actual access to essentials. Both the instrument and its delivery live here — one definition, one attack surface, no semantic gap for drift attacks to exploit.
+
+**Article V — Markets, Commons & Public Finance**: EC as the single general-purpose currency, housing and land as use-rights rather than speculative ownership, enterprise under anti-monopoly constraints, and the Public Finance & Commons Revenue function that funds public operations through non-extractive structural revenue rather than taxes on survival or ordinary labor.
+
+**Article VI — Civic Layer & Deliberation**: DW and CR as non-monetary civic instruments, the contribution acts that mint them, and the deliberation processes that consume them — one closed loop. Runs the public prioritization process with rotation, caps, and anti-capture weighting; recognizes care-based and informal contributions without tying worth to output.
+
+**Article VII — Transparency & Environmental Scanning**: Publishes real-time aggregate dashboards (the audit channel, genuinely independent of Article I control) and scans the world outside the constitutional order's operational scope for emerging risks that would destabilize measurement assumptions or the survival floor.
 
 ---
 
@@ -164,7 +176,7 @@ Abstract architecture becomes clearer when you watch it under pressure. These sc
 The protocol assumes that any useful rule will eventually be pressured, gamed, or reinterpreted. Its defense is not trust alone. It is layered friction, review, and boundary clarity.
 
 ### Hard boundaries
-LC cannot become cash. CC cannot become a social rank or purchasable power. SQ cannot quietly become permanent. Tier 1 invariants cannot be amended by ordinary emergency habit.
+LC cannot become cash. The civic layer cannot become a social rank or purchasable power. SQ cannot quietly become permanent. Tier 1 invariants cannot be amended by ordinary emergency habit.
 
 ### Challenge paths
 Standing is broad, mandatory review triggers are explicit, and hidden change through software, treaties, procurement, or administrative custom is treated as structural drift rather than harmless implementation.
@@ -173,7 +185,7 @@ Standing is broad, mandatory review triggers are explicit, and hidden change thr
 The refined protocol especially hardened six areas that tend to fail first in real systems:
 - **Demurrage** now has a governing theory and a stated purpose: discourage idle hoarding without punishing productive project finance.
 - **The essential basket** is treated as a permanent constitutional contest zone, not a solved technical list.
-- **CC** now has protections against the caregiving and hardship cliff.
+- **The civic layer** now has protections against the caregiving and hardship cliff.
 - **Judicial and constitutional review institutions** are defined rather than implied.
 - **The oracle layer** is treated as a first-order problem because the system cannot function if it loses contact with physical reality.
 - **Transition and founding legitimacy** are handled as real political risks, not as a one-paragraph appendix.
@@ -233,7 +245,7 @@ The protocol is not a utopia machine. It is an attempt to build a civic operatin
 | :--- | :--- |
 | **EC** | The only true money in the system. Used for markets, pricing, payroll, contracts, procurement, and trade. |
 | **LC** | A non-transferable entitlement ledger for baseline essentials. |
-| **CC** | A non-transferable civic influence ledger with caps, decay, and anti-capture rules. |
+| **DW / CR** | The civic layer: Deliberation Weight for bounded agenda-setting and Civic Record for service readiness, both non-transferable and anti-capture by design. |
 | **SQ** | Temporary scarcity quotas used only during verified shortage. |
 | **RCS** | The Resource & Capacity System: the measurement layer that estimates what society can physically deliver. |
 | **Tier 1 / Tier 2 / Tier 3** | The rule hierarchy: invariants, durable constitutional rules, and adjustable operating parameters. |
@@ -241,7 +253,7 @@ The protocol is not a utopia machine. It is an attempt to build a civic operatin
 
 ---
 
-# Twelve-Pillar Protocol - White Paper Sync Addendum
+# The Humane Constitution - White Paper Sync Addendum
 
 **No-loss public edition bridge aligned to the current master**
 
@@ -318,7 +330,7 @@ The following is a summary of core rights. The full Master Protocol governs in a
 
 | Where to check system health |
 | :--- |
-| The Pillar 7 public dashboard (v13; formerly Pillar 11 under v12) publishes real-time aggregate capacity, SLA performance, reserve levels, and governance queue status. |
+| The Article VII public dashboard (legacy v13 P7; formerly Pillar 11 under v12) publishes real-time aggregate capacity, SLA performance, reserve levels, and governance queue status. |
 
 ---
 

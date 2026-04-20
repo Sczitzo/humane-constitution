@@ -1,6 +1,6 @@
 """
-Twelve-Pillar Protocol — Agent-Based Simulation Outline
-========================================================
+The Humane Constitution — Agent-Based Simulation Outline
+=======================================================
 
 Framework: Mesa (pip install mesa)
 Purpose:   Model the flow of Life Credits (LC) vs. Enterprise Credits (EC)
@@ -695,7 +695,7 @@ def run_adversarial_stress(n_steps: int = 365) -> dict:
 # =============================================================================
 
 if __name__ == "__main__":
-    print("Twelve-Pillar Protocol — Agent-Based Simulation")
+    print("The Humane Constitution — Agent-Based Simulation")
     print("=" * 60)
     print("NOTE: All [FOUNDING COMMITMENT] parameters require")
     print("pilot data calibration before policy-relevant output.")
