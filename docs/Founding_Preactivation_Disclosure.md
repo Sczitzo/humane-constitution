@@ -145,4 +145,4 @@ P-014 is being invoked once, for P-013 only, because no other process was availa
 
 ---
 
-*This document is part of The Humane Constitution document set. The Master Protocol and Annexes AH and AH2 govern in all cases. Challenge window: April 10, 2026 through June 9, 2026 (60 days, per P-020 / AH2.1). Structural challenges extend the window by 14 days if unanswered.*
+*This document is part of The Humane Constitution document set. The Humane Constitution and Annex AH govern in all cases. Challenge window: April 10, 2026 through June 9, 2026 (60 days, per P-020 / AH2.1). Structural challenges extend the window by 14 days if unanswered.*

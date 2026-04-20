@@ -47,7 +47,7 @@
   - Regional enforcement (Annex AJ §4 Enforcement Panel is constituted with regional representation).
   - Regional CRP delegation to federation scale.
   - Regional Founding Order consent coordination when multiple localities within the region consent together.
-- **Representation:** Regional delegates to federation CRP per the federation apportionment rule (see Master Protocol §VIII).
+- **Representation:** Regional delegates to federation CRP per the federation apportionment rule (see Humane Constitution §VIII).
 - **Above-region: escalation rule.** Matters that affect two or more regions — EC/LC non-convertibility, Tier 1 invariants, cross-regional dispute resolution, inter-regional infrastructure — are federation-scale by construction.
 
 ### 5. Federation
@@ -56,7 +56,7 @@
 - **Lower bound:** N/A — the federation is the highest scale.
 - **Decision authority:**
   - All Tier 1 invariants (`/architecture/invariants.md`).
-  - EC/LC non-convertibility (Master Protocol §II).
+  - EC/LC non-convertibility (Humane Constitution §II).
   - Inter-regional dispute resolution not resolved at regional scale.
   - Cross-unit externalities that no smaller scale can address.
   - Drift-chain and amendment protocol operations.
@@ -137,7 +137,7 @@ Collapsed scales are rare, but the rule is stated explicitly so that the scale h
 | :--- | :--- |
 | `exit_protocol.md` | Exit is available at locality, region, or federation-sub-partition scale, not at household or neighborhood |
 | `consent_protocol.md` | Consent events are individual-personhood acts aggregated up the scale hierarchy |
-| Master Protocol §VIII (Representation) | Scale tiers are the basis for CRP delegate apportionment |
+| Humane Constitution §VIII (Representation) | Scale tiers are the basis for CRP delegate apportionment |
 | Annex AL (Oracle) | Oracle cohorts are typically regional (§Y of Annex AL) for measurement competence |
 | Annex AI (Federated Ombuds) | Sub-Ombuds are typically federation-scale but their jurisdictional dispersal (§1.2) is defined in terms of regional geography |
 | `/architecture/invariants.md` FC-122 | Scale bounds are locked at Tier 1 |

@@ -61,7 +61,7 @@ The live constitutional presentation uses **one Founding Order** and **seven Art
 
 ## Architecture flow
 
-The diagram below shows how the current Founding Order and Articles I-VII relate internally. Legacy `v13` shorthand (`P0`, `P1–P7`) and older `v12` pillar references in historical materials resolve through the crosswalk in `Master_Protocol.md` §III.
+The diagram below shows how the current Founding Order and Articles I-VII relate internally. Legacy `v13` shorthand (`P0`, `P1–P7`) and older `v12` pillar references in historical materials resolve through the crosswalk in `Humane_Constitution.md` §III.
 
 ```mermaid
 flowchart TD
@@ -113,7 +113,7 @@ flowchart TD
 
 | Document | Purpose |
 |---|---|
-| [`Master_Protocol.md`](./Master_Protocol.md) | Primary constitutional source of truth. Operative language, all annexes. |
+| [`Humane_Constitution.md`](./Humane_Constitution.md) | Primary constitutional source of truth. Lean constitutional text with links into the standalone annex corpus. |
 | [`White_Paper.md`](./White_Paper.md) | Plain-language public explanation. Start here. |
 | [`Threat_Register.md`](./Threat_Register.md) | Adversarial risk model. 27 threat IDs — 17 ADDRESSED, 5 PARTIAL, 4 OPEN (T-003 retired). T-017/P-014 is the FOUNDING instrument. |
 | [`Patch_Log.md`](./Patch_Log.md) | Change and mitigation history. 30 patches — 15 ACTIVE, 15 PROPOSED (1 FOUNDING: P-014). |
@@ -127,22 +127,13 @@ flowchart TD
 | [`docs/INVARIANTS.md`](./docs/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
 | [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Demurrage function, issuance constraints, oracle consensus rules, parameter table. |
 | [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
-| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture; preserves legacy pillar numbering where noted and maps through the `Master_Protocol.md` §III crosswalk. |
+| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture; preserves legacy pillar numbering where noted and maps through the `Humane_Constitution.md` §III crosswalk. |
 | [`docs/Founding_Preactivation_Disclosure.md`](./docs/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
 | [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
 
-Standalone annexes function as pre-launch blocking gates for specific patches. A patch cannot move to ACTIVE until its blocking annex is complete.
-
-| Annex | Purpose | Blocks |
-|---|---|---|
-| [`docs/annexes/ANNEX_AI.md`](./docs/annexes/ANNEX_AI.md) | Ombuds Office constitution: mandate, independence requirements, manufactured-flag authority, meta-capture prevention. | P-015 |
-| [`docs/annexes/ANNEX_AJ.md`](./docs/annexes/ANNEX_AJ.md) | Above-ledger bypass worked examples across all three instrument boundaries. | T-001 open problem |
-| [`docs/annexes/ANNEX_AK.md`](./docs/annexes/ANNEX_AK.md) | Identity asymmetric error doctrine: fraud/exclusion rate targets, decision rule, recalibration process. | P-016 |
-| [`docs/annexes/ANNEX_AL.md`](./docs/annexes/ANNEX_AL.md) | Methodology-class definitions for oracle independence: P-004 protected definitions, three canonical classes, anti-monoculture trigger, annual audit. | P-017 |
-| [`docs/annexes/ANNEX_AR.md`](./docs/annexes/ANNEX_AR.md) | Contract-commitment architecture parameters: release thresholds, deployment windows, force majeure caps, inspector pool governance. | P-023 |
-| [`docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md`](./docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md) | Annex AO — public/restricted bifurcation framework for the Threat Register. | P-021 |
+The annex corpus now lives entirely as standalone documents. Use [`docs/annexes/INDEX.md`](./docs/annexes/INDEX.md) as the entry point for constitutional annexes, hardening clauses, and legacy continuity material.
 
 ## Security and attack surface
 
@@ -248,7 +239,7 @@ The Formal Acceptance Protocol defines the pathway from design to operation.
 
 **Then the Threat Register** if you want to stress-test the design — it documents every adversarial failure mode and mitigation.
 
-**Then the Master Protocol** if you want the operative language.
+**Then the Humane Constitution** if you want the operative language.
 
 **To critique, challenge, or contribute:** open an Issue with your specific objection, the section it applies to, and your proposed alternative. Vague objections will be asked to specify. Specific objections will be taken seriously.
 

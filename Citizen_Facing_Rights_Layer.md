@@ -74,10 +74,10 @@ Silence about a failure is itself a violation of the protocol's commitments.
 
 ## How to verify your rights
 
-The operative language governing all of the above is in the **Master Protocol**. The threat register documents every known attempt to undermine these rights and the mitigations in place. Both are publicly available in this repository.
+The operative language governing all of the above is in the **Humane Constitution**. The threat register documents every known attempt to undermine these rights and the mitigations in place. Both are publicly available in this repository.
 
 If you believe a right has been violated, open an Issue in this repository with the specific clause affected, the mechanism of the violation, and any evidence.
 
 ---
 
-*This document summarises rights established in the Master Protocol. In any conflict, the Master Protocol governs.*
+*This document summarises rights established in the Humane Constitution. In any conflict, the Humane Constitution governs.*

@@ -3,7 +3,7 @@
 **Auditor role:** Principal Systems Architect & Macroeconomic Auditor (adversarial red-team).
 **Date:** 2026-04-18.
 **Posture:** Hostile but constructive. No praise for the protocol as a whole. Proposals optimize for **less government, decentralization, non-coercion, subsidiarity, and voluntary stewardship**.
-**Scope:** Derived from ingestion of `White_Paper.md`, `Master_Protocol.md`, `Threat_Register.md`, `Patch_Log.md`, `docs/ADVERSARIAL_AUDIT.md`, and all files in `docs/annexes/`. This document is advisory — **no authoritative file has been modified**.
+**Scope:** Derived from ingestion of `White_Paper.md`, `Humane_Constitution.md`, `Threat_Register.md`, `Patch_Log.md`, `docs/ADVERSARIAL_AUDIT.md`, and all files in `docs/annexes/`. This document is advisory — **no authoritative file has been modified**.
 **Existing audit acknowledgment:** Phases 1–3 of `docs/ADVERSARIAL_AUDIT.md` (6 PRDs, 7 sims, 14 findings) are not duplicated here. This document addresses holes the existing audit has *confirmed but not closed*, plus pathologies the existing audit has *not yet named*.
 
 **Continuity note:** This proposal memo preserves some legacy pillar shorthand in prose where chronology matters. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**; file-path scaffolding below follows that current naming where practical.
@@ -40,9 +40,9 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 ### PROPOSAL 1 — Replace normative Tier 1 enforcement with cryptographic architectural enforcement
 
-- **[TARGET]** Pillar 1 (`Master_Protocol.md` §III, Pillar 1), Annex Y (absent), `docs/INVARIANTS.md`. Files: Master_Protocol.md lines 245–252, any future `/annexes/Y/`.
+- **[TARGET]** Pillar 1 (`Humane_Constitution.md` §III, Pillar 1), Annex Y (absent), `docs/INVARIANTS.md`. Files: Humane_Constitution.md lines 245–252, any future `/annexes/Y/`.
 
-- **[THE FLAW]** Tier 1 invariants are described with architectural language but enforced by a human process. Source: Master_Protocol.md lines 246–252 lists seven invariants including *"Survival is unconditional: baseline essentials are guaranteed and cannot be withdrawn as punishment"* and *"Separation-of-concerns: survival (LC), enterprise (EC), and the civic layer (DW/CR) remain distinct and non-convertible."* The system relies on FAP (Founding Adversarial Panel) reviewers manually rejecting non-compliant amendments. `docs/ADVERSARIAL_AUDIT.md` Test 6 confirms: *"'Unamendable' is a normative description enforced by a human process (FAP review), not a technical impossibility."* A captured FAP passes any amendment.
+- **[THE FLAW]** Tier 1 invariants are described with architectural language but enforced by a human process. Source: Humane_Constitution.md lines 246–252 lists seven invariants including *"Survival is unconditional: baseline essentials are guaranteed and cannot be withdrawn as punishment"* and *"Separation-of-concerns: survival (LC), enterprise (EC), and the civic layer (DW/CR) remain distinct and non-convertible."* The system relies on FAP (Founding Adversarial Panel) reviewers manually rejecting non-compliant amendments. `docs/ADVERSARIAL_AUDIT.md` Test 6 confirms: *"'Unamendable' is a normative description enforced by a human process (FAP review), not a technical impossibility."* A captured FAP passes any amendment.
 
 - **[THE PROPOSED SOLUTION]** Convert every Tier 1 invariant into a cryptographically-committed ledger invariant enforced at the protocol layer, not at the review layer. Concretely:
   - CSM (Constitutional Survival Minimum) issuance runs automatically against verified personhood commitments with **no governance-actor authorization required for disbursement**. A governance actor must be architecturally *unable* to halt CSM issuance.
@@ -80,7 +80,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 ### PROPOSAL 2 — Collapse 12 pillars → 7 pillars + 1 foundational layer
 
-- **[TARGET]** `Master_Protocol.md` §III (The Twelve Pillars), `White_Paper.md` §4, all index files, all pillar-reference annexes, existing folder structure.
+- **[TARGET]** `Humane_Constitution.md` §III (The Twelve Pillars), `White_Paper.md` §4, all index files, all pillar-reference annexes, existing folder structure.
 
 - **[THE FLAW]** Five pillar pairs describe the same function at different altitudes:
   - P1 (Constitutional Invariants) and P10 (Operations/Oversight): Master lines 245–252 vs 306–312 — rights-definition vs rights-execution of the same underlying principle set.
@@ -189,7 +189,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 ### PROPOSAL 4 — Publish every `[FOUNDING COMMITMENT]` as a binding number, locked at founding
 
 - **[TARGET]** All hand-wavy clauses across Master, Annexes, White Paper. Specific instances:
-  - `Master_Protocol.md` §0(a): *"society can measure key physical capacities with acceptable accuracy"* — no error bound specified.
+  - `Humane_Constitution.md` §0(a): *"society can measure key physical capacities with acceptable accuracy"* — no error bound specified.
   - `Threat_Register.md` T-001: *"The system shall define an explicit acceptable leakage threshold"* — deferred, currently undefined.
   - `ADVERSARIAL_AUDIT.md` PRD-005: Protected Pause civic floor — required range (0.13, 0.67), no value.
   - Pillar 5 §II.1: demurrage corridor *"0.25%–1.00% based on hoarding signals, investment blockage, and concentration metrics"* — signals/metrics undefined.
@@ -436,7 +436,7 @@ Ten proposals, prioritized. Each has a structured brief. All optimize for less g
 
 - **[TARGET]** `Annex Y` (currently absent from worktree despite being referenced throughout), new `/annexes/Y/`.
 
-- **[THE FLAW]** From the `<system_audit>` above and the parallel exploration: Master_Protocol.md §0 (line 120) and §Pillar 4 (line 266) repeatedly reference "Annex Y" as the authoritative constitutional survival minimum. **The file does not exist in the worktree.** Protocol depends on an unpublished appendix for its most foundational commitment. This is the single largest definition-drift attack surface in the entire system: whoever first writes Annex Y writes the floor.
+- **[THE FLAW]** From the `<system_audit>` above and the parallel exploration: Humane_Constitution.md §0 (line 120) and §Pillar 4 (line 266) repeatedly reference "Annex Y" as the authoritative constitutional survival minimum. **The file does not exist in the worktree.** Protocol depends on an unpublished appendix for its most foundational commitment. This is the single largest definition-drift attack surface in the entire system: whoever first writes Annex Y writes the floor.
 
 - **[THE PROPOSED SOLUTION]** Publish Annex Y as a concrete document before any pilot, containing:
   - Per-category minimum quantities (e.g., calories/day, liters of potable water/day, square meters of weather-safe shelter/person, annual medical-stabilization events/person, basic-sanitation service units).

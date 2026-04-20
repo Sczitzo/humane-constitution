@@ -3,7 +3,7 @@
 ## Scope reviewed
 - `README.md`
 - `White_Paper.md`
-- `Master_Protocol.md`
+- `Humane_Constitution.md`
 
 This review flags argument-level weaknesses (logical fallacies, over-claims, and non-falsifiable framing), then proposes concrete revisions that preserve the project’s intent while increasing rigor and credibility.
 

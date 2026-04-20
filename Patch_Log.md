@@ -61,7 +61,7 @@ Inline dependencies are preserved as-authored for audit traceability; the mappin
 | P-024 | T-009 / TR-07 / T-018 (residual) | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
 | P-025 | T-008 (residual) / meta-capture | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | Founding Order — Subsidiarity, Consent & Exit layer: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with LC continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/founding/order/` directory. |
-| P-027 | structural simplification / T-005 / T-008 (residual) | **ACTIVE** | Critical | Proposal 2 pillar consolidation: twelve pillars → Seven Pillars + P0 (v13). Five redundant pairs collapsed (P1/P10, P4/P5-LC, P6/P7, P11/P10 S3-S3*, P3/P12-as-reserves); Beer-VSM S4 environmental-scanning function added; PFCR (external v12 P12) absorbed into new P5 Markets, Commons & Public Finance. Legacy v12 nomenclature preserved in crosswalk tables. `Master_Protocol.md` §III, `White_Paper.md` §4. |
+| P-027 | structural simplification / T-005 / T-008 (residual) | **ACTIVE** | Critical | Proposal 2 pillar consolidation: twelve pillars → Seven Pillars + P0 (v13). Five redundant pairs collapsed (P1/P10, P4/P5-LC, P6/P7, P11/P10 S3-S3*, P3/P12-as-reserves); Beer-VSM S4 environmental-scanning function added; PFCR (external v12 P12) absorbed into new P5 Markets, Commons & Public Finance. Legacy v12 nomenclature preserved in crosswalk tables. `Humane_Constitution.md` §III, `White_Paper.md` §4. |
 | P-029 | T-016 / public-funding architecture | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, demurrage routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
 | P-030 | PRD-004 / household coercion | **ACTIVE** | Critical | Protocol-only money creation + household finance boundaries: no private EC creation, no compounding household ordinary-life debt, no survival-floor securitization. |
 | P-031 | PRD-009 / dynastic capture | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
@@ -626,7 +626,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-009 / TR-07 / T-018 residual | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
 | T-008 residual / meta-capture | P-025 | **ACTIVE** | Annex AI ACTIVE (rewritten) · FC-090/091/092 |
 | T-026 / T-027 | P-026 | **ACTIVE** | `/founding/order/` ACTIVE · FC-120/121/122 |
-| structural simplification / T-005 residual / T-008 residual | P-027 | **ACTIVE** | `Master_Protocol.md` §III Seven Pillars + P0 · `White_Paper.md` §4 |
+| structural simplification / T-005 residual / T-008 residual | P-027 | **ACTIVE** | `Humane_Constitution.md` §III Seven Pillars + P0 · `White_Paper.md` §4 |
 
 ---
 
