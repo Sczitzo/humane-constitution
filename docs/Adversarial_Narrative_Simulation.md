@@ -4,6 +4,8 @@
 
 This document does not rebut the attacks rhetorically. It maps them — their mechanics, their audiences, and the design features that preempt or constrain them. Effective response begins with accurate diagnosis.
 
+> **Nomenclature note (2026-04-18):** this file was authored under the v12 twelve-pillar naming scheme (references to "Pillar 9", "Pillar 11", "twelve pillars", etc.). The operational architecture was restructured into **Seven Pillars on a P0 subsidiarity foundation** (v13) by Proposal 2. Inline v12 references are preserved as authored — the attack narratives (e.g. N-008 "This is too complex to ever work") are historically accurate to the state at time of writing, and the v12 → v13 crosswalk in `Master_Protocol.md` §III maps all legacy pillar numbers to their v13 locations (e.g. v12 Pillar 11 → v13 Pillar 7; v12 Pillar 9 → v13 Pillar 6).
+
 ---
 
 ## How to read this document
