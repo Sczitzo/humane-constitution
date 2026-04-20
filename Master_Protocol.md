@@ -1,6 +1,6 @@
 # The Twelve-Pillar Protocol
 
-**Integrated master edition**
+**Integrated master edition** — operational architecture: Seven Pillars + P0 (v13, Proposal 2 close-out 2026-04-18). Project name retained for external continuity.
 
 ---
 
@@ -110,6 +110,8 @@ The next red-team queue, to be continued through the running documents, is prior
 ## THE TWELVE-PILLAR PROTOCOL
 **A constitution-grade architecture for a flow-based economy, unconditional survival, and capture-resistant governance.**
 
+*Proposal 2 close-out (2026-04-18): the operational architecture was restructured from twelve pillars into **Seven Pillars + P0** (a foundational subsidiarity/consent/exit layer). The project name is retained for continuity of external reference, but §III below defines the current v13 pillar structure. Legacy v12 and v10 nomenclature resolves through the crosswalk tables at the end of §III.*
+
 ### 0. Scope, Assumptions, and Design Invariants
 **Scope:** This document describes a high-level governance and monetary architecture intended to prevent survival coercion, wealth-to-power conversion, and institutional capture while preserving competitive enterprise and personal freedom.
 
@@ -187,8 +189,10 @@ The legacy system fails when financial claims on the future outgrow the physical
 
 ---
 
-## II. Monetary Architecture (Pillar 5)
+## II. Monetary Architecture (split across Pillars 4, 5, 6 in v13)
 To prevent corruption and category errors, the protocol uses four separated instruments. Only one is money. The other three are bounded ledgers or emergency quota tools with distinct rules aligned to their constitutional purpose.
+
+*Instrument-to-pillar mapping in v13: **LC** lives in Pillar 4 (Survival), **EC** and **SQ** live in Pillar 5 (Markets, Commons & Public Finance), **DW** and **CR** live in Pillar 6 (Civic Layer). The instruments are defined here under one architectural heading because their non-convertibility rules are mutually-referential; the operational pillars that own each instrument are specified in §III.*
 
 ### 1) Enterprise Currency (EC) - The Currency
 - **Purpose:** production, trade, innovation, non-essential consumption, payroll, procurement, and settlement.
@@ -218,164 +222,206 @@ To prevent corruption and category errors, the protocol uses four separated inst
 
 ---
 
-## III. The Twelve Pillars (Operational Mechanics)
-This section defines the twelve pillars as the system’s separation-of-concerns. Each pillar has a narrow job, explicit inputs/outputs, and a hard boundary to prevent category errors (e.g., turning wellbeing metrics into coercion).
+## III. The Seven Pillars + P0 (Operational Mechanics)
+
+**Proposal 2 close-out, 2026-04-18.** This section was restructured from twelve pillars into **seven operational pillars on a P0 subsidiarity foundation** per `Protocol_Optimization_Proposals.md` Proposal 2. The substantive content is preserved; the reorganization collapses five redundant pairs, separates S3 (control) from S3* (audit), and introduces three previously-missing foundations (subsidiarity, consent/exit, environmental scanning). The v12 → v13 crosswalk lives in the legacy mapping table below; the v10 → v11 → v12 history is preserved there for traceability.
+
+Each pillar has a narrow job, explicit inputs/outputs, and a hard boundary to prevent category errors (e.g., turning wellbeing metrics into coercion). **P0 reads through every operational pillar**: each pillar's default resolution scale is the smallest competent unit under the subsidiarity rule; federation-scale operation requires affirmative justification per `pillars/P0_subsidiarity/subsidiarity_rule.md`.
 
 ### Architecture at a glance
 
-1. **Constitutional Invariants & Rights** - Defines non-negotiables; protects dignity, due process, and non-coercion.
-2. **Personhood, Identity & Continuity** - Proof-of-personhood + privacy + continuity (guardianship, recovery).
-3. **Resource & Capacity System (RCS)** - Measures physical capacity of essentials; publishes aggregate indices.
-4. **Life Support Layer (LC Services)** - Delivers baseline essentials using LC with scarcity modes, quota controls, and anti-coercion safeguards.
-5. **Monetary Architecture (EC / LC / civic layer / SQ)** - Defines the money, entitlement, deliberation, service-readiness, and scarcity instruments; non-convertibility; decay; partitions; and emergency scarcity logic.
-6. **Land, Housing & Commons (Use-Rights)** - Prevents rent-seeking via leases/use-rights and stewardship renewal.
-7. **Enterprise & Production Platform** - Competitive markets using EC under anti-monopoly + regenerative constraints.
-8. **Contribution & Capability Development** - Mints CR and DW through verified stewardship under differentiated rules; capability-adjusted; anti-gaming.
-9. **Civic Deliberation & Decision Systems** - Quarterly priority setting + proposal pipeline + anti-capture weighting.
-10. **Operations & Service Delivery** - Rule-bound execution with safety rails, audits, SLAs, incident response.
-11. **Information Commons & Trust Transparency** - Real-time public dashboards (privacy-preserving), definitions, change logs.
-12. **Public Finance & Commons Revenue (PFCR)** - Funds public operations, banking rails, and commons stewardship through non-extractive structural revenue rather than taxes on survival or ordinary labor.
+0. **Subsidiarity, Consent & Exit (P0)** — Defines the smallest competent scale for every decision, the affirmative consent act by which units join the protocol, and the graceful-exit pathway by which they leave. The foundation layer that makes every operational pillar non-coercive by construction.
+1. **Rights & Rule of Law** — Tier 1 constitutional invariants (dignity, due process, non-coercion, separation-of-concerns) combined with rule-bound execution of those rights. Oversight-of-execution lives here because rights and their enforcement are one function; the S3* audit channel is architecturally separated (see Pillar 7).
+2. **Personhood, Identity & Continuity** — Proof-of-personhood, guardianship, recovery, and dependent continuity without surveillance scoring.
+3. **Physics & Reserves** — Polycentric measurement of physical capacity (food, water, energy, shelter, medicines) AND the strategic reserves that buffer measurement error and supply shocks — one capacity-function under one rubric.
+4. **Survival (LC Instrument + Delivery)** — The Life Access Ledger as an instrument AND its delivery to people as actual access. One definition, one attack surface; resolves the prior P4/P5 gap that T-007 drift attacks exploited.
+5. **Markets, Commons & Public Finance** — Enterprise Currency (EC) + land/housing/commons use-rights + anti-monopoly enterprise + Public Finance & Commons Revenue (PFCR) as one production-and-revenue pillar. All markets-side functions — currency issuance, productive activity, housing allocation, commons stewardship, and the non-extractive public revenue that funds public operations — unified.
+6. **Civic Layer (DW/CR + Deliberation)** — Deliberation Weight (DW) + Civic Record (CR) as instruments AND the deliberation processes they feed AND the contribution-recognition that mints them. The civic input-output pipeline as one pillar.
+7. **Transparency & Environmental Scanning** — Real-time public dashboards (the S3* audit channel, genuinely independent of Pillar 1's control channel) + Beer-VSM S4 external-world scanning. The reporting function has no institutional overlap with the operating function.
 
 ### Pillar interfaces
 *Pillar + Interfaces ↔ Boundary (cannot touch)*
 
-1. **Constitutional Invariants & Rights**
-   - \-\> Constraints for all pillars; Cannot be overridden by CC/EC decisions.
+0. **Subsidiarity, Consent & Exit**
+   - → All pillars: sets the default scale of action and the consent basis for protocol operation; Cannot override Tier 1 human-dignity (CSM) floor, which applies regardless of consent.
+1. **Rights & Rule of Law**
+   - → Constraints for all pillars + rule-bound execution of those constraints; Cannot be overridden by DW/CR/EC decisions or by operational expedience.
 2. **Personhood, Identity & Continuity**
-   - (1) \-\> Eligibility signals (minimal); Cannot become surveillance scoring.
-3. **Resource & Capacity System (RCS)**
-   - (2),(7) \-\> Capacity/scarcity indices; Cannot issue beyond conservative buffers.
-4. **Life Support Layer (LC Services)**
-   - (3),(5) \-\> Essential service delivery; Cannot condition survival on behavior.
-5. **Monetary Architecture (EC / LC / CC / SQ)**
-   - (1),(3),(4),(8),(9) \-\> Issuance/decay rules; non-convertibility; partitions; scarcity logic. Cannot allow instrument conversion or role drift.
-6. **Land, Housing & Commons (Use-Rights)**
-   - (1),(3),(5),(9) \-\> Housing/commons allocation rules; Cannot enable speculative ownership rents.
-7. **Enterprise & Production Platform**
-   - (5),(6),(3) \-\> Goods/services production; Cannot create monopolies/capture.
-8. **Contribution & Capability Development**
-   - (2),(10) \-\> Verified CC minting; Cannot rank human worth.
-9. **Civic Deliberation & Decision Systems**
-   - (2),(8),(11) \-\> Authorized decisions/priorities; Cannot change constitutional rights.
-10. **Operations & Service Delivery**
-    - (9),(5) \-\> Implemented services/programs + enforcement; Cannot exercise discretionary coercion.
-11. **Information Commons & Trust Transparency**
-    - All (aggregate signals) \-\> Public accountability layer; Cannot publish re-identifiable data.
-12. **Public Finance & Commons Revenue (PFCR)**
-    - (1),(5),(6),(7),(10),(11) \-\> Public funding, banking-rail support, and commons revenue discipline; Cannot tax survival or ordinary labor, and cannot hide debt or off-ledger obligations.
+   - (1) → Eligibility signals (minimal, privacy-preserving); Cannot become surveillance scoring.
+3. **Physics & Reserves**
+   - (2),(5) → Capacity indices and reserve buffers; Cannot issue beyond conservative margins; Cannot absorb control functions from Pillar 1 or audit functions from Pillar 7.
+4. **Survival (LC Instrument + Delivery)**
+   - (3),(5) → LC issuance, daily allocation, and essential service delivery; Cannot condition survival on behavior; Cannot permit LC monetization or conversion.
+5. **Markets, Commons & Public Finance**
+   - (1),(3),(4),(6) → EC issuance/decay, housing/commons use-rights, enterprise competition, commons-revenue routing, public banking rail; Cannot allow instrument conversion, enable speculative rents, create monopolies, or tax survival or ordinary labor.
+6. **Civic Layer (DW/CR + Deliberation)**
+   - (1),(2),(7) → DW/CR minting, priority-setting, authorized decisions; Cannot change constitutional rights; Cannot rank human worth; Cannot convert into economic power.
+7. **Transparency & Environmental Scanning**
+   - All (aggregate signals) → Public accountability layer + external-world scanning (Beer S4); Cannot publish re-identifiable data; Cannot share institutional home with Pillar 1 control (S3/S3* independence).
 
 ---
 
 ### Pillar-by-pillar detail
 
-#### Pillar 1: Constitutional Invariants & Rights
+#### Pillar 0: Subsidiarity, Consent & Exit
+- **Subsidiarity rule:** decisions default to the smallest competent scale — household, neighborhood (≤500 persons), locality (≤5,000), region (≤500,000), federation — with federation-scale action permitted only where cross-regional externality, physical-scale infrastructure, or constitutional-floor enforcement is affirmatively justified (`pillars/P0_subsidiarity/subsidiarity_rule.md`).
+- **Scale hierarchy (FC-122):** five scales with quantitative bounds; no empty scales; Tier 1 locked. Multi-scale competence disputes default against escalation.
+- **Consent protocol:** affirmative 2/3-supermajority consent, 90-day notice, 60-day deliberation, roll-call, 2/3 minimum participation. Non-consenting units are outside protocol scope except for the Tier 1 human-dignity floor (CSM).
+- **Exit protocol (FC-120, FC-121):** any unit at locality scale or larger may exit by 2/3 resident-personhood supermajority with a 730-day graceful unwind. LC continuity is preserved during unwind; no exit tax; no forfeiture.
+- **Re-entry protocol:** procedurally symmetric to accession; no penalty for previously-exited units; 365-day floor between exit events to prevent cycling.
+- **Individual consent withdrawal:** a person may withdraw individual consent at any time; Tier 1 CSM floor continues unconditionally.
+- **Relationship to other pillars:** P0 is read through every operational pillar. P1 rights remain protected regardless of scale; Pillar 3 capacity measurement, Pillar 4 LC delivery, Pillar 5 markets, and Pillar 7 transparency each resolve to the smallest competent scale by default.
+
+#### Pillar 1: Rights & Rule of Law
 - **Survival is unconditional:** baseline essentials are guaranteed and cannot be withdrawn as punishment.
+- **Constitutional Survival Minimum:** no ordinary process may reduce the humane floor below Annex Y minima; only H-3 refounding authority may amend.
 - **Human worth is not measured:** no score or metric can gate dignity, personhood, or survival access.
 - **Due process:** enforcement requires transparent rules, appeal paths, and independent oversight.
 - **No taxes on ordinary life:** survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources.
 - **Separation-of-concerns:** survival (LC), enterprise (EC), and the civic layer (DW/CR) remain distinct and non-convertible.
 - **Money creation is public:** only protocol-authorized issuance bodies may create EC or EC-equivalent purchasing power.
 - **Families may pass continuity, not domination:** modest succession may be protected, but perpetual dynastic wealth structures, trusts, and inherited ruling claims are prohibited.
-- **Anti-capture oversight:** independent audits, rotation, conflict-of-interest rules, and funded red-teaming are mandatory system features.
-- **Non-coercion:** DW, CR, and EC can never purchase or condition constitutional rights.
 - **Ownership is stewardship, not tribute:** rights in land, housing, and enterprise may reward use, risk, and contribution, but may not justify perpetual passive extraction from others' necessity or labor.
+- **Non-coercion:** DW, CR, and EC can never purchase or condition constitutional rights.
+- **Rule-bound execution (absorbed from v12 P10):** implementation of authorized decisions runs through rule-bound workflows with a published discretion taxonomy, documented reasons, and reviewable boundaries. Oversight enforces fraud/coercion/bribery rules proportionally, protects dependents and innocent counterparties, and avoids collateral harm. Staged rollouts, canary deployments, rate limits, narrow emergency pauses, competency-based auditable hiring/procurement, and published SLA/incident/correction logs are mandatory.
+- **Anti-capture oversight:** independent audits, rotation, conflict-of-interest rules, and funded red-teaming are mandatory system features. The S3/S3* independence rule requires that audit (Pillar 7) be institutionally separate from control (this pillar) — the reporting function may never share an institutional home with the operating function it reports on.
+- **Architectural enforcement:** Tier 1 invariants are mechanically enforced via the `architecture/` directory (7-of-9 amendment, 180-day timelock, drift chain, implementation binding) per Proposal 1 close-out.
 
 #### Pillar 2: Personhood, Identity & Continuity
 - **One-person-one-core-wallet** to prevent Sybil attacks and duplicate LC claims.
 - **Privacy-preserving verification** with selective disclosure; collect the minimum data required.
 - **Continuity rules:** guardianship, incapacity, birth/death handling, and uninterrupted dependent coverage.
 - **Appeals and recovery:** robust wallet recovery and dispute resolution, designed for refugees and those without documentation.
+- **Layered identity (Annex AB4):** identity powers are split by consequence — humane-floor personhood, provisional personhood, core resident identity, and later civic activation. No single document, biometric, institution, or device may serve as the sole irreversible authority.
 
-#### Pillar 3: Resource & Capacity System (RCS)
-- **Polycentric measurement:** multiple independent sources publish capacity and scarcity indices.
+#### Pillar 3: Physics & Reserves
+- **Polycentric measurement:** multiple independent sources publish capacity and scarcity indices; minimum N=5 nodes per cohort, minimum 3 methodology classes, with pairwise-correlation tests and at least one adversarial seat per cohort (Proposal 3).
 - **Conservative issuance:** buffers and safety margins remain mandatory, but methodology-only disputes do not automatically reduce issuance; challengers must produce prima facie alternative evidence or the system defaults toward continuity while audit proceeds.
 - **Aggregate transparency:** publish methodology, definitions, and change logs; minimize individual-level exposure.
-- **Resilience reserves:** define strategic buffers for food, water, energy, and critical medicines with replenishment rules.
+- **Resilience reserves (absorbed capacity function):** strategic buffers for food, water, energy, and critical medicines with replenishment rules. Reserves and measurement live in one pillar because reserves exist to buffer measurement error and supply-shock tails — they are the same capacity function at different time-scales.
+- **Crisis fallback (Proposal 6):** published fallback protocol for measurement failure — conservative issuance defaults, reserve draw triggers, and automatic review escalation.
 
-#### Pillar 4: Life Support Layer (LC Services)
-- **LC purpose:** baseline essentials (food, water, weather-safe shelter, basic transit, essential healthcare/medicines, crisis mental-health care, and the Constitutional Survival Minimum floor defined in Annex Y).
+#### Pillar 4: Survival (LC Instrument + Delivery)
+- **LC as instrument and delivery combined:** the Life Access Ledger is both a non-monetary entitlement ledger AND the service pathway that turns that ledger into actual access. Collapsing v12 P4 (delivery) and the LC portion of v12 P5 (instrument) into one pillar removes the semantic gap T-007 drift attacks exploited.
+- **LC purpose:** baseline essentials — food, water, weather-safe shelter, basic transit, essential healthcare/medicines, crisis mental-health care, and the Constitutional Survival Minimum floor defined in Annex Y.
+- **Nature:** LC is not money. It is a non-transferable entitlement that authorizes access to the essential basket.
+- **Constitutional floor:** LC may never be narrowed below the CSM defined in Annex Y, even during scarcity modes or temporary substitution.
 - **Issuance cadence:** daily micro-issuance derived from the Option B baseline using Pillar 3 capacity signals and conservative buffers.
 - **Expiration:** each daily tranche expires after a 72-hour rolling window; unused expired LC returns to the Capacity Pool while preserving continuity paths for illness, travel disruption, caregiving emergencies, and provider outages.
-- **Non-transferability** by default to block coercion and black-market control; narrow caregiver/dependent exceptions with caps and auditing.
+- **Non-transferability** by default to block coercion and black-market control; narrow caregiver/dependent exceptions with caps, audit, and reversibility when coercion is detected.
+- **Non-convertibility rule:** LC cannot be sold, pledged, collateralized, or informally monetized. LC-only lane for the essential basket prevents scalable arbitrage (T-001 containment).
+- **Scarcity interface:** during declared scarcity, Pillar 5's SQ (Scarcity Quotas — a category-specific emergency rationing instrument, not money) may supplement LC allocation; termination rules bind SQ to the end of scarcity mode.
 
-#### Pillar 5: Monetary Architecture (EC / LC / civic layer / SQ)
+#### Pillar 5: Markets, Commons & Public Finance
 **Core boundary rule**
 - **Instruments are non-convertible** by default; any exception requires amendment-level authorization, narrow scope, and explicit anti-capture constraints.
-- **EC form:** public digital currency is primary, secured by cryptographic methods, with physical cash or equivalent offline EC instruments maintained as a permanent resilience and privacy layer.
-- **EC demurrage:** default 0.5% per month on idle balances above the constitutional operating-float exemption, with review inside a 0.25%-1.00% corridor and anti-evasion treatment for equivalent non-EC value stores above threshold.
-- **EC issuance:** new EC originates only through Annex X channels. Private banks and ordinary balance-sheet lenders may intermediate or recycle existing EC, but may not create new EC, EC-denominated deposit substitutes, or other currency-like claims by debt expansion. Issuance must remain polycentric, provenance-tagged at audit level, and bounded by channel ceilings, dual-key review, and unwind discipline.
-- **Civic layer minting and decay:** CR is earned through verified stewardship and service readiness; DW governs bounded quarterly agenda influence. Both remain bounded by caps, decay rules, category balancing, and hardship-safe continuity safeguards.
-- **Public banking utility:** baseline payments, custody, wage receipt, bill pay, cash conversion, and fraud recovery run on PFCR-funded public infrastructure with a guaranteed public option and interoperable licensed providers.
-- **Household finance rule:** compounding interest on household ordinary-life debt is prohibited. No household debt instrument may securitize the humane floor, rely on revolving traps, or survive through hidden fee chains that recreate survival coercion.
-- **Wallet partitioning:** protect payroll/essential obligations from broad freezes; target enforcement narrowly.
-- **Investment channel:** transparent equity-like, revenue-share, or milestone-bound instruments with capped, redeemable, or sunset claims; default prohibition on compounding interest as systemic extraction and on perpetual extractive ownership claims.
 
-#### Pillar 6: Land, Housing & Commons (Use-Rights)
-- **Housing/land governed as use-rights/leases** (not speculative ownership).
-- **Transparent allocation rules**; renewal depends on occupancy and a closed-list stewardship standard limited to vacancy, damage beyond normal wear, verified illegal use of the premises, or clearly defined health/safety violations after remediation opportunity.
-- **Family continuity protected without dynastic landlordism:** ordinary household continuity may be preserved, but housing and land rights may not be warehoused through trusts, shell entities, or absentee succession structures detached from active stewardship.
+**Enterprise Currency (EC)**
+- **Purpose:** production, trade, innovation, non-essential consumption, payroll, procurement, and settlement.
+- **Nature:** EC is the sole general-purpose currency and the common accounting denominator for market pricing and public finance.
+- **Form rule:** EC operates primarily as a public digital currency secured by cryptographic methods; physical cash or equivalent offline bearer instruments remain permanently available for privacy, resilience, and universal access.
+- **Issuance rule:** EC is issued only through Annex X channels (payroll, milestone-bound project escrow, essential-services procurement, public infrastructure windows, tightly bounded continuity backstops). Dual-key review, provenance tagging at audit level, and published unwind paths are mandatory. Private banks, funds, and lenders may intermediate existing EC but may not create new EC, EC-denominated deposit substitutes, or currency-like purchasing power by debt expansion.
+- **Circulation rule:** free transfer within lawful market activity, subject to anti-hoarding, anti-monopoly, and anti-rent-seeking constraints.
+- **Idle-value rule:** default 0.5% per month demurrage on idle balances above a published operating-float exemption, with review inside a 0.25%–1.00% corridor based on hoarding signals, investment blockage, and concentration metrics.
+- **Investment channel:** time-bound project escrows, build accounts, term-finance pools, catastrophe reserves, and public infrastructure windows may hold EC without ordinary idle decay only while funds remain preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
+- **Household finance rule:** compounding interest on household ordinary-life debt is prohibited. No household debt instrument may securitize the humane floor, rely on revolving traps, or recreate survival coercion through hidden fee chains.
+- **Wallet partitioning:** protect payroll/essential obligations from broad freezes; target enforcement narrowly.
+
+**Land, Housing & Commons (absorbed from v12 P6)**
+- **Use-rights governance:** housing and land are governed as use-rights/leases rather than speculative ownership.
+- **Transparent allocation:** renewal depends on occupancy and a closed-list stewardship standard (vacancy, damage beyond normal wear, verified illegal use, or clearly defined health/safety violations after remediation opportunity).
+- **Family continuity without dynastic landlordism:** ordinary household continuity may be preserved, but housing and land rights may not be warehoused through trusts, shell entities, or absentee succession structures detached from active stewardship.
 - **Anti-vacancy carrying costs** and accumulation limits to block rent-seeking.
 - **Commons stewardship:** water, energy commons, and ecological assets governed with regenerative targets and auditability.
 - **Beneficial ownership transparency:** every housing, land, and commons claim must resolve to natural persons or chartered public/community bodies; entity wrappers may not obscure effective control.
 - **Dispute resolution + appeals** for allocation decisions (no hidden gatekeeping).
 
-#### Pillar 7: Enterprise & Production Platform
-- **Competitive and cooperative enterprise:** firms compete on quality and efficiency using EC, while worker-owned, cooperative, and mission-locked structures receive structural preference where public finance, procurement, or succession pathways are involved.
+**Enterprise & Production (absorbed from v12 P7)**
+- **Competitive and cooperative enterprise:** firms compete on quality and efficiency using EC; worker-owned, cooperative, and mission-locked structures receive structural preference where public finance, procurement, or succession pathways are involved.
 - **Anti-monopoly:** merger controls, open standards, and interoperability requirements reduce platform capture.
 - **Bounded capital claims:** outside capital may fund enterprise, but investor claims must be capped, redeemable, sunset, or otherwise bounded so ownership cannot become a perpetual extraction right over labor or necessity.
-- **Worker-preference tools:** PFCR-backed financing, worker buyout pathways, cooperative retained-earnings pools, and founder-exit conversion rules should favor stewardship succession over absentee control.
+- **Worker-preference tools:** PFCR-backed financing, worker buyout pathways, cooperative retained-earnings pools, and founder-exit conversion rules favor stewardship succession over absentee control.
 - **Natural monopoly track:** water, energy, communications, rail, and similar infrastructure sectors require a regulated utility governance model rather than ordinary competition logic.
 - **Regenerative production:** repairability, take-back/extended responsibility, and circularity incentives where feasible.
 - **Anti-hoarding economics:** demurrage + transparent registries for high-value assets to deter shadow accumulation.
 
-#### Pillar 8: Contribution & Capability Development
-- **Contribution mints Civic Record (CR) first**; it does not mint moral rank and cannot affect LC access.
-- **CR records verified stewardship** across care, maintenance, safety, education, ecological work, civic operations, and similar domains. DW is derived from recent verified contribution plus hardship-safe civic floor rules, then decays rapidly to keep agenda power kinetic.
+**Public Finance & Commons Revenue (absorbed from v12 P12)**
+- **Revenue constitution:** public operations are funded through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production — not through taxes on survival, ordinary labor, or basic household exchange. (The no-taxes-on-ordinary-life rule itself is a Pillar 1 Tier 1 invariant; PFCR is the revenue mechanism that makes it operationally coherent.)
+- **Public banking infrastructure:** the payment rail, basic custody, wage receipt, cash conversion, and fraud-recovery floor are funded as public infrastructure with a guaranteed postal-bank or public-bank option and interoperable licensed providers. Any licensed retail provider serving the public must offer the baseline public banking floor on the common rail.
+- **Budget discipline:** all public funding channels require published service plans, staffing assumptions, source disclosures, and off-ledger obligation prohibitions.
+- **Commons return principle:** exclusive control over commons, scarce public interfaces, or large idle asset positions may incur public charges; personhood, basic work, and household continuity may not be treated as taxable extraction bases.
+- **Transparency and anti-capture:** PFCR flows, demurrage routing, gateway revenues, and major appropriations are published in aggregate (via Pillar 7) and subject to independent audit, anti-concentration review, and automatic challenge rights when hidden debt or favoritism appears.
+
+**Why these functions share one pillar.** EC, housing/commons use-rights, enterprise activity, and commons-revenue routing are the four faces of the same economic surface. Keeping them in separate v12 pillars (P5 EC, P6 housing, P7 enterprise, P12 PFCR) produced four boundary disputes (co-ops fall between P6 and P7; public banking straddles P5 and P12; commons-revenue intersects all four) and four capture targets. Consolidation preserves every substantive rule while reducing attack surface by a factor of four.
+
+#### Pillar 6: Civic Layer (DW/CR + Deliberation)
+**DW and CR instruments (absorbed from v12 P5 civic portion)**
+- **Civic Record (CR):** earned through verified stewardship and service readiness; governs eligibility to serve on juries, panels, rotating review bodies, and oversight roles. Slower-moving, service-oriented.
+- **Deliberation Weight (DW):** derived from recent verified contribution plus hardship-safe civic-floor rules; governs short-horizon agenda-setting and budget prioritization. Fast-decay, low-cap.
+- **Non-convertibility:** DW cannot purchase goods, private privilege, legal immunity, or survival access. CR cannot be traded, inherited, collateralized, or pooled as a patronage asset.
+- **Civic floor:** one-person-one-vote for constitutional matters and survival-adjacent outcomes; DW affects only bounded budget prioritization and agenda sequencing. No single contribution sector may dominate effective civic weighting.
+
+**Contribution & Capability Development (absorbed from v12 P8)**
+- **CR minting first:** contribution mints Civic Record, not moral rank. It cannot affect LC access.
+- **CR records verified stewardship** across care, maintenance, safety, education, ecological work, civic operations, and similar domains. DW is derived from recent verified contribution plus hardship-safe civic-floor rules, then decays rapidly to keep agenda power kinetic.
 - **Verification:** scaled multi-path review. Small claims may use lightweight attestation; higher-impact claims require stronger evidence, rotating review, and audit escalation.
 - **Capability adjustment:** expectations scale to disability, caregiving load, age, and crisis context. Protected Pause preserves proportionate continuity during verified hardship.
 - **High-impact channel:** rare CR or DW boosts require evidence-heavy Impact Review with independent panels, published criteria, and category-balance safeguards.
 
-#### Pillar 9: Civic Deliberation & Decision Systems
-- **Proposal pipeline:** draft \-> review \-> cost/capacity check \-> deliberation \-> legitimacy check where required \-> staged execution.
+**Deliberation & Decision Systems (absorbed from v12 P9)**
+- **Proposal pipeline:** draft → review → cost/capacity check → deliberation → legitimacy check where required → staged execution.
 - **Anti-capture weighting:** DW is capped, fast-decay, category-balanced, and subject to conflict-of-interest rules. CR governs service eligibility, not agenda dominance.
-- **Quarterly decision cycle (baseline):** priorities set quarterly through DW; no rollover is permitted and no single contribution category may exceed the published balance cap in effective deliberation weight.
-- **Minimum civic floor:** one-person-one-vote for constitutional matters and survival-adjacent outcomes; DW affects only bounded budget prioritization and agenda sequencing.
+- **Quarterly decision cycle (baseline):** priorities set quarterly through DW; no rollover is permitted; no single contribution category may exceed the published balance cap in effective deliberation weight.
+- **Minimum civic floor:** one-person-one-vote for constitutional matters and survival-adjacent outcomes.
 
-#### Pillar 10: Operations, Oversight & Service Delivery
-- **Mandate:** implement decisions authorized by Pillar 9 using rule-bound workflows with a published discretion taxonomy, documented reasons, and reviewable boundaries.
-- **Oversight execution:** enforce fraud/coercion/bribery rules proportionally; protect dependents and innocent counterparties; avoid collateral harm.
-- **Safety rails:** staged rollouts, canary deployments, rate limits, and narrow emergency pause mechanisms for critical systems.
-- **Hiring/procurement:** competency-based, audited, and appealable; algorithms must be testable and bias-audited.
-- **Trust operating standard:** publish SLAs, incident post-mortems, and correction logs; measure consistency and responsiveness.
+**Why these functions share one pillar.** DW/CR as instruments (v12 P5), the contribution acts that mint them (v12 P8), and the deliberation processes that consume them (v12 P9) form a single closed loop. Separating the instrument from the minting from the consumption produced three capture targets for what is structurally one civic-input pipeline.
 
-#### Pillar 11: Information Commons & Trust Transparency
+#### Pillar 7: Transparency & Environmental Scanning
+**Transparency (absorbed from v12 P11) — the S3* audit channel**
 - **Real-time public dashboards** for aggregate system health: capacity indices, issuance, reserves, service SLAs, and budget flows.
 - **Privacy preserved:** aggregation thresholds, small-cell suppression, rounding/noise where needed, and time delays for sensitive signals.
 - **Transparency:** publish definitions, sources, refresh rates, and a public change log for metrics and methodologies.
 - **Abuse-resistance:** delay/rate-limit gameable signals; disputes trigger conservative issuance and review.
+- **Institutional independence:** Pillar 7 is organizationally separate from Pillar 1's control function. The same body may never both execute and report on its own execution. This is the S3/S3* independence rule from Beer VSM — the structural reason for separating this pillar from Pillar 1.
 
-#### Pillar 12: Public Finance & Commons Revenue (PFCR)
-- **Revenue constitution:** public operations are funded through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production - not through taxes on survival, ordinary labor, or basic household exchange.
-- **Public banking infrastructure:** the payment rail, basic custody, wage receipt, cash conversion, and fraud-recovery floor are funded as public infrastructure with a guaranteed postal-bank or public-bank option and interoperable licensed providers.
-- **Budget discipline:** all public funding channels require published service plans, staffing assumptions, source disclosures, and off-ledger obligation prohibitions.
-- **Commons return principle:** exclusive control over commons, scarce public interfaces, or large idle asset positions may incur public charges, but personhood, basic work, and household continuity may not be treated as taxable extraction bases.
-- **Transparency and anti-capture:** PFCR flows, demurrage routing, gateway revenues, and major appropriations are published in aggregate and subject to independent audit, anti-concentration review, and automatic challenge rights when hidden debt or favoritism appears.
+**Environmental Scanning (new S4 function)**
+- **Mandate:** continuous scanning of the world outside the protocol's direct operational scope — emerging technologies, climate signals, geopolitical shifts, pandemic precursors, demographic trends, ecological tail risks — to feed anticipatory adaptation rather than reactive response.
+- **Deliverables:** published quarterly environmental-scan reports with 10-year horizon, with specific attention to signals that could destabilize Pillar 3 measurement assumptions or the CSM basket.
+- **Escalation rule:** scan findings that would require Tier 1 amendment trigger automatic referral to the Federated Ombuds (Annex AI) and the H-3 refounding process if warranted.
+- **Why this function exists:** Beer VSM S4 (the environmental-scanning viable-system function) was absent in the v12 architecture; the protocol had no structured process for noticing that its physical-world assumptions were becoming obsolete. That absence was a slow-failure surface. S4 here closes it.
 
 ---
 
-### Mapping from prior 8-pillar numbering (reference)
+### Legacy mapping tables (reference)
 
-| Prior structure (v10) | New 12-pillar mapping (v11) |
-| :--- | :--- |
-| **Non-negotiable invariants (Section 0)** | Pillar 1 (and governs all) |
-| **Pillar 1: RCS** | Pillar 3 |
-| **Section II: Monetary architecture** | Pillar 5 (plus Pillar 4 for LC services and scarcity delivery) |
-| **Pillar 3: Identity & Personhood** | Pillar 2 |
-| **Pillar 4: Contribution & Capability** | Pillar 8 |
-| **Pillar 5: Civic Deliberation** | Pillar 9 |
-| **Pillar 6: Government Operations** | Pillar 10 |
-| **Pillar 7: Enterprise Platform** | Pillar 7 (housing carved into Pillar 6) |
-| **Pillar 8: Immune System** | Distributed across Pillar 1 (due process/constraints), Pillar 10 (oversight/enforcement), Pillar 11 (transparency), and Annexes A-C. |
+**v12 → v13 crosswalk (Proposal 2 close-out, 2026-04-18).** The Twelve-Pillar structure was collapsed into Seven Pillars + P0 to eliminate five redundant pairs, separate S3 control from S3* audit, and add three previously-absent foundations (subsidiarity, consent/exit, environmental scanning). Every substantive rule is preserved; the reorganization is by consolidation, not deletion.
+
+| v12 (Twelve Pillars) | v13 (Seven Pillars + P0) | Notes |
+| :--- | :--- | :--- |
+| *(none — absent layer)* | **P0. Subsidiarity, Consent & Exit** | Proposal 5 close-out — smallest competent scale, consent act, exit pathway. FC-120 (2/3), FC-121 (730-day unwind), FC-122 (scale tiers). |
+| **P1. Constitutional Invariants & Rights** + **P10. Operations, Oversight & Service Delivery** (execution portion) | **P1. Rights & Rule of Law** | Rights-definition and rights-execution are one function. S3* audit independence preserved via separation from Pillar 7. |
+| **P2. Personhood, Identity & Continuity** | **P2. Personhood & Continuity** | Unchanged. |
+| **P3. Resource & Capacity System (RCS)** (includes resilience reserves in-pillar) | **P3. Physics & Reserves** | Measurement and reserves are one capacity-function at different time-scales. |
+| **P4. Life Support Layer** + LC-instrument portion of **P5. Monetary Architecture** | **P4. Survival (LC Instrument + Delivery)** | Removes the semantic gap T-007 drift attacks exploited between LC-as-instrument and LC-as-delivery. |
+| EC-instrument portion of **P5. Monetary Architecture** + **P6. Land, Housing & Commons** + **P7. Enterprise & Production** + **P12. Public Finance & Commons Revenue (PFCR)** | **P5. Markets, Commons & Public Finance** | Four-faces-of-one-surface consolidation. Co-ops, public banking, and commons-revenue now resolve within a single pillar. |
+| DW/CR-instrument portion of **P5. Monetary Architecture** + **P8. Contribution & Capability Development** + **P9. Civic Deliberation & Decision Systems** | **P6. Civic Layer (DW/CR + Deliberation)** | Instruments, minting acts, and deliberation form one closed loop. |
+| **P11. Information Commons & Trust Transparency** + *(new Beer S4 scanning)* | **P7. Transparency & Environmental Scanning** | S3*/S3 institutional independence from Pillar 1 control. S4 adds previously-absent environmental-scanning function. |
+
+**v10 → v11 crosswalk (historical, retained for traceability).**
+
+| Prior structure (v10) | v11 (12-pillar) mapping | v13 (7+P0) terminal mapping |
+| :--- | :--- | :--- |
+| **Non-negotiable invariants (Section 0)** | Pillar 1 (and governs all) | New P1 |
+| **Pillar 1: RCS** | Pillar 3 | New P3 |
+| **Section II: Monetary architecture** | Pillar 5 (plus Pillar 4 for LC services and scarcity delivery) | New P4 (LC portion), P5 (EC portion), P6 (DW/CR portion) |
+| **Pillar 3: Identity & Personhood** | Pillar 2 | New P2 |
+| **Pillar 4: Contribution & Capability** | Pillar 8 | New P6 |
+| **Pillar 5: Civic Deliberation** | Pillar 9 | New P6 |
+| **Pillar 6: Government Operations** | Pillar 10 | New P1 (rule-bound execution absorbed into rights pillar) |
+| **Pillar 7: Enterprise Platform** | Pillar 7 (housing carved into Pillar 6) | New P5 |
+| **Pillar 8: Immune System** | Distributed across Pillar 1, Pillar 10, Pillar 11, and Annexes A-C | Distributed across new P1 (rights/oversight), P7 (transparency), and Annexes A–C |
+
+**Note on preserved v12 terminology in downstream sections.** Many annexes, threat records, and patch entries continue to reference v12 pillar numbers (e.g., "Pillar 11 dashboard", "Pillar 12 PFCR") where the cross-reference was already baked into integration commits. Where such references occur, they resolve to the v13 pillar as shown in the crosswalk above. A future housekeeping pass will update downstream references to v13 nomenclature; the crosswalk above is the authoritative mapping until then.
 
 ---
 
@@ -822,8 +868,10 @@ This protocol uses real-time public dashboards for accountability and resilience
 
 ---
 
-## ANNEX F. 12-Pillar Requirements Checklist (Tagged)
-**Purpose.** This annex provides an audit-ready checklist for the active 12-pillar architecture. Each item is tagged as: **[I] Informational metric**, **[E] Enforceable guardrail**, **[P] Implementation practice**.
+## ANNEX F. 12-Pillar Requirements Checklist (Tagged — Legacy v12 Reference)
+**Purpose.** This annex provides an audit-ready checklist under the v12 pillar architecture. Each item is tagged as: **[I] Informational metric**, **[E] Enforceable guardrail**, **[P] Implementation practice**.
+
+**Post-Proposal-2 note (2026-04-18).** The operational architecture was restructured from twelve pillars into **Seven Pillars + P0** (v13). This checklist is retained as a v12 reference for continuity of pre-restructure audit work; the v12 → v13 crosswalk at the end of §III provides the authoritative mapping. A v13 checklist will be produced in a subsequent housekeeping pass.
 
 #### Pillar 1 - Constitutional Invariants & Rights
 - **[E]** LC access cannot be conditioned on contribution/behavior; any suspension requires constitutional violation threshold + due process. Policy text + test: attempted denial paths blocked.

@@ -8,6 +8,25 @@
 
 **Rule.** The patch log is not a substitute for the master. The master holds the law-like text; the patch log explains how and why the hardening evolved.
 
+**Pillar nomenclature note (Proposal 2 close-out, 2026-04-18).** The operational architecture was restructured from twelve pillars into **Seven Pillars + P0** (v13). Patch entries authored before the restructure continue to reference v12 pillar numbers in dependencies and integration sections (e.g., "Pillar 10 demand-context register", "Pillar 11 dashboard", "Pillar 8 / Annex K4"). Those references resolve to v13 pillars via the crosswalk in `Master_Protocol.md` §III:
+
+| v12 reference | v13 pillar |
+| :--- | :--- |
+| Pillar 1 (Constitutional Invariants) | P1. Rights & Rule of Law |
+| Pillar 2 (Personhood) | P2. Personhood & Continuity |
+| Pillar 3 (RCS) | P3. Physics & Reserves |
+| Pillar 4 (Life Support / LC delivery) | P4. Survival (LC Instrument + Delivery) |
+| Pillar 5 (Monetary Architecture) | split: LC→P4, EC→P5, DW/CR→P6 |
+| Pillar 6 (Land/Housing/Commons) | P5. Markets, Commons & Public Finance |
+| Pillar 7 (Enterprise) | P5. Markets, Commons & Public Finance |
+| Pillar 8 (Contribution/Capability) | P6. Civic Layer |
+| Pillar 9 (Civic Deliberation) | P6. Civic Layer |
+| Pillar 10 (Operations/Oversight) | P1. Rights & Rule of Law (rule-bound execution) |
+| Pillar 11 (Transparency) | P7. Transparency & Environmental Scanning |
+| Pillar 12 (PFCR) | P5. Markets, Commons & Public Finance |
+
+Inline dependencies are preserved as-authored for audit traceability; the mapping above is authoritative.
+
 **Patch status convention:** 
 - **ACTIVE** = adopted and awaiting simulation/tuning. 
 - **SUPERSEDED** = replaced by a later patch. 
@@ -44,6 +63,7 @@
 | P-024 | T-009 / TR-07 / T-018 (residual) | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
 | P-025 | T-008 (residual) / meta-capture | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | P0 Subsidiarity, Consent & Exit layer: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with LC continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/pillars/P0_subsidiarity/` directory. |
+| P-027 | structural simplification / T-005 / T-008 (residual) | **ACTIVE** | Critical | Proposal 2 pillar consolidation: twelve pillars → Seven Pillars + P0 (v13). Five redundant pairs collapsed (P1/P10, P4/P5-LC, P6/P7, P11/P10 S3-S3*, P3/P12-as-reserves); Beer-VSM S4 environmental-scanning function added; PFCR (external v12 P12) absorbed into new P5 Markets, Commons & Public Finance. Legacy v12 nomenclature preserved in crosswalk tables. `Master_Protocol.md` §III, `White_Paper.md` §4. |
 | P-029 | T-016 / public-funding architecture | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, demurrage routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
 | P-030 | PRD-004 / household coercion | **ACTIVE** | Critical | Protocol-only money creation + household finance boundaries: no private EC creation, no compounding household ordinary-life debt, no survival-floor securitization. |
 | P-031 | PRD-009 / dynastic capture | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
@@ -576,6 +596,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-009 / TR-07 / T-018 residual | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
 | T-008 residual / meta-capture | P-025 | **ACTIVE** | Annex AI ACTIVE (rewritten) · FC-090/091/092 |
 | T-026 / T-027 | P-026 | **ACTIVE** | `/pillars/P0_subsidiarity/` ACTIVE · FC-120/121/122 |
+| structural simplification / T-005 residual / T-008 residual | P-027 | **ACTIVE** | `Master_Protocol.md` §III Seven Pillars + P0 · `White_Paper.md` §4 |
 
 ---
 
@@ -596,3 +617,43 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 - **Residual risk:** Structural-dispersal criteria can be met formally while capture is achieved through informal coordination (mitigated by Oversight Assembly §5.1 institutional-health reporting; voting-pattern concentration is a published metric). Oversight Assembly itself can be captured at small scale (mitigated by §5.4 meta-capture controls).
 - **Compound linkages:** P-025 × P-008 (federation closes the T-008 open question — "who audits the auditors of elite formation?" — by making the auditor a federation subject to its own dispersal rule); P-025 × P-015 (Ombuds-dependent PCRP flag determinations now robust to single-node capture); P-025 × P-017 (methodology-class adversarial seat certification now clears 4-of-5 threshold rather than single-commissioner signature); P-025 × P-022 (Annex AQ arbitration panel seat rotation is Plenum-certified).
 - **Auto-close clause:** P-025 is standing. It does not auto-close. Changes to the federation structure (FC-090, FC-091, FC-092) require Tier 1 amendment (7-of-9, 180-day timelock).
+
+---
+
+## Session 9 — Proposal 5 Close-out Detailed Entry
+
+### P-026 — P0 Subsidiarity, Consent & Exit Layer
+
+- **Introduced design:** The protocol acquires a foundational scale-and-consent layer beneath the operational pillars. P0 defines *who* consents to be governed, *at what scale*, and *how they withdraw*. Six files under `/pillars/P0_subsidiarity/` cover: (1) README orientation, (2) five-tier scale hierarchy (FC-122: household / neighborhood ≤500 / locality ≤5,000 / region ≤500,000 / federation), (3) three-prong subsidiarity competence test (informational, adjudicative, externality-containment) with default-against-escalation rule, (4) affirmative consent protocol (2/3 supermajority, 90-day notice, 60-day deliberation, roll-call, 2/3 minimum participation), (5) exit protocol (FC-120 2/3 supermajority, FC-121 730-day graceful unwind with LC continuity, no exit tax, no forfeiture, T-026 Exit Denial enforcement), (6) re-entry protocol (procedurally symmetric, no penalty, 365-day floor between cycles).
+- **Clauses to integrate:** Master Protocol §0 P0 paragraph (lines 140–149); every operational pillar reads through P0 (smallest-competent-scale default).
+- **Load-bearing integrations:**
+  - Federated Ombuds (Annex AI §3.2 challenge process; §3.4 automatic Plenum convocation on exit denial).
+  - Annex AJ §4 severity 3 (Institutional) penalties for Exit Denial violations.
+  - CSM (Annex Y) as the single Tier 1 exception that binds regardless of consent.
+  - Architectural enforcement layer (Proposal 1) locks FC-120/121/122 under Tier 1 process.
+- **Dependencies:** Federated Ombuds seated (four of five sub-Ombuds) before any P0 challenge procedure is operative. Drift chain must support federation-scope expansion and contraction events. Scale registry (household through federation) must be initialized at founding.
+- **New risks introduced:** Re-entry 365-day floor could be gamed through individual-personhood cycling (mitigated by individual consent being distinct from unit consent, with the floor applying only to unit cycles). Exit-cost asymmetry — the 730-day unwind is generous for the unit but introduces a period of dual-authority — could produce enforcement ambiguity (mitigated by published unwind schedule and Ombuds oversight).
+- **Residual risk:** Subsidiarity is an aggregate property; any single decision's escalation may look reasonable while the cumulative drift toward federation-scale venue is substantial. Aggregate monitoring via the Ombuds §4.3 federation-decision-concentration report is the mitigation — a threshold breach is itself a T-027 trigger.
+- **Compound linkages:** P-026 × P-025 (Ombuds is the P0 enforcement organ — subsidiarity and exit both depend on Ombuds independence); P-026 × P-018 (LC-floor-persistence clause is reinforced by LC continuity preservation during the 730-day unwind); P-026 × P-008 (exit right structurally constrains elite formation — elites cannot form a federation they cannot lose).
+- **Auto-close clause:** P-026 is standing. Changes to FC-120/121/122 and the no-exit-tax rule require Tier 1 amendment (7-of-9, 180-day timelock). Strengthening (shorter unwind, lower supermajority) is Tier 2.
+
+---
+
+## Session 9 — Proposal 2 Close-out Detailed Entry
+
+### P-027 — Seven Pillars + P0 Structural Consolidation
+
+- **Introduced design:** The operational architecture is restructured from twelve pillars into Seven Pillars on a P0 foundation (v13). Five redundant v12 pairs are consolidated: (a) P1 Constitutional Invariants + P10 Operations/Oversight → new P1 Rights & Rule of Law (rights-definition and rule-bound execution as one function); (b) P4 Life Support + LC-instrument portion of P5 → new P4 Survival (LC instrument AND delivery, closing the T-007 drift gap); (c) P6 Land/Housing + P7 Enterprise + EC-instrument portion of P5 + P12 PFCR → new P5 Markets, Commons & Public Finance (four faces of the economic surface unified); (d) DW/CR-instrument portion of P5 + P8 Contribution + P9 Civic Deliberation → new P6 Civic Layer (instruments, minting, and deliberation as one closed loop); (e) P11 Transparency with new Beer-VSM S4 environmental-scanning → new P7 Transparency & Environmental Scanning (S3*/S3 architecturally independent of P1 control). P3 Physics & Reserves is unchanged in content (resilience reserves were already in-pillar). The v12 resilience/reserves function that Proposal 2 anticipated in P12 was supplanted by the PFCR integration (external merge `00c5ca7`); PFCR is absorbed into new P5 as the commons-revenue-and-public-banking sub-function.
+- **Clauses to integrate:** Master Protocol §III fully rewritten (Architecture-at-a-glance, Pillar interfaces, Pillar-by-pillar detail, Legacy mapping tables); White Paper §4 restructured; banner notes in Threat Register and Patch Log providing v12 → v13 crosswalk for in-flight references.
+- **Load-bearing integrations:**
+  - **Proposal 5 (P-026)** — P0 is the foundation of the v13 architecture; every operational pillar reads through P0.
+  - **Proposal 1** — Architectural enforcement layer (Tier 1 invariants, 7-of-9 amendment, drift chain) now lives functionally inside new P1 Rights & Rule of Law.
+  - **Proposal 3** — Oracle requirements (N≥5, three methodology classes, adversarial seat) land in new P3 Physics & Reserves.
+  - **Proposal 7** — Enforcement severity ladder integrates with new P1 rule-bound execution.
+  - **Proposal 9** — Attestation stake (P-024) integrates with new P6 Civic Layer contribution minting.
+  - **PFCR (P-029 through P-033)** — commons-revenue and anti-dynasty architecture land in new P5 Markets, Commons & Public Finance.
+- **Dependencies:** v12 → v13 crosswalk must be published and stable before any downstream documents (annexes, PRDs) are rewritten. Legacy mapping table is the authoritative bridge during the transition.
+- **New risks introduced:** Consolidation concentrates four former pillars into new P5; this increases the attack surface of any single P5-integrity failure. Mitigation: new P5 contains explicit internal boundaries (EC vs housing-commons vs enterprise vs PFCR) with non-convertibility rules between them, and the Pillar interface table specifies the inputs each sub-function may accept. A second risk is naming drift — "Twelve-Pillar Protocol" as external project identity versus "Seven Pillars + P0" as operational reality. Mitigation: the project name is retained for continuity; §III is the authoritative operational definition; external communications will transition on a case-by-case basis.
+- **Residual risk:** Annexes authored under v12 structure may reference pillar numbers that now span multiple v13 pillars (e.g., an Annex referencing "Pillar 5" could mean LC, EC, or DW/CR depending on context). Mitigation is the crosswalk banner in the Threat Register and Patch Log, plus the Master Protocol §III crosswalk table. A future housekeeping pass will rewrite inline annex references to v13.
+- **Compound linkages:** P-027 × P-026 (P0 + 7-pillar collapse is one conceptual move — subsidiarity provides the foundation; consolidation removes redundant capture targets); P-027 × P-017 (oracle architecture in new P3 inherits the N=5/3-class/adversarial-seat requirements); P-027 × P-029 (PFCR function lands in new P5, not as a separate pillar); P-027 × P-008 (reduced pillar count reduces elite-formation surface area by eliminating redundant institutional homes).
+- **Auto-close clause:** P-027 is standing. The seven-pillar structure itself is Tier 1 architectural. Any subsequent collapse (e.g., to six or fewer) or expansion (to eight or more) requires Tier 1 amendment (7-of-9, 180-day timelock). Content within pillars may be amended by ordinary process subject to the existing Tier classifications of each clause.

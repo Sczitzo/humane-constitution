@@ -112,24 +112,22 @@ EC is public money rather than privately created bank money. Basic banking rails
 
 ---
 
-## 4. The twelve pillars
+## 4. The seven pillars (on a subsidiarity foundation)
 The pillars are not slogans. They are separation-of-concerns rules for a civic operating system. Each pillar is narrow enough to be audited and broad enough to matter.
 
-### The twelve pillars at a glance
-Each pillar has one job. The architecture is intentionally modular so that no single office, ledger, or emergency process can silently absorb the others.
+*Proposal 2 close-out (2026-04-18): the operational architecture was restructured from twelve pillars into **Seven Pillars on a P0 subsidiarity foundation**. Five pairs of v12 pillars described the same function at different altitudes and were consolidated; three previously-absent foundations — subsidiarity, consent/exit, and external-world environmental scanning — were added. The project name "Twelve-Pillar Protocol" is retained for continuity of external reference; the v12 → v13 crosswalk lives in `Master_Protocol.md` §III for traceability.*
 
-1. **Constitutional Invariants & Rights**: Locks the non-negotiables: dignity, due process, non-coercion, and hard separation of functions.
-2. **Personhood, Identity & Continuity**: Protects one-personhood, recovery, guardianship, and continuity without normalizing surveillance.
-3. **Resource & Capacity System**: Measures what society can actually deliver in food, energy, care, shelter, and other essentials.
-4. **Life Support Layer**: Turns LC into actual access to essentials with anti-coercion and scarcity safeguards.
-5. **Monetary Architecture**: Defines EC, LC, CC, and SQ and blocks hidden convertibility between them.
-6. **Land, Housing & Commons**: Prevents housing and land from becoming the main escape hatch for rent-seeking power.
-7. **Enterprise & Production Platform**: Supports productive markets, innovation, and competition under anti-monopoly constraints.
-8. **Contribution & Capability Development**: Recognizes stewardship fairly, including informal and care-based contributions, without tying worth to output.
-9. **Civic Deliberation & Decision Systems**: Runs the public prioritization process with rotation, caps, and anti-capture weighting.
-10. **Operations & Service Delivery**: Executes the rules with SLAs, incident response, and narrow, reviewable enforcement.
-11. **Information Commons & Trust Transparency**: Publishes real-time aggregate dashboards while preserving privacy where individual exposure would create harm.
-12. **Public Finance & Commons Revenue (PFCR)**: Funds public operations and basic banking rails through structural public revenue rather than taxes on survival, ordinary labor, or basic household exchange.
+### The seven pillars at a glance
+Each pillar has one job. The architecture is intentionally modular so that no single office, ledger, or emergency process can silently absorb the others. **Pillar 0** reads through every operational pillar: decisions default to the smallest competent scale, and federation-scale action requires affirmative justification.
+
+0. **Subsidiarity, Consent & Exit (P0)**: Defines the smallest competent scale for every decision (household → neighborhood → locality → region → federation), the affirmative consent act by which units join the protocol, and the graceful-exit pathway by which they leave. The foundation layer that makes every operational pillar non-coercive by construction.
+1. **Rights & Rule of Law**: Locks the Tier 1 non-negotiables — dignity, due process, non-coercion, hard separation of functions — and binds execution to those rights. Oversight of execution lives here because rights and their enforcement are one function. Audit independence is preserved by institutional separation from Pillar 7.
+2. **Personhood, Identity & Continuity**: Protects one-personhood, recovery, guardianship, and dependent continuity without normalizing surveillance scoring.
+3. **Physics & Reserves**: Measures what society can actually deliver in food, energy, care, shelter, medicines, and other essentials — AND maintains the strategic reserves that buffer measurement error and supply shocks. Measurement and buffering are one capacity function at different time-scales.
+4. **Survival (LC Instrument + Delivery)**: Turns the Life Access Ledger into actual access to essentials. Both the instrument and its delivery live here — one definition, one attack surface, no semantic gap for drift attacks to exploit.
+5. **Markets, Commons & Public Finance**: EC as the single general-purpose currency, housing and land as use-rights rather than speculative ownership, enterprise under anti-monopoly constraints, and the Public Finance & Commons Revenue function that funds public operations through non-extractive structural revenue rather than taxes on survival or ordinary labor. The four faces of the economic surface, unified.
+6. **Civic Layer (DW/CR + Deliberation)**: DW and CR as non-monetary civic instruments, the contribution acts that mint them, and the deliberation processes that consume them — one closed loop. Runs the public prioritization process with rotation, caps, and anti-capture weighting; recognizes care-based and informal contributions without tying worth to output.
+7. **Transparency & Environmental Scanning**: Publishes real-time aggregate dashboards (the audit channel, genuinely independent of Pillar 1 control) AND scans the world outside the protocol's operational scope for emerging risks that would destabilize measurement assumptions or the survival floor.
 
 ---
 
@@ -320,7 +318,7 @@ The following is a summary of core rights. The full Master Protocol governs in a
 
 | Where to check system health |
 | :--- |
-| The Pillar 11 public dashboard publishes real-time aggregate capacity, SLA performance, reserve levels, and governance queue status. |
+| The Pillar 7 public dashboard (v13; formerly Pillar 11 under v12) publishes real-time aggregate capacity, SLA performance, reserve levels, and governance queue status. |
 
 ---
 

@@ -6,6 +6,25 @@
 
 **Purpose.** This register tracks the adversarial risks identified during the current hardening cycle and aligns them to the master protocol. It is the running control layer for red-team work, not a replacement for the master protocol.
 
+**Pillar nomenclature note (Proposal 2 close-out, 2026-04-18).** The operational architecture was restructured from twelve pillars into **Seven Pillars + P0** (v13). Threat entries in this register authored before the restructure continue to reference v12 pillar numbers (e.g., "Pillar 11 dashboard", "Pillar 10 operations", "Pillar 5 compliance matrix"). Those references resolve to v13 pillars via the crosswalk in `Master_Protocol.md` §III:
+
+| v12 reference | v13 pillar |
+| :--- | :--- |
+| Pillar 1 (Constitutional Invariants) | P1. Rights & Rule of Law |
+| Pillar 2 (Personhood) | P2. Personhood & Continuity |
+| Pillar 3 (RCS) | P3. Physics & Reserves |
+| Pillar 4 (Life Support / LC delivery) | P4. Survival (LC Instrument + Delivery) |
+| Pillar 5 (Monetary Architecture) | split: LC→P4, EC→P5, DW/CR→P6 |
+| Pillar 6 (Land/Housing/Commons) | P5. Markets, Commons & Public Finance |
+| Pillar 7 (Enterprise) | P5. Markets, Commons & Public Finance |
+| Pillar 8 (Contribution/Capability) | P6. Civic Layer |
+| Pillar 9 (Civic Deliberation) | P6. Civic Layer |
+| Pillar 10 (Operations/Oversight) | P1. Rights & Rule of Law (rule-bound execution) |
+| Pillar 11 (Transparency) | P7. Transparency & Environmental Scanning |
+| Pillar 12 (PFCR) | P5. Markets, Commons & Public Finance |
+
+Inline references are preserved as-authored for audit traceability; the mapping above is authoritative.
+
 **Status key.** 
 - **OPEN** = not yet structurally addressed. 
 - **PARTIAL** = mitigation path defined but not fully integrated/tested.
