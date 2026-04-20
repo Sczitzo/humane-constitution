@@ -5,7 +5,7 @@
 **Published by:** Threat Register Owner  
 **Challenge window opens:** April 10, 2026  
 **Challenge window closes:** June 9, 2026  
-**Submit challenges to:** [GitHub Issues — label `p014-challenge`](https://github.com/Sczitzo/twelve-pillar-protocol/issues/new?template=p014-challenge.md)
+**Submit challenges to:** [GitHub Issues — label `p014-challenge`](https://github.com/Sczitzo/humane-constitution/issues/new?template=p014-challenge.md)
 
 ---
 
@@ -95,7 +95,7 @@ One panel member must have a documented professional history of arguing against 
 
 **Conflict attestation process:** All attestations will be verified by [EXTERNAL VERIFICATION BODY], not self-reported. Verification results will be published before sign-off begins.
 
-> **Note to challengers:** If you have evidence of undisclosed conflicts for any proposed panel member, or believe the adversarial member designation does not meet the independence standard, this challenge window is the correct venue. File via the [P-014 Challenge template](https://github.com/Sczitzo/twelve-pillar-protocol/issues/new?template=p014-challenge.md). All challenges receive written responses.
+> **Note to challengers:** If you have evidence of undisclosed conflicts for any proposed panel member, or believe the adversarial member designation does not meet the independence standard, this challenge window is the correct venue. File via the [P-014 Challenge template](https://github.com/Sczitzo/humane-constitution/issues/new?template=p014-challenge.md). All challenges receive written responses.
 
 ---
 
@@ -126,7 +126,7 @@ Any written objection identifying a specific flaw in the circular dependency ana
 Objections to P-013's content (those belong in the standard review process once P-013 is ACTIVE). Objections to the protocol's broader design (those belong in repository Issues under the standard critique template).
 
 **How to file:**  
-Open an Issue using the [P-014 Challenge template](https://github.com/Sczitzo/twelve-pillar-protocol/issues/new?template=p014-challenge.md). Include: the specific claim you are challenging, your reasoning, and your proposed alternative if you have one.
+Open an Issue using the [P-014 Challenge template](https://github.com/Sczitzo/humane-constitution/issues/new?template=p014-challenge.md). Include: the specific claim you are challenging, your reasoning, and your proposed alternative if you have one.
 
 **Structural vs. procedural challenges (AH2.2):**
 A *structural challenge* identifies a specific P-013 standard not met by the P-014 process. It must receive a written response before the window closes. An unresponded structural challenge extends the window by 14 days (non-cumulative).
