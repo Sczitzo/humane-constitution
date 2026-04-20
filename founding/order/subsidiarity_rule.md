@@ -67,7 +67,7 @@ The following matters are **federation-scale by construction** and do not go thr
 | Matter class | Federation-scale reasoning |
 | :--- | :--- |
 | Tier 1 invariants (`/architecture/invariants.md`) | By construction, federation-scale — they are the floor beneath all scales |
-| EC/LC non-convertibility (Master Protocol §II) | Currency-level property; any local exception creates arbitrage across boundaries |
+| EC/LC non-convertibility (Humane Constitution §II) | Currency-level property; any local exception creates arbitrage across boundaries |
 | Cross-regional dispute resolution | Not competent at any scale below federation by definition |
 | Amendment protocol operations | Federation-scale by construction |
 | Drift chain operations | Federation-scale by construction |

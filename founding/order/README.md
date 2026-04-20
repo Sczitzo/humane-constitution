@@ -61,7 +61,7 @@ The Founding Order is a scale-and-consent layer. It does **not**:
 
 ## How the Founding Order Interacts with the Rest of the Protocol
 
-- **Master Protocol §0** — the Founding Order is the foundational layer beneath the current seven articles. The §0 invariants (survival unconditional, CSM floor, separation of concerns, etc.) are federation-scale and not subject to unit-level modification or unit-level exit.
+- **Humane Constitution §0** — the Founding Order is the foundational layer beneath the current seven articles. The §0 invariants (survival unconditional, CSM floor, separation of concerns, etc.) are federation-scale and not subject to unit-level modification or unit-level exit.
 - **Articles I–VII** — each article is read through the Founding Order: its default scale is the smallest competent unit; its exceptions-to-smallest-scale are specified with subsidiarity rationale.
 - **Founding commitments** — FC-120, FC-121, FC-122 are the numerical anchors for the Founding Order. They are Tier 1 protected per `/architecture/invariants.md` (Category D — Governance & Exit).
 - **Architecture layer** — the Founding Order integrates with the drift chain: a unit-exit event is drift-chain-logged (new row, federation scope reduced, signatures of the exiting unit's representatives and 7 of 9 Tier 1 holders acknowledging). An exit cannot proceed silently.

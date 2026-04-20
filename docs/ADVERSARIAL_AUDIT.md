@@ -6,7 +6,7 @@
 **Method:** Document ingestion → simulation → cross-reference → pass/fail logic gate  
 **Status:** NOT SCALE-READY (confirms White Paper self-assessment). 6 pillars FAIL. 6 CONDITIONAL. 0 unconditional PASS.
 
-**Continuity note:** This audit preserves the legacy twelve-pillar framing as-authored. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**; see `Master_Protocol.md` §III for the authoritative crosswalk.
+**Continuity note:** This audit preserves the legacy twelve-pillar framing as-authored. The current constitutional presentation uses **one Founding Order** and **Articles I-VII**; see `Humane_Constitution.md` §III for the authoritative crosswalk.
 
 ---
 

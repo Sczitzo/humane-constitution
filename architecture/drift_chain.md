@@ -10,7 +10,7 @@
 
 Each version row in the drift chain commits a SHA-256 hash over the canonical serialization of:
 1. `architecture/invariants.md` (this registry)
-2. `Master_Protocol.md` §0 (Scope, Assumptions, and Design Invariants — lines 113–125)
+2. `Humane_Constitution.md` §0 (Scope, Assumptions, and Design Invariants)
 3. `Annex Y §Y1` (Constitutional Survival Minimum — per-person daily minimums)
 4. `/founding/commitments.md` (all Tier 1 rows, i.e., rows where `Tier = 1`)
 5. `architecture/amendment_protocol.md` (recursive — the amendment protocol itself is Tier 1)
@@ -73,7 +73,7 @@ The drift chain is **published** to a tamper-evident public ledger at all times.
 
 At least **two independent publication channels** are required so that a single compromised publisher cannot suppress a version or publish a forged version without producing an observable divergence between the channels.
 
-Every operational component (LC issuer, DW scheduler, oracle gate, CSM dispenser, enforcement dashboard, identity ledger) queries **at least two publication channels** at startup and compares hashes. Mismatch between channels → refuse-to-operate; alert to Pillar 11.
+Every operational component (LC issuer, DW scheduler, oracle gate, CSM dispenser, enforcement dashboard, identity ledger) queries **at least two publication channels** at startup and compares hashes. Mismatch between channels -> refuse-to-operate; alert to Article VII monitoring.
 
 ---
 
@@ -82,8 +82,8 @@ Every operational component (LC issuer, DW scheduler, oracle gate, CSM dispenser
 If an adversary modifies any of the five Tier 1 files directly (editing invariants.md in place, or altering FC values in commitments.md without following the amendment protocol), the following happens:
 1. The next operational-node startup computes the hash of the current file state.
 2. This hash does not match the `state_hash` published at the drift chain's current head.
-3. The node refuses to operate and alerts Pillar 11 monitoring.
-4. Pillar 11 raises a **Category S** (structural integrity) alert, which under Annex AI requires a federated Ombuds investigation within 24 hours.
+3. The node refuses to operate and alerts Article VII monitoring.
+4. Article VII transparency infrastructure raises a **Category S** (structural integrity) alert, which under Annex AI requires a federated Ombuds investigation within 24 hours.
 5. If the modification cannot be traced to a valid amendment-protocol process, it is treated as an **unauthorized modification** — operational nodes remain in refuse-to-operate state, and the federated Ombuds issues a drift-chain preservation notice restoring the last valid state from the public ledger.
 
 This construction means that silent modification cannot persist — it is detected at the first operational-node startup after the modification, which under normal operation is within hours. The adversary must either complete a legitimate amendment through the M-of-N / timelock process, or their modification is visibly reverted and publicly logged.
@@ -104,4 +104,4 @@ Changes to this file (the chain structure, serialization rules, publication requ
 
 ---
 
-*This document is part of the Twelve Pillar Protocol's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18).*
+*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18).*

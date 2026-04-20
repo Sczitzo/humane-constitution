@@ -314,7 +314,7 @@ The system's commitment: every failure in these categories is published publicly
 ---
 
 ### 4. Citizen-Facing Rights Summary
-The following is a summary of core rights. The full Master Protocol governs in all cases. A one-page Citizen-Facing Rights Layer (CFRL) is published separately at the launch of any pilot or deployment.
+The following is a summary of core rights. The full Humane Constitution governs in all cases. A one-page Citizen-Facing Rights Layer (CFRL) is published separately at the launch of any pilot or deployment.
 
 | What you are entitled to |
 | :--- |

@@ -146,12 +146,12 @@ Changes to Tier 1 invariants require the full architectural process. Changes to 
 
 **Founding Order — Subsidiarity, Consent & Exit (Proposal 5 close-out, 2026-04-18).**
 Beneath the seven operational articles, this protocol rests on a foundational scale-and-consent layer, the **Founding Order**, that defines who consents to be governed by the protocol, at what scale, and how they withdraw. The Founding Order is Tier 1 architectural:
-- [`pillars/P0_subsidiarity/README.md`](pillars/P0_subsidiarity/README.md) — overview and integration with the current Founding Order + Articles I-VII architecture.
-- [`pillars/P0_subsidiarity/subsidiarity_rule.md`](pillars/P0_subsidiarity/subsidiarity_rule.md) — decisions default to the smallest competent scale; federation action requires affirmative justification.
-- [`pillars/P0_subsidiarity/consent_protocol.md`](pillars/P0_subsidiarity/consent_protocol.md) — affirmative consent is a published act, not a presumption. Non-consenting units are outside protocol scope except for the CSM floor.
-- [`pillars/P0_subsidiarity/exit_protocol.md`](pillars/P0_subsidiarity/exit_protocol.md) — any locality or larger unit may exit by **2/3 resident-personhood supermajority (FC-120)** with a **730-day graceful unwind (FC-121)**. LC continuity is preserved for individuals during unwind; no exit tax, no forfeiture.
-- [`pillars/P0_subsidiarity/reentry_protocol.md`](pillars/P0_subsidiarity/reentry_protocol.md) — procedurally symmetric re-entry; no penalty for previously-exited units.
-- [`pillars/P0_subsidiarity/jurisdictional_scales.md`](pillars/P0_subsidiarity/jurisdictional_scales.md) — five scales per **FC-122**: household, neighborhood (≤500), locality (≤5,000), region (≤500,000), federation.
+- [`founding/order/README.md`](founding/order/README.md) — overview and integration with the current Founding Order + Articles I-VII architecture.
+- [`founding/order/subsidiarity_rule.md`](founding/order/subsidiarity_rule.md) — decisions default to the smallest competent scale; federation action requires affirmative justification.
+- [`founding/order/consent_protocol.md`](founding/order/consent_protocol.md) — affirmative consent is a published act, not a presumption. Non-consenting units are outside protocol scope except for the CSM floor.
+- [`founding/order/exit_protocol.md`](founding/order/exit_protocol.md) — any locality or larger unit may exit by **2/3 resident-personhood supermajority (FC-120)** with a **730-day graceful unwind (FC-121)**. LC continuity is preserved for individuals during unwind; no exit tax, no forfeiture.
+- [`founding/order/reentry_protocol.md`](founding/order/reentry_protocol.md) — procedurally symmetric re-entry; no penalty for previously-exited units.
+- [`founding/order/jurisdictional_scales.md`](founding/order/jurisdictional_scales.md) — five scales per **FC-122**: household, neighborhood (≤500), locality (≤5,000), region (≤500,000), federation.
 
 The Founding Order is read *through* every operational article: each article's default resolution scale is the smallest competent unit; federation-scale operation requires affirmative justification under the subsidiarity rule. Tier 1 human-dignity invariants (CSM) are the single exception that binds everywhere regardless of consent — because human dignity is not a subject of vote.
 
@@ -299,7 +299,7 @@ Real-time public dashboards (the S3* audit channel, genuinely independent of Art
 ### Founding Order and article detail
 
 #### Founding Order: Subsidiarity, Consent & Exit
-- **Subsidiarity rule:** decisions default to the smallest competent scale — household, neighborhood (≤500 persons), locality (≤5,000), region (≤500,000), federation — with federation-scale action permitted only where cross-regional externality, physical-scale infrastructure, or constitutional-floor enforcement is affirmatively justified (`pillars/P0_subsidiarity/subsidiarity_rule.md`).
+- **Subsidiarity rule:** decisions default to the smallest competent scale — household, neighborhood (≤500 persons), locality (≤5,000), region (≤500,000), federation — with federation-scale action permitted only where cross-regional externality, physical-scale infrastructure, or constitutional-floor enforcement is affirmatively justified (`founding/order/subsidiarity_rule.md`).
 - **Scale hierarchy (FC-122):** five scales with quantitative bounds; no empty scales; Tier 1 locked. Multi-scale competence disputes default against escalation.
 - **Consent protocol:** affirmative 2/3-supermajority consent, 90-day notice, 60-day deliberation, roll-call, 2/3 minimum participation. Non-consenting units are outside protocol scope except for the Tier 1 human-dignity floor (CSM).
 - **Exit protocol (FC-120, FC-121):** any unit at locality scale or larger may exit by 2/3 resident-personhood supermajority with a 730-day graceful unwind. LC continuity is preserved during unwind; no exit tax; no forfeiture.

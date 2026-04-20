@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE — Proposal 1 close-out, 2026-04-18
 **Authority:** Tier 1 (H-3 Refounding Convention)
-**Governs:** Every modification to entries in `architecture/invariants.md`, to `Master_Protocol.md §0`, to `Annex Y §Y1`, and to Tier 1 rows of `/founding/commitments.md`.
+**Governs:** Every modification to entries in `architecture/invariants.md`, to `Humane_Constitution.md §0`, to `Annex Y §Y1`, and to Tier 1 rows of `/founding/commitments.md`.
 
 **Bound commitments:**
 - **FC-110** `TIER1_AMENDMENT_SIGNATURES_MIN` = **7 of 9** (M-of-N)
@@ -65,8 +65,8 @@ The amendment becomes eligible for the timelock only when 7 distinct holder sign
 A valid Tier 1 amendment proposal must include:
 
 1. **Plain-language summary.** A lay-readable description of what the amendment changes, who is affected, and the coalition proposing it. Minimum: 500 words; maximum: 2000.
-2. **Redline text.** Exact current text and exact proposed text for every file affected (invariants.md, Master_Protocol.md §0, Annex Y §Y1, commitments.md Tier 1 rows, as applicable).
-3. **Invariant impact statement.** Which Master Protocol §0 invariants the amendment affects; whether the amendment narrows, broadens, or holds constant each invariant.
+2. **Redline text.** Exact current text and exact proposed text for every file affected (invariants.md, Humane_Constitution.md §0, Annex Y §Y1, commitments.md Tier 1 rows, as applicable).
+3. **Invariant impact statement.** Which Humane Constitution §0 invariants the amendment affects; whether the amendment narrows, broadens, or holds constant each invariant.
 4. **Threat impact.** Registered threats (Threat Register) whose risk score changes; new threats introduced; residual risks after amendment.
 5. **Migration plan.** Operational transition — how running services update their pinned references (per `implementation_binding.md`), how in-flight transactions are handled, whether the amendment has retroactive effect.
 6. **Rollback plan.** Under what conditions the amendment would be rolled back and through what process.
@@ -170,8 +170,8 @@ Coerced holders may also confidentially alert the federated Ombuds, who issues a
 
 Changes to this amendment protocol (M, N, timelock days, procedural requirements, holder diversity criteria) are themselves **Tier 1 amendments** requiring 7-of-9 signatures and a 180-day timelock. This is recursive — the protocol cannot be amended into a weaker protocol through a weaker process.
 
-The only exception is the **Refounding Convention** authority (H-3 per Master Protocol §H2.4), which can restructure the amendment protocol itself but is itself a Tier 1–grade collective action requiring supermajority ratification at the federation level.
+The only exception is the **Refounding Convention** authority (H-3 per Humane Constitution Annex H), which can restructure the amendment protocol itself but is itself a Tier 1-grade collective action requiring supermajority ratification at the federation level.
 
 ---
 
-*This document is part of the Twelve Pillar Protocol's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the mechanical specification by which the Tier 1 invariants in `invariants.md` and Master Protocol §0 may be legitimately changed.*
+*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the mechanical specification by which the Tier 1 invariants in `invariants.md` and Humane Constitution §0 may be legitimately changed.*

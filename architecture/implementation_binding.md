@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE — Proposal 1 close-out, 2026-04-18
 **Authority:** Tier 1 (H-3 Refounding Convention)
-**Purpose:** Binding requirement that every operational component of the Twelve Pillar Protocol verifies the current drift-chain state before operation. Without this binding, the architectural-enforcement layer (`invariants.md`, `amendment_protocol.md`, `drift_chain.md`) is only as strong as the implementors' discipline.
+**Purpose:** Binding requirement that every operational component of the Humane Constitution verifies the current drift-chain state before operation. Without this binding, the architectural-enforcement layer (`invariants.md`, `amendment_protocol.md`, `drift_chain.md`) is only as strong as the implementors' discipline.
 
 ---
 
@@ -31,9 +31,9 @@ Every operational component whose behavior depends on Tier 1 parameters must imp
 Every bound component, on startup and on a recurring schedule (every 24 hours minimum), executes:
 
 1. **Fetch drift chain head from ≥ 2 independent publication channels** (per `drift_chain.md §Publication Requirements`).
-2. **Verify inter-channel consistency** — the `state_hash` reported by each channel must match. Mismatch → abort startup; alert Pillar 11 with `DRIFT_CHAIN_CHANNEL_DIVERGENCE`.
+2. **Verify inter-channel consistency** — the `state_hash` reported by each channel must match. Mismatch -> abort startup; alert Article VII monitoring with `DRIFT_CHAIN_CHANNEL_DIVERGENCE`.
 3. **Compute local Tier 1 state hash** — canonical serialization of the five Tier 1 files per `drift_chain.md §What This Chain Covers`.
-4. **Compare local hash to drift-chain head** — match required. Mismatch → abort startup; alert Pillar 11 with `DRIFT_CHAIN_LOCAL_DIVERGENCE`.
+4. **Compare local hash to drift-chain head** — match required. Mismatch -> abort startup; alert Article VII monitoring with `DRIFT_CHAIN_LOCAL_DIVERGENCE`.
 5. **Verify holder-signature validity** — confirm the head row carries 7 distinct valid signatures from current holders (using the public holder-keys registry, which is itself Tier 1 and hashed into the chain).
 6. **Verify timelock compliance** — the head row's `timelock_exit_date` must be on or before the current date. If not, the head row is a proposed-but-not-effective version; the component operates against the prior effective version.
 7. **Pin the effective state hash** to the component's local cache; all subsequent Tier 1 parameter reads during this session use this pinned reference.
@@ -73,7 +73,7 @@ Each operator of a bound component maintains:
 
 3. **An audit log** — append-only record of every pinned-reference update with the operator's signature, the prior reference, and the new reference. This audit log is itself subject to random inspection by the federated Ombuds (Annex AI) and the Enforcement Panel.
 
-Operators who fail to update pinned references within 30 days of a new effective drift-chain version are out of compliance. Compliance failures are not penalized by removing them from service (that would create a denial-of-service surface on operators), but compliance reports are published as part of the Pillar 11 transparency layer.
+Operators who fail to update pinned references within 30 days of a new effective drift-chain version are out of compliance. Compliance failures are not penalized by removing them from service (that would create a denial-of-service surface on operators), but compliance reports are published as part of the Article VII transparency layer.
 
 ---
 
@@ -97,4 +97,4 @@ This document is Tier 1 protected per `invariants.md`. Changes require the full 
 
 ---
 
-*This document is part of the Twelve Pillar Protocol's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the bridge between the cryptographic commitments in `invariants.md` / `drift_chain.md` and the running operational components that must respect them.*
+*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the bridge between the cryptographic commitments in `invariants.md` / `drift_chain.md` and the running operational components that must respect them.*

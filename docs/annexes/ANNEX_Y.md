@@ -1,18 +1,18 @@
 # ANNEX Y — Constitutional Survival Minimum (CSM)
 
 **Status:** Tier 1 (Constitutional). Amendment requires H-3 refounding authority only.
-**Referenced by:** `Master_Protocol.md` §0 (line 120), §Pillar 4 (line 266), §VIII (line 441).
+**Referenced by:** `Humane_Constitution.md` §0, Article IV, and §VIII.
 **Integration:** This annex closes Proposal 10 of `Protocol_Optimization_Proposals.md`. Prior to this publication, Annex Y was declared as authoritative but absent — an undefined constitutional floor.
 
 ---
 
 ## Y0. Purpose and Scope
 
-The Constitutional Survival Minimum (CSM) is the hard lower bound on life-access guaranteed to every personhood-verified resident. The broader LC essential basket (`Master_Protocol.md` §VIII) may vary in response to capacity, policy, and period-specific choices. The CSM does not. It is the floor below which LC cannot be narrowed by any ordinary process, governance actor, emergency order, or technical update.
+The Constitutional Survival Minimum (CSM) is the hard lower bound on life-access guaranteed to every personhood-verified resident. The broader LC essential basket (`Humane_Constitution.md` §VIII) may vary in response to capacity, policy, and period-specific choices. The CSM does not. It is the floor below which LC cannot be narrowed by any ordinary process, governance actor, emergency order, or technical update.
 
 The CSM is not a generous definition of a good life. It is the narrow, defensible minimum below which survival and dignity are structurally threatened. It is set deliberately at the threshold of physical viability plus a dignity margin — not at desirable comfort.
 
-Every numerical value in this annex is a **Tier 1 Founding Commitment**. Changing any number below requires the full H-3 refounding authority process defined in the Master Protocol's amendment ladder. No emergency, scarcity declaration, fiscal pressure, or administrative reinterpretation may lower these values.
+Every numerical value in this annex is a **Tier 1 Founding Commitment**. Changing any number below requires the full H-3 refounding authority process defined in the Humane Constitution's amendment ladder. No emergency, scarcity declaration, fiscal pressure, or administrative reinterpretation may lower these values.
 
 ## Y1. CSM Basket — Per-Person Daily Minimums
 
@@ -91,13 +91,13 @@ The CSM is preserved even during declared scarcity by substitution, not by narro
 - **Medical and mental-health stabilization: NO substitution.** Response time floors and stabilization scope are invariant.
 - **Medicines substitution:** therapeutic equivalents may be substituted only with prescriber review; no substitution is permitted where evidence of equivalence is absent.
 
-All substitutions are published in real-time on the Pillar 11 dashboard with entry/exit timestamps, scope, and expected restoration timeline.
+All substitutions are published in real time through Article VII transparency infrastructure with entry/exit timestamps, scope, and expected restoration timeline.
 
 ## Y4. CSM Failure as Critical Incident
 
 Any observed failure to deliver the §Y1 minimums to any personhood-verified resident is a Critical Incident.
 
-- **Mandatory disclosure:** published on Pillar 11 dashboard within 24 hours.
+- **Mandatory disclosure:** published through Article VII transparency infrastructure within 24 hours.
 - **Mandatory investigation:** Ombuds Office (post-Proposal 8 federation) opens an investigation within 72 hours.
 - **Mandatory restitution:** the affected person receives retroactive CSM provision, plus dignity-preserving redress, within 7 days of confirmation.
 - **Mandatory root-cause review:** capacity gap, process failure, or capture is published within 30 days; patches registered per Patch Log.
@@ -106,13 +106,13 @@ Any observed failure to deliver the §Y1 minimums to any personhood-verified res
 ## Y5. Amendment and Lock
 
 - **Every numerical value above is locked** by cryptographic hash commitment at founding (Proposal 1 architectural enforcement). Hash appears in `/architecture/drift_chain.md` and is referenced in the ledger genesis block.
-- **Amendment requires H-3 refounding authority** as defined in the Master Protocol amendment ladder. No Tier 2 or Tier 3 process may modify §Y1.
+- **Amendment requires H-3 refounding authority** as defined in the Humane Constitution amendment ladder. No Tier 2 or Tier 3 process may modify §Y1.
 - **Upward amendment** (increasing floors) is permitted through ordinary Tier 2 process. Only *downward* changes require H-3 refounding.
 - **Temporary suspension prohibited.** No emergency, treaty, budget cycle, or transition process may suspend CSM. If capacity cannot meet CSM × population, the protocol is in System Failure and Y4 applies.
 
 ## Y6. Relationship to Broader Essential Basket
 
-The essential basket defined in `Master_Protocol.md` §VIII is broader than the CSM. Ordinary policy, scarcity mode, or procurement choice may adjust the broader basket. The CSM is the subset of the broader basket that is invariant.
+The essential basket defined in `Humane_Constitution.md` §VIII is broader than the CSM. Ordinary policy, scarcity mode, or procurement choice may adjust the broader basket. The CSM is the subset of the broader basket that is invariant.
 
 Example — the broader basket may include "basic clothing" or "basic local transit." These are essential-basket items but not CSM items. They may vary by region or period. The CSM items (food, water, shelter, emergency medicine, sanitation, mental-health stabilization, essential-medicines continuity) may not.
 
@@ -136,9 +136,9 @@ Example — the broader basket may include "basic clothing" or "basic local tran
 
 This annex satisfies the following references in other authoritative documents:
 
-- `Master_Protocol.md` line 120: "Constitutional Survival Minimum: no ordinary process may reduce the humane floor below the explicit survival minima defined in Annex Y" — ✓ minimums specified in §Y1.
-- `Master_Protocol.md` line 180: "LC may never be narrowed below the Constitutional Survival Minimum defined in Annex Y" — ✓ §Y2 issuance rule.
-- `Master_Protocol.md` line 266: "the Constitutional Survival Minimum floor defined in Annex Y" — ✓ §Y1 numerical floor.
-- `Master_Protocol.md` line 441: "founding schedule for caloric sufficiency, potable water, weather-safe shelter, emergency medical stabilization, basic sanitation/hygiene, crisis mental-health stabilization, and continuity for essential medicines" — ✓ all seven categories specified in §Y1.1 through §Y1.7.
+- `Humane_Constitution.md` §0: "Constitutional Survival Minimum: no ordinary process may reduce the humane floor below the explicit survival minima defined in Annex Y" — ✓ minimums specified in §Y1.
+- `Humane_Constitution.md` Article IV: "LC may never be narrowed below the Constitutional Survival Minimum defined in Annex Y" — ✓ §Y2 issuance rule.
+- `Humane_Constitution.md` Article IV LC purpose clause — ✓ §Y1 numerical floor.
+- `Humane_Constitution.md` §VIII baseline settings — ✓ all seven categories specified in §Y1.1 through §Y1.7.
 
 **End Annex Y.**

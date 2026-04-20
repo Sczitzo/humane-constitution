@@ -12,7 +12,7 @@ This is an open design project. The design is not finished. The most valuable th
 
 **If you want to stress-test:** Read [`Threat_Register.md`](./Threat_Register.md). Every adversarial failure mode we've found is documented there with its risk score. The open problems are explicitly marked. If you find one we haven't, that's a contribution.
 
-**If you want the operative language:** Read [`Master_Protocol.md`](./Master_Protocol.md).
+**If you want the operative language:** Read [`Humane_Constitution.md`](./Humane_Constitution.md).
 
 **If you want to understand the hardening methodology:** Read [`Patch_Log.md`](./Patch_Log.md) — 26 patches, each with the threat it addresses, the new risk it introduces, and its residual risk.
 

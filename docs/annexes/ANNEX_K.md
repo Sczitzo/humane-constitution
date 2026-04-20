@@ -1,0 +1,36 @@
+# ANNEX K. Essential Basket Governance and Civic Participation Fairness
+**Purpose.** This annex addresses two persistent risks: first, that the essential basket will be treated as a settled technical list when it is actually a recurring constitutional conflict zone; second, that the civic layer can quietly reward only people whose lives are already legible to institutions.
+
+**Design principle: govern the argument, not just the answer.**
+
+### K1. The essential basket is a permanent contestation zone
+Terms such as basic healthcare, basic shelter, basic transit, or basic care are not politically neutral. They must be handled through a visible, repeatable process rather than a one-time founding definition.
+- **The basket shall be maintained** through a standing Essential Basket Review Cycle with published definitions, challenge windows, substitution rules, and impact analysis.
+- **Each category requires:** functional definition, minimum quality floor, permitted substitution ladder, exclusion list, and a rights-impact note naming who is most harmed if the category narrows.
+- **Mental health**, reproductive care, disability supports, dental care, temperature safety, and digital access may not be silently omitted by administrative drift; any narrowing requires explicit public action.
+- **Every material change** to the basket must state whether it expands, narrows, or merely clarifies the humane floor, and must include both a cost/capacity note and a protected-group impact note.
+- **No vendor definition** controls the basket. The constitutional definition controls the vendor, not the reverse.
+
+### K2. Basket governance process
+- **Routine cycle:** quarterly evidence review, annual consolidation, and mandatory judicial review for any narrowing that materially reduces baseline access or quality for a protected group or region.
+- **Inputs:** lived-experience panels, provider evidence, care-worker evidence, disability and elder advocates, supply/capacity data, cost simulations, and rights-impact analysis.
+- **Decision classes:** clarification, substitution, expansion, narrowing, emergency temporary adjustment.
+- **Narrowing rule:** no narrowing takes effect without plain-language notice, worked examples, and publication of what continuity protections apply to people already relying on the prior basket.
+- **Emergency temporary adjustment** may preserve continuity during a real shortage, but cannot become permanent by default; repeated emergency use triggers root-cause review under Annex M.
+
+### K3. Civic-layer fairness and the anti-legibility trap
+A civic system that only rewards institutionally legible contribution will recreate class hierarchy inside the civic layer. Contribution verification must therefore recognize care work, mutual aid, informal stewardship, and interrupted lives.
+- **Multi-path verification:** institutional attestations are allowed but never the only path. Community attestations, rotating civic jury review, time-bounded self-declarations, and retrospective bundles are also admissible within published limits.
+- **Informal contribution classes** must include caregiving, neighborhood maintenance, mutual aid, translation, de-escalation, disability support, mentoring, and emergency response.
+- **No person may be disqualified** from DW participation or CR earning solely because their work occurs outside payroll systems, formal nonprofits, or registered enterprises.
+- **Verification burden** must scale with claimed civic influence, not with human need. Small DW or CR claims should be easier to verify than large accumulations or high-impact service credentials.
+
+### K4. Protected pause, civic floor, and asymmetric decay
+- **Low DW balances** decay more slowly than high DW balances.
+- **CR may decay more slowly** than DW and may preserve service continuity during approved hardship windows.
+- **Verified caregiving crises**, severe illness, disability disruption, family emergency, disaster displacement, or involuntary unemployment may activate a Protected Pause Window for up to four quarters, renewable only with review.
+- **During a Protected Pause Window**, previously earned DW retains a civic floor sufficient to preserve petition standing, and previously earned CR retains enough continuity to preserve jury eligibility review, service-readiness review, and reentry continuity.
+- **Protected Pause** never creates new DW or CR out of nothing; it preserves continuity and prevents cliff effects during hardship.
+- **High-balance holders** remain subject to stronger decay even during approved pause windows, except where incapacity review determines otherwise.
+
+---
