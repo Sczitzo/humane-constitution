@@ -5,8 +5,8 @@ type: software
 authors:
   - alias: "Sczitzo"
     name: "Protocol Author"
-repository-code: "https://github.com/Sczitzo/twelve-pillar-protocol"
-url: "https://github.com/Sczitzo/twelve-pillar-protocol"
+repository-code: "https://github.com/Sczitzo/humane-constitution"
+url: "https://github.com/Sczitzo/humane-constitution"
 abstract: >
   A constitutional systems design separating survival, markets, and governance
   into structurally independent lanes. The protocol guarantees an unconditional

@@ -14,7 +14,7 @@ If you identify a critical design flaw that:
 
 Please report it privately before opening a public issue.
 
-**Contact:** Open a [private security advisory](https://github.com/Sczitzo/twelve-pillar-protocol/security/advisories/new) via GitHub's built-in reporting tool.
+**Contact:** Open a [private security advisory](https://github.com/Sczitzo/humane-constitution/security/advisories/new) via GitHub's built-in reporting tool.
 
 Include:
 - The specific clause, annex, or mechanism affected
