@@ -716,3 +716,332 @@ The 61-point comprehension gap between DW quintiles (Sim F, 24.3× effective inf
 The interaction produces a third effect neither pillar specifies: those who contribute most *also* understand the agenda most *also* have the most agenda weight. Comprehension correlates with DW because the activities that generate DW also generate issue familiarity. This is a legitimate-participation advantage being converted into agenda capture through information asymmetry — not through deliberate design, but through an unspecified interaction.
 
 No pillar currently specifies a legibility standard. The Annual Compound Simulation identifies this as a "recommended CRP step" without formalizing it. Until a Civic Legibility Standard is specified with a minimum comprehension threshold, a legibility budget requirement, and Pillar 11 monitoring metrics, the DW system is partially functioning as an information-asymmetry amplifier rather than a civic voice equalizer.
+
+---
+
+---
+
+## Deep Audit — Phase 4: Conditional Pillar Stress Tests (PRD-007 through PRD-012)
+
+*Phase 4 examines the six CONDITIONAL pillars (P4, P6, P7, P10, P11, P12) that the Phase 1 scorecard deferred pending gate resolution. The prior audit documented the conditions for CONDITIONAL status; this phase stress-tests the underlying mechanisms against the same five frameworks to determine whether the CONDITIONAL verdict is stable or conceals undetected FAIL conditions. Four simulations (Sim L–O) are produced and six PRDs are written.*
+
+---
+
+### Sim L — 72-Hour Redemption Failure Rate by Population Category (Pillar 4 / Task 4.1)
+
+**Setup:** LC daily tranches are valid for 72 hours from issuance. The 72-hour window assumes continuous access to a registered delivery point. Test: what is the expected redemption loss rate for populations whose access is structurally interrupted?
+
+| Population | Typical access interruption | 72h window consumed? | Expected loss per event |
+|:---|:---:|:---:|:---:|
+| Acute hospital admission (avg stay 4.7 days) | 112 hours | YES — 100% (days 2–5) | 3–4 daily tranches |
+| Incarcerated (pre-trial detention, avg 3 days) | 72+ hours | YES | 1–3 tranches |
+| Natural disaster displacement (FEMA avg 3–7 days) | 72–168 hours | YES — partial to full | 1–5 tranches |
+| Rural/remote (>4h travel to nearest delivery point) | N/A — structural | Conditional on trip frequency | 1 tranche per missed day |
+| Severe psychiatric episode (crisis hold, avg 5.4 days) | 130 hours | YES — 100% (days 2–6) | 3–5 tranches |
+
+**Finding:** The 72-hour design correctly prevents accumulation. It simultaneously creates a structural redemption gap for populations with involuntary access interruptions. These are not edge cases — hospitalization, incarceration, disaster displacement, and severe mental health episodes affect the populations most dependent on the CSM floor.
+
+**The continuity safeguard ("Protected Pause preserves proportionate access") does not address this failure mode.** Protected Pause is a contribution-system adjustment (DW/CR continuity during hardship). It does not extend LC validity windows or guarantee LC delivery to delivery-inaccessible locations. The spec notes "provider outages" as an exception but does not specify what triggers a continuity path for delivery-point inaccessibility vs. individual incapacity.
+
+**Required specification:** The delivery-point inaccessibility continuity path must be architecturally specified, not listed as a future founding commitment. Minimum: define the trigger conditions (delivery point inaccessibility exceeding N hours), the substitute delivery mechanism (mobile delivery, institutional delivery point registration), and the LC validity extension rule (extend window or re-issue) before pilot.
+
+---
+
+### Sim M — Physical Asset Demurrage Bypass (Pillar 7 / Task 7.2)
+
+**Setup:** EC demurrage applies to *idle financial balances*, not physical assets. Test the conversion pathway: EC holder converts to physical assets before the idle threshold θ (FOUNDING COMMITMENT, not yet specified), holds physical capital, reconverts to EC on need.
+
+| Strategy | EC demurrage paid | Physical asset carrying cost | Effective demurrage avoidance |
+|:---|:---:|:---:|:---:|
+| Hold EC past θ | r × t_idle | — | 0% |
+| Convert EC → physical inventory (goods) | 0% | Storage cost only | Up to 100% |
+| Convert EC → land/equipment registry | 0% | Registry fee (unspecified) | Up to 100% |
+| Convert EC → collectibles/art (high-value asset registry) | 0% | Registry fee (unspecified) | Up to 100% |
+
+**At any demurrage rate r, an actor who converts EC to physical assets before threshold θ pays zero demurrage.** The anti-hoarding mechanism applies to financial holdings only. The physical asset registries are cited as an anti-hoarding deterrent ("transparent registries for high-value assets deter shadow accumulation") but no carrying-cost mechanism analogous to demurrage is specified for physical holdings.
+
+**Equilibrium under adversarial conditions:** High-EC actors convert to physical asset holdings near θ, hold, and reconvert on need. Demurrage fully avoids them. This creates a two-tier economy: ordinary participants subject to demurrage on financial balances; capital-sufficient actors who rotate through physical assets to avoid it. The anti-concentration function of demurrage is negated for any actor with sufficient EC to purchase physical assets.
+
+**Required patch:** Specify a carrying cost on registered high-value physical assets (above a threshold analogous to the EC operating-float exemption) payable in EC, designed to produce equivalent anti-hoarding signal to EC demurrage at the actual operative rate. Without this, the demurrage architecture applies to the wrong layer of the wealth stack.
+
+---
+
+### Sim N — Small-Community k-Anonymity Failure (Pillar 11 / Task 11.1)
+
+**Setup:** Pillar 11 mandates real-time public dashboards with "aggregation thresholds" and "small-cell suppression" to protect individual privacy. k-anonymity requires that any published cell represents at least k individuals. Test: at what community size does the transparency requirement structurally conflict with the k-anonymity floor?
+
+**Assumptions:** Dashboard publishes capacity utilization by (neighborhood × service type). Pilot community. Service types: food, water, shelter, healthcare, transit (5 types). k-anonymity floor: k ≥ 5 (standard minimum).
+
+| Community size | Avg cell size (5 types, 4 neighborhoods) | k ≥ 5 satisfied? | Publishable cells | Information loss |
+|:---:|:---:|:---:|:---:|:---:|
+| 10,000 | 500 | YES | 100% | Minimal |
+| 2,000 | 100 | YES | 100% | Minimal |
+| 500 | 25 | YES | 100% | Low |
+| 200 | 10 | MARGINAL | ~80% | Moderate |
+| **100** | **5** | **BORDERLINE** | **~50%** | **HIGH** |
+| 50 | 2.5 | **NO** | **<20%** | **CRITICAL** |
+
+**At a community of 100 people** (plausible early pilot scale), approximately half of all dashboard cells must be suppressed to satisfy k=5. The published dashboard becomes sparse — providing less than half the transparency the protocol promises.
+
+**The tradeoff is structural, not parametric.** Raising the k threshold improves privacy protection and reduces transparency. Lowering it improves transparency and reduces privacy. No parameter selection satisfies both simultaneously at small community scales. The pilot community is likely to be small; this failure manifests most acutely at exactly the deployment scale the founding coalition controls.
+
+**Required specification:** Publish a pilot-scale privacy architecture that explicitly models k-anonymity tradeoffs at the expected pilot population size. The differential privacy parameters must be chosen *after* the pilot community size is known, not before. The Pillar 11 dashboard specification must include a minimum community size below which certain dashboard layers are suppressed pending scale threshold, with the suppressed data provided to independent auditors under P-017-equivalent independence standards.
+
+---
+
+### Sim O — Reserve Depletion Cascade (Pillar 12 / Task 12.1)
+
+**Setup:** Pillar 12 mandates strategic reserves for food, water, energy, and critical medicines with "explicit replenishment rules." Reserve levels are all [FOUNDING COMMITMENT]. Test: what happens when one reserve is depleted under emergency conditions, assuming correlated demand across categories?
+
+**Correlation structure (based on natural disaster scenario):**
+- Food reserve depleted (e.g., supply chain disruption) → increased demand on water (drinking, sanitation during food preparation alternatives) and healthcare (malnutrition-adjacent conditions)
+- Healthcare/medicine reserve depleted → increased demand on food (therapeutic nutrition) and energy (medical device power)
+- Energy reserve depleted → cold storage failure → food reserve accelerated depletion + medical device failure → medicine reserve pressure
+
+| Initial depletion event | Direct reserve hit | Correlated secondary hit | Cascade timeline |
+|:---|:---:|:---:|:---:|
+| Food −30% | Food | Healthcare +15% demand | Days 7–14 |
+| Energy −50% | Energy | Food (cold storage) −20%, Medicine −10% | Days 1–3 |
+| Water −40% | Water | Healthcare +25% demand, Food +10% demand | Days 3–7 |
+
+**The cascade risk is not modeled anywhere in the current protocol.** Each reserve category has its own replenishment rules, but no cross-reserve correlation model exists. A protocol that treats four correlated reserve categories as independent systems will systematically underestimate combined depletion risk.
+
+**Finding:** Under energy depletion alone, food reserves face accelerated secondary depletion within 1–3 days via cold storage failure. If food reserves are already near the (unspecified) minimum, energy depletion triggers a food crisis without a food supply event. No trigger in the current protocol detects this compound state — the PCRP sentinel indicators (P-006) monitor individual categories, not cross-category correlations.
+
+**Required addition:** A cross-reserve correlation model must be developed as a Tier 2 founding commitment before pilot. Minimum specification: pairwise correlation coefficients between reserve categories under three standard emergency scenarios; a combined reserve health index that aggregates correlated risk rather than reporting each category independently; and a compound depletion trigger threshold that fires PCRP before any individual category reaches its floor.
+
+---
+
+## PRD-007: Pillar 4 — Life Support Layer
+
+**Status: CONDITIONAL → FAIL (reclassified)**
+
+### The Failure Point
+
+**Failure A — 72-hour delivery-point inaccessibility (Sim L):** The continuity safeguard documentation lists "provider outages" as an exception condition but provides no architectural specification for the delivery-point inaccessibility continuity path. The populations most dependent on the CSM floor (hospitalized, incarcerated, disaster-displaced, severe psychiatric crisis) have structurally interrupted delivery-point access as a predictable consequence of their circumstances. This is not a rare edge case; it is the modal failure condition for the most vulnerable identity holders.
+
+**Failure B — Caregiver exception boundary undefined:** The non-transferability rule includes a "narrowly scoped" caregiver/dependent exception. "Narrowly scoped" is not a specification. The operational test for coercion detection in a caregiver relationship is unspecified. Any person with legal guardianship authority can claim caregiver-exception status. The exception is auditable in principle, but there is no published audit criterion, no case categorization, and no maximum exception scope that would trigger automatic review.
+
+**Failure C — Redemption identity fallback is normative (prior verdict upheld):** During identity re-verification suspension, CSM issuance continues. But delivery-point redemption requires "biometric or equivalent identity confirmation (Tier 2 assurance minimum)." A suspended identity cannot redeem LC at the Tier 2 assurance level. The spec says the system issues LC at CSM during suspension — but it does not specify a redemption mechanism that does not require the suspended identity confirmation. Issued but unreedemable LC is not survival access; it is a promise to provide access that the delivery system cannot honor.
+
+### The Violated Principle
+**Lessig — Architecture as Law.** The continuity safeguards are normative descriptions. "Protected Pause preserves proportionate access" is a design intent statement, not an architectural specification. There is no mechanism that automatically routes LC delivery to a hospital ward, a detention facility, or a disaster shelter when standard delivery-point access is interrupted.
+
+**Ostrom — Principle 2 (Congruence).** The rules governing LC delivery must match the actual conditions under which the most vulnerable users operate. A 72-hour validity window that systematically fails during hospitalization and incarceration is not congruent with the population it purports to protect.
+
+### The Systemic Risk
+The most predictable failure mode of the LC delivery system is not Sybil attack or shadow convertibility — it is silent non-redemption by the people who need it most. A disabled person hospitalized for a week loses 5 daily tranches. No alarm fires. No PCRP indicator activates. The capacity pool registers the expiry as routine. The loss is invisible because it looks identical to voluntary non-redemption. This is INV-001's greatest vulnerability: the floor is architecturally in place but operationally unreachable for the people it protects.
+
+### The Required Patch
+1. **Institutional delivery point registration:** Hospitals, detention facilities, emergency shelters, and crisis mental health facilities must be registered as LC delivery points before pilot. LC should be redeemable through institutional delivery under institutional verification on behalf of confirmed identity holders.
+2. **Delivery-point inaccessibility trigger:** Specify an architectural trigger: when a confirmed identity holder has not redeemed LC for N consecutive validity windows (suggested: 3 windows = 9 days), an automatic welfare check alert fires to the Ombuds or designated welfare authority. This converts silent non-redemption from invisible system noise to a detectable signal.
+3. **Caregiver exception specification:** Publish the closed list of caregiver exception categories, the maximum LC units per period delegatable, the audit trigger (delegation > X% of total allocation for > Y consecutive periods), and the coercion detection criteria before any pilot.
+4. **Suspended identity redemption path:** Specify the reduced-assurance redemption mechanism (Tier 1 assurance with institutional confirmation) that allows CSM delivery during identity suspension. "Issuance continues at CSM" is not sufficient — redemption must also continue.
+
+---
+
+## PRD-008: Pillar 6 — Land, Housing & Commons
+
+**Status: CONDITIONAL (prior verdict upheld, gaps enumerated)**
+
+### The Failure Point
+
+**Failure A — Corporate entity Sybil (prior verdict upheld):** The one-person-one-core-wallet Sybil protection is designed for natural persons. A corporation, cooperative, or other legal entity can be assigned a use-right as a registered entity identity. Nothing in the current protocol prevents a single beneficial owner from holding multiple use-rights through multiple registered entity identities. The closed-list renewal criteria (vacancy, damage, illegal use, health-safety violations) do not screen for beneficial-owner consolidation. The anti-accumulation limits apply to individual persons under the use-rights model, not to the beneficial ownership layer.
+
+**Failure B — Dispute resolution institution unspecified:** Use-rights allocations will generate disputes: contested renewals, inheritance-equivalent continuity, shared-care arrangements, co-occupancy conflicts. In a property-ownership model, courts adjudicate. In a use-rights model, no equivalent institution is named. The protocol's appeal paths guarantee a right to appeal, but the appeal body is unspecified. An appeal right without an appeal institution is a normative guarantee with no architectural support.
+
+**Failure C — Commons regenerative governance oracle problem:** Pillar 6 requires "published regenerative targets" for water, energy, and ecological assets, measured and audited. Who measures soil health? Who audits water quality? Who sets the regenerative targets? This creates an implicit commons measurement oracle that inherits the Pillar 3 BFT and independence failures at a higher-stakes layer (ecological commons are slower to recover from measurement manipulation than economic systems).
+
+### The Violated Principle
+**Ostrom — Principles 1 and 4 (Boundary Definition and Monitoring).** The commons boundary (what constitutes a use-right, who holds one, what the beneficial ownership layer looks like) is not fully defined. Monitoring of regenerative targets requires an independent measurement oracle that is not specified.
+
+**Buterin — Sybil Resistance.** Corporate entity Sybil attacks on use-rights bypass the natural person identity system entirely. The cost to create multiple registered entity identities may be low relative to the benefit of holding multiple use-rights in high-value areas.
+
+### The Systemic Risk
+Use-rights without beneficial ownership transparency reproduce private property concentration under a different label. A single actor holding thirty use-rights through thirty shell entities is functionally equivalent to owning thirty properties, but the protocol's anti-accumulation mechanisms do not reach the beneficial ownership layer. Over time, this recreates housing scarcity for natural persons without any formal property market.
+
+### The Required Patch
+1. **Beneficial ownership transparency:** Use-rights must be registered with a beneficial owner of record (natural person or confirmed community trust). Shell entity chains that obscure beneficial ownership are prohibited. This is a Tier 2 founding commitment requiring architectural implementation before pilot.
+2. **Name the dispute resolution institution:** Before pilot, a named institution (or a specification for constituting one) must be published. Minimum: jurisdiction, appointment process, appeal pathway, conflict-of-interest rules.
+3. **Commons measurement standards:** Publish a commons oracle specification analogous to Pillar 3's oracle requirements. Minimum: who measures which ecological indicators, at what frequency, under what independence standard, subject to what BFT-equivalent multi-source corroboration requirement.
+
+---
+
+## PRD-009: Pillar 7 — Enterprise & Production Platform
+
+**Status: CONDITIONAL (prior verdict upheld, structural bias enumerated)**
+
+### The Failure Point
+
+**Failure A — Natural monopoly structural gap:** The protocol mandates competitive enterprise with open standards and interoperability requirements. This architecture applies to industries where competition produces efficiency — software, services, differentiated goods. It does not address industries where competition produces inefficiency: power grid infrastructure, water distribution, rail networks, broadband backbone, large-scale waste management. These natural monopolies have declining average cost curves; parallel competing infrastructure is waste-productive, not efficiency-producing.
+
+The protocol has no design for natural monopoly governance. The anti-monopoly controls (merger controls, interoperability requirements) applied to natural monopolies either produce forced fragmentation (waste) or are inapplicable (a competitive power grid is not more efficient). Without a distinct governance track for natural monopolies, the protocol's enterprise architecture either destroys or ignores the industries that are structurally incompatible with its model.
+
+**Failure B — Physical asset demurrage bypass (Sim M):** EC demurrage applies to idle financial balances. Physical assets (machinery, inventory, land, infrastructure) are exempt. Any actor with sufficient EC can convert to physical assets before the idle threshold and reconvert on need — paying zero demurrage indefinitely. The "transparent registries for high-value assets" carry no analog to demurrage's carrying cost. The anti-hoarding architecture addresses only the financial layer of the wealth stack.
+
+**Failure C — Regenerative production enforcement vacuum:** "Repairability, take-back/extended responsibility, circularity incentives where feasible" contains an undefined escape hatch ("where feasible") with no published feasibility criteria, no enforcement body, and no consequence for non-compliance.
+
+### The Violated Principle
+**Beer VSM — S3/S4 separation.** The protocol describes what enterprise should look like (S4 intelligence) without specifying the control mechanism that enforces it (S3 regulation). The enterprise production standards are a design aspiration without an operational enforcement layer.
+
+**Lessig — Architecture as Law.** "Anti-monopoly enforcement controls" are normative rules enforced by an unspecified regulatory body. Merger controls and interoperability requirements require an institutional enforcer. Without naming and constituting that institution, the controls are policy declarations.
+
+### The Systemic Risk
+The natural monopoly gap is not a future risk — it is a present architectural blind spot. Any pilot involving electricity, water, or communications infrastructure immediately encounters industries the protocol cannot govern as written. The founding coalition must either (a) exclude these sectors from the pilot's enterprise architecture and specify a governance track for them, or (b) acknowledge that the enterprise pillar is incomplete for infrastructure sectors and publish the completion timeline.
+
+### The Required Patch
+1. **Natural monopoly governance track:** Specify a separate governance architecture for natural monopolies — not competition, but regulated utility governance with rate review, service standards, and public interest override. This is a Tier 2 founding commitment gap.
+2. **Physical asset carrying cost:** Specify a registered asset fee structure (analogous to EC demurrage) on high-value physical asset holdings above an exemption threshold. The fee should be sufficient to prevent systematic EC→physical asset demurrage avoidance at the operative demurrage rate.
+3. **Regenerative production feasibility criteria:** Replace "where feasible" with a closed list of exemption conditions, each with a published review period. Enforcement body must be named before pilot.
+
+---
+
+## PRD-010: Pillar 10 — Operations, Oversight & Service Delivery
+
+**Status: CONDITIONAL (prior verdict upheld, Beer VSM gap detailed)**
+
+### The Failure Point
+
+**Failure A — Beer S3* channel unspecified:** Beer's VSM requires a direct audit channel (S3*) from the operational layer to senior governance (S4/S5) that bypasses S3 (operational management). This channel exists so that operational audits are not filtered by the layer being audited. The protocol assigns audit functions to the Ombuds Office. The Ombuds reports to the Ombuds Oversight Panel, which reports to governance (Pillar 9). Pillar 9's deliberation layer has the 3-sector coalition capture problem (PRD-006). The S3* signal is directed at a potentially captured governance layer — the structural independence of S3* is not architectural, it is contingent on Pillar 9 being uncaptured.
+
+**Failure B — "Execution without discretion" is unachievable (prior verdict upheld):** All rule execution requires boundary-case interpretation. The protocol acknowledges this implicitly by specifying appeal paths (appeals require someone to decide them) and by creating the Ombuds Office (investigations require someone to interpret whether a determination is warranted). The claim "execution without discretion" describes an aspirational limit, not a mechanically achievable state. What is needed is not the elimination of discretion but the specification of who holds discretion, under what constraints, subject to what review.
+
+**Failure C — Indirect INV-006 violation through operational staff incentives:** INV-006 prohibits entities that govern LC issuance from being beneficiaries of those outcomes. Operational staff are paid in EC (payroll). Operational staff control safety-rail deployment and system continuity decisions. System continuity affects LC delivery reliability, which affects community welfare, which affects social stability, which affects the operational environment that determines staff EC payroll reliability. This is an indirect beneficiary relationship — not a violation of INV-006's literal text, but a structural conflict-of-interest that INV-006's stated purpose was designed to prevent.
+
+### The Violated Principle
+**Beer VSM — S3* independence.** The audit channel from operations to governance must structurally bypass the operational layer. Routing it through a potentially-captured Pillar 9 does not satisfy this requirement.
+
+**Ostrom — Principle 5 (Conflict Resolution).** Dispute resolution mechanisms must be accessible and affordable. An Ombuds Office that is the single conflict resolution channel for all operational disputes is a single point of failure — when the Ombuds is under-resourced, captured, or conflicted, all dispute resolution fails simultaneously.
+
+### The Systemic Risk
+The Ombuds is already identified as the highest-leverage single structural gap (Finding 1). Pillar 10's S3* channel dependency on the Ombuds means that operational audit independence is entirely contingent on one institution being correctly constituted and free from capture. Six critical patches depend on the Ombuds being established. If Ombuds constitutionalization is delayed (the current state), all six patches remain PROPOSED and all six threat vectors remain open — simultaneously.
+
+### The Required Patch
+1. **S3* channel independence specification:** Specify a direct channel from operational audit outputs to S4/S5 (senior governance) that does not route through Pillar 9 deliberation. Minimum: an emergency escalation pathway for critical findings that triggers mandatory senior governance attention without requiring Pillar 9 scheduling. This could be a constitutional requirement that critical audit findings appear on the mandatory agenda of the next governance cycle regardless of DW-based prioritization.
+2. **Discretion framework:** Replace "execution without discretion" with a published discretion taxonomy: which operational decisions require zero discretion (algorithmic), which require bounded discretion (specified criteria, documented, subject to Ombuds review), and which require full discretion (emergency conditions only, with mandatory post-hoc review). This is more honest and more enforceable than an unachievable prohibition.
+3. **INV-006 operational staff conflict:** Specify that operational staff oversight decisions (safety-rail activation, system pause, enforcement escalations) are subject to mandatory independent review before implementation, precisely because operational staff have an indirect interest in system continuity. This closes the INV-006-adjacent conflict without requiring operational staff to have no stake in the system.
+
+---
+
+## PRD-011: Pillar 11 — Information Commons & Trust Transparency
+
+**Status: CONDITIONAL (prior verdict upheld, structural contradiction detailed)**
+
+### The Failure Point
+
+**Failure A — Small-community k-anonymity failure (Sim N):** At expected pilot community scales (~100–500 people), standard k-anonymity thresholds require suppressing 20–80% of dashboard cells to protect individual privacy. The protocol simultaneously requires transparency (Pillar 11) and minimum data collection with small-cell suppression (Pillar 2/P-003). At small scales, these requirements are structurally in tension. No pilot-scale privacy architecture is specified. The founding coalition will encounter this conflict at first publication of pilot dashboard data and will have no architectural guidance for resolving it.
+
+**Failure B — Real-time vs. delayed signal taxonomy unpublished:** P-004 (ACTIVE) protects against definition drift on specified protected terms. But the classification of signals as "real-time" vs. "delayed" is not itself a protected specification. Without a published taxonomy, the real-time vs. delayed classification is subject to negotiation, political pressure, and definitional drift — the exact failure mode P-004 was designed to prevent, now applied to P-004's own adjacent domain.
+
+**Failure C — P-004 scope excludes implementation-layer drift:** P-004's semantic audit covers changes to defined terms in protocol documents. It does not cover behavioral changes implemented at the software layer without changing defined terms. A software update that modifies the algorithm calculating "idle balance threshold" does not change the term "idle balance threshold" — it changes the behavior the term encodes. Technical implementation can drift from documented meaning without triggering P-004's audit mechanism.
+
+### The Violated Principle
+**Lessig — Architecture as Law.** The transparency system relies on normative commitments to publish the right information at the right granularity. The k-anonymity tradeoff is a genuine architectural constraint, not a policy preference — it cannot be resolved by choosing better values for founding commitment parameters.
+
+**Ostrom — Principle 4 (Monitoring).** The information commons is the protocol's self-monitoring mechanism. A monitoring system that can publish less than half of its intended dashboard due to privacy constraints at pilot scale is not a functioning monitor. And a monitoring system whose key signal classifications are subject to definitional drift is not a reliable monitor.
+
+### The Systemic Risk
+If the pilot dashboard is sparse due to k-anonymity constraints, the founding coalition faces pressure to lower the privacy threshold (increasing transparency at the cost of privacy) or to suppress more categories (maintaining privacy at the cost of oversight). Either choice, made under real-time pressure without pre-specified architecture, sets a precedent that shapes all future dashboard governance. The pilot's information architecture becomes de facto constitutional law through operational precedent — exactly the definition-drift pathway T-007 targets.
+
+### The Required Patch
+1. **Pilot-scale privacy architecture:** Before pilot, commission and publish a k-anonymity analysis at the projected pilot population size. Publish the resulting suppression map — which dashboard cells will be suppressed, which will be published, and which will be provided under P-017-independent confidential audit access. The suppression map is itself a protected specification (Tier 2).
+2. **Real-time vs. delayed taxonomy as Tier 2 specification:** The classification of each dashboard signal as real-time, short-delay (≤24h), medium-delay (≤7d), or long-delay (≤90d) must be published as a Tier 2 protected founding commitment before pilot. Changes require the Tier 2 amendment process.
+3. **P-004 extension to implementation layer:** Extend P-004's semantic audit scope to cover implementation-layer behavioral changes that affect any protected term's operational meaning. This requires a test oracle: a published behavioral specification for each protected term against which software behavior can be audited. The test oracle is a Tier 2 protected document.
+
+---
+
+## PRD-012: Pillar 12 — Resilience, Regeneration & Adaptation
+
+**Status: CONDITIONAL (prior verdict upheld, Beer S3/S4 gap and cascade risk detailed)**
+
+### The Failure Point
+
+**Failure A — Reserve levels all [FOUNDING COMMITMENT]:** The protocol cannot distinguish between "resilience maintained" and "resilience abandoned" until reserve-level founding commitments are filled. Zero days of food reserve and 30 days are both protocol-compliant in the current specification. This means the protocol offers no operational protection against resilience erosion — a governing body could deplete all strategic reserves to meet near-term resource demands and remain formally compliant with the protocol until the founding commitments are set.
+
+**Failure B — Non-punitive scorecard = Beer S4 without S3 (prior verdict upheld):** Beer's S4 is the intelligence function — monitoring the environment, detecting signals. Beer's S3 is the control function — using those signals to modify operational behavior. The regeneration scorecard publishes ecological targets and measures performance. It does not specify what enforcement action triggers when targets are missed. This is S4 without S3: the protocol collects environmental intelligence and produces no control signal. A quarterly adaptation loop that *may* update parameters is not a control loop — it is an advisory loop. Without mandatory consequences for target misses, the scorecard is aspirational.
+
+**Failure C — No-trade-away constraint is normative (Lessig test):** "No patch may reduce resilience guarantees to meet near-term targets" is evaluated by a FAP reviewer. The reviewer must determine whether a proposed patch "reduces resilience guarantees." That determination is a judgment call. A patch framed as "temporary resilience adjustment in response to pilot data" or "calibration of reserve definitions in light of operational experience" can reduce resilience while appearing compliant. The Lessig failure applies: the constraint is normative, enforced by human judgment, without an architectural backstop.
+
+**Failure D — Cross-reserve cascade risk unmodeled (Sim O):** Energy depletion triggers food reserve secondary depletion within 1–3 days via cold storage failure. No cross-reserve correlation model exists. PCRP sentinel indicators (P-006) monitor categories independently. A compound depletion state (two categories simultaneously approaching floor) does not trigger any additional alert above the sum of two independent category alerts. The compound risk is systematically underestimated.
+
+### The Violated Principle
+**Beer VSM — S3 control layer.** A regeneration scorecard without enforcement is S4 (environment monitoring) without S3 (operational control). The ecological feedback loop has no mechanical coupling to operational decisions.
+
+**Lessig — Architecture as Law.** The no-trade-away constraint and the reserve floor guarantees are normative rules enforced by FAP review. Neither has an architectural enforcement mechanism that makes violation technically impossible.
+
+**Ostrom — Principle 6 (Graduated Sanctions).** Without specified consequences for ecological target misses, there are no sanctions — graduated or otherwise. Ostrom's principle requires that violations receive proportionate responses. Zero specified consequence is not a proportionate response.
+
+### The Systemic Risk
+Resilience reserves protect the CSM floor during emergencies. INV-001 (survival is unconditional) depends on physical delivery capacity being available when the system's issuance obligations must be met. If resilience reserves are depleted before an emergency, INV-001 cannot be honored — not because the system is unwilling to issue LC, but because the physical goods the LC represents do not exist. Resilience failure is the pathway through which physical-layer reality penetrates the protocol's architectural guarantees.
+
+### The Required Patch
+1. **Reserve minimums as Tier 2 founding commitments before pilot:** Minimum reserve level for each category (food, water, energy, critical medicines) must be expressed as days-of-CSM-coverage at the pilot population size before any pilot begins. These values exit [FOUNDING COMMITMENT] status and become enforceable floors.
+2. **Regeneration scorecard enforcement coupling:** Attach mandatory escalation triggers to the scorecard. Minimum: first consecutive-quarter miss → mandatory parameter review (Beer S3 response); second consecutive miss → mandatory governance item that cannot be dequeued; third consecutive miss → protocol-level emergency declaration. These triggers should be Tier 2 specifications.
+3. **Cross-reserve correlation model:** Develop and publish a pairwise cross-reserve correlation model before pilot. Specify a combined reserve health index and a compound depletion sentinel threshold that fires PCRP before any individual reserve reaches its floor (anticipatory signal, not lagging).
+4. **No-trade-away architectural backstop:** Convert the no-trade-away constraint from a FAP judgment call to a quantified test: any patch that reduces any reserve minimum, extends any scorecard target, or narrows any resilience obligation must pass a formal resilience impact assessment by an independent reviewer (P-017-equivalent independence standard) before FAP intake. The impact assessment is the architectural precondition; FAP rejection is the consequence.
+
+---
+
+## Phase 4 System-Level Findings
+
+### Finding 15: Pillar 4 Is a FAIL, Not a CONDITIONAL — Reclassification Required
+
+The prior scorecard classified Pillar 4 as CONDITIONAL pending architectural specification of the identity fallback during redemption. Phase 4 analysis reveals two additional unresolved failures (delivery-point inaccessibility for the most vulnerable populations; undefined caregiver exception boundary) that are not contingent on PRD-001 or PRD-002 resolution. These failures exist independently and affect the LC's core operational promise. Pillar 4 should be reclassified to FAIL pending:
+1. Institutional delivery point registration architecture
+2. Silent non-redemption detection trigger (Ombuds welfare alert)
+3. Caregiver exception closed-list specification
+4. Suspended identity reduced-assurance redemption path
+
+### Finding 16: Physical Asset Holdings Are the Demurrage Architecture's Unaddressed Attack Surface
+
+Sim M confirms that EC→physical asset conversion before the idle threshold avoids demurrage indefinitely. This is not a novel exploit — it is the standard historical response to wealth taxes and asset-holding restrictions in every comparable economic system. The protocol's demurrage architecture addresses the symptom (idle financial balances) rather than the underlying condition (idle productive capacity, whether financial or physical). The anti-hoarding mechanism needs a physical asset analog before the demurrage architecture can claim to produce the concentration-reduction effects simulated in Phase 1, Test 2.
+
+### Finding 17: The Cross-Reserve Cascade Risk Is the Protocol's Unmodeled Systemic Tail Risk
+
+INV-001's survival guarantee is ultimately backed by physical goods. The protocol's resilience architecture treats the physical reserve categories as independent. They are not — under any realistic emergency scenario involving infrastructure failure, the reserve categories are correlated. Energy failure cascades to food and medicine within days. Food shortage cascades to healthcare within weeks. The current architecture cannot detect or respond to compound reserve depletion until each individual category reaches its independently specified sentinel threshold. By that point, cascades may already be underway. A compound reserve health index is not optional — it is the mechanism that makes INV-001 operationally credible under emergency conditions.
+
+### Finding 18: The Five CONDITIONAL Pillars Share a Common Root Cause
+
+P6, P7, P10, P11, and P12 are all CONDITIONAL for the same underlying reason: each specifies a governance or enforcement function without naming the institution that performs it.
+
+| Pillar | Unnamed institution |
+|:---|:---|
+| P6 | Use-rights dispute resolution body |
+| P7 | Competition and natural monopoly regulator; production standards enforcer |
+| P10 | S3* independent audit channel recipient; operational discretion reviewer |
+| P11 | Real-time vs. delayed signal taxonomy guardian; implementation-layer audit body |
+| P12 | Resilience impact assessment body; scorecard enforcement escalation authority |
+
+Every one of these institutional gaps flows through the same dependency: the Ombuds Office and its Oversight Panel are unestablished. The Ombuds is the natural home for several of these functions. **Until the Ombuds is constituted with a specified mandate covering these domains, all five CONDITIONAL pillars remain operationally incomplete.** This confirms and strengthens Finding 1 — the Ombuds constitutionalization bottleneck is not merely the largest single gap; it is the root cause of over half the system's unresolved audit findings.
+
+---
+
+## Updated Scorecard
+
+| Pillar | Name | Phase 1 Verdict | Phase 4 Verdict | Change |
+|:---:|:---|:---:|:---:|:---:|
+| **P1** | Constitutional Invariants & Rights | FAIL | FAIL | — |
+| **P2** | Personhood, Identity & Continuity | FAIL | FAIL | — |
+| **P3** | Resource & Capacity System | FAIL | FAIL | — |
+| **P4** | Life Support Layer | CONDITIONAL | **FAIL** | ↓ |
+| **P5** | Monetary Architecture | FAIL | FAIL | — |
+| **P6** | Land, Housing & Commons | CONDITIONAL | CONDITIONAL | — |
+| **P7** | Enterprise & Production Platform | CONDITIONAL | CONDITIONAL | — |
+| **P8** | Contribution & Capability Development | FAIL | FAIL | — |
+| **P9** | Civic Deliberation & Decision Systems | FAIL | FAIL | — |
+| **P10** | Operations & Service Delivery | CONDITIONAL | CONDITIONAL | — |
+| **P11** | Information Commons & Trust Transparency | CONDITIONAL | CONDITIONAL | — |
+| **P12** | Resilience, Regeneration & Adaptation | CONDITIONAL | CONDITIONAL | — |
+
+**Final: 7 FAIL. 5 CONDITIONAL. 0 unconditional PASS.**
+
+PILOT-ELIGIBLE gate list now extends to 14 required conditions (10 prior + 4 from Phase 4):
+
+| Priority | Gate | Source |
+|:---:|:---|:---:|
+| 11 | Institutional delivery point registration + silent non-redemption detection | PRD-007 |
+| 12 | Caregiver exception closed-list + suspended identity redemption path | PRD-007 |
+| 13 | Physical asset carrying cost specified | PRD-009 / Sim M |
+| 14 | Cross-reserve correlation model + compound sentinel threshold | PRD-012 / Sim O |
+
+*Phase 4 adds 18 new findings to the register (Sim L–O; PRD-007–012; Findings 15–18). No prior finding is superseded. The Consolidated Risk Map in Phase 3 remains the authoritative priority ranking, with Phase 4 gates appended at positions 11–14.*

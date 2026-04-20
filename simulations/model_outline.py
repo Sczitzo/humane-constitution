@@ -55,12 +55,17 @@ CONFIG = {
     # CR slow-decay (SPECIFICATIONS.md Section 4.3)
     "cr_decay_rate_normal": 0.02,         # normal decay rate [FC]
     "cr_decay_rate_grace": 0.004,         # 20% of normal during grace (P-009)
-    "cr_sector_ceiling": 0.25,            # max 25% per sector (P-008)
+    "cr_sector_ceiling": 0.20,            # max 20% per sector — P-025: reduced from 25%
+                                          # to prevent 3-sector supermajority in 5-sector system
 
-    # Oracle parameters (SPECIFICATIONS.md Section 7)
+    # Oracle parameters (SPECIFICATIONS.md Section 7 / P-024)
     "oracle_accuracy": 0.95,              # baseline accuracy [FC]
     "oracle_failure_rate": 0.02,          # probability of oracle failure per cycle
-    "min_oracle_nodes": 3,
+    "min_oracle_nodes": 5,               # P-024: raised from 3 → 5 (BFT requires n≥3f+1;
+                                          # at f=1, N=3 fails; N=5 provides honest-majority
+                                          # protection for 2-node colluding pair)
+    "min_methodology_classes": 3,         # P-024: all 3 classes required in active cohort
+                                          # (Sim D: 2-class floor fails at every N)
 
     # Population
     "n_agents": 500,
@@ -164,43 +169,101 @@ class OracleNode:
         return max(0.0, true_capacity * (1 + noise))
 
 
+class ColludingOracleNode(OracleNode):
+    """
+    Test-only adversarial oracle node that always returns a fabricated reading.
+
+    Used in oracle BFT tests (Sim H gap) to verify that:
+    - At N=3: two colluding nodes can forge a valid quorum (CRITICAL FAIL)
+    - At N=5: two colluding nodes are defeated by honest majority (PASS)
+
+    Never used in production model runs.
+    """
+
+    def __init__(self, node_id: int, methodology_class: str,
+                 fabricated_value: float):
+        super().__init__(node_id, methodology_class, accuracy=1.0, failure_rate=0.0)
+        self.fabricated_value = fabricated_value
+
+    def read_capacity(self, true_capacity: float) -> float:
+        """Always returns fabricated value regardless of true capacity."""
+        self.is_active = True
+        return self.fabricated_value
+
+
 class OracleSubsystem:
     """
     Polycentric oracle system. Applies consensus rules from SPECIFICATIONS.md Section 7.
-    Minimum 3 nodes, one per methodology class.
+
+    P-024 configuration:
+    - Minimum 5 nodes (raised from 3; BFT requires n≥3f+1 for f=1 → n≥4; 5 provides margin)
+    - Minimum 3 methodology classes (all classes must appear in active quorum;
+      2-class floor fails at every N per Sim D)
+    - LC consensus: majority quorum ⌈N/2⌉ + 1
+    - SQ consensus: supermajority ⌈2N/3⌉
     """
 
     def __init__(self, config: dict):
+        # P-024: N=5 default with 3-class coverage.
+        # Distribution: INSTITUTIONAL×2, CBPR×2, PHYSICAL×1
+        # (PHYSICAL is highest-fidelity but hardest to replicate at scale)
         self.nodes = [
             OracleNode(0, "INSTITUTIONAL", config["oracle_accuracy"],
                        config["oracle_failure_rate"]),
-            OracleNode(1, "CBPR", config["oracle_accuracy"] * 0.95,
+            OracleNode(1, "INSTITUTIONAL", config["oracle_accuracy"] * 0.97,
                        config["oracle_failure_rate"]),
-            OracleNode(2, "PHYSICAL", config["oracle_accuracy"] * 0.98,
+            OracleNode(2, "CBPR", config["oracle_accuracy"] * 0.95,
+                       config["oracle_failure_rate"]),
+            OracleNode(3, "CBPR", config["oracle_accuracy"] * 0.93,
+                       config["oracle_failure_rate"]),
+            OracleNode(4, "PHYSICAL", config["oracle_accuracy"] * 0.98,
                        config["oracle_failure_rate"]),
         ]
         self.failure_log = []
+        self.min_methodology_classes = config.get("min_methodology_classes", 3)
+
+    def _validate_methodology_diversity(self, active_nodes: list) -> bool:
+        """
+        P-024 / Sim D: verify active quorum covers all 3 methodology classes.
+        A quorum composed entirely of one or two classes fails structural independence.
+        """
+        classes_in_quorum = {n.methodology_class for n in active_nodes}
+        return len(classes_in_quorum) >= self.min_methodology_classes
 
     def get_consensus_capacity(self, true_capacity: float,
                                 consensus_type: str = "LC") -> float | None:
         """
         Returns consensus capacity estimate or None if quorum fails.
 
-        consensus_type:
-          "LC"  → majority consensus (⌈N/2⌉ + 1)
-          "SQ"  → supermajority (⌈2N/3⌉)
+        Quorum requirements (P-024):
+          "LC"  → majority consensus (⌈N/2⌉ + 1); must include ≥3 methodology classes
+          "SQ"  → supermajority (⌈2N/3⌉); must include ≥3 methodology classes
+
+        Returns None (conservative hold, P-022) if:
+          - Insufficient valid readings for quorum, OR
+          - Valid readings do not cover all 3 methodology classes
         """
-        readings = [node.read_capacity(true_capacity) for node in self.nodes]
-        valid = [r for r in readings if r is not None]
+        readings = [(node, node.read_capacity(true_capacity)) for node in self.nodes]
+        active = [(node, r) for node, r in readings if r is not None]
         n = len(self.nodes)
 
         quorum = (n // 2) + 1 if consensus_type == "LC" else int(np.ceil(2 * n / 3))
 
-        if len(valid) < quorum:
-            self.failure_log.append({"type": "QUORUM_FAILURE", "valid": len(valid)})
+        if len(active) < quorum:
+            self.failure_log.append({"type": "QUORUM_FAILURE", "valid": len(active)})
             return None  # conservative hold (P-022)
 
-        return float(np.median(valid))
+        # P-024: methodology diversity check on the active set (not just quorum subset)
+        active_nodes = [node for node, _ in active]
+        if not self._validate_methodology_diversity(active_nodes):
+            self.failure_log.append({
+                "type": "METHODOLOGY_DIVERSITY_FAILURE",
+                "classes_present": list({n.methodology_class for n in active_nodes})
+            })
+            return None  # conservative hold — methodology monoculture detected
+
+        valid_readings = [r for _, r in active]
+        return float(np.median(valid_readings))
 
 
 # =============================================================================
@@ -273,8 +336,17 @@ class CitizenAgent(Agent):
         """
         SPECIFICATIONS.md Section 2.3: exponential decay on idle EC.
         B(t) = B(0) × e^(−r × t_idle) when t_idle ≥ θ
+
+        P-023 (COMMITTED state discipline):
+        EC in COMMITTED (milestone escrow) state also accrues idle time.
+        "Discipline is the point" — demurrage continues during escrow.
+        This was previously a bug: COMMITTED did not increment days_idle,
+        meaning escrow was a demurrage-exempt state in contradiction to P-023.
+        Fixed: COMMITTED now treated identically to IDLE for demurrage accrual.
+        See Sim G (ADVERSARIAL_AUDIT.md Phase 2) for the specification/implementation
+        divergence this corrects.
         """
-        if self.ec_state == ECState.IDLE:
+        if self.ec_state in (ECState.IDLE, ECState.COMMITTED):  # P-023: COMMITTED accrues demurrage
             self.days_idle += 1
         elif self.ec_state == ECState.ACTIVE:
             self.days_idle = 0
@@ -282,7 +354,10 @@ class CitizenAgent(Agent):
         if self.days_idle >= CONFIG["idle_threshold_days"]:
             r = CONFIG["demurrage_rate_monthly"] / 30  # convert to daily
             self.ec_balance *= np.exp(-r)
-            self.ec_state = ECState.DECAYED
+            # COMMITTED state remains COMMITTED after decay application;
+            # the escrow is still active, but the balance has decayed.
+            if self.ec_state != ECState.COMMITTED:
+                self.ec_state = ECState.DECAYED
 
             if self.ec_balance < CONFIG["min_ec_balance"]:
                 self.ec_balance = 0.0

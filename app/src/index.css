@@ -1,0 +1,421 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --glass-bg:             rgba(255, 255, 255, 0.04);
+  --glass-bg-hover:       rgba(255, 255, 255, 0.07);
+  --glass-bg-active:      rgba(255, 255, 255, 0.10);
+  --glass-border:         rgba(255, 255, 255, 0.08);
+  --glass-border-strong:  rgba(255, 255, 255, 0.14);
+  --glass-shadow:         0 4px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  --glass-shadow-hover:   0 8px 48px rgba(124, 58, 237, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --plasma-glow:          rgba(168, 85, 247, 0.3);
+  --plasma-hot:           rgba(192, 38, 211, 0.35);
+  --neon-cyan:            rgba(34, 211, 238, 0.25);
+  --neon-lime:            rgba(163, 230, 53, 0.2);
+
+  /* Inline SVG feTurbulence noise texture — used for organic film-grain overlay */
+  --noise-url: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'300'%20height%3D'300'%3E%3Cfilter%20id%3D'n'%20x%3D'0'%20y%3D'0'%3E%3CfeTurbulence%20type%3D'fractalNoise'%20baseFrequency%3D'0.75'%20numOctaves%3D'4'%20stitchTiles%3D'stitch'%2F%3E%3CfeColorMatrix%20type%3D'saturate'%20values%3D'0'%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D'300'%20height%3D'300'%20filter%3D'url(%23n)'%20opacity%3D'1'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BASE RESETS
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Tauri desktop — no browser scrollbars */
+  }
+
+  body {
+    background-color: #04040a;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Tauri: remove default focus outlines on non-keyboard interactions */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Custom scrollbar — minimal, glass-toned */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, 0.45);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   LAYER 0 — FIXED CANVAS (Artwork)
+   The painterly cyber-palette background. Fixed to viewport, never scrolls.
+   Z-index: 0. All UI floats above this via z-index ≥ 10.
+   ───────────────────────────────────────────────────────────────────────────── */
+.canvas-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+
+  /*
+   * Multi-stack gradient composition:
+   *   • Layer A: Large plasma void blob (top-left, violet)
+   *   • Layer B: Hot magenta bloom (bottom-right)
+   *   • Layer C: Cyan arc burst (top-center)
+   *   • Layer D: Lime phosphor scatter (bottom-left)
+   *   • Layer E: Deep void base gradient
+   *
+   * background-size with 200%+ enables the canvasDrift animation to
+   * shift the blobs slowly, creating the "living canvas" effect.
+   */
+  background-image:
+    radial-gradient(ellipse 130% 90% at 15% 20%,   rgba(124, 58,  237, 0.60) 0%, transparent 55%),
+    radial-gradient(ellipse  90% 70% at 85% 78%,   rgba(192, 38,  211, 0.50) 0%, transparent 55%),
+    radial-gradient(ellipse  70% 100% at 52% 5%,   rgba(34,  211, 238, 0.28) 0%, transparent 48%),
+    radial-gradient(ellipse  45% 50% at 18% 88%,   rgba(163, 230, 53,  0.22) 0%, transparent 45%),
+    radial-gradient(ellipse  60% 40% at 75% 15%,   rgba(251, 191, 36,  0.12) 0%, transparent 40%),
+    linear-gradient(145deg, #04040a 0%, #0c0b20 40%, #0e0a1e 70%, #04040a 100%);
+
+  background-size:
+    220% 220%,
+    200% 200%,
+    180% 180%,
+    160% 160%,
+    150% 150%,
+    100% 100%;
+
+  background-position:
+    0% 0%,
+    100% 100%,
+    50% 0%,
+    0% 100%,
+    80% 10%,
+    0% 0%;
+
+  animation: canvasDrift 60s ease-in-out infinite alternate;
+
+  /* Mild contrast+saturation push to make gradients feel punchy */
+  filter: contrast(1.06) saturate(1.12);
+
+  /* Hardware acceleration */
+  transform: translateZ(0);
+  will-change: background-position;
+}
+
+/* Film-grain noise overlay via feTurbulence SVG */
+.canvas-layer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--noise-url);
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  opacity: 0.032;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Vignette — darkens the very edges to frame the viewport like a canvas */
+.canvas-layer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 50%,
+    transparent 60%,
+    rgba(4, 4, 10, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   LAYER 0 BRUSHSTROKE SVG ELEMENTS
+   Embedded in Layout.tsx — these classes style the SVG blob strokes that float
+   over the gradient as "painted" marks, completing the brushstroke aesthetic.
+   ───────────────────────────────────────────────────────────────────────────── */
+.brushstroke {
+  position: absolute;
+  pointer-events: none;
+}
+
+.brushstroke-plasma {
+  fill: none;
+  stroke: rgba(168, 85, 247, 0.18);
+  stroke-width: 80;
+  stroke-linecap: round;
+  filter: blur(24px);
+}
+
+.brushstroke-cyan {
+  fill: none;
+  stroke: rgba(34, 211, 238, 0.14);
+  stroke-width: 60;
+  stroke-linecap: round;
+  filter: blur(20px);
+}
+
+.brushstroke-lime {
+  fill: none;
+  stroke: rgba(163, 230, 53, 0.10);
+  stroke-width: 50;
+  stroke-linecap: round;
+  filter: blur(28px);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   REFRACTIVE GLASS UTILITIES
+   The core visual mechanic. As glass cards float over the canvas, they distort,
+   blur, and magnify the background beneath them — simulating refraction physics.
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer utilities {
+
+  /*
+   * .backdrop-refract
+   * Primary glass surface. Combines backdrop-filter properties to simulate:
+   *   • blur()       — frosted glass scattering
+   *   • saturate()   — color intensification (like dense glass bending hues)
+   *   • brightness() — slight luminosity boost (glass catching light)
+   *   • contrast()   — micro-contrast push for depth
+   *
+   * Hardware acceleration is MANDATORY for desktop perf:
+   *   transform: translateZ(0) lifts the element to its own GPU compositing layer.
+   *   will-change: backdrop-filter tells the GPU to pre-allocate.
+   */
+  .backdrop-refract {
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+    -webkit-backdrop-filter: blur(18px) saturate(160%) brightness(1.08) contrast(1.04);
+    backdrop-filter:         blur(18px) saturate(160%) brightness(1.08) contrast(1.04);
+    background:              var(--glass-bg);
+    border:                  1px solid var(--glass-border);
+    box-shadow:              var(--glass-shadow);
+    transition:
+      backdrop-filter         300ms cubic-bezier(0.23, 1, 0.32, 1),
+      -webkit-backdrop-filter 300ms cubic-bezier(0.23, 1, 0.32, 1),
+      background              300ms cubic-bezier(0.23, 1, 0.32, 1),
+      box-shadow              300ms cubic-bezier(0.23, 1, 0.32, 1),
+      border-color            300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .backdrop-refract:hover {
+    -webkit-backdrop-filter: blur(22px) saturate(200%) brightness(1.14) contrast(1.06);
+    backdrop-filter:         blur(22px) saturate(200%) brightness(1.14) contrast(1.06);
+    background:              var(--glass-bg-hover);
+    border-color:            var(--glass-border-strong);
+    box-shadow:              var(--glass-shadow-hover);
+  }
+
+  .backdrop-refract:active {
+    -webkit-backdrop-filter: blur(26px) saturate(220%) brightness(1.18) contrast(1.08);
+    backdrop-filter:         blur(26px) saturate(220%) brightness(1.18) contrast(1.08);
+    background:              var(--glass-bg-active);
+    box-shadow:
+      0 2px 16px rgba(124, 58, 237, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  /*
+   * .refract-lens
+   * Applied on top of .backdrop-refract to add the "lens magnification" effect.
+   * A subtle scale(1.003) makes the card appear to slightly magnify whatever is
+   * behind it, reinforcing the glass-as-optics metaphor.
+   * On hover, the scale increases (1.007) deepening the illusion.
+   */
+  .refract-lens {
+    transform: translateZ(0) scale(1.003);
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .refract-lens:hover {
+    transform: translateZ(0) scale(1.007);
+  }
+
+  /*
+   * .refract-lens-deep
+   * A stronger variant for primary/hero cards.
+   */
+  .refract-lens-deep {
+    transform: translateZ(0) scale(1.006);
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .refract-lens-deep:hover {
+    transform: translateZ(0) scale(1.012);
+  }
+
+  /*
+   * .glass-shimmer
+   * Animated horizontal light sweep — simulates a light source moving across
+   * the glass surface, reinforcing the physical material metaphor.
+   */
+  .glass-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.04) 40%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.04) 60%,
+      transparent 100%
+    );
+    transform: skewX(-12deg) translateZ(0);
+    transition: left 600ms cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+  }
+
+  .glass-shimmer:hover::after {
+    left: 140%;
+  }
+
+  /*
+   * .plasma-border
+   * Animated gradient border using a pseudo-element. Creates the glowing
+   * plasma ring that intensifies on hover — the "energy containment field" look.
+   */
+  .plasma-border {
+    position: relative;
+  }
+
+  .plasma-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.6),
+      rgba(192, 38, 211, 0.4),
+      rgba(34, 211, 238, 0.3),
+      rgba(124, 58, 237, 0.6)
+    );
+    background-size: 300% 300%;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    animation: borderShimmer 3s linear infinite;
+    pointer-events: none;
+  }
+
+  .plasma-border:hover::before {
+    opacity: 1;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   TAURI WINDOW DRAG REGION
+   Sets -webkit-app-region: drag on the titlebar area, while explicitly
+   excluding interactive child elements from being draggable.
+   ───────────────────────────────────────────────────────────────────────────── */
+[data-tauri-drag-region] {
+  -webkit-app-region: drag;
+  cursor: default;
+  user-select: none;
+}
+
+/* Interactive elements within a drag region must opt out */
+[data-tauri-drag-region] button,
+[data-tauri-drag-region] a,
+[data-tauri-drag-region] input,
+[data-tauri-drag-region] select,
+[data-tauri-drag-region] [data-no-drag] {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   KEYFRAME DEFINITIONS
+   (Tailwind keyframes config mirrors these — defined here for direct CSS use)
+   ───────────────────────────────────────────────────────────────────────────── */
+@keyframes canvasDrift {
+  0% {
+    background-position:
+      0%   0%,
+      100% 100%,
+      50%  0%,
+      0%   100%,
+      80%  10%,
+      0%   0%;
+  }
+  33% {
+    background-position:
+      40%  10%,
+      60%  90%,
+      80%  20%,
+      20%  80%,
+      50%  50%,
+      0%   0%;
+  }
+  66% {
+    background-position:
+      20%  60%,
+      80%  40%,
+      30%  70%,
+      70%  30%,
+      20%  80%,
+      0%   0%;
+  }
+  100% {
+    background-position:
+      80%  20%,
+      20%  80%,
+      70%  30%,
+      10%  60%,
+      90%  20%,
+      0%   0%;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1.0; transform: scale(1.02); }
+}
+
+@keyframes borderShimmer {
+  0%   { background-position: 0%   50%; }
+  100% { background-position: 300% 50%; }
+}
+
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(16px) translateZ(0); }
+  100% { opacity: 1; transform: translateY(0)    translateZ(0); }
+}

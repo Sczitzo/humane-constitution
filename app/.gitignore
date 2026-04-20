@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output (Vite)
+dist/
+
+# Rust / Tauri build artifacts — can be gigabytes, never commit
+src-tauri/target/
+src-tauri/gen/
+
+# Tauri WiX candles (Windows installer intermediates)
+src-tauri/WixTools/
+
+# Vite local env overrides
+.env.local
+.env.*.local
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
