@@ -44,7 +44,7 @@ export const corpusStats: CorpusStats = {
   "threatCount": 27,
   "patchCount": 31,
   "validatorStatus": "pass",
-  "buildStamp": "corpus-d72dc540c585"
+  "buildStamp": "corpus-d3822f357aa7"
 } as const
 
 export const corpusDocs: CorpusDoc[] = [
@@ -67,8 +67,8 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Reader note: The public white paper remains a plain-language map of the protocol. It now makes clearer that the measurement layer constrains what can be delivered, not who is worthy of life, and that full-scale legitimacy depends on a proven non-coercive identity stack.",
-    "wordCount": 2814,
-    "headingCount": 36
+    "wordCount": 2925,
+    "headingCount": 37
   },
   {
     "id": "Citizen_Facing_Rights_Layer_md",
@@ -78,8 +78,8 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "A plain-language summary of what you are entitled to, what is protected, and what to do if something goes wrong.",
-    "wordCount": 563,
-    "headingCount": 7
+    "wordCount": 681,
+    "headingCount": 8
   },
   {
     "id": "README_md",
@@ -89,8 +89,8 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "The Humane Constitution is a constitutional systems design for a society in which survival is unconditional, markets remain productive, and governance cannot be purchased. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.",
-    "wordCount": 2573,
-    "headingCount": 21
+    "wordCount": 2636,
+    "headingCount": 22
   },
   {
     "id": "Threat_Register_md",

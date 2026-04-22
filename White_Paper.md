@@ -12,6 +12,8 @@
 ## THE HUMANE CONSTITUTION
 **Public White Paper Edition: A flow-based civic operating system for unconditional survival, productive markets, and capture-resistant governance**
 
+**In one sentence:** this design tries to make three things true at once: no one loses baseline survival, markets still function, and wealth cannot quietly turn into civic rule.
+
 ### What this paper is
 A readable public edition of the protocol. It explains the system in plain language, shows how the pieces fit together, surfaces the main safeguards, and is honest about the hardest unresolved questions.
 
@@ -39,6 +41,9 @@ Start with Sections 1-4 if you want to understand the system at a high level. Th
 
 ### Read for credibility
 Jump to Sections 6-8 if your first question is whether this could be abused, captured, or simply fail in the real world. Those sections focus on constraints, courts, transition, and hard limits.
+
+### If you only want the short version
+Read Sections 1-3. They explain the diagnosis, the five instruments, and why the system separates them instead of trusting one form of money to do every job.
 
 ---
 
@@ -79,7 +84,7 @@ The design is simple in structure: one true currency, one survival instrument, t
 **What it is not:** money, moral worth, or a permanent civic class marker.
 
 #### Shared Storehouse
-**What it does:** temporary emergency quotas during verified shortage.
+**What it does:** temporary emergency rationing during verified shortage.
 **What it is not:** a permanent rationing system or a hidden second market.
 
 ---
@@ -141,6 +146,8 @@ Each article has one job. The architecture is intentionally modular so that no s
 
 ## 5. What daily life could look like
 Abstract architecture becomes clearer when you watch it under pressure. These scenarios are not promises. They are stress-tested illustrations of what the protocol is trying to make possible.
+
+Before the examples, the basic idea is simple: losing a job should not mean losing food or medicines; building a company should not buy public power; caring for others should not erase your civic standing; and real shortage should be handled openly instead of by panic prices.
 
 **Case 1 - A person loses work and still needs to eat, travel, and get medical care**
 - They do not fall instantly into survival panic because baseline essentials are handled through Essential Access, not through whatever cash they happen to have that week.

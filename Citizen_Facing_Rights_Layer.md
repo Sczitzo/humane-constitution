@@ -4,6 +4,8 @@
 
 ---
 
+If this system were live, the basic promise would be simple: losing money, status, or civic standing would not cancel your right to eat, drink, stay sheltered, travel for basics, or receive essential care.
+
 ## What you are unconditionally entitled to
 
 The protocol guarantees a **survival floor** — a set of essentials you receive as a matter of right, not favour. This is delivered through **Essential Access**:
@@ -20,7 +22,7 @@ These are yours regardless of employment status, civic standing, or any other co
 
 ## What money cannot buy
 
-The **Flow** — the system's market money — is structurally blocked from purchasing:
+**Flow** — the system's market money — is structurally blocked from purchasing:
 
 - Survival access (your Essential Access basket cannot be priced or withheld)
 - Civic power (votes, agenda-setting weight, or governance influence)
@@ -30,7 +32,16 @@ Wealth can improve your life. It cannot determine whether you survive or whether
 
 ---
 
-## What your civic instruments cannot do
+## What this means in ordinary life
+
+- Losing your job does not erase your baseline access to essentials.
+- Getting sick, disabled, displaced, or temporarily overwhelmed does not erase your personhood.
+- Not participating in public service or civic processes does not put your survival floor at risk.
+- A wealthy person can live better than you. They cannot buy the right to decide whether you eat or whether your basic rights apply.
+
+---
+
+## What your civic tools can and cannot do
 
 Your **Voice** helps you participate in collective priority-setting. Your **Service Record** tracks readiness for rotating public roles. They operate under hard limits:
 
@@ -75,9 +86,9 @@ Silence about a failure is itself a violation of the protocol's commitments.
 
 ## How to verify your rights
 
-The operative language governing all of the above is in the **Humane Constitution**. The threat register documents every known attempt to undermine these rights and the mitigations in place. Both are publicly available in this repository.
+The operative language governing all of the above is in the **Humane Constitution**. The threat register documents the known attempts to undermine these rights and the mitigations in place. Both are publicly available in this repository.
 
-If you believe a right has been violated, open an Issue in this repository with the specific clause affected, the mechanism of the violation, and any evidence.
+In a live deployment, a rights challenge would go through the review, appeals, and ombuds pathways defined by the constitution. In this repository, you can open an Issue with the specific clause affected, the mechanism of the violation, and any evidence.
 
 ---
 

@@ -27,7 +27,16 @@
 
 The Humane Constitution is a constitutional systems design for a society in which **survival is unconditional**, **markets remain productive**, and **governance cannot be purchased**. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.
 
-This is not a political manifesto. It is a systems engineering document — with threat modeling, adversarial red-teaming, patch logs, and version control. It has been stress-tested against bad actors, institutional capture, measurement failure, and its own internal contradictions.
+This is not just a manifesto and not just a technical spec. It is a public constitutional design backed by systems engineering — threat modeling, adversarial red-teaming, patch logs, and version control. It has been stress-tested against bad actors, institutional capture, measurement failure, and its own internal contradictions.
+
+## If you're new
+
+Use this reading order:
+
+1. [`White_Paper.md`](./White_Paper.md) for the public explanation
+2. [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) for the plain-language rights summary
+3. [`Humane_Constitution.md`](./Humane_Constitution.md) for the governing text
+4. [`Threat_Register.md`](./Threat_Register.md) if you want to test the design against failure and bad actors
 
 ## The core separation
 
@@ -245,11 +254,11 @@ The Formal Acceptance Protocol defines the pathway from design to operation.
 
 ## How to engage
 
-**Read the White Paper first.** It is 14 pages and written for a general audience.
+**If you want the public case first:** read the White Paper, then the Citizen-Facing Rights Layer.
 
-**Then the Threat Register** if you want to stress-test the design — it documents every adversarial failure mode and mitigation.
+**If you want to stress-test the design:** read the Threat Register after the White Paper.
 
-**Then the Humane Constitution** if you want the operative language.
+**If you want the operative language:** read the Humane Constitution after that.
 
 **To critique, challenge, or contribute:** open an Issue with your specific objection, the section it applies to, and your proposed alternative. Vague objections will be asked to specify. Specific objections will be taken seriously.
 
