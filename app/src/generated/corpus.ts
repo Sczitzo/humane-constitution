@@ -44,7 +44,7 @@ export const corpusStats: CorpusStats = {
   "threatCount": 27,
   "patchCount": 31,
   "validatorStatus": "pass",
-  "buildStamp": "corpus-b43a55681b3e"
+  "buildStamp": "corpus-102716718322"
 } as const
 
 export const corpusDocs: CorpusDoc[] = [
@@ -56,7 +56,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Every system that governs human survival makes a claim about what value is and who it belongs to. Most systems make that claim implicitly, buried inside institutional arrangements that appear neutral. This protocol makes it explicitly, because the claim drives every architectural decision that follows.",
-    "wordCount": 8828,
+    "wordCount": 8835,
     "headingCount": 50
   },
   {
@@ -67,8 +67,8 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Reader note: The public white paper remains a plain-language map of the protocol. It now makes clearer that the measurement layer constrains what can be delivered, not who is worthy of life, and that full-scale legitimacy depends on a proven non-coercive identity stack.",
-    "wordCount": 2782,
-    "headingCount": 35
+    "wordCount": 2813,
+    "headingCount": 36
   },
   {
     "id": "Citizen_Facing_Rights_Layer_md",
@@ -78,7 +78,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "A plain-language summary of what you are entitled to, what is protected, and what to do if something goes wrong.",
-    "wordCount": 519,
+    "wordCount": 563,
     "headingCount": 7
   },
   {
@@ -89,7 +89,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "The Humane Constitution is a constitutional systems design for a society in which survival is unconditional, markets remain productive, and governance cannot be purchased. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.",
-    "wordCount": 2524,
+    "wordCount": 2573,
     "headingCount": 21
   },
   {

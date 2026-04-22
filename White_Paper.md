@@ -60,19 +60,23 @@ The design is built around a few non-negotiables:
 At a glance, the protocol does three things at once: it guarantees a survival floor, preserves productive markets, and denies ordinary money the right to buy civic control.
 
 ### The system in one picture
-The design is simple in structure: one true currency, two non-money civic and survival instruments, and one temporary emergency instrument.
+The design is simple in structure: one true currency, one survival instrument, two civic instruments, and one temporary emergency instrument.
 
 #### Flow
 **What it does:** prices, trade, payroll, contracts, procurement, saving, investment, and everyday payments through a public digital currency with physical cash fallback.
 **What it is not:** a path to buy civic power or baseline survival.
 
 #### Essential Access
-**What it does:** guarantees baseline essentials.
+**What it does:** protects the survival floor and guarantees baseline essentials.
 **What it is not:** cash, collateral, a status marker, or a store of value.
 
-#### Voice and Service Record
-**What it does:** bounded civic weighting for agenda setting, jury pools, service roles, and public prioritization.
-**What it is not:** money, reputation rank, or a license to rule.
+#### Voice
+**What it does:** bounded agenda-setting and budget prioritization.
+**What it is not:** money, a reputation rank, or a license to rule.
+
+#### Service Record
+**What it does:** records verified stewardship and governs readiness for rotating public service roles.
+**What it is not:** money, moral worth, or a permanent civic class marker.
 
 #### Shared Storehouse
 **What it does:** temporary emergency quotas during verified shortage.
@@ -86,12 +90,12 @@ The design is simple in structure: one true currency, two non-money civic and su
 | :--- | :--- | :--- |
 | **Daily life** | **Essential Access** | You can obtain baseline food, heat, shelter support, healthcare, and transit without needing market cash first. |
 | **Markets** | **Flow** | You price goods, pay wages, sign contracts, save for projects, and trade with others. |
-| **Civic life** | **Voice and Service Record** | Your verified stewardship gives you bounded voice, but no ability to buy privileges. |
+| **Civic life** | **Voice + Service Record** | Your verified stewardship can strengthen bounded agenda-setting and public-service readiness, but it cannot buy privileges. |
 | **Emergencies** | **Shared Storehouse** | When there is real shortage, access is rationed openly instead of letting price spikes decide who gets through. |
 
 ---
 
-## 3. Why four instruments instead of one money
+## 3. Why five instruments instead of one money
 The protocol treats money as useful, but not omnipotent. Some social functions are coordinated well by prices; others are better protected by rights, bounded ledgers, and explicit emergency rules.
 
 A one-money system is simpler on paper but unstable in practice. If the same instrument buys food, housing, political access, and institutional immunity, then the system has only one real lane of power. The protocol therefore keeps the lanes separate by design.
@@ -168,7 +172,7 @@ Abstract architecture becomes clearer when you watch it under pressure. These sc
 The protocol assumes that any useful rule will eventually be pressured, gamed, or reinterpreted. Its defense is not trust alone. It is layered friction, review, and boundary clarity.
 
 ### Hard boundaries
-Essential Access cannot become cash. The civic layer cannot become a social rank or purchasable power. Shared Storehouse cannot quietly become permanent. Tier 1 invariants cannot be amended by ordinary emergency habit.
+Essential Access cannot become cash. Voice cannot become purchasable civic power. Service Record cannot become a permanent social rank. Shared Storehouse cannot quietly become permanent. Tier 1 invariants cannot be amended by ordinary emergency habit.
 
 ### Challenge paths
 Standing is broad, mandatory review triggers are explicit, and hidden change through software, treaties, procurement, or administrative custom is treated as structural drift rather than harmless implementation.
@@ -237,7 +241,8 @@ The protocol is not a utopia machine. It is an attempt to build a civic operatin
 | :--- | :--- |
 | **Flow** | The only true money in the system. Used for markets, pricing, payroll, contracts, procurement, and trade. |
 | **Essential Access** | A non-transferable entitlement ledger for baseline essentials. |
-| **Voice and Service Record** | Voice for bounded agenda-setting and Service Record for service readiness, both non-transferable and anti-capture by design. |
+| **Voice** | Bounded civic weighting for agenda-setting and budget prioritization. |
+| **Service Record** | Verified stewardship history used for readiness to serve in rotating public roles. |
 | **Shared Storehouse** | Temporary scarcity instrument used only during verified shortage. |
 | **RCS** | The Resource & Capacity System: the measurement layer that estimates what society can physically deliver. |
 | **Tier 1 / Tier 2 / Tier 3** | The rule hierarchy: invariants, durable constitutional rules, and adjustable operating parameters. |

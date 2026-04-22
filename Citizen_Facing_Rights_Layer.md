@@ -9,8 +9,9 @@
 The protocol guarantees a **survival floor** — a set of essentials you receive as a matter of right, not favour. This is delivered through **Essential Access**:
 
 - Food
+- Water
 - Shelter
-- Healthcare
+- Essential healthcare and medicines
 - Basic transit
 
 These are yours regardless of employment status, civic standing, or any other condition. No authority within the system can revoke them as punishment, leverage, or incentive.
@@ -33,12 +34,12 @@ Wealth can improve your life. It cannot determine whether you survive or whether
 
 Your **Voice** helps you participate in collective priority-setting. Your **Service Record** tracks readiness for rotating public roles. They operate under hard limits:
 
-- They cannot be used to buy goods, services, or survival access
-- They cannot accumulate indefinitely — they decay and are capped
-- They cannot be transferred or sold
-- They do not measure your worth as a person
+- Voice cannot be used to buy goods, services, or survival access
+- Voice is capped and decays quickly so agenda-setting power does not harden into permanent rank
+- Service Record cannot be transferred, sold, inherited, or turned into a patronage asset
+- Service Record is bounded to public-service readiness and does not measure your worth as a person
 
-Participation earns influence. Absence of participation has no penalty beyond reduced agenda-setting weight.
+Participation can strengthen agenda-setting influence and readiness for public service. Absence of participation can reduce those civic tools over time. It cannot reduce your survival floor or your basic rights.
 
 ---
 
@@ -50,7 +51,7 @@ Participation earns influence. Absence of participation has no penalty beyond re
 
 **Against permanent error:** If an enforcement action is taken in error, you have the right to:
 - Review of the decision
-- Continued access to your Essential Access floor during the review
+- Continued access to at least your survival floor during the review
 - A public correction if the error is confirmed
 
 **Against emergency abuse:** Scarcity rationing (Shared Storehouse) may be activated during genuine verified shortage. It cannot be made permanent. Every activation is publicly logged and time-limited.

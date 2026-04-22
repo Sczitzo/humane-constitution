@@ -31,17 +31,19 @@ This is not a political manifesto. It is a systems engineering document — with
 
 ## The core separation
 
-The protocol separates three social functions that most systems collapse together:
+The protocol separates three social functions across five instruments that most systems collapse together:
 
 | Instrument | Purpose | What it cannot do |
 |---|---|---|
 | **Flow** | Markets, wages, contracts, savings, investment | Buy survival access or civic power |
-| **Essential Access** | Baseline essentials: food, shelter, healthcare, transit | Become cash, collateral, or a status marker |
-| **Voice** | Bounded agenda-setting and civic priority signaling | Buy rights, goods, or survival access |
-| **Service Record** | Public-service eligibility and stewardship history | Measure human worth or accumulate permanent rank |
+| **Essential Access** | Survival floor and baseline essentials: food, water, shelter, healthcare, essential medicines, and basic transit | Become cash, collateral, or a status marker |
+| **Voice** | Bounded agenda-setting and budget prioritization | Buy rights, goods, or survival access |
+| **Service Record** | Eligibility for rotating public-service roles and stewardship history | Measure human worth or accumulate permanent rank |
 | **Shared Storehouse** | Emergency rationing during verified shortage | Become permanent or a hidden market |
 
 The walls between these lanes are the system. Not the instruments themselves.
+
+Essential Access protects the survival floor. Voice shapes bounded civic priorities. Service Record governs readiness for rotating public roles. Shared Storehouse appears only during verified shortage.
 
 Flow is public money rather than privately created bank money. It is primarily digital, secured with cryptographic methods, and paired with physical cash or equivalent offline instruments for resilience and privacy.
 
@@ -53,9 +55,9 @@ The live constitutional presentation uses **one Founding Order** and **seven Art
 - **Article I — Rights & Rule of Law** — Tier 1 invariants, due process, non-coercion, and rule-bound execution.
 - **Article II — Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, and dependent protection without surveillance scoring.
 - **Article III — Physics & Reserves** — Polycentric measurement of real capacity plus the reserves that buffer shocks and measurement error.
-- **Article IV — Survival** — Essential Access as both constitutional survival instrument and actual delivery path.
+- **Article IV — Survival** — Essential Access as the survival instrument and delivery lane for baseline essentials.
 - **Article V — Markets, Commons & Public Finance** — Flow, housing and land use-rights, enterprise, public banking rails, and commons revenue under one economic surface.
-- **Article VI — Voice, Service Record & Deliberation** — Civic instruments, contribution recognition, and bounded public prioritization.
+- **Article VI — Voice, Service Record & Deliberation** — Voice for bounded prioritization, Service Record for public-service eligibility, and the contribution system that feeds them.
 - **Article VII — Transparency & Environmental Scanning** — Public dashboards, independent audit visibility, and external-world scanning.
 
 ## Architecture flow

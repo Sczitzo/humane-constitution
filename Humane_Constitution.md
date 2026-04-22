@@ -23,7 +23,7 @@ Structural failure requires structural correction.
 
 The correction this protocol proposes is instrument separation. Rather than attempting to make money better, it removes the survival function from money entirely. The Essential Access is not a cash transfer denominated in better currency. It is a non-monetary entitlement, denominated in physical basket units, that never enters the price system. A landlord cannot raise rent to absorb it because it is not money. A government cannot quietly defund it through a budget line because it is not a budget line. An employer cannot suppress wages in anticipation of it because it does not flow through the labor market. It does not carry prior claims on anyone's future labor because it is not a debt. It is access — direct, physical, unconditional.
 
-The Flow runs markets. It carries claims on produced value and is subject to demurrage — a time-cost on idle accumulation — so that the compulsion to hoard is structural rather than merely discouraged. Voice and Service Record carry bounded governance influence that cannot convert into economic power or survival leverage. And in verified scarcity, emergency rationing replaces price-spike exclusion. Each instrument has one job. The walls between them are the system.
+The Flow runs markets. It carries claims on produced value and is subject to demurrage — a time-cost on idle accumulation — so that the compulsion to hoard is structural rather than merely discouraged. Voice governs bounded civic priorities, and Service Record governs readiness for rotating public service; neither can convert into economic power or survival leverage. And in verified scarcity, emergency rationing replaces price-spike exclusion. Each instrument has one job. The walls between them are the system.
 
 What remains unresolved in this design is not its architecture but its founding. The protocol acknowledges openly that constituting a legitimate founding coalition without already having the governance system one is trying to found is a circular dependency it can manage but not dissolve. It acknowledges that measurement systems can satisfy every formal criterion for independence while sharing the same epistemological foundations. It acknowledges that every layer added to prevent capture creates a new surface for capture. These are not failures of design. They are permanent operating conditions that honest design accounts for, documents, and publishes before the system ever runs.
 
@@ -121,7 +121,7 @@ The prevailing system fails when financial claims on the future outgrow the phys
 ---
 
 ## II. Monetary Architecture (distributed across Articles IV, V, and VI)
-To prevent corruption and category errors, the protocol uses four separated instruments. Only one is money. The other three are bounded ledgers or emergency quota tools with distinct rules aligned to their constitutional purpose.
+To prevent corruption and category errors, the protocol uses five separated instruments across four lanes. Only one is money. One protects the survival floor, two are civic instruments, and one is a temporary emergency instrument.
 
 *Instrument-to-article mapping: **Essential Access** lives in **Article IV (Survival)**, **Flow** and **Shared Storehouse** live in **Article V (Markets, Commons & Public Finance)**, and **Voice** and **Service Record** live in **Article VI (Voice, Service Record & Deliberation)**.*
 
