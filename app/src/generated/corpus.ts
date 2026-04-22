@@ -44,7 +44,7 @@ export const corpusStats: CorpusStats = {
   "threatCount": 27,
   "patchCount": 31,
   "validatorStatus": "pass",
-  "buildStamp": "corpus-5005c720340c"
+  "buildStamp": "corpus-1073d36682d9"
 } as const
 
 export const corpusDocs: CorpusDoc[] = [
@@ -89,7 +89,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "The Humane Constitution is a constitutional systems design for a society in which survival is unconditional, markets remain productive, and governance cannot be purchased. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.",
-    "wordCount": 2762,
+    "wordCount": 2812,
     "headingCount": 23
   },
   {
@@ -225,6 +225,17 @@ export const corpusDocs: CorpusDoc[] = [
     "headingCount": 4
   },
   {
+    "id": "docs__content__Podcast_Interview_Pack_md",
+    "path": "docs/content/Podcast_Interview_Pack.md",
+    "section": "constitution",
+    "title": "Podcast Interview Pack",
+    "status": "",
+    "statusBucket": "reference",
+    "summary": "These questions and answers are designed for long-form interviews. The answers stay source-grounded and should be treated as model responses, not mandatory wording.",
+    "wordCount": 791,
+    "headingCount": 17
+  },
+  {
     "id": "docs__content__Short_Form_Hooks_md",
     "path": "docs/content/Short_Form_Hooks.md",
     "section": "constitution",
@@ -233,6 +244,28 @@ export const corpusDocs: CorpusDoc[] = [
     "statusBucket": "reference",
     "summary": "These are written for short video openings, captions, or title cards. Keep delivery direct.",
     "wordCount": 244,
+    "headingCount": 4
+  },
+  {
+    "id": "docs__content__Skeptical_Audience_Rebuttal_md",
+    "path": "docs/content/Skeptical_Audience_Rebuttal.md",
+    "section": "constitution",
+    "title": "Skeptical-Audience Rebuttal",
+    "status": "",
+    "statusBucket": "reference",
+    "summary": "This script is for audiences whose first reaction is: this sounds like socialism, social credit, or a complicated bureaucracy that would fail in real life.",
+    "wordCount": 588,
+    "headingCount": 10
+  },
+  {
+    "id": "docs__content__Three_Minute_Explainer_md",
+    "path": "docs/content/Three_Minute_Explainer.md",
+    "section": "constitution",
+    "title": "Three-Minute Explainer",
+    "status": "",
+    "statusBucket": "reference",
+    "summary": "Most systems make one mistake over and over again: they force too much through the same rail, money. The same money that decides whether you can eat, stay housed, get care, or travel for basics also helps decide who can invest, who gets institutional influence, and who can shape public life. That is how wealth turns into coercion.",
+    "wordCount": 468,
     "headingCount": 4
   },
   {

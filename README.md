@@ -128,8 +128,11 @@ flowchart TD
 | [`docs/Public_FAQ.md`](./docs/Public_FAQ.md) | Public-facing answers to the most common objections and questions. |
 | [`docs/Source_Grounded_Content_Prompts.md`](./docs/Source_Grounded_Content_Prompts.md) | Reusable prompt pack for source-grounded explainers, interviews, FAQs, and short-form content. |
 | [`docs/content/First_60_Second_Explainer.md`](./docs/content/First_60_Second_Explainer.md) | First short explainer script for video or voiceover. |
+| [`docs/content/Three_Minute_Explainer.md`](./docs/content/Three_Minute_Explainer.md) | Longer explainer script for a first serious introduction. |
 | [`docs/content/Short_Form_Hooks.md`](./docs/content/Short_Form_Hooks.md) | Ten short-form hooks for social video. |
 | [`docs/content/FAQ_Video_Set.md`](./docs/content/FAQ_Video_Set.md) | Short video answers to common public objections. |
+| [`docs/content/Skeptical_Audience_Rebuttal.md`](./docs/content/Skeptical_Audience_Rebuttal.md) | Rebuttal script for audiences worried about socialism, bureaucracy, or social credit. |
+| [`docs/content/Podcast_Interview_Pack.md`](./docs/content/Podcast_Interview_Pack.md) | Interview questions and source-grounded model answers. |
 | [`White_Paper.md`](./White_Paper.md) | Plain-language public explanation. |
 | [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) | Plain-language summary of citizen rights and protections. |
 
