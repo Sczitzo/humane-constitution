@@ -1,7 +1,7 @@
 """
 test_fap_integrity.py — P-034 Two-Key Architectural Precondition
 
-Audit finding: PRD-001 / Phase 1 Pillar 1 adversarial audit (Beer VSM + Buterin)
+Audit finding: PRD-001 / Phase 1 Article I adversarial audit (Beer VSM + Buterin)
 
 Prior normative model: a single captured FAP reviewer constitutes the entire
 Tier-1 enforcement gate. A captured reviewer can admit a modifies_tier1=True

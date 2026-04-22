@@ -4,7 +4,7 @@
 **Design principle: no full cutover without a published answer to deposits, debts, contracts, foreign claims, and payments continuity.**
 
 ### V1. Conversion-rate methodology
-- Legacy-currency to EC conversion may not be declared by charisma, donor consensus, or opaque executive discretion. It must use a published methodology referencing a basket of essentials, wage bands, production capacity, and continuity-risk assumptions.
+- Legacy-currency to Flow conversion may not be declared by charisma, donor consensus, or opaque executive discretion. It must use a published methodology referencing a basket of essentials, wage bands, production capacity, and continuity-risk assumptions.
 - Small protected household deposits and continuity-critical working balances convert first under the most stable published band. Large speculative balances may face staged conversion, holding periods, or review to reduce opportunistic arbitrage.
 - The conversion methodology must publish error bands, losers as well as winners, and the reasons any category receives preferential continuity treatment.
 

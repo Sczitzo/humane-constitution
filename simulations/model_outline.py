@@ -3,7 +3,7 @@ The Humane Constitution — Agent-Based Simulation Outline
 =======================================================
 
 Framework: Mesa (pip install mesa)
-Purpose:   Model the flow of Life Credits (LC) vs. Enterprise Credits (EC)
+Purpose:   Model the interaction between Essential Access and Flow
            across a population of agents under varying demurrage rates,
            oracle accuracy levels, and adversarial actor configurations.
 
@@ -41,23 +41,23 @@ from mesa.datacollection import DataCollector
 # NOTE: values below are simulation defaults. Bound constitutional values resolve
 # through `/founding/commitments.md`; reserved FC identifiers remain provisional.
 CONFIG = {
-    # EC demurrage parameters (SPECIFICATIONS.md Section 2.3)
+    # Flow demurrage parameters (SPECIFICATIONS.md Section 2.3)
     "demurrage_rate_monthly": 0.01,        # 1.0% monthly; range 0.005–0.02
     "idle_threshold_days": 30,             # days before demurrage begins
-    "min_ec_balance": 0.01,               # retirement threshold (epsilon)
+    "min_flow_balance": 0.01,               # retirement threshold (epsilon)
 
-    # LC parameters (SPECIFICATIONS.md Section 3)
+    # Essential Access parameters (SPECIFICATIONS.md Section 3)
     "csm_daily_units": 1.0,               # Constitutional Survival Minimum per day
-    "lc_validity_hours": 72,              # expiry window
-    "lc_enhanced_multiplier": 1.5,        # enhanced allocation above CSM [FC]
+    "essential_access_validity_hours": 72,              # expiry window
+    "essential_access_enhanced_multiplier": 1.5,        # enhanced allocation above CSM [FC]
 
-    # DW fast-decay (SPECIFICATIONS.md Section 4.2)
-    "dw_decay_rate_daily": 0.15,          # fast decay; mirrors FC-062
+    # Voice fast-decay (SPECIFICATIONS.md Section 4.2)
+    "voice_decay_rate_daily": 0.15,          # fast decay; mirrors FC-062
 
-    # CR slow-decay (SPECIFICATIONS.md Section 4.3)
-    "cr_decay_rate_normal": 0.02,         # provisional until FC-063 is bound
-    "cr_decay_rate_grace": 0.004,         # 20% of normal during grace (P-009)
-    "cr_sector_ceiling": 0.20,            # max 20% per sector — P-025: reduced from 25%
+    # Service Record slow-decay (SPECIFICATIONS.md Section 4.3)
+    "service_record_decay_rate_normal": 0.02,         # provisional until FC-063 is bound
+    "service_record_decay_rate_grace": 0.004,         # 20% of normal during grace (P-009)
+    "voice_sector_ceiling": 0.20,            # max 20% per sector — P-025: reduced from 25%
                                           # to prevent 3-sector supermajority in 5-sector system
 
     # Oracle parameters (SPECIFICATIONS.md Section 7 / P-024)
@@ -81,7 +81,7 @@ CONFIG = {
 # =============================================================================
 # Mirrors SPECIFICATIONS.md state machines
 
-class ECState:
+class FlowState:
     UNISSUED = "UNISSUED"
     ACTIVE = "ACTIVE"
     IDLE = "IDLE"
@@ -90,7 +90,7 @@ class ECState:
     DECAYED = "DECAYED"
     RETIRED = "RETIRED"
 
-class LCState:
+class EssentialAccessState:
     PENDING = "PENDING"
     ACTIVE = "ACTIVE"
     REDEEMED = "REDEEMED"
@@ -99,16 +99,16 @@ class LCState:
     RETIRED = "RETIRED"
 
 # Predefined for performance optimization
-LC_EXCLUDED_STATES = {LCState.REDEEMED, LCState.PENDING}
+ESSENTIAL_ACCESS_EXCLUDED_STATES = {EssentialAccessState.REDEEMED, EssentialAccessState.PENDING}
 
-class DWState:
+class VoiceState:
     INACTIVE = "INACTIVE"
     ACTIVE = "ACTIVE"
     APPLIED = "APPLIED"
     DECAYED = "DECAYED"
     EXHAUSTED = "EXHAUSTED"
 
-class CRState:
+class ServiceRecordState:
     INACTIVE = "INACTIVE"
     ACTIVE = "ACTIVE"
     COOLING = "COOLING"
@@ -201,8 +201,8 @@ class OracleSubsystem:
     - Minimum 5 nodes (raised from 3; BFT requires n≥3f+1 for f=1 → n≥4; 5 provides margin)
     - Minimum 3 methodology classes (all classes must appear in active quorum;
       2-class floor fails at every N per Sim D)
-    - LC consensus: majority quorum ⌈N/2⌉ + 1
-    - SQ consensus: supermajority ⌈2N/3⌉
+    - Essential Access consensus: majority quorum ⌈N/2⌉ + 1
+    - Shared Storehouse consensus: supermajority ⌈2N/3⌉
     """
 
     def __init__(self, config: dict):
@@ -233,13 +233,13 @@ class OracleSubsystem:
         return len(classes_in_quorum) >= self.min_methodology_classes
 
     def get_consensus_capacity(self, true_capacity: float,
-                                consensus_type: str = "LC") -> float | None:
+                                consensus_type: str = "Essential Access") -> float | None:
         """
         Returns consensus capacity estimate or None if quorum fails.
 
         Quorum requirements (P-024):
-          "LC"  → majority consensus (⌈N/2⌉ + 1); must include ≥3 methodology classes
-          "SQ"  → supermajority (⌈2N/3⌉); must include ≥3 methodology classes
+          "Essential Access"  → majority consensus (⌈N/2⌉ + 1); must include ≥3 methodology classes
+          "Shared Storehouse"  → supermajority (⌈2N/3⌉); must include ≥3 methodology classes
 
         Returns None (conservative hold, P-022) if:
           - Insufficient valid readings for quorum, OR
@@ -249,7 +249,7 @@ class OracleSubsystem:
         active = [(node, r) for node, r in readings if r is not None]
         n = len(self.nodes)
 
-        quorum = (n // 2) + 1 if consensus_type == "LC" else int(np.ceil(2 * n / 3))
+        quorum = (n // 2) + 1 if consensus_type == "Essential Access" else int(np.ceil(2 * n / 3))
 
         if len(active) < quorum:
             self.failure_log.append({"type": "QUORUM_FAILURE", "valid": len(active)})
@@ -274,13 +274,13 @@ class OracleSubsystem:
 
 class CitizenAgent(Agent):
     """
-    Standard identity holder. Receives LC unconditionally (INV-001).
-    Participates in EC market. Accumulates CR through service.
+    Standard identity holder. Receives Essential Access unconditionally (INV-001).
+    Participates in Flow market. Accumulates Service Record through service.
 
     Key invariants enforced here:
-      - LC never drops below CSM (INV-001)
+      - Essential Access never drops below CSM (INV-001)
       - No cross-instrument conversion (INV-002)
-      - CR is eligibility-gating only, not a worth score (INV-003)
+      - Service Record is eligibility-gating only, not a worth score (INV-003)
     """
 
     def __init__(self, unique_id: int, model: "ProtocolModel", sector: str):
@@ -288,17 +288,17 @@ class CitizenAgent(Agent):
         self.sector = sector
 
         # Instrument balances
-        self.ec_balance = np.random.exponential(10.0)  # initial EC simulation seed
+        self.flow_balance = np.random.exponential(10.0)  # initial Flow simulation seed
         self.lc_pending = CONFIG["csm_daily_units"]    # daily allocation
         self.lc_redeemed_today = False
-        self.dw_balance = 0.0
-        self.cr_balance = 0.0
+        self.voice_balance = 0.0
+        self.service_record_balance = 0.0
 
         # State tracking
-        self.ec_state = ECState.ACTIVE
-        self.lc_state = LCState.PENDING
-        self.dw_state = DWState.INACTIVE
-        self.cr_state = CRState.INACTIVE
+        self.flow_state = FlowState.ACTIVE
+        self.essential_access_state = EssentialAccessState.PENDING
+        self.voice_state = VoiceState.INACTIVE
+        self.service_record_state = ServiceRecordState.INACTIVE
 
         # Idle tracking for demurrage
         self.days_idle = 0
@@ -310,7 +310,7 @@ class CitizenAgent(Agent):
     def step(self):
         self._receive_lc_allocation()
         self._redeem_lc()
-        self._apply_ec_demurrage()
+        self._apply_flow_demurrage()
         self._participate_in_market()
         self._update_civic_record()
         self._decay_dw()
@@ -320,81 +320,81 @@ class CitizenAgent(Agent):
         INV-001: Unconditional CSM allocation. No behavioral gate.
         """
         self.lc_pending = CONFIG["csm_daily_units"]
-        self.lc_state = LCState.PENDING
+        self.essential_access_state = EssentialAccessState.PENDING
         self.lc_redeemed_today = False
 
     def _redeem_lc(self):
         """
-        Redeem LC for physical basket access. Non-transferable.
-        LC expires after validity window (72h → ~3 steps if step = 1 day).
+        Redeem Essential Access for physical basket access. Non-transferable.
+        Essential Access expires after validity window (72h → ~3 steps if step = 1 day).
         """
-        if self.lc_state == LCState.PENDING:
+        if self.essential_access_state == EssentialAccessState.PENDING:
             # Assume same-day redemption in this simplified model
             self.lc_pending = 0.0
             self.lc_redeemed_today = True
-            self.lc_state = LCState.REDEEMED
+            self.essential_access_state = EssentialAccessState.REDEEMED
 
-    def _apply_ec_demurrage(self):
+    def _apply_flow_demurrage(self):
         """
-        SPECIFICATIONS.md Section 2.3: exponential decay on idle EC.
+        SPECIFICATIONS.md Section 2.3: exponential decay on idle Flow.
         B(t) = B(0) × e^(−r × t_idle) when t_idle ≥ θ
 
         P-023 (COMMITTED state discipline):
-        EC in COMMITTED (milestone escrow) state also accrues idle time.
+        Flow in COMMITTED (milestone escrow) state also accrues idle time.
         "Discipline is the point" — demurrage continues during escrow.
         This was previously a bug: COMMITTED did not increment days_idle,
         meaning escrow was a demurrage-exempt state in contradiction to P-023.
         Fixed: COMMITTED now treated identically to IDLE for demurrage accrual.
-        See Sim G (ADVERSARIAL_AUDIT.md Phase 2) for the specification/implementation
+        See the prior adversarial simulation notes for the specification/implementation
         divergence this corrects.
         """
-        if self.ec_state in (ECState.IDLE, ECState.COMMITTED):  # P-023: COMMITTED accrues demurrage
+        if self.flow_state in (FlowState.IDLE, FlowState.COMMITTED):  # P-023: COMMITTED accrues demurrage
             self.days_idle += 1
-        elif self.ec_state == ECState.ACTIVE:
+        elif self.flow_state == FlowState.ACTIVE:
             self.days_idle = 0
 
         if self.days_idle >= CONFIG["idle_threshold_days"]:
             r = CONFIG["demurrage_rate_monthly"] / 30  # convert to daily
-            self.ec_balance *= np.exp(-r)
+            self.flow_balance *= np.exp(-r)
             # COMMITTED state remains COMMITTED after decay application;
             # the escrow is still active, but the balance has decayed.
-            if self.ec_state != ECState.COMMITTED:
-                self.ec_state = ECState.DECAYED
+            if self.flow_state != FlowState.COMMITTED:
+                self.flow_state = FlowState.DECAYED
 
-            if self.ec_balance < CONFIG["min_ec_balance"]:
-                self.ec_balance = 0.0
-                self.ec_state = ECState.RETIRED
+            if self.flow_balance < CONFIG["min_flow_balance"]:
+                self.flow_balance = 0.0
+                self.flow_state = FlowState.RETIRED
 
     def _participate_in_market(self):
         """
-        Simplified market participation. Productive agents keep EC in ACTIVE state.
+        Simplified market participation. Productive agents keep Flow in ACTIVE state.
         Idle agents accumulate demurrage pressure.
         """
         if np.random.random() < 0.7:  # 70% daily participation rate (simulation seed)
-            self.ec_state = ECState.ACTIVE
+            self.flow_state = FlowState.ACTIVE
             self.days_idle = 0
             self.last_productive_action = self.model.schedule.steps
         else:
-            self.ec_state = ECState.IDLE
+            self.flow_state = FlowState.IDLE
 
     def _update_civic_record(self):
         """
-        CR updates based on service events. Not a worth score (INV-003).
+        Service Record updates based on service events. Not a worth score (INV-003).
         Sector ceiling enforced at model level (P-008).
         """
         if np.random.random() < 0.1:  # 10% daily service event probability (simulation seed)
-            self.cr_balance += 1.0
-            self.cr_state = CRState.ACTIVE
+            self.service_record_balance += 1.0
+            self.service_record_state = ServiceRecordState.ACTIVE
 
     def _decay_dw(self):
         """
-        DW fast-decay: influence is a flow, not a stock.
+        Voice fast-decay: influence is a flow, not a stock.
         """
-        if self.dw_balance > 0:
-            self.dw_balance *= (1 - CONFIG["dw_decay_rate_daily"])
-            if self.dw_balance < 0.01:
-                self.dw_balance = 0.0
-                self.dw_state = DWState.EXHAUSTED
+        if self.voice_balance > 0:
+            self.voice_balance *= (1 - CONFIG["voice_decay_rate_daily"])
+            if self.voice_balance < 0.01:
+                self.voice_balance = 0.0
+                self.voice_state = VoiceState.EXHAUSTED
 
 
 class AdversarialAgent(CitizenAgent):
@@ -422,7 +422,7 @@ class AdversarialAgent(CitizenAgent):
 
     def _attempt_shadow_conversion(self) -> bool:
         """
-        T-001: Attempt off-ledger LC-to-EC conversion.
+        T-001: Attempt off-ledger Essential Access-to-Flow conversion.
         P-001 mitigation: broker enforcement, cluster anomaly detection.
         Returns True if bypass succeeds (detection failed).
         """
@@ -441,7 +441,7 @@ class AdversarialAgent(CitizenAgent):
         else:
             # Bypass succeeds — above-ledger conversion
             self.bypass_successes += 1
-            self.ec_balance += 1.0  # simulated LC-value extraction
+            self.flow_balance += 1.0  # simulated Essential Access-value extraction
             self.model.bypass_success_log.append({
                 "step": self.model.schedule.steps,
                 "agent": self.unique_id,
@@ -452,10 +452,10 @@ class AdversarialAgent(CitizenAgent):
 
     def _attempt_elite_formation(self):
         """
-        T-008: Attempt to exceed CR sector ceiling (25% per sector, P-008).
+        T-008: Attempt to exceed Service Record sector ceiling (25% per sector, P-008).
         Enforcement: quarterly audit at model level.
         """
-        self.cr_balance += 2.0  # accelerated accumulation attempt
+        self.service_record_balance += 2.0  # accelerated accumulation attempt
 
     def _attempt_escrow_gaming(self):
         """
@@ -485,11 +485,11 @@ class ProtocolModel(Model):
     Top-level simulation model.
 
     Simulates N agents over T steps, tracking:
-      - LC redemption rates (survival floor access)
-      - EC circulation and demurrage retirement rates
+      - Essential Access redemption rates (survival floor access)
+      - Flow circulation and demurrage retirement rates
       - Adversarial bypass success/detection rates
       - Oracle failure events and fallback activations
-      - CR sector ceiling violations
+      - Service Record sector ceiling violations
 
     Threat scenarios configurable via adversarial_intensity parameter.
     """
@@ -527,19 +527,19 @@ class ProtocolModel(Model):
         # Data collection
         self.datacollector = DataCollector(
             model_reporters={
-                "Total_EC_Circulation": self._total_ec,
-                "LC_Redemption_Rate": self._lc_redemption_rate,
-                "EC_Retired_This_Step": self._ec_retired,
+                "Total_Flow_Circulation": self._total_flow,
+                "EssentialAccess_Redemption_Rate": self._essential_access_redemption_rate,
+                "Flow_Retired_This_Step": self._flow_retired,
                 "Oracle_Failures": lambda m: len(m.oracle.failure_log),
                 "Bypass_Successes": lambda m: len(m.bypass_success_log),
                 "Bypass_Detections": lambda m: len(m.enforcement_log),
                 "CSM_Violations": self._csm_violations,  # must always be 0
             },
             agent_reporters={
-                "EC_Balance": "ec_balance",
-                "EC_State": "ec_state",
-                "CR_Balance": "cr_balance",
-                "DW_Balance": "dw_balance",
+                "Flow_Balance": "flow_balance",
+                "Flow_State": "flow_state",
+                "ServiceRecord_Balance": "service_record_balance",
+                "Voice_Balance": "voice_balance",
                 "Days_Idle": "days_idle",
             }
         )
@@ -547,7 +547,7 @@ class ProtocolModel(Model):
     def step(self):
         """Advance simulation by one day."""
         self._update_oracle()
-        self._enforce_cr_sector_ceiling()
+        self._enforce_voice_sector_ceiling()
         self.schedule.step()
         self.datacollector.collect(self)
 
@@ -561,10 +561,10 @@ class ProtocolModel(Model):
     def _update_oracle(self):
         """
         Query oracle system for capacity confirmation.
-        Drives LC issuance for this step.
+        Drives Essential Access issuance for this step.
         """
         consensus = self.oracle.get_consensus_capacity(
-            self.true_physical_capacity, consensus_type="LC"
+            self.true_physical_capacity, consensus_type="Essential Access"
         )
         if consensus is None:
             # Oracle failure: conservative hold (P-022)
@@ -573,40 +573,40 @@ class ProtocolModel(Model):
         else:
             self.confirmed_capacity = consensus
 
-    def _enforce_cr_sector_ceiling(self):
+    def _enforce_voice_sector_ceiling(self):
         """
-        P-008: No sector may hold > 25% of total active CR positions.
+        P-008: No sector may hold > 25% of total active Service Record positions.
         Enforcement: cooling periods applied on violation.
         """
         sector_cr = {s: 0.0 for s in self.SECTORS}
         total_cr = 0.0
 
         for agent in self.schedule.agents:
-            sector_cr[agent.sector] += agent.cr_balance
-            total_cr += agent.cr_balance
+            sector_cr[agent.sector] += agent.service_record_balance
+            total_cr += agent.service_record_balance
 
         if total_cr == 0:
             return
 
         for sector, cr in sector_cr.items():
-            if cr / total_cr > self.config["cr_sector_ceiling"]:
+            if cr / total_cr > self.config["voice_sector_ceiling"]:
                 # Apply cooling to sector agents
                 for agent in self.schedule.agents:
-                    if agent.sector == sector and agent.cr_balance > 0:
-                        agent.cr_balance *= 0.5  # cooling reduction
-                        agent.cr_state = CRState.COOLING
+                    if agent.sector == sector and agent.service_record_balance > 0:
+                        agent.service_record_balance *= 0.5  # cooling reduction
+                        agent.service_record_state = ServiceRecordState.COOLING
 
     # -------------------------------------------------------------------------
     # Model reporters
     # -------------------------------------------------------------------------
 
-    def _total_ec(self):
+    def _total_flow(self):
         return sum(
-            a.ec_balance for a in self.schedule.agents
-            if a.ec_state != ECState.RETIRED
+            a.flow_balance for a in self.schedule.agents
+            if a.flow_state != FlowState.RETIRED
         )
 
-    def _lc_redemption_rate(self):
+    def _essential_access_redemption_rate(self):
         total = len(self.schedule.agents)
         redeemed = sum(
             1 for a in self.schedule.agents
@@ -614,10 +614,10 @@ class ProtocolModel(Model):
         )
         return redeemed / total if total > 0 else 0.0
 
-    def _ec_retired(self):
+    def _flow_retired(self):
         return sum(
             1 for a in self.schedule.agents
-            if a.ec_state == ECState.RETIRED
+            if a.flow_state == FlowState.RETIRED
         )
 
     def _csm_violations(self):
@@ -629,7 +629,7 @@ class ProtocolModel(Model):
             1 for a in self.schedule.agents
             if isinstance(a, CitizenAgent)
             and a.lc_redeemed_today is False
-            and a.lc_state not in LC_EXCLUDED_STATES
+            and a.essential_access_state not in ESSENTIAL_ACCESS_EXCLUDED_STATES
         )
 
 
@@ -641,8 +641,8 @@ def _format_results(scenario_name: str, results) -> dict:
     """Standardizes scenario result extraction."""
     return {
         "scenario": scenario_name,
-        "final_ec_circulation": results["Total_EC_Circulation"].iloc[-1],
-        "avg_lc_redemption_rate": results["LC_Redemption_Rate"].mean(),
+        "final_flow_circulation": results["Total_Flow_Circulation"].iloc[-1],
+        "avg_essential_access_redemption_rate": results["EssentialAccess_Redemption_Rate"].mean(),
         "oracle_failures": results["Oracle_Failures"].iloc[-1],
         "bypass_successes": results["Bypass_Successes"].iloc[-1],
         "csm_violations": results["CSM_Violations"].sum(),
@@ -659,7 +659,7 @@ def run_baseline(n_steps: int = 365) -> dict:
 def run_oracle_stress(n_steps: int = 365) -> dict:
     """
     Stress scenario: elevated oracle failure rate.
-    Tests T-006 (measurement lag), T-020/T-021 (oracle capture), T-024 (SQ oracle failure).
+    Tests T-006 (measurement lag), T-020/T-021 (oracle capture), T-024 (Shared Storehouse oracle failure).
     """
     stressed_config = CONFIG.copy()
     stressed_config["oracle_failure_rate"] = 0.15  # elevated failure
@@ -714,8 +714,8 @@ if __name__ == "__main__":
         print(f"\nRunning: {scenario_fn.__name__}")
         results = scenario_fn(n_steps=CONFIG["n_steps"])
         print(f"  Scenario:              {results['scenario']}")
-        print(f"  Final EC Circulation:  {results['final_ec_circulation']:.2f}")
-        print(f"  Avg LC Redemption:     {results['avg_lc_redemption_rate']:.3f}")
+        print(f"  Final Flow Circulation:  {results['final_flow_circulation']:.2f}")
+        print(f"  Avg Essential Access Redemption:     {results['avg_essential_access_redemption_rate']:.3f}")
         print(f"  Oracle Failures:       {results['oracle_failures']}")
         print(f"  Bypass Successes:      {results['bypass_successes']}")
         print(f"  CSM Violations:        {results['csm_violations']}  ← must be 0")

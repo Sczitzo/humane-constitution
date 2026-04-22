@@ -1,28 +1,28 @@
-# ANNEX X. EC Issuance Architecture
-**Purpose.** The protocol cannot be capture-resistant if the point of money creation remains vague. This annex defines how EC comes into existence, who may authorize it, how issuance is bounded, and how issuance abuse is red-team tested. Where Annex X conflicts with looser issuance language elsewhere, Annex X governs.
+# ANNEX X. Flow Issuance Architecture
+**Purpose.** The protocol cannot be capture-resistant if the point of money creation remains vague. This annex defines how Flow comes into existence, who may authorize it, how issuance is bounded, and how issuance abuse is red-team tested. Where Annex X conflicts with looser issuance language elsewhere, Annex X governs.
 
-**Design principle: issue EC against verified productive commitments, not against discretionary stock politics or financial privilege.**
+**Design principle: issue Flow against verified productive commitments, not against discretionary stock politics or financial privilege.**
 
-### X1. What EC issuance is for
-EC issuance exists to meet real productive demand: payroll settlement, milestone-bound project build-out, essential-services procurement, public infrastructure delivery, and tightly bounded continuity backstops during payment-system failure. EC is not created to reward political allies, inflate asset prices, rescue failed speculation without conditions, or manufacture demand without linked capacity, delivery, or maintenance need. Any issuance channel must identify the concrete activity, continuity need, or productive commitment it is serving. Purpose ambiguity is itself a constitutional defect.
+### X1. What Flow issuance is for
+Flow issuance exists to meet real productive demand: payroll settlement, milestone-bound project build-out, essential-services procurement, public infrastructure delivery, and tightly bounded continuity backstops during payment-system failure. Flow is not created to reward political allies, inflate asset prices, rescue failed speculation without conditions, or manufacture demand without linked capacity, delivery, or maintenance need. Any issuance channel must identify the concrete activity, continuity need, or productive commitment it is serving. Purpose ambiguity is itself a constitutional defect.
 
 ### X2. Flow-based issuance rule and provenance
-New EC may be issued only against verified productive commitments rather than as a prior discretionary stock. The protocol treats money as a flow linked to work, provisioning, maintenance, and build-out, not as a sovereign hoard.
+New Flow may be issued only against verified productive commitments rather than as a prior discretionary stock. The protocol treats money as a flow linked to work, provisioning, maintenance, and build-out, not as a sovereign hoard.
 - **Every issuance request** must publish or internally register, subject to privacy minimization: channel, sponsor, beneficial-control map, amount, duration, linked productive obligation, release schedule, prior unused protected balance, unwind path, reviewer signatures, and error-correction route.
-- **All newly issued EC** carries provenance tags at the audit layer. EC remains user-fungible for ordinary market activity, but issuance source, channel, sponsor, and unwind status must remain visible to authorized oversight, post-mortem, and anti-capture review.
+- **All newly issued Flow** carries provenance tags at the audit layer. Flow remains user-fungible for ordinary market activity, but issuance source, channel, sponsor, and unwind status must remain visible to authorized oversight, post-mortem, and anti-capture review.
 - **No obligation** may be financed through more than one issuance channel at the same time. Duplicate financing of the same payroll run, invoice chain, milestone package, or emergency continuity need is prohibited.
-- **Unused, stale, or materially misdirected issuance** enters quarantine review. EC created for a declared purpose may not drift indefinitely into idle accumulation without reclassification, reversion, or formal protected-capital qualification.
+- **Unused, stale, or materially misdirected issuance** enters quarantine review. Flow created for a declared purpose may not drift indefinitely into idle accumulation without reclassification, reversion, or formal protected-capital qualification.
 
 ### X3. Authorized issuance channels
 
 **Payroll channel:**
-EC may be created against verified net payroll obligations due within a short published window. Requests must reconcile headcount, compensation schedule, prior payroll float, and ordinary available EC. Unused payroll issuance automatically reverts or is quarantined after the payroll window closes.
+Flow may be created against verified net payroll obligations due within a short published window. Requests must reconcile headcount, compensation schedule, prior payroll float, and ordinary available Flow. Unused payroll issuance automatically reverts or is quarantined after the payroll window closes.
 
 **Project escrow channel:**
-Approved project escrows may activate EC for facilities, tooling, R&D, housing construction, maintenance backlogs, and grid or water upgrades only through preregistered milestone tranches. Full upfront spendable issuance is prohibited absent explicit emergency authorization.
+Approved project escrows may activate Flow for facilities, tooling, R&D, housing construction, maintenance backlogs, and grid or water upgrades only through preregistered milestone tranches. Full upfront spendable issuance is prohibited absent explicit emergency authorization.
 
 **Essential-services procurement channel:**
-Essential-provider reimbursement, emergency logistics, and continuity-critical procurement may activate EC only when tied to purchase orders, delivery obligations, or receipt-confirmed service windows. Advance issuance is capped and must convert to delivered-status accounting quickly.
+Essential-provider reimbursement, emergency logistics, and continuity-critical procurement may activate Flow only when tied to purchase orders, delivery obligations, or receipt-confirmed service windows. Advance issuance is capped and must convert to delivered-status accounting quickly.
 
 **Public infrastructure windows:**
 Federation or regional project accounts for published assets, schedules, lifecycle plans, and maintenance assumptions, with independent milestone review above the enhanced threshold.
@@ -31,7 +31,7 @@ Federation or regional project accounts for published assets, schedules, lifecyc
 Tightly bounded emergency issuance may preserve payments continuity during severe technical or institutional disruption, but expires automatically after the short emergency window unless renewed once under enhanced review with published reasons and unwind accounting. Continuity backstops may not become a standing subsidy class.
 
 ### X4. Channel ceilings, dual-key review, and anti-capture governance
-No single ministry, central bank analogue, private bank, donor-backed vehicle, or political office may unilaterally create EC. Issuance authority must be polycentric, rule-bound, and reviewable.
+No single ministry, central bank analogue, private bank, donor-backed vehicle, or political office may unilaterally create Flow. Issuance authority must be polycentric, rule-bound, and reviewable.
 - **Every issuance** above the de minimis threshold requires dual-key approval: the sponsoring authority and an institutionally distinct independent reviewer.
 - **Issuance above the enhanced threshold** requires a third control signature from the published public-audit or counterparty-review layer.
 - **Issuance reviewers** must be distinct from the requesting issuer, publish conflicts, rotate under anti-capture rules analogous to oracle and CRP protections, and remain ineligible to review obligations where they or their affiliates benefit materially.
@@ -43,23 +43,23 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 - **Households** receive a safe harbor equal to 6 months of median regional consumption expenditure.
 - **Enterprises** receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis.
 - **Any higher protected balance** requires project escrow, catastrophe reserve, lifecycle fund, or other protected-capital qualification under the published rules.
-- **Any asset or instrument** that functions as a non-decaying store of value above the household-safe-harbor threshold is subject to equivalence review for EC-like carrying costs regardless of label, wrapper, or legal form.
+- **Any asset or instrument** that functions as a non-decaying store of value above the household-safe-harbor threshold is subject to equivalence review for Flow-like carrying costs regardless of label, wrapper, or legal form.
 - **Household thresholds**, privacy safe harbors, and minimization rules remain mandatory. Anti-evasion enforcement may not become a pretext for total asset surveillance.
 
 ### X6. Error correction, unwind discipline, and public logs
 - **All issuance channels** must publish aggregate issuance logs, category totals, concentration indicators, stale-balance rates, unwind performance, and exception use on the public dashboard with privacy-preserving aggregation.
-- **Mis-issued EC** may be quarantined, reclassified, or unwound only through published procedures that minimize collateral harm to payroll recipients, essential providers, and innocent counterparties. No ordinary clawback may target wage earners or essential-service recipients absent fraud findings tied to them directly.
+- **Mis-issued Flow** may be quarantined, reclassified, or unwound only through published procedures that minimize collateral harm to payroll recipients, essential providers, and innocent counterparties. No ordinary clawback may target wage earners or essential-service recipients absent fraud findings tied to them directly.
 - **Unwind must be staged** when needed to prevent payroll shock, provider insolvency, or sudden continuity collapse. Emergency correction that causes more harm than the original error is itself a design failure.
 - **Repeated issuance error** in the same channel triggers automatic audit, temporary channel throttling, and mandatory public post-mortem before ordinary operation resumes.
 
 ### X7. Red-team scenarios and mandatory controls
 
 **Red-team scenario 1 - Fake payroll ring:**
-- Test whether shell employers, fabricated staff rosters, or recycled wage obligations can mint EC.
+- Test whether shell employers, fabricated staff rosters, or recycled wage obligations can mint Flow.
 - **Required controls:** headcount reconciliation, payroll-window limits, anomaly sampling, affiliate aggregation, and rapid quarantine of unused payroll issuance.
 
 **Red-team scenario 2 - Circular invoice / project parking:**
-- Test whether affiliates can rotate invoices, declare vague milestones, or warehouse EC inside protected project structures.
+- Test whether affiliates can rotate invoices, declare vague milestones, or warehouse Flow inside protected project structures.
 - **Required controls:** preregistered milestones, independent rotating auditors, no dual-channel financing, and automatic reversion when milestones become circular, self-scored, or repeatedly deferred.
 
 **Red-team scenario 3 - Zombie rollover:**
@@ -74,15 +74,15 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 - Test whether error correction or stale-balance cleanup causes payroll interruption, provider failure, or sudden contraction.
 - **Required controls:** staged unwind, protected retirement classes, temporary continuity buffers, and public correction sequencing.
 
-**Red-team scenario 6 - Offshore leakage and non-EC parking:**
-- Test whether newly issued EC is rapidly converted into foreign stores, art, collectibles, or durable stockpiles to escape demurrage.
+**Red-team scenario 6 - Offshore leakage and non-Flow parking:**
+- Test whether newly issued Flow is rapidly converted into foreign stores, art, collectibles, or durable stockpiles to escape demurrage.
 - **Required controls:** membrane flags, asset-equivalence review, protected-float limits, and enhanced audit when issuance exits productive use too quickly.
 - *A system that cannot pass these issuance red-team tests is not scale-ready, regardless of how elegant its abstract monetary theory appears.*
 
 ---
 
-## ANNEX Y. Constitutional Survival Minimum and LC Continuity Architecture
-**Purpose.** Procedural friction against narrowing is not enough. This annex defines the absolute survival floor beneath the adjustable basket and replaces the weekly LC cliff with a continuity-preserving daily micro-issuance model. Where Annex Y conflicts with earlier weekly-expiry or implied-floor language, Annex Y governs.
+## ANNEX Y. Constitutional Survival Minimum and Essential Access Continuity Architecture
+**Purpose.** Procedural friction against narrowing is not enough. This annex defines the absolute survival floor beneath the adjustable basket and replaces the weekly Essential Access cliff with a continuity-preserving daily micro-issuance model. Where Annex Y conflicts with earlier weekly-expiry or implied-floor language, Annex Y governs.
 
 **Design principle: protect survival with an absolute floor, then deliver it in a way people can actually use.**
 
@@ -90,18 +90,18 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 - **The CSM is a Tier 1 floor.** It may not be narrowed through H-1 or H-2 process and may be amended only through H-3 Refounding Convention authority.
 - **The founding CSM schedule** must specify and publish minimum daily caloric sufficiency, minimum potable water access, weather-safe shelter thresholds, emergency medical stabilization, basic sanitation and hygiene, crisis mental-health stabilization, and continuity access for essential medicines.
 - **The ordinary essential basket** may expand above the CSM, specify richer quality floors, and add category-specific supports. It may never fall below the CSM even during scarcity, austerity pressure, or procedural narrowing cycles.
-- **Temporary substitution** is allowed only when functional equivalence is demonstrated and continuity of the humane floor is preserved for those already relying on the prior form of provision.
+- **Temporary substitution** is allowed only when functional equivalence is demonstrated and continuity of the survival floor is preserved for those already relying on the prior form of provision.
 
-### Y2. LC daily micro-issuance
-LC no longer expires as a single weekly cliff. The weekly baseline is divided into daily tranches, with each daily tranche carrying 72-hour rolling validity.
-- **This model preserves anti-hoarding discipline** while smoothing demand, reducing end-cycle panic purchases, and limiting the black-market extractable value of any momentary LC balance.
+### Y2. Essential Access daily micro-issuance
+Essential Access no longer expires as a single weekly cliff. The weekly baseline is divided into daily tranches, with each daily tranche carrying 72-hour rolling validity.
+- **This model preserves anti-hoarding discipline** while smoothing demand, reducing end-cycle panic purchases, and limiting the black-market extractable value of any momentary Essential Access balance.
 - **Maximum ordinary accumulation** is therefore limited to the rolling validity window unless a published continuity exception applies for disruption, travel, illness, provider outage, or caregiving emergency.
 - **Provider reimbursement and dashboard accounting** must support daily or rolling settlement so the issuance rhythm is matched operationally rather than left as a user-side abstraction.
 
 ### Y3. Continuity protections and household management
 - A person may not lose humane-floor access merely because illness, caregiving load, temporary travel, disability disruption, or provider unavailability prevented redemption on a particular day.
 - **Continuity pathways** may include simple re-issuance, temporary pause-and-restart, narrow caregiver delegation, provider-side deferred redemption, or ombuds-certified restoration - whichever is least coercive and most operationally simple.
-- **Where a household pooling mechanism exists**, pooling caps apply at the household level as well as the individual level. Pooling may not recreate concentrated managerial control over large LC balances through household scaling alone.
+- **Where a household pooling mechanism exists**, pooling caps apply at the household level as well as the individual level. Pooling may not recreate concentrated managerial control over large Essential Access balances through household scaling alone.
 - **Any shared household management tool** must support fast exit, dual-consent for changes where feasible, coercion alerts, and easy restoration of individual control.
 
 ### Y4. Survival-floor review and anti-hollowing rule

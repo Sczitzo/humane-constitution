@@ -37,20 +37,20 @@ On successful re-entry vote:
 1. **Unit submits re-entry petition** to the federation CRP with the vote record, deliberation artifacts, and demonstration of scale-eligibility.
 2. **Federation publishes acknowledgment** within 60 days — may only refuse on procedural grounds (the vote did not meet requirements; the scale-tier bounds are not satisfied; the unit's geographic boundaries conflict with existing consenting units). Substantive refusal is not available.
 3. **Drift chain records re-entry** as a federation-scope expansion event.
-4. **Re-entry effective date** is 60 days after acknowledgment. This ramp-up allows federation infrastructure reconnection (LC issuance, oracle coverage, enforcement registration).
+4. **Re-entry effective date** is 60 days after acknowledgment. This ramp-up allows federation infrastructure reconnection (Essential Access issuance, oracle coverage, enforcement registration).
 
 ---
 
-## Treatment of Prior Civic Records
+## Treatment of Prior Service Records
 
 A unit that re-enters after prior exit is treated, for protocol purposes, as a newly-consenting unit with the following carve-outs:
 
 | Matter | Re-entry treatment |
 | :--- | :--- |
-| **Individual personhoods** who retained individual consent during the exit period | Continue with their individual civic records intact. Prior CR/DW that decayed during exit stays decayed; it is not restored. |
-| **Individual personhoods** who withdrew individual consent during or after exit | Treated as newly-consenting individuals on re-registration. Prior CR/DW is not restored. |
-| **Unit-level prior commitments** (e.g., a locality's pre-exit DW sector-weight history) | Not restored. The unit begins re-entry civic history fresh. |
-| **Pre-exit LC-issuance history** | Not used as a basis for re-entry claims. LC is issued going forward on the same basis as any consenting unit. |
+| **Individual personhoods** who retained individual consent during the exit period | Continue with their individual civic records intact. Prior Voice and Service Record balances that decayed during exit stay decayed; they are not restored. |
+| **Individual personhoods** who withdrew individual consent during or after exit | Treated as newly-consenting individuals on re-registration. Prior Voice and Service Record balances are not restored. |
+| **Unit-level prior commitments** (e.g., a locality's pre-exit Voice sector-weight history) | Not restored. The unit begins re-entry civic history fresh. |
+| **Pre-exit Essential Access-issuance history** | Not used as a basis for re-entry claims. Essential Access is issued going forward on the same basis as any consenting unit. |
 | **Pre-exit enforcement adjudications** | Remain valid. A finding of violation before exit does not get erased by re-entry. Ongoing enforcement matters that paused at exit may resume. |
 | **Pre-exit contributions to federation-wide infrastructure** | Not subject to restoration or compensation claims. Infrastructure contribution was part of the pre-exit arrangement. |
 
@@ -83,8 +83,8 @@ The 365-day floor is administrative, not substantive — it prevents churn witho
 An individual personhood who withdrew individual consent may re-consent at any time. The re-consent act is a simple individual publication to the federation's personhood registry; no unit-level vote is required (individual consent is the person's own act).
 
 On individual re-consent:
-- **Effective immediately.** LC issuance resumes on the next cycle.
-- **Prior civic history is not restored.** The individual begins a fresh CR/DW history.
+- **Effective immediately.** Essential Access issuance resumes on the next cycle.
+- **Prior civic history is not restored.** The individual begins a fresh Voice and Service Record history.
 - **Prior enforcement matters remain** — a person with an open enforcement action that paused at withdrawal resumes the action on re-consent.
 
 ---

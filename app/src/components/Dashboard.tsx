@@ -19,7 +19,7 @@ const VIEW_META: Record<AppView, { title: string; subtitle: string }> = {
   },
   annexes: {
     title: 'Annex Corpus',
-    subtitle: 'Operational annexes, hardening clauses, and legacy continuity material.',
+    subtitle: 'Operational annexes, hardening clauses, and supporting specifications.',
   },
   registries: {
     title: 'Registries & Governance Logs',
@@ -38,7 +38,6 @@ const VIEW_META: Record<AppView, { title: string; subtitle: string }> = {
 const STATUS_STYLES: Record<string, string> = {
   active: 'bg-neon-lime/10 text-neon-lime border border-neon-lime/20',
   proposed: 'bg-neon-amber/10 text-neon-amber border border-neon-amber/20',
-  legacy: 'bg-white/5 text-white/45 border border-white/10',
   reference: 'bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20',
 }
 
@@ -193,7 +192,7 @@ function OverviewPanels() {
         <MetricCard
           label="Annexes"
           value={`${corpusStats.annexCount}`}
-          detail={`${corpusStats.activeAnnexCount} active, ${corpusStats.proposedAnnexCount} proposed, ${corpusStats.legacyAnnexCount} legacy.`}
+          detail={`${corpusStats.activeAnnexCount} active, ${corpusStats.proposedAnnexCount} proposed, ${corpusStats.referenceAnnexCount} reference.`}
         />
         <MetricCard
           label="Registries"

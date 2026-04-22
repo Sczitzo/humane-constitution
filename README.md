@@ -3,8 +3,6 @@
 **Constitution for a Humane Civilization**  
 *A Charter of Human Dignity, Stewardship, and Non-Coercive Order*
 
-**Continuity note:** This project was previously released as *The Twelve-Pillar Protocol*. Legacy references remain in historical materials and crosswalk notes.
-
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 > A non-extractive civilizational operating system — separating survival, markets, and governance into structurally independent lanes.
@@ -37,31 +35,32 @@ The protocol separates three social functions that most systems collapse togethe
 
 | Instrument | Purpose | What it cannot do |
 |---|---|---|
-| **EC** — Enterprise Currency | Markets, wages, contracts, savings, investment | Buy survival access or civic power |
-| **LC** — Life Access Ledger | Baseline essentials: food, shelter, healthcare, transit | Become cash, collateral, or a status marker |
-| **DW / CR** — Civic Layer | Bounded agenda-setting and service eligibility | Gate dignity, purchase rights, or accumulate indefinitely |
-| **SQ** — Scarcity Quotas | Emergency rationing during verified shortage | Become permanent or a hidden market |
+| **Flow** | Markets, wages, contracts, savings, investment | Buy survival access or civic power |
+| **Essential Access** | Baseline essentials: food, shelter, healthcare, transit | Become cash, collateral, or a status marker |
+| **Voice** | Bounded agenda-setting and civic priority signaling | Buy rights, goods, or survival access |
+| **Service Record** | Public-service eligibility and stewardship history | Measure human worth or accumulate permanent rank |
+| **Shared Storehouse** | Emergency rationing during verified shortage | Become permanent or a hidden market |
 
 The walls between these lanes are the system. Not the instruments themselves.
 
-EC is public money rather than privately created bank money. It is primarily digital, secured with cryptographic methods, and paired with physical cash or equivalent offline instruments for resilience and privacy.
+Flow is public money rather than privately created bank money. It is primarily digital, secured with cryptographic methods, and paired with physical cash or equivalent offline instruments for resilience and privacy.
 
 ## The current architecture
 
-The live constitutional presentation uses **one Founding Order** and **seven Articles of Constitutional Order**. The earlier `Seven Pillars + P0` shorthand survives only as legacy `v13` traceability in crosswalk tables and patch history.
+The live constitutional presentation uses **one Founding Order** and **seven Articles of Constitutional Order**.
 
 - **Founding Order — Subsidiarity, Consent & Exit** — The constitutional foundation: smallest-competent scale by default, affirmative consent to join, and graceful exit without forfeiture.
 - **Article I — Rights & Rule of Law** — Tier 1 invariants, due process, non-coercion, and rule-bound execution.
 - **Article II — Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, and dependent protection without surveillance scoring.
 - **Article III — Physics & Reserves** — Polycentric measurement of real capacity plus the reserves that buffer shocks and measurement error.
-- **Article IV — Survival** — The Life Access Ledger as both constitutional survival instrument and actual delivery path.
-- **Article V — Markets, Commons & Public Finance** — EC, housing and land use-rights, enterprise, public banking rails, and commons revenue under one economic surface.
-- **Article VI — Civic Layer & Deliberation** — Civic instruments, contribution recognition, and bounded public prioritization.
+- **Article IV — Survival** — Essential Access as both constitutional survival instrument and actual delivery path.
+- **Article V — Markets, Commons & Public Finance** — Flow, housing and land use-rights, enterprise, public banking rails, and commons revenue under one economic surface.
+- **Article VI — Voice, Service Record & Deliberation** — Civic instruments, contribution recognition, and bounded public prioritization.
 - **Article VII — Transparency & Environmental Scanning** — Public dashboards, independent audit visibility, and external-world scanning.
 
 ## Architecture flow
 
-The diagram below shows how the current Founding Order and Articles I-VII relate internally. Legacy `v13` shorthand (`P0`, `P1–P7`) and older `v12` pillar references in historical materials resolve through the crosswalk in `Humane_Constitution.md` §III.
+The diagram below shows how the current Founding Order and Articles I-VII relate internally.
 
 ```mermaid
 flowchart TD
@@ -69,9 +68,9 @@ flowchart TD
     A1["**Article I**\nRights & Rule\nof Law"]:::tier1
     A2["**Article II**\nPersonhood,\nIdentity & Continuity"]:::tier2
     A3["**Article III**\nPhysics &\nReserves"]:::tier2
-    A4["**Article IV**\nSurvival\n(LC Instrument + Delivery)"]:::tier2
+    A4["**Article IV**\nSurvival\n(Essential Access + Delivery)"]:::tier2
     A5["**Article V**\nMarkets, Commons\n& Public Finance"]:::tier3
-    A6["**Article VI**\nCivic Layer\n& Deliberation"]:::tier3
+    A6["**Article VI**\nVoice, Service Record\n& Deliberation"]:::tier3
     A7["**Article VII**\nTransparency &\nEnvironmental Scanning"]:::tier3
 
     FO -->|"smallest competent scale,\nconsent, exit"| A1
@@ -125,22 +124,22 @@ flowchart TD
 | Document | Purpose |
 |---|---|
 | [`docs/INVARIANTS.md`](./docs/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
-| [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for EC, LC, DW/CR, and SQ. Demurrage function, issuance constraints, oracle consensus rules, parameter table. |
+| [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
 | [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
-| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture; preserves legacy pillar numbering where noted and maps through the `Humane_Constitution.md` §III crosswalk. |
+| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
 | [`docs/Founding_Preactivation_Disclosure.md`](./docs/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
-| [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models LC vs. EC flow across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
+| [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
 
-The annex corpus now lives entirely as standalone documents. Use [`docs/annexes/INDEX.md`](./docs/annexes/INDEX.md) as the entry point for constitutional annexes, hardening clauses, and legacy continuity material.
+The annex corpus now lives entirely as standalone documents. Use [`docs/annexes/INDEX.md`](./docs/annexes/INDEX.md) as the entry point for constitutional annexes, hardening clauses, and detailed specifications.
 
 ## Validation
 
 The repository includes a corpus validator for the live constitutional document set:
 
 - `python3 -m pip install -e .[test]` installs the reproducible simulation and test dependencies.
-- `python3 scripts/validate_corpus.py` checks local markdown links, annex-index coverage, FC/T/P identifier integrity, and banned live legacy labels.
+- `python3 scripts/validate_corpus.py` checks local markdown links, annex-index coverage, FC/T/P identifier integrity, and deprecated live terminology.
 - `python3 -m pytest -q` runs the simulation test suite from the packaged environment.
 - GitHub Actions runs the same validator on every push and pull request, alongside a basic frontend build for the desktop shell.
 
@@ -150,7 +149,7 @@ The three highest-severity failure modes, their mechanisms, and the algorithmic 
 
 ### 1. The Oracle Problem (T-020 / T-021) — Critical
 
-**Mechanism:** The LC issuance system depends on oracle nodes measuring real-world physical capacity. Two nodes can satisfy every formal criterion for independence (separate institutions, separate funders, separate governance) while sharing the same epistemological foundation — the same statistical tradition, peer-review standards, and conception of valid evidence. When this happens, their errors are correlated: a coordinated actor who shifts the dominant methodology standard corrupts the measurement system without touching any data directly.
+**Mechanism:** The Essential Access issuance system depends on oracle nodes measuring real-world physical capacity. Two nodes can satisfy every formal criterion for independence (separate institutions, separate funders, separate governance) while sharing the same epistemological foundation — the same statistical tradition, peer-review standards, and conception of valid evidence. When this happens, their errors are correlated: a coordinated actor who shifts the dominant methodology standard corrupts the measurement system without touching any data directly.
 
 **Algorithmic mitigation (P-017 / Annex AL):**
 - Minimum three oracle nodes required
@@ -165,13 +164,13 @@ The three highest-severity failure modes, their mechanisms, and the algorithmic 
 
 ### 2. Above-Ledger Bypass / Shadow Convertibility (T-001) — Critical
 
-**Mechanism:** The non-convertibility constraint is enforced at the ledger layer. Off-ledger transactions — proxy LC redemption, service-for-LC exchanges, informal barter at instrument boundaries — are not preventable by ledger rules alone. A motivated actor can approximate LC-to-EC conversion without technically touching the ledger: pay someone in goods to redeem LC on their behalf, or build a service market that prices itself in LC-equivalent units.
+**Mechanism:** The non-convertibility constraint is enforced at the ledger layer. Off-ledger transactions — proxy Essential Access redemption, service-for-Essential Access exchanges, informal barter at instrument boundaries — are not preventable by ledger rules alone. A motivated actor can approximate Essential Access-to-Flow conversion without technically touching the ledger: pay someone in goods to redeem Essential Access on their behalf, or build a service market that prices itself in Essential Access-equivalent units.
 
 **Algorithmic mitigation (P-001 / Annex AJ):**
-- LC redemption is non-delegable: biometric or equivalent identity confirmation required at delivery point (Tier 2 assurance minimum)
+- Essential Access redemption is non-delegable: biometric or equivalent identity confirmation required at delivery point (Tier 2 assurance minimum)
 - Cluster anomaly detection: statistical monitoring for redemption patterns inconsistent with individual use
 - Broker signature detection: behavioral patterns characteristic of proxy-redemption networks flagged for Ombuds review
-- LC-only essential access: certain essential services only accessible via LC redemption, not EC purchase — reduces the conversion incentive by narrowing what EC can buy in the survival lane
+- Essential Access-only channels: certain essential services are redeemable only through Essential Access, not Flow purchase — reducing the conversion incentive by narrowing what Flow can buy in the survival lane
 
 **Residual risk:** Detection depends on statistical anomaly thresholds. A sufficiently distributed, low-frequency proxy network may fall below detection bounds. Explicit leakage tolerance accepted in P-001; T-001 remains PARTIAL status.
 
@@ -179,11 +178,11 @@ The three highest-severity failure modes, their mechanisms, and the algorithmic 
 
 ### 3. Electoral Cycle Capture / Hostile Successor Government (T-022) — Critical
 
-**Mechanism:** A hostile successor government can legally dismantle the constitutional architecture through legitimate processes: refusing to fund LC delivery infrastructure, appointing non-compliant oracle administrators, passing legislation that redefines protected terms below the constitutional amendment threshold, or simply allowing administrative hollowing — the system remains on paper while operational capacity is systematically defunded.
+**Mechanism:** A hostile successor government can legally dismantle the constitutional architecture through legitimate processes: refusing to fund Essential Access delivery infrastructure, appointing non-compliant oracle administrators, passing legislation that redefines protected terms below the constitutional amendment threshold, or simply allowing administrative hollowing — the system remains on paper while operational capacity is systematically defunded.
 
 **Algorithmic mitigation (P-018):**
-- Entrenchment ladder: LC floor provisions require progressively higher supermajorities to amend as time-in-operation increases
-- LC floor minimum persistence: no successor government may reduce LC below the self-executing 70% founding-basket floor without full Tier 1 repeal
+- Entrenchment ladder: Essential Access floor provisions require progressively higher supermajorities to amend as time-in-operation increases
+- Essential Access floor minimum persistence: no successor government may reduce Essential Access below the self-executing 70% founding-basket floor without full Tier 1 repeal
 - Administrative hollowing triggers: defined operational metrics (delivery throughput, oracle response time, enforcement rate) that, when breached, automatically activate the Pre-Confirmation Response Protocol (PCRP) regardless of political direction
 - Transition protocol: mandatory handoff documentation, independent audit of operational capacity, and public status report required before any change-of-government that affects survival delivery or rule-bound execution operations
 
@@ -198,13 +197,13 @@ The system has been adversarially stress-tested:
 | T-001 Shadow Convertibility, T-002 Identity Exploits, T-004 Incentive Collapse, T-007 Definition Drift | Four patches now ACTIVE |
 | T-005 Governance Throughput, T-006 Measurement Lag, T-008 Bureaucratic Elite Formation, T-011 Narrative Surface | Dual-queue CRP, PCRP first-responder authority, diversity controls, failure doctrine |
 | T-012–T-015 (Interface threats) | Compound tests revealed triple-deadlock risk; oracle independence requirement; demand-context flag |
-| T-009 Grace Exploitation Loop | Graduated renewal intensity; CR slow-decay; hardship attestation collusion detection |
+| T-009 Grace Exploitation Loop | Graduated renewal intensity; Service Record slow-decay; hardship attestation collusion detection |
 | T-016 Formal Acceptance Process Capture | Evidence farming, sign-off deadlock, urgency exploit, audit capture all patched |
 | T-017 Bootstrap Problem | One-time founding instrument (P-014) resolves P-013 circular dependency; founding window extended to 60 days |
 | T-018–T-019 PCRP Attack Surface | False-trigger exhaustion and demand-context suppression attacks registered and patched (P-015) |
 | T-020–T-021 Oracle Independence | Epistemological and algorithmic oracle capture registered; methodology-class diversity and AI supply-chain transparency required (P-017) |
-| T-022 Electoral Cycle Capture | Hostile successor government routes identified; entrenchment ladder, LC floor persistence, transition protocol designed (P-018) |
-| T-023–T-025 Pilot validity, SQ oracle failure, demurrage capture | External validity gate (P-019), SQ oracle-failure fallback (P-022), demurrage sector-capture resolved: contract-commitment architecture, zero exemptions (P-023) |
+| T-022 Electoral Cycle Capture | Hostile successor government routes identified; entrenchment ladder, Essential Access floor persistence, transition protocol designed (P-018) |
+| T-023–T-025 Pilot validity, Shared Storehouse oracle failure, demurrage capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), demurrage sector-capture resolved: contract-commitment architecture, zero exemptions (P-023) |
 
 **Current status: 16 patches ACTIVE, 15 PROPOSED (1 FOUNDING instrument: P-014), 4 threat IDs OPEN, 5 PARTIAL, 17 ADDRESSED.** 31 patches total across 27 threat IDs. The design continues to harden. What remains is pilot evidence and patch acceptance.
 
@@ -212,9 +211,9 @@ The system has been adversarially stress-tested:
 
 | Common fear | Protocol response |
 |---|---|
-| A hidden social credit system | DW/CR cannot buy rights, goods, immunity, or survival access. Human worth is never measured. |
-| A command economy | EC still runs markets, pricing, contracts, enterprise, and innovation. The protocol constrains power, not trade. |
-| A welfare bureaucracy | LC is grounded in measured physical capacity, clear basket rules, and reviewable scarcity procedures. |
+| A hidden social credit system | Voice and Service Record cannot buy rights, goods, immunity, or survival access. Human worth is never measured. |
+| A command economy | Flow still runs markets, pricing, contracts, enterprise, and innovation. The protocol constrains power, not trade. |
+| A welfare bureaucracy | Essential Access is grounded in measured physical capacity, clear basket rules, and reviewable scarcity procedures. |
 | A surveillance state | Identity and dashboards use minimum necessary data, aggregation thresholds, and selective disclosure. |
 | A rentier loophole | Land and housing are use-rights with anti-vacancy rules, not speculative ownership. |
 
@@ -224,7 +223,7 @@ The system acknowledges expected operational imperfections before they occur:
 
 - **PCRP false triggers** — will happen; detection, termination, and public post-mortem within 7 days are the designed response
 - **Oracle disputes** — will happen; conservative defaults protect access while disputes resolve
-- **SQ scarcity activations** — will happen during genuine shortage; managed rationing instead of price-spike exclusion
+- **Shared Storehouse scarcity activations** — will happen during genuine shortage; managed rationing instead of price-spike exclusion
 - **Enforcement errors** — will happen; partitioned wallets and due process are the correction mechanism
 - **Measurement uncertainty** — is permanent; published confidence bands are the honest response
 

@@ -22,7 +22,7 @@ A scale *S* is *competent* for matter *M* only if **all three** prongs are satis
 
 ### Prong 1 — Informational Competence
 
-Scale *S* possesses (or can acquire through its ordinary operations) the information required to decide *M* accurately. Where *M* requires specialist measurement (e.g., oracle readings for an SQ activation, leakage-rate estimation for Annex AB2), the scale must have access to the measurement infrastructure.
+Scale *S* possesses (or can acquire through its ordinary operations) the information required to decide *M* accurately. Where *M* requires specialist measurement (e.g., oracle readings for an Shared Storehouse activation, leakage-rate estimation for Annex AB2), the scale must have access to the measurement infrastructure.
 
 ### Prong 2 — Adjudicative Competence
 
@@ -51,12 +51,12 @@ This sequence is the mechanical translation of "centralization requires justific
 
 A matter is a concrete decision requiring a binding resolution:
 
-- **Rule-making:** adopting or modifying a rule that will govern future conduct. (e.g., a locality adopting a stricter SQ than the federation baseline for its own residents)
+- **Rule-making:** adopting or modifying a rule that will govern future conduct. (e.g., a locality adopting a stricter Shared Storehouse than the federation baseline for its own residents)
 - **Allocation:** distributing a finite resource among eligible claimants. (e.g., a neighborhood allocating well access)
 - **Adjudication:** resolving a dispute between parties. (e.g., first-tier mediation at neighborhood scale)
 - **Enforcement:** applying a penalty or remediation to a prior violation. (e.g., Annex AJ §4 regional enforcement)
 
-Administrative tasks that are mechanical applications of existing rules — disbursing LC at the federation rate to eligible residents, running the demurrage accrual on EC balances — are **not** matters requiring subsidiarity analysis. Those are operational execution.
+Administrative tasks that are mechanical applications of existing rules — disbursing Essential Access at the federation rate to eligible residents, running the demurrage accrual on Flow balances — are **not** matters requiring subsidiarity analysis. Those are operational execution.
 
 ---
 
@@ -67,7 +67,7 @@ The following matters are **federation-scale by construction** and do not go thr
 | Matter class | Federation-scale reasoning |
 | :--- | :--- |
 | Tier 1 invariants (`/architecture/invariants.md`) | By construction, federation-scale — they are the floor beneath all scales |
-| EC/LC non-convertibility (Humane Constitution §II) | Currency-level property; any local exception creates arbitrage across boundaries |
+| Flow/Essential Access non-convertibility (Humane Constitution §II) | Currency-level property; any local exception creates arbitrage across boundaries |
 | Cross-regional dispute resolution | Not competent at any scale below federation by definition |
 | Amendment protocol operations | Federation-scale by construction |
 | Drift chain operations | Federation-scale by construction |
@@ -86,7 +86,7 @@ Certain classes of matter are ordinarily scale-defaulted but may be federation-e
 
 - **Cross-unit externalities.** If scale *S* decides *M* in a way that imposes material unconsented cost on another scale-*S* unit, the affected unit may petition for federation review. Federation may override *S*'s decision only if the externality is shown to be material and unconsented.
 - **Measurement coordination.** If localities or regions adopt incompatible measurement conventions that frustrate oracle interoperability, the federation may set a standard through Tier 2 amendment with a 90-day comment window.
-- **Systemic drift.** If scale-*S* decisions, aggregated, are measured to breach a Tier 1 invariant (e.g., cumulative locality-level SQ liberalization breaches the FC-071 cluster-failure threshold), federation intervenes at the aggregate level.
+- **Systemic drift.** If scale-*S* decisions, aggregated, are measured to breach a Tier 1 invariant (e.g., cumulative locality-level Shared Storehouse liberalization breaches the FC-071 cluster-failure threshold), federation intervenes at the aggregate level.
 
 Soft-exception invocations are logged; repeated invocations against the same scale trigger a federation-Ombuds review (Annex AI §4.3 concentration tracking extended to decision-scale concentration).
 

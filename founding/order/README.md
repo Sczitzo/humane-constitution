@@ -30,7 +30,7 @@ No unit is bound by the protocol without an affirmative, published consent event
 
 ### Rule 3 — Exit
 
-Any unit of locality scale or larger may, by **2/3 resident-personhood supermajority** (FC-120), initiate a **730-day graceful-exit unwind** (FC-121). During unwind, LC continuity is preserved for individuals, EC is convertible, civic balances decay normally. Re-entry is permitted by the same mechanism in reverse. See `exit_protocol.md` and `reentry_protocol.md`.
+Any unit of locality scale or larger may, by **2/3 resident-personhood supermajority** (FC-120), initiate a **730-day graceful-exit unwind** (FC-121). During unwind, Essential Access continuity is preserved for individuals, Flow is convertible, civic balances decay normally. Re-entry is permitted by the same mechanism in reverse. See `exit_protocol.md` and `reentry_protocol.md`.
 
 ---
 
@@ -40,9 +40,9 @@ Any unit of locality scale or larger may, by **2/3 resident-personhood supermajo
 | :--- | :--- | :--- |
 | **Household** | Family unit (no formal ceiling) | Intra-household resource allocation, substitution choices within Annex Y schedule, private voluntary exchange |
 | **Neighborhood** | ≤500 persons | Local coordination, shared-infrastructure stewardship, first-tier dispute mediation |
-| **Locality** | ≤5,000 persons | Local SQ adaptation (within federation envelopes), local CRP representation, municipal-equivalent civic process |
+| **Locality** | ≤5,000 persons | Local Shared Storehouse adaptation (within federation envelopes), local CRP representation, municipal-equivalent civic process |
 | **Region** | ≤500,000 persons | Regional measurement infrastructure (oracle cohort support), regional enforcement, regional CRP delegation |
-| **Federation** | Continental scope | Tier 1 invariants, EC/LC non-convertibility, inter-regional dispute resolution, cross-unit externalities |
+| **Federation** | Continental scope | Tier 1 invariants, Flow/Essential Access non-convertibility, inter-regional dispute resolution, cross-unit externalities |
 
 See `jurisdictional_scales.md` for boundary rules, population-threshold behavior at scale boundaries, and the "multi-scale competence" test.
 
@@ -53,7 +53,7 @@ See `jurisdictional_scales.md` for boundary rules, population-threshold behavior
 The Founding Order is a scale-and-consent layer. It does **not**:
 
 - Repeal any Tier 1 human-dignity invariant. CSM (Annex Y §Y1) binds everywhere the protocol reaches, including during exit unwind. A unit cannot vote to starve its residents.
-- Repeal EC/LC non-convertibility. The instrument-level architecture is federation-scale by design (cross-unit externalities require a federation-level rule).
+- Repeal Flow/Essential Access non-convertibility. The instrument-level architecture is federation-scale by design (cross-unit externalities require a federation-level rule).
 - Create new central authority. Every Founding Order rule reduces or constrains the federation's default reach; no rule extends it.
 - Override individual personhood. Exit is a unit-level right but does not override the individual's right to remain within the protocol by relocation. The unwind window exists precisely to make individual relocation feasible.
 

@@ -6,10 +6,10 @@ This directory holds the standalone annex corpus for the Humane Constitution. Th
 
 - [`ANNEX_AB.md`](./ANNEX_AB.md) — first hardening integration and interpretive control addendum.
 - [`ANNEX_A.md`](./ANNEX_A.md) through [`ANNEX_C.md`](./ANNEX_C.md) — baseline red-team, threat, and threat-operations material.
-- [`ANNEX_D.md`](./ANNEX_D.md) — supplemental framework questions and constitutional enhancement crosswalk.
+- [`ANNEX_D.md`](./ANNEX_D.md) — supplemental framework questions and constitutional enhancement prompts.
 - [`ANNEX_G.md`](./ANNEX_G.md) through [`ANNEX_X.md`](./ANNEX_X.md) — constitutional plumbing, amendment control, residency, transition, identity, operations, and issuance mechanics.
-- [`ANNEX_Y.md`](./ANNEX_Y.md) — Constitutional Survival Minimum and LC continuity architecture.
-- [`ANNEX_Z.md`](./ANNEX_Z.md) — civic-layer refactor for Deliberation Weight and Civic Record.
+- [`ANNEX_Y.md`](./ANNEX_Y.md) — Constitutional Survival Minimum and Essential Access continuity architecture.
+- [`ANNEX_Z.md`](./ANNEX_Z.md) — Voice and Service Record civic architecture.
 - [`ANNEX_AA.md`](./ANNEX_AA.md) — founding constitutional assembly, membrane construction, and knowledge-commons provisions.
 
 ## Hardening-cycle annexes
@@ -22,15 +22,12 @@ This directory holds the standalone annex corpus for the Humane Constitution. Th
 - [`ANNEX_AH.md`](./ANNEX_AH.md) — bootstrap resolution for first-mover activation.
 - [`ANNEX_AI.md`](./ANNEX_AI.md), [`ANNEX_AJ.md`](./ANNEX_AJ.md), [`ANNEX_AK.md`](./ANNEX_AK.md), [`ANNEX_AL.md`](./ANNEX_AL.md), [`ANNEX_AQ.md`](./ANNEX_AQ.md), [`ANNEX_AR.md`](./ANNEX_AR.md), and [`ANNEX_AS.md`](./ANNEX_AS.md) — later-cycle active and blocking annexes already maintained as standalone specifications.
 
-## Legacy and continuity material
+## Additional reference protocols
 
-- [`ANNEX_E.md`](./ANNEX_E.md) — legacy 8-pillar checklist retained for traceability.
-- [`ANNEX_F.md`](./ANNEX_F.md) — legacy 12-pillar checklist retained for traceability.
-- [`REVISION_ADDENDUM.md`](./REVISION_ADDENDUM.md) — transitional terminology notes preserved outside the constitutional text.
 - [`REGISTER_DISCLOSURE_PROTOCOL.md`](./REGISTER_DISCLOSURE_PROTOCOL.md) — Annex AO register-disclosure framework.
 
 ## Reading rule
 
 - Start with [`Humane_Constitution.md`](../../Humane_Constitution.md) for the live constitutional order.
 - Use annex files when the constitution points to a specific annex for operative detail.
-- Treat legacy/reference files as continuity aids unless another document explicitly makes them controlling.
+- Treat annex files as supporting specifications unless another document explicitly makes them controlling.

@@ -9,11 +9,11 @@ This protocol assumes a hybrid transition path: parallel institution building fi
 
 ### Q2. Minimum viable constitutional stack
 - **Phase 1 - Humane-floor and identity pilot:** emergency protections, provisional personhood, appeals, and continuity recovery in one limited geography.
-- **Phase 2 - Essential basket and LC pilot:** a narrow basket with published quality floors, provider reimbursement in EC, and challenge rights for basket disputes.
-- **Phase 3 - EC enterprise zone:** payroll, procurement, protected operating float, and project escrows for a bounded enterprise cohort.
+- **Phase 2 - Essential basket and Essential Access pilot:** a narrow basket with published quality floors, provider reimbursement in Flow, and challenge rights for basket disputes.
+- **Phase 3 - Flow enterprise zone:** payroll, procurement, protected operating float, and project escrows for a bounded enterprise cohort.
 - **Phase 4 - Oracle and dashboard minimum:** publish capacity definitions, evidence classes, refresh cadence, and dispute paths for a small set of essentials.
-- **Phase 5 - Limited civic-layer pilot:** restrict DW to one low-stakes deliberative domain and CR to one bounded service pool before expanding either to broader civic use.
-- **Phase 6 - Scarcity simulation first, SQ later:** no real SQ activation until tabletop and live scarcity drills show activation, challenge, and unwind capacity.
+- **Phase 5 - Limited civic-layer pilot:** restrict Voice to one low-stakes deliberative domain and Service Record to one bounded service pool before expanding either to broader civic use.
+- **Phase 6 - Scarcity simulation first, Shared Storehouse later:** no real Shared Storehouse activation until tabletop and live scarcity drills show activation, challenge, and unwind capacity.
 
 ### Q3. Stop conditions and pilot honesty
 - **A pilot must pause** if humane-floor delivery degrades, identity exclusion spikes, appeal queues back up materially, or measurement disputes remain unresolved past the published limit.

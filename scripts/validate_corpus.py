@@ -6,7 +6,7 @@ Checks:
 2. Markdown heading anchors resolve for local markdown links with fragments.
 3. The annex index covers every annex file in docs/annexes/.
 4. FC/T/P identifier references resolve against their authoritative registries.
-5. Banned legacy labels do not appear in live documents.
+5. Deprecated naming/history terms do not appear in live documents.
 6. Unresolved founding placeholders are surfaced as warnings.
 """
 
@@ -34,30 +34,26 @@ IGNORED_DIRS = {
     "dist",
 }
 
-LEGACY_LABEL_EXEMPTIONS = {
-    Path("docs/ADVERSARIAL_AUDIT.md"),
-    Path("docs/Annual_Compound_Simulation.md"),
-    Path("docs/LOGICAL_FALLACY_REVIEW.md"),
-    Path("docs/Adversarial_Narrative_Simulation.md"),
-    Path("docs/annexes/ANNEX_E.md"),
-    Path("docs/annexes/ANNEX_F.md"),
-    Path("docs/annexes/REVISION_ADDENDUM.md"),
-    Path("Protocol_Optimization_Proposals.md"),
-}
+DEPRECATED_TERM_EXEMPTIONS = set()
 
 PLACEHOLDER_WARNING_EXEMPTIONS = {
     Path("Acceptance_Protocol.md"),
     Path("CONTRIBUTING.md"),
     Path("Patch_Log.md"),
-    Path("Protocol_Optimization_Proposals.md"),
-    Path("docs/ADVERSARIAL_AUDIT.md"),
     Path("founding/commitments.md"),
 }
 
-BANNED_LEGACY_LABELS = (
+DEPRECATED_TERMS = (
     "Master Protocol",
     "master protocol",
     "Master_Protocol.md",
+    "Enterprise Currency",
+    "Life Access Ledger",
+    "Deliberation Weight",
+    "Civic Record",
+    "Scarcity Quotas",
+    "Seven Pillars + P0",
+    "Continuity note:",
 )
 
 LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
@@ -285,15 +281,15 @@ def validate_identifier_references(
                 result.error(f"{relative(path)} references undefined identifier {identifier}")
 
 
-def validate_legacy_labels(result: ValidationResult, markdown_files: list[Path]) -> None:
+def validate_deprecated_terms(result: ValidationResult, markdown_files: list[Path]) -> None:
     for path in markdown_files:
         rel = relative(path)
-        if rel in LEGACY_LABEL_EXEMPTIONS:
+        if rel in DEPRECATED_TERM_EXEMPTIONS:
             continue
         text = path.read_text(encoding="utf-8")
-        for label in BANNED_LEGACY_LABELS:
-            if label in text:
-                result.error(f"{rel} contains banned legacy label: {label}")
+        for term in DEPRECATED_TERMS:
+            if term in text:
+                result.error(f"{rel} contains deprecated term: {term}")
 
 
 def validate_placeholders(result: ValidationResult, markdown_files: list[Path]) -> None:
@@ -313,7 +309,7 @@ def main() -> int:
     validate_annex_index(result)
     definitions = collect_identifier_definitions(result)
     validate_identifier_references(result, markdown_files, definitions)
-    validate_legacy_labels(result, markdown_files)
+    validate_deprecated_terms(result, markdown_files)
     validate_placeholders(result, markdown_files)
 
     if result.errors:

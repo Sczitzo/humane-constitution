@@ -4,7 +4,7 @@
 **Design principle: tighten the exception systems before they become the new capture layer.**
 
 ### U1. Revision package status and scope
-- Completed in this revision package: founding safeguards, H-1 dual-key repair, investment-channel hardening, weighted oracle evidence with sub-5 fallback, cumulative LC anti-erosion triggers, dispute-deprivation SQ bridge, closed-list housing stewardship, scaled civic-layer verification, hardship-safe Protected Pause, transition mechanics scaffold, and worked identity cases.
+- Completed in this revision package: founding safeguards, H-1 dual-key repair, investment-channel hardening, weighted oracle evidence with sub-5 fallback, cumulative Essential Access anti-erosion triggers, dispute-deprivation Shared Storehouse bridge, closed-list housing stewardship, scaled civic-layer verification, hardship-safe Protected Pause, transition mechanics scaffold, and worked identity cases.
 - This package is intentionally asymmetrical: narrowing, concentration, concealment, and founding discretion face stronger friction than expansion, continuity, transparency, and review.
 - Any implementer may propose a cleaner restatement later, but no restatement may weaken these protections without ordinary amendment review.
 
@@ -20,7 +20,7 @@
 - Protected treatment begins only after pre-registration. Milestones, review cadence, capital class, declared purpose, success conditions, and reversion triggers must be published before funds enter protected status.
 - Milestone review must be conducted by independent auditors drawn from a rotating pool. Protected entities may not select, pay, or repeatedly re-use their own reviewers without external assignment rules.
 - Any protected balance above the published disclosure threshold must publish quarterly progress reports showing milestone status, material variance, conflicts, and remaining runway.
-- Long-Horizon Research Windows are finite. Default maximum protection term is 7 years; after that the project must convert to milestone-based Project Escrow, receive a specific constitutional extension, or revert to ordinary EC treatment.
+- Long-Horizon Research Windows are finite. Default maximum protection term is 7 years; after that the project must convert to milestone-based Project Escrow, receive a specific constitutional extension, or revert to ordinary Flow treatment.
 - Actuarial and Catastrophe Reserves require published reserve logic, trigger conditions, payout authority, and evidence that the reserve is sized to real exposure rather than convenience hoarding.
 - Cooperative Retained Earnings Pools require mission lock, member-governance proof, payout constraints, and evidence that retained balances support resilience, tooling, payroll continuity, or member-approved expansion rather than passive accumulation.
 - Infrastructure Lifecycle Funds require asset registers, maintenance schedules, replacement assumptions, and public dashboarding tied to the underlying system.
@@ -49,15 +49,15 @@
 - Housing continuity remains in place during appeal except where a published and reviewable imminent-serious-harm standard is met.
 
 ### U7. Civic-layer repair, scaled verification, and hardship-safe continuity
-- The verification burden must scale with claimed influence. Small stewardship claims may use lightweight community attestation; mid-range claims require structured evidence bundles; high-impact DW allocations or near-cap CR-based service claims face intensive review and elevated audit probability.
+- The verification burden must scale with claimed influence. Small stewardship claims may use lightweight community attestation; mid-range claims require structured evidence bundles; high-impact Voice allocations or near-cap Service Record-based service claims face intensive review and elevated audit probability.
 - Aggregate attestation-network maps shall be published in anonymized form so suspicious clustering can be studied without exposing ordinary people to behavioral dossiers.
 - Where a community has low institutional trust, high poverty, or concentrated verifier conflicts, claimants must have access to cross-regional rotating review panels rather than being trapped within local patronage networks.
-- Protected Pause during verified hardship preserves proportionate civic continuity. Anti-concentration decay applies to ordinary inactive high DW or CR concentrations, not to documented incapacity, caregiving emergency, or disaster displacement.
-- Any H-1 repair that materially alters DW or CR rules must satisfy the dual-key legitimacy check described in Annex H and may not rely on civic-weighted signaling alone when the issue in dispute is the civic layer itself.
+- Protected Pause during verified hardship preserves proportionate civic continuity. Anti-concentration decay applies to ordinary inactive high Voice or Service Record concentrations, not to documented incapacity, caregiving emergency, or disaster displacement.
+- Any H-1 repair that materially alters Voice or Service Record rules must satisfy the dual-key legitimacy check described in Annex H and may not rely on civic-weighted signaling alone when the issue in dispute is the civic layer itself.
 
-### U8. Dispute-deprivation SQ bridge
-- If oracle dispute or conservative issuance reduces effective LC below 85% of the normal baseline for more than 7 consecutive days in any essential category, this automatically constitutes a provisional scarcity finding sufficient to activate narrow SQ for that category.
-- SQ activated under this bridge must be category-specific, time-limited, and auto-terminate when ordinary measurement confidence or continuity supply is restored.
+### U8. Dispute-deprivation Shared Storehouse bridge
+- If oracle dispute or conservative issuance reduces effective Essential Access below 85% of the normal baseline for more than 7 consecutive days in any essential category, this automatically constitutes a provisional scarcity finding sufficient to activate narrow Shared Storehouse for that category.
+- Shared Storehouse activated under this bridge must be category-specific, time-limited, and auto-terminate when ordinary measurement confidence or continuity supply is restored.
 - The burden of proof for refusing bridge activation lies with the authority resisting activation, which must publish an alternative continuity measure with equal or better protection.
 
 ---

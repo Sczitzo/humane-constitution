@@ -36,7 +36,7 @@ The purpose of the adversarial member is to ensure that at least one auditor is 
 
 ### AG4. Anti-Gaming Constitutional Upgrade (Tier 2 Reclassification)
 The FAP's anti-gaming rules — specifically the prohibition on waiving evidence requirements due to urgency ('urgency is a reason to accelerate the pilot, not to skip it') — are reclassified from Tier 3 operational document status to Tier 2 charter-level protection. Consequences:
-- The evidence waiver prohibition cannot be amended through the operational queue. Any change requires the H-2 amendment process: 90-day notice, two comment rounds, 2/3 DW placement, and public ratification.
+- The evidence waiver prohibition cannot be amended through the operational queue. Any change requires the H-2 amendment process: 90-day notice, two comment rounds, 2/3 Voice placement, and public ratification.
 - The urgency bypass exploit therefore requires a 90-day public notice window and referendum-level approval to execute — making it politically costly enough to deter except in genuine constitutional emergencies.
 - The reclassification itself is subject to mandatory CRP pre-clearance review under Annex H4.
 
@@ -51,7 +51,7 @@ A filing that fails any of the three questions is returned for revision. A filin
 ### AG6. Bootstrap Resolution Protocol [Ambitious]
 For genuine circular dependencies — patches that require infrastructure that only exists after the patch is active — the following protocol applies:
 - **Step 1 — Confirm circularity.** The bootstrap review (triggered by Q3 failure) confirms the dependency is genuinely circular, not merely inconvenient.
-- **Step 2 — Identify minimum viable bootstrap.** The smallest subset of the patch's clauses that: (a) can be activated without the circular infrastructure; (b) preserves the humane floor; and (c) creates enough infrastructure for the full patch to be piloted.
+- **Step 2 — Identify minimum viable bootstrap.** The smallest subset of the patch's clauses that: (a) can be activated without the circular infrastructure; (b) preserves the survival floor; and (c) creates enough infrastructure for the full patch to be piloted.
 - **Step 3 — Submit as micro-patch.** The minimum viable bootstrap is submitted as a separate temporary operational measure — not a full patch — through expedited 2-authority sign-off: Threat Register Owner + Ombuds Office only.
 - **Step 4 — Full patch proceeds.** Once the micro-patch creates the necessary infrastructure, the full patch proceeds through the standard FAP pathway.
 - **Step 5 — Auto-sunset.** The micro-patch automatically sunsets when the full patch reaches ACTIVE status. Micro-patches cannot be renewed independently.

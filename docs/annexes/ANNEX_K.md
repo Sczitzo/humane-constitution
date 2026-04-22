@@ -8,7 +8,7 @@ Terms such as basic healthcare, basic shelter, basic transit, or basic care are 
 - **The basket shall be maintained** through a standing Essential Basket Review Cycle with published definitions, challenge windows, substitution rules, and impact analysis.
 - **Each category requires:** functional definition, minimum quality floor, permitted substitution ladder, exclusion list, and a rights-impact note naming who is most harmed if the category narrows.
 - **Mental health**, reproductive care, disability supports, dental care, temperature safety, and digital access may not be silently omitted by administrative drift; any narrowing requires explicit public action.
-- **Every material change** to the basket must state whether it expands, narrows, or merely clarifies the humane floor, and must include both a cost/capacity note and a protected-group impact note.
+- **Every material change** to the basket must state whether it expands, narrows, or merely clarifies the survival floor, and must include both a cost/capacity note and a protected-group impact note.
 - **No vendor definition** controls the basket. The constitutional definition controls the vendor, not the reverse.
 
 ### K2. Basket governance process
@@ -22,15 +22,15 @@ Terms such as basic healthcare, basic shelter, basic transit, or basic care are 
 A civic system that only rewards institutionally legible contribution will recreate class hierarchy inside the civic layer. Contribution verification must therefore recognize care work, mutual aid, informal stewardship, and interrupted lives.
 - **Multi-path verification:** institutional attestations are allowed but never the only path. Community attestations, rotating civic jury review, time-bounded self-declarations, and retrospective bundles are also admissible within published limits.
 - **Informal contribution classes** must include caregiving, neighborhood maintenance, mutual aid, translation, de-escalation, disability support, mentoring, and emergency response.
-- **No person may be disqualified** from DW participation or CR earning solely because their work occurs outside payroll systems, formal nonprofits, or registered enterprises.
-- **Verification burden** must scale with claimed civic influence, not with human need. Small DW or CR claims should be easier to verify than large accumulations or high-impact service credentials.
+- **No person may be disqualified** from Voice participation or Service Record earning solely because their work occurs outside payroll systems, formal nonprofits, or registered enterprises.
+- **Verification burden** must scale with claimed civic influence, not with human need. Small Voice or Service Record claims should be easier to verify than large accumulations or high-impact service credentials.
 
 ### K4. Protected pause, civic floor, and asymmetric decay
-- **Low DW balances** decay more slowly than high DW balances.
-- **CR may decay more slowly** than DW and may preserve service continuity during approved hardship windows.
+- **Low Voice balances** decay more slowly than high Voice balances.
+- **Service Record may decay more slowly** than Voice and may preserve service continuity during approved hardship windows.
 - **Verified caregiving crises**, severe illness, disability disruption, family emergency, disaster displacement, or involuntary unemployment may activate a Protected Pause Window for up to four quarters, renewable only with review.
-- **During a Protected Pause Window**, previously earned DW retains a civic floor sufficient to preserve petition standing, and previously earned CR retains enough continuity to preserve jury eligibility review, service-readiness review, and reentry continuity.
-- **Protected Pause** never creates new DW or CR out of nothing; it preserves continuity and prevents cliff effects during hardship.
+- **During a Protected Pause Window**, previously earned Voice retains a civic floor sufficient to preserve petition standing, and previously earned Service Record retains enough continuity to preserve jury eligibility review, service-readiness review, and reentry continuity.
+- **Protected Pause** never creates new Voice or Service Record out of nothing; it preserves continuity and prevents cliff effects during hardship.
 - **High-balance holders** remain subject to stronger decay even during approved pause windows, except where incapacity review determines otherwise.
 
 ---

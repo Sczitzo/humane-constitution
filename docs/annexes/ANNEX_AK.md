@@ -32,15 +32,15 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 
 ## Section 1 — Maximum Acceptable Fraud Rates
 
-*Fraud is defined as: a person receiving LC, DW, or CR entitlements under an identity that does not correspond to a unique living person — including duplicate identities, synthetic identities, takeover of another person's account, and proxy use that results in over-issuance.*
+*Fraud is defined as: a person receiving Essential Access, Voice, or Service Record entitlements under an identity that does not correspond to a unique living person — including duplicate identities, synthetic identities, takeover of another person's account, and proxy use that results in over-issuance.*
 
 | Instrument Tier | Fraud Rate Target (% of enrolled population per quarter) | Upper Tolerance Bound | Mandatory Audit Trigger |
 | :--- | :--- | :--- | :--- |
-| **LC — Life Access Ledger** | FC-140 target (reserved; recommended anchor: ≤0.5%) | FC-140 upper bound (reserved; recommended anchor: 1.0%) | FC-140 trigger (reserved; recommended anchor: exceeded in 2 consecutive quarters) |
-| **DW — Deliberation Weight** | FC-141 target (reserved) | FC-141 upper bound (reserved) | FC-141 trigger (reserved) |
-| **CR — Civic Record** | FC-142 target (reserved) | FC-142 upper bound (reserved) | FC-142 trigger (reserved) |
+| **Essential Access — Essential Access** | FC-140 target (reserved; recommended anchor: ≤0.5%) | FC-140 upper bound (reserved; recommended anchor: 1.0%) | FC-140 trigger (reserved; recommended anchor: exceeded in 2 consecutive quarters) |
+| **Voice — Voice** | FC-141 target (reserved) | FC-141 upper bound (reserved) | FC-141 trigger (reserved) |
+| **Service Record — Service Record** | FC-142 target (reserved) | FC-142 upper bound (reserved) | FC-142 trigger (reserved) |
 
-**Rationale for asymmetry between tiers:** LC fraud directly consumes physical supply — food, housing support, healthcare capacity. DW and CR fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for LC than for DW/CR, recognising that LC fraud has immediate physical consequence while civic layer fraud has a slower and more diffuse effect.
+**Rationale for asymmetry between tiers:** Essential Access fraud directly consumes physical supply — food, housing support, healthcare capacity. Voice and Service Record fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for Essential Access than for Voice and Service Record, recognising that Essential Access fraud has immediate physical consequence while civic layer fraud has a slower and more diffuse effect.
 
 **How to measure:** Fraud rate is measured as: confirmed fraud cases (after investigation) as a percentage of total enrolled population in that tier per quarter. Suspected but unconfirmed cases are tracked separately and used for trend monitoring, not rate calculation. The measurement methodology must be independent from the identity system operators.
 
@@ -96,7 +96,7 @@ This is the most consequential section. It specifies what happens when the ident
 
 > **When both rates simultaneously exceed their upper tolerance bounds, an independent review panel convenes within 14 days to make a binding recommendation. The founding coalition's pre-committed default preference is FC-150 (reserved; exclusion-first or fraud-first).**
 
-**Rationale for the asymmetry:** The protocol's foundational commitment is that survival is unconditional. An identity system that excludes genuinely vulnerable people from the survival floor is a more fundamental violation of the protocol's purpose than one that permits a higher rate of fraud. However, LC fraud directly consumes physical supply that is needed by genuine recipients — so fraud above the upper tolerance bound is not a minor concern. The founding coalition's pre-committed preference encodes the relative weight placed on these two failure modes.
+**Rationale for the asymmetry:** The protocol's foundational commitment is that survival is unconditional. An identity system that excludes genuinely vulnerable people from the survival floor is a more fundamental violation of the protocol's purpose than one that permits a higher rate of fraud. However, Essential Access fraud directly consumes physical supply that is needed by genuine recipients — so fraud above the upper tolerance bound is not a minor concern. The founding coalition's pre-committed preference encodes the relative weight placed on these two failure modes.
 
 **What this rule is not:** This is not a rule that automatically recalibrates the identity system. It is a decision rule for when human reviewers must make a calibration change. The rule specifies who has priority in those decisions and under what conditions.
 

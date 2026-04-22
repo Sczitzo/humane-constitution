@@ -70,7 +70,7 @@ A non-consenting unit (one that has not performed the consent act):
 
 1. **Is not bound by federation rules** other than the Tier 1 human-dignity floor.
 2. **Is not represented** in the CRP or federation decision bodies. It does not vote; it is not counted in federation-scale apportionment.
-3. **Does not receive LC entitlements** from the federation. Its residents may individually consent to the protocol (individual-personhood consent) and then travel to a consenting unit to claim LC, but the non-consenting unit itself is outside the LC system.
+3. **Does not receive Essential Access entitlements** from the federation. Its residents may individually consent to the protocol (individual-personhood consent) and then travel to a consenting unit to claim Essential Access, but the non-consenting unit itself is outside the Essential Access system.
 4. **Is not protected by federation enforcement** against most internal misconduct. The protocol's enforcement reach stops at consented boundaries, with the human-dignity exception noted.
 5. **Receives humanitarian support** under the CSM exception. The federation maintains a minimal CSM provisioning capability for the human-dignity floor, delivered to non-consenting units through the least-invasive available means. This provisioning is not contingent on the unit's future consent.
 
@@ -96,7 +96,7 @@ The individual-consent pathway ensures that unit non-consent does not foreclose 
 
 A unit that has consented may withdraw consent through the Exit Protocol (`exit_protocol.md`). Withdrawal of consent is exit; the two concepts are operationally identical. The distinction between "exiting the protocol" and "withdrawing consent" is terminological — both invoke the FC-120 / FC-121 procedure.
 
-**Individual consent withdrawal.** An individual personhood may withdraw individual consent through a published individual act. Withdrawal takes effect on a 180-day wind-down during which the individual continues to receive LC at their last-eligible rate (to allow relocation). After wind-down, the individual is outside the protocol's individual-consent scope. Re-entry is permitted.
+**Individual consent withdrawal.** An individual personhood may withdraw individual consent through a published individual act. Withdrawal takes effect on a 180-day wind-down during which the individual continues to receive Essential Access at their last-eligible rate (to allow relocation). After wind-down, the individual is outside the protocol's individual-consent scope. Re-entry is permitted.
 
 Individual withdrawal does not reduce a unit's consent status — the unit remains consented as long as 2/3 of its resident-personhood remain consented.
 

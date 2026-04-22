@@ -62,7 +62,7 @@ Criterion 3 is operationalized through the **error independence test**: given a 
 
 The error independence test is applied during RCS accreditation review and documented in the accreditation record. It is a prospective assessment, not a historical one.
 
-**Quantitative corroboration:** wherever the oracle nodes have produced at least 18 months of overlapping time-series data for the measured category, the prospective error independence test is supplemented by a historical **pairwise error correlation** check. The Pearson correlation coefficient between any two nodes' error series (measured against the ensemble median or an independent ground-truth sample) must not exceed **FC-032 = 0.30**. Pairs above this threshold are classified as structurally dependent regardless of formal classification and must be resolved by reducing the count in one class or introducing additional independent nodes before SQ activation is (re-)authorized.
+**Quantitative corroboration:** wherever the oracle nodes have produced at least 18 months of overlapping time-series data for the measured category, the prospective error independence test is supplemented by a historical **pairwise error correlation** check. The Pearson correlation coefficient between any two nodes' error series (measured against the ensemble median or an independent ground-truth sample) must not exceed **FC-032 = 0.30**. Pairs above this threshold are classified as structurally dependent regardless of formal classification and must be resolved by reducing the count in one class or introducing additional independent nodes before Shared Storehouse activation is (re-)authorized.
 
 ---
 
@@ -78,7 +78,7 @@ The error independence test is applied during RCS accreditation review and docum
 
 **Standards provenance:** National statistics offices, international bodies (e.g., UN Statistics Division, Eurostat), professional statistical associations.
 
-**Canonical examples:** National food security surveys, administrative LC redemption records, government housing vacancy databases, official unemployment registries.
+**Canonical examples:** National food security surveys, administrative Essential Access redemption records, government housing vacancy databases, official unemployment registries.
 
 **Disqualifying variants (same class despite appearing different):**
 - An academic statistical model using the same administrative data sources → same data generation process; same class
@@ -127,7 +127,7 @@ The error independence test is applied during RCS accreditation review and docum
 
 ### Section 3.4 — Cohort Composition Requirements (FC-030, FC-031, FC-033)
 
-Per the founding commitments, every oracle cohort for a high-volatility essential category that gates SQ activation must satisfy, jointly, the following structural requirements:
+Per the founding commitments, every oracle cohort for a high-volatility essential category that gates Shared Storehouse activation must satisfy, jointly, the following structural requirements:
 
 | Requirement | Commitment | Value |
 | :--- | :--- | :--- |
@@ -136,11 +136,11 @@ Per the founding commitments, every oracle cohort for a high-volatility essentia
 | Maximum pairwise error correlation within cohort | **FC-032** `ORACLE_PAIRWISE_CORRELATION_MAX` | **0.30** (Pearson) |
 | Minimum adversarial (red-team) seats per cohort | **FC-033** `ORACLE_ADVERSARIAL_SEATS_MIN` | **1** |
 
-**Why N = 5.** The Byzantine Fault Tolerance theorem requires n ≥ 3f + 1 to tolerate f simultaneously faulty nodes. At f = 1, the BFT floor is n = 4. Setting N_MIN = 5 provides one node of margin above BFT so the cohort does not drop below tolerance on a single-node loss. This replaces the prior Specifications §7 floor of N ≥ 3, which tolerates zero faulty nodes and is insufficient for SQ-gating measurements.
+**Why N = 5.** The Byzantine Fault Tolerance theorem requires n ≥ 3f + 1 to tolerate f simultaneously faulty nodes. At f = 1, the BFT floor is n = 4. Setting N_MIN = 5 provides one node of margin above BFT so the cohort does not drop below tolerance on a single-node loss. This replaces the prior Specifications §7 floor of N ≥ 3, which tolerates zero faulty nodes and is insufficient for Shared Storehouse-gating measurements.
 
-**Why three classes.** Two-class coverage detects manipulation that affects both classes simultaneously (e.g., a standards body controlling both Class 1 and Class 2 measurement standards). Three-class coverage makes simultaneous manipulation across all three epistemological foundations extremely difficult. This was previously a "recommended" higher standard; it is now the floor for any essential category that directly gates SQ activation.
+**Why three classes.** Two-class coverage detects manipulation that affects both classes simultaneously (e.g., a standards body controlling both Class 1 and Class 2 measurement standards). Three-class coverage makes simultaneous manipulation across all three epistemological foundations extremely difficult. This was previously a "recommended" higher standard; it is now the floor for any essential category that directly gates Shared Storehouse activation.
 
-**Adversarial seats (FC-033).** At least one node in every cohort must be a designated adversarial (red-team) seat whose explicit mandate is to find reasons the cohort's consensus reading might be wrong. The adversarial seat uses one of the three canonical classes (or a newly-added class after Section 5 audit), but is selected and compensated under a separate procurement track from the consensus nodes: shorter terms, explicit "dissent credit" recognition in the Civic Record (CR) for documented manipulation findings, and no funding relationship with the RCS accreditation body itself. The adversarial seat does not reduce the N_MIN count — it is one of the five, with a distinct role.
+**Adversarial seats (FC-033).** At least one node in every cohort must be a designated adversarial (red-team) seat whose explicit mandate is to find reasons the cohort's consensus reading might be wrong. The adversarial seat uses one of the three canonical classes (or a newly-added class after Section 5 audit), but is selected and compensated under a separate procurement track from the consensus nodes: shorter terms, explicit "dissent credit" recognition in the Service Record for documented manipulation findings, and no funding relationship with the RCS accreditation body itself. The adversarial seat does not reduce the N_MIN count — it is one of the five, with a distinct role.
 
 **Cohort composition example (minimum-compliant):** 5 nodes total = 2 Class 1 (Institutional Statistical) + 2 Class 2 (CBPR) + 1 Class 3 (Independent Physical Sampling), with the Class 3 node designated adversarial seat. Pairwise error correlation verified ≤ 0.30 across all pairs. This is the minimum, not the target — cohorts are encouraged to exceed the floors.
 
@@ -150,7 +150,7 @@ Per the founding commitments, every oracle cohort for a high-volatility essentia
 
 ### 4.1 — Standards-Body Concentration Rule
 
-If **3 or more** oracle nodes for a given essential category rely on the same standards body for their validity criteria, an **independent methodological review** is required before that category can be used for SQ activation.
+If **3 or more** oracle nodes for a given essential category rely on the same standards body for their validity criteria, an **independent methodological review** is required before that category can be used for Shared Storehouse activation.
 
 **Triggering the review:**
 - The RCS accreditation system tracks standards-body affiliations for all accredited nodes per category
@@ -160,7 +160,7 @@ If **3 or more** oracle nodes for a given essential category rely on the same st
 **What the review assesses:**
 - Whether the concentrated standards body has funding or governance relationships with entities that have a material interest in oracle outputs for the affected category
 - Whether the concentration creates a single point of failure for the category's measurement validity
-- Whether accreditation can proceed with the concentrated nodes, or whether new nodes from independent standards bodies must be recruited before SQ activation is re-authorized
+- Whether accreditation can proceed with the concentrated nodes, or whether new nodes from independent standards bodies must be recruited before Shared Storehouse activation is re-authorized
 
 **Review body:** The methodological review is conducted by a panel independent of the RCS accreditation body — drawn from methodology specialists with no affiliation with any of the concentrated standards bodies. Panel composition uses P-017 oracle-independence standards (recursive application).
 
@@ -243,8 +243,8 @@ To complete this annex before deployment, the founding coalition must:
 
 5. **Build the standards-body concentration tracking** (Section 4.1) into the RCS accreditation system before the first oracle node is accredited. This is a technical infrastructure requirement, not a manual process — the concentration count must be automated and verifiable.
 
-6. **Publish the initial methodology-class registry** — the actual classification of each accredited oracle node by class, with the error independence assessment and standards-provenance documentation — before any SQ activation occurs. This registry is the public accountability record for the epistemological independence mandate.
+6. **Publish the initial methodology-class registry** — the actual classification of each accredited oracle node by class, with the error independence assessment and standards-provenance documentation — before any Shared Storehouse activation occurs. This registry is the public accountability record for the epistemological independence mandate.
 
 ---
 
-*This document is Annex AL of the Humane Constitution. The definition architecture is operative as an ACTIVE constitutional standard. The remaining implementation gate is publication of the initial methodology-class registry before any SQ activation that depends on methodology-class-diverse oracle coverage.*
+*This document is Annex AL of the Humane Constitution. The definition architecture is operative as an ACTIVE constitutional standard. The remaining implementation gate is publication of the initial methodology-class registry before any Shared Storehouse activation that depends on methodology-class-diverse oracle coverage.*

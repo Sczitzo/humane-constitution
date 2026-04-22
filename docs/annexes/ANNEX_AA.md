@@ -18,15 +18,15 @@ Before any public announcement of full conversion to the protocol’s monetary a
 ### AA3. Intellectual property and knowledge commons
 Intellectual property is a modern rent-seeking vector and shall not remain outside the protocol’s anti-extraction logic. Article V therefore includes knowledge-governance rules that distinguish genuine productive creativity from blocking portfolios and perpetual licensing extraction.
 - **IP protection is time-limited** and use-rights based, not perpetual or dynastic.
-- **Essential goods and services** dependent on protected IP must be subject to compulsory licensing at published rates when refusal would undermine the humane floor, public health, or constitutional survival minimum.
+- **Essential goods and services** dependent on protected IP must be subject to compulsory licensing at published rates when refusal would undermine the survival floor, public health, or constitutional survival minimum.
 - **Blocking portfolios** without associated productive deployment are prohibited as rent-seeking instruments.
 - **Protected works and patents** expire into a commons unless renewed through a narrowly defined public-interest process that cannot recreate perpetual extraction.
 
 ### AA4. Tier 3 drift and technical-failure simulations
 In addition to the existing compound failure scenarios, the annual stress library must include the following tests:
 - **Slow-drift simulation:** twenty successive Tier 3 compliant changes are applied over time to test whether cumulative narrowing triggers engage before a core protection is hollowed out.
-- **Technical-breach simulation:** identity compromise, LC delivery interruption, and a contested political event are combined to test whether the humane floor survives technical failure under political stress.
-- **Regional-defection simulation:** one region ceases protocol compliance and the system must preserve the humane floor for residents through alternative mechanisms while containing cross-region contagion.
+- **Technical-breach simulation:** identity compromise, Essential Access delivery interruption, and a contested political event are combined to test whether the survival floor survives technical failure under political stress.
+- **Regional-defection simulation:** one region ceases protocol compliance and the system must preserve the survival floor for residents through alternative mechanisms while containing cross-region contagion.
 
 ### AA5. Interpretation of earlier weaker wording
 If any earlier section of this Protocol implies a single civic weighting ledger, a purely technocratic founding path, or unrestricted IP accumulation by default, this annex controls. It supersedes weaker prior wording to the extent necessary to preserve anti-capture logic, democratic legitimacy, and knowledge-commons discipline.

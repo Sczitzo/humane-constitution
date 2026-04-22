@@ -10,13 +10,13 @@ The following vulnerabilities were identified by running Annex T scenarios again
 | Interface | Vulnerability | Severity |
 | :--- | :--- | :--- |
 | **PCRP × Oracle Manipulation** | Manipulated oracle poisons sentinel and corroboration simultaneously; two-source requirement satisfied by single corrupted source. | Critical |
-| **PCRP × LC Velocity Oracle** | Demand-side velocity spikes (issuance unwind) trigger supply-shortage PCRP incorrectly. | High |
+| **PCRP × Essential Access Velocity Oracle** | Demand-side velocity spikes (issuance unwind) trigger supply-shortage PCRP incorrectly. | High |
 | **Throughput Floor × Compound Crisis** | Single aggregate floor consumed by one crisis type; second simultaneous crisis receives no guaranteed governance capacity. | High |
 | **P-008 Cohort Cooling × Emergency Audit** | Audit body understaffed exactly when urgency is highest; independence rules reduce capacity under stress. | High |
 | **T3 Triple Deadlock** | Sequential cap audit + CRP split + sub-panel authority limit simultaneously block mandatory emergency decision. | Critical |
 | **RPCP × Contested Emergency** | 4-hour communication required when system cannot accurately state legal status of the emergency. | High |
 | **P-004 × Procedural Accumulation** | Definition drift controls catch semantic changes but not 20-decision procedural attrition of constitutional space. | Med-High |
-| **Velocity Oracle × Demand Surge** | LC velocity oracle has no demand-side context; cannot distinguish supply shock from EC enforcement unwind spending surge. | High |
+| **Velocity Oracle × Demand Surge** | Essential Access velocity oracle has no demand-side context; cannot distinguish supply shock from Flow enforcement unwind spending surge. | High |
 
 ### AE2. P-012 Operative Clauses
 The following clauses amend Annex AC (P-005, P-006), Annex AD (P-011), and Annex AB (P-004) to close interface vulnerabilities identified in AE1.
@@ -43,15 +43,15 @@ No single category may consume more than 3 of the 5 floor slots per quarter. Cat
 #### AE2.3 Emergency Deadlock Resolution Protocol
 An Emergency Deadlock is declared automatically when a mandatory emergency decision is simultaneously blocked by two or more independent legitimate processes. Resolution sequence:
 - **Immediate humane-floor bridge:** Level 4 regional continuity provisions activate unconditionally. Survival access is maintained regardless of deadlock status.
-- **Deadlock arbitration panel:** Constituted within 6 hours — one Ombuds Office officer, one reserve CRP member not involved in the contested classification, one regional judicial officer. Authority limited to: (a) establishing a temporary operational baseline that maintains humane floor; (b) setting a binding resolution timeline for the blocking processes.
-- **Scope freeze:** No expansion of powers, no new SQ activations, no new PCRP activations during the deadlock period.
+- **Deadlock arbitration panel:** Constituted within 6 hours — one Ombuds Office officer, one reserve CRP member not involved in the contested classification, one regional judicial officer. Authority limited to: (a) establishing a temporary operational baseline that maintains survival floor; (b) setting a binding resolution timeline for the blocking processes.
+- **Scope freeze:** No expansion of powers, no new Shared Storehouse activations, no new PCRP activations during the deadlock period.
 - **Mandatory root-cause review:** Post-resolution post-mortem identifies which procedural rules enabled the triple-block and whether amendment is required.
 
-The arbitration panel has no authority over constitutional classification. It ensures the humane floor survives while the classification dispute resolves through normal channels. Second-generation deadlock (arbitration panel itself blocked) escalates immediately to Level 5 structural review.
+The arbitration panel has no authority over constitutional classification. It ensures the survival floor survives while the classification dispute resolves through normal channels. Second-generation deadlock (arbitration panel itself blocked) escalates immediately to Level 5 structural review.
 
-#### AE2.4 Demand-Context Flag for LC Velocity Oracle
-The Article I operations layer must maintain a demand-context register. When any of the following conditions are active, the LC velocity oracle applies a demand-surge discount before triggering sentinel signals:
-- Any active EC enforcement action or issuance unwind affecting more than the published population threshold.
+#### AE2.4 Demand-Context Flag for Essential Access Velocity Oracle
+The Article I operations layer must maintain a demand-context register. When any of the following conditions are active, the Essential Access velocity oracle applies a demand-surge discount before triggering sentinel signals:
+- Any active Flow enforcement action or issuance unwind affecting more than the published population threshold.
 - Any active mass identity re-verification campaign affecting more than the published threshold.
 - Any declared regional defection or inter-regional supply route disruption.
 
@@ -60,7 +60,7 @@ The discount flags the signal as 'demand-context modified' — it does not suppr
 #### AE2.5 RPCP Contested-Status Template
 When an operational event requiring RPCP communication has legally contested status — meaning classification, scope, or continuation is under active CRP review — the contested-status template must be used:
 - **What happened** — factual statement of the physical event only; no legal characterization.
-- **Current access status** — humane floor condition right now, not legal status of the emergency.
+- **Current access status** — survival floor condition right now, not legal status of the emergency.
 - **What is contested** — one sentence: the legal classification is under review by [named body].
 - **Where to see updates** — link to CRP review status, updated in real time.
 

@@ -13,7 +13,7 @@
 - **Upper bound:** Family or co-resident unit. No formal person-count ceiling. The household is defined by co-residence and shared domestic economy, not by legal household definitions that may vary across cultures.
 - **Representative acts:** Self-identification published to the local roll. A household consists of the personhood-holders who have self-identified as co-resident.
 - **Decision authority:** Intra-household resource allocation, including substitution choices within the Annex Y §Y3 substitution schedule, caregiving-duty allocation, and any matter that does not cross the threshold of the dwelling.
-- **Not authorized at household scale:** Consent to the protocol (consent is individual-personhood act, not household act); civic voting; SQ rule adaptation; representation in CRP.
+- **Not authorized at household scale:** Consent to the protocol (consent is individual-personhood act, not household act); civic voting; Shared Storehouse rule adaptation; representation in CRP.
 
 ### 2. Neighborhood
 
@@ -30,7 +30,7 @@
 - **Lower bound:** At least 2 neighborhoods (a locality cannot consist of a single neighborhood).
 - **Boundary determination:** Contiguous geography, shared local governance tradition (town / village cluster / small municipality), self-identified via the local roll.
 - **Decision authority:**
-  - Local SQ adaptation within federation envelopes (a locality may set a stricter SQ than the regional or federal baseline for its own residents but not a looser one).
+  - Local Shared Storehouse adaptation within federation envelopes (a locality may set a stricter Shared Storehouse than the regional or federal baseline for its own residents but not a looser one).
   - Local CRP representation (one or more delegates depending on population).
   - Municipal-equivalent civic process — public works, local resource stewardship, first-tier civic dispute resolution.
   - **Entry-tier exit eligibility:** Locality is the smallest scale that may invoke the Founding Order exit protocol. Sub-locality units (households, neighborhoods) may exit only by joining a unit that is itself exiting, or by individual relocation during another unit's unwind.
@@ -48,7 +48,7 @@
   - Regional CRP delegation to federation scale.
   - Regional Founding Order consent coordination when multiple localities within the region consent together.
 - **Representation:** Regional delegates to federation CRP per the federation apportionment rule (see Humane Constitution §VIII).
-- **Above-region: escalation rule.** Matters that affect two or more regions — EC/LC non-convertibility, Tier 1 invariants, cross-regional dispute resolution, inter-regional infrastructure — are federation-scale by construction.
+- **Above-region: escalation rule.** Matters that affect two or more regions — Flow/Essential Access non-convertibility, Tier 1 invariants, cross-regional dispute resolution, inter-regional infrastructure — are federation-scale by construction.
 
 ### 5. Federation
 
@@ -56,7 +56,7 @@
 - **Lower bound:** N/A — the federation is the highest scale.
 - **Decision authority:**
   - All Tier 1 invariants (`/architecture/invariants.md`).
-  - EC/LC non-convertibility (Humane Constitution §II).
+  - Flow/Essential Access non-convertibility (Humane Constitution §II).
   - Inter-regional dispute resolution not resolved at regional scale.
   - Cross-unit externalities that no smaller scale can address.
   - Drift-chain and amendment protocol operations.
@@ -81,9 +81,9 @@ If all three are met, the matter is properly resolved at scale *S*. If any fails
 | :--- | :--- | :--- |
 | Family substitution within Annex Y §Y3 (adult→child caloric shift within household) | Household | Competence: within family; Locality: effects within dwelling; Non-preemption: no smaller scale exists |
 | Neighborhood well usage rotation | Neighborhood | Competence: shared infrastructure; Locality: within walk-shed; Non-preemption: households cannot coordinate usage |
-| Locality SQ stricter than federation baseline | Locality | Competence: local supply understanding; Locality: residents only; Non-preemption: neighborhoods would each need to adopt individually — locality is the efficient scale |
+| Locality Shared Storehouse stricter than federation baseline | Locality | Competence: local supply understanding; Locality: residents only; Non-preemption: neighborhoods would each need to adopt individually — locality is the efficient scale |
 | Regional oracle cohort siting | Region | Competence: regional measurement infrastructure; Locality: ensures N=5 cohort diversity per FC-030; Non-preemption: localities cannot individually run oracle cohorts |
-| EC demurrage rate adjustment | Federation | Competence: requires currency-level calibration; Locality: affects entire EC zone; Non-preemption: no smaller scale can set non-convertibility parameters |
+| Flow demurrage rate adjustment | Federation | Competence: requires currency-level calibration; Locality: affects entire Flow zone; Non-preemption: no smaller scale can set non-convertibility parameters |
 | Tier 1 amendment (CSM floor, exit threshold) | Federation (H-3 authority) | Non-preemption: H-3 refounding authority is definitionally federation-scale |
 
 ---

@@ -17,7 +17,7 @@
 
 **Is it Agile?**
 - **Does execution prioritize outcomes over outputs and support continuous improvement, iteration, and rapid correction without instability?**
-- **Resulting enhancements:** Adopt a quarterly delivery cadence aligned to the DW cycle. Require staged rollouts and pilot-first execution for high-impact contracts. Institutionalize retrospectives and incident reviews.
+- **Resulting enhancements:** Adopt a quarterly delivery cadence aligned to the Voice cycle. Require staged rollouts and pilot-first execution for high-impact contracts. Institutionalize retrospectives and incident reviews.
 
 **Is it Holistic?**
 - **Does the protocol account for whole-person and community wellness (physical, emotional, social, spiritual, intellectual, occupational, financial, environmental) without creating a social score?**

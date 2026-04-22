@@ -18,7 +18,7 @@
 
 ### R3. Motivation for exceptional contribution
 The protocol rejects the claim that only extreme extractive upside can motivate excellence. It also rejects the opposite fantasy that intrinsic motivation alone is enough. Exceptional contribution is supported through a bounded mix of economic reward, mission alignment, autonomy, recognition, and reduced precarity.
-- **EC compensation bands** may reward scarce expertise, difficult work, night burden, and mission-critical skill without permitting unlimited wealth-to-power conversion.
+- **Flow compensation bands** may reward scarce expertise, difficult work, night burden, and mission-critical skill without permitting unlimited wealth-to-power conversion.
 - **Mission-critical premiums** may be used where failure to attract talent would threaten care, safety, or continuity.
 - **Professional autonomy**, protected research time, cooperative upside sharing, and public honor can reward excellence without converting into constitutional privilege.
 - **The civic layer** may recognize stewardship but cannot become private income, office purchase, class rank, or a substitute for one-person-one-vote legitimacy on survival-adjacent matters.

@@ -10,7 +10,7 @@ The Protected Pause Window renewal review must apply graduated evidence standard
 | **First activation** | Lightweight — one qualifying condition, self-declaration with supporting evidence | Local Review Office | 3 days |
 | **First renewal (Q5)** | Structured — same category evidence plus brief status update confirming ongoing hardship | Local RO + case file review | 5 days |
 | **Second renewal (Q9)** | Mid-intensity — full evidence bundle; confirmation that appropriate support services were offered or declined | Regional review + Local RO | 7 days |
-| **Third+ renewal (Q13+)** | High-intensity — independent assessment, same standard as high-impact CR claim; published aggregate statistics | Independent panel | 14 days |
+| **Third+ renewal (Q13+)** | High-intensity — independent assessment, same standard as high-impact Service Record claim; published aggregate statistics | Independent panel | 14 days |
 
 Genuine long-term hardship (severe disability, permanent caregiving responsibility, chronic illness) qualifies under the high-intensity standard. Graduated intensity targets exploitation detection at the renewal stage, not access deterrence at initiation. Any qualifying hardship is approved under any review standard.
 
@@ -29,25 +29,25 @@ Detection triggers elevated scrutiny review, not automatic denial. The review mu
 
 **Community-disaster safe harbor:** When a declared emergency (oracle-verified) affects the attestation network's region, collusion patterns among affected persons are exempt from elevated scrutiny for 2 quarters. Safe harbor is applied by the reviewing body automatically upon confirming regional emergency status.
 
-### AF4. CR Slow-Decay During Extended Pause (Annex K4 Amendment)
-During a Protected Pause Window, CR decays at 20% of the normal quarterly rate rather than being fully frozen. DW decay freeze is unchanged — DW cliff-effect protection is preserved in full. The CR slow-decay applies only during quarters in which a Protected Pause Window is active.
+### AF4. Service Record Slow-Decay During Extended Pause (Annex K4 Amendment)
+During a Protected Pause Window, Service Record decays at 20% of the normal quarterly rate rather than being fully frozen. Voice decay freeze is unchanged — Voice cliff-effect protection is preserved in full. The Service Record slow-decay applies only during quarters in which a Protected Pause Window is active.
 
-| Scenario | CR After 4 Quarters | CR After 8 Quarters | CR After 12 Quarters |
+| Scenario | Service Record After 4 Quarters | Service Record After 8 Quarters | Service Record After 12 Quarters |
 | :--- | :--- | :--- | :--- |
 | No pause (normal decay at 10%/quarter) | 65.6 | 43.0 | 28.2 |
 | Full freeze (current design) | 100.0 | 100.0 | 100.0 |
 | **Slow-decay at 20% of normal (P-009)** | 92.2 | 85.1 | 78.5 |
 
-**Calibration rationale:** a 4-quarter pause (one typical hardship cycle) produces approximately 8% CR reduction — negligible for genuine users who will rebuild through resumed contribution. A 12-quarter rotation exploit produces approximately 22% reduction, draining high-impact service eligibility thresholds over time. The slow-decay must be clearly communicated: it is not punitive, and CR can be fully rebuilt through resumed verified contribution after the pause ends.
+**Calibration rationale:** a 4-quarter pause (one typical hardship cycle) produces approximately 8% Service Record reduction — negligible for genuine users who will rebuild through resumed contribution. A 12-quarter rotation exploit produces approximately 22% reduction, draining high-impact service eligibility thresholds over time. The slow-decay must be clearly communicated: it is not punitive, and Service Record can be fully rebuilt through resumed verified contribution after the pause ends.
 
 ### AF5. Service Pool Pause-Saturation Monitoring
-Published quarterly in the Article VII concentration dashboard (extending AC3.7): the percentage of each CR-governed service pool simultaneously in Protected Pause. When any pool exceeds 20% simultaneously paused, a pool-health alert fires. The alert triggers: (a) review of whether paused members' service eligibility should be temporarily suspended pending return to active status; (b) assessment of whether the pool requires emergency replenishment from the next eligible cohort. Pool saturation monitoring triggers review only — it never automatically bars any individual's Protected Pause activation.
+Published quarterly in the Article VII concentration dashboard (extending AC3.7): the percentage of each Service Record-governed service pool simultaneously in Protected Pause. When any pool exceeds 20% simultaneously paused, a pool-health alert fires. The alert triggers: (a) review of whether paused members' service eligibility should be temporarily suspended pending return to active status; (b) assessment of whether the pool requires emergency replenishment from the next eligible cohort. Pool saturation monitoring triggers review only — it never automatically bars any individual's Protected Pause activation.
 
 ### AF6. Capability Development Pathway During Pause [Ambitious]
-During a Protected Pause Window, a person may earn up to 15% of their normal quarterly CR through verified pause-appropriate stewardship. Qualifying activities: peer support for other hardship-affected persons; verified self-directed learning with completion evidence; community care activities that do not require the person's primary capacity. 'Pause-appropriate stewardship' is a protected term under P-004. The 15% cap is absolute; the pathway cannot be used to accumulate CR beyond the person's pre-pause baseline.
+During a Protected Pause Window, a person may earn up to 15% of their normal quarterly Service Record through verified pause-appropriate stewardship. Qualifying activities: peer support for other hardship-affected persons; verified self-directed learning with completion evidence; community care activities that do not require the person's primary capacity. 'Pause-appropriate stewardship' is a protected term under P-004. The 15% cap is absolute; the pathway cannot be used to accumulate Service Record beyond the person's pre-pause baseline.
 
 ### AF7. T-009 × P-008 Explicit Closure [Ambitious]
-P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpose of the cohort concurrent maximum (2 members of the same co-service cohort sharing review authority simultaneously), a person is considered effectively serving if their CR is maintained above the service eligibility threshold through Protected Pause rather than ongoing contribution. Paused cohort members count toward the 2-member concurrent maximum. When a paused cohort member's count causes the maximum to be exceeded, the active serving members must accommodate — not the paused person. The paused person is never required to exit pause due to this rule.
+P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpose of the cohort concurrent maximum (2 members of the same co-service cohort sharing review authority simultaneously), a person is considered effectively serving if their Service Record is maintained above the service eligibility threshold through Protected Pause rather than ongoing contribution. Paused cohort members count toward the 2-member concurrent maximum. When a paused cohort member's count causes the maximum to be exceeded, the active serving members must accommodate — not the paused person. The paused person is never required to exit pause due to this rule.
 
 ---
 

@@ -1,8 +1,8 @@
 # Annex AS — Attestation-at-Risk Stake Mechanism
 
 **Status: ACTIVE — founding commitments bound (FC-080, FC-081, FC-082) — Proposal 9 close-out, 2026-04-18**
-**Governs:** contribution attestation, hardship attestation, civic identity attestation, and any Civic Record (CR) or Deliberation Weight (DW) allocation that depends on third-party verification.
-**Related:** Article VI civic-layer rules for Civic Record (CR); Annex AF (P-009 Grace Exploitation patches, hardship attestation); Humane Constitution Article VI multi-attestation and random-audit clauses; Threat Register T-018 (PCRP False-Trigger Exhaustion), TR-07 (Contribution fraud / attestation rings).
+**Governs:** contribution attestation, hardship attestation, civic identity attestation, and any Service Record or Voice allocation that depends on third-party verification.
+**Related:** Article VI civic-layer rules for Service Record; Annex AF (P-009 Grace Exploitation patches, hardship attestation); Humane Constitution Article VI multi-attestation and random-audit clauses; Threat Register T-018 (PCRP False-Trigger Exhaustion), TR-07 (Contribution fraud / attestation rings).
 
 ---
 
@@ -12,7 +12,7 @@ Attestation is the infrastructure by which individuals without institutional sta
 
 The existing constitutional mitigations (multi-attestation, random audits, verifier reputation scoring, collusion-graph analytics) are necessary but not sufficient. They raise the probability of detection after a false attestation is made. They do not change the calculation *before* the attestation is made. An attestor with no stake in the outcome has no reason to refuse a favor, a reciprocal arrangement, or a sympathetic lie — until after they are caught, at which point reputational loss is a lagging, socially-mediated signal that can be absorbed by thick networks.
 
-This annex adds **skin-in-the-game**. An attestor's CR (or DW, for civic attestations) is placed at measurable risk when they attest, proportional to the claim size. False attestations — adjudicated through the Ombuds process or the Enforcement Panel — slash the stake. Slashed stake is redistributed to whistleblowers and to restitution for those harmed by the false claim. Honest attestations are returned with time; skilled attestors accrue reputation along with their returned stake.
+This annex adds **skin-in-the-game**. An attestor's Service Record (or Voice, for civic attestations) is placed at measurable risk when they attest, proportional to the claim size. False attestations — adjudicated through the Ombuds process or the Enforcement Panel — slash the stake. Slashed stake is redistributed to whistleblowers and to restitution for those harmed by the false claim. Honest attestations are returned with time; skilled attestors accrue reputation along with their returned stake.
 
 The mechanism is calibrated via three Founding Commitments (FC-080, FC-081, FC-082) binding in `/founding/commitments.md`.
 
@@ -20,18 +20,18 @@ The mechanism is calibrated via three Founding Commitments (FC-080, FC-081, FC-0
 
 ## Section 1 — Scope: What Counts as an Attestation
 
-**Attestation (protected term):** a statement by an identified civic participant (the *attestor*) about another participant (the *subject*) that is entered into the Civic Record to support a claim the subject is making.
+**Attestation (protected term):** a statement by an identified civic participant (the *attestor*) about another participant (the *subject*) that is entered into the Service Record to support a claim the subject is making.
 
 Covered attestation classes:
 
 | Class | Subject claim | Typical attestor | Example |
 | :--- | :--- | :--- | :--- |
-| **Contribution attestation** | Stewardship or civic work that should accrue CR | Co-participant, recipient-of-service, or supervising civic body | "I confirm Subject X staffed the distribution site on dates Y–Z as the schedule records show." |
+| **Contribution attestation** | Stewardship or civic work that should accrue Service Record | Co-participant, recipient-of-service, or supervising civic body | "I confirm Subject X staffed the distribution site on dates Y–Z as the schedule records show." |
 | **Hardship attestation** | Qualification for Protected Pause or reduced-contribution accommodation | Household member, community worker, or healthcare provider | "I confirm Subject X is caring full-time for a dependent who requires continuous supervision." |
 | **Identity attestation** | Identity assurance where institutional documentation is not available (P-003 / P-016) | Long-standing community member or trusted institution | "I have known Subject X in community for ≥5 years and affirm their stated identity." |
 | **Civic-qualification attestation** | Eligibility for CRP seat, Ombuds role, audit panel, or other civic position requiring independent witness | Current or prior civic officeholders outside the nominee's direct network | "I affirm Subject X has no disqualifying conflict for the [body] seat." |
 
-**Not covered** (out of scope of this annex): ordinary social statements not entered into the Civic Record; character references for non-protocol purposes; statements by the subject about themselves (self-attestation is governed separately under Annex K multi-path verification rules).
+**Not covered** (out of scope of this annex): ordinary social statements not entered into the Service Record; character references for non-protocol purposes; statements by the subject about themselves (self-attestation is governed separately under Annex K multi-path verification rules).
 
 ---
 
@@ -43,13 +43,13 @@ When an attestor submits an attestation covered by this annex, a stake is **plac
 
 > **Stake placed = FC-080 × Claim-size-scaled base**
 >
-> **FC-080 `ATTESTATION_STAKE_RATIO` = 0.20** (20% of attestor's own DW or CR at the time of attestation, scaled to claim size)
+> **FC-080 `ATTESTATION_STAKE_RATIO` = 0.20** (20% of attestor's own Voice or Service Record at the time of attestation, scaled to claim size)
 
-The **claim-size-scaled base** is the fraction of the attestor's own DW/CR proportional to the magnitude of the subject's claim:
+The **claim-size-scaled base** is the fraction of the attestor's own Voice and Service Record proportional to the magnitude of the subject's claim:
 
-- **Small claim** (e.g., individual CR accrual ≤ 50 units, routine contribution verification): stake = 20% of attestor's CR × 0.1 = 2% of attestor's CR placed
-- **Mid claim** (e.g., CR accrual 50–200 units, Protected Pause eligibility, identity assurance Tier 2): stake = 20% of attestor's CR × 0.3 = 6% of attestor's CR placed
-- **High claim** (e.g., CR accrual >200 units, civic-position qualification, high-impact DW allocation, identity assurance Tier 3): stake = 20% of attestor's CR × 1.0 = 20% of attestor's CR placed
+- **Small claim** (e.g., individual Service Record accrual ≤ 50 units, routine contribution verification): stake = 20% of attestor's Service Record × 0.1 = 2% of attestor's Service Record placed
+- **Mid claim** (e.g., Service Record accrual 50–200 units, Protected Pause eligibility, identity assurance Tier 2): stake = 20% of attestor's Service Record × 0.3 = 6% of attestor's Service Record placed
+- **High claim** (e.g., Service Record accrual >200 units, civic-position qualification, high-impact Voice allocation, identity assurance Tier 3): stake = 20% of attestor's Service Record × 1.0 = 20% of attestor's Service Record placed
 
 Rationale: the stake ratio FC-080 = 0.20 ensures meaningful skin-in-the-game (not trivial) without destroying attestor livelihoods on single errors (not ruinous). A 20% loss on a high claim is a genuine cost; a 2% loss on a small claim is a measurable signal without being disproportionate to the stakes of the routine verification.
 
@@ -61,7 +61,7 @@ Stake is **released** back to the attestor's available balance after the audit w
 
 Released stake returns:
 - The original placed amount.
-- A **small reputation credit** recorded in the attestor's CR: +0.01 × FC-080 × claim-scaled-base per successful attestation, bounded at a lifetime cap so reputation accrual does not itself become a status-currency drift surface (see §5.2).
+- A **small reputation credit** recorded in the attestor's Service Record: +0.01 × FC-080 × claim-scaled-base per successful attestation, bounded at a lifetime cap so reputation accrual does not itself become a status-currency drift surface (see §5.2).
 
 Reputation credit is public (anonymised ledger) and visible to future subjects considering whom to ask for attestation — so consistently-accurate attestors become valued civic resources.
 
@@ -89,7 +89,7 @@ A false-claim finding by the Ombuds (Annex AI) or the Enforcement Panel (Annex A
 | False attestation, inadvertent (attestor believed claim true; was deceived by subject) | 25% of placed stake slashed; remaining 75% released |
 | False attestation, negligent (attestor should have verified; did not) | 50% of placed stake slashed; remaining 50% released |
 | False attestation, knowing (attestor knew claim was false or recklessly indifferent) | 100% of placed stake slashed; attestor referred to Enforcement Panel under Annex AJ §4.2 at AJ-2.2 severity (1.5×) for the functional gain created by the false attestation |
-| Attestation ring or coordinated false attestation | 100% of placed stake slashed for all ring members; Annex AJ §4.2 AJ-2.2 + AJ-2.3 escalation; 2-year attestation disqualification; CR deduction per matrix |
+| Attestation ring or coordinated false attestation | 100% of placed stake slashed for all ring members; Annex AJ §4.2 AJ-2.2 + AJ-2.3 escalation; 2-year attestation disqualification; Service Record deduction per matrix |
 
 **Slashed stake distribution** (§3).
 
@@ -112,10 +112,10 @@ Slashed stake does not simply disappear — that would be deflationary and would
 
 | Recipient | Share | Conditions |
 | :--- | :--- | :--- |
-| **Whistleblower** (the party who raised the complaint leading to finding) | **40%** | Direct transfer to whistleblower's CR balance. If complaint was anonymous, share is held in a whistleblower-reserve account and released on claim with identity verification. If complaint was automated (e.g., collusion-graph detection), share routes to the Article VII enforcement maintenance fund. |
-| **Subject harmed by false attestation** (when a false attestation harmed someone other than the subject of the attestation — e.g., someone excluded from a position the false claim helped secure) | **30%** | Restitution; paid into harmed party's CR. If no third-party harm is identified, share reallocates to the Article VII enforcement maintenance fund. |
+| **Whistleblower** (the party who raised the complaint leading to finding) | **40%** | Direct transfer to whistleblower's Service Record balance. If complaint was anonymous, share is held in a whistleblower-reserve account and released on claim with identity verification. If complaint was automated (e.g., collusion-graph detection), share routes to the Article VII enforcement maintenance fund. |
+| **Subject harmed by false attestation** (when a false attestation harmed someone other than the subject of the attestation — e.g., someone excluded from a position the false claim helped secure) | **30%** | Restitution; paid into harmed party's Service Record. If no third-party harm is identified, share reallocates to the Article VII enforcement maintenance fund. |
 | **Article VII enforcement maintenance fund** | **20%** | Funds detection infrastructure (AF3 collusion-graph analytics, cross-attestation audit sampling, whistleblower protection infrastructure per P-021). |
-| **Civic Record overall** (deflationary — permanently retired) | **10%** | A small deflationary share ensures the system does not reward detection without any cost to the civic-record aggregate. |
+| **Service Record overall** (deflationary — permanently retired) | **10%** | A small deflationary share ensures the system does not reward detection without any cost to the civic-record aggregate. |
 
 The distribution is executed automatically on finality of the finding (post-appeal, or appeal deadline lapsed).
 
@@ -127,7 +127,7 @@ Individual-level stake mechanisms handle individual false attestations. They do 
 
 **FC-082 `ATTESTATION_GRAPH_DENSITY_THRESHOLD` = 0.40** (mutual cross-attestation ratio)
 
-The Civic Record system computes, for each attestor cohort of ≥10 participants, the **mutual cross-attestation ratio**: the fraction of pairs (A, B) in the cohort for which A has attested for B *and* B has attested for A within any overlapping 2-year window, divided by the total possible such pairs.
+The Service Record system computes, for each attestor cohort of ≥10 participants, the **mutual cross-attestation ratio**: the fraction of pairs (A, B) in the cohort for which A has attested for B *and* B has attested for A within any overlapping 2-year window, divided by the total possible such pairs.
 
 **Null-model baseline.** A random graph with the same number of attestations distributed uniformly across eligible attestors would produce a mutual cross-attestation ratio of approximately k/n (where k is per-person attestations and n is cohort size). For realistic cohort sizes and activity rates, this baseline is typically under 0.05. A threshold of **0.40** is a large multiple of the null-model expectation — meaning attestor networks exceeding 0.40 are structurally distinct from independent attestors making unrelated judgments, and the deviation is statistically hard to explain without coordination.
 
@@ -165,7 +165,7 @@ Reputation credit accrued via honest attestation (§2.2) is capped at a lifetime
 
 ## Section 6 — Implementation Notes for Founding Coalition
 
-1. **Technical infrastructure.** The stake mechanism requires Civic Record ledger support for:
+1. **Technical infrastructure.** The stake mechanism requires Service Record ledger support for:
    - Atomic place/release/slash operations on attestor balances.
    - Audit-window tracking (365-day cursor) per attestation.
    - Attestation-graph density computation (FC-082) with the null-model baseline as a verifiable benchmark, recomputed monthly.

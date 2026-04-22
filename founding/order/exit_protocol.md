@@ -20,7 +20,7 @@ Any unit at **locality scale or larger** may, by affirmative supermajority of it
 - **Household** — no.
 - **Individual personhood** — uses individual-consent withdrawal (`consent_protocol.md §Individual consent withdrawal`), not the unit exit protocol.
 
-The smallest-scale minimum for exit is locality because below locality the administrative coherence of unwind (LC continuity, oracle coverage, enforcement handoff) cannot be practically maintained, and smaller-scale dissent is more effectively handled through internal customization (subsidiarity rule) or individual relocation.
+The smallest-scale minimum for exit is locality because below locality the administrative coherence of unwind (Essential Access continuity, oracle coverage, enforcement handoff) cannot be practically maintained, and smaller-scale dissent is more effectively handled through internal customization (subsidiarity rule) or individual relocation.
 
 ---
 
@@ -55,12 +55,12 @@ During the 730-day unwind, all of the following apply:
 
 | Element | Unwind treatment |
 | :--- | :--- |
-| **LC entitlements to individuals in the exiting unit** | **Continue at full federation rate** throughout the unwind. This is unconditional — a person's LC does not degrade because their unit is exiting. At the end of unwind, individuals who remain in the unit lose federation-issued LC (they may continue as individual-consented personhoods if they individually consent and the post-exit unit does not block federation's CSM reach). |
-| **EC balances held by individuals in the exiting unit** | **Fully convertible** at prevailing rate throughout the unwind. No exchange controls. No demurrage anomalies. Individuals may transfer EC out of the exiting unit freely. |
-| **DW/CR balances** | **Decay normally**. No accelerated decay. No grandfathering. A person who earned CR under the protocol continues to hold it until it decays; if they relocate to a consenting unit within the unwind, the CR continues to apply. If they remain in the exiting unit, CR decays to zero by the ordinary rule (FC-062 = 0.15/day after the DW-feed-rate transition) and they no longer have federation civic standing. |
-| **SQ rationing** | **Continues at the federation-set level for the category**. The exiting unit does not gain early relief from rationing during unwind (that would create a perverse incentive to exit during supply stress). It also does not face punitive rationing (that would be coercion). |
+| **Essential Access entitlements to individuals in the exiting unit** | **Continue at full federation rate** throughout the unwind. This is unconditional — a person's Essential Access does not degrade because their unit is exiting. At the end of unwind, individuals who remain in the unit lose federation-issued Essential Access (they may continue as individual-consented personhoods if they individually consent and the post-exit unit does not block federation's CSM reach). |
+| **Flow balances held by individuals in the exiting unit** | **Fully convertible** at prevailing rate throughout the unwind. No exchange controls. No demurrage anomalies. Individuals may transfer Flow out of the exiting unit freely. |
+| **Voice and Service Record balances** | **Decay normally**. No accelerated decay. No grandfathering. A person who earned Service Record under the protocol continues to hold it until it decays; if they relocate to a consenting unit within the unwind, the Service Record continues to apply. If they remain in the exiting unit, Service Record decays to zero by the ordinary rule (FC-062 = 0.15/day after the Voice-feed-rate transition) and they no longer have federation civic standing. |
+| **Shared Storehouse rationing** | **Continues at the federation-set level for the category**. The exiting unit does not gain early relief from rationing during unwind (that would create a perverse incentive to exit during supply stress). It also does not face punitive rationing (that would be coercion). |
 | **Enforcement** | Annex AJ §4 enforcement continues to apply to federation-instrument misconduct during unwind. Post-unwind, federation enforcement reach ends, with limited carve-outs for fraudulent acts committed during the protocol scope that are not discovered until after unwind (these remain federation-adjudicable per the statute-of-limitations rule published with the exit agreement). |
-| **Federation infrastructure** | Federation continues to operate oracle, measurement, and LC-issuance infrastructure serving the exiting unit until unwind ends. Federation may not preemptively withdraw infrastructure during unwind. |
+| **Federation infrastructure** | Federation continues to operate oracle, measurement, and Essential Access-issuance infrastructure serving the exiting unit until unwind ends. Federation may not preemptively withdraw infrastructure during unwind. |
 | **Human-dignity floor (CSM)** | **Unaffected**. CSM applies during unwind and after unwind. If the exiting unit cannot or will not provide CSM post-exit, federation retains unconditional humanitarian access per `consent_protocol.md §Non-Consenting Units — Human-dignity provisioning reach`. |
 
 ### Phase 3 — Post-Unwind (Day 730+)
@@ -80,8 +80,8 @@ On day 730 after exit vote:
 The exit is structured to preserve individual standing wherever possible:
 
 - **Individual-personhood consent** — persons who were individually consented remain so unless they individually withdraw. They may relocate to any consenting unit and resume full protocol participation.
-- **Pre-exit contributions** — work performed under the protocol that earned CR/DW is not retroactively clawed back. The exit terminates forward participation, not past transactions.
-- **Accrued EC** — fully portable, fully convertible during unwind.
+- **Pre-exit contributions** — work performed under the protocol that earned Voice and Service Record is not retroactively clawed back. The exit terminates forward participation, not past transactions.
+- **Accrued Flow** — fully portable, fully convertible during unwind.
 - **Pre-exit enforcement protections** — a person harmed under the protocol before exit retains the right to federation adjudication of the harm, even if the adjudication concludes after unwind.
 
 ---
@@ -89,7 +89,7 @@ The exit is structured to preserve individual standing wherever possible:
 ## What the Exiting Unit Loses
 
 - **Representation in the CRP and federation decision bodies.**
-- **Federation-provisioned LC** (except for the CSM floor — see below).
+- **Federation-provisioned Essential Access** (except for the CSM floor — see below).
 - **Federation oracle and measurement services.**
 - **Federation enforcement protection** against most conduct originating within the unit (except human-dignity floor violations, which remain federation-enforceable as crimes-against-humanity-equivalent).
 - **Access to Tier 2 amendment participation** for federation-scope rules going forward.
@@ -102,7 +102,7 @@ A central design principle of the exit protocol is **bounded exit cost**: exit m
 
 The protocol's exit cost consists of:
 - **180-day pre-exit deliberation** — gives time for reconsideration but does not delay exit indefinitely.
-- **730-day unwind** — gives time for infrastructure transition, individual relocation, and economic re-organization. Does not punish the exiting unit; LC continues at full rate, EC is convertible, infrastructure continues to operate.
+- **730-day unwind** — gives time for infrastructure transition, individual relocation, and economic re-organization. Does not punish the exiting unit; Essential Access continues at full rate, Flow is convertible, infrastructure continues to operate.
 - **Loss of forward federation benefits** — the legitimate cost of withdrawing from a joint enterprise.
 
 There is **no exit tax**, **no forfeiture of accrued assets**, **no prohibition on resource export**, **no restriction on relocation**. A unit that exits may liquidate, relocate, or reorganize as its residents choose.
@@ -118,7 +118,7 @@ This is the essential non-coercion guarantee: the protocol does not bind through
 **Prohibited conduct:**
 - Refusing to publish exit proposal on federation record.
 - Manipulating the exit impact assessment to bias the deliberation.
-- Withholding LC from the exiting unit during unwind (violates FC-121 unwind terms).
+- Withholding Essential Access from the exiting unit during unwind (violates FC-121 unwind terms).
 - Preemptively withdrawing federation infrastructure before day 730+90.
 - Blocking re-apportionment of the exited unit's CRP seats.
 - Filing pretextual enforcement actions against exiting-unit representatives.

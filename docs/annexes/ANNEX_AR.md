@@ -36,27 +36,27 @@ Each section is a parameter block. The founding coalition must bind the reserved
 
 ## Section 1 — High-Value Release Thresholds
 
-*A milestone release is the transfer of EC from escrow to a contractor upon certified completion of a physical deliverable. The threshold structure determines when a single independent verifier is sufficient and when additional verifiers are required.*
+*A milestone release is the transfer of Flow from escrow to a contractor upon certified completion of a physical deliverable. The threshold structure determines when a single independent verifier is sufficient and when additional verifiers are required.*
 
 ### 1.1 — Absolute Tier Thresholds
 
 | Tier | Release Size | Verification Required |
 | :--- | :--- | :--- |
-| **Standard** | Below FC-160 (reserved; recommended anchor: 100,000 EC) | Single independent verifier |
-| **Enhanced** | FC-160 to FC-161 (both reserved; recommended anchor ceiling: 1,000,000 EC) | Dual independent verifier |
+| **Standard** | Below FC-160 (reserved; recommended anchor: 100,000 Flow) | Single independent verifier |
+| **Enhanced** | FC-160 to FC-161 (both reserved; recommended anchor ceiling: 1,000,000 Flow) | Dual independent verifier |
 | **Major** | Above FC-161 (reserved) | Triple independent verifier + mandatory physical inspection with audit trail |
 
 ### 1.2 — Project-Value Percentage Floor (Anti-Fragmentation Rule)
 
 *A contractor may not escape the Major tier by fragmenting a large deliverable into many smaller milestones. The percentage floor applies regardless of absolute amount.*
 
-Any single milestone release exceeding **FC-162** (reserved; recommended anchor: 15% of total contracted project value) triggers **Major tier verification**, regardless of the absolute EC amount.
+Any single milestone release exceeding **FC-162** (reserved; recommended anchor: 15% of total contracted project value) triggers **Major tier verification**, regardless of the absolute Flow amount.
 
-**Rationale:** Without the percentage floor, a 20M EC project could define all milestones at 999,999 EC (just below the Major threshold), permanently avoiding triple verification. The percentage floor closes this. On a 20M EC project with a 15% floor, any release above 3M EC triggers Major verification — independent of the absolute threshold.
+**Rationale:** Without the percentage floor, a 20M Flow project could define all milestones at 999,999 Flow (just below the Major threshold), permanently avoiding triple verification. The percentage floor closes this. On a 20M Flow project with a 15% floor, any release above 3M Flow triggers Major verification — independent of the absolute threshold.
 
 ### 1.3 — Worked Examples
 
-*The following scenarios use a representative housing project (10M EC contracted value, 20 milestones, average 500k EC per release) to show how threshold choices affect oversight intensity and gaming risk.*
+*The following scenarios use a representative housing project (10M Flow contracted value, 20 milestones, average 500k Flow per release) to show how threshold choices affect oversight intensity and gaming risk.*
 
 **Scenario A — Tight thresholds (50k / 500k / 10%)**
 
@@ -72,11 +72,11 @@ Result: All 20 milestones require dual verification. High administrative burden.
 
 | Release | Absolute tier | Percentage floor | Verification |
 | :--- | :--- | :--- | :--- |
-| 500k EC average milestone | Enhanced (100k–1M) | Below 15% of 10M (= 1.5M) | Dual |
+| 500k Flow average milestone | Enhanced (100k–1M) | Below 15% of 10M (= 1.5M) | Dual |
 | Milestone defined at 1.4M | Major (above 1M) | Below 15% (1.4M < 1.5M) | Triple + inspection |
 | Milestone defined at 1.6M | Major (above 1M) | Above 15% (1.6M > 1.5M) | Triple + inspection |
 
-Result: Standard milestones receive dual verification. Only milestones above 1M EC receive triple verification. Fragmentation to 999k EC would still require dual verification — the gaming surface is reduced but not eliminated, because the percentage floor (15% = 1.5M) closes the threshold-straddling game for large milestones.
+Result: Standard milestones receive dual verification. Only milestones above 1M Flow receive triple verification. Fragmentation to 999k Flow would still require dual verification — the gaming surface is reduced but not eliminated, because the percentage floor (15% = 1.5M) closes the threshold-straddling game for large milestones.
 
 **Scenario C — Loose thresholds (500k / 5M / 25%)**
 
@@ -100,40 +100,40 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 | Programme Type | Deployment Window | Rationale |
 | :--- | :--- | :--- |
-| **LC-essential delivery** (housing floor, primary healthcare capacity, emergency food supply) | FC-163 (reserved; recommended anchor: 90 days) | LC delivery is a survival obligation. Idle funds in this category represent people not housed or not treated. The shorter window creates institutional urgency aligned with the protocol's first priority. |
+| **Essential Access-essential delivery** (housing floor, primary healthcare capacity, emergency food supply) | FC-163 (reserved; recommended anchor: 90 days) | Essential Access delivery is a survival obligation. Idle funds in this category represent people not housed or not treated. The shorter window creates institutional urgency aligned with the protocol's first priority. |
 | **Standard infrastructure** (transport, utilities, civic facilities) | FC-164 (reserved; recommended anchor: 180 days) | Complex procurement cycles require more time. 180 days balances contracting quality against idle-fund accountability. |
-| **Large-scale or novel infrastructure** (projects above FC-165 (reserved; recommended anchor: 50M EC) contracted value, or first-of-type projects with no established procurement pathway) | FC-166 (reserved; recommended anchor: 365 days) | Procurement complexity is genuine at this scale. The longer window is compensated by stricter oversight: CRP review at 180 days (not just at end of window) and mandatory procurement progress reporting at 90-day intervals. |
+| **Large-scale or novel infrastructure** (projects above FC-165 (reserved; recommended anchor: 50M Flow) contracted value, or first-of-type projects with no established procurement pathway) | FC-166 (reserved; recommended anchor: 365 days) | Procurement complexity is genuine at this scale. The longer window is compensated by stricter oversight: CRP review at 180 days (not just at end of window) and mandatory procurement progress reporting at 90-day intervals. |
 
 ### 2.2 — Demurrage Interaction Worked Examples
 
 *These examples use a 5% annual demurrage rate. Founding coalition must recalibrate if the actual rate differs.*
 
-**LC-essential: 5M EC housing fund, 90-day deployment window**
+**Essential Access-essential: 5M Flow housing fund, 90-day deployment window**
 
-| Day reached without active contracting | EC lost to demurrage | Annualised rate signal |
+| Day reached without active contracting | Flow lost to demurrage | Annualised rate signal |
 | :--- | :--- | :--- |
-| Day 30 | ~20,500 EC | Finance directors will notice by first monthly report |
-| Day 60 | ~41,100 EC | Sufficient to trigger internal programme review in most institutional budgets |
-| Day 90 | ~61,600 EC | CRP review triggered. 1.2% of fund lost — a visible institutional cost |
-| Day 180 (if no review outcome) | ~123,300 EC | 2.5% of fund lost — strong internal pressure to contract |
+| Day 30 | ~20,500 Flow | Finance directors will notice by first monthly report |
+| Day 60 | ~41,100 Flow | Sufficient to trigger internal programme review in most institutional budgets |
+| Day 90 | ~61,600 Flow | CRP review triggered. 1.2% of fund lost — a visible institutional cost |
+| Day 180 (if no review outcome) | ~123,300 Flow | 2.5% of fund lost — strong internal pressure to contract |
 
-**Standard infrastructure: 5M EC fund, 180-day window**
+**Standard infrastructure: 5M Flow fund, 180-day window**
 
-| Day reached without active contracting | EC lost to demurrage | Signal |
+| Day reached without active contracting | Flow lost to demurrage | Signal |
 | :--- | :--- | :--- |
-| Day 90 | ~61,600 EC | Internal signal; no CRP review yet |
-| Day 180 | ~123,300 EC | CRP review triggered. 2.5% of fund lost |
-| Day 365 | ~250,000 EC | 5% of fund lost if review produces no contracting |
+| Day 90 | ~61,600 Flow | Internal signal; no CRP review yet |
+| Day 180 | ~123,300 Flow | CRP review triggered. 2.5% of fund lost |
+| Day 365 | ~250,000 Flow | 5% of fund lost if review produces no contracting |
 
-**Demurrage rate sensitivity: same 5M EC fund, 180-day window**
+**Demurrage rate sensitivity: same 5M Flow fund, 180-day window**
 
-| Annual demurrage rate | EC lost by day 180 | Institutional signal strength |
+| Annual demurrage rate | Flow lost by day 180 | Institutional signal strength |
 | :--- | :--- | :--- |
-| 2% | ~49,300 EC | Weak — <1% of fund |
-| 5% | ~123,300 EC | Moderate — 2.5% of fund |
-| 10% | ~246,600 EC | Strong — 4.9% of fund |
+| 2% | ~49,300 Flow | Weak — <1% of fund |
+| 5% | ~123,300 Flow | Moderate — 2.5% of fund |
+| 10% | ~246,600 Flow | Strong — 4.9% of fund |
 
-**Key finding:** If the EC demurrage rate is below approximately 3%, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. If the founding coalition sets a low demurrage rate for EC generally, the deployment windows must be shortened to compensate, or the protocol must specify a separate, higher demurrage rate for escrowed funds.
+**Key finding:** If the Flow demurrage rate is below approximately 3%, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. If the founding coalition sets a low demurrage rate for Flow generally, the deployment windows must be shortened to compensate, or the protocol must specify a separate, higher demurrage rate for escrowed funds.
 
 ### 2.3 — What CRP Review Entails
 
@@ -169,37 +169,37 @@ CRP review outcomes are published publicly within **FC-170** (reserved; recommen
 
 *Three projects of different durations, 5% annual demurrage rate, using the recommended anchor cap of 365 days.*
 
-**Project A: 2-year hospital construction, 8M EC escrowed**
+**Project A: 2-year hospital construction, 8M Flow escrowed**
 
 | Scenario | Total demurrage paid | Demurrage avoided (frozen) | Freeze as % of total exposure |
 | :--- | :--- | :--- | :--- |
-| No force majeure events | ~800,000 EC | 0 | 0% |
-| 90-day freeze (single disruption) | ~701,000 EC | ~99,000 EC | 12.4% |
-| 180-day freeze (sustained disruption) | ~602,000 EC | ~198,000 EC | 24.8% |
-| 365-day freeze (cap exhausted) | ~402,000 EC | ~398,000 EC | **49.7%** — approximately half of total demurrage eliminated |
+| No force majeure events | ~800,000 Flow | 0 | 0% |
+| 90-day freeze (single disruption) | ~701,000 Flow | ~99,000 Flow | 12.4% |
+| 180-day freeze (sustained disruption) | ~602,000 Flow | ~198,000 Flow | 24.8% |
+| 365-day freeze (cap exhausted) | ~402,000 Flow | ~398,000 Flow | **49.7%** — approximately half of total demurrage eliminated |
 
 At a 365-day cap on a 2-year project, a contractor can eliminate ~50% of total demurrage exposure. The question for the founding coalition: is 365 days too generous for a 2-year project? A tighter cap of 180 days limits avoidance to ~25%.
 
-**Project B: 5-year power grid, 30M EC escrowed**
+**Project B: 5-year power grid, 30M Flow escrowed**
 
 | Cap length | Max demurrage avoided | As % of total exposure (5yr, 5%) | Economic value of capturing the certification panel |
 | :--- | :--- | :--- | :--- |
-| 90-day cap | ~369,000 EC | 4.9% | Low — not worth the effort |
-| 180-day cap | ~739,000 EC | 9.8% | Borderline |
-| 365-day cap | ~1,479,000 EC | 19.7% | **Significant** — enough to fund sustained panel influence |
-| 730-day cap | ~2,959,000 EC | 39.4% | **High** — panel capture is economically rational |
+| 90-day cap | ~369,000 Flow | 4.9% | Low — not worth the effort |
+| 180-day cap | ~739,000 Flow | 9.8% | Borderline |
+| 365-day cap | ~1,479,000 Flow | 19.7% | **Significant** — enough to fund sustained panel influence |
+| 730-day cap | ~2,959,000 Flow | 39.4% | **High** — panel capture is economically rational |
 
-**Key finding for large projects:** The 365-day cap produces a meaningful savings opportunity (~1.5M EC) on a large multi-year project. The founding coalition should consider whether the cap should scale inversely with project duration — shorter caps for longer projects — or whether the absolute cap should be lower (e.g., 180 days regardless of project length).
+**Key finding for large projects:** The 365-day cap produces a meaningful savings opportunity (~1.5M Flow) on a large multi-year project. The founding coalition should consider whether the cap should scale inversely with project duration — shorter caps for longer projects — or whether the absolute cap should be lower (e.g., 180 days regardless of project length).
 
-**Project C: 1-year community housing (LC-essential), 1M EC escrowed**
+**Project C: 1-year community housing (Essential Access-essential), 1M Flow escrowed**
 
 | Cap length | Max demurrage avoided | As % of total exposure (1yr, 5%) |
 | :--- | :--- | :--- |
-| 90 days | ~12,300 EC | 24.7% |
-| 180 days | ~24,700 EC | 49.4% |
-| 365 days | ~50,000 EC | 100% — entire demurrage eliminated on a 1-year project |
+| 90 days | ~12,300 Flow | 24.7% |
+| 180 days | ~24,700 Flow | 49.4% |
+| 365 days | ~50,000 Flow | 100% — entire demurrage eliminated on a 1-year project |
 
-**Key finding for short LC-essential projects:** A 365-day cap on a 1-year project is effectively unlimited. For LC-essential programmes, the cap should be set relative to total project duration through **FC-174** (reserved; recommended anchor: 25% of contracted project duration), regardless of the absolute day limit. This prevents the "1-year project, 365-day cap" outcome above.
+**Key finding for short Essential Access-essential projects:** A 365-day cap on a 1-year project is effectively unlimited. For Essential Access-essential programmes, the cap should be set relative to total project duration through **FC-174** (reserved; recommended anchor: 25% of contracted project duration), regardless of the absolute day limit. This prevents the "1-year project, 365-day cap" outcome above.
 
 ### 3.3 — Qualifying Events
 
@@ -262,7 +262,7 @@ The following is published as part of the contract-commitment architecture's pub
 
 | Metric | Publication format | Frequency |
 | :--- | :--- | :--- |
-| Number of active escrow accounts by programme type | Aggregate count; EC value by tier | Quarterly |
+| Number of active escrow accounts by programme type | Aggregate count; Flow value by tier | Quarterly |
 | Number of deployment window reviews triggered | Count; outcomes (extension / support / escalation) | Quarterly |
 | Number of force majeure freeze applications by project; approvals, denials, total days frozen | Per-project summary | Quarterly |
 | Inspector pool size, sector composition summary, disqualifications | Pool health report | Quarterly |
@@ -277,17 +277,17 @@ Publication of force majeure applications and outcomes converts the certificatio
 
 To complete this annex before deployment, the founding coalition must:
 
-1. **Determine the actual EC demurrage rate** and recalibrate the deployment window examples in Section 2 accordingly. If the demurrage rate is below 3% per year, deployment windows must be shortened or a separate rate must be specified for escrowed funds to maintain adequate institutional signal strength.
+1. **Determine the actual Flow demurrage rate** and recalibrate the deployment window examples in Section 2 accordingly. If the demurrage rate is below 3% per year, deployment windows must be shortened or a separate rate must be specified for escrowed funds to maintain adequate institutional signal strength.
 
 2. **Bind FC-160 through FC-184** in Sections 1 through 4, using first-year pilot data where available. Where pilot data is not yet available, use the recommended anchors as starting positions:
-   - High-value thresholds: 100k EC / 1M EC / 15% of project value
-   - Deployment windows: 90 days (LC-essential) / 180 days (standard) / 365 days (large-scale)
-   - Force majeure cap: 365 days absolute; capped at 25% of project duration for LC-essential programmes
+   - High-value thresholds: 100k Flow / 1M Flow / 15% of project value
+   - Deployment windows: 90 days (Essential Access-essential) / 180 days (standard) / 365 days (large-scale)
+   - Force majeure cap: 365 days absolute; capped at 25% of project duration for Essential Access-essential programmes
    - Inspector pool: minimum 12 (pilot), 30 (regional), 75 per region (national); rotation per Section 4.2 anchors
 
 3. **Determine whether the force majeure cap should scale with project duration** for standard infrastructure (see Section 3.2, Project A and B). A fixed 365-day cap is more predictable; a proportional cap (e.g., 20% of contracted duration) better reflects actual project risk profiles. This choice must be made before deployment.
 
-4. **Specify the actual EC amounts and thresholds** in relation to the real price level in the pilot context. The absolute thresholds in Section 1 are illustrative only. "100,000 EC" is meaningless as a protection unless the founding coalition has established what a standard housing unit or clinic costs in EC and verified that 100,000 EC represents a significant but not exceptional milestone release.
+4. **Specify the actual Flow amounts and thresholds** in relation to the real price level in the pilot context. The absolute thresholds in Section 1 are illustrative only. "100,000 Flow" is meaningless as a protection unless the founding coalition has established what a standard housing unit or clinic costs in Flow and verified that 100,000 Flow represents a significant but not exceptional milestone release.
 
 5. **Commission the inspector pool** before the first escrow account is opened. Pool size must meet the minimum for the deployment scale; pool composition must satisfy Section 4.4 before any inspector makes any certification.
 
@@ -300,7 +300,7 @@ To complete this annex before deployment, the founding coalition must:
 | Annex | Relationship |
 | :--- | :--- |
 | Annex AK (Identity AED) | Parallel structure — both are parameter-commitment annexes for P-004-protected terms. AK governs identity error tolerances; AR governs capital-deployment tolerances. The pattern is the same: explicit numbers, public commitment, annual review. |
-| Annex AJ (Above-Ledger Bypass) | AJ defines what EC/LC boundary violations look like. P-023 forecloses the investment-channel boundary manipulation specifically; AR governs how. AJ-3.3 (anticipatory hoarding) is the upstream threat that P-023 + AR address. |
+| Annex AJ (Above-Ledger Bypass) | AJ defines what Flow/Essential Access boundary violations look like. P-023 forecloses the investment-channel boundary manipulation specifically; AR governs how. AJ-3.3 (anticipatory hoarding) is the upstream threat that P-023 + AR address. |
 | Annex AL (P-017 Oracle Independence) | Inspector pool governance (Section 4) and force majeure certification panel composition are both governed by P-017 standards. Where AR refers to "P-017 oracle-independence standards," the specific requirements are defined in AL. |
 
 ---

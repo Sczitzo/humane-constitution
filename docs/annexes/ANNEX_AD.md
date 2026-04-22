@@ -10,7 +10,7 @@ For any operational event that crosses the public visibility threshold — defin
 The 4-hour RPCP communication must follow this structure:
 - **What happened** — factual, maximum 2 sentences, no jargon.
 - **What the system did in response** — 2 sentences covering the control activated.
-- **Current access status** — 1 sentence explicitly stating whether the humane floor is protected.
+- **Current access status** — 1 sentence explicitly stating whether the survival floor is protected.
 - **What to expect next** — timeline for full post-mortem publication.
 
 The RPCP does not replace the 7-day post-mortem. It closes the narrative gap between event and accountability record. Pre-authorized publication authority for RPCP must be established before launch — the 4-hour SLA cannot accommodate approval chains. PCRP false-trigger events have a mandatory RPCP template that explicitly states the false trigger was detected, terminated, and logged as expected system behavior.
@@ -19,7 +19,7 @@ The RPCP does not replace the 7-day post-mortem. It closes the narrative gap bet
 Before public launch, the system must publish a plain-language document titled 'What Will Go Wrong and Why That Is Acceptable.' The document must explicitly acknowledge the following expected failure categories:
 - **PCRP false triggers** — will occur; detection, termination, and logging are the designed response.
 - **Oracle disputes** — will occur; conservative defaults protect access while disputes are resolved.
-- **SQ activations** — will occur during genuine scarcity; the system is designed to manage scarcity, not prevent it.
+- **Shared Storehouse activations** — will occur during genuine scarcity; the system is designed to manage scarcity, not prevent it.
 - **Enforcement errors** — will occur; partitioned wallets, due process, and post-mortems are the designed response.
 - **Measurement uncertainty** — is permanent; confidence bands and evidence classes are how the system is honest about it.
 

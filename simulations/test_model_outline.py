@@ -6,7 +6,7 @@ from simulations.model_outline import OracleNode, OracleSubsystem, ColludingOrac
 # =============================================================================
 # ORACLE CONSENSUS TESTS — addressing Sim H gap
 #
-# Prior audit (Sim H, ADVERSARIAL_AUDIT.md Phase 2) identified that the test
+# Prior adversarial review identified that the test
 # suite had zero coverage of the oracle consensus mechanism. Only single-node
 # reads were tested. These tests verify:
 #   1. Normal multi-node consensus (median of valid readings)
@@ -42,7 +42,7 @@ class TestOracleConsensus:
             MagicMock(read_capacity=lambda tc: 105.0, methodology_class="PHYSICAL",       is_active=True),
         ]
         subsystem = self._make_subsystem_with_nodes(nodes)
-        result = subsystem.get_consensus_capacity(100.0, consensus_type="LC")
+        result = subsystem.get_consensus_capacity(100.0, consensus_type="Essential Access")
         assert result == pytest.approx(100.0)
 
     def test_n3_two_colluding_nodes_forge_quorum(self):
@@ -73,7 +73,7 @@ class TestOracleConsensus:
         # Disable diversity check for this N=3 legacy test
         subsystem.min_methodology_classes = 1
 
-        result = subsystem.get_consensus_capacity(true_capacity, consensus_type="LC")
+        result = subsystem.get_consensus_capacity(true_capacity, consensus_type="Essential Access")
 
         # The inflated value IS accepted at N=3 — this is the documented failure
         assert result == pytest.approx(fabricated_capacity), (
@@ -105,7 +105,7 @@ class TestOracleConsensus:
         subsystem = self._make_subsystem_with_nodes(nodes_n5)
         subsystem.min_methodology_classes = 1  # isolate BFT test from diversity check
 
-        result = subsystem.get_consensus_capacity(true_capacity, consensus_type="LC")
+        result = subsystem.get_consensus_capacity(true_capacity, consensus_type="Essential Access")
 
         # Honest majority prevails — collusion defeated
         assert result == pytest.approx(true_capacity), (
@@ -130,7 +130,7 @@ class TestOracleConsensus:
         subsystem = self._make_subsystem_with_nodes(nodes)
         subsystem.min_methodology_classes = 1
 
-        result = subsystem.get_consensus_capacity(100.0, consensus_type="LC")
+        result = subsystem.get_consensus_capacity(100.0, consensus_type="Essential Access")
 
         assert result is None, "Quorum failure must return None (conservative hold)."
         assert len(subsystem.failure_log) == 1
@@ -155,7 +155,7 @@ class TestOracleConsensus:
         subsystem = self._make_subsystem_with_nodes(nodes)
         # min_methodology_classes = 3 (default)
 
-        result = subsystem.get_consensus_capacity(100.0, consensus_type="LC")
+        result = subsystem.get_consensus_capacity(100.0, consensus_type="Essential Access")
 
         assert result is None, (
             "Single-class quorum must trigger methodology diversity failure → conservative hold."
@@ -166,11 +166,11 @@ class TestOracleConsensus:
 
     def test_sq_supermajority_quorum_requires_higher_threshold(self):
         """
-        SQ activation requires supermajority: ⌈2N/3⌉.
-        At N=5: SQ quorum = ⌈10/3⌉ = 4. LC quorum = 3.
+        Shared Storehouse activation requires supermajority: ⌈2N/3⌉.
+        At N=5: Shared Storehouse quorum = ⌈10/3⌉ = 4. Essential Access quorum = 3.
 
-        With 3 active nodes, LC consensus succeeds but SQ consensus fails.
-        This verifies that SQ activation has a higher quorum bar than LC consensus.
+        With 3 active nodes, Essential Access consensus succeeds but Shared Storehouse consensus fails.
+        This verifies that Shared Storehouse activation has a higher quorum bar than Essential Access consensus.
         """
         nodes = [
             MagicMock(read_capacity=lambda tc: 100.0, methodology_class="INSTITUTIONAL", is_active=True),
@@ -182,11 +182,11 @@ class TestOracleConsensus:
         subsystem = self._make_subsystem_with_nodes(nodes)
         subsystem.min_methodology_classes = 1  # isolate quorum threshold test
 
-        lc_result = subsystem.get_consensus_capacity(100.0, consensus_type="LC")
-        sq_result = subsystem.get_consensus_capacity(100.0, consensus_type="SQ")
+        lc_result = subsystem.get_consensus_capacity(100.0, consensus_type="Essential Access")
+        sq_result = subsystem.get_consensus_capacity(100.0, consensus_type="Shared Storehouse")
 
-        assert lc_result == pytest.approx(100.0), "LC quorum (3/5) should succeed."
-        assert sq_result is None, "SQ quorum (4/5) should fail with only 3 active nodes."
+        assert lc_result == pytest.approx(100.0), "Essential Access quorum (3/5) should succeed."
+        assert sq_result is None, "Shared Storehouse quorum (4/5) should fail with only 3 active nodes."
 
 
 # =============================================================================

@@ -14,7 +14,7 @@ Every change proposal must declare its class before deliberation begins. Misclas
 *Every proposal must publish five attachments at filing: plain-language summary, redline text, invariant impact statement, fiscal / capacity note, and privacy / surveillance note.*
 
 ### H2. Proposal thresholds, notice windows, and ratification math
-For avoidance of doubt, any DW-based tally in this annex uses the quarterly cap, category-balance rule, and diminishing-returns curve already adopted elsewhere in this Protocol. No rollover, hidden weighting, or paid delegation is permitted.
+For avoidance of doubt, any Voice-based tally in this annex uses the quarterly cap, category-balance rule, and diminishing-returns curve already adopted elsewhere in this Protocol. No rollover, hidden weighting, or paid delegation is permitted.
 
 #### H2.1 Class H-0 - clerical correction
 - **Who may file:** any authorized drafting office or oversight body.
@@ -26,20 +26,20 @@ For avoidance of doubt, any DW-based tally in this annex uses the quarterly cap,
 #### H2.2 Class H-1 - Tier 3 operational parameter change
 - **Who may file:** the relevant article or instrument authority, the Operations / Oversight body, or a public petition equal to at least 1% of active persons nationally or 3% in the directly affected region.
 - **Public notice window:** 30 days, including at least one public simulation or worked example showing expected effects.
-- **Passage rule:** both (a) at least 60% of valid weighted DW cast in the quarterly decision cycle and (b) support from a simple majority of participating regions. Any H-1 change touching DW or CR rules, verification, caps, half-life, proxy rules, tally math, challenge rights, or amendment-repair mechanics also requires a concurrent legitimacy check showing majority support in a stratified one-person-one-vote sample or equivalent low-burden referendum instrument; material divergence between the DW result and the legitimacy check triggers mandatory CRP review before certification.
+- **Passage rule:** both (a) at least 60% of valid weighted Voice cast in the quarterly decision cycle and (b) support from a simple majority of participating regions. Any H-1 change touching Voice or Service Record rules, verification, caps, half-life, proxy rules, tally math, challenge rights, or amendment-repair mechanics also requires a concurrent legitimacy check showing majority support in a stratified one-person-one-vote sample or equivalent low-burden referendum instrument; material divergence between the Voice result and the legitimacy check triggers mandatory CRP review before certification.
 - **Legality gate:** the Constitutional Review Panel must certify that the proposal stays within pre-authorized Tier 3 bounds and does not alter Tier 1 or Tier 2 by implication.
 - **Effective date:** no sooner than 14 days after certification and publication.
 
 #### H2.3 Class H-2 - Tier 2 charter / statutory amendment
 - **Who may file:** a two-thirds vote of the relevant deliberative body, a joint filing by at least one-third of regions, or a public petition equal to at least 3% of active persons nationally.
 - **Public notice window:** 90 days minimum, including two comment rounds separated by at least 30 days, a plain-language debate brief, and a public adverse-case analysis.
-- **Placement rule:** before public ratification, the proposal must first receive at least two-thirds of valid weighted DW cast in a quarterly decision cycle, alongside any additional legitimacy checks required elsewhere in this Protocol when the matter touches survival-adjacent systems.
+- **Placement rule:** before public ratification, the proposal must first receive at least two-thirds of valid weighted Voice cast in a quarterly decision cycle, alongside any additional legitimacy checks required elsewhere in this Protocol when the matter touches survival-adjacent systems.
 - **Ratification rule:** after placement, the amendment passes only if it also receives (a) at least 60% approval in a one-person-one-vote national referendum and (b) majority approval in at least three-fifths of regions.
 - **Effective date:** 30 days after certification unless the text itself specifies a later date or staged implementation schedule.
 
 #### H2.4 Class H-3 - Tier 1 invariant amendment (Refounding Convention only)
 - **Ordinary amendment is unavailable.** No regular quarterly cycle, agency rule, treaty, or procurement process may amend Tier 1 invariants.
-- **Convention call threshold:** either (a) a 70% approval vote in a one-person-one-vote national referendum and majority approval in at least three-quarters of regions, or (b) a two-stage path of 80% valid weighted DW to place the question plus the same referendum threshold.
+- **Convention call threshold:** either (a) a 70% approval vote in a one-person-one-vote national referendum and majority approval in at least three-quarters of regions, or (b) a two-stage path of 80% valid weighted Voice to place the question plus the same referendum threshold.
 - **Notice window before convention ratification vote:** 180 days minimum with full publication of draft text, dissent reports, simulations, and rights-impact analysis.
 - **Ratification rule:** passage requires both (a) at least 80% approval in a one-person-one-vote national referendum and (b) majority approval in at least four-fifths of regions, repeated in two successive quarterly public votes separated by at least one full quarter.
 - **Cooling-off rule:** no Tier 1 amendment may take effect sooner than 90 days after final certification.
@@ -55,9 +55,9 @@ Standing must be broad where constitutional drift is the risk. The inability to 
 ### H4. Mandatory judicial review triggers
 The following changes require pre-clearance review even if no petition is filed. A rule subject to mandatory review may not take effect until the review certificate is published.
 - Any proposal that changes rule classification, amendment thresholds, emergency powers, judicial standing, review timelines, or appeal rights.
-- Any proposal that changes the essential basket, the definition of baseline shelter or care, or a parameter expected to reduce LC-covered access by more than 5% for any protected group or region in normal conditions.
-- Any proposal that introduces a new path of convertibility, collateralization, leasing, or external settlement between EC, LC, DW, CR, SQ, or foreign instruments.
-- Any proposal that changes DW earning rules, CR service thresholds, the cap, the half-life, proxy rules, category balancing, or weighted tally math.
+- Any proposal that changes the essential basket, the definition of baseline shelter or care, or a parameter expected to reduce Essential Access-covered access by more than 5% for any protected group or region in normal conditions.
+- Any proposal that introduces a new path of convertibility, collateralization, leasing, or external settlement between Flow, Essential Access, Voice, Service Record, Shared Storehouse, or foreign instruments.
+- Any proposal that changes Voice earning rules, Service Record service thresholds, the cap, the half-life, proxy rules, category balancing, or weighted tally math.
 - Any proposal that expands individual-level data exposure, weakens dashboard privacy classes, introduces new surveillance authorities, or materially alters small-cell suppression / delay rules.
 - Any treaty, procurement agreement, code release, model update, or standards adoption that could alter Tier 1 or Tier 2 rules by implication rather than explicit text.
 
@@ -88,7 +88,7 @@ Emergency response may preserve continuity, but it may not silently rewrite the 
 
 ### H8. Bright-line prohibitions
 - No amendment may create a direct or indirect social score that gates essentials, mobility, rights, or dignity.
-- No amendment may merge EC, LC, the civic layer, and SQ into a single balance or permit ordinary convertibility among them.
+- No amendment may merge Flow, Essential Access, the civic layer, and Shared Storehouse into a single balance or permit ordinary convertibility among them.
 - No amendment may hide a rights-impacting rule inside a technical release, vendor standard, or treaty appendix.
 - No amendment may reduce due-process minima, standing, or appeal access for the very people most exposed to system power.
 - No amendment may take effect while the public redline, plain-language summary, and review certificate are missing or materially incomplete.

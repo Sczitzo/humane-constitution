@@ -19,11 +19,11 @@
 ### L3. Capture resistance and self-protection
 - **Any single CRP member**, the Ombuds Office, one-third of a deliberative minority bloc, or a qualifying public petition may trigger temporary stay and full-chamber review for suspected misclassification or disguised convertibility.
 - **Tier-sensitive determinations** require a supermajority of the full CRP plus a published opinion.
-- **Any CRP decision** weakening privacy, LC continuity, or instrument separation automatically triggers external review by a rotating regional chamber panel.
+- **Any CRP decision** weakening privacy, Essential Access continuity, or instrument separation automatically triggers external review by a rotating regional chamber panel.
 - **CRP opinions, dissents**, conflicts, and evidence packets are public except for protected personal data.
 
 ### L4. Standards of review
-- **Strict review** applies to Tier 1 invariants, personhood/identity continuity, LC narrowing, convertibility risk, surveillance expansion, and civic-rights restrictions.
+- **Strict review** applies to Tier 1 invariants, personhood/identity continuity, Essential Access narrowing, convertibility risk, surveillance expansion, and civic-rights restrictions.
 - **Heightened review** applies to Tier 2 changes affecting housing, migration, public finance, oracle thresholds, or major vendor/pricing rules.
 - **Ordinary reasonableness review** applies to Tier 3 operational adjustments that do not materially burden rights or cross article/instrument boundaries.
 - **Where uncertainty is high**, the burden remains on the authority that seeks to narrow access, expand data exposure, or create new coercive discretion.

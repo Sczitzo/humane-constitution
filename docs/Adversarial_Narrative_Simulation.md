@@ -4,8 +4,6 @@
 
 This document does not rebut the attacks rhetorically. It maps them — their mechanics, their audiences, and the design features that preempt or constrain them. Effective response begins with accurate diagnosis.
 
-> **Nomenclature note (2026-04-18):** this file was authored under the v12 twelve-pillar naming scheme (references to "Pillar 9", "Pillar 11", "twelve pillars", etc.). The operational architecture was restructured into **Seven Pillars on a P0 subsidiarity foundation** (v13) by Proposal 2. Inline v12 references are preserved as authored — the attack narratives (e.g. N-008 "This is too complex to ever work") are historically accurate to the state at time of writing, and the v12 → v13 crosswalk in `Humane_Constitution.md` §III maps all legacy pillar numbers to their v13 locations (e.g. v12 Pillar 11 → v13 Pillar 7; v12 Pillar 9 → v13 Pillar 6).
-
 ---
 
 ## How to read this document
@@ -22,7 +20,7 @@ Each scenario includes:
 
 ## N-001 | "This is communism"
 
-**The attack:** The protocol replaces free markets with state control of resources, housing, and economic life. The Life Access Ledger is a ration book. The civic layer is political scoring. This is central planning dressed up in technical language.
+**The attack:** The protocol replaces free markets with state control of resources, housing, and economic life. The Essential Access is a ration book. The civic layer is political scoring. This is central planning dressed up in technical language.
 
 **Emotional hook:** Loss of economic freedom; historical memory of command economies; distrust of technocratic governance.
 
@@ -31,9 +29,9 @@ Each scenario includes:
 **Grain of truth:** The protocol does constrain what money can buy, caps civic accumulation, and establishes a state-maintained baseline. These are real departures from pure market liberalism.
 
 **Structural response:**
-- EC still runs markets, pricing, wages, contracts, investment, and enterprise. The protocol does not set prices or plan production.
-- LC is a floor, not a ceiling. It does not cap earning, saving, or consumption above the baseline.
-- DW/CR operate on civic agenda-setting only — they do not affect market participation.
+- Flow still runs markets, pricing, wages, contracts, investment, and enterprise. The protocol does not set prices or plan production.
+- Essential Access is a floor, not a ceiling. It does not cap earning, saving, or consumption above the baseline.
+- Voice and Service Record operate on civic agenda-setting only — they do not affect market participation.
 - The design explicitly names "command economy" as what this system is not, with mechanism-level explanation.
 
 **Residual risk:** The framing is emotionally sticky regardless of accuracy. Repeated technical rebuttals may not penetrate. Pre-commitment to the specific constraints — published before launch — is the primary defence.
@@ -48,11 +46,11 @@ Each scenario includes:
 
 **Target audience:** Civil libertarians; privacy advocates; anyone alarmed by platform-based reputation systems.
 
-**Grain of truth:** The protocol does maintain a Civic Record and uses it for agenda-setting eligibility. Contributions are tracked and verified.
+**Grain of truth:** The protocol does maintain a Service Record and uses it for agenda-setting eligibility. Contributions are tracked and verified.
 
 **Structural response:**
-- DW/CR cannot buy goods, services, survival access, or rights. It affects only bounded civic participation.
-- LC access is unconditional — it explicitly cannot be revoked based on civic standing.
+- Voice and Service Record cannot buy goods, services, survival access, or rights. It affects only bounded civic participation.
+- Essential Access access is unconditional — it explicitly cannot be revoked based on civic standing.
 - Human worth is never measured. The protocol states this as an invariant.
 - Contribution tracking is opt-in for stewardship categories and uses minimum necessary data.
 - The separation of the civic layer from the survival layer is the system's load-bearing wall against this exact failure mode.
@@ -69,13 +67,13 @@ Each scenario includes:
 
 **Target audience:** Anyone with historical memory of politically engineered famine; food sovereignty advocates; rural and agricultural communities; working-class audiences with food insecurity experience.
 
-**Grain of truth:** Centralised delivery systems create single points of failure. If the LC system is captured, the consequences for people dependent on it are severe.
+**Grain of truth:** Centralised delivery systems create single points of failure. If the Essential Access system is captured, the consequences for people dependent on it are severe.
 
 **Structural response:**
 - The protocol explicitly names PCRP (emergency process capture) as a threat and mandates public post-mortems within 7 days of any activation.
-- SQ (scarcity rationing) is time-limited, publicly logged, and cannot become permanent.
-- Polycentric measurement (RCS) is designed to prevent any single node from controlling the data that drives LC delivery.
-- Constitutional invariants lock LC as a right — ordinary legislation cannot remove it.
+- Shared Storehouse (scarcity rationing) is time-limited, publicly logged, and cannot become permanent.
+- Polycentric measurement (RCS) is designed to prevent any single node from controlling the data that drives Essential Access delivery.
+- Constitutional invariants lock Essential Access as a right — ordinary legislation cannot remove it.
 - Enforcement errors have partitioned wallet protections: access continues during dispute.
 
 **Residual risk:** Capture of the system at a sufficiently high level — founding coalition, constitutional amendment, or sustained institutional erosion — could override these protections. The design acknowledges this is the residual risk that pilot evidence must address before scale.
@@ -93,8 +91,8 @@ Each scenario includes:
 **Grain of truth:** Unconditional floors do change incentive structures at the margin. Some people will reduce market labour. This is a real, empirically documented effect.
 
 **Structural response:**
-- The LC basket is a floor, not a comfortable life. EC still controls quality beyond the baseline — housing size, food variety, travel, consumer goods, savings, investment. Market incentives for improvement remain intact.
-- The contribution system (Pillar 8) recognises and records stewardship, care work, and informal contribution — broadening the definition of productive participation.
+- The Essential Access basket is a floor, not a comfortable life. Flow still controls quality beyond the baseline — housing size, food variety, travel, consumer goods, savings, investment. Market incentives for improvement remain intact.
+- The contribution system recognises and records stewardship, care work, and informal contribution — broadening the definition of productive participation.
 - Real-world evidence from unconditional cash transfer programmes and pilot UBI experiments shows labour supply effects are modest and concentrated in caregiving and education, not general withdrawal.
 
 **Residual risk:** The incentive concern is legitimate at scale and in specific sectors. The design does not eliminate it — it claims the trade-off is acceptable. This claim needs pilot evidence to be credible.
@@ -112,9 +110,9 @@ Each scenario includes:
 **Grain of truth:** This is a genuine and significant design challenge. The protocol acknowledges that basket definition is a measurement and governance problem, not a solved one.
 
 **Structural response:**
-- Basket definition operates through the Resource and Capacity System (Pillar 3), which uses polycentric measurement — multiple independent input streams, not a single authority.
-- Civic deliberation (Pillar 9) provides the priority-setting mechanism for basket composition, with rotation and anti-capture weighting.
-- Published confidence bands and real-time dashboards (Pillar 11) make basket adequacy visible and contestable.
+- Basket definition operates through Article III capacity measurement, which uses polycentric measurement — multiple independent input streams, not a single authority.
+- Article VI deliberation provides the priority-setting mechanism for basket composition, with rotation and anti-capture weighting.
+- Published confidence bands and Article VII dashboards make basket adequacy visible and contestable.
 - Constitutional invariants set the floor below which definition cannot fall — dignity and basic physical sufficiency are locked.
 
 **Residual risk:** Polycentric measurement reduces but does not eliminate definition capture. This is explicitly flagged as requiring ongoing vigilance and is addressed in the oracle independence patch (T-012).
@@ -142,7 +140,7 @@ Each scenario includes:
 
 ## N-007 | "The rich will just route around it"
 
-**The attack:** Wealthy actors will find ways to convert EC to LC influence, buy political cover, or exit the system entirely. The walls between instruments will be arbitraged away within a decade. The design is naïve about power.
+**The attack:** Wealthy actors will find ways to convert Flow to Essential Access influence, buy political cover, or exit the system entirely. The walls between instruments will be arbitraged away within a decade. The design is naïve about power.
 
 **Emotional hook:** Cynicism; historically accurate pattern (regulatory capture, shadow banking, offshore evasion); distrust of systems that claim to constrain wealth.
 
@@ -154,7 +152,7 @@ Each scenario includes:
 - Non-convertibility is enforced at the technical level (wallet partitioning), not just the legal level.
 - Shadow convertibility is explicitly modelled in T-001 with active monitoring patches.
 - The civic layer's decay and cap mechanisms limit the accumulation of civic power regardless of wealth.
-- Governance anti-capture weighting (Pillar 9) is specifically designed to counteract well-resourced lobbying.
+- Governance anti-capture weighting in Article VI is specifically designed to counteract well-resourced lobbying.
 
 **Residual risk:** At sufficient wealth and time, sophisticated actors will find new routes. The design's claim is not that this is impossible but that the cost and visibility of circumvention are high enough to be detectable and correctable. Pilot evidence at scale is required to validate this claim.
 
@@ -162,7 +160,7 @@ Each scenario includes:
 
 ## N-008 | "This is too complex to ever work"
 
-**The attack:** The system has seven pillars plus a foundation layer, seventeen threats, fourteen patches, multiple instruments, and a 111-page master document. Real governance is simple. This is academic complexity cosplaying as a solution.
+**The attack:** The system has a Founding Order, seven Articles, dozens of threat and patch records, multiple instruments, and a large constitutional corpus. Real governance is simple. This is academic complexity cosplaying as a solution.
 
 **Emotional hook:** Legitimate preference for simplicity; reasonable suspicion of over-engineered solutions; fatigue with systems that produce more documentation than outcomes.
 
@@ -184,7 +182,7 @@ Each scenario includes:
 
 | ID | Attack | Core hook | Primary structural defence | Honest residual |
 |---|---|---|---|---|
-| N-001 | "This is communism" | Freedom loss | EC market independence | Framing is sticky regardless of accuracy |
+| N-001 | "This is communism" | Freedom loss | Flow market independence | Framing is sticky regardless of accuracy |
 | N-002 | "Social credit system" | Surveillance fear | Instrument separation | Requires audience to understand the walls |
 | N-003 | "Government controls your food" | Control weaponisation | Constitutional invariants + PCRP limits | High-level capture remains a risk |
 | N-004 | "Destroys incentives" | Fairness intuition | Floor vs. ceiling; contribution system | Real at margin; needs pilot data |
@@ -209,9 +207,9 @@ Each scenario includes:
 
 **Structural response:**
 - The Tier 1 invariants (survival floor, due process, non-coercion) are not policy choices subject to electoral reversal — they are constitutional rights. Constitutions routinely entrench rights against democratic majorities; this is the same architecture.
-- The incoming government retains full authority to govern within the protocol — to set the EC policy agenda, to contest basket definitions through civic deliberation, to propose Tier 3 changes through the normal amendment process. The protocol does not prevent democratic governance; it prevents one category of action: removing the survival floor without constitutional process.
+- The incoming government retains full authority to govern within the protocol — to set the Flow policy agenda, to contest basket definitions through civic deliberation, to propose Tier 3 changes through the normal amendment process. The protocol does not prevent democratic governance; it prevents one category of action: removing the survival floor without constitutional process.
 - P-018 (Electoral Cycle Resilience, Annex AM) provides for a 180-day transition audit and transition continuity protocol — specifically designed to demonstrate that a new government's mandate is accommodated, not blocked.
-- The self-executing LC floor minimum (70% of founding basket) is the designed response: it does not require the incoming government to fund it affirmatively; it continues unless actively repealed via the full Tier 1 amendment process — which requires a supermajority plus independent constitutional body ratification.
+- The self-executing Essential Access floor minimum (70% of founding basket) is the designed response: it does not require the incoming government to fund it affirmatively; it continues unless actively repealed via the full Tier 1 amendment process — which requires a supermajority plus independent constitutional body ratification.
 
 **Residual risk:** The argument that survival rights should be constitutionally entrenched is accepted in theory by most democratic traditions. The challenge is whether this specific protocol's founding coalition is perceived as legitimate enough to have made that constitutional entrenchment. If the founding is perceived as captured, the constitutional entrenchment reads as the founders locking in their preferences. This is the T-022 / N-006 compound: founding legitimacy and electoral resilience are not separable.
 
@@ -235,7 +233,7 @@ Each scenario includes:
 - The post-activation audit can suspend P-013 if it finds compromise. If the founding was corrupt, the system provides a defined path to re-run the founding under the now-operative P-013 standards.
 - The Annual Compound Simulation and Threat Register are public. If the founding was corrupt in ways that produced detectable design biases, those biases are visible to independent reviewers.
 
-**Residual risk:** This narrative attack cannot be fully pre-empted by design. It can only be addressed by the quality of the founding itself and by the accumulation of operational evidence over time. A system that functions as advertised — that actually delivers the LC floor, actually maintains the instrument separations, actually publishes post-mortems — builds credibility that no founding document can substitute for. The ultimate response to N-010 is not argument; it is years of verifiable operation.
+**Residual risk:** This narrative attack cannot be fully pre-empted by design. It can only be addressed by the quality of the founding itself and by the accumulation of operational evidence over time. A system that functions as advertised — that actually delivers the Essential Access floor, actually maintains the instrument separations, actually publishes post-mortems — builds credibility that no founding document can substitute for. The ultimate response to N-010 is not argument; it is years of verifiable operation.
 
 **Counter-narrative:** "The founding documentation is public. The objections raised were published and answered. The post-activation audit found no compromise. If you believe the founding was corrupt, here is exactly what you would need to show and here is the process for challenging it."
 

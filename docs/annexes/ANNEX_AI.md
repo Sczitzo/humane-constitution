@@ -148,7 +148,7 @@ The Plenum is automatically convened (72-hour emergency session) when any of the
 - A drift-chain divergence alert under `/architecture/drift_chain.md` that is not resolved within 72 hours.
 - A CSM cluster-failure report exceeding FC-071 (3 per 10,000 per 30 days).
 - An FC-010 systemic-leakage threshold breach (7% / annum).
-- A P-022 SQ-oracle-failure event exceeding 72 hours without restoration.
+- A P-022 Shared Storehouse-oracle-failure event exceeding 72 hours without restoration.
 - A formal concentration-complaint filed by any advocacy organisation or by any sub-Ombuds regarding another sub-Ombuds.
 
 Emergency sessions operate under the same FC-091 threshold. If fewer than four sub-Ombuds can attend within the 72-hour window, the Plenum operates under the reduced-Plenum unanimous rule (§2.3) for the matter.
@@ -199,11 +199,11 @@ Each sub-Ombuds holds restricted Threat Register access within its jurisdictiona
 
 The Plenum certifies each cohort's adversarial oracle seat (FC-033 = 1 per cohort) and recertifies at every methodology-class rotation.
 
-### 4.7 SQ Oracle-Failure Arbitration (Proposal 6 / Annex AQ §3)
+### 4.7 Shared Storehouse Oracle-Failure Arbitration (Proposal 6 / Annex AQ §3)
 
 *Protocol-level seating; operational decisions within the arbitration panel.*
 
-One sub-Ombuds rotates into the 3-member arbitration panel convened within 72 hours of an SQ oracle-quorum-loss event (Annex AQ §3.1). Seat assignment is by Plenum vote (§3.2 item 3). The seated sub-Ombuds acts on the panel under the panel's own rules; dissents are published.
+One sub-Ombuds rotates into the 3-member arbitration panel convened within 72 hours of an Shared Storehouse oracle-quorum-loss event (Annex AQ §3.1). Seat assignment is by Plenum vote (§3.2 item 3). The seated sub-Ombuds acts on the panel under the panel's own rules; dissents are published.
 
 ### 4.8 Enforcement Panel Appeals (Proposal 7 / Annex AJ §4.4)
 
@@ -330,7 +330,7 @@ To constitute the Federated Ombuds before deployment, the founding coalition mus
 | Annex AK (Identity AED) | Federation monitors AED and receives exclusion reports (§4.4) |
 | Annex AL (Methodology-Class) | Federation certifies adversarial oracle seats (§3.2 item 2; §4.6) |
 | Annex AO (Register Disclosure) | Sub-Ombuds hold restricted register access; Plenum conducts annual attestation (§4.5) |
-| Annex AQ (SQ Oracle-Failure Fallback) | Federation seats one sub-Ombuds on the arbitration panel (§3.2 item 3; §4.7) |
+| Annex AQ (Shared Storehouse Oracle-Failure Fallback) | Federation seats one sub-Ombuds on the arbitration panel (§3.2 item 3; §4.7) |
 | Annex AS (Attestation-at-Risk Stake) | Federation adjudicates false-claim findings (§3.2 item 5; §4.9) |
 | Annex AH/AH2 (Founding Window) | Federation contributes one staff member to the P-014 panel by lot (§4.10) |
 | Annex AR (Contract-Commitment Architecture) | Federation issues public notices when Annex AR deployment-window reviews are triggered (§4.11) |

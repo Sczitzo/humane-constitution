@@ -2,13 +2,13 @@
 
 **Status:** Tier 1 (Constitutional). Amendment requires H-3 refounding authority only.
 **Referenced by:** `Humane_Constitution.md` §0, Article IV, and §VIII.
-**Integration:** This annex closes Proposal 10 of `Protocol_Optimization_Proposals.md`. Prior to this publication, Annex Y was declared as authoritative but absent — an undefined constitutional floor.
+**Integration:** This annex defines the Constitutional Survival Minimum and removes ambiguity around the constitutional floor.
 
 ---
 
 ## Y0. Purpose and Scope
 
-The Constitutional Survival Minimum (CSM) is the hard lower bound on life-access guaranteed to every personhood-verified resident. The broader LC essential basket (`Humane_Constitution.md` §VIII) may vary in response to capacity, policy, and period-specific choices. The CSM does not. It is the floor below which LC cannot be narrowed by any ordinary process, governance actor, emergency order, or technical update.
+The Constitutional Survival Minimum (CSM) is the hard lower bound on life-access guaranteed to every personhood-verified resident. The broader Essential Access essential basket (`Humane_Constitution.md` §VIII) may vary in response to capacity, policy, and period-specific choices. The CSM does not. It is the floor below which Essential Access cannot be narrowed by any ordinary process, governance actor, emergency order, or technical update.
 
 The CSM is not a generous definition of a good life. It is the narrow, defensible minimum below which survival and dignity are structurally threatened. It is set deliberately at the threshold of physical viability plus a dignity margin — not at desirable comfort.
 
@@ -62,7 +62,7 @@ The following minimums apply to every personhood-verified resident, regardless o
 ### Y1.6 Crisis mental-health stabilization
 - **Crisis access:** 24/7 crisis contact (call/text/in-person) with qualified responder. Response to in-person crisis contact ≤4 hours.
 - **Stabilization scope:** suicide and self-harm crisis response; acute psychosis stabilization; acute trauma response; dignity-preserving de-escalation; assisted access to continuing care.
-- **Coercion prohibition:** mental-health stabilization services may never be used to gate LC, civic standing, residency, or personhood verification. Involuntary hold powers are narrowly tied to imminent self-harm or harm-to-others and subject to Article I due-process review within 72 hours.
+- **Coercion prohibition:** mental-health stabilization services may never be used to gate Essential Access, civic standing, residency, or personhood verification. Involuntary hold powers are narrowly tied to imminent self-harm or harm-to-others and subject to Article I due-process review within 72 hours.
 
 ### Y1.7 Essential medicines continuity
 - **Scope:** WHO Model List of Essential Medicines, current edition, as floor. Additional medicines added by regional published formulary cannot be removed without substitution equivalence.
@@ -75,10 +75,10 @@ The following minimums apply to every personhood-verified resident, regardless o
 CSM issuance is not a governance decision. It is a mechanical function of personhood verification.
 
 - **Trigger:** valid personhood commitment under Article II, including provisional personhood states.
-- **Mechanism:** ledger-layer automatic LC tranche issuance against CSM basket per 72-hour rolling window. Governance actors — including the Constitutional Review Panel, Regional Executive Body, Federated Ombuds, and any emergency authority — are architecturally *unable* to halt CSM issuance for any verified personhood.
+- **Mechanism:** ledger-layer automatic Essential Access tranche issuance against CSM basket per 72-hour rolling window. Governance actors — including the Constitutional Review Panel, Regional Executive Body, Federated Ombuds, and any emergency authority — are architecturally *unable* to halt CSM issuance for any verified personhood.
 - **Identity uncertainty does not halt CSM.** Provisional personhood receives the humane-floor subset of the CSM basket while verification is in progress.
 - **Scarcity does not halt CSM.** During Scarcity L2/L3, the CSM is preserved by invoking the substitution rules in §Y3. Capacity below CSM × population is a declared System Failure triggering §Y4.
-- **Sanction does not halt CSM.** No judicial, regulatory, criminal, or contractual process may produce withdrawal of CSM access. Enforcement acts on EC, DW, CR, liberty (per due process), or civic privileges — never on CSM.
+- **Sanction does not halt CSM.** No judicial, regulatory, criminal, or contractual process may produce withdrawal of CSM access. Enforcement acts on Flow, Voice, Service Record, liberty (per due process), or civic privileges — never on CSM.
 - **Administrative error does not halt CSM.** Any system action that reduces CSM below §Y1 minimums to any personhood-verified resident is, by definition, a Critical Incident (§Y4) regardless of intent.
 
 ## Y3. Scarcity Substitution Protocol
@@ -120,7 +120,7 @@ Example — the broader basket may include "basic clothing" or "basic local tran
 
 - **Article II (Identity):** CSM applies to provisional personhood, full personhood, and civic-activated personhood alike. Identity uncertainty reduces civic powers, not CSM access.
 - **Article III (Capacity):** the RCS publishes CSM × population estimates continuously. Any projected shortfall triggers §Y3 substitution planning immediately — not when the shortfall arrives.
-- **Article I (Rule-bound execution):** enforcement actions are architecturally prohibited from targeting CSM channels. Account partitioning in the constitutional monetary architecture ensures enforcement on EC or other channels does not touch LC/CSM.
+- **Article I (Rule-bound execution):** enforcement actions are architecturally prohibited from targeting CSM channels. Account partitioning in the constitutional monetary architecture ensures enforcement on Flow or other channels does not touch Essential Access/CSM.
 - **Article VII (Transparency):** CSM delivery rate, substitution events, and Critical Incidents are published in aggregate at the jurisdictional-cluster level. Individual-level CSM data is never published.
 - **Article III (Reserves):** resilience reserves are sized to cover CSM × population × [RESERVE_WINDOW_DAYS] (Tier 2 Founding Commitment).
 
@@ -136,9 +136,9 @@ Example — the broader basket may include "basic clothing" or "basic local tran
 
 This annex satisfies the following references in other authoritative documents:
 
-- `Humane_Constitution.md` §0: "Constitutional Survival Minimum: no ordinary process may reduce the humane floor below the explicit survival minima defined in Annex Y" — ✓ minimums specified in §Y1.
-- `Humane_Constitution.md` Article IV: "LC may never be narrowed below the Constitutional Survival Minimum defined in Annex Y" — ✓ §Y2 issuance rule.
-- `Humane_Constitution.md` Article IV LC purpose clause — ✓ §Y1 numerical floor.
+- `Humane_Constitution.md` §0: "Constitutional Survival Minimum: no ordinary process may reduce the survival floor below the explicit survival minima defined in Annex Y" — ✓ minimums specified in §Y1.
+- `Humane_Constitution.md` Article IV: "Essential Access may never be narrowed below the Constitutional Survival Minimum defined in Annex Y" — ✓ §Y2 issuance rule.
+- `Humane_Constitution.md` Article IV Essential Access purpose clause — ✓ §Y1 numerical floor.
 - `Humane_Constitution.md` §VIII baseline settings — ✓ all seven categories specified in §Y1.1 through §Y1.7.
 
 **End Annex Y.**

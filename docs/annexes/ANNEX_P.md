@@ -28,8 +28,8 @@ The Protocol adopts a layered hybrid approach rather than choosing a single iden
 ### P4. Status ladder and failure-safe defaults
 - **Humane Floor Person:** any person physically present is entitled to immediate life-preserving treatment, emergency food, emergency shelter triage, and emergency medical stabilization even before full identity resolution.
 - **Provisional Personhood:** a time-limited status granted on weaker but reviewable evidence so displaced or undocumented persons are not trapped outside the system.
-- **Core Resident Identity:** a fully activated status for ordinary LC continuity, enterprise participation, and legal standing after threshold evidence and review.
-- **Civic Activation:** DW participation and CR eligibility remain separate and later-gated, so hurried identity decisions do not immediately shift civic power.
+- **Core Resident Identity:** a fully activated status for ordinary Essential Access continuity, enterprise participation, and legal standing after threshold evidence and review.
+- **Civic Activation:** Voice participation and Service Record eligibility remain separate and later-gated, so hurried identity decisions do not immediately shift civic power.
 - **If the identity stack is uncertain**, the default is to preserve humane-floor protections while limiting higher-consequence privileges until review is completed.
 
 ### P5. Red lines

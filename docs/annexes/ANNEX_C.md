@@ -27,15 +27,15 @@ Each Threat ID must have a named Owner accountable for controls and test evidenc
 6. **Implement + verify:** deploy controls behind staged rollout; require test pass + evidence package.
 7. **Operate:** monitor continuously; patch quickly; update residual risk; close only when root causes are addressed or risk is explicitly accepted by oversight.
 
-### C-4. Cadence (Option B with quarterly DW cycles)
+### C-4. Cadence (Option B with quarterly Voice cycles)
 Quarterly cycles reduce governance noise while keeping the system responsive. Monitoring and audits remain more frequent than the decision cycle.
 
 | Frequency | Activities | Outputs |
 | :--- | :--- | :--- |
 | **Continuous** | Telemetry collection; anomaly detection; alerting; fraud/coercion flags. | Alerts; incident tickets; dashboards. |
-| **Weekly** | Operational review of anomalies; LC coercion/hoarding monitoring review; backlog grooming. | Weekly ops note; escalations; patch queue. |
+| **Weekly** | Operational review of anomalies; Essential Access coercion/hoarding monitoring review; backlog grooming. | Weekly ops note; escalations; patch queue. |
 | **Monthly** | Control health review; test flakiness review; oracle volatility sampling; threshold tuning proposals. | Control health report; tuning proposals. |
-| **Quarterly** | Full Threat Register review; re-score I/L/D; verify evidence packages; CC decision cycle execution (bounded scope). | Quarterly register sign-off; updated scores; public summary (aggregated). |
+| **Quarterly** | Full Threat Register review; re-score I/L/D; verify evidence packages; Voice and Service Record decision cycle execution (bounded scope). | Quarterly register sign-off; updated scores; public summary (aggregated). |
 | **Annually** | System-wide red-team exercise; privacy/security audit; constitutional constraint review. | Annual red-team report; audit report; constraint reaffirmation. |
 
 ### C-5. Evidence requirements (audit-ready)
@@ -46,7 +46,7 @@ Quarterly cycles reduce governance noise while keeping the system responsive. Mo
 - **Incident Records:** for any triggered alert or exploit, include timeline, root cause, and patch verification.
 
 ### C-6. Change control and emergency patching
-All material changes to LC basket, scarcity triggers, EC demurrage, DW scope, CR service eligibility rules, or identity/oracle mechanisms must use a controlled change process.
+All material changes to Essential Access basket, scarcity triggers, Flow demurrage, Voice scope, Service Record service eligibility rules, or identity/oracle mechanisms must use a controlled change process.
 1. **Change Proposal (CP)** created with: intent, affected invariants, threat impact, migration plan, and rollback plan.
 2. **Two-layer review:** (1) technical/security review, then (2) oversight review for rights/survival impacts.
 3. **Staged rollout with kill-switch:** deploy to a pilot region/segment; expand only after evidence passes.
