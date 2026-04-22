@@ -40,7 +40,7 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 | **Voice — Voice** | FC-141 target (reserved) | FC-141 upper bound (reserved) | FC-141 trigger (reserved) |
 | **Service Record — Service Record** | FC-142 target (reserved) | FC-142 upper bound (reserved) | FC-142 trigger (reserved) |
 
-**Rationale for asymmetry between tiers:** Essential Access fraud directly consumes physical supply — food, housing support, healthcare capacity. Voice and Service Record fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for Essential Access than for Voice and Service Record, recognising that Essential Access fraud has immediate physical consequence while civic layer fraud has a slower and more diffuse effect.
+**Rationale for asymmetry between tiers:** Essential Access fraud directly consumes physical supply — food, housing support, healthcare capacity. Voice and Service Record fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for Essential Access than for Voice and Service Record, recognising that Essential Access fraud has immediate physical consequence while fraud against the civic instruments has a slower and more diffuse effect.
 
 **How to measure:** Fraud rate is measured as: confirmed fraud cases (after investigation) as a percentage of total enrolled population in that tier per quarter. Suspected but unconfirmed cases are tracked separately and used for trend monitoring, not rate calculation. The measurement methodology must be independent from the identity system operators.
 

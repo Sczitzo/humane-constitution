@@ -76,7 +76,7 @@ CSM issuance is not a governance decision. It is a mechanical function of person
 
 - **Trigger:** valid personhood commitment under Article II, including provisional personhood states.
 - **Mechanism:** ledger-layer automatic Essential Access tranche issuance against CSM basket per 72-hour rolling window. Governance actors — including the Constitutional Review Panel, Regional Executive Body, Federated Ombuds, and any emergency authority — are architecturally *unable* to halt CSM issuance for any verified personhood.
-- **Identity uncertainty does not halt CSM.** Provisional personhood receives the humane-floor subset of the CSM basket while verification is in progress.
+- **Identity uncertainty does not halt CSM.** Provisional personhood receives the survival-floor subset of the CSM basket while verification is in progress.
 - **Scarcity does not halt CSM.** During Scarcity L2/L3, the CSM is preserved by invoking the substitution rules in §Y3. Capacity below CSM × population is a declared System Failure triggering §Y4.
 - **Sanction does not halt CSM.** No judicial, regulatory, criminal, or contractual process may produce withdrawal of CSM access. Enforcement acts on Flow, Voice, Service Record, liberty (per due process), or civic privileges — never on CSM.
 - **Administrative error does not halt CSM.** Any system action that reduces CSM below §Y1 minimums to any personhood-verified resident is, by definition, a Critical Incident (§Y4) regardless of intent.

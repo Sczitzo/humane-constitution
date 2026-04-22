@@ -2,7 +2,7 @@
 
 **Purpose.** This annex introduces the operative clauses produced during the second hardening cycle, covering T-005 Governance Throughput Failure (P-005), T-006 Measurement Lag and Supply Shock Behavior (P-006), and T-008 Bureaucratic Elite Formation (P-008). Where clauses in this annex conflict with earlier language, this annex governs. Clauses are PROPOSED and become operative only when formally accepted into the constitution.
 
-**Interpretive rule.** These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and humane-floor protections are unaffected by any clause in this annex.
+**Interpretive rule.** These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and survival-floor protections are unaffected by any clause in this annex.
 
 ### AC1. Governance Throughput Hardening (P-005)
 The following clauses extend Article VI, Article I, Annex L, and the emergency cascade table.

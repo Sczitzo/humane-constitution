@@ -109,7 +109,7 @@ This is not a prediction. It is a stress-test: running the system through a plau
 ---
 
 ### Month 9
-**Annual RCS calibration begins:** Full measurement cycle for basket adequacy assessment. Cross-pillar dependency mapping updated. Confidence bands have narrowed significantly from Q1 (more data, better calibration).
+**Annual RCS calibration begins:** Full measurement cycle for basket adequacy assessment. Cross-article dependency mapping updated. Confidence bands have narrowed significantly from Q1 (more data, better calibration).
 
 **Governance:** Third CRP session. First formally contested agenda item — a proposed Essential Access basket expansion (adding a mental health services component). Contested on measurement grounds (how to verify delivery). Referred for pilot study rather than immediate inclusion.
 
@@ -130,7 +130,7 @@ This is not a prediction. It is a stress-test: running the system through a plau
 - Vendor enforcement proceeds independently through the Article I enforcement branch; it does not affect Essential Access delivery to end users
 - Patch acceptance vote proceeds on schedule — no emergency provisions invoked
 
-**Finding:** Concurrent minor events do not compound into a crisis. Modular pillar design prevents cross-contamination.
+**Finding:** Concurrent minor events do not compound into a crisis. Modular constitutional design prevents cross-instrument contamination.
 
 ---
 
@@ -179,7 +179,7 @@ The following compounding failure modes were monitored but did not materialise. 
 
 ## Key findings
 
-1. **Modular design holds under concurrent minor events.** Cross-pillar contamination did not occur in any of the simulated scenarios.
+1. **Modular design holds under concurrent minor events.** Cross-instrument contamination did not occur in any of the simulated scenarios.
 
 2. **Post-mortem cadence is the operational bottleneck.** Two concurrent post-mortems plus routine governance operations would strain a small founding team. Staff capacity for transparency obligations is a real constraint.
 
@@ -254,7 +254,7 @@ Cumulative 14% top-quartile exit. Confidence interval on housing capacity has wi
 
 ### Scenario B — Civic Legibility Crisis
 
-**Purpose:** Test whether Voice and Service Record participants who are not protocol specialists can meaningfully participate in agenda-setting on a contested issue. If the answer is no, the system's civic layer is de facto technocratic regardless of its formal design. Addresses T-008 (Bureaucratic Elite Formation) and the red-team finding that complexity-legitimacy gap in the civic layer is undermodelled.
+**Purpose:** Test whether Voice and Service Record participants who are not protocol specialists can meaningfully participate in agenda-setting on a contested issue. If the answer is no, the civic instruments are de facto technocratic regardless of their formal design. Addresses T-008 (Bureaucratic Elite Formation) and the red-team finding that the complexity-legitimacy gap in Voice and Service Record is undermodelled.
 
 **Starting conditions:** Year 2 of operation. First full CRP cycle complete. Voice and Service Record enrollment is at 67% of adult population. However, active participation in agenda-setting (Voice exercise) is concentrated: the top 20% of Voice holders account for 71% of agenda-item submissions.
 
@@ -275,7 +275,7 @@ Cumulative 14% top-quartile exit. Confidence interval on housing capacity has wi
 | Quintiles 2–4 | 51% | 38% | 62% |
 | Bottom 20% | 23% | 14% | 31% |
 
-**Finding:** The civic layer produces a 61-percentage-point gap in legibility between the top and bottom quintiles. Bottom-quintile participants — who hold the lowest Voice balances and are least likely to have participated in prior CRP processes — have a 23% accurate understanding of the item on which they nominally have civic weight.
+**Finding:** Voice and Service Record produce a 61-percentage-point gap in legibility between the top and bottom quintiles. Bottom-quintile participants — who hold the lowest Voice balances and are least likely to have participated in prior CRP processes — have a 23% accurate understanding of the item on which they nominally have civic weight.
 
 This is not a design failure of the Voice and Service Record system's rules. It is a legibility failure: the agenda-setting process produces items that are not legible to the majority of the people whose Voice weight is intended to represent their civic preferences.
 
@@ -303,7 +303,7 @@ This is not a design failure of the Voice and Service Record system's rules. It 
 
 8. **The conservative default for oracle disputes is not calibrated for sustained supply constraint.** A "sustained constraint conservative bridge" protocol is required in P-006 for categories that are simultaneously genuinely supply-constrained and in oracle dispute.
 
-9. **The civic layer produces a significant legibility gap across Voice quintiles.** The P-008 diversity requirements address representation; they do not address legibility. A civic legibility standard and agenda-item translation process must be added before scale-up.
+9. **Voice and Service Record produce a significant legibility gap across Voice quintiles.** The P-008 diversity requirements address representation; they do not address legibility. A civic legibility standard and agenda-item translation process must be added before scale-up.
 
 10. **Pilot external validity requires stress-condition evidence.** Neither scenario was testable in a smooth Year 1 operation. P-019 (Pilot External Validity Gate) requires explicit documentation of conditions that could not be tested and designated substitute evidence. These two scenarios fulfill the Session 8 simulation requirement per P-019; they do not substitute for live observation of the conditions they simulate.
 

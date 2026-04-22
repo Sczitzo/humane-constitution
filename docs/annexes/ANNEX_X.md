@@ -99,7 +99,7 @@ Essential Access no longer expires as a single weekly cliff. The weekly baseline
 - **Provider reimbursement and dashboard accounting** must support daily or rolling settlement so the issuance rhythm is matched operationally rather than left as a user-side abstraction.
 
 ### Y3. Continuity protections and household management
-- A person may not lose humane-floor access merely because illness, caregiving load, temporary travel, disability disruption, or provider unavailability prevented redemption on a particular day.
+- A person may not lose survival-floor access merely because illness, caregiving load, temporary travel, disability disruption, or provider unavailability prevented redemption on a particular day.
 - **Continuity pathways** may include simple re-issuance, temporary pause-and-restart, narrow caregiver delegation, provider-side deferred redemption, or ombuds-certified restoration - whichever is least coercive and most operationally simple.
 - **Where a household pooling mechanism exists**, pooling caps apply at the household level as well as the individual level. Pooling may not recreate concentrated managerial control over large Essential Access balances through household scaling alone.
 - **Any shared household management tool** must support fast exit, dual-consent for changes where feasible, coercion alerts, and easy restoration of individual control.

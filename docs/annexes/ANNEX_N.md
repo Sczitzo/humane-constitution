@@ -8,7 +8,7 @@
 - **Manual fallback capacity** for food, shelter, identity continuity, and payment continuity during digital or institutional failure.
 - **At least provisional review institutions**, ombuds capacity, and public-interest advocates able to hear emergency claims immediately.
 - **A publishable essential-capacity baseline** with known weaknesses rather than a false claim of omniscient measurement.
-- **Public education materials** sufficient for ordinary people to understand Flow, Essential Access, the civic layer (Voice and Service Record), Shared Storehouse, rights, appeals, and basic onboarding.
+- **Public education materials** sufficient for ordinary people to understand Flow, Essential Access, Voice, Service Record, Shared Storehouse, rights, appeals, and basic onboarding.
 
 ### N2. Genesis governance (first 90 days)
 - **Days 0-30:** debt-collection standstill for essentials-linked households; continuity guarantees for food, shelter, care, transit, and emergency mental health stabilization; publication of initial basket v0; publication of initial Flow supply formula and conversion map; appointment by mixed lot of provisional CRP and provisional oracle quorum under founding-exclusion rules, external observers, and a public challenge window. The provisional CRP has zero Tier 1 authority during this window.

@@ -88,7 +88,7 @@ Emergency response may preserve continuity, but it may not silently rewrite the 
 
 ### H8. Bright-line prohibitions
 - No amendment may create a direct or indirect social score that gates essentials, mobility, rights, or dignity.
-- No amendment may merge Flow, Essential Access, the civic layer, and Shared Storehouse into a single balance or permit ordinary convertibility among them.
+- No amendment may merge Flow, Essential Access, Voice, Service Record, and Shared Storehouse into a single balance or permit ordinary convertibility among them.
 - No amendment may hide a rights-impacting rule inside a technical release, vendor standard, or treaty appendix.
 - No amendment may reduce due-process minima, standing, or appeal access for the very people most exposed to system power.
 - No amendment may take effect while the public redline, plain-language summary, and review certificate are missing or materially incomplete.

@@ -30,7 +30,7 @@
 
 ### L5. Remedy ladder
 - **Available remedies** include stay, reclassification upward, nullification, partial severance, rollback to last-known-valid rule, compensatory continuity order, and targeted institutional sanctions.
-- **No remedy may solve** an institutional error by cutting off humane-floor protections to the affected population.
+- **No remedy may solve** an institutional error by cutting off survival-floor protections to the affected population.
 - **Software, oracle, and platform releases** that alter legal effect without authorization are void upon finding and must revert immediately.
 
 ---

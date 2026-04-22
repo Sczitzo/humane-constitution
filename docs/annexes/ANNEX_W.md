@@ -9,7 +9,7 @@
 ### W2. Trafficking survivor or coercively undocumented person
 - The protocol treats document absence and inconsistent narrative as possible indicators of coercion, not automatic fraud.
 - A protected interviewer, trauma-informed review path, and sealed corroboration channel must be available so the person is not forced to prove continuity using evidence controlled by the abuser.
-- Biometrics, if used at all, remain optional accelerants rather than mandatory gates. Refusal of biometrics alone may not defeat humane-floor or provisional status.
+- Biometrics, if used at all, remain optional accelerants rather than mandatory gates. Refusal of biometrics alone may not defeat survival-floor or provisional status.
 
 ### W3. Disaster-displaced person with interrupted records
 - Emergency continuity may rely on disaster rosters, shelter logs, utility-disruption records, family-link corroboration, and cross-regional service traces until normal records recover.

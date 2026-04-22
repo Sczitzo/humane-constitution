@@ -22,7 +22,7 @@ A scarcity trigger must specify verifying authority, evidence class, threshold c
 
 ### M4. Oracle failure defaults
 - **Uncertain data** may justify conservative expansion restraint, but not silent deprivation.
-- **In dispute**, the system defaults toward continuity of humane-floor obligations and slower tightening; if conservative issuance pushes any affected essential category below 85% of published baseline for more than 7 consecutive days, provisional narrow Shared Storehouse activates for that category unless an expedited review body issues a written block with alternative continuity measures.
+- **In dispute**, the system defaults toward continuity of survival-floor obligations and slower tightening; if conservative issuance pushes any affected essential category below 85% of published baseline for more than 7 consecutive days, provisional narrow Shared Storehouse activates for that category unless an expedited review body issues a written block with alternative continuity measures.
 - **Repeated emergency scarcity** in the same category triggers mandatory root-cause review of production, logistics, staffing, and governance rather than normalized permanent emergency.
 - **Any oracle quorum** that repeatedly publishes materially false data enters supervised mode or is dissolved under the failure-state protocol.
 

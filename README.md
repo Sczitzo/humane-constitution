@@ -106,7 +106,7 @@ flowchart TD
     classDef tier3 fill:#0f3460,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
 ```
 
-**Reading the diagram:** The **Founding Order** establishes scale, consent, and exit defaults across the entire architecture. **Article I** constrains every operational article constitutionally. The instrument-level non-convertibility rules are enforced within the architecture itself rather than by a separate sovereign pillar.
+**Reading the diagram:** The **Founding Order** establishes scale, consent, and exit defaults across the entire architecture. **Article I** constrains every operational article constitutionally. The instrument-level non-convertibility rules are enforced within the architecture itself rather than by a separate sovereign body.
 
 ## Document set
 

@@ -252,7 +252,7 @@ Real-time public dashboards (the S3* audit channel, genuinely independent of Art
 - **Continuity rules:** guardianship, incapacity, birth/death handling, and uninterrupted dependent coverage.
 - **Household composition verification:** household composition claims that trigger resource allocation changes — including housing space expansion, Essential Access dependent transfers, or caregiver exceptions — require verified co-habitation and genuine dependency under a published evidence standard. A minimum verification period applies before any allocation increase is granted. Verification is needs-neutral and relationship-neutral; it tests occupancy and dependency, not household structure or lifestyle.
 - **Appeals and recovery:** robust wallet recovery and dispute resolution, designed for refugees and those without documentation.
-- **Layered identity (Annex AB4):** identity powers are split by consequence — humane-floor personhood, provisional personhood, core resident identity, and later civic activation. No single document, biometric, institution, or device may serve as the sole irreversible authority.
+- **Layered identity (Annex AB4):** identity powers are split by consequence — survival-floor personhood, provisional personhood, core resident identity, and later civic activation. No single document, biometric, institution, or device may serve as the sole irreversible authority.
 
 #### Article III: Physics & Reserves
 - **Polycentric measurement:** multiple independent sources publish capacity and scarcity indices; minimum N=5 nodes per cohort, minimum 3 methodology classes, with pairwise-correlation tests and at least one adversarial seat per cohort (Proposal 3).
@@ -397,7 +397,7 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 - **Patches:** account partitioning (payroll escrow, dependents protection); targeted freezes (discretionary accounts first); due process; time-limited freezes pending adjudication.
 
 ### 22. Identity fraud / Sybil attacks
-- **Failure mode:** multiple identities claim Essential Access or unlawfully enter the civic layer at scale.
+- **Failure mode:** multiple identities claim Essential Access or unlawfully enter Voice or Service Record pathways at scale.
 - **Patches:** proof-of-personhood; periodic re-verification; fraud detection; penalties; accessible pathways for vulnerable populations; strong recovery without creating a surveillance state.
 
 ---

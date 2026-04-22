@@ -1,5 +1,5 @@
 # ANNEX K. Essential Basket Governance and Civic Participation Fairness
-**Purpose.** This annex addresses two persistent risks: first, that the essential basket will be treated as a settled technical list when it is actually a recurring constitutional conflict zone; second, that the civic layer can quietly reward only people whose lives are already legible to institutions.
+**Purpose.** This annex addresses two persistent risks: first, that the essential basket will be treated as a settled technical list when it is actually a recurring constitutional conflict zone; second, that Voice and Service Record can quietly reward only people whose lives are already legible to institutions.
 
 **Design principle: govern the argument, not just the answer.**
 
@@ -18,8 +18,8 @@ Terms such as basic healthcare, basic shelter, basic transit, or basic care are 
 - **Narrowing rule:** no narrowing takes effect without plain-language notice, worked examples, and publication of what continuity protections apply to people already relying on the prior basket.
 - **Emergency temporary adjustment** may preserve continuity during a real shortage, but cannot become permanent by default; repeated emergency use triggers root-cause review under Annex M.
 
-### K3. Civic-layer fairness and the anti-legibility trap
-A civic system that only rewards institutionally legible contribution will recreate class hierarchy inside the civic layer. Contribution verification must therefore recognize care work, mutual aid, informal stewardship, and interrupted lives.
+### K3. Civic-instrument fairness and the anti-legibility trap
+A civic system that only rewards institutionally legible contribution will recreate class hierarchy inside Voice and Service Record. Contribution verification must therefore recognize care work, mutual aid, informal stewardship, and interrupted lives.
 - **Multi-path verification:** institutional attestations are allowed but never the only path. Community attestations, rotating civic jury review, time-bounded self-declarations, and retrospective bundles are also admissible within published limits.
 - **Informal contribution classes** must include caregiving, neighborhood maintenance, mutual aid, translation, de-escalation, disability support, mentoring, and emergency response.
 - **No person may be disqualified** from Voice participation or Service Record earning solely because their work occurs outside payroll systems, formal nonprofits, or registered enterprises.

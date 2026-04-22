@@ -21,7 +21,7 @@ The protocol rejects the claim that only extreme extractive upside can motivate 
 - **Flow compensation bands** may reward scarce expertise, difficult work, night burden, and mission-critical skill without permitting unlimited wealth-to-power conversion.
 - **Mission-critical premiums** may be used where failure to attract talent would threaten care, safety, or continuity.
 - **Professional autonomy**, protected research time, cooperative upside sharing, and public honor can reward excellence without converting into constitutional privilege.
-- **The civic layer** may recognize stewardship but cannot become private income, office purchase, class rank, or a substitute for one-person-one-vote legitimacy on survival-adjacent matters.
+- **Voice and Service Record** may recognize stewardship but cannot become private income, office purchase, class rank, or a substitute for one-person-one-vote legitimacy on survival-adjacent matters.
 - **The system should attract** surgeons, engineers, researchers, and builders because excellence still matters - but because survival is guaranteed, excellence no longer requires others to remain desperate.
 
 ---

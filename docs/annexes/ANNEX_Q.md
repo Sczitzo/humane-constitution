@@ -5,7 +5,7 @@
 This protocol assumes a hybrid transition path: parallel institution building first, limited public-authority integration second, and full constitutional adoption only after legitimacy, continuity capacity, and review capacity are demonstrated. It is therefore neither a pure revolutionary blueprint nor a simple top-down administrative reform package.
 - **Parallel institutions** are used to prove measurability, service continuity, dispute handling, and public legibility before system-wide cutover.
 - **Public integration** occurs only where incumbent authorities accept published constraints, open challenge rights, and anti-capture conditions.
-- **Full adoption** is justified only after pilots show that humane-floor delivery, boundary enforcement, identity recovery, and adjudication can function together under stress.
+- **Full adoption** is justified only after pilots show that survival-floor delivery, boundary enforcement, identity recovery, and adjudication can function together under stress.
 
 ### Q2. Minimum viable constitutional stack
 - **Phase 1 - Humane-floor and identity pilot:** emergency protections, provisional personhood, appeals, and continuity recovery in one limited geography.
@@ -16,7 +16,7 @@ This protocol assumes a hybrid transition path: parallel institution building fi
 - **Phase 6 - Scarcity simulation first, Shared Storehouse later:** no real Shared Storehouse activation until tabletop and live scarcity drills show activation, challenge, and unwind capacity.
 
 ### Q3. Stop conditions and pilot honesty
-- **A pilot must pause** if humane-floor delivery degrades, identity exclusion spikes, appeal queues back up materially, or measurement disputes remain unresolved past the published limit.
+- **A pilot must pause** if survival-floor delivery degrades, identity exclusion spikes, appeal queues back up materially, or measurement disputes remain unresolved past the published limit.
 - **A pilot must not be marketed** as proof of scale readiness if it depends on unrepeatable founder discretion, heroic volunteerism, or hidden subsidy.
 - **Every pilot report** must state what was still manually patched, who held discretionary override authority, and which components were not yet constitution-grade.
 

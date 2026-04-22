@@ -1,7 +1,7 @@
 # Annex AQ — Shared Storehouse Oracle-Failure Fallback Protocol
 
 **Status: ACTIVE — FC-100 bound; Proposal 6 close-out, 2026-04-18**
-**Addresses:** T-024 (Shared Storehouse Oracle-Failure During Active Rationing) — the operational void where Shared Storehouse are active and the oracle system fails, loses quorum, or enters an unresolvable dispute with no defined decision path.
+**Addresses:** T-024 (Shared Storehouse Oracle-Failure During Active Rationing) — the operational void where Shared Storehouse is active and the oracle system fails, loses quorum, or enters an unresolvable dispute with no defined decision path.
 **Related patches:** P-022 (this annex's parent patch); P-006 (REB first-responder authority); P-012 AE2.3 (emergency deadlock protocol); P-017 (oracle independence, Annex AL); Annex Y (CSM — continues unconditionally throughout oracle failure).
 
 ---
@@ -100,7 +100,7 @@ The panel **cannot**:
 - Override CSM (Annex Y) issuance — the survival floor is unconditional.
 - Bypass the FC-100 restoration-window verification period (§4) once oracle operation resumes.
 
-### 3.3 — Humane Floor Unconditionality
+### 3.3 — Survival Floor Unconditionality
 
 The survival floor bridge established in P-012 AE2.3 is **explicitly unconditional** throughout oracle failure. Regardless of Conservative Hold, REB decision, panel decision, or reconciliation-review outcome, the Annex Y Constitutional Survival Minimum — 2,100 kcal/adult, 50 L water, shelter, essential medicines — continues to be issued. Panels and REB cannot make decisions that suspend or reduce CSM. This is the non-negotiable design anchor: oracle failure cannot be allowed to become a deprivation vector.
 

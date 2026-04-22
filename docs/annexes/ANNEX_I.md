@@ -1,5 +1,5 @@
 # ANNEX I. Residency, Migration, and Onboarding Article
-**Purpose.** This annex defines who may enter, reside, onboard, and gain full civic standing in the system. It protects humane treatment, identity continuity, and family stability while preventing membership from becoming a purchasable asset, a political-stacking tool, or a backdoor pressure valve on Essential Access, housing, or the civic layer.
+**Purpose.** This annex defines who may enter, reside, onboard, and gain full civic standing in the system. It protects humane treatment, identity continuity, and family stability while preventing membership from becoming a purchasable asset, a political-stacking tool, or a backdoor pressure valve on Essential Access, housing, Voice, or Service Record.
 
 **Design principle: belonging must be humane, capacity-aware, non-purchasable, and non-exploitable;** the system must neither invite predation nor punish vulnerability.
 
@@ -100,6 +100,6 @@ A humane system must also be capacity-honest. Regions may not promise settlement
 - No region may sell, auction, or indirectly monetize residency status, settlement priority, or Voice and Service Record activation.
 - No residency or migration rule may reduce the survival floor below the minimum continuity obligations stated in this annex.
 - No status class may be used as a disguised caste system for labor exploitation, inferior justice, or permanent civil inferiority.
-- Any amendment that changes onboarding classes, waiting periods, humane-floor minima, capacity declarations, or Voice and Service Record activation rules is subject to the mandatory judicial review triggers in Annex H.
+- Any amendment that changes onboarding classes, waiting periods, survival-floor minima, capacity declarations, or Voice and Service Record activation rules is subject to the mandatory judicial review triggers in Annex H.
 
 ---

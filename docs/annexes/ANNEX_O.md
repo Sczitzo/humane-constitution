@@ -7,7 +7,7 @@
 - **Relevant authorities:** Article V, Annex J, Annex G4, and Annex H if a rule change is attempted.
 
 ### O2. Caregiver with a six-month family crisis
-- The caregiver retains humane-floor protections through Essential Access continuity and may seek a Protected Pause Window under Annex K so prior Voice and Service Record are not wiped out during the crisis. Verified hardship preserves proportionate civic continuity; anti-concentration decay for high balances applies to ordinary inactivity, not documented incapacity or caregiving emergency.
+- The caregiver retains survival-floor protections through Essential Access continuity and may seek a Protected Pause Window under Annex K so prior Voice and Service Record are not wiped out during the crisis. Verified hardship preserves proportionate civic continuity; anti-concentration decay for high balances applies to ordinary inactivity, not documented incapacity or caregiving emergency.
 - Contribution earned through caregiving and mutual aid remains eligible for multi-path verification rather than being erased because it occurred outside a formal payroll context.
 - **Relevant authorities:** Articles IV and VI, Annex K, Annex L for appeal, and Annex H if any attempt is made to narrow the hardship pathway.
 

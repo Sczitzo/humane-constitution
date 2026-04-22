@@ -28,12 +28,13 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 ## INV-002 — Instrument Non-Convertibility
 
-**Statement:** The four instruments — Flow, Essential Access, Voice, Service Record — cannot be directly or indirectly converted into one another. No market mechanism, contractual arrangement, proxy transaction, or system state may create a conversion pathway between instruments.
+**Statement:** The five instruments — Flow, Essential Access, Voice, Service Record, and Shared Storehouse — cannot be directly or indirectly converted into one another. No market mechanism, contractual arrangement, proxy transaction, or system state may create a conversion pathway between instruments.
 
 **Mechanical boundary:**
 - Essential Access → Flow conversion: prohibited
 - Flow → Essential Access conversion: prohibited (Essential Access is issued by the system, not purchased)
-- Voice and Service Record → Flow or Essential Access conversion: prohibited
+- Voice and Service Record → Flow, Essential Access, or Shared Storehouse conversion: prohibited
+- Shared Storehouse → Flow or Essential Access conversion: prohibited
 - Cross-instrument collateralization: prohibited
 
 **Why this is load-bearing:** When survival and market participation ride the same instrument, currency becomes a mechanism for imposing prior claims on future labor — the structural transformation Wolf's Economic Trilogy (Part 2) traces as the terminal condition of debt-based monetary systems. A single conversion pathway, however narrow, restores that mechanism. The Essential Access escapes this failure mode precisely because it is non-monetary: it never enters the price system and therefore cannot carry the coercive structure that money inherits from its reflexive domain. The above-ledger bypass (T-001 residual) exploits proximity to this boundary without crossing it; the invariant defines where the boundary is.
@@ -60,7 +61,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:** Voice is issued by the system on contribution and participation criteria only. No secondary market for Voice may exist. No Flow expenditure pathway to governance influence may exist.
 
-**Why this is load-bearing:** If economic position translates to governance weight, the system reproduces the failure mode of purchased political influence through a legitimated channel. The civic layer loses independence from the market layer.
+**Why this is load-bearing:** If economic position translates to governance weight, the system reproduces the failure mode of purchased political influence through a legitimated channel. Voice and Service Record lose independence from the market lane.
 
 **Attack vectors that target this invariant:** T-016 (FAP capture), T-022 (electoral cycle capture)
 

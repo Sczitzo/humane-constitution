@@ -53,7 +53,7 @@
 - Aggregate attestation-network maps shall be published in anonymized form so suspicious clustering can be studied without exposing ordinary people to behavioral dossiers.
 - Where a community has low institutional trust, high poverty, or concentrated verifier conflicts, claimants must have access to cross-regional rotating review panels rather than being trapped within local patronage networks.
 - Protected Pause during verified hardship preserves proportionate civic continuity. Anti-concentration decay applies to ordinary inactive high Voice or Service Record concentrations, not to documented incapacity, caregiving emergency, or disaster displacement.
-- Any H-1 repair that materially alters Voice or Service Record rules must satisfy the dual-key legitimacy check described in Annex H and may not rely on civic-weighted signaling alone when the issue in dispute is the civic layer itself.
+- Any H-1 repair that materially alters Voice or Service Record rules must satisfy the dual-key legitimacy check described in Annex H and may not rely on civic-weighted signaling alone when the issue in dispute is those civic instruments themselves.
 
 ### U8. Dispute-deprivation Shared Storehouse bridge
 - If oracle dispute or conservative issuance reduces effective Essential Access below 85% of the normal baseline for more than 7 consecutive days in any essential category, this automatically constitutes a provisional scarcity finding sufficient to activate narrow Shared Storehouse for that category.

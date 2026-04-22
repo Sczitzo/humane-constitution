@@ -42,7 +42,7 @@ No single category may consume more than 3 of the 5 floor slots per quarter. Cat
 
 #### AE2.3 Emergency Deadlock Resolution Protocol
 An Emergency Deadlock is declared automatically when a mandatory emergency decision is simultaneously blocked by two or more independent legitimate processes. Resolution sequence:
-- **Immediate humane-floor bridge:** Level 4 regional continuity provisions activate unconditionally. Survival access is maintained regardless of deadlock status.
+- **Immediate survival-floor bridge:** Level 4 regional continuity provisions activate unconditionally. Survival access is maintained regardless of deadlock status.
 - **Deadlock arbitration panel:** Constituted within 6 hours — one Ombuds Office officer, one reserve CRP member not involved in the contested classification, one regional judicial officer. Authority limited to: (a) establishing a temporary operational baseline that maintains survival floor; (b) setting a binding resolution timeline for the blocking processes.
 - **Scope freeze:** No expansion of powers, no new Shared Storehouse activations, no new PCRP activations during the deadlock period.
 - **Mandatory root-cause review:** Post-resolution post-mortem identifies which procedural rules enabled the triple-block and whether amendment is required.

@@ -44,7 +44,7 @@ export const corpusStats: CorpusStats = {
   "threatCount": 27,
   "patchCount": 31,
   "validatorStatus": "pass",
-  "buildStamp": "corpus-102716718322"
+  "buildStamp": "corpus-d72dc540c585"
 } as const
 
 export const corpusDocs: CorpusDoc[] = [
@@ -56,7 +56,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Every system that governs human survival makes a claim about what value is and who it belongs to. Most systems make that claim implicitly, buried inside institutional arrangements that appear neutral. This protocol makes it explicitly, because the claim drives every architectural decision that follows.",
-    "wordCount": 8835,
+    "wordCount": 8837,
     "headingCount": 50
   },
   {
@@ -67,7 +67,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Reader note: The public white paper remains a plain-language map of the protocol. It now makes clearer that the measurement layer constrains what can be delivered, not who is worthy of life, and that full-scale legitimacy depends on a proven non-coercive identity stack.",
-    "wordCount": 2813,
+    "wordCount": 2814,
     "headingCount": 36
   },
   {
@@ -275,7 +275,7 @@ export const corpusDocs: CorpusDoc[] = [
     "title": "ANNEX AC \u2014 Session 2 Hardening Clauses",
     "status": "",
     "statusBucket": "reference",
-    "summary": "Interpretive rule. These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and humane-floor protections are unaffected by any clause in this annex.",
+    "summary": "Interpretive rule. These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and survival-floor protections are unaffected by any clause in this annex.",
     "wordCount": 2848,
     "headingCount": 24
   },
@@ -353,7 +353,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "Status: ACTIVE \u2014 penalty schedule bound to Founding Commitments FC-010, FC-040, FC-041 (Proposal 7 close-out, 2026-04-18)",
     "statusBucket": "active",
     "summary": "Pre-launch gate: required before system deployment \u00b7 Governed as P-004 protected specification Status: ACTIVE \u2014 penalty schedule bound to Founding Commitments FC-010, FC-040, FC-041 (Proposal 7 close-out, 2026-04-18)",
-    "wordCount": 4364,
+    "wordCount": 4362,
     "headingCount": 21
   },
   {
@@ -364,7 +364,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "Status: PROPOSED (referenced by T-002 Session 8 update and P-016)",
     "statusBucket": "proposed",
     "summary": "Tier 2 founding commitment \u2014 required before deployment \u00b7 Governed as P-004 protected specification Status: PROPOSED (referenced by T-002 Session 8 update and P-016)",
-    "wordCount": 1991,
+    "wordCount": 1993,
     "headingCount": 10
   },
   {
@@ -485,7 +485,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Design principle: punish idle extraction, not patient production.",
-    "wordCount": 782,
+    "wordCount": 776,
     "headingCount": 6
   },
   {
@@ -496,7 +496,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "",
-    "wordCount": 629,
+    "wordCount": 631,
     "headingCount": 5
   },
   {
@@ -529,7 +529,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "Design principle: if the founding moment is captured, later safeguards inherit the capture.",
-    "wordCount": 497,
+    "wordCount": 493,
     "headingCount": 5
   },
   {
@@ -573,7 +573,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "",
-    "wordCount": 431,
+    "wordCount": 432,
     "headingCount": 4
   },
   {

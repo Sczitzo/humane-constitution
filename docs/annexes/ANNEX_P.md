@@ -3,7 +3,7 @@
 
 ### P1. Design goals and non-goals
 - **Goal:** one person can hold only one active core civic identity at a time, without turning ordinary life into a surveillance trail.
-- **Goal:** people lacking legacy documents, stable housing, or formal institutional records must still have a path to humane-floor protections and eventual full recognition.
+- **Goal:** people lacking legacy documents, stable housing, or formal institutional records must still have a path to survival-floor protections and eventual full recognition.
 - **Goal:** identity recovery must be possible after displacement, abuse, disaster, or data loss.
 - **Non-goal:** perfect certainty. The protocol must tolerate bounded uncertainty and still fail safely.
 - **Non-goal:** a single magical identity method. No single modality is assumed sufficient at constitutional scale.
@@ -19,22 +19,22 @@ The protocol recognizes five broad identity evidence classes. None is sufficient
 ### P3. Selected protocol stance: layered hybrid identity
 The Protocol adopts a layered hybrid approach rather than choosing a single identity doctrine.
 - **No person is required** to rely on only one class of evidence.
-- **No one class of evidence** may become the sole gate to humane-floor protections.
+- **No one class of evidence** may become the sole gate to survival-floor protections.
 - **Full Core Resident activation** requires a threshold combination of evidence classes rather than a single decisive credential.
 - **Biometrics**, if used at all, must be optional or secondary, revocable in their operational role, and never published as a reusable global identifier.
 - **Identity verification** and activity monitoring must remain legally separated. The system may verify that a person exists and is continuous without creating a unified behavioral dossier.
 - **The stricter the consequence** of a decision, the higher the evidentiary threshold and the stronger the appeal rights.
 
 ### P4. Status ladder and failure-safe defaults
-- **Humane Floor Person:** any person physically present is entitled to immediate life-preserving treatment, emergency food, emergency shelter triage, and emergency medical stabilization even before full identity resolution.
+- **Survival-Floor Personhood:** any person physically present is entitled to immediate life-preserving treatment, emergency food, emergency shelter triage, and emergency medical stabilization even before full identity resolution.
 - **Provisional Personhood:** a time-limited status granted on weaker but reviewable evidence so displaced or undocumented persons are not trapped outside the system.
 - **Core Resident Identity:** a fully activated status for ordinary Essential Access continuity, enterprise participation, and legal standing after threshold evidence and review.
 - **Civic Activation:** Voice participation and Service Record eligibility remain separate and later-gated, so hurried identity decisions do not immediately shift civic power.
-- **If the identity stack is uncertain**, the default is to preserve humane-floor protections while limiting higher-consequence privileges until review is completed.
+- **If the identity stack is uncertain**, the default is to preserve survival-floor protections while limiting higher-consequence privileges until review is completed.
 
 ### P5. Red lines
 - No mandatory permanent biometric database as the sole path to personhood.
-- No requirement that a person possess legacy state-issued documents in order to access humane-floor protections.
+- No requirement that a person possess legacy state-issued documents in order to access survival-floor protections.
 - No fusion of all identity evidence into a permanently queryable behavioral surveillance graph.
 - No secret risk score may determine personhood, continuity, or queue priority.
 - No irreversible identity denial without human review, recorded reasons, and appeal.

@@ -66,7 +66,7 @@
 
 ### P-029 — Public Finance & Commons Revenue (PFCR)
 
-- **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding pillar. PFCR funds public operations through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production.
+- **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding function. PFCR funds public operations through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production.
 - **Clauses integrated:** no taxes on survival access, ordinary labor, or basic household exchange; public banking rails funded as infrastructure; postal-bank/public-bank option; anti-hidden-debt rules; source-by-source public reporting.
 - **Dependencies:** demurrage routing rule, asset carrying cost enforcement, gateway registry, and budget transparency stack.
 - **New risks introduced:** fiscal dependence on poorly calibrated demurrage or gateway flows; naming disputes over what counts as a prohibited tax. Mitigated by judicial review trigger and source registry.

@@ -20,7 +20,7 @@ Each scenario includes:
 
 ## N-001 | "This is communism"
 
-**The attack:** The protocol replaces free markets with state control of resources, housing, and economic life. The Essential Access is a ration book. The civic layer is political scoring. This is central planning dressed up in technical language.
+**The attack:** The protocol replaces free markets with state control of resources, housing, and economic life. Essential Access is a ration book. Voice and Service Record are political scoring. This is central planning dressed up in technical language.
 
 **Emotional hook:** Loss of economic freedom; historical memory of command economies; distrust of technocratic governance.
 
@@ -40,7 +40,7 @@ Each scenario includes:
 
 ## N-002 | "It's a social credit system"
 
-**The attack:** The civic layer tracks your contributions, assigns you a score, and uses that score to determine your access to services, opportunities, or rights. China's social credit system. Obey, or lose access.
+**The attack:** Voice and Service Record track your contributions, assign you a score, and use that score to determine your access to services, opportunities, or rights. China's social credit system. Obey, or lose access.
 
 **Emotional hook:** Surveillance anxiety; fear of algorithmic judgment; distrust of governments that claim to measure "good behaviour."
 
@@ -53,7 +53,7 @@ Each scenario includes:
 - Essential Access access is unconditional — it explicitly cannot be revoked based on civic standing.
 - Human worth is never measured. The protocol states this as an invariant.
 - Contribution tracking is opt-in for stewardship categories and uses minimum necessary data.
-- The separation of the civic layer from the survival layer is the system's load-bearing wall against this exact failure mode.
+- The separation of Voice and Service Record from the survival layer is the system's load-bearing wall against this exact failure mode.
 
 **Residual risk:** The surface resemblance to social credit systems is real. The response requires audiences to understand the load-bearing role of instrument separation — a non-trivial ask. Visual explainers showing the walls between instruments may be more effective than text.
 
@@ -151,7 +151,7 @@ Each scenario includes:
 **Structural response:**
 - Non-convertibility is enforced at the technical level (wallet partitioning), not just the legal level.
 - Shadow convertibility is explicitly modelled in T-001 with active monitoring patches.
-- The civic layer's decay and cap mechanisms limit the accumulation of civic power regardless of wealth.
+- Voice and Service Record decay and cap mechanisms limit the accumulation of civic power regardless of wealth.
 - Governance anti-capture weighting in Article VI is specifically designed to counteract well-resourced lobbying.
 
 **Residual risk:** At sufficient wealth and time, sophisticated actors will find new routes. The design's claim is not that this is impossible but that the cost and visibility of circumvention are high enough to be detectable and correctable. Pilot evidence at scale is required to validate this claim.

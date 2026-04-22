@@ -3,14 +3,14 @@
 
 ### T1. Scenario class A - regional food shortage plus oracle manipulation plus Essential Access coercion
 - Test whether scarcity activation can be challenged quickly when regional actors overstate shortage or undercount usable supply.
-- Test whether humane-floor protections continue while the shortage declaration is reviewed.
+- Test whether survival-floor protections continue while the shortage declaration is reviewed.
 - Test whether coercion detection in caregiver or household channels accelerates scarcity rather than failing silently.
 
 ### T2. Scenario class B - identity fraud pressure plus housing scarcity plus migration surge
 - Test whether provisional personhood protects real people without opening mass duplicate-account extraction.
 - Test whether queue fairness survives when identity uncertainty and housing scarcity interact simultaneously.
 
-### T3. Scenario class C - civic-layer capture attempt during emergency Shared Storehouse extension and CRP split
+### T3. Scenario class C - civic-instrument capture attempt during emergency Shared Storehouse extension and CRP split
 - Test whether emergency scarcity tools unwind on time even when politically useful to keep.
 - Test whether disputed Voice or Service Record rule changes auto-escalate rather than being smuggled through crisis conditions.
 - Test whether CRP minority dissent and substitute review function under timed emergency pressure.

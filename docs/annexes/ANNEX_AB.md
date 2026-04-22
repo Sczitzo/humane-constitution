@@ -22,8 +22,8 @@ Universal survival does not remove incentive gradients. The protocol therefore e
 - **The system shall not punish** initiative, excellence, or responsibility merely because the survival floor is protected.
 
 ### AB4. T-002 Identity Assurance — Adversarial Layered Identity
-Identity is a permanent adversarial surface. The protocol does not assume perfect identity certainty and shall preserve humane-floor continuity under bounded uncertainty while restricting higher-consequence powers to higher-assurance identity states.
-- **Identity powers** shall be split by consequence: humane-floor personhood, provisional personhood, core resident identity, and later civic activation.
+Identity is a permanent adversarial surface. The protocol does not assume perfect identity certainty and shall preserve survival-floor continuity under bounded uncertainty while restricting higher-consequence powers to higher-assurance identity states.
+- **Identity powers** shall be split by consequence: survival-floor personhood, provisional personhood, core resident identity, and later civic activation.
 - **No single document**, biometric, institution, or device may serve as the sole irreversible authority for personhood, continuity, or civic activation.
 - **Recovery is a protected subsystem**: multi-step, reviewable, and reversible in stages. Recovery must be harder to exploit than ordinary daily use.
 - **When identity is uncertain or contested**, survival continuity remains protected while only the highest-consequence powers are temporarily restricted.

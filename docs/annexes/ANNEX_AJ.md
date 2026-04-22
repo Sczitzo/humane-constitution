@@ -79,7 +79,7 @@ The purpose of this annex is to enumerate specific prohibited patterns per instr
 
 **Pattern:** An institution, vendor, service provider, or programme uses Voice balance, Service Record score, or civic participation history as an explicit or implicit criterion for preferential allocation of goods, services, employment, housing, or any resource that is not a formal civic function.
 
-**Why it is prohibited:** Voice and Service Record is scoped exclusively to civic agenda-setting and service eligibility within the civic layer. If Voice and Service Record balance produces preferential outcomes in markets, housing, employment, or services, it has effectively become a general status currency — which is the social credit failure mode the instrument separation is designed to prevent.
+**Why it is prohibited:** Voice and Service Record are scoped exclusively to civic agenda-setting and service eligibility within the civic instruments. If Voice and Service Record balance produces preferential outcomes in markets, housing, employment, or services, it has effectively become a general status currency — which is the social credit failure mode the instrument separation is designed to prevent.
 
 **Concrete examples:**
 - An employer who uses Service Record records as a positive factor in hiring decisions for non-civic roles.
@@ -87,7 +87,7 @@ The purpose of this annex is to enumerate specific prohibited patterns per instr
 - A university that offers admissions preference to applicants with high Service Record records on the grounds that they are "engaged citizens."
 - A vendor loyalty programme that grants discounts or perks based on civic participation history.
 
-**Permitted:** Civic functions — jury selection pools, audit panels, deliberation bodies, and oversight roles — may and should use Service Record eligibility criteria. These are the defined uses of the civic layer. What is prohibited is any use of Voice and Service Record as a criterion in decisions that are not formal civic functions.
+**Permitted:** Civic functions — jury selection pools, audit panels, deliberation bodies, and oversight roles — may and should use Service Record eligibility criteria. These are the defined uses of the civic instruments. What is prohibited is any use of Voice and Service Record as a criterion in decisions that are not formal civic functions.
 
 **Detection signal:** Correlation between Voice and Service Record balance and outcomes in non-civic domains (employment rates, housing allocation rates, service quality) across a population.
 
@@ -114,14 +114,14 @@ The purpose of this annex is to enumerate specific prohibited patterns per instr
 
 **Pattern:** An individual uses their formal position in a civic body — an audit panel, oversight committee, CRP seat, or deliberation body — to advance Flow-beneficial decisions, direct contracts, or signal preferences to market actors in ways that translate civic position into economic advantage.
 
-**Why it is prohibited:** Civic positions carry real decision-making authority. If that authority can be converted into Flow advantage — through directed contracts, information asymmetry, or signalled preferences — then the civic layer has become an economic power instrument, inverting the separation the protocol is designed to maintain.
+**Why it is prohibited:** Civic positions carry real decision-making authority. If that authority can be converted into Flow advantage — through directed contracts, information asymmetry, or signalled preferences — then the civic instruments have become an economic power instrument, inverting the separation the protocol is designed to maintain.
 
 **Concrete examples:**
 - A CRP member who votes on procurement priorities in ways that systematically benefit businesses they have personal Flow relationships with.
 - An audit panel member who signals audit focus areas to connected market participants before the audit begins, allowing them to prepare preferentially.
 - An oversight committee member who leverages their position to obtain speaking engagements, consulting arrangements, or advisory roles from organisations they oversee.
 
-**Permitted:** Civic participants may have ordinary economic lives. What is prohibited is using the information, authority, or influence of a civic position to secure Flow advantage — standard conflict-of-interest doctrine applied to the Voice and Service Record layer.
+**Permitted:** Civic participants may have ordinary economic lives. What is prohibited is using the information, authority, or influence of a civic position to secure Flow advantage — standard conflict-of-interest doctrine applied to Voice and Service Record.
 
 **Detection signal:** Correlation between civic position and Flow outcomes for the individual and their connected networks; post-position employment in sectors they previously oversaw.
 

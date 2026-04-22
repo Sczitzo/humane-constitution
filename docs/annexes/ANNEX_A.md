@@ -2,7 +2,7 @@
 This annex operationalizes the protocol's adversarial testing discipline by defining how the system is continuously stress-tested against coercion, fraud, capture, and technical failure. It expands the threat-summary in Section IV into a repeatable test program.
 
 ### A1. Red-Team method (repeatable)
-**23. Define invariants (non-negotiables):** (1) no survival denial via Essential Access; (2) no rights denial via the civic layer or Flow; (3) coercion must be detectable and punishable without punishing innocents broadly; (4) system must be patchable without elite permission.
+**23. Define invariants (non-negotiables):** (1) no survival denial via Essential Access; (2) no rights denial via Voice, Service Record, or Flow; (3) coercion must be detectable and punishable without punishing innocents broadly; (4) system must be patchable without elite permission.
 **24. Score threats on four axes (1-5):** impact, likelihood, detectability, and reversibility (blast-radius control).
 **25. Run tabletop simulations (human role-play)** before deploying automation; convert tabletop outcomes into automated test cases.
 **26. Patch using one of four levers:** reduce incentive, increase detection, increase abuse cost, or limit blast radius (caps/escrows/throttles).
@@ -52,7 +52,7 @@ This annex operationalizes the protocol's adversarial testing discipline by defi
 ---
 
 ### A3. Acceptance criteria (minimum safety bar)
-- No scenario allows the civic layer or Flow to gate survival, identity status, or rights.
+- No scenario allows Voice, Service Record, or Flow to gate survival, identity status, or rights.
 - High-impact abuse above defined thresholds is detectable within a bounded time window (policy-defined), with documented response playbooks.
 - Enforcement actions are targeted and time-limited; dependent protections and escrow partitioning prevent collateral harm.
 - The protocol supports rapid patching: publicly logged vulnerabilities, mandatory post-mortems, and upgrade paths that cannot be blocked by entrenched beneficiaries.

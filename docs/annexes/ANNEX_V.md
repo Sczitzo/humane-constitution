@@ -9,7 +9,7 @@
 - The conversion methodology must publish error bands, losers as well as winners, and the reasons any category receives preferential continuity treatment.
 
 ### V2. Debt restructuring hierarchy
-- Essentials-linked household debts enter standstill first and restructure under humane-floor rules before enforcement resumes.
+- Essentials-linked household debts enter standstill first and restructure under survival-floor rules before enforcement resumes.
 - Mission-critical enterprise debts are triaged by continuity value, labor dependence, and supply importance rather than by creditor seniority alone.
 - Speculative claims, extractive fee chains, and claims dependent on obvious pre-transition windfalls are junior in restructuring order.
 - Pensions, protected savings, and disability-linked income streams receive explicit continuity treatment before ordinary unsecured claims.

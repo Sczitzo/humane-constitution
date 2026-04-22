@@ -181,7 +181,7 @@ Standing is broad, mandatory review triggers are explicit, and hidden change thr
 The refined protocol especially hardened six areas that tend to fail first in real systems:
 - **Demurrage** now has a governing theory and a stated purpose: discourage idle hoarding without punishing productive project finance.
 - **The essential basket** is treated as a permanent constitutional contest zone, not a solved technical list.
-- **The civic layer** now has protections against the caregiving and hardship cliff.
+- **Voice and Service Record** now have protections against the caregiving and hardship cliff.
 - **Judicial and constitutional review institutions** are defined rather than implied.
 - **The oracle layer** is treated as a first-order problem because the system cannot function if it loses contact with physical reality.
 - **Transition and founding legitimacy** are handled as real political risks, not as a one-paragraph appendix.

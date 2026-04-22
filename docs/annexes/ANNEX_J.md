@@ -1,5 +1,5 @@
 # ANNEX J. Monetary Calibration, Long-Horizon Capital, and Instrument Discipline
-**Purpose.** This annex refines the monetary architecture where hidden economic failure would otherwise appear: demurrage theory, long-horizon investment, instrument naming discipline, and calibration rules. It does not alter the constitutional separation among Flow, Essential Access, the civic layer, and Shared Storehouse; it clarifies how the system uses Flow without punishing productive build time or silently recreating rent-seeking.
+**Purpose.** This annex refines the monetary architecture where hidden economic failure would otherwise appear: demurrage theory, long-horizon investment, instrument naming discipline, and calibration rules. It does not alter the constitutional separation among Flow, Essential Access, Voice, Service Record, and Shared Storehouse; it clarifies how the system uses Flow without punishing productive build time or silently recreating rent-seeking.
 
 **Design principle: punish idle extraction, not patient production.**
 
@@ -36,6 +36,6 @@ Long-horizon enterprise is impossible if all held Flow is treated as idle. The i
 
 ### J5. Instrument naming and public communication discipline
 The system must not confuse the public by making unlike instruments look like interchangeable balances.
-- **Legal vocabulary** remains technical: Flow, Essential Access, the civic layer (Voice and Service Record umbrella, composed of Voice and Service Record), and Shared Storehouse.
-- **Public education** may use metaphors - Flow as current, Essential Access as a gauge, the civic layer as a pulse, Shared Storehouse as an emergency ration key - but the law and interfaces must never imply fungibility.
+- **Legal vocabulary** remains technical: Flow, Essential Access, Voice, Service Record, and Shared Storehouse.
+- **Public education** may use metaphors - Flow as current, Essential Access as a gauge, Voice as a pulse, Service Record as a ledger of service, Shared Storehouse as an emergency ration key - but the law and interfaces must never imply fungibility.
 - **Wallets, dashboards, receipts, and reports** must visually separate money from rights, civic weight, and scarcity permissions.
