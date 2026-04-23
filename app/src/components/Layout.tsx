@@ -282,7 +282,7 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
           {/* Sidebar footer — version badge */}
           <div className="mt-3 px-3">
             <span className="text-[9px] font-mono text-white/20 tracking-widest">
-              v0.1.0 — CORPUS SHELL
+              v0.1.0 — CORPUS READER
             </span>
           </div>
         </aside>
