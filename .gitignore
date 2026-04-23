@@ -19,6 +19,7 @@ desktop.ini
 draft_*/
 working_*/
 scratch_*/
+tmp/
 *_draft.*
 *_wip.*
 *_temp.*

@@ -44,7 +44,7 @@ export const corpusStats: CorpusStats = {
   "threatCount": 27,
   "patchCount": 31,
   "validatorStatus": "pass",
-  "buildStamp": "corpus-1073d36682d9"
+  "buildStamp": "corpus-aae94b64a424"
 } as const
 
 export const corpusDocs: CorpusDoc[] = [
@@ -89,7 +89,7 @@ export const corpusDocs: CorpusDoc[] = [
     "status": "",
     "statusBucket": "reference",
     "summary": "The Humane Constitution is a constitutional systems design for a society in which survival is unconditional, markets remain productive, and governance cannot be purchased. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.",
-    "wordCount": 2812,
+    "wordCount": 2830,
     "headingCount": 23
   },
   {
@@ -267,6 +267,17 @@ export const corpusDocs: CorpusDoc[] = [
     "summary": "Most systems make one mistake over and over again: they force too much through the same rail, money. The same money that decides whether you can eat, stay housed, get care, or travel for basics also helps decide who can invest, who gets institutional influence, and who can shape public life. That is how wealth turns into coercion.",
     "wordCount": 468,
     "headingCount": 4
+  },
+  {
+    "id": "docs__content__Visual_Assets_md",
+    "path": "docs/content/Visual_Assets.md",
+    "section": "constitution",
+    "title": "Visual Assets",
+    "status": "",
+    "statusBucket": "reference",
+    "summary": "This index collects the first reusable presentation assets built from the public release documents.",
+    "wordCount": 131,
+    "headingCount": 3
   },
   {
     "id": "founding__order__README_md",
