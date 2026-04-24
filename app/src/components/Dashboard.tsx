@@ -1,4 +1,4 @@
-import { startTransition, useDeferredValue, useEffect, useState, type WheelEvent as ReactWheelEvent } from 'react'
+import { startTransition, useDeferredValue, useEffect, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
 import { invoke } from '@tauri-apps/api/core'
 import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
 import type { AppView } from './Layout'
@@ -99,6 +99,18 @@ const SECTION_LABELS: Record<CorpusDoc['section'], string> = {
   founding_order: 'Founding Order',
   registry: 'Registry',
   annex: 'Annex',
+}
+
+interface PaneScrollState {
+  shelf: number
+  reader: number
+  outline: number
+}
+
+const EMPTY_PANE_SCROLL_STATE: PaneScrollState = {
+  shelf: 0,
+  reader: 0,
+  outline: 0,
 }
 
 function docsForView(view: AppView, docs: CorpusDoc[], featuredPaths: string[]): CorpusDoc[] {
@@ -395,6 +407,44 @@ function parseTable(lines: string[]): { headers: string[]; rows: string[][] } | 
 
 function headingScrollId(doc: CorpusDoc, slug: string): string {
   return `${doc.id}--${slug}`
+}
+
+function selectedDocStorageKey(view: AppView): string {
+  return `humane-reader:selected-doc:${view}`
+}
+
+function paneScrollStorageKey(view: AppView): string {
+  return `humane-reader:pane-scroll:${view}`
+}
+
+function readStoredSelectedDocId(view: AppView): string | null {
+  if (typeof window === 'undefined') {
+    return null
+  }
+
+  return window.localStorage.getItem(selectedDocStorageKey(view))
+}
+
+function readStoredPaneScroll(view: AppView): PaneScrollState {
+  if (typeof window === 'undefined') {
+    return EMPTY_PANE_SCROLL_STATE
+  }
+
+  const raw = window.localStorage.getItem(paneScrollStorageKey(view))
+  if (!raw) {
+    return EMPTY_PANE_SCROLL_STATE
+  }
+
+  try {
+    const parsed = JSON.parse(raw) as Partial<PaneScrollState>
+    return {
+      shelf: typeof parsed.shelf === 'number' ? parsed.shelf : 0,
+      reader: typeof parsed.reader === 'number' ? parsed.reader : 0,
+      outline: typeof parsed.outline === 'number' ? parsed.outline : 0,
+    }
+  } catch {
+    return EMPTY_PANE_SCROLL_STATE
+  }
 }
 
 function jumpToHeading(doc: CorpusDoc, slug: string) {
@@ -758,6 +808,10 @@ function ReaderWorkspace({
   railLabel,
   emptyLabel,
   independentScroll = false,
+  shelfPaneRef,
+  readerPaneRef,
+  outlinePaneRef,
+  onPaneScroll,
 }: {
   docs: CorpusDoc[]
   selectedDoc: CorpusDoc | null
@@ -767,6 +821,10 @@ function ReaderWorkspace({
   railLabel: string
   emptyLabel: string
   independentScroll?: boolean
+  shelfPaneRef: (node: HTMLElement | null) => void
+  readerPaneRef: (node: HTMLDivElement | null) => void
+  outlinePaneRef: (node: HTMLDivElement | null) => void
+  onPaneScroll: (event: ReactUIEvent<HTMLElement>) => void
 }) {
   if (!docs.length || !selectedDoc) {
     return (
@@ -784,12 +842,14 @@ function ReaderWorkspace({
       }`}
     >
         <section
+          ref={shelfPaneRef}
           data-testid="shelf-pane"
           className={`space-y-4 ${
             independentScroll
               ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
             : 'xl:sticky xl:top-6 xl:self-start xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
           }`}
+          onScroll={onPaneScroll}
           onWheelCapture={routeVerticalWheelToSelf}
         >
           <div className="space-y-4 rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(246,239,228,0.82),rgba(238,230,218,0.68))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_24px_42px_rgba(35,30,20,0.1)]">
@@ -829,12 +889,14 @@ function ReaderWorkspace({
 
         <div
           key={`reader-pane-${selectedDoc.id}`}
+          ref={readerPaneRef}
           data-testid="reader-scroll-pane"
           className={`min-w-0 ${
             independentScroll
               ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
               : ''
           }`}
+          onScroll={independentScroll ? onPaneScroll : undefined}
           onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
         >
           <div className="rounded-[34px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(244,236,224,0.84),rgba(236,227,214,0.66))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.6),0_28px_50px_rgba(35,30,20,0.11)]">
@@ -848,12 +910,14 @@ function ReaderWorkspace({
 
         <div
           key={`outline-pane-${selectedDoc.id}`}
+          ref={outlinePaneRef}
           data-testid="outline-scroll-pane"
           className={`hidden 2xl:block ${
             independentScroll
               ? '2xl:sticky 2xl:top-6 2xl:max-h-[calc(100vh-9rem)] 2xl:overflow-y-auto 2xl:overscroll-contain 2xl:pr-1'
               : ''
           }`}
+          onScroll={independentScroll ? onPaneScroll : undefined}
           onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
         >
           <div className={independentScroll ? '' : 'sticky top-8'}>
@@ -952,11 +1016,17 @@ function EmptySettings() {
 
 export function Dashboard({ view, corpus, loadError }: DashboardProps) {
   const [query, setQuery] = useState('')
-  const [selectedDocId, setSelectedDocId] = useState<string | null>(null)
+  const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [sourceFeedback, setSourceFeedback] = useState<SourceFeedback>({
     tone: 'neutral',
     message: 'Read in-app, or open the source document directly from the reader header.',
   })
+  const shelfPaneRef = useRef<HTMLElement | null>(null)
+  const readerPaneRef = useRef<HTMLDivElement | null>(null)
+  const outlinePaneRef = useRef<HTMLDivElement | null>(null)
+  const restorePaneScrollRef = useRef(true)
+  const lastViewRef = useRef<AppView>(view)
+  const scrollWriteFrameRef = useRef<number | null>(null)
 
   const deferredQuery = useDeferredValue(query)
   const baseDocs = corpus ? docsForView(view, corpus.docs, corpus.featuredPaths) : []
@@ -964,8 +1034,31 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
   const selectedDoc = visibleDocs.find((doc) => doc.id === selectedDocId) ?? visibleDocs[0] ?? null
   const meta = VIEW_META[view]
   const independentPaneView = view === 'constitution' || view === 'annexes' || view === 'registries'
+  const bindShelfPaneRef = (node: HTMLElement | null) => {
+    shelfPaneRef.current = node
+  }
+  const bindReaderPaneRef = (node: HTMLDivElement | null) => {
+    readerPaneRef.current = node
+  }
+  const bindOutlinePaneRef = (node: HTMLDivElement | null) => {
+    outlinePaneRef.current = node
+  }
 
   useEffect(() => {
+    if (lastViewRef.current === view) {
+      return
+    }
+
+    lastViewRef.current = view
+    restorePaneScrollRef.current = true
+    startTransition(() => setSelectedDocId(readStoredSelectedDocId(view)))
+  }, [view])
+
+  useEffect(() => {
+    if (!corpus) {
+      return
+    }
+
     if (!visibleDocs.length) {
       if (selectedDocId !== null) {
         startTransition(() => setSelectedDocId(null))
@@ -979,6 +1072,19 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
   }, [selectedDocId, visibleDocs])
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    if (selectedDocId) {
+      window.localStorage.setItem(selectedDocStorageKey(view), selectedDocId)
+      return
+    }
+
+    window.localStorage.removeItem(selectedDocStorageKey(view))
+  }, [selectedDocId, view])
+
+  useEffect(() => {
     setSourceFeedback({
       tone: 'neutral',
       message: selectedDoc
@@ -986,6 +1092,57 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
         : 'Refine the filter or switch views to select a document.',
     })
   }, [selectedDoc?.id])
+
+  useEffect(() => {
+    return () => {
+      if (scrollWriteFrameRef.current !== null) {
+        window.cancelAnimationFrame(scrollWriteFrameRef.current)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!independentPaneView || !selectedDoc || !restorePaneScrollRef.current) {
+      return
+    }
+
+    restorePaneScrollRef.current = false
+
+    window.requestAnimationFrame(() => {
+      const stored = readStoredPaneScroll(view)
+      if (shelfPaneRef.current) {
+        shelfPaneRef.current.scrollTop = stored.shelf
+      }
+      if (readerPaneRef.current) {
+        readerPaneRef.current.scrollTop = stored.reader
+      }
+      if (outlinePaneRef.current) {
+        outlinePaneRef.current.scrollTop = stored.outline
+      }
+    })
+  }, [independentPaneView, selectedDoc?.id, view])
+
+  function handlePaneScroll() {
+    if (!independentPaneView || typeof window === 'undefined') {
+      return
+    }
+
+    if (scrollWriteFrameRef.current !== null) {
+      return
+    }
+
+    scrollWriteFrameRef.current = window.requestAnimationFrame(() => {
+      scrollWriteFrameRef.current = null
+      window.localStorage.setItem(
+        paneScrollStorageKey(view),
+        JSON.stringify({
+          shelf: shelfPaneRef.current?.scrollTop ?? 0,
+          reader: readerPaneRef.current?.scrollTop ?? 0,
+          outline: outlinePaneRef.current?.scrollTop ?? 0,
+        }),
+      )
+    })
+  }
 
   async function handleOpenSource(doc: CorpusDoc) {
     setSourceFeedback({
@@ -1099,6 +1256,10 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
           railLabel={meta.railLabel}
           emptyLabel="No documents match the current filter. Broaden the query or move to another shelf."
           independentScroll={independentPaneView}
+          shelfPaneRef={bindShelfPaneRef}
+          readerPaneRef={bindReaderPaneRef}
+          outlinePaneRef={bindOutlinePaneRef}
+          onPaneScroll={handlePaneScroll}
         />
       )}
     </div>

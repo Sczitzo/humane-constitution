@@ -114,4 +114,25 @@ test.describe('reader shell regression coverage', () => {
     await expect(page.getByTestId('reader-title')).toHaveText(secondTitle)
     await expect.poll(() => paneScrollTop(page.getByTestId('reader-scroll-pane'))).toBe(0)
   })
+
+  test('last view, selected document, and reader position persist across reload', async ({ page }) => {
+    await page.setViewportSize({ width: 1660, height: 1100 })
+    await openConstitutionView(page)
+
+    const readerPane = page.getByTestId('reader-scroll-pane')
+    const rows = page.locator('[data-testid^="document-row-"]')
+    const secondRow = rows.nth(1)
+    const secondTitle = await rowTitle(secondRow)
+
+    await secondRow.locator('button').first().click()
+    await expect(page.getByTestId('reader-title')).toHaveText(secondTitle)
+
+    await wheelInside(page, readerPane, 2200)
+    await expect.poll(() => paneScrollTop(readerPane)).toBeGreaterThan(1000)
+
+    await page.reload()
+
+    await expect(page.getByTestId('reader-title')).toHaveText(secondTitle)
+    await expect.poll(() => paneScrollTop(page.getByTestId('reader-scroll-pane'))).toBeGreaterThan(1000)
+  })
 })
