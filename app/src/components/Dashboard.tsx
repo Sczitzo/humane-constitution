@@ -512,6 +512,8 @@ function DocumentRow({
 }) {
   return (
     <article
+      data-testid={`document-row-${doc.id}`}
+      data-selected={selected ? 'true' : 'false'}
       className={`rounded-[24px] border p-4 transition ${
         selected
           ? 'border-[rgba(159,108,49,0.26)] bg-[rgba(253,249,242,0.92)] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_16px_28px_rgba(35,30,20,0.08)]'
@@ -667,6 +669,7 @@ function ReaderOutline({ doc, independentScroll = false }: { doc: CorpusDoc; ind
 
   return (
     <aside
+      data-testid="reader-outline-content"
       className={`rounded-[26px] border border-[rgba(60,54,46,0.16)] bg-[linear-gradient(180deg,rgba(252,248,241,0.96),rgba(248,242,232,0.9))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.6),0_20px_36px_rgba(35,30,20,0.08)] ${
         independentScroll ? 'h-full overflow-y-auto' : 'self-start'
       }`}
@@ -701,14 +704,14 @@ function ReaderPanel({
   onOpenSource: () => void
 }) {
   return (
-    <section id="reader-panel-start" className="space-y-6">
+    <section id="reader-panel-start" data-testid="reader-panel" className="space-y-6">
       <header className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(253,249,242,1),rgba(247,240,229,0.95))] px-6 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_28px_48px_rgba(35,30,20,0.11)] sm:px-8">
         <div className="mb-5 h-px w-full bg-[linear-gradient(90deg,rgba(159,108,49,0.32),rgba(159,108,49,0.1),transparent)]" />
         <div className="min-w-0">
           <p className="text-[10px] font-mono uppercase tracking-[0.24em] text-[var(--ink-faint)]">
             {SECTION_LABELS[doc.section]}
           </p>
-          <h2 className="mt-3 font-serif text-[2rem] leading-tight text-[var(--ink-strong)] sm:text-[2.55rem]">
+          <h2 data-testid="reader-title" className="mt-3 font-serif text-[2rem] leading-tight text-[var(--ink-strong)] sm:text-[2.55rem]">
             {doc.title}
           </h2>
           <p className="mt-4 max-w-3xl text-[15px] leading-7 text-[var(--ink-soft)]">
@@ -735,9 +738,9 @@ function ReaderPanel({
         </p>
       </header>
 
-      <article className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(252,246,238,0.98),rgba(245,238,227,0.92))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_28px_48px_rgba(35,30,20,0.12)] sm:p-4">
+      <article data-testid="reader-paper-shell" className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(252,246,238,0.98),rgba(245,238,227,0.92))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_28px_48px_rgba(35,30,20,0.12)] sm:p-4">
         <div className="rounded-[24px] border border-[rgba(60,54,46,0.12)] bg-[var(--paper-strong)] px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.76),0_1px_0_rgba(60,54,46,0.04)] sm:px-10 sm:py-10">
-          <div className="mx-auto max-w-[47rem]">
+          <div data-testid="reader-document" className="mx-auto max-w-[47rem]">
             <MarkdownDocument doc={doc} />
           </div>
         </div>
@@ -781,6 +784,7 @@ function ReaderWorkspace({
       }`}
     >
         <section
+          data-testid="shelf-pane"
           className={`space-y-4 ${
             independentScroll
               ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
@@ -808,7 +812,7 @@ function ReaderWorkspace({
             </div>
 
             <div className="overflow-hidden rounded-[26px] border border-[rgba(60,54,46,0.16)] bg-[linear-gradient(180deg,rgba(252,248,241,0.92),rgba(247,240,230,0.86))] shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_18px_30px_rgba(35,30,20,0.08)]">
-              <div className="space-y-2 p-3">
+              <div data-testid="shelf-list" className="space-y-2 p-3">
                 {docs.map((doc) => (
                   <DocumentRow
                     key={doc.id}
@@ -825,6 +829,7 @@ function ReaderWorkspace({
 
         <div
           key={`reader-pane-${selectedDoc.id}`}
+          data-testid="reader-scroll-pane"
           className={`min-w-0 ${
             independentScroll
               ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
@@ -843,6 +848,7 @@ function ReaderWorkspace({
 
         <div
           key={`outline-pane-${selectedDoc.id}`}
+          data-testid="outline-scroll-pane"
           className={`hidden 2xl:block ${
             independentScroll
               ? '2xl:sticky 2xl:top-6 2xl:max-h-[calc(100vh-9rem)] 2xl:overflow-y-auto 2xl:overscroll-contain 2xl:pr-1'

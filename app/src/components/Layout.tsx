@@ -15,6 +15,7 @@ interface LayoutProps {
 }
 
 interface NavItemProps {
+  testId?: string
   glyph: string
   label: string
   detail: string
@@ -22,9 +23,10 @@ interface NavItemProps {
   onClick?: () => void
 }
 
-function NavItem({ glyph, label, detail, active = false, onClick }: NavItemProps) {
+function NavItem({ testId, glyph, label, detail, active = false, onClick }: NavItemProps) {
   return (
     <button
+      data-testid={testId}
       onClick={onClick}
       className={`group w-full rounded-[22px] border px-4 py-3.5 text-left transition ${
         active
@@ -127,11 +129,12 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
       </header>
 
       <div className="relative z-10 flex min-h-screen flex-col pt-14 lg:grid lg:grid-cols-[18.5rem_minmax(0,1fr)]">
-        <aside className="border-b border-[rgba(60,54,46,0.12)] bg-[var(--nav-surface)] px-4 py-5 text-[var(--nav-text-strong)] shadow-[inset_-1px_0_0_rgba(255,255,255,0.02)] lg:flex lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:flex-col lg:overflow-y-auto lg:overscroll-contain lg:border-b-0 lg:border-r lg:border-r-[rgba(60,54,46,0.14)] lg:px-5 lg:py-7">
-          <nav className="mt-0 flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
+        <aside data-testid="reader-compass" className="border-b border-[rgba(60,54,46,0.12)] bg-[var(--nav-surface)] px-4 py-5 text-[var(--nav-text-strong)] shadow-[inset_-1px_0_0_rgba(255,255,255,0.02)] lg:flex lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:flex-col lg:overflow-y-auto lg:overscroll-contain lg:border-b-0 lg:border-r lg:border-r-[rgba(60,54,46,0.14)] lg:px-5 lg:py-7">
+          <nav data-testid="reader-compass-nav" className="mt-0 flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
             {navItems.slice(0, 5).map((item) => (
               <div key={item.id} className="min-w-[15rem] lg:min-w-0">
                 <NavItem
+                  testId={`nav-${item.id}`}
                   glyph={item.glyph}
                   label={item.label}
                   detail={item.detail}
@@ -144,6 +147,7 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
 
           <div className="mt-4 border-t border-[rgba(230,207,172,0.12)] pt-4 lg:mt-auto">
             <NavItem
+              testId="nav-settings"
               glyph={navItems[5].glyph}
               label={navItems[5].label}
               detail={navItems[5].detail}
@@ -156,7 +160,7 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
           </div>
         </aside>
 
-        <main className="min-h-[calc(100vh-3.5rem)] overflow-y-auto px-4 pb-8 pt-5 lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:px-8 lg:pb-10 lg:pt-8">
+        <main data-testid="reader-main" className="min-h-[calc(100vh-3.5rem)] overflow-y-auto px-4 pb-8 pt-5 lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:px-8 lg:pb-10 lg:pt-8">
           <div className="mx-auto w-full max-w-[97rem]">{children}</div>
         </main>
       </div>
