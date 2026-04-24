@@ -173,4 +173,47 @@ test.describe('reader shell regression coverage', () => {
     await expect(activeOutlineHeading.first()).not.toContainText('Philosophical Preamble')
     await expect(activeOutlineHeading.first()).toContainText('0. Scope, Assumptions, and Design Invariants')
   })
+
+  test('keyboard shortcuts focus search and navigate search matches', async ({ page }) => {
+    await page.setViewportSize({ width: 1660, height: 1100 })
+    await openConstitutionView(page)
+
+    await page.keyboard.press('/')
+    await expect(page.getByTestId('reader-search-input')).toBeFocused()
+
+    await page.keyboard.type('survival')
+    await expect(page.getByTestId('reader-search-status')).toContainText('1 of')
+
+    await page.keyboard.press('Escape')
+    await expect(page.getByTestId('reader-search-input')).not.toBeFocused()
+
+    await page.keyboard.press('n')
+    await expect(page.getByTestId('reader-search-status')).toContainText('2 of')
+
+    await page.keyboard.press('Shift+N')
+    await expect(page.getByTestId('reader-search-status')).toContainText('1 of')
+  })
+
+  test('keyboard shortcuts move documents and sections', async ({ page }) => {
+    await page.setViewportSize({ width: 1660, height: 1100 })
+    await openConstitutionView(page)
+
+    const rows = page.locator('[data-testid^="document-row-"]')
+    const firstTitle = await rowTitle(rows.nth(0))
+    const secondTitle = await rowTitle(rows.nth(1))
+
+    await expect(page.getByTestId('reader-title')).toHaveText(firstTitle)
+
+    await page.keyboard.press('j')
+    await expect(page.getByTestId('reader-title')).toHaveText(secondTitle)
+
+    await page.keyboard.press('k')
+    await expect(page.getByTestId('reader-title')).toHaveText(firstTitle)
+
+    await page.keyboard.press(']')
+    await expect(page.getByRole('heading', { name: 'Annex Corpus' })).toBeVisible()
+
+    await page.keyboard.press('[')
+    await expect(page.getByRole('heading', { name: 'Constitution & Founding Order' })).toBeVisible()
+  })
 })

@@ -7,6 +7,7 @@ interface DashboardProps {
   view: AppView
   corpus: CorpusPayload | null
   loadError: string | null
+  onViewChange: (view: AppView) => void
 }
 
 interface SourceFeedback {
@@ -111,6 +112,28 @@ const EMPTY_PANE_SCROLL_STATE: PaneScrollState = {
   shelf: 0,
   reader: 0,
   outline: 0,
+}
+
+const KEYBOARD_NAV_VIEWS: AppView[] = [
+  'overview',
+  'constitution',
+  'annexes',
+  'registries',
+  'validation',
+]
+
+function isTypingElement(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) {
+    return false
+  }
+
+  const tagName = target.tagName
+  return (
+    target.isContentEditable ||
+    tagName === 'INPUT' ||
+    tagName === 'TEXTAREA' ||
+    tagName === 'SELECT'
+  )
 }
 
 function docsForView(view: AppView, docs: CorpusDoc[], featuredPaths: string[]): CorpusDoc[] {
@@ -805,6 +828,7 @@ function ReaderPanel({
   onOpenSource,
   searchQuery,
   onSearchChange,
+  searchInputRef,
   matchCount,
   currentMatchIndex,
   onJumpToPreviousMatch,
@@ -815,6 +839,7 @@ function ReaderPanel({
   onOpenSource: () => void
   searchQuery: string
   onSearchChange: (value: string) => void
+  searchInputRef: (node: HTMLInputElement | null) => void
   matchCount: number
   currentMatchIndex: number
   onJumpToPreviousMatch: () => void
@@ -861,6 +886,7 @@ function ReaderPanel({
               </label>
               <input
                 id="reader-search"
+                ref={searchInputRef}
                 data-testid="reader-search-input"
                 value={searchQuery}
                 onChange={(event) => onSearchChange(event.target.value)}
@@ -918,6 +944,7 @@ function ReaderWorkspace({
   activeHeadingSlug,
   searchQuery,
   onSearchChange,
+  searchInputRef,
   matchCount,
   currentMatchIndex,
   onJumpToPreviousMatch,
@@ -938,6 +965,7 @@ function ReaderWorkspace({
   activeHeadingSlug: string | null
   searchQuery: string
   onSearchChange: (value: string) => void
+  searchInputRef: (node: HTMLInputElement | null) => void
   matchCount: number
   currentMatchIndex: number
   onJumpToPreviousMatch: () => void
@@ -1023,6 +1051,7 @@ function ReaderWorkspace({
               onOpenSource={() => onOpenSource(selectedDoc)}
               searchQuery={searchQuery}
               onSearchChange={onSearchChange}
+              searchInputRef={searchInputRef}
               matchCount={matchCount}
               currentMatchIndex={currentMatchIndex}
               onJumpToPreviousMatch={onJumpToPreviousMatch}
@@ -1137,7 +1166,7 @@ function EmptySettings() {
   )
 }
 
-export function Dashboard({ view, corpus, loadError }: DashboardProps) {
+export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardProps) {
   const [query, setQuery] = useState('')
   const [documentQuery, setDocumentQuery] = useState('')
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
@@ -1151,6 +1180,7 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
   const shelfPaneRef = useRef<HTMLElement | null>(null)
   const readerPaneRef = useRef<HTMLDivElement | null>(null)
   const outlinePaneRef = useRef<HTMLDivElement | null>(null)
+  const readerSearchInputRef = useRef<HTMLInputElement | null>(null)
   const restorePaneScrollRef = useRef(true)
   const lastViewRef = useRef<AppView>(view)
   const scrollWriteFrameRef = useRef<number | null>(null)
@@ -1170,6 +1200,9 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
   }
   const bindOutlinePaneRef = (node: HTMLDivElement | null) => {
     outlinePaneRef.current = node
+  }
+  const bindReaderSearchInputRef = (node: HTMLInputElement | null) => {
+    readerSearchInputRef.current = node
   }
 
   useEffect(() => {
@@ -1380,6 +1413,38 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
     })
   }
 
+  function selectRelativeDocument(direction: 1 | -1) {
+    if (!selectedDoc || !visibleDocs.length) {
+      return
+    }
+
+    const currentIndex = visibleDocs.findIndex((doc) => doc.id === selectedDoc.id)
+    if (currentIndex < 0) {
+      return
+    }
+
+    const nextIndex = currentIndex + direction
+    if (nextIndex < 0 || nextIndex >= visibleDocs.length) {
+      return
+    }
+
+    handleSelectDoc(visibleDocs[nextIndex])
+  }
+
+  function moveRelativeView(direction: 1 | -1) {
+    const currentIndex = KEYBOARD_NAV_VIEWS.indexOf(view)
+    if (currentIndex < 0) {
+      return
+    }
+
+    const nextIndex = currentIndex + direction
+    if (nextIndex < 0 || nextIndex >= KEYBOARD_NAV_VIEWS.length) {
+      return
+    }
+
+    onViewChange(KEYBOARD_NAV_VIEWS[nextIndex])
+  }
+
   async function handleOpenSource(doc: CorpusDoc) {
     setSourceFeedback({
       tone: 'neutral',
@@ -1410,6 +1475,74 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
       })
     }
   }
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) {
+        return
+      }
+
+      if (event.key === '/') {
+        if (isTypingElement(event.target)) {
+          return
+        }
+
+        event.preventDefault()
+        readerSearchInputRef.current?.focus()
+        readerSearchInputRef.current?.select()
+        return
+      }
+
+      if (event.key === 'Escape') {
+        if (document.activeElement === readerSearchInputRef.current) {
+          readerSearchInputRef.current?.blur()
+        }
+        return
+      }
+
+      if (isTypingElement(event.target)) {
+        return
+      }
+
+      if (event.key === 'n' || event.key === 'N') {
+        if (!documentQuery.trim() || !documentMatchCount) {
+          return
+        }
+
+        event.preventDefault()
+        jumpSearchMatch(event.shiftKey ? -1 : 1)
+        return
+      }
+
+      if (event.key === 'j' || event.key === 'ArrowDown') {
+        event.preventDefault()
+        selectRelativeDocument(1)
+        return
+      }
+
+      if (event.key === 'k' || event.key === 'ArrowUp') {
+        event.preventDefault()
+        selectRelativeDocument(-1)
+        return
+      }
+
+      if (event.key === ']') {
+        event.preventDefault()
+        moveRelativeView(1)
+        return
+      }
+
+      if (event.key === '[') {
+        event.preventDefault()
+        moveRelativeView(-1)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [documentMatchCount, documentQuery, onViewChange, selectedDoc, view, visibleDocs])
 
   if (loadError) {
     return (
@@ -1499,6 +1632,7 @@ export function Dashboard({ view, corpus, loadError }: DashboardProps) {
           activeHeadingSlug={activeHeadingSlug}
           searchQuery={documentQuery}
           onSearchChange={setDocumentQuery}
+          searchInputRef={bindReaderSearchInputRef}
           matchCount={documentMatchCount}
           currentMatchIndex={activeMatchIndex}
           onJumpToPreviousMatch={() => jumpSearchMatch(-1)}

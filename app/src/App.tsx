@@ -63,7 +63,7 @@ export default function App() {
 
   return (
     <Layout activeNav={view} onNavChange={setView}>
-      <Dashboard view={view} corpus={corpus} loadError={loadError} />
+      <Dashboard view={view} corpus={corpus} loadError={loadError} onViewChange={setView} />
     </Layout>
   )
 }
