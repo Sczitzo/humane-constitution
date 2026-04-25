@@ -280,4 +280,30 @@ test.describe('reader shell regression coverage', () => {
       '#Humane_Constitution_md--0-scope-assumptions-and-design-invariants',
     )
   })
+
+  test('reading mode hides navigation chrome while keeping document search available', async ({ page }) => {
+    await page.setViewportSize({ width: 1800, height: 1100 })
+    await openConstitutionView(page)
+
+    const shelfPane = page.getByTestId('shelf-pane')
+    const outlinePane = page.getByTestId('outline-scroll-pane')
+    const readerPane = page.getByTestId('reader-scroll-pane')
+    const searchInput = page.getByTestId('reader-search-input')
+
+    await expect(shelfPane).toBeVisible()
+    await expect(outlinePane).toBeVisible()
+
+    await page.getByTestId('reading-mode-toggle').click()
+
+    await expect(shelfPane).toBeHidden()
+    await expect(outlinePane).toBeHidden()
+    await expect(readerPane).toBeVisible()
+    await expect(searchInput).toBeVisible()
+
+    await page.reload()
+
+    await expect(page.getByTestId('shelf-pane')).toBeHidden()
+    await expect(page.getByTestId('outline-scroll-pane')).toBeHidden()
+    await expect(page.getByTestId('reading-mode-toggle')).toHaveText('Exit Reading Mode')
+  })
 })

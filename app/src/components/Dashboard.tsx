@@ -124,6 +124,7 @@ const KEYBOARD_NAV_VIEWS: AppView[] = [
 
 const PINNED_DOCS_STORAGE_KEY = 'humane-reader:pinned-docs'
 const RECENT_DOCS_STORAGE_KEY = 'humane-reader:recent-docs'
+const READING_MODE_STORAGE_KEY = 'humane-reader:reading-mode'
 const MAX_RECENT_DOCS = 8
 
 function isTypingElement(target: EventTarget | null): boolean {
@@ -535,6 +536,14 @@ function readStoredDocList(storageKey: string): string[] {
   }
 }
 
+function readStoredBoolean(storageKey: string): boolean {
+  if (typeof window === 'undefined') {
+    return false
+  }
+
+  return window.localStorage.getItem(storageKey) === 'true'
+}
+
 function readStoredPaneScroll(view: AppView): PaneScrollState {
   if (typeof window === 'undefined') {
     return EMPTY_PANE_SCROLL_STATE
@@ -669,11 +678,13 @@ function ActionButton({
   onClick,
   tone = 'default',
   disabled = false,
+  testId,
 }: {
   label: string
   onClick: () => void
   tone?: 'default' | 'accent'
   disabled?: boolean
+  testId?: string
 }) {
   const toneClass =
     tone === 'accent'
@@ -682,6 +693,7 @@ function ActionButton({
 
   return (
     <button
+      data-testid={testId}
       disabled={disabled}
       onClick={onClick}
       className={`rounded-full border px-4 py-2 text-[10px] font-mono uppercase tracking-[0.2em] transition ${
@@ -983,6 +995,8 @@ function ReaderPanel({
   onOpenSource,
   pinned,
   onTogglePinned,
+  readingMode,
+  onToggleReadingMode,
   copiedHeadingSlug,
   onCopyHeadingLink,
   searchQuery,
@@ -998,6 +1012,8 @@ function ReaderPanel({
   onOpenSource: () => void
   pinned: boolean
   onTogglePinned: () => void
+  readingMode: boolean
+  onToggleReadingMode: () => void
   copiedHeadingSlug: string | null
   onCopyHeadingLink: (slug: string) => void
   searchQuery: string
@@ -1039,6 +1055,12 @@ function ReaderPanel({
             label={pinned ? 'Unpin' : 'Pin'}
             onClick={onTogglePinned}
             tone={pinned ? 'accent' : 'default'}
+          />
+          <ActionButton
+            label={readingMode ? 'Exit Reading Mode' : 'Reading Mode'}
+            onClick={onToggleReadingMode}
+            tone={readingMode ? 'accent' : 'default'}
+            testId="reading-mode-toggle"
           />
           <ActionButton label="Open Source" onClick={onOpenSource} tone="accent" />
         </div>
@@ -1087,7 +1109,10 @@ function ReaderPanel({
 
       <article data-testid="reader-paper-shell" className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(252,246,238,0.98),rgba(245,238,227,0.92))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_28px_48px_rgba(35,30,20,0.12)] sm:p-4">
         <div className="rounded-[24px] border border-[rgba(60,54,46,0.12)] bg-[var(--paper-strong)] px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.76),0_1px_0_rgba(60,54,46,0.04)] sm:px-10 sm:py-10">
-          <div data-testid="reader-document" className="mx-auto max-w-[47rem]">
+          <div
+            data-testid="reader-document"
+            className={`mx-auto ${readingMode ? 'max-w-[58rem]' : 'max-w-[47rem]'}`}
+          >
             <MarkdownDocument
               doc={doc}
               searchQuery={searchQuery}
@@ -1110,6 +1135,8 @@ function ReaderWorkspace({
   onSelect,
   onSelectQuickDoc,
   onTogglePinned,
+  readingMode,
+  onToggleReadingMode,
   onOpenSource,
   feedback,
   railLabel,
@@ -1138,6 +1165,8 @@ function ReaderWorkspace({
   onSelect: (doc: CorpusDoc) => void
   onSelectQuickDoc: (doc: CorpusDoc) => void
   onTogglePinned: () => void
+  readingMode: boolean
+  onToggleReadingMode: () => void
   onOpenSource: (doc: CorpusDoc) => void
   feedback: SourceFeedback
   railLabel: string
@@ -1169,17 +1198,26 @@ function ReaderWorkspace({
 
   return (
     <div
-      className={`grid gap-6 xl:grid-cols-[21.5rem_minmax(0,1fr)] 2xl:grid-cols-[21.5rem_minmax(0,1fr)_15.5rem] ${
-        independentScroll ? 'items-start' : ''
+      data-reading-mode={readingMode ? 'true' : 'false'}
+      className={`grid gap-6 ${
+        readingMode
+          ? 'xl:grid-cols-[minmax(0,1fr)]'
+          : 'xl:grid-cols-[21.5rem_minmax(0,1fr)] 2xl:grid-cols-[21.5rem_minmax(0,1fr)_15.5rem]'
+      } ${
+        independentScroll || readingMode ? 'items-start' : ''
       }`}
     >
         <section
           ref={shelfPaneRef}
           data-testid="shelf-pane"
           className={`space-y-4 ${
+            readingMode
+              ? 'hidden'
+              : ''
+          } ${
             independentScroll
               ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-            : 'xl:sticky xl:top-6 xl:self-start xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
+              : 'xl:sticky xl:top-6 xl:self-start xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
           }`}
           onScroll={onPaneScroll}
           onWheelCapture={routeVerticalWheelToSelf}
@@ -1237,6 +1275,8 @@ function ReaderWorkspace({
           ref={readerPaneRef}
           data-testid="reader-scroll-pane"
           className={`min-w-0 ${
+            readingMode ? 'mx-auto w-full max-w-[76rem]' : ''
+          } ${
             independentScroll
               ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
               : ''
@@ -1250,6 +1290,8 @@ function ReaderWorkspace({
               feedback={feedback}
               pinned={pinnedDocIds.includes(selectedDoc.id)}
               onTogglePinned={onTogglePinned}
+              readingMode={readingMode}
+              onToggleReadingMode={onToggleReadingMode}
               copiedHeadingSlug={copiedHeadingSlug}
               onCopyHeadingLink={onCopyHeadingLink}
               onOpenSource={() => onOpenSource(selectedDoc)}
@@ -1268,7 +1310,7 @@ function ReaderWorkspace({
           key={`outline-pane-${selectedDoc.id}`}
           ref={outlinePaneRef}
           data-testid="outline-scroll-pane"
-          className={`hidden 2xl:block ${
+          className={`${readingMode ? 'hidden' : 'hidden 2xl:block'} ${
             independentScroll
               ? '2xl:sticky 2xl:top-6 2xl:max-h-[calc(100vh-9rem)] 2xl:overflow-y-auto 2xl:overscroll-contain 2xl:pr-1'
               : ''
@@ -1376,6 +1418,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
   const [recentDocIds, setRecentDocIds] = useState<string[]>(() => readStoredDocList(RECENT_DOCS_STORAGE_KEY))
+  const [readingMode, setReadingMode] = useState(() => readStoredBoolean(READING_MODE_STORAGE_KEY))
   const [sourceFeedback, setSourceFeedback] = useState<SourceFeedback>({
     tone: 'neutral',
     message: 'Read in-app, or open the source document directly from the reader header.',
@@ -1478,6 +1521,14 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
 
     window.localStorage.setItem(RECENT_DOCS_STORAGE_KEY, JSON.stringify(recentDocIds))
   }, [recentDocIds])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    window.localStorage.setItem(READING_MODE_STORAGE_KEY, String(readingMode))
+  }, [readingMode])
 
   useEffect(() => {
     if (!selectedDoc?.id) {
@@ -1825,6 +1876,10 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
     })
   }
 
+  function handleToggleReadingMode() {
+    setReadingMode((current) => !current)
+  }
+
   async function handleCopyHeadingLink(slug: string) {
     if (!selectedDoc) {
       return
@@ -2001,6 +2056,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
           onSelect={handleSelectDoc}
           onSelectQuickDoc={handleSelectQuickDoc}
           onTogglePinned={handleTogglePinned}
+          readingMode={readingMode}
+          onToggleReadingMode={handleToggleReadingMode}
           onOpenSource={handleOpenSource}
           feedback={sourceFeedback}
           railLabel={meta.railLabel}
