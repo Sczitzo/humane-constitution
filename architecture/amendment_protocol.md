@@ -36,7 +36,7 @@ A valid Tier 1 amendment requires **7 of 9** holder signatures. The choice of M 
 
 - **Resilience against loss.** Up to 2 holders can be unavailable (death, incapacity, unavailability, corrupted key material) without breaking the amendment pathway. Amendment remains possible at N=7 of N_available=7 or N_available=8.
 - **Resistance to capture.** An adversary must capture at least 7 of 9 holders to force an amendment. Capturing 3 is sufficient to *block* amendments (since N − 3 = 6 < 7), but blocking is not the same as forcing — a captured minority cannot alter the invariants, only prevent their improvement.
-- **Resistance to coercion.** With N = 9 distributed, captured, or coerced holders can be identified and publicly named (since the identity set is public). A holder acting under coercion has the option to refuse signing, reducing available holders below 7 and forcing the amendment into the P0 exit / federated Ombuds response path rather than succeeding.
+- **Resistance to coercion.** With N = 9 distributed, captured, or coerced holders can be identified and publicly named (since the identity set is public). A holder acting under coercion has the option to refuse signing, reducing available holders below 7 and forcing the amendment into the Founding Order exit / federated Ombuds response path rather than succeeding.
 
 Simulations and derivation notes are preserved in `/founding/commitments.md` FC-110.
 
@@ -88,7 +88,7 @@ During the 180-day window:
 - The amendment is published on the drift chain as a **proposed-but-not-effective** version.
 - All operational components continue to enforce the prior (current) state.
 - Counter-proposals may be submitted through the standard amendment process.
-- P0 jurisdictional exit proposals (§FC-120/121) may be initiated in response.
+- Founding Order jurisdictional exit proposals (§FC-120/121) may be initiated in response.
 - The federated Ombuds (Annex AI) produces a formal Tier 1 Amendment Integrity Report within 60 days of signature registration, covering: procedural compliance, substantive analysis of invariant impact, adversarial-pressure assessment (was any holder coerced? was the threshold manufactured?).
 - Public comment is collected and archived on the amendment log.
 - Holders may revoke their signatures at any time before the timelock expires. A signature revocation that drops the count below 7 aborts the amendment.
@@ -151,7 +151,7 @@ If fewer than 7 holders are ever simultaneously available (e.g., a mass-casualty
 If ≥7 holders are captured by a hostile coalition, the amendment process remains procedurally valid — the protocol's own rules allow this coalition to propose and carry an amendment. Response paths:
 - **Timelock** (180 days) provides response window.
 - **Federated Ombuds** Integrity Report will surface concerns.
-- **P0 exit** (FC-120, FC-121) allows jurisdictions to exit the federation in response rather than accept the amendment.
+- **Founding Order exit** (FC-120, FC-121) allows jurisdictions to exit the federation in response rather than accept the amendment.
 - **Drift chain public visibility** ensures the amendment cannot be concealed.
 
 The protocol does not claim to prevent capture by a majority-of-holders coalition with sufficient political will — that is the scope of constitutional politics, not architectural enforcement. The architectural enforcement guarantees **visibility** and **response time**, not immunity.

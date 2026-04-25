@@ -11,7 +11,7 @@
 **Patch status convention:** 
 - **ACTIVE** = adopted and awaiting simulation/tuning. 
 - **SUPERSEDED** = replaced by a later patch. 
-- **PROPOSED** = designed but not yet accepted into the master. 
+- **PROPOSED** = designed but not yet accepted into the Humane Constitution.
 - **RETIRED** = intentionally removed.
 
 ---
@@ -166,7 +166,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-003 — Identity System Hardening
 
-- **Introduced design:** four assurance tiers (survival floor, provisional, core, civic activation), multi-evidence thresholding, no master credential, hardened recovery, anti-Sybil controls, and no-survival-lockout under uncertainty.
+- **Introduced design:** four assurance tiers (survival floor, provisional, core, civic activation), multi-evidence thresholding, no single universal credential, hardened recovery, anti-Sybil controls, and no-survival-lockout under uncertainty.
 - **Clauses to integrate:** Identity Adversarial Reality, Differential Assurance, Recovery Safety, No Master Credential, Identity Failure Continuity.
 - **Dependencies:** appeals architecture, ombuds/advocate pathways, and clear separation between verification and monitoring.
 - **New risks introduced:** complexity, onboarding friction, and slower recovery for legitimate edge cases if poorly implemented.
@@ -573,7 +573,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 ## Operating Rules for the Patch Log
 
 - Every future patch must reference a threat ID and specify the new risk it creates.
-- If a patch only exists in the log and not in the master, it is not yet operative.
+- If a patch only exists in the log and not in the Humane Constitution, it is not yet operative.
 - If a patch changes public explanation, the white paper and technical reference must be synced in the same cycle.
 - When a patch materially changes user experience or institutional authority, the diagram set must be updated too.
 - **PROPOSED** patches become ACTIVE only after formal Humane Constitution integration and oversight sign-off.

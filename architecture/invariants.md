@@ -9,7 +9,7 @@
 
 ## Why an Architectural Layer
 
-The Tier 1 invariants stated at Humane Constitution §0 — survival is unconditional, CSM floor, human worth not measured, separation of concerns, influence cannot be purchased, reality anchoring, due process — are textual. Text is amendable. The H-3 Refounding Convention requirement states who may amend and under what process, but the day-to-day operation of the protocol is in running systems: the LC issuance service, the DW decay scheduler, the demurrage calculator, the oracle quorum checker, the SQ activator, the identity ledger, the CR tabulator.
+The Tier 1 invariants stated at Humane Constitution §0 — survival is unconditional, CSM floor, human worth not measured, separation of concerns, influence cannot be purchased, reality anchoring, due process — are textual. Text is amendable. The H-3 Refounding Convention requirement states who may amend and under what process, but the day-to-day operation of the protocol is in running systems: the Essential Access issuance service, the Voice decay scheduler, the demurrage calculator, the oracle quorum checker, the Scarcity Protocol activator, the identity ledger, and the Service Record tabulator.
 
 **If the Tier 1 invariants are enforced only in text, they are protected only to the extent that the implementors agree to read the text.** An implementor who does not read the text — or who reads it and is instructed by a captured governance body to deploy a parameter change that implicitly narrows an invariant — has no architectural obstacle. The H-3 process protects against explicit repeal; it does not protect against silent drift at the implementation layer.
 
@@ -28,7 +28,7 @@ Four elements, each addressed in a dedicated file:
 | **Invariant registry** | `invariants.md` (this file) | Enumerates every architecturally-locked parameter and value with references to Tier classification, source commitment, and enforcement mechanism. |
 | **Amendment protocol** | `amendment_protocol.md` | Specifies M-of-N signature threshold (FC-110), timelock (FC-111), and procedural gates for changing any Tier 1 entry in this registry. |
 | **Drift chain** | `drift_chain.md` | Version-chained hash history of `/founding/commitments.md`, `Humane_Constitution.md` §0, and Annex Y §Y1, published to a tamper-evident ledger so that silent modification is detectable. |
-| **Implementation binding** | `implementation_binding.md` | Requirement that every operational service component (LC issuer, DW scheduler, oracle gate, etc.) verifies the current drift-chain hash of this registry at startup and refuses to operate if the hash does not match the operator's pinned reference. |
+| **Implementation binding** | `implementation_binding.md` | Requirement that every operational service component (Essential Access issuer, Voice scheduler, oracle gate, etc.) verifies the current drift-chain hash of this registry at startup and refuses to operate if the hash does not match the operator's pinned reference. |
 
 ---
 
@@ -55,11 +55,11 @@ The following parameters are **Tier 1 architecturally locked**. Change requires 
 
 | Parameter | Current Value | Source | Change Authority |
 | :--- | :--- | :--- | :--- |
-| EC ↔ LC boundary | No direct or proxy conversion; violations governed by Annex AJ §4 | Humane Constitution §II non-convertibility | Tier 1 (H-3) |
-| DW/CR ↔ EC boundary | No civic standing as allocation preference in non-civic domains | Annex AJ §AJ-2 | Tier 1 (H-3) |
-| SQ ↔ EC boundary | No EC premium for SQ-rationed access | Annex AJ §AJ-3 | Tier 1 (H-3) |
-| Protected Pause floor | 0.30 DW | FC-020 | Tier 1 (H-3) |
-| DW sector ceiling | 0.20 | FC-060 | Tier 1 (H-3) |
+| Flow ↔ Essential Access boundary | No direct or proxy conversion; violations governed by Annex AJ §4 | Humane Constitution §II non-convertibility | Tier 1 (H-3) |
+| Voice / Service Record ↔ Flow boundary | No civic standing as allocation preference in non-civic domains | Annex AJ §AJ-2 | Tier 1 (H-3) |
+| Scarcity Protocol ↔ Flow boundary | No Flow premium for scarcity-rationed access | Annex AJ §AJ-3 | Tier 1 (H-3) |
+| Protected Pause floor | 0.30 Voice | FC-020 | Tier 1 (H-3) |
+| Voice sector ceiling | 0.20 | FC-060 | Tier 1 (H-3) |
 
 ### Category C — Measurement Architecture
 
@@ -81,9 +81,9 @@ The following parameters are **Tier 1 architecturally locked**. Change requires 
 | Tier 1 amendment timelock | 180 days | FC-111 | Tier 1 (H-3, recursive) |
 | Ombuds sub-count minimum | 5 sub-nodes | FC-090 | Tier 1 (H-3) |
 | Ombuds supermajority threshold | 4 of 5 | FC-091 | Tier 1 (H-3) |
-| P0 exit supermajority threshold | 2/3 resident personhood | FC-120 | Tier 1 (H-3) |
-| P0 exit unwind window | 730 days (2 years) | FC-121 | Tier 1 (H-3) |
-| P0 subsidiarity scales | household / neighborhood / locality / region / federation | FC-122 | Tier 1 (H-3) |
+| Founding Order exit supermajority threshold | 2/3 resident personhood | FC-120 | Tier 1 (H-3) |
+| Founding Order exit unwind window | 730 days (2 years) | FC-121 | Tier 1 (H-3) |
+| Founding Order subsidiarity scales | household / neighborhood / locality / region / federation | FC-122 | Tier 1 (H-3) |
 
 ---
 
@@ -93,7 +93,7 @@ The following parameters are **Tier 1 architecturally locked**. Change requires 
 
 1. At each amendment (including founding): a canonical serialization of this file, `Humane_Constitution.md §0`, `Annex Y §Y1`, and `/founding/commitments.md` is produced and SHA-256 hashed.
 2. The hash is recorded in `drift_chain.md` as a new version row, with the prior-version hash chained into the new-version commitment (standard hash-chain construction).
-3. Every operating node — LC issuer, oracle gate, DW scheduler, enforcement dashboard — on startup retrieves the current drift-chain head and compares against the operator-pinned reference. Mismatch triggers refuse-to-operate with an alert to Article VII monitoring.
+3. Every operating node — Essential Access issuer, oracle gate, Voice scheduler, enforcement dashboard — on startup retrieves the current drift-chain head and compares against the operator-pinned reference. Mismatch triggers refuse-to-operate with an alert to Article VII monitoring.
 4. Changes to any Tier 1 parameter require a new version with M-of-N signatures per `amendment_protocol.md`. Unsigned or insufficiently-signed changes cannot advance the drift chain.
 
 ### Why Cryptographic and Not Merely Textual
@@ -102,13 +102,13 @@ Text-only invariants are protected by the good-faith reading of the text. Crypto
 - **Any operator node can detect tampering** — startup hash check is a small, deterministic operation.
 - **Tampering is public** — the drift chain is published; silent unilateral change produces visible chain divergence.
 - **Valid amendment requires threshold of holders** — the 7-of-9 signature requirement means no single captured holder or pair can force a change; M-of-N with distributed holders is resilient to coercion of a minority.
-- **Timelock creates response window** — the 180-day delay between proposal and effect means even a valid amendment provides civil society, the federated Ombuds, and uncaptured jurisdictions 6 months to respond (e.g., by proposing a counter-amendment, by exercising P0 exit rights, or by alerting the public).
+- **Timelock creates response window** — the 180-day delay between proposal and effect means even a valid amendment provides civil society, the federated Ombuds, and uncaptured jurisdictions 6 months to respond (e.g., by proposing a counter-amendment, by exercising Founding Order exit rights, or by alerting the public).
 
 ### What This Layer Does Not Do
 
 It does not prevent a coalition from meeting the M-of-N threshold and waiting out the timelock. That coalition, by construction, represents the required authority under the protocol's own amendment rules. This layer prevents **capture below the amendment threshold** from silently narrowing the invariants. Defense against legitimate-but-hostile amendment through the valid M-of-N process relies on:
 - The 180-day timelock (time for response),
-- The P0 exit pathway (ability to leave — FC-120, FC-121),
+- The Founding Order exit pathway (ability to leave — FC-120, FC-121),
 - The federated Ombuds annual integrity audit (Proposal 8),
 - Public scrutiny via the drift chain's published divergence.
 

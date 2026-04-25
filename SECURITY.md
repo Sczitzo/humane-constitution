@@ -2,7 +2,7 @@
 
 ## Scope
 
-This repository contains a governance systems design document, not executable software. "Security" in this context means **design vulnerabilities** — mechanisms that a motivated bad actor could exploit to undermine the protocol's core guarantees (instrument separation, survival access, governance integrity).
+This repository contains a constitutional systems design and a reader application. "Security" in this context primarily means **design vulnerabilities** — mechanisms that a motivated bad actor could exploit to undermine the protocol's core protections (instrument separation, survival access, governance integrity) — plus ordinary software vulnerabilities in the reader app or tooling.
 
 ## Reporting a design vulnerability
 

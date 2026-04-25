@@ -39,8 +39,8 @@ This protocol was built in public, stress-tested adversarially, and released wit
 1. **Humane Constitution** — primary constitutional source of truth.
 2. **Threat Register** — living adversarial model and control inventory.
 3. **Patch Log** — change ledger and risk traceability record.
-4. **Public White Paper** — public-facing explanatory document aligned to the master.
-5. **Diagrammed Technical Reference** — visual system map aligned to the master.
+4. **Public White Paper** — public-facing explanatory document aligned to the Humane Constitution.
+5. **Diagrammed Technical Reference** — visual system map aligned to the Humane Constitution.
 
 **Working edition:** this is the current constitutional text for a flow-based economy, unconditional survival, and capture-resistant governance.
 

@@ -73,7 +73,7 @@ The drift chain is **published** to a tamper-evident public ledger at all times.
 
 At least **two independent publication channels** are required so that a single compromised publisher cannot suppress a version or publish a forged version without producing an observable divergence between the channels.
 
-Every operational component (LC issuer, DW scheduler, oracle gate, CSM dispenser, enforcement dashboard, identity ledger) queries **at least two publication channels** at startup and compares hashes. Mismatch between channels -> refuse-to-operate; alert to Article VII monitoring.
+Every operational component (Essential Access issuer, Voice scheduler, oracle gate, CSM dispenser, enforcement dashboard, identity ledger) queries **at least two publication channels** at startup and compares hashes. Mismatch between channels -> refuse-to-operate; alert to Article VII monitoring.
 
 ---
 

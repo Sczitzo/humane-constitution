@@ -9,13 +9,12 @@ repository-code: "https://github.com/Sczitzo/humane-constitution"
 url: "https://github.com/Sczitzo/humane-constitution"
 abstract: >
   A constitutional systems design separating survival, markets, and governance
-  into structurally independent lanes. The protocol guarantees an unconditional
-  humane floor through LC (Life Access Ledger), preserves productive markets
-  through EC (Enterprise Currency), and implements capture-resistant civic
-  governance through DW/CR (Deliberation Weight / Civic Record). Includes
-  a complete adversarial threat register (25 threats), patch log (21 patches),
-  formal state machine specifications, constitutional invariants, and a formal
-  acceptance protocol.
+  into structurally independent lanes. The design protects baseline survival
+  through Essential Access, preserves productive exchange through Flow, and
+  separates civic influence through Voice, the Service Record, and the Shared
+  Storehouse. Includes an adversarial threat register, patch log, formal state
+  machine specifications, constitutional invariants, and a formal acceptance
+  protocol.
 keywords:
   - constitutional design
   - governance systems
@@ -25,7 +24,7 @@ keywords:
   - civilizational design
   - threat modeling
   - governance hardening
-  - humane floor
+  - survival floor
   - instrument separation
 license: CC-BY-4.0
 date-released: "2026-04-09"

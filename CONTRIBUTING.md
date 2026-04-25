@@ -65,7 +65,7 @@ If you can translate the White Paper or Citizen-Facing Rights Layer into another
 
 ## What is not accepted
 
-- **Wholesale redesign proposals** that abandon the LC/EC/DW/CR instrument separation — this is the foundational architectural constraint, not a negotiable parameter. Proposals that collapse the separation will be declined.
+- **Wholesale redesign proposals** that abandon the Flow / Essential Access / Voice / Service Record / Shared Storehouse separation — this is the foundational architectural constraint, not a negotiable parameter. Proposals that collapse the separation will be declined.
 - **Changes that weaken existing protections** without replacing them with demonstrably stronger ones.
 - **Philosophical objections without mechanism analysis.** "This won't work because human nature" is not a contribution. "Here is the specific incentive structure that produces the failure" is.
 - **Simplifications that break existing constraints.** The complexity is load-bearing.
@@ -78,7 +78,7 @@ Every threat follows the same structure:
 
 ```
 T-XXX — [Threat Name]
-- Layer: which article, legacy crosswalk, annex, or mechanism is targeted
+- Layer: which article, annex, or mechanism is targeted
 - Severity: Critical / High / Med-High / Medium
 - Risk Score: I × L × (6 - D)
 - Mechanism: how the attack works

@@ -46,8 +46,8 @@
 | T-023 | Pilot External Validity Collapse | Med-High | **OPEN** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **ADDRESSED** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active — no current resolution path. Closed by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18). | 60 |
 | T-025 | Demurrage Sector-Capture via Investment Channel | High | **OPEN** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 |
-| T-026 | Exit Denial | **Critical** | **ADDRESSED** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Closed by P0 exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies. | 48 |
-| T-027 | Subsidiarity Violation | High | **ADDRESSED** | Prevent federation action at a scale larger than the smallest-competent scale under the P0 subsidiarity rule. Closed by P0 subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle. | 36 |
+| T-026 | Exit Denial | **Critical** | **ADDRESSED** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Closed by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies. | 48 |
+| T-027 | Subsidiarity Violation | High | **ADDRESSED** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Closed by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle. | 36 |
 
 *\* ADDRESSED = mitigation patch designed (PROPOSED) but not yet ACTIVE. Status will update to ACTIVE when patches are integrated into the Humane Constitution.*
 
@@ -77,7 +77,7 @@
 - **Mechanism:** duplicate identities, account takeover, synthetic identities, proxy use, and recovery fraud.
 - **Impact:** drains Essential Access, corrupts Voice and Service Record legitimacy, and can exclude vulnerable people if controls become too harsh.
 - **Detection:** cross-signal deduplication, recovery anomaly review, impossible-use patterns, and staged assurance mismatches.
-- **Mitigation direction:** four-tier identity assurance model, multi-evidence thresholding, no master credential, recovery safety ladder, survival-floor continuity during disputes. → P-003 ACTIVE.
+- **Mitigation direction:** four-tier identity assurance model, multi-evidence thresholding, no single universal credential, recovery safety ladder, survival-floor continuity during disputes. → P-003 ACTIVE.
 - **Open problem:** calibrate fraud tolerance without making the system unusable for displaced, undocumented, or digitally fragile people.
 - **Session 8 addition — Asymmetric Error Doctrine required:** The current mitigation does not specify quantified targets. Before deployment, the founding coalition must publish and formally adopt an Asymmetric Error Doctrine that specifies: (a) maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record); (b) maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile) per tier; (c) the review trigger when either rate is exceeded; (d) the decision rule when the two error types trade off. Without explicit numbers, calibration is permanently subject to political pressure. The Asymmetric Error Doctrine is a Tier 2 founding commitment. → See P-016 (Annex AK).
 
@@ -449,10 +449,10 @@
 
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **ADDRESSED** | P-022 | 60 |
 | T-025 | Demurrage Sector-Capture via Investment Channel | High | **PROPOSED** | P-023 | 48 |
-| T-026 | Exit Denial | **Critical** | **ADDRESSED** | P0 exit_protocol + Annex AI §3.4 + Annex AJ §4 | 48 |
-| T-027 | Subsidiarity Violation | High | **ADDRESSED** | P0 subsidiarity_rule + Annex AI §3.2 | 36 |
+| T-026 | Exit Denial | **Critical** | **ADDRESSED** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 |
+| T-027 | Subsidiarity Violation | High | **ADDRESSED** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 12 PROPOSED, 5 OPEN, 4 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-001 and T-002 carry Session 8 open-problem additions (Annexes AJ and AK). T-020 and T-021 addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033 (Proposal 3). T-025 addressed by P-023 (contract-commitment architecture, zero exemptions). T-026 and T-027 are new Session 9 Proposal 5 threat classes, both ADDRESSED by the P0 subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI).
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 12 PROPOSED, 5 OPEN, 4 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-001 and T-002 carry Session 8 open-problem additions (Annexes AJ and AK). T-020 and T-021 addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033 (Proposal 3). T-025 addressed by P-023 (contract-commitment architecture, zero exemptions). T-026 and T-027 are new Session 9 Proposal 5 threat classes, both ADDRESSED by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI).
 
 ---
 
@@ -474,12 +474,12 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 ### T-026 — Exit Denial
 - **Layer:** Governance / federation-scope layer
 - **Severity:** Critical
-- **Status:** ADDRESSED (P0 `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4)
+- **Status:** ADDRESSED (Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4)
 - **Risk Score:** 4×3×(6-2)=48
 - **Mechanism:** A federation subset (captured CRP faction, captured enforcement body, or coordinated infrastructure operators) attempts to block, delay, or corrupt a valid exit event by: (a) refusing to publish the exit proposal on the federation record; (b) withholding Essential Access during the FC-121 730-day unwind, in violation of the unconditional Essential Access-continuity rule; (c) preemptively withdrawing federation infrastructure before day 730+90; (d) filing pretextual enforcement actions against exiting-unit representatives to suppress the exit vote; (e) manipulating the exit impact assessment beyond factual description; (f) refusing to update the drift chain with the exit row; (g) blocking re-apportionment of CRP seats held by delegates from the exiting unit.
-- **Impact:** Defeats the fundamental non-coercion guarantee. An exit right that cannot be exercised is a trapdoor with a false label. A federation that denies exit while retaining the appearance of offering it converts to soft occupation; every internal protection becomes contingent on the captors' willingness to honor it — the exact failure mode P0 was designed to prevent.
+- **Impact:** Defeats the fundamental non-coercion guarantee. An exit right that cannot be exercised is a trapdoor with a false label. A federation that denies exit while retaining the appearance of offering it converts to soft occupation; every internal protection becomes contingent on the captors' willingness to honor it — the exact failure mode the Founding Order was designed to prevent.
 - **Detection:** Medium-high (D=2). Exit events are public drift-chain entries with Ombuds attestation; delay or refusal against a valid exit creates observable procedural-compliance gaps. Most attack surfaces (infrastructure withdrawal, Essential Access withholding) are measurable in real time.
-- **Mitigation:** P0 `exit_protocol.md §Exit Denial — T-026` enumerates prohibited conduct. Annex AI §3.4 auto-convenes the Federated Ombuds Plenum on exit-denial complaints; Plenum finding under FC-091 (4-of-5) triggers Annex AJ §4 severity 3 (Institutional) penalties plus order of specific performance compelling the federation action. Unwind window auto-extends by the period of denial at federation cost (not exiting-unit cost).
+- **Mitigation:** Founding Order `exit_protocol.md §Exit Denial — T-026` enumerates prohibited conduct. Annex AI §3.4 auto-convenes the Federated Ombuds Plenum on exit-denial complaints; Plenum finding under FC-091 (4-of-5) triggers Annex AJ §4 severity 3 (Institutional) penalties plus order of specific performance compelling the federation action. Unwind window auto-extends by the period of denial at federation cost (not exiting-unit cost).
 - **Residual risk:** Slow-motion exit denial — federation action that is individually within the rules but cumulatively obstructive (e.g., slow publication, narrowly compliant impact-assessment language that misleads without violating). Mitigated by the drift-chain audit trail and the 180-day deliberation window that gives time for procedural integrity claims to be raised and adjudicated before the vote.
 - **Compound linkages:** T-026 × T-008 (captured elite formation in federation-level bodies is the primary attack surface for exit denial; P-025 Federated Ombuds dispersal is the counter). T-026 × T-022 (hostile successor government attempting exit denial to prevent resource loss). T-026 × T-007 (definition drift around "valid exit vote" standards — closed by P-004 + publication of FC-120 threshold in Tier 1 architecture).
 
@@ -488,7 +488,7 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 ### T-027 — Subsidiarity Violation
 - **Layer:** Governance / scale-decision layer
 - **Severity:** High
-- **Status:** ADDRESSED (P0 `subsidiarity_rule.md` + Annex AI §3.2 challenge; Proportionality Principle)
+- **Status:** ADDRESSED (Founding Order `subsidiarity_rule.md` + Annex AI §3.2 challenge; Proportionality Principle)
 - **Risk Score:** 3×3×(6-2)=36
 - **Mechanism:** The federation (or a region acting above its scale competence) decides a matter that is properly resolvable at a smaller scale, imposing uniform rules where scale-appropriate differentiation is competent. Pathway vectors: (a) expanding the "federation-scale by construction" list without Tier 1 amendment; (b) using soft exceptions (cross-unit externality claims, measurement coordination claims) as a routine basis for federation preemption rather than last-resort; (c) declining to express federation rules as floors-plus-local-customization where floor-expression would suffice; (d) inconclusive subsidiarity challenge reviews resolving toward the larger scale despite the default-against-escalation rule; (e) slow erosion of the three-prong competence test through precedent accumulation.
 - **Impact:** The protocol drifts toward centralization without any single amendment being visibly centralizing. Ostrom's principle 2 (rules match local conditions) is violated by default. Units that would have handled matters competently are preempted, reducing local competence over time (principle-erosion feedback loop). The federation's default reach grows; every article that depends on local adaptation (Article III capacity measurement, Article V enterprise scaling, Article I enforcement) loses calibration to local context.

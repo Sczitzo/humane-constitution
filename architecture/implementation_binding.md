@@ -12,17 +12,17 @@ Every operational component whose behavior depends on Tier 1 parameters must imp
 
 | Component | What it reads from Tier 1 |
 | :--- | :--- |
-| **LC Issuance Service** | CSM basket values (Annex Y §Y1); reserve window (FC-070); acceptable measurement error thresholds (FC-001, FC-002, FC-004, FC-005) |
+| **Essential Access Issuance Service** | CSM basket values (Annex Y §Y1); reserve window (FC-070); acceptable measurement error thresholds (FC-001, FC-002, FC-004, FC-005) |
 | **Oracle Cohort Gate** | N_MIN (FC-030); methodology class minimum (FC-031); pairwise correlation max (FC-032); adversarial seat minimum (FC-033); quorum-loss restoration window (FC-100) |
-| **DW/CR Scheduler** | Sector ceiling (FC-060); per-person cap (FC-061); decay rate (FC-062); Protected Pause floor (FC-020) |
-| **SQ Activator** | Oracle quorum thresholds; CSM-cluster failure threshold (FC-071); Annex AQ conservative hold logic |
+| **Voice / Service Record Scheduler** | Sector ceiling (FC-060); per-person cap (FC-061); decay rate (FC-062); Protected Pause floor (FC-020) |
+| **Scarcity Protocol Activator** | Oracle quorum thresholds; CSM-cluster failure threshold (FC-071); Annex AQ conservative hold logic |
 | **CSM Dispenser (Annex Y §Y2)** | All Category A parameters from invariants.md; governance-actor-independent issuance rule |
 | **Enforcement Panel dashboard** | Penalty multipliers (FC-040); detection assumptions (FC-041); leakage thresholds (FC-010); severity matrix (Annex AJ §4.2) |
 | **Attestation Stake Engine** | Stake ratio (FC-080); audit window (FC-081); graph density threshold (FC-082) |
 | **Ombuds Coordination Service** | Sub-count minimum (FC-090); supermajority threshold (FC-091); term length (FC-092) |
 | **Identity Ledger** | Amendment-authority controls over identity schema changes |
 | **Amendment Registry** | Signature threshold (FC-110); timelock (FC-111); holder identities and keys |
-| **P0 Exit Coordinator** | Supermajority threshold (FC-120); unwind window (FC-121); subsidiarity scale definitions (FC-122) |
+| **Founding Order Exit Coordinator** | Supermajority threshold (FC-120); unwind window (FC-121); subsidiarity scale definitions (FC-122) |
 
 ---
 
@@ -39,9 +39,9 @@ Every bound component, on startup and on a recurring schedule (every 24 hours mi
 7. **Pin the effective state hash** to the component's local cache; all subsequent Tier 1 parameter reads during this session use this pinned reference.
 
 If any step fails, the component **refuses to perform operations that depend on Tier 1 parameters**. Specifically:
-- LC Issuance Service: refuses to issue new LC entitlements but continues to honor prior issuance already in user accounts (so outages do not starve recipients).
-- Oracle Gate: reports oracle status as "unknown" for measurement-gated SQ decisions; §Annex AQ Conservative Hold applies until resolved.
-- CSM Dispenser: **continues to operate against the last verified state** — the humane floor is unconditional (Annex Y §Y5) and cannot be interrupted by drift-chain verification failure. This is the explicit exception. Any other component shuts down; CSM continues.
+- Essential Access Issuance Service: refuses to issue new Essential Access entitlements but continues to honor prior issuance already in user accounts (so outages do not starve recipients).
+- Oracle Gate: reports oracle status as "unknown" for measurement-gated Scarcity Protocol decisions; §Annex AQ Conservative Hold applies until resolved.
+- CSM Dispenser: **continues to operate against the last verified state** — the survival floor is unconditional (Annex Y §Y5) and cannot be interrupted by drift-chain verification failure. This is the explicit exception. Any other component shuts down; CSM continues.
 - Enforcement Panel dashboard: holds pending actions; does not issue new findings.
 - Amendment Registry: refuses to accept new proposals until restored.
 

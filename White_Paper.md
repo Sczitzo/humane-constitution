@@ -53,7 +53,7 @@ The protocol starts from a simple diagnosis: when survival, enterprise, and poli
 Most systems fail in one of two directions. Either they leave survival exposed to market power, or they try to protect survival by building institutions that quietly become coercive in their own right. The protocol is an attempt to escape that trap by separating the social functions that most systems collapse together.
 
 The design is built around a few non-negotiables:
-- **Baseline survival is unconditional under the design.** Baseline essentials are tied to personhood, not wages, obedience, or popularity.
+- **Baseline survival is protected by personhood under the design.** Baseline essentials are not tied to wages, obedience, or popularity.
 - **Human worth is not measured.** No score is allowed to gate dignity, personhood, or baseline access.
 - **Influence cannot be purchased.** Markets matter, but civic weight cannot be bought with market money.
 - **Reality has to anchor issuance.** Baseline guarantees must be constrained by measured physical capacity, not wishful accounting.
