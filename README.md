@@ -63,8 +63,8 @@ Use this reading order:
 2. [`docs/public/03_readiness.md`](./docs/public/03_readiness.md) for the claims, readiness status, and strongest objections
 3. [`docs/public/04_white_paper.md`](./docs/public/04_white_paper.md) for the fuller public explanation
 4. [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md) for the plain-language rights summary
-5. [`Humane_Constitution.md`](./Humane_Constitution.md) for the governing text
-6. [`Threat_Register.md`](./Threat_Register.md) if you want to test the design against failure and bad actors
+5. [`docs/constitution/Humane_Constitution.md`](./docs/constitution/Humane_Constitution.md) for the governing text
+6. [`docs/governance/Threat_Register.md`](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
 
 ## The core separation
 
@@ -153,33 +153,32 @@ flowchart TD
 |---|---|
 | [`docs/public/01_overview.md`](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
 | [`docs/public/03_readiness.md`](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
-| [`docs/Claims_Evidence_Register.md`](./docs/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
-| [`docs/Pilot_Evidence_Roadmap.md`](./docs/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
+| [`docs/governance/Claims_Evidence_Register.md`](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
+| [`docs/governance/Pilot_Evidence_Roadmap.md`](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
 | [`docs/public/02_faq.md`](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
-| [`docs/Source_Grounded_Content_Prompts.md`](./docs/Source_Grounded_Content_Prompts.md) | Reusable prompt pack for source-grounded explainers, interviews, FAQs, and short-form content. |
 | [`docs/public/04_white_paper.md`](./docs/public/04_white_paper.md) | Plain-language public explanation. |
 | [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md) | Plain-language summary of citizen rights and protections. |
 
-> Marketing scripts, deck assets, and short-form content (formerly `docs/content/`) are kept offline and excluded from this repository via `.gitignore`.
+> Marketing scripts, deck assets, source-grounded prompt packs, and short-form content are kept offline (excluded via `.gitignore`).
 
 ### Core documents
 
 | Document | Purpose |
 |---|---|
-| [`Humane_Constitution.md`](./Humane_Constitution.md) | Primary constitutional source of truth. Lean constitutional text with links into the standalone annex corpus. |
-| [`Threat_Register.md`](./Threat_Register.md) | Adversarial risk model. 27 threat IDs — 17 ADDRESSED, 5 PARTIAL, 4 OPEN (T-003 retired). T-017/P-014 is the FOUNDING instrument. |
-| [`Patch_Log.md`](./Patch_Log.md) | Change and mitigation history. 31 patches — 16 ACTIVE, 15 PROPOSED (1 FOUNDING: P-014). |
-| [`Acceptance_Protocol.md`](./Acceptance_Protocol.md) | Process for moving patches from design to operation. |
+| [`docs/constitution/Humane_Constitution.md`](./docs/constitution/Humane_Constitution.md) | Primary constitutional source of truth. Lean constitutional text with links into the standalone annex corpus. |
+| [`docs/governance/Threat_Register.md`](./docs/governance/Threat_Register.md) | Adversarial risk model. 27 threat IDs — 17 ADDRESSED, 5 PARTIAL, 4 OPEN (T-003 retired). T-017/P-014 is the FOUNDING instrument. |
+| [`docs/governance/Patch_Log.md`](./docs/governance/Patch_Log.md) | Change and mitigation history. 31 patches — 16 ACTIVE, 15 PROPOSED (1 FOUNDING: P-014). |
+| [`docs/constitution/Acceptance_Protocol.md`](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 
 ## Technical Specifications
 
 | Document | Purpose |
 |---|---|
-| [`docs/INVARIANTS.md`](./docs/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
-| [`docs/SPECIFICATIONS.md`](./docs/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
-| [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
-| [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
-| [`docs/Founding_Preactivation_Disclosure.md`](./docs/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
+| [`docs/constitution/INVARIANTS.md`](./docs/constitution/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
+| [`docs/constitution/SPECIFICATIONS.md`](./docs/constitution/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
+| [`docs/simulations/Adversarial_Narrative_Simulation.md`](./docs/simulations/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
+| [`docs/simulations/Annual_Compound_Simulation.md`](./docs/simulations/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
+| [`docs/governance/Founding_Preactivation_Disclosure.md`](./docs/governance/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
 | [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
@@ -287,12 +286,12 @@ The system's commitment: every failure in these categories is published publicly
 Scale readiness requires:
 
 - [x] Public readiness guide — see [`docs/public/03_readiness.md`](./docs/public/03_readiness.md)
-- [x] Claims and evidence register — see [`docs/Claims_Evidence_Register.md`](./docs/Claims_Evidence_Register.md)
-- [x] Pilot evidence roadmap — see [`docs/Pilot_Evidence_Roadmap.md`](./docs/Pilot_Evidence_Roadmap.md)
+- [x] Claims and evidence register — see [`docs/governance/Claims_Evidence_Register.md`](./docs/governance/Claims_Evidence_Register.md)
+- [x] Pilot evidence roadmap — see [`docs/governance/Pilot_Evidence_Roadmap.md`](./docs/governance/Pilot_Evidence_Roadmap.md)
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
 - [x] CFRL one-page publication — see [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md)
-- [x] Adversarial narrative simulation — see [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md)
-- [x] Annual compound simulation — see [`docs/Annual_Compound_Simulation.md`](./docs/Annual_Compound_Simulation.md)
+- [x] Adversarial narrative simulation — see [`docs/simulations/Adversarial_Narrative_Simulation.md`](./docs/simulations/Adversarial_Narrative_Simulation.md)
+- [x] Annual compound simulation — see [`docs/simulations/Annual_Compound_Simulation.md`](./docs/simulations/Annual_Compound_Simulation.md)
 - [ ] Legitimate founding coalition
 
 The Formal Acceptance Protocol defines the pathway from design to operation.

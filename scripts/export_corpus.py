@@ -14,22 +14,24 @@ OUTPUT_TS = ROOT / "app" / "src" / "generated" / "corpus.ts"
 OUTPUT_JSON = ROOT / "app" / "public" / "generated" / "corpus.json"
 
 CORE_DOCS = (
-    "Humane_Constitution.md",
-    "White_Paper.md",
-    "Citizen_Facing_Rights_Layer.md",
     "README.md",
-    "docs/One_Page_Overview.md",
-    "docs/Public_Readiness_Guide.md",
-    "docs/Claims_Evidence_Register.md",
-    "docs/Pilot_Evidence_Roadmap.md",
-    "docs/Public_FAQ.md",
-    "docs/Source_Grounded_Content_Prompts.md",
-    "Threat_Register.md",
-    "Patch_Log.md",
-    "Acceptance_Protocol.md",
+    "docs/constitution/Humane_Constitution.md",
+    "docs/constitution/Acceptance_Protocol.md",
+    "docs/constitution/INVARIANTS.md",
+    "docs/constitution/SPECIFICATIONS.md",
+    "docs/governance/Threat_Register.md",
+    "docs/governance/Patch_Log.md",
+    "docs/governance/Claims_Evidence_Register.md",
+    "docs/governance/Founding_Preactivation_Disclosure.md",
+    "docs/governance/Pilot_Evidence_Roadmap.md",
+    "docs/public/01_overview.md",
+    "docs/public/02_faq.md",
+    "docs/public/03_readiness.md",
+    "docs/public/04_white_paper.md",
+    "docs/public/05_rights_layer.md",
+    "docs/simulations/Adversarial_Narrative_Simulation.md",
+    "docs/simulations/Annual_Compound_Simulation.md",
     "founding/commitments.md",
-    "docs/SPECIFICATIONS.md",
-    "docs/Founding_Preactivation_Disclosure.md",
     "docs/annexes/INDEX.md",
 )
 
@@ -111,11 +113,13 @@ def section_for(relative_path: str) -> str:
     if relative_path.startswith("docs/annexes/ANNEX_"):
         return "annex"
     if relative_path in {
-        "Threat_Register.md",
-        "Patch_Log.md",
-        "Acceptance_Protocol.md",
+        "docs/governance/Threat_Register.md",
+        "docs/governance/Patch_Log.md",
+        "docs/governance/Claims_Evidence_Register.md",
+        "docs/governance/Founding_Preactivation_Disclosure.md",
+        "docs/governance/Pilot_Evidence_Roadmap.md",
+        "docs/constitution/Acceptance_Protocol.md",
         "founding/commitments.md",
-        "docs/Founding_Preactivation_Disclosure.md",
         "docs/annexes/INDEX.md",
     }:
         return "registry"
@@ -180,7 +184,7 @@ def parse_heading_id_count(path: Path, prefix: str) -> int:
 
 
 def parse_article_count() -> int:
-    text = (ROOT / "Humane_Constitution.md").read_text(encoding="utf-8")
+    text = (ROOT / "docs" / "constitution" / "Humane_Constitution.md").read_text(encoding="utf-8")
     return len(set(re.findall(r"^#{1,6}\s+(Article [IVX]+)\b", text, re.MULTILINE)))
 
 
@@ -198,8 +202,8 @@ def collect_stats(docs: list[dict[str, object]]) -> dict[str, object]:
         "referenceAnnexCount": sum(doc["statusBucket"] == "reference" for doc in annexes),
         "commitmentCount": commitment_count,
         "reservedCommitmentCount": reserved_commitment_count,
-        "threatCount": parse_heading_id_count(ROOT / "Threat_Register.md", "T"),
-        "patchCount": parse_heading_id_count(ROOT / "Patch_Log.md", "P"),
+        "threatCount": parse_heading_id_count(ROOT / "docs" / "governance" / "Threat_Register.md", "T"),
+        "patchCount": parse_heading_id_count(ROOT / "docs" / "governance" / "Patch_Log.md", "P"),
         "validatorStatus": "pass",
     }
     fingerprint_input = json.dumps({"docs": docs, "stats": stats}, sort_keys=True).encode("utf-8")
@@ -209,17 +213,17 @@ def collect_stats(docs: list[dict[str, object]]) -> dict[str, object]:
 
 def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> None:
     featured_paths = [
-        "docs/One_Page_Overview.md",
-        "docs/Public_Readiness_Guide.md",
-        "docs/Claims_Evidence_Register.md",
-        "docs/Pilot_Evidence_Roadmap.md",
-        "Humane_Constitution.md",
-        "White_Paper.md",
-        "docs/Public_FAQ.md",
+        "docs/public/01_overview.md",
+        "docs/public/02_faq.md",
+        "docs/public/03_readiness.md",
+        "docs/public/04_white_paper.md",
+        "docs/constitution/Humane_Constitution.md",
+        "docs/constitution/SPECIFICATIONS.md",
+        "docs/governance/Claims_Evidence_Register.md",
+        "docs/governance/Pilot_Evidence_Roadmap.md",
+        "docs/governance/Threat_Register.md",
+        "docs/governance/Patch_Log.md",
         "founding/commitments.md",
-        "Threat_Register.md",
-        "Patch_Log.md",
-        "docs/SPECIFICATIONS.md",
         "docs/annexes/ANNEX_AK.md",
         "docs/annexes/ANNEX_AL.md",
         "docs/annexes/ANNEX_AR.md",

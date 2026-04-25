@@ -1,6 +1,6 @@
 # Annex Directory
 
-This directory holds the standalone annex corpus for the Humane Constitution. The constitution itself lives in [`/Humane_Constitution.md`](../../Humane_Constitution.md); annexes extend, specify, or document that text without bloating the constitutional body.
+This directory holds the standalone annex corpus for the Humane Constitution. The constitution itself lives in [`/Humane_Constitution.md`](../constitution/Humane_Constitution.md); annexes extend, specify, or document that text without bloating the constitutional body.
 
 ## Core constitutional annexes
 
@@ -46,7 +46,7 @@ This directory holds the standalone annex corpus for the Humane Constitution. Th
 
 ## Reading rule
 
-- Start with [`Humane_Constitution.md`](../../Humane_Constitution.md) for the live constitutional order.
+- Start with [`Humane_Constitution.md`](../constitution/Humane_Constitution.md) for the live constitutional order.
 - Use annex files when the constitution points to a specific annex for operative detail.
 - Treat annex files as supporting specifications unless another document explicitly makes them controlling.
 

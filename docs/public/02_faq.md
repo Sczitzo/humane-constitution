@@ -80,7 +80,7 @@ Start with:
 
 1. [`01_overview.md`](./01_overview.md)
 2. [`03_readiness.md`](./03_readiness.md)
-3. [`Claims_Evidence_Register.md`](./Claims_Evidence_Register.md)
-4. [`Pilot_Evidence_Roadmap.md`](./Pilot_Evidence_Roadmap.md)
+3. [`Claims_Evidence_Register.md`](../governance/Claims_Evidence_Register.md)
+4. [`Pilot_Evidence_Roadmap.md`](../governance/Pilot_Evidence_Roadmap.md)
 5. [`./04_white_paper.md`](./04_white_paper.md)
 6. [`./05_rights_layer.md`](./05_rights_layer.md)
