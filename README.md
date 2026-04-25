@@ -10,6 +10,7 @@
 ## Contents
 
 - [What this is](#what-this-is)
+- [Reader app](#reader-app)
 - [Current status](#current-status)
 - [If you're skeptical](#if-youre-skeptical)
 - [The core separation](#the-core-separation)
@@ -30,6 +31,47 @@
 The Humane Constitution is a constitutional systems design for a society where baseline survival is protected, markets remain productive, and civic power cannot be bought. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. This constitutional project is an attempt to escape that failure mode by design.
 
 This is not a live government, a finished rollout plan, or a promise that the hard parts are already solved. It is a public constitutional design backed by systems engineering: threat modeling, adversarial red-teaming, patch logs, validation checks, and version control.
+
+## Reader app
+
+The repository ships with a reader app (`app/`) — a Tauri 2 + React + Vite shell that loads the entire constitutional corpus as a single navigable document set. It is the easiest way to read across the constitution, annexes, and registries without losing your place in cross-references.
+
+**Run it locally:**
+
+```bash
+cd app
+npm install
+npm run dev          # browser (Vite dev server at http://localhost:5173)
+npm run tauri dev    # desktop window (requires Rust + platform Tauri prereqs)
+```
+
+`npm run dev` and `npm run build` both regenerate the corpus first via `python3 ../scripts/export_corpus.py`, so the reader always reflects the live markdown on disk. To regenerate manually: `npm run generate:corpus`. To verify the generated corpus matches what's checked in: `npm run check:corpus`.
+
+**What the navigation contains:**
+
+| Section | What's there |
+|---|---|
+| **Overview** | Featured documents and the recommended reading path. Start here if it's your first visit. |
+| **Constitution** | The charter text, white paper, public-facing explainers, and Founding Order. |
+| **Annexes** | All operational annexes (A through AV). Search and filter by status (active / proposed / reference). |
+| **Registries** | Threat Register, Patch Log, Founding Commitments, Claims & Evidence, Pilot Roadmap, Founding Pre-activation Disclosure. |
+| **Validation** | Activation gates, integrity status, and structural-check output. |
+| **Settings** | Reader behavior. The shell remembers your last view between sessions. |
+
+**Reading conventions:**
+
+- Section headings have stable anchor IDs, so you can deep-link any clause. The TypeScript corpus (`app/src/generated/corpus.ts`) is the canonical mapping from heading text to slug.
+- Each document carries a status banner (active / proposed / reference) and a word count so you can size the read before starting.
+- The reader is read-only by design — every edit must go through the markdown source so it lands in version control, runs through `scripts/validate_corpus.py`, and stays consistent with the registries.
+
+**Build a release binary:**
+
+```bash
+cd app
+npm run tauri build  # produces a platform-native installer in src-tauri/target/release
+```
+
+**Browser-only build (no desktop wrapper):** `npm run build` then `npm run preview`.
 
 ## Current status
 
