@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "generate:corpus": "python3 ../scripts/export_corpus.py",
+    "check:corpus": "npm run generate:corpus && git diff --exit-code -- src/generated/corpus.ts public/generated/corpus.json",
     "predev": "npm run generate:corpus",
     "prebuild": "npm run generate:corpus",
     "dev": "vite",

@@ -69,6 +69,9 @@ jobs:
       - name: Build frontend shell
         run: npm run build
 
+      - name: Check generated corpus is committed
+        run: npm run check:corpus
+
   app-e2e:
     runs-on: ubuntu-latest
     defaults:

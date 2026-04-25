@@ -198,7 +198,8 @@ The repository includes a corpus validator for the live constitutional document 
 - `python3 -m pip install -e .[test]` installs the reproducible simulation and test dependencies.
 - `python3 scripts/validate_corpus.py` checks local markdown links, annex-index coverage, FC/T/P identifier integrity, and deprecated live terminology.
 - `python3 -m pytest -q` runs the simulation test suite from the packaged environment.
-- GitHub Actions runs the same validator on every push and pull request, alongside a basic frontend build for the desktop shell.
+- `npm run check:corpus` from `app/` regenerates the reader corpus and fails if generated files are not committed.
+- GitHub Actions runs the same validator on every push and pull request, alongside frontend build, generated-corpus drift, and reader regression checks.
 
 ## Security and attack surface
 

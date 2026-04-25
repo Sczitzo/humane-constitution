@@ -16,7 +16,7 @@ This is an open design project. The design is not finished. The most valuable th
 
 **If you want to understand the hardening methodology:** Read [`Patch_Log.md`](./Patch_Log.md) — 31 patches, each with the threat it addresses, the new risk it introduces, and its residual risk.
 
-**Before opening a structural docs PR:** Run `python3 scripts/validate_corpus.py`. This checks local markdown links, annex index coverage, FC/T/P identifier integrity, and banned live legacy labels.
+**Before opening a structural docs PR:** Run `python3 scripts/validate_corpus.py`. This checks local markdown links, annex index coverage, FC/T/P identifier integrity, and banned live legacy labels. If your change affects the reader corpus, also run `npm run check:corpus` from `app/` and commit the generated files.
 
 **Before opening a simulation or mechanics PR:** Run `python3 -m pip install -e .[test]` once, then `python3 -m pytest -q`.
 
