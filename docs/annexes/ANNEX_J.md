@@ -44,7 +44,7 @@ The system must not confuse the public by making unlike instruments look like in
 
 ## Merged Content from former Annex R — Protected Capital Classes and Motivation for Excellence
 
-> **Provenance (2026-04-25):** Annex R was retired in the 2026-04-25 review and merged here. R1 + R2 (capital classes + treatment rules) fit naturally with this annex's monetary-calibration scope. R3 (motivation, compensation, anti-extraction) overlaps with Annex U §anti-abuse and may later move there; it is kept here as the closest single home.
+> **Provenance (2026-04-25):** Annex R was retired in the 2026-04-25 review and merged here. R1 + R2 (capital classes + treatment rules) live here permanently because they fit this annex's monetary-calibration scope. R3 (motivation, compensation, anti-extraction) was moved to Annex U §U10 in the 2026-04-25 follow-up.
 
 ### R1 — Protected capital classes
 
@@ -65,12 +65,3 @@ Demurrage is an anti-hoarding instrument, not a ban on patient capital. The foll
 - **The more patient the capital class**, the stronger the transparency, audit, and conflict-disclosure requirements.
 - **Perpetual dynastic wrappers are prohibited.** Trusts, entity chains, and similar legal structures may preserve continuity for dependents or mission-locked stewardship only within published limits; they may not preserve extractive control across generations.
 
-### R3 — Motivation for exceptional contribution (may later move to Annex U)
-
-The protocol rejects the claim that only extreme extractive upside can motivate excellence. It also rejects the opposite fantasy that intrinsic motivation alone is enough. Exceptional contribution is supported through a bounded mix of economic reward, mission alignment, autonomy, recognition, and reduced precarity.
-
-- **Flow compensation bands** may reward scarce expertise, difficult work, night burden, and mission-critical skill without permitting unlimited wealth-to-power conversion.
-- **Mission-critical premiums** may be used where failure to attract talent would threaten care, safety, or continuity.
-- **Professional autonomy**, protected research time, cooperative upside sharing, and public honor can reward excellence without converting into constitutional privilege.
-- **Voice and Service Record** may recognize stewardship but cannot become private income, office purchase, class rank, or a substitute for one-person-one-vote legitimacy on survival-adjacent matters.
-- **The system should attract** surgeons, engineers, researchers, and builders because excellence still matters — but because survival is guaranteed, excellence no longer requires others to remain desperate.

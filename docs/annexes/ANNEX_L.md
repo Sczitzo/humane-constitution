@@ -34,3 +34,23 @@
 - **Software, oracle, and platform releases** that alter legal effect without authorization are void upon finding and must revert immediately.
 
 ---
+
+## L6 — Justice, Appeals, and Constitutional Review (merged from former Annex G §G3)
+
+> **Provenance:** Originally drafted as Annex G §G3 ("Justice, Appeals, and Constitutional Review"). Annex G was retired in the 2026-04-25 review and held in Annex H pending redistribution; moved here in the 2026-04-25 follow-up because dispute classes, appeal paths, and remedies belong with the judicial architecture defined in L1–L5.
+
+Every materially adverse decision must be challengeable by a legible path. Automated decisions are never self-justifying; they must produce a reviewable record and a human-readable explanation.
+
+| Dispute class | Initial review | Appeal path | Typical remedies |
+| :--- | :--- | :--- | :--- |
+| **Identity / personhood** | Administrative identity tribunal or registrar review. | Independent personhood court; constitutional review if rights are implicated. | Record correction, restored continuity, temporary manual access, damages for wrongful denial. |
+| **Essential Access delivery / service access** | Service ombuds + rapid benefit review. | Regional administrative court with emergency relief window. | Immediate restoration, arrears / restitution, corrected routing, vendor sanctions. |
+| **Voice / Service Record attribution / contribution verification** | Contribution registry review with verifier challenge file. | Independent civic adjudicator; constitutional review if structural bias is alleged. | Re-score, nullification of fraudulent attestations, verifier penalties, published correction. |
+| **Vendor / commercial disputes** | Contract and market regulator review. | Commercial court / arbitration subject to public-law guardrails. | Specific performance, compensation, license conditions, procurement exclusion. |
+| **Oracle / capacity data disputes** | Technical audit panel and temporary conservative operating mode. | Independent review chamber; constitutional review if prolonged deprivation risk exists. | Data correction, rollback, model freeze, re-issuance / reconciliation. |
+| **Emergency powers / rights impacts** | Immediate judicial notice and rights-impact filing. | Constitutional court on expedited schedule. | Injunction, sunset enforcement, compensation, removal of unlawful measures. |
+
+- Burden of justification lies with the authority imposing deprivation, restriction, or adverse classification.
+- Severe consequences require notice, access to evidence, explanation of the rule invoked, and access to counsel or advocate support.
+- Emergency relief windows should be measured in hours or days, not months, whenever survival access, identity continuity, or liberty interests are at stake.
+- Algorithmic systems must preserve the inputs, rules, and model / version state necessary for retrospective review.

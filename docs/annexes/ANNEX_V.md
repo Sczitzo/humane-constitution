@@ -32,3 +32,23 @@
 - Transition mechanics must name who decides, under what authority, with what appeal path, and under what sunset. Silence on these questions is itself a stop condition.
 
 ---
+
+## V6 — External Boundary Membrane (merged from former Annex G §G2)
+
+> **Provenance:** Originally drafted as Annex G §G2 ("External Boundary Membrane"). Annex G was retired in the 2026-04-25 review and held in Annex H pending redistribution; moved here in the 2026-04-25 follow-up because boundary mechanics belong with transition mechanics, conversion, and legacy-system treatment.
+
+The boundary membrane prevents external trade, finance, and diplomacy from reintroducing the very capture dynamics the protocol is designed to remove. External connectivity is allowed for production and exchange, but only through audited gateways that preserve the internal separation of survival, enterprise, and civic power.
+
+- **Essential Access is domestic**, non-exportable, and never convertible into foreign money or Flow balances.
+- **Voice and Service Record are non-transferable**, non-saleable, and have no external analogue; no foreign person or firm may purchase civic influence or institutional service eligibility.
+- **Flow may cross the boundary** only through registered gateways with public reporting, sanctions screening, and treaty compliance review.
+- **Any treaty or commercial agreement** that conflicts with Tier 1 invariants is void inside the protocol.
+
+| Boundary case | Allowed path | Prohibited path | Core safeguard |
+| :--- | :--- | :--- | :--- |
+| **Imports of essentials** | Settled through Flow gateways or public procurement contracts tied to published resilience plans. | Foreign claims on Essential Access issuance, automatic price pass-through into the Essential Access basket, or creditor control of domestic survival access. | Strategic reserves, supplier diversity, emergency substitution plans. |
+| **Exports / foreign sales** | Domestic producers may sell externally for Flow through audited registries and tax-compliant settlement. | Hidden offshore settlement, shadow conversion of export proceeds into political power, or treaty carve-outs around disclosure. | Beneficial ownership registry, transfer pricing audits, anti-monopoly review. |
+| **Foreign firms and investors** | Transactional Flow wallets, lease/use-right contracts, and time-bounded operating permissions. | Acquisition of constitutional assets, ownership rights that bypass commons rules, or direct political financing. | Public registry, lease limits, conflict-of-interest controls. |
+| **Tourism and temporary presence** | Visitors operate in Flow only, except emergency humanitarian services delivered through the service layer. | Routine access to Voice and Service Record, Essential Access wallets, or residency rights by payment. | Duration limits, residency verification, emergency-only humanitarian floor. |
+| **Migration and new residency** | Onboarding through personhood verification, residency rules, and service continuity planning. | Pay-to-accelerate access, sponsor capture, or forced sponsorship dependence. | Uniform residency path, appeal rights, anti-discrimination review. |
+| **Remittances and gifts** | Flow may be sent outward from lawful earnings through declared gateways. | Outbound Essential Access / Voice / Service Record transfer, bundled coercive labor contracts, or hidden cross-border compensation for civic acts. | Transaction reporting thresholds, labor review, anomaly detection. |

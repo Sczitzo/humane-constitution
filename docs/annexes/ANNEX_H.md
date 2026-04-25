@@ -97,15 +97,13 @@ Emergency response may preserve continuity, but it may not silently rewrite the 
 
 ## Merged Content from former Annex G — Constitutional Plumbing and System Durability
 
-> **Provenance (2026-04-25):** Annex G ("Constitutional Plumbing and System Durability") was retired in the 2026-04-25 review and its operative content merged here. G's six subsections cut across multiple thematic homes; only G1 belongs naturally with the amendment-and-tier material in this annex. The remaining sections are kept here as a holding location until a follow-up edit moves them to their proper homes:
+> **Provenance (2026-04-25):** Annex G ("Constitutional Plumbing and System Durability") was retired in the 2026-04-25 review. G1 (rule hierarchy and amendment classes) lives here permanently because it belongs with the amendment-and-tier material. G2–G6 were initially held here as a transitional location and have since been redistributed to their proper homes:
 >
-> - **G2 External Boundary Membrane** → properly belongs in Annex V (transition mechanics, conversion, legacy treatment).
-> - **G3 Justice, Appeals, Constitutional Review** → properly belongs in Annex L (judicial architecture).
-> - **G4 Public Finance & Commons Revenue** → properly belongs in Annex X (Flow issuance) or as a new public-finance annex.
-> - **G5 Essential Basket, Vendor, and Pricing** → properly belongs in Annex K (essential basket governance).
-> - **G6 Failure-State, Rollback, and Dissolution** → properly belongs in Annex U (operational bypass closure) or a new failure-state annex.
->
-> Treat the subsections below as authoritative content but in transition; cite the destination annex once the move is complete.
+> - **G2 External Boundary Membrane** — moved to Annex V §V6.
+> - **G3 Justice, Appeals, Constitutional Review** — moved to Annex L §L6.
+> - **G4 Public Finance & Commons Revenue** — moved to Annex X §X8.
+> - **G5 Essential Basket, Vendor, and Pricing** — moved to Annex K §K5.
+> - **G6 Failure-State, Rollback, and Dissolution** — moved to Annex U §U9.
 
 ### G1 — Rule Hierarchy and Amendment Classes (belongs here)
 
@@ -120,86 +118,5 @@ Every rule must be classified before adoption. Lower tiers may refine higher tie
 - Emergency rules may only move Tier 3 parameters unless a charter explicitly authorizes a narrow temporary Tier 2 adjustment.
 - Every emergency adjustment expires automatically after one quarter unless re-ratified through the ordinary process.
 - No treaty, procurement contract, technical standard, or algorithm may modify Tier 1 rules by implication.
-
-### G2 — External Boundary Membrane (move to Annex V)
-
-The boundary membrane prevents external trade, finance, and diplomacy from reintroducing the very capture dynamics the protocol is designed to remove. External connectivity is allowed for production and exchange, but only through audited gateways that preserve the internal separation of survival, enterprise, and civic power.
-
-- **Essential Access is domestic**, non-exportable, and never convertible into foreign money or Flow balances.
-- **Voice and Service Record are non-transferable**, non-saleable, and have no external analogue; no foreign person or firm may purchase civic influence or institutional service eligibility.
-- **Flow may cross the boundary** only through registered gateways with public reporting, sanctions screening, and treaty compliance review.
-- **Any treaty or commercial agreement** that conflicts with Tier 1 invariants is void inside the protocol.
-
-| Boundary case | Allowed path | Prohibited path | Core safeguard |
-| :--- | :--- | :--- | :--- |
-| **Imports of essentials** | Settled through Flow gateways or public procurement contracts tied to published resilience plans. | Foreign claims on Essential Access issuance, automatic price pass-through into the Essential Access basket, or creditor control of domestic survival access. | Strategic reserves, supplier diversity, emergency substitution plans. |
-| **Exports / foreign sales** | Domestic producers may sell externally for Flow through audited registries and tax-compliant settlement. | Hidden offshore settlement, shadow conversion of export proceeds into political power, or treaty carve-outs around disclosure. | Beneficial ownership registry, transfer pricing audits, anti-monopoly review. |
-| **Foreign firms and investors** | Transactional Flow wallets, lease/use-right contracts, and time-bounded operating permissions. | Acquisition of constitutional assets, ownership rights that bypass commons rules, or direct political financing. | Public registry, lease limits, conflict-of-interest controls. |
-| **Tourism and temporary presence** | Visitors operate in Flow only, except emergency humanitarian services delivered through the service layer. | Routine access to Voice and Service Record, Essential Access wallets, or residency rights by payment. | Duration limits, residency verification, emergency-only humanitarian floor. |
-| **Migration and new residency** | Onboarding through personhood verification, residency rules, and service continuity planning. | Pay-to-accelerate access, sponsor capture, or forced sponsorship dependence. | Uniform residency path, appeal rights, anti-discrimination review. |
-| **Remittances and gifts** | Flow may be sent outward from lawful earnings through declared gateways. | Outbound Essential Access / Voice / Service Record transfer, bundled coercive labor contracts, or hidden cross-border compensation for civic acts. | Transaction reporting thresholds, labor review, anomaly detection. |
-
-### G3 — Justice, Appeals, and Constitutional Review (move to Annex L)
-
-Every materially adverse decision must be challengeable by a legible path. Automated decisions are never self-justifying; they must produce a reviewable record and a human-readable explanation.
-
-| Dispute class | Initial review | Appeal path | Typical remedies |
-| :--- | :--- | :--- | :--- |
-| **Identity / personhood** | Administrative identity tribunal or registrar review. | Independent personhood court; constitutional review if rights are implicated. | Record correction, restored continuity, temporary manual access, damages for wrongful denial. |
-| **Essential Access delivery / service access** | Service ombuds + rapid benefit review. | Regional administrative court with emergency relief window. | Immediate restoration, arrears / restitution, corrected routing, vendor sanctions. |
-| **Voice / Service Record attribution / contribution verification** | Contribution registry review with verifier challenge file. | Independent civic adjudicator; constitutional review if structural bias is alleged. | Re-score, nullification of fraudulent attestations, verifier penalties, published correction. |
-| **Vendor / commercial disputes** | Contract and market regulator review. | Commercial court / arbitration subject to public-law guardrails. | Specific performance, compensation, license conditions, procurement exclusion. |
-| **Oracle / capacity data disputes** | Technical audit panel and temporary conservative operating mode. | Independent review chamber; constitutional review if prolonged deprivation risk exists. | Data correction, rollback, model freeze, re-issuance / reconciliation. |
-| **Emergency powers / rights impacts** | Immediate judicial notice and rights-impact filing. | Constitutional court on expedited schedule. | Injunction, sunset enforcement, compensation, removal of unlawful measures. |
-
-- Burden of justification lies with the authority imposing deprivation, restriction, or adverse classification.
-- Severe consequences require notice, access to evidence, explanation of the rule invoked, and access to counsel or advocate support.
-- Emergency relief windows should be measured in hours or days, not months, whenever survival access, identity continuity, or liberty interests are at stake.
-- Algorithmic systems must preserve the inputs, rules, and model / version state necessary for retrospective review.
-
-### G4 — Public Finance & Commons Revenue Constitution (move to Annex X)
-
-Public institutions must be funded in a way that is transparent, capacity-aware, and resistant to quiet debt resurrection. The public side may spend, but it may not hide future obligations off-ledger, manufacture permanent emergency dependence, or fall back to taxing survival, ordinary labor, or basic household exchange.
-
-| Rule area | Default constitutional rule | Anti-capture control |
-| :--- | :--- | :--- |
-| **Revenue sources** | PFCR receipts may draw from demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production. | Every source must publish methodology, exemptions, and aggregate receipts; hidden levies are void. |
-| **Prohibited tax base** | Survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources. | Any measure that functionally backfills PFCR through those bases triggers mandatory judicial review. |
-| **Operating budgets** | Public institutions receive Flow appropriations tied to published service plans, staffing assumptions, capacity evidence, and a declared PFCR source mix. | Quarterly variance reporting, source-by-source disclosure, and public change logs. |
-| **Recurring obligations** | Any recurring program expansion must identify a stable PFCR path and capacity plan before approval. | No unfunded permanent commitments and no quiet migration to prohibited taxes. |
-| **Capital projects** | Long-lived infrastructure may use time-bounded public borrowing only when tied to resilience, productive capacity, commons maintenance, or the public banking / payment rail. | Amortization schedule, public cost register, PFCR repayment path, and constitutional debt cap. |
-| **Payroll and compensation** | Public workers receive the universal Essential Access floor like everyone else and any additional compensation through the ordinary Flow wage system. | No privileged compensation channel or hidden civic bonuses. |
-| **Basic banking rails** | Payments, basic custody, wage receipt, bill pay, fraud recovery, and cash access are funded as public infrastructure with a guaranteed postal-bank or public-bank option and interoperable licensed providers. | Universal service obligations, retail fee caps above the free baseline, portability rights, and published uptime / recovery metrics. |
-| **Procurement** | Open standards, public bid logic, beneficial ownership disclosure, and conflict-of-interest rules apply by default. | Automatic audit triggers for concentration, overruns, and sole-source exceptions. |
-| **Deficits and emergency spending** | Emergency overspending must be explicitly tagged, time-limited, and paired with a restoration plan that does not rely on prohibited taxes or hidden bank privileges. | No rolling emergency status; mandatory sunset, post-mortem, and PFCR correction plan. |
-
-### G5 — Essential Basket, Vendor, and Pricing Protocol (move to Annex K)
-
-The essential basket is not a one-time technical specification. It is a permanent constitutional contest zone. The protocol therefore governs how baseline goods and services are defined, challenged, substituted, and revised over time rather than pretending that "basic" is politically neutral.
-
-| Topic | Default rule | Guardrail / evidence |
-| :--- | :--- | :--- |
-| **Essential classification** | Each basket item has a published functional definition, quality floor, and substitution ladder. | Independent review, consumer testing, and public change log. |
-| **Essential Access reimbursement model** | Baseline goods and services are reimbursed within a public reference band that is reviewed quarterly and can move only within pre-declared emergency ranges. | Price methodology publication and anti-gouging triggers. |
-| **Vendor participation** | Vendors may accept Essential Access reimbursement only if they meet service, quality, data, and continuity obligations. | License conditions, complaint tracking, mystery-shop audits. |
-| **Premium vs baseline versions** | Vendors may sell premium Flow variants, but the Essential Access-redeemable baseline must remain meaningfully functional and non-degraded. | Bait-and-switch penalties and quality equivalence testing. |
-| **Regional variation** | Regional cost and logistics factors may adjust reimbursement bands, but the functional baseline must remain constitutionally equivalent. | Published adjustment formula and appeal path. |
-| **Severe divergence / shortage** | If Flow market prices diverge sharply from baseline bands, the system shifts to procurement, reserve drawdown, substitution, or temporary direct delivery rather than silently abandoning the floor. | Trigger thresholds, reserve plans, emergency review log. |
-
-### G6 — Failure-State, Rollback, and Dissolution Protocol (move to Annex U)
-
-A durable system must specify how it fails without sacrificing the people it exists to protect. Emergency response therefore follows a bounded ladder: contain, continue essential functions manually if needed, roll back unsafe changes, and only then consider deeper structural intervention.
-
-| Level | Representative trigger | Immediate action | Time limit / exit rule |
-| :--- | :--- | :--- | :--- |
-| **Level 1 — Watch** | Localized anomalies, rising dispute rate, or dashboard signals outside normal bands. | Heightened monitoring, public notice, targeted audit, no rights reduction. | Expires when metrics normalize or escalate within one cycle. |
-| **Level 2 — Contained incident** | Single subsystem bug, vendor failure, or regional capacity shortfall with workaround available. | Freeze the affected parameter, preserve last-known-good access, activate manual fallback. | Review within 72 hours; written corrective action required. |
-| **Level 3 — Subsystem pause** | Oracle quorum failure, identity verification instability, or pricing system malfunction with material deprivation risk. | Pause the faulty subsystem, revert to conservative baseline mode, appoint independent incident lead. | Sunset within one quarter unless constitutional authority renews narrowly. |
-| **Level 4 — Regional continuity mode** | A region cannot sustain baseline services or logistics through ordinary controls. | Interregional support, reserve drawdown, temporary operational stewardship, mandatory public dashboard of continuity actions. | Ends when baseline service continuity is restored and reviewed. |
-| **Level 5 — Structural rollback / dissolution** | Persistent systemic failure, capture of multiple safeguard layers, or impossible contradiction between invariants and live institutions. | Activate constitutional convention / rollback mechanism with service-continuity guarantee. | Tier 1 rights remain intact throughout; dissolution cannot suspend the survival floor. |
-
-- If identity systems fail, access defaults to last-known-good continuity plus manual adjudication rather than hard lockout.
-- If oracle publication fails, the system may not raise obligations or tighten survival access on disputed data; it must default conservative and reviewable.
-- Every Level 3+ event requires a public incident file, post-mortem, and patch verification before the subsystem returns to normal mode.
 
 ---

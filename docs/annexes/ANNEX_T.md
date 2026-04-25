@@ -26,3 +26,13 @@
 - A system that passes only single-threat tests but fails interface tests is not scale-ready.
 
 ---
+
+## T6 — Tier 3 Drift and Technical-Failure Simulations (merged from former Annex AA §AA4)
+
+> **Provenance:** Originally drafted as Annex AA §AA4 ("Tier 3 Drift and Technical-Failure Simulations"). Annex AA was retired in the 2026-04-25 review and held in Annex N pending redistribution; moved here in the 2026-04-25 follow-up because compound failure simulations belong with the stress-test library defined in T1–T5.
+
+In addition to the existing compound failure scenarios above, the annual stress library must include the following tests:
+
+- **Slow-drift simulation:** twenty successive Tier 3 compliant changes are applied over time to test whether cumulative narrowing triggers engage before a core protection is hollowed out.
+- **Technical-breach simulation:** identity compromise, Essential Access delivery interruption, and a contested political event are combined to test whether the survival floor survives technical failure under political stress.
+- **Regional-defection simulation:** one region ceases protocol compliance and the system must preserve the survival floor for residents through alternative mechanisms while containing cross-region contagion.

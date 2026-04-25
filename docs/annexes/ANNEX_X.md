@@ -81,6 +81,39 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 
 ---
 
+## X8 — Public Finance & Commons Revenue Constitution (merged from former Annex G §G4)
+
+> **Provenance:** Originally drafted as Annex G §G4 ("Public Finance & Commons Revenue Constitution"). Annex G was retired in the 2026-04-25 review and held in Annex H pending redistribution; moved here in the 2026-04-25 follow-up because public-finance rules and revenue-source discipline belong with Flow issuance architecture.
+
+Public institutions must be funded in a way that is transparent, capacity-aware, and resistant to quiet debt resurrection. The public side may spend, but it may not hide future obligations off-ledger, manufacture permanent emergency dependence, or fall back to taxing survival, ordinary labor, or basic household exchange.
+
+| Rule area | Default constitutional rule | Anti-capture control |
+| :--- | :--- | :--- |
+| **Revenue sources** | PFCR receipts may draw from demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production. | Every source must publish methodology, exemptions, and aggregate receipts; hidden levies are void. |
+| **Prohibited tax base** | Survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources. | Any measure that functionally backfills PFCR through those bases triggers mandatory judicial review. |
+| **Operating budgets** | Public institutions receive Flow appropriations tied to published service plans, staffing assumptions, capacity evidence, and a declared PFCR source mix. | Quarterly variance reporting, source-by-source disclosure, and public change logs. |
+| **Recurring obligations** | Any recurring program expansion must identify a stable PFCR path and capacity plan before approval. | No unfunded permanent commitments and no quiet migration to prohibited taxes. |
+| **Capital projects** | Long-lived infrastructure may use time-bounded public borrowing only when tied to resilience, productive capacity, commons maintenance, or the public banking / payment rail. | Amortization schedule, public cost register, PFCR repayment path, and constitutional debt cap. |
+| **Payroll and compensation** | Public workers receive the universal Essential Access floor like everyone else and any additional compensation through the ordinary Flow wage system. | No privileged compensation channel or hidden civic bonuses. |
+| **Basic banking rails** | Payments, basic custody, wage receipt, bill pay, fraud recovery, and cash access are funded as public infrastructure with a guaranteed postal-bank or public-bank option and interoperable licensed providers. | Universal service obligations, retail fee caps above the free baseline, portability rights, and published uptime / recovery metrics. |
+| **Procurement** | Open standards, public bid logic, beneficial ownership disclosure, and conflict-of-interest rules apply by default. | Automatic audit triggers for concentration, overruns, and sole-source exceptions. |
+| **Deficits and emergency spending** | Emergency overspending must be explicitly tagged, time-limited, and paired with a restoration plan that does not rely on prohibited taxes or hidden bank privileges. | No rolling emergency status; mandatory sunset, post-mortem, and PFCR correction plan. |
+
+---
+
+## X9 — Intellectual Property and Knowledge Commons (merged from former Annex AA §AA3)
+
+> **Provenance:** Originally drafted as Annex AA §AA3 ("Intellectual Property and Knowledge Commons"). Annex AA was retired in the 2026-04-25 review and held in Annex N pending redistribution; moved here in the 2026-04-25 follow-up because knowledge-governance rules belong with Flow issuance and commons-revenue architecture.
+
+Intellectual property is a modern rent-seeking vector and shall not remain outside the protocol's anti-extraction logic. Article V therefore includes knowledge-governance rules that distinguish genuine productive creativity from blocking portfolios and perpetual licensing extraction.
+
+- **IP protection is time-limited** and use-rights based, not perpetual or dynastic.
+- **Essential goods and services** dependent on protected IP must be subject to compulsory licensing at published rates when refusal would undermine the survival floor, public health, or constitutional survival minimum.
+- **Blocking portfolios** without associated productive deployment are prohibited as rent-seeking instruments.
+- **Protected works and patents** expire into a commons unless renewed through a narrowly defined public-interest process that cannot recreate perpetual extraction.
+
+---
+
 ## ANNEX Y. Constitutional Survival Minimum and Essential Access Continuity Architecture
 **Purpose.** Procedural friction against narrowing is not enough. This annex defines the absolute survival floor beneath the adjustable basket and replaces the weekly Essential Access cliff with a continuity-preserving daily micro-issuance model. Where Annex Y conflicts with earlier weekly-expiry or implied-floor language, Annex Y governs.
 

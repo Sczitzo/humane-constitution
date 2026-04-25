@@ -61,3 +61,35 @@
 - The burden of proof for refusing bridge activation lies with the authority resisting activation, which must publish an alternative continuity measure with equal or better protection.
 
 ---
+
+## U9 — Failure-State, Rollback, and Dissolution Protocol (merged from former Annex G §G6)
+
+> **Provenance:** Originally drafted as Annex G §G6 ("Failure-State, Rollback, and Dissolution Protocol"). Annex G was retired in the 2026-04-25 review and held in Annex H pending redistribution; moved here in the 2026-04-25 follow-up because the failure-state ladder belongs with operational bypass closure and exception-system discipline.
+
+A durable system must specify how it fails without sacrificing the people it exists to protect. Emergency response therefore follows a bounded ladder: contain, continue essential functions manually if needed, roll back unsafe changes, and only then consider deeper structural intervention.
+
+| Level | Representative trigger | Immediate action | Time limit / exit rule |
+| :--- | :--- | :--- | :--- |
+| **Level 1 — Watch** | Localized anomalies, rising dispute rate, or dashboard signals outside normal bands. | Heightened monitoring, public notice, targeted audit, no rights reduction. | Expires when metrics normalize or escalate within one cycle. |
+| **Level 2 — Contained incident** | Single subsystem bug, vendor failure, or regional capacity shortfall with workaround available. | Freeze the affected parameter, preserve last-known-good access, activate manual fallback. | Review within 72 hours; written corrective action required. |
+| **Level 3 — Subsystem pause** | Oracle quorum failure, identity verification instability, or pricing system malfunction with material deprivation risk. | Pause the faulty subsystem, revert to conservative baseline mode, appoint independent incident lead. | Sunset within one quarter unless constitutional authority renews narrowly. |
+| **Level 4 — Regional continuity mode** | A region cannot sustain baseline services or logistics through ordinary controls. | Interregional support, reserve drawdown, temporary operational stewardship, mandatory public dashboard of continuity actions. | Ends when baseline service continuity is restored and reviewed. |
+| **Level 5 — Structural rollback / dissolution** | Persistent systemic failure, capture of multiple safeguard layers, or impossible contradiction between invariants and live institutions. | Activate constitutional convention / rollback mechanism with service-continuity guarantee. | Tier 1 rights remain intact throughout; dissolution cannot suspend the survival floor. |
+
+- If identity systems fail, access defaults to last-known-good continuity plus manual adjudication rather than hard lockout.
+- If oracle publication fails, the system may not raise obligations or tighten survival access on disputed data; it must default conservative and reviewable.
+- Every Level 3+ event requires a public incident file, post-mortem, and patch verification before the subsystem returns to normal mode.
+
+---
+
+## U10 — Motivation for Exceptional Contribution (merged from former Annex R §R3)
+
+> **Provenance:** Originally drafted as Annex R §R3 ("Motivation for exceptional contribution"). Annex R was retired in the 2026-04-25 review and held in Annex J pending possible move; moved here in the 2026-04-25 follow-up because compensation bands, anti-extraction limits, and the anti-conversion rule for Voice/Service Record fit U's anti-abuse and operational-bypass-closure scope.
+
+The protocol rejects the claim that only extreme extractive upside can motivate excellence. It also rejects the opposite fantasy that intrinsic motivation alone is enough. Exceptional contribution is supported through a bounded mix of economic reward, mission alignment, autonomy, recognition, and reduced precarity.
+
+- **Flow compensation bands** may reward scarce expertise, difficult work, night burden, and mission-critical skill without permitting unlimited wealth-to-power conversion.
+- **Mission-critical premiums** may be used where failure to attract talent would threaten care, safety, or continuity.
+- **Professional autonomy**, protected research time, cooperative upside sharing, and public honor can reward excellence without converting into constitutional privilege.
+- **Voice and Service Record** may recognize stewardship but cannot become private income, office purchase, class rank, or a substitute for one-person-one-vote legitimacy on survival-adjacent matters.
+- **The system should attract** surgeons, engineers, researchers, and builders because excellence still matters — but because survival is guaranteed, excellence no longer requires others to remain desperate.

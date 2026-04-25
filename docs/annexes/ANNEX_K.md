@@ -34,3 +34,18 @@ A civic system that only rewards institutionally legible contribution will recre
 - **High-balance holders** remain subject to stronger decay even during approved pause windows, except where incapacity review determines otherwise.
 
 ---
+
+## K5 — Essential Basket, Vendor, and Pricing Protocol (merged from former Annex G §G5)
+
+> **Provenance:** Originally drafted as Annex G §G5 ("Essential Basket, Vendor, and Pricing Protocol"). Annex G was retired in the 2026-04-25 review and held in Annex H pending redistribution; moved here in the 2026-04-25 follow-up because basket classification, vendor participation, and pricing methodology belong with the basket-governance architecture in K1–K4.
+
+The essential basket is not a one-time technical specification. It is a permanent constitutional contest zone. The protocol therefore governs how baseline goods and services are defined, challenged, substituted, and revised over time rather than pretending that "basic" is politically neutral.
+
+| Topic | Default rule | Guardrail / evidence |
+| :--- | :--- | :--- |
+| **Essential classification** | Each basket item has a published functional definition, quality floor, and substitution ladder. | Independent review, consumer testing, and public change log. |
+| **Essential Access reimbursement model** | Baseline goods and services are reimbursed within a public reference band that is reviewed quarterly and can move only within pre-declared emergency ranges. | Price methodology publication and anti-gouging triggers. |
+| **Vendor participation** | Vendors may accept Essential Access reimbursement only if they meet service, quality, data, and continuity obligations. | License conditions, complaint tracking, mystery-shop audits. |
+| **Premium vs baseline versions** | Vendors may sell premium Flow variants, but the Essential Access-redeemable baseline must remain meaningfully functional and non-degraded. | Bait-and-switch penalties and quality equivalence testing. |
+| **Regional variation** | Regional cost and logistics factors may adjust reimbursement bands, but the functional baseline must remain constitutionally equivalent. | Published adjustment formula and appeal path. |
+| **Severe divergence / shortage** | If Flow market prices diverge sharply from baseline bands, the system shifts to procurement, reserve drawdown, substitution, or temporary direct delivery rather than silently abandoning the floor. | Trigger thresholds, reserve plans, emergency review log. |
