@@ -80,5 +80,6 @@ Start with:
 
 1. [`One_Page_Overview.md`](./One_Page_Overview.md)
 2. [`Public_Readiness_Guide.md`](./Public_Readiness_Guide.md)
-3. [`../White_Paper.md`](../White_Paper.md)
-4. [`../Citizen_Facing_Rights_Layer.md`](../Citizen_Facing_Rights_Layer.md)
+3. [`Claims_Evidence_Register.md`](./Claims_Evidence_Register.md)
+4. [`../White_Paper.md`](../White_Paper.md)
+5. [`../Citizen_Facing_Rights_Layer.md`](../Citizen_Facing_Rights_Layer.md)

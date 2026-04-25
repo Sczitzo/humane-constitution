@@ -20,6 +20,7 @@ CORE_DOCS = (
     "README.md",
     "docs/One_Page_Overview.md",
     "docs/Public_Readiness_Guide.md",
+    "docs/Claims_Evidence_Register.md",
     "docs/Public_FAQ.md",
     "docs/Source_Grounded_Content_Prompts.md",
     "Threat_Register.md",
@@ -209,6 +210,7 @@ def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> Non
     featured_paths = [
         "docs/One_Page_Overview.md",
         "docs/Public_Readiness_Guide.md",
+        "docs/Claims_Evidence_Register.md",
         "Humane_Constitution.md",
         "White_Paper.md",
         "docs/Public_FAQ.md",

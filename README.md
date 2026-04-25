@@ -153,6 +153,7 @@ flowchart TD
 |---|---|
 | [`docs/One_Page_Overview.md`](./docs/One_Page_Overview.md) | One-page introduction for first-time readers. |
 | [`docs/Public_Readiness_Guide.md`](./docs/Public_Readiness_Guide.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
+| [`docs/Claims_Evidence_Register.md`](./docs/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
 | [`docs/Public_FAQ.md`](./docs/Public_FAQ.md) | Public-facing answers to the most common objections and questions. |
 | [`docs/Source_Grounded_Content_Prompts.md`](./docs/Source_Grounded_Content_Prompts.md) | Reusable prompt pack for source-grounded explainers, interviews, FAQs, and short-form content. |
 | [`docs/content/Visual_Assets.md`](./docs/content/Visual_Assets.md) | Index of reusable public deck assets and social carousel files. |
@@ -289,6 +290,7 @@ The system's commitment: every failure in these categories is published publicly
 Scale readiness requires:
 
 - [x] Public readiness guide — see [`docs/Public_Readiness_Guide.md`](./docs/Public_Readiness_Guide.md)
+- [x] Claims and evidence register — see [`docs/Claims_Evidence_Register.md`](./docs/Claims_Evidence_Register.md)
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
 - [x] CFRL one-page publication — see [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md)
 - [x] Adversarial narrative simulation — see [`docs/Adversarial_Narrative_Simulation.md`](./docs/Adversarial_Narrative_Simulation.md)
