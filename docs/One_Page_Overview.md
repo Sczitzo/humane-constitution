@@ -1,8 +1,10 @@
 # One-Page Overview
 
-**The Humane Constitution** is a constitutional design that tries to make three things true at the same time: baseline survival is secure, markets still function, and wealth cannot buy civic rule.
+**The Humane Constitution** is a constitutional design for people who are tired of systems where money can buy safety, influence, and escape from consequences.
 
-- no one loses baseline survival
+It tries to make three things true at the same time:
+
+- baseline survival is protected
 - markets still function
 - wealth cannot quietly turn into civic rule
 
@@ -50,7 +52,7 @@ This design is trying to do four things ordinary systems rarely do at once:
 
 ## Current status
 
-This is a serious design, not a live nation-state rollout.
+This is a serious design, not a live nation-state rollout and not a promise that the hard parts are already solved.
 
 What already exists:
 

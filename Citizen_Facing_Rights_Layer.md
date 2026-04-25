@@ -1,14 +1,16 @@
-# Your Rights Under the Protocol
+# Rights Under a Live Protocol
 
-*A plain-language summary of what you are entitled to, what is protected, and what to do if something goes wrong.*
+*A plain-language summary of what the Humane Constitution is designed to protect if adopted and made operational.*
 
 ---
 
+This document is not claiming those rights are live today. It describes the public rights layer the protocol is designed to establish if adopted, funded, measured, and governed under the Humane Constitution.
+
 If this system were live, the basic promise would be simple: losing money, status, or civic standing would not cancel your right to eat, drink, stay sheltered, travel for basics, or receive essential care.
 
-## What you are unconditionally entitled to
+## What you would be unconditionally entitled to
 
-The protocol guarantees a **survival floor** — a set of essentials you receive as a matter of right, not favour. This is delivered through **Essential Access**:
+Under a live protocol, the constitution would guarantee a **survival floor**: a set of essentials you receive as a matter of right, not favor. This would be delivered through **Essential Access**:
 
 - Food
 - Water
@@ -16,7 +18,7 @@ The protocol guarantees a **survival floor** — a set of essentials you receive
 - Essential healthcare and medicines
 - Basic transit
 
-These are yours regardless of employment status, civic standing, or any other condition. No authority within the system can revoke them as punishment, leverage, or incentive.
+These would be yours regardless of employment status, civic standing, or any other condition. No authority within the system could revoke them as punishment, leverage, or incentive.
 
 ---
 

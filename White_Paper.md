@@ -10,15 +10,15 @@
 ---
 
 ## THE HUMANE CONSTITUTION
-**Public White Paper Edition: A flow-based civic operating system for unconditional survival, productive markets, and capture-resistant governance**
+**Public White Paper Edition: A constitutional design for protected survival, productive markets, and capture-resistant governance**
 
-**In one sentence:** this design tries to make three things true at once: no one loses baseline survival, markets still function, and wealth cannot quietly turn into civic rule.
+**In one sentence:** this design tries to make three things true at once: baseline survival is protected, markets still function, and wealth cannot quietly turn into civic rule.
 
 ### What this paper is
 A readable public edition of the protocol. It explains the system in plain language, shows how the pieces fit together, surfaces the main safeguards, and is honest about the hardest unresolved questions.
 
 ### Three claims at the center
-- **Survival should not depend on market power, obedience, or social approval.**
+- **Baseline survival should not depend on market power, obedience, or social approval.**
 - **Markets still matter, but money should not purchase civic control.**
 - **A system this ambitious only earns legitimacy if its own power is tightly constrained.**
 
@@ -53,7 +53,7 @@ The protocol starts from a simple diagnosis: when survival, enterprise, and poli
 Most systems fail in one of two directions. Either they leave survival exposed to market power, or they try to protect survival by building institutions that quietly become coercive in their own right. The protocol is an attempt to escape that trap by separating the social functions that most systems collapse together.
 
 The design is built around a few non-negotiables:
-- **Survival is unconditional.** Baseline essentials are guaranteed by personhood, not by wages, obedience, or popularity.
+- **Baseline survival is unconditional under the design.** Baseline essentials are tied to personhood, not wages, obedience, or popularity.
 - **Human worth is not measured.** No score is allowed to gate dignity, personhood, or baseline access.
 - **Influence cannot be purchased.** Markets matter, but civic weight cannot be bought with market money.
 - **Reality has to anchor issuance.** Baseline guarantees must be constrained by measured physical capacity, not wishful accounting.
@@ -62,7 +62,7 @@ The design is built around a few non-negotiables:
 ---
 
 ## 2. The system in plain language
-At a glance, the protocol does three things at once: it guarantees a survival floor, preserves productive markets, and denies ordinary money the right to buy civic control.
+At a glance, the protocol is designed to do three things at once: protect a survival floor, preserve productive markets, and deny ordinary money the right to buy civic control.
 
 ### The system in one picture
 The design is simple in structure: one true currency, one survival instrument, two civic instruments, and one temporary emergency instrument.
@@ -72,7 +72,7 @@ The design is simple in structure: one true currency, one survival instrument, t
 **What it is not:** a path to buy civic power or baseline survival.
 
 #### Essential Access
-**What it does:** protects the survival floor and guarantees baseline essentials.
+**What it does:** protects the survival floor and provides baseline essentials under the constitutional design.
 **What it is not:** cash, collateral, a status marker, or a store of value.
 
 #### Voice

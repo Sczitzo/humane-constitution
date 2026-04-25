@@ -5,11 +5,12 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> A non-extractive civilizational operating system — separating survival, markets, and governance into structurally independent lanes.
+> A constitutional design for separating survival, markets, and civic power so wealth cannot quietly become coercion.
 
 ## Contents
 
 - [What this is](#what-this-is)
+- [Current status](#current-status)
 - [The core separation](#the-core-separation)
 - [The current architecture](#the-current-architecture)
 - [Architecture flow](#architecture-flow)
@@ -19,15 +20,35 @@
 - [Security and attack surface](#security-and-attack-surface)
 - [What this system is not](#what-this-system-is-not)
 - [What will go wrong](#what-will-go-wrong-pre-committed)
-- [Scale readiness](#scale-readiness)
+- [Scale readiness checklist](#scale-readiness-checklist)
 - [How to engage](#how-to-engage)
 - [License](#license)
 
 ## What this is
 
-The Humane Constitution is a constitutional systems design for a society in which **survival is unconditional**, **markets remain productive**, and **governance cannot be purchased**. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. Every major social system fails at this interface. This constitutional project is an attempt to escape that failure mode by design.
+The Humane Constitution is a constitutional systems design for a society where baseline survival is protected, markets remain productive, and civic power cannot be bought. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. This constitutional project is an attempt to escape that failure mode by design.
 
-This is not just a manifesto and not just a technical spec. It is a public constitutional design backed by systems engineering — threat modeling, adversarial red-teaming, patch logs, and version control. It has been stress-tested against bad actors, institutional capture, measurement failure, and its own internal contradictions.
+This is not a live government, a finished rollout plan, or a promise that the hard parts are already solved. It is a public constitutional design backed by systems engineering: threat modeling, adversarial red-teaming, patch logs, validation checks, and version control.
+
+## Current status
+
+This project is strongest today as a design, critique target, and public working draft. It is **not scale-ready**.
+
+What exists now:
+
+- constitutional text and public explanations
+- a threat register and patch log
+- adversarial simulations and stress-test documents
+- a validation pipeline and reader app
+
+What must still be proven:
+
+- pilot evidence at real scale
+- a non-coercive identity and recovery stack
+- reliable measurement of essential capacity
+- a legitimate founding coalition
+
+The right response is neither blind belief nor dismissal. The useful response is specific critique, hard testing, and evidence.
 
 ## If you're new
 
@@ -256,9 +277,9 @@ The system acknowledges expected operational imperfections before they occur:
 
 The system's commitment: every failure in these categories is published publicly, with a timeline and a correction path. Silence is the violation, not the failure.
 
-## Scale readiness
+## Scale readiness checklist
 
-The system is **defensible and documented**. It is not yet **scale-ready**. Scale readiness requires:
+Scale readiness requires:
 
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
 - [x] CFRL one-page publication — see [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md)

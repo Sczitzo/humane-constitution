@@ -2,7 +2,7 @@
 
 ## 1. What is the Humane Constitution?
 
-It is a constitutional design for a society where survival is unconditional, markets remain productive, and governance cannot be purchased. Its core idea is to stop wealth from automatically becoming coercive power.
+It is a constitutional design for a society where baseline survival is protected, markets remain productive, and civic power cannot be purchased. Its core idea is to stop wealth from automatically becoming coercive power.
 
 ## 2. What problem is it trying to solve?
 
@@ -42,19 +42,39 @@ The system can activate **Shared Storehouse**, a temporary and publicly visible 
 
 It relies on structural separation, public logs, challenge rights, patch review, oracle diversity, anti-convertibility rules, and explicit threat modeling. The design assumes people will try to game it and tries to make those routes harder, more visible, and easier to challenge.
 
-## 10. Does it depend on people being morally perfect?
+## 10. Who controls this?
+
+No single office, bank, party, vendor, or expert class is supposed to control it. The design separates functions across constitutional articles, public review paths, measurement systems, and challenge rights so power has to stay visible and contestable. That does not make capture impossible, which is why founding legitimacy and independent review institutions remain preconditions.
+
+## 11. What stops this from becoming another bureaucracy?
+
+Nothing automatic. The defense is structural: bounded instruments, public logs, appeal rights, anti-capture triggers, and clear limits on what each institution is allowed to do. The system is designed to make bureaucracy easier to challenge, not to pretend administration disappears.
+
+## 12. What happens to banks and credit?
+
+Flow is public money on common rails. Basic banking services are treated as public infrastructure, with a guaranteed public option and interoperable providers. Credit as predatory dependency is constrained; productive project finance still has to exist through explicit, reviewable channels.
+
+## 13. How is privacy protected?
+
+The design requires minimum necessary data, selective disclosure, aggregation thresholds, and appealable identity processes. It still needs a proven non-coercive identity stack before scale claims would be credible.
+
+## 14. How would transition happen?
+
+Gradually. The project should be tested through pilots: identity recovery, capacity measurement, appeal paths, essential basket rules, and productive investment channels. A forced rollout without those proofs would create a capture risk.
+
+## 15. Does it depend on people being morally perfect?
 
 No. In fact, it assumes the opposite. The system is designed on the premise that greed, capture, fear, and manipulation will happen. That is why so much of the project is about boundaries, review, and failure handling.
 
-## 11. Is it ready to deploy right now?
+## 16. Is it ready to deploy right now?
 
 No. The repo is much stronger as a design than as a live deployment plan. It still needs pilot evidence, a proven non-coercive identity stack, measured capacity discipline, and a legitimate founding coalition.
 
-## 12. Why should an ordinary person care?
+## 17. Why should an ordinary person care?
 
 Because the project is aimed at a simple question: should losing money mean losing basic safety and dignity? If your answer is no, then the design is worth understanding, testing, and challenging seriously.
 
-## 13. Where should I start if I want the shortest explanation?
+## 18. Where should I start if I want the shortest explanation?
 
 Start with:
 
