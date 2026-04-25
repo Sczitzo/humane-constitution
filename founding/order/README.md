@@ -63,7 +63,7 @@ The Founding Order is a scale-and-consent layer. It does **not**:
 
 - **Humane Constitution §0** — the Founding Order is the foundational layer beneath the current seven articles. The §0 invariants (survival unconditional, CSM floor, separation of concerns, etc.) are federation-scale and not subject to unit-level modification or unit-level exit.
 - **Articles I–VII** — each article is read through the Founding Order: its default scale is the smallest competent unit; its exceptions-to-smallest-scale are specified with subsidiarity rationale.
-- **Founding commitments** — FC-120, FC-121, FC-122 are the numerical anchors for the Founding Order. They are Tier 1 protected per `/architecture/invariants.md` (Category D — Governance & Exit).
+- **Founding commitments** — FC-120, FC-121, FC-122 are the numerical anchors for the Founding Order. They are Tier 1 protected per `/architecture/parameter_registry.md` (Category D — Governance & Exit).
 - **Architecture layer** — the Founding Order integrates with the drift chain: a unit-exit event is drift-chain-logged (new row, federation scope reduced, signatures of the exiting unit's representatives and 7 of 9 Tier 1 holders acknowledging). An exit cannot proceed silently.
 - **Threat Register** — two new threat classes: T-026 "Exit Denial" and T-027 "Subsidiarity Violation." See the register for mechanism and mitigation.
 
@@ -84,7 +84,7 @@ The Founding Order is a scale-and-consent layer. It does **not**:
 
 ## Governance of the Founding Order
 
-This entire directory is Tier 1 protected per `/architecture/invariants.md`. Changes to the subsidiarity rule, consent rule, exit threshold (FC-120), unwind window (FC-121), or scale tiers (FC-122) require the full amendment protocol (7-of-9 signatures, 180-day timelock).
+This entire directory is Tier 1 protected per `/architecture/parameter_registry.md`. Changes to the subsidiarity rule, consent rule, exit threshold (FC-120), unwind window (FC-121), or scale tiers (FC-122) require the full amendment protocol (7-of-9 signatures, 180-day timelock).
 
 Extension — adding finer-grained scales (e.g., sub-neighborhood clusters for specific decision classes), adding consent mechanisms, or strengthening exit rights — may proceed by Tier 2 amendment. **Weakening any Founding Order right requires Tier 1 amendment with the full H-3 Refounding Convention.**
 

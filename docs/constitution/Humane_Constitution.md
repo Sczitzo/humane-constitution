@@ -64,7 +64,7 @@ This protocol was built in public, stress-tested adversarially, and released wit
 
 **Architectural enforcement layer (Proposal 1 close-out, 2026-04-18).**
 The above invariants are not only textually protected but **mechanically enforced** via the architecture/ directory:
-- [`architecture/invariants.md`](architecture/invariants.md) — Tier 1 parameter registry with cryptographic hash commitment.
+- [`architecture/parameter_registry.md`](architecture/parameter_registry.md) — Tier 1 parameter registry with cryptographic hash commitment.
 - [`architecture/amendment_protocol.md`](architecture/amendment_protocol.md) — 7-of-9 holder signatures (FC-110) and 180-day timelock (FC-111) required for any Tier 1 change.
 - [`architecture/drift_chain.md`](architecture/drift_chain.md) — append-only published version history; silent modification is detectable at first operational-node startup.
 - [`architecture/implementation_binding.md`](architecture/implementation_binding.md) — every bound component verifies the drift-chain head on startup and refuses to operate on unverified state (with the CSM-dispensation exception per Annex Y unconditionality).

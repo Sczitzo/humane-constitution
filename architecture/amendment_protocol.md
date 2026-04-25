@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE — Proposal 1 close-out, 2026-04-18
 **Authority:** Tier 1 (H-3 Refounding Convention)
-**Governs:** Every modification to entries in `architecture/invariants.md`, to `Humane_Constitution.md §0`, to `Annex Y §Y1`, and to Tier 1 rows of `/founding/commitments.md`.
+**Governs:** Every modification to entries in `architecture/parameter_registry.md`, to `Humane_Constitution.md §0`, to `Annex Y §Y1`, and to Tier 1 rows of `/founding/commitments.md`.
 
 **Bound commitments:**
 - **FC-110** `TIER1_AMENDMENT_SIGNATURES_MIN` = **7 of 9** (M-of-N)

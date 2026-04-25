@@ -14,7 +14,47 @@
 
 **Scoring convention.** Risk Score = I × L × (6 − D) where I = Impact, L = Likelihood, D = Detectability (each 1–5; higher D = more detectable = lower risk multiplier).
 
-**Disclosure policy.** This register is bifurcated per the Register Disclosure Protocol (see `docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md`). Specific detection thresholds, timing windows, and operational exploit paths are published only in the Restricted Annex, available to auditors, oversight panels, and adversarial panel members. This public version records threat categories, mechanisms, mitigations, and risk scores. The restricted version adds precise calibration data. Both versions must remain consistent; any discrepancy is treated as a T-007 definition-drift event.
+**Disclosure policy.** This register is bifurcated per the Register Disclosure Protocol (see `docs/annexes/ANNEX_AO.md`). Specific detection thresholds, timing windows, and operational exploit paths are published only in the Restricted Annex, available to auditors, oversight panels, and adversarial panel members. This public version records threat categories, mechanisms, mitigations, and risk scores. The restricted version adds precise calibration data. Both versions must remain consistent; any discrepancy is treated as a T-007 definition-drift event.
+
+---
+
+## Open Problems Dashboard
+
+The single working list of unsolved threats. Read this first before scanning the rest of the register. A threat appears here if it is `OPEN`, `PARTIAL`, or otherwise unresolved at the structural level. `ADDRESSED*` items below the dashboard exist in the broader summary but are not active design loopholes.
+
+### Fully open (no structural mitigation yet)
+
+| ID | Title | Severity | Score | Why it matters in one line | Proposed patch |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| T-022 | Electoral Cycle Capture | **Critical** | 60 | Hostile successor government repeals or hollows out the constitutional architecture. | P-018 (Annex AM — to be written) |
+| T-019 | Demand-Context Flag Suppression | High | 48 | Strategically timed enforcement actions suppress legitimate PCRP activation. | P-015 (Annex AP — to be written) |
+| T-025 | Demurrage Sector-Capture via Investment Channel | High | 48 | Flow investment exemptions become milking instruments for capital-intensive sectors. | P-023 |
+| T-023 | Pilot External Validity Collapse | Med-High | 32 | Scale-up rests on pilot evidence that did not include adversarial or crisis conditions. | P-019 (Annex AN — to be written) |
+
+### Partial (mitigation path defined; not fully integrated or tested)
+
+| ID | Title | Severity | Score | What still needs work |
+| :--- | :--- | :--- | :--- | :--- |
+| T-001 | Shadow Convertibility | **Critical** | 60 | Above-ledger residual: scale-arbitrage containment without authoritarian overreach. |
+| T-002 | Identity Exploits | **Critical** | 60 | Non-coercive identity stack remains the largest unresolved precondition. |
+| T-007 | Political Definition Drift | **Critical** | 60 | Semantic capture defenses depend on a registry that is not yet enforced in production. |
+| T-004 | Incentive Collapse | **Critical** | 48 | Real contribution model that rewards output without recreating coercive hierarchy. |
+| T-018 | PCRP False-Trigger Exhaustion | High | 36 | Attestation-vector closed by P-024; false-trigger-at-scale residual still on P-015. |
+
+### Open sub-problems with no T-ID
+
+These appear inside detailed entries below as "Open problem:" lines and are not yet promoted to the priority table:
+
+- **Identity-stack fraud calibration** — fraud tolerance that does not exclude displaced, undocumented, or digitally fragile people (under T-002).
+- **Contribution model definition** — reward output without coercive hierarchy or burnout pressure (under T-004).
+- **Semantic bureaucracy risk** — institutionalize definition control without freezing useful iteration (under T-007).
+- **Subsidiarity aggregate drift** — individual escalations look reasonable while cumulative drift toward federation-scale venue is substantial (under T-008/T-027).
+
+### Maintenance rules for this dashboard
+
+- Move a threat off the dashboard only when its row in `Summary by Priority` flips to `ADDRESSED` AND the closing patch has reached `ACTIVE` in `Patch_Log.md`.
+- When a threat is fully `RESOLVED` (evidence-backed), strike it through here in one update cycle, then remove on the next.
+- Newly added threats go on this dashboard at creation, not at resolution.
 
 ---
 

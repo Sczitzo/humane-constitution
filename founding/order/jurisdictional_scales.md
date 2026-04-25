@@ -55,7 +55,7 @@
 - **Upper bound:** Continental scope. The federation is the entire protocol.
 - **Lower bound:** N/A — the federation is the highest scale.
 - **Decision authority:**
-  - All Tier 1 invariants (`/architecture/invariants.md`).
+  - All Tier 1 invariants (`/architecture/parameter_registry.md`).
   - Flow/Essential Access non-convertibility (Humane Constitution §II).
   - Inter-regional dispute resolution not resolved at regional scale.
   - Cross-unit externalities that no smaller scale can address.
@@ -140,7 +140,7 @@ Collapsed scales are rare, but the rule is stated explicitly so that the scale h
 | Humane Constitution §VIII (Representation) | Scale tiers are the basis for CRP delegate apportionment |
 | Annex AL (Oracle) | Oracle cohorts are typically regional (§Y of Annex AL) for measurement competence |
 | Annex AI (Federated Ombuds) | Sub-Ombuds are typically federation-scale but their jurisdictional dispersal (§1.2) is defined in terms of regional geography |
-| `/architecture/invariants.md` FC-122 | Scale bounds are locked at Tier 1 |
+| `/architecture/parameter_registry.md` FC-122 | Scale bounds are locked at Tier 1 |
 
 ---
 

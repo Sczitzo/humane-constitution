@@ -37,9 +37,9 @@ IGNORED_DIRS = {
 DEPRECATED_TERM_EXEMPTIONS = set()
 
 PLACEHOLDER_WARNING_EXEMPTIONS = {
-    Path("Acceptance_Protocol.md"),
+    Path("docs/constitution/Acceptance_Protocol.md"),
     Path("CONTRIBUTING.md"),
-    Path("Patch_Log.md"),
+    Path("docs/governance/Patch_Log.md"),
     Path("founding/commitments.md"),
 }
 
@@ -261,10 +261,10 @@ def parse_table_ids(path: Path, prefix: str) -> set[str]:
 def collect_identifier_definitions(_: ValidationResult) -> dict[str, set[str]]:
     return {
         "FC": parse_fc_definitions(),
-        "T": parse_heading_ids(ROOT / "Threat_Register.md", "T")
-        | parse_table_ids(ROOT / "Threat_Register.md", "T"),
-        "P": parse_heading_ids(ROOT / "Patch_Log.md", "P")
-        | parse_table_ids(ROOT / "Patch_Log.md", "P"),
+        "T": parse_heading_ids(ROOT / "docs" / "governance" / "Threat_Register.md", "T")
+        | parse_table_ids(ROOT / "docs" / "governance" / "Threat_Register.md", "T"),
+        "P": parse_heading_ids(ROOT / "docs" / "governance" / "Patch_Log.md", "P")
+        | parse_table_ids(ROOT / "docs" / "governance" / "Patch_Log.md", "P"),
     }
 
 

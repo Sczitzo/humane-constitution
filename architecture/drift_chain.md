@@ -9,7 +9,7 @@
 ## What This Chain Covers
 
 Each version row in the drift chain commits a SHA-256 hash over the canonical serialization of:
-1. `architecture/invariants.md` (this registry)
+1. `architecture/parameter_registry.md` (this registry)
 2. `Humane_Constitution.md` §0 (Scope, Assumptions, and Design Invariants)
 3. `Annex Y §Y1` (Constitutional Survival Minimum — per-person daily minimums)
 4. `/founding/commitments.md` (all Tier 1 rows, i.e., rows where `Tier = 1`)

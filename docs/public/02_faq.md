@@ -78,9 +78,9 @@ Because the project is aimed at a simple question: should losing money mean losi
 
 Start with:
 
-1. [`One_Page_Overview.md`](./One_Page_Overview.md)
-2. [`Public_Readiness_Guide.md`](./Public_Readiness_Guide.md)
-3. [`Claims_Evidence_Register.md`](./Claims_Evidence_Register.md)
-4. [`Pilot_Evidence_Roadmap.md`](./Pilot_Evidence_Roadmap.md)
-5. [`../White_Paper.md`](../White_Paper.md)
-6. [`../Citizen_Facing_Rights_Layer.md`](../Citizen_Facing_Rights_Layer.md)
+1. [`01_overview.md`](./01_overview.md)
+2. [`03_readiness.md`](./03_readiness.md)
+3. [`Claims_Evidence_Register.md`](../governance/Claims_Evidence_Register.md)
+4. [`Pilot_Evidence_Roadmap.md`](../governance/Pilot_Evidence_Roadmap.md)
+5. [`./04_white_paper.md`](./04_white_paper.md)
+6. [`./05_rights_layer.md`](./05_rights_layer.md)

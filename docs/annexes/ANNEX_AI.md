@@ -323,7 +323,7 @@ To constitute the Federated Ombuds before deployment, the founding coalition mus
 
 | Annex | Relationship |
 | :--- | :--- |
-| `/architecture/invariants.md` | FC-090, FC-091, FC-092 are Tier 1 parameters locked in the registry |
+| `/architecture/parameter_registry.md` | FC-090, FC-091, FC-092 are Tier 1 parameters locked in the registry |
 | `/architecture/amendment_protocol.md` | Federation issues the 60-day Tier 1 Amendment Integrity Report (§3.2 item 1) |
 | `/architecture/drift_chain.md` | Federation plenum votes and Oversight Assembly certifications are drift-chain-logged events |
 | Annex AJ (Above-Ledger Bypass) | Federation hears enforcement appeals (§3.2 item 4; §4.8) |
@@ -339,7 +339,7 @@ To constitute the Federated Ombuds before deployment, the founding coalition mus
 
 ## 9. Governance of This Annex
 
-This annex is Tier 1 protected per `/architecture/invariants.md`. Changes to the federation structure (FC-090 = 5), the supermajority threshold (FC-091 = 4/5), or the term length (FC-092 = 730 days) require the full amendment protocol (7 of 9, 180-day timelock). Changes to §4 mandate functions that would weaken protection of any Tier 1 invariant are prohibited without H-3 refounding authority.
+This annex is Tier 1 protected per `/architecture/parameter_registry.md`. Changes to the federation structure (FC-090 = 5), the supermajority threshold (FC-091 = 4/5), or the term length (FC-092 = 730 days) require the full amendment protocol (7 of 9, 180-day timelock). Changes to §4 mandate functions that would weaken protection of any Tier 1 invariant are prohibited without H-3 refounding authority.
 
 Mandate functions may be **extended** by Tier 2 amendment — new integrations may add protocol-level matters to §3.2 or new operational functions to §4 — but cannot be **reduced** without Tier 1 amendment. The principle mirrors the implementation-binding rule: the lock can be strengthened but not weakened by ordinary amendment.
 

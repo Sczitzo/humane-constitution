@@ -473,7 +473,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
   - *Restricted Register Annex:* Specific detection thresholds (e.g., exact trigger counts and time windows), precise timing windows for exploitation, operational detection patterns and signatures, and calibration data used to set automated alerts. The Restricted Annex is available to: credentialed auditors under NDA; adversarial panel members in the P-013/P-014 acceptance process; the constitutional review body; and Ombuds Office staff. It is not published publicly. It is version-controlled privately with access logs.
   - *Consistency requirement:* Both versions must be updated simultaneously. Any discrepancy between the public and restricted versions triggers a T-007 definition-drift review. The restricted version is the authoritative operational document; the public version is the transparency artifact.
   - *Reclassification review:* Annually, the Threat Register Owner reviews whether any restricted-version content can be declassified to the public version (because the window of operational sensitivity has passed) or whether any public-version content should be reclassified to restricted (because specific operational details have been added).
-- **Clauses to integrate:** AO1–AO5. Annex AO (Register Disclosure Protocol) — see `docs/annexes/REGISTER_DISCLOSURE_PROTOCOL.md`. P-004 protected terms registry: 'restricted annex' and 'public register' defined.
+- **Clauses to integrate:** AO1–AO5. Annex AO (Register Disclosure Protocol) — see `docs/annexes/ANNEX_AO.md`. P-004 protected terms registry: 'restricted annex' and 'public register' defined.
 - **Dependencies:** Restricted Annex infrastructure (private version-controlled repository with access controls) must be established before P-021 is operative. Threat Register Owner role must be formally constituted with authority to manage both versions.
 - **New risks introduced:** Bifurcation creates an accountability gap — the public cannot verify that the restricted version is consistent with stated mitigations. Mitigated by: credentialed auditors can access restricted version and publish a consistency attestation (not the content) annually. Restricted version existence itself creates an information asymmetry that could be used to claim mitigations are more robust than they are. Mitigated by: consistency attestation is published; any disclosed gap between public claims and restricted reality is a T-007 event.
 - **Residual risk:** The bifurcation design assumes that restricted content stays restricted. Leaks are possible. The design accepts this and treats the restricted version as reducing adversarial advantage, not eliminating it — full security through obscurity is not the goal.
@@ -609,7 +609,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-009 / TR-07 / T-018 residual | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
 | T-008 residual / meta-capture | P-025 | **ACTIVE** | Annex AI ACTIVE (rewritten) · FC-090/091/092 |
 | T-026 / T-027 | P-026 | **ACTIVE** | `/founding/order/` ACTIVE · FC-120/121/122 |
-| structural simplification / T-005 residual / T-008 residual | P-027 | **ACTIVE** | `Humane_Constitution.md` §III Founding Order + Articles I-VII · `White_Paper.md` §4 |
+| structural simplification / T-005 residual / T-008 residual | P-027 | **ACTIVE** | `Humane_Constitution.md` §III Founding Order + Articles I-VII · `docs/public/04_white_paper.md` §4 |
 
 ---
 

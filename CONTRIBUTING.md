@@ -8,13 +8,13 @@ This is an open design project. The design is not finished. The most valuable th
 
 ## Start here
 
-**If you're new:** Read [`White_Paper.md`](./White_Paper.md) first (14 pages, general audience). Then [`Citizen_Facing_Rights_Layer.md`](./Citizen_Facing_Rights_Layer.md) for the one-page rights summary.
+**If you're new:** Read [`docs/public/04_white_paper.md`](./docs/public/04_white_paper.md) first (14 pages, general audience). Then [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md) for the one-page rights summary.
 
-**If you want to stress-test:** Read [`Threat_Register.md`](./Threat_Register.md). Every adversarial failure mode we've found is documented there with its risk score. The open problems are explicitly marked. If you find one we haven't, that's a contribution.
+**If you want to stress-test:** Read [`docs/governance/Threat_Register.md`](./docs/governance/Threat_Register.md). Every adversarial failure mode we've found is documented there with its risk score. The open problems are explicitly marked. If you find one we haven't, that's a contribution.
 
-**If you want the operative language:** Read [`Humane_Constitution.md`](./Humane_Constitution.md).
+**If you want the operative language:** Read [`docs/constitution/Humane_Constitution.md`](./docs/constitution/Humane_Constitution.md).
 
-**If you want to understand the hardening methodology:** Read [`Patch_Log.md`](./Patch_Log.md) — 31 patches, each with the threat it addresses, the new risk it introduces, and its residual risk.
+**If you want to understand the hardening methodology:** Read [`docs/governance/Patch_Log.md`](./docs/governance/Patch_Log.md) — 31 patches, each with the threat it addresses, the new risk it introduces, and its residual risk.
 
 **Before opening a structural docs PR:** Run `python3 scripts/validate_corpus.py`. This checks local markdown links, annex index coverage, FC/T/P identifier integrity, and banned live legacy labels. If your change affects the reader corpus, also run `npm run check:corpus` from `app/` and commit the generated files.
 
@@ -35,7 +35,7 @@ The issue templates are part of the quality system:
 - **Reader Comprehension** — a public explanation that confused, misled, or failed to persuade a general reader
 - **Real-World Analogue** — historical cases, academic literature, operational systems, or failure cases relevant to the design
 
-If your contribution changes what the project can honestly claim, update or reference [`docs/Claims_Evidence_Register.md`](./docs/Claims_Evidence_Register.md). If it changes scale readiness, update or reference [`docs/Pilot_Evidence_Roadmap.md`](./docs/Pilot_Evidence_Roadmap.md).
+If your contribution changes what the project can honestly claim, update or reference [`docs/governance/Claims_Evidence_Register.md`](./docs/governance/Claims_Evidence_Register.md). If it changes scale readiness, update or reference [`docs/governance/Pilot_Evidence_Roadmap.md`](./docs/governance/Pilot_Evidence_Roadmap.md).
 
 ### 1. Find a threat we haven't modeled (most valuable)
 
@@ -50,7 +50,7 @@ Use the threat register format if you can: `I × L × (6 - D)` risk score (Impac
 
 ### 2. Challenge an existing patch
 
-Every patch in [`Patch_Log.md`](./Patch_Log.md) has a residual risk statement — an honest acknowledgment of what the patch doesn't fully solve. If you think a residual risk is understated, or if you can find a way around a proposed mitigation, open an Issue with the patch ID and your specific challenge.
+Every patch in [`docs/governance/Patch_Log.md`](./docs/governance/Patch_Log.md) has a residual risk statement — an honest acknowledgment of what the patch doesn't fully solve. If you think a residual risk is understated, or if you can find a way around a proposed mitigation, open an Issue with the patch ID and your specific challenge.
 
 ### 3. Real-world analogues and evidence
 
