@@ -665,11 +665,9 @@ function MetaStat({
   value: string
 }) {
   return (
-    <div className="rounded-[18px] border border-[rgba(60,54,46,0.14)] bg-[rgba(253,249,242,0.8)] px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_14px_24px_rgba(35,30,20,0.06)]">
-      <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-        {label}
-      </p>
-      <p className="mt-2 font-serif text-[1.3rem] leading-tight text-[var(--ink-strong)]">{value}</p>
+    <div className="border-l border-line pl-4">
+      <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">{label}</p>
+      <p className="mt-1 font-serif text-[1.3rem] leading-tight text-ink-strong">{value}</p>
     </div>
   )
 }
@@ -689,8 +687,8 @@ function ActionButton({
 }) {
   const toneClass =
     tone === 'accent'
-      ? 'border-[rgba(159,108,49,0.3)] bg-[rgba(159,108,49,0.14)] text-[var(--accent-deep)] shadow-[inset_0_1px_0_rgba(255,255,255,0.22)] hover:bg-[rgba(159,108,49,0.2)]'
-      : 'border-[rgba(60,54,46,0.14)] bg-[rgba(253,249,242,0.8)] text-[var(--ink-soft)] shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] hover:bg-[rgba(253,249,242,0.96)] hover:text-[var(--ink-strong)]'
+      ? 'border-[rgba(159,108,49,0.4)] bg-[rgba(230,207,172,0.35)] text-accent-deep hover:bg-[rgba(230,207,172,0.55)]'
+      : 'border-line bg-[rgba(251,246,236,0.5)] text-ink-soft hover:text-ink-strong hover:bg-[rgba(251,246,236,0.85)]'
 
   return (
     <button
@@ -699,8 +697,8 @@ function ActionButton({
       disabled={disabled}
       aria-disabled={disabled || undefined}
       onClick={onClick}
-      className={`focus-ring rounded-full border px-4 py-2 text-[10px] font-mono uppercase tracking-[0.2em] transition ${
-        disabled ? 'cursor-not-allowed opacity-45' : ''
+      className={`focus-ring inline-flex h-8 min-w-8 items-center justify-center rounded border px-2.5 font-serif text-[12px] transition ${
+        disabled ? 'cursor-not-allowed opacity-50' : ''
       } ${toneClass}`}
     >
       {label}
@@ -713,7 +711,6 @@ function DocumentRow({
   selected,
   pinned = false,
   onSelect,
-  onOpenSource,
 }: {
   doc: CorpusDoc
   selected: boolean
@@ -722,45 +719,41 @@ function DocumentRow({
   onOpenSource: () => void
 }) {
   return (
-    <article
+    <button
       data-testid={`document-row-${doc.id}`}
       data-selected={selected ? 'true' : 'false'}
-      className={`rounded-[24px] border p-4 transition ${
+      type="button"
+      onClick={onSelect}
+      className={`focus-ring group block w-full border-l-2 py-3 pl-4 pr-2 text-left transition ${
         selected
-          ? 'border-[rgba(159,108,49,0.26)] bg-[rgba(253,249,242,0.92)] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_16px_28px_rgba(35,30,20,0.08)]'
-          : 'border-[rgba(60,54,46,0.1)] bg-[rgba(253,249,242,0.46)] shadow-[inset_0_1px_0_rgba(255,255,255,0.28)] hover:border-[rgba(159,108,49,0.14)] hover:bg-[rgba(253,249,242,0.7)] hover:shadow-[0_14px_24px_rgba(35,30,20,0.06)]'
+          ? 'border-l-accent bg-[rgba(251,246,236,0.6)]'
+          : 'border-l-transparent hover:border-l-line hover:bg-[rgba(251,246,236,0.3)]'
       }`}
     >
-      <button className="w-full text-left" onClick={onSelect}>
-        <div className="min-w-0">
-          <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-            {SECTION_LABELS[doc.section]}
-          </p>
-          {pinned ? (
-            <p className="mt-2 text-[9px] font-mono uppercase tracking-[0.2em] text-[var(--accent-deep)]">
-              Pinned
-            </p>
-          ) : null}
-          <h3 className="mt-2 font-serif text-[1.18rem] leading-7 text-[var(--ink-strong)]">
-            {doc.title}
-          </h3>
-        </div>
-        <p className="mt-3 line-clamp-2 text-[13px] leading-6 text-[var(--ink-soft)]">{doc.summary}</p>
-      </button>
-
-      <div className="mt-4 flex flex-wrap items-center gap-1.5 text-[9px] font-mono uppercase tracking-[0.18em] text-[var(--ink-faint)]">
-        <span>{estimatedReadMinutes(doc.wordCount)} min read</span>
-        <span>•</span>
-        <span>{doc.headingCount} headings</span>
-        <span>•</span>
-        <span>{doc.wordCount} words</span>
+      <div className="flex items-baseline justify-between gap-3">
+        <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">
+          {SECTION_LABELS[doc.section]}
+        </p>
+        {pinned ? (
+          <span aria-label="Pinned" title="Pinned" className="text-[11px] text-accent-deep">
+            ●
+          </span>
+        ) : null}
       </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        <ActionButton label={selected ? 'Reading' : 'Read'} onClick={onSelect} tone={selected ? 'accent' : 'default'} />
-        <ActionButton label="Open Source" onClick={onOpenSource} />
-      </div>
-    </article>
+      <h3
+        className={`mt-1 font-serif text-[1.05rem] leading-snug ${
+          selected ? 'text-ink-strong' : 'text-ink group-hover:text-ink-strong'
+        }`}
+      >
+        {doc.title}
+      </h3>
+      {doc.summary ? (
+        <p className="mt-1 line-clamp-2 text-[13px] leading-6 text-ink-soft">{doc.summary}</p>
+      ) : null}
+      <p className="mt-2 text-[11px] text-ink-faint">
+        {estimatedReadMinutes(doc.wordCount)} min · {doc.headingCount} headings
+      </p>
+    </button>
   )
 }
 
@@ -780,34 +773,23 @@ function QuickAccessSection({
   }
 
   return (
-    <section
-      data-testid={testId}
-      className="rounded-[24px] border border-[rgba(60,54,46,0.12)] bg-[rgba(253,249,242,0.82)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]"
-    >
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-          {label}
-        </p>
-        <span className="text-[9px] font-mono uppercase tracking-[0.18em] text-[var(--ink-faint)]">
-          {docs.length}
-        </span>
-      </div>
-
-      <div className="mt-3 flex flex-wrap gap-2">
+    <section data-testid={testId} className="border-t border-line pt-3">
+      <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">{label}</p>
+      <ul className="mt-2 flex flex-col">
         {docs.map((doc) => (
-          <button
-            key={`${testId}-${doc.id}`}
-            data-testid={`${testId}-${doc.id}`}
-            onClick={() => onSelect(doc)}
-            className="max-w-full rounded-full border border-[rgba(60,54,46,0.12)] bg-[rgba(250,246,238,0.92)] px-3 py-2 text-left text-[11px] leading-5 text-[var(--ink-soft)] transition hover:border-[rgba(159,108,49,0.22)] hover:text-[var(--ink-strong)]"
-          >
-            <span className="block truncate font-medium text-[var(--ink-strong)]">{doc.title}</span>
-            <span className="mt-0.5 block truncate text-[9px] font-mono uppercase tracking-[0.18em] text-[var(--ink-faint)]">
-              {SECTION_LABELS[doc.section]}
-            </span>
-          </button>
+          <li key={`${testId}-${doc.id}`}>
+            <button
+              data-testid={`${testId}-${doc.id}`}
+              type="button"
+              onClick={() => onSelect(doc)}
+              className="focus-ring group block w-full py-1.5 text-left text-[13px] leading-snug text-ink-soft transition hover:text-ink-strong"
+            >
+              <span className="font-serif text-ink group-hover:text-ink-strong">{doc.title}</span>
+              <span className="ml-2 text-[11px] text-ink-faint">{SECTION_LABELS[doc.section]}</span>
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }
@@ -959,17 +941,13 @@ function ReaderOutline({
   }
 
   return (
-    <aside
+    <nav
       data-testid="reader-outline-content"
-      className={`rounded-[26px] border border-[rgba(60,54,46,0.16)] bg-[linear-gradient(180deg,rgba(252,248,241,0.96),rgba(248,242,232,0.9))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.6),0_20px_36px_rgba(35,30,20,0.08)] ${
-        independentScroll ? 'h-full overflow-y-auto' : 'self-start'
-      }`}
+      aria-label="Outline"
+      className={`${independentScroll ? 'h-full overflow-y-auto' : 'self-start'}`}
     >
-      <div className="mb-4 h-px w-full bg-[linear-gradient(90deg,rgba(159,108,49,0.28),rgba(159,108,49,0.08),transparent)]" />
-      <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-        Outline
-      </p>
-      <div className="mt-4 space-y-1">
+      <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">On this page</p>
+      <div className="mt-3 flex flex-col gap-px">
         {headings.map((heading) => (
           <button
             key={`${doc.id}-${heading.slug}`}
@@ -979,18 +957,18 @@ function ReaderOutline({
             type="button"
             aria-current={activeHeadingSlug === heading.slug ? 'location' : undefined}
             onClick={() => jumpToHeading(doc, heading.slug)}
-            className={`focus-ring block w-full rounded-[16px] px-3 py-2 text-left text-[12px] leading-5 transition ${
+            className={`focus-ring border-l-2 py-1 pr-2 text-left text-[12px] leading-snug transition ${
               activeHeadingSlug === heading.slug
-                ? 'bg-[rgba(159,108,49,0.12)] text-[var(--accent-deep)] shadow-[inset_0_0_0_1px_rgba(159,108,49,0.16)]'
-                : 'text-[var(--ink-soft)] hover:bg-[rgba(60,54,46,0.05)] hover:text-[var(--ink-strong)]'
+                ? 'border-l-accent text-accent-deep'
+                : 'border-l-transparent text-ink-soft hover:border-l-line hover:text-ink-strong'
             }`}
-            style={{ paddingLeft: `${12 + Math.max(0, heading.level - 1) * 10}px` }}
+            style={{ paddingLeft: `${10 + Math.max(0, heading.level - 1) * 10}px` }}
           >
             {heading.text}
           </button>
         ))}
       </div>
-    </aside>
+    </nav>
   )
 }
 
@@ -1030,101 +1008,102 @@ function ReaderPanel({
   onJumpToNextMatch: () => void
 }) {
   return (
-    <section id="reader-panel-start" data-testid="reader-panel" className="space-y-6">
-      <header className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(253,249,242,1),rgba(247,240,229,0.95))] px-6 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_28px_48px_rgba(35,30,20,0.11)] sm:px-8">
-        <div className="mb-5 h-px w-full bg-[linear-gradient(90deg,rgba(159,108,49,0.32),rgba(159,108,49,0.1),transparent)]" />
-        <div className="min-w-0">
-          <p className="text-[10px] font-mono uppercase tracking-[0.24em] text-[var(--ink-faint)]">
+    <section id="reader-panel-start" data-testid="reader-panel" className="space-y-8">
+      <header className="border-b border-line pb-6">
+        <div className="flex items-baseline justify-between gap-4">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-ink-faint">
             {SECTION_LABELS[doc.section]}
           </p>
-          <h2 data-testid="reader-title" className="mt-3 font-serif text-[2rem] leading-tight text-[var(--ink-strong)] sm:text-[2.55rem]">
-            {doc.title}
-          </h2>
-          <p className="mt-4 max-w-3xl text-[15px] leading-7 text-[var(--ink-soft)]">
-            {doc.summary}
-          </p>
+          <p className="font-mono text-[11px] text-ink-faint">{doc.path}</p>
         </div>
+        <h2
+          data-testid="reader-title"
+          className="mt-3 font-serif text-[2.1rem] leading-tight text-ink-strong sm:text-[2.6rem]"
+        >
+          {doc.title}
+        </h2>
+        {doc.summary ? (
+          <p className="mt-4 max-w-[40rem] text-[15px] leading-7 text-ink-soft">{doc.summary}</p>
+        ) : null}
 
-        <div className="mt-5 flex flex-wrap items-center gap-3 text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--ink-faint)]">
-          <span>{doc.path}</span>
-          <span>•</span>
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[12px] text-ink-faint">
           <span>{estimatedReadMinutes(doc.wordCount)} min read</span>
-          <span>•</span>
-          <span>{doc.wordCount} words</span>
-          <span>•</span>
+          <span aria-hidden="true">·</span>
           <span>{doc.headingCount} headings</span>
+          <span aria-hidden="true">·</span>
+          <span>{doc.wordCount.toLocaleString()} words</span>
         </div>
 
-        <div className="mt-5 flex flex-wrap gap-3">
+        <div className="mt-5 flex flex-wrap items-center gap-2">
           <ActionButton
             label={pinned ? 'Unpin' : 'Pin'}
             onClick={onTogglePinned}
             tone={pinned ? 'accent' : 'default'}
           />
           <ActionButton
-            label={readingMode ? 'Exit Reading Mode' : 'Reading Mode'}
+            label={readingMode ? 'Exit reading mode' : 'Reading mode'}
             onClick={onToggleReadingMode}
             tone={readingMode ? 'accent' : 'default'}
             testId="reading-mode-toggle"
           />
-          <ActionButton label="Open Source" onClick={onOpenSource} tone="accent" />
-        </div>
+          <ActionButton label="Open source" onClick={onOpenSource} />
 
-        <div className="mt-5 rounded-[22px] border border-[rgba(60,54,46,0.12)] bg-[rgba(252,248,241,0.72)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-            <div className="min-w-0 flex-1">
-              <label
-                htmlFor="reader-search"
-                className="block text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]"
-              >
-                Search this document
-              </label>
-              <input
-                id="reader-search"
-                ref={searchInputRef}
-                data-testid="reader-search-input"
-                value={searchQuery}
-                onChange={(event) => onSearchChange(event.target.value)}
-                placeholder="Find a term, phrase, or heading"
-                className="focus-ring mt-3 w-full rounded border-0 bg-transparent p-0 font-serif text-[1.08rem] text-[var(--ink-strong)] placeholder:font-sans placeholder:text-[var(--ink-faint)]"
-              />
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2 lg:justify-end">
-              <span
-                data-testid="reader-search-status"
-                className="rounded-full border border-[rgba(60,54,46,0.12)] bg-[rgba(253,249,242,0.8)] px-3 py-2 text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--ink-faint)]"
-              >
-                {searchQuery.trim()
-                  ? matchCount
-                    ? `${currentMatchIndex + 1} of ${matchCount} hits`
-                    : 'No matches'
-                  : 'Find in text'}
-              </span>
-              <ActionButton label="Prev" onClick={onJumpToPreviousMatch} disabled={!matchCount} />
-              <ActionButton label="Next" onClick={onJumpToNextMatch} disabled={!matchCount} />
-            </div>
-          </div>
-        </div>
-
-        <p className={`mt-4 text-[12px] leading-6 ${feedbackClass(feedback.tone)}`}>
-          {feedback.message}
-        </p>
-      </header>
-
-      <article data-testid="reader-paper-shell" className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(252,246,238,0.98),rgba(245,238,227,0.92))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_28px_48px_rgba(35,30,20,0.12)] sm:p-4">
-        <div className="rounded-[24px] border border-[rgba(60,54,46,0.12)] bg-[var(--paper-strong)] px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.76),0_1px_0_rgba(60,54,46,0.04)] sm:px-10 sm:py-10">
-          <div
-            data-testid="reader-document"
-            className={`mx-auto ${readingMode ? 'max-w-[58rem]' : 'max-w-[47rem]'}`}
-          >
-            <MarkdownDocument
-              doc={doc}
-              searchQuery={searchQuery}
-              copiedHeadingSlug={copiedHeadingSlug}
-              onCopyHeadingLink={onCopyHeadingLink}
+          <div className="ml-auto flex w-full items-center gap-2 sm:w-auto">
+            <label htmlFor="reader-search" className="sr-only">
+              Search this document
+            </label>
+            <input
+              id="reader-search"
+              ref={searchInputRef}
+              data-testid="reader-search-input"
+              value={searchQuery}
+              onChange={(event) => onSearchChange(event.target.value)}
+              placeholder="Find in text…"
+              className="focus-ring w-full min-w-0 rounded border border-line bg-[rgba(251,246,236,0.6)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint sm:w-56"
+            />
+            <span
+              data-testid="reader-search-status"
+              className="shrink-0 text-[11px] text-ink-faint"
+            >
+              {searchQuery.trim()
+                ? matchCount
+                  ? `${currentMatchIndex + 1}/${matchCount}`
+                  : '—'
+                : ''}
+            </span>
+            <ActionButton
+              label="↑"
+              onClick={onJumpToPreviousMatch}
+              disabled={!matchCount}
+              testId="reader-search-prev"
+            />
+            <ActionButton
+              label="↓"
+              onClick={onJumpToNextMatch}
+              disabled={!matchCount}
+              testId="reader-search-next"
             />
           </div>
+        </div>
+
+        {feedback.message ? (
+          <p className={`mt-4 text-[12px] leading-6 ${feedbackClass(feedback.tone)}`}>
+            {feedback.message}
+          </p>
+        ) : null}
+      </header>
+
+      <article data-testid="reader-paper-shell">
+        <div
+          data-testid="reader-document"
+          className={`mx-auto ${readingMode ? 'max-w-[44rem]' : 'max-w-[42rem]'}`}
+        >
+          <MarkdownDocument
+            doc={doc}
+            searchQuery={searchQuery}
+            copiedHeadingSlug={copiedHeadingSlug}
+            onCopyHeadingLink={onCopyHeadingLink}
+          />
         </div>
       </article>
     </section>
@@ -1192,11 +1171,11 @@ function ReaderWorkspace({
   onJumpToPreviousMatch: () => void
   onJumpToNextMatch: () => void
 }) {
+  void railLabel
   if (!docs.length || !selectedDoc) {
     return (
-      <article className="rounded-[32px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.92)] px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_24px_40px_rgba(35,30,20,0.08)]">
-        <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">No Matches</p>
-        <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[var(--ink-soft)]">{emptyLabel}</p>
+      <article className="border-l-2 border-line py-6 pl-5">
+        <p className="font-serif text-[15px] leading-7 text-ink-soft">{emptyLabel}</p>
       </article>
     )
   }
@@ -1204,201 +1183,133 @@ function ReaderWorkspace({
   return (
     <div
       data-reading-mode={readingMode ? 'true' : 'false'}
-      className={`grid gap-6 ${
+      className={`grid gap-10 ${
         readingMode
           ? 'xl:grid-cols-[minmax(0,1fr)]'
-          : 'xl:grid-cols-[21.5rem_minmax(0,1fr)] 2xl:grid-cols-[21.5rem_minmax(0,1fr)_15.5rem]'
-      } ${
-        independentScroll || readingMode ? 'items-start' : ''
-      }`}
+          : 'xl:grid-cols-[16rem_minmax(0,1fr)] 2xl:grid-cols-[16rem_minmax(0,1fr)_13rem]'
+      } ${independentScroll || readingMode ? 'items-start' : ''}`}
     >
-        <section
-          ref={shelfPaneRef}
-          data-testid="shelf-pane"
-          className={`space-y-4 ${
-            readingMode
-              ? 'hidden'
-              : ''
-          } ${
-            independentScroll
-              ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-              : 'xl:sticky xl:top-6 xl:self-start xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-          }`}
-          onScroll={onPaneScroll}
-          onWheelCapture={routeVerticalWheelToSelf}
-        >
-          <div className="space-y-4 rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(246,239,228,0.82),rgba(238,230,218,0.68))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_24px_42px_rgba(35,30,20,0.1)]">
-            <div className="rounded-[26px] border border-[rgba(60,54,46,0.16)] bg-[linear-gradient(180deg,rgba(252,248,241,0.96),rgba(248,242,232,0.9))] px-5 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_18px_30px_rgba(35,30,20,0.08)]">
-              <div className="mb-4 h-px w-full bg-[linear-gradient(90deg,rgba(159,108,49,0.28),rgba(159,108,49,0.08),transparent)]" />
-              <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-                {railLabel}
-              </p>
-              <div className="mt-3 flex items-end justify-between gap-4">
-                <p className="font-serif text-[1.55rem] leading-tight text-[var(--ink-strong)]">
-                  {docs.length} documents
-                </p>
-                <span className="text-[9px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-                  browse + read
-                </span>
-              </div>
-              <p className="mt-3 text-[13px] leading-6 text-[var(--ink-soft)]">
-                Select a document from the shelf, then stay in one stable reading surface while the corpus remains browseable.
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-[26px] border border-[rgba(60,54,46,0.16)] bg-[linear-gradient(180deg,rgba(252,248,241,0.92),rgba(247,240,230,0.86))] shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_18px_30px_rgba(35,30,20,0.08)]">
-              <div data-testid="shelf-list" className="space-y-3 p-3">
-                <QuickAccessSection
-                  label="Pinned"
-                  testId="quick-access-pinned"
-                  docs={pinnedDocs}
-                  onSelect={onSelectQuickDoc}
-                />
-                <QuickAccessSection
-                  label="Recent"
-                  testId="quick-access-recent"
-                  docs={recentDocs}
-                  onSelect={onSelectQuickDoc}
-                />
-                {docs.map((doc) => (
-                  <DocumentRow
-                    key={doc.id}
-                    doc={doc}
-                    selected={selectedDoc.id === doc.id}
-                    pinned={pinnedDocIds.includes(doc.id)}
-                    onSelect={() => onSelect(doc)}
-                    onOpenSource={() => onOpenSource(doc)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div
-          key={`reader-pane-${selectedDoc.id}`}
-          ref={readerPaneRef}
-          data-testid="reader-scroll-pane"
-          className={`min-w-0 ${
-            readingMode ? 'mx-auto w-full max-w-[76rem]' : ''
-          } ${
-            independentScroll
-              ? 'xl:sticky xl:top-6 xl:max-h-[calc(100vh-9rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-              : ''
-          }`}
-          onScroll={independentScroll ? onPaneScroll : undefined}
-          onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
-        >
-          <div className="rounded-[34px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(244,236,224,0.84),rgba(236,227,214,0.66))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.6),0_28px_50px_rgba(35,30,20,0.11)]">
-            <ReaderPanel
-              doc={selectedDoc}
-              feedback={feedback}
-              pinned={pinnedDocIds.includes(selectedDoc.id)}
-              onTogglePinned={onTogglePinned}
-              readingMode={readingMode}
-              onToggleReadingMode={onToggleReadingMode}
-              copiedHeadingSlug={copiedHeadingSlug}
-              onCopyHeadingLink={onCopyHeadingLink}
-              onOpenSource={() => onOpenSource(selectedDoc)}
-              searchQuery={searchQuery}
-              onSearchChange={onSearchChange}
-              searchInputRef={searchInputRef}
-              matchCount={matchCount}
-              currentMatchIndex={currentMatchIndex}
-              onJumpToPreviousMatch={onJumpToPreviousMatch}
-              onJumpToNextMatch={onJumpToNextMatch}
+      <section
+        ref={shelfPaneRef}
+        data-testid="shelf-pane"
+        aria-label="Document index"
+        className={`${readingMode ? 'hidden' : ''} ${
+          independentScroll
+            ? 'xl:sticky xl:top-20 xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
+            : 'xl:sticky xl:top-20 xl:self-start xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
+        }`}
+        onScroll={onPaneScroll}
+        onWheelCapture={routeVerticalWheelToSelf}
+      >
+        <p className="text-[11px] uppercase tracking-[0.16em] text-ink-faint">
+          {docs.length} {docs.length === 1 ? 'document' : 'documents'}
+        </p>
+        <div data-testid="shelf-list" className="mt-3 -ml-4 space-y-px">
+          {pinnedDocs.length > 0 ? (
+            <QuickAccessSection
+              label="Pinned"
+              testId="quick-access-pinned"
+              docs={pinnedDocs}
+              onSelect={onSelectQuickDoc}
             />
+          ) : null}
+          {recentDocs.length > 0 ? (
+            <QuickAccessSection
+              label="Recent"
+              testId="quick-access-recent"
+              docs={recentDocs}
+              onSelect={onSelectQuickDoc}
+            />
+          ) : null}
+          <div
+            className={
+              pinnedDocs.length || recentDocs.length ? 'border-t border-line pt-3 mt-3' : ''
+            }
+          >
+            {docs.map((doc) => (
+              <DocumentRow
+                key={doc.id}
+                doc={doc}
+                selected={selectedDoc.id === doc.id}
+                pinned={pinnedDocIds.includes(doc.id)}
+                onSelect={() => onSelect(doc)}
+                onOpenSource={() => onOpenSource(doc)}
+              />
+            ))}
           </div>
         </div>
+      </section>
 
-        <div
-          key={`outline-pane-${selectedDoc.id}`}
-          ref={outlinePaneRef}
-          data-testid="outline-scroll-pane"
-          className={`${readingMode ? 'hidden' : 'hidden 2xl:block'} ${
-            independentScroll
-              ? '2xl:sticky 2xl:top-6 2xl:max-h-[calc(100vh-9rem)] 2xl:overflow-y-auto 2xl:overscroll-contain 2xl:pr-1'
-              : ''
-          }`}
-          onScroll={independentScroll ? onPaneScroll : undefined}
-          onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
-        >
-          <div className={independentScroll ? '' : 'sticky top-8'}>
-            <div className="rounded-[30px] border border-[rgba(60,54,46,0.18)] bg-[linear-gradient(180deg,rgba(244,236,224,0.78),rgba(236,227,214,0.62))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_20px_36px_rgba(35,30,20,0.08)]">
-              <ReaderOutline doc={selectedDoc} independentScroll={false} activeHeadingSlug={activeHeadingSlug} />
-            </div>
-          </div>
+      <div
+        key={`reader-pane-${selectedDoc.id}`}
+        ref={readerPaneRef}
+        data-testid="reader-scroll-pane"
+        className={`min-w-0 ${readingMode ? 'mx-auto w-full max-w-[44rem]' : ''} ${
+          independentScroll
+            ? 'xl:sticky xl:top-20 xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
+            : ''
+        }`}
+        onScroll={independentScroll ? onPaneScroll : undefined}
+        onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
+      >
+        <ReaderPanel
+          doc={selectedDoc}
+          feedback={feedback}
+          pinned={pinnedDocIds.includes(selectedDoc.id)}
+          onTogglePinned={onTogglePinned}
+          readingMode={readingMode}
+          onToggleReadingMode={onToggleReadingMode}
+          copiedHeadingSlug={copiedHeadingSlug}
+          onCopyHeadingLink={onCopyHeadingLink}
+          onOpenSource={() => onOpenSource(selectedDoc)}
+          searchQuery={searchQuery}
+          onSearchChange={onSearchChange}
+          searchInputRef={searchInputRef}
+          matchCount={matchCount}
+          currentMatchIndex={currentMatchIndex}
+          onJumpToPreviousMatch={onJumpToPreviousMatch}
+          onJumpToNextMatch={onJumpToNextMatch}
+        />
+      </div>
+
+      <aside
+        key={`outline-pane-${selectedDoc.id}`}
+        ref={outlinePaneRef}
+        data-testid="outline-scroll-pane"
+        aria-label="Document outline"
+        className={`${readingMode ? 'hidden' : 'hidden 2xl:block'} ${
+          independentScroll
+            ? '2xl:sticky 2xl:top-20 2xl:max-h-[calc(100vh-7rem)] 2xl:overflow-y-auto 2xl:overscroll-contain 2xl:pr-1'
+            : ''
+        }`}
+        onScroll={independentScroll ? onPaneScroll : undefined}
+        onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
+      >
+        <div className={independentScroll ? '' : 'sticky top-20'}>
+          <ReaderOutline doc={selectedDoc} independentScroll={false} activeHeadingSlug={activeHeadingSlug} />
         </div>
+      </aside>
     </div>
   )
 }
 
 function OverviewPanels({ corpus }: { corpus: CorpusPayload }) {
-  const constitutionDocs = corpus.docs.filter((doc) => doc.section === 'constitution').length
-  const annexDocs = corpus.docs.filter((doc) => doc.section === 'annex').length
-  const registryDocs = corpus.docs.filter((doc) => doc.section === 'registry').length
-
-  return (
-    <section className="rounded-[30px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.94)] px-6 py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_18px_30px_rgba(35,30,20,0.06)] sm:px-8">
-      <p className="text-[10px] font-mono uppercase tracking-[0.26em] text-[var(--ink-faint)]">
-        Reading Room
-      </p>
-      <div className="mt-4 grid gap-8 xl:grid-cols-[minmax(0,1.28fr)_minmax(22rem,0.92fr)] xl:items-start">
-        <div>
-          <h2 className="max-w-4xl font-serif text-[2rem] leading-tight text-[var(--ink-strong)] sm:text-[2.45rem]">
-            Read the corpus as a constitutional archive, not a dashboard.
-          </h2>
-          <p className="mt-4 max-w-3xl text-[15px] leading-8 text-[var(--ink-soft)]">
-            This shell now prioritizes reading comfort, collection navigation, and direct source access. Start with the public overview
-            documents on the shelf below, then move through the formal constitutional and governance layers as needed.
-          </p>
-        </div>
-
-        <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-          <MetaStat label="Schema" value={`${corpus.stats.articleCount} articles`} />
-          <MetaStat label="Annexes" value={`${corpus.stats.annexCount} annexes`} />
-          <MetaStat label="Registries" value={`${corpus.stats.threatCount} threats · ${corpus.stats.patchCount} patches`} />
-        </div>
-      </div>
-
-      <div className="mt-7 grid gap-5 border-t border-[rgba(60,54,46,0.1)] pt-7 sm:grid-cols-3">
-        <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">Constitution shelf</p>
-          <p className="mt-3 font-serif text-[1.35rem] leading-tight text-[var(--ink-strong)]">{constitutionDocs}</p>
-          <p className="mt-2 text-[14px] leading-7 text-[var(--ink-soft)]">
-            {constitutionDocs} documents spanning the charter, public white paper, rights layer, and formal specifications.
-          </p>
-        </div>
-        <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">Annex shelf</p>
-          <p className="mt-3 font-serif text-[1.35rem] leading-tight text-[var(--ink-strong)]">{annexDocs}</p>
-          <p className="mt-2 text-[14px] leading-7 text-[var(--ink-soft)]">
-            {annexDocs} annexes for hardening clauses, operational mechanics, and deeper implementation detail.
-          </p>
-        </div>
-        <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">Registry shelf</p>
-          <p className="mt-3 font-serif text-[1.35rem] leading-tight text-[var(--ink-strong)]">{registryDocs}</p>
-          <p className="mt-2 text-[14px] leading-7 text-[var(--ink-soft)]">
-            {registryDocs} living governance logs covering threats, patches, commitments, and activation discipline.
-          </p>
-        </div>
-      </div>
-    </section>
-  )
+  void corpus
+  return null
 }
 
 function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
   return (
-    <section className="rounded-[30px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.9)] px-6 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_18px_30px_rgba(35,30,20,0.06)]">
-      <div className="grid gap-4 lg:grid-cols-3">
+    <section className="border-b border-line pb-8">
+      <div className="grid gap-6 sm:grid-cols-3">
         <MetaStat label="Corpus check" value={corpus.stats.validatorStatus.toUpperCase()} />
         <MetaStat label="Commitments" value={`${corpus.stats.commitmentCount}`} />
         <MetaStat label="Reserved" value={`${corpus.stats.reservedCommitmentCount}`} />
       </div>
-      <p className="mt-5 max-w-4xl text-[14px] leading-7 text-[var(--ink-soft)]">
-        The validation view is the activation shelf: it keeps the remaining prelaunch uncertainty visible instead of hiding it in prose.
-        Use it to inspect reserved commitments, specification dependencies, and the corpus snapshot that the reader is currently serving.
+      <p className="mt-6 max-w-[42rem] font-serif text-[15px] leading-7 text-ink-soft">
+        The validation view keeps the remaining pre-launch uncertainty visible instead of hiding it in
+        prose. Inspect reserved commitments, specification dependencies, and the corpus snapshot the
+        reader is currently serving.
       </p>
     </section>
   )
@@ -1406,12 +1317,13 @@ function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
 
 function EmptySettings() {
   return (
-    <article className="rounded-[30px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.9)] px-6 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_18px_30px_rgba(35,30,20,0.06)]">
-      <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">Shell Settings</p>
-      <h2 className="mt-3 font-serif text-[2rem] leading-tight text-[var(--ink-strong)]">The reader is ready; operator tooling is next.</h2>
-      <p className="mt-4 max-w-3xl text-[15px] leading-8 text-[var(--ink-soft)]">
-        The highest-value settings work from here would be search persistence, pinned documents, and explicit one-click shortcuts for
-        validation, build, and corpus refresh tasks.
+    <article className="max-w-[42rem]">
+      <h2 className="font-serif text-[2rem] leading-tight text-ink-strong">
+        The reader is ready; operator tooling is next.
+      </h2>
+      <p className="mt-4 font-serif text-[15px] leading-7 text-ink-soft">
+        The highest-value settings work from here would be search persistence, pinned documents, and
+        explicit one-click shortcuts for validation, build, and corpus refresh tasks.
       </p>
     </article>
   )
@@ -2085,10 +1997,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
 
   if (loadError) {
     return (
-      <div className="space-y-6" role="alert" aria-live="assertive">
-        <article className="rounded-[32px] border border-[rgba(139,45,45,0.22)] bg-[rgba(255,248,246,0.92)] px-6 py-8 shadow-[0_18px_30px_rgba(35,30,20,0.07)]">
-          <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[#8b2d2d]">Corpus Load Failure</p>
-          <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[var(--ink-soft)]">{loadError}</p>
+      <div role="alert" aria-live="assertive">
+        <article className="border-l-2 border-l-[#8b2d2d] py-6 pl-5">
+          <p className="text-[12px] uppercase tracking-[0.16em] text-[#8b2d2d]">Corpus load failure</p>
+          <p className="mt-3 max-w-[42rem] font-serif text-[15px] leading-7 text-ink-soft">
+            {loadError}
+          </p>
         </article>
       </div>
     )
@@ -2096,10 +2010,10 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
 
   if (!corpus) {
     return (
-      <div className="space-y-6" role="status" aria-live="polite" aria-busy="true">
-        <article className="rounded-[32px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.9)] px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_18px_30px_rgba(35,30,20,0.06)]">
-          <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">Loading Corpus</p>
-          <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[var(--ink-soft)]">
+      <div role="status" aria-live="polite" aria-busy="true">
+        <article className="border-l-2 border-l-line py-6 pl-5">
+          <p className="text-[12px] uppercase tracking-[0.16em] text-ink-faint">Loading corpus</p>
+          <p className="mt-3 max-w-[42rem] font-serif text-[15px] leading-7 text-ink-soft">
             Pulling the generated constitutional corpus into the reader shell.
           </p>
         </article>
@@ -2118,53 +2032,45 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
           role="status"
           aria-live="polite"
           data-testid="stale-corpus-notice"
-          className="flex items-start justify-between gap-4 rounded-[20px] border border-[rgba(159,108,49,0.28)] bg-[rgba(253,243,224,0.9)] px-4 py-3 text-[12px] leading-5 text-ink-strong shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"
+          className="flex items-start justify-between gap-4 border-l-2 border-l-accent bg-[rgba(251,246,236,0.6)] px-4 py-3 text-[13px] leading-6 text-ink-strong"
         >
           <p className="max-w-3xl">{staleCorpusNotice}</p>
           <button
             type="button"
             onClick={() => setStaleCorpusNotice(null)}
             aria-label="Dismiss notice"
-            className="focus-ring shrink-0 rounded-full border border-[rgba(60,54,46,0.16)] bg-paper-strong px-2 py-1 text-[10px] font-mono uppercase tracking-[0.18em] text-ink-soft hover:text-ink-strong"
+            className="focus-ring shrink-0 text-[12px] text-ink-soft hover:text-ink-strong"
           >
             Dismiss
           </button>
         </div>
       )}
-      <header className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
-        <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[var(--ink-faint)]">
-            Humane Constitution Reader
-          </p>
-          <h1 className="mt-3 font-serif text-[2.1rem] leading-tight text-[var(--ink-strong)] sm:text-[2.75rem]">
-            {meta.title}
-          </h1>
-          <p className="mt-4 max-w-4xl text-[15px] leading-8 text-[var(--ink-soft)]">
-            {meta.subtitle}
-          </p>
-        </div>
-
+      <header className="border-b border-line pb-6">
+        <h1
+          data-testid="view-title"
+          className="font-serif text-[2.4rem] leading-tight text-ink-strong sm:text-[2.9rem]"
+        >
+          {meta.title}
+        </h1>
+        <p className="mt-3 max-w-[42rem] font-serif text-[15px] leading-7 text-ink-soft">
+          {meta.subtitle}
+        </p>
         {view !== 'settings' && (
-          <div className="w-full max-w-[23rem] rounded-[20px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.86)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.42),0_12px_20px_rgba(35,30,20,0.05)]">
-            <label
-              className="block text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]"
-              htmlFor="corpus-search"
-            >
-              Filter this shelf
+          <div className="mt-5 flex max-w-md items-center gap-3">
+            <label htmlFor="corpus-search" className="sr-only">
+              Filter this section
             </label>
             <input
               id="corpus-search"
               ref={shelfSearchInputRef}
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search title, path, or headings"
-              className="focus-ring mt-3 w-full rounded border-0 bg-transparent p-0 font-serif text-[1.05rem] text-[var(--ink-strong)] placeholder:font-sans placeholder:text-[var(--ink-faint)]"
+              placeholder="Filter title, path, or headings…"
+              className="focus-ring flex-1 rounded border border-line bg-[rgba(251,246,236,0.6)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint"
             />
-            <div className="mt-3 flex flex-wrap items-center gap-2 text-[10px] font-mono uppercase tracking-[0.18em] text-[var(--ink-faint)]">
-              <span>{visibleDocs.length} matches</span>
-              <span>•</span>
-              <span>{corpus.stats.buildStamp}</span>
-            </div>
+            <span className="shrink-0 text-[11px] text-ink-faint">
+              {visibleDocs.length} {visibleDocs.length === 1 ? 'match' : 'matches'}
+            </span>
           </div>
         )}
       </header>
