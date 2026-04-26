@@ -191,6 +191,17 @@ export function DotMatrixField() {
       animationFrame = window.requestAnimationFrame(drawFrame)
     }
 
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        if (animationFrame) {
+          window.cancelAnimationFrame(animationFrame)
+          animationFrame = 0
+        }
+      } else if (mounted && !animationFrame) {
+        animationFrame = window.requestAnimationFrame(drawFrame)
+      }
+    }
+
     const resizeObserver = new ResizeObserver(() => resizeCanvas())
     resizeObserver.observe(host)
     resizeCanvas()
@@ -200,18 +211,22 @@ export function DotMatrixField() {
     window.addEventListener('pointerdown', handlePointerDown, { passive: true })
     window.addEventListener('blur', handlePointerLeave)
     document.documentElement.addEventListener('mouseleave', handlePointerLeave)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
 
     animationFrame = window.requestAnimationFrame(drawFrame)
 
     return () => {
       mounted = false
-      window.cancelAnimationFrame(animationFrame)
+      if (animationFrame) {
+        window.cancelAnimationFrame(animationFrame)
+      }
       resizeObserver.disconnect()
       window.removeEventListener('resize', resizeCanvas)
       window.removeEventListener('pointermove', handlePointerMove)
       window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('blur', handlePointerLeave)
       document.documentElement.removeEventListener('mouseleave', handlePointerLeave)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
   }, [])
 
