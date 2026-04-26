@@ -10,7 +10,7 @@
   --ink: #322f2b;
   --ink-strong: #1f2422;
   --ink-soft: #67615b;
-  --ink-faint: #8c857d;
+  --ink-faint: #7a7268;
   --nav-surface: rgba(39, 45, 42, 0.98);
   --nav-text-strong: #f2ebdf;
   --nav-text: #d4ccbf;
@@ -100,6 +100,23 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(103, 97, 91, 0.38);
     background-clip: padding-box;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    outline-color: rgba(159, 108, 49, 0.45);
+  }
+
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    @apply not-sr-only fixed left-3 top-3 z-[60] rounded-full bg-paper-strong px-4 py-2 text-[12px] font-mono uppercase tracking-[0.2em] text-ink-strong shadow-lg;
+    border: 1px solid rgba(159, 108, 49, 0.4);
   }
 }
 

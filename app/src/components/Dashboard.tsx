@@ -125,6 +125,7 @@ const KEYBOARD_NAV_VIEWS: AppView[] = [
 const PINNED_DOCS_STORAGE_KEY = 'humane-reader:pinned-docs'
 const RECENT_DOCS_STORAGE_KEY = 'humane-reader:recent-docs'
 const READING_MODE_STORAGE_KEY = 'humane-reader:reading-mode'
+const CORPUS_STAMP_STORAGE_KEY = 'humane-reader:corpus-stamp'
 const MAX_RECENT_DOCS = 8
 
 function isTypingElement(target: EventTarget | null): boolean {
@@ -694,9 +695,11 @@ function ActionButton({
   return (
     <button
       data-testid={testId}
+      type="button"
       disabled={disabled}
+      aria-disabled={disabled || undefined}
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 text-[10px] font-mono uppercase tracking-[0.2em] transition ${
+      className={`focus-ring rounded-full border px-4 py-2 text-[10px] font-mono uppercase tracking-[0.2em] transition ${
         disabled ? 'cursor-not-allowed opacity-45' : ''
       } ${toneClass}`}
     >
@@ -973,8 +976,10 @@ function ReaderOutline({
             data-testid={`outline-heading-${heading.slug}`}
             data-heading-slug={heading.slug}
             data-active-heading={activeHeadingSlug === heading.slug ? 'true' : 'false'}
+            type="button"
+            aria-current={activeHeadingSlug === heading.slug ? 'location' : undefined}
             onClick={() => jumpToHeading(doc, heading.slug)}
-            className={`block w-full rounded-[16px] px-3 py-2 text-left text-[12px] leading-5 transition ${
+            className={`focus-ring block w-full rounded-[16px] px-3 py-2 text-left text-[12px] leading-5 transition ${
               activeHeadingSlug === heading.slug
                 ? 'bg-[rgba(159,108,49,0.12)] text-[var(--accent-deep)] shadow-[inset_0_0_0_1px_rgba(159,108,49,0.16)]'
                 : 'text-[var(--ink-soft)] hover:bg-[rgba(60,54,46,0.05)] hover:text-[var(--ink-strong)]'
@@ -1081,7 +1086,7 @@ function ReaderPanel({
                 value={searchQuery}
                 onChange={(event) => onSearchChange(event.target.value)}
                 placeholder="Find a term, phrase, or heading"
-                className="mt-3 w-full border-0 bg-transparent p-0 font-serif text-[1.08rem] text-[var(--ink-strong)] outline-none placeholder:font-sans placeholder:text-[var(--ink-faint)]"
+                className="focus-ring mt-3 w-full rounded border-0 bg-transparent p-0 font-serif text-[1.08rem] text-[var(--ink-strong)] placeholder:font-sans placeholder:text-[var(--ink-faint)]"
               />
             </div>
 
@@ -1419,6 +1424,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
   const [recentDocIds, setRecentDocIds] = useState<string[]>(() => readStoredDocList(RECENT_DOCS_STORAGE_KEY))
   const [readingMode, setReadingMode] = useState(() => readStoredBoolean(READING_MODE_STORAGE_KEY))
+  const [staleCorpusNotice, setStaleCorpusNotice] = useState<string | null>(null)
   const [sourceFeedback, setSourceFeedback] = useState<SourceFeedback>({
     tone: 'neutral',
     message: 'Read in-app, or open the source document directly from the reader header.',
@@ -1431,6 +1437,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
   const readerPaneRef = useRef<HTMLDivElement | null>(null)
   const outlinePaneRef = useRef<HTMLDivElement | null>(null)
   const readerSearchInputRef = useRef<HTMLInputElement | null>(null)
+  const shelfSearchInputRef = useRef<HTMLInputElement | null>(null)
   const restorePaneScrollRef = useRef(true)
   const lastViewRef = useRef<AppView>(view)
   const scrollWriteFrameRef = useRef<number | null>(null)
@@ -1529,6 +1536,107 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
 
     window.localStorage.setItem(READING_MODE_STORAGE_KEY, String(readingMode))
   }, [readingMode])
+
+  // P3.2 — corpus-stamp purge: when the corpus build stamp changes, validate
+  // every persisted doc id against the live corpus and drop any that no longer
+  // resolve. Surfaces a transient notice if anything was removed.
+  useEffect(() => {
+    if (typeof window === 'undefined' || !corpus) {
+      return
+    }
+
+    const currentStamp = corpus.stats.buildStamp
+    let storedStamp: string | null = null
+    try {
+      storedStamp = window.localStorage.getItem(CORPUS_STAMP_STORAGE_KEY)
+    } catch {
+      storedStamp = null
+    }
+
+    if (storedStamp === currentStamp) {
+      return
+    }
+
+    const liveIds = new Set(corpus.docs.map((doc) => doc.id))
+    let droppedCount = 0
+
+    setPinnedDocIds((prev) => {
+      const kept = prev.filter((id) => liveIds.has(id))
+      droppedCount += prev.length - kept.length
+      return kept.length === prev.length ? prev : kept
+    })
+
+    setRecentDocIds((prev) => {
+      const kept = prev.filter((id) => liveIds.has(id))
+      droppedCount += prev.length - kept.length
+      return kept.length === prev.length ? prev : kept
+    })
+
+    try {
+      window.localStorage.setItem(CORPUS_STAMP_STORAGE_KEY, currentStamp)
+    } catch {
+      /* storage may be full or disabled; ignore */
+    }
+
+    if (droppedCount > 0) {
+      setStaleCorpusNotice(
+        `${droppedCount} pinned or recent ${
+          droppedCount === 1 ? 'item was' : 'items were'
+        } removed because the underlying documents moved.`,
+      )
+    }
+  }, [corpus])
+
+  // P3.3 — global keyboard shortcuts.
+  // Cmd/Ctrl+K  → focus shelf search.
+  // Cmd/Ctrl+F  → focus reader search (overrides browser Find inside the app shell).
+  // /            → focus shelf search (when not typing).
+  // Escape      → blur active input back to the reader.
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      const target = event.target as EventTarget | null
+      const typing = isTypingElement(target)
+      const meta = event.metaKey || event.ctrlKey
+
+      if (meta && event.key.toLowerCase() === 'k') {
+        event.preventDefault()
+        shelfSearchInputRef.current?.focus()
+        shelfSearchInputRef.current?.select()
+        return
+      }
+
+      if (meta && event.key.toLowerCase() === 'f') {
+        if (readerSearchInputRef.current) {
+          event.preventDefault()
+          readerSearchInputRef.current.focus()
+          readerSearchInputRef.current.select()
+        }
+        return
+      }
+
+      if (event.key === 'Escape' && typing) {
+        ;(target as HTMLElement | null)?.blur()
+        return
+      }
+
+      if (typing) {
+        return
+      }
+
+      if (event.key === '/') {
+        event.preventDefault()
+        shelfSearchInputRef.current?.focus()
+        shelfSearchInputRef.current?.select()
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   useEffect(() => {
     if (!selectedDoc?.id) {
@@ -1977,7 +2085,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
 
   if (loadError) {
     return (
-      <div className="space-y-6">
+      <div className="space-y-6" role="alert" aria-live="assertive">
         <article className="rounded-[32px] border border-[rgba(139,45,45,0.22)] bg-[rgba(255,248,246,0.92)] px-6 py-8 shadow-[0_18px_30px_rgba(35,30,20,0.07)]">
           <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[#8b2d2d]">Corpus Load Failure</p>
           <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[var(--ink-soft)]">{loadError}</p>
@@ -1988,7 +2096,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
 
   if (!corpus) {
     return (
-      <div className="space-y-6">
+      <div className="space-y-6" role="status" aria-live="polite" aria-busy="true">
         <article className="rounded-[32px] border border-[rgba(60,54,46,0.14)] bg-[rgba(250,246,238,0.9)] px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_18px_30px_rgba(35,30,20,0.06)]">
           <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-[var(--ink-faint)]">Loading Corpus</p>
           <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[var(--ink-soft)]">
@@ -2005,6 +2113,24 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
         independentPaneView ? 'xl:grid xl:grid-rows-[auto_minmax(0,1fr)] xl:gap-6 xl:space-y-0' : ''
       }`}
     >
+      {staleCorpusNotice && (
+        <div
+          role="status"
+          aria-live="polite"
+          data-testid="stale-corpus-notice"
+          className="flex items-start justify-between gap-4 rounded-[20px] border border-[rgba(159,108,49,0.28)] bg-[rgba(253,243,224,0.9)] px-4 py-3 text-[12px] leading-5 text-ink-strong shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"
+        >
+          <p className="max-w-3xl">{staleCorpusNotice}</p>
+          <button
+            type="button"
+            onClick={() => setStaleCorpusNotice(null)}
+            aria-label="Dismiss notice"
+            className="focus-ring shrink-0 rounded-full border border-[rgba(60,54,46,0.16)] bg-paper-strong px-2 py-1 text-[10px] font-mono uppercase tracking-[0.18em] text-ink-soft hover:text-ink-strong"
+          >
+            Dismiss
+          </button>
+        </div>
+      )}
       <header className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
         <div>
           <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[var(--ink-faint)]">
@@ -2028,10 +2154,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
             </label>
             <input
               id="corpus-search"
+              ref={shelfSearchInputRef}
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search title, path, or headings"
-              className="mt-3 w-full border-0 bg-transparent p-0 font-serif text-[1.05rem] text-[var(--ink-strong)] outline-none placeholder:font-sans placeholder:text-[var(--ink-faint)]"
+              className="focus-ring mt-3 w-full rounded border-0 bg-transparent p-0 font-serif text-[1.05rem] text-[var(--ink-strong)] placeholder:font-sans placeholder:text-[var(--ink-faint)]"
             />
             <div className="mt-3 flex flex-wrap items-center gap-2 text-[10px] font-mono uppercase tracking-[0.18em] text-[var(--ink-faint)]">
               <span>{visibleDocs.length} matches</span>

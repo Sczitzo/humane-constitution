@@ -28,7 +28,8 @@ function NavItem({ testId, glyph, label, detail, active = false, onClick }: NavI
     <button
       data-testid={testId}
       onClick={onClick}
-      className={`group w-full rounded-[22px] border px-4 py-3.5 text-left transition ${
+      aria-current={active ? 'page' : undefined}
+      className={`group focus-ring w-full rounded-[22px] border px-4 py-3.5 text-left transition ${
         active
           ? 'border-[rgba(230,207,172,0.34)] bg-[linear-gradient(180deg,rgba(253,249,242,0.14),rgba(253,249,242,0.06))] text-[var(--nav-text-strong)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_18px_34px_rgba(12,16,15,0.2)]'
           : 'border-[rgba(230,207,172,0.08)] bg-[rgba(255,255,255,0.02)] text-[var(--nav-text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.015)] hover:border-[rgba(230,207,172,0.16)] hover:bg-[rgba(253,249,242,0.05)] hover:text-[var(--nav-text-strong)] hover:shadow-[0_14px_24px_rgba(12,16,15,0.12)]'
@@ -96,7 +97,8 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
   ]
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[var(--page-bg)] text-[var(--ink)]">
+    <div className="relative min-h-screen overflow-hidden bg-paper text-ink">
+      <a href="#reader-main" className="skip-link">Skip to reader</a>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <DotMatrixField />
         <div className="absolute left-[-8rem] top-[5rem] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(214,188,139,0.14),transparent_68%)] blur-3xl" />
@@ -129,8 +131,8 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
       </header>
 
       <div className="relative z-10 flex min-h-screen flex-col pt-14 lg:grid lg:grid-cols-[18.5rem_minmax(0,1fr)]">
-        <aside data-testid="reader-compass" className="border-b border-[rgba(60,54,46,0.12)] bg-[var(--nav-surface)] px-4 py-5 text-[var(--nav-text-strong)] shadow-[inset_-1px_0_0_rgba(255,255,255,0.02)] lg:flex lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:flex-col lg:overflow-y-auto lg:overscroll-contain lg:border-b-0 lg:border-r lg:border-r-[rgba(60,54,46,0.14)] lg:px-5 lg:py-7">
-          <nav data-testid="reader-compass-nav" className="mt-0 flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
+        <aside data-testid="reader-compass" aria-label="Primary navigation" className="border-b border-[rgba(60,54,46,0.12)] bg-[var(--nav-surface)] px-4 py-5 text-[var(--nav-text-strong)] shadow-[inset_-1px_0_0_rgba(255,255,255,0.02)] lg:flex lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:flex-col lg:overflow-y-auto lg:overscroll-contain lg:border-b-0 lg:border-r lg:border-r-[rgba(60,54,46,0.14)] lg:px-5 lg:py-7">
+          <nav data-testid="reader-compass-nav" aria-label="Reader sections" className="mt-0 flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
             {navItems.slice(0, 5).map((item) => (
               <div key={item.id} className="min-w-[15rem] lg:min-w-0">
                 <NavItem
@@ -160,7 +162,7 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
           </div>
         </aside>
 
-        <main data-testid="reader-main" className="min-h-[calc(100vh-3.5rem)] overflow-y-auto px-4 pb-8 pt-5 lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:px-8 lg:pb-10 lg:pt-8">
+        <main id="reader-main" data-testid="reader-main" tabIndex={-1} className="min-h-[calc(100vh-3.5rem)] overflow-y-auto px-4 pb-8 pt-5 focus:outline-none lg:h-[calc(100vh-3.5rem)] lg:min-h-0 lg:px-8 lg:pb-10 lg:pt-8">
           <div className="mx-auto w-full max-w-[97rem]">{children}</div>
         </main>
       </div>
