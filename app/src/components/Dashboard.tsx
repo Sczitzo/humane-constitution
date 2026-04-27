@@ -773,8 +773,8 @@ function QuickAccessSection({
   }
 
   return (
-    <section data-testid={testId} className="border-t border-line pt-3">
-      <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">{label}</p>
+    <section data-testid={testId} className="border-t border-line pl-4 pr-2 pt-3">
+      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{label}</p>
       <ul className="mt-2 flex flex-col">
         {docs.map((doc) => (
           <li key={`${testId}-${doc.id}`}>
@@ -782,10 +782,14 @@ function QuickAccessSection({
               data-testid={`${testId}-${doc.id}`}
               type="button"
               onClick={() => onSelect(doc)}
-              className="focus-ring group block w-full py-1.5 text-left text-[13px] leading-snug text-ink-soft transition hover:text-ink-strong"
+              className="focus-ring group block w-full py-1.5 text-left transition"
             >
-              <span className="font-serif text-ink group-hover:text-ink-strong">{doc.title}</span>
-              <span className="ml-2 text-[11px] text-ink-faint">{SECTION_LABELS[doc.section]}</span>
+              <span className="block text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+                {SECTION_LABELS[doc.section]}
+              </span>
+              <span className="mt-0.5 block line-clamp-2 font-serif text-[13.5px] leading-snug text-ink group-hover:text-ink-strong">
+                {doc.title}
+              </span>
             </button>
           </li>
         ))}
@@ -879,6 +883,19 @@ function MarkdownDocument({
             <blockquote key={`${doc.id}-quote-${index}`} className="reader-quote">
               {renderInline(block.text, `${doc.id}-quote-inline-${index}`, searchQuery)}
             </blockquote>
+          )
+        }
+
+        if (block.type === 'rule') {
+          return (
+            <div
+              key={`${doc.id}-rule-${index}`}
+              role="separator"
+              aria-hidden="true"
+              className="reader-rule"
+            >
+              <span className="reader-rule-mark">§</span>
+            </div>
           )
         }
 
@@ -1293,9 +1310,154 @@ function ReaderWorkspace({
   )
 }
 
-function OverviewPanels({ corpus }: { corpus: CorpusPayload }) {
-  void corpus
-  return null
+/* ============================================================
+ * Inline editorial-link primitives.
+ *
+ * Featured documents are linked inside flowing prose rather than rendered as
+ * an enumerated index. Clicking a DocLink switches view + selects the doc
+ * (with scroll-to-top on the reader pane via the existing select pipeline).
+ * ============================================================ */
+
+function DocLink({
+  path,
+  corpus,
+  onJump,
+  children,
+}: {
+  path: string
+  corpus: CorpusPayload
+  onJump: (doc: CorpusDoc) => void
+  children: React.ReactNode
+}) {
+  const doc = corpus.docs.find((entry) => entry.path === path)
+  if (!doc) {
+    return <span className="text-ink-faint italic">{children}</span>
+  }
+  return (
+    <button
+      type="button"
+      data-testid={`doclink-${doc.id}`}
+      onClick={() => onJump(doc)}
+      className="focus-ring inline rounded-sm border-b border-accent/45 font-medium text-accent-deep transition hover:border-accent hover:text-[var(--accent)]"
+      style={{ borderBottomColor: 'rgba(159, 108, 49, 0.45)' }}
+    >
+      {children}
+    </button>
+  )
+}
+
+function OverviewPanels({
+  corpus,
+  onJump,
+}: {
+  corpus: CorpusPayload
+  onJump: (doc: CorpusDoc) => void
+}) {
+  const link = (path: string, children: React.ReactNode) => (
+    <DocLink path={path} corpus={corpus} onJump={onJump}>
+      {children}
+    </DocLink>
+  )
+
+  return (
+    <section className="max-w-[44rem] reader-prose font-serif text-ink">
+      <p className="text-[1.06rem] leading-[1.78]">
+        The Humane Constitution is a constitutional design for separating survival, markets, and
+        civic power so that wealth cannot quietly become coercion. The reading path depends on what
+        you came here for. If you want a single page that names the project's core diagnosis, start
+        with the {link('docs/public/01_overview.md', 'one-page overview')}. If you arrived skeptical,
+        read the {link('docs/public/03_readiness.md', 'readiness guide')} — it states what is only
+        designed, what still needs evidence, and which objections deserve the most pressure.
+      </p>
+      <p className="text-[1.06rem] leading-[1.78]">
+        The {link('docs/constitution/Humane_Constitution.md', 'governing text')} itself is the
+        constitutional source of truth, lean by intention, with extension into a parallel{' '}
+        {link('docs/annexes/INDEX.md', 'annex corpus')} for operational mechanics. Two living logs
+        track adversarial work: the {link('docs/governance/Threat_Register.md', 'threat register')}{' '}
+        catalogues every failure mode found by red-teaming, and the{' '}
+        {link('docs/governance/Patch_Log.md', 'patch log')} records the structural responses.
+      </p>
+      <p className="text-[1.06rem] leading-[1.78]">
+        For a longer public-facing argument see the{' '}
+        {link('docs/public/04_white_paper.md', 'white paper')}, or read the plain-language{' '}
+        {link('docs/public/05_rights_layer.md', 'rights layer')} that names what the design protects
+        for ordinary people. The {link('docs/constitution/INVARIANTS.md', 'seven invariants')} —
+        Tier 1 protected — and the{' '}
+        {link('docs/constitution/SPECIFICATIONS.md', 'formal specifications')} cover the lower-level
+        commitments any patch must respect.
+      </p>
+    </section>
+  )
+}
+
+const SECTION_INTRO: Partial<Record<AppView, (corpus: CorpusPayload, link: (path: string, children: React.ReactNode) => JSX.Element) => JSX.Element>> = {
+  constitution: (_, link) => (
+    <p>
+      Begin with the{' '}
+      {link('docs/constitution/Humane_Constitution.md', 'governing text')}. The{' '}
+      {link('docs/constitution/INVARIANTS.md', 'invariants')} state what cannot be amended without
+      a refounding convention; the{' '}
+      {link('docs/constitution/SPECIFICATIONS.md', 'specifications')} fix the formal state machine
+      every implementation must respect; the{' '}
+      {link('docs/constitution/Acceptance_Protocol.md', 'acceptance protocol')} governs how
+      patches reach operation. Founding-order commitments live with the rest of the founding
+      material below.
+    </p>
+  ),
+  annexes: (_, link) => (
+    <p>
+      The annex corpus extends the lean charter without bloating it. Each annex is operational
+      detail bound to a specific question. Use the{' '}
+      {link('docs/annexes/INDEX.md', 'annex index')} to navigate by topic, or filter the shelf
+      below.
+    </p>
+  ),
+  registries: (_, link) => (
+    <p>
+      The {link('docs/governance/Threat_Register.md', 'threat register')} catalogues every
+      adversarial failure mode the project has surfaced; the{' '}
+      {link('docs/governance/Patch_Log.md', 'patch log')} records the responses. The{' '}
+      {link('docs/governance/Claims_Evidence_Register.md', 'claims and evidence register')}{' '}
+      tracks what the project is allowed to assert; the{' '}
+      {link('docs/governance/Pilot_Evidence_Roadmap.md', 'pilot evidence roadmap')} names what
+      must be tested before any scale claim.
+    </p>
+  ),
+  validation: (_, link) => (
+    <p>
+      Validation is the activation shelf — it keeps the remaining pre-launch uncertainty visible.
+      The{' '}
+      {link('docs/governance/Founding_Preactivation_Disclosure.md', 'pre-activation disclosure')}{' '}
+      states what must be true before any rollout begins. The{' '}
+      {link('founding/commitments.md', 'founding commitments')} register holds the numerical
+      lock-file every implementation is bound to.
+    </p>
+  ),
+}
+
+function SectionIntro({
+  view,
+  corpus,
+  onJump,
+}: {
+  view: AppView
+  corpus: CorpusPayload
+  onJump: (doc: CorpusDoc) => void
+}) {
+  const builder = SECTION_INTRO[view]
+  if (!builder) {
+    return null
+  }
+  const link = (path: string, children: React.ReactNode) => (
+    <DocLink path={path} corpus={corpus} onJump={onJump}>
+      {children}
+    </DocLink>
+  )
+  return (
+    <div className="max-w-[42rem] space-y-3 pt-1 font-serif text-[15px] leading-7 text-ink">
+      {builder(corpus, link)}
+    </div>
+  )
 }
 
 function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
@@ -2045,41 +2207,49 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
           </button>
         </div>
       )}
-      <header className="border-b border-line pb-6">
+      <header className="border-b border-line pb-7">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
+          §{view === 'overview' ? ' Overview' : ` ${meta.title}`}
+        </p>
         <h1
           data-testid="view-title"
-          className="font-serif text-[2.4rem] leading-tight text-ink-strong sm:text-[2.9rem]"
+          className="mt-2 font-serif text-[2.5rem] leading-[1.04] text-ink-strong sm:text-[3.1rem]"
         >
           {meta.title}
         </h1>
-        <p className="mt-3 max-w-[42rem] font-serif text-[15px] leading-7 text-ink-soft">
+        <p className="mt-3 max-w-[42rem] font-serif text-[15px] italic leading-7 text-ink-soft">
           {meta.subtitle}
         </p>
-        {view !== 'settings' && (
-          <div className="mt-5 flex max-w-md items-center gap-3">
-            <label htmlFor="corpus-search" className="sr-only">
-              Filter this section
-            </label>
-            <input
-              id="corpus-search"
-              ref={shelfSearchInputRef}
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Filter title, path, or headings…"
-              className="focus-ring flex-1 rounded border border-line bg-[rgba(251,246,236,0.6)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint"
-            />
-            <span className="shrink-0 text-[11px] text-ink-faint">
-              {visibleDocs.length} {visibleDocs.length === 1 ? 'match' : 'matches'}
-            </span>
-          </div>
-        )}
       </header>
 
-      {view === 'overview' && <OverviewPanels corpus={corpus} />}
+      {view === 'overview' && <OverviewPanels corpus={corpus} onJump={handleSelectQuickDoc} />}
       {view === 'validation' && <ValidationPanels corpus={corpus} />}
       {view === 'settings' && <EmptySettings />}
 
-      {view !== 'settings' && (
+      {view !== 'overview' && view !== 'settings' && (
+        <SectionIntro view={view} corpus={corpus} onJump={handleSelectQuickDoc} />
+      )}
+
+      {view !== 'overview' && view !== 'settings' && (
+        <div className="flex max-w-md items-center gap-3">
+          <label htmlFor="corpus-search" className="sr-only">
+            Filter this section
+          </label>
+          <input
+            id="corpus-search"
+            ref={shelfSearchInputRef}
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Filter title, path, or headings…"
+            className="focus-ring flex-1 rounded border border-line bg-[rgba(251,246,236,0.6)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint"
+          />
+          <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
+            {visibleDocs.length} {visibleDocs.length === 1 ? 'match' : 'matches'}
+          </span>
+        </div>
+      )}
+
+      {view !== 'settings' && view !== 'overview' && (
         <ReaderWorkspace
           docs={visibleDocs}
           selectedDoc={selectedDoc}
