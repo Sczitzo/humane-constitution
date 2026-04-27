@@ -38,7 +38,14 @@
   }
 
   body {
-    background: var(--page-bg);
+    /* Paper texture — subtle warm tints + a fine grain overlay.
+       Adds tactile warmth without reintroducing card chrome. */
+    background-color: var(--page-bg);
+    background-image:
+      radial-gradient(at 18% 4%, rgba(214, 188, 139, 0.18), transparent 52%),
+      radial-gradient(at 92% 0%, rgba(111, 124, 103, 0.09), transparent 46%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.16 0 0 0 0 0.14 0 0 0 0.045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-attachment: fixed;
     color: var(--ink);
     font-family: var(--font-serif);
     -webkit-font-smoothing: antialiased;
@@ -138,30 +145,55 @@
 .reader-h2,
 .reader-h3,
 .reader-h4 {
-  margin-top: 3rem;
   color: var(--ink-strong);
   font-family: var(--font-serif);
   font-weight: 600;
   letter-spacing: -0.012em;
-  line-height: 1.18;
+  line-height: 1.16;
 }
 
 .reader-h1 {
-  font-size: 2.55rem;
-  letter-spacing: -0.02em;
+  margin-top: 3.5rem;
+  font-size: 2.7rem;
+  letter-spacing: -0.022em;
 }
 
 .reader-h2 {
-  font-size: 1.85rem;
+  margin-top: 3.2rem;
+  font-size: 1.95rem;
 }
 
 .reader-h3 {
-  font-size: 1.42rem;
+  margin-top: 2.6rem;
+  font-size: 1.45rem;
 }
 
 .reader-h4 {
+  margin-top: 2.2rem;
   font-size: 1.12rem;
   letter-spacing: 0;
+}
+
+/* Italic small-caps run-in: ornament after every h2 — the next paragraph's
+   first line takes a quiet typographic flourish without screaming. */
+.reader-prose .reader-h2 + p::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+/* Drop cap for the very first paragraph of the document. The MarkdownDocument
+   component drops the first heading when it matches the doc title, so the
+   body's leading paragraph genuinely begins the prose. */
+.reader-prose > p:first-child::first-letter,
+.reader-prose > p:first-of-type:not(:nth-of-type(n+2))::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-size: 4.4rem;
+  line-height: 0.92;
+  font-weight: 600;
+  color: var(--accent-deep);
+  padding: 0.45rem 0.7rem 0 0;
+  margin-top: 0.18rem;
 }
 
 .reader-prose p {
@@ -227,11 +259,55 @@
 }
 
 .reader-quote {
-  margin: 0;
-  border-left: 2px solid rgba(159, 108, 49, 0.4);
-  padding-left: 1.25rem;
+  position: relative;
+  margin: 1.6rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
   color: var(--ink-soft);
+  font-family: var(--font-serif);
   font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.reader-quote::before {
+  content: '“';
+  position: absolute;
+  left: -0.1rem;
+  top: -0.4rem;
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--accent-soft);
+  font-style: normal;
+}
+
+/* Centered ornament for thematic breaks (`---` rules in markdown).
+   Replaces the plain hr with a small editorial mark. */
+.reader-rule {
+  border: none;
+  margin: 2.6rem auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: var(--accent);
+  font-family: var(--font-serif);
+}
+
+.reader-rule::before,
+.reader-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+.reader-rule-mark {
+  font-size: 1.05rem;
+  letter-spacing: 0.4em;
+  color: var(--accent);
+  opacity: 0.7;
 }
 
 .reader-table-wrap {
