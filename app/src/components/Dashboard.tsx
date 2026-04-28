@@ -1018,6 +1018,10 @@ function ReaderPanel({
   currentMatchIndex,
   onJumpToPreviousMatch,
   onJumpToNextMatch,
+  allDocs,
+  recentIds,
+  pinnedIds,
+  onSelectDoc,
 }: {
   doc: CorpusDoc
   feedback: SourceFeedback
@@ -1035,6 +1039,10 @@ function ReaderPanel({
   currentMatchIndex: number
   onJumpToPreviousMatch: () => void
   onJumpToNextMatch: () => void
+  allDocs: CorpusDoc[]
+  recentIds: string[]
+  pinnedIds: string[]
+  onSelectDoc: (doc: CorpusDoc) => void
 }) {
   return (
     <section id="reader-panel-start" data-testid="reader-panel" className="space-y-8">
@@ -1133,18 +1141,187 @@ function ReaderPanel({
             copiedHeadingSlug={copiedHeadingSlug}
             onCopyHeadingLink={onCopyHeadingLink}
           />
+          <ReadNext
+            current={doc}
+            allDocs={allDocs}
+            recentIds={recentIds}
+            pinnedIds={pinnedIds}
+            onSelect={onSelectDoc}
+          />
         </div>
       </article>
     </section>
   )
 }
 
+/* ============================================================
+ * Read-next suggestion engine
+ * ============================================================ */
+
+const STOP_WORDS = new Set([
+  'the', 'and', 'for', 'that', 'with', 'this', 'from', 'are', 'was',
+  'been', 'have', 'has', 'will', 'its', 'all', 'any', 'can', 'may',
+  'not', 'but', 'each', 'into', 'over', 'such', 'than', 'then', 'they',
+  'which', 'where', 'when', 'how', 'what', 'their', 'there', 'these',
+  'those', 'shall', 'must', 'also', 'only', 'within', 'under', 'upon',
+])
+
+function extractKeywords(doc: CorpusDoc): Set<string> {
+  const words = doc.headings
+    .map((h) => h.text)
+    .join(' ')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w.length > 4 && !STOP_WORDS.has(w))
+  return new Set(words)
+}
+
+interface Suggestion {
+  doc: CorpusDoc
+  reason: string
+}
+
+function buildSuggestions(
+  current: CorpusDoc,
+  allDocs: CorpusDoc[],
+  recentIds: string[],
+  pinnedIds: string[],
+): Suggestion[] {
+  const recentSet = new Set(recentIds)
+  const pinnedSet = new Set(pinnedIds)
+  const currentKeywords = extractKeywords(current)
+  const candidates = allDocs.filter((d) => d.id !== current.id)
+  const results: Suggestion[] = []
+  const used = new Set<string>()
+
+  function push(s: Suggestion) {
+    if (!used.has(s.doc.id)) {
+      used.add(s.doc.id)
+      results.push(s)
+    }
+  }
+
+  // 1. Pinned — always surface, reader explicitly saved these
+  for (const doc of candidates) {
+    if (results.length >= 4) break
+    if (pinnedSet.has(doc.id)) {
+      push({ doc, reason: 'In your reading list' })
+    }
+  }
+
+  // 2. Same-section, not recently read — "Next in [section]"
+  const sectionOrder = candidates.filter(
+    (d) => d.section === current.section && !recentSet.has(d.id),
+  )
+  for (const doc of sectionOrder) {
+    if (results.length >= 4) break
+    push({ doc, reason: `Next in ${SECTION_LABELS[doc.section]}` })
+  }
+
+  // 3. Heading keyword overlap — find best match not yet added
+  if (results.length < 4 && currentKeywords.size > 0) {
+    const scored = candidates
+      .filter((d) => !used.has(d.id))
+      .map((doc) => {
+        const kws = extractKeywords(doc)
+        const shared = [...currentKeywords].filter((k) => kws.has(k))
+        return { doc, shared }
+      })
+      .filter((x) => x.shared.length > 0)
+      .sort((a, b) => b.shared.length - a.shared.length)
+
+    for (const { doc, shared } of scored) {
+      if (results.length >= 4) break
+      const topic = shared
+        .slice(0, 2)
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(', ')
+      push({ doc, reason: `Related: ${topic}` })
+    }
+  }
+
+  // 4. Recently visited from a different section — cross-section continuity
+  if (results.length < 4) {
+    for (const id of recentIds) {
+      if (results.length >= 4) break
+      const doc = candidates.find((d) => d.id === id && d.section !== current.section)
+      if (doc) push({ doc, reason: 'You were reading this' })
+    }
+  }
+
+  // 5. Fallback: any unread same-section doc, then any doc
+  if (results.length < 4) {
+    for (const doc of candidates) {
+      if (results.length >= 4) break
+      push({ doc, reason: `Next in ${SECTION_LABELS[doc.section]}` })
+    }
+  }
+
+  return results.slice(0, 4)
+}
+
+function ReadNext({
+  current,
+  allDocs,
+  recentIds,
+  pinnedIds,
+  onSelect,
+}: {
+  current: CorpusDoc
+  allDocs: CorpusDoc[]
+  recentIds: string[]
+  pinnedIds: string[]
+  onSelect: (doc: CorpusDoc) => void
+}) {
+  const suggestions = buildSuggestions(current, allDocs, recentIds, pinnedIds)
+  if (!suggestions.length) return null
+
+  return (
+    <aside
+      data-testid="read-next"
+      className="mt-16 border-t border-line pt-10"
+    >
+      <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
+        Continue reading
+      </p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {suggestions.map(({ doc, reason }) => (
+          <button
+            key={doc.id}
+            type="button"
+            data-testid={`read-next-${doc.id}`}
+            onClick={() => onSelect(doc)}
+            className="focus-ring group flex flex-col rounded-lg border border-line bg-paper-strong p-4 text-left transition hover:border-[rgba(159,108,49,0.4)] hover:shadow-sm"
+          >
+            <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-2 py-0.5 font-sans text-[10px] tracking-[0.02em] text-ink-faint">
+              <span
+                aria-hidden="true"
+                className="h-1 w-1 rounded-full bg-accent opacity-70"
+              />
+              {reason}
+            </span>
+            <h3 className="font-serif text-[0.97rem] font-semibold leading-snug text-ink-strong group-hover:text-[var(--accent-deep)]">
+              {doc.title}
+            </h3>
+            <p className="mt-auto pt-2 text-[11px] text-ink-faint">
+              {SECTION_LABELS[doc.section]} · {estimatedReadMinutes(doc.wordCount)} min
+            </p>
+          </button>
+        ))}
+      </div>
+    </aside>
+  )
+}
+
 function ReaderWorkspace({
   docs,
+  allDocs,
   selectedDoc,
   pinnedDocIds,
   pinnedDocs,
   recentDocs,
+  recentIds,
   onSelect,
   onSelectQuickDoc,
   onTogglePinned,
@@ -1171,10 +1348,12 @@ function ReaderWorkspace({
   onJumpToNextMatch,
 }: {
   docs: CorpusDoc[]
+  allDocs: CorpusDoc[]
   selectedDoc: CorpusDoc | null
   pinnedDocIds: string[]
   pinnedDocs: CorpusDoc[]
   recentDocs: CorpusDoc[]
+  recentIds: string[]
   onSelect: (doc: CorpusDoc) => void
   onSelectQuickDoc: (doc: CorpusDoc) => void
   onTogglePinned: () => void
@@ -1298,6 +1477,10 @@ function ReaderWorkspace({
           currentMatchIndex={currentMatchIndex}
           onJumpToPreviousMatch={onJumpToPreviousMatch}
           onJumpToNextMatch={onJumpToNextMatch}
+          allDocs={allDocs}
+          recentIds={recentIds}
+          pinnedIds={pinnedDocIds}
+          onSelectDoc={onSelectQuickDoc}
         />
       </div>
 
@@ -2523,10 +2706,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <ReaderWorkspace
           docs={visibleDocs}
+          allDocs={allDocs}
           selectedDoc={selectedDoc}
           pinnedDocIds={pinnedDocIds}
           pinnedDocs={pinnedDocs}
           recentDocs={recentDocs}
+          recentIds={recentDocIds}
           onSelect={handleSelectDoc}
           onSelectQuickDoc={handleSelectQuickDoc}
           onTogglePinned={handleTogglePinned}
