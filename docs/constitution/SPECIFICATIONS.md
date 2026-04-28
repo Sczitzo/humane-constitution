@@ -14,14 +14,14 @@ The Humane Constitution operates four primary instruments and one emergency inst
 ```statechart
 title: Instrument Space — Four Primary Lanes + Emergency Overlay
 primary: FLOW, ESSENTIAL_ACCESS, VOICE, SERVICE_RECORD
-terminal: NON_CONVERTIBILITY_LAYER
+terminal: NO_CONVERSION
 warning: SHARED_STOREHOUSE
 
-FLOW -> NON_CONVERTIBILITY_LAYER: market lane
-ESSENTIAL_ACCESS -> NON_CONVERTIBILITY_LAYER: access lane
-VOICE -> NON_CONVERTIBILITY_LAYER: civic lane
-SERVICE_RECORD -> NON_CONVERTIBILITY_LAYER: eligibility lane
-SHARED_STOREHOUSE -> NON_CONVERTIBILITY_LAYER: emergency only
+FLOW -> NO_CONVERSION: market lane
+ESSENTIAL_ACCESS -> NO_CONVERSION: access lane
+VOICE -> NO_CONVERSION: civic lane
+SERVICE_RECORD -> NO_CONVERSION: eligibility lane
+SHARED_STOREHOUSE -> NO_CONVERSION: emergency only
 ```
 
 ---
