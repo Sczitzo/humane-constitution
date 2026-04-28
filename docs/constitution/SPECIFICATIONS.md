@@ -11,25 +11,19 @@
 
 The Humane Constitution operates four primary instruments and one emergency instrument. Each instrument is a bounded state machine with defined issuance conditions, transition rules, decay functions, and termination states. The lanes are non-convertible by design; the non-convertibility constraint is enforced at the ledger layer, not at the application layer. Flow may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                     INSTRUMENT SPACE                             │
-│                                                                  │
-│  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐ │
-│  │    Flow     │   │ Essential   │   │    Voice    │   │   Service   │ │
-│  │             │   │   Access    │   │             │   │   Record    │ │
-│  └──────┬──────┘   └──────┬──────┘   └──────┬──────┘   └──────┬──────┘ │
-│         │                 │                 │                 │          │
-│         ▼                 ▼                 ▼                 ▼          │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │              NON-CONVERTIBILITY ENFORCEMENT LAYER        │   │
-│  │         (ledger-enforced, no application-layer bypass)   │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                  │
-│  ┌────────────────────┐  (emergency only, time-limited)        │
-│  │ Shared Storehouse  │                                         │
-│  └────────────────────┘                                         │
-└──────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph PRIMARY["Primary Instruments — always active"]
+        F["**Flow**\nMarket instrument · public money\nDemurrage · protocol-issued"]
+        EA["**Essential Access**\nBasket units · non-monetary\nIdentity-bound · 72 h validity"]
+        V["**Voice**\nCivic influence\nFast-decay · non-accumulative"]
+        SR["**Service Record**\nCivic eligibility\nSlow-decay · role-gated"]
+    end
+
+    PRIMARY -->|"all four lanes"| NCEL["🔒 NON-CONVERTIBILITY ENFORCEMENT LAYER\nLedger-enforced · structural impossibility\nof cross-namespace conversion"]
+
+    SS["**Shared Storehouse**\nEmergency overlay · oracle-gated\nTime-limited · mandatory sunset"]
+    SS -. "emergency only" .-> NCEL
 ```
 
 ---
@@ -42,27 +36,28 @@ Flow is the general-purpose market instrument. It is issued against verified pro
 
 ### 2.2 State Machine
 
-```
-States:
-  UNISSUED       — not yet in circulation
-  ACTIVE         — held by an identity, available for transactions
-  IDLE           — held without productive deployment (demurrage accumulates)
-  COMMITTED      — locked in milestone escrow (demurrage continues; see P-023)
-  SETTLED        — released from escrow on verified milestone completion
-  DECAYED        — reduced by demurrage application
-  RETIRED        — permanently removed from circulation
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> UNISSUED
 
-Transitions:
-  UNISSUED  → ACTIVE      : issuance event (verified productive commitment)
-  ACTIVE    → IDLE        : balance held beyond activity threshold (FC-052 reserved)
-  ACTIVE    → COMMITTED   : contract-commitment escrow trigger (P-023)
-  IDLE      → ACTIVE      : productive deployment event
-  IDLE      → DECAYED     : demurrage application cycle (see 2.3)
-  COMMITTED → SETTLED     : independent physical verification of milestone delivery
-  COMMITTED → ACTIVE      : escrow release on verified completion
-  DECAYED   → ACTIVE      : balance adjusted downward; remainder re-enters ACTIVE
-  DECAYED   → RETIRED     : balance reaches zero through demurrage
-  ACTIVE    → RETIRED     : voluntary retirement or enforcement action
+    UNISSUED --> ACTIVE : issuance event\n(verified productive commitment)
+
+    ACTIVE --> IDLE : balance exceeds\nidle threshold (FC-052)
+    ACTIVE --> COMMITTED : escrow trigger (P-023)
+    ACTIVE --> RETIRED : voluntary retirement\nor enforcement action
+
+    IDLE --> ACTIVE : productive deployment
+    IDLE --> DECAYED : demurrage cycle
+
+    COMMITTED --> ACTIVE : escrow release\non verified completion
+    COMMITTED --> SETTLED : independent milestone\nverification
+
+    DECAYED --> ACTIVE : balance adjusted;\nremainder re-enters
+    DECAYED --> RETIRED : balance reaches zero
+
+    SETTLED --> [*]
+    RETIRED --> [*]
 ```
 
 ### 2.3 Demurrage Function
@@ -150,25 +145,23 @@ Essential Access is a non-transferable, non-convertible entitlement to physical 
 
 ### 3.2 State Machine
 
-```
-States:
-  PENDING        — allocated, not yet claimed
-  ACTIVE         — available for redemption within validity window
-  REDEEMED       — exchanged for physical basket access
-  EXPIRED        — validity window elapsed without redemption (retired)
-  SUSPENDED      — temporarily frozen during identity re-verification
-                   (floor allocation continues at CSM; see INV-001)
-  RETIRED        — permanently removed (identity deregistration only)
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> PENDING
 
-Transitions:
-  PENDING   → ACTIVE      : daily micro-allocation event (system-triggered)
-  ACTIVE    → REDEEMED    : redemption event at registered delivery point
-  ACTIVE    → EXPIRED     : validity window elapsed (72 hours; see 3.3)
-  ACTIVE    → SUSPENDED   : identity re-verification trigger
-  SUSPENDED → ACTIVE      : re-verification confirmed
-  SUSPENDED → RETIRED     : identity permanently deregistered
-  EXPIRED   → (void)      : expired Essential Access is destroyed; no rollover
-  REDEEMED  → (void)      : redeemed Essential Access is destroyed; no secondary use
+    PENDING --> ACTIVE : daily micro-allocation\n(system-triggered)
+
+    ACTIVE --> REDEEMED : basket redemption at\nregistered delivery point
+    ACTIVE --> EXPIRED : 72 h validity elapsed\n(no rollover)
+    ACTIVE --> SUSPENDED : identity re-verification\ntrigger
+
+    SUSPENDED --> ACTIVE : re-verification confirmed\n(CSM issuance continues)
+    SUSPENDED --> RETIRED : permanent deregistration
+
+    REDEEMED --> [*] : destroyed · no secondary use
+    EXPIRED --> [*] : destroyed · no rollover
+    RETIRED --> [*]
 ```
 
 ### 3.3 Validity and Expiry
@@ -234,66 +227,51 @@ This section defines the two civic instruments:
 
 ### 4.2 Voice State Machine
 
-```
-States:
-  INACTIVE       — not yet issued; identity not yet civically active
-  ACTIVE         — available for use in deliberative processes
-  APPLIED        — committed to a specific deliberative action
-  DECAYED        — reduced by fast-decay function
-  EXHAUSTED      — balance reaches zero; requires re-issuance cycle
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> INACTIVE
 
-Transitions:
-  INACTIVE  → ACTIVE      : civic activation event (contribution threshold met)
-  ACTIVE    → APPLIED     : deliberative action commitment
-  APPLIED   → ACTIVE      : deliberative cycle completes; residual returned
-  ACTIVE    → DECAYED     : fast-decay application cycle (see 4.3)
-  DECAYED   → ACTIVE      : balance adjusted; remainder active
-  DECAYED   → EXHAUSTED   : balance reaches zero
-  EXHAUSTED → ACTIVE      : new issuance cycle following qualifying participation
+    INACTIVE --> ACTIVE : civic activation\n(contribution threshold met)
 
-Decay function (Voice):
-  Voice(t) = Voice(0) × e^(−r_dw × t)
-  r_dw = FC-062 = 0.15 / day
-  
-  Design intent: Voice must not accumulate. Influence is a flow, not a stock.
-  An actor who was influential last cycle should not carry that influence
-  forward without continued participation.
+    ACTIVE --> APPLIED : deliberative action\ncommitment
+    ACTIVE --> DECAYED : fast-decay cycle\n(r = 0.15/day · FC-062)
+
+    APPLIED --> ACTIVE : cycle completes;\nresidual returned
+
+    DECAYED --> ACTIVE : balance adjusted;\nremainder active
+    DECAYED --> EXHAUSTED : balance reaches zero
+
+    EXHAUSTED --> ACTIVE : new issuance cycle\n(qualifying participation)
 ```
+
+**Decay function:** `Voice(t) = Voice(0) × e^(−0.15 × t)` where t is days elapsed. Influence is a flow, not a stock — an actor who was influential last cycle carries no advantage without continued participation.
 
 ### 4.3 Service Record State Machine
 
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> INACTIVE
+
+    INACTIVE --> ACTIVE : first qualifying\nservice event
+
+    ACTIVE --> COOLING : role completion\n(mandatory anti-entrenchment)
+    ACTIVE --> SUSPENDED : investigation triggered
+    ACTIVE --> SLOW_DECAY : inactivity beyond\nthreshold
+
+    COOLING --> ACTIVE : cooling period elapsed
+
+    SUSPENDED --> ACTIVE : investigation cleared
+    SUSPENDED --> INACTIVE : deregistered
+
+    SLOW_DECAY --> ACTIVE : new service event
+    SLOW_DECAY --> INACTIVE : balance reaches zero
 ```
-States:
-  INACTIVE       — no service history
-  ACTIVE         — service history present; eligibility gates available
-  COOLING        — post-role cooling period (anti-entrenchment)
-  SUSPENDED      — under investigation or re-verification
-  SLOW_DECAY     — reduced by slow-decay function during inactivity
 
-Transitions:
-  INACTIVE  → ACTIVE      : first qualifying service event
-  ACTIVE    → COOLING     : completion of role with mandatory cooling trigger
-  COOLING   → ACTIVE      : cooling period elapsed
-  ACTIVE    → SUSPENDED   : investigation trigger
-  SUSPENDED → ACTIVE      : investigation resolved, cleared
-  SUSPENDED → INACTIVE    : investigation resolved, deregistration
-  ACTIVE    → SLOW_DECAY  : inactivity beyond threshold
-  SLOW_DECAY→ ACTIVE      : new service event
-  SLOW_DECAY→ INACTIVE    : balance reaches zero
+**Decay function (SLOW_DECAY):** `SR(t) = SR(0) × (1 − r_cr)^t` — P-009 sets grace-period rate at 20% of normal (FC-063 reserved).
 
-Decay function (Service Record):
-  During SLOW_DECAY:
-    Service Record(t) = Service Record(0) × (1 − r_cr)^t
-    r_cr = normal slow-decay rate (FC-063 reserved)
-          P-009 establishes 20% of the normal decay rate during grace-period transitions
-
-Sector ceiling (P-008):
-  No single sector may hold > 20% of total active Service Record positions. (P-025)
-  [Prior specification: 25% — SUPERSEDED. In a 5-sector system, 25% permits a
-   3-sector coalition to reach 75% Voice — supermajority control. The ceiling must
-   satisfy 3c < 0.667; c < 22.2%; 20% provides margin. See PRD-006, Test 4.]
-  Enforcement: quarterly audit; cooling periods applied proportionally.
-```
+**Sector ceiling (P-008, P-025):** No single sector may hold > 20% of active Service Record positions. (Prior 25% ceiling superseded — in a 5-sector system 25% permits a 3-sector coalition to reach 75% Voice, i.e. supermajority control. Ceiling must satisfy 3c < 0.667; c < 22.2%; 20% provides margin.) Enforcement: quarterly audit with proportional cooling.
 
 ---
 

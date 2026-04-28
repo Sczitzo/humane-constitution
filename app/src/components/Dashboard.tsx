@@ -39,6 +39,11 @@ interface MarkdownCode {
   language: string
 }
 
+interface MarkdownMermaid {
+  type: 'mermaid'
+  code: string
+}
+
 interface MarkdownQuote {
   type: 'quote'
   text: string
@@ -58,6 +63,7 @@ type MarkdownBlock =
   | MarkdownParagraph
   | MarkdownList
   | MarkdownCode
+  | MarkdownMermaid
   | MarkdownQuote
   | MarkdownRule
   | MarkdownTable
@@ -284,11 +290,12 @@ function parseMarkdown(doc: CorpusDoc): MarkdownBlock[] {
       if (index < lines.length) {
         index += 1
       }
-      blocks.push({
-        type: 'code',
-        code: codeLines.join('\n'),
-        language,
-      })
+      const code = codeLines.join('\n')
+      if (language === 'mermaid') {
+        blocks.push({ type: 'mermaid', code })
+      } else {
+        blocks.push({ type: 'code', code, language })
+      }
       continue
     }
 
@@ -813,6 +820,110 @@ function QuickAccessSection({
   )
 }
 
+/* ============================================================
+ * Mermaid diagram renderer — lazy-loaded, themed to match the app palette.
+ * ============================================================ */
+
+let mermaidReady = false
+
+async function renderMermaid(code: string, id: string): Promise<string> {
+  const mermaid = (await import('mermaid')).default
+  if (!mermaidReady) {
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'base',
+      themeVariables: {
+        background: '#fdf9f2',
+        primaryColor: '#f3ede4',
+        primaryTextColor: '#2a2722',
+        primaryBorderColor: 'rgba(60,54,46,0.28)',
+        lineColor: 'rgba(60,54,46,0.4)',
+        secondaryColor: '#f8f1e5',
+        tertiaryColor: '#fdf9f2',
+        fontFamily: '"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif',
+        fontSize: '13px',
+        // state diagram
+        stateBkg: '#fdf9f2',
+        stateBorder: 'rgba(60,54,46,0.25)',
+        transitionColor: 'rgba(60,54,46,0.45)',
+        // graph nodes
+        clusterBkg: '#f8f1e5',
+        clusterBorder: 'rgba(60,54,46,0.15)',
+        edgeLabelBackground: '#fdf9f2',
+        // special nodes
+        labelBoxBkgColor: '#f3ede4',
+        labelBoxBorderColor: 'rgba(60,54,46,0.18)',
+        labelTextColor: '#2a2722',
+        activeTaskBkgColor: 'rgba(230,207,172,0.35)',
+        activeTaskBorderColor: '#9f6c31',
+        doneTaskBkgColor: '#f3ede4',
+        doneTaskBorderColor: 'rgba(60,54,46,0.2)',
+        critBkgColor: 'rgba(159,108,49,0.1)',
+        critBorderColor: 'rgba(159,108,49,0.5)',
+        // notes / annotations
+        noteBkgColor: '#f8f1e5',
+        noteBorderColor: 'rgba(159,108,49,0.3)',
+        noteTextColor: '#5e584f',
+        // title
+        titleColor: '#2a2722',
+      },
+    })
+    mermaidReady = true
+  }
+  const safeId = id.replace(/[^a-zA-Z0-9]/g, '_')
+  const { svg } = await mermaid.render(safeId, code)
+  return svg
+}
+
+function MermaidBlock({ code, id }: { code: string; id: string }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    setError(null)
+    renderMermaid(code, id)
+      .then((svg) => {
+        if (!cancelled && containerRef.current) {
+          containerRef.current.innerHTML = svg
+          // Make the generated SVG responsive
+          const svgEl = containerRef.current.querySelector('svg')
+          if (svgEl) {
+            svgEl.removeAttribute('height')
+            svgEl.style.maxWidth = '100%'
+            svgEl.style.height = 'auto'
+          }
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Diagram render failed')
+        }
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [code, id])
+
+  if (error) {
+    return (
+      <div className="reader-code">
+        <p className="reader-code-label text-[#8b2d2d]">diagram error</p>
+        <pre className="whitespace-pre-wrap break-words text-[0.82rem] text-[#8b2d2d]">{error}</pre>
+      </div>
+    )
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      data-testid={`mermaid-${id}`}
+      className="my-2 overflow-x-auto rounded-lg border border-line bg-paper-strong p-4"
+      aria-label="Diagram"
+    />
+  )
+}
+
 function MarkdownDocument({
   doc,
   searchQuery,
@@ -890,6 +1001,16 @@ function MarkdownDocument({
               {block.language ? <p className="reader-code-label">{block.language}</p> : null}
               <pre className="whitespace-pre-wrap break-words">{block.code}</pre>
             </div>
+          )
+        }
+
+        if (block.type === 'mermaid') {
+          return (
+            <MermaidBlock
+              key={`${doc.id}-mermaid-${index}`}
+              id={`${doc.id}-mermaid-${index}`}
+              code={block.code}
+            />
           )
         }
 
