@@ -11,19 +11,17 @@
 
 The Humane Constitution operates four primary instruments and one emergency instrument. Each instrument is a bounded state machine with defined issuance conditions, transition rules, decay functions, and termination states. The lanes are non-convertible by design; the non-convertibility constraint is enforced at the ledger layer, not at the application layer. Flow may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
 
-```mermaid
-graph TB
-    subgraph PRIMARY["Primary Instruments — always active"]
-        F["**Flow**\nMarket instrument · public money\nDemurrage · protocol-issued"]
-        EA["**Essential Access**\nBasket units · non-monetary\nIdentity-bound · 72 h validity"]
-        V["**Voice**\nCivic influence\nFast-decay · non-accumulative"]
-        SR["**Service Record**\nCivic eligibility\nSlow-decay · role-gated"]
-    end
+```statechart
+title: Instrument Space — Four Primary Lanes + Emergency Overlay
+primary: FLOW, ESSENTIAL_ACCESS, VOICE, SERVICE_RECORD
+terminal: NON_CONVERTIBILITY_LAYER
+warning: SHARED_STOREHOUSE
 
-    PRIMARY -->|"all four lanes"| NCEL["🔒 NON-CONVERTIBILITY ENFORCEMENT LAYER\nLedger-enforced · structural impossibility\nof cross-namespace conversion"]
-
-    SS["**Shared Storehouse**\nEmergency overlay · oracle-gated\nTime-limited · mandatory sunset"]
-    SS -. "emergency only" .-> NCEL
+FLOW -> NON_CONVERTIBILITY_LAYER: market lane
+ESSENTIAL_ACCESS -> NON_CONVERTIBILITY_LAYER: access lane
+VOICE -> NON_CONVERTIBILITY_LAYER: civic lane
+SERVICE_RECORD -> NON_CONVERTIBILITY_LAYER: eligibility lane
+SHARED_STOREHOUSE -> NON_CONVERTIBILITY_LAYER: emergency only
 ```
 
 ---
@@ -36,28 +34,22 @@ Flow is the general-purpose market instrument. It is issued against verified pro
 
 ### 2.2 State Machine
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> UNISSUED
+```statechart
+title: Flow — Token Lifecycle
+primary: ACTIVE
+terminal: SETTLED, RETIRED
+warning: IDLE, DECAYED
 
-    UNISSUED --> ACTIVE : issuance event\n(verified productive commitment)
-
-    ACTIVE --> IDLE : balance exceeds\nidle threshold (FC-052)
-    ACTIVE --> COMMITTED : escrow trigger (P-023)
-    ACTIVE --> RETIRED : voluntary retirement\nor enforcement action
-
-    IDLE --> ACTIVE : productive deployment
-    IDLE --> DECAYED : demurrage cycle
-
-    COMMITTED --> ACTIVE : escrow release\non verified completion
-    COMMITTED --> SETTLED : independent milestone\nverification
-
-    DECAYED --> ACTIVE : balance adjusted;\nremainder re-enters
-    DECAYED --> RETIRED : balance reaches zero
-
-    SETTLED --> [*]
-    RETIRED --> [*]
+UNISSUED -> ACTIVE: issuance
+ACTIVE -> IDLE: idle threshold
+ACTIVE -> COMMITTED: escrow (P-023)
+ACTIVE -> RETIRED: retirement
+IDLE -> ACTIVE: deployment
+IDLE -> DECAYED: demurrage
+COMMITTED -> ACTIVE: escrow release
+COMMITTED -> SETTLED: milestone verified
+DECAYED -> ACTIVE: balance adjusted
+DECAYED -> RETIRED: balance zero
 ```
 
 ### 2.3 Demurrage Function
@@ -145,23 +137,18 @@ Essential Access is a non-transferable, non-convertible entitlement to physical 
 
 ### 3.2 State Machine
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> PENDING
+```statechart
+title: Essential Access — Entitlement Lifecycle (per identity, per day)
+primary: ACTIVE
+terminal: REDEEMED, EXPIRED, RETIRED
+suspended: SUSPENDED
 
-    PENDING --> ACTIVE : daily micro-allocation\n(system-triggered)
-
-    ACTIVE --> REDEEMED : basket redemption at\nregistered delivery point
-    ACTIVE --> EXPIRED : 72 h validity elapsed\n(no rollover)
-    ACTIVE --> SUSPENDED : identity re-verification\ntrigger
-
-    SUSPENDED --> ACTIVE : re-verification confirmed\n(CSM issuance continues)
-    SUSPENDED --> RETIRED : permanent deregistration
-
-    REDEEMED --> [*] : destroyed · no secondary use
-    EXPIRED --> [*] : destroyed · no rollover
-    RETIRED --> [*]
+PENDING -> ACTIVE: daily allocation (system)
+ACTIVE -> REDEEMED: basket redemption
+ACTIVE -> EXPIRED: 72 h elapsed, no rollover
+ACTIVE -> SUSPENDED: re-verification trigger
+SUSPENDED -> ACTIVE: re-verification confirmed
+SUSPENDED -> RETIRED: permanent deregistration
 ```
 
 ### 3.3 Validity and Expiry
@@ -227,46 +214,41 @@ This section defines the two civic instruments:
 
 ### 4.2 Voice State Machine
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> INACTIVE
+```statechart
+title: Voice — Civic Influence Lifecycle (fast-decay · r = 0.15/day)
+primary: ACTIVE
+terminal: EXHAUSTED
+warning: DECAYED
 
-    INACTIVE --> ACTIVE : civic activation\n(contribution threshold met)
-
-    ACTIVE --> APPLIED : deliberative action\ncommitment
-    ACTIVE --> DECAYED : fast-decay cycle\n(r = 0.15/day · FC-062)
-
-    APPLIED --> ACTIVE : cycle completes;\nresidual returned
-
-    DECAYED --> ACTIVE : balance adjusted;\nremainder active
-    DECAYED --> EXHAUSTED : balance reaches zero
-
-    EXHAUSTED --> ACTIVE : new issuance cycle\n(qualifying participation)
+INACTIVE -> ACTIVE: civic activation
+ACTIVE -> APPLIED: deliberative commitment
+ACTIVE -> DECAYED: fast-decay cycle
+APPLIED -> ACTIVE: cycle completes, residual returned
+DECAYED -> ACTIVE: balance adjusted
+DECAYED -> EXHAUSTED: balance reaches zero
+EXHAUSTED -> ACTIVE: new issuance (qualifying participation)
 ```
 
 **Decay function:** `Voice(t) = Voice(0) × e^(−0.15 × t)` where t is days elapsed. Influence is a flow, not a stock — an actor who was influential last cycle carries no advantage without continued participation.
 
 ### 4.3 Service Record State Machine
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> INACTIVE
+```statechart
+title: Service Record — Civic Eligibility Lifecycle (slow-decay)
+primary: ACTIVE
+terminal: INACTIVE
+warning: SLOW_DECAY
+suspended: SUSPENDED, COOLING
 
-    INACTIVE --> ACTIVE : first qualifying\nservice event
-
-    ACTIVE --> COOLING : role completion\n(mandatory anti-entrenchment)
-    ACTIVE --> SUSPENDED : investigation triggered
-    ACTIVE --> SLOW_DECAY : inactivity beyond\nthreshold
-
-    COOLING --> ACTIVE : cooling period elapsed
-
-    SUSPENDED --> ACTIVE : investigation cleared
-    SUSPENDED --> INACTIVE : deregistered
-
-    SLOW_DECAY --> ACTIVE : new service event
-    SLOW_DECAY --> INACTIVE : balance reaches zero
+INACTIVE -> ACTIVE: first qualifying service
+ACTIVE -> COOLING: role completion (anti-entrenchment)
+ACTIVE -> SUSPENDED: investigation triggered
+ACTIVE -> SLOW_DECAY: inactivity threshold
+COOLING -> ACTIVE: cooling period elapsed
+SUSPENDED -> ACTIVE: investigation cleared
+SUSPENDED -> INACTIVE: deregistered
+SLOW_DECAY -> ACTIVE: new service event
+SLOW_DECAY -> INACTIVE: balance reaches zero
 ```
 
 **Decay function (SLOW_DECAY):** `SR(t) = SR(0) × (1 − r_cr)^t` — P-009 sets grace-period rate at 20% of normal (FC-063 reserved).

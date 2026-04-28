@@ -1,4 +1,5 @@
 import { startTransition, useDeferredValue, useEffect, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
+import { StatechartDiagram } from './StatechartDiagram'
 import { invoke } from '@tauri-apps/api/core'
 import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
 import type { AppView } from './Layout'
@@ -44,6 +45,11 @@ interface MarkdownMermaid {
   code: string
 }
 
+interface MarkdownStatechart {
+  type: 'statechart'
+  code: string
+}
+
 interface MarkdownQuote {
   type: 'quote'
   text: string
@@ -64,6 +70,7 @@ type MarkdownBlock =
   | MarkdownList
   | MarkdownCode
   | MarkdownMermaid
+  | MarkdownStatechart
   | MarkdownQuote
   | MarkdownRule
   | MarkdownTable
@@ -293,6 +300,8 @@ function parseMarkdown(doc: CorpusDoc): MarkdownBlock[] {
       const code = codeLines.join('\n')
       if (language === 'mermaid') {
         blocks.push({ type: 'mermaid', code })
+      } else if (language === 'statechart') {
+        blocks.push({ type: 'statechart', code })
       } else {
         blocks.push({ type: 'code', code, language })
       }
@@ -1010,6 +1019,15 @@ function MarkdownDocument({
               key={`${doc.id}-mermaid-${index}`}
               id={`${doc.id}-mermaid-${index}`}
               code={block.code}
+            />
+          )
+        }
+
+        if (block.type === 'statechart') {
+          return (
+            <StatechartDiagram
+              key={`${doc.id}-statechart-${index}`}
+              dsl={block.code}
             />
           )
         }
