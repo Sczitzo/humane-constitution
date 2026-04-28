@@ -63,10 +63,10 @@ type MarkdownBlock =
   | MarkdownTable
 
 const VIEW_META: Record<AppView, { title: string; subtitle: string; railLabel: string }> = {
-  overview: {
-    title: 'Corpus Overview',
-    subtitle: 'Begin with the public-facing documents, then move inward to the formal constitutional body.',
-    railLabel: 'Featured Shelf',
+  home: {
+    title: 'Humane Constitution',
+    subtitle: 'A constitutional design for separating survival, markets, and civic power.',
+    railLabel: 'Featured',
   },
   constitution: {
     title: 'Constitution & Founding Order',
@@ -82,6 +82,16 @@ const VIEW_META: Record<AppView, { title: string; subtitle: string; railLabel: s
     title: 'Registries & Governance Logs',
     subtitle: 'Threats, patches, commitments, acceptance records, and public disclosures that harden the system over time.',
     railLabel: 'Registry Shelf',
+  },
+  topics: {
+    title: 'Browse by Topic',
+    subtitle: 'Find documents across the corpus by theme or instrument.',
+    railLabel: 'Topics',
+  },
+  paths: {
+    title: 'Reading Paths',
+    subtitle: 'Curated sequences for different entry points into the corpus.',
+    railLabel: 'Paths',
   },
   validation: {
     title: 'Validation State',
@@ -115,10 +125,12 @@ const EMPTY_PANE_SCROLL_STATE: PaneScrollState = {
 }
 
 const KEYBOARD_NAV_VIEWS: AppView[] = [
-  'overview',
+  'home',
   'constitution',
   'annexes',
   'registries',
+  'topics',
+  'paths',
   'validation',
 ]
 
@@ -145,8 +157,11 @@ function isTypingElement(target: EventTarget | null): boolean {
 function docsForView(view: AppView, docs: CorpusDoc[], featuredPaths: string[]): CorpusDoc[] {
   const featuredPathSet = new Set<string>(featuredPaths)
 
-  if (view === 'overview') {
+  if (view === 'home') {
     return docs.filter((doc) => featuredPathSet.has(doc.path))
+  }
+  if (view === 'topics' || view === 'paths') {
+    return []
   }
   if (view === 'constitution') {
     return docs.filter(
@@ -888,14 +903,11 @@ function MarkdownDocument({
 
         if (block.type === 'rule') {
           return (
-            <div
+            <hr
               key={`${doc.id}-rule-${index}`}
-              role="separator"
               aria-hidden="true"
               className="reader-rule"
-            >
-              <span className="reader-rule-mark">§</span>
-            </div>
+            />
           )
         }
 
@@ -1311,11 +1323,7 @@ function ReaderWorkspace({
 }
 
 /* ============================================================
- * Inline editorial-link primitives.
- *
- * Featured documents are linked inside flowing prose rather than rendered as
- * an enumerated index. Clicking a DocLink switches view + selects the doc
- * (with scroll-to-top on the reader pane via the existing select pipeline).
+ * Inline document-link primitive.
  * ============================================================ */
 
 function DocLink({
@@ -1346,47 +1354,115 @@ function DocLink({
   )
 }
 
-function OverviewPanels({
+interface HomeCard {
+  path: string
+  label: string
+  description: string
+  tag: string
+}
+
+const HOME_CARDS: HomeCard[] = [
+  {
+    path: 'docs/public/01_overview.md',
+    label: 'One-Page Overview',
+    description: 'The core diagnosis: why survival, markets, and civic power must be separated.',
+    tag: 'Start here',
+  },
+  {
+    path: 'docs/public/03_readiness.md',
+    label: 'Readiness Guide',
+    description: 'What is only designed, what still needs evidence, and which objections have the most pressure.',
+    tag: 'Skeptics',
+  },
+  {
+    path: 'docs/constitution/Humane_Constitution.md',
+    label: 'Governing Text',
+    description: 'The constitutional source of truth — lean by intention, extensible by annex.',
+    tag: 'Core',
+  },
+  {
+    path: 'docs/annexes/INDEX.md',
+    label: 'Annex Index',
+    description: 'Operational mechanics and detailed clauses that extend the charter without bloating it.',
+    tag: 'Operational',
+  },
+  {
+    path: 'docs/governance/Threat_Register.md',
+    label: 'Threat Register',
+    description: 'Every adversarial failure mode found by red-teaming, kept visible and open.',
+    tag: 'Adversarial',
+  },
+  {
+    path: 'docs/governance/Patch_Log.md',
+    label: 'Patch Log',
+    description: 'Structural responses to threats — the living record of how the design hardens over time.',
+    tag: 'Adversarial',
+  },
+  {
+    path: 'docs/public/04_white_paper.md',
+    label: 'White Paper',
+    description: 'The longer public-facing argument for the constitutional design.',
+    tag: 'Public',
+  },
+  {
+    path: 'docs/public/05_rights_layer.md',
+    label: 'Rights Layer',
+    description: 'Plain-language statement of what the design protects for ordinary people.',
+    tag: 'Public',
+  },
+  {
+    path: 'docs/constitution/INVARIANTS.md',
+    label: 'Seven Invariants',
+    description: 'Tier 1 protected commitments that cannot be amended without a refounding convention.',
+    tag: 'Core',
+  },
+]
+
+function HomeView({
   corpus,
   onJump,
 }: {
   corpus: CorpusPayload
   onJump: (doc: CorpusDoc) => void
 }) {
-  const link = (path: string, children: React.ReactNode) => (
-    <DocLink path={path} corpus={corpus} onJump={onJump}>
-      {children}
-    </DocLink>
-  )
-
   return (
-    <section className="max-w-[44rem] reader-prose font-serif text-ink">
-      <p className="text-[1.06rem] leading-[1.78]">
-        The Humane Constitution is a constitutional design for separating survival, markets, and
-        civic power so that wealth cannot quietly become coercion. The reading path depends on what
-        you came here for. If you want a single page that names the project's core diagnosis, start
-        with the {link('docs/public/01_overview.md', 'one-page overview')}. If you arrived skeptical,
-        read the {link('docs/public/03_readiness.md', 'readiness guide')} — it states what is only
-        designed, what still needs evidence, and which objections deserve the most pressure.
+    <div className="space-y-10">
+      <p className="max-w-[44rem] font-serif text-[1.05rem] leading-[1.78] text-ink">
+        A constitutional design for separating survival, markets, and civic power so that wealth
+        cannot quietly become coercion. Choose a starting point below, or use{' '}
+        <span className="font-medium text-ink-strong">Topics</span> and{' '}
+        <span className="font-medium text-ink-strong">Reading Paths</span> to navigate by theme.
       </p>
-      <p className="text-[1.06rem] leading-[1.78]">
-        The {link('docs/constitution/Humane_Constitution.md', 'governing text')} itself is the
-        constitutional source of truth, lean by intention, with extension into a parallel{' '}
-        {link('docs/annexes/INDEX.md', 'annex corpus')} for operational mechanics. Two living logs
-        track adversarial work: the {link('docs/governance/Threat_Register.md', 'threat register')}{' '}
-        catalogues every failure mode found by red-teaming, and the{' '}
-        {link('docs/governance/Patch_Log.md', 'patch log')} records the structural responses.
-      </p>
-      <p className="text-[1.06rem] leading-[1.78]">
-        For a longer public-facing argument see the{' '}
-        {link('docs/public/04_white_paper.md', 'white paper')}, or read the plain-language{' '}
-        {link('docs/public/05_rights_layer.md', 'rights layer')} that names what the design protects
-        for ordinary people. The {link('docs/constitution/INVARIANTS.md', 'seven invariants')} —
-        Tier 1 protected — and the{' '}
-        {link('docs/constitution/SPECIFICATIONS.md', 'formal specifications')} cover the lower-level
-        commitments any patch must respect.
-      </p>
-    </section>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {HOME_CARDS.map((card) => {
+          const doc = corpus.docs.find((d) => d.path === card.path)
+          return (
+            <button
+              key={card.path}
+              type="button"
+              onClick={() => doc && onJump(doc)}
+              disabled={!doc}
+              className={`focus-ring group flex flex-col rounded-lg border border-line bg-paper-strong p-5 text-left transition ${
+                doc
+                  ? 'hover:border-[rgba(159,108,49,0.4)] hover:shadow-sm'
+                  : 'opacity-50 cursor-not-allowed'
+              }`}
+            >
+              <span className="topic-tag mb-3 self-start">{card.tag}</span>
+              <h3 className="font-serif text-[1.05rem] font-semibold leading-snug text-ink-strong group-hover:text-[var(--accent-deep)]">
+                {card.label}
+              </h3>
+              <p className="mt-2 text-[13px] leading-6 text-ink-soft">{card.description}</p>
+              {doc && (
+                <p className="mt-auto pt-3 text-[11px] text-ink-faint">
+                  {estimatedReadMinutes(doc.wordCount)} min · {doc.headingCount} headings
+                </p>
+              )}
+            </button>
+          )
+        })}
+      </div>
+    </div>
   )
 }
 
@@ -1456,6 +1532,200 @@ function SectionIntro({
   return (
     <div className="max-w-[42rem] space-y-3 pt-1 font-serif text-[15px] leading-7 text-ink">
       {builder(corpus, link)}
+    </div>
+  )
+}
+
+/* ============================================================
+ * Topics view — browse corpus by theme tag.
+ * Tags are derived by keyword matching document titles and summaries.
+ * ============================================================ */
+
+interface TopicDef {
+  id: string
+  label: string
+  keywords: string[]
+}
+
+const TOPIC_DEFS: TopicDef[] = [
+  { id: 'survival', label: 'Survival & Essential Access', keywords: ['survival', 'access', 'basic', 'subsistence', 'tier 1', 'rights layer'] },
+  { id: 'governance', label: 'Governance & Accountability', keywords: ['governance', 'accountability', 'oversight', 'protocol', 'acceptance', 'patch', 'amendment'] },
+  { id: 'threats', label: 'Threat Analysis', keywords: ['threat', 'adversarial', 'risk', 'failure', 'attack', 'capture'] },
+  { id: 'economic', label: 'Economic Design', keywords: ['market', 'economic', 'flow', 'storehouse', 'wealth', 'tax', 'commerce'] },
+  { id: 'civic', label: 'Civic Power & Voice', keywords: ['voice', 'civic', 'democratic', 'participation', 'referendum', 'representation'] },
+  { id: 'validation', label: 'Validation & Evidence', keywords: ['validation', 'evidence', 'commitment', 'specification', 'invariant', 'reserved', 'preactivation'] },
+  { id: 'public', label: 'Public Facing', keywords: ['overview', 'readiness', 'white paper', 'rights', 'plain language', 'public'] },
+  { id: 'operational', label: 'Operational Mechanics', keywords: ['annex', 'index', 'operational', 'implementation', 'procedure', 'schedule'] },
+]
+
+function getDocTopics(doc: CorpusDoc): string[] {
+  const haystack = [doc.title, doc.summary, doc.path].join(' ').toLowerCase()
+  return TOPIC_DEFS
+    .filter((t) => t.keywords.some((kw) => haystack.includes(kw)))
+    .map((t) => t.id)
+}
+
+function TopicsView({
+  corpus,
+  onJump,
+}: {
+  corpus: CorpusPayload
+  onJump: (doc: CorpusDoc) => void
+}) {
+  const taggedDocs: Map<string, CorpusDoc[]> = new Map(TOPIC_DEFS.map((t) => [t.id, []]))
+
+  for (const doc of corpus.docs) {
+    const topics = getDocTopics(doc)
+    for (const topicId of topics) {
+      taggedDocs.get(topicId)?.push(doc)
+    }
+  }
+
+  return (
+    <div className="space-y-10">
+      {TOPIC_DEFS.map((topic) => {
+        const docs = taggedDocs.get(topic.id) ?? []
+        if (!docs.length) return null
+        return (
+          <section key={topic.id}>
+            <h2 className="mb-4 font-serif text-[1.2rem] font-semibold text-ink-strong">
+              {topic.label}
+              <span className="ml-2 font-sans text-[12px] font-normal text-ink-faint">
+                {docs.length} {docs.length === 1 ? 'document' : 'documents'}
+              </span>
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {docs.map((doc) => (
+                <button
+                  key={doc.id}
+                  type="button"
+                  onClick={() => onJump(doc)}
+                  className="focus-ring group flex flex-col rounded border border-line bg-paper-strong p-4 text-left transition hover:border-[rgba(159,108,49,0.4)] hover:shadow-sm"
+                >
+                  <span className="text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+                    {SECTION_LABELS[doc.section]}
+                  </span>
+                  <h3 className="mt-1 font-serif text-[0.97rem] leading-snug text-ink group-hover:text-ink-strong">
+                    {doc.title}
+                  </h3>
+                  {doc.summary ? (
+                    <p className="mt-1.5 line-clamp-2 text-[12px] leading-5 text-ink-soft">{doc.summary}</p>
+                  ) : null}
+                </button>
+              ))}
+            </div>
+          </section>
+        )
+      })}
+    </div>
+  )
+}
+
+/* ============================================================
+ * Reading Paths view — curated sequential reading sequences.
+ * ============================================================ */
+
+interface PathStep {
+  path: string
+  note: string
+}
+
+interface ReadingPathDef {
+  id: string
+  title: string
+  description: string
+  steps: PathStep[]
+}
+
+const READING_PATHS: ReadingPathDef[] = [
+  {
+    id: 'skeptic',
+    title: 'The Skeptic\'s Path',
+    description: 'For those who arrived with objections. Starts with what is unknown, then builds the case.',
+    steps: [
+      { path: 'docs/public/03_readiness.md', note: 'What is designed vs. what still needs evidence' },
+      { path: 'docs/governance/Threat_Register.md', note: 'Every adversarial failure mode, kept visible' },
+      { path: 'docs/governance/Patch_Log.md', note: 'How the design has responded to threats' },
+      { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text itself' },
+    ],
+  },
+  {
+    id: 'first-time',
+    title: 'First-Time Reader',
+    description: 'The intended public on-ramp: overview first, then the constitutional core.',
+    steps: [
+      { path: 'docs/public/01_overview.md', note: 'One-page diagnosis' },
+      { path: 'docs/public/05_rights_layer.md', note: 'Plain-language rights' },
+      { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text' },
+      { path: 'docs/constitution/INVARIANTS.md', note: 'What cannot be amended' },
+    ],
+  },
+  {
+    id: 'implementer',
+    title: 'Implementation Track',
+    description: 'For those building or auditing a pilot. Focus on specifications and operational mechanics.',
+    steps: [
+      { path: 'docs/constitution/SPECIFICATIONS.md', note: 'Formal state machine every implementation must satisfy' },
+      { path: 'docs/constitution/Acceptance_Protocol.md', note: 'How patches reach operation' },
+      { path: 'docs/annexes/INDEX.md', note: 'Operational extension layer' },
+      { path: 'founding/commitments.md', note: 'Numerical lock-file every implementation is bound to' },
+    ],
+  },
+  {
+    id: 'governance-deep',
+    title: 'Governance Deep Dive',
+    description: 'The full adversarial and evidence stack. For auditors, researchers, and red-teamers.',
+    steps: [
+      { path: 'docs/governance/Threat_Register.md', note: 'Catalogued failure modes' },
+      { path: 'docs/governance/Patch_Log.md', note: 'Structural responses' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is allowed to assert' },
+      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'What must be tested before scale' },
+      { path: 'docs/governance/Founding_Preactivation_Disclosure.md', note: 'Pre-activation truth conditions' },
+    ],
+  },
+]
+
+function ReadingPathsView({
+  corpus,
+  onJump,
+}: {
+  corpus: CorpusPayload
+  onJump: (doc: CorpusDoc) => void
+}) {
+  return (
+    <div className="space-y-10">
+      {READING_PATHS.map((path) => (
+        <section key={path.id} className="rounded-lg border border-line bg-paper-strong p-6">
+          <h2 className="font-serif text-[1.3rem] font-semibold text-ink-strong">{path.title}</h2>
+          <p className="mt-1 text-[14px] leading-6 text-ink-soft">{path.description}</p>
+          <ol className="mt-5 space-y-2">
+            {path.steps.map((step, index) => {
+              const doc = corpus.docs.find((d) => d.path === step.path)
+              return (
+                <li key={step.path} className="flex gap-4">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(159,108,49,0.12)] font-mono text-[10px] text-accent-deep">
+                    {index + 1}
+                  </span>
+                  <div className="min-w-0">
+                    {doc ? (
+                      <button
+                        type="button"
+                        onClick={() => onJump(doc)}
+                        className="focus-ring inline border-b border-[rgba(159,108,49,0.35)] font-serif text-[0.97rem] font-medium text-accent-deep transition hover:border-accent hover:text-[var(--accent)]"
+                      >
+                        {doc.title}
+                      </button>
+                    ) : (
+                      <span className="font-serif text-[0.97rem] text-ink-faint">{step.path}</span>
+                    )}
+                    <p className="mt-0.5 text-[12px] leading-5 text-ink-soft">{step.note}</p>
+                  </div>
+                </li>
+              )
+            })}
+          </ol>
+        </section>
+      ))}
     </div>
   )
 }
@@ -2207,30 +2477,31 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
           </button>
         </div>
       )}
-      <header className="border-b border-line pb-7">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
-          §{view === 'overview' ? ' Overview' : ` ${meta.title}`}
-        </p>
-        <h1
-          data-testid="view-title"
-          className="mt-2 font-serif text-[2.5rem] leading-[1.04] text-ink-strong sm:text-[3.1rem]"
-        >
-          {meta.title}
-        </h1>
-        <p className="mt-3 max-w-[42rem] font-serif text-[15px] italic leading-7 text-ink-soft">
-          {meta.subtitle}
-        </p>
-      </header>
+      {view !== 'home' && (
+        <header className="border-b border-line pb-7">
+          <h1
+            data-testid="view-title"
+            className="font-serif text-[2.5rem] leading-[1.04] text-ink-strong sm:text-[3.1rem]"
+          >
+            {meta.title}
+          </h1>
+          <p className="mt-3 max-w-[42rem] font-serif text-[15px] leading-7 text-ink-soft">
+            {meta.subtitle}
+          </p>
+        </header>
+      )}
 
-      {view === 'overview' && <OverviewPanels corpus={corpus} onJump={handleSelectQuickDoc} />}
+      {view === 'home' && <HomeView corpus={corpus} onJump={handleSelectQuickDoc} />}
+      {view === 'topics' && <TopicsView corpus={corpus} onJump={handleSelectQuickDoc} />}
+      {view === 'paths' && <ReadingPathsView corpus={corpus} onJump={handleSelectQuickDoc} />}
       {view === 'validation' && <ValidationPanels corpus={corpus} />}
       {view === 'settings' && <EmptySettings />}
 
-      {view !== 'overview' && view !== 'settings' && (
+      {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <SectionIntro view={view} corpus={corpus} onJump={handleSelectQuickDoc} />
       )}
 
-      {view !== 'overview' && view !== 'settings' && (
+      {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <div className="flex max-w-md items-center gap-3">
           <label htmlFor="corpus-search" className="sr-only">
             Filter this section
@@ -2249,7 +2520,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
         </div>
       )}
 
-      {view !== 'settings' && view !== 'overview' && (
+      {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <ReaderWorkspace
           docs={visibleDocs}
           selectedDoc={selectedDoc}

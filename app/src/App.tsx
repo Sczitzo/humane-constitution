@@ -12,17 +12,21 @@ function readStoredView(): AppView {
 
   const value = window.localStorage.getItem(VIEW_STORAGE_KEY)
   if (
+    value === 'home' ||
     value === 'overview' ||
     value === 'constitution' ||
     value === 'annexes' ||
     value === 'registries' ||
+    value === 'topics' ||
+    value === 'paths' ||
     value === 'validation' ||
     value === 'settings'
   ) {
-    return value
+    // Map legacy 'overview' → 'home'.
+    return value === 'overview' ? 'home' : value
   }
 
-  return 'overview'
+  return 'home'
 }
 
 export default function App() {

@@ -26,6 +26,12 @@ export default {
           DEFAULT: 'var(--sage)',
           deep: 'var(--sage-deep)',
         },
+        forest: {
+          DEFAULT: 'var(--forest)',
+          soft: 'var(--forest-soft)',
+          text: 'var(--forest-text)',
+          muted: 'var(--forest-text-muted)',
+        },
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', '"SFMono-Regular"', 'Menlo', 'monospace'],
