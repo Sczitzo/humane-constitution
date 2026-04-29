@@ -33,6 +33,7 @@ export default function App() {
   const [view, setView] = useState<AppView>(readStoredView)
   const [corpus, setCorpus] = useState<CorpusPayload | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
+  const [readingProgress, setReadingProgress] = useState(0)
 
   // Remembers window scroll position for each view so the nav bar can restore it.
   const scrollPositions = useRef<Map<AppView, number>>(new Map())
@@ -71,6 +72,7 @@ export default function App() {
   // Nav-bar click: save the current position, switch, then restore or jump to top.
   function handleNavChange(nextView: AppView) {
     scrollPositions.current.set(view, window.scrollY)
+    setReadingProgress(0)
     setView(nextView)
     requestAnimationFrame(() => {
       window.scrollTo({ top: scrollPositions.current.get(nextView) ?? 0, behavior: 'instant' })
@@ -86,8 +88,8 @@ export default function App() {
   }
 
   return (
-    <Layout activeNav={view} onNavChange={handleNavChange}>
-      <Dashboard view={view} corpus={corpus} loadError={loadError} onViewChange={handleViewChange} />
+    <Layout activeNav={view} onNavChange={handleNavChange} readingProgress={readingProgress}>
+      <Dashboard view={view} corpus={corpus} loadError={loadError} onViewChange={handleViewChange} onProgressChange={setReadingProgress} />
     </Layout>
   )
 }

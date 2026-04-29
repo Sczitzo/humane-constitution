@@ -12,6 +12,7 @@ interface LayoutProps {
   children: React.ReactNode
   activeNav: AppView
   onNavChange: (view: AppView) => void
+  readingProgress?: number
 }
 
 interface NavItem {
@@ -31,7 +32,7 @@ const PRIMARY_NAV: NavItem[] = [
 
 const SECONDARY_NAV: NavItem[] = [{ id: 'settings', label: 'Settings' }]
 
-export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
+export function Layout({ children, activeNav, onNavChange, readingProgress = 0 }: LayoutProps) {
   function renderNavLink(item: NavItem) {
     const active = activeNav === item.id
     return (
@@ -68,6 +69,16 @@ export function Layout({ children, activeNav, onNavChange }: LayoutProps) {
         data-tauri-drag-region
         className="sticky top-0 z-40 border-b border-[rgba(0,0,0,0.18)] bg-[var(--forest)] px-6 sm:px-8"
       >
+        {/* Reading progress bar — sits flush at the very bottom of the header */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-[rgba(0,0,0,0.15)]"
+        >
+          <div
+            className="h-full bg-[var(--accent)] transition-[width] duration-75 ease-linear"
+            style={{ width: `${readingProgress * 100}%` }}
+          />
+        </div>
         <div className="mx-auto flex w-full max-w-[82rem] items-end gap-7">
           <p
             className="shrink-0 select-none py-3 font-serif text-[15px] tracking-tight text-[var(--forest-text)]"

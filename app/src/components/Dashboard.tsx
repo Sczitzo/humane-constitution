@@ -9,6 +9,7 @@ interface DashboardProps {
   corpus: CorpusPayload | null
   loadError: string | null
   onViewChange: (view: AppView) => void
+  onProgressChange?: (progress: number) => void
 }
 
 interface SourceFeedback {
@@ -2083,7 +2084,7 @@ function EmptySettings() {
   )
 }
 
-export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardProps) {
+export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange }: DashboardProps) {
   const [query, setQuery] = useState('')
   const [documentQuery, setDocumentQuery] = useState('')
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
@@ -2343,6 +2344,19 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
     }
   }, [])
 
+  // Window-scroll progress — always active. The pane-scroll handler overrides
+  // this when the reader pane is the active scroll container (xl+ viewports).
+  useEffect(() => {
+    if (!onProgressChange) return
+    function handleWindowScroll() {
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      onProgressChange!(max > 0 ? window.scrollY / max : 0)
+    }
+    window.addEventListener('scroll', handleWindowScroll, { passive: true })
+    handleWindowScroll()
+    return () => window.removeEventListener('scroll', handleWindowScroll)
+  }, [onProgressChange])
+
   useEffect(() => {
     if (!independentPaneView || !selectedDoc || !restorePaneScrollRef.current) {
       return
@@ -2499,6 +2513,13 @@ export function Dashboard({ view, corpus, loadError, onViewChange }: DashboardPr
     }
 
     const scrolledPane = event.currentTarget
+
+    // Emit reader pane progress immediately (no rAF needed — just a ratio)
+    if (scrolledPane === readerPaneRef.current && onProgressChange) {
+      const el = readerPaneRef.current
+      const max = el.scrollHeight - el.clientHeight
+      onProgressChange(max > 0 ? el.scrollTop / max : 0)
+    }
 
     if (scrollWriteFrameRef.current !== null) {
       return
