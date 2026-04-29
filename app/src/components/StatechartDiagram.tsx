@@ -83,15 +83,33 @@ const NODE_STYLES: Record<NodeRole, NodeStyle> = {
   },
 }
 
-const EDGE_COLOR   = 'rgba(60,54,46,0.40)'
-const LABEL_COLOR  = '#7a7268'
-const LABEL_BG     = '#fdf9f2'
-const CALLOUT_FILL = '#f3ede4'
-const FONT_FAMILY  = '"Iowan Old Style","Palatino Linotype",Georgia,serif'
-const MONO_FAMILY  = '"SF Mono","Fira Code",monospace'
+const EDGE_COLOR  = 'rgba(60,54,46,0.40)'
+const LABEL_COLOR = '#7a7268'
+const LABEL_BG    = '#fdf9f2'
+const FONT_FAMILY = '"Iowan Old Style","Palatino Linotype",Georgia,serif'
+const MONO_FAMILY = '"SF Mono","Fira Code",monospace'
 
-// Unicode circled digits for legend callouts
-const CALLOUT = ['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩','⑪','⑫','⑬','⑭','⑮']
+// Colour palette for callout bubbles + legend rows.
+// Each entry: [stroke/text colour, fill (light tint)].
+// Chosen to be distinct but harmonious with the warm parchment palette.
+const CALLOUT_PALETTE: [string, string][] = [
+  ['#9f6c31', '#fef3e2'],  // amber      — matches primary node
+  ['#4d7a6a', '#e8f3ef'],  // sage green
+  ['#6b5fa0', '#eeebf7'],  // soft violet
+  ['#b05a5a', '#f7ecec'],  // dusty rose
+  ['#3d7a9a', '#e6f2f7'],  // slate blue
+  ['#7a8a3a', '#f0f4e4'],  // olive
+  ['#a06040', '#f7ede6'],  // terracotta
+  ['#4d8080', '#e6f2f2'],  // teal
+  ['#7a4d80', '#f2ebf5'],  // plum
+  ['#6a7a40', '#eef2e4'],  // moss
+  ['#a04060', '#f7e8ee'],  // raspberry
+  ['#406080', '#e6eef5'],  // denim
+]
+
+function calloutColor(n: number): [string, string] {
+  return CALLOUT_PALETTE[n % CALLOUT_PALETTE.length]
+}
 
 // ── DSL parser ────────────────────────────────────────────────────────────
 
@@ -357,6 +375,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
         aria-hidden="true"
       >
         <defs>
+          {/* Default arrow (inline label mode) */}
           <marker
             id={arrowId}
             markerWidth="9" markerHeight="9"
@@ -365,6 +384,18 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
           >
             <path d="M0,0 L0,6 L9,3 z" fill={EDGE_COLOR} />
           </marker>
+          {/* Per-colour arrows (legend mode) */}
+          {useLegend && CALLOUT_PALETTE.map(([stroke], ci) => (
+            <marker
+              key={`arrow-c${ci}`}
+              id={`${arrowId}-c${ci}`}
+              markerWidth="9" markerHeight="9"
+              refX="8" refY="3"
+              orient="auto"
+            >
+              <path d="M0,0 L0,6 L9,3 z" fill={stroke} fillOpacity={0.65} />
+            </marker>
+          ))}
         </defs>
 
         {/* ── edges ── */}
@@ -374,14 +405,23 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
           const calloutIdx = calloutMap.get(i)
           const showInline = !useLegend && !!edge.label
 
+          const edgeStroke = (useLegend && calloutIdx !== undefined)
+            ? calloutColor(calloutIdx)[0]
+            : EDGE_COLOR
+
           return (
             <g key={`edge-${i}`}>
               <path
                 d={d}
                 fill="none"
-                stroke={EDGE_COLOR}
-                strokeWidth={1.25}
-                markerEnd={`url(#${arrowId})`}
+                stroke={edgeStroke}
+                strokeWidth={useLegend ? 1.5 : 1.25}
+                strokeOpacity={useLegend ? 0.65 : 1}
+                markerEnd={
+                  useLegend && calloutIdx !== undefined
+                    ? `url(#${arrowId}-c${calloutIdx % CALLOUT_PALETTE.length})`
+                    : `url(#${arrowId})`
+                }
               />
 
               {/* Inline label */}
@@ -411,18 +451,25 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
 
               {/* Legend callout bubble */}
               {useLegend && calloutIdx !== undefined && (() => {
-                const mp  = bezierMid(d)
-                const sym = CALLOUT[calloutIdx] ?? String(calloutIdx + 1)
+                const mp              = bezierMid(d)
+                const [stroke, fill]  = calloutColor(calloutIdx)
                 return (
                   <g>
-                    <circle cx={mp.x} cy={mp.y} r={8} fill={CALLOUT_FILL} stroke="none" />
+                    <circle
+                      cx={mp.x} cy={mp.y} r={9}
+                      fill={fill}
+                      stroke={stroke}
+                      strokeWidth={1.5}
+                    />
                     <text
-                      x={mp.x} y={mp.y + 4}
+                      x={mp.x} y={mp.y + 4.5}
                       textAnchor="middle"
-                      fontSize={10} fill={LABEL_COLOR}
+                      fontSize={10}
+                      fill={stroke}
+                      fontWeight="600"
                       fontFamily={FONT_FAMILY}
                     >
-                      {sym}
+                      {calloutIdx + 1}
                     </text>
                   </g>
                 )
@@ -461,32 +508,52 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
 
       {/* ── Legend (dense diagrams only) ── */}
       {useLegend && (
-        <ol
-          className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1"
-          style={{ listStyle: 'none', padding: 0, margin: 0 }}
-        >
-          {labeledEdges.map((edge, n) => (
-            <li
-              key={`legend-${n}`}
-              className="flex items-baseline gap-2 text-ink-faint"
-              style={{ fontFamily: FONT_FAMILY, fontSize: 11, lineHeight: 1.5 }}
-            >
-              <span
-                className="shrink-0 text-ink-muted"
-                style={{ fontFamily: FONT_FAMILY, fontSize: 11 }}
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          {labeledEdges.map((edge, n) => {
+            const [stroke, fill] = calloutColor(n)
+            return (
+              <div
+                key={`legend-${n}`}
+                className="flex items-start gap-2 rounded"
+                style={{
+                  background: fill,
+                  borderLeft: `3px solid ${stroke}`,
+                  padding: '4px 8px 4px 8px',
+                }}
               >
-                {CALLOUT[n] ?? String(n + 1)}
-              </span>
-              <span>
-                <span className="text-ink-muted" style={{ fontSize: 10, fontFamily: MONO_FAMILY }}>
-                  {edge.from} → {edge.to}
+                {/* colour-matched number badge */}
+                <span
+                  className="shrink-0 font-semibold tabular-nums"
+                  style={{
+                    color: stroke,
+                    fontSize: 11,
+                    lineHeight: '18px',
+                    minWidth: 14,
+                    fontFamily: FONT_FAMILY,
+                  }}
+                >
+                  {n + 1}
                 </span>
-                {'  '}
-                {edge.label}
-              </span>
-            </li>
-          ))}
-        </ol>
+                <span style={{ fontFamily: FONT_FAMILY, fontSize: 11, lineHeight: 1.55 }}>
+                  <span
+                    style={{
+                      display: 'block',
+                      fontSize: 9,
+                      fontFamily: MONO_FAMILY,
+                      color: stroke,
+                      opacity: 0.8,
+                      letterSpacing: '0.04em',
+                      marginBottom: 1,
+                    }}
+                  >
+                    {edge.from} → {edge.to}
+                  </span>
+                  <span style={{ color: '#3c362e' }}>{edge.label}</span>
+                </span>
+              </div>
+            )
+          })}
+        </div>
       )}
     </div>
   )
