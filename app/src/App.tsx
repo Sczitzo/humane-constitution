@@ -1,4 +1,4 @@
-import { startTransition, useEffect, useState } from 'react'
+import { startTransition, useEffect, useRef, useState } from 'react'
 import { Layout, type AppView } from './components/Layout'
 import { Dashboard } from './components/Dashboard'
 import { loadCorpus, type CorpusPayload } from './generated/corpus'
@@ -34,6 +34,9 @@ export default function App() {
   const [corpus, setCorpus] = useState<CorpusPayload | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
 
+  // Remembers window scroll position for each view so the nav bar can restore it.
+  const scrollPositions = useRef<Map<AppView, number>>(new Map())
+
   useEffect(() => {
     if (typeof window === 'undefined') {
       return
@@ -65,9 +68,26 @@ export default function App() {
     }
   }, [])
 
+  // Nav-bar click: save the current position, switch, then restore or jump to top.
+  function handleNavChange(nextView: AppView) {
+    scrollPositions.current.set(view, window.scrollY)
+    setView(nextView)
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: scrollPositions.current.get(nextView) ?? 0, behavior: 'instant' })
+    })
+  }
+
+  // Internal view changes (Read Next, doc links) always start at the top.
+  function handleViewChange(nextView: AppView) {
+    setView(nextView)
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    })
+  }
+
   return (
-    <Layout activeNav={view} onNavChange={setView}>
-      <Dashboard view={view} corpus={corpus} loadError={loadError} onViewChange={setView} />
+    <Layout activeNav={view} onNavChange={handleNavChange}>
+      <Dashboard view={view} corpus={corpus} loadError={loadError} onViewChange={handleViewChange} />
     </Layout>
   )
 }
