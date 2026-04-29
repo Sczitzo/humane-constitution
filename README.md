@@ -1,3 +1,7 @@
+---
+title: Project Guide & Reader Overview
+---
+
 # The Humane Constitution
 
 **Constitution for a Humane Civilization**  

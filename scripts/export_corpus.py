@@ -72,7 +72,22 @@ def clean_inline(text: str) -> str:
     return re.sub(r"\s+", " ", cleaned).strip()
 
 
+def frontmatter_title(text: str) -> str | None:
+    """Return the value of a 'title:' key in YAML frontmatter, if present."""
+    if not text.startswith("---"):
+        return None
+    end = text.find("\n---", 3)
+    if end == -1:
+        return None
+    fm = text[3:end]
+    m = re.search(r"^title:\s*(.+)$", fm, re.MULTILINE)
+    return m.group(1).strip() if m else None
+
+
 def title_for(text: str, fallback: str) -> str:
+    fm = frontmatter_title(text)
+    if fm:
+        return fm
     for line in text.splitlines():
         if line.startswith("# "):
             return clean_inline(line[2:])
