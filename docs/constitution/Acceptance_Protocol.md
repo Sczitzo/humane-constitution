@@ -1,7 +1,3 @@
----
-title: Formal Acceptance Protocol
----
-
 # The Humane Constitution
 
 **Formal Acceptance Protocol (Amended by P-013 / AG; Bootstrap resolved by P-014 / AH; Founding window extended by P-020 / AH2)**
