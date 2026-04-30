@@ -1,6 +1,6 @@
-# ANNEX AG — Formal Acceptance Process Integrity (P-013 / T-016)
+# ANNEX AG — Formal Acceptance Process Integrity Clauses
 
-**Purpose.** This annex hardens the Formal Acceptance Protocol (FAP) against the exploit surfaces identified in T-016. It amends the FAP directly and adds constitutional protections to its anti-gaming rules. Where this annex conflicts with the FAP document, this annex governs. Status: PROPOSED.
+**Purpose.** This annex strengthens the Formal Acceptance Protocol (FAP) against the exploit surfaces identified in T-016 (P-013). It amends the FAP directly and adds constitutional protections to its anti-gaming rules. Where this annex conflicts with the FAP document, this annex governs. Status: PROPOSED.
 
 ### AG1. Pilot Representativeness Standard (FAP Amendment)
 Pilot region designation requires a published representativeness assessment before the pilot begins. The assessment must document four dimensions against the national median:
@@ -86,6 +86,6 @@ The four FAP sign-off authorities collectively constitute a new institutional cl
 | T-009 | P-009 | PROPOSED | AF | S4 |
 | T-016 | P-013 | PROPOSED | AG | S5 |
 
-*Session 5 complete. T-016 addressed via P-013. 14 threats total: 4 ACTIVE, 10 PROPOSED. The FAP itself is now hardened against the exploit surfaces identified in T-016.*
+*T-016 is addressed via P-013. The Formal Acceptance Protocol is protected against the exploit surfaces documented in T-016.*
 
 ---

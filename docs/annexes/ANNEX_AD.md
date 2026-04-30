@@ -1,4 +1,4 @@
-# ANNEX AD — Narrative Attack Surface Hardening (P-011)
+# ANNEX AD — Narrative Attack Surface Clauses
 
 **Purpose.** This annex introduces the operative clauses for P-011 (T-011 Narrative Attack Surface). It extends Article VII, the White Paper governance rules, and the annual simulation mandate. Where clauses here conflict with earlier language, this annex governs.
 
@@ -56,7 +56,7 @@ Before public launch, the White Paper must be updated to include:
 
 White Paper updates for P-011 activation are governed as Tier 3 operational changes if they only add the above content. Any update that removes or weakens existing commitments is a substantive change requiring full review.
 
-### AD7. Updated Threat/Patch Linkage (Session 2 Complete)
+### AD7. Threat and Patch Linkage
 
 | Threat ID | Patch ID | Status | Annex |
 | :--- | :--- | :--- | :--- |

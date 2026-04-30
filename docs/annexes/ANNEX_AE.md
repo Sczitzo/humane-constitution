@@ -1,11 +1,11 @@
-# ANNEX AE — Compound Interface Tests (Session 3) + P-012 Interface Hardening
+# ANNEX AE — Compound Interface Tests and Deadlock Prevention Clauses
 
-**Purpose.** This annex records the compound interface test results from Session 3, the new threats identified at patch interfaces (T-012 through T-015), and the operative clauses for P-012 (Interface Hardening and Deadlock Prevention). Where clauses here conflict with Annexes AC or AD, this annex governs.
+**Purpose.** This annex records compound interface test results, the new threats identified at patch interfaces (T-012 through T-015), and the operative clauses for P-012 (Interface Hardening and Deadlock Prevention). Where clauses here conflict with Annexes AC or AD, this annex governs.
 
 **Status:** PROPOSED. Clauses become operative only when formally accepted.
 
 ### AE1. Interface Vulnerability Register
-The following vulnerabilities were identified by running Annex T scenarios against Session 2 patches:
+The following vulnerabilities were identified by running Annex T scenarios against previously adopted patches:
 
 | Interface | Vulnerability | Severity |
 | :--- | :--- | :--- |
@@ -88,6 +88,6 @@ The P-004 definition drift controls (Annex AB5) are extended to procedural accum
 | T-014 | P-012 | PROPOSED | AE2.3 | S3 |
 | T-015 | P-012 | PROPOSED | AE2.4 | S3 |
 
-*P-012 addresses four threats (T-012 through T-015) through six interface hardening clauses. T-009 (Grace Exploitation Loop) remains OPEN — next hardening target.*
+*P-012 addresses four threats (T-012 through T-015) through six interface clauses. T-009 (Grace Exploitation Loop) is addressed in Annex AF.*
 
 ---

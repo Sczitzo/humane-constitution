@@ -1,4 +1,4 @@
-# ANNEX A. Red-Team Pass (Option B Baseline)
+# ANNEX A — Adversarial Test Suite
 
 This annex operationalises the protocol's adversarial testing discipline by defining how the system is continuously stress-tested against coercion, fraud, capture, and technical failure. It expands the threat-summary in Section IV into a repeatable test program.
 

@@ -1,10 +1,10 @@
-# ANNEX AC — Session 2 Hardening Clauses
+# ANNEX AC — Governance Throughput, Measurement Lag, and Elite Formation Clauses
 
-**Purpose.** This annex introduces the operative clauses produced during the second hardening cycle, covering T-005 Governance Throughput Failure (P-005), T-006 Measurement Lag and Supply Shock Behavior (P-006), and T-008 Bureaucratic Elite Formation (P-008). Where clauses in this annex conflict with earlier language, this annex governs. Clauses are PROPOSED and become operative only when formally accepted into the constitution.
+**Purpose.** This annex introduces the operative clauses covering T-005 Governance Throughput Failure (P-005), T-006 Measurement Lag and Supply Shock Behavior (P-006), and T-008 Bureaucratic Elite Formation (P-008). Where clauses in this annex conflict with earlier language, this annex governs. Clauses are PROPOSED and become operative only when formally accepted into the constitution.
 
 **Interpretive rule.** These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and survival-floor protections are unaffected by any clause in this annex.
 
-### AC1. Governance Throughput Hardening (P-005)
+### AC1. Governance Throughput Clauses (P-005)
 The following clauses extend Article VI, Article I, Annex L, and the emergency cascade table.
 
 #### AC1.1 CRP Dual-Queue Separation
@@ -124,7 +124,7 @@ When the concentration dashboard shows the cohort overlap index exceeding the pu
 
 ---
 
-### AC4. Updated Threat/Patch Linkage (Session 2)
+### AC4. Threat and Patch Linkage
 
 | Threat ID | Patch ID | Status | Annex |
 | :--- | :--- | :--- | :--- |
@@ -136,7 +136,7 @@ When the concentration dashboard shows the cohort overlap index exceeding the pu
 | T-006 | P-006 | PROPOSED | AC2 |
 | T-008 | P-008 | PROPOSED | AC3 |
 
-*Green rows: ACTIVE patches from Session 1 (Annex AB). Yellow rows: PROPOSED patches from Session 2 (Annex AC). PROPOSED patches are not yet operative.*
+*Green rows: ACTIVE patches (Annex AB). Yellow rows: PROPOSED patches (Annex AC). PROPOSED patches are not yet operative.*
 
 ---
 

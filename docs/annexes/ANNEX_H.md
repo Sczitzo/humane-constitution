@@ -1,4 +1,4 @@
-# ANNEX H. Amendment Article and Constitutional Change Control
+# ANNEX H — Amendment Article and Constitutional Change Control
 **Purpose.** This annex turns “change” itself into a governed object. It defines which rules may change, who may propose change, what notice and evidence are required, when judicial review is mandatory, and how emergency powers are prevented from mutating into permanent rewrites. No amendment may be smuggled in through software releases, procurement terms, treaty language, or administrative custom.
 
 **Design principle: the harder a rule is to see, the easier it is to capture;** therefore every substantive change must be classified, published, reviewable, and time-bounded.

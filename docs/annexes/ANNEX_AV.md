@@ -1,4 +1,4 @@
-# Annex AV — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement
+# ANNEX AV — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-034
 **Threats addressed:** T-016 (FAP capture), INV-007 single-point-of-failure

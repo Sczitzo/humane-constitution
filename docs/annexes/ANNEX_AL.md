@@ -1,4 +1,4 @@
-# Annex AL — Methodology-Class Definitions for Oracle Independence
+# ANNEX AL — Methodology-Class Definitions for Oracle Independence
 
 **Pre-launch blocking gate — required before P-017 is operative · Governed as P-004 protected specification**
 **Status: ACTIVE — founding commitments resolved (FC-030, FC-031, FC-032, FC-033, FC-090, FC-091)**

@@ -1,4 +1,4 @@
-# Annex AQ — Shared Storehouse Oracle-Failure Fallback Protocol
+# ANNEX AQ — Shared Storehouse Oracle-Failure Fallback Protocol
 
 **Status: ACTIVE — FC-100 bound; Proposal 6 close-out, 2026-04-18**
 **Addresses:** T-024 (Shared Storehouse Oracle-Failure During Active Rationing) — the operational void where Shared Storehouse is active and the oracle system fails, loses quorum, or enters an unresolvable dispute with no defined decision path.

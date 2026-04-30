@@ -1,4 +1,4 @@
-# ANNEX B. Threat Register (Option B Baseline)
+# ANNEX B — Threat Register
 Scoring uses Impact (I), Likelihood (L), Detectability (D). Risk Score = I × L × (6 − D). Owners are accountable for test coverage and response playbooks.
 
 | ID | Threat scenario (area) | I/L/D & score | Key controls | Tests/monitoring | Owner (residual) |

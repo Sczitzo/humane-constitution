@@ -1,7 +1,7 @@
-# Annex AK — Identity Asymmetric Error Doctrine
+# ANNEX AK — Identity Asymmetric Error Doctrine
 
 **Tier 2 founding commitment — required before deployment · Governed as P-004 protected specification**
-**Status: PROPOSED (referenced by T-002 Session 8 update and P-016)**
+**Status: PROPOSED (referenced by T-002 and P-016)**
 
 ---
 

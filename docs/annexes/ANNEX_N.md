@@ -1,4 +1,4 @@
-# ANNEX N. Transition, Genesis, and Deployability Preconditions
+# ANNEX N — Transition, Genesis, and Deployability Preconditions
 **Purpose.** Steady-state architecture is not enough. The first 90 days of rollout can lock in capture for generations. This annex therefore expands the transition pathway, names who decides what at genesis, and states when the protocol is not yet legitimately deployable.
 
 **Design principle: if the founding moment is captured, later safeguards inherit the capture.**

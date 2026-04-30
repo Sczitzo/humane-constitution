@@ -1,4 +1,4 @@
-# ANNEX Q. Minimum Viable Pilot Stack and Transition Doctrine
+# ANNEX Q — Minimum Viable Pilot Stack and Transition Doctrine
 **Purpose.** The protocol is not an all-at-once deployment blueprint. This Annex defines the minimum coherent subset that can be piloted and states the transition doctrine explicitly.
 
 ### Q1. Transition doctrine

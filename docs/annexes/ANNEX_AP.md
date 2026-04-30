@@ -1,4 +1,4 @@
-# Annex AP — PCRP Attack Surface Hardening
+# ANNEX AP — PCRP Attack Surface Hardening
 
 **Status:** PROPOSED | **Priority:** High | **Patch:** P-015
 **Threats addressed:** T-018 (PCRP False-Trigger Exhaustion Attack), T-019 (Demand-Context Flag Suppression Attack)

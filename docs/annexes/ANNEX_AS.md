@@ -1,4 +1,4 @@
-# Annex AS — Attestation-at-Risk Stake Mechanism
+# ANNEX AS — Attestation-at-Risk Stake Mechanism
 
 **Status: ACTIVE — founding commitments bound (FC-080, FC-081, FC-082) — Proposal 9 close-out, 2026-04-18**
 **Governs:** contribution attestation, hardship attestation, civic identity attestation, and any Service Record or Voice allocation that depends on third-party verification.

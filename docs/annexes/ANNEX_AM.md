@@ -1,4 +1,4 @@
-# Annex AM — Electoral Cycle Resilience
+# ANNEX AM — Electoral Cycle Resilience
 
 **Status:** PROPOSED | **Priority:** Critical | **Patch:** P-018
 **Threat addressed:** T-022 (Electoral Cycle Capture)

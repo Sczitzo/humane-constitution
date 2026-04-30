@@ -1,4 +1,4 @@
-# ANNEX V. Transition Mechanics, Conversion, and Legacy-System Treatment
+# ANNEX V — Transition Mechanics, Conversion, and Legacy-System Treatment
 **Purpose.** Annex Q states the transition doctrine. This Annex adds operational mechanics so transition is not left at the level of aspiration. Where Annex V conflicts with looser transition language elsewhere, Annex V governs.
 
 **Design principle: no full cutover without a published answer to deposits, debts, contracts, foreign claims, and payments continuity.**

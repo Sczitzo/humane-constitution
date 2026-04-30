@@ -1,4 +1,4 @@
-# Annex AJ — Above-Ledger Bypass Worked Examples
+# ANNEX AJ — Above-Ledger Bypass Worked Examples
 
 **Pre-launch gate: required before system deployment · Governed as P-004 protected specification**
 **Status: ACTIVE — penalty schedule bound to Founding Commitments FC-010, FC-040, FC-041 (Proposal 7 close-out, 2026-04-18)**
@@ -9,7 +9,7 @@
 
 T-001 (Shadow Convertibility) and its mitigation P-001 address on-ledger arbitrage: direct trades of Essential Access for Flow, proxy redemption, and broker-mediated exchanges that touch the ledger. P-001's detection infrastructure monitors these channels.
 
-This annex addresses the gap identified in Session 8: **above-ledger bypass** — convertibility attacks that do not touch the ledger at all and therefore evade P-001 detection entirely. In above-ledger bypass, the boundary between Flow, Essential Access, Voice and Service Record, and Shared Storehouse is not breached on the ledger; it is circumvented through arrangements made entirely in the social and economic layer above it.
+This annex addresses the gap identified during adversarial review: **above-ledger bypass** — convertibility attacks that do not touch the ledger at all and therefore evade P-001 detection entirely. In above-ledger bypass, the boundary between Flow, Essential Access, Voice and Service Record, and Shared Storehouse is not breached on the ledger; it is circumvented through arrangements made entirely in the social and economic layer above it.
 
 The purpose of this annex is to enumerate specific prohibited patterns per instrument boundary so that:
 1. The legal and enforcement definition of "convertibility violation" extends above the ledger.

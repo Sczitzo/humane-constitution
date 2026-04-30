@@ -1,7 +1,7 @@
-# Register Disclosure Protocol
+# ANNEX AO — Register Disclosure Protocol
 
-**Annex AO — Governing document for Threat Register bifurcation**
-**Status: PROPOSED (P-021) · Session 8**
+**Governing document for Threat Register bifurcation**
+**Status: PROPOSED (P-021)**
 
 ---
 
@@ -164,7 +164,7 @@ The CFRL (Citizen-Facing Rights Layer) and Article VII public dashboard must inc
 
 ## Part 6 — Applicability
 
-This protocol applies to the Threat Register (`Threat_Register.md`) as of Session 8 and to any successor register documents. It does not apply to the Patch Log (which does not contain operational calibration data), the Annual Compound Simulation (which is fully public), or the Adversarial Narrative Simulation (which is fully public).
+This protocol applies to the Threat Register (`Threat_Register.md`) and to any successor register documents. It does not apply to the Patch Log (which does not contain operational calibration data), the Annual Compound Simulation (which is fully public), or the Adversarial Narrative Simulation (which is fully public).
 
 If other documents are identified as requiring bifurcation under this logic, a new annex must be created rather than extending AO retroactively.
 

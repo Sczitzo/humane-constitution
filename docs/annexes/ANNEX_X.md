@@ -1,4 +1,4 @@
-# ANNEX X. Flow Issuance Architecture
+# ANNEX X — Flow Issuance Architecture
 **Purpose.** The protocol cannot be capture-resistant if the point of money creation remains vague. This annex defines how Flow comes into existence, who may authorize it, how issuance is bounded, and how issuance abuse is red-team tested. Where Annex X conflicts with looser issuance language elsewhere, Annex X governs.
 
 **Design principle: issue Flow against verified productive commitments, not against discretionary stock politics or financial privilege.**

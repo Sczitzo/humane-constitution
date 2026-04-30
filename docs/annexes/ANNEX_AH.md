@@ -1,4 +1,4 @@
-# ANNEX AH — Bootstrap Resolution: P-013 First-Mover Activation (P-014 / T-017)
+# ANNEX AH — Founding Bootstrap Resolution
 
 **Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard Formal Acceptance Protocol activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE. Status: PROPOSED.
 

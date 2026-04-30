@@ -1,4 +1,4 @@
-# ANNEX AF — Grace Exploitation Loop Hardening (P-009)
+# ANNEX AF — Grace Period Exploitation Clauses
 
 **Purpose.** This annex introduces operative clauses for P-009 (T-009 Grace Exploitation Loop). It amends Annex K4 (Protected Pause), extends P-002 collusion analytics to hardship attestation, and closes the T-009 × T-008 bypass route. Status: PROPOSED.
 
@@ -69,6 +69,6 @@ P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpo
 | T-015 | P-012 | PROPOSED | AE2.4 | S3 |
 | T-009 | P-009 | PROPOSED | AF | S4 |
 
-*Session 4 complete. T-009 addressed. All named threats now have mitigation designs. Priority open items: White Paper sync (mandatory pre-launch), Technical Reference diagram update, formal acceptance of Annexes AC–AF.*
+*T-009 is addressed via P-009. All threats named through this annex have mitigation designs. Outstanding pre-launch items: White Paper sync, Technical Reference diagram update, and formal acceptance of Annexes AC–AF.*
 
 ---

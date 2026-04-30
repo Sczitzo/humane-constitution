@@ -1,4 +1,4 @@
-# ANNEX I. Residency, Migration, and Onboarding Article
+# ANNEX I — Residency, Migration, and Onboarding Article
 **Purpose.** This annex defines who may enter, reside, onboard, and gain full civic standing in the system. It protects humane treatment, identity continuity, and family stability while preventing membership from becoming a purchasable asset, a political-stacking tool, or a backdoor pressure valve on Essential Access, housing, Voice, or Service Record.
 
 **Design principle: belonging must be humane, capacity-aware, non-purchasable, and non-exploitable;** the system must neither invite predation nor punish vulnerability.

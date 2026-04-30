@@ -1,4 +1,4 @@
-# ANNEX T. Compound Failure Scenarios and Interface Stress Tests
+# ANNEX T — Compound Failure Scenarios and Interface Stress Tests
 **Purpose.** Complex systems fail at interfaces. This Annex supplements the single-threat register by defining compound stress tests that deliberately cross articles, instruments, and institutions.
 
 ### T1. Scenario class A - regional food shortage plus oracle manipulation plus Essential Access coercion

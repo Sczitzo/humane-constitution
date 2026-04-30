@@ -1,4 +1,4 @@
-# Annex AI — Federated Ombuds Constitution
+# ANNEX AI — Federated Ombuds Constitution
 
 **Status:** ACTIVE — Proposal 8 close-out, 2026-04-18
 **Authority:** Tier 1 structural (FC-090, FC-091 lock the federation and its threshold; FC-092 governs terms).

@@ -1,4 +1,4 @@
-# ANNEX Z. Voice and Service Record Civic Architecture
+# ANNEX Z — Voice and Service Record Civic Architecture
 
 ### Z1. Purpose and superseding interpretation
 This annex defines the two civic instruments used by Article VI. **Voice** governs bounded agenda weighting and budget prioritization. **Service Record** governs eligibility for rotating institutional service roles. Their separation reduces hierarchy reproduction, lowers the stakes of ordinary civic weighting, and prevents one concentrated civic balance from simultaneously dominating agendas and institutional service pipelines.

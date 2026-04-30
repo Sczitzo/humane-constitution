@@ -1,4 +1,4 @@
-# Annex AN — Pilot External Validity Gate
+# ANNEX AN — Pilot External Validity Gate
 
 **Status:** PROPOSED | **Priority:** Med-High | **Patch:** P-019
 **Threat addressed:** T-023 (Pilot External Validity Collapse)

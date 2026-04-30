@@ -4,45 +4,47 @@ This directory holds the standalone annex corpus for the Humane Constitution. Th
 
 ## Core constitutional annexes
 
-- [Annex A](./ANNEX_A.md) through [Annex C](./ANNEX_C.md) — baseline red-team, threat, and threat-operations material.
-- [Annex H](./ANNEX_H.md) — amendment article and change control.
+- [Annex A](./ANNEX_A.md) — adversarial test suite and red-team method.
+- [Annex B](./ANNEX_B.md) — threat register baseline.
+- [Annex C](./ANNEX_C.md) — threat register operations, workflow, and evidence.
+- [Annex H](./ANNEX_H.md) — amendment article and constitutional change control.
 - [Annex I](./ANNEX_I.md) — residency, migration, and onboarding.
-- [Annex J](./ANNEX_J.md) — monetary calibration, demurrage, and instruments.
-- [Annex K](./ANNEX_K.md) — essential basket governance and civic fairness.
-- [Annex L](./ANNEX_L.md) — judicial architecture and Constitutional Review Panel (CRP).
+- [Annex J](./ANNEX_J.md) — monetary calibration, demurrage, and instrument discipline.
+- [Annex K](./ANNEX_K.md) — essential basket governance and civic participation fairness.
+- [Annex L](./ANNEX_L.md) — judicial architecture and Constitutional Review Panel.
 - [Annex M](./ANNEX_M.md) — oracle architecture, physical reality, and measurement limits.
 - [Annex N](./ANNEX_N.md) — transition, genesis, and deployability preconditions.
-- [Annex P](./ANNEX_P.md) — proof-of-personhood tradeoffs.
+- [Annex P](./ANNEX_P.md) — proof-of-personhood, identity tradeoffs, and red lines.
 - [Annex Q](./ANNEX_Q.md) — minimum viable pilot stack and transition doctrine.
-- [Annex S](./ANNEX_S.md) — CRP anti-capture and failure recovery.
+- [Annex S](./ANNEX_S.md) — Constitutional Review Panel anti-capture and failure recovery.
 - [Annex T](./ANNEX_T.md) — compound failure scenarios and interface stress tests.
 - [Annex U](./ANNEX_U.md) — operational bypass closure and superseding clauses.
-- [Annex V](./ANNEX_V.md) — transition mechanics, conversion, and legacy treatment.
+- [Annex V](./ANNEX_V.md) — transition mechanics, conversion, and legacy-system treatment.
 - [Annex X](./ANNEX_X.md) — Flow issuance architecture.
-- [Annex Y](./ANNEX_Y.md) — Constitutional Survival Minimum and Essential Access continuity architecture.
+- [Annex Y](./ANNEX_Y.md) — Constitutional Survival Minimum and Essential Access continuity.
 - [Annex Z](./ANNEX_Z.md) — Voice and Service Record civic architecture.
 
-## Hardening-cycle annexes
+## Amendment and clause annexes
 
-- [Annex AB](./ANNEX_AB.md) — first hardening integration and interpretive control addendum.
-- [Annex AC](./ANNEX_AC.md) — session 2 hardening clauses.
-- [Annex AD](./ANNEX_AD.md) — narrative attack surface hardening.
-- [Annex AE](./ANNEX_AE.md) — compound interface tests and interface hardening.
-- [Annex AF](./ANNEX_AF.md) — grace-exploitation loop hardening.
-- [Annex AG](./ANNEX_AG.md) — Formal Acceptance Protocol integrity hardening.
-- [Annex AH](./ANNEX_AH.md) — bootstrap resolution for first-mover activation.
+- [Annex AB](./ANNEX_AB.md) — document governance and integration clauses.
+- [Annex AC](./ANNEX_AC.md) — governance throughput, measurement lag, and elite formation clauses.
+- [Annex AD](./ANNEX_AD.md) — narrative attack surface clauses.
+- [Annex AE](./ANNEX_AE.md) — compound interface tests and deadlock prevention clauses.
+- [Annex AF](./ANNEX_AF.md) — grace period exploitation clauses.
+- [Annex AG](./ANNEX_AG.md) — Formal Acceptance Protocol integrity clauses.
+- [Annex AH](./ANNEX_AH.md) — founding bootstrap resolution.
 - [Annex AI](./ANNEX_AI.md) — Federated Ombuds constitution.
 - [Annex AJ](./ANNEX_AJ.md) — above-ledger bypass worked examples.
 - [Annex AK](./ANNEX_AK.md) — identity asymmetric error doctrine.
 - [Annex AL](./ANNEX_AL.md) — methodology-class definitions for oracle independence.
-- [Annex AM](./ANNEX_AM.md) — electoral cycle resilience (P-018).
-- [Annex AN](./ANNEX_AN.md) — pilot external validity gate (P-019).
-- [Annex AO](./ANNEX_AO.md) — register-disclosure framework.
-- [Annex AP](./ANNEX_AP.md) — PCRP false-trigger exhaustion governance (P-015).
-- [Annex AQ](./ANNEX_AQ.md) — Shared Storehouse oracle-failure fallback.
-- [Annex AR](./ANNEX_AR.md) — contract-commitment architecture parameters.
+- [Annex AM](./ANNEX_AM.md) — electoral cycle resilience.
+- [Annex AN](./ANNEX_AN.md) — pilot external validity gate.
+- [Annex AO](./ANNEX_AO.md) — register disclosure protocol.
+- [Annex AP](./ANNEX_AP.md) — PCRP attack surface governance.
+- [Annex AQ](./ANNEX_AQ.md) — Shared Storehouse oracle-failure fallback protocol.
+- [Annex AR](./ANNEX_AR.md) — contract-commitment architecture: threshold values and governance parameters.
 - [Annex AS](./ANNEX_AS.md) — attestation-at-risk stake mechanism.
-- [Annex AV](./ANNEX_AV.md) — two-key Tier 1 invariant precondition (P-034).
+- [Annex AV](./ANNEX_AV.md) — two-key architectural precondition for Tier-1 invariant enforcement.
 
 ## Reading rule
 

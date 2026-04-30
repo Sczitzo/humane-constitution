@@ -1,4 +1,4 @@
-# ANNEX J. Monetary Calibration, Long-Horizon Capital, and Instrument Discipline
+# ANNEX J — Monetary Calibration, Long-Horizon Capital, and Instrument Discipline
 **Purpose.** This annex refines the monetary architecture where hidden economic failure would otherwise appear: demurrage theory, long-horizon investment, instrument naming discipline, and calibration rules. It does not alter the constitutional separation among Flow, Essential Access, Voice, Service Record, and Shared Storehouse; it clarifies how the system uses Flow without punishing productive build time or silently recreating rent-seeking.
 
 **Design principle: punish idle extraction, not patient production.**
@@ -12,7 +12,7 @@ Demurrage exists to reduce passive hoarding, concentration, and rent-seeking bas
 
 ### J2. Default calibration corridor and operating-float exemption
 The protocol therefore adopts a corridor rather than a sacred number.
-- **Default Option B rate:** 0.5% per month on idle Flow above a published operating-float exemption.
+- **Default demurrage rate:** 0.5% per month on idle Flow above a published operating-float exemption.
 - **Permitted review corridor:** 0.25%-1.00% per month, adjusted only through published Tier 3 process and mandatory public evidence.
 - **Operating-float exemption:** households receive a safe harbor equal to 6 months of median regional consumption expenditure. Enterprises receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis. Balances above this threshold require either ordinary demurrage treatment or a protected-capital pathway.
 - **Equivalence rule:** any asset or instrument above the household-safe-harbor threshold that functions primarily as a non-decaying store of value - including foreign currency, collectible portfolios, non-productive durable stockpiles, or equivalent wrappers - is subject to review for Flow-equivalent carrying-cost treatment regardless of legal form.

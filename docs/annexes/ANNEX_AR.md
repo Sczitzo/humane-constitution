@@ -1,4 +1,4 @@
-# Annex AR — Contract-Commitment Architecture: Threshold Values and Governance Parameters
+# ANNEX AR — Contract-Commitment Architecture: Threshold Values and Governance Parameters
 
 **Tier 2 founding commitment — required before deployment · Governed as P-004 protected specification**
 **Status: PROPOSED (referenced by P-023)**

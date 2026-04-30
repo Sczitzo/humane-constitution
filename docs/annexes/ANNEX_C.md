@@ -1,4 +1,4 @@
-# ANNEX C. Threat Register Operations (Workflow and Evidence)
+# ANNEX C — Threat Register Operations (Workflow and Evidence)
 This annex defines how the Threat Register is maintained, tested, audited, and patched over time. It converts the register from a static table into an operational control system.
 
 ### C-1. Purpose
@@ -27,7 +27,7 @@ Each Threat ID must have a named Owner accountable for controls and test evidenc
 6. **Implement + verify:** deploy controls behind staged rollout; require test pass + evidence package.
 7. **Operate:** monitor continuously; patch quickly; update residual risk; close only when root causes are addressed or risk is explicitly accepted by oversight.
 
-### C-4. Cadence (Option B with quarterly Voice cycles)
+### C-4. Review Cadence
 Quarterly cycles reduce governance noise while keeping the system responsive. Monitoring and audits remain more frequent than the decision cycle.
 
 | Frequency | Activities | Outputs |
