@@ -1,3 +1,7 @@
+---
+title: Constitutional Invariants
+---
+
 # INVARIANTS.md — Constitutional Invariants of The Humane Constitution
 
 **Status:** Tier 1 Protected (unamendable by any supermajority; amendment requires full constitutional refounding under P-014 procedure)  

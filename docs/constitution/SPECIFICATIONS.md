@@ -1,3 +1,7 @@
+---
+title: Formal System Specifications
+---
+
 # SPECIFICATIONS.md — Formal System Specifications
 
 **Document type:** Technical specification  

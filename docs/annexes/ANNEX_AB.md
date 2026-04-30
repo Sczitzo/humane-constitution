@@ -44,7 +44,4 @@ The first hardening cycle is now represented in the running documents as follows
 - T-004 / P-002 — Incentive System Stabilization
 - T-007 / P-004 — Definition Drift Protection
 
-### AB7. Next Hardening Queue
-The next red-team queue, to be continued through the running documents, is prioritized as follows: T-005 Governance Throughput Failure; T-006 Measurement Lag and Supply Shock Behavior; T-008 Bureaucratic Elite Formation; T-011 Narrative Attack Surface; and compound interface tests across identity, scarcity, issuance, and civic weighting.
-
 **Interpretive rule.** Where earlier language in this Protocol can be read more loosely than the controls set out in Annex AB, Annex AB governs to the extent necessary to preserve unconditional survival, non-convertibility, non-coercion, and anti-capture integrity.

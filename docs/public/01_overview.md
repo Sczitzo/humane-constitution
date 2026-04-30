@@ -73,10 +73,10 @@ So the right stance is neither blind belief nor dismissal. The right stance is s
 
 ## Read next
 
-- [`03_readiness.md`](./03_readiness.md)
-- [`Claims_Evidence_Register.md`](../governance/Claims_Evidence_Register.md)
-- [`Pilot_Evidence_Roadmap.md`](../governance/Pilot_Evidence_Roadmap.md)
-- [`./04_white_paper.md`](./04_white_paper.md)
-- [`./05_rights_layer.md`](./05_rights_layer.md)
-- [`../Humane_Constitution.md`](../constitution/Humane_Constitution.md)
-- [`../Threat_Register.md`](../governance/Threat_Register.md)
+- [Readiness Assessment](./03_readiness.md) — what the system has and has not yet built; where the gaps are
+- [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — the live ledger of empirical claims and their current evidential status
+- [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — the sequenced plan for closing the evidence gaps
+- [White Paper](./04_white_paper.md) — the full technical and economic argument for the protocol
+- [Rights Layer](./05_rights_layer.md) — the enforceable rights that underpin the survival floor
+- [Humane Constitution](../constitution/Humane_Constitution.md) — the founding constitutional text with all articles and amendments
+- [Threat Register](../governance/Threat_Register.md) — the adversarial catalogue of attack vectors and their mitigations

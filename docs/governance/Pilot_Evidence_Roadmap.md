@@ -1,6 +1,6 @@
 # Pilot Evidence Roadmap
 
-This roadmap turns the claims in [`Claims_Evidence_Register.md`](./Claims_Evidence_Register.md) into testable work.
+This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md) into testable work.
 
 The project should not move from design to scale by confidence, enthusiasm, or moral urgency alone. It needs staged evidence. Each pilot below is meant to answer one question: **does this mechanism still protect dignity when it meets real-world incentives, constraints, errors, and bad actors?**
 

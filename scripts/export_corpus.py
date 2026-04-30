@@ -24,6 +24,7 @@ CORE_DOCS = (
     "docs/governance/Claims_Evidence_Register.md",
     "docs/governance/Founding_Preactivation_Disclosure.md",
     "docs/governance/Pilot_Evidence_Roadmap.md",
+    "docs/governance/Hardening_Queue.md",
     "docs/public/01_overview.md",
     "docs/public/02_faq.md",
     "docs/public/03_readiness.md",

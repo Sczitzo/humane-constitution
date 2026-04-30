@@ -68,4 +68,4 @@ When editing public-facing material:
 3. Avoid deployment language unless the mechanism has pilot or implementation proof.
 4. If a new claim does not fit this register, either add it here or soften the claim.
 
-For the staged testing path, use [`Pilot_Evidence_Roadmap.md`](./Pilot_Evidence_Roadmap.md).
+For the staged testing path, use the [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md).

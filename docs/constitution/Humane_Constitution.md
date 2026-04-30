@@ -33,7 +33,7 @@ This protocol was built in public, stress-tested adversarially, and released wit
 
 ---
 
-**Document posture:** this file is the lean constitutional text. Supporting annexes, hardening clauses, and detailed specifications live in the standalone annex corpus at [`docs/annexes/INDEX.md`](docs/annexes/INDEX.md).
+**Document posture:** this file is the lean constitutional text. Supporting annexes, hardening clauses, and detailed specifications live in the standalone [Annex Directory](docs/annexes/INDEX.md).
 
 ### Authoritative document set (current)
 1. **Humane Constitution** — primary constitutional source of truth.
@@ -64,21 +64,21 @@ This protocol was built in public, stress-tested adversarially, and released wit
 
 **Architectural enforcement layer (Proposal 1 close-out, 2026-04-18).**
 The above invariants are not only textually protected but **mechanically enforced** via the architecture/ directory:
-- [`architecture/parameter_registry.md`](architecture/parameter_registry.md) — Tier 1 parameter registry with cryptographic hash commitment.
-- [`architecture/amendment_protocol.md`](architecture/amendment_protocol.md) — 7-of-9 holder signatures (FC-110) and 180-day timelock (FC-111) required for any Tier 1 change.
-- [`architecture/drift_chain.md`](architecture/drift_chain.md) — append-only published version history; silent modification is detectable at first operational-node startup.
-- [`architecture/implementation_binding.md`](architecture/implementation_binding.md) — every bound component verifies the drift-chain head on startup and refuses to operate on unverified state (with the CSM-dispensation exception per Annex Y unconditionality).
+- [Parameter Registry](architecture/parameter_registry.md) — Tier 1 parameter registry with cryptographic hash commitment.
+- [Amendment Protocol](architecture/amendment_protocol.md) — 7-of-9 holder signatures (FC-110) and 180-day timelock (FC-111) required for any Tier 1 change.
+- [Drift Chain](architecture/drift_chain.md) — append-only published version history; silent modification is detectable at first operational-node startup.
+- [Implementation Binding](architecture/implementation_binding.md) — every bound component verifies the drift-chain head on startup and refuses to operate on unverified state (with the CSM-dispensation exception per Annex Y unconditionality).
 
 Changes to Tier 1 invariants require the full architectural process. Changes to the architectural enforcement layer itself are also Tier 1 and subject to the same process (recursive). The architectural layer protects against silent drift below the amendment threshold; it does not and cannot prevent legitimate H-3 amendment by a lawful supermajority of holders, but it guarantees visibility, response time (180 days), and public auditability of any such change.
 
 **Founding Order — Subsidiarity, Consent & Exit (Proposal 5 close-out, 2026-04-18).**
 Beneath the seven operational articles, this protocol rests on a foundational scale-and-consent layer, the **Founding Order**, that defines who consents to be governed by the protocol, at what scale, and how they withdraw. The Founding Order is Tier 1 architectural:
-- [`founding/order/README.md`](founding/order/README.md) — overview and integration with the current Founding Order + Articles I-VII architecture.
-- [`founding/order/subsidiarity_rule.md`](founding/order/subsidiarity_rule.md) — decisions default to the smallest competent scale; federation action requires affirmative justification.
-- [`founding/order/consent_protocol.md`](founding/order/consent_protocol.md) — affirmative consent is a published act, not a presumption. Non-consenting units are outside protocol scope except for the CSM floor.
-- [`founding/order/exit_protocol.md`](founding/order/exit_protocol.md) — any locality or larger unit may exit by **2/3 resident-personhood supermajority (FC-120)** with a **730-day graceful unwind (FC-121)**. Essential Access continuity is preserved for individuals during unwind; no exit tax, no forfeiture.
-- [`founding/order/reentry_protocol.md`](founding/order/reentry_protocol.md) — procedurally symmetric re-entry; no penalty for previously-exited units.
-- [`founding/order/jurisdictional_scales.md`](founding/order/jurisdictional_scales.md) — five scales per **FC-122**: household, neighborhood (≤500), locality (≤5,000), region (≤500,000), federation.
+- [Founding Order Overview](founding/order/README.md) — overview and integration with the current Founding Order + Articles I-VII architecture.
+- [Subsidiarity Rule](founding/order/subsidiarity_rule.md) — decisions default to the smallest competent scale; federation action requires affirmative justification.
+- [Consent Protocol](founding/order/consent_protocol.md) — affirmative consent is a published act, not a presumption. Non-consenting units are outside protocol scope except for the CSM floor.
+- [Exit Protocol](founding/order/exit_protocol.md) — any locality or larger unit may exit by **2/3 resident-personhood supermajority (FC-120)** with a **730-day graceful unwind (FC-121)**. Essential Access continuity is preserved for individuals during unwind; no exit tax, no forfeiture.
+- [Re-entry Protocol](founding/order/reentry_protocol.md) — procedurally symmetric re-entry; no penalty for previously-exited units.
+- [Jurisdictional Scales](founding/order/jurisdictional_scales.md) — five scales per **FC-122**: household, neighborhood (≤500), locality (≤5,000), region (≤500,000), federation.
 
 The Founding Order is read *through* every operational article: each article's default resolution scale is the smallest competent unit; federation-scale operation requires affirmative justification under the subsidiarity rule. Tier 1 human-dignity invariants (CSM) are the single exception that binds everywhere regardless of consent — because human dignity is not a subject of vote.
 
@@ -86,7 +86,7 @@ The Founding Order is read *through* every operational article: each article's d
 
 ## How to read this document
 - **Main body:** Sections I-VIII state the constitutional architecture, operating logic, baseline settings, and illustrative user flows.
-- **Annex corpus:** standalone annex documents live in [`docs/annexes/INDEX.md`](docs/annexes/INDEX.md). Use that directory for threat operations, change control, transition mechanics, hardening clauses, and detailed operational guidance.
+- **Annex corpus:** standalone annex documents live in the [Annex Directory](docs/annexes/INDEX.md). Use that directory for threat operations, change control, transition mechanics, hardening clauses, and detailed operational guidance.
 
 ---
 
@@ -529,7 +529,7 @@ Constitutional rules, rights, and survival access remain one-person-one-vote, an
 
 ## Annex Directory
 
-The constitutional annex corpus is maintained as standalone files in [`docs/annexes/INDEX.md`](docs/annexes/INDEX.md).
+The constitutional annex corpus is maintained as standalone files in the [Annex Directory](docs/annexes/INDEX.md).
 
 - **Operative annexes:** threat operations, amendment mechanics, transition rules, issuance architecture, civic-layer specifics, and hardening clauses.
 - **Supporting annexes:** detailed operational rules, threat operations, and explanatory specifications kept out of the constitutional body.

@@ -7,7 +7,7 @@ const VIEW_STORAGE_KEY = 'humane-reader:last-view'
 
 function readStoredView(): AppView {
   if (typeof window === 'undefined') {
-    return 'overview'
+    return 'home'
   }
 
   const value = window.localStorage.getItem(VIEW_STORAGE_KEY)
@@ -22,8 +22,8 @@ function readStoredView(): AppView {
     value === 'validation' ||
     value === 'settings'
   ) {
-    // Map legacy 'overview' → 'home'.
-    return value === 'overview' ? 'home' : value
+    // Map legacy 'overview' and 'settings' → 'home'.
+    return (value === 'overview' || value === 'settings') ? 'home' : value
   }
 
   return 'home'

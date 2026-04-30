@@ -140,13 +140,6 @@ When the concentration dashboard shows the cohort overlap index exceeding the pu
 
 ---
 
-### AC5. Next Hardening Queue
-The following threats remain in the hardening queue following Session 2:
-- **T-011 — Narrative Attack Surface.** Compound threat with T-008: elite formation creates the narrative vulnerability; P-008 concentration dashboard provides the evidence base for defense.
-- **Compound interface tests** — identity × scarcity × issuance × civic weighting. Annual simulation requirement extended per P-005 AC1 and P-006 AC2.
-- **Ombuds Office concentration risk** (open question from P-008) — who audits the auditors of elite formation?
-- **T-006 cross-threat validation** — PCRP authority at Regional Executive Body level assessed for T-008 elite formation risk.
-
 *This annex is part of the Humane Constitution document set. It must be integrated into the Humane Constitution before public distribution. Where this annex conflicts with earlier language, this annex governs. The patch log extension (P-005, P-006, P-008) and threat register additions (T-005, T-006, T-008) are companion documents to this annex.*
 
 ---

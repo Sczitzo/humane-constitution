@@ -69,6 +69,4 @@ White Paper updates for P-011 activation are governed as Tier 3 operational chan
 | T-008 | P-008 | PROPOSED | AC3 |
 | T-011 | P-011 | PROPOSED | AD |
 
-*Session 2 hardening complete. Next queue: compound interface tests (Annex T).*
-
 ---

@@ -28,3 +28,4 @@ test-results/
 
 # macOS
 .DS_Store
+.vercel

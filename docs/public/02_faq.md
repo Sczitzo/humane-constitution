@@ -78,9 +78,9 @@ Because the project is aimed at a simple question: should losing money mean losi
 
 Start with:
 
-1. [`01_overview.md`](./01_overview.md)
-2. [`03_readiness.md`](./03_readiness.md)
-3. [`Claims_Evidence_Register.md`](../governance/Claims_Evidence_Register.md)
-4. [`Pilot_Evidence_Roadmap.md`](../governance/Pilot_Evidence_Roadmap.md)
-5. [`./04_white_paper.md`](./04_white_paper.md)
-6. [`./05_rights_layer.md`](./05_rights_layer.md)
+1. [One-Page Overview](./01_overview.md) — the shortest public explanation
+2. [Public Readiness Guide](./03_readiness.md) — what the project claims, what still needs proof, and where to push hardest
+3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — the live claim-by-claim audit of design vs. evidence
+4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — the staged testing plan before any scale-up
+5. [White Paper](./04_white_paper.md) — the fuller public explanation of the economic and governance design
+6. [Rights Layer](./05_rights_layer.md) — the plain-language rights summary

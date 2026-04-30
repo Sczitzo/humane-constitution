@@ -1,4 +1,4 @@
-import { startTransition, useDeferredValue, useEffect, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
+import { startTransition, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
 import { StatechartDiagram } from './StatechartDiagram'
 import { invoke } from '@tauri-apps/api/core'
 import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
@@ -150,6 +150,7 @@ const KEYBOARD_NAV_VIEWS: AppView[] = [
 
 const PINNED_DOCS_STORAGE_KEY = 'humane-reader:pinned-docs'
 const RECENT_DOCS_STORAGE_KEY = 'humane-reader:recent-docs'
+const READ_DOCS_STORAGE_KEY   = 'humane-reader:read-docs'
 const READING_MODE_STORAGE_KEY = 'humane-reader:reading-mode'
 const CORPUS_STAMP_STORAGE_KEY = 'humane-reader:corpus-stamp'
 const MAX_RECENT_DOCS = 8
@@ -506,6 +507,63 @@ function parseTable(lines: string[]): { headers: string[]; rows: string[][] } | 
   return { headers, rows }
 }
 
+// ── Status badge helpers ──────────────────────────────────────────────────────
+
+type StatusMeta = { badgeClass: string; rowClass: string; label: string }
+
+const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
+  { pattern: /^ACTIVE$/i,              meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ACTIVE' } },
+  { pattern: /^ADDRESSED\*?$/i,        meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ADDRESSED' } },
+  { pattern: /^CLOSED$/i,              meta: { badgeClass: 's-closed',   rowClass: 'row-closed',   label: 'CLOSED' } },
+  { pattern: /^PROPOSED$/i,            meta: { badgeClass: 's-proposed', rowClass: 'row-proposed', label: 'PROPOSED' } },
+  { pattern: /^PARTIAL$/i,             meta: { badgeClass: 's-partial',  rowClass: 'row-partial',  label: 'PARTIAL' } },
+  { pattern: /^OPEN$/i,                meta: { badgeClass: 's-open',     rowClass: 'row-open',     label: 'OPEN' } },
+  { pattern: /^ONGOING$/i,             meta: { badgeClass: 's-ongoing',  rowClass: 'row-ongoing',  label: 'ONGOING' } },
+  { pattern: /^FOUNDING$/i,            meta: { badgeClass: 's-founding', rowClass: 'row-founding', label: 'FOUNDING' } },
+  { pattern: /^\*\*ACTIVE\*\*$/i,      meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ACTIVE' } },
+  { pattern: /^\*\*ADDRESSED\*?\*\*$/, meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ADDRESSED' } },
+  { pattern: /^\*\*PROPOSED\*\*$/i,    meta: { badgeClass: 's-proposed', rowClass: 'row-proposed', label: 'PROPOSED' } },
+  { pattern: /^\*\*PARTIAL\*\*$/i,     meta: { badgeClass: 's-partial',  rowClass: 'row-partial',  label: 'PARTIAL' } },
+  { pattern: /^\*\*OPEN\*\*$/i,        meta: { badgeClass: 's-open',     rowClass: 'row-open',     label: 'OPEN' } },
+  { pattern: /^\*\*ONGOING\*\*$/i,     meta: { badgeClass: 's-ongoing',  rowClass: 'row-ongoing',  label: 'ONGOING' } },
+  { pattern: /^\*\*FOUNDING\*\*$/i,    meta: { badgeClass: 's-founding', rowClass: 'row-founding', label: 'FOUNDING' } },
+  { pattern: /^\*\*CLOSED\*\*$/i,      meta: { badgeClass: 's-closed',   rowClass: 'row-closed',   label: 'CLOSED' } },
+  { pattern: /^\*\*Critical\*\*$/i,    meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
+  { pattern: /^Critical$/i,            meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
+  { pattern: /^\*\*High\*\*$/i,        meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
+  { pattern: /^High$/i,                meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
+  { pattern: /^Medium$/i,              meta: { badgeClass: 's-medium',   rowClass: '',             label: 'Medium' } },
+  { pattern: /^Low$/i,                 meta: { badgeClass: 's-low',      rowClass: '',             label: 'Low' } },
+]
+
+function matchStatus(cell: string): StatusMeta | null {
+  const trimmed = cell.trim()
+  for (const { pattern, meta } of STATUS_MAP) {
+    if (pattern.test(trimmed)) return meta
+  }
+  return null
+}
+
+function getRowStatusClass(row: string[]): string {
+  for (const cell of row) {
+    const meta = matchStatus(cell)
+    if (meta?.rowClass) return meta.rowClass
+  }
+  return ''
+}
+
+function renderTableCell(text: string, keyPrefix: string, query: string): React.ReactNode {
+  const meta = matchStatus(text.trim())
+  if (meta) {
+    return (
+      <span className={`status-badge ${meta.badgeClass}`}>
+        {meta.label.replace(/\*/g, '')}
+      </span>
+    )
+  }
+  return renderInline(text, keyPrefix, query)
+}
+
 function headingScrollId(doc: CorpusDoc, slug: string): string {
   return `${doc.id}--${slug}`
 }
@@ -534,6 +592,62 @@ function escapeSelectorValue(value: string): string {
 
   return value.replace(/["\\]/g, '\\$&')
 }
+
+// ── appearance settings ────────────────────────────────────────────────────
+
+const FONT_SIZE_KEY    = 'humane-reader:font-size'
+const COLUMN_WIDTH_KEY = 'humane-reader:column-width'
+
+type FontSizeOption  = 'sm' | 'md' | 'lg' | 'xl'
+type ColumnWidthOption = 'narrow' | 'normal' | 'wide'
+
+const FONT_SIZE_VALUES: Record<FontSizeOption, string> = {
+  sm: '14px', md: '16px', lg: '18px', xl: '20px',
+}
+const COLUMN_WIDTH_VALUES: Record<ColumnWidthOption, string> = {
+  narrow: '38rem', normal: '52rem', wide: '68rem',
+}
+
+function readFontSize(): FontSizeOption {
+  const v = typeof window !== 'undefined' ? window.localStorage.getItem(FONT_SIZE_KEY) : null
+  return (v === 'sm' || v === 'md' || v === 'lg' || v === 'xl') ? v : 'md'
+}
+function readColumnWidth(): ColumnWidthOption {
+  const v = typeof window !== 'undefined' ? window.localStorage.getItem(COLUMN_WIDTH_KEY) : null
+  return (v === 'narrow' || v === 'normal' || v === 'wide') ? v : 'normal'
+}
+function applyFontSize(size: FontSizeOption) {
+  document.documentElement.style.setProperty('--reader-font-size', FONT_SIZE_VALUES[size])
+}
+function applyColumnWidth(width: ColumnWidthOption) {
+  document.documentElement.style.setProperty('--reader-column-width', COLUMN_WIDTH_VALUES[width])
+}
+
+const THEME_KEY = 'humane-reader:theme'
+type ThemeOption = 'light' | 'dark' | 'system'
+
+function readTheme(): ThemeOption {
+  const v = typeof window !== 'undefined' ? window.localStorage.getItem(THEME_KEY) : null
+  return (v === 'light' || v === 'dark' || v === 'system') ? v : 'system'
+}
+
+function resolveTheme(pref: ThemeOption): 'light' | 'dark' {
+  if (pref === 'system') {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+  return pref
+}
+
+function applyTheme(pref: ThemeOption) {
+  const resolved = resolveTheme(pref)
+  if (resolved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark')
+  } else {
+    document.documentElement.removeAttribute('data-theme')
+  }
+}
+
+// ── ─────────────────────────────────────────────────────────────────────────
 
 function selectedDocStorageKey(view: AppView): string {
   return `humane-reader:selected-doc:${view}`
@@ -719,8 +833,8 @@ function ActionButton({
 }) {
   const toneClass =
     tone === 'accent'
-      ? 'border-[rgba(159,108,49,0.4)] bg-[rgba(230,207,172,0.35)] text-accent-deep hover:bg-[rgba(230,207,172,0.55)]'
-      : 'border-line bg-[rgba(251,246,236,0.5)] text-ink-soft hover:text-ink-strong hover:bg-[rgba(251,246,236,0.85)]'
+      ? 'border-[rgba(159,108,49,0.45)] bg-[var(--accent-soft)] text-[var(--accent-deep)] hover:opacity-80'
+      : 'border-[var(--line-strong)] bg-[var(--paper-strong)] text-[var(--ink-soft)] hover:text-[var(--ink-strong)] hover:bg-[var(--paper-warm)]'
 
   return (
     <button
@@ -742,11 +856,13 @@ function DocumentRow({
   doc,
   selected,
   pinned = false,
+  read = false,
   onSelect,
 }: {
   doc: CorpusDoc
   selected: boolean
   pinned?: boolean
+  read?: boolean
   onSelect: () => void
   onOpenSource: () => void
 }) {
@@ -758,19 +874,26 @@ function DocumentRow({
       onClick={onSelect}
       className={`focus-ring group block w-full border-l-2 py-3 pl-4 pr-2 text-left transition ${
         selected
-          ? 'border-l-accent bg-[rgba(251,246,236,0.6)]'
-          : 'border-l-transparent hover:border-l-line hover:bg-[rgba(251,246,236,0.3)]'
+          ? 'border-l-accent bg-[var(--paper-strong)]'
+          : 'border-l-transparent hover:border-l-line hover:bg-[var(--paper-warm)]'
       }`}
     >
       <div className="flex items-baseline justify-between gap-3">
         <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">
           {SECTION_LABELS[doc.section]}
         </p>
-        {pinned ? (
-          <span aria-label="Pinned" title="Pinned" className="text-[11px] text-accent-deep">
-            ●
-          </span>
-        ) : null}
+        <span className="flex items-center gap-1.5">
+          {read ? (
+            <span aria-label="Read" title="Marked as read" className="text-[10px] text-sage-deep opacity-80">
+              ✓
+            </span>
+          ) : null}
+          {pinned ? (
+            <span aria-label="Pinned" title="Pinned" className="text-[11px] text-accent-deep">
+              ●
+            </span>
+          ) : null}
+        </span>
       </div>
       <h3
         className={`mt-1 font-serif text-[1.05rem] leading-snug ${
@@ -805,27 +928,40 @@ function QuickAccessSection({
   }
 
   return (
-    <section data-testid={testId} className="border-t border-line pl-4 pr-2 pt-3">
-      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{label}</p>
-      <ul className="mt-2 flex flex-col">
-        {docs.map((doc) => (
-          <li key={`${testId}-${doc.id}`}>
-            <button
-              data-testid={`${testId}-${doc.id}`}
-              type="button"
-              onClick={() => onSelect(doc)}
-              className="focus-ring group block w-full py-1.5 text-left transition"
-            >
-              <span className="block text-[10px] uppercase tracking-[0.14em] text-ink-faint">
-                {SECTION_LABELS[doc.section]}
-              </span>
-              <span className="mt-0.5 block line-clamp-2 font-serif text-[13.5px] leading-snug text-ink group-hover:text-ink-strong">
-                {doc.title}
-              </span>
-            </button>
-          </li>
-        ))}
-      </ul>
+    <section data-testid={testId} className="border-t border-line">
+      <details className="group/qa">
+        <summary className="flex cursor-pointer list-none items-center gap-1.5 px-4 py-2.5 select-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[rgba(159,108,49,0.4)]">
+          <svg
+            aria-hidden="true"
+            className="h-3 w-3 shrink-0 text-ink-faint transition-transform group-open/qa:rotate-90"
+            viewBox="0 0 12 12"
+            fill="currentColor"
+          >
+            <path d="M4 2.5 L8.5 6 L4 9.5 Z" />
+          </svg>
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{label}</span>
+          <span className="ml-auto font-mono text-[10px] text-ink-faint">{docs.length}</span>
+        </summary>
+        <ul className="flex flex-col pb-1 pl-4 pr-2">
+          {docs.map((doc) => (
+            <li key={`${testId}-${doc.id}`}>
+              <button
+                data-testid={`${testId}-${doc.id}`}
+                type="button"
+                onClick={() => onSelect(doc)}
+                className="focus-ring group block w-full py-1.5 text-left transition"
+              >
+                <span className="block text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+                  {SECTION_LABELS[doc.section]}
+                </span>
+                <span className="mt-0.5 block line-clamp-2 font-serif text-[13.5px] leading-snug text-ink group-hover:text-ink-strong">
+                  {doc.title}
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </details>
     </section>
   )
 }
@@ -1074,15 +1210,18 @@ function MarkdownDocument({
                   </tr>
                 </thead>
                 <tbody>
-                  {parsedTable.rows.map((row, rowIndex) => (
-                    <tr key={`${doc.id}-table-row-${index}-${rowIndex}`}>
-                      {row.map((cell, cellIndex) => (
-                        <td key={`${doc.id}-table-cell-${index}-${rowIndex}-${cellIndex}`}>
-                          {renderInline(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery)}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
+                  {parsedTable.rows.map((row, rowIndex) => {
+                    const rowClass = getRowStatusClass(row)
+                    return (
+                      <tr key={`${doc.id}-table-row-${index}-${rowIndex}`} className={rowClass || undefined}>
+                        {row.map((cell, cellIndex) => (
+                          <td key={`${doc.id}-table-cell-${index}-${rowIndex}-${cellIndex}`}>
+                            {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery)}
+                          </td>
+                        ))}
+                      </tr>
+                    )
+                  })}
                 </tbody>
               </table>
             </div>
@@ -1147,6 +1286,8 @@ function ReaderPanel({
   onOpenSource,
   pinned,
   onTogglePinned,
+  read,
+  onToggleRead,
   readingMode,
   onToggleReadingMode,
   copiedHeadingSlug,
@@ -1168,6 +1309,8 @@ function ReaderPanel({
   onOpenSource: () => void
   pinned: boolean
   onTogglePinned: () => void
+  read: boolean
+  onToggleRead: () => void
   readingMode: boolean
   onToggleReadingMode: () => void
   copiedHeadingSlug: string | null
@@ -1218,6 +1361,11 @@ function ReaderPanel({
             tone={pinned ? 'accent' : 'default'}
           />
           <ActionButton
+            label={read ? 'Mark unread' : 'Mark as read'}
+            onClick={onToggleRead}
+            tone={read ? 'accent' : 'default'}
+          />
+          <ActionButton
             label={readingMode ? 'Exit reading mode' : 'Reading mode'}
             onClick={onToggleReadingMode}
             tone={readingMode ? 'accent' : 'default'}
@@ -1236,7 +1384,7 @@ function ReaderPanel({
               value={searchQuery}
               onChange={(event) => onSearchChange(event.target.value)}
               placeholder="Find in text…"
-              className="focus-ring w-full min-w-0 rounded border border-line bg-[rgba(251,246,236,0.6)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint sm:w-56"
+              className="focus-ring w-full min-w-0 rounded border border-[var(--line-strong)] bg-[var(--paper-strong)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint sm:w-56"
             />
             <span
               data-testid="reader-search-status"
@@ -1273,7 +1421,8 @@ function ReaderPanel({
       <article data-testid="reader-paper-shell">
         <div
           data-testid="reader-document"
-          className={`mx-auto ${readingMode ? 'max-w-[44rem]' : 'max-w-[42rem]'}`}
+          className="mx-auto"
+          style={{ maxWidth: 'var(--reader-column-width)' }}
         >
           <MarkdownDocument
             doc={doc}
@@ -1465,6 +1614,8 @@ function ReaderWorkspace({
   onSelect,
   onSelectQuickDoc,
   onTogglePinned,
+  readDocIds,
+  onToggleRead,
   readingMode,
   onToggleReadingMode,
   onOpenSource,
@@ -1497,6 +1648,8 @@ function ReaderWorkspace({
   onSelect: (doc: CorpusDoc) => void
   onSelectQuickDoc: (doc: CorpusDoc) => void
   onTogglePinned: () => void
+  readDocIds: string[]
+  onToggleRead: () => void
   readingMode: boolean
   onToggleReadingMode: () => void
   onOpenSource: (doc: CorpusDoc) => void
@@ -1519,7 +1672,6 @@ function ReaderWorkspace({
   onJumpToPreviousMatch: () => void
   onJumpToNextMatch: () => void
 }) {
-  void railLabel
   if (!docs.length || !selectedDoc) {
     return (
       <article className="border-l-2 border-line py-6 pl-5">
@@ -1569,22 +1721,33 @@ function ReaderWorkspace({
               onSelect={onSelectQuickDoc}
             />
           ) : null}
-          <div
-            className={
-              pinnedDocs.length || recentDocs.length ? 'border-t border-line pt-3 mt-3' : ''
-            }
-          >
-            {docs.map((doc) => (
-              <DocumentRow
-                key={doc.id}
-                doc={doc}
-                selected={selectedDoc.id === doc.id}
-                pinned={pinnedDocIds.includes(doc.id)}
-                onSelect={() => onSelect(doc)}
-                onOpenSource={() => onOpenSource(doc)}
-              />
-            ))}
-          </div>
+          <details className="group/docs border-t border-line">
+            <summary className="flex cursor-pointer list-none items-center gap-1.5 px-4 py-2.5 select-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[rgba(159,108,49,0.4)]">
+              <svg
+                aria-hidden="true"
+                className="h-3 w-3 shrink-0 text-ink-faint transition-transform group-open/docs:rotate-90"
+                viewBox="0 0 12 12"
+                fill="currentColor"
+              >
+                <path d="M4 2.5 L8.5 6 L4 9.5 Z" />
+              </svg>
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{railLabel}</span>
+              <span className="ml-auto font-mono text-[10px] text-ink-faint">{docs.length}</span>
+            </summary>
+            <div>
+              {docs.map((doc) => (
+                <DocumentRow
+                  key={doc.id}
+                  doc={doc}
+                  selected={selectedDoc.id === doc.id}
+                  pinned={pinnedDocIds.includes(doc.id)}
+                  read={readDocIds.includes(doc.id)}
+                  onSelect={() => onSelect(doc)}
+                  onOpenSource={() => onOpenSource(doc)}
+                />
+              ))}
+            </div>
+          </details>
         </div>
       </section>
 
@@ -1592,11 +1755,12 @@ function ReaderWorkspace({
         key={`reader-pane-${selectedDoc.id}`}
         ref={readerPaneRef}
         data-testid="reader-scroll-pane"
-        className={`min-w-0 ${readingMode ? 'mx-auto w-full max-w-[44rem]' : ''} ${
+        className={`min-w-0 ${readingMode ? 'mx-auto w-full' : ''} ${
           independentScroll
             ? 'xl:sticky xl:top-20 xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
             : ''
         }`}
+        style={readingMode ? { maxWidth: 'var(--reader-column-width)' } : undefined}
         onScroll={independentScroll ? onPaneScroll : undefined}
         onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
       >
@@ -1605,6 +1769,8 @@ function ReaderWorkspace({
           feedback={feedback}
           pinned={pinnedDocIds.includes(selectedDoc.id)}
           onTogglePinned={onTogglePinned}
+          read={readDocIds.includes(selectedDoc.id)}
+          onToggleRead={onToggleRead}
           readingMode={readingMode}
           onToggleReadingMode={onToggleReadingMode}
           copiedHeadingSlug={copiedHeadingSlug}
@@ -1740,6 +1906,234 @@ const HOME_CARDS: HomeCard[] = [
     tag: 'Core',
   },
 ]
+
+interface GlobalSearchResult {
+  doc: CorpusDoc
+  matchType: 'title' | 'heading' | 'body'
+  excerpt: string
+}
+
+function globalSearch(allDocs: CorpusDoc[], rawQuery: string): GlobalSearchResult[] {
+  const q = rawQuery.trim().toLowerCase()
+  if (!q || q.length < 2) return []
+  const results: GlobalSearchResult[] = []
+  const seen = new Set<string>()
+
+  for (const doc of allDocs) {
+    const addResult = (matchType: GlobalSearchResult['matchType'], excerpt: string) => {
+      if (!seen.has(`${doc.id}:${matchType}`)) {
+        seen.add(`${doc.id}:${matchType}`)
+        results.push({ doc, matchType, excerpt })
+      }
+    }
+
+    if (doc.title.toLowerCase().includes(q)) {
+      addResult('title', doc.title)
+    }
+    for (const h of doc.headings) {
+      if (h.text.toLowerCase().includes(q)) {
+        addResult('heading', h.text)
+        break
+      }
+    }
+    const bodyLower = doc.content.toLowerCase()
+    const idx = bodyLower.indexOf(q)
+    if (idx !== -1) {
+      const start = Math.max(0, idx - 60)
+      const end = Math.min(doc.content.length, idx + q.length + 60)
+      const raw = doc.content.slice(start, end).replace(/\s+/g, ' ').trim()
+      addResult('body', (start > 0 ? '…' : '') + raw + (end < doc.content.length ? '…' : ''))
+    }
+  }
+
+  return results.slice(0, 40)
+}
+
+function highlightMatch(text: string, query: string) {
+  const idx = text.toLowerCase().indexOf(query.toLowerCase())
+  if (idx === -1) return <>{text}</>
+  return (
+    <>
+      {text.slice(0, idx)}
+      <mark className="bg-[var(--accent-soft)] text-inherit">{text.slice(idx, idx + query.length)}</mark>
+      {text.slice(idx + query.length)}
+    </>
+  )
+}
+
+function GlobalSearchOverlay({
+  allDocs,
+  onSelect,
+  onClose,
+}: {
+  allDocs: CorpusDoc[]
+  onSelect: (doc: CorpusDoc) => void
+  onClose: () => void
+}) {
+  const [query, setQuery] = useState('')
+  const [activeIndex, setActiveIndex] = useState(0)
+  const inputRef = useRef<HTMLInputElement | null>(null)
+  const listRef = useRef<HTMLUListElement | null>(null)
+  const dq = useDeferredValue(query)
+
+  const results = useMemo(() => globalSearch(allDocs, dq), [allDocs, dq])
+
+  useEffect(() => { inputRef.current?.focus() }, [])
+  useEffect(() => { setActiveIndex(0) }, [dq])
+
+  const handleSelect = useCallback((doc: CorpusDoc) => {
+    onSelect(doc)
+    onClose()
+  }, [onSelect, onClose])
+
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setActiveIndex(i => Math.min(i + 1, results.length - 1))
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setActiveIndex(i => Math.max(i - 1, 0))
+    } else if (e.key === 'Enter' && results[activeIndex]) {
+      handleSelect(results[activeIndex].doc)
+    } else if (e.key === 'Escape') {
+      onClose()
+    }
+  }
+
+  useEffect(() => {
+    if (!listRef.current) return
+    const active = listRef.current.querySelector('[data-active="true"]') as HTMLElement | null
+    active?.scrollIntoView({ block: 'nearest' })
+  }, [activeIndex])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center bg-[rgba(0,0,0,0.5)] pt-[12vh]"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-[42rem] overflow-hidden rounded-xl border border-line bg-paper-strong shadow-2xl"
+        onClick={e => e.stopPropagation()}
+        onKeyDown={handleKeyDown}
+      >
+        <div className="flex items-center gap-3 border-b border-line px-4 py-3">
+          <span className="text-ink-faint" aria-hidden="true">⌕</span>
+          <input
+            ref={inputRef}
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Search all documents…"
+            className="flex-1 bg-transparent font-serif text-[1rem] text-ink-strong placeholder:text-ink-faint focus:outline-none"
+          />
+          <kbd className="hidden rounded border border-line bg-paper px-1.5 py-0.5 font-mono text-[10px] text-ink-faint sm:block">
+            esc
+          </kbd>
+        </div>
+
+        {results.length > 0 ? (
+          <ul ref={listRef} className="max-h-[50vh] overflow-y-auto py-2" role="listbox">
+            {results.map((r, i) => (
+              <li key={`${r.doc.id}:${r.matchType}`} role="option" aria-selected={i === activeIndex} data-active={i === activeIndex ? 'true' : 'false'}>
+                <button
+                  type="button"
+                  onClick={() => handleSelect(r.doc)}
+                  onMouseEnter={() => setActiveIndex(i)}
+                  className={`w-full px-4 py-2.5 text-left transition ${
+                    i === activeIndex ? 'bg-[rgba(159,108,49,0.1)]' : 'hover:bg-[rgba(159,108,49,0.06)]'
+                  }`}
+                >
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-[0.9rem] font-semibold leading-snug text-ink-strong">
+                      {highlightMatch(r.doc.title, query)}
+                    </span>
+                    <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.1em] text-ink-faint">
+                      {r.matchType === 'title' ? 'title' : r.matchType === 'heading' ? 'heading' : 'body'}
+                    </span>
+                  </div>
+                  {r.matchType !== 'title' && (
+                    <p className="mt-0.5 line-clamp-1 text-[12px] leading-5 text-ink-soft">
+                      {highlightMatch(r.excerpt, query)}
+                    </p>
+                  )}
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : query.length >= 2 ? (
+          <p className="px-4 py-6 text-center font-serif text-[14px] text-ink-faint">No results found.</p>
+        ) : (
+          <p className="px-4 py-6 text-center font-serif text-[14px] text-ink-faint">
+            Type at least 2 characters to search.
+          </p>
+        )}
+      </div>
+    </div>
+  )
+}
+
+const KEYBOARD_SHORTCUTS = [
+  { keys: ['⌘', 'K'], label: 'Global search across all documents' },
+  { keys: ['⌘', 'F'], label: 'Search within current document' },
+  { keys: ['/'], label: 'Focus section filter' },
+  { keys: ['?'], label: 'Show this keyboard reference' },
+  { keys: ['↑', '↓'], label: 'Navigate search results' },
+  { keys: ['↵'], label: 'Open selected result' },
+  { keys: ['Esc'], label: 'Close overlay / clear search' },
+]
+
+function KeyboardCheatsheet({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape' || e.key === '?') { e.preventDefault(); onClose() }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(0,0,0,0.5)]"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-sm overflow-hidden rounded-xl border border-line bg-paper-strong shadow-2xl"
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between border-b border-line px-5 py-4">
+          <h2 className="font-serif text-[1.1rem] font-semibold text-ink-strong">Keyboard shortcuts</h2>
+          <button
+            type="button"
+            onClick={onClose}
+            className="focus-ring rounded text-ink-faint hover:text-ink"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
+        <ul className="divide-y divide-line">
+          {KEYBOARD_SHORTCUTS.map((s, i) => (
+            <li key={i} className="flex items-center justify-between gap-4 px-5 py-3">
+              <span className="font-serif text-[13px] text-ink-soft">{s.label}</span>
+              <span className="flex shrink-0 items-center gap-1">
+                {s.keys.map((k, ki) => (
+                  <kbd
+                    key={ki}
+                    className="inline-block rounded border border-line bg-paper px-1.5 py-0.5 font-mono text-[11px] text-ink-soft"
+                  >
+                    {k}
+                  </kbd>
+                ))}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <p className="border-t border-line px-5 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+          Press ? or Esc to close
+        </p>
+      </div>
+    </div>
+  )
+}
 
 function HomeView({
   corpus,
@@ -2070,19 +2464,6 @@ function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
   )
 }
 
-function EmptySettings() {
-  return (
-    <article className="max-w-[42rem]">
-      <h2 className="font-serif text-[2rem] leading-tight text-ink-strong">
-        The reader is ready; operator tooling is next.
-      </h2>
-      <p className="mt-4 font-serif text-[15px] leading-7 text-ink-soft">
-        The highest-value settings work from here would be search persistence, pinned documents, and
-        explicit one-click shortcuts for validation, build, and corpus refresh tasks.
-      </p>
-    </article>
-  )
-}
 
 export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange }: DashboardProps) {
   const [query, setQuery] = useState('')
@@ -2090,6 +2471,9 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
   const [recentDocIds, setRecentDocIds] = useState<string[]>(() => readStoredDocList(RECENT_DOCS_STORAGE_KEY))
+  const [readDocIds, setReadDocIds]     = useState<string[]>(() => readStoredDocList(READ_DOCS_STORAGE_KEY))
+  const [showGlobalSearch, setShowGlobalSearch] = useState(false)
+  const [showCheatsheet, setShowCheatsheet] = useState(false)
   const [readingMode, setReadingMode] = useState(() => readStoredBoolean(READING_MODE_STORAGE_KEY))
   const [staleCorpusNotice, setStaleCorpusNotice] = useState<string | null>(null)
   const [sourceFeedback, setSourceFeedback] = useState<SourceFeedback>({
@@ -2111,6 +2495,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const shouldScrollToActiveMatchRef = useRef(false)
   const copiedHeadingTimeoutRef = useRef<number | null>(null)
   const pendingHashTargetRef = useRef<{ docId: string; slug: string } | null>(null)
+  // Set to true when the user explicitly picks a doc so the guard effect skips its reset.
+  const userPickedDocRef = useRef(false)
 
   const deferredQuery = useDeferredValue(query)
   const allDocs = corpus?.docs ?? []
@@ -2163,6 +2549,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     }
 
     if (!selectedDocId || !visibleDocs.some((doc) => doc.id === selectedDocId)) {
+      // Don't reset if the user just explicitly picked this doc (e.g. ReadNext).
+      // The doc may be in a different section and view-change is already in flight.
+      if (userPickedDocRef.current) {
+        userPickedDocRef.current = false
+        return
+      }
       startTransition(() => setSelectedDocId(visibleDocs[0].id))
     }
   }, [selectedDocId, visibleDocs])
@@ -2271,8 +2663,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
       if (meta && event.key.toLowerCase() === 'k') {
         event.preventDefault()
-        shelfSearchInputRef.current?.focus()
-        shelfSearchInputRef.current?.select()
+        setShowGlobalSearch(true)
         return
       }
 
@@ -2298,6 +2689,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
         event.preventDefault()
         shelfSearchInputRef.current?.focus()
         shelfSearchInputRef.current?.select()
+        return
+      }
+
+      if (event.key === '?') {
+        event.preventDefault()
+        setShowCheatsheet(v => !v)
       }
     }
 
@@ -2332,6 +2729,13 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   useEffect(() => {
     setActiveMatchIndex(0)
   }, [selectedDoc?.id, documentQuery])
+
+  useEffect(() => {
+    // Apply persisted appearance settings immediately on mount
+    applyFontSize(readFontSize())
+    applyColumnWidth(readColumnWidth())
+    applyTheme(readTheme())
+  }, [])
 
   useEffect(() => {
     return () => {
@@ -2631,13 +3035,36 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }
 
   function handleSelectDoc(doc: CorpusDoc) {
-    startTransition(() => setSelectedDocId(doc.id))
+    const targetView = viewForDoc(doc)
 
-    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 1279px)').matches) {
-      window.requestAnimationFrame(() => {
-        document.getElementById('reader-panel-start')?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
+    // If the doc lives in a different section, switch view first and persist the
+    // selection so the view-change effect restores it correctly.
+    if (targetView !== view) {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(selectedDocStorageKey(targetView), doc.id)
+      }
+      onViewChange(targetView)
+      // The view-change useEffect will restore selectedDocId from storage.
+      return
+    }
+
+    // Use a plain state update (not startTransition) so the new doc renders
+    // synchronously in this batch. Then scroll AFTER the DOM has painted.
+    userPickedDocRef.current = true
+    setSelectedDocId(doc.id)
+
+    if (typeof window !== 'undefined') {
+      // Two rAFs: first fires after React flushes, second after the browser paints.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (window.matchMedia('(max-width: 1279px)').matches) {
+            document.getElementById('reader-panel-start')?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            })
+          } else {
+            window.scrollTo({ top: 0, behavior: 'instant' })
+          }
         })
       })
     }
@@ -2657,6 +3084,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     handleSelectDoc(doc)
   }
 
+  function handleGlobalSearchSelect(doc: CorpusDoc) {
+    onViewChange(viewForDoc(doc))
+    setSelectedDocId(doc.id)
+  }
+
   function handleTogglePinned() {
     if (!selectedDoc) {
       return
@@ -2668,6 +3100,17 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       }
 
       return [selectedDoc.id, ...current.filter((docId) => docId !== selectedDoc.id)]
+    })
+  }
+
+  function handleToggleRead() {
+    if (!selectedDoc) return
+    setReadDocIds((current) => {
+      const next = current.includes(selectedDoc.id)
+        ? current.filter((id) => id !== selectedDoc.id)
+        : [...current, selectedDoc.id]
+      window.localStorage.setItem(READ_DOCS_STORAGE_KEY, JSON.stringify(next))
+      return next
     })
   }
 
@@ -2802,12 +3245,22 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
         independentPaneView ? 'xl:grid xl:grid-rows-[auto_minmax(0,1fr)] xl:gap-6 xl:space-y-0' : ''
       }`}
     >
+      {showGlobalSearch && (
+        <GlobalSearchOverlay
+          allDocs={allDocs}
+          onSelect={handleGlobalSearchSelect}
+          onClose={() => setShowGlobalSearch(false)}
+        />
+      )}
+      {showCheatsheet && (
+        <KeyboardCheatsheet onClose={() => setShowCheatsheet(false)} />
+      )}
       {staleCorpusNotice && (
         <div
           role="status"
           aria-live="polite"
           data-testid="stale-corpus-notice"
-          className="flex items-start justify-between gap-4 border-l-2 border-l-accent bg-[rgba(251,246,236,0.6)] px-4 py-3 text-[13px] leading-6 text-ink-strong"
+          className="flex items-start justify-between gap-4 border-l-2 border-l-accent bg-[var(--paper-strong)] px-4 py-3 text-[13px] leading-6 text-ink-strong"
         >
           <p className="max-w-3xl">{staleCorpusNotice}</p>
           <button
@@ -2838,8 +3291,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       {view === 'topics' && <TopicsView corpus={corpus} onJump={handleSelectQuickDoc} />}
       {view === 'paths' && <ReadingPathsView corpus={corpus} onJump={handleSelectQuickDoc} />}
       {view === 'validation' && <ValidationPanels corpus={corpus} />}
-      {view === 'settings' && <EmptySettings />}
-
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <SectionIntro view={view} corpus={corpus} onJump={handleSelectQuickDoc} />
       )}
@@ -2855,7 +3306,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Filter title, path, or headings…"
-            className="focus-ring flex-1 rounded border border-line bg-[rgba(251,246,236,0.6)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint"
+            className="focus-ring flex-1 rounded border border-line bg-[var(--paper-strong)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint"
           />
           <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
             {visibleDocs.length} {visibleDocs.length === 1 ? 'match' : 'matches'}
@@ -2875,6 +3326,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           onSelect={handleSelectDoc}
           onSelectQuickDoc={handleSelectQuickDoc}
           onTogglePinned={handleTogglePinned}
+          readDocIds={readDocIds}
+          onToggleRead={handleToggleRead}
           readingMode={readingMode}
           onToggleReadingMode={handleToggleReadingMode}
           onOpenSource={handleOpenSource}

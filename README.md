@@ -14,7 +14,7 @@ title: Project Guide & Reader Overview
 ## Contents
 
 - [What this is](#what-this-is)
-- [Reader app](#reader-app)
+- [Reader app](#reader-app) — open in browser · download desktop app · run from source
 - [Current status](#current-status)
 - [If you're skeptical](#if-youre-skeptical)
 - [The core separation](#the-core-separation)
@@ -38,35 +38,49 @@ This is not a live government, a finished rollout plan, or a promise that the ha
 
 ## Reader app
 
-The repository ships with a reader app (`app/`) — a Tauri 2 + React + Vite shell that loads the entire constitutional corpus as a single navigable document set. It is the easiest way to read across the constitution, annexes, and registries without losing your place in cross-references.
+The repository ships with a reader app — a clean, searchable interface for reading the entire constitutional corpus: the charter text, white paper, annexes, threat register, patch log, and evidence documents. It is the easiest way to navigate across the full document set without losing your place in cross-references.
 
-**Run it locally:**
+### Option 1 — Open in your browser (no install, no download)
+
+> **This is the recommended path for most readers.**
+
+A hosted version of the reader is available at:
+
+**[→ humane-constitution.vercel.app](https://humane-constitution.vercel.app)**
+
+Click the link. That's it. Nothing to install.
+
+---
+
+### Option 2 — Download the desktop app
+
+If you prefer a desktop window (works offline, no browser needed):
+
+1. Go to the [Releases page](../../releases) of this repository on GitHub.
+2. Under the most recent release, find the file for your computer:
+   - **Mac:** download the `.dmg` file
+   - **Windows:** download the `.msi` or `.exe` file
+   - **Linux:** download the `.AppImage` or `.deb` file
+3. Open the downloaded file and follow the normal install steps for your system (same as installing any app).
+
+> If you're on a Mac and see a warning that the app is from an "unidentified developer," right-click the app and choose **Open** — this bypasses the warning for apps that haven't been submitted to Apple's store.
+
+---
+
+### Option 3 — Run it yourself (for contributors and developers)
+
+If you want to run the app from source — for example, to propose edits or work on the codebase — you'll need a few tools installed first. This path assumes familiarity with a terminal.
+
+**Prerequisites:** Node.js 18+, Python 3.10+, and (for the desktop wrapper) Rust + Tauri prerequisites.
 
 ```bash
 cd app
 npm install
-npm run dev          # browser (Vite dev server at http://localhost:5173)
-npm run tauri dev    # desktop window (requires Rust + platform Tauri prereqs)
+npm run dev          # opens in browser at http://localhost:5173
+npm run tauri dev    # opens as a desktop window
 ```
 
 `npm run dev` and `npm run build` both regenerate the corpus first via `python3 ../scripts/export_corpus.py`, so the reader always reflects the live markdown on disk. To regenerate manually: `npm run generate:corpus`. To verify the generated corpus matches what's checked in: `npm run check:corpus`.
-
-**What the navigation contains:**
-
-| Section | What's there |
-|---|---|
-| **Overview** | Featured documents and the recommended reading path. Start here if it's your first visit. |
-| **Constitution** | The charter text, white paper, public-facing explainers, and Founding Order. |
-| **Annexes** | All operational annexes (A through AV). Search and filter by status (active / proposed / reference). |
-| **Registries** | Threat Register, Patch Log, Founding Commitments, Claims & Evidence, Pilot Roadmap, Founding Pre-activation Disclosure. |
-| **Validation** | Activation gates, integrity status, and structural-check output. |
-| **Settings** | Reader behavior. The shell remembers your last view between sessions. |
-
-**Reading conventions:**
-
-- Section headings have stable anchor IDs, so you can deep-link any clause. The TypeScript corpus (`app/src/generated/corpus.ts`) is the canonical mapping from heading text to slug.
-- Each document carries a status banner (active / proposed / reference) and a word count so you can size the read before starting.
-- The reader is read-only by design — every edit must go through the markdown source so it lands in version control, runs through `scripts/validate_corpus.py`, and stays consistent with the registries.
 
 **Build a release binary:**
 
@@ -75,7 +89,20 @@ cd app
 npm run tauri build  # produces a platform-native installer in src-tauri/target/release
 ```
 
-**Browser-only build (no desktop wrapper):** `npm run build` then `npm run preview`.
+---
+
+### What the reader contains
+
+| Section | What's there |
+|---|---|
+| **Home** | Featured documents and the recommended reading path. Start here on your first visit. |
+| **Constitution** | The charter text, white paper, public-facing explainers, and Founding Order. |
+| **Annexes** | All operational annexes (A through AV). Search and filter by topic. |
+| **Threats & Patches** | Threat Register, Patch Log, Founding Commitments, Claims & Evidence, Pilot Roadmap. |
+| **Validation** | Activation gates, integrity status, and structural-check output. |
+| **Settings** | Font size, column width, and dark mode. The reader remembers your last view between sessions. |
+
+**Keyboard shortcuts:** press `?` inside the reader to see all shortcuts. Press `Cmd K` (Mac) or `Ctrl K` (Windows/Linux) to search across the full document set.
 
 ## Current status
 
@@ -99,18 +126,18 @@ The right response is neither blind belief nor dismissal. The useful response is
 
 ## If you're skeptical
 
-Start with [`docs/public/03_readiness.md`](./docs/public/03_readiness.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
+Start with the [Public Readiness Guide](./docs/public/03_readiness.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
 
 ## If you're new
 
 Use this reading order:
 
-1. [`docs/public/01_overview.md`](./docs/public/01_overview.md) for the shortest public introduction
-2. [`docs/public/03_readiness.md`](./docs/public/03_readiness.md) for the claims, readiness status, and strongest objections
-3. [`docs/public/04_white_paper.md`](./docs/public/04_white_paper.md) for the fuller public explanation
-4. [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md) for the plain-language rights summary
-5. [`docs/constitution/Humane_Constitution.md`](./docs/constitution/Humane_Constitution.md) for the governing text
-6. [`docs/governance/Threat_Register.md`](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
+1. [One-Page Overview](./docs/public/01_overview.md) for the shortest public introduction
+2. [Public Readiness Guide](./docs/public/03_readiness.md) for the claims, readiness status, and strongest objections
+3. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
+4. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
+5. [Humane Constitution](./docs/constitution/Humane_Constitution.md) for the governing text
+6. [Threat Register](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
 
 ## The core separation
 
@@ -145,51 +172,17 @@ The live constitutional presentation uses **one Founding Order** and **seven Art
 
 ## Architecture flow
 
-The diagram below shows how the current Founding Order and Articles I-VII relate internally.
+The constitution is built in five layers. Each layer depends on the one above it and feeds signals back up.
 
-```mermaid
-flowchart TD
-    FO["**Founding Order**\nSubsidiarity,\nConsent & Exit"]:::foundation
-    A1["**Article I**\nRights & Rule\nof Law"]:::tier1
-    A2["**Article II**\nPersonhood,\nIdentity & Continuity"]:::tier2
-    A3["**Article III**\nPhysics &\nReserves"]:::tier2
-    A4["**Article IV**\nSurvival\n(Essential Access + Delivery)"]:::tier2
-    A5["**Article V**\nMarkets, Commons\n& Public Finance"]:::tier3
-    A6["**Article VI**\nVoice, Service Record\n& Deliberation"]:::tier3
-    A7["**Article VII**\nTransparency &\nEnvironmental Scanning"]:::tier3
+| Layer | Article(s) | What it does | What it sends down |
+|---|---|---|---|
+| **Foundation** | Founding Order | Sets subsidiarity, consent, and exit rules that apply to every article | Scale and participation constraints |
+| **Rights** | I — Rights & Rule of Law | Constitutional limits that bind every operational article below | Rights constraints on all |
+| **Inputs** | II — Personhood & Identity · III — Physics & Reserves | Establishes *who is eligible* (identity) and *what exists to deliver* (measured capacity) | Eligibility signals; capacity limits and scarcity signals |
+| **Operations** | IV — Survival & Essential Access · V — Markets, Commons & Public Finance | Delivers survival goods; manages markets, housing, public banking, and commons revenue | Delivery outcomes; production and finance flows |
+| **Accountability** | VI — Voice & Deliberation · VII — Transparency & Scanning | Voice shapes priorities; Transparency audits the whole system | ↑ Priorities back to V; audit signals back to I and V |
 
-    FO -->|"smallest competent scale,\nconsent, exit"| A1
-    FO -->|"smallest competent scale,\nconsent, exit"| A2
-    FO -->|"smallest competent scale,\nconsent, exit"| A3
-    FO -->|"smallest competent scale,\nconsent, exit"| A4
-    FO -->|"smallest competent scale,\nconsent, exit"| A5
-    FO -->|"smallest competent scale,\nconsent, exit"| A6
-    FO -->|"smallest competent scale,\nconsent, exit"| A7
-
-    A1 -->|"constitutional constraints"| A2
-    A1 -->|"constitutional constraints"| A3
-    A1 -->|"constitutional constraints"| A4
-    A1 -->|"constitutional constraints"| A5
-    A1 -->|"constitutional constraints"| A6
-    A1 -->|"constitutional constraints"| A7
-
-    A2 -->|"identity continuity\nand eligibility signals"| A4
-    A2 -->|"identity continuity\nand eligibility signals"| A6
-    A3 -->|"capacity limits,\nscarcity signals, reserves"| A4
-    A3 -->|"physical constraints"| A5
-    A4 -->|"delivery outcomes"| A7
-    A5 -->|"production, housing,\npublic-finance flows"| A3
-    A6 -->|"priorities, service eligibility,\nlegitimacy inputs"| A5
-    A7 -->|"audit visibility"| A1
-    A7 -->|"public accountability"| A5
-
-    classDef foundation fill:#254336,color:#f2f2e6,stroke:#6b8f71,stroke-width:2px
-    classDef tier1 fill:#1a1a2e,color:#e0e0e0,stroke:#4a4a8a,stroke-width:2px
-    classDef tier2 fill:#16213e,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
-    classDef tier3 fill:#0f3460,color:#e0e0e0,stroke:#4a4a8a,stroke-width:1px
-```
-
-**Reading the diagram:** The **Founding Order** establishes scale, consent, and exit defaults across the entire architecture. **Article I** constrains every operational article constitutionally. The instrument-level non-convertibility rules are enforced within the architecture itself rather than by a separate sovereign body.
+**Feedback loops:** Article VII (Transparency) sends audit visibility back up to Article I (Rights) and public accountability signals back to Article V (Markets). Article VI (Voice) sends priorities and legitimacy inputs back to Article V. Article V sends production and housing flows back down to Article III for physical constraint updates. The system is designed to self-correct — failures surface at the accountability layer and travel back up to the rights and constraints layers rather than accumulating silently.
 
 ## Document set
 
@@ -197,39 +190,38 @@ flowchart TD
 
 | Document | Purpose |
 |---|---|
-| [`docs/public/01_overview.md`](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
-| [`docs/public/03_readiness.md`](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
-| [`docs/governance/Claims_Evidence_Register.md`](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
-| [`docs/governance/Pilot_Evidence_Roadmap.md`](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
-| [`docs/public/02_faq.md`](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
-| [`docs/public/04_white_paper.md`](./docs/public/04_white_paper.md) | Plain-language public explanation. |
-| [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md) | Plain-language summary of citizen rights and protections. |
-
-> Marketing scripts, deck assets, source-grounded prompt packs, and short-form content are kept offline (excluded via `.gitignore`).
+| [One-Page Overview](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
+| [Public Readiness Guide](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
+| [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
+| [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
+| [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
+| [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
+| [Rights Layer](./docs/public/05_rights_layer.md) | Plain-language summary of citizen rights and protections. |
 
 ### Core documents
 
 | Document | Purpose |
 |---|---|
-| [`docs/constitution/Humane_Constitution.md`](./docs/constitution/Humane_Constitution.md) | Primary constitutional source of truth. Lean constitutional text with links into the standalone annex corpus. |
-| [`docs/governance/Threat_Register.md`](./docs/governance/Threat_Register.md) | Adversarial risk model. 27 threat IDs — 17 ADDRESSED, 5 PARTIAL, 4 OPEN (T-003 retired). T-017/P-014 is the FOUNDING instrument. |
-| [`docs/governance/Patch_Log.md`](./docs/governance/Patch_Log.md) | Change and mitigation history. 31 patches — 16 ACTIVE, 15 PROPOSED (1 FOUNDING: P-014). |
-| [`docs/constitution/Acceptance_Protocol.md`](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
+| [Humane Constitution](./docs/constitution/Humane_Constitution.md) | Primary constitutional source of truth. Lean constitutional text with links into the standalone annex corpus. |
+| [Threat Register](./docs/governance/Threat_Register.md) | Adversarial risk model. 27 threat IDs — 17 ADDRESSED, 5 PARTIAL, 4 OPEN (T-003 retired). T-017/P-014 is the FOUNDING instrument. |
+| [Patch Log](./docs/governance/Patch_Log.md) | Change and mitigation history. 31 patches — 16 ACTIVE, 15 PROPOSED (1 FOUNDING: P-014). |
+| [Hardening Queue](./docs/governance/Hardening_Queue.md) | Red-team hardening queue — session history, closed items, open items, and standing simulation requirements. |
+| [Acceptance Protocol](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 
 ## Technical Specifications
 
 | Document | Purpose |
 |---|---|
-| [`docs/constitution/INVARIANTS.md`](./docs/constitution/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
-| [`docs/constitution/SPECIFICATIONS.md`](./docs/constitution/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
-| [`docs/simulations/Adversarial_Narrative_Simulation.md`](./docs/simulations/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
-| [`docs/simulations/Annual_Compound_Simulation.md`](./docs/simulations/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
-| [`docs/governance/Founding_Preactivation_Disclosure.md`](./docs/governance/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
-| [`simulations/model_outline.py`](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
+| [Constitutional Invariants](./docs/constitution/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
+| [Formal Specifications](./docs/constitution/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
+| [Adversarial Narrative Simulation](./docs/simulations/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
+| [Annual Compound Simulation](./docs/simulations/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
+| [Founding Pre-Activation Disclosure](./docs/governance/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
+| [Simulation Model Outline](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
 
-The annex corpus now lives entirely as standalone documents. Use [`docs/annexes/INDEX.md`](./docs/annexes/INDEX.md) as the entry point for constitutional annexes, hardening clauses, and detailed specifications.
+The annex corpus now lives entirely as standalone documents. Use the [Annex Directory](./docs/annexes/INDEX.md) as the entry point for constitutional annexes, hardening clauses, and detailed specifications.
 
 ## Validation
 
@@ -331,13 +323,13 @@ The system's commitment: every failure in these categories is published publicly
 
 Scale readiness requires:
 
-- [x] Public readiness guide — see [`docs/public/03_readiness.md`](./docs/public/03_readiness.md)
-- [x] Claims and evidence register — see [`docs/governance/Claims_Evidence_Register.md`](./docs/governance/Claims_Evidence_Register.md)
-- [x] Pilot evidence roadmap — see [`docs/governance/Pilot_Evidence_Roadmap.md`](./docs/governance/Pilot_Evidence_Roadmap.md)
+- [x] Public readiness guide — see [Public Readiness Guide](./docs/public/03_readiness.md)
+- [x] Claims and evidence register — see [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md)
+- [x] Pilot evidence roadmap — see [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md)
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
-- [x] CFRL one-page publication — see [`docs/public/05_rights_layer.md`](./docs/public/05_rights_layer.md)
-- [x] Adversarial narrative simulation — see [`docs/simulations/Adversarial_Narrative_Simulation.md`](./docs/simulations/Adversarial_Narrative_Simulation.md)
-- [x] Annual compound simulation — see [`docs/simulations/Annual_Compound_Simulation.md`](./docs/simulations/Annual_Compound_Simulation.md)
+- [x] CFRL one-page publication — see [Rights Layer](./docs/public/05_rights_layer.md)
+- [x] Adversarial narrative simulation — see [Adversarial Narrative Simulation](./docs/simulations/Adversarial_Narrative_Simulation.md)
+- [x] Annual compound simulation — see [Annual Compound Simulation](./docs/simulations/Annual_Compound_Simulation.md)
 - [ ] Legitimate founding coalition
 
 The Formal Acceptance Protocol defines the pathway from design to operation.
