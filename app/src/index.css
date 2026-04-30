@@ -480,7 +480,19 @@
   border-color: rgba(155, 108, 44, 0.40);
 }
 
-/* Critical / High severity badges */
+/* Critical / High / Med-High severity badges */
+.status-badge.s-med-high {
+  background: rgba(210, 75, 40, 0.12);
+  color: #b03a15;
+  border: 1px solid rgba(210, 75, 40, 0.30);
+}
+[data-theme="dark"] .status-badge.s-med-high {
+  background: rgba(210, 75, 40, 0.20);
+  color: #e06a48;
+  border-color: rgba(210, 75, 40, 0.38);
+}
+
+
 .status-badge.s-critical {
   background: rgba(196, 60, 60, 0.13);
   color: #a02020;
@@ -569,4 +581,9 @@
   .reader-h3 {
     font-size: 1.22rem;
   }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Updated: Session 9 economic-governance integration (P-029 through P-033 added)**
+**Running change ledger aligned to the Humane Constitution · Current through P-034**
 
 ---
 
@@ -37,32 +37,32 @@
 | P-017 | T-020 / T-021 | **ACTIVE** | Critical | Oracle epistemological and algorithmic independence: methodology-class diversity, AI supply chain transparency, physical ground-truth requirement. Numerical floors (N≥5, ≥3 classes, ≤0.30 pairwise correlation, ≥1 adversarial seat) bound in `/founding/commitments.md` FC-030/FC-031/FC-032/FC-033. |
 | P-018 | T-022 | **PROPOSED** | Critical | Electoral cycle resilience: entrenchment ladder, Essential Access floor minimum persistence, administrative hollowing triggers, transition continuity protocol. |
 | P-019 | T-023 | **PROPOSED** | Med-High | Pilot external validity gate: stress-condition pilot requirement, red-team challenge window, crisis simulation mandate. |
-| P-020 | T-017 (residual) | **PROPOSED** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
+| P-020 | T-017 | **PROPOSED** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
 | P-021 | — | **PROPOSED** | High | Register disclosure protocol: bifurcation into public and restricted versions; operational security for detection thresholds. |
 | P-022 | T-024 | **ACTIVE** | Critical | Shared Storehouse oracle-failure fallback: conservative hold, 48h REB first-responder window, 72h governance handoff, FC-100 14-day restoration verification, reconciliation review. Annex AQ ACTIVE. |
 | P-023 | T-025 | **PROPOSED** | High | Demurrage sector-capture: contract-commitment architecture, zero exemptions, demurrage-as-discipline, milestone escrow. |
-| P-024 | T-009 / TR-07 / T-018 (residual) | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
-| P-025 | T-008 (residual) / meta-capture | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
+| P-024 | T-009 / TR-07 / T-018 | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
+| P-025 | T-008 | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | Founding Order — Subsidiarity, Consent & Exit: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with Essential Access continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/founding/order/` directory. |
-| P-027 | structural simplification / T-005 / T-008 (residual) | **ACTIVE** | Critical | Structural consolidation into one Founding Order and seven Articles of Constitutional Order. Rights and execution unified under Article I; Essential Access and delivery unified under Article IV; markets, housing, enterprise, and PFCR unified under Article V; Voice, Service Record, and deliberation unified under Article VI; transparency and environmental scanning unified under Article VII. |
-| P-029 | T-016 / public-funding architecture | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, demurrage routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
-| P-030 | PRD-004 / household coercion | **ACTIVE** | Critical | Protocol-only money creation + household finance boundaries: no private Flow creation, no compounding household ordinary-life debt, no survival-floor securitization. |
-| P-031 | PRD-009 / dynastic capture | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
-| P-032 | PRD-009 / rent extraction | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
-| P-033 | PRD-008 / enterprise governance | **ACTIVE** | High | Worker-owned and mission-locked enterprise preference: financing, procurement, and succession pathways structurally favor stewardship forms over absentee control. |
-| P-034 | T-016 / INV-007 single-point-of-failure | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
+| P-027 | T-005 / T-008 | **ACTIVE** | Critical | Structural consolidation into one Founding Order and seven Articles of Constitutional Order. Rights and execution unified under Article I; Essential Access and delivery unified under Article IV; markets, housing, enterprise, and PFCR unified under Article V; Voice, Service Record, and deliberation unified under Article VI; transparency and environmental scanning unified under Article VII. |
+| P-029 | T-016 | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, demurrage routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
+| P-030 | PRD-004 | **ACTIVE** | Critical | Protocol-only money creation + household finance boundaries: no private Flow creation, no compounding household ordinary-life debt, no survival-floor securitization. |
+| P-031 | PRD-009 | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
+| P-032 | PRD-009 | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
+| P-033 | PRD-008 | **ACTIVE** | High | Worker-owned and mission-locked enterprise preference: financing, procurement, and succession pathways structurally favor stewardship forms over absentee control. |
+| P-034 | T-016 / INV-007 | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
 
 ---
 
-## Session 9 Patches — Integrated Constitutional Direction
+## P-029 through P-033 — Economic Governance Integration
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
 | P-029 | T-016 / public-funding architecture | **ACTIVE** | Critical | constitutional fiscal redesign |
-| P-030 | PRD-004 / household coercion | **ACTIVE** | Critical | monetary + retail-finance boundary |
-| P-031 | PRD-009 / dynastic capture | **ACTIVE** | Critical | ownership + succession + anti-circumvention |
-| P-032 | PRD-009 / rent extraction | **ACTIVE** | High | constitutional ownership standard |
-| P-033 | PRD-008 / enterprise governance | **ACTIVE** | High | enterprise-preference and succession design |
+| P-030 | PRD-004 | **ACTIVE** | Critical | monetary + retail-finance boundary |
+| P-031 | PRD-009 | **ACTIVE** | Critical | ownership + succession + anti-circumvention |
+| P-032 | PRD-009 | **ACTIVE** | High | constitutional ownership standard |
+| P-033 | PRD-008 | **ACTIVE** | High | enterprise-preference and succession design |
 
 ### P-029 — Public Finance & Commons Revenue (PFCR)
 
@@ -103,7 +103,7 @@
 
 ### P-034 — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement
 
-**Threat addressed:** T-016 (FAP capture), INV-007 single-point-of-failure  
+**Threat addressed:** T-016 / INV-007  
 **Audit finding:** PRD-001 / Phase 1 Article I adversarial audit; confirmed still open in Phase 4 follow-up check  
 **Status:** ACTIVE | **Priority:** Critical | **Annex:** AV (Acceptance_Protocol.md §Structural Precondition Gate)
 
@@ -130,7 +130,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 **Residual risk (acknowledged):** The adversarial panel member can be defected through external pressure not covered by the internal penalty structure (coercion, external blackmail). This is documented as a known residual rather than a resolved problem. Physical-world coercion cannot be fully eliminated by protocol design; conservative failure mode (panel member refuses to attest rather than attesting fraudulently) is the design target.
 
-## Session 1 Patches — Detailed Entries
+## P-001 through P-004 — Core Convertibility Controls
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
@@ -188,7 +188,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ---
 
-## Session 2 Patches — Detailed Entries
+## P-005 through P-012 — Governance and Operational Resilience
 
 **Status: PROPOSED.** These patches are not yet operative. They become operative only when formally integrated into the Humane Constitution and status updated to ACTIVE.
 
@@ -324,7 +324,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ---
 
-## Session 8 Patches — Detailed Entries
+## P-013 through P-025 — Founding Mechanics and Attack Surface Closure
 
 *Red-team hardening cycle. All patches PROPOSED. Addresses T-018 through T-023 and closes residual risks identified in T-001, T-002, T-017, and the register's own operational security posture.*
 
@@ -352,12 +352,12 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-016 | T-002 (residual) | **PROPOSED** | Critical | constitutional commitment + quantified doctrine |
+| P-016 | T-002 | **PROPOSED** | Critical | constitutional commitment + quantified doctrine |
 
 ### P-016 — Identity Asymmetric Error Doctrine
 
 - **Change type:** constitutional commitment + quantified doctrine.
-- **Addresses:** T-002 open problem — calibrating fraud tolerance without making the system unusable for vulnerable populations. Extends P-003.
+- **Addresses:** T-002 — calibrating fraud tolerance without making the system unusable for vulnerable populations. Extends P-003.
 - **Introduced design:** The founding coalition must publish and formally adopt an **Asymmetric Error Doctrine** (AED) as a Tier 2 founding commitment before deployment. The AED must specify:
   - (a) Maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record) — expressed as a percentage of enrolled population per quarter, with confidence interval.
   - (b) Maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile persons) per tier — expressed as a percentage of estimated vulnerable population.
@@ -430,7 +430,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 - **Introduced design:**
   - *Stress-condition pilot gate:* Scale-up approval requires the pilot evidence record to include at least one each of: an economic stress event (recession, significant unemployment spike, or supply price shock affecting the pilot region); a compound supply disruption (two or more essential categories simultaneously below adequate levels); and documented operation during a formal political opposition campaign against the system. Where a condition could not be tested in the pilot, the evidence record must include: (a) explicit documentation of why it could not be tested; (b) a designated substitute evidence source (e.g., analogous case from another jurisdiction, red-team analysis); (c) a residual-risk statement acknowledging the gap; and (d) a post-scale monitoring commitment specific to the untested condition.
   - *Red-team challenge window (T-016 companion):* Before any scale-up vote, a mandatory 30-day adversarial challenge window allows independent reviewers to contest the external validity of the evidence base. Challengers must have access to the full evidence record, not just the summary. Responses to challenges are published before the vote.
-  - *Crisis simulation mandate:* The Annual Compound Simulation must include at least one compound-crisis scenario not previously simulated before each scale-up gate. The talent drain scenario and civic legibility scenario added to the simulation in this session fulfill this requirement for the first scale-up gate only.
+  - *Crisis simulation mandate:* The Annual Compound Simulation must include at least one compound-crisis scenario not previously simulated before each scale-up gate. The talent drain scenario and civic legibility scenario fulfill this requirement for the first scale-up gate only.
 - **Clauses to integrate:** AN1–AN5. FAP (Formal Acceptance Protocol) extended — scale-up gate conditions added to evidence requirements. Annex T (simulation mandate) extended. P-013 representativeness standard cross-referenced (stress-condition pilot is a representativeness requirement).
 - **Dependencies:** Annual Compound Simulation must be updated to include new scenarios before each scale-up gate. Red-team challenge window requires independent reviewer access infrastructure.
 - **New risks introduced:** Stress-condition requirement may delay scale-up indefinitely if adverse conditions do not occur in the pilot region within a reasonable window. Mitigated by: substitute evidence pathway is explicitly available; the requirement is for good-faith engagement with external validity, not for a manufactured crisis. Red-team challenge window creates a blocking mechanism — mitigated by: challengers must propose specific residual-risk mitigations, not merely object.
@@ -441,7 +441,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-020 | T-017 (residual) | **PROPOSED** | Critical | founding governance + window extension |
+| P-020 | T-017 | **PROPOSED** | Critical | founding governance + window extension |
 
 ### P-020 — Founding Window Extension
 
@@ -462,7 +462,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-021 | — (operational security) | **PROPOSED** | High | register architecture + disclosure policy |
+| P-021 | — | **PROPOSED** | High | register architecture + disclosure policy |
 
 ### P-021 — Register Disclosure Protocol
 
@@ -481,7 +481,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ---
 
-## Session 9 Patches — Detailed Entries
+## P-022 through P-023 — Operational Gap Closure
 
 *Operational gap closure (P-022) and design-discussion registration (P-023).*
 
@@ -598,22 +598,22 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-016 | P-013 | **PROPOSED** | Annex AG |
 | T-017 | P-014 | **PROPOSED** | Annex AH |
 | T-018 / T-019 | P-015 | **PROPOSED** | Annex AP; pre-launch gate: Annex AI |
-| T-002 (residual) | P-016 | **PROPOSED** | Annex AK |
+| T-002 | P-016 | **PROPOSED** | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL ACTIVE · FC-030/031/032/033/100 |
 | T-022 | P-018 | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **PROPOSED** | Annex AN |
-| T-017 (residual) | P-020 | **PROPOSED** | Annex AH2 |
-| — (opsec) | P-021 | **PROPOSED** | Annex AO |
+| T-017 | P-020 | **PROPOSED** | Annex AH2 |
+| — | P-021 | **PROPOSED** | Annex AO |
 | T-024 | P-022 | **ACTIVE** | Annex AQ ACTIVE · FC-100 |
 | T-025 | P-023 | **PROPOSED** | Annex AR |
-| T-009 / TR-07 / T-018 residual | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
-| T-008 residual / meta-capture | P-025 | **ACTIVE** | Annex AI ACTIVE (rewritten) · FC-090/091/092 |
+| T-009 / TR-07 / T-018 | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
+| T-008 | P-025 | **ACTIVE** | Annex AI ACTIVE (rewritten) · FC-090/091/092 |
 | T-026 / T-027 | P-026 | **ACTIVE** | `/founding/order/` ACTIVE · FC-120/121/122 |
-| structural simplification / T-005 residual / T-008 residual | P-027 | **ACTIVE** | `Humane_Constitution.md` §III Founding Order + Articles I-VII · `docs/public/04_white_paper.md` §4 |
+| T-005 / T-008 | P-027 | **ACTIVE** | `Humane_Constitution.md` §III Founding Order + Articles I-VII · `docs/public/04_white_paper.md` §4 |
 
 ---
 
-## Session 9 — Proposal 8 Close-out Detailed Entry
+## P-025 through P-027 — Ombuds, Founding Order, and Consolidation
 
 ### P-025 — Federated Ombuds Constitution
 
@@ -633,7 +633,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ---
 
-## Session 9 — Proposal 5 Close-out Detailed Entry
+## P-026 — Founding Order Detail
 
 ### P-026 — Founding Order: Subsidiarity, Consent & Exit
 
@@ -652,7 +652,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ---
 
-## Session 9 — Proposal 2 Close-out Detailed Entry
+## P-027 — Constitutional Consolidation Detail
 
 ### P-027 — Founding Order and Seven-Article Structural Consolidation
 

@@ -1,6 +1,6 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Updated: Session 8 (Red Team — T-018 through T-023 added; T-001/T-002/T-017 updated; Register Disclosure Protocol introduced)**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-026**
 
 ---
 
@@ -105,7 +105,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 - **Detection:** cluster anomalies, synchronized redemption patterns, broker signatures, and consumption deviation scoring.
 - **Mitigation direction:** Essential Access-only channels, non-delegable redemption, context-locked use, tolerance for low-level leakage, and broker-focused enforcement. → P-001 ACTIVE.
 - **Open problem (resolved):** ~~define the acceptable leakage threshold~~ — resolved by FC-010 in `/founding/commitments.md`: 3%/annum routine operational target; 7%/annum systemic-review trigger. Surveillance-vs-containment verification continues as an Article VII annual audit responsibility.
-- **Session 8 addition (resolved):** Informal convertibility that does not touch the ledger is now covered by Annex AJ ACTIVE with nine worked prohibited patterns across Essential Access/Flow, Voice-Service Record/resource, and Shared Storehouse/Flow boundaries. **Proposal 7 close-out (2026-04-18)** added Annex AJ §4 Penalty Schedule binding detected violations to a 5.0× base multiplier (FC-040) at assumed 0.85 detection probability (FC-041), with severity factors per pattern (1.0×–2.0×) and escalation ladder for repeat and systemic violations. Annex AJ is promoted from PROPOSED to ACTIVE. Enforcement Panel publishes Annual Deterrence Audit to verify EV-negative regime holds empirically. → See Annex AJ §4; Penalty Schedule.
+- **Informal convertibility (resolved):** Informal convertibility that does not touch the ledger is covered by Annex AJ ACTIVE with nine worked prohibited patterns across Essential Access/Flow, Voice-Service Record/resource, and Shared Storehouse/Flow boundaries. Annex AJ §4 Penalty Schedule binds detected violations to a 5.0× base multiplier (FC-040) at assumed 0.85 detection probability (FC-041), with severity factors per pattern (1.0×–2.0×) and escalation ladder for repeat and systemic violations. Enforcement Panel publishes Annual Deterrence Audit to verify EV-negative regime holds empirically. → See Annex AJ §4; Penalty Schedule.
 
 ---
 
@@ -119,7 +119,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 - **Detection:** cross-signal deduplication, recovery anomaly review, impossible-use patterns, and staged assurance mismatches.
 - **Mitigation direction:** four-tier identity assurance model, multi-evidence thresholding, no single universal credential, recovery safety ladder, survival-floor continuity during disputes. → P-003 ACTIVE.
 - **Open problem:** calibrate fraud tolerance without making the system unusable for displaced, undocumented, or digitally fragile people.
-- **Session 8 addition — Asymmetric Error Doctrine required:** The current mitigation does not specify quantified targets. Before deployment, the founding coalition must publish and formally adopt an Asymmetric Error Doctrine that specifies: (a) maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record); (b) maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile) per tier; (c) the review trigger when either rate is exceeded; (d) the decision rule when the two error types trade off. Without explicit numbers, calibration is permanently subject to political pressure. The Asymmetric Error Doctrine is a Tier 2 founding commitment. → See P-016 (Annex AK).
+- **Asymmetric Error Doctrine required (see P-016):** The current mitigation does not specify quantified targets. Before deployment, the founding coalition must publish and formally adopt an Asymmetric Error Doctrine that specifies: (a) maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record); (b) maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile) per tier; (c) the review trigger when either rate is exceeded; (d) the decision rule when the two error types trade off. Without explicit numbers, calibration is permanently subject to political pressure. The Asymmetric Error Doctrine is a Tier 2 founding commitment. → See P-016 (Annex AK).
 
 ---
 
@@ -186,7 +186,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 - **Impact:** capture of verification, oversight, and constitutional interpretation infrastructure. Does not directly harm Essential Access floor but undermines every other safeguard over time.
 - **Detection:** Very low (D=2). Visible only in aggregate metrics over multi-year horizon. P-008 creates the first detection infrastructure: legibility gap audit, concentration dashboard, cohort overlap index.
 - **Mitigation direction:** P-008 PROPOSED: legibility gap audit; Service Record sector ceiling specification (founding precondition); epistemic diversity requirement (three-axis); verification independence rule; cooling-off cohort rule; [ambitious] qualification standard governance; concentration dashboard with auto-escalation. See Patch Log P-008 and Annex AC3.
-- **Open problem (resolved Session 9):** ~~The prior single-Ombuds design carried three load-bearing P-008 functions — if the Ombuds became an elite-formation site, all three failed simultaneously. Open question: who audits the auditors of elite formation?~~ **Closed by P-025 (Federated Ombuds, Annex AI ACTIVE).** The five-node federation with FC-090 = 5, FC-091 = 4/5 supermajority, and the Oversight Assembly (5-of-7) distributes the auditor function across structurally dispersed sub-nodes (§1.2 dispersal criteria) and subjects the federation itself to external oversight for dispersal compliance (§5). "Who audits the auditors" resolves to: the Oversight Assembly audits dispersal; the Plenum audits operational determinations post-hoc; the public record (§6 publication commitment) audits voting patterns. Residual-risk path is now informal coordination across nominally dispersed sub-Ombuds, mitigated by §5.1 institutional-health reporting on voting-pattern concentration.
+- **Open problem (resolved):** ~~The prior single-Ombuds design carried three load-bearing P-008 functions — if the Ombuds became an elite-formation site, all three failed simultaneously. Open question: who audits the auditors of elite formation?~~ **Closed by P-025 (Federated Ombuds, Annex AI ACTIVE).** The five-node federation with FC-090 = 5, FC-091 = 4/5 supermajority, and the Oversight Assembly (5-of-7) distributes the auditor function across structurally dispersed sub-nodes (§1.2 dispersal criteria) and subjects the federation itself to external oversight for dispersal compliance (§5). "Who audits the auditors" resolves to: the Oversight Assembly audits dispersal; the Plenum audits operational determinations post-hoc; the public record (§6 publication commitment) audits voting patterns. Residual-risk path is now informal coordination across nominally dispersed sub-Ombuds, mitigated by §5.1 institutional-health reporting on voting-pattern concentration.
 - **Compound linkages:** T-008 × T-011 (elite formation creates narrative attack surface); T-008 × T-005 (PCRP authority); T-008 × T-006 (REB PCRP authority); T-008 × P-025 (federation is the structural answer to the auditor-of-auditors open problem).
 
 ---
@@ -220,7 +220,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 
 ---
 
-## Session 3 Interface Threats — Detailed Entries
+## T-012 through T-017 — Interface and Coordination Threats
 
 *New threats identified at patch interfaces during compound interface testing. All ADDRESSED via P-012.*
 
@@ -301,14 +301,14 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 - **Impact:** Without resolution: all 10 PROPOSED patches remain frozen permanently. The system is locked at its current design state. With uncontrolled resolution: a founding exception normalizes urgency bypass, defeating P-013's core purpose before it takes effect.
 - **Detection:** D=3 — the bootstrap problem is logically visible once the FAP and P-013 are examined together. It does not require adversarial action to surface.
 - **Mitigation direction:** P-014 PROPOSED: 5-stage founding instrument with 14-day pre-activation disclosure, heightened 5-member panel with external conflict verification and adversarial member, substitute evidence standard (desk review + red-team analysis), permanent sealing with Tier 2 non-precedent statement, mandatory post-activation audit within 90 days. See Annex AH.
-- **Residual risk:** Desk review case selection; founding panel capture during 14-day window; post-activation audit self-reference if activation was compromised. All mitigated by adversarial member, external verification, and Formal Acceptance Protocol fallback during any suspension. **Session 8 update:** The 14-day pre-activation disclosure window is insufficient for independent critique to organize against a coordinated founding capture attempt. P-020 (Founding Window Extension, Annex AH2) extends this to 60 days minimum and requires the adversarial panel member to be nominated by a body structurally *opposed* to the founding coalition's interests — not appointed by the same process as the other four panel members.
+- **Residual risk:** Desk review case selection; founding panel capture during pre-activation window; post-activation audit self-reference if activation was compromised. All mitigated by adversarial member, external verification, and Formal Acceptance Protocol fallback during any suspension. P-020 (Founding Window Extension, Annex AH2) extends the pre-activation disclosure period to 60 days minimum and requires the adversarial panel member to be nominated by a body structurally opposed to the founding coalition's interests.
 - **Compound linkages:** T-017 × T-016 (bootstrap paradox is the exploit surface T-016 bad actors use for indefinite delay). T-017 × T-011 (bootstrap paradox is a narrative attack surface — P-014 converts it into a transparency demonstration). T-017 × T-022 (a successful T-022 attack requires a new founding moment — T-017 recurs; recursive bootstrap is a second-order T-022 consequence).
 
 ---
 
-## Session 7 Threats — Detailed Entries
+## T-018 through T-019 — Resilience and Deadlock Threats
 
-*New threats identified during corpus audit (Session 7). Both are OPEN pending patch design. They represent second-order attacks on existing mitigations rather than attacks on the system directly.*
+*Both are second-order attacks on existing mitigations rather than attacks on the system directly.*
 
 ### T-018 — PCRP False-Trigger Exhaustion Attack
 - **Layer:** PCRP / governance / measurement
@@ -339,9 +339,9 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 
 ---
 
-## Session 8 Threats — Detailed Entries
+## T-020 through T-023 — Oracle and Epistemological Threats
 
-*New threats identified during red-team review (Session 8). All are OPEN pending patch design. T-020 and T-021 target the measurement architecture's epistemological foundations. T-022 targets the political durability of the constitutional architecture. T-023 targets the evidentiary basis for scale-up decisions.*
+*T-020 and T-021 target the measurement architecture's epistemological foundations. T-022 targets the political durability of the constitutional architecture. T-023 targets the evidentiary basis for scale-up decisions.*
 
 ### T-020 — Epistemological Oracle Capture
 - **Layer:** Measurement / RCS / oracle accreditation
@@ -400,9 +400,9 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 
 ---
 
-## Session 9 Threats — Detailed Entries
+## T-024 through T-025 — Operational and Systemic Threats
 
-*Gaps identified after Session 8 implementation review. T-024 is an operational void with no current mitigation path. T-025 is registered pending design discussion.*
+*T-024 is an operational void resolved by P-022. T-025 is resolved by P-023 (contract-commitment architecture).*
 
 ---
 
@@ -436,7 +436,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 
 ## T-008 / T-009 / T-016 / T-017 Capture Triad Extended
 
-*The connected capture triad from Session 5 is now a quadruplet:*
+*The capture triad is now a quadruplet:*
 
 | Threat | Route | Patch | Closes |
 | :--- | :--- | :--- | :--- |
@@ -461,7 +461,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 
 ---
 
-## Complete Register Summary — Session 8
+## Complete Register Summary
 
 | ID | Title | Severity | Status | Patch | Score |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -492,7 +492,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 | T-026 | Exit Denial | **Critical** | **ADDRESSED** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 |
 | T-027 | Subsidiarity Violation | High | **ADDRESSED** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 12 PROPOSED, 5 OPEN, 4 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-001 and T-002 carry Session 8 open-problem additions (Annexes AJ and AK). T-020 and T-021 addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033 (Proposal 3). T-025 addressed by P-023 (contract-commitment architecture, zero exemptions). T-026 and T-027 are new Session 9 Proposal 5 threat classes, both ADDRESSED by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI).
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 12 PROPOSED, 5 OPEN, 4 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033. T-025 addressed by P-023 (contract-commitment architecture, zero exemptions). T-026 and T-027 both ADDRESSED by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI).
 
 ---
 
@@ -501,13 +501,7 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 | ID | Status | Reason |
 | :--- | :--- | :--- |
 | T-003 | **RETIRED** | Scope fully absorbed into T-002 (Identity Exploits) before formal register versioning. ID permanently retired. |
-| T-010 | **RENUMBERED** | Consolidated with T-011 (Narrative Attack Surface) during Session 3. References to T-010 resolve to T-011. |
-
----
-
-*Session 9 complete. T-024 → P-022 (Shared Storehouse oracle-failure fallback). T-025 → P-023 (contract-commitment architecture, zero demurrage exemptions). P-016 (identity AED) and P-021 (register disclosure) remain next-priority after P-022 and P-023.*
-
-*Session 10 resolution: T-025 design question resolved. Direction B adopted — investment-channel exemptions removed entirely. Contract-commitment architecture serves genuine long-horizon capital needs without creating exploitable classifications. Ten red-team attack vectors identified and resolved before patch was written. Annex AR governs threshold values, deployment windows, and force majeure freeze caps.*
+| T-010 | **RENUMBERED** | Consolidated with T-011 (Narrative Attack Surface). References to T-010 resolve to T-011. |
 
 ---
 
@@ -535,4 +529,4 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Detection:** Medium (D=2). Requires cross-scale comparison over time — which smaller-scale decisions were preempted when they could have been competent? The Federated Ombuds §4.3 cohort concentration tracking extended to decision-scale concentration (§4.3 "concentration of decision venue at federation scale") provides the detection infrastructure.
 - **Mitigation:** The subsidiarity rule (`subsidiarity_rule.md §Three-Prong Competence Test`) is Tier 1 protected. Federation-scale-by-construction list is exhaustive and Tier 1-locked; extensions require 7-of-9 amendment. Soft-exception invocations are logged and audited. The Proportionality Principle is enforceable by Ombuds appeal: a federation action adopting a uniform rule where a floor would suffice is challengeable, and the Plenum (Annex AI §3.2) may remand for reconsideration under FC-091.
 - **Residual risk:** The three-prong test applied at the margin can accommodate reasonable-seeming expansion over many individual decisions. Mitigation is aggregate monitoring — the Ombuds §4.3 federation-decision-concentration report is an Article VII metric published annually; significant drift toward federation-scale decision venue is itself a trigger event.
-- **Compound linkages:** T-027 × T-022 (electoral cycle capture often operates through subsidiarity violation — a captured federation adopts uniform rules that would otherwise be local prerogatives). T-027 × T-008 (centralization of decision venue is an elite-formation vector; decisions concentrated in federation bodies produce concentrated expertise pools). T-027 × T-007 (definition drift around "federation-scale by construction" categories; closed by explicit enumeration).*
+- **Compound linkages:** T-027 × T-022 (electoral cycle capture often operates through subsidiarity violation — a captured federation adopts uniform rules that would otherwise be local prerogatives). T-027 × T-008 (centralization of decision venue is an elite-formation vector; decisions concentrated in federation bodies produce concentrated expertise pools). T-027 × T-007 (definition drift around "federation-scale by construction" categories; closed by explicit enumeration).

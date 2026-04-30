@@ -4,11 +4,11 @@
 
 ---
 
-This document supersedes the Session 6 Formal Acceptance Protocol. Two amendments from Session 8: (1) the P-020 founding window extension, and (2) the Session 8 patch priority additions. All prior content is unchanged except as explicitly noted.
+This document incorporates two amendments: (1) the P-020 founding window extension (Annex AH2), and (2) updated patch priority additions. All prior content is unchanged except as explicitly noted.
 
 Governing principle: acceptance is evidence-gated, not calendar-gated. Urgency is a reason to accelerate the pilot, not to skip it. [Tier 2 protected per P-013 AG4]
 
-### Bootstrap Amendment (Session 6)
+### Bootstrap Amendment
 
 P-013 cannot be activated through earlier versions of the Formal Acceptance Protocol because P-013 governs the process that would activate it. This circular dependency is resolved by P-014 (Annex AH), a one-time founding instrument. P-014 is the only authorized pathway for P-013 activation. Once P-013 reaches ACTIVE through P-014, this Formal Acceptance Protocol governs all subsequent patch activations.
 
@@ -17,7 +17,7 @@ P-013 cannot be activated through earlier versions of the Formal Acceptance Prot
 -   **P-014 may not be cited as precedent.** [Tier 2 protected per AH1]
 -   **After P-013 ACTIVE:** P-006 and P-009 immediately enter the Formal Acceptance Protocol pilot stage as first-priority patches.
 
-### P-014 Founding Window Amendment (Session 8 — P-020 / Annex AH2)
+### Founding Window Extension (P-020 / Annex AH2)
 
 The original P-014 Annex AH specified a 14-day pre-activation disclosure window. P-020 amends this as follows. **Annex AH2 is operative as of this document version and governs all P-014 executions.**
 
@@ -38,7 +38,7 @@ The nominating body's selection rationale must be published as part of the found
 
 ---
 
-### Priority Acceptance Order (Updated — Session 8)
+### Priority Acceptance Order
 
 | Priority | Patch | Activation Path | Pre-Launch Gate? |
 | :--- | :--- | :--- | :--- |
@@ -62,7 +62,7 @@ All other Formal Acceptance Protocol provisions (Sections 1–5 of the prior ver
 
 ---
 
-### Pre-Launch Blocking Gates (Session 11 — explicit registry)
+### Pre-Launch Blocking Gates
 
 The following items must be complete before any patch can move from PROPOSED to ACTIVE. These are not aspirational milestones — they are hard preconditions. A patch that depends on a blocking gate cannot be activated until the gate is cleared, regardless of pilot evidence quality.
 

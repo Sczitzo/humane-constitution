@@ -1,8 +1,365 @@
-import { startTransition, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
+import { createContext, startTransition, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
+import { createPortal } from 'react-dom'
 import { StatechartDiagram } from './StatechartDiagram'
 import { invoke } from '@tauri-apps/api/core'
 import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
 import type { AppView } from './Layout'
+
+// ─── Ref-chip system ────────────────────────────────────────────────────────
+
+interface RefEntry {
+  label: string        // e.g. "P-013", "T-007", "Annex AH"
+  title: string        // short title shown in tooltip
+  summary: string      // one-line description or excerpt
+  status: string       // 'active' | 'proposed' | 'reference' | ''
+  docId: string        // corpus doc id to navigate to
+  slug?: string        // optional heading slug within that doc
+}
+
+type RefLookup = Map<string, RefEntry>
+
+interface RefNavContextValue {
+  lookup: RefLookup
+  onNavigate: (docId: string, slug?: string) => void
+  isDark: boolean
+}
+
+const RefNavContext = createContext<RefNavContextValue>({
+  lookup: new Map(),
+  onNavigate: () => {},
+  isDark: false,
+})
+
+/** Build a lookup map from the full corpus docs list. */
+function buildRefLookup(docs: CorpusDoc[]): RefLookup {
+  const map: RefLookup = new Map()
+
+  for (const doc of docs) {
+    // Patch entries: P-\d+
+    if (doc.section === 'registry' && /patch/i.test(doc.path)) {
+      const pMatch = doc.title.match(/P-(\d+)/i)
+      if (pMatch) {
+        const key = `P-${pMatch[1].padStart(3, '0')}`
+        const shortKey = `P-${parseInt(pMatch[1], 10)}`
+        const entry: RefEntry = {
+          label: shortKey,
+          title: doc.title,
+          summary: doc.summary || '',
+          status: doc.statusBucket,
+          docId: doc.id,
+        }
+        map.set(shortKey, entry)
+        map.set(key, entry)
+      }
+      // Also index any P-NNN headings within patch docs
+      for (const h of doc.headings) {
+        const hm = h.text.match(/^(P-\d+)\s*[—–-]/)
+        if (hm) {
+          const pKey = hm[1]
+          if (!map.has(pKey)) {
+            map.set(pKey, {
+              label: pKey,
+              title: h.text,
+              summary: doc.summary || '',
+              status: doc.statusBucket,
+              docId: doc.id,
+              slug: h.slug,
+            })
+          }
+        }
+      }
+    }
+
+    // Threat entries: T-\d+, TR-\d+, PRD-\d+, INV-\d+ — scan all registry docs
+    if (doc.section === 'registry') {
+      for (const h of doc.headings) {
+        const tm = h.text.match(/^(T-\d+|TR-\d+|PRD-\d+|INV-\d+)\s*[—–:\s]/)
+        if (tm) {
+          const tKey = tm[1]
+          if (!map.has(tKey)) {
+            map.set(tKey, {
+              label: tKey,
+              title: h.text,
+              summary: '',
+              status: doc.statusBucket || 'reference',
+              docId: doc.id,
+              slug: h.slug,
+            })
+          }
+        }
+      }
+    }
+
+    // Annex entries
+    if (doc.section === 'annex') {
+      // Match "ANNEX_AB" style path or "Annex AB" style title
+      const annexMatch = doc.path.match(/ANNEX_([A-Z]{1,3}\d*)\.md$/i)
+        || doc.title.match(/^ANNEX\s+([A-Z]{1,3}\d*)\s*[—–-]/i)
+      if (annexMatch) {
+        const code = annexMatch[1].toUpperCase()
+        const keys = [`Annex ${code}`, `ANNEX ${code}`, code]
+        const entry: RefEntry = {
+          label: `Annex ${code}`,
+          title: doc.title,
+          summary: doc.summary || '',
+          status: doc.statusBucket,
+          docId: doc.id,
+        }
+        for (const k of keys) {
+          if (!map.has(k)) map.set(k, entry)
+        }
+      }
+    }
+  }
+
+  // Second pass: scan raw content for inline PRD-xxx, TR-xx references in table cells
+  // Format: "| PRD-004 / household coercion |" or "T-009 / TR-07 / ..."
+  for (const doc of docs) {
+    if (!/patch.log|patch_log|threat.register|threat_register/i.test(doc.path)) continue
+    const cellPattern = /\b(PRD-\d+|TR-\d+)\s*\/\s*([^|,\n]{3,60})/g
+    let cm: RegExpExecArray | null = cellPattern.exec(doc.content)
+    while (cm) {
+      const key = cm[1]
+      const desc = cm[2].trim().replace(/\*+/g, '').trim()
+      if (!map.has(key)) {
+        map.set(key, {
+          label: key,
+          title: `${key} — ${desc}`,
+          summary: '',
+          status: 'reference',
+          docId: doc.id,
+        })
+      }
+      cm = cellPattern.exec(doc.content)
+    }
+    // Also catch "T-010 / T-011 — Combined heading" style
+    const combinedPattern = /\b(T-\d+)\s*\/\s*(T-\d+)\s*[—–]/g
+    let combo: RegExpExecArray | null = combinedPattern.exec(doc.content)
+    while (combo) {
+      // Both T-IDs point to the same heading
+      for (const key of [combo[1], combo[2]]) {
+        if (!map.has(key)) {
+          // Find the heading that contains this
+          const h = doc.headings.find(hd => hd.text.includes(combo![1]) || hd.text.includes(combo![2]))
+          map.set(key, {
+            label: key,
+            title: h?.text ?? key,
+            summary: '',
+            status: 'reference',
+            docId: doc.id,
+            slug: h?.slug,
+          })
+        }
+      }
+      combo = combinedPattern.exec(doc.content)
+    }
+  }
+
+  // Third pass: index P-NNN headings inside the Patch Log doc
+  for (const doc of docs) {
+    if (/patch.log/i.test(doc.path) || /patch_log/i.test(doc.path)) {
+      for (const h of doc.headings) {
+        const hm = h.text.match(/^(P-\d+)\s*[—–-]/)
+        if (hm) {
+          const pKey = hm[1]
+          if (!map.has(pKey)) {
+            map.set(pKey, {
+              label: pKey,
+              title: h.text,
+              summary: '',
+              status: 'reference',
+              docId: doc.id,
+              slug: h.slug,
+            })
+          }
+        }
+      }
+    }
+    if (/threat.register/i.test(doc.path) || /threat_register/i.test(doc.path)) {
+      for (const h of doc.headings) {
+        const tm = h.text.match(/^(T-\d+|TR-\d+|PRD-\d+|INV-\d+)\s*[—–:\s]/)
+        if (tm) {
+          const tKey = tm[1]
+          if (!map.has(tKey)) {
+            map.set(tKey, {
+              label: tKey,
+              title: h.text,
+              summary: '',
+              status: 'reference',
+              docId: doc.id,
+              slug: h.slug,
+            })
+          }
+        }
+      }
+    }
+  }
+
+  return map
+}
+
+const STATUS_CHIP_STYLES: Record<string, string> = {
+  active:   'bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100',
+  proposed: 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100',
+  reference:'bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100',
+  '':       'bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200',
+}
+
+const STATUS_CHIP_STYLES_DARK: Record<string, string> = {
+  active:   'bg-emerald-950/70 text-emerald-300 border border-emerald-700/50 hover:bg-emerald-900/70',
+  proposed: 'bg-amber-950/70 text-amber-300 border border-amber-700/50 hover:bg-amber-900/70',
+  reference:'bg-sky-950/70 text-sky-300 border border-sky-700/50 hover:bg-sky-900/70',
+  '':       'bg-white/10 text-stone-300 border border-white/20 hover:bg-white/15',
+}
+
+const STATUS_DOT: Record<string, string> = {
+  active:    'bg-emerald-500',
+  proposed:  'bg-amber-400',
+  reference: 'bg-sky-400',
+  '':        'bg-stone-400',
+}
+
+const STATUS_DOT_DARK: Record<string, string> = {
+  active:    'bg-emerald-400',
+  proposed:  'bg-amber-400',
+  reference: 'bg-sky-400',
+  '':        'bg-stone-500',
+}
+
+interface TooltipPos { x: number; y: number; align: 'left' | 'right' }
+
+function RefChip({ refKey, display }: { refKey: string; display: string }) {
+  const { lookup, onNavigate, isDark } = useContext(RefNavContext)
+  const entry = lookup.get(refKey) || lookup.get(display)
+  const btnRef = useRef<HTMLButtonElement>(null)
+  const [pos, setPos] = useState<TooltipPos | null>(null)
+
+  if (!entry) return <>{display}</>
+
+  const chipStyles = isDark ? STATUS_CHIP_STYLES_DARK : STATUS_CHIP_STYLES
+  const dotStyles  = isDark ? STATUS_DOT_DARK : STATUS_DOT
+  const chipStyle  = chipStyles[entry.status] ?? chipStyles['']
+  const dotStyle   = dotStyles[entry.status]  ?? dotStyles['']
+  const tooltipTitle = entry.title.replace(/^(P-\d+|T-\d+|PRD-\d+|TR-\d+|INV-\d+|ANNEX\s+[A-Z\d]+|FC-\d+)\s*[—–\-]+\s*/i, '').trim()
+
+  const TOOLTIP_W = 220
+
+  function showTooltip() {
+    if (!btnRef.current) return
+    const r = btnRef.current.getBoundingClientRect()
+    const spaceRight = window.innerWidth - r.left
+    const align: 'left' | 'right' = spaceRight >= TOOLTIP_W + 8 ? 'left' : 'right'
+    setPos({ x: align === 'left' ? r.left : r.right, y: r.bottom + 6, align })
+  }
+
+  function hideTooltip() { setPos(null) }
+
+  function handleClick(e: React.MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
+    hideTooltip()
+    onNavigate(entry!.docId, entry!.slug)
+  }
+
+  // Tooltip colours — contextually aware of dark mode
+  const tipBg     = isDark ? '#232018' : '#ffffff'
+  const tipBorder = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+  const tipShadow = isDark
+    ? '0 4px_24px_rgba(0,0,0,0.55)'
+    : '0 4px 20px rgba(0,0,0,0.14)'
+  const tipLabel  = isDark ? '#a09680' : '#6b7280'
+  const tipTitle  = isDark ? '#ede8df' : '#1f2937'
+  const tipBody   = isDark ? '#7d7567' : '#6b7280'
+  const tipHint   = isDark ? '#5a5246' : '#9ca3af'
+
+  // Status badge colours
+  const badgeBg    = isDark
+    ? (entry.status === 'active' ? 'rgba(6,78,59,0.7)' : entry.status === 'proposed' ? 'rgba(78,52,10,0.7)' : 'rgba(7,68,100,0.7)')
+    : (entry.status === 'active' ? '#dcfce7' : entry.status === 'proposed' ? '#fef3c7' : '#e0f2fe')
+  const badgeColor = isDark
+    ? (entry.status === 'active' ? '#6ee7b7' : entry.status === 'proposed' ? '#fcd34d' : '#7dd3fc')
+    : (entry.status === 'active' ? '#166534' : entry.status === 'proposed' ? '#92400e' : '#075985')
+
+  const tooltip = pos && typeof document !== 'undefined'
+    ? createPortal(
+        <div
+          role="tooltip"
+          style={{
+            position: 'fixed',
+            top: pos.y,
+            left:  pos.align === 'left'  ? pos.x : undefined,
+            right: pos.align === 'right' ? window.innerWidth - pos.x : undefined,
+            width: TOOLTIP_W,
+            zIndex: 99999,
+            background: tipBg,
+            border: `1px solid ${tipBorder}`,
+            borderRadius: 10,
+            boxShadow: tipShadow,
+          }}
+          className="pointer-events-none text-left"
+        >
+          {/* Arrow */}
+          <span
+            style={{
+              position: 'absolute',
+              top: -5,
+              left: pos.align === 'left' ? 16 : undefined,
+              right: pos.align === 'right' ? 16 : undefined,
+              width: 10, height: 10,
+              background: tipBg,
+              border: `1px solid ${tipBorder}`,
+              borderRight: 'none',
+              borderBottom: 'none',
+              transform: 'rotate(45deg)',
+              borderRadius: 2,
+            }}
+          />
+          <div style={{ padding: '10px 12px 10px' }}>
+            {/* Header row */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: dotStyle.includes('emerald') ? (isDark ? '#34d399' : '#10b981') : dotStyle.includes('amber') ? '#fbbf24' : dotStyle.includes('sky') ? '#38bdf8' : (isDark ? '#78716c' : '#a8a29e'), flexShrink: 0 }} />
+              <span style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: tipLabel }}>{entry.label}</span>
+              <span style={{ marginLeft: 'auto', borderRadius: 4, padding: '1px 5px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', background: badgeBg, color: badgeColor }}>
+                {entry.status || 'ref'}
+              </span>
+            </div>
+            {tooltipTitle && (
+              <p style={{ marginTop: 7, fontSize: 12, fontWeight: 600, lineHeight: 1.4, color: tipTitle }}>
+                {tooltipTitle.length > 90 ? tooltipTitle.slice(0, 90) + '…' : tooltipTitle}
+              </p>
+            )}
+            {entry.summary && (
+              <p style={{ marginTop: 4, fontSize: 11, lineHeight: 1.5, color: tipBody }}>
+                {entry.summary.length > 110 ? entry.summary.slice(0, 110) + '…' : entry.summary}
+              </p>
+            )}
+            <p style={{ marginTop: 8, fontSize: 10, color: tipHint }}>Click to open →</p>
+          </div>
+        </div>,
+        document.body
+      )
+    : null
+
+  return (
+    <span className="relative inline-block align-baseline">
+      <button
+        ref={btnRef}
+        type="button"
+        onClick={handleClick}
+        onMouseEnter={showTooltip}
+        onMouseLeave={hideTooltip}
+        onFocus={showTooltip}
+        onBlur={hideTooltip}
+        className={`inline-flex cursor-pointer items-center rounded px-1.5 py-0.5 font-mono text-[0.78em] font-semibold leading-none whitespace-nowrap transition-colors ${chipStyle}`}
+      >
+        {display}
+      </button>
+      {tooltip}
+    </span>
+  )
+}
+
+// ─── End ref-chip system ─────────────────────────────────────────────────────
 
 interface DashboardProps {
   view: AppView
@@ -427,7 +784,35 @@ function renderTextWithHighlights(text: string, query: string, keyPrefix: string
   })
 }
 
-function renderInline(text: string, keyPrefix: string, query = ''): React.ReactNode[] {
+// Pattern that matches ref tokens we want to chip-ify in plain text
+const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1,3}\d*|ANNEX\s+[A-Z]{1,3}\d*|FC-\d+)\b/g
+
+function renderPlainWithRefChips(text: string, query: string, keyPrefix: string, noChips = false): React.ReactNode[] {
+  if (noChips) {
+    return renderTextWithHighlights(text, query, keyPrefix)
+  }
+  const result: React.ReactNode[] = []
+  let last = 0
+  REF_TOKEN_PATTERN.lastIndex = 0
+  let rm: RegExpExecArray | null = REF_TOKEN_PATTERN.exec(text)
+  while (rm) {
+    if (rm.index > last) {
+      result.push(...renderTextWithHighlights(text.slice(last, rm.index), query, `${keyPrefix}-pre-${rm.index}`))
+    }
+    const raw = rm[1]
+    // Normalise "Annex AB" → lookup key
+    const lookupKey = raw.replace(/^ANNEX\s+/i, 'Annex ')
+    result.push(<RefChip key={`${keyPrefix}-chip-${rm.index}`} refKey={lookupKey} display={raw} />)
+    last = REF_TOKEN_PATTERN.lastIndex
+    rm = REF_TOKEN_PATTERN.exec(text)
+  }
+  if (last < text.length) {
+    result.push(...renderTextWithHighlights(text.slice(last), query, `${keyPrefix}-post`))
+  }
+  return result
+}
+
+function renderInline(text: string, keyPrefix: string, query = '', noChips = false): React.ReactNode[] {
   const parts: React.ReactNode[] = []
   const tokenPattern = /(`[^`]+`|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g
   let lastIndex = 0
@@ -435,7 +820,7 @@ function renderInline(text: string, keyPrefix: string, query = ''): React.ReactN
 
   while (match) {
     if (match.index > lastIndex) {
-      parts.push(...renderTextWithHighlights(text.slice(lastIndex, match.index), query, `${keyPrefix}-plain-${match.index}`))
+      parts.push(...renderPlainWithRefChips(text.slice(lastIndex, match.index), query, `${keyPrefix}-plain-${match.index}`, noChips))
     }
 
     if (match[1]?.startsWith('`')) {
@@ -478,7 +863,7 @@ function renderInline(text: string, keyPrefix: string, query = ''): React.ReactN
   }
 
   if (lastIndex < text.length) {
-    parts.push(...renderTextWithHighlights(text.slice(lastIndex), query, `${keyPrefix}-tail`))
+    parts.push(...renderPlainWithRefChips(text.slice(lastIndex), query, `${keyPrefix}-tail`, noChips))
   }
 
   return parts
@@ -530,6 +915,8 @@ const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
   { pattern: /^\*\*CLOSED\*\*$/i,      meta: { badgeClass: 's-closed',   rowClass: 'row-closed',   label: 'CLOSED' } },
   { pattern: /^\*\*Critical\*\*$/i,    meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
   { pattern: /^Critical$/i,            meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
+  { pattern: /^\*\*Med-High\*\*$/i,    meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
+  { pattern: /^Med-High$/i,            meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
   { pattern: /^\*\*High\*\*$/i,        meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
   { pattern: /^High$/i,                meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
   { pattern: /^Medium$/i,              meta: { badgeClass: 's-medium',   rowClass: '',             label: 'Medium' } },
@@ -1103,7 +1490,7 @@ function MarkdownDocument({
                   block.level >= 4 ? 'reader-h4' : ''
                 }`}
               >
-                {renderInline(block.text, `${doc.id}-heading-inline-${index}`, searchQuery)}
+                {renderInline(block.text, `${doc.id}-heading-inline-${index}`, searchQuery, true)}
               </Tag>
               <button
                 type="button"
@@ -2497,9 +2884,17 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const pendingHashTargetRef = useRef<{ docId: string; slug: string } | null>(null)
   // Set to true when the user explicitly picks a doc so the guard effect skips its reset.
   const userPickedDocRef = useRef(false)
+  const [isDark, setIsDark] = useState(() =>
+    typeof document !== 'undefined'
+      ? document.documentElement.getAttribute('data-theme') === 'dark'
+      : false
+  )
+  const [backTarget, setBackTarget] = useState<{ docId: string; scrollTop: number } | null>(null)
+  const backTimeoutRef = useRef<number | null>(null)
 
   const deferredQuery = useDeferredValue(query)
   const allDocs = corpus?.docs ?? []
+  const refLookup = useMemo(() => buildRefLookup(allDocs), [allDocs])
   const baseDocs = corpus ? docsForView(view, corpus.docs, corpus.featuredPaths) : []
   const visibleDocs = baseDocs.filter((doc) => matchesQuery(doc, deferredQuery))
   const selectedDoc = visibleDocs.find((doc) => doc.id === selectedDocId) ?? visibleDocs[0] ?? null
@@ -2737,6 +3132,16 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     applyTheme(readTheme())
   }, [])
 
+  // Track dark-mode changes so RefChip can switch colour palettes reactively
+  useEffect(() => {
+    const root = document.documentElement
+    const obs = new MutationObserver(() => {
+      setIsDark(root.getAttribute('data-theme') === 'dark')
+    })
+    obs.observe(root, { attributes: true, attributeFilter: ['data-theme'] })
+    return () => obs.disconnect()
+  }, [])
+
   useEffect(() => {
     return () => {
       if (scrollWriteFrameRef.current !== null) {
@@ -2744,6 +3149,9 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       }
       if (copiedHeadingTimeoutRef.current !== null) {
         window.clearTimeout(copiedHeadingTimeoutRef.current)
+      }
+      if (backTimeoutRef.current !== null) {
+        window.clearTimeout(backTimeoutRef.current)
       }
     }
   }, [])
@@ -3089,6 +3497,53 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     setSelectedDocId(doc.id)
   }
 
+  function handleNavToRef(docId: string, slug?: string) {
+    const doc = allDocs.find((d) => d.id === docId)
+    if (!doc) return
+
+    // Save current position so the user can jump back
+    const currentScrollTop = readerPaneRef.current?.scrollTop ?? window.scrollY
+    const currentDocId = selectedDoc?.id
+    if (currentDocId) {
+      if (backTimeoutRef.current !== null) window.clearTimeout(backTimeoutRef.current)
+      setBackTarget({ docId: currentDocId, scrollTop: currentScrollTop })
+      backTimeoutRef.current = window.setTimeout(() => {
+        setBackTarget(null)
+        backTimeoutRef.current = null
+      }, 12000)
+    }
+
+    handleSelectDoc(doc)
+    if (slug) {
+      // Give the renderer a tick to mount the doc before jumping
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => jumpToHeading(doc, slug))
+      })
+    }
+  }
+
+  function handleGoBack() {
+    if (!backTarget) return
+    const doc = allDocs.find((d) => d.id === backTarget.docId)
+    if (!doc) { setBackTarget(null); return }
+    const savedScrollTop = backTarget.scrollTop
+    setBackTarget(null)
+    if (backTimeoutRef.current !== null) {
+      window.clearTimeout(backTimeoutRef.current)
+      backTimeoutRef.current = null
+    }
+    handleSelectDoc(doc)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (readerPaneRef.current) {
+          readerPaneRef.current.scrollTop = savedScrollTop
+        } else {
+          window.scrollTo({ top: savedScrollTop, behavior: 'instant' })
+        }
+      })
+    })
+  }
+
   function handleTogglePinned() {
     if (!selectedDoc) {
       return
@@ -3240,6 +3695,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }
 
   return (
+    <RefNavContext.Provider value={{ lookup: refLookup, onNavigate: handleNavToRef, isDark }}>
     <div
       className={`space-y-6 ${
         independentPaneView ? 'xl:grid xl:grid-rows-[auto_minmax(0,1fr)] xl:gap-6 xl:space-y-0' : ''
@@ -3352,5 +3808,75 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
         />
       )}
     </div>
+
+    {/* Back-navigation float — appears after clicking a ref chip, auto-dismisses after 12s */}
+    {backTarget && typeof document !== 'undefined' && createPortal(
+      <div
+        style={{
+          position: 'fixed',
+          bottom: 24,
+          left: 24,
+          zIndex: 9999,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          background: isDark ? 'rgba(28,26,22,0.92)' : 'rgba(253,249,242,0.96)',
+          border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(60,54,46,0.14)'}`,
+          borderRadius: 10,
+          boxShadow: isDark
+            ? '0 4px 24px rgba(0,0,0,0.5)'
+            : '0 4px 20px rgba(0,0,0,0.12)',
+          padding: '8px 14px 8px 12px',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          animation: 'fadeSlideUp 0.18s ease',
+        }}
+        role="navigation"
+        aria-label="Return to previous position"
+      >
+        <svg
+          width="13" height="13" viewBox="0 0 13 13" fill="none"
+          style={{ color: isDark ? '#a09680' : '#6b7280', flexShrink: 0 }}
+        >
+          <path d="M8 2L4 6.5L8 11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <button
+          type="button"
+          onClick={handleGoBack}
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+            fontSize: 12,
+            fontWeight: 500,
+            color: isDark ? '#c8bfb2' : '#3c362e',
+            letterSpacing: '0.01em',
+            lineHeight: 1,
+          }}
+        >
+          Back to previous position
+        </button>
+        <button
+          type="button"
+          onClick={() => { setBackTarget(null); if (backTimeoutRef.current !== null) { window.clearTimeout(backTimeoutRef.current); backTimeoutRef.current = null } }}
+          aria-label="Dismiss"
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: '0 0 0 4px',
+            cursor: 'pointer',
+            color: isDark ? '#5a5246' : '#9ca3af',
+            fontSize: 11,
+            lineHeight: 1,
+          }}
+        >
+          ✕
+        </button>
+      </div>,
+      document.body
+    )}
+    </RefNavContext.Provider>
   )
 }
