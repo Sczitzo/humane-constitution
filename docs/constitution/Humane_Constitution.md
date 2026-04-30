@@ -59,6 +59,7 @@ This protocol was built in public, stress-tested adversarially, and released wit
 - **Families may pass continuity, not domination:** homes, tools, and modest succession may be protected, but perpetual dynastic wealth structures and inherited ruling claims are prohibited.
 - **Ownership is stewardship, not tribute:** land, housing, and enterprise rights may reward use, risk, and contribution, but may not justify perpetual passive extraction from others' necessity or labor.
 - **Influence cannot be purchased:** governance influence is earned through verified stewardship and decays over time.
+- **Legitimacy cannot be automated:** the system may automate the continuity of survival baselines and operational functions, but it may never automate the legitimacy of decisions that affect constitutional order. Automated execution of a legitimated decision is permitted; automated substitution for the legitimating act itself is not. This constraint applies regardless of efficiency arguments and is not waivable by operational expedience.
 - **Reality anchoring:** issuance of survival instruments is capped by verified physical capacity with conservative safety margins.
 - **Due process and auditability:** enforcement is constrained by transparent rules, appeal paths, and independent oversight.
 
@@ -70,6 +71,9 @@ The above invariants are not only textually protected but **mechanically enforce
 - [Implementation Binding](architecture/implementation_binding.md) — every bound component verifies the drift-chain head on startup and refuses to operate on unverified state (with the CSM-dispensation exception per Annex Y unconditionality).
 
 Changes to Tier 1 invariants require the full architectural process. Changes to the architectural enforcement layer itself are also Tier 1 and subject to the same process (recursive). The architectural layer protects against silent drift below the amendment threshold; it does not and cannot prevent legitimate H-3 amendment by a lawful supermajority of holders, but it guarantees visibility, response time (180 days), and public auditability of any such change.
+
+**Fail-closed posture.**
+The protocol defaults to caution, not momentum. In the absence of active civic participation, all evolutionary progress — new proposals, amendments, parameter adjustments, and scope expansions — freezes at the last legitimated state. Survival baselines (Essential Access, CSM floor) continue unconditionally; no civic silence may be interpreted as consent to reduce them. Operational continuity is not proof of legitimacy. The system holds its position until humans actively renew the mandate to move. This posture is not a crisis mode — it is the default. Growth and change require deliberate human activation; stasis requires nothing.
 
 **Founding Order — Subsidiarity, Consent & Exit (Proposal 5 close-out, 2026-04-18).**
 Beneath the seven operational articles, this protocol rests on a foundational scale-and-consent layer, the **Founding Order**, that defines who consents to be governed by the protocol, at what scale, and how they withdraw. The Founding Order is Tier 1 architectural:
@@ -149,6 +153,7 @@ To prevent corruption and category errors, the protocol uses five separated inst
 
 ### 4) Shared Storehouse - The Emergency Brake
 - **Purpose and limit:** Shared Storehouse is a temporary, category-specific emergency quota instrument activated only during verified scarcity. Shared Storehouse is not money, is not permanent, is non-convertible, and must terminate when scarcity mode ends.
+- **Hard expiration rule:** every Shared Storehouse activation carries a published expiration timestamp set at activation. Continuation beyond that timestamp requires an affirmative multi-key renewal — a new scarcity finding published by the oracle quorum plus a deliberative ratification under Article VI. Without active renewal, the system automatically reverts to its baseline constitutional state at the expiration timestamp regardless of whether the underlying conditions have improved. Silence, apathy, or administrative delay is not renewal. Automatic reversion is not a failure mode; it is the designed default. No emergency power may accumulate across renewal cycles into a permanent expansion of executive scope.
 - **Separation rule:** Flow is the only true currency. Essential Access, Voice, Service Record, and Shared Storehouse are not money and may not be converted, pooled, sold, wrapped, or re-created through indirect markets, queue trading, or proxy contracts.
 
 ---
@@ -339,6 +344,9 @@ Real-time public dashboards (the S3* audit channel, genuinely independent of Art
 - **Minimum civic floor:** one-person-one-vote for constitutional matters and survival-adjacent outcomes.
 
 **Why these functions share one article.** Voice and Service Record, the contribution acts that mint them, and the deliberation processes that consume them form a single closed loop. Keeping them together prevents the civic-input pipeline from fragmenting into separate capture points.
+
+**The measure of civic health.**
+The success of this article is not measured by the stability of its mechanics or the volume of Voice allocated. It is measured by movement: specifically, the rate at which people who rely on the system as recipients also become active contributors to it. A society in which the survival floor is secure but civic participation is absent has achieved only half the design goal. The other half is the conditions under which a person can move from receiving care to extending it — from consuming the commons to stewarding it. This protocol does not prescribe the content of that movement or set a threshold for it. It preserves the structural conditions under which it becomes possible: a survival floor that removes desperation, instruments that reward stewardship rather than purchase it, and a deliberation process that remains open to new participants rather than crystallizing around an established class. Measuring this rate of movement — the velocity of contribution — is a legitimate Article VII transparency function and a meaningful signal of whether the civic layer is alive or merely operating.
 
 #### Article VII: Transparency & Environmental Scanning
 **Transparency — the S3* audit channel**
