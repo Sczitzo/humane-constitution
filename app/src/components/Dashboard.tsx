@@ -3008,6 +3008,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   )
   const [backTarget, setBackTarget] = useState<{ docId: string; scrollTop: number } | null>(null)
   const backTimeoutRef = useRef<number | null>(null)
+  const isGoingBackRef = useRef(false)
 
   const deferredQuery = useDeferredValue(query)
   const allDocs = corpus?.docs ?? []
@@ -3578,10 +3579,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     userPickedDocRef.current = true
     setSelectedDocId(doc.id)
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && !isGoingBackRef.current) {
       // Two rAFs: first fires after React flushes, second after the browser paints.
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
+          if (isGoingBackRef.current) return  // back navigation will restore scroll itself
           if (window.matchMedia('(max-width: 1279px)').matches) {
             document.getElementById('reader-panel-start')?.scrollIntoView({
               behavior: 'smooth',
@@ -3649,9 +3651,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       window.clearTimeout(backTimeoutRef.current)
       backTimeoutRef.current = null
     }
+    isGoingBackRef.current = true
     handleSelectDoc(doc)
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
+        isGoingBackRef.current = false
         if (readerPaneRef.current) {
           readerPaneRef.current.scrollTop = savedScrollTop
         } else {
