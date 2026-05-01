@@ -13,10 +13,12 @@ Read in this order:
 1. [One-Page Overview](./01_overview.md) — the shortest explanation.
 2. [FAQ](./02_faq.md) — common questions in plain language.
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
-4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-5. [White Paper](./04_white_paper.md) — the fuller public explanation.
-6. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-7. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+4. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
+5. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+6. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+7. [White Paper](./04_white_paper.md) — the fuller public explanation.
+8. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+9. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
 Do not start with the annexes unless you already want the technical layer.
 

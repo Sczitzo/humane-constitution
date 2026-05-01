@@ -9,10 +9,12 @@
 **Rule.** The patch log is not a substitute for the constitution. The Humane Constitution holds the law-like text; the patch log explains how and why the hardening evolved.
 
 **Patch status convention:** 
-- **ACTIVE** = adopted and awaiting simulation/tuning. 
+- **ACTIVE** = adopted into the document set and awaiting simulation/tuning; not evidence-backed proof. 
 - **SUPERSEDED** = replaced by a later patch. 
 - **PROPOSED** = designed but not yet accepted into the Humane Constitution.
 - **RETIRED** = intentionally removed.
+
+**Evidence discipline.** A patch can be well designed and still fail in contact with identity errors, measurement lag, legal wrappers, institutional self-protection, or founding politics. Do not treat `ACTIVE` or `PROPOSED` as `RESOLVED`; evidence-backed resolution belongs in the Claims and Evidence Register and the relevant Threat Register residual-risk update.
 
 ---
 
@@ -116,6 +118,7 @@
 **Threat addressed:** T-016 / INV-007  
 **Audit finding:** PRD-001 / Phase 1 Article I adversarial audit; confirmed still open in Phase 4 follow-up check  
 **Status:** ACTIVE | **Priority:** Critical | **Annex:** AV (Acceptance_Protocol.md §Structural Precondition Gate)
+
 **Constitutional text:** [ANNEX_AV.md](../annexes/ANNEX_AV.md)
 
 **Problem diagnosed:**  
@@ -333,7 +336,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 - **Dependencies:** P-005 categorical floor extended to include FAP deadlock resolution slot. P-004 protected terms registry extended for representativeness criteria. P-008 AC3.3 epistemic diversity standard referenced for audit body. Article VII AC3.7 concentration dashboard extended for FAP sign-off cluster. Independent concentration monitoring (not Ombuds) required before FAP becomes operative.
 - **New risks introduced:** Two-region pilot requirement increases cost and time; 'close enough' stress-tested region designation risk (mitigated by published representativeness assessment). 60-day deadlock window creates operational gap (mitigated by Annex C-6 emergency patching remaining available as separate pathway). Adversarial auditor produces hostile reports (mitigated by multi-member team). [Ambitious] Bootstrap micro-patch normalized as general bypass channel (mitigated by 2-authority sign-off, survival floor requirement, auto-sunset). [Ambitious] FAP concentration controls risk infinite regress (mitigated by self-executing Article VII publication).
 - **Residual risk:** Evidence farming in stress-tested pilot region remains possible if representativeness assessment criteria are gamed at the definition stage — criteria require P-004 protection. Deadlock resolution creates new CRP workload at day 61; if CRP is congested (T-005 risk), the deadline may not be met — P-005 categorical floor must include FAP deadlock as a guaranteed slot. At root: the FAP cannot be made exploitation-proof without being made unusable. P-013 accepts this and chooses calibrated friction over either extreme.
-- **Compound linkages:** T-016 × T-005 (deadlock resolution congests CRP; P-005 floor must accommodate). T-016 × T-008 (audit capture via intellectual-cousin exploit — closed by AG3). T-016 × T-011 (stagnation of critical patches is narrative attack: 'the system cannot fix itself').
+- **Compound linkages:** T-016 × T-005 (deadlock resolution congests CRP; P-005 floor must accommodate). T-016 × T-008 (audit capture via intellectual-cousin exploit — mitigated by AG3). T-016 × T-011 (stagnation of critical patches is narrative attack: 'the system cannot fix itself').
 
 ---
 
@@ -418,6 +421,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 ### P-017 — Oracle Epistemological and Algorithmic Independence
 
 **Status: ACTIVE (promoted 2026-04-18 via Proposal 3 close-out).** Numerical floors bound in `/founding/commitments.md` FC-030 (N≥5), FC-031 (≥3 methodology classes), FC-032 (pairwise correlation ≤0.30), FC-033 (≥1 adversarial seat), FC-100 (14-day quorum-loss restoration window). Annex AL promoted to ACTIVE with its former founding-parameter slots fully bound.
+
 **Constitutional text:** [ANNEX_AL.md](../annexes/ANNEX_AL.md)
 
 - **Change type:** measurement architecture + accreditation standards + supply-chain transparency.
@@ -543,6 +547,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 ### P-022 — Shared Storehouse Oracle-Failure Fallback Protocol
 
 **Status: ACTIVE (promoted 2026-04-18 via Proposal 6 close-out).** FC-100 `ORACLE_QUORUM_LOSS_RESTORATION_WINDOW` = 14 days bound in `/founding/commitments.md`. Annex AQ promoted to ACTIVE with full protocol detail, survival floor unconditionality confirmed, Reconciliation Review specified.
+
 **Constitutional text:** [ANNEX_AQ.md](../annexes/ANNEX_AQ.md)
 
 - **Change type:** protocol + authority definition + oracle reconciliation procedure.
@@ -568,7 +573,9 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 ### P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)
 
 - **Status:** PROPOSED
+
 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md)
+
 - **Threat addressed:** T-025 (Demurrage Sector-Capture via Investment Channel).
 - **Direction adopted:** Direction B — deployment-speed architecture. Investment-channel exemptions are removed entirely. Genuine long-horizon capital needs are served by contract-commitment architecture; demurrage pressure remains universal.
 - **Red-team pre-analysis:** Ten attack vectors identified and resolved before this patch was written. Vectors: (1) escrow control ambiguity, (2) milestone definition gaming, (3) "working capital" as new exemption label, (4) advance procurement rebranded as hoarding, (5) subcontractor chain gaming, (6) essential-sector carve-out pressure, (7) multi-jurisdiction pooling ambiguity, (8) force majeure as wedge for permanent exemptions, (9) sector definitional creep, (10) milestone oracle capture. All resolved in patch rules below.
@@ -670,7 +677,9 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 ### P-024 — Attestation-at-Risk Stake Mechanism
 
 - **Status:** ACTIVE (promoted 2026-04-25 via Annex AS ratification). FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold bound in `/founding/commitments.md`.
+
 **Constitutional text:** [ANNEX_AS.md](../annexes/ANNEX_AS.md)
+
 - **Threat addressed:** T-009 (Coordinated False-Positive Suppression), TR-07 (Attestor Collusion), T-018 (Deliberate False-Trigger Exhaustion).
 - **Direction adopted:** Attestors who certify a claim bear skin-in-the-game exposure proportional to the claim's downstream consequence. A slashing schedule fires automatically when a certified claim is later disconfirmed by oracle quorum; redistribution routes slashed stake to the claimant harmed (where identifiable) and to a system integrity reserve.
 - **Introduced design:**

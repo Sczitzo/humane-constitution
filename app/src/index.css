@@ -376,19 +376,35 @@
 /* ── Status row tints ────────────────────────────────────────────────────── */
 
 .reader-table tr.row-active   { background: rgba(74, 160, 90, 0.07); }
+.reader-table tr.row-addressed { background: rgba(20, 184, 166, 0.07); }
+.reader-table tr.row-designed { background: rgba(194, 142, 44, 0.07); }
+.reader-table tr.row-active-unproven { background: rgba(20, 184, 166, 0.07); }
 .reader-table tr.row-proposed { background: rgba(194, 142, 44, 0.08); }
 .reader-table tr.row-partial  { background: rgba(210, 110, 40, 0.07); }
+.reader-table tr.row-needs-evidence { background: rgba(210, 110, 40, 0.07); }
 .reader-table tr.row-open     { background: rgba(196, 60, 60, 0.07); }
+.reader-table tr.row-unresolved { background: rgba(196, 60, 60, 0.07); }
 .reader-table tr.row-closed   { background: rgba(100, 100, 100, 0.04); }
 .reader-table tr.row-ongoing  { background: rgba(60, 130, 180, 0.07); }
+.reader-table tr.row-partly-tested { background: rgba(92, 95, 180, 0.07); }
+.reader-table tr.row-evidence-backed { background: rgba(34, 150, 90, 0.08); }
+.reader-table tr.row-moral { background: rgba(110, 140, 80, 0.07); }
 .reader-table tr.row-founding { background: rgba(155, 108, 44, 0.10); }
 
 .reader-table tr.row-active   td:first-child { border-left: 3px solid rgba(74, 160, 90, 0.55); }
+.reader-table tr.row-addressed td:first-child { border-left: 3px solid rgba(20, 184, 166, 0.50); }
+.reader-table tr.row-designed td:first-child { border-left: 3px solid rgba(194, 142, 44, 0.50); }
+.reader-table tr.row-active-unproven td:first-child { border-left: 3px solid rgba(20, 184, 166, 0.50); }
 .reader-table tr.row-proposed td:first-child { border-left: 3px solid rgba(194, 142, 44, 0.55); }
 .reader-table tr.row-partial  td:first-child { border-left: 3px solid rgba(210, 110, 40, 0.55); }
+.reader-table tr.row-needs-evidence td:first-child { border-left: 3px solid rgba(210, 110, 40, 0.55); }
 .reader-table tr.row-open     td:first-child { border-left: 3px solid rgba(196, 60, 60, 0.55); }
+.reader-table tr.row-unresolved td:first-child { border-left: 3px solid rgba(196, 60, 60, 0.55); }
 .reader-table tr.row-closed   td:first-child { border-left: 3px solid rgba(130, 130, 130, 0.35); }
 .reader-table tr.row-ongoing  td:first-child { border-left: 3px solid rgba(60, 130, 180, 0.50); }
+.reader-table tr.row-partly-tested td:first-child { border-left: 3px solid rgba(92, 95, 180, 0.50); }
+.reader-table tr.row-evidence-backed td:first-child { border-left: 3px solid rgba(34, 150, 90, 0.58); }
+.reader-table tr.row-moral td:first-child { border-left: 3px solid rgba(110, 140, 80, 0.50); }
 .reader-table tr.row-founding td:first-child { border-left: 3px solid rgba(155, 108, 44, 0.65); }
 
 /* ── Status badge pills ──────────────────────────────────────────────────── */
@@ -429,6 +445,32 @@
   border-color: rgba(74, 160, 90, 0.35);
 }
 
+/* Addressed / Active-unproven */
+.status-badge.s-addressed,
+.status-badge.s-active-unproven {
+  background: rgba(20, 184, 166, 0.12);
+  color: #0f766e;
+  border: 1px solid rgba(20, 184, 166, 0.30);
+}
+[data-theme="dark"] .status-badge.s-addressed,
+[data-theme="dark"] .status-badge.s-active-unproven {
+  background: rgba(20, 184, 166, 0.18);
+  color: #5eead4;
+  border-color: rgba(20, 184, 166, 0.36);
+}
+
+/* Designed */
+.status-badge.s-designed {
+  background: rgba(194, 142, 44, 0.11);
+  color: #8a5a0a;
+  border: 1px solid rgba(194, 142, 44, 0.28);
+}
+[data-theme="dark"] .status-badge.s-designed {
+  background: rgba(194, 142, 44, 0.17);
+  color: #f0c15a;
+  border-color: rgba(194, 142, 44, 0.34);
+}
+
 /* Proposed */
 .status-badge.s-proposed {
   background: rgba(194, 142, 44, 0.13);
@@ -453,6 +495,18 @@
   border-color: rgba(210, 110, 40, 0.35);
 }
 
+/* Needs evidence */
+.status-badge.s-needs-evidence {
+  background: rgba(210, 110, 40, 0.12);
+  color: #a8540e;
+  border: 1px solid rgba(210, 110, 40, 0.30);
+}
+[data-theme="dark"] .status-badge.s-needs-evidence {
+  background: rgba(210, 110, 40, 0.17);
+  color: #e08a50;
+  border-color: rgba(210, 110, 40, 0.35);
+}
+
 /* Open */
 .status-badge.s-open {
   background: rgba(196, 60, 60, 0.11);
@@ -460,6 +514,18 @@
   border: 1px solid rgba(196, 60, 60, 0.28);
 }
 [data-theme="dark"] .status-badge.s-open {
+  background: rgba(196, 60, 60, 0.17);
+  color: #e07070;
+  border-color: rgba(196, 60, 60, 0.35);
+}
+
+/* Unresolved prerequisite */
+.status-badge.s-unresolved {
+  background: rgba(196, 60, 60, 0.11);
+  color: #a02020;
+  border: 1px solid rgba(196, 60, 60, 0.28);
+}
+[data-theme="dark"] .status-badge.s-unresolved {
   background: rgba(196, 60, 60, 0.17);
   color: #e07070;
   border-color: rgba(196, 60, 60, 0.35);
@@ -487,6 +553,42 @@
   background: rgba(60, 130, 180, 0.18);
   color: #70b4e0;
   border-color: rgba(60, 130, 180, 0.35);
+}
+
+/* Partly tested */
+.status-badge.s-partly-tested {
+  background: rgba(92, 95, 180, 0.11);
+  color: #4f46a5;
+  border: 1px solid rgba(92, 95, 180, 0.28);
+}
+[data-theme="dark"] .status-badge.s-partly-tested {
+  background: rgba(92, 95, 180, 0.18);
+  color: #a5b4fc;
+  border-color: rgba(92, 95, 180, 0.35);
+}
+
+/* Evidence-backed / Resolved */
+.status-badge.s-evidence-backed {
+  background: rgba(34, 150, 90, 0.13);
+  color: #1f7a4d;
+  border: 1px solid rgba(34, 150, 90, 0.30);
+}
+[data-theme="dark"] .status-badge.s-evidence-backed {
+  background: rgba(34, 150, 90, 0.20);
+  color: #7ee0a1;
+  border-color: rgba(34, 150, 90, 0.38);
+}
+
+/* Moral commitment */
+.status-badge.s-moral {
+  background: rgba(110, 140, 80, 0.12);
+  color: #536b2c;
+  border: 1px solid rgba(110, 140, 80, 0.28);
+}
+[data-theme="dark"] .status-badge.s-moral {
+  background: rgba(110, 140, 80, 0.18);
+  color: #b6d988;
+  border-color: rgba(110, 140, 80, 0.34);
 }
 
 /* Founding */

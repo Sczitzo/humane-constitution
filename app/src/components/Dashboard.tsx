@@ -273,30 +273,58 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
 
 const STATUS_CHIP_STYLES: Record<string, string> = {
   active:   'bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100',
+  addressed:'bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100',
+  designed: 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100',
   proposed: 'bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100',
+  partial:  'bg-orange-50 text-orange-800 border border-orange-200 hover:bg-orange-100',
+  open:     'bg-red-50 text-red-800 border border-red-200 hover:bg-red-100',
+  ongoing:  'bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100',
+  evidence: 'bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100',
+  moral:    'bg-lime-50 text-lime-800 border border-lime-200 hover:bg-lime-100',
   reference:'bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100',
   '':       'bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200',
 }
 
 const STATUS_CHIP_STYLES_DARK: Record<string, string> = {
   active:   'bg-emerald-950/70 text-emerald-300 border border-emerald-700/50 hover:bg-emerald-900/70',
+  addressed:'bg-teal-950/70 text-teal-300 border border-teal-700/50 hover:bg-teal-900/70',
+  designed: 'bg-amber-950/70 text-amber-300 border border-amber-700/50 hover:bg-amber-900/70',
   proposed: 'bg-amber-950/70 text-amber-300 border border-amber-700/50 hover:bg-amber-900/70',
+  partial:  'bg-orange-950/70 text-orange-300 border border-orange-700/50 hover:bg-orange-900/70',
+  open:     'bg-red-950/70 text-red-300 border border-red-700/50 hover:bg-red-900/70',
+  ongoing:  'bg-sky-950/70 text-sky-300 border border-sky-700/50 hover:bg-sky-900/70',
+  evidence: 'bg-emerald-950/70 text-emerald-300 border border-emerald-700/50 hover:bg-emerald-900/70',
+  moral:    'bg-lime-950/70 text-lime-300 border border-lime-700/50 hover:bg-lime-900/70',
   reference:'bg-sky-950/70 text-sky-300 border border-sky-700/50 hover:bg-sky-900/70',
   '':       'bg-white/10 text-stone-300 border border-white/20 hover:bg-white/15',
 }
 
-const STATUS_DOT: Record<string, string> = {
-  active:    'bg-emerald-500',
-  proposed:  'bg-amber-400',
-  reference: 'bg-sky-400',
-  '':        'bg-stone-400',
+const STATUS_DOT_COLORS: Record<StatusVisualKey, string> = {
+  active: '#10b981',
+  addressed: '#14b8a6',
+  designed: '#f59e0b',
+  proposed: '#f59e0b',
+  partial: '#f97316',
+  open: '#ef4444',
+  ongoing: '#0ea5e9',
+  evidence: '#059669',
+  moral: '#65a30d',
+  reference: '#38bdf8',
+  '': '#a8a29e',
 }
 
-const STATUS_DOT_DARK: Record<string, string> = {
-  active:    'bg-emerald-400',
-  proposed:  'bg-amber-400',
-  reference: 'bg-sky-400',
-  '':        'bg-stone-500',
+const STATUS_DOT_COLORS_DARK: Record<StatusVisualKey, string> = {
+  active: '#34d399',
+  addressed: '#2dd4bf',
+  designed: '#fbbf24',
+  proposed: '#fbbf24',
+  partial: '#fb923c',
+  open: '#f87171',
+  ongoing: '#38bdf8',
+  evidence: '#6ee7b7',
+  moral: '#a3e635',
+  reference: '#38bdf8',
+  '': '#78716c',
 }
 
 interface TooltipPos { x: number; y: number; align: 'left' | 'right' }
@@ -310,9 +338,8 @@ function RefChip({ refKey, display, fallback }: { refKey: string; display: strin
   if (!entry) return fallback !== undefined ? <>{fallback}</> : <>{display}</>
 
   const chipStyles = isDark ? STATUS_CHIP_STYLES_DARK : STATUS_CHIP_STYLES
-  const dotStyles  = isDark ? STATUS_DOT_DARK : STATUS_DOT
-  const chipStyle  = chipStyles[entry.status] ?? chipStyles['']
-  const dotStyle   = dotStyles[entry.status]  ?? dotStyles['']
+  const visualStatus = statusVisualKey(entry.status)
+  const chipStyle  = chipStyles[visualStatus] ?? chipStyles['']
   const tooltipTitle = entry.title.replace(/^(P-\d+|T-\d+|PRD-\d+|TR-\d+|INV-\d+|ANNEX\s+[A-Z\d]+|FC-\d+)\s*[—–\-]+\s*/i, '').trim()
 
   const TOOLTIP_W = 220
@@ -346,12 +373,10 @@ function RefChip({ refKey, display, fallback }: { refKey: string; display: strin
   const tipHint   = isDark ? '#5a5246' : '#9ca3af'
 
   // Status badge colours
-  const badgeBg    = isDark
-    ? (entry.status === 'active' ? 'rgba(6,78,59,0.7)' : entry.status === 'proposed' ? 'rgba(78,52,10,0.7)' : 'rgba(7,68,100,0.7)')
-    : (entry.status === 'active' ? '#dcfce7' : entry.status === 'proposed' ? '#fef3c7' : '#e0f2fe')
-  const badgeColor = isDark
-    ? (entry.status === 'active' ? '#6ee7b7' : entry.status === 'proposed' ? '#fcd34d' : '#7dd3fc')
-    : (entry.status === 'active' ? '#166534' : entry.status === 'proposed' ? '#92400e' : '#075985')
+  const badgePalette = STATUS_BADGE_PALETTE[visualStatus] ?? STATUS_BADGE_PALETTE.reference
+  const badgeBg = isDark ? badgePalette.darkBg : badgePalette.bg
+  const badgeColor = isDark ? badgePalette.darkColor : badgePalette.color
+  const tooltipDotColor = isDark ? STATUS_DOT_COLORS_DARK[visualStatus] : STATUS_DOT_COLORS[visualStatus]
 
   const tooltip = pos && typeof document !== 'undefined'
     ? createPortal(
@@ -390,7 +415,7 @@ function RefChip({ refKey, display, fallback }: { refKey: string; display: strin
           <div style={{ padding: '10px 12px 10px' }}>
             {/* Header row */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: dotStyle.includes('emerald') ? (isDark ? '#34d399' : '#10b981') : dotStyle.includes('amber') ? '#fbbf24' : dotStyle.includes('sky') ? '#38bdf8' : (isDark ? '#78716c' : '#a8a29e'), flexShrink: 0 }} />
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: tooltipDotColor, flexShrink: 0 }} />
               <span style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: tipLabel }}>{entry.label}</span>
               <span style={{ marginLeft: 'auto', borderRadius: 4, padding: '1px 5px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', background: badgeBg, color: badgeColor }}>
                 {entry.status || 'ref'}
@@ -1028,24 +1053,52 @@ function parseTable(lines: string[]): { headers: string[]; rows: string[][] } | 
 // ── Status badge helpers ──────────────────────────────────────────────────────
 
 type StatusMeta = { badgeClass: string; rowClass: string; label: string }
+type StatusVisualKey =
+  | 'active'
+  | 'addressed'
+  | 'designed'
+  | 'proposed'
+  | 'partial'
+  | 'open'
+  | 'ongoing'
+  | 'evidence'
+  | 'moral'
+  | 'reference'
+  | ''
+
+const STATUS_BADGE_PALETTE: Record<StatusVisualKey, { bg: string; color: string; darkBg: string; darkColor: string }> = {
+  active:    { bg: '#dcfce7', color: '#166534', darkBg: 'rgba(6,78,59,0.7)', darkColor: '#6ee7b7' },
+  addressed: { bg: '#ccfbf1', color: '#115e59', darkBg: 'rgba(19,78,74,0.72)', darkColor: '#5eead4' },
+  designed:  { bg: '#fef3c7', color: '#92400e', darkBg: 'rgba(78,52,10,0.7)', darkColor: '#fcd34d' },
+  proposed:  { bg: '#fef3c7', color: '#92400e', darkBg: 'rgba(78,52,10,0.7)', darkColor: '#fcd34d' },
+  partial:   { bg: '#ffedd5', color: '#9a3412', darkBg: 'rgba(124,45,18,0.7)', darkColor: '#fdba74' },
+  open:      { bg: '#fee2e2', color: '#991b1b', darkBg: 'rgba(127,29,29,0.72)', darkColor: '#fca5a5' },
+  ongoing:   { bg: '#e0f2fe', color: '#075985', darkBg: 'rgba(7,68,100,0.7)', darkColor: '#7dd3fc' },
+  evidence:  { bg: '#d1fae5', color: '#065f46', darkBg: 'rgba(6,78,59,0.74)', darkColor: '#6ee7b7' },
+  moral:     { bg: '#ecfccb', color: '#3f6212', darkBg: 'rgba(54,83,20,0.7)', darkColor: '#bef264' },
+  reference: { bg: '#e0f2fe', color: '#075985', darkBg: 'rgba(7,68,100,0.7)', darkColor: '#7dd3fc' },
+  '':        { bg: '#f5f5f4', color: '#57534e', darkBg: 'rgba(68,64,60,0.72)', darkColor: '#d6d3d1' },
+}
 
 const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
-  { pattern: /^ACTIVE$/i,              meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ACTIVE' } },
-  { pattern: /^ADDRESSED\*?$/i,        meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ADDRESSED' } },
-  { pattern: /^CLOSED$/i,              meta: { badgeClass: 's-closed',   rowClass: 'row-closed',   label: 'CLOSED' } },
-  { pattern: /^PROPOSED$/i,            meta: { badgeClass: 's-proposed', rowClass: 'row-proposed', label: 'PROPOSED' } },
-  { pattern: /^PARTIAL$/i,             meta: { badgeClass: 's-partial',  rowClass: 'row-partial',  label: 'PARTIAL' } },
-  { pattern: /^OPEN$/i,                meta: { badgeClass: 's-open',     rowClass: 'row-open',     label: 'OPEN' } },
-  { pattern: /^ONGOING$/i,             meta: { badgeClass: 's-ongoing',  rowClass: 'row-ongoing',  label: 'ONGOING' } },
-  { pattern: /^FOUNDING$/i,            meta: { badgeClass: 's-founding', rowClass: 'row-founding', label: 'FOUNDING' } },
-  { pattern: /^\*\*ACTIVE\*\*$/i,      meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ACTIVE' } },
-  { pattern: /^\*\*ADDRESSED\*?\*\*$/, meta: { badgeClass: 's-active',   rowClass: 'row-active',   label: 'ADDRESSED' } },
-  { pattern: /^\*\*PROPOSED\*\*$/i,    meta: { badgeClass: 's-proposed', rowClass: 'row-proposed', label: 'PROPOSED' } },
-  { pattern: /^\*\*PARTIAL\*\*$/i,     meta: { badgeClass: 's-partial',  rowClass: 'row-partial',  label: 'PARTIAL' } },
-  { pattern: /^\*\*OPEN\*\*$/i,        meta: { badgeClass: 's-open',     rowClass: 'row-open',     label: 'OPEN' } },
-  { pattern: /^\*\*ONGOING\*\*$/i,     meta: { badgeClass: 's-ongoing',  rowClass: 'row-ongoing',  label: 'ONGOING' } },
-  { pattern: /^\*\*FOUNDING\*\*$/i,    meta: { badgeClass: 's-founding', rowClass: 'row-founding', label: 'FOUNDING' } },
-  { pattern: /^\*\*CLOSED\*\*$/i,      meta: { badgeClass: 's-closed',   rowClass: 'row-closed',   label: 'CLOSED' } },
+  { pattern: /^ACTIVE-UNPROVEN$/i,           meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
+  { pattern: /^ACTIVE$/i,                    meta: { badgeClass: 's-active',          rowClass: 'row-active',          label: 'ACTIVE' } },
+  { pattern: /^ADDRESSED\*?$/i,              meta: { badgeClass: 's-addressed',       rowClass: 'row-addressed',       label: 'ADDRESSED' } },
+  { pattern: /^RESOLVED$/i,                  meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'RESOLVED' } },
+  { pattern: /^EVIDENCE-BACKED$/i,           meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'EVIDENCE-BACKED' } },
+  { pattern: /^CLOSED$/i,                    meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'CLOSED' } },
+  { pattern: /^DESIGNED$/i,                  meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'DESIGNED' } },
+  { pattern: /^PROPOSED$/i,                  meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'PROPOSED' } },
+  { pattern: /^PARTIAL$/i,                   meta: { badgeClass: 's-partial',         rowClass: 'row-partial',         label: 'PARTIAL' } },
+  { pattern: /^OPEN$/i,                      meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'OPEN' } },
+  { pattern: /^ONGOING$/i,                   meta: { badgeClass: 's-ongoing',         rowClass: 'row-ongoing',         label: 'ONGOING' } },
+  { pattern: /^FOUNDING$/i,                  meta: { badgeClass: 's-founding',        rowClass: 'row-founding',        label: 'FOUNDING' } },
+  { pattern: /UNRESOLVED PREREQUISITE/i,     meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'UNRESOLVED PREREQUISITE' } },
+  { pattern: /NEEDS EVIDENCE/i,              meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'NEEDS EVIDENCE' } },
+  { pattern: /PARTLY TESTED/i,               meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'PARTLY TESTED' } },
+  { pattern: /MORAL COMMITMENT/i,            meta: { badgeClass: 's-moral',           rowClass: 'row-moral',           label: 'MORAL COMMITMENT' } },
+  { pattern: /ACTIVE-UNPROVEN CONTROL/i,     meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
+  { pattern: /DESIGNED MECHANISM|DESIGNED DIRECTION|DESIGNED CONTROL|DESIGNED$/i, meta: { badgeClass: 's-designed', rowClass: 'row-designed', label: 'DESIGNED' } },
   { pattern: /^\*\*Critical\*\*$/i,    meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
   { pattern: /^Critical$/i,            meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
   { pattern: /^\*\*Med-High\*\*$/i,    meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
@@ -1056,8 +1109,29 @@ const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
   { pattern: /^Low$/i,                 meta: { badgeClass: 's-low',      rowClass: '',             label: 'Low' } },
 ]
 
+function cleanStatusCell(cell: string): string {
+  return cell.replace(/\*\*/g, '').replace(/`/g, '').trim().replace(/\s+/g, ' ')
+}
+
+function statusVisualKey(status: string): StatusVisualKey {
+  const normalized = cleanStatusCell(status).toLowerCase()
+  if (!normalized) return ''
+  if (normalized.includes('evidence-backed') || normalized === 'resolved') return 'evidence'
+  if (normalized.includes('active-unproven')) return 'addressed'
+  if (normalized === 'active') return 'active'
+  if (normalized.includes('addressed')) return 'addressed'
+  if (normalized.includes('moral commitment')) return 'moral'
+  if (normalized.includes('designed') || normalized === 'proposed') return 'designed'
+  if (normalized.includes('partial') || normalized.includes('needs evidence')) return 'partial'
+  if (normalized.includes('unresolved prerequisite') || normalized === 'open') return 'open'
+  if (normalized.includes('ongoing')) return 'ongoing'
+  if (normalized.includes('partly tested')) return 'ongoing'
+  if (normalized === 'reference') return 'reference'
+  return 'reference'
+}
+
 function matchStatus(cell: string): StatusMeta | null {
-  const trimmed = cell.trim()
+  const trimmed = cleanStatusCell(cell)
   for (const { pattern, meta } of STATUS_MAP) {
     if (pattern.test(trimmed)) return meta
   }
@@ -1077,7 +1151,7 @@ function renderTableCell(text: string, keyPrefix: string, query: string): React.
   if (meta) {
     return (
       <span className={`status-badge ${meta.badgeClass}`}>
-        {meta.label.replace(/\*/g, '')}
+        {meta.label}
       </span>
     )
   }
