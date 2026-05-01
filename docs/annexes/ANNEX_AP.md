@@ -3,7 +3,7 @@
 **Status:** PROPOSED | **Priority:** High | **Patch:** P-015
 **Threats addressed:** T-018 (PCRP False-Trigger Exhaustion Attack), T-019 (Demand-Context Flag Suppression Attack)
 **Authority:** Tier 2.
-**Pre-launch blocking gate:** Annex AI (Federated Ombuds) must be operational — Commissioner appointed, Oversight Panel seated, manufactured-flag criteria published — before AP becomes operative.
+**Pre-launch blocking gate:** Annex AI (Federated Ombuds) must be operational — at least four of five sub-Ombuds appointed, challenged, and seated; the Oversight Assembly seated; and manufactured-flag criteria published — before AP becomes operative.
 
 > **Drafting note (2026-04-25):** This annex was written from the existing P-015 specification in `Patch_Log.md` to close the dangling reference in the Patch Log mapping table. P-015 is currently `PROPOSED`; the annex is operative once P-015 is `ACTIVE` and the Annex AI pre-launch gate is satisfied.
 
@@ -51,7 +51,7 @@ This default is conservative-toward-protection: a real harm condition does not w
 
 ## Dependencies
 
-- Federated Ombuds (Annex AI) operational with manufactured-flag criteria published — this is the pre-launch blocking gate.
+- Federated Ombuds (Annex AI) operational with at least four of five sub-Ombuds seated, Oversight Assembly seated, and manufactured-flag criteria published — this is the pre-launch blocking gate.
 - P-006 PCRP false-trigger tracking infrastructure operative.
 - P-012 demand-context flag register operative.
 - Cross-register timing monitor (AI §3.3) technically implemented and tested.

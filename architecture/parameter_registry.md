@@ -19,13 +19,28 @@ The design takes the pattern from financial-grade custody (M-of-N signing) and p
 
 ---
 
+## Plain-Language Guide
+
+This file lists the numbers and rules that cannot be quietly changed.
+
+The Constitution can say "survival access cannot be cut," but software also needs hard checks. This architecture layer makes the running systems check the protected values before they operate.
+
+In plain terms:
+
+- The most important rules are listed here.
+- Changing them requires 7 of 9 approved signatures and a 180-day waiting period.
+- Every system that uses these rules must check the public record before it runs.
+- If someone edits a protected rule without the required process, the system should detect it.
+
+---
+
 ## The Architectural Enforcement Model
 
 Four elements, each addressed in a dedicated file:
 
 | Element | File | Enforces |
 | :--- | :--- | :--- |
-| **Invariant registry** | `invariants.md` (this file) | Enumerates every architecturally-locked parameter and value with references to Tier classification, source commitment, and enforcement mechanism. |
+| **Parameter registry** | `parameter_registry.md` (this file) | Lists every architecturally locked parameter and value with references to tier classification, source commitment, and enforcement mechanism. |
 | **Amendment protocol** | `amendment_protocol.md` | Specifies M-of-N signature threshold (FC-110), timelock (FC-111), and procedural gates for changing any Tier 1 entry in this registry. |
 | **Drift chain** | `drift_chain.md` | Version-chained hash history of `/founding/commitments.md`, `Humane_Constitution.md` §0, and Annex Y §Y1, published to a tamper-evident ledger so that silent modification is detectable. |
 | **Implementation binding** | `implementation_binding.md` | Requirement that every operational service component (Essential Access issuer, Voice scheduler, oracle gate, etc.) verifies the current drift-chain hash of this registry at startup and refuses to operate if the hash does not match the operator's pinned reference. |
@@ -34,7 +49,7 @@ Four elements, each addressed in a dedicated file:
 
 ## Tier 1 Invariant Registry
 
-The following parameters are **Tier 1 architecturally locked**. Change requires the full amendment protocol (M=7 signatures from N=9 geographically-distributed holders, 180-day timelock, H-3 Refounding Convention authority per Humane Constitution Annex H). No operational body, including the CRP, the REB, the Enforcement Panel, or the federated Ombuds, may modify these values.
+The following parameters are **Tier 1 architecturally locked**. Change requires the full amendment protocol: 7 signatures from 9 geographically distributed holders, a 180-day waiting period, and H-3 Refounding Convention authority per Humane Constitution Annex H. No operational body, including the CRP, the REB, the Enforcement Panel, or the federated Ombuds, may modify these values.
 
 ### Category A — Survival Floor (CSM)
 
@@ -98,7 +113,7 @@ The following parameters are **Tier 1 architecturally locked**. Change requires 
 
 ### Why Cryptographic and Not Merely Textual
 
-Text-only invariants are protected by the good-faith reading of the text. Cryptographic invariants are protected by:
+Text-only invariants are protected by people reading and honoring the text. Cryptographic locks add machine-checkable protection:
 - **Any operator node can detect tampering** — startup hash check is a small, deterministic operation.
 - **Tampering is public** — the drift chain is published; silent unilateral change produces visible chain divergence.
 - **Valid amendment requires threshold of holders** — the 7-of-9 signature requirement means no single captured holder or pair can force a change; M-of-N with distributed holders is resilient to coercion of a minority.
@@ -106,7 +121,7 @@ Text-only invariants are protected by the good-faith reading of the text. Crypto
 
 ### What This Layer Does Not Do
 
-It does not prevent a coalition from meeting the M-of-N threshold and waiting out the timelock. That coalition, by construction, represents the required authority under the protocol's own amendment rules. This layer prevents **capture below the amendment threshold** from silently narrowing the invariants. Defense against legitimate-but-hostile amendment through the valid M-of-N process relies on:
+It does not prevent a coalition from meeting the 7-of-9 threshold and waiting out the timelock. That coalition, by construction, represents the required authority under the protocol's own amendment rules. This layer prevents **capture below the amendment threshold** from silently narrowing the invariants. Defense against legitimate-but-hostile amendment through the valid process relies on:
 - The 180-day timelock (time for response),
 - The Founding Order exit pathway (ability to leave — FC-120, FC-121),
 - The federated Ombuds annual integrity audit (Proposal 8),
@@ -116,7 +131,7 @@ It does not prevent a coalition from meeting the M-of-N threshold and waiting ou
 
 ## Relationship to Other Architecture Files
 
-- **`amendment_protocol.md`** — defines the mechanical amendment procedure (who signs, with what keys, under what timelock, with what public-notice requirements).
+- **`amendment_protocol.md`** — defines the amendment procedure: who signs, with what keys, under what waiting period, with what public-notice requirements.
 - **`drift_chain.md`** — the append-only version history of this registry's hash, with each row signed per the amendment protocol.
 - **`implementation_binding.md`** — technical requirement that every operational component verify the drift-chain head on startup and refuse to operate on a hash it cannot verify against its pinned reference.
 

@@ -16,21 +16,31 @@ Every major operating component in the prior protocol operated under an implicit
 
 The Founding Order closes all three gaps at the architectural layer.
 
+## Plain-Language Guide
+
+The Founding Order answers three reader questions:
+
+- Who agreed to join?
+- Who gets to decide which issues?
+- How can a place leave if the system stops serving it?
+
+The answer is: the smallest capable group should decide, no place is bound unless it clearly joins, and any locality or larger unit can leave through a published process that protects ordinary people during the transition.
+
 ---
 
 ## The Three Rules
 
 ### Rule 1 — Subsidiarity
 
-Decisions default to the smallest viable unit. The **Federation** (continental scope) is the exception, not the default. See `subsidiarity_rule.md` for the test that determines when a matter may be escalated above the smallest competent scale.
+Decisions default to the smallest viable unit. The **Federation** (continental scope) is the exception, not the default. See `subsidiarity_rule.md` for the test that determines when an issue may move above the smallest capable scale.
 
 ### Rule 2 — Consent-of-Founding
 
-No unit is bound by the protocol without an affirmative, published consent event. Dissenting units retain pre-protocol arrangements, with a narrow carve-out for Tier 1 human-dignity invariants (survival floor / CSM) that bind everywhere regardless. See `consent_protocol.md`.
+No unit is bound by the protocol without an affirmative, published consent event. Units that do not join keep their earlier arrangements, with one narrow exception: the human survival floor still applies. See `consent_protocol.md`.
 
 ### Rule 3 — Exit
 
-Any unit of locality scale or larger may, by **2/3 resident-personhood supermajority** (FC-120), initiate a **730-day graceful-exit unwind** (FC-121). During unwind, Essential Access continuity is preserved for individuals, Flow is convertible, civic balances decay normally. Re-entry is permitted by the same mechanism in reverse. See `exit_protocol.md` and `reentry_protocol.md`.
+Any unit of locality scale or larger may leave if **2/3 of resident personhoods** vote for exit (FC-120). The exit then takes **730 days** (FC-121), so people keep Essential Access during the transition, Flow remains portable, and civic balances decay normally. Re-entry is allowed through the same basic process in reverse. See `exit_protocol.md` and `reentry_protocol.md`.
 
 ---
 
@@ -38,11 +48,11 @@ Any unit of locality scale or larger may, by **2/3 resident-personhood supermajo
 
 | Scale | Upper bound | Typical decision domain |
 | :--- | :--- | :--- |
-| **Household** | Family unit (no formal ceiling) | Intra-household resource allocation, substitution choices within Annex Y schedule, private voluntary exchange |
-| **Neighborhood** | ≤500 persons | Local coordination, shared-infrastructure stewardship, first-tier dispute mediation |
-| **Locality** | ≤5,000 persons | Local Shared Storehouse adaptation (within federation envelopes), local CRP representation, municipal-equivalent civic process |
-| **Region** | ≤500,000 persons | Regional measurement infrastructure (oracle cohort support), regional enforcement, regional CRP delegation |
-| **Federation** | Continental scope | Tier 1 invariants, Flow/Essential Access non-convertibility, inter-regional dispute resolution, cross-unit externalities |
+| **Household** | Family unit (no formal ceiling) | Home-level choices, care duties, basic household exchange |
+| **Neighborhood** | ≤500 persons | Local coordination, shared wells/paths/commons, first-step dispute help |
+| **Locality** | ≤5,000 persons | Town-scale choices, local Shared Storehouse rules within federation limits, local CRP representation |
+| **Region** | ≤500,000 persons | Regional measurement, enforcement, and delegation |
+| **Federation** | Continental scope | Core promises, instrument separation, cross-region disputes, issues no smaller scale can handle |
 
 See `jurisdictional_scales.md` for boundary rules, population-threshold behavior at scale boundaries, and the "multi-scale competence" test.
 
@@ -50,7 +60,7 @@ See `jurisdictional_scales.md` for boundary rules, population-threshold behavior
 
 ## What the Founding Order Does NOT Touch
 
-The Founding Order is a scale-and-consent layer. It does **not**:
+The Founding Order is about scale, consent, and exit. It does **not**:
 
 - Repeal any Tier 1 human-dignity invariant. CSM (Annex Y §Y1) binds everywhere the protocol reaches, including during exit unwind. A unit cannot vote to starve its residents.
 - Repeal Flow/Essential Access non-convertibility. The instrument-level architecture is federation-scale by design (cross-unit externalities require a federation-level rule).
@@ -84,7 +94,7 @@ The Founding Order is a scale-and-consent layer. It does **not**:
 
 ## Governance of the Founding Order
 
-This entire directory is Tier 1 protected per `/architecture/parameter_registry.md`. Changes to the subsidiarity rule, consent rule, exit threshold (FC-120), unwind window (FC-121), or scale tiers (FC-122) require the full amendment protocol (7-of-9 signatures, 180-day timelock).
+This entire directory is Tier 1 protected per `/architecture/parameter_registry.md`. Changes to the smallest-scale rule, consent rule, exit threshold (FC-120), unwind window (FC-121), or scale tiers (FC-122) require the full amendment protocol (7-of-9 signatures, 180-day timelock).
 
 Extension — adding finer-grained scales (e.g., sub-neighborhood clusters for specific decision classes), adding consent mechanisms, or strengthening exit rights — may proceed by Tier 2 amendment. **Weakening any Founding Order right requires Tier 1 amendment with the full H-3 Refounding Convention.**
 

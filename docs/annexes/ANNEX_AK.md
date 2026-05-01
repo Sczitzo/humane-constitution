@@ -15,6 +15,21 @@ The **Asymmetric Error Doctrine (AED)** is the founding coalition's explicit, pu
 
 ---
 
+## Plain-Language Guide
+
+This annex is about identity mistakes.
+
+There are two bad mistakes:
+
+- **Fraud:** someone gets benefits through an identity that is not a unique living person.
+- **Exclusion:** a real eligible person is blocked because the identity process is too hard, too digital, too document-heavy, or unsafe for their situation.
+
+The system cannot drive both mistakes to zero. This annex forces the founding coalition to say, in public, how much risk it will tolerate and what happens when the numbers get too high.
+
+The plain rule is: protecting vulnerable real people from exclusion usually deserves special weight, but serious Essential Access fraud also matters because it consumes real food, shelter, care, and medicine.
+
+---
+
 ## Structure of the Doctrine
 
 The AED specifies six things:
@@ -40,7 +55,7 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 | **Voice — Voice** | FC-141 target (reserved) | FC-141 upper bound (reserved) | FC-141 trigger (reserved) |
 | **Service Record — Service Record** | FC-142 target (reserved) | FC-142 upper bound (reserved) | FC-142 trigger (reserved) |
 
-**Rationale for asymmetry between tiers:** Essential Access fraud directly consumes physical supply — food, housing support, healthcare capacity. Voice and Service Record fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for Essential Access than for Voice and Service Record, recognising that Essential Access fraud has immediate physical consequence while fraud against the civic instruments has a slower and more diffuse effect.
+**Plain rationale for different tiers:** Essential Access fraud directly consumes physical supply: food, housing support, healthcare capacity. Voice and Service Record fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for Essential Access than for Voice and Service Record, recognizing that Essential Access fraud has immediate physical consequences while fraud against the civic instruments has a slower and more diffuse effect.
 
 **How to measure:** Fraud rate is measured as: confirmed fraud cases (after investigation) as a percentage of total enrolled population in that tier per quarter. Suspected but unconfirmed cases are tracked separately and used for trend monitoring, not rate calculation. The measurement methodology must be independent from the identity system operators.
 
@@ -60,7 +75,7 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 | **Recovery/crisis situations (domestic violence, trafficking, incapacity)** | FC-146 target (reserved) | FC-146 upper bound (reserved) | FC-146 trigger (reserved) |
 | **Overall population (all enrolled persons)** | FC-147 target (reserved) | FC-147 upper bound (reserved) | FC-147 trigger (reserved) |
 
-**Rationale for tier-specific tracking:** Exclusion rates for vulnerable categories are tracked separately from the overall population because aggregate rates obscure concentrated harm. A 1% overall exclusion rate that is evenly distributed is a different problem than a 1% overall exclusion rate concentrated entirely among undocumented persons.
+**Plain rationale for separate tracking:** Exclusion rates for vulnerable categories are tracked separately from the overall population because averages can hide concentrated harm. A 1% overall exclusion rate spread evenly is different from a 1% overall exclusion rate concentrated entirely among undocumented persons.
 
 **How to measure:** Exclusion rate requires active monitoring — it is not visible in successful-enrollment data alone. Measurement requires: (a) periodic sampling at access points where people attempt to enrol but do not complete; (b) Federated Ombuds reporting from advocacy organisations; (c) cross-matching with estimated vulnerable population size from independent sources. The measurement methodology must include advocates and researchers from vulnerable communities.
 
@@ -86,7 +101,7 @@ All published notices and audit findings are public. The Article VII dashboard m
 
 ## Section 4 — Decision Rule for Trade-Offs
 
-This is the most consequential section. It specifies what happens when the identity system cannot simultaneously satisfy both the fraud rate target and the exclusion rate target — when tightening controls to reduce fraud will increase exclusion, or loosening controls to reduce exclusion will increase fraud.
+This is the most consequential section. It specifies what happens when the identity system cannot satisfy both the fraud target and the exclusion target at the same time: tightening controls may reduce fraud but increase exclusion, while loosening controls may reduce exclusion but increase fraud.
 
 **Default rule:** When a calibration decision will push one rate above its target to bring the other below its target, the decision rule is:
 
@@ -98,7 +113,7 @@ This is the most consequential section. It specifies what happens when the ident
 
 **Rationale for the asymmetry:** The protocol's foundational commitment is that survival is unconditional. An identity system that excludes genuinely vulnerable people from the survival floor is a more fundamental violation of the protocol's purpose than one that permits a higher rate of fraud. However, Essential Access fraud directly consumes physical supply that is needed by genuine recipients — so fraud above the upper tolerance bound is not a minor concern. The founding coalition's pre-committed preference encodes the relative weight placed on these two failure modes.
 
-**What this rule is not:** This is not a rule that automatically recalibrates the identity system. It is a decision rule for when human reviewers must make a calibration change. The rule specifies who has priority in those decisions and under what conditions.
+**What this rule is not:** This is not a rule that automatically changes the identity system. It is a decision rule for when human reviewers must make a calibration change. The rule specifies who gets priority in those decisions and under what conditions.
 
 ---
 
@@ -116,7 +131,7 @@ The fraud and exclusion rate targets in this annex are not permanent. They are e
 - At least one member nominated by the Federated Ombuds.
 - Recalibration findings and any proposed changes are published 30 days before taking effect.
 
-**Protected floor:** The exclusion rate upper tolerance bounds may not be loosened without H-2 amendment process. These represent the maximum harm the system is willing to inflict on vulnerable populations; they are treated as constitutional commitments, not operational parameters.
+**Protected floor:** The exclusion rate upper tolerance bounds may not be loosened without H-2 amendment process. These represent the maximum harm the system is willing to impose on vulnerable populations; they are treated as constitutional commitments, not operational settings.
 
 ---
 
@@ -132,7 +147,7 @@ The following is published quarterly as part of the Article VII public dashboard
 | Current calibration setting summary | Plain-language description of the current assurance threshold configuration |
 | AED targets (current) | The founding commitment numbers in this annex, publicly visible |
 
-Publication of the AED targets themselves converts the doctrine from a private intention into a public commitment. If the published rates diverge from the targets, the divergence is public. This is the mechanism that makes the doctrine meaningful: it cannot be quietly abandoned.
+Publication of the AED targets turns the doctrine from a private intention into a public commitment. If the published rates diverge from the targets, the divergence is public. This is what makes the doctrine meaningful: it cannot be quietly abandoned.
 
 ---
 

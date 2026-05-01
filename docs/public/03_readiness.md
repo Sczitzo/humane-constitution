@@ -1,101 +1,129 @@
 # Public Readiness Guide
 
-This guide is for readers who are skeptical, worried, or simply trying to decide whether the Humane Constitution deserves serious attention.
+This guide is for people who are skeptical, worried, or trying to decide whether this project deserves serious attention.
 
-The short answer is: **it deserves pressure, not blind trust**. The project is a constitutional design, not a completed society. Its value depends on whether its separations can survive real incentives, real scarcity, real corruption attempts, and real transition pressure.
+Short answer: **do not trust it blindly. Test it. Pressure it. Look for failure points.**
 
-## Start here if you think this sounds impossible
+The Humane Constitution is a design, not a finished society. It only matters if it can survive real greed, real scarcity, real corruption, and real transition pressure.
+
+## Start Here If This Sounds Impossible
 
 Read in this order:
 
-1. [One-Page Overview](./01_overview.md) — the shortest public explanation.
-2. [FAQ](./02_faq.md) — direct answers to common objections.
+1. [One-Page Overview](./01_overview.md) — the shortest explanation.
+2. [FAQ](./02_faq.md) — common questions in plain language.
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
-4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what should be tested before any scale-up claim.
-5. [Skeptical Audience Rebuttal](./02_faq.md) — the strongest public-facing framing for skeptical audiences.
-6. [White Paper](./04_white_paper.md) — the fuller public explanation.
-7. [Threat Register](../governance/Threat_Register.md) — the adversarial model; this is where the design is easiest to test seriously.
+4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+5. [White Paper](./04_white_paper.md) — the fuller public explanation.
+6. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+7. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
-Do not start with the annexes unless you already want the technical layer. The public question comes first: does separating survival, markets, and civic power solve a real failure mode without creating a worse one?
+Do not start with the annexes unless you already want the technical layer.
 
-## What the project claims
+The public question comes first: can we separate basic needs, markets, and public power without creating something worse?
+
+## What The Project Claims
 
 | Claim | Current status | What would make it stronger |
 |---|---|---|
-| Wealth should not buy survival access or civic rule. | Constitutional principle designed. | Stress tests showing boundary enforcement under proxy markets and elite workarounds. |
-| Baseline survival can be protected without abolishing markets. | Public architecture specified. | Pilot evidence for Essential Access delivery, Flow pricing, and supply response. |
-| Voice and Service Record can support civic participation without becoming social credit. | Constitutional limits specified. | Usability tests, abuse-case review, and strong privacy implementation. |
-| Shared Storehouse can handle real shortage more fairly than price spikes alone. | Scarcity mechanism specified. | Simulations and emergency drills using real supply data. |
-| A public money rail can reduce predatory banking without killing productive finance. | Design direction specified. | Banking-cost model, project-finance mechanism, and transition plan. |
-| Capture can be made harder, more visible, and easier to challenge. | Threat register and patch log exist. | External red-team review and independent adversarial audits. |
+| Wealth should not buy basic needs or public power. | Designed as a core rule. | Stress tests against proxy markets and elite workarounds. |
+| Basic survival can be protected without ending markets. | Design exists. | Pilot evidence for delivery, prices, and supply response. |
+| Voice and Service Record can avoid becoming social credit. | Limits are written. | User testing, abuse review, and strong privacy design. |
+| Real shortage can be handled more fairly than panic prices alone. | Shortage rules are written. | Emergency drills with real supply data. |
+| Public money rails can reduce predatory banking. | Design direction exists. | Cost models, finance pilots, and transition plans. |
+| Capture can be made harder and easier to see. | Threat register and patch log exist. | Outside red-team review and independent audits. |
 
-## Readiness dashboard
+## Readiness Dashboard
 
 | Area | Status | Meaning |
 |---|---|---|
-| Public explanation | **Designed** | The core idea, instruments, and objections are documented for general readers. |
-| Constitutional architecture | **Specified** | Founding Order and Articles I-VII exist as structured constitutional text. |
-| Instrument separation | **Specified** | Flow, Essential Access, Voice, Service Record, and Shared Storehouse are formally separated in the design. |
-| Threat modeling | **Specified, still open** | Major attack routes are documented, but several remain partial or unresolved. |
-| Identity and recovery | **Needs evidence** | The design requires a non-coercive identity stack that has not been proven at scale. |
-| Capacity measurement | **Needs evidence** | Essential Access depends on reliable measurement of food, water, shelter, care, and other essentials. |
-| Economic transition | **Needs simulation** | Flow, demurrage, public banking rails, credit replacement, and business ownership rules need deeper model testing. |
-| Founding legitimacy | **Unresolved** | A legitimate coalition and consent pathway are prerequisites, not solved assumptions. |
-| Reader app | **Working prototype** | The public reader functions, but still needs production polish and accessibility review. |
-| Deployment readiness | **Not ready** | The repo is a serious design and critique target, not a live rollout plan. |
+| Public explanation | **Designed** | General readers can see the core idea and objections. |
+| Constitutional text | **Written** | The main rule set exists as documents. |
+| Tool separation | **Written** | Flow, Essential Access, Voice, Service Record, and Shared Storehouse are separated in the design. |
+| Threat modeling | **Written, still active** | Many attack paths are named, but not all are proven solved. |
+| Identity and recovery | **Needs proof** | The system needs identity checks that do not become surveillance or exclusion. |
+| Measuring essentials | **Needs proof** | Food, water, shelter, care, and energy capacity must be measured well enough. |
+| Economic transition | **Needs simulation** | Money, debt, business finance, and ownership changes need deeper testing. |
+| Founding legitimacy | **Unresolved** | The first institutions must be trusted enough to begin. |
+| Reader app | **Working prototype** | The reader works, but still needs polish and accessibility review. |
+| Deployment | **Not ready** | This is a design and critique target, not a rollout plan. |
 
-## Strongest objections to test
+## Strong Objections To Test
 
-### Could this become bureaucracy with nicer language?
+### Could this become bureaucracy with nicer words?
 
-Yes. That is one of the main risks. The defense is not good intentions; it is instrument limits, public logs, appeal rights, external review, and narrow authority. Those mechanisms need to be tested as aggressively as the economic design.
+Yes. That is a major risk.
 
-### Could elites recreate control through trusts, ownership structures, finance, or proxy markets?
+The answer cannot be "trust the officials." The answer has to be limits, public records, appeal rights, outside review, and narrow powers.
 
-Yes, unless the anti-rent and anti-convertibility rules are enforceable in practice. The design already targets shadow convertibility and capture, but this is a permanent red-team surface.
+### Could wealthy people recreate control anyway?
+
+Yes. They may use shell companies, trusts, proxy markets, finance tricks, or ownership structures.
+
+That is why anti-rent and anti-conversion rules must be tested constantly.
 
 ### Could Essential Access become coercive?
 
-Yes, if access is conditioned on behavior, identity systems become punitive, or delivery institutions become discretionary gatekeepers. That is why the design treats survival access, due process, and identity recovery as load-bearing.
+Yes. If food, shelter, medicine, or identity checks become tools of punishment, the system has failed.
+
+Survival access must not depend on obedience, popularity, work status, or civic participation.
 
 ### Could Voice and Service Record become social credit?
 
-Yes, if they escape their constitutional boundaries. The design says they cannot buy rights, goods, survival access, immunity, or human worth. The practical question is whether institutions and interfaces enforce that boundary.
+Yes, if they escape their limits.
+
+They must never buy rights, goods, housing, money, immunity, or human worth.
 
 ### Could transition create instability?
 
-Yes. The safest version is gradual: pilots, parallel rails, public measurement, appeal testing, and explicit transition gates. A forced rollout would be reckless.
+Yes. A forced rollout would be dangerous.
 
-## Evidence map
+The safer path is pilots, parallel systems, public measurement, appeal testing, and clear stop/go gates.
 
-| Design area | Useful evidence sources |
+## Evidence To Look For
+
+| Area | Useful evidence |
 |---|---|
-| Essential Access | Cash-transfer pilots, universal basic services, food security programs, emergency medicine access, housing-first outcomes. |
-| Flow and demurrage | Historical demurrage systems, public banking, payment-rail cost studies, local currency experiments, monetary velocity research. |
-| Anti-rent extraction | Community land trusts, cooperative ownership, anti-vacancy policy, worker-owned firm performance, inheritance and trust-law studies. |
-| Identity recovery | Refugee documentation systems, privacy-preserving credentials, guardianship abuse prevention, account recovery failure research. |
-| Oracle and measurement design | Statistical audit systems, supply-chain measurement, public-health surveillance, adversarial ML evaluation, standards-body capture cases. |
-| Governance hardening | Constitutional backsliding research, anti-corruption bodies, sortition, ombuds systems, public audit logs, emergency-powers abuse history. |
+| Basic needs | Cash-transfer pilots, universal basic services, food security, housing-first programs, emergency medicine access. |
+| Money and idle-money fees | Public banking, payment-rail costs, local currency experiments, monetary velocity research. |
+| Anti-rent rules | Community land trusts, cooperative ownership, anti-vacancy policy, worker-owned firms, trust-law studies. |
+| Identity recovery | Refugee documentation, privacy-preserving credentials, account recovery failures, guardianship abuse prevention. |
+| Measuring real capacity | Supply-chain data, public-health monitoring, audit systems, standards-body capture cases. |
+| Anti-capture design | Constitutional backsliding research, anti-corruption bodies, public audit logs, emergency-powers abuse history. |
 
-## How to critique productively
+## How To Critique Usefully
 
-A useful critique names the mechanism that fails.
+A useful critique names the way the system fails.
 
-Weak critique: `People are greedy, so this will fail.`
+Weak critique:
 
-Useful critique: `Here is how a wealthy actor could convert Flow into Essential Access through a proxy redemption network without triggering the current detection rules.`
+> People are greedy, so this will fail.
 
-Weak critique: `This is too complicated.`
+Useful critique:
 
-Useful critique: `This section creates three review bodies with overlapping authority, so a dispute could deadlock here.`
+> A wealthy actor could convert Flow into Essential Access through a proxy redemption network without triggering the current detection rules.
 
-Weak critique: `This is utopian.`
+Weak critique:
 
-Useful critique: `This claim depends on capacity measurement, but the repo does not yet show how measurement error affects allocation during shortage.`
+> This is too complicated.
 
-## Bottom line
+Useful critique:
 
-The Humane Constitution should not ask the public for faith. It should earn attention by making its claims explicit, its weak points visible, and its failure modes testable.
+> This section creates three review bodies with overlapping authority, so a dispute could deadlock here.
+
+Weak critique:
+
+> This is utopian.
+
+Useful critique:
+
+> This claim depends on measuring capacity, but the repo does not yet show how measurement error changes access during shortage.
+
+## Bottom Line
+
+The Humane Constitution should not ask for faith.
+
+It should earn attention by making its claims clear, its weak points visible, and its failure modes testable.
 
 For the detailed claim-by-claim audit, use the [Claims & Evidence Register](../governance/Claims_Evidence_Register.md).
 

@@ -12,11 +12,15 @@ Re-entry uses the same procedural structure as initial accession (`consent_proto
 
 The purpose of this rule is to make exit genuinely reversible. An exit that is practically one-way would pressure units to stay in an unwanted arrangement rather than accept a punitive re-entry cost later. Reversibility preserves the meaningfulness of the exit right.
 
+Plain meaning: leaving is not a permanent punishment. A unit that left can come back under the same basic rules as a unit joining for the first time.
+
 ---
 
 ## The Re-Entry Procedure
 
 ### Phase 0 — Re-Entry Deliberation
+
+Plain meaning: before re-entry, residents get a public discussion period and a chance to challenge process problems.
 
 1. **Re-entry proposal published** at the unit's own public record and to the federation's drift chain acknowledgment queue.
 2. **90-day deliberation window** (same as consent / accession). Public may challenge procedural irregularities; federation may publish a factual re-entry impact assessment.
@@ -31,6 +35,8 @@ Re-entry requires **2/3 of eligible resident-personhood** affirmative (matching 
 - Ombuds attestation.
 
 ### Phase 2 — Federation Acknowledgment
+
+Plain meaning: if the vote was valid, the federation must acknowledge re-entry unless there is a narrow process or boundary problem.
 
 On successful re-entry vote:
 
@@ -54,7 +60,7 @@ A unit that re-enters after prior exit is treated, for protocol purposes, as a n
 | **Pre-exit enforcement adjudications** | Remain valid. A finding of violation before exit does not get erased by re-entry. Ongoing enforcement matters that paused at exit may resume. |
 | **Pre-exit contributions to federation-wide infrastructure** | Not subject to restoration or compensation claims. Infrastructure contribution was part of the pre-exit arrangement. |
 
-The principle: re-entry does not look back. The unit's pre-exit and exit-period choices stand; re-entry is a forward act.
+The principle: re-entry starts from today. Earlier choices still count, but the unit rejoins going forward.
 
 ---
 
@@ -62,7 +68,7 @@ The principle: re-entry does not look back. The unit's pre-exit and exit-period 
 
 There is **no re-entry fee**, **no probationary period**, **no restricted participation**, **no "second-class" status** for re-entered units. On the re-entry effective date, the unit has full participation rights identical to any consenting unit.
 
-The only cosmetic distinction: the drift chain preserves the full history of the unit's consent → exit → re-entry transitions for public audit. This is transparency, not penalty.
+The only visible distinction is the public history: the drift chain preserves the unit's consent, exit, and re-entry records for audit. This is transparency, not penalty.
 
 ---
 
@@ -74,7 +80,7 @@ However, **cycle integrity** is protected:
 - An exit event cannot be initiated within **365 days** of a prior re-entry effective date. This prevents exit/re-entry abuse for strategic purposes (e.g., cycling in and out to avoid ongoing enforcement matters).
 - If a unit files exit within the 365-day window, the Federated Ombuds investigates for procedural-integrity issues; the exit filing may be held in abeyance pending investigation.
 
-The 365-day floor is administrative, not substantive — it prevents churn without constraining the underlying right.
+The 365-day floor is an anti-churn rule. It prevents strategic in-and-out cycling without removing the underlying right to leave.
 
 ---
 
@@ -91,7 +97,7 @@ On individual re-consent:
 
 ## Accession of Never-Consented Units
 
-A unit that never consented to the protocol (e.g., a locality that was outside the founding scope) follows the Accession procedure in `consent_protocol.md` rather than the Re-Entry procedure. Substantively the procedures are nearly identical; the documents are separated so that "re-entry" has a clear referent (prior exit) and "accession" has a clear referent (first-time consent).
+A unit that never consented to the protocol (e.g., a locality that was outside the founding scope) follows the Accession procedure in `consent_protocol.md` rather than the Re-Entry procedure. The procedures are nearly identical. The documents are separated so that "re-entry" means returning after exit, and "accession" means joining for the first time.
 
 ---
 
@@ -106,7 +112,7 @@ Re-entry and exit are **procedurally symmetric**:
 
 The only asymmetry is the timeline: exit has a 730-day unwind (FC-121); re-entry has a 60-day ramp-up. The unwind length reflects the complexity of withdrawing federation services without harming individuals. The ramp-up length reflects the (much simpler) task of reconnecting services.
 
-This symmetry is itself a non-coercion guarantee: leaving and returning face the same procedural hurdle, which means the protocol cannot trap units through asymmetric exit cost or asymmetric re-entry cost.
+This symmetry is itself a non-coercion guarantee: leaving and returning face the same basic hurdle, so the protocol cannot trap units by making exit or return unfairly hard.
 
 ---
 

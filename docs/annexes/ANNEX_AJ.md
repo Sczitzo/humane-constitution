@@ -21,6 +21,24 @@ The purpose of this annex is to enumerate specific prohibited patterns per instr
 
 ---
 
+## Plain-Language Guide
+
+This annex explains banned workarounds.
+
+The main rule is simple: people cannot turn one instrument into another by using side deals, informal networks, special queues, employers, vendors, or civic positions.
+
+Examples of banned behavior:
+
+- using Essential Access status to get special treatment above the survival floor
+- charging Flow for faster access to the same essential service
+- using money to buy easier Service Record or Voice accumulation
+- using a civic role to get contracts or private economic advantage
+- using money to escape Shared Storehouse rationing during a shortage
+
+The system looks at the real effect, not the excuse. If a side deal acts like conversion, it is treated as conversion.
+
+---
+
 ## Boundary 1 — Essential Access / Flow Boundary
 
 *The prohibited direction: Essential Access entitlements being used to confer Flow-equivalent benefit, or Flow being used to secure preferential Essential Access access.*

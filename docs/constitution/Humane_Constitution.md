@@ -1,41 +1,55 @@
 # The Humane Constitution
 
-**Constitution for a Humane Civilization**  
+**Constitution for a Humane Civilization**
 *A Charter of Human Dignity, Stewardship, and Non-Coercive Order*
 
 ---
 
 ## Philosophical Preamble
 
-Every system that governs human survival makes a claim about what value is and who it belongs to. Most systems make that claim implicitly, buried inside institutional arrangements that appear neutral. This protocol makes it explicitly, because the claim drives every architectural decision that follows.
+Every society makes a choice about what money should be allowed to decide.
+
+This constitution starts from a simple answer: money should not decide whether a person eats, gets medicine, has shelter, or counts in public life.
+
+Most systems hide that choice inside banks, property rules, welfare rules, courts, and agencies. This document says the choice openly, because every rule below depends on it.
 
 ---
 
 #### I. Two Kinds of Value
 
-There are two categories of value that human societies generate. The first is **produced value** — the product of individual effort, skill, and productive activity. A person who builds something has a traceable causal relationship to what they built. A claim on that value is logically coherent because the grounding relationship exists. This is why ownership of what one produces is not merely a legal convention but a structural fact: the causal chain from individual action to outcome is real and traceable.
+Human societies deal with two kinds of value.
 
-The second category is **value that exists prior to and independently of individual action.** Land does not become valuable because any single person improved it — it becomes valuable because a society grew around it. The electromagnetic spectrum was not created by its licensees. Environmental capacity was not manufactured by those who consume it. The accumulated knowledge passed between generations was not authored by any living individual. These are encountered conditions, not produced outcomes. A private claim on this value — what we call the Commons — asserts a causal relationship between individual effort and outcome that simply does not exist.
+The first kind is **produced value**. This is value created by work, skill, care, invention, repair, and other human effort. If a person builds something, grows something, fixes something, or serves someone, there is a real link between their action and the result.
+
+The second kind is **shared value**. This is value no single person created alone: land made valuable by a community around it, clean water, the airwaves, public knowledge, inherited infrastructure, and the natural world that supports life.
+
+This constitution treats those two kinds of value differently. People may be rewarded for what they actually create. But no one should be able to turn shared value into permanent power over everyone else.
 
 ---
 
 #### II. A Structural Distinction, Not a Moral One
 
-This is not a moral argument. It is a structural one. The distinction between produced and unproduced value is a distinction in kind, not in degree. It holds regardless of legal convention, historical practice, or political agreement, because it refers to something those things cannot alter: whether or not a specific human action brought a specific value into existence.
+This is not about calling people good or bad.
+
+It is about what a person actually created and what already belonged to the shared world. A law can assign ownership. It cannot change whether one person truly created the value being claimed.
 
 ---
 
 #### III. How Money Collapses the Distinction
 
-Modern monetary systems collapse this distinction. A single instrument — money — carries claims on produced value, claims on unproduced Commons value, and claims on the future labor of people who had no voice in the obligations those claims impose.
+Modern money mixes these things together.
 
-When all three ride on the same instrument, the system becomes self-referential. The Commons is privately enclosed. Measurement adapts to conceal the growing gap between monetary claims and physical reality. Labor ceases to be voluntary and becomes the mechanism through which prior obligations — obligations the laborer did not incur — are serviced. Wealth converts into coercion not through malice or moral failure, but through the normal operation of a system whose instruments were never separated.
+The same money buys wages, land, housing, food, medicine, political access, debt claims, and control over future work. When one tool controls all of that, wealth can become power over other people's survival.
+
+This can happen even without a villain. It happens because the tool was given too many jobs.
 
 ---
 
 #### IV. Why Policy Cannot Fix This
 
-Policy cannot correct this. A tax on land value reduces the symptom while the structural condition persists. A reformed price index makes the measurement more honest while the thing being measured remains unchanged. Better legal protections for workers operate within the system that transforms labor into obligation in the first place. Corrections that operate within a structure are subject to its logic. They can slow the failure mode; they cannot alter the condition that produces it.
+Small policy fixes can help, but they do not solve the core problem.
+
+A tax can reduce harm. A better price index can make numbers more honest. Worker protections can improve conditions. But if food, housing, medicine, business, and public power all still run through the same money, the same pressure returns.
 
 > **Structural failure requires structural correction.**
 
@@ -43,150 +57,154 @@ Policy cannot correct this. A tax on land value reduces the symptom while the st
 
 #### V. The Proposed Correction: Instrument Separation
 
-The correction this protocol proposes is instrument separation. Rather than attempting to make money better, it removes the survival function from money entirely.
+The correction is separation.
 
-The **Essential Access** is not a cash transfer denominated in better currency. It is a non-monetary entitlement, denominated in physical basket units, that never enters the price system. A landlord cannot raise rent to absorb it because it is not money. A government cannot quietly defund it through a budget line because it is not a budget line. An employer cannot suppress wages in anticipation of it because it does not flow through the labor market. It does not carry prior claims on anyone's future labor because it is not a debt. It is access — direct, physical, unconditional.
+Instead of asking one kind of money to do every job, this constitution gives different jobs to different tools.
 
-The **Flow** runs markets. It carries claims on produced value and is subject to demurrage — a time-cost on idle accumulation — so that the compulsion to hoard is structural rather than merely discouraged. **Voice** governs bounded civic priorities, and **Service Record** governs readiness for rotating public service; neither can convert into economic power or survival leverage. And in verified scarcity, emergency rationing replaces price-spike exclusion.
+**Essential Access** is the basic needs floor. It is not cash. It is not debt. It is not a voucher that landlords or employers can absorb. It is direct access to basics like food, water, shelter, essential care, medicines, and basic transit.
 
-Each instrument has one job. The walls between them are the system.
+**Flow** is ordinary money for markets. **Voice** helps set public priorities in limited ways. **Service Record** tracks useful service for rotating public roles. **Shared Storehouse** is temporary rationing during a real shortage.
+
+Each tool has one job. The walls between the tools are the system.
 
 ---
 
 #### VI. What This Design Does Not Claim to Have Solved
 
-What remains unresolved in this design is not its architecture but its founding. The protocol acknowledges openly that constituting a legitimate founding coalition without already having the governance system one is trying to found is a circular dependency it can manage but not dissolve. It acknowledges that measurement systems can satisfy every formal criterion for independence while sharing the same epistemological foundations. It acknowledges that every layer added to prevent capture creates a new surface for capture.
+This design does not pretend the hard parts are solved.
 
-These are not failures of design. They are permanent operating conditions that honest design accounts for, documents, and publishes before the system ever runs.
+It still needs a legitimate founding group. It still needs a way to prove identity without building surveillance. It still needs reliable measurement of food, housing, care, water, energy, and medicine. It still needs outside review. Every safeguard can become a new place to capture.
+
+Honest design names those problems before the system runs.
 
 ---
 
-This protocol was built in public, stress-tested adversarially, and released without restriction. If it is wrong, it should be possible to show that. If it is incomplete, it should be possible to extend it. The measure of its legitimacy is not that it claims to have solved what no one has solved, but that it is honest about what it has and has not.
+This project was built in public and stress-tested against bad uses. If it is wrong, people should be able to show where. If it is incomplete, people should be able to improve it. Its claim to seriousness is not perfection. Its claim is that its promises, weak points, and failure paths are visible.
 
 *Philosophical grounding informed in part by Marc Wolf's Economic Trilogy (2026), which derives from first principles the distinction between produced and unproduced value and the structural failure of debt-based monetary systems. The protocol extends that derivation into institutional architecture, particularly the conclusion that monetary dispersal of Commons value remains capturable by the mechanisms Wolf documents in Part 2 — and that non-monetary instrument separation is the structural completion of the correction his framework points toward.*
 
 ---
 
-**Document posture:** this file is the lean constitutional text. Supporting annexes, hardening clauses, and detailed specifications live in the standalone [Annex Directory](../annexes/INDEX.md).
+**Document role:** this file is the main rule text. Supporting details live in the standalone [Annex Directory](../annexes/INDEX.md).
 
 ### Authoritative document set (current)
-1. **Humane Constitution** — primary constitutional source of truth.
-2. **Threat Register** — living adversarial model and control inventory.
-3. **Patch Log** — change ledger and risk traceability record.
-4. **Public White Paper** — public-facing explanatory document aligned to the Humane Constitution.
-5. **Diagrammed Technical Reference** — visual system map aligned to the Humane Constitution.
+1. **Humane Constitution** — the main rule text.
+2. **Threat Register** — known attack paths and defenses.
+3. **Patch Log** — history of fixes and remaining risks.
+4. **Public White Paper** — plain-language public explanation.
+5. **Diagrammed Technical Reference** — visual map of the system.
 
-**Working edition:** this is the current constitutional text for a flow-based economy, unconditional survival, and capture-resistant governance.
+**Working edition:** this is the current rule text for a system with ordinary money, a basic needs floor, and public power that cannot be bought.
 
 ### 0. Scope, Assumptions, and Design Invariants
-**Scope:** This document describes a high-level governance and monetary architecture intended to prevent survival coercion, wealth-to-power conversion, and institutional capture while preserving competitive enterprise and personal freedom.
+**Scope:** This document describes a society-level rule design. It is meant to prevent survival coercion, wealth becoming public power, and capture by insiders while preserving enterprise and personal freedom.
 
-**Assumptions:** (a) society can measure key physical capacities with acceptable accuracy, (b) identity systems can prevent mass fraud without creating a surveillance state, and (c) essential goods and services can be defined and provisioned as a baseline.
+**Assumptions:** this design only works if society can measure key essentials well enough, prevent mass identity fraud without surveillance, and define a basic needs floor that can actually be delivered.
 
 **Non-negotiable invariants**
 - **Survival is unconditional:** access to a baseline of essentials is guaranteed by existence, not employment or compliance.
-- **Constitutional Survival Minimum:** no ordinary process may reduce the survival floor below the explicit survival minima defined in Annex Y; only H-3 refounding authority may amend that floor.
+- **Basic needs floor:** no ordinary process may reduce the survival floor below the explicit minimum in Annex Y; only the highest amendment path may change that floor.
 - **Human worth is not measured:** no score can gate personhood, dignity, or access to essentials.
-- **Separation of concerns:** survival, enterprise, and governance use distinct instruments with strict non-convertibility.
+- **Separated tools:** survival, markets, and public power use different tools that cannot be freely converted into each other.
 - **Money creation is a public function:** only protocol-authorized issuance bodies may create Flow or Flow-equivalent purchasing power.
 - **No taxes on ordinary life:** survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources.
 - **Families may pass continuity, not domination:** homes, tools, and modest succession may be protected, but perpetual dynastic wealth structures and inherited ruling claims are prohibited.
 - **Ownership is stewardship, not tribute:** land, housing, and enterprise rights may reward use, risk, and contribution, but may not justify perpetual passive extraction from others' necessity or labor.
 - **Influence cannot be purchased:** governance influence is earned through verified stewardship and decays over time.
-- **Legitimacy cannot be automated:** the system may automate the continuity of survival baselines and operational functions, but it may never automate the legitimacy of decisions that affect constitutional order. Automated execution of a legitimated decision is permitted; automated substitution for the legitimating act itself is not. This constraint applies regardless of efficiency arguments and is not waivable by operational expedience.
-- **Reality anchoring:** issuance of survival instruments is capped by verified physical capacity with conservative safety margins.
+- **Legitimacy cannot be automated:** the system may automate delivery and routine operations, but it may not let software replace human consent for decisions that change the constitutional order.
+- **Reality anchoring:** promises must stay tied to what society can physically provide, with safety margins.
 - **Due process and auditability:** enforcement is constrained by transparent rules, appeal paths, and independent oversight.
 
-**Architectural enforcement layer (Proposal 1 close-out, 2026-04-18).**
-The above invariants are not only textually protected but **mechanically enforced** via the architecture/ directory:
+**Hard locks for core rules (Proposal 1 close-out, 2026-04-18).**
+The rules above are not protected only by words. They are also protected by files in the `architecture/` directory:
 - [Parameter Registry](../../architecture/parameter_registry.md) — Tier 1 parameter registry with cryptographic hash commitment.
 - [Amendment Protocol](../../architecture/amendment_protocol.md) — 7-of-9 holder signatures (FC-110) and 180-day timelock (FC-111) required for any Tier 1 change.
 - [Drift Chain](../../architecture/drift_chain.md) — append-only published version history; silent modification is detectable at first operational-node startup.
 - [Implementation Binding](../../architecture/implementation_binding.md) — every bound component verifies the drift-chain head on startup and refuses to operate on unverified state (with the CSM-dispensation exception per Annex Y unconditionality).
 
-Changes to Tier 1 invariants require the full architectural process. Changes to the architectural enforcement layer itself are also Tier 1 and subject to the same process (recursive). The architectural layer protects against silent drift below the amendment threshold; it does not and cannot prevent legitimate H-3 amendment by a lawful supermajority of holders, but it guarantees visibility, response time (180 days), and public auditability of any such change.
+Changes to the highest-level rules require the full change process. The lock itself is also protected. This cannot stop a lawful large-majority change, but it makes quiet changes visible and creates a 180-day response window.
 
-**Fail-closed posture.**
-The protocol defaults to caution, not momentum. In the absence of active civic participation, all evolutionary progress — new proposals, amendments, parameter adjustments, and scope expansions — freezes at the last legitimated state. Survival baselines (Essential Access, CSM floor) continue unconditionally; no civic silence may be interpreted as consent to reduce them. Operational continuity is not proof of legitimacy. The system holds its position until humans actively renew the mandate to move. This posture is not a crisis mode — it is the default. Growth and change require deliberate human activation; stasis requires nothing.
+**Default to caution.**
+If people are not actively taking part, the system does not treat silence as consent. New proposals, changes, parameter adjustments, and expansions freeze at the last approved state. The basic needs floor continues. Silence can never be used as permission to reduce it.
 
-**Founding Order — Subsidiarity, Consent & Exit (Proposal 5 close-out, 2026-04-18).**
-Beneath the seven operational articles, this protocol rests on a foundational scale-and-consent layer, the **Founding Order**, that defines who consents to be governed by the protocol, at what scale, and how they withdraw. The Founding Order is Tier 1 architectural:
+**Founding Order — Local Choice, Consent & Exit (Proposal 5 close-out, 2026-04-18).**
+Before the seven articles, the system needs a rule for who joins, at what scale, and how they leave. That rule is the **Founding Order**:
 - [Founding Order Overview](../../founding/order/README.md) — overview and integration with the current Founding Order + Articles I-VII architecture.
-- [Subsidiarity Rule](../../founding/order/subsidiarity_rule.md) — decisions default to the smallest competent scale; federation action requires affirmative justification.
-- [Consent Protocol](../../founding/order/consent_protocol.md) — affirmative consent is a published act, not a presumption. Non-consenting units are outside protocol scope except for the CSM floor.
-- [Exit Protocol](../../founding/order/exit_protocol.md) — any locality or larger unit may exit by **2/3 resident-personhood supermajority (FC-120)** with a **730-day graceful unwind (FC-121)**. Essential Access continuity is preserved for individuals during unwind; no exit tax, no forfeiture.
-- [Re-entry Protocol](../../founding/order/reentry_protocol.md) — procedurally symmetric re-entry; no penalty for previously-exited units.
-- [Jurisdictional Scales](../../founding/order/jurisdictional_scales.md) — five scales per **FC-122**: household, neighborhood (≤500), locality (≤5,000), region (≤500,000), federation.
+- [Local Decision Rule](../../founding/order/subsidiarity_rule.md) — decisions stay at the smallest scale that can handle them.
+- [Consent Protocol](../../founding/order/consent_protocol.md) — joining must be an open, published act, not an assumption.
+- [Exit Protocol](../../founding/order/exit_protocol.md) — a locality or larger unit may leave by a two-thirds vote with a 730-day transition; no exit tax and no forfeiture.
+- [Re-entry Protocol](../../founding/order/reentry_protocol.md) — returning is allowed without penalty.
+- [Jurisdictional Scales](../../founding/order/jurisdictional_scales.md) — five scales: household, neighborhood, locality, region, federation.
 
-The Founding Order is read *through* every operational article: each article's default resolution scale is the smallest competent unit; federation-scale operation requires affirmative justification under the subsidiarity rule. Tier 1 human-dignity invariants (CSM) are the single exception that binds everywhere regardless of consent — because human dignity is not a subject of vote.
+The Founding Order applies to every article. Decisions stay local unless there is a real reason to move them up. The human dignity floor is the exception: it applies everywhere because dignity is not up for a vote.
 
 ---
 
 ## How to read this document
-- **Main body:** Sections I-VIII state the constitutional architecture, operating logic, baseline settings, and illustrative user flows.
-- **Annex corpus:** standalone annex documents live in the [Annex Directory](../annexes/INDEX.md). Use that directory for threat operations, change control, transition mechanics, hardening clauses, and detailed operational guidance.
+- **Main body:** the main rule design and article summaries.
+- **Annex corpus:** supporting details in the [Annex Directory](../annexes/INDEX.md).
 
 ---
 
 ### 0A. Moral Scope, Spiritual Limits, and Stewardship Orientation
-This Protocol governs external civic and economic order. It does not claim to perfect human nature, eliminate moral corruption, or produce inward transformation.
+This system governs public and economic order. It does not claim to perfect human nature, end moral corruption, or transform the human heart.
 
-It aims in the civic sphere to protect intrinsic human dignity, restrain domination and extraction, preserve stewardship and truthful accountability, and protect the liberty of conscience, worship, and voluntary obedience to God.
+Its public purpose is to protect human dignity, restrain domination and extraction, preserve stewardship and truthful accountability, and protect freedom of conscience and worship.
 
-This Protocol proceeds from moral realism: human beings are capable of creativity, stewardship, service, love, deception, domination, and corruption. For that reason, power must be bounded, exploitation restrained, and dignity protected.
+It assumes moral realism: people can create, care, serve, love, deceive, dominate, and corrupt. For that reason, power must be bounded, exploitation restrained, and dignity protected.
 
-This Protocol therefore should be read as a framework for civil stewardship, not as a claim to save, sanctify, or morally complete the human person. Just institutions can reduce structural evil and protect the conditions under which moral responsibility, family life, worship, service, and voluntary faithfulness may flourish; they cannot create innocence or holiness by administration.
+This system is a framework for public stewardship. It is not a claim to save, sanctify, or morally complete any person. Just institutions can reduce structural harm and protect the conditions for family life, worship, service, and responsibility. They cannot create innocence or holiness by administration.
 
-No part of this Protocol may be read as a substitute for truth, virtue, worship, repentance, or reverence before God. It regulates public order; it does not replace the inward transformation that belongs to conscience, conviction, repentance, and God.
+No part of this system replaces truth, virtue, worship, repentance, or reverence before God. It regulates public order. It does not replace conscience, conviction, repentance, or God.
 
 **God-honoring civic commitments (non-coercive)**
-1. **Anti-idolatry of wealth and power** - No instrument, institution, or office within this Protocol may treat accumulation, price power, market leverage, or administrative dominance as a measure of moral worth or civic superiority.
-2. **Stewardship of time and rest** - Public and economic institutions should preserve rhythms of rest, family life, worship, recovery, and reflection, and must not treat endless extraction of labor as a civic good.
+1. **Do not worship wealth or power** - No tool, institution, or office may treat accumulation, market leverage, or administrative dominance as proof of moral worth or civic superiority.
+2. **Protect time and rest** - Public and economic institutions should preserve rest, family life, worship, recovery, and reflection. Endless extraction of labor is not a civic good.
 3. **Freedom of conscience before God** - Persons, families, congregations, and voluntary communities retain protected space to seek, worship, obey, and serve God according to conscience, provided they do not violate the baseline dignity and protections owed to others.
 
-The Protocol shall not be interpreted to authorize religious scoring, compelled worship, coerced profession of belief, or state management of salvation. It preserves freedom of conscience and worship while refusing both moral neutrality toward domination and coercive religion.
+This system must not authorize religious scoring, forced worship, forced statements of belief, or state management of salvation. It protects conscience and worship while rejecting both domination and coerced religion.
 
 ---
 
-## I. Philosophy: Physics Over Finance
-The prevailing system fails when financial claims on the future outgrow the physical reality of the present. This protocol treats money and power as constrained by measurable capacity, time, and accountability.
+## I. Philosophy: Reality Before Finance
+The system fails when financial claims grow beyond what the real world can support. This constitution treats money and power as limited by real capacity, time, and public accountability.
 
 **Core framing**
-- **Money is a flow, not a stock:** instruments are designed to circulate, not accumulate indefinitely.
-- **Survival rights are non-accumulable:** you cannot hoard future survival at the expense of others.
-- **Civic influence is kinetic:** it exists while you are actively stewarding the commons, then fades.
+- **Money should move:** Flow is designed to circulate, not pile up forever.
+- **Basic needs cannot be hoarded:** no one may store up future survival access at the expense of others.
+- **Public influence should fade:** civic influence exists while a person is actively helping, then declines.
 
 ---
 
 ## II. Monetary Architecture (distributed across Articles IV, V, and VI)
-To prevent corruption and category errors, the protocol uses five separated instruments across four lanes. Only one is money. One protects the survival floor, two are civic instruments, and one is a temporary emergency instrument.
+To prevent money from doing every job, the system uses five separated tools. Only one is money. One protects basic needs. Two are civic tools. One is for real emergencies.
 
-*Instrument-to-article mapping: **Essential Access** lives in **Article IV (Survival)**, **Flow** and **Shared Storehouse** live in **Article V (Markets, Commons & Public Finance)**, and **Voice** and **Service Record** live in **Article VI (Voice, Service Record & Deliberation)**.*
+*Where they live: **Essential Access** is in **Article IV (Survival)**. **Flow** and **Shared Storehouse** are in **Article V (Markets, Commons & Public Finance)**. **Voice** and **Service Record** are in **Article VI (Voice, Service Record & Public Decisions)**.*
 
-### 1) Flow - The Currency
+### 1) Flow - Ordinary Money
 - **Purpose:** production, trade, innovation, non-essential consumption, payroll, procurement, and settlement.
-- **Nature:** Flow is the sole general-purpose currency and the common accounting denominator for market pricing and public finance.
+- **Nature:** Flow is the only general-purpose money in the system.
 - **Form rule:** Flow operates primarily as a public digital currency secured by cryptographic methods, while physical cash or equivalent offline bearer instruments remain permanently available for privacy, resilience, and universal access.
 - **Issuance rule:** Flow is issued only against verified productive commitments through the Annex X channels - payroll, milestone-bound project escrow, essential-services procurement, public infrastructure windows, and tightly bounded continuity backstops. All issuance is provenance-tagged at audit level, approved under dual-key review (and enhanced review above threshold), and released with a published unwind path. Private banks, funds, and lenders may lend or intermediate existing Flow, but may not create new Flow, Flow-denominated deposit substitutes, or other currency-like purchasing power by debt expansion.
 - **Circulation rule:** Flow may transfer freely within lawful market activity, but remains subject to anti-hoarding, anti-monopoly, and anti-rent-seeking constraints.
-- **Idle-value rule:** Flow decay is a calibrated anti-hoarding tool, not a punishment for productive planning. The default Option B rate is 0.5% per month on idle balances above a published operating-float exemption, with review inside a 0.25%-1.00% corridor based on hoarding signals, investment blockage, and concentration metrics.
+- **Idle-money rule:** Flow has a fee on large idle balances to discourage hoarding. It is not meant to punish ordinary saving or real project planning.
 - **Banking rule:** basic payments, custody, wage receipt, transfers, and cash access operate on public infrastructure funded through Article V public finance and commons revenue (PFCR); any licensed retail provider serving the public must offer the baseline public banking floor on the common rail.
 - **Investment channel:** protected capital treatment is not a blanket exemption. Time-bound project escrows, build accounts, term-finance pools, catastrophe reserves, and public infrastructure windows may hold Flow without ordinary idle decay only while funds remain preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
 
-### 2) Essential Access - The Guarantee
+### 2) Essential Access - The Basic Needs Floor
 - **Purpose:** baseline essentials such as food, water, basic shelter/heat, basic transit, essential healthcare/medicines, crisis mental-health care, and explicit mental-health continuity.
-- **Nature:** Essential Access is not money. It is a non-transferable entitlement ledger that authorizes access to the essential basket.
+- **Nature:** Essential Access is not money. It is a non-transferable right to receive items in the basic needs basket.
 - **Constitutional floor:** Essential Access may never be narrowed below the Constitutional Survival Minimum defined in Annex Y, even when the broader essential basket is under review or temporary substitution is required.
 - **Cycle rule:** Essential Access is issued as a daily micro-allocation derived from the weekly baseline, with each daily tranche valid for 72 hours; this smooths demand, limits hoarding, and avoids single-day expiry cliffs.
 - **Protection rule:** Essential Access cannot be sold, pledged, collateralized, or informally monetized; narrow caregiver/dependent exceptions must remain capped, auditable, and reversible when coercion appears.
 
-### 3) Voice + Service Record - Deliberation & Service
-- **Purpose:** the civic instruments are split into two bounded functions. Voice governs short-horizon agenda-setting and budget prioritization; Service Record governs eligibility to serve on juries, panels, rotating review bodies, and oversight roles.
-- **Nature:** neither Voice nor Service Record is money. Both remain non-transferable, non-convertible, and narrow in function. Voice is fast-decay and low-cap; Service Record is slower-moving and service-oriented.
+### 3) Voice + Service Record - Public Priorities And Service
+- **Purpose:** Voice helps set near-term public priorities. Service Record helps decide readiness for rotating public service roles.
+- **Nature:** neither Voice nor Service Record is money. They cannot be transferred or sold. Voice fades quickly and is capped. Service Record moves more slowly and is tied to service.
 - **Anti-capture rule:** Voice may never purchase goods, private privilege, legal immunity, or survival access, and Service Record may never be traded, inherited, collateralized, or pooled as a patronage asset. Survival-adjacent decisions remain protected by one-person-one-vote legitimacy checks, and no single contribution sector may dominate effective civic weighting.
 
-### 4) Shared Storehouse - The Emergency Brake
-- **Purpose and limit:** Shared Storehouse is a temporary, category-specific emergency quota instrument activated only during verified scarcity. Shared Storehouse is not money, is not permanent, is non-convertible, and must terminate when scarcity mode ends.
+### 4) Shared Storehouse - Emergency Rationing
+- **Purpose and limit:** Shared Storehouse is temporary rationing for a specific category during a verified shortage. It is not money. It is not permanent. It must end when the shortage mode ends.
 - **Hard expiration rule:** every Shared Storehouse activation carries a published expiration timestamp set at activation. Continuation beyond that timestamp requires an affirmative multi-key renewal — a new scarcity finding published by the oracle quorum plus a deliberative ratification under Article VI. Without active renewal, the system automatically reverts to its baseline constitutional state at the expiration timestamp regardless of whether the underlying conditions have improved. Silence, apathy, or administrative delay is not renewal. Automatic reversion is not a failure mode; it is the designed default. No emergency power may accumulate across renewal cycles into a permanent expansion of executive scope.
 - **Separation rule:** Flow is the only true currency. Essential Access, Voice, Service Record, and Shared Storehouse are not money and may not be converted, pooled, sold, wrapped, or re-created through indirect markets, queue trading, or proxy contracts.
 
@@ -194,145 +212,149 @@ To prevent corruption and category errors, the protocol uses five separated inst
 
 ## III. Founding Order and Articles of Constitutional Order
 
-The **Founding Order** governs scale, consent, and exit. Every **Article** then has a narrow job, explicit inputs/outputs, and a hard boundary to prevent category errors such as turning wellbeing metrics into coercion. The Founding Order reads through every article: each article defaults to the smallest competent scale under the subsidiarity rule, and federation-scale action requires affirmative justification.
+The **Founding Order** answers three plain questions: who joins, who decides, and how a place can leave.
+
+Each **Article** then has one main job. The point is to stop one office, one number, or one money tool from taking over the rest.
+
+The default is local decision-making. A larger body may act only when the smaller place cannot handle the issue on its own.
 
 ### Constitutional architecture at a glance
 
-**Founding Order — Subsidiarity, Consent & Exit**  
-Defines the smallest competent scale for every decision, the affirmative consent act by which units join the constitutional order, and the graceful-exit pathway by which they leave. This is the foundation that makes every article non-coercive by construction.
+**Founding Order — Local Choice, Consent & Exit**
+Says decisions stay as local as possible, places must openly choose to join, and places have a known way to leave.
 
-**Article I — Rights & Rule of Law**  
-Tier 1 constitutional invariants (dignity, due process, non-coercion, separation-of-concerns) combined with rule-bound execution of those rights. Oversight-of-execution lives here because rights and their enforcement are one function; the S3* audit channel is architecturally separated in Article VII.
-
-**Article II — Personhood, Identity & Continuity**  
-Proof-of-personhood, guardianship, recovery, and dependent continuity without surveillance scoring.
-
-**Article III — Physics & Reserves**  
-Polycentric measurement of physical capacity (food, water, energy, shelter, medicines) and the strategic reserves that buffer measurement error and supply shocks — one capacity-function under one constitutional article.
-
-**Article IV — Survival**  
-Essential Access as instrument and delivery path together. One definition and one attack surface under a single constitutional function.
-
-**Article V — Markets, Commons & Public Finance**  
-Flow, land and housing use-rights, anti-monopoly enterprise, and Public Finance & Commons Revenue (PFCR) unified under one production-and-revenue article.
-
-**Article VI — Voice, Service Record & Deliberation**  
-Voice, Service Record, the contribution-recognition that mints them, and the deliberation processes they feed — the civic input-output pipeline as one article.
-
-**Article VII — Transparency & Environmental Scanning**  
-Real-time public dashboards (the S3* audit channel, genuinely independent of Article I's control channel) plus Beer-VSM S4 external-world scanning. The reporting function has no institutional overlap with the operating function.
-
-### Founding Order and article interfaces
-*Order / Article + Interfaces ↔ Boundary (cannot touch)*
-
-**Founding Order — Subsidiarity, Consent & Exit**
-- → All articles: sets the default scale of action and the consent basis for protocol operation.
-- Cannot override the Tier 1 human-dignity floor (CSM), which applies regardless of consent.
-
-**Article I — Rights & Rule of Law**
-- → Constraints for all articles plus rule-bound execution of those constraints.
-- Cannot be overridden by Voice, Service Record, or Flow decisions or by operational expedience.
+**Article I — Rights & Rules**
+Protects the rules that cannot be quietly changed: dignity, fair process, no coercion, and the wall between basic needs, markets, and public power.
 
 **Article II — Personhood, Identity & Continuity**
-- → Eligibility and continuity signals (minimal, privacy-preserving).
-- Cannot become surveillance scoring.
+Recognizes one person as one person, protects recovery when records fail, and avoids turning identity into surveillance.
 
-**Article III — Physics & Reserves**
-- → Capacity indices and reserve buffers for Articles IV and V.
-- Cannot issue beyond conservative margins; cannot absorb control functions from Article I or audit functions from Article VII.
+**Article III — Real Capacity & Reserves**
+Measures what society can actually provide: food, water, energy, shelter, medicines, care, and reserves for shocks.
 
 **Article IV — Survival**
-- → Essential Access issuance, daily allocation, and essential service delivery.
-- Cannot condition survival on behavior; cannot permit Essential Access monetization or conversion.
+Turns Essential Access into real access to basic needs.
 
 **Article V — Markets, Commons & Public Finance**
-- → Flow issuance and decay, housing and commons use-rights, enterprise competition, commons-revenue routing, and the public banking rail.
-- Cannot allow instrument conversion, enable speculative rents, create monopolies, or tax survival or ordinary labor.
+Sets rules for Flow, business, housing, land, public banking, and public funding.
 
-**Article VI — Voice, Service Record & Deliberation**
-- → Voice and Service Record minting, priority-setting, and authorized public decisions.
-- Cannot change constitutional rights; cannot rank human worth; cannot convert into economic power.
+**Article VI — Voice, Service Record & Public Decisions**
+Sets rules for public priority-setting and rotating service roles without creating social credit.
 
-**Article VII — Transparency & Environmental Scanning**
-- → Public accountability signals across the order and external-world scanning.
-- Cannot publish re-identifiable data; cannot share an institutional home with Article I control (S3/S3* independence).
+**Article VII — Public Records & Warning Systems**
+Publishes what is happening, checks the system from outside its operating offices, and watches for future risks.
+
+### Founding Order and article boundaries
+Each part has a job. These are the handoffs and hard limits.
+
+**Founding Order — Local Choice, Consent & Exit**
+- Sends to all articles: the default scale of action and the rule for joining or leaving.
+- Cannot override the basic human dignity floor, which applies regardless of local consent.
+
+**Article I — Rights & Rules**
+- Sends to all articles: the rights and limits that bind every other part.
+- Cannot be overridden by Voice, Service Record, Flow, or convenience.
+
+**Article II — Personhood, Identity & Continuity**
+- Sends to the system: proof that a person is a person and continuity when records fail.
+- Cannot become surveillance scoring.
+
+**Article III — Real Capacity & Reserves**
+- Sends to Articles IV and V: capacity numbers and reserve buffers.
+- Cannot promise beyond conservative safety margins or take over rights or audit jobs.
+
+**Article IV — Survival**
+- Sends to people: Essential Access and basic service delivery.
+- Cannot make survival depend on behavior or let Essential Access become money.
+
+**Article V — Markets, Commons & Public Finance**
+- Handles Flow, housing, land, business, public banking, and public funding.
+- Cannot let tools convert into each other, create monopoly power, or tax survival and ordinary labor.
+
+**Article VI — Voice, Service Record & Public Decisions**
+- Handles Voice, Service Record, public priorities, and authorized public decisions.
+- Cannot change basic rights, rank human worth, or become economic power.
+
+**Article VII — Public Records & Warning Systems**
+- Publishes public accountability signals and watches outside risks.
+- Cannot expose private identities or be housed inside the same office it audits.
 
 ---
 
 ### Founding Order and article detail
 
-#### Founding Order: Subsidiarity, Consent & Exit
-- **Subsidiarity rule:** decisions default to the smallest competent scale — household, neighborhood (≤500 persons), locality (≤5,000), region (≤500,000), federation — with federation-scale action permitted only where cross-regional externality, physical-scale infrastructure, or constitutional-floor enforcement is affirmatively justified (`founding/order/subsidiarity_rule.md`).
-- **Scale hierarchy (FC-122):** five scales with quantitative bounds; no empty scales; Tier 1 locked. Multi-scale competence disputes default against escalation.
-- **Consent protocol:** affirmative 2/3-supermajority consent, 90-day notice, 60-day deliberation, roll-call, 2/3 minimum participation. Non-consenting units are outside protocol scope except for the Tier 1 human-dignity floor (CSM).
-- **Exit protocol (FC-120, FC-121):** any unit at locality scale or larger may exit by 2/3 resident-personhood supermajority with a 730-day graceful unwind. Essential Access continuity is preserved during unwind; no exit tax; no forfeiture.
-- **Re-entry protocol:** procedurally symmetric to accession; no penalty for previously-exited units; 365-day floor between exit events to prevent cycling.
+#### Founding Order: Local Choice, Consent & Exit
+- **Local decision rule:** decisions stay at the smallest scale that can handle them — household, neighborhood (≤500 persons), locality (≤5,000), region (≤500,000), federation. Federation-scale action needs a clear reason (`founding/order/subsidiarity_rule.md`).
+- **Scale list (FC-122):** the five scales are locked. If there is a dispute about which scale should decide, the default is not to move power upward.
+- **Consent rule:** joining requires an open two-thirds vote, 90-day notice, 60-day public discussion, roll-call, and two-thirds minimum participation. Places that do not consent are outside the system except for the basic human dignity floor.
+- **Exit rule (FC-120, FC-121):** a locality or larger unit may leave by a two-thirds resident vote with a 730-day transition. Essential Access continues during transition. No exit tax. No forfeiture.
+- **Re-entry rule:** a place may return without penalty; a 365-day waiting floor between exit events prevents cycling in and out.
 - **Individual consent withdrawal:** a person may withdraw individual consent at any time; Tier 1 CSM floor continues unconditionally.
-- **Relationship to the articles:** the Founding Order is read through every article. Article I rights remain protected regardless of scale; Articles III, IV, V, and VII each resolve to the smallest competent scale by default unless an affirmative federation-level justification is met.
+- **Relationship to the articles:** Article I rights remain protected at every scale. Articles III, IV, V, and VII stay as local as possible unless federation-level action is justified.
 
-#### Article I: Rights & Rule of Law
+#### Article I: Rights & Rules
 - **Survival is unconditional:** baseline essentials are guaranteed and cannot be withdrawn as punishment.
-- **Constitutional Survival Minimum:** no ordinary process may reduce the survival floor below Annex Y minima; only H-3 refounding authority may amend.
+- **Basic needs floor:** no ordinary process may reduce the survival floor below Annex Y minima; only the highest amendment path may change it.
 - **Human worth is not measured:** no score or metric can gate dignity, personhood, or survival access.
-- **Due process:** enforcement requires transparent rules, appeal paths, and independent oversight.
+- **Fair process:** enforcement requires clear rules, appeal paths, and independent review.
 - **No taxes on ordinary life:** survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources.
-- **Separation-of-concerns:** survival (Essential Access), enterprise (Flow), and the civic instruments (Voice and Service Record) remain distinct and non-convertible.
+- **Separated tools:** survival (Essential Access), enterprise (Flow), and civic tools (Voice and Service Record) stay separate and cannot be freely converted.
 - **Money creation is public:** only protocol-authorized issuance bodies may create Flow or Flow-equivalent purchasing power.
 - **Families may pass continuity, not domination:** modest succession may be protected, but perpetual dynastic wealth structures, trusts, and inherited ruling claims are prohibited.
 - **Ownership is stewardship, not tribute:** rights in land, housing, and enterprise may reward use, risk, and contribution, but may not justify perpetual passive extraction from others' necessity or labor.
-- **Non-coercion:** Voice, Service Record, and Flow can never purchase or condition constitutional rights.
-- **Rule-bound execution:** implementation of authorized decisions runs through rule-bound workflows with a published discretion taxonomy, documented reasons, and reviewable boundaries. Oversight enforces fraud/coercion/bribery rules proportionally, protects dependents and innocent counterparties, and avoids collateral harm. Staged rollouts, canary deployments, rate limits, narrow emergency pauses, competency-based auditable hiring/procurement, and published SLA/incident/correction logs are mandatory.
-- **Anti-capture oversight:** independent audits, rotation, conflict-of-interest rules, and funded red-teaming are mandatory system features. The S3/S3* independence rule requires that audit (Article VII) be institutionally separate from control (this article) — the reporting function may never share an institutional home with the operating function it reports on.
-- **Architectural enforcement:** Tier 1 invariants are mechanically enforced via the `architecture/` directory (7-of-9 amendment, 180-day timelock, drift chain, implementation binding) per Proposal 1 close-out.
+- **No coercion:** Voice, Service Record, and Flow can never buy or condition basic rights.
+- **Bounded execution:** approved decisions must run through published workflows, documented reasons, and reviewable boundaries. Oversight must protect dependents and innocent parties while enforcing fraud, coercion, and bribery rules.
+- **Anti-capture review:** independent audits, rotation, conflict rules, and funded red-team testing are mandatory. The office that reports on the system may not be the same office that runs the system.
+- **Hard locks:** Tier 1 rules are mechanically protected through the `architecture/` directory: 7-of-9 amendment, 180-day delay, drift chain, and implementation binding.
 
 #### Article II: Personhood, Identity & Continuity
-- **One-person-one-core-wallet** to prevent Sybil attacks and duplicate Essential Access claims.
-- **Privacy-preserving verification** with selective disclosure; collect the minimum data required.
-- **Continuity rules:** guardianship, incapacity, birth/death handling, and uninterrupted dependent coverage.
-- **Household composition verification:** household composition claims that trigger resource allocation changes — including housing space expansion, Essential Access dependent transfers, or caregiver exceptions — require verified co-habitation and genuine dependency under a published evidence standard. A minimum verification period applies before any allocation increase is granted. Verification is needs-neutral and relationship-neutral; it tests occupancy and dependency, not household structure or lifestyle.
-- **Appeals and recovery:** robust wallet recovery and dispute resolution, designed for refugees and those without documentation.
-- **Layered identity (Annex AB4):** identity powers are split by consequence — survival-floor personhood, provisional personhood, core resident identity, and later civic activation. No single document, biometric, institution, or device may serve as the sole irreversible authority.
+- **One person, one core wallet:** prevents duplicate Essential Access claims and fake extra identities.
+- **Privacy-preserving checks:** collect the least data needed and disclose only what is necessary.
+- **Continuity rules:** protect guardianship, incapacity, birth and death handling, and dependent coverage.
+- **Household verification:** when a household claim changes resource allocation, the system checks real co-habitation and dependency. It does not judge lifestyle, relationship type, or household structure.
+- **Appeals and recovery:** people must have usable recovery paths, including refugees and people without strong documents.
+- **Layered identity:** identity checks are stronger only when consequences are higher. No single document, biometric, institution, or device may become the only irreversible source of identity.
 
-#### Article III: Physics & Reserves
-- **Polycentric measurement:** multiple independent sources publish capacity and scarcity indices; minimum N=5 nodes per cohort, minimum 3 methodology classes, with pairwise-correlation tests and at least one adversarial seat per cohort (Proposal 3).
-- **Conservative issuance:** buffers and safety margins remain mandatory, but methodology-only disputes do not automatically reduce issuance; challengers must produce prima facie alternative evidence or the system defaults toward continuity while audit proceeds.
-- **Aggregate transparency:** publish methodology, definitions, and change logs; minimize individual-level exposure.
-- **Resilience reserves (absorbed capacity function):** strategic buffers for food, water, energy, and critical medicines with replenishment rules. Reserves and measurement live in one article because reserves exist to buffer measurement error and supply-shock tails — they are the same capacity function at different time-scales.
-- **Crisis fallback (Proposal 6):** published fallback protocol for measurement failure — conservative issuance defaults, reserve draw triggers, and automatic review escalation.
+#### Article III: Real Capacity & Reserves
+- **Many measurement sources:** several independent sources measure capacity and scarcity. The system needs at least 5 nodes, at least 3 ways of measuring, error checks, and at least one adversarial reviewer per group.
+- **Safety margins:** the system keeps buffers. A disagreement about method does not automatically reduce Essential Access unless challengers produce real alternative evidence.
+- **Public methods:** publish methods, definitions, and change logs while protecting individual privacy.
+- **Reserves:** food, water, energy, and critical medicines need strategic buffers and replenishment rules.
+- **Crisis fallback:** if measurement fails, the system uses published fallback rules, conservative defaults, reserve triggers, and automatic review.
 
 #### Article IV: Survival
-- **Essential Access as instrument and delivery combined:** Essential Access is both a non-monetary entitlement ledger and the service pathway that turns that ledger into actual access.
+- **Essential Access as right and delivery path:** Essential Access is both the right to basics and the service path that delivers them.
 - **Essential Access purpose:** baseline essentials — food, water, weather-safe shelter, basic transit, essential healthcare/medicines, crisis mental-health care, and the Constitutional Survival Minimum floor defined in Annex Y.
-- **Nature:** Essential Access is not money. It is a non-transferable entitlement that authorizes access to the essential basket.
-- **Constitutional floor:** Essential Access may never be narrowed below the CSM defined in Annex Y, even during scarcity modes or temporary substitution.
-- **Issuance cadence:** daily micro-issuance derived from the Option B baseline using Article III capacity signals and conservative buffers.
-- **Expiration:** each daily tranche expires after a 72-hour rolling window; unused expired Essential Access returns to the Capacity Pool while preserving continuity paths for illness, travel disruption, caregiving emergencies, and provider outages.
-- **Non-transferability** by default to block coercion and black-market control; narrow caregiver/dependent exceptions with caps, audit, and reversibility when coercion is detected.
-- **Non-convertibility rule:** Essential Access cannot be sold, pledged, collateralized, or informally monetized. Essential Access-only lane for the essential basket prevents scalable arbitrage (T-001 containment).
-- **Scarcity interface:** during declared scarcity, Article V's Shared Storehouse may supplement Essential Access allocation; termination rules bind it to the end of scarcity mode.
+- **Nature:** Essential Access is not money. It is a non-transferable right to receive items in the basic needs basket.
+- **Minimum floor:** Essential Access may never be narrowed below the minimum in Annex Y, even during shortage or temporary substitution.
+- **Daily issuance:** Essential Access is issued daily using Article III capacity signals and safety buffers.
+- **Expiration:** each daily amount expires after a 72-hour rolling window. Unused access returns to the capacity pool, with continuity paths for illness, travel disruption, caregiving emergencies, and provider outages.
+- **Non-transferable by default:** this blocks coercion and black-market control. Caregiver and dependent exceptions must be capped, auditable, and reversible.
+- **No conversion:** Essential Access cannot be sold, pledged, used as collateral, or turned into money.
+- **Shortage interface:** during declared shortage, Shared Storehouse may supplement Essential Access and must end when shortage mode ends.
 
 #### Article V: Markets, Commons & Public Finance
 **Core boundary rule**
-- **Instruments are non-convertible** by default; any exception requires amendment-level authorization, narrow scope, and explicit anti-capture constraints.
+- **Tools do not convert by default.** Any exception needs a formal change, narrow scope, and explicit anti-capture limits.
 
 **Flow**
 - **Purpose:** production, trade, innovation, non-essential consumption, payroll, procurement, and settlement.
-- **Nature:** Flow is the sole general-purpose currency and the common accounting denominator for market pricing and public finance.
-- **Form rule:** Flow operates primarily as a public digital currency secured by cryptographic methods; physical cash or equivalent offline bearer instruments remain permanently available for privacy, resilience, and universal access.
-- **Issuance rule:** Flow is issued only through Annex X channels (payroll, milestone-bound project escrow, essential-services procurement, public infrastructure windows, tightly bounded continuity backstops). Dual-key review, provenance tagging at audit level, and published unwind paths are mandatory. Private banks, funds, and lenders may intermediate existing Flow but may not create new Flow, Flow-denominated deposit substitutes, or currency-like purchasing power by debt expansion.
-- **Circulation rule:** free transfer within lawful market activity, subject to anti-hoarding, anti-monopoly, and anti-rent-seeking constraints.
-- **Idle-value rule:** default 0.5% per month demurrage on idle balances above a published operating-float exemption, with review inside a 0.25%–1.00% corridor based on hoarding signals, investment blockage, and concentration metrics.
-- **Investment channel:** time-bound project escrows, build accounts, term-finance pools, catastrophe reserves, and public infrastructure windows may hold Flow without ordinary idle decay only while funds remain preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
+- **Nature:** Flow is the only general-purpose money in the system.
+- **Form rule:** Flow is mainly public digital money, with physical cash or offline equivalents kept available for privacy, resilience, and universal access.
+- **Issuance rule:** new Flow can be created only through approved channels such as payroll, project escrows, essential-service procurement, public infrastructure, and tightly bounded continuity backstops. Private banks and lenders may lend existing Flow, but they may not create new Flow through debt.
+- **Circulation rule:** Flow can move freely in lawful market activity, subject to anti-hoarding, anti-monopoly, and anti-rent-seeking rules.
+- **Idle-money rule:** the default idle-money fee is 0.5% per month on balances above a published operating-float exemption, reviewed inside a 0.25%-1.00% corridor.
+- **Investment channel:** long-term project funds may receive protected treatment only while they are registered, separated, milestone-reviewed, and subject to reversion if the purpose drifts.
 - **Household finance rule:** compounding interest on household ordinary-life debt is prohibited. No household debt instrument may securitize the survival floor, rely on revolving traps, or recreate survival coercion through hidden fee chains.
 - **Wallet partitioning:** protect payroll/essential obligations from broad freezes; target enforcement narrowly.
 
 **Land, Housing & Commons**
-- **Use-rights governance:** housing and land are governed as use-rights/leases rather than speculative ownership. No individual or private entity may extract Flow returns from residential use-rights.
-- **Housing is non-profit infrastructure:** residential construction is funded through Flow public infrastructure channels and project escrows; workers are compensated in Flow, but the resulting units are held as commons and allocated as use-rights. No private housing market exists for residential units; allocation is managed by need and occupancy criteria, not price.
+- **Use-rights:** housing and land are governed as use-rights or leases, not speculative ownership. No individual or private entity may extract Flow returns from residential use-rights.
+- **Housing as public infrastructure:** residential construction is funded through public channels and project escrows. Workers are paid in Flow, but homes are held as commons and allocated by need and occupancy, not price.
 - **Per-person allocation floor with hard household cap:** residential space is allocated at a published per-person floor. Total allocation scales with verified household size up to a published household maximum; the commons is not obligated to expand allocation beyond the cap regardless of household composition decisions. Additional space above the per-person floor may be requested for documented accessibility needs, caregiving requirements, or disability accommodations and is subject to independent needs review.
-- **Composition verification before space expansion:** household composition changes that would trigger a space-allocation increase require verified co-habitation and genuine dependency under the published standard in Article II before any additional allocation is granted. A minimum verification period applies. Births and documented medical emergencies are exempt from verification delay.
+- **Household verification before more space:** household changes that trigger more space require verified co-habitation and real dependency under Article II. Births and documented medical emergencies are exempt from delay.
 - **Quality is a civic investment, not an individual Flow purchase:** housing quality improvements are funded at the neighborhood or district level through civic deliberation (Article VI) and public Flow channels. Individual Flow wealth does not entitle any resident to a superior private unit. No Flow-priced private residential tier exists.
-- **Transparent allocation:** renewal depends on occupancy and a closed-list stewardship standard (vacancy, damage beyond normal wear, verified illegal use, or clearly defined health/safety violations after remediation opportunity).
+- **Transparent allocation:** renewal depends on occupancy and a closed-list stewardship standard: vacancy, damage beyond normal wear, verified illegal use, or clear health/safety violations after a chance to fix them.
 - **Family continuity without dynastic landlordism:** ordinary household continuity may be preserved, but housing and land rights may not be warehoused through trusts, shell entities, or absentee succession structures detached from active stewardship.
 - **Anti-vacancy carrying costs** and accumulation limits to block rent-seeking.
 - **Commons stewardship:** water, energy commons, and ecological assets governed with regenerative targets and auditability.
@@ -357,51 +379,51 @@ Real-time public dashboards (the S3* audit channel, genuinely independent of Art
 
 **Why these functions share one article.** Flow, housing and commons use-rights, enterprise activity, and commons-revenue routing are the four faces of the same economic surface. Keeping them under one article reduces boundary disputes and narrows the capture surface.
 
-#### Article VI: Voice, Service Record & Deliberation
-**Voice and Service Record instruments**
-- **Service Record:** earned through verified stewardship and service readiness; governs eligibility to serve on juries, panels, rotating review bodies, and oversight roles. Slower-moving, service-oriented.
-- **Voice:** derived from recent verified contribution plus hardship-safe civic-floor rules; governs short-horizon agenda-setting and budget prioritization. Fast-decay, low-cap.
-- **Non-convertibility:** Voice cannot purchase goods, private privilege, legal immunity, or survival access. Service Record cannot be traded, inherited, collateralized, or pooled as a patronage asset.
-- **Civic floor:** one-person-one-vote for constitutional matters and survival-adjacent outcomes; Voice affects only bounded budget prioritization and agenda sequencing. No single contribution sector may dominate effective civic weighting.
+#### Article VI: Voice, Service Record & Public Decisions
+**Voice and Service Record tools**
+- **Service Record:** earned through verified stewardship and service readiness. It helps decide who is ready for juries, panels, rotating review bodies, and oversight roles.
+- **Voice:** based on recent verified contribution plus hardship-safe floor rules. It helps set near-term priorities and budget sequencing. It fades quickly and is capped.
+- **No conversion:** Voice cannot buy goods, private privilege, legal immunity, or survival access. Service Record cannot be traded, inherited, used as collateral, or pooled as a patronage asset.
+- **Civic floor:** constitutional matters and survival-adjacent outcomes stay one-person-one-vote. No single contribution sector may dominate civic weighting.
 
-**Contribution & Capability Development**
-- **Service Record minting first:** contribution mints Service Record, not moral rank. It cannot affect Essential Access access.
-- **Service Record records verified stewardship** across care, maintenance, safety, education, ecological work, civic operations, and similar domains. Voice is derived from recent verified contribution plus hardship-safe civic-floor rules, then decays rapidly to keep agenda power kinetic.
-- **Verification:** scaled multi-path review. Small claims may use lightweight attestation; higher-impact claims require stronger evidence, rotating review, and audit escalation.
-- **Capability adjustment:** expectations scale to disability, caregiving load, age, and crisis context. Protected Pause preserves proportionate continuity during verified hardship.
-- **High-impact channel:** rare Service Record or Voice boosts require evidence-heavy Impact Review with independent panels, published criteria, and category-balance safeguards.
+**Contribution and capability**
+- **Contribution records service, not moral rank:** contribution can create Service Record. It cannot affect Essential Access.
+- **Recognized stewardship:** care, maintenance, safety, education, ecological work, civic operations, and similar work can count when verified.
+- **Verification scales with impact:** small claims may use light proof. Higher-impact claims require stronger evidence, rotating review, and audit escalation.
+- **Life circumstances matter:** disability, caregiving, age, crisis, illness, and disaster can change expectations. Protected Pause preserves continuity during verified hardship.
+- **High-impact claims need strong review:** rare Service Record or Voice boosts require independent panels, published criteria, and category-balance safeguards.
 
-**Deliberation & Decision Systems**
-- **Proposal pipeline:** draft → review → cost/capacity check → deliberation → legitimacy check where required → staged execution.
-- **Anti-capture weighting:** Voice is capped, fast-decay, category-balanced, and subject to conflict-of-interest rules. Service Record governs service eligibility, not agenda dominance.
-- **Quarterly decision cycle (baseline):** priorities set quarterly through Voice; no rollover is permitted; no single contribution category may exceed the published balance cap in effective deliberation weight.
-- **Minimum civic floor:** one-person-one-vote for constitutional matters and survival-adjacent outcomes.
+**Public decision process**
+- **Proposal path:** draft → review → cost and capacity check → public decision process → legitimacy check where required → staged execution.
+- **Anti-capture weighting:** Voice is capped, fades quickly, balanced by category, and subject to conflict-of-interest rules. Service Record governs service eligibility, not agenda dominance.
+- **Quarterly cycle:** priorities are set quarterly through Voice. No rollover. No single contribution category may exceed the published balance cap.
+- **Minimum civic floor:** constitutional matters and survival-adjacent outcomes remain one-person-one-vote.
 
-**Why these functions share one article.** Voice and Service Record, the contribution acts that mint them, and the deliberation processes that consume them form a single closed loop. Keeping them together prevents the civic-input pipeline from fragmenting into separate capture points.
+**Why these functions share one article.** Voice, Service Record, the work that creates them, and the public decisions that use them are one loop. Keeping them together reduces capture points.
 
 **The measure of civic health.**
-The success of this article is not measured by the stability of its mechanics or the volume of Voice allocated. It is measured by movement: specifically, the rate at which people who rely on the system as recipients also become active contributors to it. A society in which the survival floor is secure but civic participation is absent has achieved only half the design goal. The other half is the conditions under which a person can move from receiving care to extending it — from consuming the commons to stewarding it. This protocol does not prescribe the content of that movement or set a threshold for it. It preserves the structural conditions under which it becomes possible: a survival floor that removes desperation, instruments that reward stewardship rather than purchase it, and a deliberation process that remains open to new participants rather than crystallizing around an established class. Measuring this rate of movement — the velocity of contribution — is a legitimate Article VII transparency function and a meaningful signal of whether the civic layer is alive or merely operating.
+This article succeeds only if people can move from receiving care to also giving care, service, repair, teaching, stewardship, or other useful contribution. A secure basic needs floor is not enough if public life becomes closed to ordinary people. Article VII may measure this movement as a sign of whether the civic layer is alive or merely operating on paper.
 
-#### Article VII: Transparency & Environmental Scanning
-**Transparency — the S3* audit channel**
-- **Real-time public dashboards** for aggregate system health: capacity indices, issuance, reserves, service SLAs, and budget flows.
+#### Article VII: Public Records & Warning Systems
+**Public records**
+- **Public dashboards** for system health: capacity, issuance, reserves, service performance, and budget flows.
 - **Privacy preserved:** aggregation thresholds, small-cell suppression, rounding/noise where needed, and time delays for sensitive signals.
-- **Transparency:** publish definitions, sources, refresh rates, and a public change log for metrics and methodologies.
-- **Abuse-resistance:** delay/rate-limit gameable signals; disputes trigger conservative issuance and review.
-- **Institutional independence:** Article VII is organizationally separate from Article I's control function. The same body may never both execute and report on its own execution. This is the S3/S3* independence rule from Beer VSM — the structural reason for separating this article from Article I.
+- **Clear methods:** publish definitions, sources, refresh rates, and a public change log for metrics.
+- **Abuse resistance:** delay or limit signals that could be gamed. Disputes trigger conservative issuance and review.
+- **Independence:** the same body may never both run a function and report on its own performance.
 
-**Environmental Scanning (new S4 function)**
-- **Mandate:** continuous scanning of the world outside the protocol's direct operational scope — emerging technologies, climate signals, geopolitical shifts, pandemic precursors, demographic trends, ecological tail risks — to feed anticipatory adaptation rather than reactive response.
-- **Deliverables:** published quarterly environmental-scan reports with 10-year horizon, with specific attention to signals that could destabilize Article III measurement assumptions or the CSM basket.
-- **Escalation rule:** scan findings that would require Tier 1 amendment trigger automatic referral to the Federated Ombuds (Annex AI) and the H-3 refounding process if warranted.
-- **Why this function exists:** Beer VSM S4 (the environmental-scanning viable-system function) provides a structured process for noticing when the system's physical-world assumptions are becoming obsolete. Without it, slow-failure surfaces stay invisible until they become crises.
+**Warning systems**
+- **Mandate:** watch outside conditions that could break the system's assumptions: technology, climate, geopolitical shifts, pandemics, demographics, and ecological risks.
+- **Reports:** publish quarterly warning reports with a 10-year horizon, especially for risks to capacity measurement or the basic needs floor.
+- **Escalation:** findings that may require top-level rule changes go to the Federated Ombuds and the highest amendment path if needed.
+- **Why this exists:** slow failures should be seen before they become crises.
 
 ---
 
-## IV. Loopholes and Patches (Threat Model Summary)
-Common failure modes in multi-instrument systems and protocol-level patches intended to close them. This section is the narrative summary; Annex B is the authoritative threat register and Annex C is the authoritative operations workflow.
+## IV. Loopholes and Patches
+This section names common ways the system could fail and the fixes designed to reduce those risks. The full details are in the Threat Register and annexes.
 
-### 13. Essential Access coercion or black-market conversion
+### 13. Essential Access coercion or black-market exchange
 - **Failure mode:** people buy/sell Essential Access or force dependents to hand over Essential Access, reintroducing survival coercion.
 - **Patches:** Essential Access non-transferable by default; tightly scoped caregiver transfers with caps; coercion-specific penalties; safe-report channels; anomaly detection on essential purchase patterns.
 - **Residual risk:** barter cannot be eliminated; minimize incentives by guaranteeing baseline supply and keeping Essential Access usable only for the essential basket.
@@ -410,12 +432,12 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 - **Failure mode:** even if Essential Access expires, goods can be stockpiled to gain leverage in scarcity.
 - **Patches:** per-category purchase caps during declared scarcity; storage/carrying charges above baseline; shelf-life-aware rationing; resilient local redundancy and strategic reserves.
 
-### 15. Flow demurrage avoidance via asset hoarding
-- **Failure mode:** value shifts into non-decaying assets (land, commodities), recreating rent-seeking.
+### 15. Avoiding idle-money fees through asset hoarding
+- **Failure mode:** value shifts into assets such as land or commodities, recreating rent-seeking.
 - **Patches:** capacity-lease model for land/housing; progressive carrying costs on large idle holdings; anti-speculation rules; transparent registry for high-value assets; strong competition policy.
 
 ### 16. Issuance capture / circular finance
-- **Failure mode:** insiders create Flow through fake payroll, circular invoices, indefinite continuity backstops, or political favoritism, allowing hidden stock creation even while the protocol claims money is flow-bound.
+- **Failure mode:** insiders create Flow through fake payroll, circular invoices, indefinite backstops, or political favoritism.
 - **Patches:** Annex X dual-key approval; provenance tags at audit level; channel ceilings with affiliate aggregation; preregistered milestone schedules; no dual-channel financing of the same obligation; automatic throttling, audit, and unwind when stale issuance, repeat rollovers, or sector favoritism appear.
 
 ### 17. Civic layer capture by 'professional contributors'
@@ -424,19 +446,19 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 
 ### 18. Contribution fraud / guild collusion
 - **Failure mode:** fake hours or collusive approvals mint Voice or Service Record illegitimately.
-- **Patches:** multi-attestation + random audits; verifier reputation scoring; penalties for fraudulent attestations; cryptographic logs; whistleblower protections; automated anomaly flags.
+- **Patches:** multiple proof paths, random audits, verifier reputation tracking, penalties for false proof, secure logs, whistleblower protections, and automated anomaly flags.
 
 ### 19. Oracle manipulation / bad data
 - **Failure mode:** capacity is overstated or corrupted, causing over-issuance or shortages.
 - **Patches:** polycentric oracle quorum; conservative buffers; independent audits; open methods; rollback and emergency throttles; 'dispute reduces issuance' rule.
 
-### 20. Smart contract bugs / malicious proposals
+### 20. Automation bugs / malicious proposals
 - **Failure mode:** automatic execution amplifies errors or enables exploit proposals.
 - **Patches:** staged execution with mandatory review windows; formal verification for critical contracts; emergency pause with narrow triggers; post-mortems and patch governance.
 
 ### 21. Justice penalties harm innocents
 - **Failure mode:** freezing wallets can harm employees/dependents or crash a firm.
-- **Patches:** account partitioning (payroll escrow, dependents protection); targeted freezes (discretionary accounts first); due process; time-limited freezes pending adjudication.
+- **Patches:** account partitioning, payroll protection, dependent protection, targeted freezes, fair process, and time-limited freezes while review is pending.
 
 ### 22. Identity fraud / Sybil attacks
 - **Failure mode:** multiple identities claim Essential Access or unlawfully enter Voice or Service Record pathways at scale.
@@ -447,18 +469,18 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 ## V. Transition Outline
 
 ### Phase 1: Genesis and Debt Reset
-- **Debt reconciliation:** eliminate or restructure unsustainable personal debts while protecting essential savings and pensions through explicit conversion rules.
-- **Banking conversion:** legacy banks become regulated utilities and custodians on PFCR-funded public payment rails, with a guaranteed public banking option and bounded enterprise-underwriting functions.
+- **Debt reset:** eliminate or restructure unsustainable personal debts while protecting essential savings and pensions through clear conversion rules.
+- **Banking transition:** legacy banks become regulated service providers on public payment rails, with a guaranteed public banking option.
 - **Continuity guarantees:** ensure uninterrupted access to essentials (Essential Access) during cutover.
 
-### Phase 2: Boundary Interface (Legacy Bridge)
-- **Foreign inflow controls:** convert external capital into Flow subject to demurrage immediately, forcing productive deployment. Operative detail in [Annex AT §AT4](../annexes/ANNEX_AT.md).
-- **Trade membrane:** essential-capacity exports are capped to protect domestic Essential Access guarantees; strategic floors maintained for each CSM category; reciprocity membrane adjusts posture to counterparty behavior. Operative architecture in [Annex AT](../annexes/ANNEX_AT.md).
-- **Security posture:** defend infrastructure and ledger integrity as critical national assets.
+### Phase 2: Outside Money And Trade
+- **Foreign inflow controls:** outside capital converts into Flow and faces the idle-money fee immediately, pushing it toward productive use. Detail is in [Annex AT §AT4](../annexes/ANNEX_AT.md).
+- **Trade boundary:** exports of essentials are capped when needed to protect domestic Essential Access. Detail is in [Annex AT](../annexes/ANNEX_AT.md).
+- **Security posture:** defend infrastructure and records as critical public assets.
 
-### Phase 3: Network Expansion (Archipelago)
-- **Open standards:** publish protocol specs to enable interoperability and reduce vendor lock-in.
-- **Federation:** allow other jurisdictions to adopt and interlink ledgers while preserving local sovereignty and capacity constraints.
+### Phase 3: Network Expansion
+- **Open standards:** publish specs so places and vendors can interoperate and lock-in is reduced.
+- **Federation:** let other places adopt and link systems while preserving local consent and capacity limits.
 
 ---
 

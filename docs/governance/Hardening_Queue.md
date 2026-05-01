@@ -1,12 +1,14 @@
 # Hardening Queue
 
-This document is the single record for the constitutional red-team hardening queue. Prior to this file, queue items were tracked as trailing sections in individual annexes (AB7, AC5, AD). Those sections have been removed; this file supersedes them.
+This document tracks the next known hardening work.
+
+Plain meaning: it is the project's "what still needs pressure" list. It records which threats have a proposed answer, which checks must keep repeating, and which items still need real-world evidence or activation.
 
 ## Status key
 
-- **CLOSED** — threat is ADDRESSED in the Threat Register and the closing annex is identified.
-- **ONGOING** — a standing simulation or audit requirement with no single closing event.
-- **OPEN** — not yet addressed; blocking further hardening cycles.
+- **CLOSED** — the threat has a named mitigation path and a closing annex or patch.
+- **ONGOING** — the item must keep being tested or audited; there is no one-time finish line.
+- **OPEN** — no adequate mitigation path exists yet.
 
 ---
 
@@ -33,17 +35,17 @@ This document is the single record for the constitutional red-team hardening que
 
 ---
 
-## Session 3 queue (open)
+## Current queue
 
-No Session 3 hardening has been conducted. Items carried forward from Session 2:
+These are the highest-value items still needing pressure. Some are not "open" in the Threat Register anymore because they now have proposed fixes, but they still need activation, pilots, or proof.
 
 | Item | Priority | Notes |
 |---|---|---|
-| Compound interface tests — annual simulation run | High | Required annually per Annex AE; first live run not yet completed |
-| T-022 — Hostile Successor Government | High | PARTIAL in Threat Register; closing patch not yet written |
-| T-023 — Pilot-to-Scale Validity Gap | High | PARTIAL in Threat Register; Annex AN is a stub |
-| T-024 — Oracle Failure During Shared Storehouse | High | OPEN in Threat Register; Annex AQ is operative but T-024 residual risk acknowledged |
-| T-025 — Above-Ledger Boundary Manipulation | PARTIAL | P-023 closes main vectors; AV two-key precondition is operative |
+| Compound interface tests — annual simulation run | High | Required every year. First live annual run still needs completion. |
+| T-022 — Hostile successor government | High | P-018 / Annex AM proposes the answer. The constitutional body and trigger systems still need founding. |
+| T-023 — Pilot-to-scale validity gap | High | P-019 / Annex AN proposes the answer. Pilot evidence and challenge process still need execution. |
+| T-024 — Oracle failure during Shared Storehouse | High | Annex AQ is active. Remaining risk: temporary emergency decision-making could become normalized. |
+| T-025 — Idle-money fee capture through investment channels | High | P-023 / Annex AR closes main vectors. Founding values and inspector pool still need activation. |
 
 ---
 

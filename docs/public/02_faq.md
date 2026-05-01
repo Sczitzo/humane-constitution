@@ -2,85 +2,121 @@
 
 ## 1. What is the Humane Constitution?
 
-It is a constitutional design for a society where baseline survival is protected, markets remain productive, and civic power cannot be purchased. Its core idea is to stop wealth from automatically becoming coercive power.
+It is a design for a society where everyone has a basic needs floor, markets still work, and money cannot buy public power.
+
+The core idea is simple: wealth should not decide who gets food, shelter, medicine, safety, or a voice.
 
 ## 2. What problem is it trying to solve?
 
-Most systems let the same money decide too much at once: whether you eat, whether you can build, and whether you can shape institutions. That creates a world where money can buy safety, influence, and insulation from consequences. The Humane Constitution tries to separate those functions.
+Money does too many jobs today. It buys groceries, rent, medicine, business tools, lawyers, political access, and protection from consequences.
 
-## 3. What are the five instruments?
+When money controls all of that, being poor becomes dangerous. Being rich becomes power over other people.
 
-- **Flow** for markets
-- **Essential Access** for baseline survival
-- **Voice** for bounded civic priority-setting
-- **Service Record** for readiness to serve in rotating public roles
-- **Shared Storehouse** for genuine emergency shortage
+This project tries to separate those powers.
 
-The design depends on keeping those instruments from collapsing back into one another.
+## 3. What are the five tools?
 
-## 4. Is Essential Access just welfare under a new name?
+- **Flow:** ordinary money for markets
+- **Essential Access:** the basic needs floor
+- **Voice:** a limited way to help set public priorities
+- **Service Record:** proof of useful public service
+- **Shared Storehouse:** temporary rationing during a real shortage
 
-No. The design treats baseline essentials as a constitutional floor, not as discretionary aid. The point is to make survival a matter of right rather than a revocable program benefit.
+The design only works if these tools stay separate.
+
+## 4. Is Essential Access just welfare?
+
+No. Welfare is usually a program that can be changed, cut, or used as leverage.
+
+Essential Access is meant to be a right. It is the basic floor below which the system cannot push a person.
 
 ## 5. Is this communism or central planning?
 
-No. Flow still runs markets, prices, wages, contracts, and enterprise. The design does not abolish trade or private initiative. It limits what market money is allowed to buy.
+No. People can still trade, earn, save, start businesses, and make contracts.
 
-## 6. Is Voice or Service Record basically a social credit score?
+The system limits what money can buy. It does not try to run every choice from the center.
 
-No. Voice and Service Record are bounded civic instruments. They are not allowed to buy goods, rights, immunity, or survival access. The constitution explicitly rejects any measure of human worth.
+## 6. Is Voice or Service Record social credit?
 
-## 7. Can people still build businesses, earn more, and live differently?
+It must not become that.
 
-Yes. The system does not aim for identical outcomes. People can still earn, save, build, invest, and create. The main prohibition is that wealth cannot buy the survival floor or formal civic rule.
+Voice and Service Record cannot buy food, housing, money, rights, immunity, or rank. They are limited civic tools. They do not measure a person's worth.
+
+## 7. Can people still earn more and live differently?
+
+Yes. The system is not trying to make everyone have the same life.
+
+The main rule is that wealth cannot buy the basic needs floor or formal public power.
 
 ## 8. What happens during a real shortage?
 
-The system can activate **Shared Storehouse**, a temporary and publicly visible emergency rationing instrument. The point is to manage shortage openly instead of letting price spikes decide who goes without. It is supposed to be time-limited and challengeable.
+The system can use **Shared Storehouse**: temporary rationing during a verified shortage.
 
-## 9. How does it try to prevent capture and corruption?
+The point is to handle shortage openly, with public rules, instead of letting price spikes decide who gets through.
 
-It relies on structural separation, public logs, challenge rights, patch review, oracle diversity, anti-convertibility rules, and explicit threat modeling. The design assumes people will try to game it and tries to make those routes harder, more visible, and easier to challenge.
+## 9. How does it fight corruption?
 
-## 10. Who controls this?
+It assumes corruption will be attempted.
 
-No single office, bank, party, vendor, or expert class is supposed to control it. The design separates functions across constitutional articles, public review paths, measurement systems, and challenge rights so power has to stay visible and contestable. That does not make capture impossible, which is why founding legitimacy and independent review institutions remain preconditions.
+The design uses hard boundaries between tools, public records, appeal rights, independent checks, and a threat register that names known attack paths.
+
+## 10. Who controls it?
+
+No single party, office, bank, vendor, or expert group is supposed to control it.
+
+Different jobs are split apart so power is visible and can be challenged. That does not make capture impossible. It means capture must be treated as a constant risk.
 
 ## 11. What stops this from becoming another bureaucracy?
 
-Nothing automatic. The defense is structural: bounded instruments, public logs, appeal rights, anti-capture triggers, and clear limits on what each institution is allowed to do. The system is designed to make bureaucracy easier to challenge, not to pretend administration disappears.
+Nothing automatic.
+
+The defense is simple in principle: every office has limits, every major action leaves a record, and people must have ways to challenge mistakes and abuse.
 
 ## 12. What happens to banks and credit?
 
-Flow is public money on common rails. Basic banking services are treated as public infrastructure, with a guaranteed public option and interoperable providers. Credit as predatory dependency is constrained; productive project finance still has to exist through explicit, reviewable channels.
+Flow is public money on shared rails. Basic banking is treated more like public infrastructure.
+
+Predatory debt is limited. Productive finance still needs to exist, but through clear and reviewable channels.
 
 ## 13. How is privacy protected?
 
-The design requires minimum necessary data, selective disclosure, aggregation thresholds, and appealable identity processes. It still needs a proven non-coercive identity stack before scale claims would be credible.
+The system must use the least data needed. It must avoid general monitoring.
+
+This is still one of the hardest open problems. The project needs a proven identity system before any large rollout would be credible.
 
 ## 14. How would transition happen?
 
-Gradually. The project should be tested through pilots: identity recovery, capacity measurement, appeal paths, essential basket rules, and productive investment channels. A forced rollout without those proofs would create a capture risk.
+Slowly, through pilots and proof.
+
+Identity recovery, essential delivery, shortage rules, appeal paths, and business finance all need testing before scale-up. A forced rollout would be reckless.
 
 ## 15. Does it depend on people being morally perfect?
 
-No. In fact, it assumes the opposite. The system is designed on the premise that greed, capture, fear, and manipulation will happen. That is why so much of the project is about boundaries, review, and failure handling.
+No. It assumes greed, fear, manipulation, and power-seeking will happen.
 
-## 16. Is it ready to deploy right now?
+That is why the design focuses on boundaries, review, and failure plans.
 
-No. The repo is much stronger as a design than as a live deployment plan. It still needs pilot evidence, a proven non-coercive identity stack, measured capacity discipline, and a legitimate founding coalition.
+## 16. Is it ready to deploy now?
+
+No.
+
+It is a design and critique target. It still needs pilot evidence, a non-coercive identity system, reliable capacity measurement, and a legitimate founding group.
 
 ## 17. Why should an ordinary person care?
 
-Because the project is aimed at a simple question: should losing money mean losing basic safety and dignity? If your answer is no, then the design is worth understanding, testing, and challenging seriously.
+Because the basic question is direct:
 
-## 18. Where should I start if I want the shortest explanation?
+Should losing money mean losing food, medicine, shelter, safety, or dignity?
+
+If the answer is no, this design is worth testing seriously.
+
+## 18. Where should I start?
 
 Start with:
 
-1. [One-Page Overview](./01_overview.md) — the shortest public explanation
-2. [Public Readiness Guide](./03_readiness.md) — what the project claims, what still needs proof, and where to push hardest
-3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — the live claim-by-claim audit of design vs. evidence
-4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — the staged testing plan before any scale-up
-5. [White Paper](./04_white_paper.md) — the fuller public explanation of the economic and governance design
-6. [Rights Layer](./05_rights_layer.md) — the plain-language rights summary
+1. [One-Page Overview](./01_overview.md)
+2. [Public Readiness Guide](./03_readiness.md)
+3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md)
+4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md)
+5. [White Paper](./04_white_paper.md)
+6. [Rights Layer](./05_rights_layer.md)

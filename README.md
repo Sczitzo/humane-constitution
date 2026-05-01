@@ -9,13 +9,14 @@ title: Project Guide & Reader Overview
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> A constitutional design for separating survival, markets, and civic power so wealth cannot quietly become coercion.
+> A design for separating basic needs, markets, and public power so wealth cannot quietly become control over other people.
 
 ## Contents
 
 - [What this is](#what-this-is)
 - [Reader app](#reader-app) — open in browser · download desktop app · run from source
 - [Current status](#current-status)
+- [Plain-language rule](#plain-language-rule)
 - [If you're skeptical](#if-youre-skeptical)
 - [The core separation](#the-core-separation)
 - [The current architecture](#the-current-architecture)
@@ -23,7 +24,7 @@ title: Project Guide & Reader Overview
 - [Document set](#document-set)
 - [Technical specifications](#technical-specifications)
 - [Hardening history](#hardening-history)
-- [Security and attack surface](#security-and-attack-surface)
+- [Major risks](#major-risks)
 - [What this system is not](#what-this-system-is-not)
 - [What will go wrong](#what-will-go-wrong-pre-committed)
 - [Scale readiness checklist](#scale-readiness-checklist)
@@ -32,13 +33,15 @@ title: Project Guide & Reader Overview
 
 ## What this is
 
-The Humane Constitution is a constitutional systems design for a society where baseline survival is protected, markets remain productive, and civic power cannot be bought. It is built on a single core diagnosis: when survival, enterprise, and political influence all ride on the same money, wealth converts into coercion. This constitutional project is an attempt to escape that failure mode by design.
+The Humane Constitution is a design for a society where everyone has a basic needs floor, markets still work, and public power cannot be bought.
 
-This is not a live government, a finished rollout plan, or a promise that the hard parts are already solved. It is a public constitutional design backed by systems engineering: threat modeling, adversarial red-teaming, patch logs, validation checks, and version control.
+The core problem is simple: when food, housing, medicine, business, and political influence all depend on the same money, wealth becomes power over other people's safety.
+
+This is not a live government. It is not a finished rollout plan. It is a public working draft with stress tests, known failure paths, proposed fixes, and validation checks.
 
 ## Reader app
 
-The repository ships with a reader app — a clean, searchable interface for reading the entire constitutional corpus: the charter text, white paper, annexes, threat register, patch log, and evidence documents. It is the easiest way to navigate across the full document set without losing your place in cross-references.
+The repository ships with a reader app: a clean, searchable way to read the whole project. It includes the main text, public explainers, annexes, threat register, patch log, and evidence documents.
 
 ### Option 1 — Open in your browser (no install, no download)
 
@@ -124,6 +127,12 @@ What must still be proven:
 
 The right response is neither blind belief nor dismissal. The useful response is specific critique, hard testing, and evidence.
 
+## Plain-language rule
+
+This project should be understandable to people who never went to college. Legal, policy, and software terms should be avoided unless they are truly needed. When a formal term is needed, explain it in plain English first.
+
+The project-wide writing rule is in [Plain-Language Standard](./docs/PLAIN_LANGUAGE.md). Future edits should follow it, especially in public pages, the reader app, the constitution overview, and threat summaries.
+
 ## If you're skeptical
 
 Start with the [Public Readiness Guide](./docs/public/03_readiness.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
@@ -141,9 +150,15 @@ Use this reading order:
 
 ## The core separation
 
-The protocol separates three social functions across five instruments that most systems collapse together:
+The system separates three things that most societies mix together:
 
-| Instrument | Purpose | What it cannot do |
+- basic needs
+- markets
+- public power
+
+It does this with five tools:
+
+| Tool | Purpose | What it cannot do |
 |---|---|---|
 | **Flow** | Markets, wages, contracts, savings, investment | Buy survival access or civic power |
 | **Essential Access** | Survival floor and baseline essentials: food, water, shelter, healthcare, essential medicines, and basic transit | Become cash, collateral, or a status marker |
@@ -151,7 +166,7 @@ The protocol separates three social functions across five instruments that most 
 | **Service Record** | Eligibility for rotating public-service roles and stewardship history | Measure human worth or accumulate permanent rank |
 | **Shared Storehouse** | Emergency rationing during verified shortage | Become permanent or a hidden market |
 
-The walls between these lanes are the system. Not the instruments themselves.
+The walls between these tools are the system.
 
 Essential Access protects the survival floor. Voice shapes bounded civic priorities. Service Record governs readiness for rotating public roles. Shared Storehouse appears only during verified shortage.
 
@@ -159,16 +174,16 @@ Flow is public money rather than privately created bank money. It is primarily d
 
 ## The current architecture
 
-The live constitutional presentation uses **one Founding Order** and **seven Articles of Constitutional Order**.
+The current main text uses **one Founding Order** and **seven articles**.
 
-- **Founding Order — Subsidiarity, Consent & Exit** — The constitutional foundation: smallest-competent scale by default, affirmative consent to join, and graceful exit without forfeiture.
-- **Article I — Rights & Rule of Law** — Tier 1 invariants, due process, non-coercion, and rule-bound execution.
+- **Founding Order — Local Choice, Consent & Exit** — who joins, how decisions stay local when possible, and how a place can leave.
+- **Article I — Rights & Rules** — the rules that cannot be quietly changed.
 - **Article II — Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, and dependent protection without surveillance scoring.
-- **Article III — Physics & Reserves** — Polycentric measurement of real capacity plus the reserves that buffer shocks and measurement error.
-- **Article IV — Survival** — Essential Access as the survival instrument and delivery lane for baseline essentials.
-- **Article V — Markets, Commons & Public Finance** — Flow, housing and land use-rights, enterprise, public banking rails, and commons revenue under one economic surface.
-- **Article VI — Voice, Service Record & Deliberation** — Voice for bounded prioritization, Service Record for public-service eligibility, and the contribution system that feeds them.
-- **Article VII — Transparency & Environmental Scanning** — Public dashboards, independent audit visibility, and external-world scanning.
+- **Article III — Real Capacity & Reserves** — how the system measures food, water, energy, shelter, care, medicine, and reserves.
+- **Article IV — Survival** — how Essential Access becomes real access to basics.
+- **Article V — Markets, Commons & Public Finance** — Flow, housing, land, business, public banking, and public funding.
+- **Article VI — Voice, Service Record & Public Decisions** — how people help set priorities without creating social credit.
+- **Article VII — Public Records & Warning Systems** — dashboards, audits, and early warnings.
 
 ## Architecture flow
 
@@ -202,9 +217,9 @@ The constitution is built in five layers. Each layer depends on the one above it
 
 | Document | Purpose |
 |---|---|
-| [Humane Constitution](./docs/constitution/Humane_Constitution.md) | Primary constitutional source of truth. Lean constitutional text with links into the standalone annex corpus. |
-| [Threat Register](./docs/governance/Threat_Register.md) | Adversarial risk model. 27 threat IDs — 17 ADDRESSED, 5 PARTIAL, 4 OPEN (T-003 retired). T-017/P-014 is the FOUNDING instrument. |
-| [Patch Log](./docs/governance/Patch_Log.md) | Change and mitigation history. 31 patches — 16 ACTIVE, 15 PROPOSED (1 FOUNDING: P-014). |
+| [Humane Constitution](./docs/constitution/Humane_Constitution.md) | Primary rule text, with links into the standalone annex corpus. |
+| [Threat Register](./docs/governance/Threat_Register.md) | Known attack paths and proposed defenses. 27 threat IDs: 4 active controls, 16 proposed controls, 5 addressed by active non-register structures, and 2 retired IDs. |
+| [Patch Log](./docs/governance/Patch_Log.md) | Change history. 31 patches: 16 active, 15 proposed, including the founding patch P-014. |
 | [Hardening Queue](./docs/governance/Hardening_Queue.md) | Red-team hardening queue — session history, closed items, open items, and standing simulation requirements. |
 | [Acceptance Protocol](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 
@@ -233,50 +248,39 @@ The repository includes a corpus validator for the live constitutional document 
 - `npm run check:corpus` from `app/` regenerates the reader corpus and fails if generated files are not committed.
 - GitHub Actions runs the same validator on every push and pull request, alongside frontend build, generated-corpus drift, and reader regression checks.
 
-## Security and attack surface
+## Major Risks
 
-The three highest-severity failure modes, their mechanisms, and the algorithmic mitigations in place:
+The project names its biggest failure paths instead of hiding them.
 
-### 1. The Oracle Problem (T-020 / T-021) — Critical
+### 1. Bad Measurement
 
-**Mechanism:** The Essential Access issuance system depends on oracle nodes measuring real-world physical capacity. Two nodes can satisfy every formal criterion for independence (separate institutions, separate funders, separate governance) while sharing the same epistemological foundation — the same statistical tradition, peer-review standards, and conception of valid evidence. When this happens, their errors are correlated: a coordinated actor who shifts the dominant methodology standard corrupts the measurement system without touching any data directly.
+Essential Access depends on knowing what society can actually provide.
 
-**Algorithmic mitigation (P-017 / Annex AL):**
-- Minimum three oracle nodes required
-- Nodes must differ on all three dimensions simultaneously: epistemological foundation, data generation process, and standards provenance
-- At least one node must use direct physical sampling (ground-truth, Tier 3) — this node cannot share standards provenance with institutional statistical nodes
-- Error independence test required: nodes must produce materially different error structures, not merely formally different methodologies
-- Anti-monoculture trigger: if ≥3 nodes share a standards body, independent review is mandatory
+If the system measures food, housing, medicine, water, or energy badly, people can be harmed. A captured measurement system could make shortages look fake or make capacity look larger than it is.
 
-**Residual risk:** The definition of "fundamentally different methodology" is itself a protected term (P-004 / Annex AL) — but whoever influences that definition retains indirect leverage. This is documented as an open residual risk, not a resolved problem.
+The defense is to use several different measurement sources, public methods, direct physical checks, and review when sources start copying the same assumptions.
 
----
+Remaining risk: the people who define "good measurement" still hold power.
 
-### 2. Above-Ledger Bypass / Shadow Convertibility (T-001) — Critical
+### 2. Backdoor Conversion
 
-**Mechanism:** The non-convertibility constraint is enforced at the ledger layer. Off-ledger transactions — proxy Essential Access redemption, service-for-Essential Access exchanges, informal barter at instrument boundaries — are not preventable by ledger rules alone. A motivated actor can approximate Essential Access-to-Flow conversion without technically touching the ledger: pay someone in goods to redeem Essential Access on their behalf, or build a service market that prices itself in Essential Access-equivalent units.
+Essential Access is not supposed to become money. But people may try to trade around the rules.
 
-**Algorithmic mitigation (P-001 / Annex AJ):**
-- Essential Access redemption is non-delegable: biometric or equivalent identity confirmation required at delivery point (Tier 2 assurance minimum)
-- Cluster anomaly detection: statistical monitoring for redemption patterns inconsistent with individual use
-- Broker signature detection: behavioral patterns characteristic of proxy-redemption networks flagged for Ombuds review
-- Essential Access-only channels: certain essential services are redeemable only through Essential Access, not Flow purchase — reducing the conversion incentive by narrowing what Flow can buy in the survival lane
+Example: a broker pays someone in Flow to use their Essential Access for someone else. Or a business prices services in "Essential Access equivalents" without touching the official system.
 
-**Residual risk:** Detection depends on statistical anomaly thresholds. A sufficiently distributed, low-frequency proxy network may fall below detection bounds. Explicit leakage tolerance accepted in P-001; T-001 remains PARTIAL status.
+The defense is to make Essential Access personal, limit delegation, watch for broker patterns, and focus enforcement on scalable abuse rather than ordinary help between people.
 
----
+Remaining risk: small hidden exchanges will still happen. The goal is to stop them from becoming a power structure.
 
-### 3. Electoral Cycle Capture / Hostile Successor Government (T-022) — Critical
+### 3. Political Reversal
 
-**Mechanism:** A hostile successor government can legally dismantle the constitutional architecture through legitimate processes: refusing to fund Essential Access delivery infrastructure, appointing non-compliant oracle administrators, passing legislation that redefines protected terms below the constitutional amendment threshold, or simply allowing administrative hollowing — the system remains on paper while operational capacity is systematically defunded.
+A later government could try to hollow the system out while keeping the words on paper.
 
-**Algorithmic mitigation (P-018):**
-- Entrenchment ladder: Essential Access floor provisions require progressively higher supermajorities to amend as time-in-operation increases
-- Essential Access floor minimum persistence: no successor government may reduce Essential Access below the self-executing 70% founding-basket floor without full Tier 1 repeal
-- Administrative hollowing triggers: defined operational metrics (delivery throughput, oracle response time, enforcement rate) that, when breached, automatically activate the Pre-Confirmation Response Protocol (PCRP) regardless of political direction
-- Transition protocol: mandatory handoff documentation, independent audit of operational capacity, and public status report required before any change-of-government that affects survival delivery or rule-bound execution operations
+It could defund delivery, appoint hostile officials, weaken measurement, or stop publishing records.
 
-**Residual risk:** The entrenchment ladder and persistence requirements are only as durable as the constitutional text that contains them. A sufficiently determined successor government with a large enough legislative majority can repeal the constitutional text itself. This is the recursion of T-017 (bootstrap problem) — resolved founding legitimacy does not prevent future delegitimation.
+The defense is a protected basic floor, transition audits, public triggers when institutions are left empty, and exit rights for places that no longer consent.
+
+Remaining risk: no document can fully stop a determined political movement with enough power. The design can buy time, raise the cost, and make the attack visible.
 
 ## Hardening history
 
@@ -295,14 +299,14 @@ The system has been adversarially stress-tested:
 | T-022 Electoral Cycle Capture | Hostile successor government routes identified; entrenchment ladder, Essential Access floor persistence, transition protocol designed (P-018) |
 | T-023–T-025 Pilot validity, Shared Storehouse oracle failure, demurrage capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), demurrage sector-capture resolved: contract-commitment architecture, zero exemptions (P-023) |
 
-**Current status: 16 patches ACTIVE, 15 PROPOSED (1 FOUNDING instrument: P-014), 4 threat IDs OPEN, 5 PARTIAL, 17 ADDRESSED.** 31 patches total across 27 threat IDs. The design continues to harden. What remains is pilot evidence and patch acceptance.
+**Current status: 16 patches active and 15 proposed, including the founding patch P-014.** The Threat Register currently has no fully open threat with no mitigation path, but many controls still need pilot evidence, activation, and outside review.
 
 ## What this system is not
 
-| Common fear | Protocol response |
+| Common fear | Plain response |
 |---|---|
 | A hidden social credit system | Voice and Service Record cannot buy rights, goods, immunity, or survival access. Human worth is never measured. |
-| A command economy | Flow still runs markets, pricing, contracts, enterprise, and innovation. The protocol constrains power, not trade. |
+| A command economy | Flow still runs markets, prices, contracts, business, and innovation. The system limits power, not all trade. |
 | A welfare bureaucracy | Essential Access is grounded in measured physical capacity, clear basket rules, and reviewable scarcity procedures. |
 | A surveillance state | Identity and dashboards use minimum necessary data, aggregation thresholds, and selective disclosure. |
 | A rentier loophole | Land and housing are use-rights with anti-vacancy rules, not speculative ownership. |
@@ -342,7 +346,7 @@ The Formal Acceptance Protocol defines the pathway from design to operation.
 
 **If you want to stress-test the design:** read the Threat Register after the White Paper.
 
-**If you want the operative language:** read the Humane Constitution after that.
+**If you want the exact rule text:** read the Humane Constitution after that.
 
 **To critique, challenge, or contribute:** open an Issue with your specific objection, the section it applies to, and your proposed alternative. Vague objections will be asked to specify. Specific objections will be taken seriously.
 
@@ -354,4 +358,4 @@ This work is released under [Creative Commons Attribution 4.0 International (CC 
 
 ---
 
-*The protocol is not a utopia machine. It is an attempt to build a civic operating system whose own powers are constrained tightly enough to make its promises believable.*
+*This is not a utopia machine. It is a rule design for keeping basic needs, markets, and public power from collapsing into one tool: money.*

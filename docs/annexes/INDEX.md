@@ -1,24 +1,38 @@
 # Annex Directory
 
-This directory holds the standalone annex corpus for the Humane Constitution. The constitution itself lives in the [Humane Constitution](../constitution/Humane_Constitution.md); annexes extend, specify, or document that text without bloating the constitutional body.
+This directory holds the detailed support documents for the Humane Constitution.
+
+Plain meaning: start with the [Humane Constitution](../constitution/Humane_Constitution.md). Come here when you need the deeper rules, tests, failure plans, or implementation details behind a section.
+
+## Plain-Language Map
+
+| If you want to understand... | Read |
+| :--- | :--- |
+| How the system is attacked and tested | Annexes A, B, C, T, AE |
+| How rules can change without being captured | Annexes H, AG, AH, AV |
+| Who counts, how people recover identity, and how migration works | Annexes I, P, AK |
+| How basic needs, scarcity, and survival continuity work | Annexes K, M, Q, U, Y, AQ |
+| How money, housing, land, business, and public funding work | Annexes J, V, X, AR, AT |
+| How public voice, service, and review bodies avoid capture | Annexes L, S, Z, AC, AF, AI |
+| How public communication and evidence gates work | Annexes AD, AM, AN, AO, AP, AS |
 
 ## Core constitutional annexes
 
-- [Annex A](./ANNEX_A.md) — adversarial test suite and red-team method.
-- [Annex B](./ANNEX_B.md) — threat register baseline.
-- [Annex C](./ANNEX_C.md) — threat register operations, workflow, and evidence.
-- [Annex H](./ANNEX_H.md) — amendment article and constitutional change control.
+- [Annex A](./ANNEX_A.md) — how the project stress-tests itself.
+- [Annex B](./ANNEX_B.md) — baseline list of known threats.
+- [Annex C](./ANNEX_C.md) — how threats are tracked, reviewed, and updated.
+- [Annex H](./ANNEX_H.md) — how major rules can change.
 - [Annex I](./ANNEX_I.md) — residency, migration, and onboarding.
-- [Annex J](./ANNEX_J.md) — monetary calibration, demurrage, and instrument discipline.
+- [Annex J](./ANNEX_J.md) — money settings, idle-money fee, and tool boundaries.
 - [Annex K](./ANNEX_K.md) — essential basket governance and civic participation fairness.
-- [Annex L](./ANNEX_L.md) — judicial architecture and Constitutional Review Panel.
-- [Annex M](./ANNEX_M.md) — oracle architecture, physical reality, and measurement limits.
+- [Annex L](./ANNEX_L.md) — courts, review panels, and appeal structure.
+- [Annex M](./ANNEX_M.md) — how real-world capacity is measured and where measurement can fail.
 - [Annex N](./ANNEX_N.md) — transition, genesis, and deployability preconditions.
 - [Annex P](./ANNEX_P.md) — proof-of-personhood, identity tradeoffs, and red lines.
 - [Annex Q](./ANNEX_Q.md) — minimum viable pilot stack and transition doctrine.
-- [Annex S](./ANNEX_S.md) — Constitutional Review Panel anti-capture and failure recovery.
+- [Annex S](./ANNEX_S.md) — how the review panel avoids capture and recovers from failure.
 - [Annex T](./ANNEX_T.md) — compound failure scenarios and interface stress tests.
-- [Annex U](./ANNEX_U.md) — operational bypass closure and superseding clauses.
+- [Annex U](./ANNEX_U.md) — closes loopholes that could bypass the main rules.
 - [Annex V](./ANNEX_V.md) — transition mechanics, conversion, and legacy-system treatment.
 - [Annex X](./ANNEX_X.md) — Flow issuance architecture.
 - [Annex Y](./ANNEX_Y.md) — Constitutional Survival Minimum and Essential Access continuity.
@@ -26,33 +40,33 @@ This directory holds the standalone annex corpus for the Humane Constitution. Th
 
 ## Amendment and clause annexes
 
-- [Annex AB](./ANNEX_AB.md) — document governance and integration clauses.
-- [Annex AC](./ANNEX_AC.md) — governance throughput, measurement lag, and elite formation clauses.
-- [Annex AD](./ANNEX_AD.md) — narrative attack surface clauses.
-- [Annex AE](./ANNEX_AE.md) — compound interface tests and deadlock prevention clauses.
-- [Annex AF](./ANNEX_AF.md) — grace period exploitation clauses.
-- [Annex AG](./ANNEX_AG.md) — Formal Acceptance Protocol integrity clauses.
-- [Annex AH](./ANNEX_AH.md) — founding bootstrap resolution.
+- [Annex AB](./ANNEX_AB.md) — how document changes are integrated.
+- [Annex AC](./ANNEX_AC.md) — prevents delays, bad measurement timing, and insider class formation.
+- [Annex AD](./ANNEX_AD.md) — how the project explains failures before opponents define them.
+- [Annex AE](./ANNEX_AE.md) — tests combined failures and prevents deadlock.
+- [Annex AF](./ANNEX_AF.md) — prevents hardship rules from becoming a power-preservation loophole.
+- [Annex AG](./ANNEX_AG.md) — protects the patch acceptance process.
+- [Annex AH](./ANNEX_AH.md) — handles the founding bootstrap problem.
 - [Annex AI](./ANNEX_AI.md) — Federated Ombuds constitution.
-- [Annex AJ](./ANNEX_AJ.md) — above-ledger bypass worked examples.
-- [Annex AK](./ANNEX_AK.md) — identity asymmetric error doctrine.
-- [Annex AL](./ANNEX_AL.md) — methodology-class definitions for oracle independence.
-- [Annex AM](./ANNEX_AM.md) — electoral cycle resilience.
-- [Annex AN](./ANNEX_AN.md) — pilot external validity gate.
-- [Annex AO](./ANNEX_AO.md) — register disclosure protocol.
-- [Annex AP](./ANNEX_AP.md) — PCRP attack surface governance.
+- [Annex AJ](./ANNEX_AJ.md) — examples of side deals that try to turn one tool into another.
+- [Annex AK](./ANNEX_AK.md) — how identity rules balance fraud prevention and wrongful exclusion.
+- [Annex AL](./ANNEX_AL.md) — how measurement sources must differ from each other.
+- [Annex AM](./ANNEX_AM.md) — protects against a later government hollowing the system out.
+- [Annex AN](./ANNEX_AN.md) — what pilots must prove before scale-up.
+- [Annex AO](./ANNEX_AO.md) — what threat details are public and what details are restricted for safety.
+- [Annex AP](./ANNEX_AP.md) — protects emergency response signals from manipulation.
 - [Annex AQ](./ANNEX_AQ.md) — Shared Storehouse oracle-failure fallback protocol.
-- [Annex AR](./ANNEX_AR.md) — contract-commitment architecture: threshold values and governance parameters.
-- [Annex AS](./ANNEX_AS.md) — attestation-at-risk stake mechanism.
-- [Annex AT](./ANNEX_AT.md) — external trade architecture: strategic floors, export caps, and the reciprocity membrane.
-- [Annex AV](./ANNEX_AV.md) — two-key architectural precondition for Tier-1 invariant enforcement.
+- [Annex AR](./ANNEX_AR.md) — prevents investment accounts from becoming idle-money-fee escape routes.
+- [Annex AS](./ANNEX_AS.md) — makes high-impact witness statements carry risk if false.
+- [Annex AT](./ANNEX_AT.md) — trade rules for protecting basic domestic capacity.
+- [Annex AV](./ANNEX_AV.md) — requires two independent checks before top-level rules can be touched.
 
 ## Reading rule
 
-- Start with the [Humane Constitution](../constitution/Humane_Constitution.md) for the live constitutional order.
-- Use annex files when the constitution points to a specific annex for operative detail.
-- Treat annex files as supporting specifications unless another document explicitly makes them controlling.
+- Start with the [Humane Constitution](../constitution/Humane_Constitution.md).
+- Use annexes when you need the detailed rule behind a section.
+- If a controlling annex conflicts with looser summary language, the controlling annex wins.
 
 ## Audit history
 
-The 2026-04-25 review removed annexes D and O (no operative content; superseded by AJ + Q), merged G into H/L/V, R into J + U, W into P, and AA into N + U + X. Annexes AM, AN, AP, AV were created as stubs from existing Patch Log + Acceptance Protocol context to close dangling references.
+The 2026-04-25 review removed annexes D and O (no operative content; superseded by AJ + Q), merged G into H/L/V, R into J + U, W into P, and AA into N + U + X. Annexes AM, AN, AP, AV were created from existing Patch Log + Acceptance Protocol context to close dangling references.

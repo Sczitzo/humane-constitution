@@ -11,6 +11,20 @@
 
 The Humane Constitution operates four primary instruments and one emergency instrument. Each instrument is a bounded state machine with defined issuance conditions, transition rules, decay functions, and termination states. The lanes are non-convertible by design; the non-convertibility constraint is enforced at the ledger layer, not at the application layer. Flow may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
 
+## Plain-Language Guide
+
+This document is the machine-room version of the Constitution. It explains what each instrument does, how it starts, how it changes, when it ends, and what it is never allowed to turn into.
+
+The simple version:
+
+- **Flow** is public money for ordinary buying, selling, saving, and investing.
+- **Essential Access** is not money. It is daily access to basic needs.
+- **Voice** is short-lived civic influence. It cannot be saved forever.
+- **Service Record** is a record of service and eligibility. It is not a human-worth score.
+- **Shared Storehouse** is only for scarcity emergencies.
+
+The most important rule is separation: none of these instruments may be traded into another one.
+
 ```statechart
 title: Instrument Space — Four Primary Lanes + Emergency Overlay
 primary: FLOW, ESSENTIAL_ACCESS, VOICE, SERVICE_RECORD
@@ -31,6 +45,8 @@ SHARED_STOREHOUSE -> NO_CONVERSION: emergency only
 ### 2.1 Definition
 
 Flow is the general-purpose market instrument. It is issued against verified productive commitments, circulates freely within the Flow lane, and is subject to demurrage (time-decay on idle balances) to discourage hoarding. Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
+
+Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. Idle Flow slowly loses value so holding large unused balances is less attractive than putting resources to work.
 
 ### 2.2 State Machine
 
@@ -55,6 +71,8 @@ DECAYED -> RETIRED: balance zero
 ### 2.3 Demurrage Function
 
 Demurrage is a time-decay and carrying charge applied to idle Flow balances. It is not assessed on survival access, ordinary labor, or basic household exchange. Charged Flow is split between retirement and Public Finance & Commons Revenue (PFCR) receipts under a published routing rule.
+
+Plain meaning: the idle-money fee is aimed at hoarding, not at survival, wages, or normal household life.
 
 ```
 Let:
@@ -135,6 +153,8 @@ Household finance constraints:
 
 Essential Access is a non-transferable, non-convertible entitlement to physical basket access. It is denominated in Basket Units (BU), not monetary value. One BU represents one day's access to the Constitutional Survival Minimum basket (food, water, shelter, healthcare, transit). Essential Access is issued by the system, not earned or purchased.
 
+Plain meaning: Essential Access is a daily claim to basic needs. It cannot be sold, saved up, or used as money.
+
 ### 3.2 State Machine
 
 ```statechart
@@ -212,6 +232,8 @@ This section defines the two civic instruments:
 - **Voice:** Fast-decaying agenda-setting influence. Used in deliberative processes. Cannot accumulate indefinitely.
 - **Service Record:** Service history and eligibility record. Slow-decay. Gates access to civic roles and service tiers. Does not represent worth (INV-003).
 
+Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Service Record shows service history for role eligibility, but it must never become a ranking of people.
+
 ### 4.2 Voice State Machine
 
 ```statechart
@@ -281,6 +303,8 @@ Termination:
   Asymmetric deactivation (easier to activate than deactivate) is prohibited.
 ```
 
+Plain meaning: Shared Storehouse is the emergency rationing tool. It does not replace Essential Access, and it must turn off when the shortage is over.
+
 ---
 
 ## 6. Non-Convertibility Enforcement Layer
@@ -309,19 +333,13 @@ Above-ledger bypass risk:
   ledger enforcement alone. This is the primary residual risk (T-001).
   P-001 addresses enforcement mechanisms above the ledger layer.
 
-Philosophical basis for non-convertibility:
-  The Essential Access's non-monetary design addresses a structural failure that monetary
-  dispersal — however well-grounded — cannot escape. When currency carries
-  claims on produced and unproduced value simultaneously, it becomes the
-  mechanism through which prior obligations are imposed on labor. Individuals
-  must service claims they did not incur as the price of remaining within the
-  system. A Commons-backed currency with equal monetary dispersal reduces
-  this pressure but does not eliminate it — the dispersal flows into the
-  reflexive domain through rent increases, subscription price adjustments, and
-  wage suppression. Instrument separation is the structural completion of that
-  correction: the survival floor exits the monetary domain entirely, carrying
-  no prior claims on future labor and entering no price system that can absorb
-  it. *(Wolf, Economic Trilogy Part 2: Manifestation and Part 3: Resolution, 2026)*
+Plain basis for non-convertibility:
+  Essential Access stays outside money because money can be captured by prices,
+  rent, debt, and wage pressure. If survival support is paid as spendable money,
+  landlords, sellers, creditors, and employers can absorb much of it. Instrument
+  separation prevents that. The survival floor is delivered as access to real
+  needs, not as extra money that the market can pull away. *(Wolf, Economic
+  Trilogy Part 2: Manifestation and Part 3: Resolution, 2026)*
 ```
 
 ---
@@ -331,6 +349,8 @@ Philosophical basis for non-convertibility:
 *P-024 amendment (Phase 4 adversarial audit): N_min raised from 3 to 5;
 methodology-class floor raised from 2 to 3. Both changes are required simultaneously
 and are mutually reinforcing. See ADVERSARIAL_AUDIT.md PRD-003, Sim D, Finding 7.*
+
+Plain meaning: oracles are the system's reality checkers. They confirm whether real-world capacity exists before the system issues survival access or turns on emergency scarcity rules.
 
 ```
 Purpose: Provide verified physical capacity data to Essential Access issuance and Shared Storehouse activation systems.
@@ -373,20 +393,13 @@ Independence requirements (Annex AL):
   Formal independence without structural independence is insufficient.
 
 Measurement drift defense:
-  The oracle independence requirement addresses a failure mode in which
-  measurement systems gradually decouple from the physical reality they are
-  meant to represent through incremental methodological adjustment. This is
-  not a hypothetical risk — modern price indices employ substitution and
-  hedonic adjustments that systematically obscure declining purchasing power,
-  confirming that measurement adaptation is the primary concealment mechanism
-  of systems operating beyond their physical constraints. The Tier-3 physical
-  sampling requirement exists specifically because statistical and institutional
-  methodologies can converge on shared assumptions while appearing formally
-  independent — only direct physical sampling is epistemologically incapable
-  of sharing foundations with pure statistical approaches. The oracle system
-  is the point where the non-reflexive domain is translated into system inputs.
-  If that translation is captured, the entire grounding of Essential Access issuance fails.
-  *(Wolf, Economic Trilogy Part 1: Foundation, 2026)*
+  Measurement can slowly stop matching lived reality. Different official
+  methods can also start sharing the same blind spots. That is why the oracle
+  system requires several kinds of measurement and at least one direct physical
+  sampling method. Somebody must check the real thing, not just the model.
+  If the reality check is captured, Essential Access can become accurate on
+  paper while failing in practice. *(Wolf, Economic Trilogy Part 1: Foundation,
+  2026)*
 ```
 
 ---

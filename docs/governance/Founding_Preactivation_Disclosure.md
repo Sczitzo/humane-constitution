@@ -13,6 +13,22 @@
 
 ---
 
+## Plain-Language Guide
+
+This document explains a one-time founding exception.
+
+The problem is that P-013 is supposed to harden the review process, but the review process is also what would normally activate P-013. That creates a loop. P-014 is the one-time way out of that loop.
+
+The limits are strict:
+
+- P-014 can activate only P-013.
+- It cannot activate any other patch.
+- It cannot become a general emergency shortcut.
+- It closes forever once P-013 becomes active.
+- The public gets a 60-day challenge window before activation can proceed.
+
+---
+
 ## Part 1 — Circular Dependency Analysis
 
 ### What the bootstrap problem is
@@ -26,7 +42,7 @@ Concretely:
 - To activate P-013, you would normally run it through the FAP.
 - But the FAP, in its current form, does not satisfy P-013's own evidence and independence standards.
 - Using the current FAP to activate P-013 would mean activating a process-hardening patch through the very unhardened process it was designed to fix.
-- This is not a procedural technicality. It is a structural incoherence: the controls P-013 introduces — adversarial audit members, representativeness assessments, deadlock timelines — are not operative during its own activation. The process that would certify P-013 as safe is the process P-013 declares unsafe.
+- This is not paperwork. It is a real loop: the controls P-013 introduces — adversarial audit members, representativeness assessments, deadlock timelines — are not active during its own activation. The process that would certify P-013 as safe is the process P-013 says is not yet safe enough.
 
 This is T-017 in the Threat Register: the P-013 Bootstrap Problem. It was identified during Session 6 as the final blocker to the acceptance sequence.
 
@@ -43,7 +59,7 @@ Rejected. Amending the FAP requires going through the FAP. The same circularity 
 **Option C — Activate P-013 through a temporary emergency governance path.**  
 Rejected. Emergency paths (Level 3–4 cascade, Annex C-6) are scoped to operational continuity, not to patch acceptance. Using an emergency path for a governance evolution decision would normalize emergency bypass for non-emergencies — the precise behavior P-005 and P-013 are designed to prevent.
 
-**Conclusion:** There is no procedurally clean activation path for P-013. The bootstrap problem is genuine, not manufactured. P-014 is the designed resolution: a one-time founding instrument that acknowledges the exception explicitly, bounds it precisely, and closes permanently once the exception is used.
+**Conclusion:** There is no clean normal activation path for P-013. The bootstrap problem is real, not manufactured. P-014 is the designed resolution: a one-time founding instrument that names the exception, limits it, and closes permanently once used.
 
 ---
 
@@ -65,7 +81,7 @@ Once P-013 reaches ACTIVE status, P-014 closes permanently. There is no re-openi
 
 If the post-activation audit (AH6, within 90 days of activation) finds that the P-014 process was compromised — captured panel, gamed case selection, undisclosed side agreements — the finding is published immediately. P-013 is suspended (not revoked). P-013 is re-submitted through the now-operative Formal Acceptance Protocol, using its own hardened standards. P-014's non-precedent status is reaffirmed. The compromise does not authorize any other founding exception; it only re-opens P-013's specific activation path.
 
-We are publishing this document before any activation steps begin because the 14-day public challenge window is not a formality. It is a substantive check. If a challenger identifies a resolution path we have not considered, or a flaw in P-014's design that makes it a worse problem than the bootstrap itself, we are obligated to engage with that challenge in writing before proceeding.
+We are publishing this document before any activation steps begin because the public challenge window is not a formality. It is a real check. If a challenger identifies a resolution path we have not considered, or a flaw in P-014's design that makes it worse than the bootstrap problem, we are obligated to respond in writing before proceeding.
 
 ---
 
@@ -128,9 +144,9 @@ Objections to P-013's content (those belong in the standard review process once 
 **How to file:**  
 Open an Issue using the [P-014 Challenge template](https://github.com/Sczitzo/humane-constitution/issues/new?template=p014-challenge.md). Include: the specific claim you are challenging, your reasoning, and your proposed alternative if you have one.
 
-**Structural vs. procedural challenges (AH2.2):**
-A *structural challenge* identifies a specific P-013 standard not met by the P-014 process. It must receive a written response before the window closes. An unresponded structural challenge extends the window by 14 days (non-cumulative).
-A *procedural challenge* that does not identify a specific P-013 standard gap will be acknowledged but does not extend the window.
+**Structural vs. process challenges (AH2.2):**
+A *structural challenge* identifies a specific P-013 standard not met by the P-014 process. It must receive a written response before the window closes. An unanswered structural challenge extends the window by 14 days (non-cumulative).
+A *process challenge* that does not identify a specific P-013 standard gap will be acknowledged but does not extend the window.
 
 **Timeline:**
 All structural challenges filed before **June 9, 2026** will receive written responses before activation proceeds. Challenges filed after the window closes are not part of the pre-activation record but may be addressed as part of the post-activation audit.

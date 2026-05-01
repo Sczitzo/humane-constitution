@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE — Proposal 1 close-out, 2026-04-18
 **Authority:** Tier 1 (H-3 Refounding Convention)
-**Purpose:** Binding requirement that every operational component of the Humane Constitution verifies the current drift-chain state before operation. Without this binding, the architectural-enforcement layer (`invariants.md`, `amendment_protocol.md`, `drift_chain.md`) is only as strong as the implementors' discipline.
+**Purpose:** Binding requirement that every operational component of the Humane Constitution verifies the current drift-chain state before operation. Without this binding, the architectural-enforcement layer (`parameter_registry.md`, `amendment_protocol.md`, `drift_chain.md`) is only as strong as the implementors' discipline.
 
 ---
 
@@ -16,7 +16,7 @@ Every operational component whose behavior depends on Tier 1 parameters must imp
 | **Oracle Cohort Gate** | N_MIN (FC-030); methodology class minimum (FC-031); pairwise correlation max (FC-032); adversarial seat minimum (FC-033); quorum-loss restoration window (FC-100) |
 | **Voice / Service Record Scheduler** | Sector ceiling (FC-060); per-person cap (FC-061); decay rate (FC-062); Protected Pause floor (FC-020) |
 | **Scarcity Protocol Activator** | Oracle quorum thresholds; CSM-cluster failure threshold (FC-071); Annex AQ conservative hold logic |
-| **CSM Dispenser (Annex Y §Y2)** | All Category A parameters from invariants.md; governance-actor-independent issuance rule |
+| **CSM Dispenser (Annex Y §Y2)** | All Category A parameters from `parameter_registry.md`; governance-actor-independent issuance rule |
 | **Enforcement Panel dashboard** | Penalty multipliers (FC-040); detection assumptions (FC-041); leakage thresholds (FC-010); severity matrix (Annex AJ §4.2) |
 | **Attestation Stake Engine** | Stake ratio (FC-080); audit window (FC-081); graph density threshold (FC-082) |
 | **Ombuds Coordination Service** | Sub-count minimum (FC-090); supermajority threshold (FC-091); term length (FC-092) |
@@ -26,9 +26,19 @@ Every operational component whose behavior depends on Tier 1 parameters must imp
 
 ---
 
+## Plain-Language Guide
+
+This file explains how the protected rules connect to running software.
+
+The point is simple: a service should not run on secretly changed core rules. Before it operates, it checks the public drift chain. If the local files and public record do not match, the service stops the affected operation and raises an alert.
+
+One exception matters: the CSM survival floor keeps running from the last verified state. A broken verification check must not become a way to starve people.
+
+---
+
 ## The Startup Check — Required Sequence
 
-Every bound component, on startup and on a recurring schedule (every 24 hours minimum), executes:
+Every bound component, on startup and on a recurring schedule (every 24 hours minimum), performs these checks:
 
 1. **Fetch drift chain head from ≥ 2 independent publication channels** (per `drift_chain.md §Publication Requirements`).
 2. **Verify inter-channel consistency** — the `state_hash` reported by each channel must match. Mismatch -> abort startup; alert Article VII monitoring with `DRIFT_CHAIN_CHANNEL_DIVERGENCE`.
@@ -49,11 +59,11 @@ If any step fails, the component **refuses to perform operations that depend on 
 
 ## Why CSM Is the One Exception
 
-The drift-chain verification is designed to protect Tier 1 invariants from unauthorized modification. If it fails, the safe default is to stop operating until the situation is resolved. For most components, stopping is safer than operating with possibly-corrupted parameters.
+The drift-chain verification is designed to protect Tier 1 invariants from unauthorized modification. If it fails, the safe default is to stop operating until the situation is resolved. For most components, stopping is safer than operating with possibly corrupted parameters.
 
 For CSM, this calculation inverts: stopping CSM dispensation starves the people the protocol exists to protect. If drift-chain verification fails while CSM is active, the risk of continuing with possibly-corrupted parameters is bounded (CSM is already at the designed floor; it cannot be silently narrowed below the floor because it is itself hashed into the chain at the last verified state). The risk of stopping is unbounded (people die).
 
-Therefore: **CSM continues operating against the last verified state**, and drift-chain resolution proceeds in parallel through the federated Ombuds emergency-response process. The architectural layer protects against silent narrowing of CSM; the implementation binding ensures that even when the protection itself is under attack, CSM does not become collateral damage.
+Therefore: **CSM continues operating against the last verified state**, and drift-chain resolution proceeds in parallel through the federated Ombuds emergency-response process. The architecture protects against silent narrowing of CSM; this binding ensures that even when the protection itself is under attack, CSM does not become collateral damage.
 
 This exception is itself a Tier 1 commitment and cannot be removed without the full amendment protocol.
 
@@ -79,9 +89,9 @@ Operators who fail to update pinned references within 30 days of a new effective
 
 ## Why This Binding Must Be Architectural, Not Procedural
 
-A procedural rule that says "operators should verify the drift chain" is only as strong as operators' willingness to follow it. A captured operator, a lazy operator, or an operator pressured by a governance body to "skip the check this once" can quietly deviate.
+A rule that says "operators should verify the drift chain" is only as strong as operators' willingness to follow it. A captured operator, a careless operator, or an operator pressured by a governance body to "skip the check this once" can quietly deviate.
 
-The architectural binding closes this gap by making the check part of the **software contract** — a bound component that does not perform the startup check is by definition not a compliant implementation. Reference implementations of each component ship with the check built in; third-party implementations must implement the check to be accredited.
+The architectural binding closes this gap by making the check part of the **software contract**. A bound component that does not perform the startup check is not a compliant implementation. Reference implementations of each component ship with the check built in; third-party implementations must implement the check to be accredited.
 
 This means capture of the software supply chain itself becomes a specific attack vector. Defenses:
 - Reference implementations are published as open source with reproducible builds.
@@ -93,8 +103,8 @@ This means capture of the software supply chain itself becomes a specific attack
 
 ## Governance
 
-This document is Tier 1 protected per `invariants.md`. Changes require the full amendment protocol per `amendment_protocol.md`. The list of bound components (above) may be extended by ordinary amendment (Tier 2) to add new components as the protocol grows — new entries **can only strengthen** the binding (add more components to the check), never weaken it (remove components or soften the check). Weakening requires Tier 1 amendment.
+This document is Tier 1 protected per `parameter_registry.md`. Changes require the full amendment protocol per `amendment_protocol.md`. The list of bound components above may be extended by ordinary amendment (Tier 2) to add new components as the protocol grows. New entries **can only strengthen** the binding by adding more components to the check. Removing components or softening the check requires Tier 1 amendment.
 
 ---
 
-*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the bridge between the cryptographic commitments in `invariants.md` / `drift_chain.md` and the running operational components that must respect them.*
+*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the bridge between the protected commitments in `parameter_registry.md` / `drift_chain.md` and the running operational components that must respect them.*

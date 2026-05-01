@@ -20,6 +20,21 @@ This annex constitutes the Federated Ombuds. Prior references to "the Ombuds" or
 
 ---
 
+## Plain-Language Guide
+
+The Ombuds is the system's independent watchdog.
+
+This annex uses five Ombuds offices instead of one. That matters because one office can be captured, pressured, or fooled. Five independent offices are harder to capture at the same time.
+
+In plain terms:
+
+- Routine urgent cases can be handled by the duty Ombuds office.
+- System-level decisions need 4 of 5 Ombuds offices to agree.
+- The five offices must be separated by place, funding, infrastructure, and appointing networks.
+- If one office is captured or conflicted, the others can still protect the system.
+
+---
+
 ## 1. Structure
 
 ### 1.1 Five Sub-Ombuds (FC-090)
@@ -31,11 +46,11 @@ The Federated Ombuds is constituted as **five sub-Ombuds offices**, each with:
 - A local access-authority mandate over enforcement records, identity-system telemetry, and supply-signal data within its assigned jurisdictional scope.
 - A signed inter-office protocol committing each sub-Ombuds to the federation's decision rules and publication commitments.
 
-The five sub-Ombuds are sited so that no two share primary jurisdiction, primary regulatory relationship, primary funding channel, or primary infrastructure dependency. Structural-dispersal criteria are defined in §1.2.
+The five sub-Ombuds are sited so that no two share primary jurisdiction, primary regulatory relationship, primary funding channel, or primary infrastructure dependency. Separation criteria are defined in Section 1.2.
 
-FC-090 sets `OMBUDS_SUBCOUNT_MIN = 5` as a Tier 1 floor. The federation may be extended above five (e.g., to seven or nine sub-nodes as the protocol scales) by Tier 2 amendment with adjusted supermajority threshold. **Below five is prohibited; contraction to below five requires Tier 1 amendment (H-3) and is materially equivalent to re-centralising the office.**
+FC-090 sets `OMBUDS_SUBCOUNT_MIN = 5` as a Tier 1 floor. The federation may be extended above five (for example, to seven or nine sub-nodes as the protocol scales) by Tier 2 amendment with adjusted supermajority threshold. **Below five is prohibited; contraction to below five requires Tier 1 amendment (H-3) and is treated as re-centralizing the office.**
 
-### 1.2 Structural-Dispersal Criteria
+### 1.2 Separation Criteria
 
 Each sub-Ombuds must be dispersed from every other sub-Ombuds along **at least four** of the following five dimensions:
 
@@ -47,7 +62,7 @@ Each sub-Ombuds must be dispersed from every other sub-Ombuds along **at least f
 | **Infrastructure** | Distinct primary publication channel, distinct primary communication infrastructure, distinct primary record-storage custodian. |
 | **Personnel-recruitment** | No more than one sub-Ombuds may recruit primarily from any single academic, professional, or alumni network (per FC-032-style concentration limit applied institutionally). |
 
-The Ombuds Oversight Assembly (§5) certifies dispersal compliance annually and publishes the certification. Non-compliance on any dimension triggers a remediation window of 180 days; persistent non-compliance is treated as structural capture and activates the §5.3 Concentration Response.
+The Ombuds Oversight Assembly (Section 5) certifies compliance annually and publishes the certification. Non-compliance on any dimension triggers a repair window of 180 days. Persistent non-compliance is treated as structural capture and activates the Section 5.3 Concentration Response.
 
 ### 1.3 Duty Rotation and Federation Plenum
 
@@ -117,7 +132,7 @@ Removal procedures are Tier 1 protected; modification requires H-3 refounding au
 | **Operational** | Time-sensitive individual-case determinations (manufactured-flag findings, PCRP co-certifications, exclusion-report triage, register-access authorisations within a single sub-node's scope) | Duty Sub-Ombuds acts; post-hoc Plenum review within 30 days; Plenum may overturn or confirm |
 | **Protocol-level** | Determinations that bind the federation as an institution (integrity audits, dispersal certification, appeals from §4 operational decisions, appointment challenges, concentration-response activation, §3.4 matters below) | **Plenum vote under FC-091 — 4 of 5 affirmative required** |
 
-This two-class design preserves operational speed (a supply-shock demand-context flag cannot wait for a five-seat quorum) while ensuring that every structural determination clears a Byzantine-fault-tolerant threshold.
+This two-class design preserves operational speed while keeping system-level decisions hard to capture. A supply-shock flag cannot wait for all five offices, but structural decisions still need the 4-of-5 threshold.
 
 ### 3.2 Protocol-Level Matters Requiring 4-of-5 Plenum Vote (FC-091)
 

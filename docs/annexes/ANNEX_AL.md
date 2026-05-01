@@ -18,6 +18,23 @@ This annex provides the definitions, the worked examples (both qualifying and di
 
 ---
 
+## Plain-Language Guide
+
+This annex explains how the system avoids trusting one kind of measurement too much.
+
+If every oracle uses the same data, same assumptions, or same standards body, they can all be wrong in the same way. This annex requires different kinds of measurement so one blind spot does not become the system's reality.
+
+In plain terms:
+
+- Some oracles use official statistics.
+- Some use community-based research.
+- Some directly inspect physical conditions.
+- At least three different measurement classes are required.
+- At least one oracle is expected to challenge the others.
+- Shared standards bodies, shared data, or shared AI systems can trigger extra review.
+
+---
+
 ## Structure of this Annex
 
 This annex specifies five things:
@@ -38,13 +55,13 @@ This annex specifies five things:
 
 | Characteristic | Meaning |
 | :--- | :--- |
-| **Epistemological foundation** | The underlying theory of how knowledge about the measured phenomenon is obtained — what counts as evidence, what counts as valid inference, and what sources of uncertainty are recognized as material |
+| **Knowledge basis** | The underlying theory of how knowledge about the measured phenomenon is obtained — what counts as evidence, what counts as valid inference, and what sources of uncertainty are recognized as material |
 | **Data generation process** | How the primary data is produced — by whom, using what instruments, at what resolution, with what sampling frame |
 | **Standards provenance** | Which body or bodies define the validity criteria, calibration standards, and reporting requirements for the measurement approach |
 
 Two measurement nodes belong to the **same methodology class** if they share any two of these three characteristics with any other node in the same accredited set for a given essential category. Two measurement nodes belong to **different methodology classes** if they differ on all three characteristics.
 
-**Why three components, and why any two trigger same-class classification:** The epistemological foundation determines what errors are visible and invisible to the measurement approach. The data generation process determines what physical and social phenomena can introduce bias. The standards provenance determines who decides what counts as valid. A method that changes its data generation process but retains the same epistemological assumptions and standards body has not changed its vulnerability profile in a meaningful way — it can still be captured through the standards body, and its errors are still invisible to itself by design.
+**Why three components, and why any two trigger same-class classification:** The knowledge basis determines what errors are visible and invisible to the measurement approach. The data generation process determines what physical and social conditions can introduce bias. The standards provenance determines who decides what counts as valid. A method that changes its data generation process but keeps the same assumptions and standards body has not changed its risk profile in a meaningful way: it can still be captured through the standards body, and its errors are still invisible to itself by design.
 
 ---
 
@@ -56,7 +73,7 @@ Two methodology classes are **fundamentally different** for the purposes of P-01
 
 1. They differ on **all three** characteristics in Section 1.
 2. Neither class's standards provenance has a funding or governance relationship with the other's standards provenance within the prior **5 years** (lookback window; lengthens to 10 years for standards bodies with material operating ties).
-3. The epistemological foundations predict **materially different error structures** — meaning the systematic errors each approach is most likely to make under manipulation or institutional pressure are not correlated.
+3. The knowledge bases predict **materially different error structures** — meaning the systematic errors each approach is most likely to make under manipulation or institutional pressure are not correlated.
 
 Criterion 3 is operationalized through the **error independence test**: given a known manipulation of the measured phenomenon (e.g., artificial suppression of reported food scarcity), would both methods be expected to fail in the same direction? If yes, they are not fundamentally different regardless of formal classification. If no — one would overstate, one would understate, or one would detect when the other does not — they satisfy criterion 3.
 
@@ -138,7 +155,7 @@ Per the founding commitments, every oracle cohort for a high-volatility essentia
 
 **Why N = 5.** The Byzantine Fault Tolerance theorem requires n ≥ 3f + 1 to tolerate f simultaneously faulty nodes. At f = 1, the BFT floor is n = 4. Setting N_MIN = 5 provides one node of margin above BFT so the cohort does not drop below tolerance on a single-node loss. This replaces the prior Specifications §7 floor of N ≥ 3, which tolerates zero faulty nodes and is insufficient for Shared Storehouse-gating measurements.
 
-**Why three classes.** Two-class coverage detects manipulation that affects both classes simultaneously (e.g., a standards body controlling both Class 1 and Class 2 measurement standards). Three-class coverage makes simultaneous manipulation across all three epistemological foundations extremely difficult. This was previously a "recommended" higher standard; it is now the floor for any essential category that directly gates Shared Storehouse activation.
+**Why three classes.** Two-class coverage can fail if one standards body or shared assumption affects both classes at the same time. Three-class coverage makes simultaneous manipulation across all three knowledge bases much harder. This was previously a "recommended" higher standard; it is now the floor for any essential category that directly gates Shared Storehouse activation.
 
 **Adversarial seats (FC-033).** At least one node in every cohort must be a designated adversarial (red-team) seat whose explicit mandate is to find reasons the cohort's consensus reading might be wrong. The adversarial seat uses one of the three canonical classes (or a newly-added class after Section 5 audit), but is selected and compensated under a separate procurement track from the consensus nodes: shorter terms, explicit "dissent credit" recognition in the Service Record for documented manipulation findings, and no funding relationship with the RCS accreditation body itself. The adversarial seat does not reduce the N_MIN count — it is one of the five, with a distinct role.
 
@@ -183,7 +200,7 @@ The T-020 open problem requires an "annual audit of the worked examples themselv
 ### 5.1 — Annual Review Panel
 
 An independent review panel convenes annually to assess:
-1. Whether the three canonical classes in Section 3 remain epistemologically distinct given changes in measurement technology and practice
+1. Whether the three canonical classes in Section 3 remain meaningfully distinct given changes in measurement technology and practice
 2. Whether any new measurement approaches exist that do not fit within the three canonical classes and should be added
 3. Whether any disqualifying variants listed in Section 3 have been miscategorized (in either direction)
 4. Whether any standards-body relationships have changed in ways that affect the independence assessments in Section 3

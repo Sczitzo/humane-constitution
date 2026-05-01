@@ -1,10 +1,14 @@
 # Pilot Evidence Roadmap
 
-This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md) into testable work.
+This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md) into tests.
 
-The project should not move from design to scale by confidence, enthusiasm, or moral urgency alone. It needs staged evidence. Each pilot below is meant to answer one question: **does this mechanism still protect dignity when it meets real-world incentives, constraints, errors, and bad actors?**
+The project should not scale because people feel confident, excited, or morally urgent. It needs evidence in stages.
 
-## Pilot doctrine
+Each pilot asks one plain question:
+
+> Does this part still protect people when it meets real incentives, real mistakes, real limits, and bad actors?
+
+## Pilot rules
 
 No pilot should threaten anyone's survival, legal status, housing, healthcare, or public benefits. Early pilots should be voluntary, reversible, independently reviewed, and designed to expose failure before any person depends on the system.
 
@@ -19,9 +23,9 @@ Every pilot needs:
 
 ## Evidence sequence
 
-| Phase | Pilot track | Primary question | Scale gate |
+| Phase | Pilot track | Main question | Gate before moving on |
 |---|---|---|---|
-| 1 | Public comprehension | Can ordinary skeptical readers understand the core separation without expert help? | Public docs are clear enough to support critique. |
+| 1 | Public understanding | Can ordinary skeptical readers understand the core separation without expert help? | Public docs are clear enough to support critique. |
 | 2 | Identity and recovery | Can people recover access without surveillance, exclusion, or fraud collapse? | False exclusion remains below published threshold. |
 | 3 | Essential capacity measurement | Can essentials be measured accurately enough to support issuance and scarcity decisions? | Measurement error remains within published bounds. |
 | 4 | Essential Access delivery | Can baseline essentials be delivered without discretionary gatekeeping? | Delivery, appeals, and continuity meet minimum service targets. |
@@ -30,7 +34,7 @@ Every pilot needs:
 | 7 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
 | 8 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
 
-## Phase 1 - Public comprehension
+## Phase 1 - Public understanding
 
 **Hypothesis:** A skeptical general reader can understand the basic claim: survival, markets, and civic power should not ride on the same rail.
 
@@ -50,7 +54,7 @@ Every pilot needs:
 - Readers believe the project claims to be ready for rollout.
 - Readers cannot describe why instrument separation matters.
 
-**Artifacts to improve after this phase:** README, One-Page Overview, Public FAQ, Public Readiness Guide, Claims and Evidence Register.
+**Documents to improve after this phase:** README, One-Page Overview, Public FAQ, Public Readiness Guide, Claims and Evidence Register.
 
 ## Phase 2 - Identity and recovery
 
@@ -65,7 +69,7 @@ Every pilot needs:
 - time to recovery
 - appeal completion time
 - user comprehension of rights and recourse
-- data-minimization score
+- minimum-data score
 - staff discretion points
 
 **Failure criteria:**
@@ -124,7 +128,7 @@ Every pilot needs:
 
 ## Phase 5 - Flow and demurrage simulation
 
-**Hypothesis:** Flow can support exchange while demurrage funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
+**Hypothesis:** Flow can support exchange while the idle-money fee funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
 
 **Measure:**
 
@@ -138,12 +142,12 @@ Every pilot needs:
 
 **Failure criteria:**
 
-- Demurrage burdens low-wealth users more than concentrated capital.
+- The idle-money fee burdens low-wealth users more than concentrated capital.
 - Actors create exemptions that become capture channels.
 - Productive project finance collapses or becomes elite-controlled.
 - Shadow credit recreates predatory dependency.
 
-**Scale rule:** Demurrage should remain a simulation and pilot parameter until burden distribution is transparent.
+**Scale rule:** the idle-money fee should remain a simulation and pilot parameter until the burden is transparent.
 
 ## Phase 6 - Public banking rails
 
@@ -225,7 +229,7 @@ Every pilot needs:
 
 Before any serious scale-up claim, the project needs:
 
-- public comprehension results
+- public understanding results
 - identity recovery pilot results
 - capacity measurement error reports
 - Essential Access delivery and appeal results

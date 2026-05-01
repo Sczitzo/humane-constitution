@@ -12,6 +12,8 @@ Any unit at **locality scale or larger** may, by affirmative supermajority of it
 
 **Threshold.** **2/3 of eligible resident-personhood** of the unit must vote affirmative to initiate exit (FC-120). This is the same threshold as consent, for the same reason: asymmetric thresholds create capture pathways. A unit that could consent on 2/3 but could only exit on 3/4 would be a trap.
 
+Plain meaning: a town-scale unit or larger can leave if 2/3 of eligible residents vote yes. Leaving takes 730 days so people are not hurt by a sudden cutoff. The system may not make joining easy and leaving nearly impossible.
+
 **Who is eligible to exit:**
 - **Locality** — yes.
 - **Region** — yes.
@@ -20,13 +22,15 @@ Any unit at **locality scale or larger** may, by affirmative supermajority of it
 - **Household** — no.
 - **Individual personhood** — uses individual-consent withdrawal (`consent_protocol.md §Individual consent withdrawal`), not the unit exit protocol.
 
-The smallest-scale minimum for exit is locality because below locality the administrative coherence of unwind (Essential Access continuity, oracle coverage, enforcement handoff) cannot be practically maintained, and smaller-scale dissent is more effectively handled through internal customization (subsidiarity rule) or individual relocation.
+The smallest-scale minimum for exit is locality because below locality the transition would be too hard to run safely. Essential Access, oracle coverage, and enforcement handoff need a unit large enough to manage them. Smaller-scale disagreement is handled through local control rules or individual relocation.
 
 ---
 
 ## The Exit Procedure
 
 ### Phase 0 — Pre-Exit Deliberation (Days -180 to 0)
+
+Plain meaning: before the vote, everyone gets time to see what exit would mean and challenge problems in the process.
 
 1. **Exit proposal published** at the unit's public record and federation drift chain. The proposal includes:
    - Unit identity and scale.
@@ -51,6 +55,8 @@ If threshold is met, the exit is activated and the unwind window (FC-121 = 730 d
 
 ### Phase 2 — Unwind (Days 0 to 730)
 
+Plain meaning: during the two-year transition, the federation must keep basic services running and must not punish people for the exit vote.
+
 During the 730-day unwind, all of the following apply:
 
 | Element | Unwind treatment |
@@ -64,6 +70,8 @@ During the 730-day unwind, all of the following apply:
 | **Human-dignity floor (CSM)** | **Unaffected**. CSM applies during unwind and after unwind. If the exiting unit cannot or will not provide CSM post-exit, federation retains unconditional humanitarian access per `consent_protocol.md §Non-Consenting Units — Human-dignity provisioning reach`. |
 
 ### Phase 3 — Post-Unwind (Day 730+)
+
+Plain meaning: after the transition, the unit is outside the protocol except for the survival floor and any unresolved cases from before exit.
 
 On day 730 after exit vote:
 
@@ -98,7 +106,7 @@ The exit is structured to preserve individual standing wherever possible:
 
 ## Bounded Exit Cost — The Non-Coercion Guarantee
 
-A central design principle of the exit protocol is **bounded exit cost**: exit must be costly enough that it is not casual, but not so costly that it functions as coercion-by-attrition.
+A central design principle of the exit protocol is **bounded exit cost**: exit must involve enough transition work that it is not casual, but not so much cost that people are trapped.
 
 The protocol's exit cost consists of:
 - **180-day pre-exit deliberation** — gives time for reconsideration but does not delay exit indefinitely.
@@ -107,13 +115,13 @@ The protocol's exit cost consists of:
 
 There is **no exit tax**, **no forfeiture of accrued assets**, **no prohibition on resource export**, **no restriction on relocation**. A unit that exits may liquidate, relocate, or reorganize as its residents choose.
 
-This is the essential non-coercion guarantee: the protocol does not bind through lock-in. It binds through continued consent, renewed daily by the fact that residents have not chosen exit.
+This is the essential non-coercion guarantee: the protocol does not hold units through lock-in. It holds them only while they continue to consent.
 
 ---
 
 ## Exit Denial — T-026
 
-**Threat class:** Exit Denial — federation actors (or captured federation subset) attempt to block or delay a valid exit event.
+**Threat class:** Exit Denial — federation actors, or a captured federation subset, try to block or delay a valid exit.
 
 **Prohibited conduct:**
 - Refusing to publish exit proposal on federation record.
@@ -138,10 +146,10 @@ This is the essential non-coercion guarantee: the protocol does not bind through
 
 FC-120 (2/3 supermajority), FC-121 (730-day unwind), and the prohibition of exit taxes / forfeitures are **Tier 1 protected**. Any amendment weakening exit rights requires the full 7-of-9 / 180-day timelock.
 
-Amendments that **strengthen** exit rights (e.g., shortening the unwind to 365 days, lowering the supermajority to simple majority, expanding exit eligibility to neighborhood scale) may proceed by Tier 2 amendment with affected-scale consent.
+Amendments that **strengthen** exit rights (for example, shortening the unwind to 365 days, lowering the supermajority to simple majority, or expanding exit eligibility to neighborhood scale) may proceed by Tier 2 amendment with affected-scale consent.
 
 The asymmetry — strengthening is easier than weakening — mirrors the design of the CSM amendment lock (Annex Y §Y5). Rights to non-coercion can be expanded by ordinary process; they cannot be narrowed without the full procedure.
 
 ---
 
-*Exit is the last-resort protection that makes every prior protection credible. A captured federation that cannot be left is simply occupation with a more humane face. This protocol refuses that bargain.*
+*Exit is the last-resort protection that makes every other protection credible. A federation that cannot be left can become control by another name. This protocol refuses that bargain.*

@@ -12,7 +12,9 @@
 
 **Exception — human-dignity floor.** Tier 1 human-dignity invariants — specifically the CSM (Annex Y §Y1 — caloric minimum, water minimum, shelter minimum, medical response, sanitation minimum, mental-health response, essential medicines continuity) — apply everywhere the protocol has operational reach, regardless of a unit's consent status. The protocol does not permit humans to be starved because their locality did not consent. This exception is itself Tier 1 and is the smallest possible carve-out: the floor applies, but nothing else binds a non-consenting unit.
 
-This is the classical-liberal asymmetry: coercion is always minimized, but the minimum is not zero — at the floor of human survival, the protocol binds unconditionally because the alternative is death, and death is not a legitimate subject of consent.
+Plain meaning: no town, region, or other unit is treated as joined unless it clearly says yes through a public process. The only rule that reaches everyone is the survival floor, because the system does not treat starvation, untreated emergency illness, or exposure as acceptable outcomes.
+
+This is the consent balance: force is minimized, but the minimum is not zero. At the floor of human survival, the protocol binds unconditionally because the alternative is death, and death is not a legitimate subject of consent.
 
 ---
 
@@ -32,6 +34,8 @@ The roll-call-equivalent is designed to prevent manufactured majorities through 
 
 **Minimum participation floor.** For the consent event to bind, at least **2/3 of eligible resident-personhood must have either affirmed, opposed, or actively abstained**. A consent event in which fewer than 2/3 of eligible persons participated is deemed inconclusive and must be re-run after a remediation period (to address participation barriers).
 
+Plain meaning: a unit cannot join through a quiet, low-turnout vote. At least 2/3 of eligible people must take part somehow: yes, no, or active abstention.
+
 ---
 
 ## Scale-Specific Consent Mechanisms
@@ -49,13 +53,13 @@ The roll-call-equivalent is designed to prevent manufactured majorities through 
 
 ## Accession — Joining After Founding
 
-A unit that did not participate in founding may accede to the protocol through:
+A unit that did not participate in founding may join later through:
 
 1. **Internal consent event** meeting the requirements above at the unit's own scale.
 2. **Accession petition** to the federation CRP. The petition includes the unit's consent record, a roll of resident-personhood, and a demonstration of scale-eligibility (e.g., a locality demonstrating it contains at least 2 neighborhoods).
 3. **Federation acknowledgment.** The federation publishes the accession, updates the drift chain to reflect the expanded scope, and the unit becomes protocol-bound on the effective date.
 
-Accession is permissive — the federation may refuse accession only on narrow grounds:
+Joining is permissive — the federation may refuse only on narrow grounds:
 - The unit's consent event did not meet the published requirements.
 - The unit does not satisfy scale-tier bounds (e.g., a "locality" of 10,000 persons cannot accede as locality; it must split or accede as region-tier).
 - The unit is contiguous with an already-non-consenting unit and accession would create incoherent geographic boundaries. In this case the federation works with the acceding unit to resolve the geography, not to block accession.
@@ -76,7 +80,7 @@ A non-consenting unit (one that has not performed the consent act):
 
 **Human-dignity provisioning reach.** The federation's CSM provisioning to non-consenting units is limited to: caloric minimum (2,100 kcal/day), water minimum (50 L/day), emergency medical response (60 min urban, scaled for rural), emergency shelter access during acute weather events, and essential-medicines continuity (30-day WHO Model List). The provisioning is declared, audited annually by the Federated Ombuds, and published. It does not extend to discretionary services, to civic participation rights (which require consent), or to non-emergency infrastructure.
 
-This design ensures the protocol cannot be used as a humanitarian lever for coerced accession. A unit that accepts CSM provisioning does not thereby consent to the full protocol; the provisioning is unconditional.
+This design ensures the protocol cannot use basic humanitarian support to pressure a unit into joining. A unit that accepts CSM provisioning does not thereby consent to the full protocol; the provisioning is unconditional.
 
 ---
 
@@ -88,13 +92,13 @@ An individual personhood within a non-consenting unit retains:
 - **Right to relocate.** An individually-consenting personhood within a non-consenting unit may relocate to a consenting unit and acquire full protocol participation on arrival.
 - **Right to appeal.** An individual who believes their non-consenting unit is suppressing a consent process (e.g., by blocking public notice, rolling-stuffing, coerced abstention) may appeal to the Federated Ombuds. The Ombuds investigates and publishes findings; federation support for a reclaimed consent event may be authorized on Plenum vote (Annex AI §3.2).
 
-The individual-consent pathway ensures that unit non-consent does not foreclose individual participation — the protocol's smallest authority unit is the person, not the geography.
+The individual-consent pathway means a unit's refusal does not erase a person's choice. The protocol's smallest authority unit is the person, not the geography.
 
 ---
 
 ## Withdrawal of Consent (Consent Unwind)
 
-A unit that has consented may withdraw consent through the Exit Protocol (`exit_protocol.md`). Withdrawal of consent is exit; the two concepts are operationally identical. The distinction between "exiting the protocol" and "withdrawing consent" is terminological — both invoke the FC-120 / FC-121 procedure.
+A unit that has consented may withdraw consent through the Exit Protocol (`exit_protocol.md`). Withdrawal of consent is exit; the two concepts work the same way. Both use the FC-120 / FC-121 procedure.
 
 **Individual consent withdrawal.** An individual personhood may withdraw individual consent through a published individual act. Withdrawal takes effect on a 180-day wind-down during which the individual continues to receive Essential Access at their last-eligible rate (to allow relocation). After wind-down, the individual is outside the protocol's individual-consent scope. Re-entry is permitted.
 
@@ -112,7 +116,7 @@ Every consent event at any scale is logged to the protocol's drift chain (`/arch
 - Effective date
 - Signatures of the unit's representatives and the Federated Ombuds' attestation of procedural compliance
 
-This makes the consent record publicly auditable in perpetuity. A consent event that does not appear on the drift chain is not operative.
+This makes the consent record public and checkable over time. A consent event that does not appear on the drift chain is not operative.
 
 ---
 
@@ -122,4 +126,4 @@ The consent rule is Tier 1 protected. Consent-event requirements (90-day notice,
 
 ---
 
-*Consent is the act by which authority legitimates itself in the classical-liberal tradition. This protocol makes consent a published, renewable, procedurally-anchored event — not a presumption.*
+*Consent is how authority earns its standing. This protocol makes consent public, renewable, and checkable — not assumed.*

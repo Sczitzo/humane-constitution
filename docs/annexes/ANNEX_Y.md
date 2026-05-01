@@ -14,6 +14,24 @@ The CSM is not a generous definition of a good life. It is the narrow, defensibl
 
 Every numerical value in this annex is a **Tier 1 Founding Commitment**. Changing any number below requires the full H-3 refounding authority process defined in the Humane Constitution's amendment ladder. No emergency, scarcity declaration, fiscal pressure, or administrative reinterpretation may lower these values.
 
+## Plain-Language Guide
+
+CSM means the minimum a person must always be able to get to stay alive with basic dignity.
+
+It is not a full good life. It is the line the system must never go below.
+
+The floor covers:
+
+- food
+- safe water
+- weather-safe shelter
+- emergency medical stabilization
+- sanitation and hygiene
+- crisis mental-health stabilization
+- essential medicines
+
+No punishment, budget problem, emergency, identity delay, or software update may cut someone below this floor.
+
 ## Y1. CSM Basket — Per-Person Daily Minimums
 
 The following minimums apply to every personhood-verified resident, regardless of contribution status, civic record, pause status, employment, or identity state above provisional personhood.
@@ -72,7 +90,7 @@ The following minimums apply to every personhood-verified resident, regardless o
 
 ## Y2. CSM Issuance Rule (Architecturally Enforced)
 
-CSM issuance is not a governance decision. It is a mechanical function of personhood verification.
+CSM issuance is not a governance decision. It is an automatic function of personhood verification.
 
 - **Trigger:** valid personhood commitment under Article II, including provisional personhood states.
 - **Mechanism:** ledger-layer automatic Essential Access tranche issuance against CSM basket per 72-hour rolling window. Governance actors — including the Constitutional Review Panel, Regional Executive Body, Federated Ombuds, and any emergency authority — are architecturally *unable* to halt CSM issuance for any verified personhood.
@@ -83,7 +101,7 @@ CSM issuance is not a governance decision. It is a mechanical function of person
 
 ## Y3. Scarcity Substitution Protocol
 
-The CSM is preserved even during declared scarcity by substitution, not by narrowing.
+The CSM is preserved even during declared scarcity by substitution, not by narrowing. Plain meaning: the system may change how the floor is delivered during a shortage, but it may not pretend the floor is lower.
 
 - **Caloric substitution:** emergency food baskets with nutrient equivalence. Composition may vary by available supply; total kcal and protein floors may not fall below §Y1.1.
 - **Water substitution:** emergency minimum 15 L/day as specified in §Y1.2. Mandatory restoration timeline published within 72 hours of entering substitution mode.
@@ -96,6 +114,8 @@ All substitutions are published in real time through Article VII transparency in
 ## Y4. CSM Failure as Critical Incident
 
 Any observed failure to deliver the §Y1 minimums to any personhood-verified resident is a Critical Incident.
+
+Plain meaning: even one confirmed failure matters. It must be disclosed, investigated, repaired, and checked for a wider pattern.
 
 - **Mandatory disclosure:** published through Article VII transparency infrastructure within 24 hours.
 - **Mandatory investigation:** the Federated Ombuds opens an investigation within 72 hours.
@@ -112,7 +132,7 @@ Any observed failure to deliver the §Y1 minimums to any personhood-verified res
 
 ## Y6. Relationship to Broader Essential Basket
 
-The essential basket defined in `Humane_Constitution.md` §VIII is broader than the CSM. Ordinary policy, scarcity mode, or procurement choice may adjust the broader basket. The CSM is the subset of the broader basket that is invariant.
+The essential basket defined in `Humane_Constitution.md` §VIII is broader than the CSM. Ordinary policy, scarcity mode, or procurement choice may adjust the broader basket. The CSM is the subset of the broader basket that is fixed.
 
 Example — the broader basket may include "basic clothing" or "basic local transit." These are essential-basket items but not CSM items. They may vary by region or period. The CSM items (food, water, shelter, emergency medicine, sanitation, mental-health stabilization, essential-medicines continuity) may not.
 

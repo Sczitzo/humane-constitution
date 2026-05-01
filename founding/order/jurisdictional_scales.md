@@ -4,15 +4,27 @@
 **Authority:** Tier 1 (FC-122).
 **Purpose:** Define the five scales of the protocol and the rules for how decisions, measurements, and rights propagate between them.
 
+## Plain-Language Guide
+
+This document defines the layers of decision-making.
+
+The rule is not "bigger is better." The rule is "use the smallest layer that can handle the issue without hurting outsiders."
+
+- A household handles home matters.
+- A neighborhood handles shared nearby matters.
+- A locality handles town-scale matters.
+- A region handles regional measurement, enforcement, and coordination.
+- The federation handles only system-wide promises and cross-region issues.
+
 ---
 
 ## The Five Scales
 
 ### 1. Household
 
-- **Upper bound:** Family or co-resident unit. No formal person-count ceiling. The household is defined by co-residence and shared domestic economy, not by legal household definitions that may vary across cultures.
+- **Upper bound:** Family or co-resident unit. No formal person-count ceiling. The household is defined by people living together and sharing domestic life, not by legal household definitions that may vary across cultures.
 - **Representative acts:** Self-identification published to the local roll. A household consists of the personhood-holders who have self-identified as co-resident.
-- **Decision authority:** Intra-household resource allocation, including substitution choices within the Annex Y §Y3 substitution schedule, caregiving-duty allocation, and any matter that does not cross the threshold of the dwelling.
+- **Decision authority:** Home-level resource choices, including substitution choices within the Annex Y §Y3 substitution schedule, caregiving-duty allocation, and any matter that does not cross the threshold of the dwelling.
 - **Not authorized at household scale:** Consent to the protocol (consent is individual-personhood act, not household act); civic voting; Shared Storehouse rule adaptation; representation in CRP.
 
 ### 2. Neighborhood
@@ -20,7 +32,7 @@
 - **Upper bound:** **≤500 persons** (FC-122).
 - **Lower bound:** At least 2 households (a neighborhood cannot consist of a single household).
 - **Boundary determination:** Contiguous geography, shared local infrastructure (street / village / immediate catchment), self-identified as a neighborhood via the local roll.
-- **Decision authority:** Local coordination of shared infrastructure (wells, commons, local paths, shared energy nodes where applicable), first-tier dispute mediation between households, voluntary mutual aid organization within the neighborhood.
+- **Decision authority:** Local coordination of shared infrastructure (wells, commons, local paths, shared energy nodes where applicable), first-step dispute help between households, voluntary mutual aid within the neighborhood.
 - **Representation:** Neighborhoods may elect a coordinator to the locality layer. Coordinator has no standing authority over internal household decisions.
 - **Above-neighborhood: escalation rule.** A matter that involves two or more neighborhoods must be addressed at locality scale unless the neighborhoods unanimously delegate otherwise.
 
@@ -30,7 +42,7 @@
 - **Lower bound:** At least 2 neighborhoods (a locality cannot consist of a single neighborhood).
 - **Boundary determination:** Contiguous geography, shared local governance tradition (town / village cluster / small municipality), self-identified via the local roll.
 - **Decision authority:**
-  - Local Shared Storehouse adaptation within federation envelopes (a locality may set a stricter Shared Storehouse than the regional or federal baseline for its own residents but not a looser one).
+  - Local Shared Storehouse adaptation within federation limits (a locality may set a stricter Shared Storehouse than the regional or federal baseline for its own residents but not a looser one).
   - Local CRP representation (one or more delegates depending on population).
   - Municipal-equivalent civic process — public works, local resource stewardship, first-tier civic dispute resolution.
   - **Entry-tier exit eligibility:** Locality is the smallest scale that may invoke the Founding Order exit protocol. Sub-locality units (households, neighborhoods) may exit only by joining a unit that is itself exiting, or by individual relocation during another unit's unwind.
@@ -69,11 +81,11 @@
 
 A matter is eligible for resolution at scale *S* only if:
 
-1. **Competence.** Scale *S* has the informational, administrative, and adjudicative capacity to address the matter.
-2. **Locality.** The matter's effects are substantially contained within scale *S* — at most de-minimis externalities to units outside *S*.
-3. **Non-preemption.** No smaller scale *S'* can handle the matter with equal competence and locality.
+1. **Capability.** Scale *S* has the information, administration, and dispute-resolution capacity to address the matter.
+2. **Effects stay inside.** The matter's effects are mostly contained within scale *S*, with only small effects on units outside *S*.
+3. **No smaller capable scale.** No smaller scale *S'* can handle the matter just as well.
 
-If all three are met, the matter is properly resolved at scale *S*. If any fails, the matter escalates to the smallest scale at which all three can be satisfied.
+If all three are met, the matter is handled at scale *S*. If any fails, the matter moves to the smallest scale where all three can be satisfied.
 
 **Worked examples:**
 
@@ -97,7 +109,7 @@ When a unit grows past the upper bound of its scale (neighborhood exceeding 500,
 - **Split.** Divide into two or more units of the smaller scale, each within the cap. Split must preserve contiguity and respect established sub-unit boundaries (a neighborhood split cannot cut through a household's co-residence boundary).
 - **Promote.** Self-declare as a unit of the next-larger scale, acquiring that scale's representation structure and shedding the smaller-scale decision authority that no longer fits. A neighborhood that exceeds 500 can promote to locality scale if at least two sub-units can be meaningfully identified as neighborhoods.
 
-A unit that fails to split or promote within 180 days is flagged by the federation Ombuds (Annex AI §4.4 regional monitoring) and assigned a resolution panel; it does not lose its existing rights during resolution.
+A unit that fails to split or promote within 180 days is flagged by the federation Ombuds (Annex AI §4.4 regional monitoring) and assigned a resolution panel. It does not lose its existing rights while the issue is being resolved.
 
 ### 3.2 Population Threshold Shrinkage
 
@@ -112,7 +124,7 @@ Boundaries at neighborhood, locality, and regional scales may be redrawn by **lo
 
 ### 3.4 Overlapping / Fragmented Geography
 
-The protocol is built for roughly-contiguous geographic units. Where geography is fragmented (enclaves, diaspora communities, mobile populations), the affected community may petition for:
+The protocol is built for mostly connected geographic units. Where geography is fragmented (enclaves, diaspora communities, mobile populations), the affected community may petition for:
 
 - **Virtual-locality status.** A non-contiguous community of ≤5,000 persons with shared cultural/economic catchment may request recognition as a locality on a Tier 2 amendment basis. Recognition requires proof of functional decision-making capability and a stable roll.
 - **Satellite representation.** A diaspora community attached to a locality of origin may maintain representation through that locality, with consent of the locality.
@@ -127,7 +139,7 @@ Every scale must have at least one unit for the protocol to operate coherently. 
 - Collapsed locality scale → decisions default up to region, with the affected residents carrying standing personhood rights directly to the regional CRP.
 - Collapsed regional scale → prohibited. A region must exist between localities and federation; if a region collapses, the federation Ombuds (Annex AI §3.4 auto-trigger) convenes an emergency constitutional review.
 
-Collapsed scales are rare, but the rule is stated explicitly so that the scale hierarchy never has silent holes.
+Collapsed scales should be rare, but the rule is stated explicitly so that the scale hierarchy never has silent holes.
 
 ---
 

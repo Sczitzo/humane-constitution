@@ -1,97 +1,117 @@
-# Rights Under a Live Protocol
+# Rights Under A Live System
 
-*A plain-language summary of what the Humane Constitution is designed to protect if adopted and made operational.*
+This is a plain-language summary of the rights the Humane Constitution is designed to protect if it is ever adopted and made real.
 
----
+These rights are **not live today**. This document describes what the system is meant to protect after adoption, funding, measurement, and public review.
 
-This document is not claiming those rights are live today. It describes the public rights layer the protocol is designed to establish if adopted, funded, measured, and governed under the Humane Constitution.
+The basic promise is simple:
 
-If this system were live, the basic promise would be simple: losing money, status, or civic standing would not cancel your right to eat, drink, stay sheltered, travel for basics, or receive essential care.
+> Losing money, status, or civic standing must not cancel your right to eat, drink, stay sheltered, travel for basics, or receive essential care.
 
-## What you would be unconditionally entitled to
+## What You Would Get As A Right
 
-Under a live protocol, the constitution would establish a **survival floor**: a set of essentials you receive as a matter of right, not favor. This would be delivered through **Essential Access**:
+Under a live system, every person would have a **basic needs floor**.
 
-- Food
-- Water
-- Shelter
-- Essential healthcare and medicines
-- Basic transit
+That floor would include:
 
-These would be yours regardless of employment status, civic standing, or any other condition. No authority within the system could revoke them as punishment, leverage, or incentive.
+- food
+- water
+- shelter
+- essential healthcare and medicines
+- basic transit
 
----
+The system calls this **Essential Access**.
 
-## What money cannot buy
+It is not a favor. It is not a reward. It is not a benefit that can be taken away to punish you.
 
-**Flow** — the system's market money — is structurally blocked from purchasing:
+## What Money Cannot Buy
 
-- Survival access (your Essential Access basket cannot be priced or withheld)
-- Civic power (votes, agenda-setting weight, or governance influence)
-- Identity standing (your rights do not depend on your wealth)
+The system's ordinary money is called **Flow**.
 
-Wealth can improve your life. It cannot determine whether you survive or whether your voice counts.
+Flow can buy market goods and services. It cannot buy:
 
----
+- your basic needs floor
+- public power
+- extra rights
+- immunity from rules
+- control over another person's basic access
 
-## What this means in ordinary life
+A wealthy person may live better than you. They cannot buy the right to decide whether you eat, receive medicine, or count as a person.
 
-- Losing your job does not erase your baseline access to essentials.
-- Getting sick, disabled, displaced, or temporarily overwhelmed does not erase your personhood.
-- Not participating in public service or civic processes does not put your survival floor at risk.
-- A wealthy person can live better than you. They cannot buy the right to decide whether you eat or whether your basic rights apply.
+## What This Means In Daily Life
 
----
+- Losing your job does not erase your basic access to essentials.
+- Getting sick, disabled, displaced, or overwhelmed does not erase your personhood.
+- Not joining public service does not put your survival floor at risk.
+- Not having money does not make your basic rights optional.
+- Having money does not let someone else buy control over your basic rights.
 
-## What your civic tools can and cannot do
+## Civic Tools Have Limits
 
-Your **Voice** helps you participate in collective priority-setting. Your **Service Record** tracks readiness for rotating public roles. They operate under hard limits:
+The system has two civic tools:
 
-- Voice cannot be used to buy goods, services, or survival access
-- Voice is capped and decays quickly so agenda-setting power does not harden into permanent rank
-- Service Record cannot be transferred, sold, inherited, or turned into a patronage asset
-- Service Record is bounded to public-service readiness and does not measure your worth as a person
+- **Voice:** helps set public priorities in limited ways.
+- **Service Record:** records useful public service and helps choose people for rotating service roles.
 
-Participation can strengthen agenda-setting influence and readiness for public service. Absence of participation can reduce those civic tools over time. It cannot reduce your survival floor or your basic rights.
+These tools cannot become social credit.
 
----
+They cannot buy:
 
-## Your protections
+- food
+- housing
+- money
+- rights
+- legal protection
+- rank
+- human worth
 
-**Against coercion:** No official, service provider, or institution may use your Essential Access access as leverage to compel behaviour. Threats to withhold your survival floor are prohibited.
+Participation can affect these civic tools over time. It cannot reduce your basic needs floor.
 
-**Against surveillance:** The system uses the minimum data necessary to function. Identity and transaction records are not available for general monitoring.
+## Protections Against Abuse
 
-**Against permanent error:** If an enforcement action is taken in error, you have the right to:
-- Review of the decision
-- Continued access to at least your survival floor during the review
-- A public correction if the error is confirmed
+### No coercion
 
-**Against emergency abuse:** Scarcity rationing (Shared Storehouse) may be activated during genuine verified shortage. It cannot be made permanent. Every activation is publicly logged and time-limited.
+No official, provider, or institution may use your Essential Access as leverage.
 
----
+No one may threaten your food, shelter, medicine, or basic transit to make you obey.
 
-## If something goes wrong
+### No general surveillance
 
-Every operational failure in the following categories must be published publicly, with a timeline and a correction path:
+The system must use the least data needed. Identity and transaction records are not for general monitoring.
 
-| What happened | Designed response |
+### No permanent silent error
+
+If the system makes a mistake, you must have:
+
+- review of the decision
+- continued access to the basic needs floor during review
+- public correction if the mistake is confirmed
+
+### No permanent emergency rationing
+
+During a real shortage, the system may use **Shared Storehouse**, which means temporary rationing.
+
+It must be public, time-limited, and reviewable. It cannot become the normal system.
+
+## If Something Goes Wrong
+
+| What happened | What the system must do |
 |---|---|
-| Your Essential Access access was blocked or interrupted | Immediate review; access restored during dispute |
-| An enforcement action was applied in error | Partitioned wallet protections; due process |
-| A scarcity activation was triggered | Public log, termination procedure, post-mortem within 7 days |
-| An oracle (measurement authority) dispute | Conservative default protects your access while dispute resolves |
+| Your Essential Access was blocked | Review quickly and restore access during the dispute. |
+| A rule was applied to you by mistake | Protect basic accounts and give you a review path. |
+| Emergency rationing was started | Publish the reason, time limit, and end process. |
+| Measurement data is disputed | Default toward keeping basic access while the dispute is reviewed. |
 
-Silence about a failure is itself a violation of the protocol's commitments.
+Silence about a serious failure is itself a failure.
 
----
+## How To Check These Rights
 
-## How to verify your rights
+The full rule text is in the [Humane Constitution](../constitution/Humane_Constitution.md).
 
-The operative language governing all of the above is in the **Humane Constitution**. The threat register documents the known attempts to undermine these rights and the mitigations in place. Both are publicly available in this repository.
+The [Threat Register](../governance/Threat_Register.md) lists known ways these rights could be attacked or weakened.
 
-In a live deployment, a rights challenge would go through the review, appeals, and ombuds pathways defined by the constitution. In this repository, you can open an Issue with the specific clause affected, the mechanism of the violation, and any evidence.
+In a live system, a rights challenge would go through review, appeal, and Ombuds paths. In this repository, a reader can open an issue naming the rule, the failure, and the evidence.
 
----
+## Final Note
 
-*This document summarises rights established in the Humane Constitution. In any conflict, the Humane Constitution governs.*
+This document is a plain-language guide. If it conflicts with the full Humane Constitution, the full constitution controls. But the goal is for both to say the same thing in language ordinary people can understand.

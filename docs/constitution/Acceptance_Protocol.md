@@ -8,6 +8,19 @@ This document incorporates two amendments: (1) the P-020 founding window extensi
 
 Governing principle: acceptance is evidence-gated, not calendar-gated. Urgency is a reason to accelerate the pilot, not to skip it. [Tier 2 protected per P-013 AG4]
 
+## Plain-Language Guide
+
+This document explains how a proposed change becomes active.
+
+The basic rule is simple: a change does not become real just because people are in a hurry or because powerful people support it. It must pass the required evidence checks, timing checks, independence checks, and public challenge windows.
+
+In plain terms:
+
+- Some early founding steps have to happen in a special order because they create the review process itself.
+- The first public founding window must stay open for at least 60 days.
+- Certain high-risk patches cannot launch until their blocking gates are complete.
+- A proposal that touches Tier 1 core promises needs an independent second check before review begins.
+
 ### Bootstrap Amendment
 
 P-013 cannot be activated through earlier versions of the Formal Acceptance Protocol because P-013 governs the process that would activate it. This circular dependency is resolved by P-014 (Annex AH), a one-time founding instrument. P-014 is the only authorized pathway for P-013 activation. Once P-013 reaches ACTIVE through P-014, this Formal Acceptance Protocol governs all subsequent patch activations.
@@ -19,7 +32,7 @@ P-013 cannot be activated through earlier versions of the Formal Acceptance Prot
 
 ### Founding Window Extension (P-020 / Annex AH2)
 
-The original P-014 Annex AH specified a 14-day pre-activation disclosure window. P-020 amends this as follows. **Annex AH2 is operative as of this document version and governs all P-014 executions.**
+The original P-014 Annex AH specified a 14-day pre-activation disclosure window. P-020 changes that rule. **Annex AH2 is operative as of this document version and governs all P-014 executions.**
 
 **AH2.1 — Extended disclosure window:** The pre-activation challenge window is extended from 14 days to **60 days minimum**. The 60-day clock begins when all of the following are simultaneously published: (a) the circular dependency analysis; (b) the founding exception statement from the Threat Register Owner; (c) the full proposed panel composition with disclosed affiliations. No stage of P-014 may proceed until the 60-day window closes with no unresolved structural objections.
 
@@ -34,7 +47,7 @@ The nominating body's selection rationale must be published as part of the found
 
 **AH2.4 — Non-precedent statement extension (Tier 2 protected):** 'P-020 amends P-014. The 60-day window and oppose-coalition nomination are P-014 requirements only. They do not establish precedent for other patch activations, emergency processes, or governance decisions. Any invocation of AH2 logic for any purpose other than P-014 execution requires H-2 amendment process.'
 
-**Planning implication:** The founding timeline should budget a minimum of 90 days for the full P-014 process: 30 days to identify and confirm the oppose-coalition nominating body, prepare panel composition, and publish the full disclosure package; 60 days for the challenge window; plus time for panel deliberation and sign-off. Founding coalitions that begin P-014 planning without this timeline have insufficient runway.
+**Planning implication:** The founding timeline should budget a minimum of 90 days for the full P-014 process: about 30 days to confirm the independent nominating body, prepare the panel list, and publish the disclosure package; 60 days for public challenge; plus time for panel deliberation and sign-off. A founding group that cannot allow this much time is not ready.
 
 ---
 
@@ -64,12 +77,12 @@ All other Formal Acceptance Protocol provisions (Sections 1–5 of the prior ver
 
 ### Pre-Launch Blocking Gates
 
-The following items must be complete before any patch can move from PROPOSED to ACTIVE. These are not aspirational milestones — they are hard preconditions. A patch that depends on a blocking gate cannot be activated until the gate is cleared, regardless of pilot evidence quality.
+The following items must be complete before any patch can move from PROPOSED to ACTIVE. These are hard requirements, not goals. A patch that depends on one of these gates cannot activate until the gate is cleared, even if its pilot results look strong.
 
 | Gate | Required by | What must be complete | Annex |
 | :--- | :--- | :--- | :--- |
-| **Ombuds Commissioner appointed** | P-015 | Commissioner appointment complete; challenge period closed; Ombuds Oversight Panel seated; manufactured-flag criteria published at least 30 days before first determination | Annex AI |
-| **Ombuds Oversight Panel seated** | P-015 | Panel constituted per Annex AI Section 5.1; initial independence review conducted and published | Annex AI |
+| **Federated Ombuds seated** | P-015 | At least four of five sub-Ombuds appointed, challenge periods closed, and seats active; manufactured-flag criteria published at least 30 days before first determination | Annex AI |
+| **Ombuds Oversight Assembly seated** | P-015 | Assembly constituted per Annex AI Section 5.1; initial dispersal and independence review conducted and published | Annex AI |
 | **Cross-register timing monitor built** | P-015 | Automated infrastructure for flagging enforcement actions within proximity window of sentinel indicator movement; technically implemented, tested, and independently verified | Annex AI §3.3 |
 | **Methodology-class registry published** | P-017 | Initial classification of each accredited oracle node by class; error independence assessments documented; standards-provenance records complete; published before first oracle accreditation | Annex AL |
 | **Standards-body concentration tracking built** | P-017 | Automated system tracking standards-body affiliations per oracle node per essential category; AI supply chain concentration tracking; technically implemented before first oracle accreditation | Annex AL §4 |
@@ -89,10 +102,10 @@ The P-014 gate (row 9) is on the critical path for everything — P-013 must be 
 **Operative as of P-034 ACTIVE. Applies to every FAP intake after P-013 ACTIVE.**
 
 **AV1 — Two-key intake requirement for Tier-1-touching patches:**  
-Any patch proposal that carries the tag `modifies_tier1=True` — meaning the proposal, if adopted, would directly modify, reinterpret, or operationally constrain any Tier 1 invariant defined in `docs/INVARIANTS.md` — must carry a valid cryptographic attestation from the standing adversarial panel member before FAP intake is opened. A proposal submitted without the attestation is returned to the submitter at intake. No invariant analysis is performed; no technical review begins; no rejection record citing an invariant ID is created. The proposal is treated as administratively incomplete.
+Any patch proposal that carries the tag `modifies_tier1=True` — meaning the proposal, if adopted, would directly change, reinterpret, or limit any Tier 1 invariant defined in `docs/constitution/INVARIANTS.md` — must carry a valid cryptographic attestation from the standing adversarial panel member before FAP intake is opened. A proposal submitted without the attestation is returned to the submitter at intake. No invariant analysis is performed; no technical review begins; no rejection record citing an invariant ID is created. The proposal is treated as incomplete.
 
 **AV2 — FAP reviewer authority is explicitly excluded:**  
-The FAP reviewer holds no authority to waive, defer, or conditionally admit a `modifies_tier1=True` proposal that lacks the required attestation. The absence of the attestation is a structural precondition, not a procedural formality. A reviewer who admits such a proposal without the attestation has acted outside their authority; the admission is void and the proposal must be withdrawn.
+The FAP reviewer has no authority to waive, defer, or conditionally admit a `modifies_tier1=True` proposal that lacks the required attestation. The attestation is a real gate, not paperwork. A reviewer who admits such a proposal without the attestation has acted outside their authority; the admission is void and the proposal must be withdrawn.
 
 **AV3 — Adversarial panel member designation:**  
 The standing adversarial panel member for AV1 purposes is the same body designated under AH2.3 (the oppose-coalition nominating body). Once P-013 is ACTIVE, the panel member must be seated before any `modifies_tier1=True` proposal may be submitted. If no adversarial panel member is seated, no Tier-1-touching proposals may enter the FAP queue — the queue position is held open indefinitely.

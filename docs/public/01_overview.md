@@ -1,82 +1,84 @@
 # One-Page Overview
 
-**The Humane Constitution** is a constitutional design for people who are tired of systems where money can buy safety, influence, and escape from consequences.
+The Humane Constitution is a design for a society where money cannot decide who gets basic safety, who gets heard, or who escapes consequences.
 
 It tries to make three things true at the same time:
 
-- baseline survival is protected
-- markets still function
-- wealth cannot quietly turn into civic rule
+- everyone has a basic needs floor
+- people can still trade, build, earn, and start businesses
+- wealth cannot quietly become political power
 
-## The problem
+## The Problem
 
-Most systems force too much through one rail. The same money that buys food and shelter also buys investment, lobbying power, institutional access, and political insulation. When that happens, wealth turns into coercion. People do not just have different lifestyles; they face different levels of safety, dignity, and practical freedom.
+Most societies ask one kind of money to do too many jobs.
 
-The Humane Constitution tries to stop that conversion by design.
+The same money buys food, rent, medicine, business tools, lawyers, lobbyists, and access to powerful people. When one tool controls all of that, wealth stops being only about comfort. It becomes power over other people's safety.
 
-## The basic design
+This project tries to break that link.
 
-Instead of trusting one form of money to do every job, the system separates five instruments:
+## The Basic Design
 
-| Instrument | Job |
+The system separates five tools:
+
+| Tool | Plain Meaning |
 |---|---|
-| **Flow** | Market money for wages, prices, contracts, saving, and enterprise |
-| **Essential Access** | The survival floor: food, water, shelter, essential healthcare and medicines, and basic transit |
-| **Voice** | Bounded agenda-setting and budget prioritization |
-| **Service Record** | Readiness for rotating public-service roles |
-| **Shared Storehouse** | Temporary emergency rationing during verified shortage |
+| **Flow** | ordinary money for markets, wages, prices, contracts, saving, and business |
+| **Essential Access** | the basic needs floor: food, water, shelter, essential care and medicines, and basic transit |
+| **Voice** | a limited way to help set public priorities |
+| **Service Record** | proof of useful public service, used for rotating service roles |
+| **Shared Storehouse** | temporary rationing during a real shortage |
 
-The point is not the names alone. The point is the wall between them.
+The names matter less than the walls between them.
 
-- **Flow** cannot buy survival access or civic power.
-- **Essential Access** cannot become cash, collateral, or status.
-- **Voice** cannot buy goods, rights, or protection.
-- **Service Record** cannot become inherited rank.
-- **Shared Storehouse** cannot become permanent.
+- Flow cannot buy basic needs or public power.
+- Essential Access cannot become cash, collateral, or status.
+- Voice cannot buy goods, rights, or protection.
+- Service Record cannot become inherited rank.
+- Shared Storehouse cannot become permanent.
 
-## What makes it different
+## What Makes It Different
 
-This design is trying to do four things ordinary systems rarely do at once:
+This design tries to do four hard things at once:
 
-1. **Protect survival without making survival conditional on obedience.**
-2. **Keep productive markets without letting markets decide who deserves to live securely.**
-3. **Allow civic participation without turning it into social credit.**
-4. **Handle real shortage openly instead of letting panic prices decide who goes without.**
+1. Protect basic survival without making people obey to receive it.
+2. Keep markets without letting markets decide who deserves safety.
+3. Let people take part in public decisions without creating a social credit score.
+4. Handle real shortages openly instead of letting panic prices decide who goes without.
 
-## What it is not
+## What It Is Not
 
-- **Not a command economy:** Flow still runs markets, prices, contracts, and enterprise.
-- **Not a social credit system:** Voice and Service Record cannot buy privileges or basic rights.
-- **Not a welfare bureaucracy with no limits:** Essential Access is tied to measured physical capacity and reviewable basket rules.
-- **Not a surveillance state by default:** the design requires minimum necessary data, challenge rights, and bounded visibility.
+- **Not a command economy:** people still use money, prices, contracts, and businesses.
+- **Not social credit:** Voice and Service Record cannot buy rights or basic needs.
+- **Not unlimited aid with no physical limits:** the basic needs floor depends on what society can actually provide.
+- **Not a surveillance plan:** the design requires the least data possible, review rights, and public limits on who can see what.
 
-## Current status
+## Current Status
 
-This is a serious design, not a live nation-state rollout and not a promise that the hard parts are already solved.
+This is a serious design and public draft. It is not a live government and not ready for full rollout.
 
-What already exists:
+What exists now:
 
-- a constitutional text
-- a public white paper
+- constitutional text
+- public explanations
 - a threat register
 - a patch log
-- adversarial simulations
-- a validation and build pipeline
+- stress-test documents
+- a reader app and validation checks
 
-What does **not** yet exist:
+What still needs proof:
 
-- pilot evidence at scale
-- a fully proven non-coercive identity stack
-- a legitimate founding coalition
+- real pilot evidence
+- an identity system that does not become surveillance
+- reliable measurement of food, housing, care, water, energy, and other essentials
+- a legitimate founding group that people can trust
 
-So the right stance is neither blind belief nor dismissal. The right stance is specific critique, hard testing, and evidence.
+The right response is not faith. The right response is pressure, testing, and specific criticism.
 
-## Read next
+## Read Next
 
-- [Readiness Assessment](./03_readiness.md) — what the system has and has not yet built; where the gaps are
-- [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — the live ledger of empirical claims and their current evidential status
-- [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — the sequenced plan for closing the evidence gaps
-- [White Paper](./04_white_paper.md) — the full technical and economic argument for the protocol
-- [Rights Layer](./05_rights_layer.md) — the enforceable rights that underpin the survival floor
-- [Humane Constitution](../constitution/Humane_Constitution.md) — the founding constitutional text with all articles and amendments
-- [Threat Register](../governance/Threat_Register.md) — the adversarial catalogue of attack vectors and their mitigations
+- [Readiness Guide](./03_readiness.md) — what is built, what is only designed, and what still needs proof
+- [FAQ](./02_faq.md) — short answers to common questions
+- [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what the project claims and what evidence exists
+- [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what should be tested before any scale-up
+- [White Paper](./04_white_paper.md) — the fuller public explanation
+- [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect

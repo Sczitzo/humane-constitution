@@ -12,6 +12,22 @@ This document extracts the core invariants — the non-negotiable laws of the sy
 
 Invariants are distinguished from policy parameters (which may be tuned) and founding commitments (which require pilot data). An invariant is a structural constraint whose removal would collapse the architectural guarantee the system is built on.
 
+## Plain-Language Guide
+
+An invariant is a rule the system is never allowed to break. These are not normal policy choices. They are the load-bearing promises.
+
+In plain terms:
+
+- Everyone keeps enough Essential Access to survive.
+- The five instruments cannot be traded into each other.
+- The system cannot score a person's worth.
+- Money cannot buy governing power.
+- Survival access can only be issued when real food, shelter, care, and transport capacity exists.
+- The people checking the system cannot also be the people who benefit from changing the numbers.
+- These rules cannot be weakened by ordinary votes or inside procedures.
+
+If a proposed change breaks one of these promises, the answer is no before the detailed review even starts.
+
 ---
 
 ## INV-001 — Survival Is Unconditional
@@ -20,7 +36,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:** Essential Access allocation ≥ CSM at all times. The floor is a hard lower bound, not a target.
 
-**Why this is load-bearing:** If survival can be conditioned, it becomes a coercion instrument. Once coercible, the Essential Access lane collapses into Flow-equivalence and the instrument separation fails entirely. All downstream guarantees depend on this invariant holding.
+**Why this matters:** If survival can be used as a reward or punishment, people can be forced to obey. Essential Access would become another form of money or power, and the whole separation between survival and markets would fail.
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), T-007 (definition drift on "essential"), T-018 (PCRP false-trigger exhaustion), T-022 (electoral cycle capture)
 
@@ -37,7 +53,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 - Shared Storehouse → Flow or Essential Access conversion: prohibited
 - Cross-instrument collateralization: prohibited
 
-**Why this is load-bearing:** When survival and market participation ride the same instrument, currency becomes a mechanism for imposing prior claims on future labor — the structural transformation Wolf's Economic Trilogy (Part 2) traces as the terminal condition of debt-based monetary systems. A single conversion pathway, however narrow, restores that mechanism. The Essential Access escapes this failure mode precisely because it is non-monetary: it never enters the price system and therefore cannot carry the coercive structure that money inherits from its reflexive domain. The above-ledger bypass (T-001 residual) exploits proximity to this boundary without crossing it; the invariant defines where the boundary is.
+**Why this matters:** If survival access can be bought, sold, pledged, or traded for other instruments, people with money can gain power over people's basic needs. Essential Access avoids this by staying outside the price system. Even one narrow workaround would reopen the problem.
 
 **Attack vectors that target this invariant:** T-001, T-025, residual above-ledger bypass
 
@@ -49,7 +65,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:** Service Record is a eligibility-gating record, not a ranking. No total score, percentile, or comparative metric may be derived from Service Record and applied to Essential Access access or survival floor eligibility.
 
-**Why this is load-bearing:** A worth-measurement system is a coercion instrument. It creates leverage over behavior by threatening score reduction. This reintroduces the conditional survival failure mode through a non-monetary channel.
+**Why this matters:** A human-worth score becomes a threat. People can be pushed around by the fear of losing status, access, or eligibility. The Service Record may show service history, but it must never become a score for human value.
 
 **Attack vectors that target this invariant:** T-007 (definition drift reframing Service Record as a worth score), T-008 (bureaucratic elite using verification authority to construct implicit rankings)
 
@@ -61,7 +77,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:** Voice is issued by the system on contribution and participation criteria only. No secondary market for Voice may exist. No Flow expenditure pathway to governance influence may exist.
 
-**Why this is load-bearing:** If economic position translates to governance weight, the system reproduces the failure mode of purchased political influence through a legitimated channel. Voice and Service Record lose independence from the market lane.
+**Why this matters:** If money can buy formal influence, wealthy actors can buy the rules. Voice and Service Record must stay separate from the market lane.
 
 **Attack vectors that target this invariant:** T-016 (FAP capture), T-022 (electoral cycle capture)
 
@@ -73,9 +89,9 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:** Essential Access issued ≤ verified physical capacity at time of issuance. The capacity figure must be confirmed by at least one Tier-3 (physical sampling) oracle node.
 
-**Philosophical grounding:** A legitimate system must be constrained by conditions it did not produce and cannot redefine. The physical delivery capacity of food, shelter, healthcare, and transit exists independently of the monetary system and cannot be inflated by belief, expectation, or financial engineering. Essential Access issuance against verified physical capacity keeps the survival floor anchored to the non-reflexive domain — the domain of facts that exist whether or not anyone believes in them. This distinction, between the reflexive domain (prices, credit, expectations shaped by participant beliefs) and the non-reflexive domain (physical resources and capacity that exist independently), provides the foundational justification for this invariant. A system that issues survival claims against reflexive-domain assets — against financial instruments, projections, or promises — inherits those assets' susceptibility to measurement drift and self-referential failure. The Tier-3 physical sampling requirement ensures that at least one grounding point cannot be relocated into the reflexive domain through methodological redefinition. *(Philosophical grounding: Wolf, Economic Trilogy Part 1: Foundation, 2026)*
+**Plain grounding:** A system cannot feed, house, or treat people with promises on paper. It needs real capacity: food, shelter, healthcare, and transit that can actually be delivered. Essential Access must be tied to that real-world capacity, not to forecasts, loans, prices, or political confidence. At least one oracle must use direct physical checking so the numbers cannot drift away from reality. *(Philosophical grounding: Wolf, Economic Trilogy Part 1: Foundation, 2026)*
 
-**Why this is load-bearing:** If issuance is decoupled from physical capacity, Essential Access becomes a financial instrument subject to inflation, speculation, and supply manipulation. The survival floor becomes nominal rather than real — a promise denominated in a unit that drifts from what it claims to represent, precisely the failure mode this protocol was designed to correct.
+**Why this matters:** If Essential Access is issued without real capacity behind it, it becomes only a promise. The survival floor would look valid on paper while failing in real life.
 
 **Attack vectors that target this invariant:** T-006 (measurement lag), T-012 (PCRP oracle poisoning), T-020/T-021 (epistemological/algorithmic oracle capture), T-024 (Shared Storehouse oracle failure)
 
@@ -87,7 +103,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 
 **Mechanical boundary:** No individual or organization may hold both verification authority and primary beneficiary status in the same subsystem. Structural independence is required, not just disclosed conflict-of-interest.
 
-**Why this is load-bearing:** Verification authority over survival-linked systems is a concentrated leverage point. Combined with beneficiary status, it creates the conditions for bureaucratic elite formation (T-008) and definition drift (T-007) within a single actor.
+**Why this matters:** The same actor should not be able to check the numbers and benefit from changing them. That creates a strong temptation to bend definitions, hide failures, or build an insider class.
 
 **Attack vectors that target this invariant:** T-008, T-016
 
@@ -103,7 +119,7 @@ Invariants are distinguished from policy parameters (which may be tuned) and fou
 - Tier 2 (founding commitments): amendable by supermajority + adversarial panel
 - Tier 3 (operational parameters): amendable by standard FAP
 
-**Why this is load-bearing:** An amendable invariant is not an invariant. The amendment pathway itself becomes an attack surface. Tier 1 protection converts an invariant from a policy commitment to a structural constraint. Without the two-key precondition, a single captured FAP reviewer constitutes the entire enforcement gate — a single point of failure that voids all seven invariants simultaneously (T-016). The precondition adds a structurally independent second key that no in-system actor can override.
+**Why this matters:** A rule that insiders can weaken is not truly protected. Tier 1 rules need a second independent check so one captured reviewer cannot open the door to changing the system's core promises.
 
 **Attack vectors that target this invariant:** T-007, T-016, T-022
 

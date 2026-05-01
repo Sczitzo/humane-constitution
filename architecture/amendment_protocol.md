@@ -18,11 +18,27 @@ The protocol borrows the M-of-N signature pattern from financial-grade custody a
 
 ---
 
+## Plain-Language Guide
+
+This file explains how the most protected rules can be changed.
+
+The system does not say "never change." It says "do not let one office, one software team, one emergency, or one captured committee change the core promises quietly."
+
+The simple rule:
+
+- Nine people hold Tier 1 amendment authority.
+- Seven of the nine must sign the same proposed change.
+- The change waits 180 days before it can take effect.
+- The proposal must explain, in plain language, what changes and who is affected.
+- People can inspect, challenge, and respond during the waiting period.
+
+---
+
 ## Section 1 — The M-of-N Signature Requirement (FC-110)
 
 ### 1.1 — Holder Count (N = 9)
 
-The full set of **dispersed Tier 1 key-holders** is nine individuals, named at founding and rotated on a schedule specified in §4. These nine are:
+The full set of **dispersed Tier 1 key-holders** is nine individuals, named at founding and rotated on a schedule specified in Section 4. These nine are:
 
 - Geographically distributed: no two holders may reside in the same locality (≤5,000 persons per Annex Y scale definitions at FC-122) during their term. At most 2 holders per region (≤500,000 persons).
 - Institutionally diverse: no three holders may share affiliation with a single institution (governmental body, corporation, NGO, religious body, academic institution).
@@ -32,7 +48,7 @@ Holder identity is public. Holder cryptographic keys are maintained under the ho
 
 ### 1.2 — Signature Threshold (M = 7)
 
-A valid Tier 1 amendment requires **7 of 9** holder signatures. The choice of M = 7 balances:
+A valid Tier 1 amendment requires **7 of 9** holder signatures. The choice of 7 signatures balances:
 
 - **Resilience against loss.** Up to 2 holders can be unavailable (death, incapacity, unavailability, corrupted key material) without breaking the amendment pathway. Amendment remains possible at N=7 of N_available=7 or N_available=8.
 - **Resistance to capture.** An adversary must capture at least 7 of 9 holders to force an amendment. Capturing 3 is sufficient to *block* amendments (since N − 3 = 6 < 7), but blocking is not the same as forcing — a captured minority cannot alter the invariants, only prevent their improvement.
@@ -42,15 +58,17 @@ Simulations and derivation notes are preserved in `/founding/commitments.md` FC-
 
 ### 1.3 — Signing Process
 
+Plain meaning: each holder checks the proposal for themselves. They do not sign a vague promise; they sign the exact proposed new protected state.
+
 Each holder, upon receiving a proposed amendment:
 1. Receives the full text of the proposed amendment, the existing registry, and the proposed new registry state.
-2. Computes, independently, the SHA-256 hash of the proposed new state (per `invariants.md` §Invariant Hash Chain).
+2. Computes, independently, the SHA-256 hash of the proposed new state (per `parameter_registry.md` §Invariant Hash Chain).
 3. Verifies the hash against the hash included in the amendment proposal; refuses to sign any proposal where these do not match.
-4. Verifies the procedural requirements (§2) have been met.
+4. Verifies the process requirements in Section 2 have been met.
 5. Signs the hash with their personal key if and only if they affirm the amendment.
 6. Publishes the signature to the public amendment log.
 
-The amendment becomes eligible for the timelock only when 7 distinct holder signatures are published on the public log, each verifying the same hash.
+The amendment becomes eligible for the waiting period only when 7 distinct holder signatures are published on the public log, each verifying the same hash.
 
 ### 1.4 — Key Rotation and Recovery
 
@@ -65,7 +83,7 @@ The amendment becomes eligible for the timelock only when 7 distinct holder sign
 A valid Tier 1 amendment proposal must include:
 
 1. **Plain-language summary.** A lay-readable description of what the amendment changes, who is affected, and the coalition proposing it. Minimum: 500 words; maximum: 2000.
-2. **Redline text.** Exact current text and exact proposed text for every file affected (invariants.md, Humane_Constitution.md §0, Annex Y §Y1, commitments.md Tier 1 rows, as applicable).
+2. **Redline text.** Exact current text and exact proposed text for every file affected (`parameter_registry.md`, Humane_Constitution.md §0, Annex Y §Y1, commitments.md Tier 1 rows, as applicable).
 3. **Invariant impact statement.** Which Humane Constitution §0 invariants the amendment affects; whether the amendment narrows, broadens, or holds constant each invariant.
 4. **Threat impact.** Registered threats (Threat Register) whose risk score changes; new threats introduced; residual risks after amendment.
 5. **Migration plan.** Operational transition — how running services update their pinned references (per `implementation_binding.md`), how in-flight transactions are handled, whether the amendment has retroactive effect.
@@ -74,15 +92,15 @@ A valid Tier 1 amendment proposal must include:
 8. **Fiscal / capacity note.** Resource implications for CSM reserves, operating budget, infrastructure capacity.
 9. **Privacy / surveillance note.** Whether the amendment creates or requires new data collection; whether existing data uses are narrowed or broadened.
 
-Missing or materially-deficient sections are grounds for holders to refuse signing. The federated Ombuds (Annex AI) may also issue a formal deficiency finding, though the Ombuds cannot veto a proposal — only the holders' refusal to sign or the timelock procedural gates can prevent a defective proposal from advancing.
+Missing or seriously incomplete sections are grounds for holders to refuse signing. The federated Ombuds (Annex AI) may also issue a formal deficiency finding, though the Ombuds cannot veto a proposal. Only the holders' refusal to sign or the waiting-period gates can prevent a defective proposal from advancing.
 
 ---
 
 ## Section 3 — Timelock (FC-111)
 
-Once 7 holder signatures are registered on the public amendment log, the amendment enters a **180-day timelock** before taking effect.
+Once 7 holder signatures are registered on the public amendment log, the amendment enters a **180-day waiting period** before taking effect.
 
-### 3.1 — What the Timelock Does
+### 3.1 — What the Waiting Period Does
 
 During the 180-day window:
 - The amendment is published on the drift chain as a **proposed-but-not-effective** version.
@@ -101,7 +119,7 @@ During the 180-day window:
 - Longer windows (365 days, 2 years) create a governance paralysis surface where any proposed change becomes impossible in practice even when genuinely needed.
 - 180 days is calibrated to the protocol's observation that significant institutional capture tends to weaken or reveal itself within one standard political-cycle length.
 
-### 3.3 — Timelock Completion
+### 3.3 — Waiting Period Completion
 
 At the end of the 180-day window:
 - If 7 signatures remain valid (no revocations dropped count below threshold) and no procedural deficiency has been found, the amendment takes effect.
@@ -109,7 +127,7 @@ At the end of the 180-day window:
 - Operational components, on their next startup or scheduled hash recheck, adopt the new pinned reference.
 - The prior version is archived (not deleted) in the drift chain.
 
-If signatures have dropped below threshold, procedural deficiency is found, or the amendment has been withdrawn: the amendment does not take effect; the drift chain records the failed attempt in an audit-archive section (publicly visible) but does not advance the head.
+If signatures have dropped below threshold, a process defect is found, or the amendment has been withdrawn, the amendment does not take effect. The drift chain records the failed attempt in a public audit archive, but it does not advance the head.
 
 ---
 
@@ -148,13 +166,13 @@ If fewer than 7 holders are ever simultaneously available (e.g., a mass-casualty
 
 ### 5.2 — Captured Majority
 
-If ≥7 holders are captured by a hostile coalition, the amendment process remains procedurally valid — the protocol's own rules allow this coalition to propose and carry an amendment. Response paths:
+If 7 or more holders are captured by a hostile coalition, the amendment process remains valid under the protocol's own rules. Response paths:
 - **Timelock** (180 days) provides response window.
 - **Federated Ombuds** Integrity Report will surface concerns.
 - **Founding Order exit** (FC-120, FC-121) allows jurisdictions to exit the federation in response rather than accept the amendment.
 - **Drift chain public visibility** ensures the amendment cannot be concealed.
 
-The protocol does not claim to prevent capture by a majority-of-holders coalition with sufficient political will — that is the scope of constitutional politics, not architectural enforcement. The architectural enforcement guarantees **visibility** and **response time**, not immunity.
+The protocol does not claim to prevent capture by a majority-of-holders coalition with sufficient political will. That is a political failure, not something software locks can fully solve. The architectural enforcement guarantees **visibility** and **response time**, not immunity.
 
 ### 5.3 — Coerced Single Holder
 
@@ -168,10 +186,10 @@ Coerced holders may also confidentially alert the federated Ombuds, who issues a
 
 ## Section 6 — Governance of This Protocol Itself
 
-Changes to this amendment protocol (M, N, timelock days, procedural requirements, holder diversity criteria) are themselves **Tier 1 amendments** requiring 7-of-9 signatures and a 180-day timelock. This is recursive — the protocol cannot be amended into a weaker protocol through a weaker process.
+Changes to this amendment protocol (signature threshold, holder count, waiting-period days, process requirements, holder diversity criteria) are themselves **Tier 1 amendments** requiring 7-of-9 signatures and a 180-day waiting period. This is recursive: the protocol cannot be amended into a weaker protocol through a weaker process.
 
 The only exception is the **Refounding Convention** authority (H-3 per Humane Constitution Annex H), which can restructure the amendment protocol itself but is itself a Tier 1-grade collective action requiring supermajority ratification at the federation level.
 
 ---
 
-*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the mechanical specification by which the Tier 1 invariants in `invariants.md` and Humane Constitution §0 may be legitimately changed.*
+*This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the mechanical specification by which the Tier 1 invariants in `parameter_registry.md` and Humane Constitution §0 may be legitimately changed.*

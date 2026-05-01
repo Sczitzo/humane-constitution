@@ -14,23 +14,31 @@
 
 The five scales from `jurisdictional_scales.md` (household, neighborhood ≤500, locality ≤5,000, region ≤500,000, federation) provide the operational anchor. The protocol's default resolution scale for any matter is the smallest scale in this list that satisfies all three competence tests below.
 
+## Plain-Language Guide
+
+This rule means: do not move a decision upward unless it truly has to move upward.
+
+A household should handle household issues. A neighborhood should handle neighborhood issues. A locality should handle town-scale issues. The federation should handle only issues that smaller groups cannot fairly or safely handle.
+
+The federation has to explain why it needs control. The smaller scale does not have to explain why it should be trusted first.
+
 ---
 
 ## The Three-Prong Competence Test
 
-A scale *S* is *competent* for matter *M* only if **all three** prongs are satisfied:
+A scale *S* is capable of handling matter *M* only if **all three** tests are satisfied:
 
-### Prong 1 — Informational Competence
+### Prong 1 — Enough Information
 
-Scale *S* possesses (or can acquire through its ordinary operations) the information required to decide *M* accurately. Where *M* requires specialist measurement (e.g., oracle readings for an Shared Storehouse activation, leakage-rate estimation for Annex AB2), the scale must have access to the measurement infrastructure.
+Scale *S* has, or can get through normal operations, the information needed to decide *M* accurately. Where *M* requires specialist measurement (for example, oracle readings for a Shared Storehouse activation or leakage-rate estimation for Annex AB2), the scale must have access to the measurement infrastructure.
 
-### Prong 2 — Adjudicative Competence
+### Prong 2 — Enough Decision Capacity
 
-Scale *S* has the institutional capacity (representation, deliberation, enforcement, appeal) to adjudicate *M* within the protocol's timeliness and due-process requirements. A neighborhood scale that cannot constitute an appeal body is not competent for a matter requiring appeal.
+Scale *S* has the capacity to represent people, deliberate, enforce the decision, and hear appeals within the protocol's timing and fairness rules. A neighborhood that cannot form an appeal body is not capable of handling a matter that requires appeal.
 
-### Prong 3 — Externality Containment
+### Prong 3 — Effects Stay Mostly Inside
 
-The substantive effects of *M* on units outside *S* are *de minimis* — meaning, measurably small relative to the effects on units within *S* and not imposing unconsented costs on any outside unit. Where externalities are significant, the matter is not competent at *S* and escalates to the smallest scale that internalizes the externality.
+The effects of *M* on units outside *S* are small compared with the effects inside *S*, and the decision does not push unwanted costs onto outsiders. If the outside effects are significant, the matter moves to the smallest scale that includes the affected people.
 
 ---
 
@@ -43,7 +51,7 @@ When a matter *M* is proposed for resolution at scale *S*, the following sequenc
 3. **If challenged,** the matter is reviewed by the next-larger scale's representation, which may either (a) affirm the presumptive scale, (b) designate a different scale with published reasoning, or (c) remand for further analysis.
 4. **Default-against-escalation rule.** If the review is inconclusive, the matter stays at the smaller scale. Escalation requires affirmative reasoning, not mere disagreement about appropriate scale.
 
-This sequence is the mechanical translation of "centralization requires justification; decentralization is the default."
+This sequence turns the plain rule into a procedure: centralization requires a public reason; smaller-scale control is the default.
 
 ---
 
@@ -56,7 +64,7 @@ A matter is a concrete decision requiring a binding resolution:
 - **Adjudication:** resolving a dispute between parties. (e.g., first-tier mediation at neighborhood scale)
 - **Enforcement:** applying a penalty or remediation to a prior violation. (e.g., Annex AJ §4 regional enforcement)
 
-Administrative tasks that are mechanical applications of existing rules — disbursing Essential Access at the federation rate to eligible residents, running the demurrage accrual on Flow balances — are **not** matters requiring subsidiarity analysis. Those are operational execution.
+Administrative tasks that simply apply existing rules — disbursing Essential Access at the federation rate to eligible residents, running the idle-money fee on Flow balances — are **not** matters requiring subsidiarity analysis. Those are ordinary operations.
 
 ---
 
@@ -94,7 +102,7 @@ Soft-exception invocations are logged; repeated invocations against the same sca
 
 ## The Proportionality Principle
 
-Even when a matter is federation-competent, the federation is required to use **the least centralizing means** that addresses the matter. If a federation standard can be expressed as a floor that localities may exceed, it is expressed as a floor. If it can be expressed as a menu of options from which localities choose, it is expressed as a menu. Federation-wide uniform rules are the last resort, not the first.
+Even when a matter belongs at federation scale, the federation must use **the least centralizing means** that solves the problem. If a federation standard can be a floor that localities may exceed, it should be a floor. If it can be a menu of options localities choose from, it should be a menu. One rule for everyone is the last resort, not the first.
 
 This principle is not merely rhetorical — it is enforceable under the Federated Ombuds (Annex AI). A federation action that adopts a uniform rule where a floor would suffice may be challenged as a subsidiarity violation (T-027), and the Plenum may remand for reconsideration.
 

@@ -5,7 +5,7 @@
 **Origin:** PRD-001 / Phase 1 Article I adversarial audit; reconfirmed Phase 4 follow-up
 **Authority:** Tier 1. Changes require the full amendment protocol per `/architecture/amendment_protocol.md`.
 
-> **Drafting note (2026-04-25):** This annex was written from the existing operative content in `Patch_Log.md` §P-034 and `Acceptance_Protocol.md` §Structural Precondition Gate to close a dangling reference. It is authoritative, but the worked operational procedures (key-handling, attestation envelope format, defection-finding process) need a follow-up specification pass.
+> **Drafting note (2026-04-25):** This annex was written from the existing operative content in `Patch_Log.md` §P-034 and `Acceptance_Protocol.md` §Structural Precondition Gate to close a dangling reference. The 2026-05-01 follow-up added the operational procedures for key registration, attestation envelopes, intake verification, and defection findings.
 
 ---
 
@@ -48,12 +48,71 @@ The reviewer's incentive is also corrected by AV2: there is no path by which a r
 
 S3* (adversarial panel attestation) is structurally independent of S3 (FAP reviewer). Collapsing S3* into S3 is architecturally impossible because the adversarial panel member holds a key the FAP reviewer does not control. The audit channel is not a delegation from operational control; it is an independent system with its own nominating body, term structure, and accountability path.
 
+## AV7 — Key Registration and Rotation
+
+The adversarial panel member's public verification key is registered in the FAP intake system and mirrored in the Article VII dashboard before any `modifies_tier1=True` proposal may be submitted.
+
+Key registration requires:
+- Public-key fingerprint, algorithm identifier, creation timestamp, and seat identifier.
+- Signed seating certificate from the oppose-coalition nominating body under Annex AH §AH2.3.
+- Counter-attestation by the Federated Ombuds Plenum that the seat is filled and the key belongs to the seated panel member.
+- Publication in an append-only key history. Old keys are never deleted; they are marked active, rotated, revoked, or expired.
+
+Key rotation is permitted for routine security or suspected compromise. A rotated key becomes valid only after the same seating and Plenum counter-attestation steps are complete. Emergency revocation takes effect immediately on either (a) the panel member's signed revocation notice, or (b) a 4-of-5 Federated Ombuds Plenum finding of compromise. During revocation or rotation gaps, no Tier-1-touching proposal may advance.
+
+## AV8 — Attestation Envelope Format
+
+Every AV1 attestation must be a structured, signed envelope. The envelope is published with the FAP intake record and must include:
+
+| Field | Requirement |
+| :--- | :--- |
+| `patch_id` | Stable patch identifier. |
+| `proposal_hash` | Cryptographic hash of the exact proposal text reviewed. |
+| `tier1_surfaces_reviewed` | List of Tier 1 registry rows, invariant IDs, FC rows, and constitutional sections assessed. |
+| `determination` | One of `admit_no_tier1_violation`, `reject_tier1_violation`, or `unable_to_determine`. |
+| `rationale_digest` | Short public rationale; restricted operational detail may be referenced through Annex AO if publication would reveal exploit paths. |
+| `reviewer_key_fingerprint` | Fingerprint matching the active registered key under AV7. |
+| `issued_at` | Timestamp; envelope expires 90 days after issuance. |
+| `signature` | Signature over all envelope fields except `signature`. |
+
+Only `admit_no_tier1_violation` permits intake. `reject_tier1_violation` closes the proposal unless the submitter rewrites and resubmits under a new proposal hash. `unable_to_determine` is treated as non-attestation: the proposal stalls without prejudice and no invariant merits review begins.
+
+## AV9 — Intake Verification Procedure
+
+The FAP intake system must perform all AV checks before queue placement:
+
+1. Confirm the proposal carries `modifies_tier1=True` or run the ordinary invariant-screening rule for untagged proposals.
+2. If `modifies_tier1=True`, require exactly one current attestation envelope matching the proposal hash.
+3. Verify the signature against the active key registry.
+4. Verify the envelope has not expired and that the key was active at issuance.
+5. Confirm the determination is `admit_no_tier1_violation`.
+6. Publish the envelope hash and intake decision in the Article VII dashboard.
+
+Failure at any step returns the proposal as administratively incomplete. The FAP reviewer may not convert a failed AV9 check into a merits rejection, because doing so would recreate reviewer discretion over the precondition. The only permissible output is "intake blocked by missing or invalid AV attestation."
+
+## AV10 — Defection-Finding Process
+
+A defection inquiry may be opened by any of:
+- Federated Ombuds Plenum vote of 2 of 5 or higher.
+- The oppose-coalition nominating body that seated the adversarial panel member.
+- A published CRP referral identifying the proposal hash and the specific Tier 1 surface allegedly mis-attested.
+
+The inquiry must compare the signed envelope against the proposal text actually admitted at intake. A defection finding requires all four:
+- The envelope carried `admit_no_tier1_violation`.
+- The admitted proposal materially modified, reinterpreted, or operationally constrained a Tier 1 invariant without proper Tier 1 amendment authority.
+- The reviewed proposal hash matches the admitted proposal or the mismatch was ignored by the intake system.
+- The panel member either knew or should have known of the Tier 1 effect under the published registry and invariant text available at issuance.
+
+The Federated Ombuds Plenum decides the finding by 4-of-5 vote. Until decision, the panel member is suspended from new attestations and the seat enters conservative-failure mode: pending Tier-1-touching proposals stall. If defection is found, AV4 penalties apply, the finding is published in the Article VII dashboard with the proposal hash and affected invariant IDs, and the oppose-coalition nominating body must seat a replacement key before intake resumes.
+
+Good-faith disagreement is not defection. If the Plenum finds the issue was ambiguous, the remedy is a registry clarification under P-004, not punishment. If the intake system admitted a proposal whose proposal hash did not match the envelope, the primary defect is intake-system failure; the panel member is not penalized unless they participated in or knowingly ignored the mismatch.
+
 ---
 
 ## Dependencies
 
 - Adversarial panel member must be seated (per Annex AH §AH2.3) before any `modifies_tier1=True` proposal may be submitted. P-034 becomes operational the moment the adversarial panel member's key is registered with the FAP intake system.
-- Cryptographic attestation envelope format and key-handling procedure are operational specifications (see follow-up specification pass).
+- Cryptographic attestation envelope format and key-handling procedure are specified in AV7 through AV9.
 - Public defection-finding publication channel (Article VII dashboard) must support the attestation-history view.
 
 ## Residual Risk (Acknowledged)

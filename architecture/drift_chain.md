@@ -24,6 +24,22 @@ Canonical serialization rules:
 
 ---
 
+## Plain-Language Guide
+
+The drift chain is the public change history for the system's core promises.
+
+It works like a tamper-evident notebook. Each new entry points back to the entry before it. If someone changes an old entry or edits a protected file without permission, the chain no longer matches and running systems can refuse to use the changed version.
+
+In plain terms:
+
+- Protected files are turned into a fingerprint called a hash.
+- That fingerprint is published in more than one place.
+- Every new version points to the version before it.
+- Running systems compare their local files to the public fingerprint.
+- If the fingerprints disagree, the system raises an alert instead of quietly accepting the change.
+
+---
+
 ## Chain Structure
 
 Each row is an append record with the following fields:
@@ -40,7 +56,7 @@ Each row is an append record with the following fields:
 | `timelock_entry_date` | Date when 7 signatures were first registered (timelock start). |
 | `timelock_exit_date` | Date when amendment took effect (timelock start + FC-111 = +180 days). |
 
-Each row is itself SHA-256 hashed; the hash is the `prior_hash` for the next row. This is a standard hash-chain construction — modifying any prior row invalidates the hash linkage of every subsequent row.
+Each row is itself SHA-256 hashed; the hash is the `prior_hash` for the next row. This means changing any older row breaks the link to every later row.
 
 ---
 
@@ -55,12 +71,12 @@ Each row is itself SHA-256 hashed; the hash is the `prior_hash` for the next row
 | `prior_hash` | `GENESIS` |
 | `state_hash` | `TBD at founding event — computed by the founding coalition's multi-signature process` |
 | `signatures` | 7 of 9 founding-coalition holders |
-| `change_summary` | Protocol founding: establishes Annex Y CSM, `/founding/commitments.md` FC-001 through FC-122, architectural enforcement layer (invariants.md, amendment_protocol.md), and Annex AJ/AL/AQ/AS operative states. |
+| `change_summary` | Protocol founding: establishes Annex Y CSM, `/founding/commitments.md` FC-001 through FC-122, architectural enforcement layer (`parameter_registry.md`, `amendment_protocol.md`), and Annex AJ/AL/AQ/AS operative states. |
 | `amendment_proposal_hash` | `TBD at founding event` |
 | `timelock_entry_date` | N/A (founding not subject to timelock — the founding coalition's charter is itself the authority) |
 | `timelock_exit_date` | 2026-04-18 |
 
-**Note on founding:** The founding version is the only version permitted to bypass the timelock, because prior to the founding there is no pre-existing Tier 1 state to lock against. Every subsequent version (version 2 and later) is subject to the full amendment protocol including FC-111 timelock.
+**Note on founding:** The founding version is the only version permitted to bypass the waiting period, because before founding there is no earlier Tier 1 state to protect. Every later version is subject to the full amendment protocol, including the FC-111 waiting period.
 
 ---
 
@@ -71,7 +87,7 @@ The drift chain is **published** to a tamper-evident public ledger at all times.
 - Multi-host mirror with signed consistency attestations (e.g., the federated Ombuds' 5 sub-offices each publishing and counter-signing each version).
 - Certificate-transparency-style append-only log operated by an independent body.
 
-At least **two independent publication channels** are required so that a single compromised publisher cannot suppress a version or publish a forged version without producing an observable divergence between the channels.
+At least **two independent publication channels** are required so that one compromised publisher cannot hide a version or publish a forged version without creating a visible mismatch between channels.
 
 Every operational component (Essential Access issuer, Voice scheduler, oracle gate, CSM dispenser, enforcement dashboard, identity ledger) queries **at least two publication channels** at startup and compares hashes. Mismatch between channels -> refuse-to-operate; alert to Article VII monitoring.
 
@@ -79,20 +95,20 @@ Every operational component (Essential Access issuer, Voice scheduler, oracle ga
 
 ## Detection of Silent Tampering
 
-If an adversary modifies any of the five Tier 1 files directly (editing invariants.md in place, or altering FC values in commitments.md without following the amendment protocol), the following happens:
+If an adversary modifies any of the five Tier 1 files directly (editing `parameter_registry.md` in place, or altering FC values in `commitments.md` without following the amendment protocol), the following happens:
 1. The next operational-node startup computes the hash of the current file state.
 2. This hash does not match the `state_hash` published at the drift chain's current head.
 3. The node refuses to operate and alerts Article VII monitoring.
 4. Article VII transparency infrastructure raises a **Category S** (structural integrity) alert, which under Annex AI requires a federated Ombuds investigation within 24 hours.
 5. If the modification cannot be traced to a valid amendment-protocol process, it is treated as an **unauthorized modification** — operational nodes remain in refuse-to-operate state, and the federated Ombuds issues a drift-chain preservation notice restoring the last valid state from the public ledger.
 
-This construction means that silent modification cannot persist — it is detected at the first operational-node startup after the modification, which under normal operation is within hours. The adversary must either complete a legitimate amendment through the M-of-N / timelock process, or their modification is visibly reverted and publicly logged.
+This construction means that a silent modification should not last. It is detected at the first operational-node startup after the modification, which under normal operation is within hours. An attacker must either complete a legitimate amendment through the 7-of-9 and waiting-period process, or the modification is visibly reverted and publicly logged.
 
 ---
 
 ## Relationship to Other Architecture Files
 
-- **`invariants.md`** — the registry of Tier 1 parameters that are hashed into the chain.
+- **`parameter_registry.md`** — the registry of Tier 1 parameters that are hashed into the chain.
 - **`amendment_protocol.md`** — defines how new versions may be added.
 - **`implementation_binding.md`** — specifies the startup hash-check requirement for operational components.
 
@@ -100,7 +116,7 @@ This construction means that silent modification cannot persist — it is detect
 
 ## Amendment of This Drift Chain Specification
 
-Changes to this file (the chain structure, serialization rules, publication requirements, detection procedures) are themselves Tier 1 amendments per `amendment_protocol.md`. The drift chain records its own specification history as part of the chain it maintains — the spec is inside the thing it specifies.
+Changes to this file (the chain structure, serialization rules, publication requirements, detection procedures) are themselves Tier 1 amendments per `amendment_protocol.md`. The drift chain records its own specification history as part of the chain it maintains. In other words, the rulebook for the chain is also protected by the chain.
 
 ---
 

@@ -1,10 +1,12 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Current through T-026**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-027**
 
 ---
 
 **Purpose.** This register tracks the adversarial risks identified during the current hardening cycle and aligns them to the Humane Constitution. It is the running control layer for red-team work, not a replacement for the constitution.
+
+**Plain-language purpose.** This document asks: how could the system fail, be gamed, or be captured? Each threat names a failure path, the harm it could cause, and the current mitigation status.
 
 **Status key.** 
 - **OPEN** = not yet structurally addressed. 
@@ -18,6 +20,30 @@
 
 ---
 
+## Plain-Language Threat Map
+
+Read this table first if you do not work in law, policy, security, or systems design.
+
+| Threats | Plain meaning |
+| :--- | :--- |
+| T-001 | People try to turn Essential Access into money through side deals. |
+| T-002 | People fake, steal, duplicate, or lose identity in ways that either drain the system or exclude real people. |
+| T-004 | The system protects survival but fails to keep work, excellence, and contribution meaningful. |
+| T-005 / T-013 / T-014 | Review bodies get clogged, deadlocked, or overloaded during crisis. |
+| T-006 / T-012 / T-015 / T-018 / T-019 / T-024 | Measurement and emergency signals are wrong, manipulated, suppressed, or unavailable when decisions matter. |
+| T-007 | Powerful actors quietly change definitions so the rules still sound the same but work differently. |
+| T-008 / T-009 | A professional insider class captures review, verification, hardship rules, or service roles. |
+| T-010 / T-011 | The public misunderstands the system, or opponents define it before it can explain itself. |
+| T-016 / T-017 | The patch process itself gets captured or cannot activate its own safeguards. |
+| T-020 / T-021 | Measurement sources look independent but share the same assumptions, standards, data, or AI supply chain. |
+| T-022 | A later hostile government keeps the words but hollows out the system. |
+| T-023 | A pilot works in calm conditions but fails when scaled into real stress. |
+| T-025 | Investment-channel rules become a way for powerful sectors to avoid the idle-money fee. |
+| T-026 | A valid exit is blocked, delayed, or punished. |
+| T-027 | Decisions drift upward to larger bodies when local people could handle them. |
+
+---
+
 ## Open Problems Dashboard
 
 The single working list of unsolved threats. Read this first before scanning the rest of the register. A threat appears here if it is `OPEN`, `PARTIAL`, or otherwise unresolved at the structural level. `ADDRESSED*` items below the dashboard exist in the broader summary but are not active design loopholes.
@@ -26,10 +52,7 @@ The single working list of unsolved threats. Read this first before scanning the
 
 | ID | Title | Severity | Score | Why it matters in one line | Proposed patch |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| T-022 | Electoral Cycle Capture | **Critical** | 60 | Hostile successor government repeals or hollows out the constitutional architecture. | P-018 (Annex AM — to be written) |
-| T-019 | Demand-Context Flag Suppression | High | 48 | Strategically timed enforcement actions suppress legitimate PCRP activation. | P-015 (Annex AP — to be written) |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | 48 | Flow investment exemptions become milking instruments for capital-intensive sectors. | P-023 |
-| T-023 | Pilot External Validity Collapse | Med-High | 32 | Scale-up rests on pilot evidence that did not include adversarial or crisis conditions. | P-019 (Annex AN — to be written) |
+| _None currently registered_ | — | — | — | Every registered threat currently has at least a mitigation path, proposed annex, or active control. | — |
 
 ### Partial (mitigation path defined; not fully integrated or tested)
 
@@ -40,6 +63,10 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-007 | Political Definition Drift | **Critical** | 60 | Semantic capture defenses depend on a registry that is not yet enforced in production. |
 | T-004 | Incentive Collapse | **Critical** | 48 | Real contribution model that rewards output without recreating coercive hierarchy. |
 | T-018 | PCRP False-Trigger Exhaustion | High | 36 | Attestation-vector closed by P-024; false-trigger-at-scale residual still on P-015. |
+| T-019 | Demand-Context Flag Suppression | High | 48 | P-015 / Annex AP defines a mitigation path; Annex AI gates and timing-monitor infrastructure still need activation. |
+| T-022 | Electoral Cycle Capture | **Critical** | 60 | P-018 / Annex AM defines the entrenchment and transition-continuity path; constitutional body and trigger infrastructure still need founding. |
+| T-023 | Pilot External Validity Collapse | Med-High | 32 | P-019 / Annex AN defines the scale-up evidence gate; pilot evidence and challenge infrastructure still need execution. |
+| T-025 | Demurrage Sector-Capture via Investment Channel | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
 
 ### Open sub-problems with no T-ID
 
@@ -79,13 +106,13 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 | T-016 | FAP Capture | **Critical** | **ADDRESSED*** | Prevent capture of the patch acceptance process itself. | 60 |
 | T-017 | Bootstrap Problem | **Critical** | **ADDRESSED*** | Resolve P-013 circular dependency without normalizing urgency bypass. | 45 |
 | T-018 | PCRP False-Trigger Exhaustion | High | **PARTIAL** | Prevent deliberate engineering of false triggers to exhaust the audit-cap and suppress real responses. Attestation-vector component addressed by P-024 (Annex AS, FC-080/081/082); false-trigger-at-scale residual remains with P-015. | 36 |
-| T-019 | Demand-Context Flag Suppression | High | **OPEN** | Prevent strategically timed enforcement actions from suppressing legitimate PCRP activation. | 48 |
+| T-019 | Demand-Context Flag Suppression | High | **ADDRESSED*** | Prevent strategically timed enforcement actions from suppressing legitimate PCRP activation. | 48 |
 | T-020 | Epistemological Oracle Capture | **Critical** | **ADDRESSED** | Prevent methodology-standard capture that biases oracle outputs without touching data directly. | 60 |
 | T-021 | Algorithmic Oracle Capture | **Critical** | **ADDRESSED** | Prevent AI/algorithmic manipulation of measurement systems that satisfies formal independence while being systematically biased. | 60 |
-| T-022 | Electoral Cycle Capture | **Critical** | **OPEN** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 |
-| T-023 | Pilot External Validity Collapse | Med-High | **OPEN** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 |
+| T-022 | Electoral Cycle Capture | **Critical** | **ADDRESSED*** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 |
+| T-023 | Pilot External Validity Collapse | Med-High | **ADDRESSED*** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **ADDRESSED** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active — no current resolution path. Closed by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18). | 60 |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | **OPEN** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 |
+| T-025 | Demurrage Sector-Capture via Investment Channel | High | **ADDRESSED*** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 |
 | T-026 | Exit Denial | **Critical** | **ADDRESSED** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Closed by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies. | 48 |
 | T-027 | Subsidiarity Violation | High | **ADDRESSED** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Closed by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle. | 36 |
 
@@ -327,7 +354,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ### T-019 — Demand-Context Flag Suppression Attack
 - **Layer:** PCRP / enforcement / measurement
 - **Severity:** High
-- **Status:** OPEN
+- **Status:** ADDRESSED* (P-015 / Annex AP PROPOSED)
 - **Risk Score:** 4×3×(6-2)=48
 - **Note:** Identified as residual risk in T-015 (P-012 AE2.4) but requires separate registration — distinct mechanism and control profile.
 - **Mechanism:** A coordinated actor *initiates a small, technically valid enforcement action* strategically timed to activate the demand-context flag, which then blocks PCRP Ombuds co-certification during a genuine supply shock. The enforcement action itself causes no significant harm; its purpose is flag activation to suppress emergency response.
@@ -374,7 +401,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ### T-022 — Electoral Cycle Capture
 - **Layer:** Constitutional architecture / political durability
 - **Severity:** Critical
-- **Status:** OPEN
+- **Status:** ADDRESSED* (P-018 / Annex AM PROPOSED)
 - **Risk Score:** 5×4×(6-3)=60
 - **Mechanism:** The protocol assumes durable institutional commitment from the political coalitions that implement it. It does not model what happens when a hostile successor government — one that campaigned against the protocol — wins a democratic election and has both the political mandate and the institutional access to dismantle or hollow out the architecture. Four specific routes: (1) Direct Constitutional Repeal — the Tier 1 invariants are designed to resist this, but constitutional repeal via supermajority is legally possible. (2) Administrative Hollowing — the successor government does not formally repeal anything; it appoints adversarial actors to founding institutions, defunds oracle nodes, and stops publishing post-mortems until the system becomes non-functional without any formal change. (3) Jurisdictional Fragmentation — the successor government transfers authority to sub-jurisdictional entities that are not bound by the protocol. (4) Treaty Override — the successor government signs international agreements that require modifications to the non-convertibility architecture as a condition of participation, triggering Tier 3 changes that accumulate into Tier 2 impact (T-012 cumulative drift trigger, applied to treaty obligations). The amendment ladder (Tier 1/2/3) was calibrated for incremental drift, not organized political reversal.
 - **Impact:** The most complete failure mode. If a hostile successor government succeeds in dismantling the protocol through legal means, the system has no recovery path short of a new founding moment — with all the bootstrap problems that entails (T-017 recurrence). The people who depended on Essential Access floor guarantees face sudden withdrawal after having structured their lives around the system.
@@ -388,7 +415,7 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ### T-023 — Pilot External Validity Collapse
 - **Layer:** Evidence base / scale-up decision-making
 - **Severity:** Med-High
-- **Status:** OPEN
+- **Status:** ADDRESSED* (P-019 / Annex AN PROPOSED)
 - **Risk Score:** 4×4×(6-4)=32
 - **Note on impact:** The risk score understates the consequence of acting on false confidence. A scale-up decision based on a pilot that did not include crisis conditions is not a statistical error — it is a structural commitment that may be irreversible.
 - **Mechanism:** T-016 (FAP Capture) addresses evidence farming — deliberately piloting in favorable regions. T-023 is distinct: an *honest* pilot that succeeds, is genuinely representative, and produces valid evidence — but in a pre-crisis period. The evidence base does not include: (a) economic shock or recession; (b) compound supply disruption across multiple categories simultaneously; (c) an organized political opposition campaign against the system; (d) a hostile successor government transition; (e) a technology failure in an oracle or identity system at scale. When the system is deployed at scale and the first real compound crisis hits, the pilot evidence does not apply. This is the fundamental problem of external validity in social systems: controlled conditions do not generalize to adversarial conditions.
@@ -480,19 +507,18 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 | T-015 | Demand Oracle Poisoning | High | **PROPOSED** | P-012 | 48 |
 | T-016 | FAP Capture | **Critical** | **PROPOSED** | P-013 | 60 |
 | T-017 | Bootstrap Problem | **Critical** | **PROPOSED** | P-014 / P-020 | 45 |
-| T-018 | PCRP False-Trigger Exhaustion | High | **OPEN** | P-015 | 36 |
-| T-019 | Demand-Context Suppression | High | **OPEN** | P-015 | 48 |
+| T-018 | PCRP False-Trigger Exhaustion | High | **PROPOSED** | P-015 | 36 |
+| T-019 | Demand-Context Suppression | High | **PROPOSED** | P-015 | 48 |
 | T-020 | Epistemological Oracle Capture | **Critical** | **ADDRESSED** | P-017 | 60 |
 | T-021 | Algorithmic Oracle Capture | **Critical** | **ADDRESSED** | P-017 | 60 |
-| T-022 | Electoral Cycle Capture | **Critical** | **OPEN** | P-018 | 60 |
-| T-023 | Pilot External Validity Collapse | Med-High | **OPEN** | P-019 | 32 |
-
+| T-022 | Electoral Cycle Capture | **Critical** | **PROPOSED** | P-018 | 60 |
+| T-023 | Pilot External Validity Collapse | Med-High | **PROPOSED** | P-019 | 32 |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **ADDRESSED** | P-022 | 60 |
 | T-025 | Demurrage Sector-Capture via Investment Channel | High | **PROPOSED** | P-023 | 48 |
 | T-026 | Exit Denial | **Critical** | **ADDRESSED** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 |
 | T-027 | Subsidiarity Violation | High | **ADDRESSED** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 12 PROPOSED, 5 OPEN, 4 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033. T-025 addressed by P-023 (contract-commitment architecture, zero exemptions). T-026 and T-027 both ADDRESSED by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI).
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 16 PROPOSED, 0 OPEN, 5 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033. T-025 addressed by P-023 (contract-commitment architecture, zero exemptions). T-026 and T-027 both ADDRESSED by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI).
 
 ---
 
