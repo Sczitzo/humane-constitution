@@ -97,7 +97,6 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
         || doc.title.match(/^ANNEX\s+([A-Z]{1,3}\d*)\s*[—–-]/i)
       if (annexMatch) {
         const code = annexMatch[1].toUpperCase()
-        const keys = [`Annex ${code}`, `ANNEX ${code}`, code]
         const entry: RefEntry = {
           label: `Annex ${code}`,
           title: doc.title,
@@ -105,10 +104,40 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
           status: doc.statusBucket,
           docId: doc.id,
         }
-        for (const k of keys) {
+        // Register base keys
+        for (const k of [`Annex ${code}`, `ANNEX ${code}`, code]) {
           if (!map.has(k)) map.set(k, entry)
         }
+        // Also register subsection variants: "Annex AC1", "Annex AC2", etc.
+        // so that inline references like "Annex AC1" chip to the parent annex
+        for (let n = 1; n <= 9; n++) {
+          for (const k of [`Annex ${code}${n}`, `ANNEX ${code}${n}`]) {
+            if (!map.has(k)) map.set(k, { ...entry, label: `Annex ${code}${n}` })
+          }
+        }
       }
+    }
+  }
+
+  // Fourth pass: index FC-NNN entries from founding/commitments.md
+  for (const doc of docs) {
+    if (!/commitments/i.test(doc.path)) continue
+    // Rows: | **FC-030** | `ORACLE_N_MIN` | ... | Name | ... |
+    const fcPattern = /\|\s*\*{0,2}(FC-\d+)\*{0,2}\s*\|\s*`?([^`|\n]{3,60})`?\s*\|(?:[^|]*\|){1,2}\s*([^|\n]{0,80})\|/g
+    let fm: RegExpExecArray | null = fcPattern.exec(doc.content)
+    while (fm) {
+      const key = fm[1]
+      const name = fm[2].trim()
+      if (!map.has(key)) {
+        map.set(key, {
+          label: key,
+          title: `${key} — ${name}`,
+          summary: '',
+          status: 'reference',
+          docId: doc.id,
+        })
+      }
+      fm = fcPattern.exec(doc.content)
     }
   }
 
