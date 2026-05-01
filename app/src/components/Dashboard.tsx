@@ -823,7 +823,11 @@ function expandShorthandRefs(text: string): string {
       const to   = parseInt(toStr,   10)
       // Safety: only expand sensible ranges
       if (to <= from || to - from > 30) return _match
-      return Array.from({ length: to - from + 1 }, (_, i) => `${prefix}-${from + i}`).join(' / ')
+      // Preserve leading-zero width from the source (e.g. "012" → pad to 3 digits)
+      const padLen = Math.max(fromStr.length, toStr.length)
+      return Array.from({ length: to - from + 1 }, (_, i) =>
+        `${prefix}-${String(from + i).padStart(padLen, '0')}`
+      ).join(' / ')
     }
   )
   // 2. Slash list: PREFIX-N(/M)+
