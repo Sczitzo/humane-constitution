@@ -440,6 +440,9 @@ interface DashboardProps {
   loadError: string | null
   onViewChange: (view: AppView) => void
   onProgressChange?: (progress: number) => void
+  onNavDocsChange: (recent: CorpusDoc[], shelf: CorpusDoc[], label: string) => void
+  corpusQuery: string
+  onCorpusQueryChange: (q: string) => void
 }
 
 interface SourceFeedback {
@@ -3006,8 +3009,7 @@ function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
 }
 
 
-export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange }: DashboardProps) {
-  const [query, setQuery] = useState('')
+export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange }: DashboardProps) {
   const [documentQuery, setDocumentQuery] = useState('')
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
@@ -3029,7 +3031,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const readerPaneRef = useRef<HTMLDivElement | null>(null)
   const outlinePaneRef = useRef<HTMLDivElement | null>(null)
   const readerSearchInputRef = useRef<HTMLInputElement | null>(null)
-  const shelfSearchInputRef = useRef<HTMLInputElement | null>(null)
+
   const restorePaneScrollRef = useRef(true)
   const lastViewRef = useRef<AppView>(view)
   const scrollWriteFrameRef = useRef<number | null>(null)
@@ -3047,7 +3049,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const backTimeoutRef = useRef<number | null>(null)
   const isGoingBackRef = useRef(false)
 
-  const deferredQuery = useDeferredValue(query)
+  const deferredQuery = useDeferredValue(corpusQuery)
   const allDocs = corpus?.docs ?? []
   const refLookup = useMemo(() => buildRefLookup(allDocs), [allDocs])
   const baseDocs = corpus ? docsForView(view, corpus.docs, corpus.featuredPaths) : []
@@ -3062,6 +3064,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     .map((docId) => docById.get(docId))
     .filter((doc): doc is CorpusDoc => Boolean(doc))
   const meta = VIEW_META[view]
+
+  useEffect(() => {
+    onNavDocsChange(recentDocs, visibleDocs, meta.railLabel)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [recentDocs.map(d => d.id).join(','), visibleDocs.map(d => d.id).join(','), meta.railLabel])
+
   const independentPaneView = view === 'constitution' || view === 'annexes' || view === 'registries'
   const bindShelfPaneRef = (node: HTMLElement | null) => {
     shelfPaneRef.current = node
@@ -3084,6 +3092,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     lastViewRef.current = view
     restorePaneScrollRef.current = true
     startTransition(() => setSelectedDocId(readStoredSelectedDocId(view)))
+
+    const jumpId = window.localStorage.getItem('humane-reader:nav-jump')
+    if (jumpId) {
+      window.localStorage.removeItem('humane-reader:nav-jump')
+      startTransition(() => setSelectedDocId(jumpId))
+    }
   }, [view])
 
   useEffect(() => {
@@ -3237,8 +3251,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
       if (event.key === '/') {
         event.preventDefault()
-        shelfSearchInputRef.current?.focus()
-        shelfSearchInputRef.current?.select()
         return
       }
 
@@ -3423,7 +3435,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       }
 
       if (!visibleDocs.some((doc) => doc.id === targetDoc.id)) {
-        startTransition(() => setQuery(''))
+        startTransition(() => onCorpusQueryChange(''))
       }
 
       startTransition(() => setSelectedDocId(targetDoc.id))
@@ -3909,24 +3921,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
         <SectionIntro view={view} corpus={corpus} onJump={handleSelectQuickDoc} />
       )}
 
-      {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
-        <div className="flex max-w-md items-center gap-3">
-          <label htmlFor="corpus-search" className="sr-only">
-            Filter this section
-          </label>
-          <input
-            id="corpus-search"
-            ref={shelfSearchInputRef}
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Filter title, path, or headings…"
-            className="focus-ring flex-1 rounded border border-line bg-[var(--paper-strong)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint"
-          />
-          <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
-            {visibleDocs.length} {visibleDocs.length === 1 ? 'match' : 'matches'}
-          </span>
-        </div>
-      )}
 
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <ReaderWorkspace
