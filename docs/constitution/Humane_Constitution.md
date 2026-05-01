@@ -9,23 +9,57 @@
 
 Every system that governs human survival makes a claim about what value is and who it belongs to. Most systems make that claim implicitly, buried inside institutional arrangements that appear neutral. This protocol makes it explicitly, because the claim drives every architectural decision that follows.
 
-There are two categories of value that human societies generate. The first is produced value — the product of individual effort, skill, and productive activity. A person who builds something has a traceable causal relationship to what they built. A claim on that value is logically coherent because the grounding relationship exists. This is why ownership of what one produces is not merely a legal convention but a structural fact: the causal chain from individual action to outcome is real and traceable.
+---
 
-The second category is value that exists prior to and independently of individual action. Land does not become valuable because any single person improved it — it becomes valuable because a society grew around it. The electromagnetic spectrum was not created by its licensees. Environmental capacity was not manufactured by those who consume it. The accumulated knowledge passed between generations was not authored by any living individual. These are encountered conditions, not produced outcomes. A private claim on this value — what we call the Commons — asserts a causal relationship between individual effort and outcome that simply does not exist.
+#### I. Two Kinds of Value
+
+There are two categories of value that human societies generate. The first is **produced value** — the product of individual effort, skill, and productive activity. A person who builds something has a traceable causal relationship to what they built. A claim on that value is logically coherent because the grounding relationship exists. This is why ownership of what one produces is not merely a legal convention but a structural fact: the causal chain from individual action to outcome is real and traceable.
+
+The second category is **value that exists prior to and independently of individual action.** Land does not become valuable because any single person improved it — it becomes valuable because a society grew around it. The electromagnetic spectrum was not created by its licensees. Environmental capacity was not manufactured by those who consume it. The accumulated knowledge passed between generations was not authored by any living individual. These are encountered conditions, not produced outcomes. A private claim on this value — what we call the Commons — asserts a causal relationship between individual effort and outcome that simply does not exist.
+
+---
+
+#### II. A Structural Distinction, Not a Moral One
 
 This is not a moral argument. It is a structural one. The distinction between produced and unproduced value is a distinction in kind, not in degree. It holds regardless of legal convention, historical practice, or political agreement, because it refers to something those things cannot alter: whether or not a specific human action brought a specific value into existence.
 
-Modern monetary systems collapse this distinction. A single instrument — money — carries claims on produced value, claims on unproduced Commons value, and claims on the future labor of people who had no voice in the obligations those claims impose. When all three ride on the same instrument, the system becomes self-referential. The Commons is privately enclosed. Measurement adapts to conceal the growing gap between monetary claims and physical reality. Labor ceases to be voluntary and becomes the mechanism through which prior obligations — obligations the laborer did not incur — are serviced. Wealth converts into coercion not through malice or moral failure, but through the normal operation of a system whose instruments were never separated.
+---
+
+#### III. How Money Collapses the Distinction
+
+Modern monetary systems collapse this distinction. A single instrument — money — carries claims on produced value, claims on unproduced Commons value, and claims on the future labor of people who had no voice in the obligations those claims impose.
+
+When all three ride on the same instrument, the system becomes self-referential. The Commons is privately enclosed. Measurement adapts to conceal the growing gap between monetary claims and physical reality. Labor ceases to be voluntary and becomes the mechanism through which prior obligations — obligations the laborer did not incur — are serviced. Wealth converts into coercion not through malice or moral failure, but through the normal operation of a system whose instruments were never separated.
+
+---
+
+#### IV. Why Policy Cannot Fix This
 
 Policy cannot correct this. A tax on land value reduces the symptom while the structural condition persists. A reformed price index makes the measurement more honest while the thing being measured remains unchanged. Better legal protections for workers operate within the system that transforms labor into obligation in the first place. Corrections that operate within a structure are subject to its logic. They can slow the failure mode; they cannot alter the condition that produces it.
 
-Structural failure requires structural correction.
+> **Structural failure requires structural correction.**
 
-The correction this protocol proposes is instrument separation. Rather than attempting to make money better, it removes the survival function from money entirely. The Essential Access is not a cash transfer denominated in better currency. It is a non-monetary entitlement, denominated in physical basket units, that never enters the price system. A landlord cannot raise rent to absorb it because it is not money. A government cannot quietly defund it through a budget line because it is not a budget line. An employer cannot suppress wages in anticipation of it because it does not flow through the labor market. It does not carry prior claims on anyone's future labor because it is not a debt. It is access — direct, physical, unconditional.
+---
 
-The Flow runs markets. It carries claims on produced value and is subject to demurrage — a time-cost on idle accumulation — so that the compulsion to hoard is structural rather than merely discouraged. Voice governs bounded civic priorities, and Service Record governs readiness for rotating public service; neither can convert into economic power or survival leverage. And in verified scarcity, emergency rationing replaces price-spike exclusion. Each instrument has one job. The walls between them are the system.
+#### V. The Proposed Correction: Instrument Separation
 
-What remains unresolved in this design is not its architecture but its founding. The protocol acknowledges openly that constituting a legitimate founding coalition without already having the governance system one is trying to found is a circular dependency it can manage but not dissolve. It acknowledges that measurement systems can satisfy every formal criterion for independence while sharing the same epistemological foundations. It acknowledges that every layer added to prevent capture creates a new surface for capture. These are not failures of design. They are permanent operating conditions that honest design accounts for, documents, and publishes before the system ever runs.
+The correction this protocol proposes is instrument separation. Rather than attempting to make money better, it removes the survival function from money entirely.
+
+The **Essential Access** is not a cash transfer denominated in better currency. It is a non-monetary entitlement, denominated in physical basket units, that never enters the price system. A landlord cannot raise rent to absorb it because it is not money. A government cannot quietly defund it through a budget line because it is not a budget line. An employer cannot suppress wages in anticipation of it because it does not flow through the labor market. It does not carry prior claims on anyone's future labor because it is not a debt. It is access — direct, physical, unconditional.
+
+The **Flow** runs markets. It carries claims on produced value and is subject to demurrage — a time-cost on idle accumulation — so that the compulsion to hoard is structural rather than merely discouraged. **Voice** governs bounded civic priorities, and **Service Record** governs readiness for rotating public service; neither can convert into economic power or survival leverage. And in verified scarcity, emergency rationing replaces price-spike exclusion.
+
+Each instrument has one job. The walls between them are the system.
+
+---
+
+#### VI. What This Design Does Not Claim to Have Solved
+
+What remains unresolved in this design is not its architecture but its founding. The protocol acknowledges openly that constituting a legitimate founding coalition without already having the governance system one is trying to found is a circular dependency it can manage but not dissolve. It acknowledges that measurement systems can satisfy every formal criterion for independence while sharing the same epistemological foundations. It acknowledges that every layer added to prevent capture creates a new surface for capture.
+
+These are not failures of design. They are permanent operating conditions that honest design accounts for, documents, and publishes before the system ever runs.
+
+---
 
 This protocol was built in public, stress-tested adversarially, and released without restriction. If it is wrong, it should be possible to show that. If it is incomplete, it should be possible to extend it. The measure of its legitimacy is not that it claims to have solved what no one has solved, but that it is honest about what it has and has not.
 
@@ -33,7 +67,7 @@ This protocol was built in public, stress-tested adversarially, and released wit
 
 ---
 
-**Document posture:** this file is the lean constitutional text. Supporting annexes, hardening clauses, and detailed specifications live in the standalone [Annex Directory](docs/annexes/INDEX.md).
+**Document posture:** this file is the lean constitutional text. Supporting annexes, hardening clauses, and detailed specifications live in the standalone [Annex Directory](../annexes/INDEX.md).
 
 ### Authoritative document set (current)
 1. **Humane Constitution** — primary constitutional source of truth.
@@ -90,7 +124,7 @@ The Founding Order is read *through* every operational article: each article's d
 
 ## How to read this document
 - **Main body:** Sections I-VIII state the constitutional architecture, operating logic, baseline settings, and illustrative user flows.
-- **Annex corpus:** standalone annex documents live in the [Annex Directory](docs/annexes/INDEX.md). Use that directory for threat operations, change control, transition mechanics, hardening clauses, and detailed operational guidance.
+- **Annex corpus:** standalone annex documents live in the [Annex Directory](../annexes/INDEX.md). Use that directory for threat operations, change control, transition mechanics, hardening clauses, and detailed operational guidance.
 
 ---
 
@@ -418,8 +452,8 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 - **Continuity guarantees:** ensure uninterrupted access to essentials (Essential Access) during cutover.
 
 ### Phase 2: Boundary Interface (Legacy Bridge)
-- **Foreign inflow controls:** convert external capital into Flow subject to demurrage immediately, forcing productive deployment. Operative detail in [Annex AT §AT4](docs/annexes/ANNEX_AT.md).
-- **Trade membrane:** essential-capacity exports are capped to protect domestic Essential Access guarantees; strategic floors maintained for each CSM category; reciprocity membrane adjusts posture to counterparty behavior. Operative architecture in [Annex AT](docs/annexes/ANNEX_AT.md).
+- **Foreign inflow controls:** convert external capital into Flow subject to demurrage immediately, forcing productive deployment. Operative detail in [Annex AT §AT4](../annexes/ANNEX_AT.md).
+- **Trade membrane:** essential-capacity exports are capped to protect domestic Essential Access guarantees; strategic floors maintained for each CSM category; reciprocity membrane adjusts posture to counterparty behavior. Operative architecture in [Annex AT](../annexes/ANNEX_AT.md).
 - **Security posture:** defend infrastructure and ledger integrity as critical national assets.
 
 ### Phase 3: Network Expansion (Archipelago)
@@ -537,9 +571,9 @@ Constitutional rules, rights, and survival access remain one-person-one-vote, an
 
 ## Annex Directory
 
-The constitutional annex corpus is maintained as standalone files in the [Annex Directory](docs/annexes/INDEX.md).
+The constitutional annex corpus is maintained as standalone files in the [Annex Directory](../annexes/INDEX.md).
 
 - **Operative annexes:** threat operations, amendment mechanics, transition rules, issuance architecture, civic-layer specifics, and hardening clauses.
 - **Supporting annexes:** detailed operational rules, threat operations, and explanatory specifications kept out of the constitutional body.
-- **[Annex AT](docs/annexes/ANNEX_AT.md)** — external trade architecture: strategic floors, import dependency thresholds, essential-capacity export caps, foreign capital inflow controls, and the reciprocity membrane. Governs Phase 2 boundary interface from protocol activation.
+- **[Annex AT](../annexes/ANNEX_AT.md)** — external trade architecture: strategic floors, import dependency thresholds, essential-capacity export caps, foreign capital inflow controls, and the reciprocity membrane. Governs Phase 2 boundary interface from protocol activation.
 - **Interpretive rule:** where a standalone annex is designated controlling and conflicts with looser language in this file, the annex governs to the extent stated in that annex.

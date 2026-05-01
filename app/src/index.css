@@ -22,8 +22,8 @@
   --accent-deep: #68461d;
   --sage: #6f7c67;
   --sage-deep: #53604d;
-  --font-ui: 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
-  --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Baskerville', Georgia, serif;
+  --font-ui: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-serif: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
   --radius: 0.625rem;
   --reader-font-size: 16px;
@@ -157,11 +157,19 @@
   color: var(--ink);
   font-family: var(--font-serif);
   font-size: var(--reader-font-size, 1.05rem);
-  line-height: 1.78;
+  line-height: 1.72;
+  letter-spacing: -0.003em;
+  font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .reader-prose > * + * {
   margin-top: 1.35rem;
+}
+
+/* Paragraphs that open with a bold term after another paragraph get extra
+   breathing room — e.g. instrument-name lead-ins like **Flow**, **Voice**. */
+.reader-prose p + p:has(> strong:first-child) {
+  margin-top: 2.4rem;
 }
 
 .reader-h1,
@@ -195,7 +203,7 @@
 
 .reader-h4 {
   margin-top: 2rem;
-  margin-bottom: -0.4rem;
+  margin-bottom: 0.5rem;
   font-size: 1.06rem;
   color: var(--ink-strong);
   padding-left: 0.9rem;

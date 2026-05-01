@@ -45,36 +45,60 @@ async function openConstitutionView(page: Page): Promise<void> {
   await expect(page.getByTestId('reader-title')).toBeVisible()
 }
 
+async function openAnnexesView(page: Page): Promise<void> {
+  await page.goto('/')
+  await expect(page.getByTestId('nav-annexes')).toBeVisible()
+  await page.getByTestId('nav-annexes').click()
+  await expect(page.getByTestId('reader-title')).toBeVisible()
+}
+
+async function openShelfDocsList(page: Page): Promise<void> {
+  // Document rows live inside a collapsible <details> in the shelf pane.
+  // Open it so the shelf pane has enough content to overflow and scroll.
+  const details = page.locator('[data-testid="shelf-list"] > details')
+  const isOpen = await details.evaluate((el) => (el as HTMLDetailsElement).open)
+  if (!isOpen) {
+    await details.locator('summary').click()
+    await expect(details).toHaveAttribute('open', '')
+  }
+}
+
 test.describe('reader shell regression coverage', () => {
-  test('overview shelf pane scrolls independently', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 1024 })
-    await page.goto('/')
-
-    const shelfPane = page.getByTestId('shelf-pane')
-    const mainPane = page.getByTestId('reader-main')
-
-    await expect(shelfPane).toBeVisible()
-    await expect.poll(() => paneScrollTop(shelfPane)).toBe(0)
-
-    const mainBefore = await paneScrollTop(mainPane)
-    await wheelInside(page, shelfPane, 1400)
-
-    await expect.poll(() => paneScrollTop(shelfPane)).toBeGreaterThan(0)
-    await expect.poll(() => paneScrollTop(mainPane)).toBe(mainBefore)
-  })
-
-  test('constitution shelf and reader panes scroll independently', async ({ page }) => {
-    await page.setViewportSize({ width: 1660, height: 1100 })
-    await openConstitutionView(page)
+  test('annexes shelf pane scrolls independently', async ({ page }) => {
+    // Uses the annexes view (26+ docs) which overflows the shelf pane at this viewport.
+    // The home view renders <HomeView> with no shelf-pane; the constitution view has
+    // too few docs (~10) to overflow the pane at standard viewport heights.
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await openAnnexesView(page)
 
     const shelfPane = page.getByTestId('shelf-pane')
     const readerPane = page.getByTestId('reader-scroll-pane')
 
+    await expect(shelfPane).toBeVisible()
+    await openShelfDocsList(page)
+    await setPaneScrollTop(shelfPane, 0)
+    await setPaneScrollTop(readerPane, 0)
+
+    const readerBefore = await paneScrollTop(readerPane)
+    await wheelInside(page, shelfPane, 1400)
+
+    await expect.poll(() => paneScrollTop(shelfPane)).toBeGreaterThan(0)
+    await expect.poll(() => paneScrollTop(readerPane)).toBe(readerBefore)
+  })
+
+  test('annexes shelf and reader panes scroll independently', async ({ page }) => {
+    await page.setViewportSize({ width: 1660, height: 900 })
+    await openAnnexesView(page)
+
+    const shelfPane = page.getByTestId('shelf-pane')
+    const readerPane = page.getByTestId('reader-scroll-pane')
+
+    await openShelfDocsList(page)
     await setPaneScrollTop(shelfPane, 0)
     await setPaneScrollTop(readerPane, 0)
 
     await wheelInside(page, shelfPane, 1400)
-    await expect.poll(() => paneScrollTop(shelfPane)).toBeGreaterThan(0)
+    await expect.poll(() => paneScrollTop(shelfPane), { timeout: 8000 }).toBeGreaterThan(0)
     await expect.poll(() => paneScrollTop(readerPane)).toBe(0)
 
     await setPaneScrollTop(shelfPane, 0)

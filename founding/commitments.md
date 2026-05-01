@@ -88,6 +88,15 @@
 | **FC-182** | `CC_MAJOR_ROTATION_MAX_CONSECUTIVE` | 2 | RESERVED — bind before escrow launch | consecutive milestones | Maximum repeated assignments of the same inspector on Major-tier releases | Annex AR |
 | **FC-183** | `CC_MAJOR_ROTATION_COOLING_DAYS` | 2 | RESERVED — bind before escrow launch | days | Cooling-off interval before an inspector may return to the same project at Major tier | Annex AR |
 | **FC-184** | `CC_SINGLE_SECTOR_BACKGROUND_CAP` | 2 | RESERVED — bind before escrow launch | fraction of active pool | Caps prior-employment concentration from any single sector inside the active inspector pool | Annex AR |
+| **FC-185** | `AT_CALORIC_STAPLE_STRATEGIC_FLOOR` | 1 | RESERVED — bind by TSP + Article VI ratification before activation | days of supply | Caloric staple strategic reserve floor; draft value 180 days | Annex AT §AT1 |
+| **FC-186** | `AT_ENERGY_STRATEGIC_FLOOR` | 1 | RESERVED — bind by TSP + Article VI ratification before activation | days of supply (peak-demand period) | Energy strategic reserve floor; draft value 90 days | Annex AT §AT1 |
+| **FC-187** | `AT_ESSENTIAL_MEDICINES_STRATEGIC_FLOOR` | 1 | RESERVED — bind by TSP + Article VI ratification before activation | days of supply | Essential medicines strategic reserve floor; draft value 365 days | Annex AT §AT1 |
+| **FC-188** | `AT_SINGLE_SUPPLIER_WATCH_THRESHOLD` | 2 | RESERVED — bind by TSP before activation | % of category consumption | Single-supplier Watch trigger; draft value 25% | Annex AT §AT2 |
+| **FC-189** | `AT_SINGLE_SUPPLIER_CRITICAL_THRESHOLD` | 2 | RESERVED — bind by TSP before activation | % of category consumption | Single-supplier Critical trigger; draft value 60% | Annex AT §AT2 |
+| **FC-190** | `AT_FOREIGN_CAPITAL_INFLOW_LIMIT` | 2 | RESERVED — bind by TSP + Article V review before activation | % of annual Flow issuance | Foreign capital inflow concentration ceiling; draft value 15% | Annex AT §AT4 |
+| **FC-191** | `AT_FOREIGN_CAPITAL_CONVERSION_WINDOW` | 2 | RESERVED — bind by TSP + Article V review before activation | days before demurrage activates | Foreign capital conversion window; draft value 30 days | Annex AT §AT4 |
+| **FC-192** | `AT_EXTRACTIVE_RECLASSIFICATION_WINDOW` | 2 | RESERVED — bind by TSP before activation | months | Observation window before extractive-pattern reclassification; draft value 12 months | Annex AT §AT5 |
+| **FC-193** | `AT_STAGE3_SUSPENSION_THRESHOLD` | 1 | RESERVED — bind by Article VI before activation | Article VI supermajority fraction | Stage 3 suspension ratification threshold; draft value two-thirds | Annex AT §AT5 |
 
 ---
 

@@ -35,8 +35,8 @@ export default {
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', '"SFMono-Regular"', 'Menlo', 'monospace'],
-        sans: ['"Aptos"', '"Avenir Next"', '"Segoe UI"', 'sans-serif'],
-        serif: ['"Iowan Old Style"', '"Palatino Linotype"', '"Book Antiqua"', '"Baskerville"', 'Georgia', 'serif'],
+        sans: ['Inter', '"Aptos"', '"Avenir Next"', '"Segoe UI"', 'sans-serif'],
+        serif: ['Inter', '"Aptos"', '"Avenir Next"', '"Segoe UI"', 'sans-serif'],
       },
     },
   },
