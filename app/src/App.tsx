@@ -1,9 +1,17 @@
 import { startTransition, useEffect, useRef, useState } from 'react'
 import { Layout, type AppView } from './components/Layout'
 import { Dashboard } from './components/Dashboard'
-import { loadCorpus, type CorpusPayload } from './generated/corpus'
+import { loadCorpus, type CorpusDoc, type CorpusPayload } from './generated/corpus'
 
 const VIEW_STORAGE_KEY = 'humane-reader:last-view'
+
+function viewForDocSection(section: string): AppView {
+  if (section === 'constitution') return 'constitution'
+  if (section === 'annexes') return 'annexes'
+  if (section === 'registry') return 'registries'
+  if (section === 'simulation') return 'topics'
+  return 'home'
+}
 
 function readStoredView(): AppView {
   if (typeof window === 'undefined') {
@@ -34,6 +42,10 @@ export default function App() {
   const [corpus, setCorpus] = useState<CorpusPayload | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
   const [readingProgress, setReadingProgress] = useState(0)
+  const [recentDocs, setRecentDocs] = useState<CorpusDoc[]>([])
+  const [shelfDocs, setShelfDocs] = useState<CorpusDoc[]>([])
+  const [shelfLabel, setShelfLabel] = useState('')
+  const [corpusQuery, setCorpusQuery] = useState('')
 
   // Remembers window scroll position for each view so the nav bar can restore it.
   const scrollPositions = useRef<Map<AppView, number>>(new Map())
@@ -79,6 +91,18 @@ export default function App() {
     })
   }
 
+  function handleNavDocsChange(recent: CorpusDoc[], shelf: CorpusDoc[], label: string) {
+    setRecentDocs(recent)
+    setShelfDocs(shelf)
+    setShelfLabel(label)
+  }
+
+  function handleSelectNavDoc(doc: CorpusDoc) {
+    const nextView = viewForDocSection(doc.section)
+    handleViewChange(nextView)
+    window.localStorage.setItem('humane-reader:nav-jump', doc.id)
+  }
+
   // Internal view changes (Read Next, doc links) always start at the top.
   function handleViewChange(nextView: AppView) {
     setView(nextView)
@@ -88,8 +112,27 @@ export default function App() {
   }
 
   return (
-    <Layout activeNav={view} onNavChange={handleNavChange} readingProgress={readingProgress}>
-      <Dashboard view={view} corpus={corpus} loadError={loadError} onViewChange={handleViewChange} onProgressChange={setReadingProgress} />
+    <Layout
+      activeNav={view}
+      onNavChange={handleNavChange}
+      readingProgress={readingProgress}
+      recentDocs={recentDocs}
+      shelfDocs={shelfDocs}
+      shelfLabel={shelfLabel}
+      onSelectDoc={handleSelectNavDoc}
+      corpusQuery={corpusQuery}
+      onCorpusQueryChange={setCorpusQuery}
+    >
+      <Dashboard
+        view={view}
+        corpus={corpus}
+        loadError={loadError}
+        onViewChange={handleViewChange}
+        onProgressChange={setReadingProgress}
+        onNavDocsChange={handleNavDocsChange}
+        corpusQuery={corpusQuery}
+        onCorpusQueryChange={setCorpusQuery}
+      />
     </Layout>
   )
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import type { CorpusDoc } from '../generated/corpus'
 
 export type AppView =
   | 'home'
@@ -15,6 +16,12 @@ interface LayoutProps {
   activeNav: AppView
   onNavChange: (view: AppView) => void
   readingProgress?: number
+  recentDocs: CorpusDoc[]
+  shelfDocs: CorpusDoc[]
+  shelfLabel: string
+  onSelectDoc: (doc: CorpusDoc) => void
+  corpusQuery: string
+  onCorpusQueryChange: (q: string) => void
 }
 
 interface NavItem {
@@ -226,7 +233,18 @@ function SettingsDropdown() {
 
 // ── Layout ────────────────────────────────────────────────────────────────────
 
-export function Layout({ children, activeNav, onNavChange, readingProgress = 0 }: LayoutProps) {
+export function Layout({
+  children,
+  activeNav,
+  onNavChange,
+  readingProgress = 0,
+  recentDocs: _recentDocs,
+  shelfDocs: _shelfDocs,
+  shelfLabel: _shelfLabel,
+  onSelectDoc: _onSelectDoc,
+  corpusQuery: _corpusQuery,
+  onCorpusQueryChange: _onCorpusQueryChange,
+}: LayoutProps) {
   function renderNavLink(item: NavItem) {
     const active = activeNav === item.id
     return (
