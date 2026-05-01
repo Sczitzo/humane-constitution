@@ -1,4 +1,7 @@
 # ANNEX P — Proof-of-Personhood, Identity Tradeoffs, and Red Lines
+
+> **Provenance:** Foundational constitutional annex · Governs proof-of-personhood and identity tradeoffs later extended by P-003 and P-016 · Status: **ACTIVE**
+
 **Purpose.** Proof-of-personhood is load-bearing. The protocol therefore treats identity as a bounded tradeoff problem, not a solved technical detail. This Annex defines admissible solution classes, red lines, fallback defaults, and the selected constitutional stance for pilot and scale deployment.
 
 ### P1. Design goals and non-goals

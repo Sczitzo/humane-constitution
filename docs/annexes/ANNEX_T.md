@@ -1,4 +1,7 @@
 # ANNEX T — Compound Failure Scenarios and Interface Stress Tests
+
+> **Provenance:** Foundational constitutional annex · Defines compound failure simulations later extended by P-011 and P-019 · Status: **ACTIVE**
+
 **Purpose.** Complex systems fail at interfaces. This Annex supplements the single-threat register by defining compound stress tests that deliberately cross articles, instruments, and institutions.
 
 ### T1. Scenario class A - regional food shortage plus oracle manipulation plus Essential Access coercion

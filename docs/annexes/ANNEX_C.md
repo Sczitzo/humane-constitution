@@ -1,4 +1,6 @@
 # ANNEX C — Threat Register Operations (Workflow and Evidence)
+
+> **Provenance:** Foundational constitutional annex · Defines threat-register workflow and evidence discipline · Status: **ACTIVE**
 This annex defines how the Threat Register is maintained, tested, audited, and patched over time. It converts the register from a static table into an operational control system.
 
 ### C-1. Purpose

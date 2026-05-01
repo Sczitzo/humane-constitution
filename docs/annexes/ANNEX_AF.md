@@ -1,5 +1,7 @@
 # ANNEX AF — Grace Period Exploitation Clauses
 
+> **Provenance:** Implements [P-009 — Grace Exploitation Loop Hardening] · Addresses T-009 · Status: **PROPOSED**
+
 **Purpose.** This annex introduces operative clauses for P-009 (T-009 Grace Exploitation Loop). It amends Annex K4 (Protected Pause), extends P-002 collusion analytics to hardship attestation, and closes the T-009 × T-008 bypass route. Status: PROPOSED.
 
 ### AF1. Graduated Renewal Intensity (Annex K4 Amendment)

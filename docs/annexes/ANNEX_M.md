@@ -1,4 +1,6 @@
 # ANNEX M — Oracle, Physical Reality, and Measurement Limits
+
+> **Provenance:** Foundational constitutional annex · Governs oracle evidence, physical-reality measurement, and measurement-failure defaults later hardened by P-006, P-017, and P-022 · Status: **ACTIVE**
 **Purpose.** The protocol does not just need data; it needs defensible contact with physical reality. Capacity measurement is therefore a constitutional concern. The danger is not only manipulation, but confident error in systems that are harder to measure than they first appear.
 
 **Design principle:** if reality is uncertain, the system must behave humbly, not theatrically.

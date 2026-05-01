@@ -1,5 +1,7 @@
 # ANNEX AG — Formal Acceptance Process Integrity Clauses
 
+> **Provenance:** Implements [P-013 — Formal Acceptance Process Integrity] · Addresses T-016 · Status: **PROPOSED**
+
 **Purpose.** This annex strengthens the Formal Acceptance Protocol (FAP) against the exploit surfaces identified in T-016 (P-013). It amends the FAP directly and adds constitutional protections to its anti-gaming rules. Where this annex conflicts with the FAP document, this annex governs. Status: PROPOSED.
 
 ### AG1. Pilot Representativeness Standard (FAP Amendment)

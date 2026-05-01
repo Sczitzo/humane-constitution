@@ -1,4 +1,6 @@
 # ANNEX B — Threat Register
+
+> **Provenance:** Foundational constitutional annex · Houses the original threat-register layer now extended by governance provenance records · Status: **ACTIVE**
 Scoring uses Impact (I), Likelihood (L), Detectability (D). Risk Score = I × L × (6 − D). Owners are accountable for test coverage and response playbooks.
 
 | ID | Threat scenario (area) | I/L/D & score | Key controls | Tests/monitoring | Owner (residual) |

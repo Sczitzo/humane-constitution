@@ -1,4 +1,6 @@
 # ANNEX J — Monetary Calibration, Long-Horizon Capital, and Instrument Discipline
+
+> **Provenance:** Implements [P-031 — Anti-Dynasty Ownership] (§R2), [P-032 — Stewardship Ownership Standard] (§R1–R2), [P-033 — Worker-Owned and Mission-Locked Enterprise Preference] (§R1) · Status: **ACTIVE**
 **Purpose.** This annex refines the monetary architecture where hidden economic failure would otherwise appear: demurrage theory, long-horizon investment, instrument naming discipline, and calibration rules. It does not alter the constitutional separation among Flow, Essential Access, Voice, Service Record, and Shared Storehouse; it clarifies how the system uses Flow without punishing productive build time or silently recreating rent-seeking.
 
 **Design principle: punish idle extraction, not patient production.**

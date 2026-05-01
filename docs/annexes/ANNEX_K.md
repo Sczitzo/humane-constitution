@@ -1,4 +1,7 @@
 # ANNEX K — Essential Basket Governance and Civic Participation Fairness
+
+> **Provenance:** Foundational constitutional annex · Governs Essential Basket contestation, civic participation fairness, and protected pause rules later amended by P-009 · Status: **ACTIVE**
+
 **Purpose.** This annex addresses two persistent risks: first, that the essential basket will be treated as a settled technical list when it is actually a recurring constitutional conflict zone; second, that Voice and Service Record can quietly reward only people whose lives are already legible to institutions.
 
 **Design principle: govern the argument, not just the answer.**

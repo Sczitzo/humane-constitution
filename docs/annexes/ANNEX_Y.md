@@ -1,5 +1,7 @@
 # ANNEX Y — Constitutional Survival Minimum (CSM)
 
+> **Provenance:** Foundational constitutional annex · Defines the Constitutional Survival Minimum and Essential Access continuity floor · Status: **ACTIVE**
+
 **Status:** Tier 1 (Constitutional). Amendment requires H-3 refounding authority only.
 **Referenced by:** `Humane_Constitution.md` §0, Article IV, and §VIII.
 **Integration:** This annex defines the Constitutional Survival Minimum and removes ambiguity around the constitutional floor.

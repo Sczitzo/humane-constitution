@@ -1,5 +1,7 @@
 # ANNEX AL — Methodology-Class Definitions for Oracle Independence
 
+> **Provenance:** Implements [P-017 — Oracle Epistemological and Algorithmic Independence] · Addresses T-020 and T-021 · Status: **ACTIVE**
+
 **Pre-launch blocking gate — required before P-017 is operative · Governed as P-004 protected specification**
 **Status: ACTIVE — founding commitments resolved (FC-030, FC-031, FC-032, FC-033, FC-090, FC-091)**
 **Numerical values derive from `/founding/commitments.md`. Changes to commitments require Tier 1 (H-3) amendment per Proposal 1.**

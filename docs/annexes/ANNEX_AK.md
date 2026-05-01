@@ -1,5 +1,7 @@
 # ANNEX AK — Identity Asymmetric Error Doctrine
 
+> **Provenance:** Implements [P-016 — Identity Asymmetric Error Doctrine] · Addresses T-002 · Status: **PROPOSED**
+
 **Tier 2 founding commitment — required before deployment · Governed as P-004 protected specification**
 **Status: PROPOSED (referenced by T-002 and P-016)**
 

@@ -66,12 +66,16 @@
 
 ### P-029 — Public Finance & Commons Revenue (PFCR)
 
+**Constitutional text:** [ANNEX_X.md § X8](../annexes/ANNEX_X.md)
+
 - **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding function. PFCR funds public operations through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production.
 - **Clauses integrated:** no taxes on survival access, ordinary labor, or basic household exchange; public banking rails funded as infrastructure; postal-bank/public-bank option; anti-hidden-debt rules; source-by-source public reporting.
 - **Dependencies:** demurrage routing rule, asset carrying cost enforcement, gateway registry, and budget transparency stack.
 - **New risks introduced:** fiscal dependence on poorly calibrated demurrage or gateway flows; naming disputes over what counts as a prohibited tax. Mitigated by judicial review trigger and source registry.
 
 ### P-030 — Protocol-Only Money Creation and Household Finance Boundaries
+
+**Constitutional text:** [ANNEX_X.md](../annexes/ANNEX_X.md)
 
 - **Introduced design:** only protocol-authorized issuance bodies may create Flow or Flow-equivalent purchasing power. Private institutions may lend existing Flow, but may not create new Flow, deposit substitutes, or debt-expanded currency-like claims.
 - **Clauses integrated:** compounding interest prohibited on household ordinary-life debt; no securitization of survival-linked household claims; no revolving survival traps; public retail banking floor on the common rail.
@@ -80,6 +84,8 @@
 
 ### P-031 — Anti-Dynasty Ownership
 
+**Constitutional text:** [ANNEX_J.md § R1–R2](../annexes/ANNEX_J.md)
+
 - **Introduced design:** beneficial ownership always counts through to natural persons or mission-locked/community bodies. Perpetual trusts, shell chains, and equivalent structures may not preserve extractive control across generations.
 - **Clauses integrated:** family continuity protected in modest form, but dynastic landlordism, absentee succession structures, and perpetual extractive wrappers are prohibited.
 - **Dependencies:** beneficial-ownership registry, succession review rules, and housing / enterprise stewardship standards.
@@ -87,12 +93,16 @@
 
 ### P-032 — Stewardship Ownership Standard
 
+**Constitutional text:** [ANNEX_J.md § R1–R2](../annexes/ANNEX_J.md)
+
 - **Introduced design:** ownership across land, housing, and enterprise is reframed as stewardship rather than a perpetual tribute right. Capital may be rewarded for risk and contribution, but not for endless passive extraction from necessity or labor.
 - **Clauses integrated:** bounded capital claims, anti-rent use-right logic, and judicially reviewable passive-extraction prohibitions.
 - **Dependencies:** housing and commons use-right enforcement, capital-instrument redesign, and ACC / anti-monopoly enforcement.
 - **New risks introduced:** valuation disputes around what counts as productive stewardship. Mitigated by published criteria, appeal paths, and mission-lock documentation.
 
 ### P-033 — Worker-Owned and Mission-Locked Enterprise Preference
+
+**Constitutional text:** [ANNEX_J.md § R1](../annexes/ANNEX_J.md)
 
 - **Introduced design:** worker-owned, cooperative, and mission-locked firms receive structural preference in PFCR-backed finance, procurement, retained-earnings treatment, worker buyout pathways, and founder-exit conversion rules.
 - **Clauses integrated:** natural monopolies moved to a separate regulated-utility track; outside capital claims must be capped, redeemable, sunset, or otherwise bounded.
@@ -106,6 +116,7 @@
 **Threat addressed:** T-016 / INV-007  
 **Audit finding:** PRD-001 / Phase 1 Article I adversarial audit; confirmed still open in Phase 4 follow-up check  
 **Status:** ACTIVE | **Priority:** Critical | **Annex:** AV (Acceptance_Protocol.md §Structural Precondition Gate)
+**Constitutional text:** [ANNEX_AV.md](../annexes/ANNEX_AV.md)
 
 **Problem diagnosed:**  
 The prior INV-007 enforcement relied on a single FAP reviewer checking patch proposals against INVARIANTS.md before intake. This is a single point of failure: a captured, compromised, or mistaken reviewer can admit a Tier-1-touching proposal simply by not flagging the violation. The Beer VSM logic gate test (Phase 1) confirmed this: the normative model collapses to `defect → bypass` because the reviewer is both S3 (operational control) and the entire S3* (audit channel). A single captured actor voids all seven invariants simultaneously.
@@ -138,6 +149,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-001 — Shadow Convertibility Containment
 
+**Constitutional text:** [ANNEX_AB.md § AB2](../annexes/ANNEX_AB.md)
+
 - **Introduced design:** Essential Access-only channels, non-delegable redemption, context-locking where proportionate, anomaly detection, broker targeting, and an explicit leakage-tolerance concept.
 - **Clauses to integrate:** Essential Access Exclusivity, Non-Delegable Consumption, Leakage Tolerance, Broker-Focused Enforcement.
 - **Dependencies:** identity assurance, coercion reporting pathways, and sufficiently accurate essential-supply management.
@@ -151,6 +164,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-002 | T-004 | **ACTIVE** | Critical | economic + behavioral + contribution architecture. |
 
 ### P-002 — Incentive System Stabilization
+
+**Constitutional text:** [ANNEX_AB.md § AB3](../annexes/ANNEX_AB.md)
 
 - **Introduced design:** nonlinear reward curves, multi-channel rewards (Flow, civic standing, status/recognition), opportunity access, time/flexibility rewards, and anti-gaming contribution assessment.
 - **Clauses to integrate:** Incentive Nonlinearity, Multi-Channel Reward, Outcome-Based Contribution, Anti-Gaming Contribution.
@@ -166,6 +181,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-003 — Identity System Hardening
 
+**Constitutional text:** [ANNEX_AB.md § AB4](../annexes/ANNEX_AB.md)
+
 - **Introduced design:** four assurance tiers (survival floor, provisional, core, civic activation), multi-evidence thresholding, no single universal credential, hardened recovery, anti-Sybil controls, and no-survival-lockout under uncertainty.
 - **Clauses to integrate:** Identity Adversarial Reality, Differential Assurance, Recovery Safety, No Master Credential, Identity Failure Continuity.
 - **Dependencies:** appeals architecture, ombuds/advocate pathways, and clear separation between verification and monitoring.
@@ -179,6 +196,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-004 | T-007 | **ACTIVE** | Critical | governance + constitutional anti-capture control. |
 
 ### P-004 — Definition Drift Protection
+
+**Constitutional text:** [ANNEX_AB.md § AB5](../annexes/ANNEX_AB.md)
 
 - **Introduced design:** protected term classes, semantic effect test, worked-example requirement, public definition registry, upward classification default, and anti-laundering control across code, vendor, and standards layers.
 - **Clauses to integrate:** Definition Integrity, Semantic Effect, Upward Classification Default, Worked Example Requirement, Definition Registry, Anti-Laundering.
@@ -198,6 +217,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-005 — Governance Throughput Hardening
 
+**Constitutional text:** [ANNEX_AC.md § AC1](../annexes/ANNEX_AC.md)
+
 - **Change type:** structural + procedural + monitoring.
 - **Introduced design:** CRP dual-queue separation (constitutional vs. operational); minimum operational throughput floor (5 priority decisions per quarter, non-blockable by constitutional challenges); sequential emergency re-declaration cap (2 consecutive quarters max, requires independent audit and public justification to extend); intake throttle with priority scoring (impact × urgency × reversibility; Voice-signal for urgency; overflow is public); cross-quarter interim authorization bridge (Ombuds + 1 rotating CRP member + regional exec; scope-locked to emergency declaration; provisional only; cannot narrow Essential Access access or touch constitutional matters); decision quality audit metrics (alternatives-presented ratio, reversal rate, minority dissent rate); [Ambitious] real-time throughput dashboard with auto-escalation trigger.
 - **Clauses to integrate:** CRP Dual-Queue Separation; Minimum Throughput Floor; Sequential Emergency Cap; Intake Throttle and Priority Scoring; Cross-Quarter Interim Bridge; Decision Quality Metrics. See Annex AC1.
@@ -213,6 +234,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-006 | T-006 | **PROPOSED** | Critical | structural + authority definition + measurement architecture |
 
 ### P-006 — Measurement Lag and Supply Shock Hardening
+
+**Constitutional text:** [ANNEX_AC.md § AC2](../annexes/ANNEX_AC.md)
 
 - **Change type:** structural + authority definition + measurement architecture.
 - **Introduced design:** Sentinel indicator mandate — every slow-audit essential category requires a faster low-fidelity signal; max lag by volatility class (48h high / 7d medium / 30d low). Pre-Confirmation Response Protocol (PCRP) — defined first-responder authority (Regional Executive Body, joint activation); permitted: 70% above-baseline issuance reduction, reserve release, expedited oracle review (survival floor issuance stays 100%); prohibited: full Shared Storehouse, survival floor narrowing, other categories, beyond 72h without oracle confirmation; false-trigger tracking — 3 false activations per 4 quarters triggers mandatory independent audit. Shared Storehouse unwind symmetry — recovery fast-track mirrors PCRP; conservative bias applies to activation, not prolonged restriction after recovery. Cadence-adjusted U8 bridge — 48-hour trigger for high-volatility categories; 7-day retained for medium-volatility. [Ambitious] Essential Access redemption velocity as native sentinel (150% spike threshold). [Ambitious] Cross-category demand surge detector.
@@ -230,6 +253,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-008 — Bureaucratic Elite Formation Hardening
 
+**Constitutional text:** [ANNEX_AC.md § AC3](../annexes/ANNEX_AC.md)
+
 - **Change type:** structural + measurement + institutional design.
 - **Introduced design:** Legibility gap audit — quarterly Article VI reporting tracks verification approval rate, evidence burden, appeals rate, and abandonment rate by contribution category; 20-point disparity triggers independent process audit (not by incumbent verifier pool). Service Record sector ceiling specification mandate — max 25% per sector, max 35% per identifiable institutional-origin cluster in any Service Record-governed service pool; specified at founding as precondition under Annex N. Epistemic diversity requirement — three-axis standard (institutional origin ≤30%, contribution-type diversity ≥30% informal/care, geography ≥25% non-urban-dense) for all oversight bodies >5 members; pool design requirement. Verification independence rule — verifiers cannot review claims in own primary contribution category; applies to mid-range and above claims. Cooling-off cohort rule — cohort tracking by Ombuds Office; max 2 cohort members sharing review authority over same subject simultaneously. [Ambitious] Qualification standard governance — competence criteria added to P-004 protected terms registry; standard-setting body must include ≥40% from non-qualifying backgrounds. [Ambitious] Real-time concentration dashboard.
 - **Clauses to integrate:** Legibility Gap Audit; Service Record Sector Ceiling Specification (founding precondition Annex N); Epistemic Diversity Requirement; Verification Independence Rule; Cooling-Off Cohort Rule; Qualification Standard Governance (P-004 extension); Concentration Dashboard. See Annex AC3.
@@ -245,6 +270,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-011 | T-011 | **PROPOSED** | Critical | communication architecture + transparency + pre-commitment |
 
 ### P-011 — Narrative Attack Surface Hardening
+
+**Constitutional text:** [ANNEX_AD.md](../annexes/ANNEX_AD.md)
 
 - **Change type:** communication architecture + transparency + pre-commitment doctrine.
 - **Introduced design:** Rapid Public Communication Protocol (RPCP) — 4-hour structured template for any public-visibility operational event; covers what happened, system response, access status, next steps; does not replace 7-day post-mortem; pre-authorized publication authority required. Pre-committed failure communication doctrine — published pre-launch document acknowledging expected failures (PCRP false triggers, oracle disputes, Shared Storehouse activations, enforcement errors, measurement uncertainty) with containment mechanisms; converts failures from surprises to acknowledged expected events. Citizen-Facing Rights Layer (CFRL) — one page, 8th-grade level, pre-launch, translated; governed as P-004 protected specification. Adversarial Narrative Simulation — added to Annex T annual mandate; hostile framing team publishes simulated attack; system responds within 4 hours; report published. Hostile Frame Pre-emption Registry — top 10 mischaracterizations with accurate rebuttals and Article VII evidence; updated quarterly; published as 'Common Misunderstandings.' [Ambitious] Narrative Health Dashboard — public understanding accuracy surveys, hostile framing prevalence index, RPCP response time metric; Level 1 watch auto-trigger. [Ambitious] Pre-Launch Narrative Audit — independent adversarial audit by communications professionals; findings and mitigations published simultaneously.
@@ -262,6 +289,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-012 — Interface Hardening and Deadlock Prevention
 
+**Constitutional text:** [ANNEX_AE.md § AE2.1–AE2.4](../annexes/ANNEX_AE.md)
+
 - **Change type:** structural + protocol + measurement architecture.
 - **Introduced design:** PCRP oracle independence requirement — two-source corroboration must use structurally independent measurement systems; manipulated oracle counts as one source regardless of downstream channels; single-source PCRP activates at reduced scope with Ombuds co-certification. Categorical throughput minimums — P-005 floor amended from single aggregate to 5 categorical minimums (identity, supply, enforcement, governance, unreserved); single category capped at 3 of 5 slots. Emergency deadlock resolution protocol — auto-declaration when mandatory decision is blocked by 2+ valid processes; 3-member arbitration panel within 6 hours; survival floor bridge unconditional; scope freeze; mandatory root-cause review. Demand-context flag for Essential Access velocity oracle — discount applied during Flow enforcement actions, mass re-verification campaigns, or regional defection; Ombuds co-certification required for PCRP. RPCP contested-status template — separates physical event from legal characterization during active CRP review. Cumulative procedural drift trigger — extends P-004 to 20 Tier 3 decisions in 8 quarters reducing Tier 2/1 decision space; triggers mandatory CRP cumulative review.
 - **Clauses to integrate:** AE2.1–AE2.6. Amends AC1.2 (throughput floor), AC2.2 (PCRP), AD1 (RPCP), AB5 (P-004 drift).
@@ -277,6 +306,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-009 | T-009 | **PROPOSED** | Med-High | behavioral + verification + structural |
 
 ### P-009 — Grace Exploitation Loop Hardening
+
+**Constitutional text:** [ANNEX_AF.md](../annexes/ANNEX_AF.md)
 
 - **Change type:** behavioral + verification architecture + structural.
 - **Introduced design:** Graduated renewal intensity — first activation lightweight; first renewal structured; second renewal mid-intensity with support service confirmation; third+ renewal high-intensity independent panel. All qualifying hardship approved under any standard. Cross-quarter history review — full pause history assessed at every renewal; category switching flagged for elevated scrutiny at next renewal. Hardship attestation collusion detection — P-002 analytics extended to hardship networks; detects mutual pairs, star clusters, temporal clustering; community-disaster safe harbor for 2 quarters on oracle-verified regional emergency. Service Record slow-decay at 20% of normal rate during pause — Voice freeze unchanged; 4-quarter pause produces ~8% Service Record loss (negligible); 12-quarter rotation produces ~22% loss (drains high-impact threshold). Service pool pause-saturation monitoring — >20% simultaneous pause triggers pool-health alert and review; never bars individual activation. [Ambitious] Capability development pathway — up to 15% quarterly Service Record earnable through pause-appropriate stewardship during pause. [Ambitious] T-009 × P-008 explicit closure — paused cohort members count toward P-008 cohort cooling concurrent maximum; active members accommodate, not paused person.
@@ -294,6 +325,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-013 — Formal Acceptance Process Integrity
 
+**Constitutional text:** [ANNEX_AG.md](../annexes/ANNEX_AG.md)
+
 - **Change type:** structural + governance + audit architecture.
 - **Introduced design:** Pilot representativeness standard — pilot region requires published 4-dimension assessment; >1 favorable dimension requires second stress-tested region; single favorable region = PILOT only, not ACTIVE. Deadlock resolution timeline — 30d negotiation, 60d published mediation, day 61 CRP binding ruling (14-day SLA); substitute review if CRP is party. Audit epistemic independence — 4-year institutional affiliation bar; domain-diversity requirement; adversarial audit member for I=5 patches (multi-member team, no veto). Anti-gaming constitutional upgrade — evidence waiver prohibition reclassified Tier 2; urgency bypass now requires H-2 amendment process. Stagnation documentation quality — 3-question review (accurate? progress? resolvable?); structural obstacles trigger bootstrap review not continued documentation. [Ambitious] Bootstrap Resolution Protocol — minimum viable bootstrap micro-patch for circular dependencies; 2-authority expedited sign-off; auto-sunset; P-008 legibility gap audit as first bootstrap candidate. [Ambitious] FAP concentration controls — cohort cooling on sign-off cluster; audit body meets AC3.3 diversity standard; independent Article VII monitoring (not Ombuds-managed).
 - **Clauses to integrate:** AG1–AG7. FAP document amended directly. Anti-gaming rules reclassified Tier 2 (H-2 required for amendment). Representativeness criteria added to P-004 protected terms registry.
@@ -309,6 +342,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-014 | T-017 | **PROPOSED** | Critical | founding governance + one-time exception |
 
 ### P-014 — P-013 Bootstrap Activation (One-Time Founding Instrument)
+
+**Constitutional text:** [ANNEX_AH.md § AH1–AH7](../annexes/ANNEX_AH.md)
 
 **Special status.** P-014 is not a standing patch. It is a one-time founding instrument. It has no standing effect after P-013 reaches ACTIVE. It closes permanently upon P-013 activation.
 
@@ -336,6 +371,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-015 — PCRP Attack Surface Hardening
 
+**Constitutional text:** [ANNEX_AP.md](../annexes/ANNEX_AP.md)
+
 - **Change type:** structural + protocol + escalation path.
 - **Addresses:** T-018 (False-Trigger Exhaustion Attack), T-019 (Demand-Context Flag Suppression Attack).
 - **Introduced design:**
@@ -355,6 +392,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-016 | T-002 | **PROPOSED** | Critical | constitutional commitment + quantified doctrine |
 
 ### P-016 — Identity Asymmetric Error Doctrine
+
+**Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md)
 
 - **Change type:** constitutional commitment + quantified doctrine.
 - **Addresses:** T-002 — calibrating fraud tolerance without making the system unusable for vulnerable populations. Extends P-003.
@@ -377,7 +416,9 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-017 | T-020 / T-021 | **ACTIVE** | Critical | measurement architecture + accreditation + supply-chain transparency |
 
 ### P-017 — Oracle Epistemological and Algorithmic Independence
+
 **Status: ACTIVE (promoted 2026-04-18 via Proposal 3 close-out).** Numerical floors bound in `/founding/commitments.md` FC-030 (N≥5), FC-031 (≥3 methodology classes), FC-032 (pairwise correlation ≤0.30), FC-033 (≥1 adversarial seat), FC-100 (14-day quorum-loss restoration window). Annex AL promoted to ACTIVE with its former founding-parameter slots fully bound.
+**Constitutional text:** [ANNEX_AL.md](../annexes/ANNEX_AL.md)
 
 - **Change type:** measurement architecture + accreditation standards + supply-chain transparency.
 - **Addresses:** T-020 (Epistemological Oracle Capture), T-021 (Algorithmic Oracle Capture).
@@ -403,6 +444,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-018 — Electoral Cycle Resilience
 
+**Constitutional text:** [ANNEX_AM.md](../annexes/ANNEX_AM.md)
+
 - **Change type:** constitutional architecture + political durability + transition protocol.
 - **Addresses:** T-022 (Electoral Cycle Capture).
 - **Introduced design:**
@@ -425,6 +468,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ### P-019 — Pilot External Validity Gate
 
+**Constitutional text:** [ANNEX_AN.md](../annexes/ANNEX_AN.md)
+
 - **Change type:** evidence architecture + scale-up gating + simulation mandate.
 - **Addresses:** T-023 (Pilot External Validity Collapse).
 - **Introduced design:**
@@ -444,6 +489,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-020 | T-017 | **PROPOSED** | Critical | founding governance + window extension |
 
 ### P-020 — Founding Window Extension
+
+**Constitutional text:** [ANNEX_AH.md § AH2.1–AH2.4](../annexes/ANNEX_AH.md)
 
 - **Change type:** founding governance amendment — extends P-014 Annex AH.
 - **Addresses:** T-017 residual risk — 14-day pre-activation disclosure window is insufficient for independent critique to organize against a coordinated founding capture attempt.
@@ -465,6 +512,8 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-021 | — | **PROPOSED** | High | register architecture + disclosure policy |
 
 ### P-021 — Register Disclosure Protocol
+
+**Constitutional text:** [ANNEX_AO.md](../annexes/ANNEX_AO.md)
 
 - **Change type:** register architecture + operational security + transparency calibration.
 - **Addresses:** Open threat register as attack surface — the current register publishes specific detection thresholds, timing windows, and exploit paths that constitute an operational manual for sophisticated attackers. This is not a new threat ID (the vulnerability is architectural, not a distinct attack class); it is a structural change to how the register is maintained.
@@ -492,7 +541,9 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 | P-022 | T-024 | **ACTIVE** | Critical | protocol + authority definition + FC-100 restoration verification + reconciliation |
 
 ### P-022 — Shared Storehouse Oracle-Failure Fallback Protocol
+
 **Status: ACTIVE (promoted 2026-04-18 via Proposal 6 close-out).** FC-100 `ORACLE_QUORUM_LOSS_RESTORATION_WINDOW` = 14 days bound in `/founding/commitments.md`. Annex AQ promoted to ACTIVE with full protocol detail, survival floor unconditionality confirmed, Reconciliation Review specified.
+**Constitutional text:** [ANNEX_AQ.md](../annexes/ANNEX_AQ.md)
 
 - **Change type:** protocol + authority definition + oracle reconciliation procedure.
 - **Addresses:** T-024 (Shared Storehouse Oracle-Failure During Active Rationing) — the operational void where Shared Storehouse is active and the oracle system fails, loses quorum, or enters an unresolvable dispute with no defined decision path.
@@ -517,6 +568,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 ### P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)
 
 - **Status:** PROPOSED
+**Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md)
 - **Threat addressed:** T-025 (Demurrage Sector-Capture via Investment Channel).
 - **Direction adopted:** Direction B — deployment-speed architecture. Investment-channel exemptions are removed entirely. Genuine long-horizon capital needs are served by contract-commitment architecture; demurrage pressure remains universal.
 - **Red-team pre-analysis:** Ten attack vectors identified and resolved before this patch was written. Vectors: (1) escrow control ambiguity, (2) milestone definition gaming, (3) "working capital" as new exemption label, (4) advance procurement rebranded as hoarding, (5) subcontractor chain gaming, (6) essential-sector carve-out pressure, (7) multi-jurisdiction pooling ambiguity, (8) force majeure as wedge for permanent exemptions, (9) sector definitional creep, (10) milestone oracle capture. All resolved in patch rules below.
@@ -618,6 +670,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 ### P-024 — Attestation-at-Risk Stake Mechanism
 
 - **Status:** ACTIVE (promoted 2026-04-25 via Annex AS ratification). FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold bound in `/founding/commitments.md`.
+**Constitutional text:** [ANNEX_AS.md](../annexes/ANNEX_AS.md)
 - **Threat addressed:** T-009 (Coordinated False-Positive Suppression), TR-07 (Attestor Collusion), T-018 (Deliberate False-Trigger Exhaustion).
 - **Direction adopted:** Attestors who certify a claim bear skin-in-the-game exposure proportional to the claim's downstream consequence. A slashing schedule fires automatically when a certified claim is later disconfirmed by oracle quorum; redistribution routes slashed stake to the claimant harmed (where identifiable) and to a system integrity reserve.
 - **Introduced design:**
@@ -639,6 +692,8 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ### P-025 — Federated Ombuds Constitution
 
+**Constitutional text:** [ANNEX_AI.md](../annexes/ANNEX_AI.md)
+
 - **Introduced design:** Single-commissioner Ombuds replaced with a five-node federation. Each sub-Ombuds is structurally dispersed along at least four of five dimensions (jurisdictional, institutional-origin, funding, infrastructure, personnel-recruitment). Operational decisions are handled by a rotating Duty Sub-Ombuds; protocol-level decisions require a 4-of-5 Plenum supermajority (FC-091). Staggered 730-day terms (FC-092) with two-consecutive-term limit. Oversight Assembly of 7 members (5-of-7 threshold) certifies structural dispersal annually and activates Concentration Response on loss of dispersal.
 - **Clauses to integrate:** Full rewrite of Annex AI (previously PROPOSED single-commissioner draft) to Annex AI ACTIVE federated constitution. References from the Humane Constitution, Threat Register, and other annexes read through to the federation acting per §3 (operational vs protocol-level classes).
 - **Load-bearing integrations:**
@@ -659,6 +714,8 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ### P-026 — Founding Order: Subsidiarity, Consent & Exit
 
+**Constitutional text:** [Founding Order](../../founding/order/README.md)
+
 - **Introduced design:** The protocol acquires a foundational scale-and-consent layer beneath the operational articles. The Founding Order defines *who* consents to be governed, *at what scale*, and *how they withdraw*. Six files under `/founding/order/` cover: (1) README orientation, (2) five-tier scale hierarchy (FC-122: household / neighborhood ≤500 / locality ≤5,000 / region ≤500,000 / federation), (3) three-prong subsidiarity competence test (informational, adjudicative, externality-containment) with default-against-escalation rule, (4) affirmative consent protocol (2/3 supermajority, 90-day notice, 60-day deliberation, roll-call, 2/3 minimum participation), (5) exit protocol (FC-120 2/3 supermajority, FC-121 730-day graceful unwind with Essential Access continuity, no exit tax, no forfeiture, T-026 Exit Denial enforcement), (6) re-entry protocol (procedurally symmetric, no penalty, 365-day floor between cycles).
 - **Clauses to integrate:** Humane Constitution §0 Founding Order paragraph; every operational article reads through the Founding Order (smallest-competent-scale default).
 - **Load-bearing integrations:**
@@ -677,6 +734,8 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 ## P-027 — Constitutional Consolidation Detail
 
 ### P-027 — Founding Order and Seven-Article Structural Consolidation
+
+**Constitutional text:** [Humane_Constitution.md § III](../constitution/Humane_Constitution.md)
 
 - **Introduced design:** the constitutional architecture is consolidated into one Founding Order and seven Articles of Constitutional Order. Rights and rule-bound execution live together in Article I. Essential Access and delivery live together in Article IV. Flow, housing and commons use-rights, enterprise, and PFCR live together in Article V. Voice, Service Record, contribution recognition, and deliberation live together in Article VI. Transparency and environmental scanning live together in Article VII.
 - **Clauses integrated:** Humane Constitution §III rewritten around the final constitutional structure; White Paper §4 aligned to the same article model.

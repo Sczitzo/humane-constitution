@@ -1,5 +1,7 @@
 # ANNEX AE — Compound Interface Tests and Deadlock Prevention Clauses
 
+> **Provenance:** Implements [P-012 — Interface Hardening and Deadlock Prevention] (§AE2.1–AE2.4) · Addresses T-012, T-013, T-014, T-015 · Status: **PROPOSED**
+
 **Purpose.** This annex records compound interface test results, the new threats identified at patch interfaces (T-012 through T-015), and the operative clauses for P-012 (Interface Hardening and Deadlock Prevention). Where clauses here conflict with Annexes AC or AD, this annex governs.
 
 **Status:** PROPOSED. Clauses become operative only when formally accepted.

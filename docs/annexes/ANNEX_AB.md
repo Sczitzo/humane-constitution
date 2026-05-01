@@ -1,5 +1,7 @@
 # ANNEX AB — Document Governance and Integration Clauses
 
+> **Provenance:** Implements [P-001 — Shadow Convertibility Containment] (§AB2), [P-002 — Incentive System Stabilization] (§AB3), [P-003 — Identity System Hardening] (§AB4), [P-004 — Definition Drift Protection] (§AB5) · Addresses T-001, T-004, T-002, T-007 · Status: **ACTIVE**
+
 **Purpose.** This annex integrates the first adversarial review cycle into the Humane Constitution document set without deleting predecessor content. It formalises the running-document discipline, names the highest-priority threats, and converts design decisions into controlling constitutional and operational language.
 
 ### AB1. Merge Integrity and Running-Document Governance

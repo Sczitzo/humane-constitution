@@ -1,5 +1,7 @@
 # ANNEX A — Adversarial Test Suite
 
+> **Provenance:** Foundational constitutional annex · Supports adversarial validation and pilot acceptance testing · Status: **ACTIVE**
+
 This annex operationalises the protocol's adversarial testing discipline by defining how the system is continuously stress-tested against coercion, fraud, capture, and technical failure. It expands the threat-summary in Section IV into a repeatable test program.
 
 ---

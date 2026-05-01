@@ -123,6 +123,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ## Detailed Threat Entries
 
 ### T-001 — Shadow Convertibility
+
+- **Patch:** [P-001 — Shadow Convertibility Containment](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md) · Status: **ACTIVE**
 - **Layer:** Currency boundary / essential access
 - **Severity:** Critical
 - **Status:** PARTIAL
@@ -137,6 +139,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-002 — Identity Exploits
+
+- **Patch:** [P-003 — Identity System Hardening](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md); related: [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · [ANNEX_AK.md](../annexes/ANNEX_AK.md) · Status: **ACTIVE**
 - **Layer:** Identity / access / civic activation
 - **Severity:** Critical
 - **Status:** PARTIAL
@@ -151,6 +155,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-004 — Incentive Collapse
+
+- **Patch:** [P-002 — Incentive System Stabilization](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md) · Status: **ACTIVE**
 - **Layer:** Economic / behavioral / civic motivation
 - **Severity:** Critical
 - **Status:** PARTIAL
@@ -164,6 +170,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-005 — Governance Throughput Failure
+
+- **Patch:** [P-005 — Governance Throughput Hardening](../governance/Patch_Log.md) · [ANNEX_AC.md](../annexes/ANNEX_AC.md) · Status: **PROPOSED**
 - **Layer:** Decision flow / implementation latency
 - **Severity:** High
 - **Status:** ADDRESSED (P-005 PROPOSED)
@@ -178,6 +186,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-006 — Measurement Lag / Supply Shock
+
+- **Patch:** [P-006 — Measurement Lag and Supply Shock Hardening](../governance/Patch_Log.md) · [ANNEX_AC.md](../annexes/ANNEX_AC.md) · Status: **PROPOSED**
 - **Layer:** Measurement / oracle / scarcity logic
 - **Severity:** Critical
 - **Status:** ADDRESSED (P-006 PROPOSED)
@@ -192,6 +202,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-007 — Political Definition Drift
+
+- **Patch:** [P-004 — Definition Drift Protection](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md) · Status: **ACTIVE**
 - **Layer:** Governance semantics / hidden capture
 - **Severity:** Critical
 - **Status:** PARTIAL
@@ -205,6 +217,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-008 — Bureaucratic Elite Formation
+
+- **Patch:** [P-008 — Bureaucratic Elite Formation Hardening](../governance/Patch_Log.md) · [ANNEX_AC.md](../annexes/ANNEX_AC.md); related: [P-025 — Federated Ombuds Constitution](../governance/Patch_Log.md) · [ANNEX_AI.md](../annexes/ANNEX_AI.md) · Status: **PROPOSED**
 - **Layer:** Civic / verification / oversight layer
 - **Severity:** High
 - **Status:** ADDRESSED (P-008 PROPOSED)
@@ -219,6 +233,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-009 — Grace Exploitation Loop (Updated Entry)
+
+- **Patch:** [P-009 — Grace Exploitation Loop Hardening](../governance/Patch_Log.md) · [ANNEX_AF.md](../annexes/ANNEX_AF.md); related: [P-024 — Attestation-at-Risk Stake Mechanism](../governance/Patch_Log.md) · [ANNEX_AS.md](../annexes/ANNEX_AS.md) · Status: **PROPOSED**
 - **Layer:** Hardship / continuity / civic standing
 - **Severity:** Med-High
 - **Status:** ADDRESSED* (P-009)
@@ -233,6 +249,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-010 / T-011 — Narrative Attack Surface (Updated Entry)
+
+- **Patch:** [P-011 — Narrative Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AD.md](../annexes/ANNEX_AD.md) · Status: **PROPOSED**
 - **Layer:** Public communication / legitimacy perception
 - **Severity:** Critical
 - **Status:** ADDRESSED (P-011 PROPOSED)
@@ -252,6 +270,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 *New threats identified at patch interfaces during compound interface testing. All ADDRESSED via P-012.*
 
 ### T-012 — PCRP Poisoning via Oracle-Corroboration Collapse
+
+- **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · [ANNEX_AE.md](../annexes/ANNEX_AE.md) · Status: **PROPOSED**
 - **Layer:** PCRP / oracle / measurement
 - **Severity:** Critical
 - **Status:** ADDRESSED* (P-012)
@@ -265,6 +285,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-013 — Compound Crisis Throughput Starvation
+
+- **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · [ANNEX_AE.md](../annexes/ANNEX_AE.md) · Status: **PROPOSED**
 - **Layer:** Governance / throughput / multi-crisis
 - **Severity:** High
 - **Status:** ADDRESSED* (P-012)
@@ -278,6 +300,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-014 — Emergency Governance Triple Deadlock
+
+- **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · [ANNEX_AE.md](../annexes/ANNEX_AE.md) · Status: **PROPOSED**
 - **Layer:** Governance / emergency / institutional
 - **Severity:** Critical
 - **Status:** ADDRESSED* (P-012)
@@ -291,6 +315,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-015 — Demand-Side Oracle Poisoning
+
+- **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · [ANNEX_AE.md](../annexes/ANNEX_AE.md) · Status: **PROPOSED**
 - **Layer:** Measurement / PCRP / issuance
 - **Severity:** High
 - **Status:** ADDRESSED* (P-012)
@@ -304,6 +330,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-016 — Formal Acceptance Process Capture
+
+- **Patch:** [P-013 — Formal Acceptance Process Integrity](../governance/Patch_Log.md) · [ANNEX_AG.md](../annexes/ANNEX_AG.md); related: [P-034 — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement](../governance/Patch_Log.md) · [ANNEX_AV.md](../annexes/ANNEX_AV.md) · Status: **PROPOSED**
 - **Layer:** Patch acceptance / governance evolution
 - **Severity:** Critical
 - **Status:** ADDRESSED* (P-013)
@@ -319,6 +347,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-017 — P-013 Bootstrap Problem (First-Mover Circular Dependency)
+
+- **Patch:** [P-014 — P-013 Bootstrap Activation (One-Time Founding Instrument)](../governance/Patch_Log.md) · [ANNEX_AH.md](../annexes/ANNEX_AH.md); amended by [P-020 — Founding Window Extension](../governance/Patch_Log.md) · Status: **PROPOSED**
 - **Layer:** Patch acceptance / system evolution
 - **Severity:** Critical
 - **Status:** ADDRESSED* (P-014)
@@ -338,6 +368,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 *Both are second-order attacks on existing mitigations rather than attacks on the system directly.*
 
 ### T-018 — PCRP False-Trigger Exhaustion Attack
+
+- **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md); related: [P-024 — Attestation-at-Risk Stake Mechanism](../governance/Patch_Log.md) · [ANNEX_AS.md](../annexes/ANNEX_AS.md) · Status: **PROPOSED**
 - **Layer:** PCRP / governance / measurement
 - **Status:** PARTIAL — attestation-vector residual addressed by P-024 / Annex AS (FC-080/081/082, 2026-04-18 Proposal 9 close-out). False-trigger-at-scale remains with P-015.
 - **Severity:** High
@@ -352,6 +384,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-019 — Demand-Context Flag Suppression Attack
+
+- **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md) · Status: **PROPOSED**
 - **Layer:** PCRP / enforcement / measurement
 - **Severity:** High
 - **Status:** ADDRESSED* (P-015 / Annex AP PROPOSED)
@@ -371,6 +405,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 *T-020 and T-021 target the measurement architecture's epistemological foundations. T-022 targets the political durability of the constitutional architecture. T-023 targets the evidentiary basis for scale-up decisions.*
 
 ### T-020 — Epistemological Oracle Capture
+
+- **Patch:** [P-017 — Oracle Epistemological and Algorithmic Independence](../governance/Patch_Log.md) · [ANNEX_AL.md](../annexes/ANNEX_AL.md) · Status: **ACTIVE**
 - **Layer:** Measurement / RCS / oracle accreditation
 - **Severity:** Critical
 - **Status:** ADDRESSED by P-017 ACTIVE + Annex AL ACTIVE + Founding Commitments FC-030/FC-031/FC-032/FC-033 (Proposal 3 close-out, 2026-04-18)
@@ -385,6 +421,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-021 — Algorithmic Oracle Capture
+
+- **Patch:** [P-017 — Oracle Epistemological and Algorithmic Independence](../governance/Patch_Log.md) · [ANNEX_AL.md](../annexes/ANNEX_AL.md) · Status: **ACTIVE**
 - **Layer:** Measurement / RCS / algorithmic systems
 - **Severity:** Critical
 - **Status:** ADDRESSED by P-017 ACTIVE + Annex AL §4.2 (AI supply-chain concentration threshold = 2) + Founding Commitments FC-030/FC-031 (Proposal 3 close-out, 2026-04-18)
@@ -399,6 +437,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-022 — Electoral Cycle Capture
+
+- **Patch:** [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · [ANNEX_AM.md](../annexes/ANNEX_AM.md) · Status: **PROPOSED**
 - **Layer:** Constitutional architecture / political durability
 - **Severity:** Critical
 - **Status:** ADDRESSED* (P-018 / Annex AM PROPOSED)
@@ -413,6 +453,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-023 — Pilot External Validity Collapse
+
+- **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · [ANNEX_AN.md](../annexes/ANNEX_AN.md) · Status: **PROPOSED**
 - **Layer:** Evidence base / scale-up decision-making
 - **Severity:** Med-High
 - **Status:** ADDRESSED* (P-019 / Annex AN PROPOSED)
@@ -434,6 +476,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-024 — Shared Storehouse Oracle-Failure During Active Rationing
+
+- **Patch:** [P-022 — Shared Storehouse Oracle-Failure Fallback Protocol](../governance/Patch_Log.md) · [ANNEX_AQ.md](../annexes/ANNEX_AQ.md) · Status: **ACTIVE**
 - **Layer:** Shared Storehouse / oracle / scarcity management
 - **Severity:** Critical
 - **Status:** ADDRESSED by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 `ORACLE_QUORUM_LOSS_RESTORATION_WINDOW` = 14 days (Proposal 6 close-out, 2026-04-18)
@@ -448,6 +492,8 @@ These appear inside detailed entries below as "Open problem:" lines and are not 
 ---
 
 ### T-025 — Demurrage Sector-Capture via Investment Channel
+
+- **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **PROPOSED**
 - **Layer:** Flow monetary architecture / demurrage / productive investment
 - **Severity:** High
 - **Status:** PROPOSED — *P-023 (contract-commitment architecture, zero exemptions)*
@@ -532,6 +578,8 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 ---
 
 ### T-026 — Exit Denial
+
+- **Patch:** [P-026 — Founding Order: Subsidiarity, Consent & Exit](../governance/Patch_Log.md) · [Founding Order](../../founding/order/README.md) · [ANNEX_AI.md](../annexes/ANNEX_AI.md) · [ANNEX_AJ.md](../annexes/ANNEX_AJ.md) · Status: **ACTIVE**
 - **Layer:** Governance / federation-scope layer
 - **Severity:** Critical
 - **Status:** ADDRESSED (Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4)
@@ -546,6 +594,8 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 ---
 
 ### T-027 — Subsidiarity Violation
+
+- **Patch:** [P-026 — Founding Order: Subsidiarity, Consent & Exit](../governance/Patch_Log.md) · [Founding Order](../../founding/order/README.md) · [ANNEX_AI.md](../annexes/ANNEX_AI.md) · Status: **ACTIVE**
 - **Layer:** Governance / scale-decision layer
 - **Severity:** High
 - **Status:** ADDRESSED (Founding Order `subsidiarity_rule.md` + Annex AI §3.2 challenge; Proportionality Principle)

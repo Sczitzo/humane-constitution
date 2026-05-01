@@ -1,4 +1,7 @@
 # ANNEX X — Flow Issuance Architecture
+
+> **Provenance:** Implements [P-029 — Public Finance & Commons Revenue] (§X8) and [P-030 — Protocol-Only Money Creation and Household Finance Boundaries] (§X1–X8) · Status: **ACTIVE**
+
 **Purpose.** The protocol cannot be capture-resistant if the point of money creation remains vague. This annex defines how Flow comes into existence, who may authorize it, how issuance is bounded, and how issuance abuse is red-team tested. Where Annex X conflicts with looser issuance language elsewhere, Annex X governs.
 
 **Design principle: issue Flow against verified productive commitments, not against discretionary stock politics or financial privilege.**

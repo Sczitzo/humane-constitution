@@ -1,5 +1,7 @@
 # ANNEX AD — Narrative Attack Surface Clauses
 
+> **Provenance:** Implements [P-011 — Narrative Attack Surface Hardening] · Addresses T-010/T-011 · Status: **PROPOSED**
+
 **Purpose.** This annex introduces the operative clauses for P-011 (T-011 Narrative Attack Surface). It extends Article VII, the White Paper governance rules, and the annual simulation mandate. Where clauses here conflict with earlier language, this annex governs.
 
 **Status:** PROPOSED. Clauses become operative only when formally accepted into the constitution.

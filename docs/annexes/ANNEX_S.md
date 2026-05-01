@@ -1,4 +1,6 @@
 # ANNEX S — Constitutional Review Panel Anti-Capture and Failure Recovery
+
+> **Provenance:** Foundational constitutional annex · Hardens the Constitutional Review Panel against capture and failure · Status: **ACTIVE**
 **Purpose.** The CRP is a small but load-bearing institution. This Annex hardens it against capture and defines what happens if the CRP itself becomes compromised.
 
 ### S1. Composition hardening

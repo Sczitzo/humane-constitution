@@ -1,5 +1,7 @@
 # ANNEX AJ — Above-Ledger Bypass Worked Examples
 
+> **Provenance:** Implements [P-001 — Shadow Convertibility Containment] above-ledger worked examples · Addresses T-001 · Status: **ACTIVE**
+
 **Pre-launch gate: required before system deployment · Governed as P-004 protected specification**
 **Status: ACTIVE — penalty schedule bound to Founding Commitments FC-010, FC-040, FC-041 (Proposal 7 close-out, 2026-04-18)**
 

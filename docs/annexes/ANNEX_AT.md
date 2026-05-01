@@ -1,5 +1,7 @@
 # ANNEX AT — External Trade Architecture: Strategic Floors, Export Caps, and the Reciprocity Membrane
 
+> **Provenance:** Implements external trade architecture for strategic floors, export caps, capital conversion, and reciprocity membrane governance · Addresses external dependency capture, supply-shock coercion, and PRD-008 import-leverage risk · Status: **PROPOSED**
+
 **Status:** PROPOSED | **Priority:** High
 **Threats addressed:** T-003 (external dependency capture), T-005 (supply-shock coercion), PRD-008 (enterprise governance via import leverage)
 **Authority:** Tier 2. Changes require standard FAP process. Strategic floor definitions (§AT1) are Tier 1 adjacent and require H-2 supermajority if they touch the CSM basket.

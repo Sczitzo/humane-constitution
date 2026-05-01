@@ -1,5 +1,7 @@
 # ANNEX AH — Founding Bootstrap Resolution
 
+> **Provenance:** Implements [P-014 — Bootstrap Activation Instrument] (§AH1–AH7) · Amended by [P-020 — Founding Window Extension] (§AH2.1–AH2.4) · Addresses T-017 · Status: **PROPOSED**
+
 **Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard Formal Acceptance Protocol activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE. Status: PROPOSED.
 
 **Constitutional anchor.** P-014 is explicitly modeled on the provisional authority framework in Annexes N and U2: explicit disclosure, public challenge window, time-limited authority, mandatory review, and non-transferable founding status. This makes P-014 coherent with the protocol's existing constitutional theory rather than introducing a foreign mechanism.

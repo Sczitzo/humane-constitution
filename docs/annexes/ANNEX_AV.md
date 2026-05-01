@@ -1,5 +1,7 @@
 # ANNEX AV — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement
 
+> **Provenance:** Implements [P-034 — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement] · Addresses T-016 and INV-007 · Status: **ACTIVE**
+
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-034
 **Threats addressed:** T-016 (FAP capture), INV-007 single-point-of-failure
 **Origin:** PRD-001 / Phase 1 Article I adversarial audit; reconfirmed Phase 4 follow-up

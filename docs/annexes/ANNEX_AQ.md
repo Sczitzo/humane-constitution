@@ -1,5 +1,7 @@
 # ANNEX AQ — Shared Storehouse Oracle-Failure Fallback Protocol
 
+> **Provenance:** Implements [P-022 — Shared Storehouse Oracle-Failure Fallback Protocol] · Addresses T-024 · Status: **ACTIVE**
+
 **Status: ACTIVE — FC-100 bound; Proposal 6 close-out, 2026-04-18**
 **Addresses:** T-024 (Shared Storehouse Oracle-Failure During Active Rationing) — the operational void where Shared Storehouse is active and the oracle system fails, loses quorum, or enters an unresolvable dispute with no defined decision path.
 **Related patches:** P-022 (this annex's parent patch); P-006 (REB first-responder authority); P-012 AE2.3 (emergency deadlock protocol); P-017 (oracle independence, Annex AL); Annex Y (CSM — continues unconditionally throughout oracle failure).

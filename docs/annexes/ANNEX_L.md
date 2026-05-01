@@ -1,4 +1,7 @@
 # ANNEX L — Judicial Architecture and Constitutional Review Institutions
+
+> **Provenance:** Foundational constitutional annex · Constitutes judicial architecture and constitutional review institutions · Status: **ACTIVE**
+
 **Purpose.** Annexes G and H require a review body, but a body this load-bearing cannot remain implicit. This annex constitutes the review architecture, forum selection, standards of review, and remedy ladder needed to keep tier boundaries, rights, and instrument separation enforceable.
 
 **Design principle:** no single office should be able to quietly reinterpret the constitution.

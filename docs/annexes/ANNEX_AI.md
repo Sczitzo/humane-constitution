@@ -1,5 +1,7 @@
 # ANNEX AI — Federated Ombuds Constitution
 
+> **Provenance:** Implements [P-025 — Federated Ombuds Constitution] · Addresses T-008 auditor-capture residual and supports T-019, T-026, and T-027 enforcement · Status: **ACTIVE**
+
 **Status:** ACTIVE — Proposal 8 close-out, 2026-04-18
 **Authority:** Tier 1 structural (FC-090, FC-091 lock the federation and its threshold; FC-092 governs terms).
 **Supersedes:** The prior single-commissioner draft of Annex AI. Every load-bearing function previously carried by the "Ombuds Office" is now carried by the **Federated Ombuds** — five structurally independent sub-nodes, each a full Ombuds office, with explicit protocol-level decision rules.

@@ -1,4 +1,7 @@
 # ANNEX U — Operational Bypass Closure and Superseding Clauses
+
+> **Provenance:** Foundational constitutional annex · Closes operational bypass channels and supplies superseding clauses later extended by P-022 and P-024 · Status: **ACTIVE**
+
 **Purpose.** This Annex closes operational bypass channels identified in adversarial review. Where Annex U conflicts with earlier language in Annexes H, I, K, M, N, P, Q, R, or S, Annex U governs.
 
 **Design principle: tighten the exception systems before they become the new capture layer.**
