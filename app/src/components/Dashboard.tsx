@@ -3065,10 +3065,13 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     .filter((doc): doc is CorpusDoc => Boolean(doc))
   const meta = VIEW_META[view]
 
+  const recentDocIdString = useMemo(() => recentDocs.map(d => d.id).join(','), [recentDocs])
+  const visibleDocIdString = useMemo(() => visibleDocs.map(d => d.id).join(','), [visibleDocs])
+
   useEffect(() => {
     onNavDocsChange(recentDocs, visibleDocs, meta.railLabel)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [recentDocs.map(d => d.id).join(','), visibleDocs.map(d => d.id).join(','), meta.railLabel])
+  }, [recentDocIdString, visibleDocIdString, meta.railLabel])
 
   const independentPaneView = view === 'constitution' || view === 'annexes' || view === 'registries'
   const bindShelfPaneRef = (node: HTMLElement | null) => {
