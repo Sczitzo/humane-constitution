@@ -219,6 +219,10 @@
   color: var(--ink);
 }
 
+.reader-prose p + p {
+  margin-top: 1.1em;
+}
+
 .reader-prose strong {
   color: var(--ink-strong);
 }
@@ -267,6 +271,15 @@
   margin: 0;
   padding-left: 1.4rem;
   color: var(--ink);
+  list-style: disc;
+}
+
+.reader-prose * + .reader-list {
+  margin-top: 0.75rem;
+}
+
+.reader-list + * {
+  margin-top: 1.5rem;
 }
 
 .reader-list li {

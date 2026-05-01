@@ -1,78 +1,94 @@
 # One-Page Overview
 
-The Humane Constitution is a design for a society where money cannot decide who gets basic safety, who gets heard, or who escapes consequences.
+> *The Humane Constitution is a design for a society where **money cannot decide** who gets basic safety, who gets heard, or who escapes consequences.*
 
-It tries to make three things true at the same time:
+It tries to make three things true — **simultaneously:**
 
-- everyone has a basic needs floor
-- people can still trade, build, earn, and start businesses
-- wealth cannot quietly become political power
+1. **Everyone has a basic needs floor** — food, shelter, and essential care are guaranteed by *existence*, not employment.
+2. **People can still trade, build, earn, and start businesses** — competitive markets and personal enterprise are fully preserved.
+3. **Wealth cannot quietly become political power** — the instruments that govern survival, commerce, and civic voice are kept strictly separate.
+
+---
 
 ## The Problem
 
-Most societies ask one kind of money to do too many jobs.
+Most societies ask **one kind of money to do too many jobs.**
 
-The same money buys food, rent, medicine, business tools, lawyers, lobbyists, and access to powerful people. When one tool controls all of that, wealth stops being only about comfort. It becomes power over other people's safety.
+The same dollar buys food, rent, medicine, business tools, lawyers, lobbyists, and access to powerful people. When a single tool controls all of that:
 
-This project tries to break that link.
+- wealth stops being only about comfort
+- it becomes **power over other people's survival**
+- and that power compounds quietly, invisibly, until it's structural
+
+*This project tries to break that link.*
+
+---
 
 ## The Basic Design
 
-The system separates five tools:
+The system separates **five distinct tools** — each with a purpose, and walls that keep them apart:
 
-| Tool | Plain Meaning |
+| Tool | What It Is |
 |---|---|
-| **Flow** | ordinary money for markets, wages, prices, contracts, saving, and business |
-| **Essential Access** | the basic needs floor: food, water, shelter, essential care and medicines, and basic transit |
-| **Voice** | a limited way to help set public priorities |
-| **Service Record** | proof of useful public service, used for rotating service roles |
-| **Shared Storehouse** | temporary rationing during a real shortage |
+| **Flow** | Ordinary money — markets, wages, prices, contracts, saving, and business. |
+| **Essential Access** | The basic needs floor: food, water, shelter, essential care and medicines, and transit. |
+| **Voice** | A limited, equal way to help set public priorities. |
+| **Service Record** | Proof of useful public service, used for rotating civic roles. |
+| **Shared Storehouse** | Temporary rationing during a verified shortage — *nothing more*. |
 
-The names matter less than the walls between them.
+The names matter less than the walls between them:
 
-- Flow cannot buy basic needs or public power.
-- Essential Access cannot become cash, collateral, or status.
-- Voice cannot buy goods, rights, or protection.
-- Service Record cannot become inherited rank.
-- Shared Storehouse cannot become permanent.
+- **Flow** cannot buy basic needs or public power.
+- **Essential Access** cannot become cash, collateral, or status.
+- **Voice** cannot buy goods, rights, or protection.
+- **Service Record** cannot become inherited rank.
+- **Shared Storehouse** cannot become permanent.
+
+---
 
 ## What Makes It Different
 
-This design tries to do four hard things at once:
+This design tries to do **four hard things at once** — things most systems sacrifice one for another:
 
-1. Protect basic survival without making people obey to receive it.
-2. Keep markets without letting markets decide who deserves safety.
-3. Let people take part in public decisions without creating a social credit score.
-4. Handle real shortages openly instead of letting panic prices decide who goes without.
+1. **Protect basic survival** *without* making people obey to receive it.
+2. **Keep markets** *without* letting markets decide who deserves safety.
+3. **Let people shape public decisions** *without* creating a social credit score.
+4. **Handle real shortages openly** *instead of* letting panic prices decide who goes without.
+
+---
 
 ## What It Is Not
 
-- **Not a command economy:** people still use money, prices, contracts, and businesses.
-- **Not social credit:** Voice and Service Record cannot buy rights or basic needs.
-- **Not unlimited aid with no physical limits:** the basic needs floor depends on what society can actually provide.
-- **Not a surveillance plan:** the design requires the least data possible, review rights, and public limits on who can see what.
+- **Not a command economy** — people still use money, prices, contracts, and businesses freely.
+- **Not social credit** — Voice and Service Record cannot buy rights, safety, or basic needs.
+- **Not unlimited aid** — the basic needs floor depends on what society can *actually* provide.
+- **Not a surveillance plan** — the design requires the least data possible, with review rights and public limits on who can see what.
+
+---
 
 ## Current Status
 
-This is a serious design and public draft. It is not a live government and not ready for full rollout.
+This is a **serious design and public draft.** It is not a live government and not ready for full rollout.
 
-What exists now:
+#### What exists now
 
-- constitutional text
-- public explanations
-- a threat register
-- a patch log
-- stress-test documents
-- a reader app and validation checks
+- Constitutional text
+- Public explanations
+- A threat register and patch log
+- Stress-test documents
+- A reader app with validation checks
 
-What still needs proof:
+#### What still needs proof
 
-- real pilot evidence
-- an identity system that does not become surveillance
-- reliable measurement of food, housing, care, water, energy, and other essentials
-- a legitimate founding group that people can trust
+- Real pilot evidence
+- An identity system that does not become surveillance
+- Reliable measurement of food, housing, care, water, and energy
+- A legitimate founding group that people can trust
 
-The right response is not faith. The right response is pressure, testing, and specific criticism.
+> The right response is not faith.
+> The right response is **pressure, testing, and specific criticism.**
+
+---
 
 ## Read Next
 

@@ -922,7 +922,7 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
   return result
 }
 
-function renderInline(text: string, keyPrefix: string, query = '', noChips = false): React.ReactNode[] {
+function renderInline(text: string, keyPrefix: string, query = '', noChips = false, onInternalLink?: (href: string) => void): React.ReactNode[] {
   const parts: React.ReactNode[] = []
   const tokenPattern = /(`[^`]+`|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g
   let lastIndex = 0
@@ -950,16 +950,29 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
           : codeEl
       )
     } else if (match[2] && match[3]) {
+      const linkHref = match[3]
+      const linkLabel = match[2]
+      const isInternal = linkHref.endsWith('.md') && onInternalLink
       parts.push(
-        <a
-          key={`${keyPrefix}-link-${match.index}`}
-          href={match[3]}
-          target="_blank"
-          rel="noreferrer"
-          className="font-medium text-[var(--accent-deep)] underline decoration-[rgba(159,108,49,0.3)] underline-offset-4 transition hover:text-[var(--ink-strong)]"
-        >
-          {renderTextWithHighlights(match[2], query, `${keyPrefix}-link-inline-${match.index}`)}
-        </a>,
+        isInternal ? (
+          <button
+            key={`${keyPrefix}-link-${match.index}`}
+            onClick={() => onInternalLink(linkHref)}
+            className="font-medium text-[var(--accent-deep)] underline decoration-[rgba(159,108,49,0.3)] underline-offset-4 transition hover:text-[var(--ink-strong)]"
+          >
+            {renderTextWithHighlights(linkLabel, query, `${keyPrefix}-link-inline-${match.index}`)}
+          </button>
+        ) : (
+          <a
+            key={`${keyPrefix}-link-${match.index}`}
+            href={linkHref}
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-[var(--accent-deep)] underline decoration-[rgba(159,108,49,0.3)] underline-offset-4 transition hover:text-[var(--ink-strong)]"
+          >
+            {renderTextWithHighlights(linkLabel, query, `${keyPrefix}-link-inline-${match.index}`)}
+          </a>
+        ),
       )
     } else if (match[4]) {
       parts.push(
@@ -1574,18 +1587,40 @@ function MermaidBlock({ code, id }: { code: string; id: string }) {
   )
 }
 
+function resolveInternalDoc(href: string, currentPath: string, allDocs: CorpusDoc[]): CorpusDoc | null {
+  if (!href.endsWith('.md')) return null
+  // Resolve href relative to the directory of the current doc path
+  const dir = currentPath.includes('/') ? currentPath.slice(0, currentPath.lastIndexOf('/')) : ''
+  const parts = (dir ? dir + '/' + href : href).split('/')
+  const resolved: string[] = []
+  for (const part of parts) {
+    if (part === '..') resolved.pop()
+    else if (part !== '.') resolved.push(part)
+  }
+  const resolvedPath = resolved.join('/')
+  return allDocs.find((d) => d.path === resolvedPath) ?? null
+}
+
 function MarkdownDocument({
   doc,
   searchQuery,
   copiedHeadingSlug,
   onCopyHeadingLink,
+  allDocs,
+  onSelectDoc,
 }: {
   doc: CorpusDoc
   searchQuery: string
   copiedHeadingSlug: string | null
   onCopyHeadingLink: (slug: string) => void
+  allDocs: CorpusDoc[]
+  onSelectDoc: (doc: CorpusDoc) => void
 }) {
   const blocks = parseMarkdown(doc)
+  const handleInternalLink = (href: string) => {
+    const target = resolveInternalDoc(href, doc.path, allDocs)
+    if (target) onSelectDoc(target)
+  }
   const hiddenFirstHeading = normalizeComparable(doc.title)
 
   return (
@@ -1624,7 +1659,7 @@ function MarkdownDocument({
         if (block.type === 'paragraph') {
           return (
             <p key={`${doc.id}-paragraph-${index}`}>
-              {renderInline(block.text, `${doc.id}-paragraph-inline-${index}`, searchQuery)}
+              {renderInline(block.text, `${doc.id}-paragraph-inline-${index}`, searchQuery, false, handleInternalLink)}
             </p>
           )
         }
@@ -1638,7 +1673,7 @@ function MarkdownDocument({
             >
               {block.items.map((item, itemIndex) => (
                 <li key={`${doc.id}-list-item-${index}-${itemIndex}`}>
-                  {renderInline(item, `${doc.id}-list-inline-${index}-${itemIndex}`, searchQuery)}
+                  {renderInline(item, `${doc.id}-list-inline-${index}-${itemIndex}`, searchQuery, false, handleInternalLink)}
                 </li>
               ))}
             </ListTag>
@@ -1676,7 +1711,7 @@ function MarkdownDocument({
         if (block.type === 'quote') {
           return (
             <blockquote key={`${doc.id}-quote-${index}`} className="reader-quote">
-              {renderInline(block.text, `${doc.id}-quote-inline-${index}`, searchQuery)}
+              {renderInline(block.text, `${doc.id}-quote-inline-${index}`, searchQuery, false, handleInternalLink)}
             </blockquote>
           )
         }
@@ -1933,6 +1968,8 @@ function ReaderPanel({
             searchQuery={searchQuery}
             copiedHeadingSlug={copiedHeadingSlug}
             onCopyHeadingLink={onCopyHeadingLink}
+            allDocs={allDocs}
+            onSelectDoc={onSelectDoc}
           />
           <ReadNext
             current={doc}
