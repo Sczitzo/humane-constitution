@@ -242,6 +242,32 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
     }
   }
 
+  // Fifth pass: index every doc by path and filename so backtick path references become chips
+  for (const doc of docs) {
+    const path = doc.path  // e.g. "docs/constitution/Humane_Constitution.md"
+    const filename = path.split('/').pop() ?? path  // "Humane_Constitution.md"
+    const entry: RefEntry = {
+      label: filename,
+      title: doc.title,
+      summary: doc.summary || '',
+      status: doc.statusBucket,
+      docId: doc.id,
+    }
+    // Full path (with and without leading slash)
+    for (const k of [path, `/${path}`]) {
+      if (!map.has(k)) map.set(k, entry)
+    }
+    // Filename only
+    if (!map.has(filename)) map.set(filename, { ...entry, label: filename })
+    // Directory path → map to this doc if it's a README-style entry
+    const dir = path.substring(0, path.lastIndexOf('/') + 1)  // "founding/order/"
+    if (dir && (filename === 'README.md' || filename === 'index.md')) {
+      for (const k of [dir, `/${dir}`, dir.replace(/\/$/, ''), `/${dir.replace(/\/$/, '')}`]) {
+        if (!map.has(k)) map.set(k, { ...entry, label: dir })
+      }
+    }
+  }
+
   return map
 }
 
@@ -275,13 +301,13 @@ const STATUS_DOT_DARK: Record<string, string> = {
 
 interface TooltipPos { x: number; y: number; align: 'left' | 'right' }
 
-function RefChip({ refKey, display }: { refKey: string; display: string }) {
+function RefChip({ refKey, display, fallback }: { refKey: string; display: string; fallback?: React.ReactNode }) {
   const { lookup, onNavigate, isDark } = useContext(RefNavContext)
   const entry = lookup.get(refKey) || lookup.get(display)
   const btnRef = useRef<HTMLButtonElement>(null)
   const [pos, setPos] = useState<TooltipPos | null>(null)
 
-  if (!entry) return <>{display}</>
+  if (!entry) return fallback !== undefined ? <>{fallback}</> : <>{display}</>
 
   const chipStyles = isDark ? STATUS_CHIP_STYLES_DARK : STATUS_CHIP_STYLES
   const dotStyles  = isDark ? STATUS_DOT_DARK : STATUS_DOT
@@ -908,13 +934,20 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
     }
 
     if (match[1]?.startsWith('`')) {
-      parts.push(
+      const codeContent = match[1].slice(1, -1)
+      const isPathLike = /[/\\]/.test(codeContent) || codeContent.endsWith('.md') || codeContent.endsWith('.ts') || codeContent.endsWith('.json')
+      const codeEl = (
         <code
           key={`${keyPrefix}-code-${match.index}`}
           className="rounded-md bg-[rgba(60,54,46,0.08)] px-1.5 py-0.5 font-mono text-[0.88em] text-[var(--ink-strong)]"
         >
-          {renderTextWithHighlights(match[1].slice(1, -1), query, `${keyPrefix}-code-inline-${match.index}`)}
-        </code>,
+          {renderTextWithHighlights(codeContent, query, `${keyPrefix}-code-inline-${match.index}`)}
+        </code>
+      )
+      parts.push(
+        isPathLike
+          ? <RefChip key={`${keyPrefix}-pathchip-${match.index}`} refKey={codeContent} display={codeContent} fallback={codeEl} />
+          : codeEl
       )
     } else if (match[2] && match[3]) {
       parts.push(
