@@ -70,8 +70,8 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
       }
     }
 
-    // Threat entries: T-\d+, TR-\d+, PRD-\d+, INV-\d+ — scan all registry docs
-    if (doc.section === 'registry') {
+    // Threat entries: T-\d+, TR-\d+, PRD-\d+, INV-\d+ — scan registry + constitution docs
+    if (doc.section === 'registry' || doc.section === 'constitution') {
       for (const h of doc.headings) {
         const tm = h.text.match(/^(T-\d+|TR-\d+|PRD-\d+|INV-\d+)\s*[—–:\s]/)
         if (tm) {
@@ -113,9 +113,10 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
   }
 
   // Second pass: scan raw content for inline PRD-xxx, TR-xx references in table cells
-  // Format: "| PRD-004 / household coercion |" or "T-009 / TR-07 / ..."
+  // Format: "| PRD-004 / household coercion |", "| P-030 | PRD-004 | ACTIVE | Critical | description |"
   for (const doc of docs) {
     if (!/patch.log|patch_log|threat.register|threat_register/i.test(doc.path)) continue
+    // Pattern A: PRD-NNN / description
     const cellPattern = /\b(PRD-\d+|TR-\d+)\s*\/\s*([^|,\n]{3,60})/g
     let cm: RegExpExecArray | null = cellPattern.exec(doc.content)
     while (cm) {
@@ -131,6 +132,23 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
         })
       }
       cm = cellPattern.exec(doc.content)
+    }
+    // Pattern B: table row "| P-NNN | PRD-NNN | STATUS | Priority | description |"
+    const rowPattern = /\|\s*P-\d+\s*\|\s*(PRD-\d+)\s*\|\s*\*{0,2}\w+\*{0,2}\s*\|\s*\w+\s*\|\s*([^|]{5,120})\|/g
+    let rm: RegExpExecArray | null = rowPattern.exec(doc.content)
+    while (rm) {
+      const key = rm[1]
+      const desc = rm[2].trim().replace(/\*+/g, '').trim()
+      if (!map.has(key) && desc.length > 4) {
+        map.set(key, {
+          label: key,
+          title: `${key} — ${desc.slice(0, 80)}`,
+          summary: '',
+          status: 'reference',
+          docId: doc.id,
+        })
+      }
+      rm = rowPattern.exec(doc.content)
     }
     // Also catch "T-010 / T-011 — Combined heading" style
     const combinedPattern = /\b(T-\d+)\s*\/\s*(T-\d+)\s*[—–]/g
@@ -3814,50 +3832,58 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       <div
         style={{
           position: 'fixed',
-          bottom: 24,
-          left: 24,
+          bottom: 28,
+          left: 28,
           zIndex: 9999,
           display: 'flex',
           alignItems: 'center',
-          gap: 8,
-          background: isDark ? 'rgba(28,26,22,0.92)' : 'rgba(253,249,242,0.96)',
-          border: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(60,54,46,0.14)'}`,
-          borderRadius: 10,
+          gap: 0,
+          background: isDark ? '#1a2a20' : '#2a2520',
+          border: `1px solid ${isDark ? 'rgba(80,200,120,0.25)' : 'rgba(255,255,255,0.18)'}`,
+          borderRadius: 12,
           boxShadow: isDark
-            ? '0 4px 24px rgba(0,0,0,0.5)'
-            : '0 4px 20px rgba(0,0,0,0.12)',
-          padding: '8px 14px 8px 12px',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
-          animation: 'fadeSlideUp 0.18s ease',
+            ? '0 8px 32px rgba(30,120,60,0.4), 0 2px 8px rgba(0,0,0,0.5)'
+            : '0 8px 32px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.18)',
+          overflow: 'hidden',
+          animation: 'fadeSlideUp 0.2s cubic-bezier(0.16,1,0.3,1)',
         }}
         role="navigation"
         aria-label="Return to previous position"
       >
-        <svg
-          width="13" height="13" viewBox="0 0 13 13" fill="none"
-          style={{ color: isDark ? '#a09680' : '#6b7280', flexShrink: 0 }}
-        >
-          <path d="M8 2L4 6.5L8 11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        {/* Main back button */}
         <button
           type="button"
           onClick={handleGoBack}
           style={{
             background: 'none',
             border: 'none',
-            padding: 0,
+            padding: '10px 14px 10px 14px',
             cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
             fontFamily: 'inherit',
-            fontSize: 12,
-            fontWeight: 500,
-            color: isDark ? '#c8bfb2' : '#3c362e',
+            fontSize: 13,
+            fontWeight: 600,
+            color: '#f0ebe4',
             letterSpacing: '0.01em',
             lineHeight: 1,
+            whiteSpace: 'nowrap',
           }}
+          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.07)')}
+          onMouseLeave={e => (e.currentTarget.style.background = 'none')}
         >
+          <svg
+            width="13" height="13" viewBox="0 0 13 13" fill="none"
+            style={{ color: isDark ? '#4ade80' : '#9f8c6e', flexShrink: 0 }}
+          >
+            <path d="M8 2L4 6.5L8 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
           Back to previous position
         </button>
+        {/* Divider */}
+        <span style={{ width: 1, alignSelf: 'stretch', background: isDark ? 'rgba(80,200,120,0.2)' : 'rgba(255,255,255,0.1)', flexShrink: 0 }} />
+        {/* Dismiss */}
         <button
           type="button"
           onClick={() => { setBackTarget(null); if (backTimeoutRef.current !== null) { window.clearTimeout(backTimeoutRef.current); backTimeoutRef.current = null } }}
@@ -3865,12 +3891,16 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           style={{
             background: 'none',
             border: 'none',
-            padding: '0 0 0 4px',
+            padding: '10px 12px',
             cursor: 'pointer',
-            color: isDark ? '#5a5246' : '#9ca3af',
-            fontSize: 11,
+            color: 'rgba(240,235,228,0.45)',
+            fontSize: 13,
             lineHeight: 1,
+            display: 'flex',
+            alignItems: 'center',
           }}
+          onMouseEnter={e => { (e.currentTarget.style.background = 'rgba(255,255,255,0.07)'); (e.currentTarget.style.color = 'rgba(240,235,228,0.85)') }}
+          onMouseLeave={e => { (e.currentTarget.style.background = 'none'); (e.currentTarget.style.color = 'rgba(240,235,228,0.45)') }}
         >
           ✕
         </button>
