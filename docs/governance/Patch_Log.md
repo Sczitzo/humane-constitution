@@ -597,19 +597,19 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-012–T-015 | P-012 | **PROPOSED** | Annex AE |
 | T-016 | P-013 | **PROPOSED** | Annex AG |
 | T-017 | P-014 | **PROPOSED** | Annex AH |
-| T-018 / T-019 | P-015 | **PROPOSED** | Annex AP; pre-launch gate: Annex AI |
+| T-018 / T-019 | P-015 | **PROPOSED** | Annex AP · Annex AI |
 | T-002 | P-016 | **PROPOSED** | Annex AK |
-| T-020 / T-021 | P-017 | **ACTIVE** | Annex AL ACTIVE · FC-030/031/032/033/100 |
+| T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
 | T-022 | P-018 | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **PROPOSED** | Annex AN |
 | T-017 | P-020 | **PROPOSED** | Annex AH2 |
 | — | P-021 | **PROPOSED** | Annex AO |
-| T-024 | P-022 | **ACTIVE** | Annex AQ ACTIVE · FC-100 |
+| T-024 | P-022 | **ACTIVE** | Annex AQ · FC-100 |
 | T-025 | P-023 | **PROPOSED** | Annex AR |
 | T-009 / TR-07 / T-018 | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
-| T-008 | P-025 | **ACTIVE** | Annex AI ACTIVE (rewritten) · FC-090/091/092 |
-| T-026 / T-027 | P-026 | **ACTIVE** | `/founding/order/` ACTIVE · FC-120/121/122 |
-| T-005 / T-008 | P-027 | **ACTIVE** | `Humane_Constitution.md` §III Founding Order + Articles I-VII · `docs/public/04_white_paper.md` §4 |
+| T-008 | P-025 | **ACTIVE** | Annex AI · FC-090/091/092 |
+| T-026 / T-027 | P-026 | **ACTIVE** | `founding/order/` · FC-120/121/122 |
+| T-005 / T-008 | P-027 | **ACTIVE** | `Humane_Constitution.md` · `docs/public/04_white_paper.md` |
 
 ---
 
