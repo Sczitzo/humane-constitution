@@ -805,27 +805,44 @@ function renderTextWithHighlights(text: string, query: string, keyPrefix: string
 // Pattern that matches ref tokens we want to chip-ify in plain text
 const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1,3}\d*|ANNEX\s+[A-Z]{1,3}\d*|FC-\d+)\b/g
 
+/**
+ * Expand shorthand multi-ref sequences before tokenising.
+ * "T-012/013/014/015" → "T-012 / T-013 / T-014 / T-015"
+ * "FC-080/081/082"    → "FC-080 / FC-081 / FC-082"
+ * Works for any prefix (T, P, FC, TR, PRD, INV).
+ */
+function expandShorthandRefs(text: string): string {
+  return text.replace(
+    /\b(T|P|FC|TR|PRD|INV)-(\d+)((?:\/\d+)+)\b/g,
+    (_match, prefix, first, rest) => {
+      const nums = [first, ...rest.slice(1).split('/')]
+      return nums.map(n => `${prefix}-${n}`).join(' / ')
+    }
+  )
+}
+
 function renderPlainWithRefChips(text: string, query: string, keyPrefix: string, noChips = false): React.ReactNode[] {
   if (noChips) {
     return renderTextWithHighlights(text, query, keyPrefix)
   }
+  const expanded = expandShorthandRefs(text)
   const result: React.ReactNode[] = []
   let last = 0
   REF_TOKEN_PATTERN.lastIndex = 0
-  let rm: RegExpExecArray | null = REF_TOKEN_PATTERN.exec(text)
+  let rm: RegExpExecArray | null = REF_TOKEN_PATTERN.exec(expanded)
   while (rm) {
     if (rm.index > last) {
-      result.push(...renderTextWithHighlights(text.slice(last, rm.index), query, `${keyPrefix}-pre-${rm.index}`))
+      result.push(...renderTextWithHighlights(expanded.slice(last, rm.index), query, `${keyPrefix}-pre-${rm.index}`))
     }
     const raw = rm[1]
     // Normalise "Annex AB" → lookup key
     const lookupKey = raw.replace(/^ANNEX\s+/i, 'Annex ')
     result.push(<RefChip key={`${keyPrefix}-chip-${rm.index}`} refKey={lookupKey} display={raw} />)
     last = REF_TOKEN_PATTERN.lastIndex
-    rm = REF_TOKEN_PATTERN.exec(text)
+    rm = REF_TOKEN_PATTERN.exec(expanded)
   }
-  if (last < text.length) {
-    result.push(...renderTextWithHighlights(text.slice(last), query, `${keyPrefix}-post`))
+  if (last < expanded.length) {
+    result.push(...renderTextWithHighlights(expanded.slice(last), query, `${keyPrefix}-post`))
   }
   return result
 }
