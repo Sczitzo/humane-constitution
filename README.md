@@ -56,7 +56,7 @@ Click the link. That's it. Nothing to install.
 
 If you prefer a desktop window (works offline, no browser needed):
 
-1. Go to the [Releases page](../../releases) of this repository on GitHub.
+1. Go to the [Releases page](https://github.com/humaneconstitution/humane-constitution/releases) of this repository on GitHub.
 2. Under the most recent release, find the file for your computer:
    - **Mac:** download the `.dmg` file
    - **Windows:** download the `.msi` or `.exe` file

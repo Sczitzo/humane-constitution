@@ -12,7 +12,7 @@ Read in this order:
 2. [FAQ](./02_faq.md) — direct answers to common objections.
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
 4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what should be tested before any scale-up claim.
-5. [Skeptical Audience Rebuttal](./content/Skeptical_Audience_Rebuttal.md) — the strongest public-facing framing for skeptical audiences.
+5. [Skeptical Audience Rebuttal](./02_faq.md) — the strongest public-facing framing for skeptical audiences.
 6. [White Paper](./04_white_paper.md) — the fuller public explanation.
 7. [Threat Register](../governance/Threat_Register.md) — the adversarial model; this is where the design is easiest to test seriously.
 
