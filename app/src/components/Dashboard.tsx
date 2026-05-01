@@ -807,18 +807,34 @@ const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1
 
 /**
  * Expand shorthand multi-ref sequences before tokenising.
- * "T-012/013/014/015" → "T-012 / T-013 / T-014 / T-015"
- * "FC-080/081/082"    → "FC-080 / FC-081 / FC-082"
+ *
+ * Slash list:  "T-012/013/014/015"   → "T-012 / T-013 / T-014 / T-015"
+ * Range:       "T-012–T-015"         → "T-012 / T-013 / T-014 / T-015"
+ *              "T-012–015"           → same (prefix may be omitted on end)
+ *              "FC-080/081/082"      → "FC-080 / FC-081 / FC-082"
  * Works for any prefix (T, P, FC, TR, PRD, INV).
  */
 function expandShorthandRefs(text: string): string {
-  return text.replace(
+  // 1. Range notation: PREFIX-N[–—-][PREFIX-]M  (en-dash, em-dash, or hyphen between two IDs)
+  let out = text.replace(
+    /\b(T|P|FC|TR|PRD|INV)-(\d+)\s*[–—]\s*(?:T|P|FC|TR|PRD|INV)?-?(\d+)\b/g,
+    (_match, prefix, fromStr, toStr) => {
+      const from = parseInt(fromStr, 10)
+      const to   = parseInt(toStr,   10)
+      // Safety: only expand sensible ranges
+      if (to <= from || to - from > 30) return _match
+      return Array.from({ length: to - from + 1 }, (_, i) => `${prefix}-${from + i}`).join(' / ')
+    }
+  )
+  // 2. Slash list: PREFIX-N(/M)+
+  out = out.replace(
     /\b(T|P|FC|TR|PRD|INV)-(\d+)((?:\/\d+)+)\b/g,
     (_match, prefix, first, rest) => {
       const nums = [first, ...rest.slice(1).split('/')]
       return nums.map(n => `${prefix}-${n}`).join(' / ')
     }
   )
+  return out
 }
 
 function renderPlainWithRefChips(text: string, query: string, keyPrefix: string, noChips = false): React.ReactNode[] {
