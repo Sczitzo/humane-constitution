@@ -337,7 +337,7 @@
 
 .reader-table th {
   color: var(--ink-strong);
-  font-size: 0.82rem;
+  font-size: 0.82em;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -345,7 +345,7 @@
 
 .reader-table td {
   color: var(--ink);
-  font-size: 0.95rem;
+  font-size: 0.95em;
 }
 
 .reader-table tr:last-child td {
