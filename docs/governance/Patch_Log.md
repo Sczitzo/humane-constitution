@@ -613,6 +613,28 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ---
 
+## P-024 — Attestation-at-Risk Stake Mechanism
+
+### P-024 — Attestation-at-Risk Stake Mechanism
+
+- **Status:** ACTIVE (promoted 2026-04-25 via Annex AS ratification). FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold bound in `/founding/commitments.md`.
+- **Threat addressed:** T-009 (Coordinated False-Positive Suppression), TR-07 (Attestor Collusion), T-018 (Deliberate False-Trigger Exhaustion).
+- **Direction adopted:** Attestors who certify a claim bear skin-in-the-game exposure proportional to the claim's downstream consequence. A slashing schedule fires automatically when a certified claim is later disconfirmed by oracle quorum; redistribution routes slashed stake to the claimant harmed (where identifiable) and to a system integrity reserve.
+- **Introduced design:**
+  - *FC-080 stake ratio:* Every attestation above the materiality threshold requires the attesting node to lock a stake equal to at least the ratio defined in FC-080. Stake is denominated in Flow and held in escrow by the independent escrow agent designated under P-023.3 standards.
+  - *FC-081 audit window:* Attestations remain auditable for the window defined in FC-081. Within this window any subsequent oracle measurement that contradicts the attested claim by more than the permitted variance triggers an automated slash-and-redistribute event. The audit window is the same for all attestation classes; no class-specific extension may be granted without a Tier 2 (H-2) amendment.
+  - *FC-082 graph density threshold:* A graph-density safe harbor protects attestations made by tightly connected communities (cooperatives, mutual-aid networks, family units) from slash penalties that would arise purely from the structural density of their social graph, not from factual error. Attestations above the FC-082 density threshold are flagged for manual review rather than automatic slashing; the Ombuds Duty Sub-Ombuds has 48 hours to certify the density basis before slashing is released. This prevents T-018 attacks that exploit normal community solidarity as evidence of collusion.
+  - *Slashed-stake redistribution:* Slashed Flow is routed first to compensate the identified harmed claimant (up to the claimant's verified loss); remainder flows to the system integrity reserve managed by the CRP. No slashed Flow returns to the attesting node or its affiliated entities.
+  - *False-claim escalation:* Where slashing evidence reaches the threshold defined in Annex AS §5, the Ombuds Plenum receives a formal referral. A finding of deliberate false attestation (not merely mistaken attestation) triggers disqualification from attestation roles for the period specified in Annex AS §6. Deliberate false-trigger exhaustion (T-018 use of P-024 to drain legitimate attestors) is an aggravated finding with an extended disqualification period.
+- **Clauses integrated:** AS1–AS6. Amends Annex U (adds attestation-stake exposure to bypass-closure layer). Article VII dashboard extended: real-time attestation-stake exposure by class and pending audit-window count are public indicators.
+- **Dependencies:** Independent escrow agent (P-023.3) operative. Oracle quorum system (P-017) operative with at least three independent oracle seats. Ombuds federation (P-025) seated at ≥4 sub-Ombuds before density-threshold manual review is operative. FC-080/081/082 values bound before any attestation-bearing transaction is accepted.
+- **New risks introduced:** (1) Stake requirement may chill legitimate attestation by resource-constrained community members — mitigated by FC-080 materiality threshold (low-value attestations are stake-exempt) and by graph-density safe harbor. (2) Automated slashing on oracle contradiction may fire incorrectly if oracle error precedes attestation error — mitigated by 48-hour Ombuds review gate at FC-082 density flag and by audit-window appeals process in Annex AS §4. (3) Slashed-stake redistribution route to integrity reserve creates an incentive for the CRP to manufacture slash events — mitigated by Ombuds oversight of all slash events above the Annex AS §5 threshold.
+- **Residual risk:** A coordinated oracle-and-attestor compromise that defeats both systems simultaneously remains the highest-risk failure mode. The graph-density safe harbor narrows the T-018 attack surface but cannot eliminate it if the adversary controls both oracle quorum and attestation review.
+- **Compound linkages:** T-009 × T-018 (coordinated false-positive suppression paired with deliberate exhaustion is the canonical dual-threat; P-024 raises the cost of both by making attestation financially painful to corrupt). TR-07 × P-017 (attestor collusion is detectable via oracle contradiction; P-017 oracle independence is a prerequisite for P-024 slash events to be trustworthy). T-018 × FC-082 (density safe harbor is the primary T-018 surface — its threshold value is the key calibration parameter; see Annex AS §3).
+- **Annex:** AS (attestation-at-risk stake mechanism — stake ratio schedule, audit window protocol, graph-density threshold methodology, slash-and-redistribute event specification, escalation thresholds, disqualification periods).
+
+---
+
 ## P-025 through P-027 — Ombuds, Founding Order, and Consolidation
 
 ### P-025 — Federated Ombuds Constitution
