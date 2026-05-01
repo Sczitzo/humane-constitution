@@ -418,8 +418,8 @@ Common failure modes in multi-instrument systems and protocol-level patches inte
 - **Continuity guarantees:** ensure uninterrupted access to essentials (Essential Access) during cutover.
 
 ### Phase 2: Boundary Interface (Legacy Bridge)
-- **Foreign inflow controls:** convert external capital into Flow subject to demurrage immediately, forcing productive deployment.
-- **Trade membrane:** essential-capacity exports are capped to protect domestic Essential Access guarantees.
+- **Foreign inflow controls:** convert external capital into Flow subject to demurrage immediately, forcing productive deployment. Operative detail in [Annex AT §AT4](docs/annexes/ANNEX_AT.md).
+- **Trade membrane:** essential-capacity exports are capped to protect domestic Essential Access guarantees; strategic floors maintained for each CSM category; reciprocity membrane adjusts posture to counterparty behavior. Operative architecture in [Annex AT](docs/annexes/ANNEX_AT.md).
 - **Security posture:** defend infrastructure and ledger integrity as critical national assets.
 
 ### Phase 3: Network Expansion (Archipelago)
@@ -541,4 +541,5 @@ The constitutional annex corpus is maintained as standalone files in the [Annex 
 
 - **Operative annexes:** threat operations, amendment mechanics, transition rules, issuance architecture, civic-layer specifics, and hardening clauses.
 - **Supporting annexes:** detailed operational rules, threat operations, and explanatory specifications kept out of the constitutional body.
+- **[Annex AT](docs/annexes/ANNEX_AT.md)** — external trade architecture: strategic floors, import dependency thresholds, essential-capacity export caps, foreign capital inflow controls, and the reciprocity membrane. Governs Phase 2 boundary interface from protocol activation.
 - **Interpretive rule:** where a standalone annex is designated controlling and conflicts with looser language in this file, the annex governs to the extent stated in that annex.

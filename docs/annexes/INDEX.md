@@ -44,6 +44,7 @@ This directory holds the standalone annex corpus for the Humane Constitution. Th
 - [Annex AQ](./ANNEX_AQ.md) — Shared Storehouse oracle-failure fallback protocol.
 - [Annex AR](./ANNEX_AR.md) — contract-commitment architecture: threshold values and governance parameters.
 - [Annex AS](./ANNEX_AS.md) — attestation-at-risk stake mechanism.
+- [Annex AT](./ANNEX_AT.md) — external trade architecture: strategic floors, export caps, and the reciprocity membrane.
 - [Annex AV](./ANNEX_AV.md) — two-key architectural precondition for Tier-1 invariant enforcement.
 
 ## Reading rule
