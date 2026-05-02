@@ -2859,9 +2859,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }, [view])
 
   // Handle nav-bar doc selection — fires even when view doesn't change.
+  // Use a plain (urgent) update so it takes priority over the view effect's
+  // startTransition that restores the last-viewed doc from localStorage.
   useEffect(() => {
     if (!pendingDocId) return
-    startTransition(() => setSelectedDocId(pendingDocId))
+    setSelectedDocId(pendingDocId)
     onPendingDocIdConsumed?.()
   }, [pendingDocId])
 

@@ -99,7 +99,11 @@ export default function App() {
 
   function handleSelectNavDoc(doc: CorpusDoc) {
     const nextView = viewForDocSection(doc.section)
+    // Pre-write the target doc so Dashboard's view-change effect restores the
+    // right one from localStorage (mirrors handleSelectQuickDoc inside Dashboard).
+    window.localStorage.setItem(`humane-reader:selected-doc:${nextView}`, doc.id)
     handleViewChange(nextView)
+    // Also set pendingDocId for the same-view case where the view effect won't fire.
     setPendingDocId(doc.id)
   }
 
