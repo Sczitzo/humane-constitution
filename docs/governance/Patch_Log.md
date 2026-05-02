@@ -55,6 +55,7 @@
 | P-034 | T-016 / INV-007 | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
 | P-035 | — | **ACTIVE** | High | Founding group corrigibility clause + epistemic humility statement in Preamble and §0A. |
 | P-036 | — | **ACTIVE** | High | Keyholder servanthood duty + replacement mechanism for self-interested keyholders (Article I). |
+| P-037 | — | **ACTIVE** | High | Identity-serves-person clause with triennial review and sunset requirement on secondary data use (Article II). |
 
 ---
 
@@ -806,3 +807,23 @@ Explicit constitutional statement that keyholder authority is custodial, not pro
 - "Demonstrable self-interest" requires interpretation. Mitigated: determination is made by the Federated Ombuds (P-025), not by the keyholders themselves.
 
 **Residual risk:** External pressure on keyholders (coercion, blackmail) is not addressed by internal accountability mechanisms. See P-034 residual risk for the same limitation.
+
+---
+
+### P-037 — Identity Serves the Person
+
+**Threat addressed:** identity system creep / surveillance expansion
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article II — Personhood, Identity & Continuity
+
+**Problem diagnosed:**
+Any identity system faces institutional pressure to expand verification requirements, cross-reference databases, and build behavioral profiles over time. Without a mandatory review cycle, "minimum data for minimum access" tends to expand into a comprehensive scoring regime.
+
+**Introduced design:**
+Mandatory triennial review of identity data use; secondary use requires Article VI deliberative authorization with a published sunset date that cannot be made permanent by administrative action alone.
+
+**New risks introduced:**
+- Review cycles could be gamed or delayed. Mitigated: triennial requirement is constitutional; delay beyond the cycle is a reportable failure under Article VII.
+
+**Residual risk:** Administrative pressure to expand identity data use will recur in each review cycle. The review requirement creates a forcing function but does not eliminate the pressure.

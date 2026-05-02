@@ -323,6 +323,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Household verification:** when a household claim changes resource allocation, the system checks real co-habitation and dependency. It does not judge lifestyle, relationship type, or household structure.
 - **Appeals and recovery:** people must have usable recovery paths, including refugees and people without strong documents.
 - **Layered identity:** identity checks are stronger only when consequences are higher. No single document, biometric, institution, or device may become the only irreversible source of identity.
+- **Identity serves the person:** Identity verification exists to serve the person, not to build a record of the person. The system must review — no less than every three years — whether identity data is being used for any purpose beyond enabling access to essentials and preventing fraud. Any use of identity data for behavioral prediction, civic scoring, cross-system profiling, or research requires a separate deliberative authorization under Article VI and must carry a published sunset date. Sunset dates may be renewed but never made permanent by administrative action alone.
 
 #### Article III: Real Capacity & Reserves
 - **Many measurement sources:** several independent sources measure capacity and scarcity. The system needs at least 5 nodes, at least 3 ways of measuring, error checks, and at least one adversarial reviewer per group.
