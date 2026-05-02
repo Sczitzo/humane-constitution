@@ -268,6 +268,23 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
     }
   }
 
+  // Sixth pass: doc phrase keywords for prose auto-linking
+  for (const def of DOC_PHRASE_DEFS) {
+    const docEntry = docs.find(d => d.path === def.path)
+    if (!docEntry) continue
+    const entry: RefEntry = {
+      label: def.phrases[0],
+      title: docEntry.title,
+      summary: docEntry.summary || '',
+      status: docEntry.statusBucket,
+      docId: docEntry.id,
+    }
+    for (const phrase of def.phrases) {
+      const key = `docphrase:${phrase.toLowerCase()}`
+      if (!map.has(key)) map.set(key, entry)
+    }
+  }
+
   return map
 }
 
@@ -900,8 +917,13 @@ const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1
  * Works for any prefix (T, P, FC, TR, PRD, INV).
  */
 function expandShorthandRefs(text: string): string {
-  // 1. Range notation: PREFIX-N[–—-][PREFIX-]M  (en-dash, em-dash, or hyphen between two IDs)
+  // 0. Plural annexes: "Annexes M, AL, AQ" → "Annex M, Annex AL, Annex AQ"
   let out = text.replace(
+    /\bAnnexes\s+((?:[A-Z]{1,3}\d*(?:[,\s]+|(?=[^,\s])))+)/g,
+    (_m, rest) => rest.split(/[,\s]+/).filter(Boolean).map((c: string) => `Annex ${c}`).join(', ')
+  )
+  // 1. Range notation: PREFIX-N[–—-][PREFIX-]M  (en-dash, em-dash, or hyphen between two IDs)
+  out = out.replace(
     /\b(T|P|FC|TR|PRD|INV)-(\d+)\s*[–—]\s*(?:T|P|FC|TR|PRD|INV)?-?(\d+)\b/g,
     (_match, prefix, fromStr, toStr) => {
       const from = parseInt(fromStr, 10)
@@ -926,25 +948,83 @@ function expandShorthandRefs(text: string): string {
   return out
 }
 
-function renderPlainWithRefChips(text: string, query: string, keyPrefix: string, noChips = false): React.ReactNode[] {
+// Static doc phrase definitions for prose auto-linking
+const DOC_PHRASE_DEFS: Array<{ phrases: string[]; path: string }> = [
+  { phrases: ['Claims Evidence Register', 'Claims and Evidence Register'], path: 'docs/governance/Claims_Evidence_Register.md' },
+  { phrases: ['Pilot Evidence Roadmap'], path: 'docs/governance/Pilot_Evidence_Roadmap.md' },
+  { phrases: ['Threat Resolution Matrix'], path: 'docs/governance/Threat_Resolution_Matrix.md' },
+  { phrases: ['Open Problems Docket', 'Open Problems Resolution Docket'], path: 'docs/governance/Open_Problems_Resolution_Docket.md' },
+  { phrases: ['Acceptance Protocol'], path: 'docs/constitution/Acceptance_Protocol.md' },
+  { phrases: ['Humane Constitution'], path: 'docs/constitution/Humane_Constitution.md' },
+  { phrases: ['Founding Disclosure', 'Pre-Activation Disclosure'], path: 'docs/governance/Founding_Preactivation_Disclosure.md' },
+  { phrases: ['Hardening Queue'], path: 'docs/governance/Hardening_Queue.md' },
+  { phrases: ['Provenance Map'], path: 'docs/governance/Provenance_Map.md' },
+  { phrases: ['Threat Register'], path: 'docs/governance/Threat_Register.md' },
+  { phrases: ['Annex Index'], path: 'docs/annexes/INDEX.md' },
+  { phrases: ['Patch Log'], path: 'docs/governance/Patch_Log.md' },
+]
+
+// phrase (lowercase) → target path, used to detect self-references
+const DOC_PHRASE_PATH = new Map<string, string>(
+  DOC_PHRASE_DEFS.flatMap(d => d.phrases.map(p => [p.toLowerCase(), d.path]))
+)
+
+// Regex: longest phrases first to prevent partial matches
+const _docPhrasesSorted = DOC_PHRASE_DEFS.flatMap(d => d.phrases).sort((a, b) => b.length - a.length)
+const DOC_PHRASE_PATTERN = new RegExp(
+  `\\b(${_docPhrasesSorted.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`,
+  'gi'
+)
+
+function renderPlainWithRefChips(text: string, query: string, keyPrefix: string, noChips = false, currentDocPath?: string): React.ReactNode[] {
   if (noChips) {
     return renderTextWithHighlights(text, query, keyPrefix)
   }
   const expanded = expandShorthandRefs(text)
-  const result: React.ReactNode[] = []
-  let last = 0
+
+  interface TokenMatch { index: number; end: number; raw: string; key: string }
+  const allMatches: TokenMatch[] = []
+
+  // Pass 1: structured ref tokens (T-NNN, P-NNN, Annex XX, FC-NNN, etc.)
   REF_TOKEN_PATTERN.lastIndex = 0
   let rm: RegExpExecArray | null = REF_TOKEN_PATTERN.exec(expanded)
   while (rm) {
-    if (rm.index > last) {
-      result.push(...renderTextWithHighlights(expanded.slice(last, rm.index), query, `${keyPrefix}-pre-${rm.index}`))
-    }
     const raw = rm[1]
-    // Normalise "Annex AB" → lookup key
-    const lookupKey = raw.replace(/^ANNEX\s+/i, 'Annex ')
-    result.push(<RefChip key={`${keyPrefix}-chip-${rm.index}`} refKey={lookupKey} display={raw} />)
-    last = REF_TOKEN_PATTERN.lastIndex
+    const key = raw.replace(/^ANNEX\s+/i, 'Annex ')
+    allMatches.push({ index: rm.index, end: REF_TOKEN_PATTERN.lastIndex, raw, key })
     rm = REF_TOKEN_PATTERN.exec(expanded)
+  }
+
+  // Pass 2: doc phrase tokens — skip self-references and positions already claimed by pass 1
+  DOC_PHRASE_PATTERN.lastIndex = 0
+  let pm: RegExpExecArray | null = DOC_PHRASE_PATTERN.exec(expanded)
+  while (pm) {
+    const raw = pm[1]
+    const phraseKey = raw.toLowerCase()
+    const targetPath = DOC_PHRASE_PATH.get(phraseKey)
+    const isSelf = currentDocPath !== undefined && targetPath === currentDocPath
+    if (!isSelf) {
+      const pStart = pm.index
+      const pEnd = pm.index + raw.length
+      const overlaps = allMatches.some(m => pStart < m.end && pEnd > m.index)
+      if (!overlaps) {
+        allMatches.push({ index: pStart, end: pEnd, raw, key: `docphrase:${phraseKey}` })
+      }
+    }
+    pm = DOC_PHRASE_PATTERN.exec(expanded)
+  }
+
+  allMatches.sort((a, b) => a.index - b.index)
+
+  const result: React.ReactNode[] = []
+  let last = 0
+  for (const m of allMatches) {
+    if (m.index < last) continue
+    if (m.index > last) {
+      result.push(...renderTextWithHighlights(expanded.slice(last, m.index), query, `${keyPrefix}-pre-${m.index}`))
+    }
+    result.push(<RefChip key={`${keyPrefix}-chip-${m.index}`} refKey={m.key} display={m.raw} />)
+    last = m.end
   }
   if (last < expanded.length) {
     result.push(...renderTextWithHighlights(expanded.slice(last), query, `${keyPrefix}-post`))
@@ -952,7 +1032,7 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
   return result
 }
 
-function renderInline(text: string, keyPrefix: string, query = '', noChips = false, onInternalLink?: (href: string) => void): React.ReactNode[] {
+function renderInline(text: string, keyPrefix: string, query = '', noChips = false, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode[] {
   const parts: React.ReactNode[] = []
   const tokenPattern = /(`[^`]+`|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g
   let lastIndex = 0
@@ -960,7 +1040,7 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
 
   while (match) {
     if (match.index > lastIndex) {
-      parts.push(...renderPlainWithRefChips(text.slice(lastIndex, match.index), query, `${keyPrefix}-plain-${match.index}`, noChips))
+      parts.push(...renderPlainWithRefChips(text.slice(lastIndex, match.index), query, `${keyPrefix}-plain-${match.index}`, noChips, currentDocPath))
     }
 
     if (match[1]?.startsWith('`')) {
@@ -982,13 +1062,14 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
     } else if (match[2] && match[3]) {
       const linkHref = match[3]
       const linkLabel = match[2]
-      const isInternal = linkHref.endsWith('.md') && onInternalLink
+      const isInternal = !!(onInternalLink && (linkHref.endsWith('.md') || linkHref.includes('.md#') || linkHref.startsWith('#')))
+      const linkClass = 'cursor-pointer font-medium text-[var(--accent-deep)] underline decoration-[var(--accent-deep)] underline-offset-2 transition hover:opacity-75'
       parts.push(
         isInternal ? (
           <button
             key={`${keyPrefix}-link-${match.index}`}
-            onClick={() => onInternalLink(linkHref)}
-            className="font-medium text-[var(--accent-deep)] underline decoration-[rgba(159,108,49,0.3)] underline-offset-4 transition hover:text-[var(--ink-strong)]"
+            onClick={() => onInternalLink!(linkHref)}
+            className={linkClass}
           >
             {renderTextWithHighlights(linkLabel, query, `${keyPrefix}-link-inline-${match.index}`)}
           </button>
@@ -998,7 +1079,7 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
             href={linkHref}
             target="_blank"
             rel="noreferrer"
-            className="font-medium text-[var(--accent-deep)] underline decoration-[rgba(159,108,49,0.3)] underline-offset-4 transition hover:text-[var(--ink-strong)]"
+            className={linkClass}
           >
             {renderTextWithHighlights(linkLabel, query, `${keyPrefix}-link-inline-${match.index}`)}
           </a>
@@ -1023,7 +1104,7 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
   }
 
   if (lastIndex < text.length) {
-    parts.push(...renderPlainWithRefChips(text.slice(lastIndex), query, `${keyPrefix}-tail`, noChips))
+    parts.push(...renderPlainWithRefChips(text.slice(lastIndex), query, `${keyPrefix}-tail`, noChips, currentDocPath))
   }
 
   return parts
@@ -1148,7 +1229,7 @@ function getRowStatusClass(row: string[]): string {
   return ''
 }
 
-function renderTableCell(text: string, keyPrefix: string, query: string): React.ReactNode {
+function renderTableCell(text: string, keyPrefix: string, query: string, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode {
   const meta = matchStatus(text.trim())
   if (meta) {
     return (
@@ -1157,7 +1238,7 @@ function renderTableCell(text: string, keyPrefix: string, query: string): React.
       </span>
     )
   }
-  return renderInline(text, keyPrefix, query)
+  return renderInline(text, keyPrefix, query, false, onInternalLink, currentDocPath)
 }
 
 function headingScrollId(doc: CorpusDoc, slug: string): string {
@@ -1521,10 +1602,11 @@ function MermaidBlock({ code, id }: { code: string; id: string }) {
 }
 
 function resolveInternalDoc(href: string, currentPath: string, allDocs: CorpusDoc[]): CorpusDoc | null {
-  if (!href.endsWith('.md')) return null
-  // Resolve href relative to the directory of the current doc path
+  const path = href.split('#')[0]
+  if (!path.endsWith('.md')) return null
+  // Resolve path relative to the directory of the current doc path
   const dir = currentPath.includes('/') ? currentPath.slice(0, currentPath.lastIndexOf('/')) : ''
-  const parts = (dir ? dir + '/' + href : href).split('/')
+  const parts = (dir ? dir + '/' + path : path).split('/')
   const resolved: string[] = []
   for (const part of parts) {
     if (part === '..') resolved.pop()
@@ -1551,8 +1633,26 @@ function MarkdownDocument({
 }) {
   const blocks = parseMarkdown(doc)
   const handleInternalLink = (href: string) => {
-    const target = resolveInternalDoc(href, doc.path, allDocs)
-    if (target) onSelectDoc(target)
+    const hashIdx = href.indexOf('#')
+    const pathPart = hashIdx >= 0 ? href.slice(0, hashIdx) : href
+    const anchor = hashIdx >= 0 ? href.slice(hashIdx + 1) : null
+    const target = pathPart ? resolveInternalDoc(pathPart, doc.path, allDocs) : null
+    const finalTarget = target ?? (anchor ? doc : null)
+    if (!finalTarget) return
+    const scrollToAnchor = anchor
+      ? () => {
+          const el =
+            document.getElementById(`${finalTarget.id}--${anchor}`) ??
+            document.getElementById(anchor)
+          el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      : null
+    if (target && target.id !== doc.id) {
+      onSelectDoc(target)
+      if (scrollToAnchor) setTimeout(scrollToAnchor, 200)
+    } else if (scrollToAnchor) {
+      scrollToAnchor()
+    }
   }
   const hiddenFirstHeading = normalizeComparable(doc.title)
 
@@ -1592,7 +1692,7 @@ function MarkdownDocument({
         if (block.type === 'paragraph') {
           return (
             <p key={`${doc.id}-paragraph-${index}`}>
-              {renderInline(block.text, `${doc.id}-paragraph-inline-${index}`, searchQuery, false, handleInternalLink)}
+              {renderInline(block.text, `${doc.id}-paragraph-inline-${index}`, searchQuery, false, handleInternalLink, doc.path)}
             </p>
           )
         }
@@ -1606,7 +1706,7 @@ function MarkdownDocument({
             >
               {block.items.map((item, itemIndex) => (
                 <li key={`${doc.id}-list-item-${index}-${itemIndex}`}>
-                  {renderInline(item, `${doc.id}-list-inline-${index}-${itemIndex}`, searchQuery, false, handleInternalLink)}
+                  {renderInline(item, `${doc.id}-list-inline-${index}-${itemIndex}`, searchQuery, false, handleInternalLink, doc.path)}
                 </li>
               ))}
             </ListTag>
@@ -1644,7 +1744,7 @@ function MarkdownDocument({
         if (block.type === 'quote') {
           return (
             <blockquote key={`${doc.id}-quote-${index}`} className="reader-quote">
-              {renderInline(block.text, `${doc.id}-quote-inline-${index}`, searchQuery, false, handleInternalLink)}
+              {renderInline(block.text, `${doc.id}-quote-inline-${index}`, searchQuery, false, handleInternalLink, doc.path)}
             </blockquote>
           )
         }
@@ -1676,7 +1776,7 @@ function MarkdownDocument({
                   <tr>
                     {parsedTable.headers.map((header, headerIndex) => (
                       <th key={`${doc.id}-table-header-${index}-${headerIndex}`}>
-                        {renderInline(header, `${doc.id}-table-header-inline-${index}-${headerIndex}`, searchQuery)}
+                        {renderInline(header, `${doc.id}-table-header-inline-${index}-${headerIndex}`, searchQuery, false, undefined, doc.path)}
                       </th>
                     ))}
                   </tr>
@@ -1688,7 +1788,7 @@ function MarkdownDocument({
                       <tr key={`${doc.id}-table-row-${index}-${rowIndex}`} className={rowClass || undefined}>
                         {row.map((cell, cellIndex) => (
                           <td key={`${doc.id}-table-cell-${index}-${rowIndex}-${cellIndex}`}>
-                            {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery)}
+                            {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery, handleInternalLink, doc.path)}
                           </td>
                         ))}
                       </tr>
