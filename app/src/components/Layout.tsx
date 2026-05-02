@@ -24,12 +24,9 @@ interface LayoutProps {
   onCorpusQueryChange: (q: string) => void
 }
 
-interface NavItem {
-  id: AppView
-  label: string
-}
+type NavItem = { id: AppView; label: string }
 
-const PRIMARY_NAV: NavItem[] = [
+const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home' },
   { id: 'constitution', label: 'Constitution' },
   { id: 'annexes', label: 'Annexes' },
@@ -231,6 +228,89 @@ function SettingsDropdown() {
   )
 }
 
+// ── HamburgerDrawer ───────────────────────────────────────────────────────────
+
+function HamburgerDrawer({
+  activeNav,
+  onNavChange,
+}: {
+  activeNav: AppView
+  onNavChange: (view: AppView) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const drawerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setOpen(false) }
+    function onPointer(e: PointerEvent) {
+      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('pointerdown', onPointer)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('pointerdown', onPointer)
+    }
+  }, [open])
+
+  function handleSelect(id: AppView) {
+    setOpen(false)
+    onNavChange(id)
+  }
+
+  return (
+    <div ref={drawerRef} className="relative shrink-0" data-no-drag>
+      <button
+        data-testid="nav-hamburger"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded={open}
+        onClick={() => setOpen(o => !o)}
+        className="focus-ring flex h-9 w-9 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition"
+      >
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+          {open ? (
+            <path fillRule="evenodd" clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
+          ) : (
+            <path fillRule="evenodd" clipRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
+          )}
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          role="dialog"
+          aria-label="Navigation menu"
+          className="absolute left-0 top-full z-50 mt-2 w-56 rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] py-1 shadow-2xl"
+        >
+          {NAV_ITEMS.map(item => (
+            <button
+              key={item.id}
+              data-testid={`nav-${item.id}`}
+              type="button"
+              aria-current={activeNav === item.id ? 'page' : undefined}
+              onClick={() => handleSelect(item.id)}
+              className={`focus-ring flex w-full items-center px-4 py-2.5 text-left text-[13px] font-medium transition ${
+                activeNav === item.id
+                  ? 'text-[var(--accent)] bg-[rgba(159,108,49,0.1)]'
+                  : 'text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]'
+              }`}
+            >
+              {item.label}
+              {activeNav === item.id && (
+                <span aria-hidden="true" className="ml-auto h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ── Layout ────────────────────────────────────────────────────────────────────
 
 export function Layout({
@@ -242,35 +322,9 @@ export function Layout({
   shelfDocs: _shelfDocs,
   shelfLabel: _shelfLabel,
   onSelectDoc: _onSelectDoc,
-  corpusQuery: _corpusQuery,
-  onCorpusQueryChange: _onCorpusQueryChange,
+  corpusQuery,
+  onCorpusQueryChange,
 }: LayoutProps) {
-  function renderNavLink(item: NavItem) {
-    const active = activeNav === item.id
-    return (
-      <button
-        key={item.id}
-        data-testid={`nav-${item.id}`}
-        type="button"
-        aria-current={active ? 'page' : undefined}
-        onClick={() => onNavChange(item.id)}
-        className={`focus-ring relative whitespace-nowrap py-3.5 text-[13px] font-medium transition ${
-          active
-            ? 'text-[var(--forest-text)]'
-            : 'text-[var(--forest-text-muted)] hover:text-[var(--forest-text)]'
-        }`}
-      >
-        {item.label}
-        {active ? (
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 -bottom-px h-[2px] bg-[var(--accent)]"
-          />
-        ) : null}
-      </button>
-    )
-  }
-
   return (
     <div className="relative min-h-screen bg-paper text-ink">
       <a href="#reader-main" className="skip-link">
@@ -291,9 +345,13 @@ export function Layout({
             style={{ width: `${readingProgress * 100}%` }}
           />
         </div>
-        <div className="mx-auto flex w-full max-w-[82rem] items-end gap-7">
+        <div className="mx-auto flex w-full max-w-[82rem] items-center gap-3 py-2">
+          {/* Hamburger — far left */}
+          <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
+
+          {/* Branding */}
           <p
-            className="shrink-0 select-none py-3 font-serif text-[15px] tracking-tight text-[var(--forest-text)]"
+            className="shrink-0 select-none font-serif text-[15px] tracking-tight text-[var(--forest-text)]"
             aria-label="Humane Constitution"
           >
             <span className="text-[var(--forest-text)]">Humane Constitution</span>
@@ -301,16 +359,21 @@ export function Layout({
             <span className="ml-2 text-[var(--forest-text-muted)]">Reader</span>
           </p>
 
-          <nav
-            data-testid="reader-compass-nav"
-            aria-label="Sections"
-            className="flex flex-1 items-end gap-5 overflow-x-auto sm:gap-6"
-            data-no-drag
-          >
-            {PRIMARY_NAV.map((item) => renderNavLink(item))}
-          </nav>
+          {/* Corpus search — flex-1 center */}
+          <div className="flex flex-1 items-center gap-2 px-2">
+            <label htmlFor="nav-corpus-search" className="sr-only">Search documents</label>
+            <input
+              id="nav-corpus-search"
+              type="search"
+              value={corpusQuery}
+              onChange={e => onCorpusQueryChange(e.target.value)}
+              placeholder="Search documents…"
+              className="focus-ring w-full rounded border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.07)] px-3 py-1.5 text-[13px] text-[var(--forest-text)] placeholder:text-[var(--forest-text-muted)] outline-none transition hover:border-[rgba(255,255,255,0.25)]"
+            />
+          </div>
 
-          <div className="hidden items-end gap-4 sm:flex">
+          {/* Right controls — NavDropdown and settings will be added in Task 5 */}
+          <div className="flex shrink-0 items-center gap-1">
             <SettingsDropdown />
           </div>
         </div>
