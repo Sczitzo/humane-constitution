@@ -46,6 +46,7 @@ export default function App() {
   const [shelfDocs, setShelfDocs] = useState<CorpusDoc[]>([])
   const [shelfLabel, setShelfLabel] = useState('')
   const [corpusQuery, setCorpusQuery] = useState('')
+  const [pendingDocId, setPendingDocId] = useState<string | null>(null)
 
   // Remembers window scroll position for each view so the nav bar can restore it.
   const scrollPositions = useRef<Map<AppView, number>>(new Map())
@@ -100,7 +101,7 @@ export default function App() {
   function handleSelectNavDoc(doc: CorpusDoc) {
     const nextView = viewForDocSection(doc.section)
     handleViewChange(nextView)
-    window.localStorage.setItem('humane-reader:nav-jump', doc.id)
+    setPendingDocId(doc.id)
   }
 
   // Internal view changes (Read Next, doc links) always start at the top.
@@ -132,6 +133,8 @@ export default function App() {
         onNavDocsChange={handleNavDocsChange}
         corpusQuery={corpusQuery}
         onCorpusQueryChange={setCorpusQuery}
+        pendingDocId={pendingDocId}
+        onPendingDocIdConsumed={() => setPendingDocId(null)}
       />
     </Layout>
   )

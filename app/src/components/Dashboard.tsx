@@ -468,6 +468,8 @@ interface DashboardProps {
   onNavDocsChange: (recent: CorpusDoc[], shelf: CorpusDoc[], label: string) => void
   corpusQuery: string
   onCorpusQueryChange: (q: string) => void
+  pendingDocId?: string | null
+  onPendingDocIdConsumed?: () => void
 }
 
 interface SourceFeedback {
@@ -2779,7 +2781,7 @@ function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
 }
 
 
-export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange }: DashboardProps) {
+export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange, pendingDocId, onPendingDocIdConsumed }: DashboardProps) {
   const [documentQuery, setDocumentQuery] = useState('')
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
@@ -2854,12 +2856,14 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     restorePaneScrollRef.current = true
     startTransition(() => setSelectedDocId(readStoredSelectedDocId(view)))
 
-    const jumpId = window.localStorage.getItem('humane-reader:nav-jump')
-    if (jumpId) {
-      window.localStorage.removeItem('humane-reader:nav-jump')
-      startTransition(() => setSelectedDocId(jumpId))
-    }
   }, [view])
+
+  // Handle nav-bar doc selection — fires even when view doesn't change.
+  useEffect(() => {
+    if (!pendingDocId) return
+    startTransition(() => setSelectedDocId(pendingDocId))
+    onPendingDocIdConsumed?.()
+  }, [pendingDocId])
 
   useEffect(() => {
     if (!corpus) {
