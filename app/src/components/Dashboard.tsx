@@ -1,4 +1,4 @@
-import { createContext, startTransition, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState, type UIEvent as ReactUIEvent, type WheelEvent as ReactWheelEvent } from 'react'
+import { createContext, startTransition, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { StatechartDiagram } from './StatechartDiagram'
 import { invoke } from '@tauri-apps/api/core'
@@ -1382,21 +1382,6 @@ function feedbackClass(tone: SourceFeedback['tone']): string {
   return 'text-[var(--ink-soft)]'
 }
 
-function routeVerticalWheelToSelf(event: ReactWheelEvent<HTMLElement>) {
-  if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) {
-    return
-  }
-
-  const node = event.currentTarget
-
-  if (node.scrollHeight <= node.clientHeight) {
-    return
-  }
-
-  event.preventDefault()
-  node.scrollTop += event.deltaY
-}
-
 function MetaStat({
   label,
   value,
@@ -1443,120 +1428,6 @@ function ActionButton({
     >
       {label}
     </button>
-  )
-}
-
-function DocumentRow({
-  doc,
-  selected,
-  pinned = false,
-  read = false,
-  onSelect,
-}: {
-  doc: CorpusDoc
-  selected: boolean
-  pinned?: boolean
-  read?: boolean
-  onSelect: () => void
-  onOpenSource: () => void
-}) {
-  return (
-    <button
-      data-testid={`document-row-${doc.id}`}
-      data-selected={selected ? 'true' : 'false'}
-      type="button"
-      onClick={onSelect}
-      className={`focus-ring group block w-full border-l-2 py-3 pl-4 pr-2 text-left transition ${
-        selected
-          ? 'border-l-accent bg-[var(--paper-strong)]'
-          : 'border-l-transparent hover:border-l-line hover:bg-[var(--paper-warm)]'
-      }`}
-    >
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">
-          {SECTION_LABELS[doc.section]}
-        </p>
-        <span className="flex items-center gap-1.5">
-          {read ? (
-            <span aria-label="Read" title="Marked as read" className="text-[10px] text-sage-deep opacity-80">
-              ✓
-            </span>
-          ) : null}
-          {pinned ? (
-            <span aria-label="Pinned" title="Pinned" className="text-[11px] text-accent-deep">
-              ●
-            </span>
-          ) : null}
-        </span>
-      </div>
-      <h3
-        className={`mt-1 font-serif text-[1.05rem] leading-snug ${
-          selected ? 'text-ink-strong' : 'text-ink group-hover:text-ink-strong'
-        }`}
-      >
-        {doc.title}
-      </h3>
-      {doc.summary ? (
-        <p className="mt-1 line-clamp-2 text-[13px] leading-6 text-ink-soft">{doc.summary}</p>
-      ) : null}
-      <p className="mt-2 text-[11px] text-ink-faint">
-        {estimatedReadMinutes(doc.wordCount)} min · {doc.headingCount} headings
-      </p>
-    </button>
-  )
-}
-
-function QuickAccessSection({
-  label,
-  testId,
-  docs,
-  onSelect,
-}: {
-  label: string
-  testId: string
-  docs: CorpusDoc[]
-  onSelect: (doc: CorpusDoc) => void
-}) {
-  if (!docs.length) {
-    return null
-  }
-
-  return (
-    <section data-testid={testId} className="border-t border-line">
-      <details className="group/qa">
-        <summary className="flex cursor-pointer list-none items-center gap-1.5 px-4 py-2.5 select-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[rgba(159,108,49,0.4)]">
-          <svg
-            aria-hidden="true"
-            className="h-3 w-3 shrink-0 text-ink-faint transition-transform group-open/qa:rotate-90"
-            viewBox="0 0 12 12"
-            fill="currentColor"
-          >
-            <path d="M4 2.5 L8.5 6 L4 9.5 Z" />
-          </svg>
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{label}</span>
-          <span className="ml-auto font-mono text-[10px] text-ink-faint">{docs.length}</span>
-        </summary>
-        <ul className="flex flex-col pb-1 pl-4 pr-2">
-          {docs.map((doc) => (
-            <li key={`${testId}-${doc.id}`}>
-              <button
-                data-testid={`${testId}-${doc.id}`}
-                type="button"
-                onClick={() => onSelect(doc)}
-                className="focus-ring group block w-full py-1.5 text-left transition"
-              >
-                <span className="block text-[10px] uppercase tracking-[0.14em] text-ink-faint">
-                  {SECTION_LABELS[doc.section]}
-                </span>
-                <span className="mt-0.5 block line-clamp-2 font-serif text-[13.5px] leading-snug text-ink group-hover:text-ink-strong">
-                  {doc.title}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </details>
-    </section>
   )
 }
 
@@ -1847,52 +1718,6 @@ function MarkdownDocument({
         return <div key={`${doc.id}-rule-${index}`} className="my-10 h-px bg-[rgba(60,54,46,0.12)]" />
       })}
     </article>
-  )
-}
-
-function ReaderOutline({
-  doc,
-  independentScroll = false,
-  activeHeadingSlug,
-}: {
-  doc: CorpusDoc
-  independentScroll?: boolean
-  activeHeadingSlug: string | null
-}) {
-  const headings = visibleHeadings(doc)
-  if (!headings.length) {
-    return null
-  }
-
-  return (
-    <nav
-      data-testid="reader-outline-content"
-      aria-label="Outline"
-      className={`${independentScroll ? 'h-full overflow-y-auto' : 'self-start'}`}
-    >
-      <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">On this page</p>
-      <div className="mt-3 flex flex-col gap-px">
-        {headings.map((heading) => (
-          <button
-            key={`${doc.id}-${heading.slug}`}
-            data-testid={`outline-heading-${heading.slug}`}
-            data-heading-slug={heading.slug}
-            data-active-heading={activeHeadingSlug === heading.slug ? 'true' : 'false'}
-            type="button"
-            aria-current={activeHeadingSlug === heading.slug ? 'location' : undefined}
-            onClick={() => jumpToHeading(doc, heading.slug)}
-            className={`focus-ring border-l-2 py-1 pr-2 text-left text-[12px] leading-snug transition ${
-              activeHeadingSlug === heading.slug
-                ? 'border-l-accent text-accent-deep'
-                : 'border-l-transparent text-ink-soft hover:border-l-line hover:text-ink-strong'
-            }`}
-            style={{ paddingLeft: `${10 + Math.max(0, heading.level - 1) * 10}px` }}
-          >
-            {heading.text}
-          </button>
-        ))}
-      </div>
-    </nav>
   )
 }
 
@@ -2226,10 +2051,7 @@ function ReaderWorkspace({
   allDocs,
   selectedDoc,
   pinnedDocIds,
-  pinnedDocs,
-  recentDocs,
   recentIds,
-  onSelect,
   onSelectQuickDoc,
   onTogglePinned,
   readDocIds,
@@ -2238,14 +2060,8 @@ function ReaderWorkspace({
   onToggleReadingMode,
   onOpenSource,
   feedback,
-  railLabel,
   emptyLabel,
-  independentScroll = false,
-  shelfPaneRef,
   readerPaneRef,
-  outlinePaneRef,
-  onPaneScroll,
-  activeHeadingSlug,
   copiedHeadingSlug,
   onCopyHeadingLink,
   searchQuery,
@@ -2260,10 +2076,7 @@ function ReaderWorkspace({
   allDocs: CorpusDoc[]
   selectedDoc: CorpusDoc | null
   pinnedDocIds: string[]
-  pinnedDocs: CorpusDoc[]
-  recentDocs: CorpusDoc[]
   recentIds: string[]
-  onSelect: (doc: CorpusDoc) => void
   onSelectQuickDoc: (doc: CorpusDoc) => void
   onTogglePinned: () => void
   readDocIds: string[]
@@ -2272,14 +2085,8 @@ function ReaderWorkspace({
   onToggleReadingMode: () => void
   onOpenSource: (doc: CorpusDoc) => void
   feedback: SourceFeedback
-  railLabel: string
   emptyLabel: string
-  independentScroll?: boolean
-  shelfPaneRef: (node: HTMLElement | null) => void
   readerPaneRef: (node: HTMLDivElement | null) => void
-  outlinePaneRef: (node: HTMLDivElement | null) => void
-  onPaneScroll: (event: ReactUIEvent<HTMLElement>) => void
-  activeHeadingSlug: string | null
   copiedHeadingSlug: string | null
   onCopyHeadingLink: (slug: string) => void
   searchQuery: string
@@ -2299,88 +2106,12 @@ function ReaderWorkspace({
   }
 
   return (
-    <div
-      data-reading-mode={readingMode ? 'true' : 'false'}
-      className={`grid gap-10 ${
-        readingMode
-          ? 'xl:grid-cols-[minmax(0,1fr)]'
-          : 'xl:grid-cols-[16rem_minmax(0,1fr)] 2xl:grid-cols-[16rem_minmax(0,1fr)_13rem]'
-      } ${independentScroll || readingMode ? 'items-start' : ''}`}
-    >
-      <section
-        ref={shelfPaneRef}
-        data-testid="shelf-pane"
-        aria-label="Document index"
-        className={`${readingMode ? 'hidden' : ''} ${
-          independentScroll
-            ? 'xl:sticky xl:top-20 xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-            : 'xl:sticky xl:top-20 xl:self-start xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-        }`}
-        onScroll={onPaneScroll}
-        onWheelCapture={routeVerticalWheelToSelf}
-      >
-        <p className="text-[11px] uppercase tracking-[0.16em] text-ink-faint">
-          {docs.length} {docs.length === 1 ? 'document' : 'documents'}
-        </p>
-        <div data-testid="shelf-list" className="mt-3 -ml-4 space-y-px">
-          {pinnedDocs.length > 0 ? (
-            <QuickAccessSection
-              label="Pinned"
-              testId="quick-access-pinned"
-              docs={pinnedDocs}
-              onSelect={onSelectQuickDoc}
-            />
-          ) : null}
-          {recentDocs.length > 0 ? (
-            <QuickAccessSection
-              label="Recent"
-              testId="quick-access-recent"
-              docs={recentDocs}
-              onSelect={onSelectQuickDoc}
-            />
-          ) : null}
-          <details className="group/docs border-t border-line">
-            <summary className="flex cursor-pointer list-none items-center gap-1.5 px-4 py-2.5 select-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[rgba(159,108,49,0.4)]">
-              <svg
-                aria-hidden="true"
-                className="h-3 w-3 shrink-0 text-ink-faint transition-transform group-open/docs:rotate-90"
-                viewBox="0 0 12 12"
-                fill="currentColor"
-              >
-                <path d="M4 2.5 L8.5 6 L4 9.5 Z" />
-              </svg>
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">{railLabel}</span>
-              <span className="ml-auto font-mono text-[10px] text-ink-faint">{docs.length}</span>
-            </summary>
-            <div>
-              {docs.map((doc) => (
-                <DocumentRow
-                  key={doc.id}
-                  doc={doc}
-                  selected={selectedDoc.id === doc.id}
-                  pinned={pinnedDocIds.includes(doc.id)}
-                  read={readDocIds.includes(doc.id)}
-                  onSelect={() => onSelect(doc)}
-                  onOpenSource={() => onOpenSource(doc)}
-                />
-              ))}
-            </div>
-          </details>
-        </div>
-      </section>
-
+    <div data-reading-mode={readingMode ? 'true' : 'false'} className="w-full">
       <div
         key={`reader-pane-${selectedDoc.id}`}
         ref={readerPaneRef}
         data-testid="reader-scroll-pane"
-        className={`min-w-0 ${readingMode ? 'mx-auto w-full' : ''} ${
-          independentScroll
-            ? 'xl:sticky xl:top-20 xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
-            : ''
-        }`}
-        style={readingMode ? { maxWidth: 'var(--reader-column-width)' } : undefined}
-        onScroll={independentScroll ? onPaneScroll : undefined}
-        onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
+        className="min-w-0"
       >
         <ReaderPanel
           doc={selectedDoc}
@@ -2407,24 +2138,6 @@ function ReaderWorkspace({
           onSelectDoc={onSelectQuickDoc}
         />
       </div>
-
-      <aside
-        key={`outline-pane-${selectedDoc.id}`}
-        ref={outlinePaneRef}
-        data-testid="outline-scroll-pane"
-        aria-label="Document outline"
-        className={`${readingMode ? 'hidden' : 'hidden 2xl:block'} ${
-          independentScroll
-            ? '2xl:sticky 2xl:top-20 2xl:max-h-[calc(100vh-7rem)] 2xl:overflow-y-auto 2xl:overscroll-contain 2xl:pr-1'
-            : ''
-        }`}
-        onScroll={independentScroll ? onPaneScroll : undefined}
-        onWheelCapture={independentScroll ? routeVerticalWheelToSelf : undefined}
-      >
-        <div className={independentScroll ? '' : 'sticky top-20'}>
-          <ReaderOutline doc={selectedDoc} independentScroll={false} activeHeadingSlug={activeHeadingSlug} />
-        </div>
-      </aside>
     </div>
   )
 }
@@ -3130,9 +2843,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const visibleDocs = baseDocs.filter((doc) => matchesQuery(doc, deferredQuery))
   const selectedDoc = visibleDocs.find((doc) => doc.id === selectedDocId) ?? visibleDocs[0] ?? null
   const docById = new Map(allDocs.map((doc) => [doc.id, doc]))
-  const pinnedDocs = pinnedDocIds
-    .map((docId) => docById.get(docId))
-    .filter((doc): doc is CorpusDoc => Boolean(doc))
   const recentDocs = recentDocIds
     .filter((docId) => !pinnedDocIds.includes(docId))
     .map((docId) => docById.get(docId))
@@ -3148,14 +2858,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }, [recentDocIdString, visibleDocIdString, meta.railLabel])
 
   const independentPaneView = view === 'constitution' || view === 'annexes' || view === 'registries'
-  const bindShelfPaneRef = (node: HTMLElement | null) => {
-    shelfPaneRef.current = node
-  }
   const bindReaderPaneRef = (node: HTMLDivElement | null) => {
     readerPaneRef.current = node
-  }
-  const bindOutlinePaneRef = (node: HTMLDivElement | null) => {
-    outlinePaneRef.current = node
   }
   const bindReaderSearchInputRef = (node: HTMLInputElement | null) => {
     readerSearchInputRef.current = node
@@ -3563,60 +3267,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     })
   }, [activeMatchIndex, documentMatchCount, selectedDoc?.id, documentQuery])
 
-  function handlePaneScroll(event: ReactUIEvent<HTMLElement>) {
-    if (!independentPaneView || typeof window === 'undefined') {
-      return
-    }
 
-    const scrolledPane = event.currentTarget
-
-    // Emit reader pane progress immediately (no rAF needed — just a ratio)
-    if (scrolledPane === readerPaneRef.current && onProgressChange) {
-      const el = readerPaneRef.current
-      const max = el.scrollHeight - el.clientHeight
-      onProgressChange(max > 0 ? el.scrollTop / max : 0)
-    }
-
-    if (scrollWriteFrameRef.current !== null) {
-      return
-    }
-
-    scrollWriteFrameRef.current = window.requestAnimationFrame(() => {
-      scrollWriteFrameRef.current = null
-      window.localStorage.setItem(
-        paneScrollStorageKey(view),
-        JSON.stringify({
-          shelf: shelfPaneRef.current?.scrollTop ?? 0,
-          reader: readerPaneRef.current?.scrollTop ?? 0,
-          outline: outlinePaneRef.current?.scrollTop ?? 0,
-        }),
-      )
-
-      if (scrolledPane !== readerPaneRef.current || !selectedDoc || !readerPaneRef.current) {
-        return
-      }
-
-      const headings = visibleHeadings(selectedDoc)
-      const readerTop = readerPaneRef.current.getBoundingClientRect().top
-      let nextActiveSlug = headings[0]?.slug ?? null
-
-      for (const heading of headings) {
-        const element = document.getElementById(headingScrollId(selectedDoc, heading.slug))
-        if (!element) {
-          continue
-        }
-
-        if (element.getBoundingClientRect().top - readerTop <= 150) {
-          nextActiveSlug = heading.slug
-          continue
-        }
-
-        break
-      }
-
-      setActiveHeadingSlug((current) => (current === nextActiveSlug ? current : nextActiveSlug))
-    })
-  }
 
   function jumpSearchMatch(direction: 1 | -1) {
     if (!documentMatchCount) {
@@ -4005,10 +3656,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           allDocs={allDocs}
           selectedDoc={selectedDoc}
           pinnedDocIds={pinnedDocIds}
-          pinnedDocs={pinnedDocs}
-          recentDocs={recentDocs}
           recentIds={recentDocIds}
-          onSelect={handleSelectDoc}
           onSelectQuickDoc={handleSelectQuickDoc}
           onTogglePinned={handleTogglePinned}
           readDocIds={readDocIds}
@@ -4017,14 +3665,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           onToggleReadingMode={handleToggleReadingMode}
           onOpenSource={handleOpenSource}
           feedback={sourceFeedback}
-          railLabel={meta.railLabel}
           emptyLabel="No documents match the current filter. Broaden the query or move to another shelf."
-          independentScroll={independentPaneView}
-          shelfPaneRef={bindShelfPaneRef}
           readerPaneRef={bindReaderPaneRef}
-          outlinePaneRef={bindOutlinePaneRef}
-          onPaneScroll={handlePaneScroll}
-          activeHeadingSlug={activeHeadingSlug}
           copiedHeadingSlug={copiedHeadingSlug}
           onCopyHeadingLink={handleCopyHeadingLink}
           searchQuery={documentQuery}
