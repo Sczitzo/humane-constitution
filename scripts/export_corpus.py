@@ -133,7 +133,7 @@ def summary_for(text: str) -> str:
 def section_for(relative_path: str) -> str:
     if relative_path.startswith("founding/order/"):
         return "founding_order"
-    if relative_path.startswith("docs/annexes/ANNEX_"):
+    if relative_path.startswith("docs/annexes/"):
         return "annex"
     if relative_path in {
         "docs/governance/Threat_Register.md",
@@ -150,7 +150,6 @@ def section_for(relative_path: str) -> str:
         "docs/governance/Pilot_Evidence_Roadmap.md",
         "docs/constitution/Acceptance_Protocol.md",
         "founding/commitments.md",
-        "docs/annexes/INDEX.md",
     }:
         return "registry"
     return "constitution"

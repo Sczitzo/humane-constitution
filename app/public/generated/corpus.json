@@ -3,16 +3,16 @@
     "schema": "Founding Order + Articles I-VII",
     "articleCount": 7,
     "foundingOrderDocumentCount": 6,
-    "annexCount": 39,
+    "annexCount": 40,
     "activeAnnexCount": 6,
     "proposedAnnexCount": 9,
-    "referenceAnnexCount": 24,
+    "referenceAnnexCount": 25,
     "commitmentCount": 87,
     "reservedCommitmentCount": 53,
     "threatCount": 27,
     "patchCount": 31,
     "validatorStatus": "pass",
-    "buildStamp": "corpus-a119f500ef6e"
+    "buildStamp": "corpus-36e59a64b267"
   },
   "docs": [
     {
@@ -2912,7 +2912,7 @@
     {
       "id": "docs__annexes__INDEX_md",
       "path": "docs/annexes/INDEX.md",
-      "section": "registry",
+      "section": "annex",
       "title": "Annex Directory",
       "status": "",
       "statusBucket": "reference",
