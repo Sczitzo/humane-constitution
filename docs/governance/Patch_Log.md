@@ -58,6 +58,7 @@
 | P-037 | — | **ACTIVE** | High | Identity-serves-person clause with triennial review and sunset requirement on secondary data use (Article II). |
 | P-038 | T-006 | **ACTIVE** | High | Community challenge path for capacity measurement figures with 14-day published response (Article III). |
 | P-039 | — | **ACTIVE** | High | Explicit protection for pre-existing mutual aid, family, and religious care networks; Article IV as floor not monopoly (Article IV). |
+| P-040 | — | **ACTIVE** | High | Housing cap pastoral revision (remove cold "regardless" language); structural humility closing clause added to Article V. |
 
 ---
 
@@ -871,3 +872,25 @@ Constitutional statement that Article IV is a floor not a monopoly; explicit dut
 - "Must not displace" is a normative commitment difficult to enforce mechanically. Mitigated: Article VII warning system can measure whether voluntary care networks are growing or shrinking post-implementation.
 
 **Residual risk:** Economic logic of consolidated delivery systems tends to crowd out smaller providers regardless of constitutional intent. Periodic measurement and active funding of voluntary-sector infrastructure are required.
+
+---
+
+### P-040 — Article V Housing Cap Pastoral Revision and Structural Humility
+
+**Threat addressed:** household penalization; Babel-risk structural overconfidence
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article V — Markets, Commons & Public Finance (housing allocation section; closing paragraph)
+
+**Problem diagnosed:**
+(1) The phrase "regardless of household composition decisions" treated a resource constraint as though it were a judgment about family structure. Large families, multigenerational households, and care-intensive arrangements may find the cap hostile if applied without a pastoral presumption of accommodation.
+(2) Article V's closing paragraph presented the five-instrument architecture with confidence that the design prevents exploitation. This exceeds what human institutions can reliably deliver.
+
+**Introduced design:**
+(1) Housing cap language revised: "fiscal guarantee" framing retained; pastoral review with strong presumption of accommodation added; "mercy before procedure" standard stated.
+(2) Structural humility closing paragraph added: names the limits of structural engineering and requires ongoing community paths to name and correct exploitation.
+
+**New risks introduced:**
+- "Strong presumption of accommodation" may be interpreted to override the cap entirely. Mitigated: "fiscal guarantee" framing preserved — the commons does not owe unlimited expansion; the review process applies mercy within real resource constraints.
+
+**Residual risk:** Review panels may apply "mercy before procedure" inconsistently across communities. Published review criteria and appeals paths are the mitigation; this patch adds the normative standard.
