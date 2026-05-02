@@ -6,10 +6,9 @@ import { loadCorpus, type CorpusDoc, type CorpusPayload } from './generated/corp
 const VIEW_STORAGE_KEY = 'humane-reader:last-view'
 
 function viewForDocSection(section: string): AppView {
-  if (section === 'constitution') return 'constitution'
-  if (section === 'annexes') return 'annexes'
+  if (section === 'constitution' || section === 'founding_order') return 'constitution'
+  if (section === 'annex') return 'annexes'
   if (section === 'registry') return 'registries'
-  if (section === 'simulation') return 'topics'
   return 'home'
 }
 
