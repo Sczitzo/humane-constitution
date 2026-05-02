@@ -343,6 +343,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Non-transferable by default:** this blocks coercion and black-market control. Caregiver and dependent exceptions must be capped, auditable, and reversible.
 - **No conversion:** Essential Access cannot be sold, pledged, used as collateral, or turned into money.
 - **Shortage interface:** during declared shortage, Shared Storehouse may supplement Essential Access and must end when shortage mode ends.
+- **Pre-existing care networks:** Article IV establishes a floor, not a monopoly on care. The system must actively support — and must not displace — pre-existing community networks that provide survival essentials: mutual aid groups, religious food pantries, family support structures, neighborhood care networks, and congregational outreach. Where such networks exist, the system collaborates with and strengthens them rather than routing around them. The presence of a constitutional delivery floor does not reduce the civic, moral, or spiritual value of personal generosity and communal care — it protects the conditions under which that generosity can freely operate.
 
 > The quantities and standards defining each essential category are subject to the capacity measurement protocols in [Annex AL](../annexes/ANNEX_AL.md). What can actually be promised during supply shocks depends on measurement confidence and oracle failure procedures. See T-006 and the Capacity Measurement Evidence Test Package.
 

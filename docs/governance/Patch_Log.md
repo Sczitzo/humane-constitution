@@ -57,6 +57,7 @@
 | P-036 | — | **ACTIVE** | High | Keyholder servanthood duty + replacement mechanism for self-interested keyholders (Article I). |
 | P-037 | — | **ACTIVE** | High | Identity-serves-person clause with triennial review and sunset requirement on secondary data use (Article II). |
 | P-038 | T-006 | **ACTIVE** | High | Community challenge path for capacity measurement figures with 14-day published response (Article III). |
+| P-039 | — | **ACTIVE** | High | Explicit protection for pre-existing mutual aid, family, and religious care networks; Article IV as floor not monopoly (Article IV). |
 
 ---
 
@@ -850,3 +851,23 @@ Constitutional community challenge path: written submission to oracle quorum, ma
 - Challenge system could be flooded with bad-faith submissions. Mitigated: prima facie threshold for mandatory response.
 
 **Residual risk:** Communities with less documentation capacity will use the challenge path less. Outreach and accessibility design are required — not addressed by this patch alone.
+
+---
+
+### P-039 — Protection of Pre-Existing Care Networks
+
+**Threat addressed:** institutional crowding-out of voluntary community
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article IV — Survival
+
+**Problem diagnosed:**
+A comprehensive constitutional delivery floor for survival essentials can inadvertently displace the mutual aid groups, religious food pantries, family networks, and neighborhood care structures that communities depend on — especially when the delivery system fails.
+
+**Introduced design:**
+Constitutional statement that Article IV is a floor not a monopoly; explicit duty to support pre-existing care networks; affirmation that the constitutional floor protects the conditions for voluntary generosity rather than replacing it.
+
+**New risks introduced:**
+- "Must not displace" is a normative commitment difficult to enforce mechanically. Mitigated: Article VII warning system can measure whether voluntary care networks are growing or shrinking post-implementation.
+
+**Residual risk:** Economic logic of consolidated delivery systems tends to crowd out smaller providers regardless of constitutional intent. Periodic measurement and active funding of voluntary-sector infrastructure are required.
