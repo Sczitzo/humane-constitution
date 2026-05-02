@@ -53,6 +53,7 @@
 | P-032 | PRD-009 | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
 | P-033 | PRD-008 | **ACTIVE** | High | Worker-owned and mission-locked enterprise preference: financing, procurement, and succession pathways structurally favor stewardship forms over absentee control. |
 | P-034 | T-016 / INV-007 | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
+| P-035 | — | **ACTIVE** | High | Founding group corrigibility clause + epistemic humility statement in Preamble and §0A. |
 
 ---
 
@@ -761,3 +762,24 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 - **Residual risk:** future edits that blur article boundaries can recreate the fragmentation or overlap this consolidation removed. Mitigation: the constitutional article interfaces in Humane Constitution §III remain authoritative.
 - **Compound linkages:** P-027 × P-026 (the Founding Order supplies the constitutional foundation); P-027 × P-017 (Article III inherits the oracle hardening); P-027 × P-029 (PFCR remains inside Article V instead of becoming a detached fiscal system); P-027 × P-008 (fewer institutional homes reduce elite-formation surface area).
 - **Auto-close clause:** P-027 is standing. Any change to the number of constitutional articles or to the existence of the Founding Order requires Tier 1 amendment (7-of-9, 180-day timelock). Content within the articles may be amended by ordinary process subject to the existing Tier classifications of each clause.
+
+---
+
+### P-035 — Founding Group Corrigibility and Epistemic Humility
+
+**Threat addressed:** founding group capture / Babel-risk (structural overconfidence)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Philosophical Preamble (closing paragraph) and §0A (Moral Scope, Spiritual Limits, and Stewardship Orientation)
+
+**Problem diagnosed:**
+The Preamble's statement "If it is wrong, people should be able to show where" is passive — it does not explicitly subject the founding group to the same corrigibility requirements it names for administrators. The rhetorical confidence of the document can imply that the design team has solved a problem that only ongoing moral community and dependence on God can sustain. This creates Babel-risk: a system that trusts its own architecture more than it trusts the communities and the God it claims to serve.
+
+**Introduced design:**
+- Preamble: explicit statement that founders are not exempt from the failures named in the document; the founding group must be the first to submit to correction.
+- §0A: explicit statement that the system does not claim to reflect the mind of God; it reflects fallible human judgment that remains open to correction.
+
+**New risks introduced:**
+- Overly humble framing could be exploited to argue that all constitutional protections are provisional. Mitigated: the epistemic humility clauses apply to the founders' judgment about design, not to the dignity floor itself (separately protected by Tier 1 amendment requirements).
+
+**Residual risk:** Founding group may still exercise disproportionate influence during the founding window. The corrigibility clause is a normative commitment, not a structural enforcement mechanism. Structural enforcement is addressed by P-036.

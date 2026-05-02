@@ -81,6 +81,8 @@ Honest design names those problems before the system runs.
 
 This project was built in public and stress-tested against bad uses. If it is wrong, people should be able to show where. If it is incomplete, people should be able to improve it. Its claim to seriousness is not perfection. Its claim is that its promises, weak points, and failure paths are visible.
 
+The founders of this system are not exempt from the failures it names. The same corruption, capture, and pride that threaten administrators will threaten founders. The founding group must be the first to submit to correction, not the last. This document is open to revision precisely because its authors are not beyond the need for it.
+
 *Philosophical grounding informed in part by Marc Wolf's Economic Trilogy (2026), which derives from first principles the distinction between produced and unproduced value and the structural failure of debt-based monetary systems. The protocol extends that derivation into institutional architecture, particularly the conclusion that monetary dispersal of Commons value remains capturable by the mechanisms Wolf documents in Part 2 — and that non-monetary instrument separation is the structural completion of the correction his framework points toward.*
 
 ---
@@ -158,6 +160,8 @@ It assumes moral realism: people can create, care, serve, love, deceive, dominat
 This system is a framework for public stewardship. It is not a claim to save, sanctify, or morally complete any person. Just institutions can reduce structural harm and protect the conditions for family life, worship, service, and responsibility. They cannot create innocence or holiness by administration.
 
 No part of this system replaces truth, virtue, worship, repentance, or reverence before God. It regulates public order. It does not replace conscience, conviction, repentance, or God.
+
+This system does not claim to reflect the mind of God. It reflects the best available human judgment about public order, which is fallible, partial, and in need of ongoing correction. Its claim to seriousness is not that it is right, but that it names its assumptions, makes its failure paths visible, and remains open to being shown where it is wrong.
 
 **God-honoring civic commitments (non-coercive)**
 1. **Do not worship wealth or power** - No tool, institution, or office may treat accumulation, market leverage, or administrative dominance as proof of moral worth or civic superiority.
