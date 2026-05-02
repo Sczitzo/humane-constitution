@@ -1265,12 +1265,13 @@ function renderTableCell(text: string, keyPrefix: string, query: string, onInter
       </span>
     )
   }
-  // Standalone annex code in a table cell (e.g. "AB", "AD", "AH2", "AE2.1") — chip it directly
-  const standaloneAnnex = text.trim().match(/^([A-Z]{1,3}\d*(?:\.\d+)*)$/)
+  // Annex code in a table cell, optionally followed by a parenthetical label
+  // e.g. "AB", "AH2", "AE2.1", "AH (Founding Order)"
+  const standaloneAnnex = text.trim().match(/^([A-Z]{1,3}\d*(?:\.\d+)*)(\s*\(.*\))?$/)
   if (standaloneAnnex) {
     const code = standaloneAnnex[1]
-    // Full code used as key — subsection headings are now indexed directly in buildRefLookup
-    return <RefChip refKey={`Annex ${code}`} display={code} />
+    const suffix = standaloneAnnex[2] ?? ''
+    return <>{<RefChip refKey={`Annex ${code}`} display={code} />}{suffix && <span className="text-[var(--ink-muted)] ml-1">{suffix}</span>}</>
   }
   return renderInline(text, keyPrefix, query, false, onInternalLink, currentDocPath)
 }
