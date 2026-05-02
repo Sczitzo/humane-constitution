@@ -136,23 +136,14 @@ function SettingsDropdown() {
         type="button"
         aria-haspopup="true"
         aria-expanded={open}
+        aria-label="Settings"
         onClick={() => setOpen(o => !o)}
-        className={`focus-ring relative flex items-center gap-1 whitespace-nowrap py-3.5 text-[13px] font-medium transition ${
+        className={`focus-ring flex h-9 w-9 items-center justify-center rounded transition ${
           open ? 'text-[var(--forest-text)]' : 'text-[var(--forest-text-muted)] hover:text-[var(--forest-text)]'
         }`}
       >
-        Settings
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 10 6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={`h-2.5 w-2.5 transition-transform ${open ? 'rotate-180' : ''}`}
-        >
-          <path d="M1 1l4 4 4-4" />
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+          <path fillRule="evenodd" clipRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" />
         </svg>
       </button>
 
@@ -311,6 +302,91 @@ function HamburgerDrawer({
   )
 }
 
+// ── NavDropdown ───────────────────────────────────────────────────────────────
+
+function NavDropdown({
+  label,
+  docs,
+  onSelect,
+  testId,
+  emptyText,
+}: {
+  label: string
+  docs: CorpusDoc[]
+  onSelect: (doc: CorpusDoc) => void
+  testId: string
+  emptyText: string
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setOpen(false) }
+    function onPointer(e: PointerEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('pointerdown', onPointer)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('pointerdown', onPointer)
+    }
+  }, [open])
+
+  return (
+    <div ref={ref} className="relative" data-no-drag>
+      <button
+        data-testid={testId}
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => setOpen(o => !o)}
+        className={`focus-ring flex items-center gap-1 rounded px-2.5 py-1.5 text-[12px] font-medium transition whitespace-nowrap ${
+          open
+            ? 'text-[var(--forest-text)] bg-[rgba(255,255,255,0.08)]'
+            : 'text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]'
+        }`}
+      >
+        {label}
+        <svg aria-hidden="true" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={`h-2.5 w-2.5 transition-transform ${open ? 'rotate-180' : ''}`}>
+          <path d="M1 1l4 4 4-4" />
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          role="listbox"
+          aria-label={label}
+          className="absolute right-0 top-full z-50 mt-2 w-64 rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] py-1 shadow-2xl"
+          style={{ maxHeight: '70vh', overflowY: 'auto' }}
+        >
+          {docs.length === 0 ? (
+            <p className="px-4 py-3 text-[12px] text-[var(--forest-text-muted)]">{emptyText}</p>
+          ) : (
+            docs.map(doc => (
+              <button
+                key={doc.id}
+                role="option"
+                type="button"
+                onClick={() => { onSelect(doc); setOpen(false) }}
+                className="focus-ring flex w-full flex-col px-4 py-2.5 text-left transition hover:bg-[rgba(255,255,255,0.05)]"
+              >
+                <span className="block font-mono text-[9px] uppercase tracking-[0.14em] text-[var(--forest-text-muted)]">
+                  {doc.section}
+                </span>
+                <span className="mt-0.5 block line-clamp-2 text-[12px] leading-snug text-[var(--forest-text)]">
+                  {doc.title}
+                </span>
+              </button>
+            ))
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ── Layout ────────────────────────────────────────────────────────────────────
 
 export function Layout({
@@ -318,10 +394,10 @@ export function Layout({
   activeNav,
   onNavChange,
   readingProgress = 0,
-  recentDocs: _recentDocs,
-  shelfDocs: _shelfDocs,
-  shelfLabel: _shelfLabel,
-  onSelectDoc: _onSelectDoc,
+  recentDocs,
+  shelfDocs,
+  shelfLabel,
+  onSelectDoc,
   corpusQuery,
   onCorpusQueryChange,
 }: LayoutProps) {
@@ -372,8 +448,24 @@ export function Layout({
             />
           </div>
 
-          {/* Right controls — NavDropdown and settings will be added in Task 5 */}
+          {/* Right controls */}
           <div className="flex shrink-0 items-center gap-1">
+            <NavDropdown
+              label="Recent"
+              docs={recentDocs}
+              onSelect={onSelectDoc}
+              testId="nav-recent"
+              emptyText="No recently viewed documents."
+            />
+            {shelfDocs.length > 0 && shelfLabel && (
+              <NavDropdown
+                label={shelfLabel}
+                docs={shelfDocs}
+                onSelect={onSelectDoc}
+                testId="nav-shelf"
+                emptyText="No documents in this section."
+              />
+            )}
             <SettingsDropdown />
           </div>
         </div>
