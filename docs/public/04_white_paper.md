@@ -2,6 +2,8 @@
 
 ## Public White Paper
 
+> **Status: Constitutional design and critique target — not a deployed or deployment-ready system. No major operational claim has been validated at scale. See the [Readiness Guide](03_readiness.md) and [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) for the honest status of each claim.**
+
 This paper explains the project in plain language.
 
 The Humane Constitution is a design for a society where:
@@ -42,11 +44,17 @@ The system separates five tools.
 
 The design only works if these tools stay separate.
 
+<!-- VISUAL PLACEHOLDER: [V-001] Five-Tool Separation Architecture -->
+<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
+<!-- IMAGE PROMPT:
+Architectural diagram showing five distinct vertical columns labeled: FLOW (deep blue), ESSENTIAL ACCESS (forest green), VOICE (amber gold), SERVICE RECORD (warm grey), SHARED STOREHOUSE (muted red, dashed border). Each column has icons representing what it does: Flow shows coins/wallet; Essential Access shows food/shelter/medicine; Voice shows a civic assembly; Service Record shows a contribution ledger; Shared Storehouse shows rationing boxes. Between each column are thick concrete walls with red X marks blocking conversion arrows. Below each column shows small text of what it CANNOT do. Shared Storehouse has a dashed 'emergency only' border and a clock icon. The overall aesthetic is clean constitutional infographic style, dark background, white text labels, minimal design.
+-->
+
 ## Flow: Ordinary Money With Limits
 
-Flow is the system's money for normal economic life.
+Flow (ordinary money) is the system's money for normal economic life.
 
-People use Flow to:
+People use Flow (ordinary money) to:
 
 - get paid
 - buy and sell
@@ -55,11 +63,17 @@ People use Flow to:
 - sign contracts
 - fund useful projects
 
-Flow is not evil. Markets are not abolished.
+Flow (ordinary money) is not evil. Markets are not abolished.
 
-But Flow cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
+But Flow (ordinary money) cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
 
 The system also uses an **idle-money fee** on large unused balances. The goal is to discourage hoarding and push money toward useful activity. That rule needs careful testing so it does not punish ordinary people or real long-term projects.
+
+<!-- VISUAL PLACEHOLDER: [V-005] Demurrage Decay Curve -->
+<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
+<!-- IMAGE PROMPT:
+Line chart showing currency demurrage decay over 12 months. X-axis: months 0-12. Y-axis: balance (100% to 94%). Three lines: 1) Blue solid line 'Idle balance' following B(t) = B(0)·e^(-0.005t), starting at 100%, ending at ~94.2% at month 12. 2) Green dashed line 'Active/deployed balance' — flat at 100% (no decay). 3) Amber dotted line 'Decay charges funding public rails' — starting at 0, accumulating to ~5.8%. Annotations: at month 6 'approx. 3% of idle balance transferred to public infrastructure fund.' Note at bottom: 'Rate shown: 0.5%/month baseline. Ordinary household liquidity has protected operating buffer.' Clean data visualization, dark background, minimal gridlines, constitutional design aesthetic.
+-->
 
 ## Essential Access: The Basic Needs Floor
 
@@ -74,6 +88,8 @@ It covers things like:
 - basic transit
 
 It is not cash. It is not a reward. It is not something officials can take away because they dislike a person.
+
+**Important:** Essential Access allocations are refreshed regularly and expire every 72 hours — they are deliberately not saveable. This prevents them from being stockpiled, traded, or used as collateral. They are a daily needs floor, not a savings instrument.
 
 The hard part is physical reality. A society can only provide what it can actually produce, store, move, and repair. That means the system must measure real capacity: food supply, housing, medicine, water, energy, care workers, and other essentials.
 
@@ -99,6 +115,8 @@ They cannot buy:
 
 The system must also protect people who do unpaid care work, become sick, lose work, or face hardship. Civic tools should not quietly punish people for being poor, disabled, displaced, or overwhelmed.
 
+**How Voice works in practice:** Voice balances decay continuously — roughly halving every 5 days. At any decision moment, your current balance is also converted through an effectiveness table: holding 0–50 units gives full 1.00x weight; 51–80 units is reduced to 0.50x; 81–100 units is reduced to 0.25x; holding more than 100 units is prohibited. The decay function prevents accumulation over time. The bucket table prevents gaming through large stockpiles at decision moments. For the technical specification, see [SPECIFICATIONS.md](../constitution/SPECIFICATIONS.md) (Voice State Machine § 4.2) and [Humane_Constitution.md](../constitution/Humane_Constitution.md) Article VI.
+
 ## Shared Storehouse: What Happens In A Shortage
 
 Sometimes there is not enough of something essential.
@@ -117,11 +135,19 @@ It must be:
 
 It is not meant to be normal life.
 
+<!-- VISUAL PLACEHOLDER: [V-003] Scarcity Escalation Ladder -->
+<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
+<!-- IMAGE PROMPT:
+Escalation ladder diagram with 4 horizontal bands stacked vertically. Bottom band (wide, calm green): NORMAL — ≥21 days supply, Flow-based market allocation, icons of open market stalls. Second band (yellow, slightly narrower): WATCH L1 — <21 days supply, price rise >2× baseline, icons of public announcement, voluntary conservation. Third band (orange, narrower): SCARCITY L2 — <14 days supply, Shared Storehouse optional, pricing caps, icons of rationing queue. Top band (narrow, urgent red): EMERGENCY L3 — <7 days supply, mandatory rationing by lottery, all non-essentials suspended, daily CRP review, icons of emergency response. Arrows going up show threshold trigger, arrows going down show de-escalation path. A clock icon at L3 shows '14-day mandatory sunset review.' Clean infographic style, constitutional design aesthetic, dark background.
+-->
+
 ## The Founding Order
 
 The project also asks: who gets governed by this system?
 
 The answer cannot be "everyone, because the designers said so."
+
+The Founding Order is the set of documents that governs how places join, operate within, and leave the system — it is a separate constitutional layer from the five instruments themselves, governing the political geography of participation rather than the economic mechanics of the instruments.
 
 The Founding Order says:
 
@@ -132,6 +158,12 @@ The Founding Order says:
 
 This matters because a system that people cannot leave can become coercive even if its language sounds humane.
 
+<!-- VISUAL PLACEHOLDER: [V-004] Amendment Tier Pyramid -->
+<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
+<!-- IMAGE PROMPT:
+Constitutional amendment pyramid diagram. Three tiers shown as horizontal bands in an inverted triangle (widest at bottom = easiest to change). Bottom tier (large, light grey): TIER 3 — Operational Parameters — 'Standard governance process. Examples: demurrage rate 0.5%/month, Service Record sector ceiling 20%.' Middle tier (medium, blue-grey): TIER 2 — Founding Commitments — 'Supermajority + adversarial panel review required. Examples: Essential Access 72h window, oracle minimum 5 nodes.' Top tier (small, dark with gold border): TIER 1 — INVARIANTS — 'Cannot be changed by any in-system process. Requires full constitutional refounding. Examples: Survival Unconditional, Non-Convertibility. PROTECTED BY TWO-KEY PRECONDITION: cryptographic attestation from adversarial panel required before any Tier 1 proposal enters review.' Arrows on left show amendment difficulty increasing upward. Clean constitutional design aesthetic, dark background, white text.
+-->
+
 ## The Seven Main Articles
 
 The full constitution is organized into seven main parts:
@@ -140,7 +172,7 @@ The full constitution is organized into seven main parts:
 2. **Personhood and identity:** how people are recognized without turning identity into surveillance.
 3. **Real capacity:** how the system measures food, water, care, shelter, energy, and reserves.
 4. **Survival:** how Essential Access becomes real access.
-5. **Markets and public finance:** how Flow, business, housing, land, and public funding work.
+5. **Markets and public finance:** how Flow (ordinary money), business, housing, land, and public funding work.
 6. **Voice and service:** how people take part without creating social credit.
 7. **Transparency and warning systems:** how the public sees what is happening and how risks are spotted.
 
@@ -243,13 +275,13 @@ A forced rollout would be dangerous.
 
 ## What This Is Not
 
-This is not a utopia machine.
+This is a rule design for limiting how money converts into power over other people's survival. It does not fix human nature. It tries to constrain the structural pathways through which money currently buys safety, voice, and immunity from consequences. If you can still be greedy, afraid, or cruel within these rules — you can be. The design targets the specific mechanism of survival-coercion, not character.
 
-It does not end greed, fear, pride, cruelty, corruption, or bad judgment.
-
-It does not replace family, faith, conscience, community, or moral responsibility.
-
-It is a rule design for limiting how money turns into power.
+What the design does NOT do:
+- It does not abolish private ownership, profit, or markets. Flow (ordinary money) functions in markets.
+- It does not guarantee equal outcomes. It guarantees a floor below which no outcome can fall.
+- It does not prevent people from failing, making bad decisions, or suffering consequences.
+- It limits what those consequences can include: they cannot include losing food, water, shelter, basic healthcare, or basic transit.
 
 ## Final Position
 

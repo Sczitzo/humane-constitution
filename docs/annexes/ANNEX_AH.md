@@ -53,6 +53,8 @@ Upon 4/5 panel sign-off following completed Stage 3:
 - The mandatory post-activation audit (AH6) is commissioned immediately with a 90-day deadline.
 - P-006 and P-009 immediately enter the Formal Acceptance Protocol pilot stage as first-priority patches — the sequencing dependency is resolved.
 
+> **Governance gap (IC-004):** P-014 closes permanently at Stage 4. If the Stage 5 independent audit suspends P-013, no in-system recovery path currently exists — P-014 cannot be reopened after closure. This is a residual governance risk. A future patch should specify an explicit fallback: either a fixed sunset period for the suspension, an emergency re-bootstrap procedure, or a mandatory continuation of FAP operations pending re-ratification.
+
 ### AH6. Stage 5 — Post-Activation Audit (Within 90 Days)
 A retrospective audit of the P-014 activation is conducted within 90 days using P-013's own now-operative standards (including the adversarial member requirement from AG3):
 - Was the founding panel genuinely independent? Were conflict attestations accurate?
@@ -98,5 +100,15 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-015 | P-012 | PROPOSED | AE2.4 | S3 |
 | T-016 | P-013 | PROPOSED | AG | S5 |
 | T-017 | P-014 | PROPOSED | AH | S6 |
+| T-018 | P-015 | PROPOSED | AP | S7 |
+| T-019 | P-015 | PROPOSED | AP | S7 |
+| T-020 | P-017 | ACTIVE | AL | S8 |
+| T-021 | P-017 | ACTIVE | AL | S8 |
+| T-022 | P-018 | PROPOSED | AM | S8 |
+| T-023 | P-019 | PROPOSED | AN | S8 |
+| T-024 | P-022 | ACTIVE | AQ | S8 |
+| T-025 | P-023 | PROPOSED | AR | S8 |
+| T-026 | P-026 | ACTIVE | AH (Founding Order) | S9 |
+| T-027 | P-026 | ACTIVE | AH (Founding Order) | S9 |
 
-*P-014 is shown in blue to mark its unique status as a one-time founding instrument. 15 total threats. 4 ACTIVE patches. 10 PROPOSED patches. 1 FOUNDING instrument (P-014). Bootstrap problem resolved. Acceptance sequence unblocked.*
+*P-014 is shown in blue to mark its unique status as a one-time founding instrument. 27 total threats. 9 ACTIVE patches. 17 PROPOSED patches. 1 FOUNDING instrument (P-014). Bootstrap problem resolved. Acceptance sequence unblocked.*

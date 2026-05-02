@@ -6,6 +6,8 @@ It tracks conceptual and operational weaknesses that remain important even when 
 
 See also: [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
 
+> Status labels in this document use shorthand codes. See [Claims_Evidence_Register.md](./Claims_Evidence_Register.md) for canonical definitions. The mapping is: DESIGNED → "Designed mechanism, needs evidence"; ACTIVE-UNPROVEN → "Active-unproven control"; ONGOING → context-dependent.
+
 ## Status key
 
 | Status | Meaning |

@@ -75,7 +75,8 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-006](./Patch_Log.md), [Annex AC](../annexes/ANNEX_AC.md)
 - **Resolution path:** tie issuance and scarcity response to sentinel indicators, confidence bands, physical sampling, first-responder authority, and fast recovery unwinding.
 - **Corruption route to assume:** suppliers hide shortages, agencies massage data, local officials delay bad news, and market actors exploit cadence gaps before the system catches up.
-- **Proof needed:** supply-shock drills, forecast-vs-actual review, physical inventory sampling, oracle latency tests, and public explanation tests for uncertainty bands.
+- **External evidence:** Sphere, IPC, WHO SARA, WHO/UNICEF WASH monitoring, IEA energy data, and UN/OECD statistical-practice standards anchor category-specific measurement, evidence classes, readiness indicators, and public statistical integrity.
+- **Proof needed:** the [Capacity Measurement Evidence Test Package](./Capacity_Measurement_Evidence_Test_Package.md): category definition audit, supply-shock drills, forecast-vs-actual review, physical inventory sampling, oracle latency tests, methodology independence audit, oracle-failure drill, and public explanation tests for uncertainty bands.
 - **Residual risk:** real-time scarcity measurement will always lag reality; the control must bound harm during uncertainty rather than pretend precision.
 
 ### T-007 - Political Definition Drift
@@ -182,7 +183,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-017](./Patch_Log.md), [Annex AL](../annexes/ANNEX_AL.md)
 - **Resolution path:** require independent methodology classes, standards-diversity review, direct physical sampling, and visible uncertainty rather than relying on formal vendor independence.
 - **Corruption route to assume:** measurement actors share standards, funders, professional assumptions, datasets, and model architecture while passing independence checks.
-- **Proof needed:** methodology-class audit, standards-body capture review, direct-sampling pilot, and confidence-band comprehension test.
+- **Proof needed:** Capacity Measurement Evidence Test Package; methodology-class audit, standards-body capture review, direct-sampling pilot, and confidence-band comprehension test.
 - **Residual risk:** independence is partly social and epistemic, not just organizational; recurring review is permanent.
 
 ### T-021 - Algorithmic Oracle Capture
@@ -190,7 +191,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-017](./Patch_Log.md), [Annex AL](../annexes/ANNEX_AL.md)
 - **Resolution path:** inspect AI supply chains, training data dependencies, model-update governance, and algorithmic correlation across oracle systems.
 - **Corruption route to assume:** vendors deploy shared models, hidden data pipelines, biased optimization targets, or contract incentives that satisfy formal independence while producing correlated error.
-- **Proof needed:** AI supply-chain audit, model-correlation test, vendor conflict review, and manual fallback drill.
+- **Proof needed:** Capacity Measurement Evidence Test Package; AI supply-chain audit, model-correlation test, vendor conflict review, and manual fallback drill.
 - **Residual risk:** algorithmic systems can drift silently; the system needs recurring model review and non-AI physical anchors.
 
 ### T-022 - Electoral Cycle Capture
@@ -216,7 +217,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-022](./Patch_Log.md), [Annex AQ](../annexes/ANNEX_AQ.md)
 - **Resolution path:** hold current rationing level during oracle blackout, restrict provisional REB authority, publish physical-indicator evidence, and reconcile after oracle restoration.
 - **Corruption route to assume:** actors disrupt oracle quorum during rationing to force false lapse, false extension, or normalization of non-oracle emergency discretion.
-- **Proof needed:** oracle-blackout drill, physical-indicator review, 14-day restoration-window test, reconciliation post-mortem, and public explanation review.
+- **Proof needed:** Capacity Measurement Evidence Test Package; oracle-blackout drill, physical-indicator review, 14-day restoration-window test, reconciliation post-mortem, and public explanation review.
 - **Residual risk:** emergency exceptions can normalize; reconciliation must be public, timely, and reputationally costly.
 
 ### T-025 - Demurrage Sector-Capture via Investment Channel

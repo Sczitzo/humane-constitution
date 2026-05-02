@@ -20,6 +20,8 @@ See also: [External Evidence Register](./External_Evidence_Register.md), [Open P
 
 No major operational claim in this project is currently **Evidence-backed** at deployment scale.
 
+> This register's status taxonomy is the canonical reference for all governance documents in this project. Documents using different status labels — for example, Hardening_Queue.md's DESIGNED, ACTIVE-UNPROVEN, and ONGOING — should be interpreted against the definitions in this register. The mapping is: DESIGNED → "Designed mechanism, needs evidence"; ACTIVE-UNPROVEN → "Active-unproven control"; ONGOING → context-dependent, see register entry.
+
 ---
 
 ## Public claims

@@ -30,7 +30,11 @@ No. Welfare is usually a program that can be changed, cut, or used as leverage.
 
 Essential Access is meant to be a right. It is the basic floor below which the system cannot push a person.
 
-## 5. Is this communism or central planning?
+Essential Access allocations expire every 72 hours — they are deliberately not saveable. This prevents them from being stockpiled, traded, or used as collateral. They are a daily needs floor, not a savings instrument.
+
+## 5. Is this communism or socialism?
+
+No. The system does not abolish private ownership, profit, or markets. Flow (ordinary money) functions in markets. What the design limits is the ability to purchase Essential Access, Voice, or Service Record — things the design treats as non-market goods. Think of it less like communism and more like a rule that prevents money from buying a court verdict: some things simply should not be for sale.
 
 No. People can still trade, earn, save, start businesses, and make contracts.
 
@@ -74,7 +78,7 @@ The defense is simple in principle: every office has limits, every major action 
 
 ## 12. What happens to banks and credit?
 
-Flow is public money on shared rails. Basic banking is treated more like public infrastructure.
+Flow (ordinary money) is public money on shared rails. Basic banking is treated more like public infrastructure.
 
 Predatory debt is limited. Productive finance still needs to exist, but through clear and reviewable channels.
 

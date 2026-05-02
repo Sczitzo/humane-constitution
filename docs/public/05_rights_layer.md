@@ -1,5 +1,7 @@
 # Rights Under A Live System
 
+> Losing money, status, or civic standing must not cancel your right to eat, drink, stay sheltered, travel for basics, or receive essential care.
+
 This is a plain-language summary of the rights the Humane Constitution is designed to protect if it is ever adopted and made real.
 
 These rights are **not live today**. This document describes what the system is meant to protect after adoption, funding, measurement, and public review.

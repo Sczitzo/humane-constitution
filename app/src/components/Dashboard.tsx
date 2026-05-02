@@ -1754,7 +1754,7 @@ function ReaderPanel({
   onSelectDoc: (doc: CorpusDoc) => void
 }) {
   return (
-    <section id="reader-panel-start" data-testid="reader-panel" className="space-y-8">
+    <section id="reader-panel-start" data-testid="reader-panel" className="scroll-mt-16 space-y-8">
       <header className="border-b border-line pb-6">
         <div className="flex items-baseline justify-between gap-4">
           <p className="text-[11px] uppercase tracking-[0.16em] text-ink-faint">
@@ -2867,6 +2867,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     userPickedDocRef.current = true
     setSelectedDocId(pendingDocId)
     onPendingDocIdConsumed?.()
+    // Scroll reader panel into view below the sticky header after doc change.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.getElementById('reader-panel-start')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    })
   }, [pendingDocId])
 
   useEffect(() => {

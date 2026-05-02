@@ -94,6 +94,8 @@ This project was built in public and stress-tested against bad uses. If it is wr
 4. **Public White Paper** — plain-language public explanation.
 5. **Diagrammed Technical Reference** — visual map of the system.
 
+> **Design status:** This document is a constitutional design under development. It is not a deployed system. Claims about what the system "does" describe intended design, not current operation. See [Claims_Evidence_Register.md](../governance/Claims_Evidence_Register.md) for honest status of each major claim.
+
 **Working edition:** this is the current rule text for a system with ordinary money, a basic needs floor, and public power that cannot be bought.
 
 ### 0. Scope, Assumptions, and Design Invariants
@@ -292,6 +294,8 @@ Each part has a job. These are the handoffs and hard limits.
 - **Individual consent withdrawal:** a person may withdraw individual consent at any time; Tier 1 CSM floor continues unconditionally.
 - **Relationship to the articles:** Article I rights remain protected at every scale. Articles III, IV, V, and VII stay as local as possible unless federation-level action is justified.
 
+> The Acceptance Protocol governs the current founding stage. Its authority is time-limited: once the founding stage closes and elected governance bodies are operational, ordinary constitutional amendment (Tier 2 and Tier 3) replaces the Acceptance Protocol as the primary change mechanism. The Protocol cannot entrench itself beyond its founding mandate.
+
 #### Article I: Rights & Rules
 - **Survival is unconditional:** baseline essentials are guaranteed and cannot be withdrawn as punishment.
 - **Basic needs floor:** no ordinary process may reduce the survival floor below Annex Y minima; only the highest amendment path may change it.
@@ -332,6 +336,8 @@ Each part has a job. These are the handoffs and hard limits.
 - **Non-transferable by default:** this blocks coercion and black-market control. Caregiver and dependent exceptions must be capped, auditable, and reversible.
 - **No conversion:** Essential Access cannot be sold, pledged, used as collateral, or turned into money.
 - **Shortage interface:** during declared shortage, Shared Storehouse may supplement Essential Access and must end when shortage mode ends.
+
+> The quantities and standards defining each essential category are subject to the capacity measurement protocols in [Annex AL](../annexes/ANNEX_AL.md). What can actually be promised during supply shocks depends on measurement confidence and oracle failure procedures. See T-006 and the Capacity Measurement Evidence Test Package.
 
 #### Article V: Markets, Commons & Public Finance
 **Core boundary rule**
@@ -581,6 +587,9 @@ Default Voice cap: 300 raw Voice allocatable per person per quarterly decision c
 | > 100 | Not permitted | N/A (cap) |
 
 Example: allocating 100 raw Voice yields 50 + (30×0.5) + (20×0.25) = 70 effective Voice.
+
+> The effective-weight table uses quarterly decay buckets. The underlying balance decays continuously at an exponential rate as specified in [SPECIFICATIONS.md](SPECIFICATIONS.md) (Voice State Machine § 4.2). The table maps continuous balance to discrete decision weights; it does not replace the continuous decay formula.
+
 Constitutional rules, rights, and survival access remain one-person-one-vote, and any survival-adjacent recommendation produced through Voice remains advisory unless separately ratified through the legitimacy safeguards defined elsewhere.
 
 **Oracle buffers and dispute defaults**

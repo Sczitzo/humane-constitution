@@ -1,393 +1,253 @@
 # Capacity Measurement Evidence Test Package
 
-This package defines what must be true before the project can make strong claims about measuring real essential capacity.
+This package defines what must be true before the project can make strong claims about real-capacity measurement.
 
-Capacity measurement is a constitutional safety system. Essential Access, Shared Storehouse activation, reserves, emergency response, and public trust all depend on whether the system can tell the difference between real abundance, hidden shortage, temporary logistics failure, forecast error, and manipulated data. Bad measurement can harm people even when every institution is acting in good faith.
+Capacity measurement is the mechanism by which the system determines whether essential categories — food, water, shelter, healthcare, transit, energy, communications — are available in sufficient supply to sustain Essential Access promises, trigger Shared Storehouse activation, and govern scarcity-mode escalation. Bad measurement can harm people even when every institution is acting in good faith.
 
-Current status: **active-unproven control, needs field evidence**.
+This document covers: T-006 (Measurement Lag / Supply Shock), T-020 (Measurement Source Corruption), T-021 (Measurement Independence Collapse), and T-024 (Shared Storehouse Capture via false oracle signals).
 
-See also: [Claims and Evidence Register](./Claims_Evidence_Register.md), [External Evidence Register](./External_Evidence_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), [Annex M](../annexes/ANNEX_M.md), [Annex AL](../annexes/ANNEX_AL.md), and [Annex AQ](../annexes/ANNEX_AQ.md).
+Current status: **active-unproven control, needs evidence**.
 
 ---
 
-## Honest Claim Boundary
+## 1. Honest Claim Boundary
 
 The project may currently claim:
 
-> The measurement architecture requires evidence classes, confidence bands, methodology-class diversity, direct physical sampling, and conservative defaults during oracle failure.
+> The measurement architecture requires evidence classes, confidence bands, methodology-class diversity, direct physical sampling, and conservative defaults during oracle failure. These requirements are designed into the system. None has been validated in the field.
 
 The project may not yet claim:
 
 - essential capacity is reliably measurable at deployment scale;
-- oracle independence has been proven in the field;
+- oracle independence has been demonstrated in practice — independence requirements exist in design only;
 - confidence bands will be understood by ordinary readers;
-- physical sampling is frequent enough to anchor the categories it claims to verify;
+- physical sampling is frequent or wide enough to anchor the categories it claims to verify;
 - suppliers, agencies, vendors, standards bodies, or AI systems cannot bias measurement;
 - Shared Storehouse activation and unwind thresholds are operationally safe;
-- measurement can avoid both false abundance and false scarcity under stress.
+- measurement can avoid both false abundance and false scarcity under adversarial stress.
 
-Evidence-backed claims require the tests below plus a residual-risk update.
+Evidence-backed claims require the tests in Section 4 plus a residual-risk update to this document.
 
 ---
 
-## Source Base
+## 2. Source Base
 
 | Source | What it supports | What it does not prove |
 |---|---|---|
-| [Sphere Handbook](https://spherestandards.org/handbook/) | Humanitarian response uses minimum standards and indicators for WASH, food security, shelter, and health. | Emergency standards are not a full ordinary-life capacity measurement system. |
-| [IPC Manual 3.1](https://www.ipcinfo.org/ipcinfo-website/resources/ipc-manual/en/) | Food insecurity classification uses evidence convergence, international standards, and severity thresholds. | IPC does not measure all essential categories or solve supplier manipulation. |
-| [WHO Service Availability and Readiness Assessment](https://www.who.int/data/data-collection-tools/service-availability-and-readiness-assessment-%28sara%29?ua=1) | Health service capacity requires facility lists, surveys, tracer indicators, equipment, medicines, staffing, and readiness measures. | SARA does not prove actual real-time care availability or quality under crisis. |
-| [WHO/UNICEF JMP and WHO WASH monitoring](https://www.who.int/activities/monitoring-water-sanitation-and-hygiene) | Water, sanitation, and hygiene monitoring depends on comparable indicators, system monitoring, and availability/safety dimensions. | Global WASH monitoring does not provide local real-time scarcity triggers. |
-| [UN-Water SDG 6 monitoring](https://www.unwater.org/publications/sdg-6-monitoring) | Water data supports accountability, investment, and effective decision-making; indicator methods need explicit definitions. | SDG monitoring cadence is not fast enough for emergency rationing decisions. |
-| [IEA energy data and statistics](https://www.iea.org/data-and-statistics/about) | Energy security policy depends on consistent, accurate, timely supply and demand data, including near-term data collections. | IEA data frameworks do not prove local Essential Access energy availability. |
-| [UN Fundamental Principles of Official Statistics](https://unstats.un.org/fpos) | Public statistics require integrity, professional independence, confidentiality, relevance, transparency, and equal access. | Official-statistics principles do not prevent political or supplier capture by themselves. |
-| [OECD Good Statistical Practice](https://www.oecd.org/en/toolkits/good-statistical-practice.html) | Statistical systems need quality, transparency, accountability, and institutional good practice. | Good statistical practice does not resolve adversarial oracle design. |
-| [OECD AI Principles](https://www.oecd.org/en/topics/ai-principles.html) | AI systems need transparency, robustness, safety, accountability, and risk management. | AI principles do not prove algorithmic oracle independence or correctness. |
+| [Sphere Handbook](https://spherestandards.org/handbook/) | Minimum humanitarian standards for food, water, shelter, health — shows that category definitions and quantitative thresholds matter | Does not validate the specific oracle architecture or measurement independence methods |
+| [IPC Manual 3.1](https://www.ipcinfo.org/ipcinfo-website/resources/ipc-manual/en/) | Integrated Food Security Phase Classification — shows how expert consensus, phased thresholds, and multi-source evidence work in practice | Local-context classification does not prove scalability or oracle-independence |
+| [WHO SARA](https://www.who.int/data/data-collection-tools/service-availability-and-readiness-assessment-%28sara%29) | Service Availability and Readiness Assessment — shows structured survey methodology for healthcare capacity | Health service surveys do not generalise to food, energy, or water measurement |
+| [WHO/UNICEF WASH monitoring](https://www.who.int/activities/monitoring-water-sanitation-and-hygiene) | Joint Monitoring Programme for water/sanitation — shows multi-source, multi-indicator measurement methodology | Not designed for real-time ledger-linked threshold activation |
+| [IEA energy data](https://www.iea.org/data-and-statistics/about) | Structured multi-source energy statistics with defined categories and revision cycles | IEA publishes with lag; not designed for real-time oracle architecture |
+| [UN Official Statistics Principles](https://unstats.un.org/fpos) | Fundamental principles for official statistics: independence, transparency, quality standards, revision policies | Principles do not guarantee implementation; political independence may still be compromised |
+| [OECD Good Statistical Practice](https://www.oecd.org/en/toolkits/good-statistical-practice.html) | Operational good practice for statistical organisations — governance, methodology, audit, data quality | Does not prove oracle independence under adversarial conditions |
 
 ---
 
-## Abuse Model
+## 3. Abuse Model
 
 Assume capacity numbers will be attacked because they move survival access, rationing, funding, procurement, and political legitimacy.
 
 | Actor | Likely attack or failure route | What the test must expose |
 |---|---|---|
-| Supplier or distributor | Under-reports inventory to trigger public procurement or over-reports inventory to avoid Shared Storehouse. | Whether physical sampling and logistics data catch strategic reporting. |
-| Public agency | Smooths bad news, delays publication, changes denominators, or hides uncertainty to protect reputation. | Whether dashboards publish uncertainty and revision history. |
-| Standards body | Defines quality, capacity, or readiness in a way that favors incumbents or lowers obligations. | Whether methodology-class and standards-funding audits detect capture. |
-| Oracle vendor | Optimizes model performance on stale or biased data while satisfying formal reporting requirements. | Whether direct physical sampling and error-correlation tests catch shared blind spots. |
-| Political operator | Pressures oracles to avoid scarcity declarations before elections or to overstate scarcity for emergency powers. | Whether independence and publication duties survive political stress. |
-| Local official | Reports favorable local capacity while appeals, queues, and missed deliveries reveal access failure. | Whether delivery outcomes can contradict top-line capacity claims. |
-| Black-market actor | Exploits cadence gaps, logistics delays, or false scarcity signals to hoard or arbitrage essentials. | Whether sentinel indicators compress exploit windows. |
-| Well-meaning technocrat | Treats modeled estimates as reality because direct measurement is expensive or messy. | Whether evidence classes prevent false precision. |
+| Political actor | Suppresses shortage signals before elections or during politically sensitive periods to avoid emergency activation and the accountability that follows | Whether independence requirements and mandatory publication duties survive direct political pressure |
+| Commercial supplier | Inflates reported available capacity to retain supply contracts, avoid Shared Storehouse activation, and prevent investigation of logistics failures | Whether physical sampling and delivery-outcome data can contradict administrative self-reporting |
+| Measurement body insider | Biases methodology toward category definitions that favor incumbents, lower measured obligations, or obscure access failure behind acceptable-looking aggregates | Whether methodology-class audits and standards-body concentration reviews detect capture before it affects decisions |
+| Oracle council captor | Builds institutional alignment across a majority of oracle seats through shared funders, professional culture, or AI supply-chain dependency — making formal independence nominal | Whether pairwise error-correlation tests catch shared blind spots and whether adversarial seats produce genuine dissent |
+| Adversarial simulation designer | Selects test scenarios that avoid the edge cases most likely to expose measurement failure — logistics breakdowns, rapid supply shocks, uneven geographic access | Whether test design is reviewed by parties with no stake in a passing result |
+| Oracle vendor | Shares AI models, data feeds, or calibration training across multiple oracle nodes, creating correlated errors that defeat diversity requirements without violating formal rules | Whether supply-chain audits and independent physical sampling can detect correlated drift before it affects live decisions |
 
 ---
 
-## Required Models
+## 4. Required Tests
 
-### 1. Category Definition Model
+### 4.1 Category Definition Audit
 
-**Question:** Does each essential category measure the thing people actually need, not a convenient proxy?
+**What is being tested:** Does each essential category measure the thing people actually need, or a convenient proxy that can look adequate while access fails?
 
-**Minimum categories:**
+**Method:** For each category — food, potable water, shelter, healthcare, transit, energy, communications — produce a written measurement sheet that specifies: unit of measurement, minimum quality floor, perishability or service-life assumption, substitutability rule, geographic resolution, time resolution, evidence class required to trigger threshold actions, and what the category excludes.
 
-- food;
-- potable water;
-- shelter and heat;
-- essential medicines;
-- basic healthcare and care capacity;
-- sanitation;
-- basic transit;
-- essential energy;
-- communications needed for access and emergency coordination.
-
-**Required outputs:**
-
-- operational definition;
-- unit of measurement;
-- minimum quality floor;
-- perishability or service-life assumption;
-- substitutability rule;
-- geographic resolution;
-- time resolution;
-- who is counted;
-- what is missing;
-- policy actions allowed at each evidence class.
+**Pass condition:** Every category has an operational definition that an independent observer unfamiliar with the project could use to verify a reported value against a physical sample.
 
 **Failure criteria:**
 
-- food capacity ignores distribution, spoilage, storage, or transport;
-- water capacity ignores availability, contamination, or access distance;
+- food capacity ignores distribution, spoilage, storage, or last-mile transport;
+- water capacity ignores contamination, access distance, or seasonal variation;
 - shelter capacity counts raw units rather than habitable, heated, accessible, placeable units;
 - health capacity counts licensed facilities rather than staffed, equipped, reachable, ready services;
-- medicine capacity counts inventory without continuity, cold chain, substitution, or expiry;
-- category definitions can be changed without a public semantic-impact test.
+- any category definition can be changed without a public semantic-impact test.
 
-### 2. Latency and Cadence Model
+### 4.2 Latency and Lag Test
 
-**Question:** Are measurements fast enough for decisions that can harm people?
+**What is being tested:** How quickly does the measurement system detect a real shortage? Is detection fast enough to protect people?
 
-**Minimum tests:**
+**Method:** Inject a simulated supply decline for food and water (fast-volatility categories) and for shelter and energy (slower-volatility categories). Measure time from decline onset to: oracle detection, dashboard update, public publication, and any threshold activation.
 
-- high-volatility category update interval;
-- low-volatility category update interval;
-- sentinel indicator detection delay;
-- forecast-vs-actual variance;
-- publication delay;
-- revision delay;
-- appeal and challenge timing;
-- Shared Storehouse activation and unwind timing.
+**Benchmark:** Sphere Handbook minimum thresholds for food and water — 2,100 kcal/person/day and 15 litres/person/day — provide an external anchor against which oracle outputs should be evaluated.
 
 **Failure criteria:**
 
-- data arrives after the harm window has passed;
+- detection delay exceeds 48 hours for food or water shortage reaching Sphere minimum threshold;
+- detection delay exceeds 7 days for shelter or energy shortage;
 - one category updates quickly while a dependent category lags;
-- Shared Storehouse remains active after verified recovery because unwind is slower than activation;
-- dashboard publication lags operational decision-making;
-- first-responder authority relies on stale evidence;
-- cadence gaps create predictable arbitrage windows.
+- dashboard publication trails operational decision-making by more than one update cycle.
 
-### 3. Evidence-Class and Confidence-Band Model
+### 4.3 Physical Sampling Pilot
 
-**Question:** Does the public know how strong the evidence is, and what uncertainty remains?
+**What is being tested:** Do oracle-reported figures agree with independent physical measurement?
 
-**Required evidence classes:**
+**Method:** Conduct direct physical measurement of at least one high-stakes category (food or water) in a bounded geographic area. Sample a sufficient number of locations to support a confidence interval. Compare physical sample results to oracle-reported figures for the same period and geography.
 
-- direct physical observation;
-- audited administrative estimate;
-- modeled forecast;
-- community or affected-population report;
-- expert judgment;
-- emergency physical indicator.
+**Required output:** A comparison table showing physical sample value, oracle-reported value, difference, direction of discrepancy, and confidence interval on the physical estimate.
 
-**Required outputs:**
-
-- confidence interval or uncertainty band;
-- source count;
-- methodology class;
-- data age;
-- last revision;
-- known missing data;
-- direction of likely bias;
-- decision consequence allowed.
+**Pass condition:** The pilot is completed and results are published, including cases where the physical sample contradicts the oracle.
 
 **Failure criteria:**
 
-- confidence bands are absent, hidden, or incomprehensible;
-- modeled forecasts are presented as observed capacity;
-- expert judgment can trigger scarcity without corroboration;
-- uncertainty always resolves in favor of institutional convenience;
-- public readers cannot explain what the number means;
-- old data is displayed as current.
+- sampling sites can be predicted in advance by measured actors;
+- inspectors are financially dependent on the entities being measured;
+- discrepancy findings are not used to update oracle confidence bands;
+- pilot covers only locations expected to show agreement.
 
-### 4. Methodology-Class Independence Model
+### 4.4 Methodology Independence Audit
 
-**Question:** Do different oracle nodes actually fail in different ways?
+**What is being tested:** Are measurement sources genuinely independent, or do they share data feeds, AI supply chains, funding, or professional culture in ways that make formal diversity nominal?
 
-**Required tests:**
+**Method:** For each oracle node pair, document: data feed sources, AI model provenance, primary funding body, standards bodies relied upon, and key personnel professional training. Compute pairwise error correlation on historical category readings for any period where at least two nodes operated.
 
-- Annex AL methodology-class registry review;
-- pairwise error-correlation test;
-- standards-body concentration audit;
-- funding-source lookback;
-- AI supply-chain dependency audit;
-- direct physical sampling comparison;
-- adversarial-seat dissent analysis.
+**Pass condition:** Audit report is published. Correlation findings are shared with governance before any Shared Storehouse activation test.
 
 **Failure criteria:**
 
-- formally different nodes share data, standards, vendors, AI models, funders, or professional assumptions;
-- pairwise error correlation exceeds FC-032 without corrective action;
-- adversarial seats produce no meaningful dissent because their incentives are captured;
-- standards-body concentration review is delayed until after decisions;
-- direct physical sampling is too rare to detect model drift;
-- divergence between methodology classes is suppressed as inconvenience rather than investigated as signal.
+- pairwise error correlation between any two oracle nodes exceeds 0.30 on historical category data without a documented corrective action;
+- two or more nodes share a primary AI model vendor or data provider;
+- adversarial oracle seats produce no meaningful dissent across any recorded disagreement period.
 
-### 5. Direct Physical Sampling Model
+### 4.5 Oracle Failure Drill
 
-**Question:** Is there enough ground truth to keep models and administrative data honest?
+**What is being tested:** Does the system continue to protect Essential Access when oracle nodes fail?
 
-**Minimum sampling domains:**
+**Method:** Simulate simultaneous failure of 2 of the required oracle node minimum. Record: whether Essential Access issuance continues under Conservative Hold, whether Shared Storehouse activates or holds, how the public dashboard reflects the failure state, and whether restoration and reconciliation procedures are documented and followed.
 
-- food warehouses, distributors, and retail shelves;
-- water quality and availability points;
-- shelter habitability and placement sites;
-- essential medicine inventories and cold-chain integrity;
-- healthcare staffing, equipment, and readiness;
-- energy supply continuity for essential uses;
-- transit availability at point of service.
-
-**Required outputs:**
-
-- sampling frame;
-- randomization method;
-- inspection frequency;
-- inspector independence;
-- tamper-evidence method;
-- cost per category;
-- detected discrepancy rate;
-- follow-up enforcement;
-- public summary of findings.
+**Pass condition:** Conservative Hold activates correctly, public dashboard shows oracle failure explicitly, and the documented protocol is followed without improvisation.
 
 **Failure criteria:**
 
-- sampling can be predicted or staged around;
-- inspectors depend financially on measured actors;
-- sampling covers only easy locations;
-- discrepancy findings do not update oracle confidence;
-- cost pressure causes sampling to become symbolic;
-- field data is too sparse to challenge administrative claims.
+- no documented protocol exists for quorum failure before the drill;
+- oracle failure silently causes access deprivation without a dashboard indication;
+- Conservative Hold either fails to activate or cannot be unwound within the restoration window;
+- reconciliation after restoration does not explain discrepancies produced during the failure period.
 
-### 6. Activation, Hold, and Unwind Model
+### 4.6 Dashboard Comprehension Test
 
-**Question:** Do scarcity controls activate quickly enough, hold conservatively under uncertainty, and unwind when recovery is real?
+**What is being tested:** Can ordinary readers understand what the measurement dashboard is telling them about their access rights?
 
-**Minimum scenarios:**
+**Method:** Show the capacity measurement dashboard to at least 20 readers with no technical background in statistics or logistics. Ask each reader to identify: current supply level for at least two categories, what the confidence band means, which categories are in watch or scarcity mode, and how they would challenge a measurement they believe is wrong.
 
-- genuine sudden food disruption;
-- false food disruption caused by demand surge;
-- water contamination with uncertain geography;
-- medicine shortage with substitution dispute;
-- shelter loss after disaster;
-- healthcare staffing collapse;
-- oracle quorum loss during active Shared Storehouse;
-- fast recovery after short shock;
-- politically sensitive pre-election shortage.
-
-**Required outputs:**
-
-- trigger threshold crossed;
-- evidence class supporting trigger;
-- decision time;
-- affected population;
-- CSM continuity;
-- rationing scope;
-- challenge path used;
-- unwind signal;
-- post-mortem discrepancy.
+**Pass condition:** At least 75% of readers correctly identify current supply level, interpret the confidence band as uncertainty rather than error, and can name one way to challenge a measurement.
 
 **Failure criteria:**
 
-- Shared Storehouse activates on vague scarcity claims;
-- activation is fast but unwind is slow;
-- oracle failure becomes a deprivation vector;
-- Conservative Hold normalizes permanent emergency administration;
-- challenge paths cannot operate inside the harm window;
-- recovery is ignored because officials fear being blamed for a premature lapse.
+- fewer than 75% of readers correctly identify current supply level;
+- fewer than 75% correctly interpret the confidence band;
+- no reader can identify a challenge path;
+- dashboard design creates false certainty by hiding uncertainty bands or revision history.
 
-### 7. Dashboard and Public Comprehension Model
+### 4.7 Synthetic Shock Simulation
 
-**Question:** Can ordinary skeptical readers understand the difference between measured fact, estimate, forecast, uncertainty, and policy choice?
+**What is being tested:** Does the scarcity escalation ladder activate at the correct thresholds and de-escalate when the shock resolves?
 
-**Required tests:**
+**Method:** Inject a simulated rapid supply drop into oracle inputs — a drop that crosses the Shared Storehouse activation threshold — and observe system response. After a defined interval, inject a recovery signal and observe de-escalation. Test at least two categories with different volatility profiles.
 
-- plain-language dashboard comprehension;
-- confidence-band explanation test;
-- revision-history visibility;
-- "what changed since last update" test;
-- scarcity trigger explanation test;
-- oracle disagreement explanation test;
-- appeal-path visibility.
+**Pass condition:** Activation occurs at the designed threshold, not before and not after. De-escalation occurs within the mandatory 14-day sunset window once recovery conditions are met.
 
 **Failure criteria:**
 
-- readers treat confidence bands as decoration;
-- readers cannot tell which values are modeled;
-- dashboards hide disagreement behind a single consensus score;
-- public notices do not explain what action follows from a threshold;
-- people cannot find how to challenge a measurement that affects them;
-- dashboard design creates false certainty.
+- activation threshold is incorrect — the system activates too early or fails to activate at the designed threshold;
+- system fails to de-escalate within 14 days of recovery conditions being met;
+- de-escalation is slower than activation without a documented justification;
+- Conservative Hold persists after recovery conditions are verified, normalizing permanent emergency administration.
+
+### 4.8 Adversarial Oracle Seat Test
+
+**What is being tested:** Does the adversarial oracle seat have practical ability to trigger a quorum challenge and exercise real dissent, not nominal dissent?
+
+**Method:** Using the adversarial oracle seat, attempt to: (a) register a formal dissent on a capacity reading; (b) trigger a quorum challenge; (c) access the same source data as other nodes; (d) publish a minority report visible to the public dashboard. Separately, test whether a 4-of-4 vote by non-adversarial seats can override the adversarial seat and whether that override is publicly logged.
+
+**Pass condition:** Adversarial seat can complete all four actions without being blocked by procedural barriers. Override mechanism works correctly and is logged transparently.
+
+**Failure criteria:**
+
+- adversarial seat cannot register dissent or trigger a quorum challenge in practice;
+- adversarial seat lacks access to source data available to other nodes;
+- minority report is not visible on the public dashboard;
+- override mechanism works but the override is not logged or explained publicly.
 
 ---
 
-## Calibration Rules
+## 5. Failure Criteria Summary
 
-Capacity parameters should be bound from evidence, not convenience.
-
-**Minimum parameter set:**
-
-| Parameter | What it controls | Evidence needed before binding |
-|---|---|---|
-| FC-001 through FC-005 measurement error bounds | Acceptable error for food, water, shelter, energy, and medicine | Field measurement pilot, physical sampling discrepancy rate, harm model by category. |
-| FC-030 oracle node floor | Minimum oracle cohort size | Availability, cost, BFT tolerance, independence stress test. |
-| FC-031 methodology-class floor | Minimum distinct methodology classes | Error-correlation and standards-concentration review. |
-| FC-032 pairwise error-correlation maximum | Maximum shared error pattern | Historical overlap, ground-truth sample, stress scenario. |
-| FC-033 adversarial seat floor | Required dissent capacity | Dissent usefulness, capture review, procurement independence. |
-| FC-072 Shared Storehouse activation threshold rule | Category-specific scarcity trigger | Category definition model, latency test, CSM harm model, unwind test. |
-| FC-100 oracle restoration window | Post-failure verification period | Oracle-failure drill, flash-recovery manipulation test, reconciliation results. |
-
-**Calibration must satisfy all five constraints:**
-
-1. evidence strength rises with policy consequence;
-2. uncertainty is published before decisions are made;
-3. direct physical sampling can contradict administrative and modeled data;
-4. activation and unwind are symmetric enough to prevent permanent emergency;
-5. ordinary readers can understand the measurement's limits.
-
----
-
-## Test Sequence
-
-### Stage 0 - Desk Evidence Review
-
-Output: source memo separating humanitarian standards, food-security classification, WASH monitoring, health facility readiness, energy data practice, official-statistics principles, and AI/data-governance cautions.
-
-Pass condition: the memo identifies what outside sources support and what they do not prove.
-
-### Stage 1 - Category Definition Audit
-
-Output: one measurement sheet per essential category, including unit, quality floor, evidence class, cadence, uncertainty, and allowed policy consequence.
-
-Pass condition: no category relies on a proxy that can look adequate while access fails.
-
-### Stage 2 - Synthetic Shock Simulation
-
-Output: simulated genuine shortage, false shortage, demand surge, logistics failure, and recovery scenarios across at least three categories.
-
-Pass condition: measurement latency, activation, hold, challenge, and unwind behavior are visible and timed.
-
-### Stage 3 - Field Sampling Pilot
-
-Output: direct physical samples compared with administrative reports, modeled forecasts, and community reports.
-
-Pass condition: discrepancy rates are published and used to update confidence bands.
-
-### Stage 4 - Methodology Independence Audit
-
-Output: standards-body, funding, AI supply-chain, and pairwise error-correlation review for each oracle cohort.
-
-Pass condition: every high-volatility category satisfies Annex AL requirements before it can gate Shared Storehouse.
-
-### Stage 5 - Oracle-Failure Drill
-
-Output: live tabletop or bounded operational drill using Annex AQ Conservative Hold, REB first-responder window, governance handoff, restoration, and reconciliation.
-
-Pass condition: CSM continuity holds, public dashboard shows oracle failure, and reconciliation explains discrepancies.
-
-### Stage 6 - Public Dashboard Test
-
-Output: ordinary-reader comprehension results for capacity values, confidence bands, evidence classes, and challenge paths.
-
-Pass condition: readers can tell what is known, what is estimated, what is uncertain, and what decision follows.
-
----
-
-## Minimum Evidence Tables
-
-The project should not move capacity measurement from **active-unproven** to **partly tested** until these tables exist.
-
-| Table | Required columns |
+| Test | Failure criterion |
 |---|---|
-| Category definition | Category, unit, quality floor, evidence class, cadence, geographic resolution, missing data, allowed policy consequence. |
-| Error and latency | Category, reported value, ground-truth sample, error band, update delay, publication delay, decision delay. |
-| Oracle independence | Category, node, methodology class, standards body, funding source, AI dependency, pairwise correlation, adversarial-seat status. |
-| Physical sampling | Category, sampling frame, sample size, inspection date, discrepancy, suspected manipulation, follow-up action. |
-| Activation/unwind | Scenario, trigger, evidence class, action, CSM effect, challenge path, unwind signal, post-mortem finding. |
-| Dashboard comprehension | User group, value interpreted, confidence-band interpretation, challenge-path recall, confusion pattern. |
-| Oracle failure | Failure type, hold entry time, REB decision, handoff time, restoration date, reconciliation discrepancy, root cause. |
+| 4.1 Category Definition Audit | Any category lacks an operational definition an independent observer could verify against physical sample |
+| 4.2 Latency and Lag Test | Detection delay exceeds 48 hours for food/water shortage at Sphere threshold, or 7 days for shelter/energy |
+| 4.3 Physical Sampling Pilot | Discrepancy findings are not published or not used to update oracle confidence bands |
+| 4.4 Methodology Independence Audit | Pairwise error correlation between any two oracle nodes exceeds 0.30 without corrective action |
+| 4.5 Oracle Failure Drill | No documented protocol for quorum failure exists before the drill is conducted |
+| 4.6 Dashboard Comprehension Test | Fewer than 75% of ordinary readers correctly identify current supply level and confidence band |
+| 4.7 Synthetic Shock Simulation | Incorrect activation threshold, or failure to de-escalate within 14-day mandatory sunset window |
+| 4.8 Adversarial Oracle Seat Test | Adversarial seat cannot register dissent, trigger a challenge, or publish a minority report in practice |
 
 ---
 
-## Decision Rule
+## 6. Evidence Priority
 
-Capacity measurement may support scale-up only if the tests show that it is:
+The following sequence reflects dependency order: later tests depend on work done in earlier stages.
 
-- category-specific rather than proxy-driven;
-- timely enough for the harm window;
-- honest about uncertainty;
-- independently challengeable;
-- anchored by direct physical sampling;
-- methodologically diverse under Annex AL;
-- resilient to oracle failure under Annex AQ;
-- clear enough for public accountability;
-- symmetric between activation and unwind;
-- capable of admitting "we do not know" without silently depriving people.
+**Priority 1 — Category Definition Audit (Test 4.1)**
 
-If those conditions fail, the project must pause scale-up for the affected category, restrict policy consequences to lower-stakes actions, increase direct sampling, revise category definitions, alter activation thresholds, or explicitly downgrade the claim from "measured capacity" to "estimated capacity under review."
+Run first. Every other test depends on knowing what is being measured. Until category definitions are locked and independently reviewable, latency tests, physical sampling, and shock simulations cannot be interpreted correctly. Update [Claims\_Evidence\_Register.md](./Claims_Evidence_Register.md) when category sheets are published.
+
+**Priority 2 — Methodology Independence Audit (Test 4.4)**
+
+Run second. The oracle cohort design must be validated before physical sampling is used to anchor it. If correlation findings reveal that nodes are not independent, the oracle architecture must be revised before further tests have evidentiary weight.
+
+**Priority 3 — Physical Sampling Pilot (Test 4.3)**
+
+Run third. Physical sampling provides the external ground-truth anchor for all subsequent oracle validation. Without at least one completed pilot, there is no basis for claiming oracles are calibrated against reality. Update [External\_Evidence\_Register.md](./External_Evidence_Register.md) with pilot results.
+
+**Priority 4 — Latency and Lag Test (Test 4.2)**
+
+Run fourth, after category definitions and at least one physical sampling cycle are complete. Latency is only interpretable against defined thresholds and categories.
+
+**Priority 5 — Oracle Failure Drill (Test 4.5)**
+
+Run fifth. Requires that the Conservative Hold protocol is documented and that at least one oracle cohort is operational or simulated. Update [Threat\_Resolution\_Matrix.md](./Threat_Resolution_Matrix.md) with drill findings for T-006 and T-021.
+
+**Priority 6 — Adversarial Oracle Seat Test (Test 4.8)**
+
+Run sixth, concurrent with or immediately after the oracle failure drill. Requires an operational adversarial seat. Update [Hardening\_Queue.md](./Hardening_Queue.md) with any procedural barrier findings.
+
+**Priority 7 — Synthetic Shock Simulation (Test 4.7)**
+
+Run seventh. Requires category definitions, oracle architecture, and threshold parameters to be in place.
+
+**Priority 8 — Dashboard Comprehension Test (Test 4.6)**
+
+Run last. Requires a near-final dashboard implementation. Comprehension test results should feed directly into dashboard revisions before any public launch.
 
 ---
 
-## Residual Risk Statement
+## 7. See Also
 
-Even if the tests pass, essential capacity will never be perfectly measurable. Physical reality changes faster than dashboards, and people with power will try to shape the numbers that govern obligations. The correct goal is not perfect knowledge. The goal is a measurement system that is humble, adversarially tested, physically anchored, publicly legible, and unable to quietly convert uncertainty into deprivation.
-
+- [Claims and Evidence Register](./Claims_Evidence_Register.md) — status taxonomy and evidence tracking for all capacity measurement claims
+- [External Evidence Register](./External_Evidence_Register.md) — source review and evidence classes supporting capacity measurement design
+- [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) — open problems relating to oracle independence and measurement lag
+- [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) — control status for T-006, T-020, T-021, T-024
+- [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md) — sequencing and resource requirements for physical sampling and oracle drills
+- [Hardening Queue](./Hardening_Queue.md) — items pending constitutional hardening that depend on measurement evidence
+- [ANNEX\_AL.md](../annexes/ANNEX_AL.md) — capacity measurement annex: methodology-class requirements, oracle architecture, and evidence class rules
+- [Threat Register — T-006](./Threat_Register.md) — Measurement Lag / Supply Shock
+- [Threat Register — T-020](./Threat_Register.md) — Measurement Source Corruption
+- [Threat Register — T-021](./Threat_Register.md) — Measurement Independence Collapse
+- [Threat Register — T-024](./Threat_Register.md) — Shared Storehouse Capture via false oracle signals

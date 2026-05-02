@@ -116,12 +116,21 @@ If a proposed change breaks one of these promises, the answer is no before the d
 **Mechanical boundary:**
 - Tier 1 (invariants): unamendable by any in-system process
   - **Two-key architectural precondition (P-034):** Any patch proposal tagged `modifies_tier1=True` must carry a cryptographic attestation from the standing adversarial panel member (nominated per AH2.3) before it enters FAP intake. The FAP reviewer's authority does not include the ability to override the absence of this attestation. Absence = automatic non-reviewable rejection at intake. A captured or mistaken FAP reviewer cannot unilaterally admit a Tier-1-touching proposal.
+
+  > The two-key precondition is a structural hardening measure: it raises the practical cost of amending Tier 1 invariants to near-prohibitive levels within the system. It is not a legitimacy guarantee. The bootstrap problem (T-017) is a residual risk that structural preconditions cannot resolve — the authority of these invariants ultimately derives from the voluntary agreement of participating communities, not from any pre-existing constitutional mandate. The two-key precondition protects against capture and opportunistic revision; it does not substitute for ongoing democratic legitimation of the founding design.
+
 - Tier 2 (founding commitments): amendable by supermajority + adversarial panel
 - Tier 3 (operational parameters): amendable by standard FAP
 
 **Why this matters:** A rule that insiders can weaken is not truly protected. Tier 1 rules need a second independent check so one captured reviewer cannot open the door to changing the system's core promises.
 
 **Attack vectors that target this invariant:** T-007, T-016, T-022
+
+<!-- VISUAL PLACEHOLDER: [V-004] Amendment Tier Pyramid -->
+<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
+<!-- IMAGE PROMPT:
+Constitutional amendment pyramid diagram. Three tiers shown as horizontal bands in an inverted triangle (widest at bottom = easiest to change). Bottom tier (large, light grey): TIER 3 — Operational Parameters — 'Standard governance process. Examples: demurrage rate 0.5%/month, Service Record sector ceiling 20%.' Middle tier (medium, blue-grey): TIER 2 — Founding Commitments — 'Supermajority + adversarial panel review required. Examples: Essential Access 72h window, oracle minimum 5 nodes.' Top tier (small, dark with gold border): TIER 1 — INVARIANTS — 'Cannot be changed by any in-system process. Requires full constitutional refounding. Examples: Survival Unconditional, Non-Convertibility. PROTECTED BY TWO-KEY PRECONDITION: cryptographic attestation from adversarial panel required before any Tier 1 proposal enters review.' Arrows on left show amendment difficulty increasing upward. Clean constitutional design aesthetic, dark background, white text.
+-->
 
 ---
 
