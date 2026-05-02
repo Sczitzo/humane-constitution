@@ -50,24 +50,6 @@ Plain meaning: Flow is the money lane. It can move through markets, but private 
 
 ### 2.2 State Machine
 
-```statechart
-title: Flow — Token Lifecycle
-primary: ACTIVE
-terminal: SETTLED, RETIRED
-warning: IDLE, DECAYED
-
-UNISSUED -> ACTIVE: issuance
-ACTIVE -> IDLE: idle threshold
-ACTIVE -> COMMITTED: escrow (P-023)
-ACTIVE -> RETIRED: retirement
-IDLE -> ACTIVE: deployment
-IDLE -> DECAYED: demurrage
-COMMITTED -> ACTIVE: escrow release
-COMMITTED -> SETTLED: milestone verified
-DECAYED -> ACTIVE: balance adjusted
-DECAYED -> RETIRED: balance zero
-```
-
 ![Flow Token Lifecycle](/images/V-002.png)
 
 ### 2.3 Demurrage Function
