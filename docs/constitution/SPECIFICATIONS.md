@@ -25,18 +25,7 @@ The simple version:
 
 The most important rule is separation: none of these instruments may be traded into another one.
 
-```statechart
-title: Instrument Space — Four Primary Lanes + Emergency Overlay
-primary: FLOW, ESSENTIAL_ACCESS, VOICE, SERVICE_RECORD
-terminal: NO_CONVERSION
-warning: SHARED_STOREHOUSE
-
-FLOW -> NO_CONVERSION: market lane
-ESSENTIAL_ACCESS -> NO_CONVERSION: access lane
-VOICE -> NO_CONVERSION: civic lane
-SERVICE_RECORD -> NO_CONVERSION: eligibility lane
-SHARED_STOREHOUSE -> NO_CONVERSION: emergency only
-```
+![Instrument Space — Four Primary Lanes + Emergency Overlay](/images/V-010.png)
 
 ---
 
@@ -105,19 +94,7 @@ Plain meaning: Essential Access is a daily claim to basic needs. It cannot be so
 
 ### 3.2 State Machine
 
-```statechart
-title: Essential Access — Entitlement Lifecycle (per identity, per day)
-primary: ACTIVE
-terminal: REDEEMED, EXPIRED, RETIRED
-suspended: SUSPENDED
-
-PENDING -> ACTIVE: daily allocation (system)
-ACTIVE -> REDEEMED: basket redemption
-ACTIVE -> EXPIRED: 72 h elapsed, no rollover
-ACTIVE -> SUSPENDED: re-verification trigger
-SUSPENDED -> ACTIVE: re-verification confirmed
-SUSPENDED -> RETIRED: permanent deregistration
-```
+![Essential Access — Entitlement Lifecycle](/images/V-011.png)
 
 ### 3.3 Validity and Expiry
 
@@ -157,20 +134,7 @@ Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Ser
 
 ### 4.2 Voice State Machine
 
-```statechart
-title: Voice — Civic Influence Lifecycle (fast-decay · r = 0.15/day)
-primary: ACTIVE
-terminal: EXHAUSTED
-warning: DECAYED
-
-INACTIVE -> ACTIVE: civic activation
-ACTIVE -> APPLIED: deliberative commitment
-ACTIVE -> DECAYED: fast-decay cycle
-APPLIED -> ACTIVE: cycle completes, residual returned
-DECAYED -> ACTIVE: balance adjusted
-DECAYED -> EXHAUSTED: balance reaches zero
-EXHAUSTED -> ACTIVE: new issuance (qualifying participation)
-```
+![Voice — Civic Influence Lifecycle](/images/V-012.png)
 
 **Decay function:** `Voice(t) = Voice(0) × e^(−0.15 × t)` where t is days elapsed. Influence is a flow, not a stock — an actor who was influential last cycle carries no advantage without continued participation.
 
@@ -180,23 +144,7 @@ EXHAUSTED -> ACTIVE: new issuance (qualifying participation)
 
 ### 4.3 Service Record State Machine
 
-```statechart
-title: Service Record — Civic Eligibility Lifecycle (slow-decay)
-primary: ACTIVE
-terminal: INACTIVE
-warning: SLOW_DECAY
-suspended: SUSPENDED, COOLING
-
-INACTIVE -> ACTIVE: first qualifying service
-ACTIVE -> COOLING: role completion (anti-entrenchment)
-ACTIVE -> SUSPENDED: investigation triggered
-ACTIVE -> SLOW_DECAY: inactivity threshold
-COOLING -> ACTIVE: cooling period elapsed
-SUSPENDED -> ACTIVE: investigation cleared
-SUSPENDED -> INACTIVE: deregistered
-SLOW_DECAY -> ACTIVE: new service event
-SLOW_DECAY -> INACTIVE: balance reaches zero
-```
+![Service Record — Civic Eligibility Lifecycle](/images/V-013.png)
 
 **Decay function (SLOW_DECAY):** `SR(t) = SR(0) × (1 − r_cr)^t` — P-009 sets grace-period rate at 20% of normal (FC-063 reserved).
 
