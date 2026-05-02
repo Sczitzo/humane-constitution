@@ -37,11 +37,7 @@ Every pilot needs:
 | 7 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
 | 8 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
 
-<!-- VISUAL PLACEHOLDER: [V-008] Pilot Phase Sequence -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Horizontal roadmap diagram showing 8 sequential pilot phases with dependency gates. Each phase shown as a rounded rectangle. Phase 1: 'Public Comprehension Testing — Can people understand and explain the system?' Phase 2: 'Identity and Recovery Pilot — Does the identity stack work for vulnerable populations?' Phase 3: 'Capacity Measurement Pilot — Are the oracle measurements reliable?' Phase 4: 'Essential Access Delivery and Appeals — Can the floor be delivered and challenged?' Phase 5: 'Flow, Demurrage, and Public-Rail Simulation — Economic burden and capture tests' Phase 6: 'Business Finance and Anti-Rent Red Team — Can firms operate without gaming?' Phase 7: 'Anti-Rent and Legal Wrapper Review — Do trust/foundation workarounds exist?' Phase 8: 'Governance Red-Team — Bootstrap, subsidiarity, hollowing, capture.' Between each phase: diamond-shaped gate labeled 'Must pass before proceeding.' Below each phase: small icon showing current status (clock = not started). Current status banner at top: 'All phases: Not started — design phase.' Dark background, clean roadmap aesthetic, constitutional design style.
--->
+![Pilot Phase Sequence](/images/V-008.png)
 
 ## Macro-to-pilot crosswalk
 

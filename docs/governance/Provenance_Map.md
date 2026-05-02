@@ -10,11 +10,7 @@
 
 A threat is the failure mode: the way the system can be captured, gamed, stalled, or made to harm people. A patch is the design response: the constitutional change that answers that failure mode. An annex is where the response becomes operative constitutional text, with sections, thresholds, procedures, and review duties. Read each chain as a reason trail: the threat explains why the patch exists, and the annex shows where that decision lives in the document set.
 
-<!-- VISUAL PLACEHOLDER: [V-009] Threat → Patch → Annex Provenance Chain -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Three-column chain diagram showing constitutional provenance structure. Column 1 (red/threat icons): 'THREAT REGISTER — What can go wrong? T-001 Shadow Convertibility, T-002 Identity Exploits, T-016 FAP Capture, T-017 Bootstrap Problem.' Column 2 (blue/patch icons): 'PATCH LOG — What was changed? P-001 Non-convertibility enforcement, P-003 Identity assurance, P-013 FAP hardening, P-014 Bootstrap resolution.' Column 3 (green/annex icons): 'ANNEXES — What are the full rules? ANNEX_AB Constitutional architecture, ANNEX_AK Identity thresholds, ANNEX_AG Acceptance protocol, ANNEX_AH Bootstrap resolution.' Arrows connecting each column: Threat → Patch labeled 'This threat motivated', Patch → Annex labeled 'Full rules in'. One example chain highlighted in gold: 'T-016 → P-013 → ANNEX_AG.' Note at bottom: 'The chain is the permanent record of why each constitutional clause exists.' Dark background, three-column layout, constitutional design aesthetic.
--->
+![Threat–Patch–Annex Provenance Chain](/images/V-009.png)
 
 ---
 

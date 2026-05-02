@@ -27,21 +27,13 @@ Read in this order:
 
 Do not start with the annexes unless you already want the technical layer.
 
-<!-- VISUAL PLACEHOLDER: [V-008] Pilot Phase Sequence -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Horizontal roadmap diagram showing 8 sequential pilot phases with dependency gates. Each phase shown as a rounded rectangle. Phase 1: 'Public Comprehension Testing — Can people understand and explain the system?' Phase 2: 'Identity and Recovery Pilot — Does the identity stack work for vulnerable populations?' Phase 3: 'Capacity Measurement Pilot — Are the oracle measurements reliable?' Phase 4: 'Essential Access Delivery and Appeals — Can the floor be delivered and challenged?' Phase 5: 'Flow, Demurrage, and Public-Rail Simulation — Economic burden and capture tests' Phase 6: 'Business Finance and Anti-Rent Red Team — Can firms operate without gaming?' Phase 7: 'Anti-Rent and Legal Wrapper Review — Do trust/foundation workarounds exist?' Phase 8: 'Governance Red-Team — Bootstrap, subsidiarity, hollowing, capture.' Between each phase: diamond-shaped gate labeled 'Must pass before proceeding.' Below each phase: small icon showing current status (clock = not started). Current status banner at top: 'All phases: Not started — design phase.' Dark background, clean roadmap aesthetic, constitutional design style.
--->
+![Pilot Phase Sequence](/images/V-008.png)
 
 ### How the governance chain works
 
 Every design decision in this project follows a three-part chain: Threat → Patch → Annex. A threat (T-NNN) identifies a failure mode. A patch (P-NNN) describes what was changed in response. An annex (ANNEX_XX.md) contains the full resulting constitutional text. The master linkage table is in [ANNEX_AH.md § AH8](../annexes/ANNEX_AH.md). This chain is the permanent record of why each constitutional clause exists.
 
-<!-- VISUAL PLACEHOLDER: [V-009] Threat → Patch → Annex Provenance Chain -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Three-column chain diagram showing constitutional provenance structure. Column 1 (red/threat icons): 'THREAT REGISTER — What can go wrong? T-001 Shadow Convertibility, T-002 Identity Exploits, T-016 FAP Capture, T-017 Bootstrap Problem.' Column 2 (blue/patch icons): 'PATCH LOG — What was changed? P-001 Non-convertibility enforcement, P-003 Identity assurance, P-013 FAP hardening, P-014 Bootstrap resolution.' Column 3 (green/annex icons): 'ANNEXES — What are the full rules? ANNEX_AB Constitutional architecture, ANNEX_AK Identity thresholds, ANNEX_AG Acceptance protocol, ANNEX_AH Bootstrap resolution.' Arrows connecting each column: Threat → Patch labeled 'This threat motivated', Patch → Annex labeled 'Full rules in'. One example chain highlighted in gold: 'T-016 → P-013 → ANNEX_AG.' Note at bottom: 'The chain is the permanent record of why each constitutional clause exists.' Dark background, three-column layout, constitutional design aesthetic.
--->
+![Threat–Patch–Annex Provenance Chain](/images/V-009.png)
 
 The public question comes first: can we separate basic needs, markets, and public power without creating something worse?
 

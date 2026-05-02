@@ -36,11 +36,7 @@ The system separates **five distinct tools** — each with a purpose, and walls 
 | **Service Record** | Proof of useful public service, used for rotating civic roles. |
 | **Shared Storehouse** | Temporary rationing during a verified shortage — *nothing more*. |
 
-<!-- VISUAL PLACEHOLDER: [V-001] Five-Tool Separation Architecture -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Architectural diagram showing five distinct vertical columns labeled: FLOW (deep blue), ESSENTIAL ACCESS (forest green), VOICE (amber gold), SERVICE RECORD (warm grey), SHARED STOREHOUSE (muted red, dashed border). Each column has icons representing what it does: Flow shows coins/wallet; Essential Access shows food/shelter/medicine; Voice shows a civic assembly; Service Record shows a contribution ledger; Shared Storehouse shows rationing boxes. Between each column are thick concrete walls with red X marks blocking conversion arrows. Below each column shows small text of what it CANNOT do. Shared Storehouse has a dashed 'emergency only' border and a clock icon. The overall aesthetic is clean constitutional infographic style, dark background, white text labels, minimal design.
--->
+![Five-Tool Separation Architecture](/images/V-001.png)
 
 The names matter less than the walls between them:
 

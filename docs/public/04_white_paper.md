@@ -44,11 +44,7 @@ The system separates five tools.
 
 The design only works if these tools stay separate.
 
-<!-- VISUAL PLACEHOLDER: [V-001] Five-Tool Separation Architecture -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Architectural diagram showing five distinct vertical columns labeled: FLOW (deep blue), ESSENTIAL ACCESS (forest green), VOICE (amber gold), SERVICE RECORD (warm grey), SHARED STOREHOUSE (muted red, dashed border). Each column has icons representing what it does: Flow shows coins/wallet; Essential Access shows food/shelter/medicine; Voice shows a civic assembly; Service Record shows a contribution ledger; Shared Storehouse shows rationing boxes. Between each column are thick concrete walls with red X marks blocking conversion arrows. Below each column shows small text of what it CANNOT do. Shared Storehouse has a dashed 'emergency only' border and a clock icon. The overall aesthetic is clean constitutional infographic style, dark background, white text labels, minimal design.
--->
+![Five-Tool Separation Architecture](/images/V-001.png)
 
 ## Flow: Ordinary Money With Limits
 
@@ -69,11 +65,7 @@ But Flow (ordinary money) cannot buy everything. It cannot buy another person's 
 
 The system also uses an **idle-money fee** on large unused balances. The goal is to discourage hoarding and push money toward useful activity. That rule needs careful testing so it does not punish ordinary people or real long-term projects.
 
-<!-- VISUAL PLACEHOLDER: [V-005] Demurrage Decay Curve -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Line chart showing currency demurrage decay over 12 months. X-axis: months 0-12. Y-axis: balance (100% to 94%). Three lines: 1) Blue solid line 'Idle balance' following B(t) = B(0)·e^(-0.005t), starting at 100%, ending at ~94.2% at month 12. 2) Green dashed line 'Active/deployed balance' — flat at 100% (no decay). 3) Amber dotted line 'Decay charges funding public rails' — starting at 0, accumulating to ~5.8%. Annotations: at month 6 'approx. 3% of idle balance transferred to public infrastructure fund.' Note at bottom: 'Rate shown: 0.5%/month baseline. Ordinary household liquidity has protected operating buffer.' Clean data visualization, dark background, minimal gridlines, constitutional design aesthetic.
--->
+![Demurrage Decay Curve](/images/V-005.png)
 
 ## Essential Access: The Basic Needs Floor
 
@@ -135,11 +127,7 @@ It must be:
 
 It is not meant to be normal life.
 
-<!-- VISUAL PLACEHOLDER: [V-003] Scarcity Escalation Ladder -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Escalation ladder diagram with 4 horizontal bands stacked vertically. Bottom band (wide, calm green): NORMAL — ≥21 days supply, Flow-based market allocation, icons of open market stalls. Second band (yellow, slightly narrower): WATCH L1 — <21 days supply, price rise >2× baseline, icons of public announcement, voluntary conservation. Third band (orange, narrower): SCARCITY L2 — <14 days supply, Shared Storehouse optional, pricing caps, icons of rationing queue. Top band (narrow, urgent red): EMERGENCY L3 — <7 days supply, mandatory rationing by lottery, all non-essentials suspended, daily CRP review, icons of emergency response. Arrows going up show threshold trigger, arrows going down show de-escalation path. A clock icon at L3 shows '14-day mandatory sunset review.' Clean infographic style, constitutional design aesthetic, dark background.
--->
+![Scarcity Escalation Ladder](/images/V-003.png)
 
 ## The Founding Order
 
@@ -158,11 +146,7 @@ The Founding Order says:
 
 This matters because a system that people cannot leave can become coercive even if its language sounds humane.
 
-<!-- VISUAL PLACEHOLDER: [V-004] Amendment Tier Pyramid -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Constitutional amendment pyramid diagram. Three tiers shown as horizontal bands in an inverted triangle (widest at bottom = easiest to change). Bottom tier (large, light grey): TIER 3 — Operational Parameters — 'Standard governance process. Examples: demurrage rate 0.5%/month, Service Record sector ceiling 20%.' Middle tier (medium, blue-grey): TIER 2 — Founding Commitments — 'Supermajority + adversarial panel review required. Examples: Essential Access 72h window, oracle minimum 5 nodes.' Top tier (small, dark with gold border): TIER 1 — INVARIANTS — 'Cannot be changed by any in-system process. Requires full constitutional refounding. Examples: Survival Unconditional, Non-Convertibility. PROTECTED BY TWO-KEY PRECONDITION: cryptographic attestation from adversarial panel required before any Tier 1 proposal enters review.' Arrows on left show amendment difficulty increasing upward. Clean constitutional design aesthetic, dark background, white text.
--->
+![Amendment Tier Pyramid](/images/V-004.png)
 
 ## The Seven Main Articles
 

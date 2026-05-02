@@ -126,11 +126,7 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 **Attack vectors that target this invariant:** T-007, T-016, T-022
 
-<!-- VISUAL PLACEHOLDER: [V-004] Amendment Tier Pyramid -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Constitutional amendment pyramid diagram. Three tiers shown as horizontal bands in an inverted triangle (widest at bottom = easiest to change). Bottom tier (large, light grey): TIER 3 — Operational Parameters — 'Standard governance process. Examples: demurrage rate 0.5%/month, Service Record sector ceiling 20%.' Middle tier (medium, blue-grey): TIER 2 — Founding Commitments — 'Supermajority + adversarial panel review required. Examples: Essential Access 72h window, oracle minimum 5 nodes.' Top tier (small, dark with gold border): TIER 1 — INVARIANTS — 'Cannot be changed by any in-system process. Requires full constitutional refounding. Examples: Survival Unconditional, Non-Convertibility. PROTECTED BY TWO-KEY PRECONDITION: cryptographic attestation from adversarial panel required before any Tier 1 proposal enters review.' Arrows on left show amendment difficulty increasing upward. Clean constitutional design aesthetic, dark background, white text.
--->
+![Amendment Tier Pyramid](/images/V-004.png)
 
 ---
 

@@ -68,11 +68,7 @@ DECAYED -> ACTIVE: balance adjusted
 DECAYED -> RETIRED: balance zero
 ```
 
-<!-- VISUAL PLACEHOLDER: [V-002] Flow Token Lifecycle -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-State machine diagram for a currency lifecycle. States shown as rounded rectangles: UNISSUED (light grey), ACTIVE (bright blue), IDLE (amber with warning icon), COMMITTED (teal with lock icon), DECAYED (orange), RETIRED (dark grey, strikethrough). Arrows between states with labels: ACTIVE→IDLE (labeled 'sits unused'), IDLE→DECAYED (labeled '0.5%/month fee, funds public rails'), DECAYED→ACTIVE (labeled 'redeployed productively'), ACTIVE→COMMITTED (labeled 'project or contract escrow'), COMMITTED→ACTIVE (labeled 'milestone verified'), ACTIVE/DECAYED→RETIRED (labeled 'small balances or fee proceeds'). Annotations in light grey text explain the purpose of each rule. Clean technical diagram, white background, constitutional design aesthetic.
--->
+![Flow Token Lifecycle](/images/V-002.png)
 
 ### 2.3 Demurrage Function
 
@@ -261,11 +257,7 @@ EXHAUSTED -> ACTIVE: new issuance (qualifying participation)
 
 > **Note:** The decay function above governs how a Voice balance changes over calendar time. At any decision point, the current balance is *also* subject to the effective-weight conversion table in Humane_Constitution.md Article VI (quarterly buckets: 0–50 units = 1.00×; 51–80 = 0.50×; 81–100 = 0.25×; >100 prohibited). These are two separate rules operating on the same instrument. See Humane_Constitution.md for the quarterly conversion table.
 
-<!-- VISUAL PLACEHOLDER: [V-006] Voice vs. Service Record Decay Comparison -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Side-by-side comparison chart. Two line graphs sharing the same time axis (0 to 90 days / one quarter). Left chart 'VOICE — Fast Decay': Amber line starting at 100%, decaying steeply following e^(-0.15t), reaching ~13% at day 14, ~1% at day 30. Annotation: 'Roughly 50% every 5 days — influence fades without continued participation.' Right chart 'SERVICE RECORD — Slow Decay': Blue-grey line starting at 100%, decaying slowly, reaching ~88% at day 90. Annotation: 'Builds durable standing for leadership eligibility without becoming permanent rank.' Below each chart: small icon — Voice shows a voting ballot (fading), Service Record shows a contribution ledger (slowly dimming). Dotted vertical lines at days 30, 60, 90 mark quarterly cycles. Clean technical visualization, dark background, constitutional design aesthetic.
--->
+![Voice vs. Service Record Decay Comparison](/images/V-006.png)
 
 ### 4.3 Service Record State Machine
 
@@ -419,11 +411,7 @@ Measurement drift defense:
   2026)*
 ```
 
-<!-- VISUAL PLACEHOLDER: [V-007] Oracle Polycentric Architecture -->
-<!-- To generate: paste the prompt below into an image generator (Midjourney, DALL-E, Stable Diffusion), then replace this block with: ![Alt text](path/to/image.png) -->
-<!-- IMAGE PROMPT:
-Network diagram showing a polycentric oracle system for capacity measurement. Central circle labeled 'CONSENSUS DECISION — 3/5 nodes for normal issuance, 4/5 for emergency.' Five satellite nodes arranged around it, each as a hexagon: Node 1 (blue) 'Statistical/Econometric — Tier 1 Methodology'; Node 2 (teal) 'Proxy Sampling — Tier 2 Methodology (logistics data, POS data)'; Node 3 (green) 'Direct Physical Sampling — Tier 3 Methodology (warehouse counts, shelter inspections)'; Node 4 (amber) 'Second statistical source — Tier 1'; Node 5 (red, labeled with sword icon) 'ADVERSARIAL NODE — Required by Tier 1 Invariant FC-033. Tasked with proving the others wrong.' Correlation constraint shown as a curved arrow labeled '≤0.30 Pearson correlation between any two nodes.' One node has a yellow warning icon 'Fault tolerant: up to 1 compromised node cannot swing consensus.' Clean network diagram, dark background, constitutional design aesthetic.
--->
+![Oracle Polycentric Architecture](/images/V-007.png)
 
 ---
 
