@@ -116,6 +116,7 @@ What exists now:
 - constitutional text and public explanations
 - a threat register and patch log
 - adversarial simulations and stress-test documents
+- evidence registers and dedicated test packages for unresolved load-bearing claims
 - a validation pipeline and reader app
 
 What must still be proven:

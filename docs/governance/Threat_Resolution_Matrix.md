@@ -225,7 +225,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Resolution path:** keep zero demurrage exemptions, use contract-commitment architecture, release funds on verified physical deliverables, and protect all key terms from definition drift.
 - **Corruption route to assume:** firms use subsidiaries, project cycling, force-majeure claims, infrastructure labels, escrow windows, or procurement pressure to park Flow without decay.
 - **External evidence:** IMF and Economic Journal work establish demurrage/negative-yield money as a real monetary design space; Federal Reserve research warns negative-rate regimes can create distortions; OECD procurement and FATF beneficial ownership guidance anchor the capture routes through procurement and legal wrappers.
-- **Proof needed:** project-finance simulation, procurement integrity review, legal-wrapper red team, force-majeure panel capture audit, and nested subcontractor tracing test.
+- **Proof needed:** the [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md): household burden model, small-business working-capital model, public-rail revenue model, project-finance simulation, procurement integrity review, legal-wrapper red team, force-majeure panel capture audit, and nested subcontractor tracing test.
 - **Residual risk:** tight parameters can block real infrastructure while loose parameters recreate hoarding; parameter setting must be evidence-based.
 
 ### T-026 - Exit Denial

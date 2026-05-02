@@ -152,7 +152,7 @@ Every pilot needs:
 
 **Hypothesis:** Flow can support exchange while the idle-money fee funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
 
-**External evidence basis:** IMF and peer-reviewed monetary-economics work establish that negative-yield money is a real design space; Federal Reserve research warns that negative-rate regimes can create welfare, investment, output, banking, and transmission distortions; OECD and FATF sources anchor procurement and legal-wrapper capture risks.
+**External evidence basis:** The [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md) is the governing test package for this phase. IMF and peer-reviewed monetary-economics work establish that negative-yield money is a real design space; Federal Reserve research warns that negative-rate regimes can create welfare, investment, output, banking, and transmission distortions; OECD and FATF sources anchor procurement and legal-wrapper capture risks; complementary-currency evidence warns against treating local or emergency experiments as proof of constitutional-scale design.
 
 **Measure:**
 
@@ -168,6 +168,7 @@ Every pilot needs:
 - small-business working-capital pressure by sector
 - project-escrow behavior under delay, force majeure, and procurement pressure
 - beneficial-ownership and subsidiary-fragmentation routes
+- public comprehension of who pays, where revenue goes, and what protections ordinary liquidity receives
 
 **Failure criteria:**
 
@@ -178,6 +179,7 @@ Every pilot needs:
 - Public-rail funding quietly migrates into fees on ordinary labor, survival access, or household exchange.
 - Demurrage becomes politically or practically equivalent to a hidden tax on ordinary liquidity.
 - Project escrow becomes a favored-sector parking channel despite the zero-exemption rule.
+- Users cannot explain the fee, the revenue route, or the difference between ordinary liquidity and idle concentration after public disclosure.
 
 **Scale rule:** the idle-money fee should remain a simulation and pilot parameter until the burden is transparent.
 

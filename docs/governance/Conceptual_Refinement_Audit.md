@@ -94,3 +94,5 @@ After the next revision, a skeptical reader should be able to say:
 3. I know which mechanisms are only designed.
 4. I know what evidence would strengthen or falsify each major claim.
 5. I can tell where to pressure the project next.
+
+For the core idle-money-fee claim, the immediate pressure point is now the [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), which defines the household, business, public-finance, procurement, legal-wrapper, and legitimacy tests required before stronger claims are allowed.

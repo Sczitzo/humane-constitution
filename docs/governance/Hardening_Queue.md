@@ -4,7 +4,7 @@ This document is the live "what still needs pressure" list for the Humane Consti
 
 It tracks conceptual and operational weaknesses that remain important even when a threat has a proposed patch or an active annex. A designed control is not the same thing as proof. A live queue item stays here until the project has evidence, activation, or a stronger residual-risk statement.
 
-See also: [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
+See also: [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
 
 ## Status key
 
@@ -57,7 +57,7 @@ This order prevents downstream fixes from depending on unproven identity, measur
 | Hostile successor government | **DESIGNED** | A legal government can hollow out the system without openly repealing it. | Define founding constitutional body independence and administrative hollowing trigger evidence. |
 | Pilot-to-scale validity gap | **DESIGNED** | Calm pilots can mislead the project into false confidence. | Require substitute evidence and red-team challenge when real stress cannot be ethically induced. |
 | Shared Storehouse oracle failure | **ACTIVE-UNPROVEN** | Conservative hold can become normalized emergency administration. | Run a timed simulation of oracle blackout during active rationing with published reconciliation. |
-| Contract-commitment parameters | **DESIGNED** | Loose parameters recreate hoarding; tight parameters block real infrastructure. | Bind FC-160 through FC-184 only after project-finance and procurement simulations. |
+| Contract-commitment parameters | **DESIGNED** | Loose parameters recreate hoarding; tight parameters block real infrastructure. | Use the Demurrage Evidence and Test Package before binding FC-160 through FC-184. |
 | Federated Ombuds self-protection | **ACTIVE-UNPROVEN** | A five-node federation is stronger than one office but can still coordinate informally. | Track voting-pattern concentration, staffing overlap, and funding dependence. |
 | Public claim discipline | **ONGOING** | The project loses credibility if public language outruns evidence. | Review public docs against the Claims and Evidence Register before every release. |
 

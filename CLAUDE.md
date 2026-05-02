@@ -70,7 +70,7 @@ This single file contains the entire reader. Sections in order:
 1. **Ref-chip system** — `buildRefLookup()`, `RefChip`, `RefNavContext`. Parses every doc for T-NNN / P-NNN / Annex XX references and renders them as hoverable chips that navigate to the referenced doc.
 2. **Utility functions** — `docsForView()`, `viewForDoc()`, markdown line classifiers.
 3. **`parseMarkdown()`** — converts raw markdown string into typed `MarkdownBlock[]` (heading / paragraph / list / table / code / quote / rule / mermaid / statechart).
-4. **`renderInline()`** — renders a markdown inline string to React nodes. Handles bold, italic, code, `[text](href)` links. Internal `.md` links call `onInternalLink` (navigates within the reader); external links open in a new tab.
+4. **`renderInline()`** — renders a markdown inline string to React nodes. Handles bold, italic, code, and markdown links. Internal `.md` links call `onInternalLink` (navigates within the reader); external links open in a new tab.
 5. **`resolveInternalDoc()`** — resolves a relative `.md` href against the current doc's path to find the target `CorpusDoc`.
 6. **`MarkdownDocument`** — renders a full doc using `parseMarkdown` + `renderInline`. Receives `allDocs` and `onSelectDoc` to wire internal link navigation.
 7. **`ReaderOutline`** — right-hand heading outline, tracks active heading via IntersectionObserver.

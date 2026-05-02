@@ -576,6 +576,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md)
 
+- **Evidence package:** [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
 - **Threat addressed:** T-025 (Demurrage Sector-Capture via Investment Channel).
 - **Direction adopted:** Direction B — deployment-speed architecture. Investment-channel exemptions are removed entirely. Genuine long-horizon capital needs are served by contract-commitment architecture; demurrage pressure remains universal.
 - **Red-team pre-analysis:** Ten attack vectors identified and resolved before this patch was written. Vectors: (1) escrow control ambiguity, (2) milestone definition gaming, (3) "working capital" as new exemption label, (4) advance procurement rebranded as hoarding, (5) subcontractor chain gaming, (6) essential-sector carve-out pressure, (7) multi-jurisdiction pooling ambiguity, (8) force majeure as wedge for permanent exemptions, (9) sector definitional creep, (10) milestone oracle capture. All resolved in patch rules below.
