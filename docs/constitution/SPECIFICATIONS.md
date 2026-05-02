@@ -253,6 +253,8 @@ EXHAUSTED -> ACTIVE: new issuance (qualifying participation)
 
 **Decay function:** `Voice(t) = Voice(0) × e^(−0.15 × t)` where t is days elapsed. Influence is a flow, not a stock — an actor who was influential last cycle carries no advantage without continued participation.
 
+> **Note:** The decay function above governs how a Voice balance changes over calendar time. At any decision point, the current balance is *also* subject to the effective-weight conversion table in Humane_Constitution.md Article VI (quarterly buckets: 0–50 units = 1.00×; 51–80 = 0.50×; 81–100 = 0.25×; >100 prohibited). These are two separate rules operating on the same instrument. See Humane_Constitution.md for the quarterly conversion table.
+
 ### 4.3 Service Record State Machine
 
 ```statechart
@@ -330,7 +332,10 @@ Above-ledger bypass risk:
   The non-convertibility constraint holds at the ledger layer.
   Off-ledger transactions (proxy redemption, service-for-Essential Access exchanges,
   informal barter at instrument boundaries) are not preventable by
-  ledger enforcement alone. This is the primary residual risk (T-001).
+  ledger enforcement alone.
+
+The ledger enforcement prevents in-system conversion: no ledger operation can transform Essential Access into Flow or Voice. However, ledger enforcement cannot prevent private arrangements external to the system — for example, a party that holds Essential Access could arrange services in exchange for Flow transfers made outside any official ledger entry. The practical enforcement layer for above-ledger bypass is non-technical: the 72-hour Essential Access expiry window makes stockpiling economically unattractive; demurrage costs make hoarding Flow for conversion purposes expensive; and the non-cash nature of Essential Access removes the most obvious arbitrage pathway. These are friction mechanisms, not absolute prohibitions. T-001 (shadow convertibility) remains the primary residual risk and is tracked in the Threat Register.
+
   P-001 addresses enforcement mechanisms above the ledger layer.
 
 Plain basis for non-convertibility:
@@ -362,7 +367,7 @@ Minimum configuration (per cohort, per essential category; FC-030 / FC-031 / FC-
     - At least one node: Community-based participatory research (CBPR)
     - At least one node: Independent physical sampling (Tier 3, ground-truth)
   Pairwise error-series correlation ≤ 0.30 Pearson (FC-032 ORACLE_PAIRWISE_CORRELATION_MAX)
-  At least 1 designated adversarial / red-team seat (FC-033 ORACLE_ADVERSARIAL_SEATS_MIN)
+  At least 1 designated adversarial / red-team seat AND ≥20% of total oracle nodes must be adversarial (both conditions FC-033 ORACLE_ADVERSARIAL_SEATS_MIN; Tier 1). Any expansion of the oracle council must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment.
   Rationale: BFT theorem n ≥ 3f + 1; f = 1 gives n ≥ 4; N_MIN = 5 provides one-node margin
   above the BFT floor so single-node loss does not drop the cohort below tolerance.
 
@@ -408,7 +413,10 @@ Measurement drift defense:
 
 | Parameter | Current Value | Status | Authority to Change |
 |---|---|---|---|
-| Flow demurrage rate (r) | 0.5%/month (±0.25%/mo corridor) | FC-050 / FC-051 (founding/commitments.md) | Tier 2 (supermajority + adversarial panel) |
+| Flow demurrage rate (r) | 0.5%/month (±0.25%/mo corridor) | Binding design commitment — rate provisional pending evidence calibration (Phase 5). See Claims_Evidence_Register.md FC-050 entry. FC-050 / FC-051 (founding/commitments.md) | Tier 2 (supermajority + adversarial panel) |
+
+> FC-050 sets the demurrage rate. FC-160–FC-184 govern the contract-commitment architecture through which that rate is implemented. Evidence from the Demurrage Evidence Test Package (see Hardening_Queue.md) may inform revisions to both the rate (FC-050, via standard Tier 3 FAP) and the commitment architecture (FC-160–FC-184).
+
 | Flow idle threshold (θ) | Resolved in founding/commitments.md | Resolved | Tier 2 |
 | Essential Access validity window | 72 hours | Specified | Tier 2 |
 | CSM basket composition | Annex Y (canonical) | FC-070, FC-071 (floor is Tier 1) | Tier 1 (downward only); Tier 2 (composition within basket) |
@@ -422,7 +430,7 @@ Measurement drift defense:
 | Minimum oracle nodes | N ≥ 5 | FC-030 | Tier 1 |
 | Minimum methodology classes | 3 | FC-031 | Tier 1 |
 | Max pairwise oracle error correlation | 0.30 (Pearson) | FC-032 | Tier 1 |
-| Adversarial oracle seats per cohort | ≥ 1 | FC-033 | Tier 1 |
+| Adversarial oracle seats per cohort | ≥1 adversarial node AND ≥20% of total oracle nodes must be adversarial (both conditions Tier 1). Any expansion of the oracle council must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment. | FC-033 | Tier 1 |
 | Oracle quorum-loss restoration window | 14 days | FC-100 | Tier 1 |
 | Attestation stake ratio | 0.20 of attestor balance | FC-080 | Tier 2 |
 | Reserve window (CSM×pop×days) | 45 days | FC-070 | Tier 1 |
