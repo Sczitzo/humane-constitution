@@ -314,6 +314,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Bounded execution:** approved decisions must run through published workflows, documented reasons, and reviewable boundaries. Oversight must protect dependents and innocent parties while enforcing fraud, coercion, and bribery rules.
 - **Anti-capture review:** independent audits, rotation, conflict rules, and funded red-team testing are mandatory. The office that reports on the system may not be the same office that runs the system.
 - **Hard locks:** Tier 1 rules are mechanically protected through the `architecture/` directory: 7-of-9 amendment, 180-day delay, drift chain, and implementation binding.
+- **Keyholder duty of servanthood:** The keyholders of the amendment process hold custodial, not proprietary, authority. They may not use the amendment lock to entrench any founding group, extend any founding mandate, or delay review of the founding decisions themselves. The amendment protocol must include a mechanism by which a qualified independent review body may petition for the replacement of any keyholder found to be acting in demonstrable self-interest. Keyholder authority derives from service to the constitutional community, not from the fact of appointment.
 
 #### Article II: Personhood, Identity & Continuity
 - **One person, one core wallet:** prevents duplicate Essential Access claims and fake extra identities.

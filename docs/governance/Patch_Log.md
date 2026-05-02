@@ -54,6 +54,7 @@
 | P-033 | PRD-008 | **ACTIVE** | High | Worker-owned and mission-locked enterprise preference: financing, procurement, and succession pathways structurally favor stewardship forms over absentee control. |
 | P-034 | T-016 / INV-007 | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
 | P-035 | — | **ACTIVE** | High | Founding group corrigibility clause + epistemic humility statement in Preamble and §0A. |
+| P-036 | — | **ACTIVE** | High | Keyholder servanthood duty + replacement mechanism for self-interested keyholders (Article I). |
 
 ---
 
@@ -783,3 +784,25 @@ The Preamble's statement "If it is wrong, people should be able to show where" i
 - Overly humble framing could be exploited to argue that all constitutional protections are provisional. Mitigated: the epistemic humility clauses apply to the founders' judgment about design, not to the dignity floor itself (separately protected by Tier 1 amendment requirements).
 
 **Residual risk:** Founding group may still exercise disproportionate influence during the founding window. The corrigibility clause is a normative commitment, not a structural enforcement mechanism. Structural enforcement is addressed by P-036.
+
+---
+
+### P-036 — Keyholder Servanthood Duty
+
+**Threat addressed:** amendment lock capture by founding group
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article I — Rights & Rules (Hard locks section)
+
+**Problem diagnosed:**
+The 7-of-9 amendment lock protects the dignity floor from bad changes. But the same lock also protects the founders' judgment about what the dignity floor contains. If keyholders act in self-interest — delaying replacement of founding-era text, blocking challenges to their own authority — the lock becomes a tool of entrenchment rather than protection.
+
+**Introduced design:**
+Explicit constitutional statement that keyholder authority is custodial, not proprietary; keyholders may not use the lock to entrench founding group power; a qualified independent review body may petition for keyholder replacement when self-interest is demonstrated.
+
+**Dependencies:** The independent review body referenced here is the Federated Ombuds structure defined under P-025.
+
+**New risks introduced:**
+- "Demonstrable self-interest" requires interpretation. Mitigated: determination is made by the Federated Ombuds (P-025), not by the keyholders themselves.
+
+**Residual risk:** External pressure on keyholders (coercion, blackmail) is not addressed by internal accountability mechanisms. See P-034 residual risk for the same limitation.
