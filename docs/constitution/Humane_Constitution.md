@@ -434,6 +434,7 @@ This article succeeds only if people can move from receiving care to also giving
 - **Reports:** publish quarterly warning reports with a 10-year horizon, especially for risks to capacity measurement or the basic needs floor.
 - **Escalation:** findings that may require top-level rule changes go to the Federated Ombuds and the highest amendment path if needed.
 - **Why this exists:** slow failures should be seen before they become crises.
+- **Community alert pathway:** The warning system must include a direct voice mechanism for ordinary persons to report systemic failures they experience. Expert and institutional monitors watch what is measurable; affected communities often see what institutions cannot or will not name. A constitutionally protected community alert pathway — low-barrier, anonymous if the reporter chooses, accessible without legal representation or institutional affiliation — must be maintained alongside the formal audit system. Every community alert must receive a published acknowledgment within 30 days. Alerts that meet a basic prima facie threshold for systemic failure must trigger a formal review within 90 days. Refusal to acknowledge or review is itself a reportable failure under this Article.
 
 ---
 

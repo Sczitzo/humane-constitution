@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-034**
+**Running change ledger aligned to the Humane Constitution · Current through P-042**
 
 ---
 
@@ -60,6 +60,7 @@
 | P-039 | — | **ACTIVE** | High | Explicit protection for pre-existing mutual aid, family, and religious care networks; Article IV as floor not monopoly (Article IV). |
 | P-040 | — | **ACTIVE** | High | Housing cap pastoral revision (remove cold "regardless" language); structural humility closing clause added to Article V. |
 | P-041 | T-008 | **ACTIVE** | High | Biennial recognized-contribution audit to include invisible and pastoral work; 180-day correction requirement (Article VI). |
+| P-042 | — | **ACTIVE** | High | Low-barrier community alert pathway with 30-day acknowledgment and 90-day review trigger (Article VII). |
 
 ---
 
@@ -917,3 +918,25 @@ Mandatory biennial audit of the recognized-contribution definition; explicit con
 - "Effect on human flourishing" as a measurement criterion is harder to verify than documented hours. Mitigated: the audit requirement is about the framework definition, not individual claims.
 
 **Residual risk:** The gap between the ideal (invisible work recognized) and the operational (verification required) will persist. The audit creates a forcing function for closing it over time.
+
+---
+
+### P-042 — Community Alert Pathway
+
+**Threat addressed:** institutional capture of warning function; prophetic voices blocked
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article VII — Public Records & Warning Systems
+
+**Problem diagnosed:**
+Article VII's warning function is defined, funded, and structured by the same apparatus it is meant to watch. Communities affected by systemic failures often see them earlier and more accurately than institutional reviewers — but currently have no constitutionally protected path to name them.
+
+**Introduced design:**
+Constitutionally protected community alert pathway: low-barrier, optionally anonymous, accessible without legal representation; 30-day acknowledgment requirement; 90-day formal review trigger for prima facie systemic failures; refusal to acknowledge or review is itself a reportable failure.
+
+**Dependencies:** Article VII independence requirement applies — the body managing community alerts must not be the same body whose performance is being reported.
+
+**New risks introduced:**
+- Alert pathway could be used for political harassment or coordinated false-flag campaigns. Mitigated: prima facie threshold for mandatory review; anonymous alerts published but not automatically elevated without threshold evidence.
+
+**Residual risk:** Power asymmetry between institutional reviewers and community reporters will persist. The pathway lowers the barrier; it does not equalize resources for evidence-gathering.
