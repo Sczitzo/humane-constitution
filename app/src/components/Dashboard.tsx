@@ -1179,14 +1179,6 @@ function parseHeadingHash(hash: string): { docId: string; slug: string } | null 
   }
 }
 
-function escapeSelectorValue(value: string): string {
-  if (typeof window !== 'undefined' && 'CSS' in window && typeof window.CSS.escape === 'function') {
-    return window.CSS.escape(value)
-  }
-
-  return value.replace(/["\\]/g, '\\$&')
-}
-
 // ── appearance settings ────────────────────────────────────────────────────
 
 const FONT_SIZE_KEY    = 'humane-reader:font-size'
@@ -1339,15 +1331,6 @@ async function copyHeadingLink(doc: CorpusDoc, slug: string): Promise<string> {
   document.execCommand('copy')
   document.body.removeChild(textarea)
   return value
-}
-
-function visibleHeadings(doc: CorpusDoc): CorpusDoc['headings'] {
-  return doc.headings.filter((heading, index) => {
-    if (index !== 0) {
-      return true
-    }
-    return normalizeComparable(heading.text) !== normalizeComparable(doc.title)
-  })
 }
 
 async function openSourceDocument(doc: CorpusDoc): Promise<SourceFeedback> {
@@ -2812,11 +2795,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   })
   const [documentMatchCount, setDocumentMatchCount] = useState(0)
   const [activeMatchIndex, setActiveMatchIndex] = useState(0)
-  const [activeHeadingSlug, setActiveHeadingSlug] = useState<string | null>(null)
   const [copiedHeadingSlug, setCopiedHeadingSlug] = useState<string | null>(null)
-  const shelfPaneRef = useRef<HTMLElement | null>(null)
   const readerPaneRef = useRef<HTMLDivElement | null>(null)
-  const outlinePaneRef = useRef<HTMLDivElement | null>(null)
   const readerSearchInputRef = useRef<HTMLInputElement | null>(null)
 
   const restorePaneScrollRef = useRef(true)
@@ -3126,14 +3106,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
     window.requestAnimationFrame(() => {
       const stored = readStoredPaneScroll(view)
-      if (shelfPaneRef.current) {
-        shelfPaneRef.current.scrollTop = stored.shelf
-      }
       if (readerPaneRef.current) {
         readerPaneRef.current.scrollTop = stored.reader
-      }
-      if (outlinePaneRef.current) {
-        outlinePaneRef.current.scrollTop = stored.outline
       }
     })
   }, [independentPaneView, selectedDoc?.id, view])
@@ -3141,7 +3115,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   useEffect(() => {
     if (!selectedDoc) {
       setDocumentMatchCount(0)
-      setActiveHeadingSlug(null)
       return
     }
 
@@ -3152,44 +3125,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     })
   }, [selectedDoc?.id, documentQuery])
 
-  useEffect(() => {
-    if (!selectedDoc || !readerPaneRef.current) {
-      setActiveHeadingSlug(null)
-      return
-    }
-
-    const headings = visibleHeadings(selectedDoc)
-    const readerNode = readerPaneRef.current
-    const readerTop = readerNode.getBoundingClientRect().top
-    let nextActiveSlug = headings[0]?.slug ?? null
-
-    for (const heading of headings) {
-      const element = document.getElementById(headingScrollId(selectedDoc, heading.slug))
-      if (!element) {
-        continue
-      }
-
-      if (element.getBoundingClientRect().top - readerTop <= 150) {
-        nextActiveSlug = heading.slug
-        continue
-      }
-
-      break
-    }
-
-    setActiveHeadingSlug(nextActiveSlug)
-  }, [selectedDoc?.id])
-
-  useEffect(() => {
-    if (!activeHeadingSlug || !outlinePaneRef.current) {
-      return
-    }
-
-    const activeNode = outlinePaneRef.current.querySelector<HTMLElement>(
-      `[data-heading-slug="${escapeSelectorValue(activeHeadingSlug)}"]`,
-    )
-    activeNode?.scrollIntoView({ block: 'center' })
-  }, [activeHeadingSlug, selectedDoc?.id])
 
   useEffect(() => {
     if (typeof window === 'undefined' || !allDocs.length) {
