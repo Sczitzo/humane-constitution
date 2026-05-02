@@ -76,76 +76,40 @@ Demurrage is a time-decay and carrying charge applied to idle Flow balances. It 
 
 Plain meaning: the idle-money fee is aimed at hoarding, not at survival, wages, or normal household life.
 
-```
-Let:
-  B(t)     = Flow balance at time t
-  r        = demurrage rate per period (FC-050 baseline; FC-051 review corridor)
-  t_idle   = time elapsed since last productive deployment
-  θ        = idle threshold (deployment below which demurrage begins) (FC-052 reserved)
+**Variables:** `B(t)` = Flow balance at time t; `r` = demurrage rate per period (FC-050 baseline; FC-051 review corridor); `t_idle` = time elapsed since last productive deployment; `θ` = idle threshold below which demurrage begins (FC-052 reserved).
 
-Demurrage function:
-  If t_idle < θ:
-    B(t) = B(0)                          [no decay, balance active]
+**Demurrage function:** If `t_idle < θ`, the balance is active and no decay applies: `B(t) = B(0)`. If `t_idle ≥ θ`, continuous exponential decay applies: `B(t) = B(0) × e^(−r × t_idle)`. Alternatively, discrete periodic application: `B(t+1) = B(t) × (1 − r)`.
 
-  If t_idle ≥ θ:
-    B(t) = B(0) × e^(−r × t_idle)       [continuous exponential decay]
+**Retirement:** When `B(t) < ε` (minimum balance threshold, FC-053 reserved), the balance is retired from circulation.
 
-  Alternatively, discrete periodic application:
-    B(t+1) = B(t) × (1 − r)             [per-period decay]
+**Charge routing:** Let `C(t) = B_before(t) − B_after(t)` and `α` = PFCR routing share (FC-054 reserved). Then `PFCR_receipt(t) = α × C(t)` and `Retired_Flow(t) = (1 − α) × C(t)`.
 
-Retirement:
-  When B(t) < ε (minimum balance threshold, FC-053 reserved),
-  the balance is retired from circulation.
-
-Charge routing:
-  Let C(t) = B_before(t) − B_after(t)
-  Let α = PFCR routing share (FC-054 reserved)
-
-  PFCR_receipt(t) = α × C(t)
-  Retired_Flow(t) = (1 − α) × C(t)
-
-Notes:
-  - r must be calibrated so that the deployment window produces meaningful
-    anti-hoarding signal without suppressing long-horizon productive investment
-  - Annex AR Section 2 contains worked examples at r = 0.5%, 1.0%, 2.0% monthly
-  - P-023 establishes that investment exemptions are prohibited; demurrage applies
-    during escrow periods. The discipline is the point.
-  - α must be published, reviewable, and fiscally bounded under PFCR rules
-```
+`r` must be calibrated so that the deployment window produces a meaningful anti-hoarding signal without suppressing long-horizon productive investment. Annex AR Section 2 contains worked examples at r = 0.5%, 1.0%, 2.0% monthly. P-023 establishes that investment exemptions are prohibited; demurrage applies during escrow periods — the discipline is the point. `α` must be published, reviewable, and fiscally bounded under PFCR rules.
 
 ### 2.4 Issuance Constraints
 
-```
-Issuance conditions (all must be satisfied):
-  1. Verified productive commitment exists in registry
-  2. Issuing authority is active and not under audit
-  3. Commitment has not been previously issued against
-  4. Physical capacity exists to absorb the production (oracle confirmation required)
-  5. No private institution is simultaneously creating a duplicative Flow-denominated
-     claim intended to circulate as money against the same commitment
+**Issuance conditions** (all must be satisfied):
 
-Issuance ceiling:
-  Total Flow in circulation ≤ f(verified productive commitments)
-  where f is the published issuance-ceiling function (FC-055 reserved).
-```
+1. Verified productive commitment exists in registry
+2. Issuing authority is active and not under audit
+3. Commitment has not been previously issued against
+4. Physical capacity exists to absorb the production (oracle confirmation required)
+5. No private institution is simultaneously creating a duplicative Flow-denominated claim intended to circulate as money against the same commitment
+
+**Issuance ceiling:** Total Flow in circulation ≤ `f(verified productive commitments)`, where `f` is the published issuance-ceiling function (FC-055 reserved).
 
 ### 2.5 Retail Banking and Household Finance Constraints
 
-```
-Retail public-banking floor:
-  - Basic accounts, wage receipt, bill pay, transfers, cash conversion, and
-    fraud recovery operate on PFCR-funded public infrastructure
-  - A guaranteed public postal-bank or public-bank option must remain available
-  - Licensed providers may offer the same baseline retail services on the
-    common public rail if they satisfy interoperability and service rules
+**Retail public-banking floor:**
+- Basic accounts, wage receipt, bill pay, transfers, cash conversion, and fraud recovery operate on PFCR-funded public infrastructure
+- A guaranteed public postal-bank or public-bank option must remain available
+- Licensed providers may offer the same baseline retail services on the common public rail if they satisfy interoperability and service rules
 
-Household finance constraints:
-  - Compounding interest on household ordinary-life debt is prohibited
-  - No household debt may be cross-collateralized against the Constitutional
-    Survival Minimum or transformed into a revolving survival trap
-  - Securitization of household survival-linked claims is prohibited
-  - Retail fee chains may not function as hidden interest equivalents
-```
+**Household finance constraints:**
+- Compounding interest on household ordinary-life debt is prohibited
+- No household debt may be cross-collateralized against the Constitutional Survival Minimum or transformed into a revolving survival trap
+- Securitization of household survival-linked claims is prohibited
+- Retail fee chains may not function as hidden interest equivalents
 
 ---
 
@@ -175,53 +139,26 @@ SUSPENDED -> RETIRED: permanent deregistration
 
 ### 3.3 Validity and Expiry
 
-```
-Validity window: FC-057 = 72 hours from issuance timestamp
+**Validity window** (FC-057): 72 hours from issuance timestamp.
 
-Expiry behavior:
-  - Expired Essential Access is destroyed, not rolled over
-  - No accumulation is possible; this is by design
-  - Accumulation would reintroduce asset-like properties
-    and create a secondary market attack surface
+**Expiry behavior:** Expired Essential Access is destroyed, not rolled over. No accumulation is possible — this is by design. Accumulation would reintroduce asset-like properties and create a secondary market attack surface.
 
-Non-transferability enforcement:
-  - Essential Access is bound to identity at issuance
-  - No transfer, delegation, proxy redemption, or assignment is valid
-  - Redemption requires biometric or equivalent identity confirmation
-    at delivery point (Tier 2 assurance minimum; see P-003)
-```
+**Non-transferability enforcement:** Essential Access is bound to identity at issuance. No transfer, delegation, proxy redemption, or assignment is valid. Redemption requires biometric or equivalent identity confirmation at delivery point (Tier 2 assurance minimum; see P-003).
 
 ### 3.4 Constitutional Survival Minimum (CSM)
 
-```
-CSM is the minimum Essential Access allocation that may never be reduced (INV-001).
+CSM is the minimum Essential Access allocation that may never be reduced (INV-001). `CSM = f(verified physical capacity, basket composition, regional variation)`, where basket composition and regional adjustment factors bind through FC-058.
 
-CSM = f(verified physical capacity, basket composition, regional variation)
-  where basket composition and regional adjustment factors bind through FC-058.
-
-CSM floor enforcement:
-  - Even during SUSPENDED state, Essential Access issuance continues at CSM
-  - System halt conditions do not reduce CSM allocation
-  - No patch may reduce CSM below its founding value without full
-    constitutional refounding (Tier 1 invariant; see INVARIANTS.md INV-001)
-```
+**CSM floor enforcement:**
+- Even during SUSPENDED state, Essential Access issuance continues at CSM
+- System halt conditions do not reduce CSM allocation
+- No patch may reduce CSM below its founding value without full constitutional refounding (Tier 1 invariant; see INVARIANTS.md INV-001)
 
 ### 3.5 Issuance Conditions
 
-```
-Essential Access issuance is automatic and unconditional for all confirmed identity holders.
+Essential Access issuance is automatic and unconditional for all confirmed identity holders. The issuance trigger is the daily system cycle. Issuance amount: `CSM ≤ allocation ≤ enhanced allocation`, per the enhanced-allocation rule bound through FC-056.
 
-Issuance trigger: daily system cycle
-Issuance amount: CSM ≤ allocation ≤ enhanced allocation
-  per the enhanced-allocation rule bound through FC-056.
-
-Issuance is NOT conditional on:
-  - Contribution record
-  - Civic standing
-  - Employment status
-  - Prior redemption behavior
-  - Any behavioral criterion
-```
+Issuance is **not** conditional on contribution record, civic standing, employment status, prior redemption behavior, or any behavioral criterion.
 
 ---
 
@@ -287,27 +224,17 @@ SLOW_DECAY -> INACTIVE: balance reaches zero
 
 ## 5. Shared Storehouse — Emergency Instrument
 
-```
-Shared Storehouse is not a primary instrument. It is an emergency overlay activated only
-under verified scarcity conditions.
+Shared Storehouse is not a primary instrument. It is an emergency overlay activated only under verified scarcity conditions.
 
-Activation conditions (all required):
-  1. Oracle consensus: verified physical supply below the category threshold rule bound through FC-072
-  2. PCRP sentinel indicator breach (P-006)
-  3. Governance authorization: CRP decision within 48h (P-022)
+**Activation conditions** (all required):
 
-Operating constraints:
-  - Shared Storehouse does not replace Essential Access; it modifies the delivery mechanism
-  - Shared Storehouse allocation per identity is bounded by oracle-confirmed supply
-  - Shared Storehouse has mandatory sunset: automatically deactivates when supply
-    restoration confirmed by oracle consensus
-  - Oracle failure during active Shared Storehouse triggers P-022 fallback protocol:
-    conservative hold → 48h REB window → 72h governance handoff
+1. Oracle consensus: verified physical supply below the category threshold rule bound through FC-072
+2. PCRP sentinel indicator breach (P-006)
+3. Governance authorization: CRP decision within 48h (P-022)
 
-Termination:
-  Shared Storehouse deactivation requires same oracle confirmation standard as activation.
-  Asymmetric deactivation (easier to activate than deactivate) is prohibited.
-```
+**Operating constraints:** Shared Storehouse does not replace Essential Access; it modifies the delivery mechanism. Allocation per identity is bounded by oracle-confirmed supply. It carries a mandatory sunset — automatically deactivating when supply restoration is confirmed by oracle consensus. Oracle failure during active Shared Storehouse triggers the P-022 fallback protocol: conservative hold → 48h REB window → 72h governance handoff.
+
+**Termination:** Deactivation requires the same oracle confirmation standard as activation. Asymmetric deactivation (easier to activate than deactivate) is prohibited.
 
 Plain meaning: Shared Storehouse is the emergency rationing tool. It does not replace Essential Access, and it must turn off when the shortage is over.
 
@@ -315,41 +242,25 @@ Plain meaning: Shared Storehouse is the emergency rationing tool. It does not re
 
 ## 6. Non-Convertibility Enforcement Layer
 
-```
-The non-convertibility constraint is the architectural core of the system.
-It is enforced at the ledger layer as follows:
+The non-convertibility constraint is the architectural core of the system. It is enforced at the ledger layer as follows.
 
-Prohibited operations (rejected at ledger):
-  1. Any transaction that increases Flow balance in exchange for Essential Access units
-  2. Any transaction that increases Essential Access allocation in exchange for Flow
-  3. Any transaction that increases Voice or Service Record in exchange for Flow or Essential Access
-  4. Any cross-instrument collateralization
-  5. Any derivative instrument whose value tracks another instrument
+**Prohibited operations** (rejected at ledger):
 
-Ledger enforcement mechanism:
-  Each instrument operates on a separate ledger namespace.
-  Cross-namespace transactions are structurally impossible, not merely prohibited.
-  Detailed namespace isolation and ledger implementation belong in the architecture docs;
-  the constitutional requirement is structural impossibility of cross-namespace conversion.
+1. Any transaction that increases Flow balance in exchange for Essential Access units
+2. Any transaction that increases Essential Access allocation in exchange for Flow
+3. Any transaction that increases Voice or Service Record in exchange for Flow or Essential Access
+4. Any cross-instrument collateralization
+5. Any derivative instrument whose value tracks another instrument
 
-Above-ledger bypass risk:
-  The non-convertibility constraint holds at the ledger layer.
-  Off-ledger transactions (proxy redemption, service-for-Essential Access exchanges,
-  informal barter at instrument boundaries) are not preventable by
-  ledger enforcement alone.
+**Ledger enforcement mechanism:** Each instrument operates on a separate ledger namespace. Cross-namespace transactions are structurally impossible, not merely prohibited. Detailed namespace isolation and ledger implementation belong in the architecture docs; the constitutional requirement is structural impossibility of cross-namespace conversion.
+
+**Above-ledger bypass risk:** The non-convertibility constraint holds at the ledger layer. Off-ledger transactions (proxy redemption, service-for-Essential Access exchanges, informal barter at instrument boundaries) are not preventable by ledger enforcement alone.
 
 The ledger enforcement prevents in-system conversion: no ledger operation can transform Essential Access into Flow or Voice. However, ledger enforcement cannot prevent private arrangements external to the system — for example, a party that holds Essential Access could arrange services in exchange for Flow transfers made outside any official ledger entry. The practical enforcement layer for above-ledger bypass is non-technical: the 72-hour Essential Access expiry window makes stockpiling economically unattractive; demurrage costs make hoarding Flow for conversion purposes expensive; and the non-cash nature of Essential Access removes the most obvious arbitrage pathway. These are friction mechanisms, not absolute prohibitions. T-001 (shadow convertibility) remains the primary residual risk and is tracked in the Threat Register.
 
-  P-001 addresses enforcement mechanisms above the ledger layer.
+P-001 addresses enforcement mechanisms above the ledger layer.
 
-Plain basis for non-convertibility:
-  Essential Access stays outside money because money can be captured by prices,
-  rent, debt, and wage pressure. If survival support is paid as spendable money,
-  landlords, sellers, creditors, and employers can absorb much of it. Instrument
-  separation prevents that. The survival floor is delivered as access to real
-  needs, not as extra money that the market can pull away. *(Wolf, Economic
-  Trilogy Part 2: Manifestation and Part 3: Resolution, 2026)*
-```
+**Plain basis for non-convertibility:** Essential Access stays outside money because money can be captured by prices, rent, debt, and wage pressure. If survival support is paid as spendable money, landlords, sellers, creditors, and employers can absorb much of it. Instrument separation prevents that. The survival floor is delivered as access to real needs, not as extra money that the market can pull away. *(Wolf, Economic Trilogy Part 2: Manifestation and Part 3: Resolution, 2026)*
 
 ---
 
@@ -361,55 +272,30 @@ and are mutually reinforcing. See ADVERSARIAL_AUDIT.md PRD-003, Sim D, Finding 7
 
 Plain meaning: oracles are the system's reality checkers. They confirm whether real-world capacity exists before the system issues survival access or turns on emergency scarcity rules.
 
-```
-Purpose: Provide verified physical capacity data to Essential Access issuance and Shared Storehouse activation systems.
+**Purpose:** Provide verified physical capacity data to Essential Access issuance and Shared Storehouse activation systems.
 
-Minimum configuration (per cohort, per essential category; FC-030 / FC-031 / FC-032 / FC-033):
-  N ≥ 5 independent oracle nodes (FC-030 ORACLE_N_MIN)
-  At least 3 distinct methodology classes represented (FC-031 METHODOLOGY_CLASS_MIN):
-    - At least one node: Institutional statistical modeling
-    - At least one node: Community-based participatory research (CBPR)
-    - At least one node: Independent physical sampling (Tier 3, ground-truth)
-  Pairwise error-series correlation ≤ 0.30 Pearson (FC-032 ORACLE_PAIRWISE_CORRELATION_MAX)
-  At least 1 designated adversarial / red-team seat AND ≥20% of total oracle nodes must be adversarial (both conditions FC-033 ORACLE_ADVERSARIAL_SEATS_MIN; Tier 1). Any expansion of the oracle council must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment.
-  Rationale: BFT theorem n ≥ 3f + 1; f = 1 gives n ≥ 4; N_MIN = 5 provides one-node margin
-  above the BFT floor so single-node loss does not drop the cohort below tolerance.
+**Minimum configuration** (per cohort, per essential category; FC-030 / FC-031 / FC-032 / FC-033):
+- N ≥ 5 independent oracle nodes (FC-030 `ORACLE_N_MIN`)
+- At least 3 distinct methodology classes represented (FC-031 `METHODOLOGY_CLASS_MIN`): at least one node using institutional statistical modeling; at least one using community-based participatory research (CBPR); at least one using independent physical sampling (Tier 3, ground-truth)
+- Pairwise error-series correlation ≤ 0.30 Pearson (FC-032 `ORACLE_PAIRWISE_CORRELATION_MAX`)
+- At least 1 designated adversarial / red-team seat AND ≥20% of total oracle nodes must be adversarial (both conditions FC-033 `ORACLE_ADVERSARIAL_SEATS_MIN`; Tier 1). Any expansion of the oracle council must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment.
 
-Consensus mechanism (N = 5 floor; thresholds rounded up):
-  Essential Access issuance: majority consensus ≥ 3 of 5 in agreement (⌈N/2⌉ + 1 general form)
-  Shared Storehouse activation: supermajority ≥ 4 of 5 in agreement (⌈2N/3⌉ general form; equivalent to 4/5 at N=5)
-  Shared Storehouse deactivation: same threshold as activation (hysteresis prevents chattering)
+*Rationale: BFT theorem `n ≥ 3f + 1`; `f = 1` gives `n ≥ 4`; `N_MIN = 5` provides one-node margin above the BFT floor so single-node loss does not drop the cohort below tolerance.*
 
-Failure modes:
-  - Single node failure: remaining 4 nodes continue above BFT floor; alert triggered
-  - Two concurrent node failures: below BFT floor (3 < 3f+1 for f=1); Shared Storehouse consensus suspended;
-    conservative hold engaged until quorum restored
-  - Three or more node failures: P-022 crisis fallback protocol activates; measurement-gated
-    decisions (Shared Storehouse activation, Essential Access tightening) suspended; Annex Y CSM issuance continues on
-    pre-committed floor values; governance notified within 1 hour
-  - Quorum restoration: FC-100 ORACLE_QUORUM_LOSS_RESTORATION_WINDOW = 14 days of verification
-    required before resumed-oracle readings are consensus-binding (prevents flash-recovery
-    normalization exploit)
+**Consensus mechanism** (N = 5 floor; thresholds rounded up):
+- Essential Access issuance: majority consensus ≥ 3 of 5 in agreement (`⌈N/2⌉ + 1` general form)
+- Shared Storehouse activation: supermajority ≥ 4 of 5 in agreement (`⌈2N/3⌉` general form; equivalent to 4/5 at N=5)
+- Shared Storehouse deactivation: same threshold as activation (hysteresis prevents chattering)
 
-Independence requirements (Annex AL):
-  Nodes must differ on all three dimensions:
-    1. Epistemological foundation
-    2. Data generation process
-    3. Standards provenance
-  AND produce materially different error structures (prospective error independence test).
-  AND historical pairwise Pearson correlation on error series ≤ 0.30 (FC-032) once ≥ 18
-  months of overlapping data exists.
-  Formal independence without structural independence is insufficient.
+**Failure modes:**
+- *Single node failure:* remaining 4 nodes continue above BFT floor; alert triggered
+- *Two concurrent node failures:* below BFT floor (3 < 3f+1 for f=1); Shared Storehouse consensus suspended; conservative hold engaged until quorum restored
+- *Three or more node failures:* P-022 crisis fallback protocol activates; measurement-gated decisions (Shared Storehouse activation, Essential Access tightening) suspended; Annex Y CSM issuance continues on pre-committed floor values; governance notified within 1 hour
+- *Quorum restoration:* FC-100 `ORACLE_QUORUM_LOSS_RESTORATION_WINDOW` = 14 days of verification required before resumed-oracle readings are consensus-binding (prevents flash-recovery normalization exploit)
 
-Measurement drift defense:
-  Measurement can slowly stop matching lived reality. Different official
-  methods can also start sharing the same blind spots. That is why the oracle
-  system requires several kinds of measurement and at least one direct physical
-  sampling method. Somebody must check the real thing, not just the model.
-  If the reality check is captured, Essential Access can become accurate on
-  paper while failing in practice. *(Wolf, Economic Trilogy Part 1: Foundation,
-  2026)*
-```
+**Independence requirements** (Annex AL): Nodes must differ on all three dimensions — epistemological foundation, data generation process, and standards provenance — AND produce materially different error structures (prospective error independence test), AND historical pairwise Pearson correlation on error series ≤ 0.30 (FC-032) once ≥ 18 months of overlapping data exists. Formal independence without structural independence is insufficient.
+
+**Measurement drift defense:** Measurement can slowly stop matching lived reality. Different official methods can also start sharing the same blind spots. That is why the oracle system requires several kinds of measurement and at least one direct physical sampling method — somebody must check the real thing, not just the model. If the reality check is captured, Essential Access can become accurate on paper while failing in practice. *(Wolf, Economic Trilogy Part 1: Foundation, 2026)*
 
 ![Oracle Polycentric Architecture](/images/V-007.png)
 

@@ -14,6 +14,22 @@
  *   • >5 labeled edges  → numbered callouts + legend below SVG
  */
 
+import { useEffect, useState } from 'react'
+
+function useDarkMode(): boolean {
+  const [dark, setDark] = useState(
+    () => document.documentElement.getAttribute('data-theme') === 'dark',
+  )
+  useEffect(() => {
+    const obs = new MutationObserver(() => {
+      setDark(document.documentElement.getAttribute('data-theme') === 'dark')
+    })
+    obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+    return () => obs.disconnect()
+  }, [])
+  return dark
+}
+
 // ── layout constants ──────────────────────────────────────────────────────
 
 const NODE_W      = 162
@@ -43,70 +59,78 @@ interface NodeStyle {
   fontWeight: string
 }
 
-const NODE_STYLES: Record<NodeRole, NodeStyle> = {
-  primary: {
-    fill: '#fef3e2',
-    useGradient: 'primary',
-    stroke: '#96612a',
-    strokeWidth: 2,
-    textFill: '#1c1710',
-    fontWeight: '700',
-  },
-  terminal: {
-    fill: '#1c1812',
-    stroke: '#2a2218',
-    strokeWidth: 1.5,
-    textFill: '#f0e6d4',
-    fontWeight: '600',
-  },
-  warning: {
-    fill: '#fdf0de',
-    useGradient: 'warning',
-    stroke: '#b07434',
-    strokeWidth: 1.5,
-    textFill: '#352410',
-    fontWeight: '600',
-  },
-  suspended: {
-    fill: '#eeebe6',
-    stroke: '#a09688',
-    strokeWidth: 1,
-    textFill: '#52483e',
-    fontWeight: '500',
-  },
-  default: {
-    fill: '#faf8f3',
-    stroke: 'rgba(60,54,46,0.28)',
-    strokeWidth: 1,
-    textFill: '#2a2722',
-    fontWeight: '500',
-  },
+interface Palette {
+  nodes: Record<NodeRole, NodeStyle>
+  edgeColor: string
+  labelBg: string
+  labelRing: string
+  labelText: string
+  gradPrimaryFrom: string
+  gradPrimaryTo: string
+  gradWarningFrom: string
+  gradWarningTo: string
+  shadowColor: string
+  callouts: [string, string][]
+  legendText: string
 }
 
-const EDGE_COLOR  = 'rgba(60,54,46,0.55)'
-const LABEL_BG    = '#fffdf8'
-const LABEL_RING  = 'rgba(60,54,46,0.22)'
-const LABEL_TEXT  = '#3a3228'
+const LIGHT: Palette = {
+  nodes: {
+    primary:   { fill: '#fef3e2', useGradient: 'primary', stroke: '#96612a',               strokeWidth: 2,   textFill: '#1c1710', fontWeight: '700' },
+    terminal:  { fill: '#1c1812',                          stroke: '#2a2218',               strokeWidth: 1.5, textFill: '#f0e6d4', fontWeight: '600' },
+    warning:   { fill: '#fdf0de', useGradient: 'warning',  stroke: '#b07434',               strokeWidth: 1.5, textFill: '#352410', fontWeight: '600' },
+    suspended: { fill: '#eeebe6',                          stroke: '#a09688',               strokeWidth: 1,   textFill: '#52483e', fontWeight: '500' },
+    default:   { fill: '#faf8f3',                          stroke: 'rgba(60,54,46,0.28)',   strokeWidth: 1,   textFill: '#2a2722', fontWeight: '500' },
+  },
+  edgeColor:       'rgba(60,54,46,0.55)',
+  labelBg:         '#fffdf8',
+  labelRing:       'rgba(60,54,46,0.22)',
+  labelText:       '#3a3228',
+  gradPrimaryFrom: '#fefbf2',
+  gradPrimaryTo:   '#f7e1a8',
+  gradWarningFrom: '#fef8f0',
+  gradWarningTo:   '#f9dba8',
+  shadowColor:     'rgba(50,35,10,0.16)',
+  callouts: [
+    ['#9f6c31', '#fef3e2'], ['#3d7a6a', '#e4f2ee'], ['#5f52a0', '#eae7f5'],
+    ['#b05050', '#f5eaea'], ['#2e769a', '#e2eff7'], ['#6a8232', '#eaf2df'],
+    ['#a05838', '#f5ece4'], ['#387a7a', '#e2efef'], ['#724880', '#f0e8f5'],
+    ['#5e7832', '#eaf0e0'], ['#a03858', '#f5e6ee'], ['#385e80', '#e2eaf5'],
+  ],
+  legendText: '#3a3028',
+}
+
+const DARK: Palette = {
+  nodes: {
+    primary:   { fill: '#2d1f08', useGradient: 'primary', stroke: '#c49040',               strokeWidth: 2,   textFill: '#f5dea0', fontWeight: '700' },
+    terminal:  { fill: '#0e0c0a',                          stroke: '#7a5a28',               strokeWidth: 1.5, textFill: '#d4b878', fontWeight: '600' },
+    warning:   { fill: '#281508', useGradient: 'warning',  stroke: '#c06828',               strokeWidth: 1.5, textFill: '#f2ba70', fontWeight: '600' },
+    suspended: { fill: '#1e1a14',                          stroke: '#4a4030',               strokeWidth: 1,   textFill: '#786858', fontWeight: '500' },
+    default:   { fill: '#1a1610',                          stroke: 'rgba(180,150,80,0.28)', strokeWidth: 1,   textFill: '#b89e78', fontWeight: '500' },
+  },
+  edgeColor:       'rgba(190,160,90,0.55)',
+  labelBg:         '#221a0e',
+  labelRing:       'rgba(190,160,90,0.35)',
+  labelText:       '#d4b060',
+  gradPrimaryFrom: '#2a1b06',
+  gradPrimaryTo:   '#4d3210',
+  gradWarningFrom: '#271408',
+  gradWarningTo:   '#4a280c',
+  shadowColor:     'rgba(0,0,0,0.45)',
+  callouts: [
+    ['#c49040', '#2d1f08'], ['#4aaa8a', '#0e2820'], ['#8878d0', '#18143a'],
+    ['#d07070', '#2e1010'], ['#50a0cc', '#0a1e2e'], ['#90b050', '#182010'],
+    ['#d07848', '#2a1408'], ['#50a0a0', '#0e2424'], ['#a060c0', '#201030'],
+    ['#80a840', '#182010'], ['#c05878', '#280e18'], ['#5088c0', '#0e1828'],
+  ],
+  legendText: '#c4a870',
+}
+
 const FONT_SERIF  = '"Iowan Old Style","Palatino Linotype",Georgia,serif'
 const FONT_SANS   = 'system-ui,-apple-system,"Segoe UI",sans-serif'
 const FONT_MONO   = '"SF Mono","Fira Code",monospace'
-
-const CALLOUT_PALETTE: [string, string][] = [
-  ['#9f6c31', '#fef3e2'],
-  ['#3d7a6a', '#e4f2ee'],
-  ['#5f52a0', '#eae7f5'],
-  ['#b05050', '#f5eaea'],
-  ['#2e769a', '#e2eff7'],
-  ['#6a8232', '#eaf2df'],
-  ['#a05838', '#f5ece4'],
-  ['#387a7a', '#e2efef'],
-  ['#724880', '#f0e8f5'],
-  ['#5e7832', '#eaf0e0'],
-  ['#a03858', '#f5e6ee'],
-  ['#385e80', '#e2eaf5'],
-]
-function calloutColor(n: number): [string, string] {
-  return CALLOUT_PALETTE[n % CALLOUT_PALETTE.length]
+function calloutColor(p: Palette, n: number): [string, string] {
+  return p.callouts[n % p.callouts.length]
 }
 
 // ── DSL parser ────────────────────────────────────────────────────────────
@@ -349,6 +373,8 @@ function bezierMid(path: string): LabelPos {
 // ── main component ────────────────────────────────────────────────────────
 
 export function StatechartDiagram({ dsl }: { dsl: string }) {
+  const dark    = useDarkMode()
+  const p       = dark ? DARK : LIGHT
   const spec    = parseStatechartDsl(dsl)
   const layout  = computeLayout(spec)
   const uid     = Math.random().toString(36).slice(2, 7)
@@ -400,30 +426,26 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
         aria-hidden="true"
       >
         <defs>
-          {/* Subtle drop-shadow — gives nodes lift without decoration overload */}
           <filter id={shadowId} x="-20%" y="-30%" width="140%" height="180%">
             <feDropShadow dx="0" dy="1.5" stdDeviation="2.5"
-              floodColor="rgba(50,35,10,0.16)" floodOpacity="1" />
+              floodColor={p.shadowColor} floodOpacity="1" />
           </filter>
 
-          {/* Node fill gradients */}
           <linearGradient id={gradPrimary} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stopColor="#fefbf2" />
-            <stop offset="100%" stopColor="#f7e1a8" />
+            <stop offset="0%"   stopColor={p.gradPrimaryFrom} />
+            <stop offset="100%" stopColor={p.gradPrimaryTo} />
           </linearGradient>
           <linearGradient id={gradWarning} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stopColor="#fef8f0" />
-            <stop offset="100%" stopColor="#f9dba8" />
+            <stop offset="0%"   stopColor={p.gradWarningFrom} />
+            <stop offset="100%" stopColor={p.gradWarningTo} />
           </linearGradient>
 
-          {/* Default arrowhead */}
           <marker id={arrowId} markerWidth="7" markerHeight="7"
             refX="6" refY="3" orient="auto">
-            <path d="M0,0.5 L0,5.5 L7,3 z" fill={EDGE_COLOR} />
+            <path d="M0,0.5 L0,5.5 L7,3 z" fill={p.edgeColor} />
           </marker>
 
-          {/* Per-colour arrowheads for legend mode */}
-          {useLegend && CALLOUT_PALETTE.map(([stroke], ci) => (
+          {useLegend && p.callouts.map(([stroke], ci) => (
             <marker key={`ac${ci}`} id={`${arrowId}-c${ci}`}
               markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
               <path d="M0,0.5 L0,5.5 L7,3 z" fill={stroke} fillOpacity={0.7} />
@@ -438,8 +460,8 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
           const calloutIdx = calloutMap.get(i)
           const showInline = !useLegend && !!edge.label
           const edgeStroke = useLegend && calloutIdx !== undefined
-            ? calloutColor(calloutIdx)[0]
-            : EDGE_COLOR
+            ? calloutColor(p, calloutIdx)[0]
+            : p.edgeColor
 
           return (
             <g key={`e${i}`}>
@@ -451,7 +473,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
                 strokeOpacity={useLegend ? 0.62 : 0.90}
                 markerEnd={
                   useLegend && calloutIdx !== undefined
-                    ? `url(#${arrowId}-c${calloutIdx % CALLOUT_PALETTE.length})`
+                    ? `url(#${arrowId}-c${calloutIdx % p.callouts.length})`
                     : `url(#${arrowId})`
                 }
               />
@@ -467,14 +489,14 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
                     <rect
                       x={lp.x - lw / 2} y={lp.y - lh / 2}
                       width={lw} height={lh}
-                      fill={LABEL_BG} stroke={LABEL_RING}
+                      fill={p.labelBg} stroke={p.labelRing}
                       rx={5}
                     />
                     <text
                       x={lp.x} y={lp.y + 3.5}
                       textAnchor="middle"
                       fontSize={LABEL_FONT}
-                      fill={LABEL_TEXT}
+                      fill={p.labelText}
                       fontFamily={FONT_SANS}
                     >
                       {edge.label}
@@ -486,7 +508,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
               {/* Callout bubble for legend mode */}
               {useLegend && calloutIdx !== undefined && (() => {
                 const mp = bezierMid(d)
-                const [stroke, fill] = calloutColor(calloutIdx)
+                const [stroke, fill] = calloutColor(p, calloutIdx)
                 return (
                   <g>
                     <circle cx={mp.x} cy={mp.y} r={9.5}
@@ -510,7 +532,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
 
         {/* ── nodes ── */}
         {layout.nodes.map(node => {
-          const s  = NODE_STYLES[node.role]
+          const s  = p.nodes[node.role]
           const cx = node.x + NODE_W / 2
           const cy = node.y + NODE_H / 2
           return (
@@ -543,7 +565,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
       {useLegend && (
         <div className="mt-5 grid grid-cols-2 gap-2.5">
           {labeledEdges.map((edge, n) => {
-            const [stroke, fill] = calloutColor(n)
+            const [stroke, fill] = calloutColor(p, n)
             return (
               <div
                 key={`l${n}`}
@@ -575,7 +597,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
                   }}>
                     {edge.from} → {edge.to}
                   </span>
-                  <span style={{ color: '#3a3028' }}>{edge.label}</span>
+                  <span style={{ color: p.legendText }}>{edge.label}</span>
                 </span>
               </div>
             )
