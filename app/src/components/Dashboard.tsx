@@ -115,6 +115,33 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
             if (!map.has(k)) map.set(k, { ...entry, label: `Annex ${code}${n}` })
           }
         }
+        // Index dot-notation subsection headings: AE2.1, AH2.3, etc.
+        // so hovering "AE2.1" shows the specific section title and excerpt
+        for (const h of doc.headings) {
+          const sub = h.text.match(/^([A-Z]{1,3}\d+\.\d+)(?:\s|$|[—–\-])/)
+          if (!sub) continue
+          const subCode = sub[1]
+          // Extract first real paragraph after this heading from raw content
+          const escapedCode = subCode.replace(/\./g, '\\.')
+          const hMatch = doc.content.match(new RegExp(`^#{1,6}\\s+${escapedCode}\\b[^\\n]*`, 'm'))
+          let summary = ''
+          if (hMatch && hMatch.index !== undefined) {
+            const after = doc.content.slice(hMatch.index + hMatch[0].length)
+            const paras = after.split(/\n{2,}/).map(p => p.trim()).filter(p => p && !p.startsWith('#'))
+            if (paras[0]) summary = paras[0].replace(/[*`\[\]]/g, '').slice(0, 140)
+          }
+          const subEntry: RefEntry = {
+            label: subCode,
+            title: h.text,
+            summary,
+            status: entry.status,
+            docId: doc.id,
+            slug: h.slug,
+          }
+          for (const k of [`Annex ${subCode}`, `ANNEX ${subCode}`, subCode]) {
+            if (!map.has(k)) map.set(k, subEntry)
+          }
+        }
       }
     }
   }
@@ -1242,9 +1269,8 @@ function renderTableCell(text: string, keyPrefix: string, query: string, onInter
   const standaloneAnnex = text.trim().match(/^([A-Z]{1,3}\d*(?:\.\d+)*)$/)
   if (standaloneAnnex) {
     const code = standaloneAnnex[1]
-    // Strip trailing .N suffix for lookup ("AE2.1" → "AE2", which is in the map)
-    const lookupCode = code.replace(/\.\d+$/, '')
-    return <RefChip refKey={`Annex ${lookupCode}`} display={code} />
+    // Full code used as key — subsection headings are now indexed directly in buildRefLookup
+    return <RefChip refKey={`Annex ${code}`} display={code} />
   }
   return renderInline(text, keyPrefix, query, false, onInternalLink, currentDocPath)
 }
