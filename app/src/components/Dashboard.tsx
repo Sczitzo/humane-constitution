@@ -1238,10 +1238,13 @@ function renderTableCell(text: string, keyPrefix: string, query: string, onInter
       </span>
     )
   }
-  // Standalone annex code in a table cell (e.g. "AB", "AD", "AH2", "M") — chip it directly
-  const standaloneAnnex = text.trim().match(/^([A-Z]{1,3}\d*)$/)
+  // Standalone annex code in a table cell (e.g. "AB", "AD", "AH2", "AE2.1") — chip it directly
+  const standaloneAnnex = text.trim().match(/^([A-Z]{1,3}\d*(?:\.\d+)*)$/)
   if (standaloneAnnex) {
-    return <RefChip refKey={`Annex ${standaloneAnnex[1]}`} display={standaloneAnnex[1]} />
+    const code = standaloneAnnex[1]
+    // Strip trailing .N suffix for lookup ("AE2.1" → "AE2", which is in the map)
+    const lookupCode = code.replace(/\.\d+$/, '')
+    return <RefChip refKey={`Annex ${lookupCode}`} display={code} />
   }
   return renderInline(text, keyPrefix, query, false, onInternalLink, currentDocPath)
 }
