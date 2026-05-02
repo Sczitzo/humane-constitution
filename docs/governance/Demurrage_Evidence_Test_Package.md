@@ -65,7 +65,7 @@ Assume every actor below behaves rationally under pressure and opportunistically
 
 **Question:** Does demurrage fall mainly on idle concentration, or does it punish ordinary liquidity?
 
-Minimum segmentation:
+**Minimum segmentation:**
 
 - income quintile;
 - wealth quintile;
@@ -76,7 +76,7 @@ Minimum segmentation:
 - regional price shocks;
 - emergency savings need.
 
-Required outputs:
+**Required outputs:**
 
 - monthly demurrage paid as share of disposable Flow;
 - liquid buffer retained after demurrage;
@@ -85,7 +85,7 @@ Required outputs:
 - hardship correlation by group;
 - burden comparison between low-wealth liquidity and concentrated idle balances.
 
-Failure criteria:
+**Failure criteria:**
 
 - lowest-wealth households pay a materially higher effective burden than concentrated capital;
 - users with volatile income reduce emergency buffers below a published minimum;
@@ -97,7 +97,7 @@ Failure criteria:
 
 **Question:** Can ordinary firms hold enough liquidity for payroll, inventory, seasonal cycles, and shocks without receiving a hoarding privilege?
 
-Minimum segmentation:
+**Minimum segmentation:**
 
 - labor-intensive services;
 - inventory-heavy retail;
@@ -107,7 +107,7 @@ Minimum segmentation:
 - seasonal firms;
 - high-volatility input sectors.
 
-Required outputs:
+**Required outputs:**
 
 - payroll-timing stress;
 - inventory prepayment pressure;
@@ -117,7 +117,7 @@ Required outputs:
 - growth of informal credit;
 - difference between operating float and idle accumulation.
 
-Failure criteria:
+**Failure criteria:**
 
 - firms survive only by creating demurrage-avoidance substitutes;
 - payroll or inventory timing becomes materially more fragile;
@@ -129,7 +129,7 @@ Failure criteria:
 
 **Question:** Does contract-commitment architecture finance long-horizon work without creating a demurrage shelter?
 
-Minimum scenarios:
+**Minimum scenarios:**
 
 - housing buildout;
 - hospital or clinic construction;
@@ -139,7 +139,7 @@ Minimum scenarios:
 - multi-jurisdiction project;
 - emergency reconstruction.
 
-Required outputs:
+**Required outputs:**
 
 - escrow balance over time;
 - demurrage paid by commissioning authority;
@@ -151,7 +151,7 @@ Required outputs:
 - project completion time;
 - avoidance profitability by project cycling or fragmentation.
 
-Failure criteria:
+**Failure criteria:**
 
 - escrow design becomes a preferred parking channel;
 - commissioning authorities rush low-quality contracts to avoid decay;
@@ -164,7 +164,7 @@ Failure criteria:
 
 **Question:** Can demurrage fund common rails without converting into a hidden regressive tax?
 
-Required outputs:
+**Required outputs:**
 
 - gross demurrage revenue;
 - source distribution by holder type;
@@ -176,7 +176,7 @@ Required outputs:
 - reserve requirement;
 - substitution loss as users avoid Flow holdings.
 
-Failure criteria:
+**Failure criteria:**
 
 - public-rail finance depends materially on ordinary household liquidity;
 - enforcement costs consume a large share of revenue;
@@ -188,7 +188,7 @@ Failure criteria:
 
 **Question:** Can actors turn demurrage into an avoidable fee paid mainly by people without lawyers?
 
-Minimum routes to test:
+**Minimum routes to test:**
 
 - subsidiaries;
 - trusts and foundations;
@@ -203,7 +203,7 @@ Minimum routes to test:
 - stable private claims;
 - cross-border settlement chains.
 
-Failure criteria:
+**Failure criteria:**
 
 - demurrage burden can be reduced materially through legal complexity;
 - beneficial ownership data cannot identify control in time;
@@ -217,7 +217,7 @@ Failure criteria:
 
 Demurrage parameters should not be set from moral intuition. They should be calibrated from burden, avoidance, and public-finance data.
 
-Minimum parameter set:
+**Minimum parameter set:**
 
 | Parameter | What it controls | Evidence needed before binding |
 |---|---|---|
@@ -229,7 +229,7 @@ Minimum parameter set:
 | Inspector pool size | Independence and throughput of milestone review | Capture, delay, and conflict-of-interest model. |
 | Revenue routing rule | Public-rail funding allocation | Public-finance model and anti-incentive review. |
 
-Calibration must satisfy all four constraints:
+**Calibration must satisfy all four constraints:**
 
 1. ordinary users can predict and understand the burden;
 2. concentrated idle balances face a stronger effective carrying cost than ordinary liquidity;

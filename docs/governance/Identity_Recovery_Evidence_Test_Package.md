@@ -67,7 +67,7 @@ Assume every identity mechanism will be attacked from both sides: by people seek
 
 **Question:** Can the system prevent scalable duplicate personhood without making every ordinary user continuously legible?
 
-Minimum scenarios:
+**Minimum scenarios:**
 
 - duplicate enrollment by one person;
 - synthetic identity with partial real evidence;
@@ -78,7 +78,7 @@ Minimum scenarios:
 - cross-region duplicate enrollment;
 - post-disaster mass re-enrollment.
 
-Required outputs:
+**Required outputs:**
 
 - false acceptance rate by assurance tier;
 - confirmed fraud rate by instrument tier;
@@ -89,7 +89,7 @@ Required outputs:
 - data used per detection event;
 - whether detection requires generalized behavioral monitoring.
 
-Failure criteria:
+**Failure criteria:**
 
 - fraud is only detectable through broad activity surveillance;
 - staff-assisted fraud is not separately measurable;
@@ -102,7 +102,7 @@ Failure criteria:
 
 **Question:** Who fails to enroll or recover, and is failure hidden because only successful users are counted?
 
-Minimum segmentation:
+**Minimum segmentation:**
 
 - displaced people;
 - undocumented people;
@@ -117,7 +117,7 @@ Minimum segmentation:
 - coercive-control and trafficking contexts;
 - people with name, gender, family, or document inconsistencies.
 
-Required outputs:
+**Required outputs:**
 
 - enrollment success rate;
 - abandonment rate;
@@ -130,7 +130,7 @@ Required outputs:
 - denial reason distribution;
 - survival-floor continuity during unresolved status.
 
-Failure criteria:
+**Failure criteria:**
 
 - vulnerable groups fail at materially higher rates than ordinary users;
 - abandonment is not counted as exclusion;
@@ -143,7 +143,7 @@ Failure criteria:
 
 **Question:** Can a real person recover after device loss, document loss, displacement, disaster, abuse, incapacity, or data error?
 
-Minimum scenarios:
+**Minimum scenarios:**
 
 - lost phone and no backup device;
 - stolen credentials;
@@ -157,7 +157,7 @@ Minimum scenarios:
 - legal name or gender marker change;
 - death, birth, guardianship, and dependent coverage transition.
 
-Required outputs:
+**Required outputs:**
 
 - time to provisional restoration;
 - time to full restoration;
@@ -169,7 +169,7 @@ Required outputs:
 - data exposure during recovery;
 - post-recovery correction of harmful flags.
 
-Failure criteria:
+**Failure criteria:**
 
 - recovery requires contacting an abuser, employer, landlord, sponsor, or hostile institution;
 - survival access is interrupted while recovery is pending;
@@ -182,7 +182,7 @@ Failure criteria:
 
 **Question:** Does the identity stack prove what is needed without building a lifelong surveillance dossier?
 
-Required tests:
+**Required tests:**
 
 - data inventory by evidence type;
 - purpose-limitation map;
@@ -195,7 +195,7 @@ Required tests:
 - zero-knowledge or attribute-proof feasibility where useful;
 - behavioral-linkage red team.
 
-Failure criteria:
+**Failure criteria:**
 
 - service use is routinely linkable across survival, market, civic, health, housing, and recovery contexts;
 - identity verification and activity monitoring fuse into a single graph;
@@ -208,7 +208,7 @@ Failure criteria:
 
 **Question:** Can identity be protected when a powerful person or institution controls the user's practical life?
 
-Minimum scenarios:
+**Minimum scenarios:**
 
 - family member controls phone, documents, or appointments;
 - employer or sponsor holds documents;
@@ -219,7 +219,7 @@ Minimum scenarios:
 - trafficker or abusive partner monitors communications;
 - community witness system is captured by local power holders.
 
-Required outputs:
+**Required outputs:**
 
 - coercion detection channels;
 - safe alternate contact path;
@@ -230,7 +230,7 @@ Required outputs:
 - delegation audit trail;
 - reversal speed when coercion is found.
 
-Failure criteria:
+**Failure criteria:**
 
 - delegation becomes ownership;
 - credential custody by third parties becomes normal;
@@ -243,7 +243,7 @@ Failure criteria:
 
 **Question:** Does Annex AK's Asymmetric Error Doctrine bind real decisions, or does politics override it?
 
-Required tests:
+**Required tests:**
 
 - bind FC-140 through FC-150 from pilot evidence;
 - publish fraud and exclusion rates with confidence intervals;
@@ -254,7 +254,7 @@ Required tests:
 - test recalibration panel independence;
 - test Article VII dashboard comprehension.
 
-Failure criteria:
+**Failure criteria:**
 
 - thresholds remain reserved at scale-up;
 - a fraud incident causes emergency tightening outside Annex AK;
@@ -269,7 +269,7 @@ Failure criteria:
 
 Identity parameters should not be set by political mood, vendor preference, or fear of headlines.
 
-Minimum parameter set:
+**Minimum parameter set:**
 
 | Parameter | What it controls | Evidence needed before binding |
 |---|---|---|
@@ -281,7 +281,7 @@ Minimum parameter set:
 | FC-149 fraud priority bound | When fraud reduction must outrank inclusion loosening | Supply-impact and civic-integrity model. |
 | FC-150 simultaneous breach default | Default when fraud and exclusion both breach upper bounds | Public legitimacy review and independent panel recommendation. |
 
-Calibration must satisfy all five constraints:
+**Calibration must satisfy all five constraints:**
 
 1. CSM access continues during identity uncertainty;
 2. fraud controls are stronger for higher-consequence privileges;
