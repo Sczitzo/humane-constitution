@@ -76,6 +76,8 @@ Every pilot needs:
 
 **Hypothesis:** A person can prove continuity, recover access, and challenge errors without being permanently exposed, excluded, or surveilled.
 
+**External evidence basis:** The [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md) is the governing test package for this phase. NIST anchors risk-managed digital identity assurance; World Bank ID4D anchors inclusion, privacy, and exclusion-risk assessment; UNHCR anchors accessible and non-arbitrary registration for displaced people; W3C verifiable credentials anchor privacy-respecting credential technology without proving enrollment or recovery safety.
+
 **Test population:** Volunteers representing ordinary users plus edge cases: people without stable documentation, disabled people, elderly people, displaced people, guardianship cases, and digitally fragile users.
 
 **Measure:**
@@ -88,6 +90,10 @@ Every pilot needs:
 - minimum-data score
 - staff discretion points
 - coercion-resistance for guardianship, employer, family, institutional, and trafficking contexts
+- abandonment rate and reason
+- staff-discretion concentration by office/team
+- data exposed during recovery
+- unsafe evidence avoided during coercion or abuse cases
 
 **Failure criteria:**
 
@@ -96,6 +102,8 @@ Every pilot needs:
 - Staff discretion becomes the real gate.
 - Vulnerable users fail at materially higher rates than ordinary users.
 - Identity controls require surveillance that would be unacceptable if scaled to hostile administrators.
+- Recovery requires a single device, biometric, document, institution, or abuser-controlled evidence source.
+- Abandonment is not counted as exclusion.
 
 **Scale rule:** No Essential Access pilot should depend on a live identity stack until this phase is independently reviewed.
 

@@ -50,7 +50,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Resolution path:** use layered identity assurance, recovery continuity, asymmetric error thresholds, and human appeal so fraud control does not become the survival gate.
 - **Corruption route to assume:** insiders sell credentials, abusive relatives or employers control recovery, administrators over-tighten rules to protect themselves, and vulnerable people are blamed as "risk."
 - **External evidence:** NIST SP 800-63-4 and World Bank ID4D anchor identity assurance, fraud, privacy, inclusion, and service-access concerns.
-- **Proof needed:** false-exclusion pilots, false-acceptance pilots, recovery drills for displaced and digitally fragile users, data-minimization audit, and insider fraud scenario testing.
+- **Proof needed:** the [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md): false-exclusion pilots, false-acceptance pilots, recovery drills for displaced and digitally fragile users, coercion and delegation tests, data-minimization audit, staff-discretion audit, and insider fraud scenario testing.
 - **Residual risk:** identity cannot be made frictionless and fraud-proof at the same time; the survival floor must remain continuous while disputes are reviewed.
 
 ### T-004 - Incentive Collapse

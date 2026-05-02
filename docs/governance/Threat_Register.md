@@ -160,6 +160,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Detection:** cross-signal deduplication, recovery anomaly review, impossible-use patterns, and staged assurance mismatches.
 - **Mitigation direction:** four-tier identity assurance model, multi-evidence thresholding, no single universal credential, recovery safety ladder, survival-floor continuity during disputes. → P-003 ACTIVE.
 - **Open problem:** calibrate fraud tolerance without making the system unusable for displaced, undocumented, or digitally fragile people.
+- **Evidence package:** [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md)
 - **Asymmetric Error Doctrine required (see P-016):** The current mitigation does not specify quantified targets. Before deployment, the founding coalition must publish and formally adopt an Asymmetric Error Doctrine that specifies: (a) maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record); (b) maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile) per tier; (c) the review trigger when either rate is exceeded; (d) the decision rule when the two error types trade off. Without explicit numbers, calibration is permanently subject to political pressure. The Asymmetric Error Doctrine is a Tier 2 founding commitment. → See P-016 (Annex AK).
 
 ---

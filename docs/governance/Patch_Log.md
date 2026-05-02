@@ -186,6 +186,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 **Constitutional text:** [ANNEX_AB.md § AB4](../annexes/ANNEX_AB.md)
 
+- **Evidence package:** [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md)
 - **Introduced design:** four assurance tiers (survival floor, provisional, core, civic activation), multi-evidence thresholding, no single universal credential, hardened recovery, anti-Sybil controls, and no-survival-lockout under uncertainty.
 - **Clauses to integrate:** Identity Adversarial Reality, Differential Assurance, Recovery Safety, No Master Credential, Identity Failure Continuity.
 - **Dependencies:** appeals architecture, ombuds/advocate pathways, and clear separation between verification and monitoring.

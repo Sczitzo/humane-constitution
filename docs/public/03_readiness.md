@@ -15,13 +15,14 @@ Read in this order:
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
 4. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
 5. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
-6. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
-7. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
-8. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-9. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-10. [White Paper](./04_white_paper.md) — the fuller public explanation.
-11. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-12. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+6. [Identity and Recovery Evidence Test Package](../governance/Identity_Recovery_Evidence_Test_Package.md) — the dedicated test package for fraud, exclusion, recovery, coercion, and privacy.
+7. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
+8. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
+9. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+10. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+11. [White Paper](./04_white_paper.md) — the fuller public explanation.
+12. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+13. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
 Do not start with the annexes unless you already want the technical layer.
 
