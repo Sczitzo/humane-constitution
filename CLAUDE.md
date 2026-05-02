@@ -105,3 +105,35 @@ Every threat (T-NNN) has a patch (P-NNN) and an annex (ANNEX_XX.md) containing t
 - **Always run `npm run generate:corpus` after any markdown change.** The corpus is not auto-watched in production builds. CI will catch drift via `check:corpus`, but locally it must be done manually.
 - **Do not modify `docs/constitution/Humane_Constitution.md`, `Acceptance_Protocol.md`, or `INVARIANTS.md`** without explicit instruction — these are the constitutional source of truth.
 - **The Vercel deployment root is `app/`**, not the repo root. `app/vercel.json` and `app/vite.config.ts` govern the build. Deploy with `vercel --prod` from inside `app/`.
+
+## Standing evaluative requirement: Christ-centered ethical review
+
+When evaluating, revising, or proposing changes to any constitutional document in `docs/constitution/`, apply the following interpretive lens:
+
+Use the teachings of Jesus Christ as the ethical and interpretive lens for evaluating and refining the Humane Constitution, including its Foundation and Articles.
+
+Do not treat the Humane Constitution as Scripture, prophecy, revelation, or a replacement for obedience to God. Treat it as a human-made framework that must remain humble, accountable, corrigible, and subordinate to the teachings of Christ.
+
+For the Foundation and each Article, evaluate using these eight questions:
+
+1. Does this reflect love of God and love of neighbor? (Matt 22:37–40)
+2. Does this serve people rather than exalt the system, its creator, or its authorities? (Mark 10:42–45; John 13:12–17)
+3. Does this protect the vulnerable, the poor, the outcast, and the burdened? (Matt 25:35–40; Luke 4:18–19; Luke 10:25–37)
+4. Does this honor truth, mercy, justice, forgiveness, and reconciliation? (Matt 5–7; Matt 18:21–35; John 8:31–32)
+5. Does this preserve human dignity rather than reducing people to data, utility, productivity, or compliance? (Gen 1:26–27; Matt 7:12; Luke 10:25–37)
+6. Does this resist Babel-like temptations: pride, domination, self-glory, coercive unity, and the desire to build a system that replaces dependence on God? (Gen 11:1–9; Matt 6:1–6; Matt 20:25–28)
+7. Does this produce good fruit in practice? (Matt 7:15–20; John 15:1–8; Gal 5:22–23)
+8. Does this remain open to correction, repentance, accountability, and wise counsel? (Matt 18:15–20; Prov 11:14; James 1:19–22)
+
+For each area evaluated, provide:
+- **Christ-centered alignment:** where it agrees with Jesus' teachings.
+- **Babel-risk warning:** where it could become prideful, controlling, exploitative, or self-glorifying.
+- **Human dignity test:** whether it protects persons as image-bearers rather than instruments.
+- **Revision proposal:** how to make it more humble, truthful, merciful, just, and service-oriented.
+- **Fruit test:** what observable outcomes would show it is serving people well.
+
+Avoid religious overclaiming. Do not say "God endorses this Constitution." Say whether each part appears more or less consistent with the teachings of Jesus as found in Scripture.
+
+The full evaluation report is in `docs/governance/Christ_Centered_Evaluation.md`.
+
+**Core governing sentence:** *The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
