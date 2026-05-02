@@ -56,6 +56,7 @@
 | P-035 | — | **ACTIVE** | High | Founding group corrigibility clause + epistemic humility statement in Preamble and §0A. |
 | P-036 | — | **ACTIVE** | High | Keyholder servanthood duty + replacement mechanism for self-interested keyholders (Article I). |
 | P-037 | — | **ACTIVE** | High | Identity-serves-person clause with triennial review and sunset requirement on secondary data use (Article II). |
+| P-038 | T-006 | **ACTIVE** | High | Community challenge path for capacity measurement figures with 14-day published response (Article III). |
 
 ---
 
@@ -827,3 +828,25 @@ Mandatory triennial review of identity data use; secondary use requires Article 
 - Review cycles could be gamed or delayed. Mitigated: triennial requirement is constitutional; delay beyond the cycle is a reportable failure under Article VII.
 
 **Residual risk:** Administrative pressure to expand identity data use will recur in each review cycle. The review requirement creates a forcing function but does not eliminate the pressure.
+
+---
+
+### P-038 — Community Voice in Measurement
+
+**Threat addressed:** T-006 (oracle institutional blindness / measurement capture)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article III — Real Capacity & Reserves
+
+**Problem diagnosed:**
+The oracle quorum defends against manipulation but not against shared institutional blindness — the systematic tendency of measurement systems to reflect the assumptions of the institutions that design them rather than the lived reality of affected communities.
+
+**Introduced design:**
+Constitutional community challenge path: written submission to oracle quorum, mandatory 14-day published response, challenge submissions published alongside official figures.
+
+**Dependencies:** Oracle quorum publication infrastructure must support community submission intake and co-publication.
+
+**New risks introduced:**
+- Challenge system could be flooded with bad-faith submissions. Mitigated: prima facie threshold for mandatory response.
+
+**Residual risk:** Communities with less documentation capacity will use the challenge path less. Outreach and accessibility design are required — not addressed by this patch alone.

@@ -331,6 +331,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Public methods:** publish methods, definitions, and change logs while protecting individual privacy.
 - **Reserves:** food, water, energy, and critical medicines need strategic buffers and replenishment rules.
 - **Crisis fallback:** if measurement fails, the system uses published fallback rules, conservative defaults, reserve triggers, and automatic review.
+- **Community voice in measurement:** Measurement systems must include the voices of those being measured. Communities experiencing scarcity have a direct challenge path to contest official capacity figures — a written submission to the oracle quorum that must receive a published response within 14 days. Expert measurement without community verification has a long history of systematic error. Community challenge submissions are published alongside the official figures they contest.
 
 #### Article IV: Survival
 - **Essential Access as right and delivery path:** Essential Access is both the right to basics and the service path that delivers them.
