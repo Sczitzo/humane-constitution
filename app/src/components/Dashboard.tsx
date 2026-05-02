@@ -1061,7 +1061,7 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
 
 function renderInline(text: string, keyPrefix: string, query = '', noChips = false, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode[] {
   const parts: React.ReactNode[] = []
-  const tokenPattern = /(`[^`]+`|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g
+  const tokenPattern = /(`[^`]+`|!\[([^\]]*)\]\(([^)]+)\)|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g
   let lastIndex = 0
   let match: RegExpExecArray | null = tokenPattern.exec(text)
 
@@ -1086,9 +1086,19 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
           ? <RefChip key={`${keyPrefix}-pathchip-${match.index}`} refKey={codeContent} display={codeContent} fallback={codeEl} />
           : codeEl
       )
-    } else if (match[2] && match[3]) {
-      const linkHref = match[3]
-      const linkLabel = match[2]
+    } else if (match[1]?.startsWith('!')) {
+      // Image: ![alt](src)
+      parts.push(
+        <img
+          key={`${keyPrefix}-img-${match.index}`}
+          src={match[3]}
+          alt={match[2] ?? ''}
+          className="my-4 max-w-full rounded-lg"
+        />,
+      )
+    } else if (match[4] && match[5]) {
+      const linkHref = match[5]
+      const linkLabel = match[4]
       const isInternal = !!(onInternalLink && (linkHref.endsWith('.md') || linkHref.includes('.md#') || linkHref.startsWith('#')))
       const linkClass = 'cursor-pointer font-medium text-[var(--accent-deep)] underline decoration-[var(--accent-deep)] underline-offset-2 transition hover:opacity-75'
       parts.push(
@@ -1112,16 +1122,16 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
           </a>
         ),
       )
-    } else if (match[4]) {
+    } else if (match[6]) {
       parts.push(
         <strong key={`${keyPrefix}-strong-${match.index}`} className="font-semibold text-[var(--ink-strong)]">
-          {renderTextWithHighlights(match[4], query, `${keyPrefix}-strong-inline-${match.index}`)}
+          {renderTextWithHighlights(match[6], query, `${keyPrefix}-strong-inline-${match.index}`)}
         </strong>,
       )
-    } else if (match[5]) {
+    } else if (match[7]) {
       parts.push(
         <em key={`${keyPrefix}-em-${match.index}`} className="italic text-[var(--ink)]">
-          {renderTextWithHighlights(match[5], query, `${keyPrefix}-em-inline-${match.index}`)}
+          {renderTextWithHighlights(match[7], query, `${keyPrefix}-em-inline-${match.index}`)}
         </em>,
       )
     }
