@@ -59,6 +59,7 @@
 | P-038 | T-006 | **ACTIVE** | High | Community challenge path for capacity measurement figures with 14-day published response (Article III). |
 | P-039 | — | **ACTIVE** | High | Explicit protection for pre-existing mutual aid, family, and religious care networks; Article IV as floor not monopoly (Article IV). |
 | P-040 | — | **ACTIVE** | High | Housing cap pastoral revision (remove cold "regardless" language); structural humility closing clause added to Article V. |
+| P-041 | T-008 | **ACTIVE** | High | Biennial recognized-contribution audit to include invisible and pastoral work; 180-day correction requirement (Article VI). |
 
 ---
 
@@ -894,3 +895,25 @@ Constitutional statement that Article IV is a floor not a monopoly; explicit dut
 - "Strong presumption of accommodation" may be interpreted to override the cap entirely. Mitigated: "fiscal guarantee" framing preserved — the commons does not owe unlimited expansion; the review process applies mercy within real resource constraints.
 
 **Residual risk:** Review panels may apply "mercy before procedure" inconsistently across communities. Published review criteria and appeals paths are the mitigation; this patch adds the normative standard.
+
+---
+
+### P-041 — Recognized-Contribution Audit Requirement
+
+**Threat addressed:** T-008 (elite / professional-contributor capture of civic layer)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article VI — Voice, Service Record & Public Decisions (Contribution and capability section)
+
+**Problem diagnosed:**
+"Verified contribution" as the basis for civic standing creates systematic pressure to perform contribution in legible, verifiable ways. Contributions that resist easy documentation — informal care, spiritual leadership, mutual aid, neighborhood presence, parenting — will be consistently underrepresented in the Service Record eligible pool.
+
+**Introduced design:**
+Mandatory biennial audit of the recognized-contribution definition; explicit constitutional statement that informal, spiritual, and pastoral contributions must not be excluded by documentary difficulty alone; 180-day correction requirement when gaps are found.
+
+**Dependencies:** Audit body must be independent of the civic administration it is reviewing — consistent with Article VII independence requirements.
+
+**New risks introduced:**
+- "Effect on human flourishing" as a measurement criterion is harder to verify than documented hours. Mitigated: the audit requirement is about the framework definition, not individual claims.
+
+**Residual risk:** The gap between the ideal (invisible work recognized) and the operational (verification required) will persist. The audit creates a forcing function for closing it over time.
