@@ -51,7 +51,7 @@ Small policy fixes can help, but they do not solve the core problem.
 
 A tax can reduce harm. A better price index can make numbers more honest. Worker protections can improve conditions. But if food, housing, medicine, business, and public power all still run through the same money, the same pressure returns.
 
-> **Structural failure requires structural correction.**
+> **Structural failure requires structural correction. But structural correction is necessary, not sufficient. It cannot substitute for the moral transformation of persons, the faithfulness of communities, or dependence on God. Every structural safeguard will eventually be tested by human corruption; the question is whether communities remain willing to correct themselves.**
 
 ---
 
