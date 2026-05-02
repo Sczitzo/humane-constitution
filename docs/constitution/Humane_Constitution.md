@@ -203,7 +203,7 @@ To prevent money from doing every job, the system uses five separated tools. Onl
 ### 3) Voice + Service Record - Public Priorities And Service
 - **Purpose:** Voice helps set near-term public priorities. Service Record helps decide readiness for rotating public service roles.
 - **Nature:** neither Voice nor Service Record is money. They cannot be transferred or sold. Voice fades quickly and is capped. Service Record moves more slowly and is tied to service.
-- **Anti-capture rule:** Voice may never purchase goods, private privilege, legal immunity, or survival access, and Service Record may never be traded, inherited, collateralized, or pooled as a patronage asset. Survival-adjacent decisions remain protected by one-person-one-vote legitimacy checks, and no single contribution sector may dominate effective civic weighting.
+- **Anti-capture rule:** Voice must not purchase goods, private privilege, legal immunity, or survival access, and Service Record must not be traded, inherited, collateralized, or pooled as a patronage asset. Any evidence of such use must trigger audit and published correction within 60 days. Survival-adjacent decisions remain protected by one-person-one-vote legitimacy checks, and no single contribution sector may dominate effective civic weighting.
 
 ### 4) Shared Storehouse - Emergency Rationing
 - **Purpose and limit:** Shared Storehouse is temporary rationing for a specific category during a verified shortage. It is not money. It is not permanent. It must end when the shortage mode ends.
@@ -306,7 +306,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Money creation is public:** only protocol-authorized issuance bodies may create Flow or Flow-equivalent purchasing power.
 - **Families may pass continuity, not domination:** modest succession may be protected, but perpetual dynastic wealth structures, trusts, and inherited ruling claims are prohibited.
 - **Ownership is stewardship, not tribute:** rights in land, housing, and enterprise may reward use, risk, and contribution, but may not justify perpetual passive extraction from others' necessity or labor.
-- **No coercion:** Voice, Service Record, and Flow can never buy or condition basic rights.
+- **No coercion:** Voice, Service Record, and Flow must not buy or condition basic rights. Any evidence of such use must trigger immediate independent review and published findings within 30 days.
 - **Bounded execution:** approved decisions must run through published workflows, documented reasons, and reviewable boundaries. Oversight must protect dependents and innocent parties while enforcing fraud, coercion, and bribery rules.
 - **Anti-capture review:** independent audits, rotation, conflict rules, and funded red-team testing are mandatory. The office that reports on the system may not be the same office that runs the system.
 - **Hard locks:** Tier 1 rules are mechanically protected through the `architecture/` directory: 7-of-9 amendment, 180-day delay, drift chain, and implementation binding.
