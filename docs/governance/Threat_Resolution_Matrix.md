@@ -4,7 +4,7 @@ This matrix is the working plan for moving every registered threat from "named" 
 
 The word **solve** is used here in a strict way: a threat is solved only when the system has a plausible mechanism, a corruption-aware abuse model, a test path, and an honest residual-risk statement. No institutional design can eliminate greed, coercion, collusion, political opportunism, or legal arbitrage. The goal is to make those pressures visible, costly, bounded, and correctable before they can quietly become normal.
 
-See also: [Threat Register](./Threat_Register.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md).
+See also: [Threat Register](./Threat_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md).
 
 ---
 
@@ -40,6 +40,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-001](./Patch_Log.md), [Annex AB](../annexes/ANNEX_AB.md), [Annex AJ](../annexes/ANNEX_AJ.md)
 - **Resolution path:** keep Essential Access non-delegable and context-locked, tolerate low-level informal leakage, and target organized brokers, employers, landlords, lenders, platforms, and repeat facilitators rather than ordinary households.
 - **Corruption route to assume:** professional actors will package conversion inside service contracts, employment pressure, queue priority, household coercion, side payments, or "helpful" brokerage.
+- **External evidence:** FATF beneficial ownership guidance anchors the risk that companies, trusts, and other legal arrangements can hide true control and route around enforcement.
 - **Proof needed:** proxy-market red team, broker profitability model, household-coercion cases, annual deterrence audit, and surveillance-burden review.
 - **Residual risk:** enforcement can become overbroad; low-level leakage is tolerated, but scalable markets must stay uneconomic.
 
@@ -48,6 +49,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-003](./Patch_Log.md), [P-016](./Patch_Log.md), [Annex AB](../annexes/ANNEX_AB.md), [Annex AK](../annexes/ANNEX_AK.md)
 - **Resolution path:** use layered identity assurance, recovery continuity, asymmetric error thresholds, and human appeal so fraud control does not become the survival gate.
 - **Corruption route to assume:** insiders sell credentials, abusive relatives or employers control recovery, administrators over-tighten rules to protect themselves, and vulnerable people are blamed as "risk."
+- **External evidence:** NIST SP 800-63-4 and World Bank ID4D anchor identity assurance, fraud, privacy, inclusion, and service-access concerns.
 - **Proof needed:** false-exclusion pilots, false-acceptance pilots, recovery drills for displaced and digitally fragile users, data-minimization audit, and insider fraud scenario testing.
 - **Residual risk:** identity cannot be made frictionless and fraud-proof at the same time; the survival floor must remain continuous while disputes are reviewed.
 
@@ -56,6 +58,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-002](./Patch_Log.md), [Annex AB](../annexes/ANNEX_AB.md)
 - **Resolution path:** preserve real reward gradients through Flow, opportunity, recognition, and contribution pathways while banning conversion of Service Record into worth, coercive hierarchy, or access to survival.
 - **Corruption route to assume:** employers, schools, vendors, civic bodies, and ambitious insiders will treat contribution records as rank or employability scores.
+- **External evidence:** OECD public integrity guidance anchors the need to manage incentives, implementation, accountability, and enforcement as a system rather than as isolated rules.
 - **Proof needed:** contribution-model simulation, employer/vendor misuse tests, high-skill participation metrics, burnout and coercion review, and ordinary-user comprehension testing.
 - **Residual risk:** contribution incentives remain culturally fragile; rewards can motivate without becoming a moral ranking only if misuse is monitored and punished by effect, not label.
 
@@ -80,6 +83,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-004](./Patch_Log.md), [Annex AB](../annexes/ANNEX_AB.md)
 - **Resolution path:** protect load-bearing terms, require semantic effect tests, publish worked examples, and treat cumulative narrowing as a constitutional event.
 - **Corruption route to assume:** lawyers and officials will keep the old words while changing classifications, thresholds, examples, or technical definitions.
+- **External evidence:** OECD public integrity indicators support the discipline of testing whether formal rules are implemented in practice.
 - **Proof needed:** semantic red-team review, registry usability test, ambiguity-case audit, and review of whether definition protection blocks needed iteration.
 - **Residual risk:** the anti-drift system can become a semantic bureaucracy; flexibility needs a governed path without laundering capture as clarification.
 
@@ -160,6 +164,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-015](./Patch_Log.md), [P-024](./Patch_Log.md), [Annex AP](../annexes/ANNEX_AP.md), [Annex AS](../annexes/ANNEX_AS.md)
 - **Resolution path:** distinguish engineered false triggers from ordinary false positives after the fact, reset caps when manipulation is proven, and escalate coordinated false triggers directly.
 - **Corruption route to assume:** actors create false emergencies to consume audit capacity, damage public trust, and make operators hesitate during real shocks.
+- **External evidence:** Sphere humanitarian standards anchor the requirement that emergency response preserve minimum life-supporting functions even when signals are uncertain.
 - **Proof needed:** false-trigger-at-scale simulation, forensic delay audit, compound crisis exercise, and public narrative response test.
 - **Residual risk:** real-time distinction will remain unreliable; the protocol must be conservative during emergencies and exacting afterward.
 
@@ -168,6 +173,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-015](./Patch_Log.md), [Annex AP](../annexes/ANNEX_AP.md)
 - **Resolution path:** require Ombuds assessment of whether a demand-context flag was manufactured, supported by a cross-register timing monitor and fast-lift authority.
 - **Corruption route to assume:** technically valid enforcement is launched at the exact moment needed to block legitimate PCRP response.
+- **External evidence:** OECD public integrity sources anchor the risk that formally valid processes can still be manipulated without monitoring, conflict controls, and enforcement.
 - **Proof needed:** timing-monitor false-positive test, Ombuds four-hour decision drill, enforcement-manufacture red team, and appeal review.
 - **Residual risk:** intent is hard to prove under time pressure; precommitted criteria matter more than confidence after the fact.
 
@@ -192,6 +198,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-018](./Patch_Log.md), [Annex AM](../annexes/ANNEX_AM.md)
 - **Resolution path:** entrench survival-floor persistence, transition continuity, hostile-administration triggers, and independent constitutional-body authority.
 - **Corruption route to assume:** a successor government keeps constitutional language while starving staff, delaying appointments, rewriting administrative standards, or capturing enforcement.
+- **External evidence:** OECD public integrity indicators anchor the gap between formal rules and implementation capacity, especially when institutions are under political pressure.
 - **Proof needed:** transition-of-power simulation, administrative hollowing trigger test, budget-starvation scenario, and independent-body legitimacy review.
 - **Residual risk:** no constitutional design can fully prevent determined democratic repeal or authoritarian seizure; the project can only make hollowing visible and contested.
 
@@ -200,6 +207,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-019](./Patch_Log.md), [Annex AN](../annexes/ANNEX_AN.md)
 - **Resolution path:** require stress evidence, substitute evidence, adversarial challenge, and a rule that failed pilots cannot be renamed success.
 - **Corruption route to assume:** sponsors select friendly sites, exclude hard cases, optimize metrics, and scale from calm conditions because failure is politically costly.
+- **External evidence:** Sphere standards and OECD integrity sources anchor why calm-condition success is insufficient for emergency and adversarial governance claims.
 - **Proof needed:** pilot representativeness review, stress-evidence dossier, independent challenge response, and no-rebrand audit.
 - **Residual risk:** some large-scale conditions cannot be ethically reproduced; substitute evidence must be explicit about what it cannot prove.
 
@@ -216,6 +224,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-023](./Patch_Log.md), [Annex AR](../annexes/ANNEX_AR.md)
 - **Resolution path:** keep zero demurrage exemptions, use contract-commitment architecture, release funds on verified physical deliverables, and protect all key terms from definition drift.
 - **Corruption route to assume:** firms use subsidiaries, project cycling, force-majeure claims, infrastructure labels, escrow windows, or procurement pressure to park Flow without decay.
+- **External evidence:** IMF and Economic Journal work establish demurrage/negative-yield money as a real monetary design space; Federal Reserve research warns negative-rate regimes can create distortions; OECD procurement and FATF beneficial ownership guidance anchor the capture routes through procurement and legal wrappers.
 - **Proof needed:** project-finance simulation, procurement integrity review, legal-wrapper red team, force-majeure panel capture audit, and nested subcontractor tracing test.
 - **Residual risk:** tight parameters can block real infrastructure while loose parameters recreate hoarding; parameter setting must be evidence-based.
 
@@ -232,6 +241,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 - **Current control:** [P-026](./Patch_Log.md), [Founding Order](../../founding/order/README.md), [Annex AI](../annexes/ANNEX_AI.md)
 - **Resolution path:** enforce the smallest-competent-scale default, lock federation-scale categories, require three-prong competence findings, and publish aggregate venue-drift metrics.
 - **Corruption route to assume:** central bodies expand "externality" claims, prefer uniform rules, turn coordination into preemption, or let precedent accumulate upward one reasonable case at a time.
+- **External evidence:** Ostrom's commons research and the International Association for the Study of the Commons anchor the value and limits of local rule-making for shared-resource governance.
 - **Proof needed:** subsidiarity challenge simulation, aggregate-drift audit, soft-exception review, and floor-versus-uniform-rule case study.
 - **Residual risk:** centralization often happens through plausible individual decisions; only aggregate monitoring exposes the drift.
 

@@ -14,11 +14,13 @@ Read in this order:
 2. [FAQ](./02_faq.md) — common questions in plain language.
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
 4. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
-5. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-6. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-7. [White Paper](./04_white_paper.md) — the fuller public explanation.
-8. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-9. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+5. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
+6. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
+7. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+8. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+9. [White Paper](./04_white_paper.md) — the fuller public explanation.
+10. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+11. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
 Do not start with the annexes unless you already want the technical layer.
 

@@ -1,6 +1,6 @@
 # Conceptual Refinement Audit
 
-**Role of this document.** This is the macro/micro critique layer for the Humane Constitution. It does not replace the Constitution, Threat Register, Threat Resolution Matrix, Patch Log, Claims and Evidence Register, or Pilot Evidence Roadmap. It explains where the whole design is strongest, where it is still brittle, and which concepts need sharper tests before the project can honestly claim more than serious design readiness.
+**Role of this document.** This is the macro/micro critique layer for the Humane Constitution. It does not replace the Constitution, Threat Register, Threat Resolution Matrix, Open Problems Resolution Docket, External Evidence Register, Patch Log, Claims and Evidence Register, or Pilot Evidence Roadmap. It explains where the whole design is strongest, where it is still brittle, and which concepts need sharper tests before the project can honestly claim more than serious design readiness.
 
 **Core standard.** The project should become harder to fool, not easier to sell.
 
@@ -68,7 +68,7 @@ Use these rules when editing threats, patches, annexes, and public claims:
 | Critical | Identity and recovery evidence plan | Protect survival without surveillance. | Add concrete false-exclusion, recovery-delay, data-minimization, and appeal failure criteria. |
 | Critical | Capacity measurement evidence plan | Keep promises tied to physical reality. | Test update latency, disagreement, physical sampling, standards concentration, and public confidence-band readability. |
 | High | Contribution and Service Record misuse review | Preserve incentives without social credit. | Add misuse scenarios involving employers, vendors, schools, housing providers, and civic bodies. |
-| High | Anti-rent legal wrapper review | Prevent wealth from reappearing as control. | Test trusts, foundations, beneficial ownership chains, family offices, land control, and enterprise-control rights. |
+| High | Demurrage and anti-rent evidence track | Prevent wealth from reappearing as control while testing the costs of idle-money fees. | Test trusts, foundations, beneficial ownership chains, public procurement capture, demurrage burden, project escrow, and enterprise-control rights. |
 | High | Founding legitimacy dossier | Prevent coercive rollout. | Define founding coalition legitimacy, objection channels, consent thresholds, and exit rehearsal. |
 | High | Status-language cleanup | Prevent self-deception. | Align Threat Register, Patch Log, Hardening Queue, and Claims Register around designed/active/resolved distinctions. |
 | High | Threat resolution matrix maintenance | Keep every threat tied to a realistic control path. | For each threat, maintain the mechanism, corruption route, proof needed, and residual risk. |

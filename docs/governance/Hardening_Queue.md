@@ -4,7 +4,7 @@ This document is the live "what still needs pressure" list for the Humane Consti
 
 It tracks conceptual and operational weaknesses that remain important even when a threat has a proposed patch or an active annex. A designed control is not the same thing as proof. A live queue item stays here until the project has evidence, activation, or a stronger residual-risk statement.
 
-See also: [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
+See also: [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
 
 ## Status key
 
@@ -35,7 +35,7 @@ Do not use **CLOSED** for live system risks unless the item is evidence-backed o
 
 ## Resolution sequence
 
-Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) as the threat-by-threat plan. The queue order is:
+Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) as the threat-by-threat plan and the [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) as the source-backed closure checklist. The queue order is:
 
 1. identity and measurement truth,
 2. economic boundary integrity,

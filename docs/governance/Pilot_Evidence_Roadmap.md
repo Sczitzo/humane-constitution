@@ -1,6 +1,6 @@
 # Pilot Evidence Roadmap
 
-This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md) and the threat controls in the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) into tests.
+This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md), outside sources in the [External Evidence Register](./External_Evidence_Register.md), and threat controls in the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) into tests.
 
 The project should not scale because people feel confident, excited, or morally urgent. It needs evidence in stages.
 
@@ -18,6 +18,7 @@ Every pilot needs:
 
 - a published hypothesis
 - a protected participant group
+- an outside evidence basis or explicit explanation that no adequate outside evidence exists
 - independent review
 - clear failure criteria
 - a public post-mortem
@@ -151,6 +152,8 @@ Every pilot needs:
 
 **Hypothesis:** Flow can support exchange while the idle-money fee funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
 
+**External evidence basis:** IMF and peer-reviewed monetary-economics work establish that negative-yield money is a real design space; Federal Reserve research warns that negative-rate regimes can create welfare, investment, output, banking, and transmission distortions; OECD and FATF sources anchor procurement and legal-wrapper capture risks.
+
 **Measure:**
 
 - ordinary-user holding burden
@@ -161,6 +164,10 @@ Every pilot needs:
 - public-rail operating revenue
 - exemption pressure by sector
 - shadow-credit growth outside chartered rails
+- household liquidity burden by income and volatility
+- small-business working-capital pressure by sector
+- project-escrow behavior under delay, force majeure, and procurement pressure
+- beneficial-ownership and subsidiary-fragmentation routes
 
 **Failure criteria:**
 
@@ -169,6 +176,8 @@ Every pilot needs:
 - Productive project finance collapses or becomes elite-controlled.
 - Shadow credit recreates predatory dependency.
 - Public-rail funding quietly migrates into fees on ordinary labor, survival access, or household exchange.
+- Demurrage becomes politically or practically equivalent to a hidden tax on ordinary liquidity.
+- Project escrow becomes a favored-sector parking channel despite the zero-exemption rule.
 
 **Scale rule:** the idle-money fee should remain a simulation and pilot parameter until the burden is transparent.
 
