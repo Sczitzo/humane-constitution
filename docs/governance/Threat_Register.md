@@ -550,10 +550,10 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 | ID | Title | Severity | Status | Patch | Score |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| T-001 | Shadow Convertibility | **Critical** | **ACTIVE** | P-001 | 60 |
-| T-002 | Identity Exploits | **Critical** | **ACTIVE** | P-003 | 60 |
-| T-004 | Incentive Collapse | **Critical** | **ACTIVE** | P-002 | 48 |
-| T-007 | Definition Drift | **Critical** | **ACTIVE** | P-004 | 60 |
+| T-001 | Shadow Convertibility | **Critical** | **PARTIAL** | P-001 | 60 |
+| T-002 | Identity Exploits | **Critical** | **PARTIAL** | P-003 | 60 |
+| T-004 | Incentive Collapse | **Critical** | **PARTIAL** | P-002 | 48 |
+| T-007 | Definition Drift | **Critical** | **PARTIAL** | P-004 | 60 |
 | T-005 | Governance Throughput | High | **PROPOSED** | P-005 | 40 |
 | T-006 | Measurement Lag | **Critical** | **PROPOSED** | P-006 | 60 |
 | T-008 | Bureaucratic Elite | High | **PROPOSED** | P-008 | 64 |
