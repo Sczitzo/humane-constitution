@@ -29,6 +29,18 @@ Universal survival does not remove incentive gradients. The protocol therefore e
 
 *Invisible-work backstop: The contribution framework must not systematically exclude work that is hard to measure. The biennial recognized-contribution audit (P-041, Article VI) serves as the enforcement backstop for this requirement. Any contribution category found by a P-041 audit to be systematically under-recognized must be incorporated into the §AB3 framework within 180 days of the audit finding. Contribution scores based on a definition found to be systematically deficient do not constitute valid Voice or Service Record inputs for the categories affected until the correction is applied.*
 
+*Enumerated contribution floor: The following categories of work are presumptively recognized as qualifying contribution under §AB3 without requiring measurable output or third-party institutional attestation. For each category, self-attestation is the default accepted form of evidence. Self-attestation may be rebutted only by affirmative auditable evidence to the contrary — the burden of disproof rests on the system, not the contributor.*
+
+*Presumptively recognized categories (non-exhaustive founding floor):*
+- *(a) Primary caregiving: direct unpaid care of a dependent person (child, elderly person, or person with disability or chronic illness) residing in the contributor's household or under the contributor's regular responsibility.*
+- *(b) Elder care: sustained unpaid support for an aged person, whether residential or non-residential, including accompaniment, personal care, medication management, and household maintenance.*
+- *(c) Mutual aid: regular participation in a community-based network providing direct material or practical support (food, transport, translation, emergency response) to members without compensation.*
+- *(d) Spiritual community leadership: unpaid pastoral, chaplaincy, or spiritual direction service within a recognized community, including grief accompaniment, crisis support, and rite-of-passage facilitation.*
+- *(e) Unpaid household management: the primary management of a shared household including budgeting, provisioning, scheduling, and coordination that enables other household members to contribute in other domains.*
+- *(f) Informal health work: unpaid health promotion, disease monitoring, or first-responder activity within a community, including community health worker roles that are not formally employed.*
+
+*The founding coalition may extend this list via Tier 2 amendment. Additions are presumptively non-controversial if they share the structural features of the founding floor categories: unpaid, relational, oriented toward others' welfare, and hard to measure by conventional output metrics. Removals require Tier 1 amendment and a published impact assessment.*
+
 - **Anti-gaming controls** shall use mixed evidence and diminishing returns to reduce farming of one visible metric or one socially legible role.
 - **The system shall not punish** initiative, excellence, or responsibility merely because the survival floor is protected.
 
