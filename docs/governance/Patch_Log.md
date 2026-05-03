@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-034**
+**Running change ledger aligned to the Humane Constitution · Current through P-042**
 
 ---
 
@@ -53,6 +53,14 @@
 | P-032 | PRD-009 | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
 | P-033 | PRD-008 | **ACTIVE** | High | Worker-owned and mission-locked enterprise preference: financing, procurement, and succession pathways structurally favor stewardship forms over absentee control. |
 | P-034 | T-016 / INV-007 | **ACTIVE** | Critical | Two-key architectural precondition for Tier-1-touching patches: adversarial panel attestation required before FAP intake; FAP reviewer cannot override absence; Beer S3* independence enforced; Buterin defection penalty specified. Annex AV. |
+| P-035 | — | **ACTIVE** | High | Founding group corrigibility clause + epistemic humility statement in Preamble and §0A. |
+| P-036 | — | **ACTIVE** | High | Keyholder servanthood duty + replacement mechanism for self-interested keyholders (Article I). |
+| P-037 | — | **ACTIVE** | High | Identity-serves-person clause with triennial review and sunset requirement on secondary data use (Article II). |
+| P-038 | T-006 | **ACTIVE** | High | Community challenge path for capacity measurement figures with 14-day published response (Article III). |
+| P-039 | — | **ACTIVE** | High | Explicit protection for pre-existing mutual aid, family, and religious care networks; Article IV as floor not monopoly (Article IV). |
+| P-040 | — | **ACTIVE** | High | Housing cap pastoral revision (remove cold "regardless" language); structural humility closing clause added to Article V. |
+| P-041 | T-008 | **ACTIVE** | High | Biennial recognized-contribution audit to include invisible and pastoral work; 180-day correction requirement (Article VI). |
+| P-042 | — | **ACTIVE** | High | Low-barrier community alert pathway with 30-day acknowledgment and 90-day review trigger (Article VII). |
 
 ---
 
@@ -761,3 +769,174 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 - **Residual risk:** future edits that blur article boundaries can recreate the fragmentation or overlap this consolidation removed. Mitigation: the constitutional article interfaces in Humane Constitution §III remain authoritative.
 - **Compound linkages:** P-027 × P-026 (the Founding Order supplies the constitutional foundation); P-027 × P-017 (Article III inherits the oracle hardening); P-027 × P-029 (PFCR remains inside Article V instead of becoming a detached fiscal system); P-027 × P-008 (fewer institutional homes reduce elite-formation surface area).
 - **Auto-close clause:** P-027 is standing. Any change to the number of constitutional articles or to the existence of the Founding Order requires Tier 1 amendment (7-of-9, 180-day timelock). Content within the articles may be amended by ordinary process subject to the existing Tier classifications of each clause.
+
+---
+
+### P-035 — Founding Group Corrigibility and Epistemic Humility
+
+**Threat addressed:** founding group capture / Babel-risk (structural overconfidence)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Philosophical Preamble (closing paragraph) and §0A (Moral Scope, Spiritual Limits, and Stewardship Orientation)
+
+**Problem diagnosed:**
+The Preamble's statement "If it is wrong, people should be able to show where" is passive — it does not explicitly subject the founding group to the same corrigibility requirements it names for administrators. The rhetorical confidence of the document can imply that the design team has solved a problem that only ongoing moral community and dependence on God can sustain. This creates Babel-risk: a system that trusts its own architecture more than it trusts the communities and the God it claims to serve.
+
+**Introduced design:**
+- Preamble: explicit statement that founders are not exempt from the failures named in the document; the founding group must be the first to submit to correction.
+- §0A: explicit statement that the system does not claim to reflect the mind of God; it reflects fallible human judgment that remains open to correction.
+
+**New risks introduced:**
+- Overly humble framing could be exploited to argue that all constitutional protections are provisional. Mitigated: the epistemic humility clauses apply to the founders' judgment about design, not to the dignity floor itself (separately protected by Tier 1 amendment requirements).
+
+**Residual risk:** Founding group may still exercise disproportionate influence during the founding window. The corrigibility clause is a normative commitment, not a structural enforcement mechanism. Structural enforcement is addressed by P-036.
+
+---
+
+### P-036 — Keyholder Servanthood Duty
+
+**Threat addressed:** amendment lock capture by founding group
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article I — Rights & Rules (Hard locks section)
+
+**Problem diagnosed:**
+The 7-of-9 amendment lock protects the dignity floor from bad changes. But the same lock also protects the founders' judgment about what the dignity floor contains. If keyholders act in self-interest — delaying replacement of founding-era text, blocking challenges to their own authority — the lock becomes a tool of entrenchment rather than protection.
+
+**Introduced design:**
+Explicit constitutional statement that keyholder authority is custodial, not proprietary; keyholders may not use the lock to entrench founding group power; a qualified independent review body may petition for keyholder replacement when self-interest is demonstrated.
+
+**Dependencies:** The independent review body referenced here is the Federated Ombuds structure defined under P-025.
+
+**New risks introduced:**
+- "Demonstrable self-interest" requires interpretation. Mitigated: determination is made by the Federated Ombuds (P-025), not by the keyholders themselves.
+
+**Residual risk:** External pressure on keyholders (coercion, blackmail) is not addressed by internal accountability mechanisms. See P-034 residual risk for the same limitation.
+
+---
+
+### P-037 — Identity Serves the Person
+
+**Threat addressed:** identity system creep / surveillance expansion
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article II — Personhood, Identity & Continuity
+
+**Problem diagnosed:**
+Any identity system faces institutional pressure to expand verification requirements, cross-reference databases, and build behavioral profiles over time. Without a mandatory review cycle, "minimum data for minimum access" tends to expand into a comprehensive scoring regime.
+
+**Introduced design:**
+Mandatory triennial review of identity data use; secondary use requires Article VI deliberative authorization with a published sunset date that cannot be made permanent by administrative action alone.
+
+**New risks introduced:**
+- Review cycles could be gamed or delayed. Mitigated: triennial requirement is constitutional; delay beyond the cycle is a reportable failure under Article VII.
+
+**Residual risk:** Administrative pressure to expand identity data use will recur in each review cycle. The review requirement creates a forcing function but does not eliminate the pressure.
+
+---
+
+### P-038 — Community Voice in Measurement
+
+**Threat addressed:** T-006 (oracle institutional blindness / measurement capture)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article III — Real Capacity & Reserves
+
+**Problem diagnosed:**
+The oracle quorum defends against manipulation but not against shared institutional blindness — the systematic tendency of measurement systems to reflect the assumptions of the institutions that design them rather than the lived reality of affected communities.
+
+**Introduced design:**
+Constitutional community challenge path: written submission to oracle quorum, mandatory 14-day published response, challenge submissions published alongside official figures.
+
+**Dependencies:** Oracle quorum publication infrastructure must support community submission intake and co-publication.
+
+**New risks introduced:**
+- Challenge system could be flooded with bad-faith submissions. Mitigated: prima facie threshold for mandatory response.
+
+**Residual risk:** Communities with less documentation capacity will use the challenge path less. Outreach and accessibility design are required — not addressed by this patch alone.
+
+---
+
+### P-039 — Protection of Pre-Existing Care Networks
+
+**Threat addressed:** institutional crowding-out of voluntary community
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article IV — Survival
+
+**Problem diagnosed:**
+A comprehensive constitutional delivery floor for survival essentials can inadvertently displace the mutual aid groups, religious food pantries, family networks, and neighborhood care structures that communities depend on — especially when the delivery system fails.
+
+**Introduced design:**
+Constitutional statement that Article IV is a floor not a monopoly; explicit duty to support pre-existing care networks; affirmation that the constitutional floor protects the conditions for voluntary generosity rather than replacing it.
+
+**New risks introduced:**
+- "Must not displace" is a normative commitment difficult to enforce mechanically. Mitigated: Article VII warning system can measure whether voluntary care networks are growing or shrinking post-implementation.
+
+**Residual risk:** Economic logic of consolidated delivery systems tends to crowd out smaller providers regardless of constitutional intent. Periodic measurement and active funding of voluntary-sector infrastructure are required.
+
+---
+
+### P-040 — Article V Housing Cap Pastoral Revision and Structural Humility
+
+**Threat addressed:** household penalization; Babel-risk structural overconfidence
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article V — Markets, Commons & Public Finance (housing allocation section; closing paragraph)
+
+**Problem diagnosed:**
+(1) The phrase "regardless of household composition decisions" treated a resource constraint as though it were a judgment about family structure. Large families, multigenerational households, and care-intensive arrangements may find the cap hostile if applied without a pastoral presumption of accommodation.
+(2) Article V's closing paragraph presented the five-instrument architecture with confidence that the design prevents exploitation. This exceeds what human institutions can reliably deliver.
+
+**Introduced design:**
+(1) Housing cap language revised: "fiscal guarantee" framing retained; pastoral review with strong presumption of accommodation added; "mercy before procedure" standard stated.
+(2) Structural humility closing paragraph added: names the limits of structural engineering and requires ongoing community paths to name and correct exploitation.
+
+**New risks introduced:**
+- "Strong presumption of accommodation" may be interpreted to override the cap entirely. Mitigated: "fiscal guarantee" framing preserved — the commons does not owe unlimited expansion; the review process applies mercy within real resource constraints.
+
+**Residual risk:** Review panels may apply "mercy before procedure" inconsistently across communities. Published review criteria and appeals paths are the mitigation; this patch adds the normative standard.
+
+---
+
+### P-041 — Recognized-Contribution Audit Requirement
+
+**Threat addressed:** T-008 (elite / professional-contributor capture of civic layer)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article VI — Voice, Service Record & Public Decisions (Contribution and capability section)
+
+**Problem diagnosed:**
+"Verified contribution" as the basis for civic standing creates systematic pressure to perform contribution in legible, verifiable ways. Contributions that resist easy documentation — informal care, spiritual leadership, mutual aid, neighborhood presence, parenting — will be consistently underrepresented in the Service Record eligible pool.
+
+**Introduced design:**
+Mandatory biennial audit of the recognized-contribution definition; explicit constitutional statement that informal, spiritual, and pastoral contributions must not be excluded by documentary difficulty alone; 180-day correction requirement when gaps are found.
+
+**Dependencies:** Audit body must be independent of the civic administration it is reviewing — consistent with Article VII independence requirements.
+
+**New risks introduced:**
+- "Effect on human flourishing" as a measurement criterion is harder to verify than documented hours. Mitigated: the audit requirement is about the framework definition, not individual claims.
+
+**Residual risk:** The gap between the ideal (invisible work recognized) and the operational (verification required) will persist. The audit creates a forcing function for closing it over time.
+
+---
+
+### P-042 — Community Alert Pathway
+
+**Threat addressed:** institutional capture of warning function; prophetic voices blocked
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** Article VII — Public Records & Warning Systems
+
+**Problem diagnosed:**
+Article VII's warning function is defined, funded, and structured by the same apparatus it is meant to watch. Communities affected by systemic failures often see them earlier and more accurately than institutional reviewers — but currently have no constitutionally protected path to name them.
+
+**Introduced design:**
+Constitutionally protected community alert pathway: low-barrier, optionally anonymous, accessible without legal representation; 30-day acknowledgment requirement; 90-day formal review trigger for prima facie systemic failures; refusal to acknowledge or review is itself a reportable failure.
+
+**Dependencies:** Article VII independence requirement applies — the body managing community alerts must not be the same body whose performance is being reported.
+
+**New risks introduced:**
+- Alert pathway could be used for political harassment or coordinated false-flag campaigns. Mitigated: prima facie threshold for mandatory review; anonymous alerts published but not automatically elevated without threshold evidence.
+
+**Residual risk:** Power asymmetry between institutional reviewers and community reporters will persist. The pathway lowers the barrier; it does not equalize resources for evidence-gathering.

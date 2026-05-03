@@ -57,7 +57,7 @@ Small policy fixes can help, but they do not solve the core problem.
 
 A tax can reduce harm. A better price index can make numbers more honest. Worker protections can improve conditions. But if food, housing, medicine, business, and public power all still run through the same money, the same pressure returns.
 
-> **Structural failure requires structural correction.**
+> **Structural failure requires structural correction. But structural correction is necessary, not sufficient. It cannot substitute for the moral transformation of persons, the faithfulness of communities, or dependence on God. Every structural safeguard will eventually be tested by human corruption; the question is whether communities remain willing to correct themselves.**
 
 ---
 
@@ -86,6 +86,8 @@ Honest design names those problems before the system runs.
 ---
 
 This project was built in public and stress-tested against bad uses. If it is wrong, people should be able to show where. If it is incomplete, people should be able to improve it. Its claim to seriousness is not perfection. Its claim is that its promises, weak points, and failure paths are visible.
+
+The founders of this system are not exempt from the failures it names. The same corruption, capture, and pride that threaten administrators will threaten founders. The founding group must be the first to submit to correction, not the last. This document is open to revision precisely because its authors are not beyond the need for it.
 
 *Philosophical grounding informed in part by Marc Wolf's Economic Trilogy (2026), which derives from first principles the distinction between produced and unproduced value and the structural failure of debt-based monetary systems. The protocol extends that derivation into institutional architecture, particularly the conclusion that monetary dispersal of Commons value remains capturable by the mechanisms Wolf documents in Part 2 — and that non-monetary instrument separation is the structural completion of the correction his framework points toward.*
 
@@ -167,6 +169,8 @@ This system is a framework for public stewardship. It is not a claim to save, sa
 
 No part of this system replaces truth, virtue, worship, repentance, or reverence before God. It regulates public order. It does not replace conscience, conviction, repentance, or God.
 
+This system does not claim to reflect the mind of God. It reflects the best available human judgment about public order, which is fallible, partial, and in need of ongoing correction. Its claim to seriousness is not that it is right, but that it names its assumptions, makes its failure paths visible, and remains open to being shown where it is wrong.
+
 **God-honoring civic commitments (non-coercive)**
 1. **Do not worship wealth or power** - No tool, institution, or office may treat accumulation, market leverage, or administrative dominance as proof of moral worth or civic superiority.
 2. **Protect time and rest** - Public and economic institutions should preserve rest, family life, worship, recovery, and reflection. Endless extraction of labor is not a civic good.
@@ -211,7 +215,7 @@ To prevent money from doing every job, the system uses five separated tools. Onl
 ### 3) Voice + Service Record - Public Priorities And Service
 - **Purpose:** Voice helps set near-term public priorities. Service Record helps decide readiness for rotating public service roles.
 - **Nature:** neither Voice nor Service Record is money. They cannot be transferred or sold. Voice fades quickly and is capped. Service Record moves more slowly and is tied to service.
-- **Anti-capture rule:** Voice may never purchase goods, private privilege, legal immunity, or survival access, and Service Record may never be traded, inherited, collateralized, or pooled as a patronage asset. Survival-adjacent decisions remain protected by one-person-one-vote legitimacy checks, and no single contribution sector may dominate effective civic weighting.
+- **Anti-capture rule:** Voice must not purchase goods, private privilege, legal immunity, or survival access, and Service Record must not be traded, inherited, collateralized, or pooled as a patronage asset. Any evidence of such use must trigger audit and published correction within 60 days. Survival-adjacent decisions remain protected by one-person-one-vote legitimacy checks, and no single contribution sector may dominate effective civic weighting.
 
 ### 4) Shared Storehouse - Emergency Rationing
 - **Purpose and limit:** Shared Storehouse is temporary rationing for a specific category during a verified shortage. It is not money. It is not permanent. It must end when the shortage mode ends.
@@ -314,10 +318,11 @@ Each part has a job. These are the handoffs and hard limits.
 - **Money creation is public:** only protocol-authorized issuance bodies may create Flow or Flow-equivalent purchasing power.
 - **Families may pass continuity, not domination:** modest succession may be protected, but perpetual dynastic wealth structures, trusts, and inherited ruling claims are prohibited.
 - **Ownership is stewardship, not tribute:** rights in land, housing, and enterprise may reward use, risk, and contribution, but may not justify perpetual passive extraction from others' necessity or labor.
-- **No coercion:** Voice, Service Record, and Flow can never buy or condition basic rights.
+- **No coercion:** Voice, Service Record, and Flow must not buy or condition basic rights. Any evidence of such use must trigger immediate independent review and published findings within 30 days.
 - **Bounded execution:** approved decisions must run through published workflows, documented reasons, and reviewable boundaries. Oversight must protect dependents and innocent parties while enforcing fraud, coercion, and bribery rules.
 - **Anti-capture review:** independent audits, rotation, conflict rules, and funded red-team testing are mandatory. The office that reports on the system may not be the same office that runs the system.
 - **Hard locks:** Tier 1 rules are mechanically protected through the `architecture/` directory: 7-of-9 amendment, 180-day delay, drift chain, and implementation binding.
+- **Keyholder duty of servanthood:** The keyholders of the amendment process hold custodial, not proprietary, authority. They may not use the amendment lock to entrench any founding group, extend any founding mandate, or delay review of the founding decisions themselves. The amendment protocol must include a mechanism by which a qualified independent review body may petition for the replacement of any keyholder found to be acting in demonstrable self-interest. Keyholder authority derives from service to the constitutional community, not from the fact of appointment.
 
 #### Article II: Personhood, Identity & Continuity
 - **One person, one core wallet:** prevents duplicate Essential Access claims and fake extra identities.
@@ -326,6 +331,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Household verification:** when a household claim changes resource allocation, the system checks real co-habitation and dependency. It does not judge lifestyle, relationship type, or household structure.
 - **Appeals and recovery:** people must have usable recovery paths, including refugees and people without strong documents.
 - **Layered identity:** identity checks are stronger only when consequences are higher. No single document, biometric, institution, or device may become the only irreversible source of identity.
+- **Identity serves the person:** Identity verification exists to serve the person, not to build a record of the person. The system must review — no less than every three years — whether identity data is being used for any purpose beyond enabling access to essentials and preventing fraud. Any use of identity data for behavioral prediction, civic scoring, cross-system profiling, or research requires a separate deliberative authorization under Article VI and must carry a published sunset date. Sunset dates may be renewed but never made permanent by administrative action alone.
 
 #### Article III: Real Capacity & Reserves
 - **Many measurement sources:** several independent sources measure capacity and scarcity. The system needs at least 5 nodes, at least 3 ways of measuring, error checks, and at least one adversarial reviewer per group.
@@ -333,6 +339,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Public methods:** publish methods, definitions, and change logs while protecting individual privacy.
 - **Reserves:** food, water, energy, and critical medicines need strategic buffers and replenishment rules.
 - **Crisis fallback:** if measurement fails, the system uses published fallback rules, conservative defaults, reserve triggers, and automatic review.
+- **Community voice in measurement:** Measurement systems must include the voices of those being measured. Communities experiencing scarcity have a direct challenge path to contest official capacity figures — a written submission to the oracle quorum that must receive a published response within 14 days. Expert measurement without community verification has a long history of systematic error. Community challenge submissions are published alongside the official figures they contest.
 
 #### Article IV: Survival
 - **Essential Access as right and delivery path:** Essential Access is both the right to basics and the service path that delivers them.
@@ -344,6 +351,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Non-transferable by default:** this blocks coercion and black-market control. Caregiver and dependent exceptions must be capped, auditable, and reversible.
 - **No conversion:** Essential Access cannot be sold, pledged, used as collateral, or turned into money.
 - **Shortage interface:** during declared shortage, Shared Storehouse may supplement Essential Access and must end when shortage mode ends.
+- **Pre-existing care networks:** Article IV establishes a floor, not a monopoly on care. The system must actively support — and must not displace — pre-existing community networks that provide survival essentials: mutual aid groups, religious food pantries, family support structures, neighborhood care networks, and congregational outreach. Where such networks exist, the system collaborates with and strengthens them rather than routing around them. The presence of a constitutional delivery floor does not reduce the civic, moral, or spiritual value of personal generosity and communal care — it protects the conditions under which that generosity can freely operate.
 
 > The quantities and standards defining each essential category are subject to the capacity measurement protocols in [Annex AL](../annexes/ANNEX_AL.md). What can actually be promised during supply shocks depends on measurement confidence and oracle failure procedures. See T-006 and the Capacity Measurement Evidence Test Package.
 
@@ -371,7 +379,7 @@ Each part has a job. These are the handoffs and hard limits.
 **Land, Housing & Commons**
 - **Use-rights:** housing and land are governed as use-rights or leases, not speculative ownership. No individual or private entity may extract Flow returns from residential use-rights.
 - **Housing as public infrastructure:** residential construction is funded through public channels and project escrows. Workers are paid in Flow, but homes are held as commons and allocated by need and occupancy, not price.
-- **Per-person allocation floor with hard household cap:** residential space is allocated at a published per-person floor. Total allocation scales with verified household size up to a published household maximum; the commons is not obligated to expand allocation beyond the cap regardless of household composition decisions. Additional space above the per-person floor may be requested for documented accessibility needs, caregiving requirements, or disability accommodations and is subject to independent needs review.
+- **Per-person allocation floor with hard household cap:** residential space is allocated at a published per-person floor. Total allocation scales with verified household size up to a published household maximum; the commons is not obligated to expand allocation beyond the cap as a matter of fiscal guarantee; however, the cap is a resource constraint, not a judgment about family structure, size, or composition. Pastoral need — including large families, disability, caregiving, and multigenerational arrangements — must be met through the review process with a strong presumption of accommodation. Review panels must apply mercy before procedure. Additional space above the per-person floor may be requested for documented accessibility needs, caregiving requirements, or disability accommodations and is subject to independent needs review.
 - **Household verification before more space:** household changes that trigger more space require verified co-habitation and real dependency under Article II. Births and documented medical emergencies are exempt from delay.
 - **Quality is a civic investment, not an individual Flow purchase:** housing quality improvements are funded at the neighborhood or district level through civic deliberation (Article VI) and public Flow channels. Individual Flow wealth does not entitle any resident to a superior private unit. No Flow-priced private residential tier exists.
 - **Transparent allocation:** renewal depends on occupancy and a closed-list stewardship standard: vacancy, damage beyond normal wear, verified illegal use, or clear health/safety violations after a chance to fix them.
@@ -399,6 +407,8 @@ Each part has a job. These are the handoffs and hard limits.
 
 **Why these functions share one article.** Flow, housing and commons use-rights, enterprise activity, and commons-revenue routing are the four faces of the same economic surface. Keeping them under one article reduces boundary disputes and narrows the capture surface.
 
+No mechanism in this Article should be designed with confidence that it eliminates human corruption. Structural separation, anti-conversion rules, demurrage, and use-rights tenure are necessary disciplines — they reduce the surface area of exploitation. But they do not substitute for the moral formation of persons, the faithfulness of communities, or the grace of God. Every provision in this Article assumes that people will attempt to subvert it. The question is not whether exploitation will occur but whether the community retains honest, accessible paths to name and correct it when it does.
+
 #### Article VI: Voice, Service Record & Public Decisions
 **Voice and Service Record tools**
 - **Service Record:** earned through verified stewardship and service readiness. It helps decide who is ready for juries, panels, rotating review bodies, and oversight roles.
@@ -412,6 +422,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Verification scales with impact:** small claims may use light proof. Higher-impact claims require stronger evidence, rotating review, and audit escalation.
 - **Life circumstances matter:** disability, caregiving, age, crisis, illness, and disaster can change expectations. Protected Pause preserves continuity during verified hardship.
 - **High-impact claims need strong review:** rare Service Record or Voice boosts require independent panels, published criteria, and category-balance safeguards.
+- **Recognized-contribution audit:** The system must audit — no less than every two years — whether its definition of "recognized contribution" accurately reflects the full range of human service. Contributions that sustain community but resist easy measurement must not be systematically excluded simply because they are harder to verify: informal care, spiritual leadership in the community, neighborhood presence, mutual aid, and the patient work of raising children and caring for the elderly are among the most important contributions any person makes to the common good. The measure of a contribution is its effect on human flourishing, not its documentary legibility. Audit findings must be published, and where gaps are found, corrections to the contribution-recognition framework must be published within 180 days.
 
 **Public decision process**
 - **Proposal path:** draft → review → cost and capacity check → public decision process → legitimacy check where required → staged execution.
@@ -437,6 +448,7 @@ This article succeeds only if people can move from receiving care to also giving
 - **Reports:** publish quarterly warning reports with a 10-year horizon, especially for risks to capacity measurement or the basic needs floor.
 - **Escalation:** findings that may require top-level rule changes go to the Federated Ombuds and the highest amendment path if needed.
 - **Why this exists:** slow failures should be seen before they become crises.
+- **Community alert pathway:** The warning system must include a direct voice mechanism for ordinary persons to report systemic failures they experience. Expert and institutional monitors watch what is measurable; affected communities often see what institutions cannot or will not name. A constitutionally protected community alert pathway — low-barrier, anonymous if the reporter chooses, accessible without legal representation or institutional affiliation — must be maintained alongside the formal audit system. Every community alert must receive a published acknowledgment within 30 days. Alerts that meet a basic prima facie threshold for systemic failure must trigger a formal review within 90 days. Refusal to acknowledge or review is itself a reportable failure under this Article.
 
 ---
 
@@ -528,7 +540,7 @@ This section names common ways the system could fail and the fixes designed to r
 - **Essential Access baseline (Option B):** daily micro-issuance with 72-hour rolling validity, anchored to the Constitutional Survival Minimum and the broader essential basket so survival continuity does not hinge on a single weekly redemption window.
 - **Voice and Service Record baseline (Option B):** Voice uses a short quarterly cycle with caps, no rollover, and diminishing-returns weighting; Service Record preserves bounded service eligibility with hardship-safe continuity. Neither may be purchased, sold, inherited, or used to gate survival.
 - **Shared Storehouse baseline (Option B):** activated only during verified scarcity; category-specific; non-transferable except narrow caregiver channels; and terminated automatically when scarcity mode ends.
-- **Housing/land baseline (Option B):** use-rights/leases with no private housing market for residential units; construction funded through Flow public infrastructure channels with no Flow return to any private party from the housing product itself. Allocation uses a published per-person floor scaled to verified household size up to a published household maximum cap; the commons does not expand allocation beyond the cap regardless of household composition decisions. Composition changes triggering space expansion require a minimum verification period before the increase is granted (births and documented medical emergencies exempt). Housing quality improvements are funded at the neighborhood or district level through civic deliberation, not individual Flow purchase. Renewal based on occupancy and a closed-list stewardship standard limited to sustained vacancy beyond threshold, physical damage beyond normal wear, verified illegal activity tied to the premises, and clearly defined health/safety violations after remediation opportunity; anti-vacancy carrying costs; limits on accumulation of residential use-rights; strong anti-rent-seeking enforcement. Aesthetics, lifestyle, politics, relationships, visitor profile, household structure, and protected-trait proxies are prohibited bases for renewal denial or allocation weighting.
+- **Housing/land baseline (Option B):** use-rights/leases with no private housing market for residential units; construction funded through Flow public infrastructure channels with no Flow return to any private party from the housing product itself. Allocation uses a published per-person floor scaled to verified household size up to a published household maximum cap; the commons does not expand allocation beyond the cap as a matter of fiscal guarantee; the cap is a resource constraint, not a judgment about family structure or composition, and pastoral need must be met through the review process with a strong presumption of accommodation. Composition changes triggering space expansion require a minimum verification period before the increase is granted (births and documented medical emergencies exempt). Housing quality improvements are funded at the neighborhood or district level through civic deliberation, not individual Flow purchase. Renewal based on occupancy and a closed-list stewardship standard limited to sustained vacancy beyond threshold, physical damage beyond normal wear, verified illegal activity tied to the premises, and clearly defined health/safety violations after remediation opportunity; anti-vacancy carrying costs; limits on accumulation of residential use-rights; strong anti-rent-seeking enforcement. Aesthetics, lifestyle, politics, relationships, visitor profile, household structure, and protected-trait proxies are prohibited bases for renewal denial or allocation weighting.
 - **Privacy architecture (dial):** public transparency at the aggregate level (flows, capacity indices, project budgets), with individual transaction privacy by default; lawful access only under due process with narrow scope, logging, and independent oversight.
 
 ---
