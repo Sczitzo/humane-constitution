@@ -123,7 +123,7 @@ Plain meaning: even one confirmed failure matters. It must be disclosed, investi
 - **Mandatory investigation:** the Federated Ombuds opens an investigation within 72 hours.
 - **Mandatory restitution:** the affected person receives retroactive CSM provision, plus dignity-preserving redress, within 7 days of confirmation.
 - **Mandatory root-cause review:** capacity gap, process failure, or capture is published within 30 days; patches registered per Patch Log.
-- **Mandatory pattern detection:** if more than **3 verified delivery failures** (FC-YT1, Tier 2 Founding Commitment — provisional; must be confirmed in /founding/commitments.md before operational activation; pre-launch blocking gate) failures occur in any jurisdictional cluster within a 30-day window, the protocol enters Scarcity L3 for that cluster regardless of oracle status, and H-3 refounding review is initiated at the next scheduled opportunity.
+- **Mandatory pattern detection:** if more than **3 verified delivery failures** (FC-YT1, Tier 2 Founding Commitment — provisional; must be confirmed in /founding/commitments.md before operational activation; pre-launch blocking gate) occur in any jurisdictional cluster within a 30-day window, the protocol enters Scarcity L3 for that cluster regardless of oracle status, and H-3 refounding review is initiated at the next scheduled opportunity.
 
 ## Y5. Amendment and Lock
 
