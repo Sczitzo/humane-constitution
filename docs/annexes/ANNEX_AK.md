@@ -155,6 +155,43 @@ Publication of the AED targets turns the doctrine from a private intention into 
 
 ---
 
+## Section 7 — Asymmetric Default Rule
+
+The identity system faces a structural trade-off: any threshold stringent enough to prevent fraud at scale will also exclude some genuinely vulnerable people. This section establishes a constitutional presumption for cases where the system cannot simultaneously satisfy both its fraud target and its exclusion target.
+
+**The rule:** When the identity system cannot simultaneously satisfy both the fraud rate target (Section 1) and the exclusion rate target (Section 2) for a given population or instrument tier, the system shall resolve the conflict in favor of inclusion. The burden of proof for any exclusion decision rests on the system, not on the individual.
+
+**Procedural floor:** No enrolled person shall be excluded from the survival floor (Essential Access) on the basis of documentation failure alone without:
+1. An independent review of the exclusion decision, conducted by a reviewer not affiliated with the identity system operators.
+2. A written determination stating the specific basis for exclusion.
+3. A time-bounded review: the determination must be issued within **14 calendar days** of the exclusion event. If no determination is issued within 14 days, the exclusion is automatically reversed and the person's Essential Access is restored pending a new proceeding.
+4. Notice to the affected person in a language and format accessible to them.
+
+**Scope:** This rule applies to all exclusion decisions at the Essential Access tier. It does not apply to temporary restrictions at the Voice or Service Record tier, which are governed by their own review procedures. It does not prevent the system from requiring additional verification — it prevents final exclusion without independent, time-bounded review.
+
+**Interaction with numeric targets:** The asymmetric default rule operates independently of whether FC-143 through FC-147 exclusion rate targets have been formally bound. The procedural floor is a constitutional right, not a calibration preference. Binding numeric targets supplements but does not replace this rule.
+
+---
+
+## Section 8 — Independent Identity Auditor
+
+**Mandate:** The Founding Coalition shall establish, before operational activation, an Independent Identity Auditor (IIA) as a permanent officer of the protocol, distinct from the Federated Ombuds. The IIA's sole statutory mandate is to monitor, measure, and publicly report on the performance of the identity system against the targets established in this annex.
+
+**Reporting obligation:** The IIA shall publish a public quarterly report covering:
+- Fraud rate per instrument tier (Section 1), compared to FC-140–FC-142 targets.
+- Exclusion rate per vulnerable population category (Section 2), compared to FC-143–FC-147 targets.
+- Number and outcome of independent reviews conducted under Section 7.
+- Number of cases where the 14-day review deadline was missed, and the disposition of those cases.
+- Any instrument tier or vulnerable category for which measurement data is not available, with a stated explanation.
+
+**Absence-of-data rule:** Failure to produce measurement data for any instrument tier or vulnerable population category is itself a reportable failure. The IIA shall flag each quarter in which data was unavailable, name the responsible operator or data source, and — if data has been unavailable for two consecutive quarters — refer the matter to the Federated Ombuds as a potential compliance failure.
+
+**Independence:** The IIA shall have no operational role in the identity system. The IIA may not be employed by or contracted to any identity system operator. Appointment and removal of the IIA requires a Tier 2 amendment process, preventing removal in response to unfavorable findings.
+
+**Interaction with §7:** The IIA's quarterly report serves as the primary evidence base for evaluating whether the asymmetric default rule (Section 7) is being respected at scale. A pattern of systematically missed 14-day review deadlines, or a pattern of exclusion-rate data unavailability, constitutes prima facie evidence of §7 non-compliance and must be referred to the Federated Ombuds.
+
+---
+
 ## Founding Coalition Instructions
 
 To complete this annex before deployment, the founding coalition must:
