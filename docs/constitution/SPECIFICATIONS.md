@@ -102,7 +102,7 @@ Plain meaning: Essential Access is a daily claim to basic needs. It cannot be so
 
 **Expiry behavior:** Expired Essential Access is destroyed, not rolled over. No accumulation is possible — this is by design. Accumulation would reintroduce asset-like properties and create a secondary market attack surface.
 
-**Non-transferability enforcement:** Essential Access is bound to identity at issuance. No transfer, delegation, proxy redemption, or assignment is valid. Redemption requires biometric or equivalent identity confirmation at delivery point (Tier 2 assurance minimum; see P-003).
+**Non-transferability enforcement:** Essential Access is bound to identity at issuance. No transfer, delegation, proxy redemption, or assignment is valid. Exception: constitutionally authorised caregiver and dependent mechanisms — including household pooling (up to 20% per adult per week), delegated spend authority, and the Essential Access transfer exception channel for dependents (up to 10% of dependent's weekly entitlement) — are valid transfers. These are capped, identity-bound, auditable, and reversible upon evidence of coercion. All other transfers remain prohibited. Redemption requires biometric or equivalent identity confirmation at delivery point (Tier 2 assurance minimum; see P-003).
 
 ### 3.4 Constitutional Survival Minimum (CSM)
 
@@ -111,7 +111,7 @@ CSM is the minimum Essential Access allocation that may never be reduced (INV-00
 **CSM floor enforcement:**
 - Even during SUSPENDED state, Essential Access issuance continues at CSM
 - System halt conditions do not reduce CSM allocation
-- No patch may reduce CSM below its founding value without full constitutional refounding (Tier 1 invariant; see INVARIANTS.md INV-001)
+- No patch may reduce CSM below its founding value. Any such reduction requires the Tier 1 amendment process (7-of-9 keyholder signatures + 180-day timelock, FC-110/FC-111) or, for changes to the amendment mechanism itself, H-3 refounding authority. (Tier 1 invariant; see INVARIANTS.md INV-001)
 
 ### 3.5 Issuance Conditions
 
@@ -138,7 +138,7 @@ Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Ser
 
 **Decay function:** `Voice(t) = Voice(0) × e^(−0.15 × t)` where t is days elapsed. Influence is a flow, not a stock — an actor who was influential last cycle carries no advantage without continued participation.
 
-> **Note:** The decay function above governs how a Voice balance changes over calendar time. At any decision point, the current balance is *also* subject to the effective-weight conversion table in Humane_Constitution.md Article VI (quarterly buckets: 0–50 units = 1.00×; 51–80 = 0.50×; 81–100 = 0.25×; >100 prohibited). These are two separate rules operating on the same instrument. See Humane_Constitution.md for the quarterly conversion table.
+> **Integration:** the decay function governs the Voice balance (a stock that accumulates and decays over calendar time). The quarterly allocation table governs deployment of that balance into a specific decision cycle. Up to 300 raw Voice may be issued to a person per quarterly cycle (FC-060 ceiling); no more than 100 raw Voice may be deployed to any single decision within that cycle (the weight table prohibits input above 100). These are sequential constraints, not competing ones: the balance model sets the stock, the deployment table caps each draw. See Humane_Constitution.md Article VI for the quarterly conversion table (0–50 units = 1.00×; 51–80 = 0.50×; 81–100 = 0.25×; >100 prohibited).
 
 ![Voice vs. Service Record Decay Comparison](/images/V-006.png)
 
@@ -148,7 +148,7 @@ Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Ser
 
 **Decay function (SLOW_DECAY):** `SR(t) = SR(0) × (1 − r_cr)^t` — P-009 sets grace-period rate at 20% of normal (FC-063 reserved).
 
-**Sector ceiling (P-008, P-025):** No single sector may hold > 20% of active Service Record positions. (Prior 25% ceiling superseded — in a 5-sector system 25% permits a 3-sector coalition to reach 75% Voice, i.e. supermajority control. Ceiling must satisfy 3c < 0.667; c < 22.2%; 20% provides margin.) Enforcement: quarterly audit with proportional cooling.
+**Sector ceiling (P-008, P-025):** No single sector may hold > 20% of active Service Record positions. (Prior 25% ceiling superseded. Rationale: in a 5-sector system, a 25% ceiling allows a 3-sector bloc to control 75% of governance panel seats — sufficient for procedural supermajority in any Service Record-governed body. The ceiling must satisfy 3c < 0.667; c < 22.2%; 20% provides margin against coalition capture of rotating oversight roles. Note: P-008 is currently PROPOSED in the Patch Log; P-025 is ACTIVE and holds the operative 20% ceiling pending P-008 full activation.) Enforcement: quarterly audit with proportional cooling.
 
 ---
 
@@ -232,6 +232,8 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 ---
 
 ## 8. Parameter Summary
+
+> Parameters marked 'reserved' are not design gaps — they are pre-launch blocking gates defined in the Acceptance Protocol (Acceptance_Protocol.md, Pre-Launch Blocking Gates table). The system cannot reach operational activation without binding these values in /founding/commitments.md. Until binding, the reserved parameters represent commitments to specify rather than commitments to a specific value.
 
 | Parameter | Current Value | Status | Authority to Change |
 |---|---|---|---|

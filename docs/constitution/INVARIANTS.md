@@ -1,6 +1,6 @@
 # INVARIANTS.md — Constitutional Invariants of The Humane Constitution
 
-**Status:** Tier 1 Protected (unamendable by any supermajority; amendment requires full constitutional refounding under P-014 procedure)  
+**Status:** Tier 1 Protected (changeable only via the Tier 1 amendment process — 7-of-9 keyholder signatures and 180-day timelock; amendment of the amendment mechanism itself requires H-3 refounding authority; P-014 was the founding instrument and is now permanently closed)  
 **Source authority:** Humane_Constitution.md, Article I  
 **Last reviewed:** See Patch_Log.md
 
@@ -111,10 +111,14 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 ## INV-007 — Temporal Asymmetry of Amendment
 
-**Statement:** Constitutional invariants (Tier 1) may not be amended by any process available to current governance actors. Policy parameters (Tier 3) may be amended by standard FAP process. Founding commitments (Tier 2) require supermajority plus adversarial panel review.
+**Statement:** Constitutional invariants (Tier 1) may not be amended by any Tier 2 or Tier 3 process. They are changeable only via the Tier 1 amendment process — 7-of-9 keyholder signatures (FC-110) and a 180-day timelock (FC-111). Policy parameters (Tier 3) may be amended by standard FAP process. Founding commitments (Tier 2) require supermajority plus adversarial panel review.
+
+"Unamendable by any in-system process" is a shorthand that means: no process *below* the Tier 1 threshold may alter any Tier 1 parameter. It does not mean unamendable absolutely. The 7-of-9 + 180-day process IS the in-system Tier 1 mechanism. FC-110 and FC-111 are themselves Tier 1 parameters — the amendment procedure cannot be weakened by any process below its own threshold.
+
+For changes that would themselves alter the amendment mechanism (FC-110 or FC-111), H-3 refounding authority — a full constitutional convention — is required. P-014 was the founding instrument used once at system genesis; it is now permanently closed. H-3 refounding authority is the permanent successor path for constitutional reconstitution.
 
 **Mechanical boundary:**
-- Tier 1 (invariants): unamendable by any in-system process
+- Tier 1 (invariants): changeable only via the Tier 1 amendment process (7-of-9 keyholder signatures, FC-110; and 180-day timelock, FC-111). No Tier 2 or Tier 3 process may alter any Tier 1 parameter. FC-110 and FC-111 are themselves Tier 1 parameters — changes to the amendment mechanism itself require H-3 refounding authority.
   - **Two-key architectural precondition (P-034):** Any patch proposal tagged `modifies_tier1=True` must carry a cryptographic attestation from the standing adversarial panel member (nominated per AH2.3) before it enters FAP intake. The FAP reviewer's authority does not include the ability to override the absence of this attestation. Absence = automatic non-reviewable rejection at intake. A captured or mistaken FAP reviewer cannot unilaterally admit a Tier-1-touching proposal.
 
   > The two-key precondition is a structural hardening measure: it raises the practical cost of amending Tier 1 invariants to near-prohibitive levels within the system. It is not a legitimacy guarantee. The bootstrap problem (T-017) is a residual risk that structural preconditions cannot resolve — the authority of these invariants ultimately derives from the voluntary agreement of participating communities, not from any pre-existing constitutional mandate. The two-key precondition protects against capture and opportunistic revision; it does not substitute for ongoing democratic legitimation of the founding design.

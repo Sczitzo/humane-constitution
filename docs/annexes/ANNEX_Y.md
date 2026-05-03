@@ -123,12 +123,12 @@ Plain meaning: even one confirmed failure matters. It must be disclosed, investi
 - **Mandatory investigation:** the Federated Ombuds opens an investigation within 72 hours.
 - **Mandatory restitution:** the affected person receives retroactive CSM provision, plus dignity-preserving redress, within 7 days of confirmation.
 - **Mandatory root-cause review:** capacity gap, process failure, or capture is published within 30 days; patches registered per Patch Log.
-- **Mandatory pattern detection:** if more than `[ACCEPTABLE_CSM_FAILURE_THRESHOLD]` (Tier 2 Founding Commitment; see `/founding/commitments.md`) failures occur in any jurisdictional cluster within a 30-day window, the protocol enters Scarcity L3 for that cluster regardless of oracle status, and H-3 refounding review is initiated at the next scheduled opportunity.
+- **Mandatory pattern detection:** if more than **3 verified delivery failures** (FC-YT1, Tier 2 Founding Commitment — provisional; must be confirmed in /founding/commitments.md before operational activation; pre-launch blocking gate) failures occur in any jurisdictional cluster within a 30-day window, the protocol enters Scarcity L3 for that cluster regardless of oracle status, and H-3 refounding review is initiated at the next scheduled opportunity.
 
 ## Y5. Amendment and Lock
 
 - **Every numerical value above is locked** by cryptographic hash commitment at founding (Proposal 1 architectural enforcement). Hash appears in `/architecture/drift_chain.md` and is referenced in the ledger genesis block.
-- **Amendment requires H-3 refounding authority** as defined in the Humane Constitution amendment ladder. No Tier 2 or Tier 3 process may modify §Y1.
+- **Amendment requires H-3 refounding authority** as defined in the Humane Constitution amendment ladder. No Tier 2 or Tier 3 process may modify §Y1. H-3 refounding authority is a full constitutional convention. It supersedes P-014, which was the one-time founding instrument (now permanently closed).
 - **Upward amendment** (increasing floors) is permitted through ordinary Tier 2 process. Only *downward* changes require H-3 refounding.
 - **Temporary suspension prohibited.** No emergency, treaty, budget cycle, or transition process may suspend CSM. If capacity cannot meet CSM × population, the protocol is in System Failure and Y4 applies.
 

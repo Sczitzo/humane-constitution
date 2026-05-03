@@ -13,7 +13,7 @@ P-014 is not a standing patch. It is a one-time founding instrument with a singl
 - Any invocation of P-014 logic for any purpose other than the historical record of P-013's activation requires H-2 amendment process before it takes effect.
 - P-014 closes permanently upon P-013's ACTIVE status. No re-opening, no emergency extension, no analogical application.
 
-### AH2. Stage 1 — Pre-Activation Disclosure (14 Days)
+### AH2. Stage 1 — Pre-Activation Disclosure (60 Days minimum, per P-020 amendment)
 Before any activation steps proceed, the following must be published and a 14-day public challenge window must close:
 - **Full circular dependency analysis:** a written explanation of why the standard Formal Acceptance Protocol cannot coherently activate P-013, what the bootstrap problem is, and why no other resolution path is available.
 - **Founding exception statement from the Threat Register Owner:** 'We are using a founding exception. Here is why no other option is available. Here is what this exception cannot be used for. Here is what happens if we get it wrong.'

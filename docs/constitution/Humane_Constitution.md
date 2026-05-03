@@ -33,6 +33,12 @@ This is not about calling people good or bad.
 
 It is about what a person actually created and what already belonged to the shared world. A law can assign ownership. It cannot change whether one person truly created the value being claimed.
 
+*A working test: value is produced when it primarily derives from the identifiable effort, skill, invention, or care of a specific person or group acting in time. Value is shared when it primarily derives from the presence of a community, prior public investment, inherited infrastructure, natural endowment, or legal frameworks that no current actor created. Most real value contains both elements. The question is not whether shared elements exist — they almost always do — but which element predominates.*
+
+*When a person works land, the labour is produced; the land's location value — made valuable by surrounding community, infrastructure, and rule of law — is shared. When a person writes software, the initial act of writing is produced; passive income from that work decades later draws increasingly on shared infrastructure, educated users, and network effects that were not created by the original author alone. When a business grows, the founder's work is produced; the platform of educated workers, legal contract enforcement, and public roads it relies on is shared.*
+
+*This test does not eliminate all disputes. It provides a framework for them. Disputes about which element predominates in a specific case are resolved through the published criteria process under Article V and are subject to appeal.*
+
 ---
 
 #### III. How Money Collapses the Distinction
@@ -139,6 +145,8 @@ Before the seven articles, the system needs a rule for who joins, at what scale,
 - [Jurisdictional Scales](../../founding/order/jurisdictional_scales.md) — five scales: household, neighborhood, locality, region, federation.
 
 The Founding Order applies to every article. Decisions stay local unless there is a real reason to move them up. The human dignity floor is the exception: it applies everywhere because dignity is not up for a vote.
+
+*Delivery obligation: the dignity floor promise is unconditional; its delivery is not yet universal. Essential Access infrastructure currently operates only within consented jurisdictions. Where a community has not joined the system, the constitutional commitment to the dignity floor creates an affirmative obligation — not a satisfied one. Participating jurisdictions must maintain a published accounting of unmet dignity floor commitments in adjacent non-consenting communities, and must allocate a minimum of 2% of PFCR public finance capacity toward cross-boundary dignity floor delivery mechanisms, pending those communities' free decision to join or remain outside. The dignity floor is not contingent on membership; its delivery mechanism is a work in progress that this system is obligated to complete.*
 
 ---
 
@@ -352,6 +360,12 @@ Each part has a job. These are the handoffs and hard limits.
 - **Idle-money rule:** the default idle-money fee is 0.5% per month on balances above a published operating-float exemption, reviewed inside a 0.25%-1.00% corridor.
 - **Investment channel:** long-term project funds may receive protected treatment only while they are registered, separated, milestone-reviewed, and subject to reversion if the purpose drifts.
 - **Household finance rule:** compounding interest on household ordinary-life debt is prohibited. No household debt instrument may securitize the survival floor, rely on revolving traps, or recreate survival coercion through hidden fee chains.
+
+  *For purposes of this Article:*
+
+  *"Compounding interest" means any arrangement in which unpaid interest is added to principal (capitalised), creating a new principal base on which further interest accrues — whether the compounding interval is daily, monthly, quarterly, or expressed as an equivalent annual rate through fee structures. Simple interest on a fixed principal is not prohibited. Any fee, charge, or penalty that produces the same economic effect as compounded interest — including rolling balance fees, minimum-payment traps, and tiered penalty escalation — is treated as compounding interest under this Article.*
+
+  *"Household ordinary-life debt" means any debt instrument held by a natural person or household unit for personal, family, or household purposes — including consumer credit, medical debt, education financing, and utility arrears. It does not include business debt held by a registered enterprise, nor investment instruments voluntarily undertaken for financial return rather than survival necessity. When a debt instrument mixes survival necessity and discretionary purposes, the survival-necessity portion is subject to this Article.*
 - **Wallet partitioning:** protect payroll/essential obligations from broad freezes; target enforcement narrowly.
 
 **Land, Housing & Commons**
