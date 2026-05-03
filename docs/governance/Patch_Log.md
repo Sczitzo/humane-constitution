@@ -1002,3 +1002,32 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 **New risks introduced:** None — gap closures and clarifications only.
 
 **Residual risk:** FC-140 through FC-150 remain provisional pending pilot data. P-016 remains PROPOSED until the founding coalition confirms rate targets after first-year pilot evidence.
+
+---
+
+### P-045 — Threat Resolution Batch
+
+**Threats addressed:** T-001, T-002, T-004, T-007, IC-004  
+**Status:** ACTIVE | **Priority:** Critical  
+**Date:** 2026-05-02
+
+**Constitutional text:** ANNEX_AB.md (§AB2, §AB3, §AB5), ANNEX_AK.md (§7, §8), ANNEX_AH.md (§AH5.1)
+
+**Problem diagnosed:**
+Five critical threats remained at PARTIAL status with specific unresolved gaps: T-001 lacked threshold derivation logic (arbitrary numbers); T-002 had no procedural protection for excluded persons before rate targets are formally bound; T-004 had no enumerated floor for invisible/care work; T-007's registry started empty (first-mover capture window); IC-004 had no recovery path after P-013 suspension.
+
+**Introduced design:**
+
+- **ANNEX_AB.md §AB2** — Added enforcement-capacity derivation formula: FC-010 thresholds are derived from minimum detectable enforcement rate (N ÷ P). FC-010 3% = 2× min-detectable rate; 7% = 5% supply-harm threshold. Audit participation designated as a qualified civic duty; resourcing limitations cannot justify raising thresholds. (T-001)
+- **ANNEX_AB.md §AB3** — Added enumerated contribution floor: six founding categories (primary caregiving, elder care, mutual aid, spiritual community leadership, unpaid household management, informal health work) with burden reversal. Self-attestation accepted; disproof burden on system. Extension via Tier 2; removal requires Tier 1 + impact assessment. (T-004)
+- **ANNEX_AB.md §AB5** — Added founding seed list: 14 Tier 2 protected terms (survival, survival floor, personhood, Essential Access, Flow, Voice, Service Record, non-convertibility, coercion, scarcity, contribution, identity, dignity, capacity) locked at founding. Adversarial review requirement before ratification. (T-007)
+- **ANNEX_AK.md §7** — Added Asymmetric Default Rule: system bears burden of proof for all exclusion decisions; independent time-bounded review (14-day deadline) required before any Essential Access exclusion is final; exclusions without timely determination automatically reversed. (T-002)
+- **ANNEX_AK.md §8** — Added Independent Identity Auditor mandate: quarterly public reports on fraud/exclusion rates per tier and vulnerable category; absence-of-data is a reportable failure; two consecutive quarters without data triggers Federated Ombuds referral; IIA appointment/removal requires Tier 2 amendment. (T-002)
+- **ANNEX_AH.md §AH5.1** — Replaced IC-004 governance-gap note with Dignity-Only Continuity Mode specification: CSM continues; governance suspended; 180-day trigger opens re-founding petition window (500 joint signatories to submit; 1,000 attestations to advance); P-014 non-precedent status unaffected; CSM floor cannot be suspended. (IC-004)
+
+**New risks introduced:**
+- The founding seed list authors own the semantic baseline permanently — mitigated by the mandatory adversarial review requirement before ratification.
+- The 14-day independent review deadline for identity exclusions requires review infrastructure to be operational at launch — this is a pre-launch blocking gate.
+- The 180-day dignity-only continuity period may be too long for urgent governance needs — mitigated by the automatic petition window at 180 days and the Federated Ombuds continuing to operate throughout.
+
+**Residual risk:** T-001, T-002, T-004, and T-007 remain PARTIAL pending pilot data confirmation. IC-004 is ADDRESSED — the governance gap is now resolved with a specified fallback mechanism.
