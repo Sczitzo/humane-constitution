@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-042**
+**Running change ledger aligned to the Humane Constitution · Current through P-043**
 
 ---
 
@@ -61,6 +61,7 @@
 | P-040 | — | **ACTIVE** | High | Housing cap pastoral revision (remove cold "regardless" language); structural humility closing clause added to Article V. |
 | P-041 | T-008 | **ACTIVE** | High | Biennial recognized-contribution audit to include invisible and pastoral work; 180-day correction requirement (Article VI). |
 | P-042 | — | **ACTIVE** | High | Low-barrier community alert pathway with 30-day acknowledgment and 90-day review trigger (Article VII). |
+| P-043 | Multiple | ACTIVE | High | Logical-analysis corpus corrections — documentary, amendment architecture, definitions, placeholder fill |
 
 ---
 
@@ -940,3 +941,37 @@ Constitutionally protected community alert pathway: low-barrier, optionally anon
 - Alert pathway could be used for political harassment or coordinated false-flag campaigns. Mitigated: prima facie threshold for mandatory review; anonymous alerts published but not automatically elevated without threshold evidence.
 
 **Residual risk:** Power asymmetry between institutional reviewers and community reporters will persist. The pathway lowers the barrier; it does not equalize resources for evidence-gathering.
+
+---
+
+### P-043 — Logical-Analysis Corpus Corrections
+
+**Threat addressed:** T-001, T-002, T-004, T-007, T-generic (amendment capture, definitional ambiguity, status misrepresentation)
+**Status:** ACTIVE | **Priority:** High
+
+**Constitutional text:** ANNEX_AH.md, ANNEX_Y.md, INVARIANTS.md, SPECIFICATIONS.md, Humane_Constitution.md, Patch_Log.md, Threat_Register.md
+
+**Problem diagnosed:**
+Systematic logical analysis identified 18 issues across the corpus: 4 critical (including a Tier 1 amendment architecture paradox and a literal unfilled placeholder), 11 major (internal contradictions, definitional gaps, inconsistent status reporting), and 3 minor (structural tensions and epistemological inconsistencies).
+
+**Introduced design:**
+
+- **ANNEX_AH.md §AH2 header** — Updated heading from "14 Days" to "60 Days minimum, per P-020 amendment." Heading was not updated when P-020 extended the window.
+- **Patch_Log.md P-014 entry** — Added parenthetical noting P-020 extended the 14-day challenge window to 60 days minimum.
+- **Threat_Register.md Complete Register Summary** — Corrected T-001, T-002, T-004, T-007 status from ACTIVE to PARTIAL to match the dashboard and individual entries.
+- **INVARIANTS.md INV-007** — Resolved the Tier 1 amendment paradox. "Unamendable by any in-system process" is replaced with precise language: Tier 1 is changeable only via the Tier 1 process (7-of-9 keyholder signatures + 180-day timelock, FC-110/FC-111). FC-110 and FC-111 are themselves Tier 1 protected. Changes to the amendment mechanism require H-3 refounding authority. P-014 is permanently closed.
+- **SPECIFICATIONS.md §3.4** — Replaced "full constitutional refounding under P-014 procedure" with Tier 1 amendment process language and H-3 refounding authority reference.
+- **ANNEX_Y.md §Y5** — Added: H-3 refounding authority is a full constitutional convention, superseding the closed P-014.
+- **ANNEX_Y.md §Y4** — Filled the literal `[ACCEPTABLE_CSM_FAILURE_THRESHOLD]` bracket placeholder with provisional value: 3 verified delivery failures (FC-YT1, pre-launch blocking gate, must be confirmed before operational activation).
+- **SPECIFICATIONS.md §3.3** — Added caregiver/dependent carve-out to the non-transferability rule, making it consistent with the Constitution's household pooling and delegated spend authority provisions.
+- **SPECIFICATIONS.md §4.2** — Replaced "two separate rules" bridging note with an integration formula: the 300-unit issuance ceiling sets the quarterly stock; the 100-unit weight table caps each individual deployment draw. Sequential constraints, not competing ones.
+- **SPECIFICATIONS.md §4.3** — Fixed sector ceiling arithmetic justification: reframed from Voice supermajority to Service Record governance panel concentration. Added note that P-008 is PROPOSED and P-025 is the operative ACTIVE authority for the 20% ceiling.
+- **SPECIFICATIONS.md §8** — Added pre-launch blocking gates note to the Parameter Summary, clarifying that reserved parameters are not design gaps.
+- **Humane_Constitution.md Article V** — Added operational definitions of "compounding interest" (capitalisation-based, includes fee-equivalent traps) and "household ordinary-life debt" (personal/family purposes; excludes enterprise debt and voluntary investment instruments).
+- **Humane_Constitution.md Philosophical Preamble** — Added produced/shared value working test: three concrete examples (land labour, software, enterprise) and an appeal path reference.
+- **Humane_Constitution.md Founding Order** — Added dignity floor delivery obligation: 2% PFCR cross-boundary allocation minimum, published accounting of unmet commitments in adjacent non-consenting communities.
+
+**New risks introduced:**
+- The provisional CSM failure threshold (3 failures) requires founding commitment confirmation. If not confirmed before activation, the threshold remains provisional — which is by design (pre-launch blocking gate).
+
+**Residual risk:** Issues 4 (bootstrap circularity), 8 (silence tension), 12 (single-source philosophy), and 18 (structural vs. moral sufficiency tension) are acknowledged as honest philosophical tensions named in the corpus. They are not resolved by this patch; they are monitored as open interpretive questions.
