@@ -145,6 +145,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Mitigation direction:** Essential Access-only channels, non-delegable redemption, context-locked use, tolerance for low-level leakage, and broker-focused enforcement. → P-001 ACTIVE.
 - **Leakage parameter:** FC-010 in `/founding/commitments.md` defines a 3%/annum routine operational target and 7%/annum systemic-review trigger. Surveillance-vs-containment verification continues as an Article VII annual audit responsibility.
 - **Informal convertibility control:** Informal convertibility that does not touch the ledger is covered by Annex AJ ACTIVE with nine worked prohibited patterns across Essential Access/Flow, Voice-Service Record/resource, and Shared Storehouse/Flow boundaries. Annex AJ §4 Penalty Schedule binds detected violations to a 5.0× base multiplier (FC-040) at assumed 0.85 detection probability (FC-041), with severity factors per pattern (1.0×–2.0×) and escalation ladder for repeat and systemic violations. Enforcement Panel publishes Annual Deterrence Audit to test whether the EV-negative regime holds empirically. → See Annex AJ §4; Penalty Schedule.
+- **P-045 addition:** P-045 adds a structural derivation formula grounding FC-010 thresholds in enforcement capacity (N÷P formula), designates audit participation as a qualified civic duty, and prevents resourcing limitations from being used to justify threshold increases.
 
 ---
 
@@ -162,6 +163,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Open problem:** calibrate fraud tolerance without making the system unusable for displaced, undocumented, or digitally fragile people.
 - **Evidence package:** [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md)
 - **Asymmetric Error Doctrine required (see P-016):** The current mitigation does not specify quantified targets. Before deployment, the founding coalition must publish and formally adopt an Asymmetric Error Doctrine that specifies: (a) maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record); (b) maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile) per tier; (c) the review trigger when either rate is exceeded; (d) the decision rule when the two error types trade off. Without explicit numbers, calibration is permanently subject to political pressure. The Asymmetric Error Doctrine is a Tier 2 founding commitment. → See P-016 (Annex AK).
+- **P-045 addition:** P-045 §7 adds the Asymmetric Default Rule: system bears burden of proof for exclusion decisions; 14-day independent review required before any Essential Access exclusion is final; exclusions without timely determination automatically reversed. P-045 §8 adds the Independent Identity Auditor: mandatory quarterly public reports on fraud/exclusion rates per tier and vulnerable category; absence of data for 2 consecutive quarters triggers Federated Ombuds referral; IIA appointment/removal requires Tier 2 amendment.
 
 ---
 
@@ -177,6 +179,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Detection:** participation decline, lower high-skill throughput, concentration of difficult work into narrow groups, and weak innovation rates.
 - **Mitigation direction:** nonlinear reward curves, multi-channel rewards (Flow, civic standing, status/recognition), opportunity access, and anti-gaming scoring. → P-002 ACTIVE.
 - **Open problem:** define a real contribution model that rewards output without recreating coercive hierarchy or burnout pressure.
+- **P-045 addition:** P-045 adds an enumerated contribution floor of six founding categories (primary caregiving, elder care, mutual aid, spiritual community leadership, unpaid household management, informal health work) with burden reversal — self-attestation accepted unless affirmatively disproved. Extension via Tier 2; removal requires Tier 1 + published impact assessment.
 
 ---
 
@@ -224,6 +227,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Detection:** semantic impact audits, worked examples, quality-floor changes, and cumulative narrowing triggers.
 - **Mitigation direction:** protected term classes, semantic effect test, public definition registry, anti-laundering rule, upward default on ambiguity. → P-004 ACTIVE. P-006 extends: 'supply shock' added as protected term. P-008 extends: qualification standard criteria added as protected specification.
 - **Open problem:** institutionalize without creating a semantic bureaucracy that freezes useful iteration.
+- **P-045 addition:** P-045 adds a founding seed list of 14 Tier 2 protected terms (survival, survival floor, personhood, Essential Access, Flow, Voice, Service Record, non-convertibility, coercion, scarcity, contribution, identity, dignity, capacity) locked at founding, with a mandatory adversarial review requirement before ratification. The registry is no longer empty at launch.
 
 ---
 
