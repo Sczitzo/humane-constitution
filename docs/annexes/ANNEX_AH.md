@@ -53,7 +53,30 @@ Upon 4/5 panel sign-off following completed Stage 3:
 - The mandatory post-activation audit (AH6) is commissioned immediately with a 90-day deadline.
 - P-006 and P-009 immediately enter the Formal Acceptance Protocol pilot stage as first-priority patches — the sequencing dependency is resolved.
 
-> **Governance gap (IC-004):** P-014 closes permanently at Stage 4. If the Stage 5 independent audit suspends P-013, no in-system recovery path currently exists — P-014 cannot be reopened after closure. This is a residual governance risk. A future patch should specify an explicit fallback: either a fixed sunset period for the suspension, an emergency re-bootstrap procedure, or a mandatory continuation of FAP operations pending re-ratification.
+### AH5.1 — Dignity-Only Continuity Mode (IC-004 Resolution)
+
+**Trigger:** If the Stage 5 post-activation audit (AH6) finds that P-013's activation was compromised and suspends P-013, the protocol enters **Dignity-Only Continuity Mode** immediately upon the suspension finding being published.
+
+**What continues:**
+- The Constitutional Survival Minimum (CSM) automatic issuance (ANNEX_Y §Y2) continues without interruption. Enrolled persons continue to receive Essential Access entitlements at the established survival-floor level.
+- The Independent Identity Auditor (ANNEX_AK §8) continues operating and publishing quarterly reports.
+- The Federated Ombuds continues operating in its custodial and dispute-resolution capacity.
+
+**What is suspended:**
+- All governance decisions requiring P-013 Formal Acceptance Protocol sign-off.
+- New patch activations, new founding commitment locks, and Tier 2 amendment proceedings.
+- Voice and Service Record issuance updates requiring P-013-governed recalibration.
+
+**Re-founding trigger:** If the protocol remains in Dignity-Only Continuity Mode for **180 consecutive days** without an active P-013 re-submission proceeding underway, a mandatory public re-founding petition window opens automatically. The petition window operates as follows:
+1. Any 500 or more verified enrolled persons may jointly submit a re-founding petition proposing a corrected P-013 activation procedure.
+2. Petitions are published publicly within 7 days of receipt.
+3. A petition that receives attestation from 1,000 or more verified enrolled persons within 90 days advances to a reconvened founding panel under AH3 rules.
+4. The highest-attested qualifying petition proceeds; if multiple petitions qualify, they are consolidated by the reconvened panel.
+5. If no petition qualifies within 90 days of the petition window opening, the window resets and reopens 90 days later, repeating until a qualifying petition succeeds.
+
+**Interaction with P-014 permanent closure:** P-014 remains permanently closed. The re-founding petition window is not P-014 — it is a post-activation correction mechanism that operates within the now-operative Formal Acceptance Protocol framework. P-014's non-precedent status is unaffected.
+
+**CSM continuity guarantee:** Under no circumstances does Dignity-Only Continuity Mode permit suspension of the survival floor. A finding that the CSM cannot continue without P-013 governance sign-off is treated as a CSM delivery failure (ANNEX_Y §Y4) and triggers the CSM failure response protocol, not a suspension of the floor.
 
 ### AH6. Stage 5 — Post-Activation Audit (Within 90 Days)
 A retrospective audit of the P-014 activation is conducted within 90 days using P-013's own now-operative standards (including the adversarial member requirement from AG3):
