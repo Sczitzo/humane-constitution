@@ -220,7 +220,7 @@ The constitution is built in five layers. Each layer depends on the one above it
 |---|---|
 | [Humane Constitution](./docs/constitution/Humane_Constitution.md) | Primary rule text, with links into the standalone annex corpus. |
 | [Threat Register](./docs/governance/Threat_Register.md) | Known attack paths and proposed defenses. 27 threat IDs: 4 active controls, 16 proposed controls, 5 addressed by active non-register structures, and 2 retired IDs. |
-| [Patch Log](./docs/governance/Patch_Log.md) | Change history. 31 patches: 16 active, 15 proposed, including the founding patch P-014. |
+| [Patch Log](./docs/governance/Patch_Log.md) | Change history. 40 patches: 25 active, 15 proposed, including the founding patch P-014. |
 | [Hardening Queue](./docs/governance/Hardening_Queue.md) | Red-team hardening queue — session history, closed items, open items, and standing simulation requirements. |
 | [Acceptance Protocol](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 
@@ -300,7 +300,7 @@ The system has been adversarially stress-tested:
 | T-022 Electoral Cycle Capture | Hostile successor government routes identified; entrenchment ladder, Essential Access floor persistence, transition protocol designed (P-018) |
 | T-023–T-025 Pilot validity, Shared Storehouse oracle failure, demurrage capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), demurrage sector-capture resolved: contract-commitment architecture, zero exemptions (P-023) |
 
-**Current status: 16 patches active and 15 proposed, including the founding patch P-014.** The Threat Register currently has no fully open threat with no mitigation path, but many controls still need pilot evidence, activation, and outside review.
+**Current status: 25 patches active and 15 proposed, including the founding patch P-014.** The Threat Register currently has no fully open threat with no mitigation path, but many controls still need pilot evidence, activation, and outside review.
 
 ## What this system is not
 

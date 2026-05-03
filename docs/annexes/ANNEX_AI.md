@@ -180,7 +180,19 @@ The Federated Ombuds holds the full mandate of the prior Annex AI, extended to e
 
 *Operational class — handled by Duty Sub-Ombuds.*
 
-The Duty Sub-Ombuds applies the three-criterion test for deliberate manufacture of a demand-context flag (timing proximity, proportionality anomaly, no documented operational basis), with a 4-hour determination timeline and a conservative default of maintaining the flag while assessment continues. The prior Section 3 of this annex is incorporated by reference; the only structural change is that determinations are signed by the Duty Sub-Ombuds and are reviewable by the Plenum under §3.1 post-hoc review.
+The Duty Sub-Ombuds applies the three-criterion test for deliberate manufacture of a demand-context flag (timing proximity, proportionality anomaly, no documented operational basis), with a 4-hour determination timeline and a conservative default of maintaining the flag while assessment continues. The only structural change from the prior annex design is that determinations are signed by the Duty Sub-Ombuds and are reviewable by the Plenum under §3.1 post-hoc review.
+
+*Three-criterion evidentiary standards for deliberate flag manufacture:*
+
+*1. **Timing proximity:** The demand-context flag was raised within 72 hours of a measurable adverse event affecting the flagging party (e.g., a contested vote, a Service Record review, an enforcement action). Proximity alone does not establish manufacture; it triggers heightened scrutiny.*
+
+*2. **Proportionality anomaly:** The scale or scope of the demand-context flag is disproportionate to any documented operational or community need in the jurisdiction — i.e., the flag covers a population segment, geographic area, or resource category that the claimed operational basis does not plausibly require.*
+
+*3. **No documented operational basis:** The flagging party cannot produce, within the 4-hour determination window, a contemporaneous record (pre-dating the adverse event) establishing that the flag was planned, requested, or necessitated by genuine supply-demand conditions.*
+
+*All three criteria must be met for a finding of deliberate manufacture. Meeting two criteria triggers a provisional finding with a 48-hour review extension. Meeting one criterion triggers no adverse finding but is logged for pattern detection across subsequent flags from the same party.*
+
+*Conservative default: while determination is pending, the flag remains active and Essential Access delivery continues uninterrupted.*
 
 Repeated no-findings from the same Duty Sub-Ombuds on behalf of the same enforcement body trigger Plenum review of the Duty Sub-Ombuds' independence — this is a §3.2 matter requiring 4 of 5.
 

@@ -15,11 +15,16 @@ The protocol does not attempt to eliminate all informal exchange. It prevents sc
 - **Detection systems** shall target coordinated broker patterns, not ordinary low-level human favor exchange. Networked arbitrage is the primary enforcement target.
 - **The system shall define** an explicit acceptable leakage threshold. Zero leakage is not the standard; scalable systemic leakage is.
 
+*Calibration methodology requirement: The Article VII annual audit must publish, alongside its leakage measurement findings, the calibration methodology used to set and review the FC-010 leakage thresholds (3% single-jurisdiction, 7% cross-jurisdiction). The published methodology must include: (a) the empirical or modelling basis for the current threshold values; (b) the evidence that would trigger a threshold revision upward or downward; and (c) any changes to the methodology made since the prior year's audit. Threshold values that are not calibration-documented in a published audit are not valid enforcement baselines.*
+
 ### AB3. T-004 Incentive Stability — Nonlinear Contribution Architecture
 Universal survival does not remove incentive gradients. The protocol therefore encodes a contribution architecture in which dignity remains unconditional while meaningful contribution yields noticeably greater opportunity, recognition, optional access, and bounded civic standing.
 - **Reward curves** shall be nonlinear rather than flat. Moderate contribution must produce noticeable gains; high contribution may produce disproportionately greater optional opportunity without converting into coercive power.
 - **Reward channels** shall remain multi-dimensional: Flow-based optional access, civic-layer standing under bounded rules, and non-transferable recognition or role-access pathways.
 - **Contribution assessment** shall privilege validated outcomes and proportionate stewardship rather than mere performative activity counts.
+
+*Invisible-work backstop: The contribution framework must not systematically exclude work that is hard to measure. The biennial recognized-contribution audit (P-041, Article VI) serves as the enforcement backstop for this requirement. Any contribution category found by a P-041 audit to be systematically under-recognized must be incorporated into the §AB3 framework within 180 days of the audit finding. Contribution scores based on a definition found to be systematically deficient do not constitute valid Voice or Service Record inputs for the categories affected until the correction is applied.*
+
 - **Anti-gaming controls** shall use mixed evidence and diminishing returns to reduce farming of one visible metric or one socially legible role.
 - **The system shall not punish** initiative, excellence, or responsibility merely because the survival floor is protected.
 
@@ -38,6 +43,8 @@ Protected terms are constitutional objects. Capture often proceeds through seman
 - **If classification is reasonably disputed**, the proposal escalates upward by default.
 - **Material definitional changes** require public redlines, before/after worked examples, impact notes, and challenge windows.
 - **No software release**, reimbursement rule, dashboard methodology update, vendor standard, or treaty appendix may alter the practical meaning of a protected term without full substantive review.
+
+*Registry administration: The definition registry is administered by the Federated Ombuds (ANNEX_AI) acting as an independent custodian. The administrator has no authority to change definitions unilaterally — its role is custodial: publishing definitions, recording amendment requests, and maintaining version history. The amendment pathway for any protected definition is Tier 2 (standard constitutional amendment process) unless specifically designated Tier 1. The registry is subject to an annual public review window during which any person may submit a written challenge to any definition. The review confers no amendment authority; its purpose is to surface interpretive disputes for formal deliberation. Disputes meeting a prima facie threshold of interpretive ambiguity are forwarded to the CRP for resolution.*
 
 ### AB6. Current Threat/Patch Linkage
 The first hardening cycle is now represented in the running documents as follows:

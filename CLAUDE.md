@@ -96,7 +96,7 @@ Each corpus doc has a `section` field that maps it to a nav view:
 
 ### Document provenance model
 
-Every threat (T-NNN) has a patch (P-NNN) and an annex (ANNEX_XX.md) containing the resulting constitutional text. This chain is the permanent record of why each constitutional clause exists. The master linkage table lives in `ANNEX_AH.md § AH8`. A `docs/governance/Provenance_Map.md` is planned as the human-readable entry point to this chain.
+Every threat (T-NNN) has a patch (P-NNN) and an annex (ANNEX_XX.md) containing the resulting constitutional text. This chain is the permanent record of why each constitutional clause exists. The master linkage table lives in `ANNEX_AH.md § AH8`. A `docs/governance/Provenance_Map.md` serves as the human-readable entry point to this chain.
 
 **Annex naming note:** "AH2" is not a separate file — it refers to sections AH2.1–AH2.4 inside `ANNEX_AH.md`, added by patch P-020. References like "(P-020 / Annex AH2)" mean: patch P-020, whose clauses live in `ANNEX_AH.md` under the AH2 subsections.
 

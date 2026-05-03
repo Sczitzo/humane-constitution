@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-043**
+**Running change ledger aligned to the Humane Constitution · Current through P-044**
 
 ---
 
@@ -26,7 +26,7 @@
 | P-002 | T-004 | **ACTIVE** | Critical | Stabilize incentives with nonlinear reward architecture and anti-gaming design. |
 | P-003 | T-002 | **ACTIVE** | Critical | Replace single-gate identity with differential assurance and recovery-safe continuity. |
 | P-004 | T-007 | **ACTIVE** | Critical | Stop semantic capture through definition governance and anti-laundering rules. |
-| P-005 | T-005 | **PROPOSED** | Critical | Governance throughput: tiered CRP queues, throughput floor, emergency re-declaration. |
+| P-005 | T-005 | **ACTIVE** | Critical | Governance throughput: tiered CRP queues, throughput floor, emergency re-declaration. |
 | P-006 | T-006 | **PROPOSED** | Critical | Measurement lag: sentinel mandate, PCRP first-responder authority, Shared Storehouse unwind symmetry. |
 | P-008 | T-008 | **PROPOSED** | High | Elite formation: legibility audit, diversity mandates, verification independence, cohort cooling. |
 | P-009 | T-009 | **PROPOSED** | Med-High | Grace exploitation: graduated renewal, cross-quarter history, collusion detection, Service Record slow-decay. |
@@ -62,6 +62,7 @@
 | P-041 | T-008 | **ACTIVE** | High | Biennial recognized-contribution audit to include invisible and pastoral work; 180-day correction requirement (Article VI). |
 | P-042 | — | **ACTIVE** | High | Low-barrier community alert pathway with 30-day acknowledgment and 90-day review trigger (Article VII). |
 | P-043 | Multiple | ACTIVE | High | Logical-analysis corpus corrections — documentary, amendment architecture, definitions, placeholder fill |
+| P-044 | Multiple | ACTIVE | High | Threat-strengthening batch — T-001/T-002/T-004/T-005/T-007/T-018/T-019 mitigation gaps closed |
 
 ---
 
@@ -975,3 +976,29 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 - The provisional CSM failure threshold (3 failures) requires founding commitment confirmation. If not confirmed before activation, the threshold remains provisional — which is by design (pre-launch blocking gate).
 
 **Residual risk:** Issues 4 (bootstrap circularity), 8 (silence tension), 12 (single-source philosophy), and 18 (structural vs. moral sufficiency tension) are acknowledged as honest philosophical tensions named in the corpus. They are not resolved by this patch; they are monitored as open interpretive questions.
+
+---
+
+### P-044 — Threat-Strengthening Batch
+
+**Status:** ACTIVE  
+**Date:** 2026-05-02  
+**Related threats:** T-001, T-002, T-004, T-005, T-007, T-018, T-019  
+**Core change:** Close mitigation gaps identified by systematic threat survey. Tighten PARTIAL-status threats, add missing evidentiary standards, and fill operational voids in audit timelines and authority chains.
+
+**Changes included in this patch:**
+
+- **ANNEX_AI.md §4.1** — Reproduced the T-019 three-criterion evidentiary standards inline (replacing a dangling "incorporated by reference" to a deleted prior section). Standards now specify: timing proximity (72-hour window, heightened scrutiny only), proportionality anomaly (disproportionate scope relative to documented need), no documented operational basis (contemporaneous record within 4-hour window). Three-tier outcome logic: all three → deliberate manufacture; two → provisional with 48-hour extension; one → logged only. Conservative default: flag stays active during pendency.
+- **ANNEX_AP.md §AP1** — Added cap-reset audit procedure: Federated Ombuds as responsible authority; 7-day open window; 30-day findings deadline; evidentiary standard (clear and convincing evidence); cap-counter freeze during audit; two outcome paths (reset to zero or count unchanged). Closes T-018 cap-reset void.
+- **ANNEX_AB.md §AB2** — Added FC-010 calibration methodology requirement: Article VII annual audit must publish the empirical/modelling basis for leakage thresholds, revision triggers, and methodology changes. Thresholds not documented in a published audit are not valid enforcement baselines. (T-001)
+- **ANNEX_AB.md §AB3** — Added invisible-work backstop: P-041 biennial recognized-contribution audit named as enforcement backstop for §AB3; findings requiring correction must be incorporated within 180 days; deficient contribution scores suspended from Voice/Service Record inputs until corrected. (T-004)
+- **ANNEX_AB.md §AB5** — Added registry administration clause: Federated Ombuds as custodian; no unilateral definition authority; Tier 2 amendment pathway; annual public review window; prima facie disputes forwarded to CRP. (T-007)
+- **ANNEX_AK.md** — Promoted FC-140 recommended anchors to provisional values: Essential Access fraud rate target ≤0.5% (FC-140), upper bound 1.0% — both provisional pending pilot confirmation, pre-launch blocking gates. (T-002 / P-016)
+- **README.md** — Updated stale patch counts: 31→40 total, 16→25 active (two locations).
+- **ANNEX_Y.md §Y7** — Filled `[RESERVE_WINDOW_DAYS]` placeholder with provisional value: 90 days (FC-YT2, pre-launch blocking gate).
+- **CLAUDE.md** — Corrected "Provenance_Map.md is planned" → "serves as" (file already exists).
+- **Patch_Log.md P-005** — Advanced from PROPOSED to ACTIVE: ANNEX_AC1 design is complete; residual risks (sub-panel capture, throughput theater) are acknowledged and monitored.
+
+**New risks introduced:** None — gap closures and clarifications only.
+
+**Residual risk:** FC-140 through FC-150 remain provisional pending pilot data. P-016 remains PROPOSED until the founding coalition confirms rate targets after first-year pilot evidence.

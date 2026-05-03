@@ -53,7 +53,7 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 
 | Instrument Tier | Fraud Rate Target (% of enrolled population per quarter) | Upper Tolerance Bound | Mandatory Audit Trigger |
 | :--- | :--- | :--- | :--- |
-| **Essential Access — Essential Access** | FC-140 target (reserved; recommended anchor: ≤0.5%) | FC-140 upper bound (reserved; recommended anchor: 1.0%) | FC-140 trigger (reserved; recommended anchor: exceeded in 2 consecutive quarters) |
+| **Essential Access — Essential Access** | FC-140 — **≤0.5%** provisional (pre-launch blocking gate; recommended anchor promoted to provisional value pending pilot confirmation in /founding/commitments.md) | FC-140 upper bound — **1.0%** provisional (pre-launch blocking gate) | FC-140 trigger — **exceeded in 2 consecutive quarters** provisional (pre-launch blocking gate) |
 | **Voice — Voice** | FC-141 target (reserved) | FC-141 upper bound (reserved) | FC-141 trigger (reserved) |
 | **Service Record — Service Record** | FC-142 target (reserved) | FC-142 upper bound (reserved) | FC-142 trigger (reserved) |
 
@@ -123,6 +123,8 @@ This is the most consequential section. It specifies what happens when the ident
 
 The fraud and exclusion rate targets in this annex are not permanent. They are evidence-gated:
 - The specific numbers are filled in by the founding coalition after first-year pilot data.
+
+*Where recommended anchors are specified above, those values are promoted to provisional founding commitments pending pilot confirmation. All provisional values remain pre-launch blocking gates.*
 - They are reviewed annually thereafter by an independent recalibration panel.
 - They may be tightened (lower targets) as the identity system matures and evidence accumulates.
 - They may be loosened (higher targets) only if evidence shows that a tighter target is producing systematic harm — and only through the Section 4 decision rule process, not through unilateral adjustment.

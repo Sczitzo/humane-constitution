@@ -19,6 +19,8 @@ Where a PCRP false trigger is accompanied by **either** oracle manipulation evid
 - Escalates **immediately** to the enforcement track for formal investigation.
 - Cap reset is available via independent audit finding of deliberate manipulation.
 
+*Cap-reset audit procedure: The Federated Ombuds (ANNEX_AI) is the responsible authority for cap-reset audits. Upon a credible written allegation of deliberate manipulation — submitted by any affected party, oracle node operator, or Duty Sub-Ombuds — the Federated Ombuds must open a formal cap-reset audit within 7 days and publish findings within 30 days of opening. The evidentiary standard is clear and convincing evidence that the cap activations were deliberately engineered rather than the result of genuine operational failure. During the audit period, the affected party's cap counter is frozen at its current count — neither advancing nor resetting — until the audit concludes. A finding of deliberate manipulation resets the cap to zero and publishes the full audit record. A finding of no manipulation leaves the cap count unchanged and closes the audit.*
+
 A **trigger-exhaustion alert** fires when 2 of 3 cap slots are consumed within a single quarter, prompting pre-emptive review by the Federated Ombuds before the third activation.
 
 Escalation under AP1 requires **two independent evidence types** (oracle manipulation evidence AND timing cluster), not a single officer judgment, to prevent reverse weaponization (a genuine false trigger attributed to manipulation in order to avoid the audit cap).

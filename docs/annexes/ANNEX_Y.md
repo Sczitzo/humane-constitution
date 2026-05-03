@@ -144,7 +144,7 @@ Example — the broader basket may include "basic clothing" or "basic local tran
 - **Article III (Capacity):** the RCS publishes CSM × population estimates continuously. Any projected shortfall triggers §Y3 substitution planning immediately — not when the shortfall arrives.
 - **Article I (Rule-bound execution):** enforcement actions are architecturally prohibited from targeting CSM channels. Account partitioning in the constitutional monetary architecture ensures enforcement on Flow or other channels does not touch Essential Access/CSM.
 - **Article VII (Transparency):** CSM delivery rate, substitution events, and Critical Incidents are published in aggregate at the jurisdictional-cluster level. Individual-level CSM data is never published.
-- **Article III (Reserves):** resilience reserves are sized to cover CSM × population × [RESERVE_WINDOW_DAYS] (Tier 2 Founding Commitment).
+- **Article III (Reserves):** resilience reserves are sized to cover CSM × population × **90 days** (FC-YT2, Tier 2 Founding Commitment — provisional; must be confirmed in /founding/commitments.md before operational activation; pre-launch blocking gate).
 
 ---
 
