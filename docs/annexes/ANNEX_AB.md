@@ -62,6 +62,26 @@ Protected terms are constitutional objects. Capture often proceeds through seman
 
 *Registry administration: The definition registry is administered by the Federated Ombuds (ANNEX_AI) acting as an independent custodian. The administrator has no authority to change definitions unilaterally — its role is custodial: publishing definitions, recording amendment requests, and maintaining version history. The amendment pathway for any protected definition is Tier 2 (standard constitutional amendment process) unless specifically designated Tier 1. The registry is subject to an annual public review window during which any person may submit a written challenge to any definition. The review confers no amendment authority; its purpose is to surface interpretive disputes for formal deliberation. Disputes meeting a prima facie threshold of interpretive ambiguity are forwarded to the CRP for resolution.*
 
+*Founding seed list: To prevent a capture window during the period between founding and first registry operation, the following terms are locked as Tier 2 protected definitions at founding. These terms may not be operationally redefined, relabeled, or reinterpreted before the registry is operationally active and the first annual public review window has been completed.*
+
+*Tier 2 protected terms — founding seed list:*
+- **Survival** — the irreducible minimum of material conditions necessary for a person to continue living with dignity: adequate food, safe shelter, accessible healthcare, and freedom from coercion.
+- **Survival floor** — the constitutional minimum delivery obligation specified in ANNEX_Y: the set of goods and services to which every enrolled person is entitled by the protocol without condition.
+- **Personhood** — recognition as a unique living person within the protocol's identity system, conferring eligibility for the survival floor and, upon verification, for Voice and Service Record standing.
+- **Essential Access** — the non-convertible, non-accumulative, time-bounded instrument by which enrolled persons access survival-floor goods and services (Article I, SPECIFICATIONS §1).
+- **Flow** — the market-compatible economic instrument of the protocol; convertible, accumulable, and subject to standard economic dynamics within the protocol's design constraints (Article I).
+- **Voice** — the civic participation instrument conferring bounded influence over governance decisions, allocated by contribution score within Tier-structure limits (Article III).
+- **Service Record** — the reputation and accountability instrument recording an enrolled person's verified interactions with the protocol (Article IV).
+- **Non-convertibility** — the prohibition on any exchange, transfer, transaction, or mechanism that converts Essential Access balances or entitlements into Flow or any other transferable economic instrument.
+- **Coercion** — any threat, deprivation, or conditioned offer that exploits a person's dependence on the survival floor to extract labor, compliance, consent, or political support.
+- **Scarcity** — for Essential Access purposes: a condition in which total enrolled demand for a survival-floor good or service exceeds verifiable supply capacity; must be declared formally, publicly, and with a published expiry condition.
+- **Contribution** — activity that is recognized under the §AB3 framework and the founding contribution floor as qualifying for Voice and Service Record inputs; subject to the enumerated floor and the P-041 biennial audit.
+- **Identity** — the protocol's recognition of a person as a unique living individual through its layered identity stack (Article II, P-003, ANNEX_AK); distinct from documentation, citizenship, or any state-issued credential.
+- **Dignity** — the condition of being treated as a person whose survival, autonomy, and social standing are not contingent on any performance, productivity metric, or identity credential.
+- **Capacity** — in the context of scarcity declarations and resource governance: the verifiable maximum throughput of a delivery system for a specific survival-floor good or service in a specific jurisdiction per measurement period.
+
+*Adversarial review requirement: Before ratification, the founding coalition must commission an adversarial review of this seed list by at least one independent party not affiliated with the founding team, with a specific mandate to identify terms whose founding definitions create capture advantages for specific actors. The adversarial review findings must be published alongside the ratified definitions. Any definition flagged in the adversarial review must be revised or accompanied by a published rebuttal before the seed list is locked.*
+
 ### AB6. Current Threat/Patch Linkage
 The first hardening cycle is now represented in the running documents as follows:
 - T-001 / P-001 — Shadow Convertibility Containment
