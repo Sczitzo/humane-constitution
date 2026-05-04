@@ -22,6 +22,18 @@ The same dollar buys food, rent, medicine, business tools, lawyers, lobbyists, a
 
 *This project tries to break that link.*
 
+## The Three Collapse States
+
+The design is organized around preventing three failures:
+
+| Collapse | Plain meaning |
+|---|---|
+| **Survival-Trade Bind** | People must trade dignity, obedience, labor, health, or rights just to survive. |
+| **Power-Wealth Convergence** | Resource success becomes authority over rules, enforcement, or public design. |
+| **Static-Advantage Loop** | Early advantage, inheritance, or gatekeeping becomes permanent dominance. |
+
+The point is not to punish skill, work, enterprise, or success. The point is to stop any stored advantage from becoming a universal key to survival, rule-power, or permanent control over later participants.
+
 ---
 
 ## The Basic Design
@@ -45,6 +57,8 @@ The names matter less than the walls between them:
 - **Voice** cannot buy goods, rights, or protection.
 - **Service Record** cannot become inherited rank.
 - **Shared Storehouse** cannot become permanent.
+
+For the source-backed architecture map behind this framing, see the [Architecture Source Map](../governance/Architecture_Source_Map.md).
 
 ---
 
@@ -95,6 +109,7 @@ This is a **serious design and public draft.** It is not a live government and n
 ## Read Next
 
 - [Readiness Guide](./03_readiness.md) — what is built, what is only designed, and what still needs proof
+- [Architecture Source Map](../governance/Architecture_Source_Map.md) — the collapse-state lens and source boundaries
 - [FAQ](./02_faq.md) — short answers to common questions
 - [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what the project claims and what evidence exists
 - [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what should be tested before any scale-up

@@ -30,6 +30,22 @@ It also believes:
 
 The project tries to make those two beliefs practical.
 
+## Three Collapse States
+
+The project is not mainly a redistribution model. It is a channel-separation model designed to prevent three collapse states.
+
+| Collapse state | What fails | What the design tries to do |
+|---|---|---|
+| **Survival-Trade Bind** | People have to trade dignity, obedience, rights, labor, health, or life-sustaining access just to survive. | Keep Essential Access and the Constitutional Survival Minimum outside ordinary market bargaining. |
+| **Power-Wealth Convergence** | Resource success becomes authority over rules, enforcement, measurement, or public design. | Keep Flow, Voice, Service Record, enforcement, and public measurement from becoming mutually convertible. |
+| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use demurrage, decay, rotation, anti-rent controls, exit rights, and bottleneck audits to keep advantage contestable. |
+
+The strongest version of the rule is:
+
+> No stored advantage may purchase access to survival, rule-authority, or permanent dominance.
+
+That claim is a design hypothesis, not proof. The [Architecture Source Map](../governance/Architecture_Source_Map.md) records the source anchors and the limits of what those sources can honestly support.
+
 ## The Basic Design
 
 The system separates five tools.

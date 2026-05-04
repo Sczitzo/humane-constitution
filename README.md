@@ -145,10 +145,11 @@ Use this reading order:
 
 1. [One-Page Overview](./docs/public/01_overview.md) for the shortest public introduction
 2. [Public Readiness Guide](./docs/public/03_readiness.md) for the claims, readiness status, and strongest objections
-3. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
-4. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
-5. [Humane Constitution](./docs/constitution/Humane_Constitution.md) for the governing text
-6. [Threat Register](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
+3. [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) for the three-collapse-state framing and source boundaries
+4. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
+5. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
+6. [Humane Constitution](./docs/constitution/Humane_Constitution.md) for the governing text
+7. [Threat Register](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
 
 ## The core separation
 
@@ -169,6 +170,8 @@ It does this with five tools:
 | **Shared Storehouse** | Emergency rationing during verified shortage | Become permanent or a hidden market |
 
 The walls between these tools are the system.
+
+Those walls are meant to prevent three collapse states: survival becoming dependent on trade, wealth becoming public power, and temporary advantage becoming permanent dominance. See the [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) for the source-backed version of that framing.
 
 Essential Access protects the survival floor. Voice shapes bounded civic priorities. Service Record governs readiness for rotating public roles. Shared Storehouse appears only during verified shortage.
 
@@ -209,6 +212,7 @@ The constitution is built in five layers. Each layer depends on the one above it
 |---|---|
 | [One-Page Overview](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
 | [Public Readiness Guide](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
+| [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) | First-principles collapse-state framing and source boundaries. |
 | [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
 | [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
 | [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
