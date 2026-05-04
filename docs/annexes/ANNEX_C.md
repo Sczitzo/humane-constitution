@@ -25,7 +25,7 @@ Each Threat ID must have a named Owner accountable for controls and test evidenc
 2. **Triage:** assign initial Impact/Likelihood/Detectability (I/L/D) and decide whether to merge with an existing entry.
 3. **Assign ownership:** name Threat Owner + Control Owner(s) + Test/Monitoring Owner.
 4. **Specify controls:** document controls that reduce incentive, increase detection, increase cost, and limit blast radius.
-5. **Specify tests:** define automated tests and monitoring signals that prove controls are active and effective.
+5. **Specify abuse cases and tests:** cite relevant patterns from the [Abuse Case Library](../governance/Abuse_Case_Library.md), then define automated tests and monitoring signals that prove controls are active and effective.
 6. **Implement + verify:** deploy controls behind staged rollout; require test pass + evidence package.
 7. **Operate:** monitor continuously; patch quickly; update residual risk; close only when root causes are addressed or risk is explicitly accepted by oversight.
 
@@ -42,6 +42,7 @@ Quarterly cycles reduce governance noise while keeping the system responsive. Mo
 
 ### C-5. Evidence requirements (audit-ready)
 - **Control Specification:** what the control does, who it affects, and why it reduces risk.
+- **Abuse Case Mapping:** actor incentive, attack path, affected collapse state, false reassurance, and failure criterion.
 - **Test Evidence:** automated tests + manual checks (where required) with pass/fail status and dates.
 - **Monitoring Evidence:** dashboards, alert thresholds, and mean-time-to-detect (MTTD) targets.
 - **Change Log:** what changed, when, who approved, and how rollback works.
@@ -56,7 +57,7 @@ All material changes to Essential Access basket, scarcity triggers, Flow demurra
 5. **Post-mortem required** within 7 days for any emergency activation; patches become permanent only after oversight sign-off.
 
 ### C-7. Readiness gates (pilot and scale)
-- **Pilot gate:** top 10 risks have controls implemented and passing tests; emergency processes rehearsed; oracle quorum operational; identity recovery proven.
+- **Pilot gate:** top 10 risks have controls implemented and passing tests; emergency processes rehearsed; oracle quorum operational; identity recovery tested against the published evidence package.
 - **Scale gate:** demonstrated MTTD/MTTR targets; independent audit passed; coercion/fraud false-positive rates within tolerance; public transparency reports live.
 
 ---

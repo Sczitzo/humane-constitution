@@ -114,6 +114,28 @@ This construction means that a silent modification should not last. It is detect
 
 ---
 
+## Implementation Attestation Records
+
+Tier 1 state hashes and implementation attestations are related but distinct.
+
+The drift chain head records the protected constitutional state. Implementation attestation records show whether deployed components, generated corpus artifacts, runtime configurations, operator pinned references, and public binaries match the state they claim to enforce.
+
+Implementation attestations may be linked from drift-chain rows, but they do not alter the Tier 1 state hash unless a Tier 1 file itself changes. This separation matters: code/config drift must be visible without letting implementation details rewrite constitutional commitments.
+
+Minimum linked records:
+
+- deployed binary hash;
+- generated corpus hash;
+- configuration manifest hash;
+- operator pinned reference;
+- startup-check result;
+- reproducible-build or reviewer attestation where available;
+- exception record if a bound component runs in degraded mode.
+
+The founding genesis record must include a hash or content-addressed pointer for the Founding Legitimacy Dossier once the founding dossier exists. Later founding-stage handoff records must link the updated dossier snapshot.
+
+---
+
 ## Amendment of This Drift Chain Specification
 
 Changes to this file (the chain structure, serialization rules, publication requirements, detection procedures) are themselves Tier 1 amendments per `amendment_protocol.md`. The drift chain records its own specification history as part of the chain it maintains. In other words, the rulebook for the chain is also protected by the chain.

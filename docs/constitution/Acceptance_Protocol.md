@@ -90,10 +90,14 @@ The following items must be complete before any patch can move from PROPOSED to 
 | **AED founding commitment numbers filled** | P-016 | Reserved commitments FC-140 through FC-150 in Annex AK bound using pilot data and published before scale-up gate | Annex AK |
 | **Contract-commitment parameter values set** | P-023 | Reserved commitments FC-160 through FC-184 in Annex AR bound; Flow demurrage calibration confirmed; inspector pool commissioned | Annex AR |
 | **P-014 founding window open** | P-013 | Full disclosure package published; oppose-coalition nominating body confirmed; 60-day challenge window running | Annexes AH + AH2 |
+| **Founding Legitimacy Dossier complete** | Founding activation | Scope declaration, conflict register, objection and dissent record, consent event evidence, exit rehearsal, dignity-floor non-coercion review, founder sunset, and independent review published | Founding Order; Annex AH |
+| **Evidence ladder updated** | All status changes | Any movement to ACTIVE, RESOLVED, or evidence-backed language must include the claim's evidence level, missing proof, failure criteria, and residual-risk update | Claims and Evidence Register |
+| **Implementation drift audit complete** | Tier 1-affecting deployment | Reproducible hash test, implementation attestation records, bound-component startup refusal test, key-custody review, and supply-chain bypass review complete | Architecture files; Article VII |
+| **Capture dashboard baseline published** | Scale-up and governance activation | Initial civic, Ombuds, definition, procurement, identity, and implementation-drift concentration metrics published with privacy rules | Article VII; Annex AI |
 
 **Note on ordering:** The Ombuds gates (rows 1–3) must be cleared before P-015 can be activated. The methodology-class gates (rows 4–6) must be cleared before P-017 can be activated. The AED gate (row 7) must be cleared before P-016 can be activated. The contract-commitment gate (row 8) must be cleared before P-023 can be activated. None of these gates are on the critical path for P-006 or P-009 (Priority 1 and 2 above) — the initial launch sequence can proceed while the later gates are being prepared.
 
-The P-014 gate (row 9) is on the critical path for everything — P-013 must be ACTIVE before the standard FAP governs any patch activation.
+The P-014 gate is on the critical path for everything — P-013 must be ACTIVE before the standard FAP governs any patch activation. The founding dossier, evidence ladder, implementation drift audit, and capture dashboard gates do not replace P-014; they prevent technical compliance from being mistaken for legitimate, evidence-backed activation.
 
 ---
 

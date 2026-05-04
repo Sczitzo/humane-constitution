@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-044**
+**Running change ledger aligned to the Humane Constitution · Current through P-046**
 
 ---
 
@@ -63,6 +63,8 @@
 | P-042 | — | **ACTIVE** | High | Low-barrier community alert pathway with 30-day acknowledgment and 90-day review trigger (Article VII). |
 | P-043 | Multiple | ACTIVE | High | Logical-analysis corpus corrections — documentary, amendment architecture, definitions, placeholder fill |
 | P-044 | Multiple | ACTIVE | High | Threat-strengthening batch — T-001/T-002/T-004/T-005/T-007/T-018/T-019 mitigation gaps closed |
+| P-045 | T-001 / T-002 / T-004 / T-007 / IC-004 | **ACTIVE** | Critical | Threat resolution batch — threshold derivation, asymmetric exclusion review, contribution floor, protected-term seed list, dignity-only continuity mode |
+| P-046 | Multiple | **ACTIVE** | Critical | Evidence and capture hardening — seven proof artifacts, drift audit, parameter calibration, abuse cases, evidence ladder, founding dossier, and capture dashboard |
 
 ---
 
@@ -366,10 +368,10 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 - **Nature:** One-time founding instrument, not a standing patch. Closes permanently upon P-013 ACTIVE.
 - **Change type:** founding governance + constitutional one-time exception.
-- **Introduced design:** 5-stage process: (1) Pre-activation disclosure — 14-day public challenge window (extended to 60 days minimum by P-020; see ANNEX_AH.md §AH2); circular dependency analysis published; founding exception statement from Threat Register Owner; panel composition disclosed before sign-off. (2) Heightened 5-member panel — Threat Register Owner, 1 CRP reserve member (lot-drawn, not involved in P-013 design), 1 external systems reviewer from outside design-team domain, 1 Ombuds officer, 1 public-interest advocate (lot-drawn). All attest no 5-year affiliation with design team (externally verified). Adversarial member required; dissent published. 4/5 votes required. (3) Substitute evidence — desk review of 3+ real-world analogue cases; adversarial red-team analysis; scope-limitation certification; sunset compatibility check. (4) Activation and permanent sealing — P-013 ACTIVE; P-014 closes permanently; full activation record published; non-precedent statement embedded with Tier 2 protection; P-006 and P-009 immediately enter the Formal Acceptance Protocol pilot stage. (5) Post-activation audit within 90 days — using P-013's own now-operative standards; adversarial member required; if compromised → P-013 suspended and re-submitted through the now-operative Formal Acceptance Protocol.
+- **Introduced design:** 5-stage process: (1) Pre-activation disclosure — 60-day minimum public challenge window (extended by P-020; see ANNEX_AH.md §AH2); circular dependency analysis published; founding exception statement from Threat Register Owner; panel composition disclosed before sign-off. (2) Heightened 5-member panel — Threat Register Owner, 1 CRP reserve member (lot-drawn, not involved in P-013 design), 1 external systems reviewer from outside design-team domain, 1 Ombuds officer, 1 public-interest advocate (lot-drawn). All attest no 5-year affiliation with design team (externally verified). Adversarial member required; dissent published. 4/5 votes required. (3) Substitute evidence — desk review of 3+ real-world analogue cases; adversarial red-team analysis; scope-limitation certification; sunset compatibility check. (4) Activation and permanent sealing — P-013 ACTIVE; P-014 closes permanently; full activation record published; non-precedent statement embedded with Tier 2 protection; P-006 and P-009 immediately enter the Formal Acceptance Protocol pilot stage. (5) Post-activation audit within 90 days — using P-013's own now-operative standards; adversarial member required; if compromised → P-013 suspended and re-submitted through the now-operative Formal Acceptance Protocol.
 - **Non-precedent statement (Tier 2 protected):** 'P-014 was invoked once, for P-013 only, because no other process was available. It may not be cited as authority for any future activation, exception, or urgency bypass. Any invocation of P-014 logic for any purpose requires H-2 amendment process.'
 - **Clauses to integrate:** AH1–AH7. Annex N/U2 as constitutional anchor.
-- **New risks introduced:** Founding panel subject to capture during 14-day pre-activation window (mitigated by lot-drawing, external conflict verification, adversarial member). Post-activation audit finding of compromise suspends P-013 — creates a window where the Formal Acceptance Protocol is operative but its governing patch is suspended (mitigated by the prior Formal Acceptance Protocol fallback during suspension; suspension published immediately). Pre-activation disclosure creates 14-day hostile narrative window (mitigated by framing as transparency demonstration).
+- **New risks introduced:** Founding panel subject to capture during pre-activation window (mitigated by 60-day minimum disclosure, lot-drawing, external conflict verification, adversarial member, and the Founding Legitimacy Dossier). Post-activation audit finding of compromise suspends P-013 — creates a window where the Formal Acceptance Protocol is operative but its governing patch is suspended (mitigated by the prior Formal Acceptance Protocol fallback during suspension; suspension published immediately). Pre-activation disclosure creates a hostile narrative window (mitigated by framing as transparency demonstration).
 - **Residual risk:** Desk review cases may be selected to confirm rather than challenge P-013 — adversarial member's case selection is the primary control; cases published for independent scrutiny. Second-order self-reference if post-activation audit finds compromise — accepted as less circular than the original bootstrap problem.
 - **Auto-close clause:** P-014 closes permanently upon P-013 ACTIVE status. No re-opening, no emergency extension, no analogical application. This clause is Tier 2 protected.
 - **Compound linkages:** T-017 × T-016 (bootstrap paradox is the exploit surface T-016 bad actors use for indefinite delay of P-013). T-017 × T-011 (bootstrap paradox is a narrative attack surface — P-014 pre-activation disclosure converts it into a transparency demonstration).
@@ -1035,3 +1037,35 @@ Five critical threats remained at PARTIAL status with specific unresolved gaps: 
 - The 180-day dignity-only continuity period may be too long for urgent governance needs — mitigated by the automatic petition window at 180 days and the Federated Ombuds continuing to operate throughout.
 
 **Residual risk:** T-001, T-002, T-004, and T-007 remain PARTIAL pending pilot data confirmation. IC-004 is ADDRESSED — the governance gap is now resolved with a specified fallback mechanism.
+
+---
+
+### P-046 — Evidence and Capture Hardening Suite
+
+**Threats addressed:** Multiple control-plane and evidence-status risks, including T-005, T-008, T-016, T-017, T-022, T-023, T-025, T-026, T-027, and implementation-drift risk.
+**Status:** ACTIVE | **Priority:** Critical
+**Date:** 2026-05-04
+
+**Constitutional text:** [Humane_Constitution.md §0 and Article VII](../constitution/Humane_Constitution.md); [INVARIANTS.md § Invariant Violation Detection](../constitution/INVARIANTS.md); [Acceptance_Protocol.md § Pre-Launch Blocking Gates](../constitution/Acceptance_Protocol.md); [ANNEX_AH.md § AH2](../annexes/ANNEX_AH.md); [ANNEX_C.md § C-3/C-5](../annexes/ANNEX_C.md); [ANNEX_AO.md Part 1/2](../annexes/ANNEX_AO.md)
+
+**Problem diagnosed:**
+The project had strong mechanisms and evidence packages, but seven proof surfaces remained too implicit: implementation drift, collapse-state traceability, parameter calibration, capture metrics, reusable abuse patterns, claim-evidence levels, and founding legitimacy. Without explicit artifacts, public language could outrun proof and technical compliance could be mistaken for legitimate activation.
+
+**Introduced design:**
+
+- **Implementation Drift Audit Package** — adds tests for reproducible hashes, append-only log behavior, publication-channel divergence, startup refusal, key custody, timelock response, and supply-chain bypass.
+- **Collapse-State Crosswalk** — maps every threat to Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane failure.
+- **Parameter Calibration Register** — tracks high-risk FC values, current status, rationale, capture route, evidence needed, revision trigger, and governing documents.
+- **Capture Dashboard Specification** — defines privacy-preserving public indicators for civic role concentration, Ombuds independence, definition capture, procurement/legal-wrapper capture, identity gatekeeping, and implementation drift.
+- **Abuse Case Library** — introduces reusable bad-actor patterns so patch intake and closure must test against plausible corruption routes and false reassurances.
+- **Evidence Ladder** — defines claim-strength levels, upgrade rules, downgrade rules, and forbidden status jumps.
+- **Founding Legitimacy Dossier** — defines the evidence burden for founding authority: scope, conflicts, notice, deliberation, consent, objections, exit rehearsal, dignity-floor non-coercion, founder sunset, and independent review.
+- **Architecture files** — implementation binding and drift chain now distinguish Tier 1 state hashing from implementation attestation records.
+- **Constitution and invariants** — added narrow cross-references making founding legitimacy and implementation drift public evidence duties.
+
+**New risks introduced:**
+- The new registries can become bureaucratic compliance artifacts if not tied to real tests. Mitigated by Evidence Ladder downgrade rules and Abuse Case Library false-reassurance fields.
+- Capture dashboards can become ranking tools. Mitigated by Article VII privacy language and dashboard rule that ordinary persons may not be ranked.
+- Implementation attestations can create false technical confidence. Mitigated by explicit claim boundaries in the Implementation Drift Audit Package.
+
+**Residual risk:** These upgrades make proof obligations clearer; they do not prove the system works. The highest residual risks remain founding consent theater, keyholder social capture, dashboard gaming, parameter arbitrariness, and technically valid but hostile amendment.

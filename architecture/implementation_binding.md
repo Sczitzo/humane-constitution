@@ -107,4 +107,30 @@ This document is Tier 1 protected per `parameter_registry.md`. Changes require t
 
 ---
 
+## Implementation Drift And Tamper-Evidence Layer
+
+The drift chain protects Tier 1 constitutional state. A second operational record is required for implementation state: deployed binaries, configuration manifests, generated corpus artifacts, operator pinned references, startup-check logs, and public deployment attestations.
+
+Implementation attestation records do not redefine Tier 1 constitutional state. They show whether the running system matches the constitutional state it claims to implement.
+
+Minimum implementation attestation fields:
+
+| Field | Meaning |
+|---|---|
+| `component_id` | Bound component name and version. |
+| `source_commit` | Repository commit used to build the component. |
+| `binary_hash` | Hash of the deployed binary or bundled artifact. |
+| `config_manifest_hash` | Hash of runtime configuration relevant to Tier 1 behavior. |
+| `corpus_hash` | Hash of generated constitutional corpus where the component reads document state. |
+| `pinned_state_hash` | Drift-chain state hash the component claims to enforce. |
+| `startup_check_result` | Pass/fail result and timestamp for the required startup check. |
+| `operator_signature` | Operator attestation that the record is complete. |
+| `review_signature` | Independent reviewer or Ombuds attestation where required. |
+
+The [Implementation Drift Audit Package](../docs/governance/Implementation_Drift_Audit_Package.md) governs testing for hash reproducibility, publication-channel divergence, startup refusal, key custody, timelock response, and supply-chain bypass.
+
+Failure to publish implementation attestations is an Article VII integrity exception. Repeated failure is treated as a control-plane capture signal, not a clerical defect.
+
+---
+
 *This document is part of the Humane Constitution's architectural-enforcement layer. Operative as of Proposal 1 close-out (2026-04-18). It is the bridge between the protected commitments in `parameter_registry.md` / `drift_chain.md` and the running operational components that must respect them.*

@@ -18,6 +18,8 @@ The project is organized around preventing three structural collapse states.
 
 These collapse states are a diagnostic lens, not a status label. A mechanism can be written, proposed, active, or evidence-backed only under the status language in the [Claims and Evidence Register](./Claims_Evidence_Register.md).
 
+For the threat-by-threat mapping, use the [Collapse-State Crosswalk](./Collapse_State_Crosswalk.md). For the test ladder that decides when a collapse-state claim may be strengthened, use the [Evidence Ladder](./Evidence_Ladder.md).
+
 ---
 
 ## Instrument Map
@@ -53,6 +55,7 @@ This broader version matters because corruption usually travels through indirect
 | Wealth can distort rule outcomes. | [Gilens and Page, Testing Theories of American Politics](https://doi.org/10.1017/S1537592714001595) | Economic elites and organized business interests can have substantial independent policy influence in the U.S. cases they modeled. | It is U.S.-specific, debated, and does not prove this project's anti-conversion mechanisms work. |
 | Accumulated advantage can compound over time. | [Thomas Piketty, Capital in the Twenty-First Century](https://www.hup.harvard.edu/books/9780674430006) | Long-run accumulation and inherited advantage can produce concentration dynamics that require structural attention. | It does not prove demurrage, decay, or anti-rent rules will be fair, effective, or politically legitimate. |
 | Non-convertibility is the core safety hypothesis. | Synthesis from the above sources plus the project's threat model. | The sources support the diagnosis that survival-market dependence, wealth-rule influence, commons capture, and compounding advantage are real design pressures. | No source proves perfect non-convertibility. Shadow markets, proxies, legal wrappers, and informal patronage remain permanent attack surfaces. |
+| Tier 1 drift should be detectable, not trusted by assertion. | [NIST FIPS 180-4](https://www.nist.gov/publications/secure-hash-standard), [RFC 6962](https://www.rfc-editor.org/rfc/rfc6962), [NISTIR 8214](https://www.nist.gov/publications/threshold-schemes-cryptographic-primitives), [NIST SP 800-57 Part 1 Rev. 5](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final), and [OpenZeppelin TimelockController](https://docs.openzeppelin.com/contracts/4.x/api/governance) | Hashes, append-only logs, threshold signing, key management, and timelocks are real integrity patterns. | They do not prove this project's operators, keyholders, software supply chain, founding authority, or public response window will work. |
 
 ---
 
@@ -70,6 +73,7 @@ It should not claim that:
 - measurement oracles can perfectly reflect physical reality;
 - emergency powers cannot normalize;
 - founding legitimacy has already been earned.
+- Tier 1 implementation drift is impossible merely because the documents contain hashes, signatures, and timelocks.
 
 The accurate current claim is narrower: the document set defines mechanisms, threat models, patch histories, evidence needs, and pilot gates that make those collapse states visible and testable.
 

@@ -131,6 +131,7 @@ The rules above are not protected only by words. They are also protected by file
 - [Amendment Protocol](../../architecture/amendment_protocol.md) — 7-of-9 holder signatures (FC-110) and 180-day timelock (FC-111) required for any Tier 1 change.
 - [Drift Chain](../../architecture/drift_chain.md) — append-only published version history; silent modification is detectable at first operational-node startup.
 - [Implementation Binding](../../architecture/implementation_binding.md) — every bound component verifies the drift-chain head on startup and refuses to operate on unverified state (with the CSM-dispensation exception per Annex Y unconditionality).
+- [Implementation Drift Audit Package](../governance/Implementation_Drift_Audit_Package.md) — tests whether deployed binaries, generated corpus artifacts, configuration manifests, operator pinned references, and startup checks match the constitutional state they claim to enforce.
 
 Changes to the highest-level rules require the full change process. The lock itself is also protected. This cannot stop a lawful large-majority change, but it makes quiet changes visible and creates a 180-day response window.
 
@@ -305,6 +306,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Re-entry rule:** a place may return without penalty; a 365-day waiting floor between exit events prevents cycling in and out.
 - **Individual consent withdrawal:** a person may withdraw individual consent at any time; Tier 1 CSM floor continues unconditionally.
 - **Relationship to the articles:** Article I rights remain protected at every scale. Articles III, IV, V, and VII stay as local as possible unless federation-level action is justified.
+- **Founding legitimacy record:** founding authority is an evidence burden, not an assumption. Scope, conflicts, objection responses, consent records, exit rehearsal, dignity-floor non-coercion review, and founder sunset must be published through the Founding Legitimacy Dossier before a founding coalition claims legitimate activation.
 
 > The Acceptance Protocol governs the current founding stage. Its authority is time-limited: once the founding stage closes and elected governance bodies are operational, ordinary constitutional amendment (Tier 2 and Tier 3) replaces the Acceptance Protocol as the primary change mechanism. The Protocol cannot entrench itself beyond its founding mandate.
 
@@ -438,6 +440,7 @@ This article succeeds only if people can move from receiving care to also giving
 #### Article VII: Public Records & Warning Systems
 **Public records**
 - **Public dashboards** for system health: capacity, issuance, reserves, service performance, and budget flows.
+- **Integrity dashboards:** publish capture, parameter-calibration, implementation-drift, founding-legitimacy, and evidence-ladder status using privacy-preserving aggregation. A dashboard may never rank ordinary persons or become a hidden governance score.
 - **Privacy preserved:** aggregation thresholds, small-cell suppression, rounding/noise where needed, and time delays for sensitive signals.
 - **Clear methods:** publish definitions, sources, refresh rates, and a public change log for metrics.
 - **Abuse resistance:** delay or limit signals that could be gamed. Disputes trigger conservative issuance and review.

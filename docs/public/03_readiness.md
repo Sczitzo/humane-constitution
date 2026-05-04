@@ -14,19 +14,26 @@ Read in this order:
 2. [FAQ](./02_faq.md) — common questions in plain language.
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
 4. [Architecture Source Map](../governance/Architecture_Source_Map.md) — the three-collapse-state architecture and source boundaries.
-5. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
-6. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
-7. [Identity and Recovery Evidence Test Package](../governance/Identity_Recovery_Evidence_Test_Package.md) — the dedicated test package for fraud, exclusion, recovery, coercion, and privacy.
-8. [Capacity Measurement Evidence Test Package](../governance/Capacity_Measurement_Evidence_Test_Package.md) — the dedicated test package for real capacity, oracle disagreement, and scarcity measurement.
-9. [Service Record Misuse Evidence Test Package](../governance/Service_Record_Misuse_Evidence_Test_Package.md) — the dedicated test package for contribution records, social-credit risk, non-civic misuse, and civic-pool concentration.
-10. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
-11. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
-12. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
-13. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-14. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-15. [White Paper](./04_white_paper.md) — the fuller public explanation.
-16. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-17. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+5. [Collapse-State Crosswalk](../governance/Collapse_State_Crosswalk.md) — maps every threat to the collapse state it pressures.
+6. [Evidence Ladder](../governance/Evidence_Ladder.md) — what counts as stronger proof and when claims must be downgraded.
+7. [Abuse Case Library](../governance/Abuse_Case_Library.md) — reusable bad-actor patterns for testing patches and claims.
+8. [Founding Legitimacy Dossier](../governance/Founding_Legitimacy_Dossier.md) — the evidence burden for any founding coalition.
+9. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
+10. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
+11. [Identity and Recovery Evidence Test Package](../governance/Identity_Recovery_Evidence_Test_Package.md) — the dedicated test package for fraud, exclusion, recovery, coercion, and privacy.
+12. [Capacity Measurement Evidence Test Package](../governance/Capacity_Measurement_Evidence_Test_Package.md) — the dedicated test package for real capacity, oracle disagreement, and scarcity measurement.
+13. [Service Record Misuse Evidence Test Package](../governance/Service_Record_Misuse_Evidence_Test_Package.md) — the dedicated test package for contribution records, social-credit risk, non-civic misuse, and civic-pool concentration.
+14. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
+15. [Implementation Drift Audit Package](../governance/Implementation_Drift_Audit_Package.md) — tests the hard-lock, drift-chain, keyholder, and deployment-integrity layer.
+16. [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md) — tracks high-risk FC values, rationale, capture route, and revision triggers.
+17. [Capture Dashboard Specification](../governance/Capture_Dashboard_Specification.md) — defines the public indicators for elite formation and control-plane capture.
+18. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
+19. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
+20. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+21. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+22. [White Paper](./04_white_paper.md) — the fuller public explanation.
+23. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+24. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
 Do not start with the annexes unless you already want the technical layer.
 

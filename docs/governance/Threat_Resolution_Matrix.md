@@ -4,19 +4,21 @@ This matrix is the working plan for moving every registered threat from "named" 
 
 The word **solve** is used here in a strict way: a threat is solved only when the system has a plausible mechanism, a corruption-aware abuse model, a test path, and an honest residual-risk statement. No institutional design can eliminate greed, coercion, collusion, political opportunism, or legal arbitrage. The goal is to make those pressures visible, costly, bounded, and correctable before they can quietly become normal.
 
-See also: [Architecture Source Map](./Architecture_Source_Map.md), [Threat Register](./Threat_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md).
+See also: [Architecture Source Map](./Architecture_Source_Map.md), [Collapse-State Crosswalk](./Collapse_State_Crosswalk.md), [Threat Register](./Threat_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Abuse Case Library](./Abuse_Case_Library.md), [Evidence Ladder](./Evidence_Ladder.md), [Implementation Drift Audit Package](./Implementation_Drift_Audit_Package.md), [Capture Dashboard Specification](./Capture_Dashboard_Specification.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md).
 
 ---
 
 ## Resolution Standard
 
-A threat may move toward **RESOLVED** only when all five tests are satisfied:
+A threat may move toward **RESOLVED** only when all seven tests are satisfied:
 
 1. **Mechanism:** the control exists in a patch, annex, Founding Order rule, pilot protocol, or operational standard.
 2. **Corruption model:** the record names how greedy, frightened, ambitious, or corrupt actors would route around the control.
 3. **Evidence path:** the project names a simulation, pilot, legal review, audit, or red-team exercise that could falsify the control.
 4. **Failure criteria:** the project names what would count as failure before deployment pressure can relabel failure as success.
 5. **Residual risk:** the project states what remains unsafe, uncertain, or permanently contested after the control is adopted.
+6. **Abuse cases:** critical and unresolved threats cite relevant patterns from the Abuse Case Library or explain why no existing pattern fits.
+7. **Evidence level:** claim-strength changes follow the Evidence Ladder and update the Claims and Evidence Register.
 
 Until those tests are met, the honest status is **designed**, **active-unproven**, **partial**, or **ongoing**, not resolved.
 

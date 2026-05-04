@@ -151,6 +151,8 @@ Any patch proposal submitted to FAP is evaluated against this document before te
 
 ...is rejected at intake without proceeding to technical review. The FAP reviewer documents the violation by invariant ID.
 
+Implementation drift counts as an invariant-warning event when deployed code, generated corpus, runtime configuration, operator pinned reference, or binary hash operationally narrows a Tier 1 invariant without a valid Tier 1 amendment. The warning path is governed by the architecture implementation binding and the Implementation Drift Audit Package. A drift warning does not by itself prove bad faith, but it blocks affected Tier 1-dependent operation until the last valid state, exception rule, or amendment record is established.
+
 ---
 
 ## Open Question

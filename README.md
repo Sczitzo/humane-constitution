@@ -146,10 +146,12 @@ Use this reading order:
 1. [One-Page Overview](./docs/public/01_overview.md) for the shortest public introduction
 2. [Public Readiness Guide](./docs/public/03_readiness.md) for the claims, readiness status, and strongest objections
 3. [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) for the three-collapse-state framing and source boundaries
-4. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
-5. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
-6. [Humane Constitution](./docs/constitution/Humane_Constitution.md) for the governing text
-7. [Threat Register](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
+4. [Evidence Ladder](./docs/governance/Evidence_Ladder.md) for the rules governing what counts as stronger proof
+5. [Abuse Case Library](./docs/governance/Abuse_Case_Library.md) if you want to test the design against realistic bad actors
+6. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
+7. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
+8. [Humane Constitution](./docs/constitution/Humane_Constitution.md) for the governing text
+9. [Threat Register](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
 
 ## The core separation
 
@@ -213,7 +215,14 @@ The constitution is built in five layers. Each layer depends on the one above it
 | [One-Page Overview](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
 | [Public Readiness Guide](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
 | [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) | First-principles collapse-state framing and source boundaries. |
+| [Collapse-State Crosswalk](./docs/governance/Collapse_State_Crosswalk.md) | Threat-by-threat map to Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane failure. |
 | [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
+| [Evidence Ladder](./docs/governance/Evidence_Ladder.md) | Upgrade and downgrade rules for claim strength. |
+| [Abuse Case Library](./docs/governance/Abuse_Case_Library.md) | Reusable adversarial patterns used to pressure-test patches and public claims. |
+| [Founding Legitimacy Dossier](./docs/governance/Founding_Legitimacy_Dossier.md) | Evidence burden for any founding coalition before activation claims. |
+| [Implementation Drift Audit Package](./docs/governance/Implementation_Drift_Audit_Package.md) | Tests for hash reproducibility, startup refusal, key custody, timelocks, and deployment drift. |
+| [Parameter Calibration Register](./docs/governance/Parameter_Calibration_Register.md) | High-risk parameter values, evidence needs, capture routes, and revision triggers. |
+| [Capture Dashboard Specification](./docs/governance/Capture_Dashboard_Specification.md) | Public metrics for elite formation, institutional self-protection, and control-plane capture. |
 | [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
 | [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
 | [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
@@ -224,8 +233,8 @@ The constitution is built in five layers. Each layer depends on the one above it
 | Document | Purpose |
 |---|---|
 | [Humane Constitution](./docs/constitution/Humane_Constitution.md) | Primary rule text, with links into the standalone annex corpus. |
-| [Threat Register](./docs/governance/Threat_Register.md) | Known attack paths and proposed defenses. 27 threat IDs: 4 active controls, 16 proposed controls, 5 addressed by active non-register structures, and 2 retired IDs. |
-| [Patch Log](./docs/governance/Patch_Log.md) | Change history. 40 patches: 25 active, 15 proposed, including the founding patch P-014. |
+| [Threat Register](./docs/governance/Threat_Register.md) | Known attack paths, design-state counts, mitigation posture, and residual-risk notes. |
+| [Patch Log](./docs/governance/Patch_Log.md) | Change history and current patch inventory, including ACTIVE and PROPOSED status. |
 | [Hardening Queue](./docs/governance/Hardening_Queue.md) | Red-team hardening queue — session history, closed items, open items, and standing simulation requirements. |
 | [Acceptance Protocol](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 
@@ -303,9 +312,9 @@ The system has been adversarially stress-tested:
 | T-018–T-019 PCRP Attack Surface | False-trigger exhaustion and demand-context suppression attacks registered and patched (P-015) |
 | T-020–T-021 Oracle Independence | Epistemological and algorithmic oracle capture registered; methodology-class diversity and AI supply-chain transparency required (P-017) |
 | T-022 Electoral Cycle Capture | Hostile successor government routes identified; entrenchment ladder, Essential Access floor persistence, transition protocol designed (P-018) |
-| T-023–T-025 Pilot validity, Shared Storehouse oracle failure, demurrage capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), demurrage sector-capture resolved: contract-commitment architecture, zero exemptions (P-023) |
+| T-023–T-025 Pilot validity, Shared Storehouse oracle failure, demurrage capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), demurrage sector-capture control designed through contract-commitment architecture and zero exemptions (P-023) |
 
-**Current status: 25 patches active and 15 proposed, including the founding patch P-014.** The Threat Register currently has no fully open threat with no mitigation path, but many controls still need pilot evidence, activation, and outside review.
+**Current status is tracked in the Patch Log inventory.** The Threat Register currently has no fully open threat with no mitigation path, but many controls still need pilot evidence, activation, and outside review.
 
 ## What this system is not
 

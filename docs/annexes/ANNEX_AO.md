@@ -36,6 +36,7 @@ The Public Register contains:
 - Open problems — unresolved questions that governance and future patches must address.
 - Register management rules and session history.
 - The complete summary table.
+- Public abuse-case IDs and class-level descriptions from the Abuse Case Library, when disclosure does not provide operational calibration data.
 
 ### What the Public Register does NOT contain
 
@@ -46,6 +47,7 @@ The Public Register does not contain:
 - Specific detection pattern signatures used by monitoring systems.
 - Step-by-step operational sequences for exploit classes where publishing the sequence provides attack advantage.
 - Calibration data for anomaly detection systems.
+- Step-by-step abuse-case operational details whose publication would materially improve attack execution.
 
 **Mechanism of omission:** Where the full threat entry would include operationally sensitive detail, the Public Register entry reads "[Restricted Annex — see AO]" at the relevant point. This makes the omission visible and auditable. Silent omissions are not permitted.
 

@@ -23,6 +23,8 @@ Every pilot needs:
 - clear failure criteria
 - a public post-mortem
 - a rule that failed pilots do not get rebranded as success
+- an Evidence Ladder level before and after the pilot
+- relevant Abuse Case Library patterns
 
 ## Evidence sequence
 
@@ -36,6 +38,7 @@ Every pilot needs:
 | 6 | Public banking rails | Can basic banking be provided as infrastructure without predatory fees or credit traps? | Service cost and access targets are sustainable. |
 | 7 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
 | 8 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
+| 9 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure? | Drift, founding, and claim-status failures are visible before activation or scale-up. |
 
 ![Pilot Phase Sequence](/images/V-008.png)
 
@@ -49,6 +52,7 @@ Every pilot needs:
 | Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 8 elite proxy markets |
 | Founding legitimacy and consent | Phase 8 | Consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 8 | Authority tracing; review-body deadlock tests |
+| Implementation drift and parameter calibration | Phase 9 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
 
 ## Collapse-state-to-pilot crosswalk
 
@@ -57,6 +61,7 @@ Every pilot needs:
 | Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 8 proxy-market and emergency-power tests |
 | Power-Wealth Convergence | Phase 5 Flow and demurrage; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Public procurement integrity, beneficial-ownership review, FAP capture testing, and sector concentration dashboards |
 | Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
+| Control-plane failure | Phase 8 governance red-team; Phase 9 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
 
 ## Phase 1 - Public understanding
 
@@ -286,6 +291,39 @@ Every pilot needs:
 - The patch process becomes performative.
 - A proposed patch is treated as proof before adversarial testing or activation.
 
+## Phase 9 - Implementation drift and founding legitimacy
+
+**Hypothesis:** The project can distinguish technical compliance from legitimate, evidence-backed operation.
+
+**Required packages:**
+
+- [Implementation Drift Audit Package](./Implementation_Drift_Audit_Package.md)
+- [Founding Legitimacy Dossier](./Founding_Legitimacy_Dossier.md)
+- [Evidence Ladder](./Evidence_Ladder.md)
+- [Capture Dashboard Specification](./Capture_Dashboard_Specification.md)
+- [Parameter Calibration Register](./Parameter_Calibration_Register.md)
+
+**Measure:**
+
+- reproducible hash agreement
+- bound-component startup refusal
+- publication-channel divergence response
+- keyholder custody and conflict review
+- implementation attestation completeness
+- founding scope declaration
+- objection and dissent handling
+- exit rehearsal
+- claim-level upgrade/downgrade correctness
+- capture dashboard baseline
+
+**Failure criteria:**
+
+- running components drift from the protected document state without visible exception;
+- keyholder or operator concentration makes the hard-lock layer easier to capture than assumed;
+- a founding coalition claims legitimacy without a public dossier;
+- public claims move up the Evidence Ladder without the required proof;
+- dashboards publish personal ranking signals or are gamed while appearing healthy.
+
 ## Minimum evidence before scale-up
 
 Before any serious scale-up claim, the project needs:
@@ -299,5 +337,8 @@ Before any serious scale-up claim, the project needs:
 - anti-rent legal review
 - independent red-team report
 - founding legitimacy and exit rehearsal report
+- implementation drift audit results
+- parameter calibration register review
+- capture dashboard baseline
 
 Until those exist, the accurate public claim remains: **the Humane Constitution is a serious constitutional design and critique target, not a ready deployment system.**

@@ -1,5 +1,7 @@
 # P-014 Pre-Activation Disclosure
 
+This disclosure is one source artifact for the broader [Founding Legitimacy Dossier](./Founding_Legitimacy_Dossier.md). It does not by itself prove founding legitimacy; it records the P-014/P-020 preactivation materials that the dossier must test against scope, conflict, objection, consent, exit, dignity-floor, and founder-sunset requirements.
+
 **The Humane Constitution — Founding Instrument: P-013 Bootstrap Resolution**
 
 **Published by:** Threat Register Owner  
