@@ -99,8 +99,8 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Current control:** [P-002](./Patch_Log.md), [Annex AB](../annexes/ANNEX_AB.md)
 - **Resolution path:** preserve real reward gradients through Flow, opportunity, recognition, and contribution pathways while banning conversion of Service Record into worth, coercive hierarchy, or access to survival.
 - **Corruption route to assume:** employers, schools, vendors, civic bodies, and ambitious insiders will treat contribution records as rank or employability scores.
-- **External evidence:** OECD public integrity guidance anchors the need to manage incentives, implementation, accountability, and enforcement as a system rather than as isolated rules.
-- **Proof needed:** contribution-model simulation, employer/vendor misuse tests, high-skill participation metrics, burnout and coercion review, and ordinary-user comprehension testing.
+- **External evidence:** OECD public integrity guidance anchors incentives and accountability; EU AI Act social-scoring prohibitions, EEOC employment-selection guidance, ILO forced-labour indicators, and ICO workplace-monitoring guidance anchor the misuse boundary.
+- **Proof needed:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md), contribution-model simulation, employer/vendor/school/housing misuse tests, high-skill participation metrics, burnout and coercion review, and ordinary-user comprehension testing.
 - **Residual risk:** contribution incentives remain culturally fragile; rewards can motivate without becoming a moral ranking only if misuse is monitored and punished by effect, not label.
 
 ### T-005 - Governance Throughput Failure
@@ -134,7 +134,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Current control:** [P-008](./Patch_Log.md), [P-025](./Patch_Log.md), [Annex AC](../annexes/ANNEX_AC.md), [Annex AI](../annexes/ANNEX_AI.md)
 - **Resolution path:** track verifier concentration, cohort overlap, expertise homogenization, Service Record loops, and Ombuds dispersal before insiders become a durable class.
 - **Corruption route to assume:** credentialed insiders coordinate informally, rotate through offices, define competence in their own image, and protect each other through legitimate procedure.
-- **Proof needed:** concentration dashboard, cohort-overlap audit, voting-pattern review, funding-dependence review, and external anti-capture audit.
+- **Proof needed:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md), concentration dashboard, cohort-overlap audit, voting-pattern review, funding-dependence review, and external anti-capture audit.
 - **Residual risk:** informal elite coordination cannot be eliminated by structural dispersal alone; recurring disclosure and outside review remain necessary.
 
 ### T-009 - Grace Exploitation Loop
@@ -142,7 +142,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Current control:** [P-009](./Patch_Log.md), [P-024](./Patch_Log.md), [Annex AF](../annexes/ANNEX_AF.md), [Annex AS](../annexes/ANNEX_AS.md)
 - **Resolution path:** use graduated renewal, collusion detection, slow decay, pause-saturation monitoring, and capability pathways while preserving real hardship protection.
 - **Corruption route to assume:** networks rotate hardship categories, manufacture employment evidence, freeze eligibility for civic positions, or use compassion rules as a status-preservation channel.
-- **Proof needed:** hardship-ring simulation, attestation collusion audit, involuntary-unemployment verification test, and narrative test for humane communication.
+- **Proof needed:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md), hardship-ring simulation, attestation collusion audit, involuntary-unemployment verification test, and narrative test for humane communication.
 - **Residual risk:** some low-level exploitation is the price of humane access; the unresolved danger is organized status preservation.
 
 ### T-010/T-011 - Narrative Attack Surface

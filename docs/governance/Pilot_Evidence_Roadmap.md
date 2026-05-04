@@ -45,7 +45,7 @@ Every pilot needs:
 |---|---|---|
 | Identity without surveillance or exclusion | Phase 2 | Phase 4 appeals; Phase 8 governance capture |
 | Real-capacity measurement | Phase 3 | Phase 4 delivery; Phase 8 oracle capture |
-| Contribution without coercive hierarchy | Phase 1 comprehension; Phase 8 governance red-team | Employer/vendor misuse testing; Service Record abuse scenarios |
+| Contribution without coercive hierarchy | Phase 1 comprehension; Phase 8 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
 | Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 8 elite proxy markets |
 | Founding legitimacy and consent | Phase 8 | Consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 8 | Authority tracing; review-body deadlock tests |
@@ -56,7 +56,7 @@ Every pilot needs:
 |---|---|---|
 | Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 8 proxy-market and emergency-power tests |
 | Power-Wealth Convergence | Phase 5 Flow and demurrage; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Public procurement integrity, beneficial-ownership review, FAP capture testing, and sector concentration dashboards |
-| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Service Record misuse, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
+| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
 
 ## Phase 1 - Public understanding
 

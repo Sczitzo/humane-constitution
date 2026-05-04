@@ -180,6 +180,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 **Constitutional text:** [ANNEX_AB.md § AB3](../annexes/ANNEX_AB.md)
 
+- **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **Introduced design:** nonlinear reward curves, multi-channel rewards (Flow, civic standing, status/recognition), opportunity access, time/flexibility rewards, and anti-gaming contribution assessment.
 - **Clauses to integrate:** Incentive Nonlinearity, Multi-Channel Reward, Outcome-Based Contribution, Anti-Gaming Contribution.
 - **Dependencies:** identity attribution, contribution verification, and governance rules for how civic standing can matter without becoming coercive privilege.
@@ -269,6 +270,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 **Constitutional text:** [ANNEX_AC.md § AC3](../annexes/ANNEX_AC.md)
 
+- **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **Change type:** structural + measurement + institutional design.
 - **Introduced design:** Legibility gap audit — quarterly Article VI reporting tracks verification approval rate, evidence burden, appeals rate, and abandonment rate by contribution category; 20-point disparity triggers independent process audit (not by incumbent verifier pool). Service Record sector ceiling specification mandate — max 25% per sector, max 35% per identifiable institutional-origin cluster in any Service Record-governed service pool; specified at founding as precondition under Annex N. Epistemic diversity requirement — three-axis standard (institutional origin ≤30%, contribution-type diversity ≥30% informal/care, geography ≥25% non-urban-dense) for all oversight bodies >5 members; pool design requirement. Verification independence rule — verifiers cannot review claims in own primary contribution category; applies to mid-range and above claims. Cooling-off cohort rule — cohort tracking by Ombuds Office; max 2 cohort members sharing review authority over same subject simultaneously. [Ambitious] Qualification standard governance — competence criteria added to P-004 protected terms registry; standard-setting body must include ≥40% from non-qualifying backgrounds. [Ambitious] Real-time concentration dashboard.
 - **Clauses to integrate:** Legibility Gap Audit; Service Record Sector Ceiling Specification (founding precondition Annex N); Epistemic Diversity Requirement; Verification Independence Rule; Cooling-Off Cohort Rule; Qualification Standard Governance (P-004 extension); Concentration Dashboard. See Annex AC3.
@@ -323,6 +325,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 **Constitutional text:** [ANNEX_AF.md](../annexes/ANNEX_AF.md)
 
+- **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **Change type:** behavioral + verification architecture + structural.
 - **Introduced design:** Graduated renewal intensity — first activation lightweight; first renewal structured; second renewal mid-intensity with support service confirmation; third+ renewal high-intensity independent panel. All qualifying hardship approved under any standard. Cross-quarter history review — full pause history assessed at every renewal; category switching flagged for elevated scrutiny at next renewal. Hardship attestation collusion detection — P-002 analytics extended to hardship networks; detects mutual pairs, star clusters, temporal clustering; community-disaster safe harbor for 2 quarters on oracle-verified regional emergency. Service Record slow-decay at 20% of normal rate during pause — Voice freeze unchanged; 4-quarter pause produces ~8% Service Record loss (negligible); 12-quarter rotation produces ~22% loss (drains high-impact threshold). Service pool pause-saturation monitoring — >20% simultaneous pause triggers pool-health alert and review; never bars individual activation. [Ambitious] Capability development pathway — up to 15% quarterly Service Record earnable through pause-appropriate stewardship during pause. [Ambitious] T-009 × P-008 explicit closure — paused cohort members count toward P-008 cohort cooling concurrent maximum; active members accommodate, not paused person.
 - **Clauses to integrate:** AF1–AF7. Annex K4 amended (graduated renewal; Service Record slow-decay). P-002 analytics extended (AF3). AC3.5 amended (AF7). Article VII dashboard extended (AF5).
@@ -692,6 +695,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 **Constitutional text:** [ANNEX_AS.md](../annexes/ANNEX_AS.md)
 
+- **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **Threat addressed:** T-009 (Coordinated False-Positive Suppression), TR-07 (Attestor Collusion), T-018 (Deliberate False-Trigger Exhaustion).
 - **Direction adopted:** Attestors who certify a claim bear skin-in-the-game exposure proportional to the claim's downstream consequence. A slashing schedule fires automatically when a certified claim is later disconfirmed by oracle quorum; redistribution routes slashed stake to the claimant harmed (where identifiable) and to a system integrity reserve.
 - **Introduced design:**
