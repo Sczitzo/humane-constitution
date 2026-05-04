@@ -1,6 +1,6 @@
 # Conceptual Refinement Audit
 
-**Role of this document.** This is the macro/micro critique layer for the Humane Constitution. It does not replace the Constitution, Threat Register, Threat Resolution Matrix, Open Problems Resolution Docket, External Evidence Register, Patch Log, Claims and Evidence Register, or Pilot Evidence Roadmap. It explains where the whole design is strongest, where it is still brittle, and which concepts need sharper tests before the project can honestly claim more than serious design readiness.
+**Role of this document.** This is the macro/micro critique layer for the Humane Constitution. It does not replace the Constitution, Threat Register, Threat Resolution Matrix, Open Problems Resolution Docket, Architecture Source Map, External Evidence Register, Patch Log, Claims and Evidence Register, or Pilot Evidence Roadmap. It explains where the whole design is strongest, where it is still brittle, and which concepts need sharper tests before the project can honestly claim more than serious design readiness.
 
 **Core standard.** The project should become harder to fool, not easier to sell.
 
@@ -17,6 +17,18 @@ The central theory is instrument separation:
 5. **Legitimacy** depends on local consent, exit, public records, and a patch process that can repair itself.
 
 The theory is coherent at the level of purpose. Its hard problem is not whether the values fit together; they mostly do. The hard problem is whether the institutions needed to protect those values create a second bureaucracy powerful enough to recreate the domination the system is trying to prevent.
+
+## 1A. First-Principles Collapse States
+
+The [Architecture Source Map](./Architecture_Source_Map.md) states the project as a defense against three collapse states. These are not political labels. They are system failures.
+
+| Collapse state | First-principles failure | Project response | Main evidence burden |
+|---|---|---|---|
+| **Survival-Trade Bind** | A person must succeed in markets, employment, credit, or exchange to stay alive or civically legible. | Essential Access, CSM, identity-continuity rules, capacity measurement, and non-convertibility. | Identity recovery, Essential Access delivery, shadow-convertibility tests, appeal continuity, and scarcity drills. |
+| **Power-Wealth Convergence** | Wealth becomes formal or practical authority over rules, enforcement, measurement, or institutional design. | Flow / Voice / Service Record separation, public records, beneficial-control review, anti-rent controls, and independent oversight. | Proxy-market tests, anti-corruption audit, public-banking simulation, legal-wrapper review, and FAP capture testing. |
+| **Static-Advantage Loop** | Temporary advantage hardens into permanent class position. | Demurrage, decay, rotation, anti-dynasty rules, new-participant access, subsidiarity review, exit protections, and bottleneck audits. | Service Record misuse testing, concentration dashboards, legal-wrapper review, founding-legitimacy tests, and governance red-team exercises. |
+
+The strongest version of the thesis is not "separate the instruments and trust the wall." The stronger version is: **every advantage that can affect another person's survival, rule-entry, or opportunity must remain contestable, visible, appealable, and unable to become a universal converter.**
 
 ---
 

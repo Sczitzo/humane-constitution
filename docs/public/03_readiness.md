@@ -13,17 +13,19 @@ Read in this order:
 1. [One-Page Overview](./01_overview.md) — the shortest explanation.
 2. [FAQ](./02_faq.md) — common questions in plain language.
 3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
-4. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
-5. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
-6. [Identity and Recovery Evidence Test Package](../governance/Identity_Recovery_Evidence_Test_Package.md) — the dedicated test package for fraud, exclusion, recovery, coercion, and privacy.
-7. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
-8. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
-9. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
-10. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-11. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-12. [White Paper](./04_white_paper.md) — the fuller public explanation.
-13. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-14. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+4. [Architecture Source Map](../governance/Architecture_Source_Map.md) — the three-collapse-state architecture and source boundaries.
+5. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
+6. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
+7. [Identity and Recovery Evidence Test Package](../governance/Identity_Recovery_Evidence_Test_Package.md) — the dedicated test package for fraud, exclusion, recovery, coercion, and privacy.
+8. [Capacity Measurement Evidence Test Package](../governance/Capacity_Measurement_Evidence_Test_Package.md) — the dedicated test package for real capacity, oracle disagreement, and scarcity measurement.
+9. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
+10. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
+11. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
+12. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+13. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+14. [White Paper](./04_white_paper.md) — the fuller public explanation.
+15. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+16. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
 Do not start with the annexes unless you already want the technical layer.
 
@@ -36,6 +38,8 @@ Every design decision in this project follows a three-part chain: Threat → Pat
 ![Threat–Patch–Annex Provenance Chain](/images/V-009.png)
 
 The public question comes first: can we separate basic needs, markets, and public power without creating something worse?
+
+The project is trying to prevent three collapses: survival becoming dependent on trade, wealth becoming public power, and temporary advantage becoming permanent class position. Those are architecture claims, not proof. Every one of them still has to survive pilots, outside review, and adversarial testing.
 
 ## What The Project Claims
 

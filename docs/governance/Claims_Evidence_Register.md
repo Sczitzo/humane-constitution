@@ -4,13 +4,14 @@ This register says what the project can honestly claim.
 
 It separates moral commitments, designed mechanisms, active-but-unproven controls, and evidence-backed results. The goal is to prevent overclaiming. A reader should be able to tell the difference between what the project values, what it has specified, what it has stress-tested on paper, and what has been proven in the world.
 
-See also: [External Evidence Register](./External_Evidence_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Hardening Queue](./Hardening_Queue.md), and [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md).
+See also: [Architecture Source Map](./Architecture_Source_Map.md), [External Evidence Register](./External_Evidence_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md), [Capacity Measurement Evidence Test Package](./Capacity_Measurement_Evidence_Test_Package.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Hardening Queue](./Hardening_Queue.md), and [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md).
 
 ## Status language
 
 | Status | Meaning |
 |---|---|
 | **Moral commitment** | A normative claim. Evidence can inform it, but cannot prove it by itself. |
+| **Designed framing** | An organizing theory or diagnostic lens that helps structure the design, but is not proof that any mechanism works. |
 | **Designed mechanism** | The repo contains a concrete rule, annex, patch, or procedure, but it has not been proven in live use. |
 | **Active-unproven control** | The mechanism is integrated into the constitutional document set, but still needs simulation, pilot evidence, or audit results. |
 | **Partly tested** | The repo contains simulations, threat modeling, or adversarial analysis, but not full field evidence. |
@@ -28,6 +29,7 @@ No major operational claim in this project is currently **Evidence-backed** at d
 
 | Claim | Honest status | Current repo basis | What would make it stronger | Failure mode to test |
 |---|---|---|---|---|
+| The design is organized around preventing three collapse states: survival bound to trade, wealth converging into rule-power, and temporary advantage hardening into permanent class position. | **Designed framing** | [Architecture Source Map](./Architecture_Source_Map.md), Conceptual Refinement Audit, Threat Resolution Matrix | Every threat, pilot, and public claim can be traced to at least one collapse state without hiding residual risk. | The framing becomes rhetoric while mechanisms still permit shadow conversion, proxy power, or incumbent lock-in. |
 | Survival should not depend on income, obedience, popularity, or market status. | **Moral commitment** plus designed invariant | Humane Constitution, INVARIANTS, Rights Layer, Annex Y | Broader public review across political, religious, cultural, disability, migration, and legal traditions | The survival floor becomes conditional through identity, compliance, staff discretion, debt, or emergency status. |
 | Wealth should not buy formal civic rule. | **Moral commitment** plus designed mechanism | Article VI, separated-tool rules, Annex AJ, T-001, INV-004 | External constitutional-law, anti-corruption, labor, housing, and platform-governance review | Wealth converts into Voice, Service Record, exemptions, privileged access, or institutional appointments through proxy channels. |
 | Productive markets can exist while survival access is protected separately. | **Designed mechanism, needs evidence** | Flow / Essential Access separation, White Paper, SPECIFICATIONS, Annexes X and J | Pilot data on prices, production incentives, supply response, business formation, and essential-sector labor behavior | Protected survival suppresses needed production, or Flow markets recreate survival coercion indirectly through housing, employment, credit, or vendor power. |
@@ -71,7 +73,7 @@ The accurate claim is narrower: the repo contains a serious constitutional desig
 | Priority | Evidence needed | Why it matters | First document to update after evidence |
 |---|---|---|---|
 | 1 | Identity and recovery pilot | A survival floor fails morally if documentation, coercion, staff discretion, device loss, or recovery errors exclude people. | Identity and Recovery Evidence Test Package; Threat Register T-002; Annex P; Annex AK; this register. |
-| 2 | Essential capacity measurement pilot | Essential Access and Shared Storehouse depend on credible food, water, shelter, care, medicine, transit, and energy measurements. | Annex AL; Pilot Evidence Roadmap; Threat Register T-006/T-020/T-021. |
+| 2 | Essential capacity measurement pilot | Essential Access and Shared Storehouse depend on credible food, water, shelter, care, medicine, transit, and energy measurements. | Capacity Measurement Evidence Test Package; Annex AL; Pilot Evidence Roadmap; Threat Register T-006/T-020/T-021. |
 | 3 | Essential Access delivery and appeals pilot | A right that cannot be delivered or appealed is only paper protection. | Rights Layer; Claims Register; Threat Register T-002/T-007. |
 | 4 | Flow, demurrage, and public-rail simulation | The economic rail must fund operations without distorting ordinary life or creating capture exemptions. | Demurrage Evidence and Test Package; Annexes X, J, AR; Patch Log P-023/P-030. |
 | 5 | Public banking cost and access model | Public banking must be operationally sustainable without predatory fees or digital exclusion. | SPECIFICATIONS; public docs; Pilot Evidence Roadmap. |

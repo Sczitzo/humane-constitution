@@ -1,6 +1,6 @@
 # Pilot Evidence Roadmap
 
-This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md), outside sources in the [External Evidence Register](./External_Evidence_Register.md), and threat controls in the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) into tests.
+This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md), the first-principles framing in the [Architecture Source Map](./Architecture_Source_Map.md), outside sources in the [External Evidence Register](./External_Evidence_Register.md), and threat controls in the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) into tests.
 
 The project should not scale because people feel confident, excited, or morally urgent. It needs evidence in stages.
 
@@ -49,6 +49,14 @@ Every pilot needs:
 | Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 8 elite proxy markets |
 | Founding legitimacy and consent | Phase 8 | Consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 8 | Authority tracing; review-body deadlock tests |
+
+## Collapse-state-to-pilot crosswalk
+
+| Collapse state | Primary pilot tracks | Secondary checks |
+|---|---|---|
+| Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 8 proxy-market and emergency-power tests |
+| Power-Wealth Convergence | Phase 5 Flow and demurrage; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Public procurement integrity, beneficial-ownership review, FAP capture testing, and sector concentration dashboards |
+| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Service Record misuse, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
 
 ## Phase 1 - Public understanding
 

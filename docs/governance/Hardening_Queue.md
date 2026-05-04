@@ -4,7 +4,7 @@ This document is the live "what still needs pressure" list for the Humane Consti
 
 It tracks conceptual and operational weaknesses that remain important even when a threat has a proposed patch or an active annex. A designed control is not the same thing as proof. A live queue item stays here until the project has evidence, activation, or a stronger residual-risk statement.
 
-See also: [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
+See also: [Architecture Source Map](./Architecture_Source_Map.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md), [Capacity Measurement Evidence Test Package](./Capacity_Measurement_Evidence_Test_Package.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Threat Register](./Threat_Register.md).
 
 > Status labels in this document use shorthand codes. See [Claims_Evidence_Register.md](./Claims_Evidence_Register.md) for canonical definitions. The mapping is: DESIGNED → "Designed mechanism, needs evidence"; ACTIVE-UNPROVEN → "Active-unproven control"; ONGOING → context-dependent.
 
@@ -24,14 +24,14 @@ Do not use **CLOSED** for live system risks unless the item is evidence-backed o
 
 ## Macro pressure list
 
-| Rank | Item | Status | Governing references | What still needs pressure |
-|---|---|---|---|---|
-| 1 | Identity without surveillance or exclusion | **DESIGNED** | T-002, P-003, P-016, Annex P, Annex AK | Use the Identity and Recovery Evidence Test Package to pilot false exclusion, recovery delay, coercion, data exposure, vulnerable-population failure, and staff-discretion risk. |
-| 2 | Real-capacity measurement | **ACTIVE-UNPROVEN** | T-006, T-020, T-021, T-024, Annexes M, AL, AQ | Test oracle latency, direct physical sampling, standards capture, confidence bands, and behavior during oracle disagreement. |
-| 3 | Contribution without coercive hierarchy | **DESIGNED** | T-004, T-008, T-009, Annexes AC, AF, Z, AS | Show that Service Record rewards contribution without becoming rank, employability score, or insider credential. |
-| 4 | Anti-rent enforcement against legal wrappers | **DESIGNED** | P-031, P-032, P-033, T-025, Annexes J, AR | Red-team trusts, family offices, beneficial ownership chains, land-control rights, and enterprise-control workarounds. |
-| 5 | Founding legitimacy and consent | **DESIGNED** | T-017, T-022, T-026, T-027, Founding Order, Annex AH | Define founding coalition legitimacy, objection rights, consent thresholds, exit rehearsal, and anti-imposition tests. |
-| 6 | Bureaucratic complexity and institutional self-protection | **ONGOING** | T-005, T-008, T-016, P-025, Annexes AI, AG, AV | Test whether review bodies protect people or protect themselves; measure ordinary-reader comprehension of authority paths. |
+| Rank | Item | Collapse state guarded against | Status | Governing references | What still needs pressure |
+|---|---|---|---|---|---|
+| 1 | Identity without surveillance or exclusion | Survival-Trade Bind | **DESIGNED** | T-002, P-003, P-016, Annex P, Annex AK | Use the Identity and Recovery Evidence Test Package to pilot false exclusion, recovery delay, coercion, data exposure, vulnerable-population failure, and staff-discretion risk. |
+| 2 | Real-capacity measurement | Survival-Trade Bind | **ACTIVE-UNPROVEN** | T-006, T-020, T-021, T-024, Annexes M, AL, AQ | Use the Capacity Measurement Evidence Test Package to test category definitions, oracle latency, direct sampling, standards capture, confidence bands, dashboard comprehension, activation/unwind symmetry, and oracle disagreement. |
+| 3 | Contribution without coercive hierarchy | Static-Advantage Loop | **DESIGNED** | T-004, T-008, T-009, Annexes AC, AF, Z, AS | Show that Service Record rewards contribution without becoming rank, employability score, or insider credential. |
+| 4 | Anti-rent enforcement against legal wrappers | Power-Wealth Convergence; Static-Advantage Loop | **DESIGNED** | P-031, P-032, P-033, T-025, Annexes J, AR | Red-team trusts, family offices, beneficial ownership chains, land-control rights, and enterprise-control workarounds. |
+| 5 | Founding legitimacy and consent | Power-Wealth Convergence; Static-Advantage Loop | **DESIGNED** | T-017, T-022, T-026, T-027, Founding Order, Annex AH | Define founding coalition legitimacy, objection rights, consent thresholds, exit rehearsal, and anti-imposition tests. |
+| 6 | Bureaucratic complexity and institutional self-protection | Static-Advantage Loop; Power-Wealth Convergence | **ONGOING** | T-005, T-008, T-016, P-025, Annexes AI, AG, AV | Test whether review bodies protect people or protect themselves; measure ordinary-reader comprehension of authority paths. |
 
 ---
 
@@ -44,7 +44,7 @@ Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) as the threat-
 3. institutional anti-capture,
 4. legitimacy, narrative, transition, and scale.
 
-This order prevents downstream fixes from depending on unproven identity, measurement, or founding assumptions.
+This order prevents downstream fixes from depending on unproven identity, measurement, or founding assumptions. In collapse-state terms, it tests the Survival-Trade Bind first because a survival floor that excludes people or misreads capacity can make every later anti-capture promise irrelevant.
 
 ---
 

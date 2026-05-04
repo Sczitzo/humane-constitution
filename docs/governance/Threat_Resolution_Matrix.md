@@ -4,7 +4,7 @@ This matrix is the working plan for moving every registered threat from "named" 
 
 The word **solve** is used here in a strict way: a threat is solved only when the system has a plausible mechanism, a corruption-aware abuse model, a test path, and an honest residual-risk statement. No institutional design can eliminate greed, coercion, collusion, political opportunism, or legal arbitrage. The goal is to make those pressures visible, costly, bounded, and correctable before they can quietly become normal.
 
-See also: [Threat Register](./Threat_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md).
+See also: [Architecture Source Map](./Architecture_Source_Map.md), [Threat Register](./Threat_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [External Evidence Register](./External_Evidence_Register.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), and [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md).
 
 ---
 
@@ -30,6 +30,47 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 | 2 | Economic boundary integrity | T-001, T-004, T-007, T-025 | If civic instruments become money, status, rent, or legal wrappers, the core separation collapses. |
 | 3 | Institutional anti-capture | T-005, T-008, T-009, T-013, T-014, T-016, T-017 | If the repair machinery captures itself, the system cannot adapt honestly. |
 | 4 | Legitimacy, narrative, transition, and scale | T-010/T-011, T-022, T-023, T-026, T-027 | If consent, explanation, pilot validity, exit, or subsidiarity fails, the constitution becomes coercive in practice. |
+
+---
+
+## Collapse-State Lens
+
+The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by the three collapse states the project is trying to prevent. This lens does not replace threat IDs or status labels; it shows which first-principles failure each threat pressures.
+
+| Collapse state | Meaning in this matrix |
+|---|---|
+| **Survival-Trade Bind** | Survival access, identity, scarcity response, contribution, or exit becomes entangled with market leverage, coercion, deprivation, or exchange. |
+| **Power-Wealth Convergence** | Money, office, technical expertise, verification authority, sectoral influence, or institutional control begins reinforcing rule-power. |
+| **Static-Advantage Loop** | Incumbents preserve advantage by freezing definitions, evidence standards, procedures, pilot interpretations, entry gates, or political defaults. |
+| **Control-plane failure** | The machinery that observes, decides, patches, legitimates, or routes authority fails or is captured, often compounding the three main collapse states. |
+
+| Threat | Collapse-state pressure |
+|---|---|
+| T-001 Shadow Convertibility | Survival-Trade Bind; secondary Power-Wealth Convergence through brokers, employers, lenders, landlords, and platforms. |
+| T-002 Identity Exploits | Survival-Trade Bind plus control-plane identity gate. |
+| T-004 Incentive Collapse | Survival-Trade Bind; risk is avoiding coercive contribution while preserving real work incentives. |
+| T-005 Governance Throughput Failure | Control-plane failure; secondary Static-Advantage Loop if delay normalizes procedural incumbency. |
+| T-006 Measurement Lag / Supply Shock | Control-plane failure; secondary Survival-Trade Bind when bad scarcity signals harm access. |
+| T-007 Political Definition Drift | Static-Advantage Loop; secondary Power-Wealth Convergence when experts or lawyers control meanings. |
+| T-008 Bureaucratic Elite Formation | Power-Wealth Convergence plus Static-Advantage Loop. |
+| T-009 Grace Exploitation Loop | Power-Wealth Convergence when hardship rules become status-preservation tools. |
+| T-010/T-011 Narrative Attack Surface | Legitimacy control-plane failure that can accelerate any collapse state. |
+| T-012 PCRP Oracle Poisoning | Control-plane failure in the emergency truth layer. |
+| T-013 Compound Crisis Throughput Starvation | Control-plane failure where governance capacity becomes scarce and gameable. |
+| T-014 Emergency Governance Triple Deadlock | Compound control-plane failure where safeguards block each other. |
+| T-015 Demand-Side Oracle Poisoning | Control-plane failure; secondary Survival-Trade Bind through false scarcity or deprivation. |
+| T-016 Formal Acceptance Process Capture | Static-Advantage Loop plus patch-process control-plane failure. |
+| T-017 Bootstrap Problem | Control-plane failure; secondary Static-Advantage Loop through founding precedent. |
+| T-018 PCRP False-Trigger Exhaustion | Compound control-plane failure through exhausted emergency response. |
+| T-019 Demand-Context Flag Suppression | Compound control-plane failure through valid process suppressing valid emergency response. |
+| T-020 Epistemological Oracle Capture | Power-Wealth Convergence plus Static-Advantage Loop when standards bodies define reality. |
+| T-021 Algorithmic Oracle Capture | Power-Wealth Convergence plus AI/oracle supply-chain control-plane failure. |
+| T-022 Electoral Cycle Capture | Static-Advantage Loop plus constitutional-durability control-plane failure. |
+| T-023 Pilot External Validity Collapse | Static-Advantage Loop when calm-condition evidence locks in false confidence. |
+| T-024 Shared Storehouse Oracle-Failure | Control-plane failure plus Survival-Trade Bind during rationing. |
+| T-025 Demurrage Sector-Capture | Power-Wealth Convergence; secondary Static-Advantage Loop through exemption definitions. |
+| T-026 Exit Denial | Survival-Trade Bind plus federation-coercion control-plane failure. |
+| T-027 Subsidiarity Violation | Static-Advantage Loop plus Power-Wealth Convergence through upward venue drift. |
 
 ---
 

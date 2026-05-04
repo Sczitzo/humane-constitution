@@ -29,6 +29,7 @@ title: Project Guide & Reader Overview
 - [What will go wrong](#what-will-go-wrong-pre-committed)
 - [Scale readiness checklist](#scale-readiness-checklist)
 - [How to engage](#how-to-engage)
+- [Fork, remix, or adapt this](#fork-remix-or-adapt-this)
 - [License](#license)
 
 ## What this is
@@ -350,6 +351,24 @@ The Formal Acceptance Protocol defines the pathway from design to operation.
 **If you want the exact rule text:** read the Humane Constitution after that.
 
 **To critique, challenge, or contribute:** open an Issue with your specific objection, the section it applies to, and your proposed alternative. Vague objections will be asked to specify. Specific objections will be taken seriously.
+
+## Fork, remix, or adapt this
+
+This project is released so people can build from it.
+
+You are welcome to:
+
+- fork the repository
+- copy individual sections
+- adapt the structure for your own community or project
+- translate it into plainer language
+- make competing versions
+- use the diagrams, threat model, or reading path as inspiration
+- share it with people who might pressure-test it
+
+You do not need permission to disagree, revise, or branch away from the main version.
+
+The only request: preserve attribution where reasonable, and make clear what you changed so readers can compare versions honestly.
 
 **To cite this work:** see `CITATION.cff` in this repository.
 

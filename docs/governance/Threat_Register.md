@@ -17,7 +17,7 @@
 
 **Status discipline.** This register tracks design posture, not deployment proof. `ACTIVE` means a control is integrated into the document set; it does not mean the control has been proven in field conditions. `RESOLVED` should be used only after defined tests, pilots, or audits produce evidence and the residual risk is updated.
 
-**Resolution discipline.** Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) and [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) as the working plan for moving threats toward evidence-backed resolution. A threat is not solved merely because it has a patch; it needs a corruption model, outside evidence, a test path, failure criteria, and a residual-risk statement.
+**Resolution discipline.** Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) and [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) as the working plan for moving threats toward evidence-backed resolution. A threat is not solved merely because it has a patch; it needs a corruption model, outside evidence, a test path, failure criteria, and a residual-risk statement. Threats may also be read through the [Architecture Source Map](./Architecture_Source_Map.md) collapse-state lens: Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane or compound failures.
 
 **Scoring convention.** Risk Score = I × L × (6 − D) where I = Impact, L = Likelihood, D = Detectability (each 1–5; higher D = more detectable = lower risk multiplier).
 
