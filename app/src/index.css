@@ -713,12 +713,23 @@
 
 @keyframes linkPulse {
   0%   { outline: 2px solid transparent; outline-offset: 6px; }
-  20%  { outline: 2px solid var(--accent-deep); outline-offset: 6px; }
-  60%  { outline: 2px solid var(--accent-deep); outline-offset: 6px; }
+  15%  { outline: 2px solid #7dd3fc; outline-offset: 6px; }
+  70%  { outline: 2px solid #7dd3fc; outline-offset: 6px; }
   100% { outline: 2px solid transparent; outline-offset: 6px; }
 }
 
+@keyframes linkPulseText {
+  0%   { color: inherit; text-shadow: none; }
+  15%  { color: #ff6b35; text-shadow: 0 0 12px rgba(255,107,53,0.6); }
+  70%  { color: #ff6b35; text-shadow: 0 0 12px rgba(255,107,53,0.6); }
+  100% { color: inherit; text-shadow: none; }
+}
+
 .link-pulse {
-  animation: linkPulse 1.6s ease-out forwards;
+  animation: linkPulse 3s ease-out forwards;
   border-radius: 2px;
+}
+
+.link-pulse * {
+  animation: linkPulseText 3s ease-out forwards;
 }
