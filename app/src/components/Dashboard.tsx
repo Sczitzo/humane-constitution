@@ -3026,7 +3026,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     }
     setSelectedDocId(pendingDocTarget.id)
     onPendingDocTargetConsumed?.()
-    // Scroll reader panel into view below the sticky header after doc change.
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         const targetDoc = allDocs.find((doc) => doc.id === pendingDocTarget.id)
@@ -3034,7 +3033,10 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           queueHeadingJump(targetDoc, pendingDocTarget.headingSlug)
           return
         }
-        document.getElementById('reader-panel-start')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        // No heading target — scroll both window and inner pane to top so the
+        // document title is fully visible below the sticky nav bar.
+        window.scrollTo({ top: 0, behavior: 'instant' })
+        if (readerPaneRef.current) readerPaneRef.current.scrollTop = 0
       })
     })
   }, [allDocs, pendingDocTarget])
