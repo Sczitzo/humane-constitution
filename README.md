@@ -126,6 +126,7 @@ What must still be proven:
 - a non-coercive identity and recovery stack
 - reliable measurement of essential capacity
 - a legitimate founding coalition
+- essential-sector refusal survivability for oil, energy, medicine, logistics, and PBM-style intermediaries
 
 The right response is neither blind belief nor dismissal. The useful response is specific critique, hard testing, and evidence.
 
@@ -300,6 +301,16 @@ The defense is a protected basic floor, transition audits, public triggers when 
 
 Remaining risk: no document can fully stop a determined political movement with enough power. The design can buy time, raise the cost, and make the attack visible.
 
+### 4. Essential-Sector Retaliation
+
+The design assumes some large firms will not cooperate voluntarily.
+
+Oil, energy, medicine, logistics, PBM-style intermediaries, and other essential-sector actors may leave, litigate, lobby, delay, route control through affiliates, or demand special exemptions.
+
+The defense is not moral persuasion. The defense is a profitable compliant path, refusal drills, reserve drawdown models, public/cooperative fallback capacity, compliant-bidder independence checks, beneficial-owner tracing, and temporary receiver authority when a survival chokepoint is at risk.
+
+Remaining risk: the legal authority to intervene may exist before the physical capacity to replace the refusing actor exists. That gap must be tested before any scale-up claim.
+
 ## Hardening history
 
 The system has been adversarially stress-tested:
@@ -352,6 +363,7 @@ Scale readiness requires:
 - [x] CFRL one-page publication — see [Rights Layer](./docs/public/05_rights_layer.md)
 - [x] Adversarial narrative simulation — see [Adversarial Narrative Simulation](./docs/simulations/Adversarial_Narrative_Simulation.md)
 - [x] Annual compound simulation — see [Annual Compound Simulation](./docs/simulations/Annual_Compound_Simulation.md)
+- [ ] Essential-sector refusal drills — see [Essential-Sector Refusal Test Package](./docs/governance/Essential_Sector_Refusal_Test_Package.md)
 - [ ] Legitimate founding coalition
 
 The Formal Acceptance Protocol defines the pathway from design to operation.

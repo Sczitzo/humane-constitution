@@ -51,8 +51,8 @@ Every pilot needs:
 | Real-capacity measurement | Phase 3 | Phase 4 delivery; Phase 9 oracle capture |
 | Contribution without coercive hierarchy | Phase 1 comprehension; Phase 9 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
 | Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 9 elite proxy markets |
-| Essential-sector conglomerate refusal | Phase 8 | Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
-| Founding legitimacy and consent | Phase 9 | Consent rehearsal; exit rehearsal; public objection process |
+| Essential-sector conglomerate refusal | Phase 8 | Essential-Sector Refusal Test Package; Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
+| Founding legitimacy and consent | Phase 10 | Founding Legitimacy Dossier artifact-status register; consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 9 | Authority tracing; review-body deadlock tests |
 | Implementation drift and parameter calibration | Phase 10 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
 
@@ -261,7 +261,7 @@ Every pilot needs:
 **Required packages:**
 
 - [Conglomerate Transition Dossier](./Conglomerate_Transition_Dossier.md)
-- [Essential Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md)
+- [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md)
 - [Capture Dashboard Specification](./Capture_Dashboard_Specification.md)
 - [Parameter Calibration Register](./Parameter_Calibration_Register.md)
 - [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
@@ -286,6 +286,8 @@ Every pilot needs:
 - medicine access depends on a PBM-style intermediary or patent holder that can deny survival treatment for leverage;
 - fossil transition contracts become disguised bailouts without measured capacity, remediation, or resilience output;
 - foreign affiliates can bypass strategic floors, Flow conversion, or dependency thresholds.
+
+**Bridge rule:** Phase 8 cannot be marked partly tested until the Essential-Sector Refusal Test Package leaves a public evidence packet for at least one fuel/energy category, one CSM-designated medicine category, and one grid/logistics category. A paper reserve, dormant legal authority, or bidder that shares beneficial owners with the refusing actor does not count as fallback capacity.
 
 ## Phase 9 - Governance red-team
 
@@ -358,6 +360,8 @@ Every pilot needs:
 - a founding coalition claims legitimacy without a public dossier;
 - public claims move up the Evidence Ladder without the required proof;
 - dashboards publish personal ranking signals or are gamed while appearing healthy.
+
+**Bridge rule:** Phase 10 cannot pass with only technical integrity. The implementation drift tests, founding artifact-status register, claim-status review, and capture dashboard baseline must all be current together. A clean hash, clean build, or complete document checklist does not prove legitimate activation.
 
 ## Minimum evidence before scale-up
 

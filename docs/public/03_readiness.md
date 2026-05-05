@@ -74,7 +74,8 @@ The project is trying to prevent three collapses: survival becoming dependent on
 | Identity and recovery | **Needs proof** | The system needs identity checks that do not become surveillance or exclusion. |
 | Measuring essentials | **Needs proof** | Food, water, shelter, care, and energy capacity must be measured well enough. |
 | Economic transition | **Needs simulation** | Money, debt, business finance, and ownership changes need deeper testing. |
-| Founding legitimacy | **Unresolved** | The first institutions must be trusted enough to begin. |
+| Essential-sector refusal | **Needs drills** | Oil, energy, medicine, logistics, and PBM-style intermediaries must be tested as survival-leverage actors, not only ordinary vendors. |
+| Founding legitimacy | **Dossier designed, evidence not produced** | The required founding artifacts are named, but real notice, deliberation, consent, exit rehearsal, and independent review do not exist yet. |
 | Reader app | **Working prototype** | The reader works, but still needs polish and accessibility review. |
 | Deployment | **Not ready** | This is a design and critique target, not a rollout plan. |
 
@@ -109,6 +110,18 @@ They must never buy rights, goods, housing, money, immunity, or human worth.
 Yes. A forced rollout would be dangerous.
 
 The safer path is pilots, parallel systems, public measurement, appeal testing, and clear stop/go gates.
+
+### Could big essential companies simply say no?
+
+Yes. The project should assume some will leave, litigate, lobby, delay, route control through affiliates, or demand special treatment.
+
+That is why the test is not whether the system has good intentions. The test is whether reserves, substitute suppliers, public or cooperative fallback capacity, treaty capacity, and public receiver authority can keep the CSM floor intact when the largest essential-sector actor refuses.
+
+### Could a founding vote become theater?
+
+Yes. A vote is not legitimate if ordinary affected people cannot understand the proposal, object, abstain, or leave without punishment.
+
+That is why the Founding Legitimacy Dossier now tracks required artifacts separately. Until conflict registers, notice records, deliberation records, consent evidence, exit rehearsals, dignity-floor non-coercion review, and independent review are produced, the honest status remains unresolved.
 
 ## Evidence To Look For
 

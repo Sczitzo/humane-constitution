@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-048**
+**Running change ledger aligned to the Humane Constitution · Current through P-049**
 
 ---
 
@@ -67,6 +67,7 @@
 | P-046 | Multiple | **ACTIVE** | Critical | Evidence and capture hardening — seven proof artifacts, drift audit, parameter calibration, abuse cases, evidence ladder, founding dossier, and capture dashboard |
 | P-047 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector conglomerate transition — profitable compliant path, refusal survivability tests, public fallback capacity, and numeric evidence anchors |
 | P-048 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector refusal test package — sector drills, FC-194 through FC-201 calibration rows, Annex AT receiver/licensing triggers, public explainer, and evidence-source expansion |
+| P-049 | Multiple evidence-gap bridges | **ACTIVE** | High | Cross-register bridge pass — aligns Hardening Queue, Open Problems, Pilot Roadmap, Public Readiness, README, and evidence-gap language with founding artifact status and essential-sector refusal testing |
 
 ---
 
@@ -1129,3 +1130,30 @@ P-047 defined the essential-sector conglomerate transition doctrine, but the pro
 - Parameter draft anchors may be mistaken for proven values. Mitigated by reserved status and the Parameter Calibration Register's revision-trigger discipline.
 
 **Residual risk:** The package makes essential-sector refusal testable; it does not supply the physical reserves, manufacturing capacity, alternate operators, legal judgments, or treaty capacity needed to pass. The decisive future evidence remains sector-by-sector: how long the CSM floor holds when the largest incumbent refuses.
+
+---
+
+### P-049 — Evidence-Gap Bridge Alignment
+
+**Threats addressed:** Multiple evidence-gap and status-drift risks across founding legitimacy, essential-sector refusal, implementation drift, public readiness, and evidence-register consistency.
+**Status:** ACTIVE | **Priority:** High
+**Date:** 2026-05-04
+
+**Constitutional text:** No new constitutional text. Governance and public-readiness integration only.
+
+**Problem diagnosed:**
+Recent hardening work created stronger test artifacts, but the live dashboards still left some gaps implicit. The Founding Legitimacy Dossier now has an artifact-status register, and the Essential-Sector Refusal Test Package now defines sector drills, but several reader-facing and governance trackers still described the gaps in older, broader language.
+
+**Introduced design:**
+
+- **Hardening Queue alignment** — connects essential-sector refusal to the dedicated test package and reframes founding legitimacy around artifact production, not only design existence.
+- **Open Problems bridge** — updates essential-sector and founding rows so required proof points include the newest refusal drills, artifact-status register, medicine/PBM refusal path, grid/logistics delay path, and parameter/capture links.
+- **Pilot Roadmap bridge rules** — adds explicit Phase 8 and Phase 10 pass boundaries: paper capacity and clean technical integrity cannot substitute for refusal evidence or legitimate founding artifacts.
+- **Public readiness bridge** — adds plain-language warnings for essential-company refusal and founding-vote theater.
+- **Evidence-gap language** — narrows source gaps so the project asks for drill outputs and founding artifacts, not only general outside analogies.
+
+**New risks introduced:**
+- Cross-register alignment can create the appearance of progress without real evidence. Mitigated by repeating that these are bridge rules and evidence packets, not passed pilots.
+- More references can increase reader burden. Mitigated by putting the strongest public framing in the Public Readiness Guide and keeping detailed proof duties in governance registers.
+
+**Residual risk:** P-049 improves traceability; it does not close the underlying gaps. The unresolved work remains physical refusal capacity, real founding artifacts, independent review, and pilot evidence.

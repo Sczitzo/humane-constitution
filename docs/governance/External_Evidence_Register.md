@@ -82,9 +82,9 @@ The project still needs stronger outside evidence for:
 - contribution incentives that do not become social ranking in live institutions,
 - demurrage distributional effects by household wealth and business type,
 - legal enforceability of zero-exemption project escrow across nested subcontractors,
-- essential-sector conglomerate refusal, litigation, lobbying, and retaliation scenarios,
+- essential-sector conglomerate refusal, litigation, lobbying, and retaliation scenarios, especially drill results using the Essential-Sector Refusal Test Package rather than only external analogies,
 - identity recovery for undocumented, displaced, disabled, elderly, and digitally fragile people,
-- transition legitimacy and consent thresholds,
+- transition legitimacy and consent thresholds, including real public notice, deliberation, consent-event, exit-rehearsal, and independent-review artifacts,
 - practical anti-centralization audits for subsidiarity drift.
 
 These gaps should remain visible until matched to specific studies, pilots, legal memoranda, or adversarial simulations.
