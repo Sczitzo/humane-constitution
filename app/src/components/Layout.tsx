@@ -435,7 +435,7 @@ function highlightNavMatch(text: string, query: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <mark className="bg-[rgba(159,108,49,0.35)] text-inherit not-italic">{text.slice(idx, idx + query.length)}</mark>
+      <mark className="bg-[var(--accent-soft)] text-[var(--accent-deep)] not-italic font-semibold">{text.slice(idx, idx + query.length)}</mark>
       {text.slice(idx + query.length)}
     </>
   )
