@@ -420,6 +420,20 @@ interface NavSearchResult {
   headingSlug?: string
 }
 
+function nearestHeadingSlug(doc: CorpusDoc, matchIdx: number): string | undefined {
+  // Find the heading whose text appears in doc.content at the latest position before matchIdx.
+  let bestSlug: string | undefined
+  let bestPos = -1
+  for (const h of doc.headings) {
+    const pos = doc.content.lastIndexOf(h.text, matchIdx)
+    if (pos !== -1 && pos <= matchIdx && pos > bestPos) {
+      bestPos = pos
+      bestSlug = h.slug
+    }
+  }
+  return bestSlug
+}
+
 function navSearch(allDocs: CorpusDoc[], rawQuery: string): NavSearchResult[] {
   const q = rawQuery.trim().toLowerCase()
   if (!q || q.length < 2) return []
@@ -440,10 +454,13 @@ function navSearch(allDocs: CorpusDoc[], rawQuery: string): NavSearchResult[] {
     const body = doc.content.toLowerCase()
     const idx = body.indexOf(q)
     if (idx !== -1) {
-      const s = Math.max(0, idx - 50)
-      const e = Math.min(doc.content.length, idx + q.length + 50)
+      // Center the excerpt window on the match so the query term is always visible.
+      const half = 60
+      const s = Math.max(0, idx - half)
+      const e = Math.min(doc.content.length, idx + q.length + half)
       const raw = doc.content.slice(s, e).replace(/\s+/g, ' ').trim()
-      add('body', (s > 0 ? '…' : '') + raw + (e < doc.content.length ? '…' : ''))
+      const excerpt = (s > 0 ? '…' : '') + raw + (e < doc.content.length ? '…' : '')
+      add('body', excerpt, nearestHeadingSlug(doc, idx))
     }
   }
 
