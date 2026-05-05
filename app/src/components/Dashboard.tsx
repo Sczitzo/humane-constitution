@@ -375,7 +375,10 @@ interface TooltipPos { x: number; y: number; align: 'left' | 'right' }
 
 function RefChip({ refKey, display, fallback }: { refKey: string; display: string; fallback?: React.ReactNode }) {
   const { lookup, onNavigate, isDark } = useContext(RefNavContext)
-  const entry = lookup.get(refKey) || lookup.get(display)
+  // Also try stripping §... subsection suffix (e.g. "Annex Y §Y1" → "Annex Y")
+  const strippedKey = refKey.replace(/\s*§.*$/, '').trim()
+  const strippedDisplay = display.replace(/\s*§.*$/, '').trim()
+  const entry = lookup.get(refKey) || lookup.get(display) || lookup.get(strippedKey) || lookup.get(strippedDisplay)
   const btnRef = useRef<HTMLButtonElement>(null)
   const [pos, setPos] = useState<TooltipPos | null>(null)
 
@@ -494,7 +497,7 @@ function RefChip({ refKey, display, fallback }: { refKey: string; display: strin
         onBlur={hideTooltip}
         className={`inline-flex cursor-pointer items-center rounded px-1.5 py-0.5 font-mono text-[0.78em] font-semibold leading-none whitespace-nowrap transition-colors ${chipStyle}`}
       >
-        {display}
+        {(/[/\\]/.test(display) || display.endsWith('.md') || display.endsWith('.ts') || display.endsWith('.json')) ? entry.title : display}
       </button>
       {tooltip}
     </span>
@@ -1088,10 +1091,9 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
           {renderTextWithHighlights(codeContent, query, `${keyPrefix}-code-inline-${match.index}`)}
         </code>
       )
+      // Try ref lookup for any code span — catches path-like refs AND things like "Annex Y §Y1"
       parts.push(
-        isPathLike
-          ? <RefChip key={`${keyPrefix}-pathchip-${match.index}`} refKey={codeContent} display={codeContent} fallback={codeEl} />
-          : codeEl
+        <RefChip key={`${keyPrefix}-pathchip-${match.index}`} refKey={codeContent} display={codeContent} fallback={isPathLike ? undefined : codeEl} />
       )
     } else if (match[1]?.startsWith('!')) {
       // Image: ![alt](src)
