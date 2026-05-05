@@ -126,6 +126,7 @@ export default function App() {
       onSelectDoc={handleSelectNavDoc}
       corpusQuery={corpusQuery}
       onCorpusQueryChange={setCorpusQuery}
+      allDocs={corpus?.docs ?? []}
     >
       <Dashboard
         view={view}

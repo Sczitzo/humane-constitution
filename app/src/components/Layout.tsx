@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CorpusDoc } from '../generated/corpus'
 
 export type AppView =
@@ -22,6 +22,7 @@ interface LayoutProps {
   onSelectDoc: (doc: CorpusDoc) => void
   corpusQuery: string
   onCorpusQueryChange: (q: string) => void
+  allDocs: CorpusDoc[]
 }
 
 type NavItem = { id: AppView; label: string }
@@ -387,6 +388,318 @@ function NavDropdown({
   )
 }
 
+// ── NavSearchDropdown ─────────────────────────────────────────────────────────
+
+const SEARCH_VISIBLE_ROWS = 7
+const SEARCH_ROW_HEIGHT = 56 // px — approximate touch-friendly row height
+
+interface NavSearchResult {
+  doc: CorpusDoc
+  matchType: 'title' | 'heading' | 'body'
+  excerpt: string
+}
+
+function navSearch(allDocs: CorpusDoc[], rawQuery: string): NavSearchResult[] {
+  const q = rawQuery.trim().toLowerCase()
+  if (!q || q.length < 2) return []
+  const results: NavSearchResult[] = []
+  const seen = new Set<string>()
+
+  for (const doc of allDocs) {
+    const add = (matchType: NavSearchResult['matchType'], excerpt: string) => {
+      if (!seen.has(`${doc.id}:${matchType}`)) {
+        seen.add(`${doc.id}:${matchType}`)
+        results.push({ doc, matchType, excerpt })
+      }
+    }
+    if (doc.title.toLowerCase().includes(q)) add('title', doc.title)
+    for (const h of doc.headings) {
+      if (h.text.toLowerCase().includes(q)) { add('heading', h.text); break }
+    }
+    const body = doc.content.toLowerCase()
+    const idx = body.indexOf(q)
+    if (idx !== -1) {
+      const s = Math.max(0, idx - 50)
+      const e = Math.min(doc.content.length, idx + q.length + 50)
+      const raw = doc.content.slice(s, e).replace(/\s+/g, ' ').trim()
+      add('body', (s > 0 ? '…' : '') + raw + (e < doc.content.length ? '…' : ''))
+    }
+  }
+
+  return results.slice(0, 40)
+}
+
+function highlightNavMatch(text: string, query: string) {
+  const idx = text.toLowerCase().indexOf(query.toLowerCase())
+  if (idx === -1) return <>{text}</>
+  return (
+    <>
+      {text.slice(0, idx)}
+      <mark className="bg-[rgba(159,108,49,0.35)] text-inherit not-italic">{text.slice(idx, idx + query.length)}</mark>
+      {text.slice(idx + query.length)}
+    </>
+  )
+}
+
+function NavSearchDropdown({
+  allDocs,
+  query,
+  onQueryChange,
+  onSelect,
+}: {
+  allDocs: CorpusDoc[]
+  query: string
+  onQueryChange: (q: string) => void
+  onSelect: (doc: CorpusDoc) => void
+}) {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const listRef = useRef<HTMLUListElement>(null)
+
+  const results = useMemo(() => navSearch(allDocs, query), [allDocs, query])
+  const open = results.length > 0
+
+  // Reset active highlight when results change
+  useEffect(() => { setActiveIndex(0) }, [query])
+
+  // Scroll active item into view
+  useEffect(() => {
+    if (!listRef.current) return
+    const el = listRef.current.querySelector('[data-active="true"]') as HTMLElement | null
+    el?.scrollIntoView({ block: 'nearest' })
+  }, [activeIndex])
+
+  // Close on outside click
+  useEffect(() => {
+    if (!open) return
+    function onPointer(e: PointerEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        onQueryChange('')
+      }
+    }
+    document.addEventListener('pointerdown', onPointer)
+    return () => document.removeEventListener('pointerdown', onPointer)
+  }, [open, onQueryChange])
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      if (results.length === 0) return
+      setActiveIndex(i => Math.min(i + 1, results.length - 1))
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      if (results.length === 0) return
+      setActiveIndex(i => Math.max(i - 1, 0))
+    } else if (e.key === 'Enter') {
+      if (results[activeIndex]) {
+        onSelect(results[activeIndex].doc)
+        onQueryChange('')
+        inputRef.current?.blur()
+      }
+    } else if (e.key === 'Escape') {
+      onQueryChange('')
+      inputRef.current?.blur()
+    }
+  }
+
+  const maxDropdownHeight = SEARCH_VISIBLE_ROWS * SEARCH_ROW_HEIGHT
+
+  return (
+    <div ref={containerRef} className="relative flex flex-1 items-center px-2">
+      <label htmlFor="nav-corpus-search" className="sr-only">Search documents</label>
+      <input
+        ref={inputRef}
+        id="nav-corpus-search"
+        type="search"
+        value={query}
+        onChange={e => onQueryChange(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder="Search documents…"
+        autoComplete="off"
+        aria-expanded={open}
+        aria-autocomplete="list"
+        aria-controls={open ? 'nav-search-results' : undefined}
+        aria-activedescendant={open && results[activeIndex] ? `nav-sr-${activeIndex}` : undefined}
+        className="focus-ring w-full rounded border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.07)] px-3 py-1.5 text-[13px] text-[var(--forest-text)] placeholder:text-[var(--forest-text-muted)] outline-none transition hover:border-[rgba(255,255,255,0.25)]"
+      />
+
+      {open && (
+        <ul
+          id="nav-search-results"
+          ref={listRef}
+          role="listbox"
+          aria-label="Search results"
+          className="absolute left-2 right-2 top-full z-50 mt-1 overflow-y-auto rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] py-1 shadow-2xl"
+          style={{ maxHeight: maxDropdownHeight }}
+        >
+          {results.map((r, i) => (
+            <li
+              key={`${r.doc.id}:${r.matchType}`}
+              id={`nav-sr-${i}`}
+              role="option"
+              aria-selected={i === activeIndex}
+              data-active={i === activeIndex ? 'true' : 'false'}
+            >
+              <button
+                type="button"
+                onPointerDown={e => e.preventDefault()} // keep input focused
+                onClick={() => {
+                  onSelect(r.doc)
+                  onQueryChange('')
+                  inputRef.current?.blur()
+                }}
+                onMouseEnter={() => setActiveIndex(i)}
+                className={`flex w-full min-h-[44px] flex-col justify-center px-4 py-2 text-left transition ${
+                  i === activeIndex
+                    ? 'bg-[rgba(159,108,49,0.15)]'
+                    : 'hover:bg-[rgba(255,255,255,0.05)]'
+                }`}
+              >
+                <div className="flex items-baseline gap-2">
+                  <span className="font-serif text-[13px] font-semibold leading-snug text-[var(--forest-text)]">
+                    {highlightNavMatch(r.doc.title, query)}
+                  </span>
+                  <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.1em] text-[var(--forest-text-muted)]">
+                    {r.matchType}
+                  </span>
+                </div>
+                {r.matchType !== 'title' && (
+                  <p className="mt-0.5 line-clamp-1 text-[11px] leading-5 text-[var(--forest-text-muted)]">
+                    {highlightNavMatch(r.excerpt, query)}
+                  </p>
+                )}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+
+// ── MobileSearchOverlay ───────────────────────────────────────────────────────
+
+function MobileSearchOverlay({
+  allDocs,
+  onSelect,
+  onClose,
+}: {
+  allDocs: CorpusDoc[]
+  onSelect: (doc: CorpusDoc) => void
+  onClose: () => void
+}) {
+  const [query, setQuery] = useState('')
+  const [activeIndex, setActiveIndex] = useState(0)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const listRef = useRef<HTMLUListElement>(null)
+
+  const results = useMemo(() => navSearch(allDocs, query), [allDocs, query])
+
+  useEffect(() => { inputRef.current?.focus() }, [])
+  useEffect(() => { setActiveIndex(0) }, [query])
+
+  useEffect(() => {
+    if (!listRef.current) return
+    const el = listRef.current.querySelector('[data-active="true"]') as HTMLElement | null
+    el?.scrollIntoView({ block: 'nearest' })
+  }, [activeIndex])
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      if (results.length === 0) return
+      setActiveIndex(i => Math.min(i + 1, results.length - 1))
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      if (results.length === 0) return
+      setActiveIndex(i => Math.max(i - 1, 0))
+    } else if (e.key === 'Enter' && results[activeIndex]) {
+      onSelect(results[activeIndex].doc)
+      onClose()
+    } else if (e.key === 'Escape') {
+      onClose()
+    }
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.6)]"
+      onClick={onClose}
+    >
+      <div
+        className="mx-auto flex w-full max-w-[600px] flex-col overflow-hidden rounded-b-xl border-b border-x border-[rgba(255,255,255,0.12)] bg-[var(--forest)] shadow-2xl"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Input row */}
+        <div className="flex items-center gap-3 border-b border-[rgba(255,255,255,0.1)] px-4 py-3">
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4 shrink-0 text-[var(--forest-text-muted)]">
+            <circle cx="8.5" cy="8.5" r="5.5" />
+            <path strokeLinecap="round" d="M14.5 14.5l3 3" />
+          </svg>
+          <input
+            ref={inputRef}
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Search documents…"
+            autoComplete="off"
+            className="flex-1 bg-transparent text-[15px] text-[var(--forest-text)] placeholder:text-[var(--forest-text-muted)] focus:outline-none"
+          />
+          <button
+            type="button"
+            onClick={onClose}
+            className="shrink-0 rounded px-2 py-1 text-[12px] text-[var(--forest-text-muted)] hover:text-[var(--forest-text)]"
+          >
+            Cancel
+          </button>
+        </div>
+
+        {/* Results */}
+        {results.length > 0 ? (
+          <ul
+            ref={listRef}
+            role="listbox"
+            className="overflow-y-auto py-1"
+            style={{ maxHeight: SEARCH_VISIBLE_ROWS * SEARCH_ROW_HEIGHT }}
+          >
+            {results.map((r, i) => (
+              <li key={`${r.doc.id}:${r.matchType}`} role="option" aria-selected={i === activeIndex} data-active={i === activeIndex ? 'true' : 'false'}>
+                <button
+                  type="button"
+                  onClick={() => { onSelect(r.doc); onClose() }}
+                  onMouseEnter={() => setActiveIndex(i)}
+                  className={`flex w-full min-h-[44px] flex-col justify-center px-4 py-2 text-left transition ${
+                    i === activeIndex ? 'bg-[rgba(159,108,49,0.15)]' : 'hover:bg-[rgba(255,255,255,0.05)]'
+                  }`}
+                >
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-[13px] font-semibold leading-snug text-[var(--forest-text)]">
+                      {highlightNavMatch(r.doc.title, query)}
+                    </span>
+                    <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.1em] text-[var(--forest-text-muted)]">
+                      {r.matchType}
+                    </span>
+                  </div>
+                  {r.matchType !== 'title' && (
+                    <p className="mt-0.5 line-clamp-1 text-[11px] leading-5 text-[var(--forest-text-muted)]">
+                      {highlightNavMatch(r.excerpt, query)}
+                    </p>
+                  )}
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : query.length >= 2 ? (
+          <p className="px-4 py-5 text-center text-[13px] text-[var(--forest-text-muted)]">No results found.</p>
+        ) : (
+          <p className="px-4 py-5 text-center text-[13px] text-[var(--forest-text-muted)]">Type to search all documents.</p>
+        )}
+      </div>
+    </div>
+  )
+}
+
 // ── Layout ────────────────────────────────────────────────────────────────────
 
 export function Layout({
@@ -400,12 +713,23 @@ export function Layout({
   onSelectDoc,
   corpusQuery,
   onCorpusQueryChange,
+  allDocs,
 }: LayoutProps) {
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
+
   return (
     <div className="relative min-h-screen bg-paper text-ink">
       <a href="#reader-main" className="skip-link">
         Skip to reader
       </a>
+
+      {mobileSearchOpen && (
+        <MobileSearchOverlay
+          allDocs={allDocs}
+          onSelect={(doc) => { onSelectDoc(doc); setMobileSearchOpen(false) }}
+          onClose={() => setMobileSearchOpen(false)}
+        />
+      )}
 
       <header
         data-tauri-drag-region
@@ -435,21 +759,31 @@ export function Layout({
             <span className="ml-2 text-[var(--forest-text-muted)]">Reader</span>
           </p>
 
-          {/* Corpus search — flex-1 center */}
-          <div className="flex flex-1 items-center gap-2 px-2">
-            <label htmlFor="nav-corpus-search" className="sr-only">Search documents</label>
-            <input
-              id="nav-corpus-search"
-              type="search"
-              value={corpusQuery}
-              onChange={e => onCorpusQueryChange(e.target.value)}
-              placeholder="Search documents…"
-              className="focus-ring w-full rounded border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.07)] px-3 py-1.5 text-[13px] text-[var(--forest-text)] placeholder:text-[var(--forest-text-muted)] outline-none transition hover:border-[rgba(255,255,255,0.25)]"
+          {/* Corpus search — desktop inline, hidden on mobile */}
+          <div className="hidden sm:flex flex-1">
+            <NavSearchDropdown
+              allDocs={allDocs}
+              query={corpusQuery}
+              onQueryChange={onCorpusQueryChange}
+              onSelect={onSelectDoc}
             />
           </div>
 
+          {/* Mobile search icon — visible only on small screens */}
+          <button
+            type="button"
+            aria-label="Search documents"
+            onClick={() => setMobileSearchOpen(true)}
+            className="sm:hidden focus-ring flex h-9 w-9 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition ml-auto"
+          >
+            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
+              <circle cx="8.5" cy="8.5" r="5.5" />
+              <path strokeLinecap="round" d="M14.5 14.5l3 3" />
+            </svg>
+          </button>
+
           {/* Right controls */}
-          <div className="flex shrink-0 items-center gap-1">
+          <div className="hidden sm:flex shrink-0 items-center gap-1">
             <NavDropdown
               label="Recent"
               docs={recentDocs}
