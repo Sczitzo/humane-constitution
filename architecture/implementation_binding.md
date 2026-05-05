@@ -10,19 +10,38 @@
 
 Every operational component whose behavior depends on Tier 1 parameters must implement the startup check defined here. Non-exhaustive list:
 
-| Component | What it reads from Tier 1 |
-| :--- | :--- |
-| **Essential Access Issuance Service** | CSM basket values (Annex Y §Y1); reserve window (FC-070); acceptable measurement error thresholds (FC-001, FC-002, FC-004, FC-005) |
-| **Oracle Cohort Gate** | N_MIN (FC-030); methodology class minimum (FC-031); pairwise correlation max (FC-032); adversarial seat minimum (FC-033); quorum-loss restoration window (FC-100) |
-| **Voice / Service Record Scheduler** | Sector ceiling (FC-060); per-person cap (FC-061); decay rate (FC-062); Protected Pause floor (FC-020) |
-| **Scarcity Protocol Activator** | Oracle quorum thresholds; CSM-cluster failure threshold (FC-071); Annex AQ conservative hold logic |
-| **CSM Dispenser (Annex Y §Y2)** | All Category A parameters from `parameter_registry.md`; governance-actor-independent issuance rule |
-| **Enforcement Panel dashboard** | Penalty multipliers (FC-040); detection assumptions (FC-041); leakage thresholds (FC-010); severity matrix (Annex AJ §4.2) |
-| **Attestation Stake Engine** | Stake ratio (FC-080); audit window (FC-081); graph density threshold (FC-082) |
-| **Ombuds Coordination Service** | Sub-count minimum (FC-090); supermajority threshold (FC-091); term length (FC-092) |
-| **Identity Ledger** | Amendment-authority controls over identity schema changes |
-| **Amendment Registry** | Signature threshold (FC-110); timelock (FC-111); holder identities and keys |
-| **Founding Order Exit Coordinator** | Supermajority threshold (FC-120); unwind window (FC-121); subsidiarity scale definitions (FC-122) |
+**Essential Access Issuance Service**
+— CSM basket values (Annex Y §Y1); reserve window (FC-070); measurement error thresholds (FC-001, FC-002, FC-004, FC-005)
+
+**Oracle Cohort Gate**
+— N_MIN (FC-030); methodology class minimum (FC-031); pairwise correlation max (FC-032); adversarial seat minimum (FC-033); quorum-loss restoration window (FC-100)
+
+**Voice / Service Record Scheduler**
+— Sector ceiling (FC-060); per-person cap (FC-061); decay rate (FC-062); Protected Pause floor (FC-020)
+
+**Scarcity Protocol Activator**
+— Oracle quorum thresholds; CSM-cluster failure threshold (FC-071); Annex AQ conservative hold logic
+
+**CSM Dispenser (Annex Y §Y2)**
+— All Category A parameters from `parameter_registry.md`; governance-actor-independent issuance rule
+
+**Enforcement Panel dashboard**
+— Penalty multipliers (FC-040); detection assumptions (FC-041); leakage thresholds (FC-010); severity matrix (Annex AJ §4.2)
+
+**Attestation Stake Engine**
+— Stake ratio (FC-080); audit window (FC-081); graph density threshold (FC-082)
+
+**Ombuds Coordination Service**
+— Sub-count minimum (FC-090); supermajority threshold (FC-091); term length (FC-092)
+
+**Identity Ledger**
+— Amendment-authority controls over identity schema changes
+
+**Amendment Registry**
+— Signature threshold (FC-110); timelock (FC-111); holder identities and keys
+
+**Founding Order Exit Coordinator**
+— Supermajority threshold (FC-120); unwind window (FC-121); subsidiarity scale definitions (FC-122)
 
 ---
 

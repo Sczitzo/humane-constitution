@@ -64,17 +64,15 @@ Each row is itself SHA-256 hashed; the hash is the `prior_hash` for the next row
 
 **Version 1 — 2026-04-18 (Protocol founding)**
 
-| Field | Value |
-| :--- | :--- |
-| `version` | 1 |
-| `date` | 2026-04-18 |
-| `prior_hash` | `GENESIS` |
-| `state_hash` | `TBD at founding event — computed by the founding coalition's multi-signature process` |
-| `signatures` | 7 of 9 founding-coalition holders |
-| `change_summary` | Protocol founding: establishes Annex Y CSM, `/founding/commitments.md` FC-001 through FC-122, architectural enforcement layer (`parameter_registry.md`, `amendment_protocol.md`), and Annex AJ/AL/AQ/AS operative states. |
-| `amendment_proposal_hash` | `TBD at founding event` |
-| `timelock_entry_date` | N/A (founding not subject to timelock — the founding coalition's charter is itself the authority) |
-| `timelock_exit_date` | 2026-04-18 |
+**version:** 1
+**date:** 2026-04-18
+**prior_hash:** `GENESIS`
+**state_hash:** `TBD at founding event — computed by the founding coalition's multi-signature process`
+**signatures:** 7 of 9 founding-coalition holders
+**change_summary:** Protocol founding: establishes Annex Y CSM, `/founding/commitments.md` FC-001 through FC-122, architectural enforcement layer (`parameter_registry.md`, `amendment_protocol.md`), and Annex AJ/AL/AQ/AS operative states.
+**amendment_proposal_hash:** `TBD at founding event`
+**timelock_entry_date:** N/A (founding not subject to timelock — the founding coalition's charter is itself the authority)
+**timelock_exit_date:** 2026-04-18
 
 **Note on founding:** The founding version is the only version permitted to bypass the waiting period, because before founding there is no earlier Tier 1 state to protect. Every later version is subject to the full amendment protocol, including the FC-111 waiting period.
 

@@ -38,12 +38,17 @@ In plain terms:
 
 Four elements, each addressed in a dedicated file:
 
-| Element | File | Enforces |
-| :--- | :--- | :--- |
-| **Parameter registry** | `parameter_registry.md` (this file) | Lists every architecturally locked parameter and value with references to tier classification, source commitment, and enforcement mechanism. |
-| **Amendment protocol** | `amendment_protocol.md` | Specifies M-of-N signature threshold (FC-110), timelock (FC-111), and procedural gates for changing any Tier 1 entry in this registry. |
-| **Drift chain** | `drift_chain.md` | Version-chained hash history of `/founding/commitments.md`, `Humane_Constitution.md` §0, and Annex Y §Y1, published to a tamper-evident ledger so that silent modification is detectable. |
-| **Implementation binding** | `implementation_binding.md` | Requirement that every operational service component (Essential Access issuer, Voice scheduler, oracle gate, etc.) verifies the current drift-chain hash of this registry at startup and refuses to operate if the hash does not match the operator's pinned reference. |
+**Parameter registry** — `parameter_registry.md` (this file)
+Lists every architecturally locked parameter and value with references to tier classification, source commitment, and enforcement mechanism.
+
+**Amendment protocol** — `amendment_protocol.md`
+Specifies M-of-N signature threshold (FC-110), timelock (FC-111), and procedural gates for changing any Tier 1 entry in this registry.
+
+**Drift chain** — `drift_chain.md`
+Version-chained hash history of `/founding/commitments.md`, `Humane_Constitution.md` §0, and Annex Y §Y1, published to a tamper-evident ledger so that silent modification is detectable.
+
+**Implementation binding** — `implementation_binding.md`
+Requirement that every operational service component verifies the current drift-chain hash of this registry at startup and refuses to operate if the hash does not match the operator's pinned reference.
 
 ---
 
