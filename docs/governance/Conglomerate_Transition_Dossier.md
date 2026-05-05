@@ -1,6 +1,6 @@
 # Conglomerate Transition Dossier
 
-This dossier explains how essential-sector conglomerates would operate under the Humane Constitution, especially oil, energy, medicine, logistics, and other firms whose assets can become survival chokepoints. Its primary abuse pattern is [ACL-013 - Essential-Sector Refusal Leverage](./Abuse_Case_Library.md).
+This dossier explains how essential-sector conglomerates would operate under the Humane Constitution, especially oil, energy, medicine, logistics, and other firms whose assets can become survival chokepoints. Its primary abuse pattern is [ACL-013 - Essential-Sector Refusal Leverage](./Abuse_Case_Library.md), and its operational drill package is the [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md).
 
 The design premise is simple:
 

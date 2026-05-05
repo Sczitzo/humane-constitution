@@ -82,6 +82,12 @@ Dependency percentages are measured on a rolling 12-month basis and include indi
 
 A category can be at floor-compliant levels while still being at Critical dependency concentration. Both conditions are tracked independently. Floor compliance addresses the quantity of domestic capacity; dependency concentration addresses the resilience of the supply chain. Both must be within bounds for a category to be classified as secure.
 
+### AT2.4 — Foreign-Affiliate Routing
+
+A supplier is treated as domestically controlled only when beneficial ownership, operational command, inventory disposition, patent or standards control, and essential-input routing are all subject to domestic law and Article VII audit. Routing supply through a domestic subsidiary, distributor, PBM, licensee, logistics arm, or standards body does not break foreign control if a foreign parent, affiliate, creditor, state-linked owner, or contractual veto can materially restrict supply, price, formulary access, repair parts, data access, or production inputs.
+
+For dependency classification, such routed supply is attributed to the controlling foreign source. A domestic supplier that depends on a foreign affiliate for a survival-critical license, input, platform, or dispatch decision inherits that affiliate's concentration risk until the dependency is replaced, licensed on public-interest terms, or secured by treaty-enforceable fallback capacity.
+
 ---
 
 ## AT3 — Essential-Capacity Export Caps
@@ -207,9 +213,13 @@ Trade treaties are negotiated by the TSP in consultation with affected Article V
 
 Essential-sector conglomerates — including oil, gas, grid, medicine, logistics, PBM-style medicine-access intermediaries, and critical infrastructure firms — may operate inside the protocol economy only as producers, maintainers, distributors, researchers, or regulated utility stewards. They may earn Flow for verified production, reliability, transition work, innovation, and public-interest delivery. They may not convert control over fuel, grids, medicines, patents, logistics, data, capital, standards bodies, or foreign affiliates into survival leverage, rule authority, enforcement privilege, or exemption from demurrage and beneficial-ownership review.
 
+A **survival-leverage actor** is any public, private, domestic, foreign, or affiliate-routed entity whose refusal, delay, pricing condition, patent assertion, formulary decision, logistics control, standards intervention, data denial, financing condition, or litigation posture can materially impair an Essential Access category, CSM-designated medicine, strategic floor, or Article IV survival guarantee. Survival-leverage status is functional, not formal: ownership form, domicile, contractor tier, or market label cannot remove it.
+
 The Trade Stewardship Panel must maintain a sector-by-sector refusal plan for every Essential Access category exposed to conglomerate leverage. Each plan must identify: largest-supplier exit impact; reserve drawdown duration; fallback public, cooperative, treaty, or independent private capacity; beneficial-owner trace completeness; and lobbying/capture exposure. The [Conglomerate Transition Dossier](../governance/Conglomerate_Transition_Dossier.md) supplies the evidence and test format.
 
-No essential-sector firm may be treated as non-critical merely because it is formally private, foreign, or operating through affiliates. If a refusal, litigation strategy, supply-chain delay, patent hold, PBM formulary action, or standards-body campaign can materially impair the CSM floor, the firm is a survival-leverage actor for Article VII monitoring and Annex AT dependency review.
+No essential-sector firm may be treated as non-critical merely because it is formally private, foreign, or operating through affiliates. If a survival-leverage actor refuses lawful supply, imposes survival-hostage terms, withholds operational data, disables essential infrastructure, blocks transfer to a compliant operator, or causes a verified floor breach, public receiver authority may activate for the affected function only. Receiver authority is temporary, reviewable, compensated at constitutional public-use standards, and limited to continuity of service, reserve protection, asset maintenance, and transition to compliant public, cooperative, treaty, or independent private capacity.
+
+For CSM-designated medicines, compulsory licensing and public or cooperative manufacturing activate when patent, exclusivity, PBM, formulary, foreign-affiliate, API-input, or manufacturing control creates a verified shortage risk, floor breach, unjustified access denial, or refusal to supply on published public-interest terms. Compensation must be lawful and transparent, but no exclusivity claim may override the CSM floor. Activation, rates, and deactivation are published through Article VII and tested against the Conglomerate Transition Dossier refusal drill.
 
 ---
 

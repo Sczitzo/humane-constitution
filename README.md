@@ -224,10 +224,12 @@ The constitution is built in five layers. Each layer depends on the one above it
 | [Parameter Calibration Register](./docs/governance/Parameter_Calibration_Register.md) | High-risk parameter values, evidence needs, capture routes, and revision triggers. |
 | [Capture Dashboard Specification](./docs/governance/Capture_Dashboard_Specification.md) | Public metrics for elite formation, institutional self-protection, and control-plane capture. |
 | [Conglomerate Transition Dossier](./docs/governance/Conglomerate_Transition_Dossier.md) | How essential-sector conglomerates can keep doing business without holding survival goods hostage. |
+| [Essential-Sector Refusal Test Package](./docs/governance/Essential_Sector_Refusal_Test_Package.md) | Practical drills for supplier exit, medicine/PBM refusal, grid/logistics delay, reserves, fallback capacity, and capture exposure. |
 | [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
 | [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
 | [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
 | [Rights Layer](./docs/public/05_rights_layer.md) | Plain-language summary of citizen rights and protections. |
+| [How Big Companies Work Here](./docs/public/06_big_companies.md) | Plain-language explanation of profit, compliance, and anti-hostage rules for large firms. |
 
 ### Core documents
 

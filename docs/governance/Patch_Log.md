@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-047**
+**Running change ledger aligned to the Humane Constitution · Current through P-048**
 
 ---
 
@@ -66,6 +66,7 @@
 | P-045 | T-001 / T-002 / T-004 / T-007 / IC-004 | **ACTIVE** | Critical | Threat resolution batch — threshold derivation, asymmetric exclusion review, contribution floor, protected-term seed list, dignity-only continuity mode |
 | P-046 | Multiple | **ACTIVE** | Critical | Evidence and capture hardening — seven proof artifacts, drift audit, parameter calibration, abuse cases, evidence ladder, founding dossier, and capture dashboard |
 | P-047 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector conglomerate transition — profitable compliant path, refusal survivability tests, public fallback capacity, and numeric evidence anchors |
+| P-048 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector refusal test package — sector drills, FC-194 through FC-201 calibration rows, Annex AT receiver/licensing triggers, public explainer, and evidence-source expansion |
 
 ---
 
@@ -1099,3 +1100,32 @@ The external-trade and anti-rent architecture named supply-chain dependency, dem
 - Regulated utility treatment could entrench incumbents. Mitigated by performance metrics, public receiver authority, distributed/community fallback, and capture dashboard review.
 
 **Residual risk:** This patch makes the hard bargain explicit; it does not prove that fallback capacity can be built fast enough. The largest unresolved question is numeric: how many days can people keep eating, heating, traveling, communicating, and receiving medicine if the largest incumbent in a category says no?
+
+---
+
+### P-048 — Essential-Sector Refusal Operationalization
+
+**Threats addressed:** T-025, T-026, T-027, external dependency capture, medicine-access capture, grid/logistics chokepoint risk, and essential-sector refusal leverage.
+**Patch relation:** Operationalizes P-047.
+**Status:** ACTIVE | **Priority:** Critical
+**Date:** 2026-05-04
+
+**Constitutional text:** [ANNEX_AT.md § AT2.4 and AT6.5](../annexes/ANNEX_AT.md); [Parameter_Calibration_Register.md § Seed Register](./Parameter_Calibration_Register.md); [Essential_Sector_Refusal_Test_Package.md](./Essential_Sector_Refusal_Test_Package.md); [06_big_companies.md](../public/06_big_companies.md)
+
+**Problem diagnosed:**
+P-047 defined the essential-sector conglomerate transition doctrine, but the project still needed operational drills, parameter rows, tighter Annex AT triggers, public-facing explanation, and a broader evidence pass for medicine patents, shortages, grid bottlenecks, fossil transition risk, and utility regulation.
+
+**Introduced design:**
+
+- **Essential-Sector Refusal Test Package** — adds largest oil/fuel supplier exit, largest medicine supplier/PBM refusal, and largest grid/logistics delay drills, with reserve drawdown, fallback capacity, compliant-bidder count, capture exposure, evidence packet, pass/fail, and residual-risk requirements.
+- **FC-194 through FC-201** — adds reserved/draft calibration rows for essential fuel reserves, medicine stockpiles, supplier concentration, public fallback deadlines, procurement concentration, PBM/intermediary separation, logistics redundancy, and essential data/claims portability.
+- **Annex AT tightening** — defines foreign-affiliate routing, survival-leverage actors, public receiver authority, and compulsory licensing/public manufacturing triggers for CSM-designated medicines.
+- **Public explainer** — adds "How Big Companies Work Here" for non-technical readers: profit remains allowed; hostage power does not.
+- **External evidence expansion** — adds sources for pharma patent-listing/evergreening risk, drug shortages, transformer/grid supply-chain bottlenecks, fossil transition/stranded-asset exposure, and utility regulation.
+
+**New risks introduced:**
+- Receiver authority and compulsory licensing can be abused if triggered on weak evidence. Mitigated by functional trigger definitions, Article VII publication, compensation/public-use standards, and refusal-drill evidence packets.
+- Public refusal drills can reveal operational weaknesses. Mitigated by class-level public reporting and justified redaction of exploit-enabling details.
+- Parameter draft anchors may be mistaken for proven values. Mitigated by reserved status and the Parameter Calibration Register's revision-trigger discipline.
+
+**Residual risk:** The package makes essential-sector refusal testable; it does not supply the physical reserves, manufacturing capacity, alternate operators, legal judgments, or treaty capacity needed to pass. The decisive future evidence remains sector-by-sector: how long the CSM floor holds when the largest incumbent refuses.
