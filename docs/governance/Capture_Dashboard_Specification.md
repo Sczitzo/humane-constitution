@@ -58,6 +58,8 @@ It is not a surveillance mandate. It is a public accountability specification. D
 | Demurrage burden by wealth band | Detect hidden ordinary-life tax. | Ordinary households pay more relative burden than idle concentrated holdings. |
 | Procurement award concentration | Detect favored vendors. | Awards cluster among connected entities. |
 | Subcontractor opacity | Detect control hidden below prime contractors. | Beneficial owners unresolved below second tier. |
+| Essential-sector refusal exposure | Detect survival leverage by oil, energy, medicine, logistics, or medicine-access intermediaries. | Largest-supplier exit can break a CSM category before reserve or fallback capacity is ready. |
+| Lobbying/capture exposure by contract value | Detect rule-shaping around essential public contracts. | Contract recipients fund lobbying, trade associations, standards bodies, foundations, or revolving-door pipelines tied to the regulated category without public disclosure. |
 
 ### 5. Identity And Access Gatekeeping
 

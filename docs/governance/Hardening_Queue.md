@@ -32,7 +32,8 @@ Do not use **CLOSED** for live system risks unless the item is evidence-backed o
 | 4 | Anti-rent enforcement against legal wrappers | Power-Wealth Convergence; Static-Advantage Loop | **DESIGNED** | P-031, P-032, P-033, T-025, Annexes J, AR | Red-team trusts, family offices, beneficial ownership chains, land-control rights, and enterprise-control workarounds. |
 | 5 | Founding legitimacy and consent | Power-Wealth Convergence; Static-Advantage Loop | **DESIGNED** | T-017, T-022, T-026, T-027, Founding Order, Annex AH | Define founding coalition legitimacy, objection rights, consent thresholds, exit rehearsal, and anti-imposition tests. |
 | 6 | Bureaucratic complexity and institutional self-protection | Static-Advantage Loop; Power-Wealth Convergence | **ONGOING** | T-005, T-008, T-016, P-025, Annexes AI, AG, AV | Test whether review bodies protect people or protect themselves; measure ordinary-reader comprehension of authority paths. |
-| 7 | Implementation drift and tamper evidence | Control-plane failure | **DESIGNED** | architecture files, INVARIANTS, Annex AV | Use the Implementation Drift Audit Package to test hash reproducibility, publication-channel divergence, startup refusal, key custody, timelock response, and supply-chain bypass. |
+| 7 | Essential-sector conglomerate refusal and retaliation | Survival-Trade Bind; Power-Wealth Convergence | **DESIGNED** | Annex AT, Annex AR, Conglomerate Transition Dossier, Capture Dashboard Specification | Test whether oil, energy, medicine, logistics, and PBM-style intermediaries can leave, litigate, lobby, or retaliate without breaking the CSM floor. |
+| 8 | Implementation drift and tamper evidence | Control-plane failure | **DESIGNED** | architecture files, INVARIANTS, Annex AV | Use the Implementation Drift Audit Package to test hash reproducibility, publication-channel divergence, startup refusal, key custody, timelock response, and supply-chain bypass. |
 
 ---
 
@@ -67,6 +68,7 @@ This order prevents downstream fixes from depending on unproven identity, measur
 | Parameter calibration | **DESIGNED** | A correct mechanism can fail through arbitrary numbers. | Keep high-risk FC values in the Parameter Calibration Register with evidence needs and revision triggers. |
 | Capture dashboard gaming | **DESIGNED** | Metrics can be satisfied while power remains concentrated. | Test the Capture Dashboard Specification against threshold gaming, relabeling, and hidden network coordination. |
 | Founding consent theater | **DESIGNED** | A founding vote can become legitimacy theater if people cannot understand, object, abstain, or exit. | Complete the Founding Legitimacy Dossier before any public claim of legitimate activation. |
+| Conglomerate compliant-path design | **DESIGNED** | Essential-sector firms need a profitable compliant path, but not a hostage path. | Use the Conglomerate Transition Dossier to model procurement margins, refusal survivability, reserve drawdown, fallback production, and lobbying/capture exposure. |
 
 ---
 
@@ -84,6 +86,7 @@ This order prevents downstream fixes from depending on unproven identity, measur
 | Capture dashboard review | Quarterly | Capture Dashboard Specification | Concentration metrics, exceptions, dashboard gaming, and public summary. |
 | Implementation drift drill | Pre-launch, then annual | Implementation Drift Audit Package | Hash reproducibility, startup refusal, channel divergence, key custody, and supply-chain results. |
 | Founding legitimacy review | Before activation and after founding-stage handoff | Founding Legitimacy Dossier | Scope, conflicts, objection record, consent record, exit rehearsal, and sunset report. |
+| Essential-sector refusal drill | Pre-launch, then annual by category | Conglomerate Transition Dossier; Annex AT | Largest-supplier exit simulation, reserve drawdown, compliant-bidder count, public fallback capacity, capture exposure, and residual-risk update. |
 
 ---
 

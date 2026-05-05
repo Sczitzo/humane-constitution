@@ -27,13 +27,14 @@ Read in this order:
 15. [Implementation Drift Audit Package](../governance/Implementation_Drift_Audit_Package.md) — tests the hard-lock, drift-chain, keyholder, and deployment-integrity layer.
 16. [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md) — tracks high-risk FC values, rationale, capture route, and revision triggers.
 17. [Capture Dashboard Specification](../governance/Capture_Dashboard_Specification.md) — defines the public indicators for elite formation and control-plane capture.
-18. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
-19. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
-20. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-21. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-22. [White Paper](./04_white_paper.md) — the fuller public explanation.
-23. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-24. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+18. [Conglomerate Transition Dossier](../governance/Conglomerate_Transition_Dossier.md) — how oil, energy, medicine, and other essential-sector firms can operate without survival leverage.
+19. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
+20. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
+21. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+22. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+23. [White Paper](./04_white_paper.md) — the fuller public explanation.
+24. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
+25. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
 
 Do not start with the annexes unless you already want the technical layer.
 

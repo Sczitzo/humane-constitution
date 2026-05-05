@@ -203,6 +203,14 @@ Trade governance does not create a separate economic authority. All Flow issuanc
 
 Trade treaties are negotiated by the TSP in consultation with affected Article VI constituencies and ratified by a two-thirds Article VI supermajority before taking effect. No treaty may override the strategic floor definitions (§AT1), the export cap triggers (§AT3), or the mandatory Flow conversion requirement (§AT4.1). Any treaty clause that purports to override these is void on its face.
 
+### AT6.5 — Essential-Sector Conglomerate Operating Rule
+
+Essential-sector conglomerates — including oil, gas, grid, medicine, logistics, PBM-style medicine-access intermediaries, and critical infrastructure firms — may operate inside the protocol economy only as producers, maintainers, distributors, researchers, or regulated utility stewards. They may earn Flow for verified production, reliability, transition work, innovation, and public-interest delivery. They may not convert control over fuel, grids, medicines, patents, logistics, data, capital, standards bodies, or foreign affiliates into survival leverage, rule authority, enforcement privilege, or exemption from demurrage and beneficial-ownership review.
+
+The Trade Stewardship Panel must maintain a sector-by-sector refusal plan for every Essential Access category exposed to conglomerate leverage. Each plan must identify: largest-supplier exit impact; reserve drawdown duration; fallback public, cooperative, treaty, or independent private capacity; beneficial-owner trace completeness; and lobbying/capture exposure. The [Conglomerate Transition Dossier](../governance/Conglomerate_Transition_Dossier.md) supplies the evidence and test format.
+
+No essential-sector firm may be treated as non-critical merely because it is formally private, foreign, or operating through affiliates. If a refusal, litigation strategy, supply-chain delay, patent hold, PBM formulary action, or standards-body campaign can materially impair the CSM floor, the firm is a survival-leverage actor for Article VII monitoring and Annex AT dependency review.
+
 ---
 
 ## AT7 — Threat Surface and Failure Modes
@@ -251,6 +259,7 @@ Trade treaties are negotiated by the TSP in consultation with affected Article V
 | **Annex Y — CSM** | Strategic floor definitions for CSM-basket categories are Tier 1 adjacent; floor reductions require H-2 supermajority |
 | **Annex M — Oracle Architecture** | Oracle responsibility for supply-chain measurement and dependency concentration tracking |
 | **Annex AI — Federated Ombuds** | Receives TSP conflict-of-interest referrals; reviews suppressed Extractive classifications; resolves membrane-stage disputes |
+| **Conglomerate Transition Dossier** | Sector-specific refusal drills, compliant-path incentives, public fallback capacity, and lobbying/capture exposure metrics |
 | **Annex N — Transition** | Phase 2 (Boundary Interface) transition mechanics are governed by this annex from the point of protocol activation |
 
 ---

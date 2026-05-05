@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-046**
+**Running change ledger aligned to the Humane Constitution · Current through P-047**
 
 ---
 
@@ -65,6 +65,7 @@
 | P-044 | Multiple | ACTIVE | High | Threat-strengthening batch — T-001/T-002/T-004/T-005/T-007/T-018/T-019 mitigation gaps closed |
 | P-045 | T-001 / T-002 / T-004 / T-007 / IC-004 | **ACTIVE** | Critical | Threat resolution batch — threshold derivation, asymmetric exclusion review, contribution floor, protected-term seed list, dignity-only continuity mode |
 | P-046 | Multiple | **ACTIVE** | Critical | Evidence and capture hardening — seven proof artifacts, drift audit, parameter calibration, abuse cases, evidence ladder, founding dossier, and capture dashboard |
+| P-047 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector conglomerate transition — profitable compliant path, refusal survivability tests, public fallback capacity, and numeric evidence anchors |
 
 ---
 
@@ -1069,3 +1070,32 @@ The project had strong mechanisms and evidence packages, but seven proof surface
 - Implementation attestations can create false technical confidence. Mitigated by explicit claim boundaries in the Implementation Drift Audit Package.
 
 **Residual risk:** These upgrades make proof obligations clearer; they do not prove the system works. The highest residual risks remain founding consent theater, keyholder social capture, dashboard gaming, parameter arbitrariness, and technically valid but hostile amendment.
+
+---
+
+### P-047 — Essential-Sector Conglomerate Transition
+
+**Threats addressed:** T-025, T-026, T-027, external dependency capture, procurement capture, medicine-access capture, and essential-sector refusal risk.
+**Status:** ACTIVE | **Priority:** Critical
+**Date:** 2026-05-04
+
+**Constitutional text:** [ANNEX_AT.md § AT6.5 and AT8](../annexes/ANNEX_AT.md); [Capture_Dashboard_Specification.md § Money, Procurement, And Legal Wrapper Capture](./Capture_Dashboard_Specification.md); [Conglomerate_Transition_Dossier.md](./Conglomerate_Transition_Dossier.md)
+
+**Problem diagnosed:**
+The external-trade and anti-rent architecture named supply-chain dependency, demurrage capture, and legal-wrapper risk, but it did not yet explain how incumbent oil, energy, medicine, logistics, and PBM-style medicine-access conglomerates would operate under the system. Without a sector-specific transition doctrine, the project risked relying on moral persuasion while firms with essential chokepoints could rationally leave, litigate, lobby, retaliate, or route control through foreign affiliates.
+
+**Introduced design:**
+
+- **Conglomerate Transition Dossier** — defines the operating rule: firms may earn Flow for verified production, reliability, transition work, innovation, and public-interest delivery; they may not convert survival chokepoints into rule authority or survival leverage.
+- **Numeric evidence anchors** — records real-world scale indicators: energy investment, fossil dependence, petroleum import/export flows, PBM prescription concentration, health spending, public procurement scale, lobbying spend, and beneficial-ownership risk.
+- **Sector models** — distinguishes oil/fossil firms, energy utilities/grid operators, and medicine manufacturers/PBMs, with allowed activity, prohibited leverage, compliant incentives, and refusal fallback.
+- **Refusal survivability tests** — requires largest-supplier exit modeling, reserve drawdown duration, medicine stockpile audit, compliant-bidder count, beneficial-owner trace, lobbying/capture exposure, and public fallback capacity before stronger claims.
+- **Annex AT interface** — adds AT6.5 so essential-sector conglomerates are treated as survival-leverage actors when their refusal, litigation, patent hold, supply-chain delay, or standards-body campaign can materially impair the CSM floor.
+- **Capture dashboard additions** — adds essential-sector refusal exposure and lobbying/capture exposure by contract value.
+
+**New risks introduced:**
+- Public procurement could overpay incumbents to keep them inside the system, creating disguised bailouts. Mitigated by compliant-margin tests, public fallback modeling, and beneficial-owner trace requirements.
+- Refusal drills could reveal sensitive supply-chain weaknesses. Mitigated by public class-level reporting with restricted operational detail where disclosure would improve attack execution.
+- Regulated utility treatment could entrench incumbents. Mitigated by performance metrics, public receiver authority, distributed/community fallback, and capture dashboard review.
+
+**Residual risk:** This patch makes the hard bargain explicit; it does not prove that fallback capacity can be built fast enough. The largest unresolved question is numeric: how many days can people keep eating, heating, traveling, communicating, and receiving medicine if the largest incumbent in a category says no?

@@ -37,8 +37,9 @@ Every pilot needs:
 | 5 | Flow and demurrage simulation | Can Flow decay fund public rails without burdening ordinary users or creating exemptions? | No hidden tax burden or sector-capture route dominates. |
 | 6 | Public banking rails | Can basic banking be provided as infrastructure without predatory fees or credit traps? | Service cost and access targets are sustainable. |
 | 7 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
-| 8 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
-| 9 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure? | Drift, founding, and claim-status failures are visible before activation or scale-up. |
+| 8 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
+| 9 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
+| 10 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure? | Drift, founding, and claim-status failures are visible before activation or scale-up. |
 
 ![Pilot Phase Sequence](/images/V-008.png)
 
@@ -46,22 +47,23 @@ Every pilot needs:
 
 | Macro risk | Primary pilot track | Secondary checks |
 |---|---|---|
-| Identity without surveillance or exclusion | Phase 2 | Phase 4 appeals; Phase 8 governance capture |
-| Real-capacity measurement | Phase 3 | Phase 4 delivery; Phase 8 oracle capture |
-| Contribution without coercive hierarchy | Phase 1 comprehension; Phase 8 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
-| Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 8 elite proxy markets |
-| Founding legitimacy and consent | Phase 8 | Consent rehearsal; exit rehearsal; public objection process |
-| Bureaucratic complexity and institutional self-protection | Phase 1; Phase 8 | Authority tracing; review-body deadlock tests |
-| Implementation drift and parameter calibration | Phase 9 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
+| Identity without surveillance or exclusion | Phase 2 | Phase 4 appeals; Phase 9 governance capture |
+| Real-capacity measurement | Phase 3 | Phase 4 delivery; Phase 9 oracle capture |
+| Contribution without coercive hierarchy | Phase 1 comprehension; Phase 9 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
+| Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 9 elite proxy markets |
+| Essential-sector conglomerate refusal | Phase 8 | Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
+| Founding legitimacy and consent | Phase 9 | Consent rehearsal; exit rehearsal; public objection process |
+| Bureaucratic complexity and institutional self-protection | Phase 1; Phase 9 | Authority tracing; review-body deadlock tests |
+| Implementation drift and parameter calibration | Phase 10 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
 
 ## Collapse-state-to-pilot crosswalk
 
 | Collapse state | Primary pilot tracks | Secondary checks |
 |---|---|---|
-| Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 8 proxy-market and emergency-power tests |
-| Power-Wealth Convergence | Phase 5 Flow and demurrage; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Public procurement integrity, beneficial-ownership review, FAP capture testing, and sector concentration dashboards |
-| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 8 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
-| Control-plane failure | Phase 8 governance red-team; Phase 9 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
+| Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 9 proxy-market and emergency-power tests |
+| Power-Wealth Convergence | Phase 5 Flow and demurrage; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 conglomerate transition; Phase 9 governance red-team | Public procurement integrity, beneficial-ownership review, FAP capture testing, and sector concentration dashboards |
+| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 9 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
+| Control-plane failure | Phase 9 governance red-team; Phase 10 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
 
 ## Phase 1 - Public understanding
 
@@ -252,7 +254,39 @@ Every pilot needs:
 - Anti-rent rules punish small stewards while missing large actors.
 - Mission-lock or stewardship language becomes a wrapper for private dynastic control.
 
-## Phase 8 - Governance red-team
+## Phase 8 - Essential-sector conglomerate transition
+
+**Hypothesis:** Essential-sector conglomerates can keep doing business under protocol rules if paid for verified production, reliability, and transition work, but cannot retain survival leverage.
+
+**Required packages:**
+
+- [Conglomerate Transition Dossier](./Conglomerate_Transition_Dossier.md)
+- [Capture Dashboard Specification](./Capture_Dashboard_Specification.md)
+- [Parameter Calibration Register](./Parameter_Calibration_Register.md)
+- [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
+
+**Measure:**
+
+- largest-supplier exit impact by Essential Access category
+- reserve drawdown duration
+- medicine stockpile duration for CSM-designated medicines
+- number of independent compliant bidders
+- public/cooperative fallback capacity
+- beneficial-owner trace completeness through subcontractors and foreign affiliates
+- lobbying, trade-association, foundation, standards-body, and revolving-door exposure
+- procurement margin adequacy without monopoly rent
+- foreign counterparty retaliation response under Annex AT
+
+**Failure criteria:**
+
+- the largest supplier can refuse for 90 days and break the CSM floor;
+- no public, cooperative, treaty, or independent private fallback exists for a CSM category;
+- procurement attracts only one controlled bidder while the system claims a market exists;
+- medicine access depends on a PBM-style intermediary or patent holder that can deny survival treatment for leverage;
+- fossil transition contracts become disguised bailouts without measured capacity, remediation, or resilience output;
+- foreign affiliates can bypass strategic floors, Flow conversion, or dependency thresholds.
+
+## Phase 9 - Governance red-team
 
 **Hypothesis:** The constitutional architecture can expose and respond to capture attempts before they silently alter the system.
 
@@ -291,7 +325,7 @@ Every pilot needs:
 - The patch process becomes performative.
 - A proposed patch is treated as proof before adversarial testing or activation.
 
-## Phase 9 - Implementation drift and founding legitimacy
+## Phase 10 - Implementation drift and founding legitimacy
 
 **Hypothesis:** The project can distinguish technical compliance from legitimate, evidence-backed operation.
 
@@ -336,6 +370,7 @@ Before any serious scale-up claim, the project needs:
 - public banking cost model
 - anti-rent legal review
 - independent red-team report
+- essential-sector conglomerate refusal drill
 - founding legitimacy and exit rehearsal report
 - implementation drift audit results
 - parameter calibration register review

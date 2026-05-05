@@ -142,6 +142,16 @@ Each abuse case should name:
 - **Failure criterion:** formal independence masks shared error.
 - **False reassurance:** "There are multiple sources."
 
+### ACL-013 - Essential-Sector Refusal Leverage
+
+- **Actor incentive:** preserve monopoly margins, patent leverage, fossil rents, utility rate-base control, PBM self-preferencing, or political bargaining power.
+- **Attack path:** threaten exit, litigate transition rules, slow-walk supply, route control through foreign affiliates, fund lobbying or standards bodies, withhold essential medicine, delay grid equipment, or frame public fallback capacity as confiscation.
+- **Collapse state:** Survival-Trade Bind and Power-Wealth Convergence.
+- **Current controls:** Annex AT, Annex AR, Capture Dashboard Specification, Conglomerate Transition Dossier.
+- **Missing test:** largest-supplier refusal drill with reserve drawdown, fallback capacity, beneficial-owner trace, compliant-bidder count, and lobbying/capture exposure.
+- **Failure criterion:** refusal by one supplier or controlled group can break a CSM category before public, cooperative, treaty, or independent private fallback capacity is ready.
+- **False reassurance:** "They will keep selling because the market is too large to leave."
+
 ---
 
 ## Promotion Rule

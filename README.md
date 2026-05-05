@@ -223,6 +223,7 @@ The constitution is built in five layers. Each layer depends on the one above it
 | [Implementation Drift Audit Package](./docs/governance/Implementation_Drift_Audit_Package.md) | Tests for hash reproducibility, startup refusal, key custody, timelocks, and deployment drift. |
 | [Parameter Calibration Register](./docs/governance/Parameter_Calibration_Register.md) | High-risk parameter values, evidence needs, capture routes, and revision triggers. |
 | [Capture Dashboard Specification](./docs/governance/Capture_Dashboard_Specification.md) | Public metrics for elite formation, institutional self-protection, and control-plane capture. |
+| [Conglomerate Transition Dossier](./docs/governance/Conglomerate_Transition_Dossier.md) | How essential-sector conglomerates can keep doing business without holding survival goods hostage. |
 | [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
 | [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
 | [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
