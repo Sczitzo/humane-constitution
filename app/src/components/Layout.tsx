@@ -529,7 +529,7 @@ function NavSearchDropdown({
         aria-autocomplete="list"
         aria-controls={open ? 'nav-search-results' : undefined}
         aria-activedescendant={open && results[activeIndex] ? `nav-sr-${activeIndex}` : undefined}
-        className="focus-ring w-full rounded border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.07)] px-3 py-1.5 text-[15px] text-[var(--forest-text)] placeholder:text-[var(--forest-text-muted)] outline-none transition hover:border-[rgba(255,255,255,0.25)]"
+        className="focus-ring w-full rounded border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.07)] px-3 py-1.5 text-base text-[var(--forest-text)] placeholder:text-[var(--forest-text-muted)] outline-none transition hover:border-[rgba(255,255,255,0.25)]"
       />
 
       {open && (
