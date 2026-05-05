@@ -92,6 +92,14 @@ function SettingsDropdown() {
   const [theme, setTh]          = useState<ThemeOption>(readTheme)
   const containerRef            = useRef<HTMLDivElement>(null)
 
+  // Apply saved preferences on first mount
+  useEffect(() => {
+    applyFontSize(fontSize)
+    applyColumnWidth(colWidth)
+    applyTheme(theme)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   // Close on outside click or Escape
   useEffect(() => {
     if (!open) return
