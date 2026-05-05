@@ -1436,7 +1436,12 @@ function readStoredPaneScroll(view: AppView): PaneScrollState {
 
 function jumpToHeading(doc: CorpusDoc, slug: string) {
   const element = document.getElementById(headingScrollId(doc, slug))
-  element?.scrollIntoView({ behavior: 'auto', block: 'start' })
+  if (!element) return
+  element.scrollIntoView({ behavior: 'auto', block: 'start' })
+  element.classList.remove('link-pulse')
+  void element.offsetWidth // force reflow so re-adding the class restarts the animation
+  element.classList.add('link-pulse')
+  element.addEventListener('animationend', () => element.classList.remove('link-pulse'), { once: true })
 }
 
 function queueHeadingJump(doc: CorpusDoc, slug: string) {
@@ -1705,7 +1710,12 @@ function MarkdownDocument({
           const el =
             document.getElementById(`${finalTarget.id}--${anchor}`) ??
             document.getElementById(anchor)
-          el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          if (!el) return
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          el.classList.remove('link-pulse')
+          void el.offsetWidth
+          el.classList.add('link-pulse')
+          el.addEventListener('animationend', () => el.classList.remove('link-pulse'), { once: true })
         }
       : null
     if (target && target.id !== doc.id) {
@@ -3040,10 +3050,10 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           queueHeadingJump(targetDoc, pendingDocTarget.headingSlug)
           return
         }
-        // No heading target — scroll both window and inner pane to top so the
-        // document title is fully visible below the sticky nav bar.
-        window.scrollTo({ top: 0, behavior: 'instant' })
+        // No heading target — scroll to the reader panel start so the document
+        // title is the first thing visible (not the shelf header above it).
         if (readerPaneRef.current) readerPaneRef.current.scrollTop = 0
+        document.getElementById('reader-panel-start')?.scrollIntoView({ behavior: 'instant', block: 'start' })
       })
     })
   }, [allDocs, pendingDocTarget])
