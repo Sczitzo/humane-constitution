@@ -2786,9 +2786,11 @@ function getDocTopics(doc: CorpusDoc): string[] {
 function TopicsView({
   corpus,
   onJump,
+  readDocIds,
 }: {
   corpus: CorpusPayload
   onJump: (doc: CorpusDoc) => void
+  readDocIds: string[]
 }) {
   const taggedDocs: Map<string, CorpusDoc[]> = new Map(TOPIC_DEFS.map((t) => [t.id, []]))
 
@@ -2813,24 +2815,32 @@ function TopicsView({
               </span>
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {docs.map((doc) => (
-                <button
-                  key={doc.id}
-                  type="button"
-                  onClick={() => onJump(doc)}
-                  className="focus-ring group flex flex-col rounded border border-line bg-paper-strong p-4 text-left transition hover:border-[rgba(159,108,49,0.4)] hover:shadow-sm"
-                >
-                  <span className="text-[10px] uppercase tracking-[0.14em] text-ink-faint">
-                    {SECTION_LABELS[doc.section]}
-                  </span>
-                  <h3 className="mt-1 font-serif text-[0.97rem] leading-snug text-ink group-hover:text-ink-strong">
-                    {doc.title}
-                  </h3>
-                  {doc.summary ? (
-                    <p className="mt-1.5 line-clamp-2 text-[12px] leading-5 text-ink-soft">{doc.summary}</p>
-                  ) : null}
-                </button>
-              ))}
+              {docs.map((doc) => {
+                const isRead = readDocIds.includes(doc.id)
+                return (
+                  <button
+                    key={doc.id}
+                    type="button"
+                    onClick={() => onJump(doc)}
+                    className="focus-ring group relative flex flex-col rounded border border-line bg-paper-strong p-4 text-left transition hover:border-[rgba(159,108,49,0.4)] hover:shadow-sm"
+                  >
+                    {isRead && (
+                      <span className="absolute right-3 top-3 flex items-center gap-0.5 rounded-full bg-emerald-900/40 px-1.5 py-0.5 text-[10px] font-medium text-emerald-400">
+                        ✓ Read
+                      </span>
+                    )}
+                    <span className="text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+                      {SECTION_LABELS[doc.section]}
+                    </span>
+                    <h3 className="mt-1 font-serif text-[0.97rem] leading-snug text-ink group-hover:text-ink-strong">
+                      {doc.title}
+                    </h3>
+                    {doc.summary ? (
+                      <p className="mt-1.5 line-clamp-2 text-[12px] leading-5 text-ink-soft">{doc.summary}</p>
+                    ) : null}
+                  </button>
+                )
+              })}
             </div>
           </section>
         )
@@ -3777,7 +3787,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       )}
 
       {view === 'home' && <HomeView corpus={corpus} onJump={handleSelectQuickDoc} />}
-      {view === 'topics' && <TopicsView corpus={corpus} onJump={handleSelectQuickDoc} />}
+      {view === 'topics' && <TopicsView corpus={corpus} onJump={handleSelectQuickDoc} readDocIds={readDocIds} />}
       {view === 'paths' && <ReadingPathsView corpus={corpus} onJump={handleSelectQuickDoc} />}
       {view === 'validation' && <ValidationPanels corpus={corpus} />}
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
