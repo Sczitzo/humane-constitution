@@ -2,6 +2,8 @@
 
 This dossier explains how essential-sector conglomerates would operate under the Humane Constitution, especially oil, energy, medicine, logistics, and other firms whose assets can become survival chokepoints. Its primary abuse pattern is [ACL-013 - Essential-Sector Refusal Leverage](./Abuse_Case_Library.md), and its operational drill package is the [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md).
 
+Addresses: **T-028 (Essential-Sector Refusal Leverage)**
+
 The design premise is simple:
 
 > Conglomerates may earn Flow by producing, maintaining, innovating, and delivering useful goods. They may not convert control of fuel, grids, medicines, patents, logistics, capital, data, or standards into power over survival access, law, measurement, or civic authority.
@@ -261,5 +263,6 @@ The hardest unresolved risks are:
 - whether fossil transition contracts become disguised bailouts;
 - whether foreign counterparties retaliate faster than domestic capacity can adjust;
 - whether capture dashboards detect influence before it hardens into law.
+- **Measurement and oracle capture:** A conglomerate could influence the standards bodies, oracle cohort selection, or supply-chain concentration measurement methodology used by the Capture Dashboard to avoid Watch or Critical classification under AT6.2. This is a refusal-adjacent attack surface: the leverage threat does not require overt refusal if the concentration metrics can be suppressed. Cross-reference: ACL-009 (Dashboard Gaming), ACL-012 (Oracle Standards Club).
 
 No document can make those risks disappear. The proper standard is stricter: the project must know, in advance, how many days people can keep eating, heating, traveling, communicating, and receiving medicine if the largest incumbent says no.

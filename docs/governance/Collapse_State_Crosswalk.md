@@ -32,6 +32,7 @@ Examples: identity gates, oracle capture, FAP capture, drift-chain bypass, emerg
 |---|---|---|---|
 | T-001 Shadow Convertibility | Survival-Trade Bind | Power-Wealth Convergence | Proxy-market and broker-profitability red team. |
 | T-002 Identity Exploits | Survival-Trade Bind | Control-plane identity gate | Identity and Recovery Evidence Test Package. |
+| T-003 | *RETIRED — scope absorbed into T-002 (Identity Exploits). ID permanently retired.* | — | — | — |
 | T-004 Incentive Collapse | Survival-Trade Bind | Static-Advantage Loop | Service Record Misuse Evidence Test Package. |
 | T-005 Governance Throughput Failure | Control-plane failure | Static-Advantage Loop | Backlog, emergency-bypass, and throughput-theater simulation. |
 | T-006 Measurement Lag / Supply Shock | Control-plane failure | Survival-Trade Bind | Capacity Measurement Evidence Test Package. |
@@ -66,5 +67,6 @@ When adding or revising a threat, patch, annex, pilot, or public claim:
 2. Name which control-plane function could fail.
 3. State the proof path that could show the control is not working.
 4. Keep the status language from the Claims and Evidence Register.
+5. Verify that a Patch_Log entry (P-NNN, ACTIVE or PROPOSED) exists for any new control mechanism being added. If none exists, the mechanism is aspirational only and must be labeled accordingly.
 
 If an item cannot be mapped to at least one collapse state or control-plane function, it may be decorative rather than load-bearing.

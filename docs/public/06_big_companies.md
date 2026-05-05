@@ -95,6 +95,10 @@ In plain terms, Annex AT means:
 
 This is especially important for energy, medicine, food, rare materials, shipping, and other goods where sudden disruption could harm ordinary people.
 
+The same protection applies domestically. A company inside the system's borders that controls a critical chokepoint—whether energy, food, medicine, logistics, or data networks—must follow the same rules. It cannot use that control to force concessions or hold the survival floor hostage, no matter whether the company is foreign or domestic.
+
+If a company with that kind of leverage refuses to cooperate with the Essential Access system and people's survival is at genuine risk, the system can activate a temporary public receiver authority. This means the government can step in to run that specific function directly—fuel delivery, medicine distribution, power grids, or whatever is at stake—while a permanent replacement supplier or competitive solution is being found. This is designed to be rare, short-term, and narrowly focused on the function itself. It is an emergency brake, not a tool for permanent nationalization or punishment.
+
 ## What This Means In Practice
 
 For a compliant company, the message is:

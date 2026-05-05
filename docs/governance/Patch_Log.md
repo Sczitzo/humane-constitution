@@ -1076,7 +1076,7 @@ The project had strong mechanisms and evidence packages, but seven proof surface
 
 ### P-047 — Essential-Sector Conglomerate Transition
 
-**Threats addressed:** T-025, T-026, T-027, external dependency capture, procurement capture, medicine-access capture, and essential-sector refusal risk.
+**Threats addressed:** T-025, T-026, T-027, T-028, external dependency capture, procurement capture, medicine-access capture, and essential-sector refusal risk.
 **Status:** ACTIVE | **Priority:** Critical
 **Date:** 2026-05-04
 
@@ -1105,7 +1105,7 @@ The external-trade and anti-rent architecture named supply-chain dependency, dem
 
 ### P-048 — Essential-Sector Refusal Operationalization
 
-**Threats addressed:** T-025, T-026, T-027, external dependency capture, medicine-access capture, grid/logistics chokepoint risk, and essential-sector refusal leverage.
+**Threats addressed:** T-025, T-026, T-027, T-028, external dependency capture, medicine-access capture, grid/logistics chokepoint risk, and essential-sector refusal leverage.
 **Patch relation:** Operationalizes P-047.
 **Status:** ACTIVE | **Priority:** Critical
 **Date:** 2026-05-04

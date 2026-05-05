@@ -289,6 +289,14 @@ The following parameter values are reserved pending pilot data and TSP calibrati
 | FC-191 | Foreign capital conversion window (days before demurrage activates) | Reserved — draft: 30 days | Bound by TSP + Article V review before activation |
 | FC-192 | Extractive reclassification observation window (months) | Reserved — draft: 12 months | Bound by TSP before activation |
 | FC-193 | Stage 3 suspension ratification threshold (Article VI supermajority) | Reserved — draft: two-thirds | Bound by Article VI before activation |
+| FC-194 | Essential fuel reserve minimum (days by region and season) | Reserved — draft: 60-90 days | Bound before essential-sector activation |
+| FC-195 | Essential medicine stockpile minimum (days by CSM medicine category) | Reserved — draft: 90-180 days | Bound before medicine fallback activation |
+| FC-196 | Maximum essential supplier concentration (% of regional essential throughput) | Reserved — draft: 25% | Bound before launch |
+| FC-197 | Public fallback activation deadline (hours / days) | Reserved — draft: 72h critical / 14d managed transition | Bound before activation |
+| FC-198 | Procurement concentration threshold (% of essential category spend) | Reserved — draft: review >30%, mandatory remediation >40% | Bound before essential-sector procurement launch |
+| FC-199 | PBM intermediary separation threshold (% of cross-owned claims or dispensing volume) | Reserved — draft: review >10%, mandatory firewall >20% | Bound before medicine-access launch |
+| FC-200 | Critical logistics redundancy floor (independent routes / operators) | Reserved — draft: two independent routes and operators | Bound before logistics-dependent launch |
+| FC-201 | Essential data claims portability deadline (hours / days) | Reserved — draft: 24h emergency / 30d full package | Bound before medicine/logistics fallback activation |
 
 ---
 

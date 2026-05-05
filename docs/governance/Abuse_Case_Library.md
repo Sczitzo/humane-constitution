@@ -38,7 +38,7 @@ Each abuse case should name:
 - **Attack path:** demand screenshots, infer standing from civic eligibility, scrape public records, reward disclosure.
 - **Collapse state:** Static-Advantage Loop and Power-Wealth Convergence.
 - **Current controls:** Annex Z, Annex AJ, Service Record Misuse Evidence Test Package.
-- **Missing test:** non-civic misuse red team.
+- **Missing test:** Stage 2 non-civic misuse red team — designed (Service Record Misuse Evidence Test Package Stage 2) but not yet executed.
 - **Failure criterion:** outside actors gain measurable advantage by using civic standing.
 - **False reassurance:** "Use is voluntary."
 
@@ -47,8 +47,8 @@ Each abuse case should name:
 - **Actor incentive:** incumbents preserve civic eligibility while avoiding current contribution.
 - **Attack path:** rotate hardship categories, reciprocal attestations, slow-decay exploitation, pool-saturation masking.
 - **Collapse state:** Static-Advantage Loop.
-- **Current controls:** Annex AF, Annex AS.
-- **Missing test:** pause-ring simulation with real role-pool constraints.
+- **Current controls:** Annex AF, Annex AS, Service Record Misuse Evidence Test Package Stage 5.
+- **Missing test:** pause-ring simulation with real role-pool constraints — Stage 5 designed but not yet executed.
 - **Failure criterion:** coordinated actors preserve positions indefinitely.
 - **False reassurance:** "Every individual claim was legitimate."
 

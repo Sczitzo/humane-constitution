@@ -106,6 +106,24 @@ Dashboards can become tools of capture. Therefore:
 
 ---
 
+## Minimum Evidence Before Stronger Claim
+
+This dashboard operates within the Evidence Ladder framework (see `Evidence_Ladder.md`). The following Evidence Ladder levels govern what claims the dashboard may publish:
+
+| Dashboard action | Minimum Evidence Ladder level required |
+|---|---|
+| Publish metric readings and trend lines | Level 3 — Designed mechanism (dashboard exists and methodology is published) |
+| Flag a domain as "elevated concern" or "watch" | Level 4 — Adversarial paper test (an independent reviewer has tested the metric against the known failure modes in the Abuse Case Library) |
+| Flag a domain as "active capture signal" | Level 5 — Simulation or controlled test (the metric has been tested against a simulated capture scenario and detected the signal) |
+| Publish a formal finding of systemic capture | Level 7 — Independent audit (an independent audit has confirmed the finding using the Claims and Evidence Register standard) |
+| Claim a domain is "healthy" or "controlled" | Level 6 — Limited pilot evidence (at least one pilot round has produced data showing the metric behaved as designed under live conditions) |
+
+**Escalation rule:** The dashboard office may not upgrade a domain's claim level without publishing the evidence that supports the upgrade, cross-referenced against the Evidence Ladder. Downgrades (moving from a stronger to a weaker claim) do not require new evidence — they should happen automatically when prior evidence is superseded or found insufficient.
+
+**Absence-of-evidence rule:** If a domain cannot currently be assessed at Level 3 or above, the dashboard must publish this explicitly rather than omitting the domain. An unpublished domain is not a clean domain.
+
+---
+
 ## Residual Risk
 
 Capture dashboards can create a false sense of control. A sophisticated class can stay below thresholds, split labels, use informal networks, or pressure the dashboard office. The dashboard is an early-warning system, not proof that capture is solved.

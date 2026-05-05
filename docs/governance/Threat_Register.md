@@ -1,6 +1,6 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Current through T-027**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-028**
 
 ---
 
@@ -582,8 +582,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-025 | Demurrage Sector-Capture via Investment Channel | High | **PROPOSED** | P-023 | 48 |
 | T-026 | Exit Denial | **Critical** | **ADDRESSED** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 |
 | T-027 | Subsidiarity Violation | High | **ADDRESSED** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 |
+| T-028 | Essential-Sector Refusal Leverage | **Critical** | **PARTIAL** | Prevent survival-leverage conglomerates from using essential-sector control to coerce the protocol or enrolled persons. | 72 |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 16 PROPOSED, 0 OPEN, 5 ADDRESSED. 27 total IDs — 25 active, 2 retired (T-003, T-010). These counts are design-state counts, not evidence-backed resolution counts. T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 are addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033, but still require measurement pilots and adversarial methodology review before any deployment claim. T-025 is addressed by P-023 (contract-commitment architecture, zero exemptions), but still needs parameter binding and legal/economic testing. T-026 and T-027 are addressed by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI), but remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 16 PROPOSED, 0 OPEN, 5 ADDRESSED. 28 total IDs — 26 active, 2 retired (T-003, T-010). These counts are design-state counts, not evidence-backed resolution counts. T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 are addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033, but still require measurement pilots and adversarial methodology review before any deployment claim. T-025 is addressed by P-023 (contract-commitment architecture, zero exemptions), but still needs parameter binding and legal/economic testing. T-026 and T-027 are addressed by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI), but remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
 
 ---
 
@@ -625,3 +626,13 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Mitigation:** The subsidiarity rule (`subsidiarity_rule.md §Three-Prong Competence Test`) is Tier 1 protected. Federation-scale-by-construction list is exhaustive and Tier 1-locked; extensions require 7-of-9 amendment. Soft-exception invocations are logged and audited. The Proportionality Principle is enforceable by Ombuds appeal: a federation action adopting a uniform rule where a floor would suffice is challengeable, and the Plenum (Annex AI §3.2) may remand for reconsideration under FC-091.
 - **Residual risk:** The three-prong test applied at the margin can accommodate reasonable-seeming expansion over many individual decisions. Mitigation is aggregate monitoring — the Ombuds §4.3 federation-decision-concentration report is an Article VII metric published annually; significant drift toward federation-scale decision venue is itself a trigger event.
 - **Compound linkages:** T-027 × T-022 (electoral cycle capture often operates through subsidiarity violation — a captured federation adopts uniform rules that would otherwise be local prerogatives). T-027 × T-008 (centralization of decision venue is an elite-formation vector; decisions concentrated in federation bodies produce concentrated expertise pools). T-027 × T-007 (definition drift around "federation-scale by construction" categories; bounded by explicit enumeration).
+
+### T-028 — Essential-Sector Refusal Leverage
+
+- **Summary:** A conglomerate controlling essential-sector supply (food, energy, medicine, logistics, data infrastructure) refuses to participate in the protocol's Essential Access delivery unless granted exemptions, reduced obligations, or political concessions. The threat is not market exit — it is survival leverage: holding the CSM floor hostage to extract constitutional concessions.
+- **Mechanism:** The actor controls a chokepoint in a CSM-delivery chain. Refusal to supply (or credible threat thereof) produces emergency political pressure to grant carve-outs, waive concentration rules, or extend favorable contract terms. Each concession normalizes leverage as a negotiating tool.
+- **Detection:** D=2 — refusal events are observable (Essential Access delivery gaps), but distinguishing genuine operational difficulty from strategic leverage requires the supply-chain concentration metrics in the Capture Dashboard and the Essential_Sector_Refusal_Test_Package audit trail.
+- **Severity:** Critical. A successful leverage event undermines non-coercion at the survival floor — the protocol's most fundamental guarantee.
+- **Mitigation direction:** P-047 (Essential-sector conglomerate operating rules, ANNEX_AT §AT2–AT6), P-048 (Essential-sector refusal response protocol, ANNEX_AT §AT6.5). Controls include: public receiver authority, compulsory licensing triggers, strategic reserve floors (FC-185–FC-201), multi-supplier mandates, and beneficial-ownership tracing through subcontractors.
+- **Residual risk:** Strategic reserves are provisional (FC-185–FC-193 reserved). Public receiver authority requires political will to invoke. Oracle and measurement capture (ACL-009, ACL-012) could allow a conglomerate to influence supply-chain concentration metrics and avoid Watch/Critical classification. No pilot evidence yet.
+- **Compound linkages:** T-028 × T-007 (definitional capture of "essential sector" and "survival leverage" determines when AT6.5 triggers). T-028 × T-001 (refusal leverage exploits the same Essential Access delivery chain that shadow convertibility targets). T-028 × T-022 (a captured government may decline to invoke public receiver authority).

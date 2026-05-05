@@ -261,6 +261,7 @@ Every pilot needs:
 **Required packages:**
 
 - [Conglomerate Transition Dossier](./Conglomerate_Transition_Dossier.md)
+- [Essential Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md)
 - [Capture Dashboard Specification](./Capture_Dashboard_Specification.md)
 - [Parameter Calibration Register](./Parameter_Calibration_Register.md)
 - [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)

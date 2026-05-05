@@ -80,9 +80,17 @@ Failure criterion: a component accepts one channel silently or operates through 
 
 ### Stage 4 - Startup Refusal Test
 
-Modify a protected file locally and start each bound component.
+**Required input:** A completed Stage 0 Coverage Inventory listing all Tier 1-protected files and bound components. Stage 4 cannot produce a meaningful pass/fail result without this inventory. If Stage 0 has not been completed, Stage 4 must be deferred and recorded as BLOCKED in the audit log.
 
-Failure criterion: any Tier 1-dependent component operates on the modified state without raising the required alert, except the CSM last-verified-state exception.
+**Expected sources for the coverage inventory:**
+- `architecture/drift_chain.md` — canonical list of Tier 1-protected files and their hash roots
+- `docs/governance/Parameter_Calibration_Register.md` — parameters whose values are Tier 1 protected (see "Binding Condition" column: entries bound by Tier 1 or FC-110/FC-111)
+- `docs/constitution/INVARIANTS.md` — invariants that bound components must enforce at startup
+- Deployment manifest (produced at activation) — list of bound components and their startup verification hooks
+
+**Test procedure:** For each Tier 1-protected file listed in the Stage 0 inventory, modify its content locally (without following the amendment protocol), then start each bound component listed in the inventory.
+
+Failure criterion: any Tier 1-dependent component operates on the modified state without raising the required alert, except the CSM last-verified-state exception (which allows the survival floor to continue operating on the last verified state during a detected drift event).
 
 ### Stage 5 - Key-Custody Review
 
