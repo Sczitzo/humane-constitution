@@ -778,7 +778,14 @@ function isQuoteLine(trimmed: string): boolean {
 }
 
 function parseMarkdown(doc: CorpusDoc): MarkdownBlock[] {
-  const lines = doc.content.split('\n')
+  const rawLines = doc.content.split('\n')
+  // Strip YAML frontmatter (--- ... ---) at the top of the file.
+  let start = 0
+  if (rawLines[0]?.trim() === '---') {
+    const end = rawLines.findIndex((l, i) => i > 0 && l.trim() === '---')
+    if (end !== -1) start = end + 1
+  }
+  const lines = rawLines.slice(start)
   const blocks: MarkdownBlock[] = []
   let index = 0
   let headingIndex = 0
