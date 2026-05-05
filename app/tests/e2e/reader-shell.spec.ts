@@ -40,6 +40,14 @@ async function openAnnexesView(page: Page): Promise<void> {
   await expect(page.getByTestId('reader-title')).toBeVisible()
 }
 
+async function openNavSearchResult(page: Page, query: string, resultName: string | RegExp): Promise<void> {
+  const input = page.locator('#nav-corpus-search')
+  await input.fill(query)
+  const results = page.locator('#nav-search-results')
+  await expect(results).toBeVisible()
+  await results.getByRole('button', { name: resultName }).first().click()
+}
+
 test.describe('reader shell regression coverage', () => {
   test('hamburger opens nav drawer with all sections', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 })
@@ -51,13 +59,75 @@ test.describe('reader shell regression coverage', () => {
     }
   })
 
-  test('nav corpus search filters visible content', async ({ page }) => {
+  test('slash focuses nav document search', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await openConstitutionView(page)
 
-    await page.locator('#nav-corpus-search').fill('annex')
-    // search filtering — just verify the input accepts text without error
-    await expect(page.locator('#nav-corpus-search')).toHaveValue('annex')
+    await page.keyboard.press('/')
+    await expect(page.locator('#nav-corpus-search')).toBeFocused()
+  })
+
+  test('nav search result opens a cross-section document and clears the query', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await openConstitutionView(page)
+
+    await openNavSearchResult(page, 'T-028', /Threat Register/)
+
+    await expect(page.getByTestId('view-title')).toHaveText('Registries & Governance Logs')
+    await expect(page.getByTestId('reader-title')).toHaveText('Threat Register')
+    await expect(page.locator('#nav-corpus-search')).toHaveValue('')
+  })
+
+  test('nav search Enter opens the active heading result', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await openConstitutionView(page)
+
+    const input = page.locator('#nav-corpus-search')
+    await input.fill('pass/fail criteria')
+    await expect(page.locator('#nav-search-results')).toBeVisible()
+    await input.press('Enter')
+
+    await expect(page.getByTestId('reader-title')).toHaveText('Essential-Sector Refusal Test Package')
+    await expect(page.getByRole('heading', { name: 'Pass/Fail Criteria' })).toBeInViewport()
+  })
+
+  test('recent selection is not blocked by an active nav search query', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.addInitScript(() => {
+      window.localStorage.setItem('humane-reader:recent-docs', JSON.stringify(['docs__governance__Threat_Register_md']))
+    })
+    await openConstitutionView(page)
+
+    await page.locator('#nav-corpus-search').fill('zzzzzz')
+    await page.getByTestId('nav-recent').click()
+    await page.locator('[role="listbox"][aria-label="Recent"]').getByRole('option', { name: /Threat Register/ }).click()
+
+    await expect(page.getByTestId('reader-title')).toHaveText('Threat Register')
+    await expect(page.locator('#nav-corpus-search')).toHaveValue('')
+  })
+
+  test('mobile search selection opens the selected document', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/')
+
+    await page.getByRole('button', { name: 'Search documents' }).click()
+    const mobileInput = page.locator('div.fixed input[placeholder="Search documents…"]')
+    await mobileInput.fill('pass/fail criteria')
+    await page.getByRole('listbox').getByRole('button', { name: /Essential-Sector Refusal Test Package/ }).first().click()
+
+    await expect(page.getByTestId('reader-title')).toHaveText('Essential-Sector Refusal Test Package')
+  })
+
+  test('global search persists cross-section selections', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await openConstitutionView(page)
+
+    await page.keyboard.press('Control+k')
+    await page.getByPlaceholder('Search all documents…').fill('T-028')
+    await page.getByRole('listbox').getByRole('button', { name: 'Threat Register heading T-028' }).click()
+
+    await expect(page.getByTestId('view-title')).toHaveText('Registries & Governance Logs')
+    await expect(page.getByTestId('reader-title')).toHaveText('Threat Register')
   })
 
   test('recent dropdown shows previously viewed documents', async ({ page }) => {

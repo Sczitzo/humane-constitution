@@ -512,8 +512,8 @@ interface DashboardProps {
   onNavDocsChange: (recent: CorpusDoc[], shelf: CorpusDoc[], label: string) => void
   corpusQuery: string
   onCorpusQueryChange: (q: string) => void
-  pendingDocId?: string | null
-  onPendingDocIdConsumed?: () => void
+  pendingDocTarget?: { id: string; headingSlug?: string } | null
+  onPendingDocTargetConsumed?: () => void
 }
 
 interface SourceFeedback {
@@ -1429,7 +1429,16 @@ function readStoredPaneScroll(view: AppView): PaneScrollState {
 
 function jumpToHeading(doc: CorpusDoc, slug: string) {
   const element = document.getElementById(headingScrollId(doc, slug))
-  element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  element?.scrollIntoView({ behavior: 'auto', block: 'start' })
+}
+
+function queueHeadingJump(doc: CorpusDoc, slug: string) {
+  const jump = () => jumpToHeading(doc, slug)
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(jump)
+  })
+  window.setTimeout(jump, 50)
+  window.setTimeout(jump, 150)
 }
 
 async function copyHeadingLink(doc: CorpusDoc, slug: string): Promise<string> {
@@ -2450,9 +2459,11 @@ function GlobalSearchOverlay({
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === 'ArrowDown') {
       e.preventDefault()
+      if (results.length === 0) return
       setActiveIndex(i => Math.min(i + 1, results.length - 1))
     } else if (e.key === 'ArrowUp') {
       e.preventDefault()
+      if (results.length === 0) return
       setActiveIndex(i => Math.max(i - 1, 0))
     } else if (e.key === 'Enter' && results[activeIndex]) {
       handleSelect(results[activeIndex].doc)
@@ -2535,7 +2546,7 @@ function GlobalSearchOverlay({
 const KEYBOARD_SHORTCUTS = [
   { keys: ['⌘', 'K'], label: 'Global search across all documents' },
   { keys: ['⌘', 'F'], label: 'Search within current document' },
-  { keys: ['/'], label: 'Focus section filter' },
+  { keys: ['/'], label: 'Focus document search' },
   { keys: ['?'], label: 'Show this keyboard reference' },
   { keys: ['↑', '↓'], label: 'Navigate search results' },
   { keys: ['↵'], label: 'Open selected result' },
@@ -2926,7 +2937,7 @@ function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
 }
 
 
-export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange, pendingDocId, onPendingDocIdConsumed }: DashboardProps) {
+export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange, pendingDocTarget, onPendingDocTargetConsumed }: DashboardProps) {
   const [documentQuery, setDocumentQuery] = useState('')
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
@@ -3008,17 +3019,25 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   // visibleDocs-reset effect (which fires after this one) sees the flag
   // and doesn't queue a startTransition back to visibleDocs[0].
   useEffect(() => {
-    if (!pendingDocId) return
+    if (!pendingDocTarget) return
     userPickedDocRef.current = true
-    setSelectedDocId(pendingDocId)
-    onPendingDocIdConsumed?.()
+    if (pendingDocTarget.headingSlug) {
+      pendingHashTargetRef.current = { docId: pendingDocTarget.id, slug: pendingDocTarget.headingSlug }
+    }
+    setSelectedDocId(pendingDocTarget.id)
+    onPendingDocTargetConsumed?.()
     // Scroll reader panel into view below the sticky header after doc change.
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
+        const targetDoc = allDocs.find((doc) => doc.id === pendingDocTarget.id)
+        if (targetDoc && pendingDocTarget.headingSlug) {
+          queueHeadingJump(targetDoc, pendingDocTarget.headingSlug)
+          return
+        }
         document.getElementById('reader-panel-start')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       })
     })
-  }, [pendingDocId])
+  }, [allDocs, pendingDocTarget])
 
   useEffect(() => {
     if (!corpus) {
@@ -3048,13 +3067,13 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       return
     }
 
-    if (selectedDocId) {
+    if (selectedDocId && visibleDocs.some((doc) => doc.id === selectedDocId)) {
       window.localStorage.setItem(selectedDocStorageKey(view), selectedDocId)
       return
     }
 
     window.localStorage.removeItem(selectedDocStorageKey(view))
-  }, [selectedDocId, view])
+  }, [selectedDocId, view, visibleDocs])
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -3131,9 +3150,9 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }, [corpus])
 
   // P3.3 — global keyboard shortcuts.
-  // Cmd/Ctrl+K  → focus shelf search.
+  // Cmd/Ctrl+K  → open global document search.
   // Cmd/Ctrl+F  → focus reader search (overrides browser Find inside the app shell).
-  // /            → focus shelf search (when not typing).
+  // /            → handled by Layout for nav document search.
   // Escape      → blur active input back to the reader.
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -3166,11 +3185,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       }
 
       if (typing) {
-        return
-      }
-
-      if (event.key === '/') {
-        event.preventDefault()
         return
       }
 
@@ -3333,12 +3347,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       return
     }
 
-    window.requestAnimationFrame(() => {
-      document.getElementById(headingScrollId(selectedDoc, pending.slug))?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    })
+    queueHeadingJump(selectedDoc, pending.slug)
 
     pendingHashTargetRef.current = null
   }, [selectedDoc?.id])
@@ -3440,8 +3449,9 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       if (typeof window !== 'undefined') {
         window.localStorage.setItem(selectedDocStorageKey(targetView), doc.id)
       }
+      userPickedDocRef.current = true
+      setSelectedDocId(doc.id)
       onViewChange(targetView)
-      // The view-change useEffect will restore selectedDocId from storage.
       return
     }
 
@@ -3473,6 +3483,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     if (typeof window !== 'undefined') {
       window.localStorage.setItem(selectedDocStorageKey(targetView), doc.id)
     }
+    userPickedDocRef.current = true
+    setSelectedDocId(doc.id)
 
     if (targetView !== view) {
       onViewChange(targetView)
@@ -3483,8 +3495,17 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }
 
   function handleGlobalSearchSelect(doc: CorpusDoc) {
-    onViewChange(viewForDoc(doc))
+    const targetView = viewForDoc(doc)
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(selectedDocStorageKey(targetView), doc.id)
+    }
+    userPickedDocRef.current = true
     setSelectedDocId(doc.id)
+
+    if (targetView !== view) {
+      onViewChange(targetView)
+      return
+    }
   }
 
   function handleNavToRef(docId: string, slug?: string) {
@@ -3595,17 +3616,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) {
-        return
-      }
-
-      if (event.key === '/') {
-        if (isTypingElement(event.target)) {
-          return
-        }
-
-        event.preventDefault()
-        readerSearchInputRef.current?.focus()
-        readerSearchInputRef.current?.select()
         return
       }
 

@@ -19,9 +19,7 @@ interface LayoutProps {
   recentDocs: CorpusDoc[]
   shelfDocs: CorpusDoc[]
   shelfLabel: string
-  onSelectDoc: (doc: CorpusDoc) => void
-  corpusQuery: string
-  onCorpusQueryChange: (q: string) => void
+  onSelectDoc: (doc: CorpusDoc, headingSlug?: string) => void
   allDocs: CorpusDoc[]
 }
 
@@ -81,6 +79,20 @@ function applyTheme(pref: ThemeOption) {
   } else {
     document.documentElement.removeAttribute('data-theme')
   }
+}
+
+function isTypingElement(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) {
+    return false
+  }
+
+  const tagName = target.tagName
+  return (
+    target.isContentEditable ||
+    tagName === 'INPUT' ||
+    tagName === 'TEXTAREA' ||
+    tagName === 'SELECT'
+  )
 }
 
 // ── SettingsDropdown ──────────────────────────────────────────────────────────
@@ -405,6 +417,7 @@ interface NavSearchResult {
   doc: CorpusDoc
   matchType: 'title' | 'heading' | 'body'
   excerpt: string
+  headingSlug?: string
 }
 
 function navSearch(allDocs: CorpusDoc[], rawQuery: string): NavSearchResult[] {
@@ -414,15 +427,15 @@ function navSearch(allDocs: CorpusDoc[], rawQuery: string): NavSearchResult[] {
   const seen = new Set<string>()
 
   for (const doc of allDocs) {
-    const add = (matchType: NavSearchResult['matchType'], excerpt: string) => {
+    const add = (matchType: NavSearchResult['matchType'], excerpt: string, headingSlug?: string) => {
       if (!seen.has(`${doc.id}:${matchType}`)) {
         seen.add(`${doc.id}:${matchType}`)
-        results.push({ doc, matchType, excerpt })
+        results.push({ doc, matchType, excerpt, headingSlug })
       }
     }
     if (doc.title.toLowerCase().includes(q)) add('title', doc.title)
     for (const h of doc.headings) {
-      if (h.text.toLowerCase().includes(q)) { add('heading', h.text); break }
+      if (h.text.toLowerCase().includes(q)) { add('heading', h.text, h.slug); break }
     }
     const body = doc.content.toLowerCase()
     const idx = body.indexOf(q)
@@ -454,15 +467,18 @@ function NavSearchDropdown({
   query,
   onQueryChange,
   onSelect,
+  inputRef: externalInputRef,
 }: {
   allDocs: CorpusDoc[]
   query: string
   onQueryChange: (q: string) => void
-  onSelect: (doc: CorpusDoc) => void
+  onSelect: (doc: CorpusDoc, headingSlug?: string) => void
+  inputRef?: React.RefObject<HTMLInputElement>
 }) {
   const [activeIndex, setActiveIndex] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
+  const fallbackInputRef = useRef<HTMLInputElement>(null)
+  const inputRef = externalInputRef ?? fallbackInputRef
   const listRef = useRef<HTMLUListElement>(null)
 
   const results = useMemo(() => navSearch(allDocs, query), [allDocs, query])
@@ -501,7 +517,7 @@ function NavSearchDropdown({
       setActiveIndex(i => Math.max(i - 1, 0))
     } else if (e.key === 'Enter') {
       if (results[activeIndex]) {
-        onSelect(results[activeIndex].doc)
+        onSelect(results[activeIndex].doc, results[activeIndex].headingSlug)
         onQueryChange('')
         inputRef.current?.blur()
       }
@@ -553,7 +569,7 @@ function NavSearchDropdown({
                 type="button"
                 onPointerDown={e => e.preventDefault()} // keep input focused
                 onClick={() => {
-                  onSelect(r.doc)
+                  onSelect(r.doc, r.headingSlug)
                   onQueryChange('')
                   inputRef.current?.blur()
                 }}
@@ -594,7 +610,7 @@ function MobileSearchOverlay({
   onClose,
 }: {
   allDocs: CorpusDoc[]
-  onSelect: (doc: CorpusDoc) => void
+  onSelect: (doc: CorpusDoc, headingSlug?: string) => void
   onClose: () => void
 }) {
   const [query, setQuery] = useState('')
@@ -623,7 +639,7 @@ function MobileSearchOverlay({
       if (results.length === 0) return
       setActiveIndex(i => Math.max(i - 1, 0))
     } else if (e.key === 'Enter' && results[activeIndex]) {
-      onSelect(results[activeIndex].doc)
+      onSelect(results[activeIndex].doc, results[activeIndex].headingSlug)
       onClose()
     } else if (e.key === 'Escape') {
       onClose()
@@ -675,7 +691,7 @@ function MobileSearchOverlay({
               <li key={`${r.doc.id}:${r.matchType}`} role="option" aria-selected={i === activeIndex} data-active={i === activeIndex ? 'true' : 'false'}>
                 <button
                   type="button"
-                  onClick={() => { onSelect(r.doc); onClose() }}
+                  onClick={() => { onSelect(r.doc, r.headingSlug); onClose() }}
                   onMouseEnter={() => setActiveIndex(i)}
                   className={`flex w-full min-h-[44px] flex-col justify-center px-4 py-2 text-left transition ${
                     i === activeIndex ? 'bg-[rgba(159,108,49,0.15)]' : 'hover:bg-[rgba(255,255,255,0.05)]'
@@ -719,11 +735,44 @@ export function Layout({
   shelfDocs,
   shelfLabel,
   onSelectDoc,
-  corpusQuery,
-  onCorpusQueryChange,
   allDocs,
 }: LayoutProps) {
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
+  const [navQuery, setNavQuery] = useState('')
+  const navSearchInputRef = useRef<HTMLInputElement>(null)
+
+  function handleSelectDoc(doc: CorpusDoc, headingSlug?: string) {
+    setNavQuery('')
+    onSelectDoc(doc, headingSlug)
+  }
+
+  useEffect(() => {
+    function handleSlashShortcut(event: KeyboardEvent) {
+      if (
+        event.defaultPrevented ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey ||
+        event.key !== '/' ||
+        isTypingElement(event.target)
+      ) {
+        return
+      }
+
+      event.preventDefault()
+
+      if (window.matchMedia('(min-width: 640px)').matches && navSearchInputRef.current) {
+        navSearchInputRef.current.focus()
+        navSearchInputRef.current.select()
+        return
+      }
+
+      setMobileSearchOpen(true)
+    }
+
+    window.addEventListener('keydown', handleSlashShortcut)
+    return () => window.removeEventListener('keydown', handleSlashShortcut)
+  }, [])
 
   return (
     <div className="relative min-h-screen bg-paper text-ink">
@@ -734,7 +783,10 @@ export function Layout({
       {mobileSearchOpen && (
         <MobileSearchOverlay
           allDocs={allDocs}
-          onSelect={(doc) => { onSelectDoc(doc); setMobileSearchOpen(false) }}
+          onSelect={(doc, headingSlug) => {
+            handleSelectDoc(doc, headingSlug)
+            setMobileSearchOpen(false)
+          }}
           onClose={() => setMobileSearchOpen(false)}
         />
       )}
@@ -771,9 +823,10 @@ export function Layout({
           <div className="hidden sm:flex flex-1">
             <NavSearchDropdown
               allDocs={allDocs}
-              query={corpusQuery}
-              onQueryChange={onCorpusQueryChange}
-              onSelect={onSelectDoc}
+              query={navQuery}
+              onQueryChange={setNavQuery}
+              onSelect={handleSelectDoc}
+              inputRef={navSearchInputRef}
             />
           </div>
 
@@ -795,7 +848,7 @@ export function Layout({
             <NavDropdown
               label="Recent"
               docs={recentDocs}
-              onSelect={onSelectDoc}
+              onSelect={handleSelectDoc}
               testId="nav-recent"
               emptyText="No recently viewed documents."
             />
@@ -803,7 +856,7 @@ export function Layout({
               <NavDropdown
                 label={shelfLabel}
                 docs={shelfDocs}
-                onSelect={onSelectDoc}
+                onSelect={handleSelectDoc}
                 testId="nav-shelf"
                 emptyText="No documents in this section."
               />
