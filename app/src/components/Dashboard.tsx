@@ -116,30 +116,40 @@ function buildRefLookup(docs: CorpusDoc[]): RefLookup {
           }
         }
         // Index dot-notation subsection headings: AE2.1, AH2.3, etc.
-        // so hovering "AE2.1" shows the specific section title and excerpt
+        // Also register §-prefixed variants: "Annex Y §Y1" → slug for §Y1 heading.
         for (const h of doc.headings) {
           const sub = h.text.match(/^([A-Z]{1,3}\d+\.\d+)(?:\s|$|[—–\-])/)
-          if (!sub) continue
-          const subCode = sub[1]
           // Extract first real paragraph after this heading from raw content
-          const escapedCode = subCode.replace(/\./g, '\\.')
-          const hMatch = doc.content.match(new RegExp(`^#{1,6}\\s+${escapedCode}\\b[^\\n]*`, 'm'))
-          let summary = ''
-          if (hMatch && hMatch.index !== undefined) {
-            const after = doc.content.slice(hMatch.index + hMatch[0].length)
-            const paras = after.split(/\n{2,}/).map(p => p.trim()).filter(p => p && !p.startsWith('#'))
-            if (paras[0]) summary = paras[0].replace(/[*`\[\]]/g, '').slice(0, 140)
+          const makeSubEntry = (subCode: string): RefEntry => {
+            const escapedCode = subCode.replace(/\./g, '\\.')
+            const hMatch = doc.content.match(new RegExp(`^#{1,6}\\s+${escapedCode}\\b[^\\n]*`, 'm'))
+            let summary = ''
+            if (hMatch && hMatch.index !== undefined) {
+              const after = doc.content.slice(hMatch.index + hMatch[0].length)
+              const paras = after.split(/\n{2,}/).map(p => p.trim()).filter(p => p && !p.startsWith('#'))
+              if (paras[0]) summary = paras[0].replace(/[*`\[\]]/g, '').slice(0, 140)
+            }
+            return { label: subCode, title: h.text, summary, status: entry.status, docId: doc.id, slug: h.slug }
           }
-          const subEntry: RefEntry = {
-            label: subCode,
-            title: h.text,
-            summary,
-            status: entry.status,
-            docId: doc.id,
-            slug: h.slug,
+          if (sub) {
+            const subCode = sub[1]
+            const subEntry = makeSubEntry(subCode)
+            for (const k of [`Annex ${subCode}`, `ANNEX ${subCode}`, subCode]) {
+              if (!map.has(k)) map.set(k, subEntry)
+            }
           }
-          for (const k of [`Annex ${subCode}`, `ANNEX ${subCode}`, subCode]) {
-            if (!map.has(k)) map.set(k, subEntry)
+          // §-prefixed subsection: heading text starts with §Y1, §AJ-2, §4.2, etc.
+          const secMatch = h.text.match(/^§([A-Z0-9][\w.\-]*)(?:\s|$|[.—–\-])/i)
+            ?? h.text.match(/^([A-Z]{1,3}\d+(?:\.\d+)?)(?:\s|$|[.—–\-])/)
+          if (secMatch) {
+            const secCode = secMatch[1]
+            const secEntry: RefEntry = { label: `§${secCode}`, title: h.text, summary: '', status: entry.status, docId: doc.id, slug: h.slug }
+            for (const k of [
+              `Annex ${code} §${secCode}`, `ANNEX ${code} §${secCode}`,
+              `${code} §${secCode}`, `§${secCode}`,
+            ]) {
+              if (!map.has(k)) map.set(k, secEntry)
+            }
           }
         }
       }
