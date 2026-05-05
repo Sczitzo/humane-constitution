@@ -110,6 +110,27 @@ Failure criterion: founders retain emergency, interpretive, keyholder, or appoin
 
 ---
 
+## Artifact Status Register
+
+The table below shows the current production status of each required founding artifact. **No stronger founding-legitimacy claim may be made until all rows reach PRODUCED.**
+
+| Artifact | Status | Notes |
+|---|---|---|
+| Authority statement | **DESIGNED** | Founding Order and scope declaration exist as constitutional design documents. No real founding event has occurred. |
+| Conflict register | **NOT YET PRODUCED** | Requires identification and disclosure of actual founding-coalition members, their funding, institutional ties, and interests. Cannot be produced before a founding coalition is assembled. |
+| Public notice record | **NOT YET PRODUCED** | Requires distribution to an identified affected community with verifiable reach, translations, and objection channels. |
+| Deliberation record | **NOT YET PRODUCED** | Requires a real or rehearsed deliberation process with recorded questions, dissent, and official replies. |
+| Consent event evidence | **NOT YET PRODUCED** | Requires an actual consent event run under the Founding Order with participation floor and affirmative threshold. |
+| Objection process | **DESIGNED** | Objection rules exist in the Founding Order. The process has not been rehearsed against real objections. |
+| Exit rehearsal | **DESIGNED** | Exit protocol exists ([exit_protocol.md](../../founding/order/exit_protocol.md)). No rehearsal with real or simulated exit has been conducted. |
+| Dignity-floor plan | **DESIGNED** | Non-coercion rules and Essential Access protections exist in the constitutional text. Cross-boundary non-coercion review has not been conducted. |
+| Founder sunset | **DESIGNED** | Sunset and handoff rules exist in the Founding Order. No founding event has begun the clock. |
+| Independent review | **NOT YET PRODUCED** | Requires review by outside civil-society, legal, community, disability, labor, faith, and technical parties independent of the founding team. |
+
+**What the current design-stage corpus may honestly claim:**
+
+> The project has a designed Founding Order with consent, subsidiarity, exit, and re-entry rules. All founding artifacts are defined. None of the evidential artifacts — those requiring real events, real coalitions, or real communities — have been produced.
+
 ## Minimum Evidence Before Stronger Claim
 
 The project may strengthen its founding-legitimacy claim only after producing:
