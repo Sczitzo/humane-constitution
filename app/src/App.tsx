@@ -1,9 +1,12 @@
 import { startTransition, useEffect, useRef, useState } from 'react'
 import { Layout, type AppView } from './components/Layout'
 import { Dashboard } from './components/Dashboard'
+import { LandingPage } from './components/LandingPage'
 import { loadCorpus, type CorpusDoc, type CorpusPayload } from './generated/corpus'
 
 const VIEW_STORAGE_KEY = 'humane-reader:last-view'
+const LANDING_VISITED_KEY = 'humane-reader:landing-visited'
+const ACTIVE_PATH_STORAGE_KEY = 'humane-reader:active-path'
 
 interface PendingDocTarget {
   id: string
@@ -42,6 +45,11 @@ function readStoredView(): AppView {
 }
 
 export default function App() {
+  const [showLanding, setShowLanding] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.localStorage.getItem(LANDING_VISITED_KEY) !== 'true'
+      : false
+  )
   const [view, setView] = useState<AppView>(readStoredView)
   const [corpus, setCorpus] = useState<CorpusPayload | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -118,6 +126,20 @@ export default function App() {
     requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: 'instant' })
     })
+  }
+
+  function handleEnterFromLanding(pathId?: string) {
+    window.localStorage.setItem(LANDING_VISITED_KEY, 'true')
+    if (pathId) {
+      window.localStorage.setItem(ACTIVE_PATH_STORAGE_KEY, pathId)
+      setView('paths')
+    }
+    setShowLanding(false)
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' }))
+  }
+
+  if (showLanding) {
+    return <LandingPage onEnter={handleEnterFromLanding} />
   }
 
   return (
