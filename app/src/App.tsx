@@ -128,6 +128,10 @@ export default function App() {
     })
   }
 
+  const hasVisited = typeof window !== 'undefined'
+    ? window.localStorage.getItem(LANDING_VISITED_KEY) === 'true'
+    : false
+
   function handleEnterFromLanding(pathId?: string) {
     window.localStorage.setItem(LANDING_VISITED_KEY, 'true')
     if (pathId) {
@@ -138,14 +142,20 @@ export default function App() {
     requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' }))
   }
 
+  function handleLogoClick() {
+    setShowLanding(true)
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' }))
+  }
+
   if (showLanding) {
-    return <LandingPage onEnter={handleEnterFromLanding} />
+    return <LandingPage onEnter={handleEnterFromLanding} returningVisitor={hasVisited} />
   }
 
   return (
     <Layout
       activeNav={view}
       onNavChange={handleNavChange}
+      onLogoClick={handleLogoClick}
       readingProgress={readingProgress}
       recentDocs={recentDocs}
       shelfDocs={shelfDocs}

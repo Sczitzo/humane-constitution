@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CorpusDoc } from '../generated/corpus'
+import { Logo } from './Logo'
 
 export type AppView =
   | 'home'
@@ -15,6 +16,7 @@ interface LayoutProps {
   children: React.ReactNode
   activeNav: AppView
   onNavChange: (view: AppView) => void
+  onLogoClick?: () => void
   readingProgress?: number
   recentDocs: CorpusDoc[]
   shelfDocs: CorpusDoc[]
@@ -747,6 +749,7 @@ export function Layout({
   children,
   activeNav,
   onNavChange,
+  onLogoClick,
   readingProgress = 0,
   recentDocs,
   shelfDocs,
@@ -827,14 +830,19 @@ export function Layout({
           <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
 
           {/* Branding */}
-          <p
-            className="shrink-0 select-none font-serif text-[15px] tracking-tight text-[var(--forest-text)]"
-            aria-label="Humane Constitution"
+          <button
+            type="button"
+            onClick={onLogoClick}
+            className="shrink-0 flex items-center gap-2.5 select-none rounded transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+            aria-label="Back to intro"
+            title="Back to intro"
+            style={{ cursor: onLogoClick ? 'pointer' : 'default' }}
           >
-            <span className="text-[var(--forest-text)]">Humane Constitution</span>
-            <span className="ml-2 text-[var(--forest-text-muted)]">·</span>
-            <span className="ml-2 text-[var(--forest-text-muted)]">Reader</span>
-          </p>
+            <Logo size={26} color="var(--forest-text)" />
+            <span className="font-serif text-[15px] tracking-tight text-[var(--forest-text)]">Humane Constitution</span>
+            <span className="text-[var(--forest-text-muted)]">·</span>
+            <span className="text-[14px] text-[var(--forest-text-muted)]">Reader</span>
+          </button>
 
           {/* Corpus search — desktop inline, hidden on mobile */}
           <div className="hidden sm:flex flex-1">

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
+import { Logo } from './Logo'
 
 const PATHS = [
   { id: 'first-time', emoji: '🌱', title: 'First-Time Reader', desc: 'New to AI governance? Start here. Plain language, essential ideas.', time: '~15 min', color: '#2d6a4f' },
@@ -24,9 +25,10 @@ const HEADLINE_WORDS = ['What', 'if', 'AI', 'had', 'a', 'constitution', 'that', 
 
 interface LandingPageProps {
   onEnter: (pathId?: string) => void
+  returningVisitor?: boolean
 }
 
-export function LandingPage({ onEnter }: LandingPageProps) {
+export function LandingPage({ onEnter, returningVisitor = false }: LandingPageProps) {
   const [exiting, setExiting] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const transitionRef = useRef<HTMLDivElement>(null)
@@ -467,6 +469,15 @@ export function LandingPage({ onEnter }: LandingPageProps) {
       {/* Grain texture */}
       <div className="lp-grain" />
 
+      {/* ── FLOATING LOGO ── */}
+      <div style={{
+        position: 'fixed', top: 20, left: 28, zIndex: 100,
+        opacity: Math.max(0.25, 1 - scrollProgress * 1.5),
+        pointerEvents: 'none',
+      }}>
+        <Logo size={28} color="rgba(245,240,232,0.6)" />
+      </div>
+
       {/* ── HERO ── */}
       <section className="lp-hero" style={{ opacity: 1 - scrollProgress * 0.6 }}>
         <p className="lp-eyebrow">Open Constitutional Design · 2025</p>
@@ -489,14 +500,22 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         </p>
 
         <div className="lp-hero-cta">
-          <button className="lp-btn-primary" onClick={() => {
-            document.getElementById('lp-paths-anchor')?.scrollIntoView({ behavior: 'smooth' })
-          }}>
-            Choose a Reading Path
-          </button>
-          <button className="lp-btn-ghost" onClick={() => handleEnter()}>
-            Open Full Reader
-          </button>
+          {returningVisitor ? (
+            <button className="lp-btn-primary" onClick={() => handleEnter()}>
+              ← Back to Reader
+            </button>
+          ) : (
+            <>
+              <button className="lp-btn-primary" onClick={() => {
+                document.getElementById('lp-paths-anchor')?.scrollIntoView({ behavior: 'smooth' })
+              }}>
+                Choose a Reading Path
+              </button>
+              <button className="lp-btn-ghost" onClick={() => handleEnter()}>
+                Open Full Reader
+              </button>
+            </>
+          )}
         </div>
 
         <div className="lp-scroll-hint">
@@ -540,11 +559,10 @@ export function LandingPage({ onEnter }: LandingPageProps) {
         </div>
       </div>
 
-      {/* ── TRANSITION ZONE ── */}
+      {/* ── TRANSITION ZONE + PATHS — hidden for returning visitors ── */}
       <div ref={transitionRef} className="lp-transition" id="lp-paths-anchor" />
 
-      {/* ── PATHS ── */}
-      <div style={{ opacity: pathsOpacity }}>
+      {!returningVisitor && <div style={{ opacity: pathsOpacity }}>
         <div className="lp-paths">
           <p className="lp-paths-eyebrow">Reading Paths</p>
           <h2 className="lp-paths-head">Where would you like to start?</h2>
@@ -573,7 +591,8 @@ export function LandingPage({ onEnter }: LandingPageProps) {
             </button>
           </div>
         </div>
-      </div>
+      </div>}
+
     </div>
   )
 }
