@@ -1976,25 +1976,25 @@ function ReaderPanel({
     return () => observer.disconnect()
   }, [doc.id, activePath, pathStepIndex])
   return (
-    <section id="reader-panel-start" data-testid="reader-panel" className="scroll-mt-16 space-y-8">
-      <header className="border-b border-line pb-6">
-        <div className="flex items-baseline justify-between gap-4">
-          <p className="text-[11px] uppercase tracking-[0.16em] text-ink-faint">
+    <section id="reader-panel-start" data-testid="reader-panel" className="scroll-mt-16 space-y-6 sm:space-y-8">
+      <header className="border-b border-line pb-5 sm:pb-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+          <p className="text-[10px] uppercase tracking-[0.16em] text-ink-faint sm:text-[11px]">
             {SECTION_LABELS[doc.section]}
           </p>
-          <p className="font-mono text-[11px] text-ink-faint">{doc.path}</p>
+          <p className="font-mono text-[10px] text-ink-faint sm:text-[11px] break-all">{doc.path}</p>
         </div>
         <h2
           data-testid="reader-title"
-          className="mt-3 font-serif text-[2.1rem] leading-tight text-ink-strong sm:text-[2.6rem]"
+          className="mt-2 font-serif text-[1.7rem] leading-[1.15] text-ink-strong sm:mt-3 sm:text-[2.6rem] sm:leading-tight"
         >
           {doc.title}
         </h2>
         {doc.summary ? (
-          <p className="mt-4 max-w-[40rem] text-[15px] leading-7 text-ink-soft">{doc.summary}</p>
+          <p className="mt-3 max-w-[40rem] text-[14px] leading-[1.65] text-ink-soft sm:mt-4 sm:text-[15px] sm:leading-7">{doc.summary}</p>
         ) : null}
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[12px] text-ink-faint">
+        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-ink-faint sm:mt-4 sm:gap-x-4 sm:gap-y-2 sm:text-[12px]">
           <span>{estimatedReadMinutes(doc.wordCount)} min read</span>
           <span aria-hidden="true">·</span>
           <span>{doc.headingCount} headings</span>
@@ -2002,7 +2002,7 @@ function ReaderPanel({
           <span>{doc.wordCount.toLocaleString()} words</span>
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5">
           <ActionButton
             label={pinned ? 'Unpin' : 'Pin'}
             onClick={onTogglePinned}
@@ -2021,7 +2021,7 @@ function ReaderPanel({
           />
           <ActionButton label="Open source" onClick={onOpenSource} />
 
-          <div className="ml-auto flex w-full items-center gap-2 sm:w-auto">
+          <div className="mt-2 flex w-full items-center gap-2 sm:ml-auto sm:mt-0 sm:w-auto">
             <label htmlFor="reader-search" className="sr-only">
               Search this document
             </label>
@@ -2032,7 +2032,7 @@ function ReaderPanel({
               value={searchQuery}
               onChange={(event) => onSearchChange(event.target.value)}
               placeholder="Find in text…"
-              className="focus-ring w-full min-w-0 rounded border border-[var(--line-strong)] bg-[var(--paper-strong)] px-3 py-1.5 font-serif text-[14px] text-ink-strong placeholder:text-ink-faint sm:w-56"
+              className="focus-ring w-full min-w-0 rounded border border-[var(--line-strong)] bg-[var(--paper-strong)] px-3 py-2 font-serif text-[16px] text-ink-strong placeholder:text-ink-faint sm:w-56 sm:py-1.5 sm:text-[14px]"
             />
             <span
               data-testid="reader-search-status"
@@ -2068,24 +2068,25 @@ function ReaderPanel({
 
       {/* Path progress banner */}
       {activePath && pathStepIndex >= 0 && (
-        <div className="mx-auto mb-4 flex items-center gap-3" style={{ maxWidth: 'var(--reader-column-width)' }}>
-          <div className="flex flex-1 items-center gap-2 rounded-lg border border-accent/25 bg-accent/5 px-4 py-2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent-deep">{activePath.title}</span>
-            <span className="text-ink-faint">·</span>
-            <div className="flex gap-1">
+        <div className="mx-auto mb-4 flex items-center gap-2 sm:gap-3" style={{ maxWidth: 'var(--reader-column-width)' }}>
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-accent/25 bg-accent/5 px-3 py-2 sm:flex-nowrap sm:px-4">
+            <span className="truncate font-mono text-[10px] uppercase tracking-[0.18em] text-accent-deep">{activePath.title}</span>
+            <span className="hidden sm:inline text-ink-faint">·</span>
+            <div className="flex flex-wrap gap-1">
               {pathDocs.map((_, i) => (
                 <span
                   key={i}
-                  className={`h-1.5 w-4 rounded-full transition-all ${i < pathStepIndex ? 'bg-emerald-500/70' : i === pathStepIndex ? 'bg-accent' : 'bg-line'}`}
+                  className={`h-1.5 w-3 rounded-full transition-all sm:w-4 ${i < pathStepIndex ? 'bg-emerald-500/70' : i === pathStepIndex ? 'bg-accent' : 'bg-line'}`}
                 />
               ))}
             </div>
-            <span className="ml-1 font-mono text-[10px] text-ink-faint">{pathStepIndex + 1}/{pathDocs.length}</span>
+            <span className="ml-auto font-mono text-[10px] text-ink-faint sm:ml-1">{pathStepIndex + 1}/{pathDocs.length}</span>
           </div>
           <button
             type="button"
             onClick={() => onClearPath?.()}
-            className="focus-ring shrink-0 rounded p-1 text-[11px] text-ink-faint transition hover:text-ink"
+            aria-label="Exit reading path"
+            className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded text-[13px] text-ink-faint transition hover:text-ink"
             title="Exit reading path"
           >
             ✕

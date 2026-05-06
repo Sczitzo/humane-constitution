@@ -283,7 +283,7 @@ function HamburgerDrawer({
         aria-label="Open navigation menu"
         aria-expanded={open}
         onClick={() => setOpen(o => !o)}
-        className="focus-ring flex h-9 w-9 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition"
+        className="focus-ring flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition"
       >
         <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
           {open ? (
@@ -813,7 +813,7 @@ export function Layout({
 
       <header
         data-tauri-drag-region
-        className="sticky top-0 z-40 border-b border-[rgba(0,0,0,0.18)] bg-[var(--forest)] px-6 sm:px-8"
+        className="reader-header-safe sticky top-0 z-40 border-b border-[rgba(0,0,0,0.18)] bg-[var(--forest)] px-3 sm:px-6 lg:px-8"
       >
         {/* Reading progress bar — sits flush at the very bottom of the header */}
         <div
@@ -825,7 +825,7 @@ export function Layout({
             style={{ width: `${readingProgress * 100}%` }}
           />
         </div>
-        <div className="mx-auto flex w-full max-w-[82rem] items-center gap-3 py-2">
+        <div className="mx-auto flex w-full max-w-[82rem] items-center gap-2 py-2 sm:gap-3">
           {/* Hamburger — far left */}
           <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
 
@@ -833,15 +833,15 @@ export function Layout({
           <button
             type="button"
             onClick={onLogoClick}
-            className="shrink-0 flex items-center gap-2.5 select-none rounded transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+            className="min-w-0 shrink flex items-center gap-2 sm:gap-2.5 select-none rounded transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
             aria-label="Back to intro"
             title="Back to intro"
             style={{ cursor: onLogoClick ? 'pointer' : 'default' }}
           >
             <Logo size={26} color="var(--forest-text)" />
-            <span className="font-serif text-[15px] tracking-tight text-[var(--forest-text)]">Humane Constitution</span>
-            <span className="text-[var(--forest-text-muted)]">·</span>
-            <span className="text-[14px] text-[var(--forest-text-muted)]">Reader</span>
+            <span className="truncate font-serif text-[14px] sm:text-[15px] tracking-tight text-[var(--forest-text)]">Humane Constitution</span>
+            <span className="hidden sm:inline text-[var(--forest-text-muted)]">·</span>
+            <span className="hidden sm:inline text-[14px] text-[var(--forest-text-muted)]">Reader</span>
           </button>
 
           {/* Corpus search — desktop inline, hidden on mobile */}
@@ -860,9 +860,9 @@ export function Layout({
             type="button"
             aria-label="Search documents"
             onClick={() => setMobileSearchOpen(true)}
-            className="sm:hidden focus-ring flex h-9 w-9 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition ml-auto"
+            className="sm:hidden focus-ring flex h-10 w-10 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition ml-auto"
           >
-            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
+            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-[18px] w-[18px]">
               <circle cx="8.5" cy="8.5" r="5.5" />
               <path strokeLinecap="round" d="M14.5 14.5l3 3" />
             </svg>
@@ -895,7 +895,7 @@ export function Layout({
         id="reader-main"
         data-testid="reader-main"
         tabIndex={-1}
-        className="px-4 pb-16 pt-8 focus:outline-none sm:px-8 lg:px-12"
+        className="reader-main-safe px-3 pb-12 pt-5 focus:outline-none sm:px-8 sm:pb-16 sm:pt-8 lg:px-12"
       >
         <div className="mx-auto w-full max-w-[82rem]">{children}</div>
       </main>
