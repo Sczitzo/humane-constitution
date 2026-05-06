@@ -543,12 +543,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             padding-top: max(80px, env(safe-area-inset-top, 0px) + 60px);
           }
           .lp-eyebrow {
-            font-size: 10px;
             margin-bottom: 20px;
-            letter-spacing: 0.14em;
           }
           .lp-subhead {
-            font-size: 15px;
             margin-bottom: 36px;
             line-height: 1.65;
           }
@@ -561,12 +558,10 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-btn-primary {
             width: 100%;
             padding: 15px 24px;
-            font-size: 14px;
           }
           .lp-btn-ghost {
             width: 100%;
             padding: 13px 24px;
-            font-size: 14px;
           }
           .lp-scroll-hint {
             bottom: 24px;
@@ -598,8 +593,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             padding-left: 0;
             border-bottom: none;
           }
-          .lp-stat-num { font-size: 60px; }
-          .lp-stat-label { font-size: 13px; }
           .lp-stats-swipe-hint { display: none; }
 
           /* Instruments — accordion */
@@ -617,9 +610,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
           }
-          .lp-instrument-label {
-            font-size: 22px;
-          }
           .lp-instrument-desc {
             display: none;
           }
@@ -634,7 +624,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             display: block;
             grid-column: 2 / 4;
             font-family: 'DM Mono', monospace;
-            font-size: 12px;
             color: rgba(245,240,232,0.45);
             line-height: 1.65;
             overflow: hidden;
@@ -648,7 +637,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           }
           .lp-paths-sub {
             margin-bottom: 40px;
-            font-size: 14px;
           }
           .lp-paths-grid {
             grid-template-columns: 1fr 1fr;
@@ -658,10 +646,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             padding: 18px 14px 16px;
             gap: 6px;
           }
-          .lp-path-emoji { font-size: 24px; }
-          .lp-path-title { font-size: 18px; }
-          .lp-path-time { font-size: 10px; }
-          .lp-path-desc { font-size: 12px; }
         }
 
         @media (max-width: 400px) {
