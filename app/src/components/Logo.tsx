@@ -1,25 +1,36 @@
 interface LogoProps {
   size?: number
   color?: string
+  gold?: string
   className?: string
 }
 
-// Constitutional seal mark — thin circle, five radial ticks (one per instrument), HC monogram centre
-export function Logo({ size = 32, color = 'currentColor', className }: LogoProps) {
-  const r = 13.5
-  const cx = 16
-  const cy = 16
+// Five classical pillars in a double ring — the five governance instruments
+// as a constitutional temple: entablature cap, two-step stylobate base, gold diamond apex
+export function Logo({ size = 32, color = 'currentColor', gold = '#c9a84c', className }: LogoProps) {
+  // All coordinates in 32×32 viewBox
+  const cx = 16, cy = 16
 
-  // Five tick marks at 72° intervals starting from top (−90°)
-  const ticks = Array.from({ length: 5 }, (_, i) => {
-    const angle = (i * 72 - 90) * (Math.PI / 180)
-    return {
-      x1: cx + (r - 3.5) * Math.cos(angle),
-      y1: cy + (r - 3.5) * Math.sin(angle),
-      x2: cx + r * Math.cos(angle),
-      y2: cy + r * Math.sin(angle),
-    }
-  })
+  // Column geometry — 1:1 width-to-gap ratio (classical Doric)
+  const n = 5
+  const pw = 1.85   // pillar width
+  const pg = 1.85   // pillar gap (= pillar width)
+  const tw = n * pw + (n - 1) * pg  // total width = 16.65
+  const sx = cx - tw / 2            // start x = 7.675
+
+  const pillarH  = 11.8
+  const baselineY = 22.2
+  const topY      = baselineY - pillarH  // = 10.4
+
+  // Entablature widths (project beyond columns)
+  const archW  = tw + 1.6;  const archX  = cx - archW / 2
+  const cornW  = tw + 3.0;  const cornX  = cx - cornW / 2
+
+  // Stylobate widths
+  const sty1W  = tw + 1.8;  const sty1X  = cx - sty1W / 2
+  const sty2W  = tw + 3.2;  const sty2X  = cx - sty2W / 2
+
+  const pillars = Array.from({ length: n }, (_, i) => sx + i * (pw + pg))
 
   return (
     <svg
@@ -32,32 +43,30 @@ export function Logo({ size = 32, color = 'currentColor', className }: LogoProps
       aria-hidden="true"
     >
       {/* Outer ring */}
-      <circle cx={cx} cy={cy} r={r} stroke={color} strokeWidth="1" />
+      <circle cx={cx} cy={cy} r={14.6} stroke={color} strokeWidth="0.75" />
+      {/* Inner ring */}
+      <circle cx={cx} cy={cy} r={13.5} stroke={color} strokeWidth="0.3" />
 
-      {/* Five instrument ticks */}
-      {ticks.map((t, i) => (
-        <line
-          key={i}
-          x1={t.x1} y1={t.y1}
-          x2={t.x2} y2={t.y2}
-          stroke={color}
-          strokeWidth="1"
-          strokeLinecap="round"
-        />
+      {/* Cornice (top cap — projects furthest) */}
+      <rect x={cornX} y={topY - 2.2} width={cornW} height={1.4} fill={color} />
+
+      {/* Architrave (sits directly on pillar tops) */}
+      <rect x={archX} y={topY - 0.8} width={archW} height={0.8} fill={color} />
+
+      {/* Five columns */}
+      {pillars.map((px, i) => (
+        <rect key={i} x={px} y={topY} width={pw} height={pillarH} fill={color} />
       ))}
 
-      {/* HC monogram — H */}
-      <line x1="9.5" y1="12" x2="9.5" y2="20" stroke={color} strokeWidth="1.2" strokeLinecap="round" />
-      <line x1="9.5" y1="16" x2="13.5" y2="16" stroke={color} strokeWidth="1.2" strokeLinecap="round" />
-      <line x1="13.5" y1="12" x2="13.5" y2="20" stroke={color} strokeWidth="1.2" strokeLinecap="round" />
+      {/* Stylobate — step 1 */}
+      <rect x={sty1X} y={baselineY} width={sty1W} height={0.9} fill={color} />
+      {/* Stylobate — step 2 */}
+      <rect x={sty2X} y={baselineY + 0.9} width={sty2W} height={0.85} fill={color} />
 
-      {/* HC monogram — C */}
-      <path
-        d="M22 13.2 C20.5 11.8 17.5 11.8 17.5 16 C17.5 20.2 20.5 20.2 22 18.8"
-        stroke={color}
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        fill="none"
+      {/* Gold diamond — pediment apex */}
+      <polygon
+        points={`${cx},${topY - 3.5} ${cx + 1},${topY - 2.5} ${cx},${topY - 1.5} ${cx - 1},${topY - 2.5}`}
+        fill={gold}
       />
     </svg>
   )
