@@ -352,8 +352,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-instrument-desc {
           font-family: 'DM Mono', monospace;
-          font-size: 12px;
-          color: rgba(245,240,232,0.35);
+          font-size: 14px;
+          color: rgba(245,240,232,0.55);
           text-align: right;
           white-space: nowrap;
           overflow: hidden;
