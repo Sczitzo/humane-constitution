@@ -50,6 +50,8 @@ export default function App() {
       ? window.localStorage.getItem(LANDING_VISITED_KEY) !== 'true'
       : false
   )
+  // true only when user clicks the logo from inside the reader — hides path grid
+  const [logoReturn, setLogoReturn] = useState(false)
   const [view, setView] = useState<AppView>(readStoredView)
   const [corpus, setCorpus] = useState<CorpusPayload | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -128,27 +130,25 @@ export default function App() {
     })
   }
 
-  const hasVisited = typeof window !== 'undefined'
-    ? window.localStorage.getItem(LANDING_VISITED_KEY) === 'true'
-    : false
-
   function handleEnterFromLanding(pathId?: string) {
     window.localStorage.setItem(LANDING_VISITED_KEY, 'true')
     if (pathId) {
       window.localStorage.setItem(ACTIVE_PATH_STORAGE_KEY, pathId)
       setView('paths')
     }
+    setLogoReturn(false)
     setShowLanding(false)
     requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' }))
   }
 
   function handleLogoClick() {
+    setLogoReturn(true)
     setShowLanding(true)
     requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' }))
   }
 
   if (showLanding) {
-    return <LandingPage onEnter={handleEnterFromLanding} returningVisitor={hasVisited} />
+    return <LandingPage onEnter={handleEnterFromLanding} returningVisitor={logoReturn} />
   }
 
   return (
