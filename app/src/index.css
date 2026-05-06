@@ -800,6 +800,175 @@
   }
 }
 
+/* ============================================================
+ * Mobile-only refinements (≤ 640px)
+ * Goal: keep desktop reading experience untouched while making the
+ * single-column reader feel native on phones — tighter chrome,
+ * comfortable rhythm, hardware-aware padding for notches/home bar,
+ * and overflow-safe tables / code blocks.
+ * ============================================================ */
+@media (max-width: 640px) {
+  /* Avoid iOS auto-zoom on input focus (≥ 16px input font-size) */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  .reader-prose {
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+
+  .reader-prose > * + * {
+    margin-top: 1.1rem;
+  }
+
+  .reader-prose p + p:has(> strong:first-child) {
+    margin-top: 1.8rem;
+  }
+
+  .reader-h1 {
+    margin-top: 1.8rem;
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+
+  .reader-h2 {
+    margin-top: 2rem;
+    font-size: 1.28rem;
+  }
+
+  .reader-h3 {
+    margin-top: 1.7rem;
+    font-size: 1.12rem;
+  }
+
+  .reader-h4 {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    padding-left: 0.7rem;
+  }
+
+  .reader-prose p:has(> strong:only-child) {
+    padding-left: 0.7rem;
+  }
+
+  .reader-list {
+    padding-left: 1.15rem;
+  }
+
+  .reader-list li + li {
+    margin-top: 0.5rem;
+  }
+
+  .reader-quote {
+    padding-left: 0.85rem;
+  }
+
+  .reader-rule {
+    margin: 1.5rem 0;
+  }
+
+  .reader-code {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    border-radius: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Tables: drop the desktop minimum so narrow tables fit on phone screens
+     without forcing horizontal scroll, but keep wide tables scrollable
+     (the wrapper retains overflow-x: auto). */
+  .reader-table {
+    min-width: 0;
+    font-size: 0.92em;
+  }
+
+  .reader-table th,
+  .reader-table td {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .reader-table-wrap {
+    -webkit-overflow-scrolling: touch;
+    /* Soft right-edge fade hint that more content is scrollable */
+    background-image: linear-gradient(to right, transparent calc(100% - 18px), rgba(0,0,0,0.04));
+    background-repeat: no-repeat;
+    background-attachment: local, scroll;
+  }
+
+  [data-theme="dark"] .reader-table-wrap {
+    background-image: linear-gradient(to right, transparent calc(100% - 18px), rgba(255,255,255,0.04));
+  }
+
+  .topic-tag {
+    font-size: 0.68rem;
+    padding: 0.08rem 0.45rem;
+  }
+
+  .reader-table-wrap,
+  .reader-code,
+  pre,
+  code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .reader-code,
+  pre {
+    overflow-x: auto;
+    word-break: normal;
+  }
+}
+
+/* Hardware-aware safe-area padding for sticky chrome and main content.
+   No-op on hardware without insets (env() resolves to 0). */
+.reader-header-safe {
+  padding-top: env(safe-area-inset-top, 0);
+  padding-left: max(0.75rem, env(safe-area-inset-left));
+  padding-right: max(0.75rem, env(safe-area-inset-right));
+}
+
+@media (min-width: 640px) {
+  .reader-header-safe {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+}
+
+@media (min-width: 1024px) {
+  .reader-header-safe {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
+}
+
+.reader-main-safe {
+  padding-left: max(0.75rem, env(safe-area-inset-left));
+  padding-right: max(0.75rem, env(safe-area-inset-right));
+  padding-bottom: max(3rem, env(safe-area-inset-bottom));
+}
+
+/* sm: matches Tailwind sm:px-8 (= 2rem), sm:pb-16 (= 4rem) on the main element. */
+@media (min-width: 640px) {
+  .reader-main-safe {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+    padding-bottom: max(4rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* lg: matches Tailwind lg:px-12 (= 3rem) on the main element. */
+@media (min-width: 1024px) {
+  .reader-main-safe {
+    padding-left: max(3rem, env(safe-area-inset-left));
+    padding-right: max(3rem, env(safe-area-inset-right));
+  }
+}
+
 @keyframes fadeSlideUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
