@@ -364,25 +364,14 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           line-height: 1;
           user-select: none;
         }
-        .lp-instrument-open .lp-instrument-chevron {
-          transform: rotate(90deg);
-          color: #c9a84c;
-        }
         .lp-instrument-expand {
-          display: none;
           grid-column: 2 / 4;
           font-family: 'DM Mono', monospace;
           font-size: 12px;
           color: rgba(245,240,232,0.45);
           line-height: 1.65;
-          max-height: 0;
           overflow: hidden;
-          transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1), padding-bottom 0.45s;
-          padding-bottom: 0;
-        }
-        .lp-instrument-open .lp-instrument-expand {
-          max-height: 100px;
-          padding-bottom: 12px;
+          transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.35s, padding-bottom 0.45s;
         }
 
         /* ── Transition zone ── */
@@ -589,56 +578,32 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             height: 32px;
           }
 
-          /* Stats — horizontal swipe carousel */
+          /* Stats — vertical stack */
           .lp-stats {
-            padding: 72px 0 72px 24px;
+            padding: 72px 24px;
             max-width: 100%;
-          }
-          .lp-stats .lp-eyebrow {
-            padding-right: 24px;
           }
           .lp-stats-grid {
             display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
+            flex-direction: column;
+            overflow-x: visible;
             gap: 0;
             margin-top: 40px;
-            padding-bottom: 4px;
           }
-          .lp-stats-grid::-webkit-scrollbar { display: none; }
           .lp-stat {
-            flex: 0 0 72vw;
-            scroll-snap-align: start;
-            padding: 0 24px 0 0;
-            border-right: 1px solid rgba(245,240,232,0.1);
-          }
-          .lp-stat:nth-child(2) { padding: 0 24px; flex: 0 0 72vw; }
-          .lp-stat:last-child {
-            flex: 0 0 72vw;
-            padding-left: 0;
-            padding-right: 24px;
+            flex: none;
+            padding: 28px 0;
             border-right: none;
+            border-bottom: 1px solid rgba(245,240,232,0.08);
+          }
+          .lp-stat:nth-child(2) { padding: 28px 0; }
+          .lp-stat:last-child {
+            padding-left: 0;
+            border-bottom: none;
           }
           .lp-stat-num { font-size: 60px; }
           .lp-stat-label { font-size: 13px; }
-          .lp-stats-swipe-hint {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 20px;
-            padding-right: 24px;
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            color: rgba(245,240,232,0.2);
-          }
-          .lp-stats-swipe-line {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(to right, rgba(245,240,232,0.15), transparent);
-          }
+          .lp-stats-swipe-hint { display: none; }
 
           /* Instruments — accordion */
           .lp-instruments {
@@ -700,9 +665,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             grid-template-columns: 1fr;
             gap: 10px;
           }
-          .lp-stat { flex: 0 0 85vw; }
-          .lp-stat:nth-child(2) { flex: 0 0 85vw; }
-          .lp-stat:last-child { flex: 0 0 85vw; }
         }
       `}</style>
 
@@ -804,14 +766,27 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           {INSTRUMENTS.map((inst, i) => (
             <div
               key={i}
-              className={`lp-instrument lp-reveal lp-reveal-delay-${i + 1}${openInstrument === i ? ' lp-instrument-open' : ''}`}
+              className={`lp-instrument lp-reveal lp-reveal-delay-${i + 1}`}
               onClick={() => setOpenInstrument(openInstrument === i ? null : i)}
             >
               <span className="lp-instrument-num">{inst.num}</span>
               <span className="lp-instrument-label">{inst.label}</span>
               <span className="lp-instrument-desc">{inst.desc}</span>
-              <span className="lp-instrument-chevron">›</span>
-              <div className="lp-instrument-expand">{inst.desc}</div>
+              <span
+                className="lp-instrument-chevron"
+                style={{
+                  transform: openInstrument === i ? 'rotate(90deg)' : 'none',
+                  color: openInstrument === i ? '#c9a84c' : 'rgba(245,240,232,0.3)',
+                }}
+              >›</span>
+              <div
+                className="lp-instrument-expand"
+                style={{
+                  maxHeight: openInstrument === i ? '120px' : '0',
+                  opacity: openInstrument === i ? 1 : 0,
+                  paddingBottom: openInstrument === i ? '12px' : '0',
+                }}
+              >{inst.desc}</div>
             </div>
           ))}
         </div>
