@@ -410,69 +410,75 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           gap: 16px;
         }
         .lp-path-card {
-          background: #fff;
-          border: 1px solid #e5e7eb;
-          border-radius: 8px;
-          padding: 28px 24px 24px;
+          background: transparent;
+          border: 1px solid rgba(26,26,28,0.13);
+          border-left: 3px solid var(--card-color, #1a3a5c);
+          border-radius: 0 6px 6px 0;
+          padding: 28px 24px 28px 22px;
           cursor: pointer;
-          transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
+          transition: background 0.3s cubic-bezier(0.16,1,0.3,1),
+                      border-color 0.3s,
+                      transform 0.3s cubic-bezier(0.16,1,0.3,1),
+                      box-shadow 0.3s;
           text-align: left;
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 10px;
           position: relative;
           overflow: hidden;
         }
-        .lp-path-card::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: var(--card-color, #1a3a5c);
-          opacity: 0;
-          transition: opacity 0.25s;
-        }
         .lp-path-card:hover {
-          border-color: transparent;
-          transform: translateY(-4px);
-          box-shadow: 0 20px 48px rgba(0,0,0,0.12);
+          background: color-mix(in srgb, var(--card-color) 6%, transparent);
+          border-color: color-mix(in srgb, var(--card-color) 40%, rgba(26,26,28,0.13));
+          border-left-color: var(--card-color);
+          transform: translateY(-3px);
+          box-shadow: 0 12px 32px rgba(0,0,0,0.07);
         }
-        .lp-path-card:hover::before { opacity: 0.04; }
+        .lp-path-card:hover .lp-path-title { font-style: italic; }
         .lp-path-card:hover .lp-path-arrow { opacity: 1; transform: translateX(0); }
+        .lp-path-num {
+          font-family: 'DM Mono', monospace;
+          font-size: 10px;
+          letter-spacing: 0.14em;
+          color: rgba(26,26,28,0.2);
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
         .lp-path-emoji {
-          font-size: 28px;
-          margin-bottom: 4px;
-          position: relative;
+          font-size: 24px;
+          line-height: 1;
         }
         .lp-path-title {
           font-family: 'Cormorant Garamond', serif;
           font-size: 22px;
           font-weight: 600;
           color: #1a1a1c;
-          position: relative;
+          line-height: 1.2;
+          transition: font-style 0.15s;
         }
         .lp-path-time {
           font-family: 'DM Mono', monospace;
-          font-size: 11px;
-          letter-spacing: 0.1em;
-          color: #9ca3af;
-          position: relative;
+          font-size: 10px;
+          letter-spacing: 0.12em;
+          color: color-mix(in srgb, var(--card-color) 70%, #9ca3af);
+          margin-top: -2px;
         }
         .lp-path-desc {
           font-size: 13px;
           line-height: 1.6;
-          color: #6b7280;
-          margin-top: 4px;
-          position: relative;
+          color: rgba(26,26,28,0.55);
+          margin-top: 2px;
+          flex: 1;
         }
         .lp-path-arrow {
-          position: absolute;
-          bottom: 20px;
-          right: 20px;
-          font-size: 16px;
-          color: #1a3a5c;
+          align-self: flex-end;
+          font-size: 15px;
+          color: var(--card-color);
           opacity: 0;
           transform: translateX(-6px);
-          transition: opacity 0.2s, transform 0.2s;
+          transition: opacity 0.2s, transform 0.25s cubic-bezier(0.16,1,0.3,1);
+          margin-top: 4px;
         }
         .lp-skip {
           text-align: center;
@@ -790,13 +796,14 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           <p className="lp-paths-sub">Each path takes 10–40 minutes. You can switch anytime inside the reader.</p>
 
           <div className="lp-paths-grid">
-            {PATHS.map((path) => (
+            {PATHS.map((path, i) => (
               <button
                 key={path.id}
                 className="lp-path-card"
                 style={{ '--card-color': path.color } as React.CSSProperties}
                 onClick={() => handleEnter(path.id)}
               >
+                <span className="lp-path-num">{String(i + 1).padStart(2, '0')}</span>
                 <div className="lp-path-emoji">{path.emoji}</div>
                 <div className="lp-path-title">{path.title}</div>
                 <div className="lp-path-time">{path.time}</div>
