@@ -21,6 +21,12 @@ const INSTRUMENTS = [
   { label: 'Acceptance Protocol', desc: 'Audit & validation criteria', num: '05' },
 ]
 
+const STATS = [
+  { raw: 90, suffix: '+', label: 'Documents in the corpus — threats, patches, annexes, and constitutional text' },
+  { raw: 5,  suffix: '',  label: 'Interlocking governance instruments that form a coherent system' },
+  { raw: 100, suffix: '%', label: 'Open source, CC BY 4.0 licensed, with a public audit trail' },
+]
+
 const HEADLINE_WORDS = ['What', 'if', 'AI', 'had', 'a', 'constitution', 'that', 'protected', 'you', 'by', 'design?']
 
 interface LandingPageProps {
@@ -31,18 +37,22 @@ interface LandingPageProps {
 export function LandingPage({ onEnter, returningVisitor = false }: LandingPageProps) {
   const [exiting, setExiting] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [openInstrument, setOpenInstrument] = useState<number | null>(null)
+  const [statCounts, setStatCounts] = useState([0, 0, 0])
+  const [statsVisible, setStatsVisible] = useState(false)
+
   const transitionRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const statsRef = useRef<HTMLDivElement>(null)
   const observerRef = useRef<IntersectionObserver | null>(null)
 
-  // Scroll-driven: track how far into the transition zone we are (0→1)
+  // Scroll-driven transition progress
   useEffect(() => {
     const onScroll = () => {
       const el = transitionRef.current
       if (!el) return
       const rect = el.getBoundingClientRect()
       const vh = window.innerHeight
-      // starts fading when transition zone enters viewport, completes when it exits top
       const progress = Math.max(0, Math.min(1, (vh - rect.top) / (rect.height + vh * 0.5)))
       setScrollProgress(progress)
     }
@@ -50,14 +60,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // IntersectionObserver for .reveal elements
+  // Reveal IntersectionObserver
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('lp-visible')
-          }
+          if (e.isIntersecting) e.target.classList.add('lp-visible')
         })
       },
       { threshold: 0.01 }
@@ -66,17 +74,41 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
     return () => observerRef.current?.disconnect()
   }, [])
 
+  // Stats count-up trigger
+  useEffect(() => {
+    const el = statsRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setStatsVisible(true); obs.disconnect() } },
+      { threshold: 0.15 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!statsVisible) return
+    const targets = STATS.map((s) => s.raw)
+    const duration = 1600
+    const start = performance.now()
+    const tick = (now: number) => {
+      const t = Math.min((now - start) / duration, 1)
+      const ease = 1 - Math.pow(1 - t, 3)
+      setStatCounts(targets.map((v) => Math.round(v * ease)))
+      if (t < 1) requestAnimationFrame(tick)
+    }
+    requestAnimationFrame(tick)
+  }, [statsVisible])
+
   const handleEnter = useCallback((pathId?: string) => {
     setExiting(true)
     setTimeout(() => onEnter(pathId), 600)
   }, [onEnter])
 
-  // Interpolated bg: dark (#0c0b09) → cream (#f5f0e8)
   const bgR = Math.round(12 + (245 - 12) * scrollProgress)
   const bgG = Math.round(11 + (240 - 11) * scrollProgress)
   const bgB = Math.round(9 + (232 - 9) * scrollProgress)
   const bgColor = `rgb(${bgR},${bgG},${bgB})`
-
   const textOpacity = Math.max(0, 1 - scrollProgress * 2)
 
   return (
@@ -90,7 +122,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         .lp-root {
           font-family: 'Inter', sans-serif;
           min-height: 100vh;
-          overflow-x: hidden;
+          overflow-x: clip;
           transition: opacity 0.6s ease, transform 0.6s ease;
         }
         .lp-exit {
@@ -102,19 +134,20 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         /* ── Reveal animations ── */
         .lp-reveal {
           opacity: 0;
-          transform: translateY(32px);
-          transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
+          transform: translateY(28px);
+          transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1), transform 0.85s cubic-bezier(0.16,1,0.3,1);
         }
         .lp-reveal.lp-visible { opacity: 1; transform: none; }
-        .lp-reveal-delay-1 { transition-delay: 0.1s; }
-        .lp-reveal-delay-2 { transition-delay: 0.2s; }
-        .lp-reveal-delay-3 { transition-delay: 0.3s; }
-        .lp-reveal-delay-4 { transition-delay: 0.4s; }
-        .lp-reveal-delay-5 { transition-delay: 0.5s; }
+        .lp-reveal-delay-1 { transition-delay: 0.08s; }
+        .lp-reveal-delay-2 { transition-delay: 0.16s; }
+        .lp-reveal-delay-3 { transition-delay: 0.24s; }
+        .lp-reveal-delay-4 { transition-delay: 0.32s; }
+        .lp-reveal-delay-5 { transition-delay: 0.40s; }
 
         /* ── Hero ── */
         .lp-hero {
           min-height: 100vh;
+          min-height: 100svh;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -134,7 +167,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-headline {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(52px, 7vw, 96px);
+          font-size: clamp(44px, 7vw, 96px);
           font-weight: 600;
           line-height: 1.08;
           color: #f5f0e8;
@@ -154,6 +187,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         .lp-word-italic {
           font-style: italic;
           color: #c9a84c;
+          animation: lp-word-in 0.7s cubic-bezier(0.16,1,0.3,1) both,
+                     lp-gold-glow 4s ease-in-out 2.5s infinite;
         }
         .lp-subhead {
           font-size: 18px;
@@ -181,9 +216,13 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           letter-spacing: 0.02em;
           border-radius: 4px;
           cursor: pointer;
-          transition: background 0.2s, transform 0.15s;
+          transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
         }
-        .lp-btn-primary:hover { background: #dbb85c; transform: translateY(-2px); }
+        .lp-btn-primary:hover {
+          background: #dbb85c;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+        }
         .lp-btn-ghost {
           background: transparent;
           color: rgba(245,240,232,0.65);
@@ -232,18 +271,11 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           max-width: 1100px;
           margin: 0 auto;
         }
-        .lp-stats-label {
-          font-family: 'DM Mono', monospace;
-          font-size: 11px;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          color: #c9a84c;
-          margin-bottom: 80px;
-        }
         .lp-stats-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 0;
+          margin-top: 48px;
         }
         .lp-stat {
           padding: 0 48px 0 0;
@@ -258,11 +290,15 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           color: #f5f0e8;
           line-height: 1;
           margin-bottom: 16px;
+          transition: color 0.3s;
         }
         .lp-stat-label {
           font-size: 14px;
           color: rgba(245,240,232,0.45);
           line-height: 1.5;
+        }
+        .lp-stats-swipe-hint {
+          display: none;
         }
 
         /* ── Instruments section ── */
@@ -273,7 +309,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-section-head {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(40px, 5vw, 68px);
+          font-size: clamp(36px, 5vw, 68px);
           font-weight: 600;
           color: #f5f0e8;
           line-height: 1.1;
@@ -292,12 +328,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         .lp-instrument {
           display: grid;
           grid-template-columns: 64px 1fr auto;
+          grid-template-rows: auto;
           align-items: center;
           gap: 32px;
           padding: 28px 0;
           border-bottom: 1px solid rgba(245,240,232,0.08);
-          transition: all 0.3s ease;
-          cursor: default;
+          transition: background 0.2s;
         }
         .lp-instrument:first-child { border-top: 1px solid rgba(245,240,232,0.08); }
         .lp-instrument:hover .lp-instrument-label { color: #c9a84c; }
@@ -319,6 +355,34 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           font-size: 12px;
           color: rgba(245,240,232,0.35);
           text-align: right;
+        }
+        .lp-instrument-chevron {
+          display: none;
+          font-size: 22px;
+          color: rgba(245,240,232,0.3);
+          transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), color 0.2s;
+          line-height: 1;
+          user-select: none;
+        }
+        .lp-instrument-open .lp-instrument-chevron {
+          transform: rotate(90deg);
+          color: #c9a84c;
+        }
+        .lp-instrument-expand {
+          display: none;
+          grid-column: 2 / 4;
+          font-family: 'DM Mono', monospace;
+          font-size: 12px;
+          color: rgba(245,240,232,0.45);
+          line-height: 1.65;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1), padding-bottom 0.45s;
+          padding-bottom: 0;
+        }
+        .lp-instrument-open .lp-instrument-expand {
+          max-height: 100px;
+          padding-bottom: 12px;
         }
 
         /* ── Transition zone ── */
@@ -343,7 +407,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-paths-head {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(40px, 5vw, 68px);
+          font-size: clamp(36px, 5vw, 68px);
           font-weight: 600;
           color: #1a1a1c;
           line-height: 1.1;
@@ -359,18 +423,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
-        @media (max-width: 640px) {
-          .lp-paths-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-          }
-        }
-        @media (max-width: 400px) {
-          .lp-paths-grid {
-            grid-template-columns: 1fr;
-            gap: 10px;
-          }
-        }
         .lp-path-card {
           background: #fff;
           border: 1px solid #e5e7eb;
@@ -384,11 +436,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           gap: 8px;
           position: relative;
           overflow: hidden;
-        }
-        @media (max-width: 640px) {
-          .lp-path-card {
-            padding: 20px 16px 18px;
-          }
         }
         .lp-path-card::before {
           content: '';
@@ -467,7 +514,24 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         @keyframes lp-arrow-pulse {
           0%, 100% { opacity: 0.4; transform: scaleY(1); }
-          50% { opacity: 1; transform: scaleY(1.15); }
+          50% { opacity: 1; transform: scaleY(1.18); }
+        }
+        @keyframes lp-gold-glow {
+          0%, 100% { text-shadow: none; }
+          50% { text-shadow: 0 0 32px rgba(201,168,76,0.45), 0 0 64px rgba(201,168,76,0.15); }
+        }
+        @keyframes lp-grain-drift {
+          0%   { transform: translate(0, 0); }
+          20%  { transform: translate(-2px, 3px); }
+          40%  { transform: translate(3px, -1px); }
+          60%  { transform: translate(-1px, 2px); }
+          80%  { transform: translate(2px, -3px); }
+          100% { transform: translate(0, 0); }
+        }
+        @keyframes lp-shimmer {
+          0%   { opacity: 0.018; }
+          50%  { opacity: 0.032; }
+          100% { opacity: 0.018; }
         }
 
         /* ── Grain overlay ── */
@@ -476,27 +540,193 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           inset: 0;
           pointer-events: none;
           z-index: 999;
-          opacity: 0.025;
           background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
           background-size: 128px 128px;
+          animation: lp-grain-drift 0.5s steps(1) infinite, lp-shimmer 6s ease-in-out infinite;
+        }
+
+        /* ════════════════════════════════════════
+           MOBILE — max-width: 640px
+           ════════════════════════════════════════ */
+        @media (max-width: 640px) {
+
+          /* Hero */
+          .lp-hero {
+            padding: 80px 24px 60px;
+            justify-content: flex-start;
+            padding-top: max(80px, env(safe-area-inset-top, 0px) + 60px);
+          }
+          .lp-eyebrow {
+            font-size: 10px;
+            margin-bottom: 20px;
+            letter-spacing: 0.14em;
+          }
+          .lp-subhead {
+            font-size: 15px;
+            margin-bottom: 36px;
+            line-height: 1.65;
+          }
+          .lp-hero-cta {
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            gap: 12px;
+          }
+          .lp-btn-primary {
+            width: 100%;
+            padding: 15px 24px;
+            font-size: 14px;
+          }
+          .lp-btn-ghost {
+            width: 100%;
+            padding: 13px 24px;
+            font-size: 14px;
+          }
+          .lp-scroll-hint {
+            bottom: 24px;
+          }
+          .lp-scroll-arrow {
+            height: 32px;
+          }
+
+          /* Stats — horizontal swipe carousel */
+          .lp-stats {
+            padding: 72px 0 72px 24px;
+            max-width: 100%;
+          }
+          .lp-stats .lp-eyebrow {
+            padding-right: 24px;
+          }
+          .lp-stats-grid {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            gap: 0;
+            margin-top: 40px;
+            padding-bottom: 4px;
+          }
+          .lp-stats-grid::-webkit-scrollbar { display: none; }
+          .lp-stat {
+            flex: 0 0 72vw;
+            scroll-snap-align: start;
+            padding: 0 24px 0 0;
+            border-right: 1px solid rgba(245,240,232,0.1);
+          }
+          .lp-stat:nth-child(2) { padding: 0 24px; flex: 0 0 72vw; }
+          .lp-stat:last-child {
+            flex: 0 0 72vw;
+            padding-left: 0;
+            padding-right: 24px;
+            border-right: none;
+          }
+          .lp-stat-num { font-size: 60px; }
+          .lp-stat-label { font-size: 13px; }
+          .lp-stats-swipe-hint {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding-right: 24px;
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            color: rgba(245,240,232,0.2);
+          }
+          .lp-stats-swipe-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(245,240,232,0.15), transparent);
+          }
+
+          /* Instruments — accordion */
+          .lp-instruments {
+            padding: 64px 24px 64px;
+            max-width: 100%;
+          }
+          .lp-section-head {
+            margin-bottom: 48px;
+          }
+          .lp-instrument {
+            grid-template-columns: 40px 1fr 24px;
+            gap: 16px;
+            padding: 22px 0;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+          }
+          .lp-instrument-label {
+            font-size: 22px;
+          }
+          .lp-instrument-desc {
+            display: none;
+          }
+          .lp-instrument-chevron {
+            display: block;
+            grid-column: 3;
+            grid-row: 1;
+            justify-self: end;
+            align-self: center;
+          }
+          .lp-instrument-expand {
+            display: block;
+          }
+
+          /* Paths */
+          .lp-paths {
+            padding: 72px 20px 100px;
+            max-width: 100%;
+          }
+          .lp-paths-sub {
+            margin-bottom: 40px;
+            font-size: 14px;
+          }
+          .lp-paths-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          }
+          .lp-path-card {
+            padding: 18px 14px 16px;
+            gap: 6px;
+          }
+          .lp-path-emoji { font-size: 24px; }
+          .lp-path-title { font-size: 18px; }
+          .lp-path-time { font-size: 10px; }
+          .lp-path-desc { font-size: 12px; }
+        }
+
+        @media (max-width: 400px) {
+          .lp-paths-grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+          }
+          .lp-stat { flex: 0 0 85vw; }
+          .lp-stat:nth-child(2) { flex: 0 0 85vw; }
+          .lp-stat:last-child { flex: 0 0 85vw; }
         }
       `}</style>
 
       {/* Grain texture */}
       <div className="lp-grain" />
 
-      {/* ── FLOATING LOGO ── */}
+      {/* Floating logo with parallax */}
       <div style={{
         position: 'fixed', top: 20, left: 28, zIndex: 100,
         opacity: Math.max(0.25, 1 - scrollProgress * 1.5),
         pointerEvents: 'none',
+        transform: `translateY(${scrollProgress * -10}px)`,
+        transition: 'opacity 0.1s',
       }}>
         <Logo size={28} color="rgba(245,240,232,0.6)" />
       </div>
 
       {/* ── HERO ── */}
       <section className="lp-hero" style={{ opacity: 1 - scrollProgress * 0.6 }}>
-        <div style={{ marginBottom: 36, animation: 'lp-fade-up 1s ease 0s both' }}>
+        <div style={{
+          marginBottom: 36,
+          animation: 'lp-fade-up 1s ease 0s both',
+          transform: `translateY(${scrollProgress * -24}px)`,
+        }}>
           <Logo size={120} color="#b8b4ae" gold="#c9a84c" />
         </div>
 
@@ -545,19 +775,21 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
       </section>
 
       {/* ── STATS ── */}
-      <div className="lp-stats" style={{ opacity: textOpacity }}>
+      <div className="lp-stats" ref={statsRef} style={{ opacity: textOpacity }}>
         <p className="lp-reveal lp-eyebrow">By the numbers</p>
         <div className="lp-stats-grid">
-          {[
-            { num: '90+', label: 'Documents in the corpus — threats, patches, annexes, and constitutional text' },
-            { num: '5', label: 'Interlocking governance instruments that form a coherent system' },
-            { num: '100%', label: 'Open source, CC BY 4.0 licensed, with a public audit trail' },
-          ].map((s, i) => (
+          {STATS.map((s, i) => (
             <div key={i} className={`lp-stat lp-reveal lp-reveal-delay-${i + 1}`}>
-              <div className="lp-stat-num">{s.num}</div>
+              <div className="lp-stat-num">
+                {statsVisible ? statCounts[i] : 0}{s.suffix}
+              </div>
               <div className="lp-stat-label">{s.label}</div>
             </div>
           ))}
+        </div>
+        <div className="lp-stats-swipe-hint">
+          <div className="lp-stats-swipe-line" />
+          <span>swipe</span>
         </div>
       </div>
 
@@ -570,10 +802,16 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         </h2>
         <div className="lp-instruments-list">
           {INSTRUMENTS.map((inst, i) => (
-            <div key={i} className={`lp-instrument lp-reveal lp-reveal-delay-${i + 1}`}>
+            <div
+              key={i}
+              className={`lp-instrument lp-reveal lp-reveal-delay-${i + 1}${openInstrument === i ? ' lp-instrument-open' : ''}`}
+              onClick={() => setOpenInstrument(openInstrument === i ? null : i)}
+            >
               <span className="lp-instrument-num">{inst.num}</span>
               <span className="lp-instrument-label">{inst.label}</span>
               <span className="lp-instrument-desc">{inst.desc}</span>
+              <span className="lp-instrument-chevron">›</span>
+              <div className="lp-instrument-expand">{inst.desc}</div>
             </div>
           ))}
         </div>
