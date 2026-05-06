@@ -29,6 +29,9 @@ for (const vp of viewports) {
     test.use({ viewport: { width: vp.width, height: vp.height } })
 
     test('capture each view', async ({ page }) => {
+      await page.addInitScript(() => {
+        window.localStorage.setItem('humane-reader:landing-visited', 'true')
+      })
       await page.goto('/')
       await page.waitForSelector('[data-testid="reader-main"]')
       // Let the dot-matrix and corpus settle.

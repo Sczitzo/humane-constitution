@@ -47,10 +47,10 @@ function readStoredView(): AppView {
 export default function App() {
   const [showLanding, setShowLanding] = useState(() =>
     typeof window !== 'undefined'
-      ? window.localStorage.getItem(LANDING_VISITED_KEY) !== 'true'
+      ? window.location.hash === '' && window.localStorage.getItem(LANDING_VISITED_KEY) !== 'true'
       : false
   )
-  // true only when user clicks the logo from inside the reader — hides path grid
+  // true only when user clicks the logo from inside the reader, so the landing hero returns directly to reading.
   const [logoReturn, setLogoReturn] = useState(false)
   const [view, setView] = useState<AppView>(readStoredView)
   const [corpus, setCorpus] = useState<CorpusPayload | null>(null)
@@ -61,6 +61,7 @@ export default function App() {
   const [shelfLabel, setShelfLabel] = useState('')
   const [corpusQuery, setCorpusQuery] = useState('')
   const [pendingDocTarget, setPendingDocTarget] = useState<PendingDocTarget | null>(null)
+  const [pendingPathId, setPendingPathId] = useState<string | null>(null)
 
   // Remembers window scroll position for each view so the nav bar can restore it.
   const scrollPositions = useRef<Map<AppView, number>>(new Map())
@@ -134,7 +135,8 @@ export default function App() {
     window.localStorage.setItem(LANDING_VISITED_KEY, 'true')
     if (pathId) {
       window.localStorage.setItem(ACTIVE_PATH_STORAGE_KEY, pathId)
-      setView('paths')
+      setPendingPathId(pathId)
+      setView('constitution') // will be overridden by handleStartPath in Dashboard
     }
     setLogoReturn(false)
     setShowLanding(false)
@@ -174,6 +176,8 @@ export default function App() {
         onCorpusQueryChange={setCorpusQuery}
         pendingDocTarget={pendingDocTarget}
         onPendingDocTargetConsumed={() => setPendingDocTarget(null)}
+        pendingPathId={pendingPathId}
+        onPendingPathConsumed={() => setPendingPathId(null)}
       />
     </Layout>
   )

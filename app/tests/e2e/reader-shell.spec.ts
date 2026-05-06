@@ -24,7 +24,14 @@ async function wheelInside(page: Page, locator: Locator, deltaY: number): Promis
   await page.mouse.wheel(0, deltaY)
 }
 
+async function markLandingVisited(page: Page): Promise<void> {
+  await page.addInitScript(() => {
+    window.localStorage.setItem('humane-reader:landing-visited', 'true')
+  })
+}
+
 async function openConstitutionView(page: Page): Promise<void> {
+  await markLandingVisited(page)
   await page.goto('/')
   await page.getByTestId('nav-hamburger').click()
   await expect(page.getByTestId('nav-constitution')).toBeVisible()
@@ -33,6 +40,7 @@ async function openConstitutionView(page: Page): Promise<void> {
 }
 
 async function openAnnexesView(page: Page): Promise<void> {
+  await markLandingVisited(page)
   await page.goto('/')
   await page.getByTestId('nav-hamburger').click()
   await expect(page.getByTestId('nav-annexes')).toBeVisible()
@@ -51,6 +59,7 @@ async function openNavSearchResult(page: Page, query: string, resultName: string
 test.describe('reader shell regression coverage', () => {
   test('hamburger opens nav drawer with all sections', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 })
+    await markLandingVisited(page)
     await page.goto('/')
 
     await page.getByTestId('nav-hamburger').click()
@@ -108,6 +117,7 @@ test.describe('reader shell regression coverage', () => {
 
   test('mobile search selection opens the selected document', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })
+    await markLandingVisited(page)
     await page.goto('/')
 
     await page.getByRole('button', { name: 'Search documents' }).click()

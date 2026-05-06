@@ -33,5 +33,9 @@ export default defineConfig(async () => ({
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
+    // Mermaid is already loaded behind a dynamic import in the reader. Its
+    // lazy renderer chunk is large by design, so keep Vite warnings focused on
+    // unexpected first-load regressions instead of the known diagram payload.
+    chunkSizeWarningLimit: 700,
   },
 }))

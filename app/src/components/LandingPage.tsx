@@ -60,7 +60,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           }
         })
       },
-      { threshold: 0.15 }
+      { threshold: 0.01 }
     )
     document.querySelectorAll('.lp-reveal').forEach((el) => observerRef.current?.observe(el))
     return () => observerRef.current?.disconnect()
@@ -78,8 +78,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   const bgColor = `rgb(${bgR},${bgG},${bgB})`
 
   const textOpacity = Math.max(0, 1 - scrollProgress * 2)
-  // Paths fade in as soon as the transition zone enters view — no dead grey gap
-  const pathsOpacity = Math.max(0, (scrollProgress - 0.1) / 0.5)
 
   return (
     <div
@@ -481,6 +479,10 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
 
       {/* ── HERO ── */}
       <section className="lp-hero" style={{ opacity: 1 - scrollProgress * 0.6 }}>
+        <div style={{ marginBottom: 36, animation: 'lp-fade-up 1s ease 0s both' }}>
+          <Logo size={120} color="#b8b4ae" gold="#c9a84c" />
+        </div>
+
         <p className="lp-eyebrow">Open Constitutional Design · 2025</p>
 
         <h1 className="lp-headline">
@@ -560,14 +562,14 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         </div>
       </div>
 
-      {/* ── TRANSITION ZONE + PATHS — hidden for returning visitors ── */}
+      {/* ── TRANSITION ZONE + PATHS ── */}
       <div ref={transitionRef} className="lp-transition" id="lp-paths-anchor" />
 
-      {!returningVisitor && <div style={{ opacity: pathsOpacity }}>
+      <div className="lp-reveal lp-paths-section">
         <div className="lp-paths">
           <p className="lp-paths-eyebrow">Reading Paths</p>
-          <h2 className="lp-paths-head">Where would you like to start?</h2>
-          <p className="lp-paths-sub">Each path takes 10–40 minutes. You can switch paths anytime inside the reader.</p>
+          <h2 className="lp-paths-head">Choose your path.</h2>
+          <p className="lp-paths-sub">Each path takes 10–40 minutes. You can switch anytime inside the reader.</p>
 
           <div className="lp-paths-grid">
             {PATHS.map((path) => (
@@ -592,7 +594,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             </button>
           </div>
         </div>
-      </div>}
+      </div>
 
     </div>
   )

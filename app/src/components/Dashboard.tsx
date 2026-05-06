@@ -527,6 +527,8 @@ interface DashboardProps {
   onCorpusQueryChange: (q: string) => void
   pendingDocTarget?: { id: string; headingSlug?: string } | null
   onPendingDocTargetConsumed?: () => void
+  pendingPathId?: string | null
+  onPendingPathConsumed?: () => void
 }
 
 interface SourceFeedback {
@@ -1945,7 +1947,7 @@ function ReaderPanel({
   allCorpusDocs?: CorpusDoc[]
   onMarkDocRead?: (docId: string) => void
   onSelectPathDoc?: (doc: CorpusDoc) => void
-  onClearPath?: () => void
+  onClearPath?: (nextView?: AppView) => void
 }) {
   // Derive active path context
   const activePath = activePathId ? READING_PATHS.find((p) => p.id === activePathId) ?? null : null
@@ -2082,7 +2084,7 @@ function ReaderPanel({
           </div>
           <button
             type="button"
-            onClick={onClearPath}
+            onClick={() => onClearPath?.()}
             className="focus-ring shrink-0 rounded p-1 text-[11px] text-ink-faint transition hover:text-ink"
             title="Exit reading path"
           >
@@ -2122,7 +2124,7 @@ function ReaderPanel({
                   <p className="mt-1 text-[13px] text-ink-soft">All {pathDocs.length} documents in this path read.</p>
                   <button
                     type="button"
-                    onClick={onClearPath}
+                    onClick={() => onClearPath?.('paths')}
                     className="focus-ring mt-4 rounded-md border border-emerald-700/40 bg-emerald-900/30 px-4 py-2 text-[13px] font-medium text-emerald-300 transition hover:bg-emerald-900/50"
                   >
                     Back to Reading Paths
@@ -2397,7 +2399,7 @@ function ReaderWorkspace({
   allCorpusDocs: CorpusDoc[]
   onMarkDocRead: (docId: string) => void
   onSelectPathDoc: (doc: CorpusDoc) => void
-  onClearPath: () => void
+  onClearPath: (nextView?: AppView) => void
 }) {
   if (!docs.length || !selectedDoc) {
     return (
@@ -3222,7 +3224,7 @@ function ValidationPanels({ corpus }: { corpus: CorpusPayload }) {
 }
 
 
-export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange, pendingDocTarget, onPendingDocTargetConsumed }: DashboardProps) {
+export function Dashboard({ view, corpus, loadError, onViewChange, onProgressChange, onNavDocsChange, corpusQuery, onCorpusQueryChange, pendingDocTarget, onPendingDocTargetConsumed, pendingPathId, onPendingPathConsumed }: DashboardProps) {
   const [documentQuery, setDocumentQuery] = useState('')
   const [selectedDocId, setSelectedDocId] = useState<string | null>(() => readStoredSelectedDocId(view))
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
@@ -3326,6 +3328,18 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       })
     })
   }, [allDocs, pendingDocTarget])
+
+  // Auto-start a path selected from the landing page
+  useEffect(() => {
+    if (!pendingPathId || !corpus) return
+    const path = READING_PATHS.find((p) => p.id === pendingPathId)
+    if (!path) { onPendingPathConsumed?.(); return }
+    const firstStep = path.steps[0]
+    const doc = corpus.docs.find((d) => d.path === firstStep.path)
+    if (!doc) { onPendingPathConsumed?.(); return }
+    onPendingPathConsumed?.()
+    handleStartPath(pendingPathId, doc)
+  }, [pendingPathId, corpus])
 
   useEffect(() => {
     if (!corpus) {
@@ -3885,9 +3899,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     handleSelectQuickDoc(doc)
   }
 
-  function handleClearPath() {
+  function handleClearPath(nextView?: AppView) {
     window.localStorage.removeItem(ACTIVE_PATH_STORAGE_KEY)
     setActivePathId(null)
+    if (nextView) {
+      onViewChange(nextView)
+    }
   }
 
   function handleToggleReadingMode() {
