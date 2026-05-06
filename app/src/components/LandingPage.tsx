@@ -355,6 +355,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           font-size: 12px;
           color: rgba(245,240,232,0.35);
           text-align: right;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .lp-instrument-chevron {
           display: none;
@@ -365,13 +368,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           user-select: none;
         }
         .lp-instrument-expand {
-          grid-column: 2 / 4;
-          font-family: 'DM Mono', monospace;
-          font-size: 12px;
-          color: rgba(245,240,232,0.45);
-          line-height: 1.65;
-          overflow: hidden;
-          transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.35s, padding-bottom 0.45s;
+          display: none;
         }
 
         /* ── Transition zone ── */
@@ -635,6 +632,13 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           }
           .lp-instrument-expand {
             display: block;
+            grid-column: 2 / 4;
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+            color: rgba(245,240,232,0.45);
+            line-height: 1.65;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.35s, padding-bottom 0.45s;
           }
 
           /* Paths */
