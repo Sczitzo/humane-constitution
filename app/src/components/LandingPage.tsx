@@ -78,7 +78,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   const bgColor = `rgb(${bgR},${bgG},${bgB})`
 
   const textOpacity = Math.max(0, 1 - scrollProgress * 2)
-  const pathsOpacity = Math.max(0, (scrollProgress - 0.4) / 0.6)
+  // Paths fade in as soon as the transition zone enters view — no dead grey gap
+  const pathsOpacity = Math.max(0, (scrollProgress - 0.1) / 0.5)
 
   return (
     <div
@@ -324,7 +325,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
 
         /* ── Transition zone ── */
         .lp-transition {
-          height: 400px;
+          height: 160px;
           position: relative;
         }
 
