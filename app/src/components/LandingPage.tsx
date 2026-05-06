@@ -359,6 +359,18 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
+        @media (max-width: 640px) {
+          .lp-paths-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          }
+        }
+        @media (max-width: 400px) {
+          .lp-paths-grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+          }
+        }
         .lp-path-card {
           background: #fff;
           border: 1px solid #e5e7eb;
@@ -372,6 +384,11 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           gap: 8px;
           position: relative;
           overflow: hidden;
+        }
+        @media (max-width: 640px) {
+          .lp-path-card {
+            padding: 20px 16px 18px;
+          }
         }
         .lp-path-card::before {
           content: '';
