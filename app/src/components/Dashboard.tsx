@@ -668,6 +668,7 @@ const KEYBOARD_NAV_VIEWS: AppView[] = [
 const PINNED_DOCS_STORAGE_KEY = 'humane-reader:pinned-docs'
 const RECENT_DOCS_STORAGE_KEY = 'humane-reader:recent-docs'
 const READ_DOCS_STORAGE_KEY   = 'humane-reader:read-docs'
+const ACTIVE_PATH_STORAGE_KEY = 'humane-reader:active-path'
 const READING_MODE_STORAGE_KEY = 'humane-reader:reading-mode'
 const CORPUS_STAMP_STORAGE_KEY = 'humane-reader:corpus-stamp'
 const MAX_RECENT_DOCS = 8
@@ -1912,6 +1913,11 @@ function ReaderPanel({
   recentIds,
   pinnedIds,
   onSelectDoc,
+  activePathId,
+  allCorpusDocs,
+  onMarkDocRead,
+  onSelectPathDoc,
+  onClearPath,
 }: {
   doc: CorpusDoc
   feedback: SourceFeedback
@@ -1935,7 +1941,38 @@ function ReaderPanel({
   recentIds: string[]
   pinnedIds: string[]
   onSelectDoc: (doc: CorpusDoc) => void
+  activePathId?: string | null
+  allCorpusDocs?: CorpusDoc[]
+  onMarkDocRead?: (docId: string) => void
+  onSelectPathDoc?: (doc: CorpusDoc) => void
+  onClearPath?: () => void
 }) {
+  // Derive active path context
+  const activePath = activePathId ? READING_PATHS.find((p) => p.id === activePathId) ?? null : null
+  const pathDocs = activePath && allCorpusDocs
+    ? activePath.steps.map((s) => allCorpusDocs.find((d) => d.path === s.path) ?? null)
+    : []
+  const pathStepIndex = activePath ? pathDocs.findIndex((d) => d?.id === doc.id) : -1
+  const pathPrevDoc = pathStepIndex > 0 ? pathDocs[pathStepIndex - 1] : null
+  const pathNextDoc = pathStepIndex >= 0 && pathStepIndex < pathDocs.length - 1 ? pathDocs[pathStepIndex + 1] : null
+  const isLastPathStep = activePath !== null && pathStepIndex >= 0 && pathStepIndex === pathDocs.length - 1
+
+  // Scroll-to-bottom sentinel: auto-mark read when the reader reaches the end
+  const sentinelRef = useRef<HTMLDivElement | null>(null)
+  useEffect(() => {
+    if (!activePath || pathStepIndex < 0 || !sentinelRef.current) return
+    const el = sentinelRef.current
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          onMarkDocRead?.(doc.id)
+        }
+      },
+      { threshold: 0.5 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [doc.id, activePath, pathStepIndex])
   return (
     <section id="reader-panel-start" data-testid="reader-panel" className="scroll-mt-16 space-y-8">
       <header className="border-b border-line pb-6">
@@ -2027,6 +2064,33 @@ function ReaderPanel({
         ) : null}
       </header>
 
+      {/* Path progress banner */}
+      {activePath && pathStepIndex >= 0 && (
+        <div className="mx-auto mb-4 flex items-center gap-3" style={{ maxWidth: 'var(--reader-column-width)' }}>
+          <div className="flex flex-1 items-center gap-2 rounded-lg border border-accent/25 bg-accent/5 px-4 py-2">
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent-deep">{activePath.title}</span>
+            <span className="text-ink-faint">·</span>
+            <div className="flex gap-1">
+              {pathDocs.map((_, i) => (
+                <span
+                  key={i}
+                  className={`h-1.5 w-4 rounded-full transition-all ${i < pathStepIndex ? 'bg-emerald-500/70' : i === pathStepIndex ? 'bg-accent' : 'bg-line'}`}
+                />
+              ))}
+            </div>
+            <span className="ml-1 font-mono text-[10px] text-ink-faint">{pathStepIndex + 1}/{pathDocs.length}</span>
+          </div>
+          <button
+            type="button"
+            onClick={onClearPath}
+            className="focus-ring shrink-0 rounded p-1 text-[11px] text-ink-faint transition hover:text-ink"
+            title="Exit reading path"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       <article data-testid="reader-paper-shell">
         <div
           data-testid="reader-document"
@@ -2041,13 +2105,73 @@ function ReaderPanel({
             allDocs={allDocs}
             onSelectDoc={onSelectDoc}
           />
-          <ReadNext
-            current={doc}
-            allDocs={allDocs}
-            recentIds={recentIds}
-            pinnedIds={pinnedIds}
-            onSelect={onSelectDoc}
-          />
+
+          {/* Scroll sentinel for auto-mark-read */}
+          {activePath && pathStepIndex >= 0 && <div ref={sentinelRef} className="h-1" />}
+
+          {activePath && pathStepIndex >= 0 ? (
+            <aside className="mt-16 border-t border-line pt-10">
+              <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
+                {isLastPathStep ? 'Path complete' : 'Next in path'}
+              </p>
+              {isLastPathStep ? (
+                <div className="rounded-lg border border-emerald-700/30 bg-emerald-900/20 p-5">
+                  <p className="font-serif text-[1rem] font-semibold text-emerald-300">
+                    You've finished {activePath.title}
+                  </p>
+                  <p className="mt-1 text-[13px] text-ink-soft">All {pathDocs.length} documents in this path read.</p>
+                  <button
+                    type="button"
+                    onClick={onClearPath}
+                    className="focus-ring mt-4 rounded-md border border-emerald-700/40 bg-emerald-900/30 px-4 py-2 text-[13px] font-medium text-emerald-300 transition hover:bg-emerald-900/50"
+                  >
+                    Back to Reading Paths
+                  </button>
+                </div>
+              ) : pathNextDoc ? (
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {pathPrevDoc && (
+                    <button
+                      type="button"
+                      onClick={() => onSelectPathDoc?.(pathPrevDoc)}
+                      className="focus-ring group flex flex-col rounded-lg border border-line bg-paper-strong p-4 text-left transition hover:border-[rgba(159,108,49,0.4)] hover:shadow-sm"
+                    >
+                      <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-2 py-0.5 font-sans text-[10px] tracking-[0.02em] text-ink-faint">
+                        ← Previous
+                      </span>
+                      <h3 className="font-serif text-[0.97rem] font-semibold leading-snug text-ink-strong group-hover:text-[var(--accent-deep)]">
+                        {pathPrevDoc.title}
+                      </h3>
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => onSelectPathDoc?.(pathNextDoc)}
+                    className="focus-ring group flex flex-col rounded-lg border border-accent/30 bg-accent/5 p-4 text-left transition hover:border-accent/60 hover:shadow-sm"
+                  >
+                    <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 font-sans text-[10px] tracking-[0.02em] text-accent-deep">
+                      <span aria-hidden="true" className="h-1 w-1 rounded-full bg-accent opacity-70" />
+                      Next · {activePath.title}
+                    </span>
+                    <h3 className="font-serif text-[0.97rem] font-semibold leading-snug text-ink-strong group-hover:text-[var(--accent-deep)]">
+                      {pathNextDoc.title}
+                    </h3>
+                    <p className="mt-auto pt-2 text-[11px] text-ink-faint">
+                      Step {pathStepIndex + 2} of {pathDocs.length}
+                    </p>
+                  </button>
+                </div>
+              ) : null}
+            </aside>
+          ) : (
+            <ReadNext
+              current={doc}
+              allDocs={allDocs}
+              recentIds={recentIds}
+              pinnedIds={pinnedIds}
+              onSelect={onSelectDoc}
+            />
+          )}
         </div>
       </article>
     </section>
@@ -2239,6 +2363,11 @@ function ReaderWorkspace({
   currentMatchIndex,
   onJumpToPreviousMatch,
   onJumpToNextMatch,
+  activePathId,
+  allCorpusDocs,
+  onMarkDocRead,
+  onSelectPathDoc,
+  onClearPath,
 }: {
   docs: CorpusDoc[]
   allDocs: CorpusDoc[]
@@ -2264,6 +2393,11 @@ function ReaderWorkspace({
   currentMatchIndex: number
   onJumpToPreviousMatch: () => void
   onJumpToNextMatch: () => void
+  activePathId: string | null
+  allCorpusDocs: CorpusDoc[]
+  onMarkDocRead: (docId: string) => void
+  onSelectPathDoc: (doc: CorpusDoc) => void
+  onClearPath: () => void
 }) {
   if (!docs.length || !selectedDoc) {
     return (
@@ -2304,6 +2438,11 @@ function ReaderWorkspace({
           recentIds={recentIds}
           pinnedIds={pinnedDocIds}
           onSelectDoc={onSelectQuickDoc}
+          activePathId={activePathId}
+          allCorpusDocs={allCorpusDocs}
+          onMarkDocRead={onMarkDocRead}
+          onSelectPathDoc={onSelectPathDoc}
+          onClearPath={onClearPath}
         />
       </div>
     </div>
@@ -2915,45 +3054,84 @@ const READING_PATHS: ReadingPathDef[] = [
 
 function ReadingPathsView({
   corpus,
-  onJump,
+  onStartPath,
+  activePathId,
+  readDocIds,
 }: {
   corpus: CorpusPayload
-  onJump: (doc: CorpusDoc) => void
+  onStartPath: (pathId: string, doc: CorpusDoc) => void
+  activePathId: string | null
+  readDocIds: string[]
 }) {
   return (
     <div className="space-y-10">
-      {READING_PATHS.map((path) => (
-        <section key={path.id} className="rounded-lg border border-line bg-paper-strong p-6">
-          <h2 className="font-serif text-[1.3rem] font-semibold text-ink-strong">{path.title}</h2>
-          <p className="mt-1 text-[14px] leading-6 text-ink-soft">{path.description}</p>
-          <ol className="mt-5 space-y-2">
-            {path.steps.map((step, index) => {
-              const doc = corpus.docs.find((d) => d.path === step.path)
-              return (
-                <li key={step.path} className="flex gap-4">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(159,108,49,0.12)] font-mono text-[10px] text-accent-deep">
-                    {index + 1}
-                  </span>
-                  <div className="min-w-0">
-                    {doc ? (
-                      <button
-                        type="button"
-                        onClick={() => onJump(doc)}
-                        className="focus-ring inline border-b border-[rgba(159,108,49,0.35)] font-serif text-[0.97rem] font-medium text-accent-deep transition hover:border-accent hover:text-[var(--accent)]"
-                      >
-                        {doc.title}
-                      </button>
-                    ) : (
-                      <span className="font-serif text-[0.97rem] text-ink-faint">{step.path}</span>
-                    )}
-                    <p className="mt-0.5 text-[12px] leading-5 text-ink-soft">{step.note}</p>
-                  </div>
-                </li>
-              )
-            })}
-          </ol>
-        </section>
-      ))}
+      {READING_PATHS.map((path) => {
+        const docs = path.steps.map((s) => corpus.docs.find((d) => d.path === s.path) ?? null)
+        const readCount = docs.filter((d) => d && readDocIds.includes(d.id)).length
+        const isActive = activePathId === path.id
+        const firstUnread = docs.find((d) => d && !readDocIds.includes(d.id))
+        const resumeDoc = firstUnread ?? docs[0]
+
+        return (
+          <section key={path.id} className={`rounded-lg border p-6 transition ${isActive ? 'border-accent/40 bg-[rgba(159,108,49,0.06)]' : 'border-line bg-paper-strong'}`}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <h2 className="font-serif text-[1.3rem] font-semibold text-ink-strong">{path.title}</h2>
+                <p className="mt-1 text-[14px] leading-6 text-ink-soft">{path.description}</p>
+              </div>
+              {resumeDoc && (
+                <button
+                  type="button"
+                  onClick={() => onStartPath(path.id, resumeDoc)}
+                  className="focus-ring shrink-0 rounded-md border border-accent/40 bg-accent/10 px-3 py-1.5 font-sans text-[12px] font-medium text-accent-deep transition hover:bg-accent/20"
+                >
+                  {readCount === 0 ? 'Start' : readCount === path.steps.length ? 'Review' : 'Resume'}
+                </button>
+              )}
+            </div>
+
+            {readCount > 0 && (
+              <div className="mt-3 flex items-center gap-2">
+                <div className="h-1 flex-1 overflow-hidden rounded-full bg-line">
+                  <div
+                    className="h-full rounded-full bg-accent/60 transition-all"
+                    style={{ width: `${(readCount / path.steps.length) * 100}%` }}
+                  />
+                </div>
+                <span className="font-mono text-[10px] text-ink-faint">{readCount}/{path.steps.length}</span>
+              </div>
+            )}
+
+            <ol className="mt-5 space-y-2">
+              {path.steps.map((step, index) => {
+                const doc = docs[index]
+                const isRead = doc ? readDocIds.includes(doc.id) : false
+                return (
+                  <li key={step.path} className="flex gap-4">
+                    <span className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full font-mono text-[10px] transition ${isRead ? 'bg-emerald-900/40 text-emerald-400' : 'bg-[rgba(159,108,49,0.12)] text-accent-deep'}`}>
+                      {isRead ? '✓' : index + 1}
+                    </span>
+                    <div className="min-w-0">
+                      {doc ? (
+                        <button
+                          type="button"
+                          onClick={() => onStartPath(path.id, doc)}
+                          className={`focus-ring inline border-b font-serif text-[0.97rem] font-medium transition ${isRead ? 'border-emerald-700/40 text-ink-soft hover:text-ink' : 'border-[rgba(159,108,49,0.35)] text-accent-deep hover:border-accent hover:text-[var(--accent)]'}`}
+                        >
+                          {doc.title}
+                        </button>
+                      ) : (
+                        <span className="font-serif text-[0.97rem] text-ink-faint">{step.path}</span>
+                      )}
+                      <p className="mt-0.5 text-[12px] leading-5 text-ink-soft">{step.note}</p>
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </section>
+        )
+      })}
     </div>
   )
 }
@@ -2982,6 +3160,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const [pinnedDocIds, setPinnedDocIds] = useState<string[]>(() => readStoredDocList(PINNED_DOCS_STORAGE_KEY))
   const [recentDocIds, setRecentDocIds] = useState<string[]>(() => readStoredDocList(RECENT_DOCS_STORAGE_KEY))
   const [readDocIds, setReadDocIds]     = useState<string[]>(() => readStoredDocList(READ_DOCS_STORAGE_KEY))
+  const [activePathId, setActivePathId] = useState<string | null>(() => window.localStorage.getItem(ACTIVE_PATH_STORAGE_KEY))
   const [showGlobalSearch, setShowGlobalSearch] = useState(false)
   const [showCheatsheet, setShowCheatsheet] = useState(false)
   const [readingMode, setReadingMode] = useState(() => readStoredBoolean(READING_MODE_STORAGE_KEY))
@@ -3623,6 +3802,26 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     })
   }
 
+  function handleMarkDocRead(docId: string) {
+    setReadDocIds((current) => {
+      if (current.includes(docId)) return current
+      const next = [...current, docId]
+      window.localStorage.setItem(READ_DOCS_STORAGE_KEY, JSON.stringify(next))
+      return next
+    })
+  }
+
+  function handleStartPath(pathId: string, doc: CorpusDoc) {
+    window.localStorage.setItem(ACTIVE_PATH_STORAGE_KEY, pathId)
+    setActivePathId(pathId)
+    handleSelectQuickDoc(doc)
+  }
+
+  function handleClearPath() {
+    window.localStorage.removeItem(ACTIVE_PATH_STORAGE_KEY)
+    setActivePathId(null)
+  }
+
   function handleToggleReadingMode() {
     setReadingMode((current) => !current)
   }
@@ -3788,7 +3987,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
       {view === 'home' && <HomeView corpus={corpus} onJump={handleSelectQuickDoc} />}
       {view === 'topics' && <TopicsView corpus={corpus} onJump={handleSelectQuickDoc} readDocIds={readDocIds} />}
-      {view === 'paths' && <ReadingPathsView corpus={corpus} onJump={handleSelectQuickDoc} />}
+      {view === 'paths' && <ReadingPathsView corpus={corpus} onStartPath={handleStartPath} activePathId={activePathId} readDocIds={readDocIds} />}
       {view === 'validation' && <ValidationPanels corpus={corpus} />}
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
         <SectionIntro view={view} corpus={corpus} onJump={handleSelectQuickDoc} />
@@ -3821,6 +4020,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           currentMatchIndex={activeMatchIndex}
           onJumpToPreviousMatch={() => jumpSearchMatch(-1)}
           onJumpToNextMatch={() => jumpSearchMatch(1)}
+          activePathId={activePathId}
+          allCorpusDocs={allDocs}
+          onMarkDocRead={handleMarkDocRead}
+          onSelectPathDoc={handleSelectQuickDoc}
+          onClearPath={handleClearPath}
         />
       )}
     </div>
