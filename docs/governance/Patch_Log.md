@@ -1157,3 +1157,86 @@ Recent hardening work created stronger test artifacts, but the live dashboards s
 - More references can increase reader burden. Mitigated by putting the strongest public framing in the Public Readiness Guide and keeping detailed proof duties in governance registers.
 
 **Residual risk:** P-049 improves traceability; it does not close the underlying gaps. The unresolved work remains physical refusal capacity, real founding artifacts, independent review, and pilot evidence.
+
+---
+
+### P-050 — Whistleblower Protection and Anti-Retaliation Protocol
+
+**Threats addressed:** Insider retaliation risk against community alert reporters and Service Record audit requesters; Priya-type attack path (retaliatory record modification by named respondent before investigation completes).
+**Status:** ACTIVE | **Priority:** Critical
+**Date:** 2026-05-07
+
+**Constitutional text:** [ANNEX_AW.md](../annexes/ANNEX_AW.md); Article VII (reporter protection clause)
+
+**Problem diagnosed:**
+The community alert pathway (Article VII) and Service Record audit mechanism (Article VI) require ordinary people to name wrongdoing by administrators. Without explicit protection, a corrupt administrator can use their remaining administrative access to modify the reporter's Service Record, flag contributions "under review," and revoke civic eligibility before any investigation completes. The Priya vignette in the Fairness Vignette Library documented this exact attack path. A system that cannot protect its own reporters will quickly teach everyone not to report.
+
+**Introduced design:**
+
+- **Administrative freeze on filing:** named respondents' write access to the reporter's records is automatically suspended from the moment a report is filed.
+- **Automatic escalation of retaliatory actions:** any attempted modification during the protected period is rejected, logged, and escalated to the Federated Ombuds within 24 hours.
+- **"Under review" flag governance:** flags require independent reviewer appointment (not self-authorization), evidence-based grounds, 45-day maximum duration, and automatic removal on expiry without finding.
+- **Restoration on exoneration:** retaliatory modifications are reversed; lost civic roles are restored or queued.
+- **Constitutional amendment:** reporter protection clause added to Article VII.
+
+**New risks introduced:**
+- The administrative freeze could be triggered by bad-faith reports. Mitigated by: the freeze affects only write access (not the respondent's own records), bad-faith reports are subject to the same accountability process as any false claim, and the Federated Ombuds reviews the freeze on filing.
+- Coordinated retaliation by multiple actors not individually named. Named as a residual risk in Annex AW §AW5; monitored through the community alert pathway.
+
+**Residual risk:** Informal retaliation (social pressure, community reputation) cannot be prevented by administrative controls. Culture and enforcement of the broader anti-capture provisions are the only long-term check.
+
+---
+
+### P-051 — Confidential Enrollment and Safety-Identity Protocol
+
+**Threats addressed:** Identity disclosure as a safety vector for domestic violence survivors, trafficking victims, and persons in safety-compromised situations; Elena-type attack path (wallet identity creates tracking vector for abuser via compromised administrator).
+**Status:** ACTIVE | **Priority:** Critical
+**Date:** 2026-05-07
+
+**Constitutional text:** [ANNEX_AX.md](../annexes/ANNEX_AX.md); Article II (safety-shielded enrollment clause)
+
+**Problem diagnosed:**
+The one-person-one-wallet requirement links identity to an administrator-visible record. For persons in documented safety situations, this creates a tracking vector for abusers, traffickers, or persecutors who have access to administrative channels. The Elena vignette documented this gap. The existing Asymmetric Error Doctrine (Annex AK) treats this as a calibration problem; P-051 treats it as a safety override — for persons in documented danger, the safety interest overrides the normal fraud/exclusion calibration.
+
+**Introduced design:**
+
+- **Safety-shielded enrollment pathway:** legal identity linked to wallet through a cryptographically sealed record; all location and identity fields suppressed from administrator-visible database.
+- **Address-blind delivery:** Essential Access delivered through anonymous pickup points, trusted community organizations, or encrypted digital channels without geolocation.
+- **Emergency enrollment:** 30-day temporary access on credible assertion without documentation, with support pathway to full safety-shielded enrollment.
+- **Documentation-free emergency path:** single-use 72-hour tokens for persons with no documentation, with connection to enrollment support organizations.
+- **Sealed record access governance:** sealed records accessible only by court order or Federated Ombuds finding; access requests logged and reported to the enrolled person within 72 hours.
+- **Constitutional amendment:** safety-shielded enrollment clause added to Article II.
+
+**New risks introduced:**
+- Emergency enrollment without documentation could be used for fraud. Mitigated by: 30-day window with transition requirement, the AK fraud-rate monitoring catches aggregate fraud signals, and false safety assertions are subject to accountability.
+- Sealed records could be accessed under pretextual court orders. Mitigated by: access limited to credible fraud investigation (not immigration enforcement or administrative convenience), Ombuds review authority, and notification to the enrolled person on any access request.
+
+**Residual risk:** Persons whose abuser controls their access to enrollment points cannot use this pathway. Long-term immigration or citizenship questions for undocumented persons are not resolved by AX — Essential Access continuity is provided, not immigration status.
+
+---
+
+### P-052 — Delivery Sufficiency Standard
+
+**Threats addressed:** Gap between constitutional guarantee of Essential Access and operational delivery for incarcerated persons, non-enrolled communities, persons unable to use digital interfaces, and persons in non-consenting jurisdictions.
+**Status:** ACTIVE | **Priority:** Critical
+**Date:** 2026-05-07
+
+**Constitutional text:** [ANNEX_AY.md](../annexes/ANNEX_AY.md); Article IV (delivery sufficiency obligation clause)
+
+**Problem diagnosed:**
+Multiple vignettes in the Fairness Vignette Library showed that the constitutional guarantee of Essential Access does not translate to operational delivery for several populations (Miriam, Ray, Amara, Yoder Community). The gap between the guarantee and the delivery mechanism was unnamed, untracked, and unaccountable. A constitutional guarantee that does not reach the people it covers is not a guarantee — it is a statement.
+
+**Introduced design:**
+
+- **Delivery Sufficiency Standard (AY1):** four conditions that must all be met for a population to be considered operationally covered: delivery path exists, is accessible, is monitored, and has an accountable responsible party.
+- **Delivery Sufficiency Register:** quarterly-published accounting of populations not yet meeting the standard, with gap type, current status, commitment, timeline, responsible party, and evidence link.
+- **Founding Register entries:** seven populations entered at founding with open commitments.
+- **Cross-boundary delivery operationalization:** quarterly accounting of the 2% PFCR cross-boundary allocation, flow to intermediary organizations, populations reached, no-enrollment-coercion rule.
+- **Register removal standard:** removal requires responsible party certification, Federated Ombuds independent verification, and published verification — not just administrative assertion.
+- **Constitutional amendment:** delivery sufficiency obligation clause added to Article IV.
+
+**New risks introduced:**
+- The Register could become a bureaucratic accounting exercise that satisfies the letter while missing the spirit. Mitigated by: the AY1 standard requires accessibility without extraordinary effort (not just existence of a path), and Federated Ombuds escalation authority for missed timelines.
+- Cross-boundary delivery through intermediary organizations could be used to build dependency relationships. Mitigated by: the no-enrollment-coercion rule (§AY3.3) prohibits conditioning delivery on future enrollment.
+
+**Residual risk:** The Register creates accountability; it does not create capacity. Physical infrastructure, institution enrollment, and intermediary organization funding must follow independently. P-052 makes the gap visible and governed; it does not close the gap operationally.
