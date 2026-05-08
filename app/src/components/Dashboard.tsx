@@ -602,9 +602,9 @@ const VIEW_META: Record<AppView, { title: string; subtitle: string; railLabel: s
     railLabel: 'Featured',
   },
   constitution: {
-    title: 'Constitution & Founding Order',
-    subtitle: 'The governing text, interpretive documents, and the foundational order that frames the entire corpus.',
-    railLabel: 'Core Texts',
+    title: 'Public & Governing Texts',
+    subtitle: 'Public guides, governing text, interpretive documents, and the founding order that frames the corpus.',
+    railLabel: 'Public & Core Texts',
   },
   annexes: {
     title: 'Annex Corpus',
@@ -690,10 +690,11 @@ function isTypingElement(target: EventTarget | null): boolean {
 }
 
 function docsForView(view: AppView, docs: CorpusDoc[], featuredPaths: string[]): CorpusDoc[] {
-  const featuredPathSet = new Set<string>(featuredPaths)
-
   if (view === 'home') {
-    return docs.filter((doc) => featuredPathSet.has(doc.path))
+    const docsByPath = new Map(docs.map((doc) => [doc.path, doc]))
+    return featuredPaths
+      .map((path) => docsByPath.get(path))
+      .filter((doc): doc is CorpusDoc => Boolean(doc))
   }
   if (view === 'topics' || view === 'paths') {
     return []
@@ -713,7 +714,7 @@ function docsForView(view: AppView, docs: CorpusDoc[], featuredPaths: string[]):
     return docs.filter((doc) =>
       [
         'founding/commitments.md',
-        'docs/SPECIFICATIONS.md',
+        'docs/constitution/SPECIFICATIONS.md',
         'docs/annexes/ANNEX_AK.md',
         'docs/annexes/ANNEX_AR.md',
         'docs/annexes/ANNEX_AL.md',
@@ -2499,34 +2500,28 @@ const HOME_CARDS: HomeCard[] = [
     tag: 'Start here',
   },
   {
-    path: 'docs/public/03_readiness.md',
-    label: 'Readiness Guide',
-    description: 'What is only designed, what still needs evidence, and which objections have the most pressure.',
-    tag: 'Skeptics',
+    path: 'docs/public/07_life_under_the_system.md',
+    label: 'Life Under The System',
+    description: 'Realistic one-year pressure stories about ordinary people under the proposed rules.',
+    tag: 'Human path',
   },
   {
-    path: 'docs/constitution/Humane_Constitution.md',
-    label: 'Governing Text',
-    description: 'The constitutional source of truth — lean by intention, extensible by annex.',
-    tag: 'Core',
+    path: 'docs/public/05_rights_layer.md',
+    label: 'Rights Layer',
+    description: 'Plain-language statement of what the design is meant to protect for ordinary people.',
+    tag: 'Public',
   },
   {
-    path: 'docs/annexes/INDEX.md',
-    label: 'Annex Index',
-    description: 'Operational mechanics and detailed clauses that extend the charter without bloating it.',
-    tag: 'Operational',
+    path: 'docs/public/06_big_companies.md',
+    label: 'Big Companies',
+    description: 'How profit can remain without allowing essential-sector hostage power.',
+    tag: 'Markets',
   },
   {
-    path: 'docs/governance/Threat_Register.md',
-    label: 'Threat Register',
-    description: 'Every adversarial failure mode found by red-teaming, kept visible and open.',
-    tag: 'Adversarial',
-  },
-  {
-    path: 'docs/governance/Patch_Log.md',
-    label: 'Patch Log',
-    description: 'Structural responses to threats — the living record of how the design hardens over time.',
-    tag: 'Adversarial',
+    path: 'docs/public/02_faq.md',
+    label: 'FAQ',
+    description: 'Short answers to common objections in plain language.',
+    tag: 'Questions',
   },
   {
     path: 'docs/public/04_white_paper.md',
@@ -2535,16 +2530,22 @@ const HOME_CARDS: HomeCard[] = [
     tag: 'Public',
   },
   {
-    path: 'docs/public/05_rights_layer.md',
-    label: 'Rights Layer',
-    description: 'Plain-language statement of what the design protects for ordinary people.',
-    tag: 'Public',
+    path: 'docs/public/03_readiness.md',
+    label: 'Readiness Guide',
+    description: 'What is only designed, what still needs evidence, and which objections have the most pressure.',
+    tag: 'Skeptics',
   },
   {
-    path: 'docs/constitution/INVARIANTS.md',
-    label: 'Seven Invariants',
-    description: 'Tier 1 protected commitments that cannot be amended without a refounding convention.',
-    tag: 'Core',
+    path: 'docs/governance/Claims_Evidence_Register.md',
+    label: 'Claims & Evidence',
+    description: 'The status ledger for moral commitments, mechanisms, risks, and missing proof.',
+    tag: 'Evidence',
+  },
+  {
+    path: 'docs/annexes/INDEX.md',
+    label: 'Annex Index',
+    description: 'Operational mechanics and detailed clauses that extend the charter without bloating it.',
+    tag: 'Technical',
   },
 ]
 
@@ -3011,13 +3012,15 @@ const READING_PATHS: ReadingPathDef[] = [
   {
     id: 'first-time',
     title: 'First-Time Reader',
-    description: 'The intended public on-ramp: overview first, then the constitutional core.',
+    description: 'The intended public on-ramp: human stakes first, then the plain case and readiness caveats.',
     steps: [
       { path: 'docs/public/01_overview.md', note: 'One-page diagnosis of the problem and design' },
+      { path: 'docs/public/07_life_under_the_system.md', note: 'One-year pressure stories about ordinary people' },
       { path: 'docs/public/05_rights_layer.md', note: 'Plain-language rights under a live system' },
+      { path: 'docs/public/06_big_companies.md', note: 'How profit can remain without hostage power' },
       { path: 'docs/public/02_faq.md', note: 'Common questions answered plainly' },
-      { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text' },
-      { path: 'docs/constitution/INVARIANTS.md', note: 'What cannot be amended, and why' },
+      { path: 'docs/public/04_white_paper.md', note: 'The fuller public explanation' },
+      { path: 'docs/public/03_readiness.md', note: 'What is designed vs. what still needs evidence' },
     ],
   },
   {

@@ -2,6 +2,12 @@
 
 > **Provenance:** Foundational constitutional annex · Governs Voice and Service Record civic architecture later protected by P-008, P-009, and P-024 · Status: **ACTIVE**
 
+- **Plain-language purpose:** Separates Voice from Service Record so civic agenda influence and eligibility to serve cannot become one accumulative status score.
+- **Who it protects:** Ordinary residents, informal caregivers, late entrants, low-wealth contributors, and civic institutions that need participation without a social-credit hierarchy.
+- **What could go wrong:** Wealth, employers, professional classes, attestation rings, or institutions could turn civic records into market advantage, social rank, office purchase, or survival-adjacent preference.
+- **Evidence status:** Designed mechanism, needs evidence; the architecture is active in the document set, but usability, misuse, concentration, and boundary-enforcement tests are still needed.
+- **Linked risks:** T-004 incentive collapse; T-008 bureaucratic elite formation; T-009 grace exploitation; T-011 hostile narrative framing; P-008, P-009, and P-024; Annex AJ; Annex AF; Annex AS.
+
 ### Z1. Purpose and superseding interpretation
 This annex defines the two civic instruments used by Article VI. **Voice** governs bounded agenda weighting and budget prioritization. **Service Record** governs eligibility for rotating institutional service roles. Their separation reduces hierarchy reproduction, lowers the stakes of ordinary civic weighting, and prevents one concentrated civic balance from simultaneously dominating agendas and institutional service pipelines.
 

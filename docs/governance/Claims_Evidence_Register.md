@@ -101,3 +101,16 @@ When editing public-facing or governance material:
 4. If a new claim does not fit this register, either add it here or soften the claim.
 5. When evidence arrives, update the claim, the relevant threat entry, the relevant patch or annex, and the Pilot Evidence Roadmap together.
 6. When an outside source is used, record it in the External Evidence Register with both its relevance and its limits.
+
+## Claim Integrity Checklist
+
+Before strengthening any public or governance claim, ask:
+
+- Is this sentence a value claim, mechanism claim, risk claim, or evidence claim?
+- Does it imply deployment success that has not been proven?
+- Does it name the missing proof?
+- Does it name the plausible failure mode?
+- Does it say what would downgrade the claim?
+- Does it preserve human dignity if the mechanism fails?
+
+A claim that cannot answer these questions should be softened, moved to a hypothesis section, or added to this register with an honest status.

@@ -9,15 +9,20 @@ title: Project Guide & Reader Overview
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> A design for separating basic needs, markets, and public power so wealth cannot quietly become control over other people.
+> A public design workbook for separating basic needs, markets, and public power so wealth cannot quietly become control over other people.
+
+Start with a life, not a mechanism: a person may lose work, status, health, documents, popularity, or money and still remain a person whose hunger, shelter, medicine, and basic dignity matter. This project asks whether a society can protect that truth without crushing markets, local freedom, enterprise, dissent, or responsibility.
+
+That is a serious claim, and this draft does not ask to be trusted because the aim sounds humane. It is a human attempt to design rules that serve people rather than dominate them. It must be judged by whether it protects the vulnerable, preserves dignity, tells the truth about failure, and remains open to correction.
 
 ## Contents
 
 - [What this is](#what-this-is)
+- [If you're new](#if-youre-new)
+- [If you're skeptical](#if-youre-skeptical)
 - [Reader app](#reader-app) — open in browser · download desktop app · run from source
 - [Current status](#current-status)
 - [Plain-language rule](#plain-language-rule)
-- [If you're skeptical](#if-youre-skeptical)
 - [The core separation](#the-core-separation)
 - [The current architecture](#the-current-architecture)
 - [Architecture flow](#architecture-flow)
@@ -39,6 +44,31 @@ The Humane Constitution is a design for a society where everyone has a basic nee
 The core problem is simple: when food, housing, medicine, business, and political influence all depend on the same money, wealth becomes power over other people's safety.
 
 This is not a live government. It is not a finished rollout plan. It is a public working draft with stress tests, known failure paths, proposed fixes, and validation checks.
+
+## If you're new
+
+Start with the human case before the technical machinery:
+
+1. [One-Page Overview](./docs/public/01_overview.md) for the shortest public introduction
+2. [Life Under The System](./docs/public/07_life_under_the_system.md) for one-year pressure stories about ordinary people
+3. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
+4. [How Big Companies Work Here](./docs/public/06_big_companies.md) for how profit can remain without hostage power
+5. [FAQ](./docs/public/02_faq.md) for common objections in plain language
+6. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
+7. [Public Readiness Guide](./docs/public/03_readiness.md) for status, skeptic, and audit paths
+
+## If you're skeptical
+
+Start with the [Public Readiness Guide](./docs/public/03_readiness.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
+
+If the design feels too abstract, read [Life Under The System](./docs/public/07_life_under_the_system.md) first. The stories are not promises. They are concrete pressure cases for asking whether the rules would protect dignity under stress.
+
+For deeper critique:
+
+1. [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md) for claim status and proof gaps
+2. [Evidence Ladder](./docs/governance/Evidence_Ladder.md) for what counts as stronger proof
+3. [Abuse Case Library](./docs/governance/Abuse_Case_Library.md) for bad-actor patterns
+4. [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) for what must be tested before scale-up
 
 ## Reader app
 
@@ -136,24 +166,6 @@ This project should be understandable to people who never went to college. Legal
 
 The project-wide writing rule is in [Plain-Language Standard](./docs/PLAIN_LANGUAGE.md). Future edits should follow it, especially in public pages, the reader app, the constitution overview, and threat summaries.
 
-## If you're skeptical
-
-Start with the [Public Readiness Guide](./docs/public/03_readiness.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
-
-## If you're new
-
-Use this reading order:
-
-1. [One-Page Overview](./docs/public/01_overview.md) for the shortest public introduction
-2. [Public Readiness Guide](./docs/public/03_readiness.md) for the claims, readiness status, and strongest objections
-3. [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) for the three-collapse-state framing and source boundaries
-4. [Evidence Ladder](./docs/governance/Evidence_Ladder.md) for the rules governing what counts as stronger proof
-5. [Abuse Case Library](./docs/governance/Abuse_Case_Library.md) if you want to test the design against realistic bad actors
-6. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
-7. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
-8. [Humane Constitution](./docs/constitution/Humane_Constitution.md) for the governing text
-9. [Threat Register](./docs/governance/Threat_Register.md) if you want to test the design against failure and bad actors
-
 ## The core separation
 
 The system separates three things that most societies mix together:
@@ -209,15 +221,27 @@ The constitution is built in five layers. Each layer depends on the one above it
 
 ## Document set
 
-### Public release docs
+### Public docs
 
 | Document | Purpose |
 |---|---|
 | [One-Page Overview](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
+| [Life Under The System](./docs/public/07_life_under_the_system.md) | Concrete one-year pressure stories for ordinary life under the proposed system. |
+| [Rights Layer](./docs/public/05_rights_layer.md) | Plain-language summary of rights and protections. |
+| [How Big Companies Work Here](./docs/public/06_big_companies.md) | Plain-language explanation of profit, compliance, and anti-hostage rules for large firms. |
+| [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
+| [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
 | [Public Readiness Guide](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
+
+### Audit and evidence docs
+
+| Document | Purpose |
+|---|---|
 | [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) | First-principles collapse-state framing and source boundaries. |
 | [Collapse-State Crosswalk](./docs/governance/Collapse_State_Crosswalk.md) | Threat-by-threat map to Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane failure. |
+| [Fairness Vignette Library](./docs/governance/Fairness_Vignette_Library.md) | Realistic life scenarios and fairness pressure tests across different patterns of work, care, status, and need. |
 | [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
+| [Corpus Refinement Roadmap](./docs/governance/Corpus_Refinement_Roadmap.md) | Rewrite priorities for making the corpus more legible, curious, rigorous, and less skepticism-triggering. |
 | [Evidence Ladder](./docs/governance/Evidence_Ladder.md) | Upgrade and downgrade rules for claim strength. |
 | [Abuse Case Library](./docs/governance/Abuse_Case_Library.md) | Reusable adversarial patterns used to pressure-test patches and public claims. |
 | [Founding Legitimacy Dossier](./docs/governance/Founding_Legitimacy_Dossier.md) | Evidence burden for any founding coalition before activation claims. |
@@ -227,10 +251,6 @@ The constitution is built in five layers. Each layer depends on the one above it
 | [Conglomerate Transition Dossier](./docs/governance/Conglomerate_Transition_Dossier.md) | How essential-sector conglomerates can keep doing business without holding survival goods hostage. |
 | [Essential-Sector Refusal Test Package](./docs/governance/Essential_Sector_Refusal_Test_Package.md) | Practical drills for supplier exit, medicine/PBM refusal, grid/logistics delay, reserves, fallback capacity, and capture exposure. |
 | [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md) | Pilot sequence, metrics, failure criteria, and scale-up gates. |
-| [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
-| [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
-| [Rights Layer](./docs/public/05_rights_layer.md) | Plain-language summary of citizen rights and protections. |
-| [How Big Companies Work Here](./docs/public/06_big_companies.md) | Plain-language explanation of profit, compliance, and anti-hostage rules for large firms. |
 
 ### Core documents
 
@@ -372,7 +392,9 @@ The Formal Acceptance Protocol defines the pathway from design to operation.
 
 **If you want the shortest public intro:** read the One-Page Overview first.
 
-**If you want the public case first:** read the White Paper, then the Citizen-Facing Rights Layer and Public FAQ.
+**If you want the human path first:** read Life Under The System, then the White Paper.
+
+**If you want the public case first:** read the White Paper, then the Rights Layer and Public FAQ.
 
 **If you want to stress-test the design:** read the Threat Register after the White Paper.
 
@@ -406,4 +428,4 @@ This work is released under [Creative Commons Attribution 4.0 International (CC 
 
 ---
 
-*This is not a utopia machine. It is a rule design for keeping basic needs, markets, and public power from collapsing into one tool: money.*
+*This is not a claim of perfection. It is a rule design for keeping basic needs, markets, and public power from collapsing into one tool: money.*

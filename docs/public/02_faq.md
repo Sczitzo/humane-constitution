@@ -36,8 +36,6 @@ Essential Access allocations expire every 72 hours — they are deliberately not
 
 No. The system does not abolish private ownership, profit, or markets. Flow (ordinary money) functions in markets. What the design limits is the ability to purchase Essential Access, Voice, or Service Record — things the design treats as non-market goods. Think of it less like communism and more like a rule that prevents money from buying a court verdict: some things simply should not be for sale.
 
-No. People can still trade, earn, save, start businesses, and make contracts.
-
 The system limits what money can buy. It does not try to run every choice from the center.
 
 ## 6. Is Voice or Service Record social credit?
@@ -119,8 +117,10 @@ If the answer is no, this design is worth testing seriously.
 Start with:
 
 1. [One-Page Overview](./01_overview.md)
-2. [Public Readiness Guide](./03_readiness.md)
-3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md)
-4. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md)
+2. [Life Under The System](./07_life_under_the_system.md)
+3. [Rights Layer](./05_rights_layer.md)
+4. [How Big Companies Work Here](./06_big_companies.md)
 5. [White Paper](./04_white_paper.md)
-6. [Rights Layer](./05_rights_layer.md)
+6. [Public Readiness Guide](./03_readiness.md)
+7. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md)
+8. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md)

@@ -1,10 +1,10 @@
+---
+title: White Paper
+---
+
 # The Humane Constitution
 
 ## Public White Paper
-
-> **Status: Constitutional design and critique target — not a deployed or deployment-ready system. No major operational claim has been validated at scale. See the [Readiness Guide](03_readiness.md) and [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) for the honest status of each claim.**
-
-This paper explains the project in plain language.
 
 The Humane Constitution is a design for a society where:
 
@@ -12,9 +12,13 @@ The Humane Constitution is a design for a society where:
 - markets still work
 - wealth cannot buy public power
 
-It is not a live government. It is not ready for full rollout. It is a working design that needs testing, criticism, and real evidence.
+This paper explains the project in plain language.
 
 ## The Core Problem
+
+Survival is not a wage.
+
+A person may lose work, status, health, documents, popularity, or money and still remain a person whose hunger, shelter, medicine, and basic dignity matter. The design asks whether a society can protect that truth without crushing markets, local freedom, enterprise, dissent, or responsibility.
 
 In most societies, one kind of money does too much.
 
@@ -29,6 +33,42 @@ It also believes:
 > Having money should not let a person buy control over public life.
 
 The project tries to make those two beliefs practical.
+
+## Current Status
+
+This is a constitutional design and critique target, not a deployed or deployment-ready system. No major operational claim has been validated at scale.
+
+The right response is neither blind trust nor quick dismissal. It is pressure, testing, and specific criticism. See the [Readiness Guide](03_readiness.md) and [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) for the honest status of each claim.
+
+## A Concrete Way In
+
+The design is easiest to read through ordinary pressure, not abstractions. These examples are not promises, and they are not evidence. They are the kinds of situations the rules are meant to survive.
+
+### After lost work
+
+A person loses hours, a job, or a business. The design asks whether food, shelter support, basic care, and basic transit can stay steady long enough for that person to make real choices instead of panic bargains.
+
+They still need Flow for ordinary market life, but survival should not be thrown immediately into the wage market.
+
+### During unpaid care
+
+A parent, spouse, adult child, or neighbor does care work that is hard to price.
+
+The system should not treat that person as less civic, less useful, or less worthy because the work is unpaid, interrupted, or invisible to a market.
+
+### During a long build
+
+A builder, farmer, clinic, or repair cooperative needs money for work that takes years.
+
+The system should discourage idle hoarding without choking real long-term work. That difference needs clear funding paths, milestone checks, and testing against fake projects used to hide unused wealth.
+
+### During a shortage
+
+A region faces a water, medicine, energy, or logistics shortage.
+
+The system should not pretend that high prices are neutral rationing. It should publish the evidence, protect basic access, limit emergency rules, and end those rules when the shortage ends.
+
+For longer one-year pressure stories, see [Life Under The System](07_life_under_the_system.md).
 
 ## Three Collapse States
 
@@ -123,7 +163,7 @@ They cannot buy:
 
 The system must also protect people who do unpaid care work, become sick, lose work, or face hardship. Civic tools should not quietly punish people for being poor, disabled, displaced, or overwhelmed.
 
-**How Voice works in practice:** Voice balances decay continuously — roughly halving every 5 days. At any decision moment, your current balance is also converted through an effectiveness table: holding 0–50 units gives full 1.00x weight; 51–80 units is reduced to 0.50x; 81–100 units is reduced to 0.25x; holding more than 100 units is prohibited. The decay function prevents accumulation over time. The bucket table prevents gaming through large stockpiles at decision moments. For the technical specification, see [SPECIFICATIONS.md](../constitution/SPECIFICATIONS.md) (Voice State Machine § 4.2) and [Humane_Constitution.md](../constitution/Humane_Constitution.md) Article VI.
+In the technical design, Voice fades quickly and cannot be stockpiled. The point is to let people help shape priorities without creating a permanent influence asset. For the exact state machine, see [SPECIFICATIONS.md](../constitution/SPECIFICATIONS.md) and Article VI of the [Humane Constitution](../constitution/Humane_Constitution.md).
 
 ## Shared Storehouse: What Happens In A Shortage
 
@@ -151,7 +191,7 @@ The project also asks: who gets governed by this system?
 
 The answer cannot be "everyone, because the designers said so."
 
-The Founding Order is the set of documents that governs how places join, operate within, and leave the system — it is a separate constitutional layer from the five instruments themselves, governing the political geography of participation rather than the economic mechanics of the instruments.
+The Founding Order governs how places join, operate within, and leave the system. It is the political layer: who participates, at what scale, and by what consent.
 
 The Founding Order says:
 
@@ -178,37 +218,9 @@ The full constitution is organized into seven main parts:
 
 Each part has a job. Splitting the jobs helps prevent one office or one tool from taking over the rest.
 
-## What Daily Life Could Look Like
-
-These are examples, not promises.
-
-### If a person loses work
-
-They still have the basic needs floor. Losing a job does not mean losing food, basic care, or shelter support.
-
-They still need Flow for ordinary market life, but survival is not thrown into immediate panic.
-
-### If a caregiver has less formal work
-
-The system should not erase their civic standing just because care work is hard to count.
-
-Rules must recognize care, hardship, disability, and temporary life disruptions.
-
-### If a builder needs money for a long project
-
-The system should discourage hoarding without punishing real building.
-
-Long projects need clear funding paths, milestone checks, and protections against fake "projects" used to hide idle wealth.
-
-### If a region has a water shortage
-
-The system should not pretend high prices are fair rationing.
-
-It should use public shortage rules, protect basic access, publish the evidence, and end the emergency rules when the shortage ends.
-
 ## How The Design Tries To Prevent Capture
 
-The project assumes people will try to game it.
+The project assumes ordinary self-interest, fear, ambition, and corruption will still exist. A humane label does not make officials gentle or markets honest.
 
 Known risks include:
 
@@ -231,7 +243,7 @@ The project responds with:
 - patch logs
 - rules for what happens when systems fail
 
-None of that makes abuse impossible. It makes abuse easier to see, challenge, and punish.
+None of that makes abuse impossible. The humbler claim is that abuse should become easier to see, challenge, reverse, and punish before it hardens into normal life.
 
 ## The Hardest Unsolved Problems
 
@@ -275,11 +287,11 @@ A forced rollout would be dangerous.
 
 ## What This Is Not
 
-This is a rule design for limiting how money converts into power over other people's survival. It does not fix human nature. It tries to constrain the structural pathways through which money currently buys safety, voice, and immunity from consequences. If you can still be greedy, afraid, or cruel within these rules — you can be. The design targets the specific mechanism of survival-coercion, not character.
+This is a rule design for limiting how money converts into power over other people's survival. It does not claim to heal human nature. People could still be greedy, afraid, careless, or cruel inside these rules. The design targets one structural mechanism: the way money can become leverage over food, shelter, medicine, voice, and consequences.
 
 What the design does NOT do:
 - It does not abolish private ownership, profit, or markets. Flow (ordinary money) functions in markets.
-- It does not guarantee equal outcomes. It guarantees a floor below which no outcome can fall.
+- It does not promise equal outcomes. It designs a floor below which no outcome should be allowed to fall.
 - It does not prevent people from failing, making bad decisions, or suffering consequences.
 - It limits what those consequences can include: they cannot include losing food, water, shelter, basic healthcare, or basic transit.
 
@@ -291,7 +303,7 @@ The core claim is simple:
 
 If that separation can hold in real life, the system could reduce one of the oldest political failures: wealth becoming coercion.
 
-If that separation cannot hold, the rest of the design is decoration.
+If that separation cannot hold, the design has to be judged by that failure, not by its intentions.
 
 ## Quick Glossary
 

@@ -44,6 +44,7 @@ CORE_DOCS = (
     "docs/governance/Service_Record_Misuse_Evidence_Test_Package.md",
     "docs/governance/Demurrage_Evidence_Test_Package.md",
     "docs/governance/Claims_Evidence_Register.md",
+    "docs/governance/Corpus_Refinement_Roadmap.md",
     "docs/governance/Conceptual_Refinement_Audit.md",
     "docs/governance/Founding_Preactivation_Disclosure.md",
     "docs/governance/Pilot_Evidence_Roadmap.md",
@@ -55,6 +56,7 @@ CORE_DOCS = (
     "docs/public/04_white_paper.md",
     "docs/public/05_rights_layer.md",
     "docs/public/06_big_companies.md",
+    "docs/public/07_life_under_the_system.md",
     "docs/simulations/Adversarial_Narrative_Simulation.md",
     "docs/simulations/Annual_Compound_Simulation.md",
     "founding/commitments.md",
@@ -175,9 +177,11 @@ def section_for(relative_path: str) -> str:
         "docs/governance/Service_Record_Misuse_Evidence_Test_Package.md",
         "docs/governance/Demurrage_Evidence_Test_Package.md",
         "docs/governance/Claims_Evidence_Register.md",
+        "docs/governance/Corpus_Refinement_Roadmap.md",
         "docs/governance/Conceptual_Refinement_Audit.md",
         "docs/governance/Founding_Preactivation_Disclosure.md",
         "docs/governance/Pilot_Evidence_Roadmap.md",
+        "docs/governance/Hardening_Queue.md",
         "docs/governance/Fairness_Vignette_Library.md",
         "docs/constitution/Acceptance_Protocol.md",
         "architecture/parameter_registry.md",
@@ -201,7 +205,12 @@ def status_bucket(relative_path: str, status: str) -> str:
 
 def collect_docs() -> list[dict[str, object]]:
     docs: list[dict[str, object]] = []
-    paths = [ROOT / path for path in CORE_DOCS]
+    core_paths = [ROOT / path for path in CORE_DOCS]
+    missing_core = [path.relative_to(ROOT).as_posix() for path in core_paths if not path.exists()]
+    if missing_core:
+        raise FileNotFoundError("Missing CORE_DOCS entries:\n" + "\n".join(missing_core))
+
+    paths = list(core_paths)
     paths.extend(sorted((ROOT / "docs" / "content").glob("*.md")))
     paths.extend(sorted((ROOT / "founding" / "order").glob("*.md")))
     paths.extend(sorted((ROOT / "docs" / "annexes").glob("ANNEX_*.md")))
@@ -278,12 +287,18 @@ def collect_stats(docs: list[dict[str, object]]) -> dict[str, object]:
 def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> None:
     featured_paths = [
         "docs/public/01_overview.md",
+        "docs/public/07_life_under_the_system.md",
+        "docs/public/05_rights_layer.md",
+        "docs/public/06_big_companies.md",
         "docs/public/02_faq.md",
-        "docs/public/03_readiness.md",
         "docs/public/04_white_paper.md",
+        "docs/public/03_readiness.md",
+        "docs/governance/Fairness_Vignette_Library.md",
+        "docs/governance/Claims_Evidence_Register.md",
+        "docs/governance/Corpus_Refinement_Roadmap.md",
+        "docs/governance/Pilot_Evidence_Roadmap.md",
         "docs/constitution/Humane_Constitution.md",
         "docs/constitution/SPECIFICATIONS.md",
-        "docs/governance/Claims_Evidence_Register.md",
         "docs/governance/External_Evidence_Register.md",
         "docs/governance/Evidence_Ladder.md",
         "docs/governance/Collapse_State_Crosswalk.md",
@@ -302,8 +317,6 @@ def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> Non
         "docs/governance/Architecture_Source_Map.md",
         "docs/governance/Threat_Resolution_Matrix.md",
         "docs/governance/Conceptual_Refinement_Audit.md",
-        "docs/governance/Pilot_Evidence_Roadmap.md",
-        "docs/governance/Fairness_Vignette_Library.md",
         "docs/governance/Threat_Register.md",
         "docs/governance/Patch_Log.md",
         "architecture/parameter_registry.md",
@@ -316,6 +329,10 @@ def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> Non
         "docs/annexes/ANNEX_AR.md",
         "docs/annexes/ANNEX_AS.md",
     ]
+    doc_paths = {doc["path"] for doc in docs}
+    missing_featured = [path for path in featured_paths if path not in doc_paths]
+    if missing_featured:
+        raise FileNotFoundError("Missing featured corpus entries:\n" + "\n".join(missing_featured))
 
     payload = {
         "stats": stats,

@@ -6,10 +6,6 @@ This is a plain-language summary of the rights the Humane Constitution is design
 
 These rights are **not live today**. This document describes what the system is meant to protect after adoption, funding, measurement, and public review.
 
-The basic promise is simple:
-
-> Losing money, status, or civic standing must not cancel your right to eat, drink, stay sheltered, travel for basics, or receive essential care.
-
 ## What You Would Get As A Right
 
 Under a live system, every person would have a **basic needs floor**.

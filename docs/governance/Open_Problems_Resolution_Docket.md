@@ -20,6 +20,27 @@ An open problem can leave the dashboard only when:
 
 Evidence-backed resolution requires actual test results. This docket mostly creates structural resolution paths.
 
+Structural resolution and evidence resolution are different.
+
+- **Design closure** means the mechanism, corruption route, outside source, test path, and residual risk are named.
+- **Evidence closure** means the test has actually run, adverse findings are recorded, and the claim status is updated.
+
+An open problem may leave the dashboard after design closure only if its evidence gap remains visible in the Claims and Evidence Register, Hardening Queue, or Pilot Evidence Roadmap.
+
+---
+
+## Closure Visibility Ledger
+
+| Area | Design closure is visible when | Evidence closure still requires | Evidence home |
+|---|---|---|---|
+| Identity | Error thresholds, affected populations, recovery paths, coercion routes, and data-exposure controls are named. | Pilot results by vulnerable group, adverse findings, residual-risk statement, and claim-status update. | Claims and Evidence Register; Identity and Recovery Evidence Test Package; Pilot Evidence Roadmap. |
+| Real-capacity measurement | Category definitions, evidence classes, confidence bands, oracle rules, direct sampling, and dashboard duties are named. | Shock simulation, field sampling, oracle-failure drill, dashboard comprehension results, and methodology-independence review. | Claims and Evidence Register; Capacity Measurement Evidence Test Package; Pilot Evidence Roadmap. |
+| Contribution and Service Record | Non-ranking doctrine, non-civic misuse routes, attestation-market risks, and equity tests are named. | Employer, housing, school, vendor, platform, lending, and insurance red-team results plus equity and burnout findings. | Claims and Evidence Register; Service Record Misuse Evidence Test Package; Hardening Queue. |
+| Founding legitimacy | Public-notice, objection, abstention, consent, exit, conflict, and independent-review artifacts are named. | Produced artifacts with real participants, objection record, consent evidence, exit rehearsal, independent review, and sunset report. | Founding Legitimacy Dossier; Claims and Evidence Register; Pilot Evidence Roadmap. |
+| Demurrage and anti-rent controls | Distributional models, legal-wrapper routes, procurement risks, and public-rail funding claims are named. | Household, business, infrastructure, procurement, and legal-wrapper test results with residual-risk update. | Demurrage Evidence and Test Package; Parameter Calibration Register; Claims and Evidence Register. |
+| Essential-sector refusal | Sector fallback duties, compliant-path design, reserve logic, and capture routes are named. | Largest-supplier, medicine/PBM, grid, logistics, reserve, compliant-bidder, beneficial-owner, and lobbying/capture drill results. | Essential-Sector Refusal Test Package; Capture Dashboard Specification; Hardening Queue. |
+| Implementation drift | Hash, publication-channel, startup-refusal, key-custody, timelock, and supply-chain controls are named. | Reproducible-hash, channel-divergence, startup-refusal, keyholder, timelock, and bypass drill results. | Implementation Drift Audit Package; Claims and Evidence Register; Capture Dashboard Specification. |
+
 ---
 
 ## Partial Threats

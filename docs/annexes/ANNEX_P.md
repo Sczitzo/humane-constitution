@@ -2,7 +2,11 @@
 
 > **Provenance:** Foundational constitutional annex · Governs proof-of-personhood and identity tradeoffs later extended by P-003 and P-016 · Status: **ACTIVE**
 
-**Purpose.** Proof-of-personhood is load-bearing. The protocol therefore treats identity as a bounded tradeoff problem, not a solved technical detail. This Annex defines admissible solution classes, red lines, fallback defaults, and the selected constitutional stance for pilot and scale deployment.
+- **Plain-language purpose:** Proof-of-personhood is load-bearing. The protocol treats identity as a bounded tradeoff problem, not a solved technical detail. This annex defines admissible solution classes, red lines, fallback defaults, and the selected constitutional stance for pilot and scale deployment.
+- **Who it protects:** Displaced, undocumented, digitally fragile, abused, trafficked, and disaster-affected people who need the survival floor and a fair path to full standing.
+- **What could go wrong:** Fraud controls could become exclusion controls; biometrics could become permanent surveillance; legacy documents or secret risk scores could become the real gate to survival.
+- **Evidence status:** Active constitutional design; the identity stack remains an unresolved prerequisite needing pilot evidence on Sybil resistance, false exclusion, recovery performance, and biometric minimization before scale.
+- **Linked risks:** T-002 identity exploits; P-003 proof-of-personhood; P-016 asymmetric identity errors; Annex AK.
 
 ### P1. Design goals and non-goals
 - **Goal:** one person can hold only one active core civic identity at a time, without turning ordinary life into a surveillance trail.

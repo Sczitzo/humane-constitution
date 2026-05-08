@@ -6,6 +6,12 @@
 **Status: ACTIVE — founding commitments resolved (FC-030, FC-031, FC-032, FC-033, FC-090, FC-091)**
 **Numerical values derive from `/founding/commitments.md`. Changes to commitments require Tier 1 (H-3) amendment per Proposal 1.**
 
+- **Plain-language purpose:** Defines what counts as a genuinely different oracle methodology, so capacity measurements cannot all share the same blind spot while appearing independent.
+- **Who it protects:** People whose food, shelter, medicine, or rationing decisions depend on accurate real-capacity measurement; also protects the public record from standards-body, data, or AI monoculture capture.
+- **What could go wrong:** Operators could relabel similar measurement systems as independent, use shared data or standards, or hide correlated algorithmic errors until every oracle fails in the same direction.
+- **Evidence status:** Active-unproven control, partly tested on paper; definitions and founding commitments are active, but the initial methodology-class registry, audits, and 18-month error-correlation checks must produce evidence in operation.
+- **Linked risks:** T-007 definition drift; T-020 methodology-class drift; T-021 algorithmic measurement monoculture; P-017 oracle independence; P-004 protected terms.
+
 ---
 
 ## Purpose

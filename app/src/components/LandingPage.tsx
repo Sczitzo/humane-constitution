@@ -2,32 +2,32 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { Logo } from './Logo'
 
 const PATHS = [
-  { id: 'first-time', emoji: '🌱', title: 'First-Time Reader', desc: 'New to AI governance? Start here. Plain language, essential ideas.', time: '~15 min', color: '#2d6a4f' },
+  { id: 'first-time', emoji: '🌱', title: 'First-Time Reader', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~20 min', color: '#2d6a4f' },
   { id: 'skeptic', emoji: '🔍', title: 'The Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~25 min', color: '#1a3a5c' },
   { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~35 min', color: '#4a1c40' },
-  { id: 'economic-instruments', emoji: '💰', title: 'Economic Instruments', desc: 'Financial mechanisms that enforce constitutional compliance.', time: '~30 min', color: '#5c3d00' },
+  { id: 'economic-instruments', emoji: '💰', title: 'Economic Instruments', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~30 min', color: '#5c3d00' },
   { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~25 min', color: '#1c3040' },
-  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Deployment', desc: 'Readiness assessment, MVP stack, and evidence roadmap.', time: '~30 min', color: '#3d1a1a' },
+  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Readiness', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1a1a' },
   { id: 'identity-personhood', emoji: '🪪', title: 'Identity & Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~20 min', color: '#1a3040' },
-  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architectural Integrity', desc: 'System architecture, multi-agent protocols, sandboxing.', time: '~25 min', color: '#2d1a4a' },
+  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architectural Integrity', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~25 min', color: '#2d1a4a' },
   { id: 'governance-deep', emoji: '🗳️', title: 'Governance Deep Dive', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d1a' },
 ]
 
 const INSTRUMENTS = [
-  { label: 'Threat Register', desc: 'Every documented failure mode', num: '01' },
-  { label: 'Patch Log', desc: 'Every fix & amendment', num: '02' },
-  { label: 'Constitutional Clauses', desc: 'Binding rules & rights', num: '03' },
-  { label: 'Annexes', desc: 'Full implementation text', num: '04' },
-  { label: 'Acceptance Protocol', desc: 'Audit & validation criteria', num: '05' },
+  { label: 'Flow', desc: 'Ordinary money for markets, wages, contracts, saving, and business', num: '01' },
+  { label: 'Essential Access', desc: 'The basic needs floor, designed not to become cash, collateral, or patronage', num: '02' },
+  { label: 'Voice', desc: 'Bounded civic priority-setting that cannot buy goods, rights, or protection', num: '03' },
+  { label: 'Service Record', desc: 'Verified stewardship for rotating roles, not a score of human worth', num: '04' },
+  { label: 'Shared Storehouse', desc: 'Temporary rationing during verified shortage, not normal life', num: '05' },
 ]
 
 const STATS = [
-  { raw: 90, suffix: '+', label: 'Documents in the corpus — threats, patches, annexes, and constitutional text' },
+  { raw: 90, suffix: '+', label: 'Documents in the corpus — public guides, threats, patches, annexes, and constitutional text' },
   { raw: 5,  suffix: '',  label: 'Interlocking governance instruments that form a coherent system' },
   { raw: 100, suffix: '%', label: 'Open source, CC BY 4.0 licensed, with a public audit trail' },
 ]
 
-const HEADLINE_WORDS = ['What', 'if', 'AI', 'had', 'a', 'constitution', 'that', 'protected', 'you', 'by', 'design?']
+const HEADLINE_WORDS = ['What', 'if', 'survival,', 'markets,', 'and', 'civic', 'power', 'stayed', 'separate', 'by', 'design?']
 
 interface LandingPageProps {
   onEnter: (pathId?: string) => void
@@ -685,7 +685,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           <Logo size={120} color="#b8b4ae" gold="#c9a84c" />
         </div>
 
-        <p className="lp-eyebrow">Open Constitutional Design · 2025</p>
+        <p className="lp-eyebrow">Open Constitutional Design</p>
 
         <h1 className="lp-headline">
           {HEADLINE_WORDS.map((word, i) => (
@@ -700,8 +700,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         </h1>
 
         <p className="lp-subhead">
-          The Humane Constitution is an open-source framework that embeds human dignity,
-          democratic oversight, and corrigibility into AI systems — before deployment, not after.
+          The Humane Constitution is an open-source design for a society where basic needs,
+          markets, and public power are separated so wealth cannot quietly become control.
         </p>
 
         <div className="lp-hero-cta">

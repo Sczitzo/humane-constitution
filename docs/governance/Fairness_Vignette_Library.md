@@ -352,6 +352,213 @@ A **strong** verdict means the constitution clearly covers this person and the d
 
 ## Cross-Cutting Findings
 
+## One-Year Pressure Stories
+
+These scenarios test ordinary life over a full year. They are not meant to prove the system works. They are meant to show where fairness becomes strained when people live mixed, imperfect, normal lives.
+
+Each story asks: what does the system protect, what does it still make people carry, and where could resentment or bureaucracy make the guarantee weaker in practice?
+
+### Year Story 1 — Unstable Ordinary Worker
+
+**Who they are.** Talia is 36. She works warehouse shifts and food-service weekends. She is not ideological. Most weeks she works, sees friends, streams shows, helps her nephew with homework, and ignores public meetings.
+
+**The year.** In February her hours are cut. In April her mother has surgery, so Talia misses shifts and loses a supervisor's favor. In June she changes jobs. In August her rent share rises after a roommate leaves. By November she is working steadily again, but she has no cushion and is tired.
+
+**What the system should do.**
+- Essential Access keeps the job disruption from becoming hunger, untreated illness, or survival panic.
+- Flow still matters: Talia feels the loss of extras, privacy, convenience, travel, gifts, and choice.
+- Voice is available without making her perform civic virtue every month.
+- Service Record should not treat family care and job instability as moral failure.
+
+**Where fairness strains.**
+- If every interruption requires proof, Talia spends her worst months doing paperwork.
+- If active civic participants receive visibly more influence, she may feel governed by people with more free time.
+- If Flow loss is too sharp, people will say the survival floor is real but the life above it is brittle.
+
+**Fairness question.** Can the system protect normal instability without turning hardship into an application process?
+
+**Likely verdict.** Conditional. The architecture is fair only if low-friction continuity exists for ordinary disruptions: job churn, caregiving, illness, rent changes, and short-term financial mistakes.
+
+### Year Story 2 — Majority Lifestyle: Work, Play, Repeat
+
+**Who they are.** Devon is 42. He works a steady municipal maintenance job, plays basketball twice a week, follows sports, takes one modest trip, and votes only when an issue feels direct. He is not a bad citizen. He is just busy and mostly content.
+
+**The year.** Devon's routine is stable. He earns Flow, uses Essential Access for baseline needs, saves some, spends some, and rarely attends deliberation. In September a local infrastructure issue affects his commute. He uses Voice once, then disengages again.
+
+**What the system should do.**
+- Let Devon live a normal life without constant civic participation.
+- Preserve meaningful reward for steady work.
+- Keep basic needs separate from workplace pressure.
+- Make civic tools usable in short bursts, not only for highly engaged people.
+
+**Where fairness strains.**
+- Organized minorities may dominate Voice if the majority is mostly passive.
+- Devon may resent non-workers if public culture implies his work is morally optional but still depends on people like him.
+- If demurrage is confusing, he may experience it as a penalty for ordinary prudence.
+
+**Fairness question.** Does the system work when most people are neither heroic nor hostile, just occupied with daily life?
+
+**Likely verdict.** Strong if the system assumes low participation as normal. Weak if it depends on unusually high civic attention.
+
+### Year Story 3 — Caregiver Artist
+
+**Who they are.** Lena is 51. She paints, sells a few pieces, and cares for her brother after a stroke. She does not hold a regular job. Her contribution is real but irregular, intimate, and hard to verify.
+
+**The year.** In January she starts a small art series. In March her brother's condition worsens. In May she misses a community exhibition. In July she applies for recognition of caregiving contribution but finds the process intrusive. In October she sells two paintings and feels both proud and financially behind.
+
+**What the system should do.**
+- Keep her and her brother secure through Essential Access.
+- Recognize caregiving without forcing surveillance of household life.
+- Let art be meaningful without pretending every artist will earn Flow.
+- Preserve Lena's dignity even when her contribution does not fit a workplace template.
+
+**Where fairness strains.**
+- Verification can become invasive.
+- If caregiving is under-recognized, Lena looks inactive on paper.
+- If caregiving is over-formalized, family life becomes administered.
+- Other people may question why her art and care should count when their own work is tiring and measured.
+
+**Fairness question.** Can the system honor unpaid care and creative work without creating fake metrics for private life?
+
+**Likely verdict.** Conditional. This requires trusted attestation, light documentation, and a hard rule that Service Record measures eligibility for roles, not human worth.
+
+### Year Story 4 — The Person Who Mostly Exists
+
+**Who they are.** Aaron is 28. He does not work, volunteer, campaign, make art seriously, or care for dependents. He spends time online, walks around town, eats simply, socializes occasionally, and avoids responsibility. He is not dangerous. He is not secretly productive. He mostly exists.
+
+**The year.** Nothing dramatic happens. He receives Essential Access. He has little Flow. He cannot afford many comforts. Friends drift away because they are busy. In August he briefly considers training, then stops. In December he is still alive, materially basic, and socially thin.
+
+**What the system should do.**
+- Protect his survival without humiliation.
+- Avoid coercive activation rituals.
+- Allow consequences above the floor: fewer choices, less comfort, less influence, less discretionary consumption.
+- Resist the urge to invent a moral story where everyone eventually contributes.
+
+**Where fairness strains.**
+- Workers will notice him.
+- Caregivers and high-burden professionals may resent him.
+- Politicians may use people like Aaron as proof the system rewards idleness.
+- Administrators may be tempted to make Essential Access conditional in subtle ways.
+
+**Fairness question.** Is the system willing to protect bare human existence while preserving enough reward, honor, and relief for those carrying real burdens?
+
+**Likely verdict.** This is the core test. If survival is truly unconditional, Aaron remains covered. The system must answer resentment honestly: equal survival does not mean equal lifestyle, authority, admiration, or Flow.
+
+### Year Story 5 — High-Burden Skilled Worker
+
+**Who they are.** Nia is 47. She is an emergency nurse. Her work is skilled, stressful, and socially necessary. She believes in the dignity floor but is exhausted by the number of people depending on systems she helps keep running.
+
+**The year.** Winter illness strains the hospital. In spring, staffing improves briefly. In summer, a local shortage creates longer shifts. In October, Nia considers leaving for less stressful work. She sees non-workers secure in basic needs and feels conflicted: she does not want them harmed, but she wants the burden recognized.
+
+**What the system should do.**
+- Reward scarce and difficult work with Flow, rest protection, staffing safeguards, and social honor.
+- Prevent professional skill from becoming political dominance.
+- Protect Nia from being morally blackmailed into endless service.
+- Keep the survival floor from depending on burnout.
+
+**Where fairness strains.**
+- If high-burden workers feel trapped by duty, the system recreates coercion through moral pressure.
+- If they are over-rewarded with authority, a professional class forms.
+- If they are under-rewarded, essential services decay.
+
+**Fairness question.** How does the system retain excellence and sacrifice without letting excellence become rule over others?
+
+**Likely verdict.** Conditional. The system needs capacity planning, rest floors, and compensation rules that distinguish reward from domination.
+
+### Year Story 6 — Small Builder With Real Ambition
+
+**Who they are.** Omar is 39. He repairs appliances and wants to expand into a cooperative repair shop. He is ambitious, practical, and not trying to dominate anyone. He wants more Flow because expansion requires tools, rent, inventory, and risk.
+
+**The year.** In February he leases a small space. In April he hires one apprentice. In June cash flow is tight. In August he holds a larger balance for equipment purchases and worries about demurrage. In November the shop becomes viable.
+
+**What the system should do.**
+- Permit real accumulation for operating float, investment, and expansion.
+- Keep markets alive enough that ambition has a place.
+- Prevent business success from buying civic power.
+- Distinguish productive capital from idle hoarding.
+
+**Where fairness strains.**
+- If rules treat all accumulation suspiciously, builders will feel punished.
+- If exemptions are loose, wealthy actors will hide hoards as projects.
+- If approval takes too long, small builders suffer more than sophisticated firms.
+
+**Fairness question.** Can someone become materially better off by building useful capacity without converting wealth into power over others?
+
+**Likely verdict.** Strong only if operating-float and project-capital rules are simple for small actors and strict for scalable abuse.
+
+### Year Story 7 — Rule-Gamer
+
+**Who they are.** Nolan is 33. He is not poor, desperate, or confused. He is clever and opportunistic. He tests boundaries: trading favors for Essential Access items, overstating hardship, creating fake contribution records, and routing Flow through friends.
+
+**The year.** In March he finds a side market. In June he recruits others. In August a local provider notices patterns. In October enforcement begins. Nolan frames himself as persecuted and tries to turn the process into a political dispute.
+
+**What the system should do.**
+- Detect scalable abuse without treating every poor person as suspicious.
+- Distinguish desperation, confusion, disability, and organized gaming.
+- Prioritize enforcement against patterns that threaten the whole architecture.
+- Provide appeal without letting appeal become endless delay.
+
+**Where fairness strains.**
+- Visible low-level misuse may get punished faster than sophisticated capture.
+- Over-enforcement chills legitimate hardship claims.
+- Under-enforcement damages worker trust and public legitimacy.
+
+**Fairness question.** Are enforcement tools aimed at scalable harm rather than merely visible misuse?
+
+**Likely verdict.** Conditional. Abuse control must be real, but enforcement should be proportional, appealable, and biased toward catching organized extraction over individual messiness.
+
+### Year Story 8 — Dissenting Household
+
+**Who they are.** Mara and Eli are married with two children. They dislike the system's moral and political assumptions. They use Essential Access because refusing it would hurt their children, but they do not participate in Voice and are considering moving to a non-participating jurisdiction.
+
+**The year.** In January they withdraw from civic meetings. In May their children still receive school meals and healthcare through Essential Access. In September they explore exit. In December they remain because grandparents live nearby and relocation is expensive.
+
+**What the system should do.**
+- Protect dissenters without requiring gratitude.
+- Keep children's survival access independent from parents' ideology.
+- Make exit real, not retaliatory.
+- Avoid treating non-participation as civic impurity.
+
+**Where fairness strains.**
+- If exit is formally allowed but practically unaffordable, freedom is partial.
+- Local officials may treat dissenters as bad-faith actors.
+- Children may become pressure points in ideological conflict.
+
+**Fairness question.** Can someone reject the system and still receive dignity, due process, and practical freedom?
+
+**Likely verdict.** Conditional. The exit protocol must protect dissenters in practice, not just in formal language.
+
+### Annual Fairness Findings
+
+These year stories suggest four fairness layers:
+
+| Layer | Fairness rule | Failure mode |
+|---|---|---|
+| Survival | Protected because the person is human | Conditional access, humiliation, paperwork burden |
+| Comfort and choice | Unequal through Flow, work, risk, creativity, and trade | Flattened incentives or brittle life above the floor |
+| Public power | Not purchasable through wealth or popularity | Organized capture, professional class rule, wealthy routing |
+| Trust and responsibility | Earned for role eligibility, never human worth | Service Record becomes rank, stigma, or retaliation tool |
+
+The hardest fairness tension is not worker versus non-worker. It is burden versus unconditional dignity. A fair system must protect Aaron, who mostly exists, without exploiting Nia, who carries emergency work, or dismissing Lena, whose care is real but hard to measure.
+
+### Questions Not Yet Being Asked
+
+- What happens when someone is irresponsible or manipulative but not dangerous?
+- How much paperwork turns a right into a burden?
+- Who helps people who cannot manage the system's forms, devices, deadlines, or appeals?
+- Which parts of life remain none of the system's business?
+- Can people be left alone without losing dignity or access?
+- What makes high-burden workers stay without moral coercion?
+- Can someone be poor in Flow but still socially respected?
+- Can someone be wealthier than average without becoming politically stronger?
+- How does the system distinguish fraud from confusion, trauma, disability, addiction, or bad luck?
+- What happens when the majority is passive and organized minorities dominate Voice?
+- What happens when local communities become clique-controlled or morally judgmental?
+- How are false accusations, retaliation, and administrative flags handled quickly enough to matter?
+- What happens when a person's needs are expensive, permanent, and unpopular?
+- What does loneliness look like inside a materially secure system?
+- What does year ten look like, after informal status groups have had time to harden?
+
 ### 1. The delivery gap is the biggest single risk
 
 Multiple vignettes (Miriam, Ray, Amara, Elena, the Yoder Community, Margaret) show that the constitutional guarantee is strong but the delivery mechanism is underspecified. "Essential Access is unconditional" means nothing if the person cannot access it. The constitution needs a delivery sufficiency standard: for every person the guarantee covers, there must be a documented path by which they can actually receive it.

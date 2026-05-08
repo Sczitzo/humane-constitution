@@ -4,7 +4,7 @@
 
 It tries to make three things true — **simultaneously:**
 
-1. **Everyone has a basic needs floor** — food, shelter, and essential care are guaranteed by *existence*, not employment.
+1. **Everyone has a basic needs floor** — food, shelter, and essential care are designed as rights of *existence*, not rewards for employment.
 2. **People can still trade, build, earn, and start businesses** — competitive markets and personal enterprise are fully preserved.
 3. **Wealth cannot quietly become political power** — the instruments that govern survival, commerce, and civic voice are kept strictly separate.
 
@@ -108,10 +108,12 @@ This is a **serious design and public draft.** It is not a live government and n
 
 ## Read Next
 
+- [Life Under The System](./07_life_under_the_system.md) — realistic one-year pressure stories
+- [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect
+- [How Big Companies Work Here](./06_big_companies.md) — how profit can remain without hostage power
+- [FAQ](./02_faq.md) — short answers to common questions
+- [White Paper](./04_white_paper.md) — the fuller public explanation
 - [Readiness Guide](./03_readiness.md) — what is built, what is only designed, and what still needs proof
 - [Architecture Source Map](../governance/Architecture_Source_Map.md) — the collapse-state lens and source boundaries
-- [FAQ](./02_faq.md) — short answers to common questions
 - [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what the project claims and what evidence exists
 - [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what should be tested before any scale-up
-- [White Paper](./04_white_paper.md) — the fuller public explanation
-- [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect

@@ -8,37 +8,38 @@ The Humane Constitution is a design, not a finished society. It only matters if 
 
 ## Start Here If This Sounds Impossible
 
-Read in this order:
+Do not start with the annexes unless you already want the technical layer. Use the path that matches your question.
+
+### Five-minute start
 
 1. [One-Page Overview](./01_overview.md) — the shortest explanation.
-2. [FAQ](./02_faq.md) — common questions in plain language.
-3. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
-4. [Architecture Source Map](../governance/Architecture_Source_Map.md) — the three-collapse-state architecture and source boundaries.
-5. [Collapse-State Crosswalk](../governance/Collapse_State_Crosswalk.md) — maps every threat to the collapse state it pressures.
-6. [Evidence Ladder](../governance/Evidence_Ladder.md) — what counts as stronger proof and when claims must be downgraded.
-7. [Abuse Case Library](../governance/Abuse_Case_Library.md) — reusable bad-actor patterns for testing patches and claims.
-8. [Founding Legitimacy Dossier](../governance/Founding_Legitimacy_Dossier.md) — the evidence burden for any founding coalition.
-9. [Conceptual Refinement Audit](../governance/Conceptual_Refinement_Audit.md) — the macro and micro critique of the design.
-10. [External Evidence Register](../governance/External_Evidence_Register.md) — outside sources that pressure-test the design.
-11. [Identity and Recovery Evidence Test Package](../governance/Identity_Recovery_Evidence_Test_Package.md) — the dedicated test package for fraud, exclusion, recovery, coercion, and privacy.
-12. [Capacity Measurement Evidence Test Package](../governance/Capacity_Measurement_Evidence_Test_Package.md) — the dedicated test package for real capacity, oracle disagreement, and scarcity measurement.
-13. [Service Record Misuse Evidence Test Package](../governance/Service_Record_Misuse_Evidence_Test_Package.md) — the dedicated test package for contribution records, social-credit risk, non-civic misuse, and civic-pool concentration.
-14. [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md) — the dedicated test package for idle-money fees, public-rail funding, and capture risks.
-15. [Implementation Drift Audit Package](../governance/Implementation_Drift_Audit_Package.md) — tests the hard-lock, drift-chain, keyholder, and deployment-integrity layer.
-16. [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md) — tracks high-risk FC values, rationale, capture route, and revision triggers.
-17. [Capture Dashboard Specification](../governance/Capture_Dashboard_Specification.md) — defines the public indicators for elite formation and control-plane capture.
-18. [Conglomerate Transition Dossier](../governance/Conglomerate_Transition_Dossier.md) — how oil, energy, medicine, and other essential-sector firms can operate without survival leverage.
-19. [Essential-Sector Refusal Test Package](../governance/Essential_Sector_Refusal_Test_Package.md) — drills the hard question: what happens if the largest supplier says no?
-20. [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) — source-backed plan for the remaining open problems.
-21. **[Hardening Queue](../governance/Hardening_Queue.md)** — master status tracker showing which controls are designed, which are active-unproven, and which are evidence-backed. Reading this before the white paper prevents overconfidence about the system's current readiness.
-22. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-23. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-24. [White Paper](./04_white_paper.md) — the fuller public explanation.
-25. [Rights Layer](./05_rights_layer.md) — what rights the system is designed to protect.
-26. [How Big Companies Work Here](./06_big_companies.md) — plain-language explanation of how large firms can profit without hostage power.
-27. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+2. [Life Under The System](./07_life_under_the_system.md) — realistic one-year pressure stories.
+3. [Rights Layer](./05_rights_layer.md) — what the system is trying to protect in ordinary life.
+4. [FAQ](./02_faq.md) — common objections in plain language.
 
-Do not start with the annexes unless you already want the technical layer.
+### Lived fairness path
+
+1. [Life Under The System](./07_life_under_the_system.md) — realistic one-year pressure stories.
+2. [Fairness Vignette Library](../governance/Fairness_Vignette_Library.md) — deeper edge cases and audit findings.
+3. [How Big Companies Work Here](./06_big_companies.md) — how profit can remain without hostage power.
+4. [Adversarial Narrative Simulation](../simulations/Adversarial_Narrative_Simulation.md) — public objections the project must survive.
+
+### Skeptic path
+
+1. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
+2. [Evidence Ladder](../governance/Evidence_Ladder.md) — what counts as stronger proof and when claims must be downgraded.
+3. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
+4. [Hardening Queue](../governance/Hardening_Queue.md) — master status tracker for designed, active-unproven, and evidence-backed controls.
+
+### Technical audit path
+
+1. [Architecture Source Map](../governance/Architecture_Source_Map.md) — the three-collapse-state architecture and source boundaries.
+2. [Collapse-State Crosswalk](../governance/Collapse_State_Crosswalk.md) — maps every threat to the collapse state it pressures.
+3. [Abuse Case Library](../governance/Abuse_Case_Library.md) — reusable bad-actor patterns for testing patches and claims.
+4. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
+5. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
+
+For the full refinement strategy behind this reader path, see the [Corpus Refinement Roadmap](../governance/Corpus_Refinement_Roadmap.md).
 
 ![Pilot Phase Sequence](/images/V-008.png)
 

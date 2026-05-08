@@ -29,7 +29,7 @@ Never edit `corpus.ts` or `corpus.json` by hand.
 - `docs/annexes/ANNEX_*.md` — auto-discovered via glob. Also add a row to `docs/annexes/INDEX.md`.
 - Everything else (`docs/governance/*.md`, etc.) — must be registered in **three places** in `scripts/export_corpus.py`: the `CORE_DOCS` tuple, the `section_for()` list, and `FEATURED_PATHS` if it should appear on the home screen.
 
-**Validator gotcha:** `validate_corpus.py` parses markdown links even inside code fences. Avoid `[text](path.md)` syntax in docs outside `docs/` (e.g. plan files) — use inline code instead, or the validator will try to resolve the path from the wrong directory.
+**Validator gotcha:** `validate_corpus.py` parses markdown links even inside code fences. Avoid bare Markdown-link examples in docs outside `docs/` (e.g. plan files) — use inline code instead, or the validator will try to resolve the path from the wrong directory.
 
 ## Architecture
 

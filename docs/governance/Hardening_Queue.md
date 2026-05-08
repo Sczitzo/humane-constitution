@@ -22,6 +22,22 @@ Do not use **CLOSED** for live system risks unless the item is evidence-backed o
 
 ---
 
+## Falsification Rule
+
+Every live queue item should eventually name the result that would force the project to weaken, redesign, or abandon the related claim.
+
+A strong hardening item does not only say what needs work. It says what would count against the design. Examples:
+
+- an identity pilot excludes vulnerable people above the published false-exclusion threshold;
+- a capacity dashboard is misunderstood by ordinary readers during a shortage drill;
+- a Service Record red team shows employers or landlords can use civic status as rank;
+- a demurrage model burdens ordinary liquidity more than concentrated idle capital;
+- an essential-sector refusal drill cannot preserve the Constitutional Survival Minimum.
+
+Until a queue item has a falsifying result, it remains a pressure target rather than a disciplined test.
+
+---
+
 ## Macro pressure list
 
 | Rank | Item | Collapse state guarded against | Status | Governing references | What still needs pressure |
@@ -34,6 +50,19 @@ Do not use **CLOSED** for live system risks unless the item is evidence-backed o
 | 6 | Bureaucratic complexity and institutional self-protection | Static-Advantage Loop; Power-Wealth Convergence | **ONGOING** | T-005, T-008, T-016, P-025, Annexes AI, AG, AV | Test whether review bodies protect people or protect themselves; measure ordinary-reader comprehension of authority paths. |
 | 7 | Essential-sector conglomerate refusal and retaliation | Survival-Trade Bind; Power-Wealth Convergence | **DESIGNED** | Annex AT, Annex AR, Conglomerate Transition Dossier, Essential-Sector Refusal Test Package, Capture Dashboard Specification | Run the largest-supplier exit, medicine/PBM refusal, and grid/logistics delay drills before any stronger claim that essential-sector hostage power is controlled. |
 | 8 | Implementation drift and tamper evidence | Control-plane failure | **DESIGNED** | architecture files, INVARIANTS, Annex AV | Use the Implementation Drift Audit Package to test hash reproducibility, publication-channel divergence, startup refusal, key custody, timelock response, and supply-chain bypass. |
+
+### Macro falsification hooks
+
+| Rank | Falsifying result | Status consequence |
+|---|---|---|
+| 1 | Identity pilot exceeds the published false-exclusion, recovery-delay, coercion, data-exposure, or staff-discretion threshold for any vulnerable group. | Keep identity claims at **DESIGNED**; revise thresholds, recovery paths, or data-minimization controls before strengthening public claims. |
+| 2 | Capacity drill produces stale, contradictory, captured, or misunderstood signals beyond the published tolerance. | Keep capacity controls **ACTIVE-UNPROVEN**; repair category definitions, oracle rules, or public dashboards before activation claims. |
+| 3 | Service Record red team shows employers, landlords, schools, vendors, platforms, lenders, insurers, or attestation markets can convert civic status into rank. | Keep contribution controls **DESIGNED**; revise non-civic misuse barriers and equity tests before evidence-backed status. |
+| 4 | Legal-wrapper red team preserves rent or control through trusts, beneficial ownership chains, land-control rights, or enterprise-control proxies. | Keep anti-rent enforcement **DESIGNED**; add wrapper-specific controls and rerun the red team before stronger claims. |
+| 5 | Founding artifacts lack real public notice, objection/abstention evidence, exit rehearsal, consent evidence, conflict disclosure, or independent review. | Block activation-legitimacy claims; record the residual legitimacy risk in the founding evidence track. |
+| 6 | Review bodies protect institutional discretion, confuse ordinary users, or show concentrated voting, staffing, or funding dependence. | Keep the item **ONGOING**; require corrective action before the governance cycle closes. |
+| 7 | Largest-supplier, medicine/PBM, grid, or logistics refusal drill cannot preserve the Constitutional Survival Minimum before reserves or fallback capacity fail. | Block claims that essential-sector hostage power is controlled; revise reserves, fallback production, procurement, or trade-membrane design. |
+| 8 | Hash, publication-channel, startup-refusal, key-custody, timelock, or supply-chain drill allows silent drift or bypass. | Treat the control plane as failed or **ACTIVE-UNPROVEN**; patch before launch or the next public release. |
 
 ---
 

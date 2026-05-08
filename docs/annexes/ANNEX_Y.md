@@ -6,6 +6,12 @@
 **Referenced by:** `Humane_Constitution.md` §0, Article IV, and §VIII.
 **Integration:** This annex defines the Constitutional Survival Minimum and removes ambiguity around the constitutional floor.
 
+- **Plain-language purpose:** Defines the survival floor the system may never cut: minimum food, water, shelter, emergency stabilization, sanitation, mental-health crisis care, and essential medicines.
+- **Who it protects:** Every person with confirmed or provisional personhood, especially people facing scarcity, sanction, identity delay, administrative error, disability, illness, pregnancy, childhood, or disaster.
+- **What could go wrong:** Officials, budgets, emergencies, software changes, sanctions, or supply shocks could quietly narrow the floor until "Essential Access" no longer keeps people alive with basic dignity.
+- **Evidence status:** Designed invariant with external standards; active-unproven delivery control. The numbers cite humanitarian and health standards, but delivery, reserve, and failure-response performance still need pilot and stress-test evidence.
+- **Linked risks:** T-002 identity exclusion; T-006 measurement lag and supply shock; T-024 oracle failure during rationing; T-028 essential-sector survival leverage; Annex AQ; Annex AT.
+
 ---
 
 ## Y0. Purpose and Scope
