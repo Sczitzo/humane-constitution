@@ -3028,10 +3028,10 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'The Skeptic\'s Path',
     description: 'For those who arrived with objections. Starts with what is unknown, then builds the case.',
     steps: [
-      { path: 'docs/public/03_readiness.md', note: 'What is designed vs. what still needs evidence' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert' },
+      { path: 'docs/governance/Evidence_Ladder.md', note: 'What counts as stronger proof and when claims must be downgraded' },
       { path: 'docs/governance/Threat_Register.md', note: 'Every adversarial failure mode, kept visible' },
       { path: 'docs/governance/Patch_Log.md', note: 'How the design has responded to threats' },
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert' },
       { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text itself' },
     ],
   },
@@ -3079,8 +3079,8 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Pilot & Deployment',
     description: 'What it takes to stand up a compliant pilot: evidence requirements, transition mechanics, and conglomerate handling.',
     steps: [
-      { path: 'docs/public/03_readiness.md', note: 'Honest account of what is designed vs. what needs evidence' },
       { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'What must be tested before scale' },
+      { path: 'docs/public/03_readiness.md', note: 'Honest account of what is designed vs. what needs evidence' },
       { path: 'docs/annexes/ANNEX_Q.md', note: 'Minimum viable pilot stack' },
       { path: 'docs/annexes/ANNEX_N.md', note: 'Transition, genesis, and deployability preconditions' },
       { path: 'docs/annexes/ANNEX_V.md', note: 'Transition mechanics, conversion, and legacy-system treatment' },

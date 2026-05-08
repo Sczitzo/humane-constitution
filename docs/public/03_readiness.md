@@ -6,44 +6,7 @@ Short answer: **do not trust it blindly. Test it. Pressure it. Look for failure 
 
 The Humane Constitution is a design, not a finished society. It only matters if it can survive real greed, real scarcity, real corruption, and real transition pressure.
 
-## Start Here If This Sounds Impossible
-
-Do not start with the annexes unless you already want the technical layer. Use the path that matches your question.
-
-### Five-minute start
-
-1. [One-Page Overview](./01_overview.md) — the shortest explanation.
-2. [Life Under The System](./07_life_under_the_system.md) — realistic one-year pressure stories.
-3. [Rights Layer](./05_rights_layer.md) — what the system is trying to protect in ordinary life.
-4. [FAQ](./02_faq.md) — common objections in plain language.
-
-### Lived fairness path
-
-1. [Life Under The System](./07_life_under_the_system.md) — realistic one-year pressure stories.
-2. [Fairness Vignette Library](../governance/Fairness_Vignette_Library.md) — deeper edge cases and audit findings.
-3. [How Big Companies Work Here](./06_big_companies.md) — how profit can remain without hostage power.
-4. [Adversarial Narrative Simulation](../simulations/Adversarial_Narrative_Simulation.md) — public objections the project must survive.
-
-### Skeptic path
-
-1. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md) — what is designed, what is tested, and what still needs proof.
-2. [Evidence Ladder](../governance/Evidence_Ladder.md) — what counts as stronger proof and when claims must be downgraded.
-3. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) — what must be tested before scale-up.
-4. [Hardening Queue](../governance/Hardening_Queue.md) — master status tracker for designed, active-unproven, and evidence-backed controls.
-
-### Technical audit path
-
-1. [Architecture Source Map](../governance/Architecture_Source_Map.md) — the three-collapse-state architecture and source boundaries.
-2. [Collapse-State Crosswalk](../governance/Collapse_State_Crosswalk.md) — maps every threat to the collapse state it pressures.
-3. [Abuse Case Library](../governance/Abuse_Case_Library.md) — reusable bad-actor patterns for testing patches and claims.
-4. [Threat Register](../governance/Threat_Register.md) — known attack paths and proposed defenses.
-5. [Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md) — how each threat would have to be controlled under real incentives.
-
-For the full refinement strategy behind this reader path, see the [Corpus Refinement Roadmap](../governance/Corpus_Refinement_Roadmap.md).
-
-![Pilot Phase Sequence](/images/V-008.png)
-
-### How the governance chain works
+## How the governance chain works
 
 Every design decision in this project follows a three-part chain: Threat → Patch → Annex. A threat (T-NNN) identifies a failure mode. A patch (P-NNN) describes what was changed in response. An annex (ANNEX_XX.md) contains the full resulting constitutional text. The master linkage table is in [ANNEX_AH.md § AH8](../annexes/ANNEX_AH.md). This chain is the permanent record of why each constitutional clause exists.
 
