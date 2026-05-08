@@ -1,7 +1,5 @@
 # Claims and Evidence Register
 
-This register says what the project can honestly claim.
-
 It separates moral commitments, designed mechanisms, active-but-unproven controls, and evidence-backed results. The goal is to prevent overclaiming. A reader should be able to tell the difference between what the project values, what it has specified, what it has stress-tested on paper, and what has been proven in the world.
 
 ## Status language

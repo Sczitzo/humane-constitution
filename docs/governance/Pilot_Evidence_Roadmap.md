@@ -1,7 +1,5 @@
 # Pilot Evidence Roadmap
 
-This roadmap turns the claims in the [Claims & Evidence Register](./Claims_Evidence_Register.md), the first-principles framing in the [Architecture Source Map](./Architecture_Source_Map.md), outside sources in the [External Evidence Register](./External_Evidence_Register.md), and threat controls in the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) into tests.
-
 The project should not scale because people feel confident, excited, or morally urgent. It needs evidence in stages.
 
 Each pilot asks one plain question:

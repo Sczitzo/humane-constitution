@@ -4,8 +4,6 @@ This package defines what must be true before the project can make strong claims
 
 Capacity measurement is the mechanism by which the system determines whether essential categories — food, water, shelter, healthcare, transit, energy, communications — are available in sufficient supply to sustain Essential Access promises, trigger Shared Storehouse activation, and govern scarcity-mode escalation. Bad measurement can harm people even when every institution is acting in good faith.
 
-This document covers: T-006 (Measurement Lag / Supply Shock), T-020 (Measurement Source Corruption), T-021 (Measurement Independence Collapse), and T-024 (Shared Storehouse Capture via false oracle signals).
-
 Current status: **active-unproven control, needs evidence**.
 
 ---
@@ -14,7 +12,7 @@ Current status: **active-unproven control, needs evidence**.
 
 The project may currently claim:
 
-> The measurement architecture requires evidence classes, confidence bands, methodology-class diversity, direct physical sampling, and conservative defaults during oracle failure. These requirements are designed into the system. None has been validated in the field.
+> The measurement architecture requires evidence classes, confidence bands, methodology-class diversity, direct physical sampling, and conservative defaults during oracle failure.
 
 The project may not yet claim:
 

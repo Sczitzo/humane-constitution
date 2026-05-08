@@ -109,7 +109,3 @@ The full rule text is in the [Humane Constitution](../constitution/Humane_Consti
 The [Threat Register](../governance/Threat_Register.md) lists known ways these rights could be attacked or weakened.
 
 In a live system, a rights challenge would go through review, appeal, and Ombuds paths. In this repository, a reader can open an issue naming the rule, the failure, and the evidence.
-
-## Final Note
-
-This document is a plain-language guide. If it conflicts with the full Humane Constitution, the full constitution controls. But the goal is for both to say the same thing in language ordinary people can understand.

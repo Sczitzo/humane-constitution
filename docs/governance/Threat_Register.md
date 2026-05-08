@@ -4,9 +4,7 @@
 
 ---
 
-**Purpose.** This register tracks the adversarial risks identified during the current hardening cycle and aligns them to the Humane Constitution. It is the running control layer for red-team work, not a replacement for the constitution.
-
-**Plain-language purpose.** This document asks: how could the system fail, be gamed, or be captured? Each threat names a failure path, the harm it could cause, and the current mitigation status.
+How could the system fail, be gamed, or be captured? Each threat names a failure path, the harm it could cause, and the current mitigation status.
 
 **Status key.** 
 - **OPEN** = not yet structurally addressed. 

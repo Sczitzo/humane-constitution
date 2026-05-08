@@ -1,7 +1,5 @@
 # Corpus Refinement Roadmap
 
-**Purpose:** This roadmap defines how to refine the corpus so it sparks curiosity before skepticism while becoming more accountable, not more promotional.
-
 The goal is not to make the project sound bigger. The goal is to make the moral center easier to feel, the mechanisms easier to inspect, and the evidence gaps harder to hide.
 
 ## Desired Reader Experience

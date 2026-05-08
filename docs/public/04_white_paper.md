@@ -12,8 +12,6 @@ The Humane Constitution is a design for a society where:
 - markets still work
 - wealth cannot buy public power
 
-This paper explains the project in plain language.
-
 ## The Core Problem
 
 Survival is not a wage.

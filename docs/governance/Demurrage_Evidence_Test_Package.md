@@ -6,8 +6,6 @@ Demurrage is core architecture, not a decorative monetary preference. In this pr
 
 Current status: **designed mechanism, needs evidence**.
 
-See also: [Claims and Evidence Register](./Claims_Evidence_Register.md), [External Evidence Register](./External_Evidence_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), [Patch Log P-023](./Patch_Log.md), and [Annex AR](../annexes/ANNEX_AR.md).
-
 ---
 
 ## Honest Claim Boundary

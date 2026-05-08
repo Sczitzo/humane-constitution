@@ -112,7 +112,3 @@ For a non-compliant company, the message is:
 For the public, the promise is:
 
 > Big companies can exist here. Big companies can profit here. But no company gets to turn basic survival into a bargaining chip.
-
-## Final Note
-
-This document is a plain-language guide. If it conflicts with the full Humane Constitution or its annexes, the full rule text controls. The purpose here is to explain the design in language ordinary readers can test against common sense.

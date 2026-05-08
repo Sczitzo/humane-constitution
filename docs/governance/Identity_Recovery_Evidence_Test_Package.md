@@ -6,8 +6,6 @@ Identity is a load-bearing precondition. Essential Access, Voice, Service Record
 
 Current status: **unresolved prerequisite, designed direction, needs evidence**.
 
-See also: [Claims and Evidence Register](./Claims_Evidence_Register.md), [External Evidence Register](./External_Evidence_Register.md), [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md), [Patch Log P-003/P-016](./Patch_Log.md), [Annex P](../annexes/ANNEX_P.md), and [Annex AK](../annexes/ANNEX_AK.md).
-
 ---
 
 ## Honest Claim Boundary

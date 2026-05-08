@@ -8,8 +8,6 @@
 
 **Status:** This is a human evaluation, not a claim that God endorses or condemns this Constitution. It asks whether each part is more or less consistent with the teachings of Jesus as recorded in Scripture.
 
-This document can judge moral alignment, dignity, Babel-risk, and likely fruit. It does not prove that any operational mechanism will work in practice.
-
 ---
 
 ## Evaluative Lens — Eight Questions from Jesus' Teachings

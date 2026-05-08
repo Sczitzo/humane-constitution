@@ -4,8 +4,6 @@ This docket turns the Open Problems Dashboard into a source-backed work plan.
 
 The goal is not to delete hard problems. The goal is to move each problem from vague concern to a named control, corruption model, evidence path, failure criterion, and residual-risk statement. Outside sources are used as reality checks, not as proof that the Humane Constitution works.
 
-See also: [Architecture Source Map](./Architecture_Source_Map.md), [Collapse-State Crosswalk](./Collapse_State_Crosswalk.md), [Threat Register](./Threat_Register.md), [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [External Evidence Register](./External_Evidence_Register.md), [Abuse Case Library](./Abuse_Case_Library.md), [Evidence Ladder](./Evidence_Ladder.md), [Founding Legitimacy Dossier](./Founding_Legitimacy_Dossier.md), [Implementation Drift Audit Package](./Implementation_Drift_Audit_Package.md), [Parameter Calibration Register](./Parameter_Calibration_Register.md), [Capture Dashboard Specification](./Capture_Dashboard_Specification.md), [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md), [Capacity Measurement Evidence Test Package](./Capacity_Measurement_Evidence_Test_Package.md), [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md), [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), [Hardening Queue](./Hardening_Queue.md), [Claims and Evidence Register](./Claims_Evidence_Register.md), and [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md).
-
 ---
 
 ## Completion Rule

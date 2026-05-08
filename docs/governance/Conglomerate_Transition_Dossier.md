@@ -1,6 +1,6 @@
 # Conglomerate Transition Dossier
 
-This dossier explains how essential-sector conglomerates would operate under the Humane Constitution, especially oil, energy, medicine, logistics, and other firms whose assets can become survival chokepoints. Its primary abuse pattern is [ACL-013 - Essential-Sector Refusal Leverage](./Abuse_Case_Library.md), and its operational drill package is the [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md).
+How essential-sector conglomerates — oil, energy, medicine, logistics, and other firms whose assets can become survival chokepoints — would operate under the Humane Constitution. Primary abuse pattern: [ACL-013 - Essential-Sector Refusal Leverage](./Abuse_Case_Library.md). Operational drill package: [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md).
 
 Addresses: **T-028 (Essential-Sector Refusal Leverage)**
 
@@ -253,7 +253,7 @@ The default posture is open trade above the survival floor. The hard boundary is
 
 ## Residual Risk
 
-This dossier does not solve corporate power. It makes the necessary bargain explicit: the system pays real producers, but it refuses to buy peace by surrendering the survival floor.
+The system pays real producers, but it refuses to buy peace by surrendering the survival floor.
 
 The hardest unresolved risks are:
 

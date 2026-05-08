@@ -1,12 +1,12 @@
 # Collapse-State Crosswalk
 
-This document keeps the project organized around the three first-principles failures it is trying to prevent:
+A diagnostic map of the three first-principles failures this project is built to prevent:
 
 1. Survival-Trade Bind
 2. Power-Wealth Convergence
 3. Static-Advantage Loop
 
-It is a diagnostic map, not a new status system. Threat status still comes from the Threat Register, Claims and Evidence Register, and Hardening Queue.
+Not a new status system. Threat status still comes from the Threat Register, Claims and Evidence Register, and Hardening Queue.
 
 ---
 
