@@ -2070,18 +2070,23 @@ function ReaderPanel({
       {/* Path progress banner */}
       {activePath && pathStepIndex >= 0 && (
         <div className="mx-auto mb-4 flex items-center gap-2 sm:gap-3" style={{ maxWidth: 'var(--reader-column-width)' }}>
-          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-accent/25 bg-accent/5 px-3 py-2 sm:flex-nowrap sm:px-4">
-            <span className="truncate font-mono text-[10px] uppercase tracking-[0.18em] text-accent-deep">{activePath.title}</span>
-            <span className="hidden sm:inline text-ink-faint">·</span>
-            <div className="flex flex-wrap gap-1">
-              {pathDocs.map((_, i) => (
-                <span
-                  key={i}
-                  className={`h-1.5 w-3 rounded-full transition-all sm:w-4 ${i < pathStepIndex ? 'bg-emerald-500/70' : i === pathStepIndex ? 'bg-accent' : 'bg-line'}`}
-                />
-              ))}
+          <div className="flex min-w-0 flex-1 flex-col gap-1.5 rounded-lg border border-accent/25 bg-accent/5 px-3 py-2.5 sm:px-4">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 sm:flex-nowrap">
+              <span className="truncate font-mono text-[10px] uppercase tracking-[0.18em] text-accent-deep">{activePath.title}</span>
+              <span className="hidden sm:inline text-ink-faint">·</span>
+              <div className="flex flex-wrap gap-1">
+                {pathDocs.map((_, i) => (
+                  <span
+                    key={i}
+                    className={`h-1.5 w-3 rounded-full transition-all sm:w-4 ${i < pathStepIndex ? 'bg-emerald-500/70' : i === pathStepIndex ? 'bg-accent' : 'bg-line'}`}
+                  />
+                ))}
+              </div>
+              <span className="ml-auto font-mono text-[10px] text-ink-faint sm:ml-1">{pathStepIndex + 1}/{pathDocs.length}</span>
             </div>
-            <span className="ml-auto font-mono text-[10px] text-ink-faint sm:ml-1">{pathStepIndex + 1}/{pathDocs.length}</span>
+            {activePath.steps[pathStepIndex]?.note && (
+              <p className="text-[12px] leading-5 text-ink-soft">{activePath.steps[pathStepIndex].note}</p>
+            )}
           </div>
           <button
             type="button"
@@ -2160,6 +2165,11 @@ function ReaderPanel({
                     <h3 className="font-serif text-[0.97rem] font-semibold leading-snug text-ink-strong group-hover:text-[var(--accent-deep)]">
                       {pathNextDoc.title}
                     </h3>
+                    {activePath.steps[pathStepIndex + 1]?.note && (
+                      <p className="mt-1.5 text-[12px] leading-5 text-ink-soft">
+                        {activePath.steps[pathStepIndex + 1].note}
+                      </p>
+                    )}
                     <p className="mt-auto pt-2 text-[11px] text-ink-faint">
                       Step {pathStepIndex + 2} of {pathDocs.length}
                     </p>
@@ -3014,13 +3024,13 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'First-Time Reader',
     description: 'The intended public on-ramp: human stakes first, then the plain case and readiness caveats.',
     steps: [
-      { path: 'docs/public/01_overview.md', note: 'One-page diagnosis of the problem and design' },
-      { path: 'docs/public/07_life_under_the_system.md', note: 'One-year pressure stories about ordinary people' },
-      { path: 'docs/public/05_rights_layer.md', note: 'Plain-language rights under a live system' },
-      { path: 'docs/public/06_big_companies.md', note: 'How profit can remain without hostage power' },
-      { path: 'docs/public/02_faq.md', note: 'Common questions answered plainly' },
-      { path: 'docs/public/04_white_paper.md', note: 'The fuller public explanation' },
-      { path: 'docs/public/03_readiness.md', note: 'What is designed vs. what still needs evidence' },
+      { path: 'docs/public/01_overview.md', note: 'Start here. One page that names the three problems and the five-instrument response — read this before anything else.' },
+      { path: 'docs/public/07_life_under_the_system.md', note: 'Watch how the system behaves under real pressure. These are one-year stories for ordinary people — a caregiver, a small business owner, a person in housing crisis.' },
+      { path: 'docs/public/05_rights_layer.md', note: 'What the design is trying to protect in plain language. Read this to understand what "working" looks like from a person\'s perspective.' },
+      { path: 'docs/public/06_big_companies.md', note: 'The hardest political economy question: can large profitable firms coexist with this system? This is where to look for the honest answer.' },
+      { path: 'docs/public/02_faq.md', note: 'Common objections answered directly. If you have a specific doubt, check here before going deeper.' },
+      { path: 'docs/public/04_white_paper.md', note: 'The fuller public case — more detail on the design logic, the separation of instruments, and the transition approach.' },
+      { path: 'docs/public/03_readiness.md', note: 'End here. An honest account of what is only designed vs. what still needs pilots and outside evidence. The system is not ready to deploy — this explains exactly where it stands.' },
     ],
   },
   {
@@ -3028,11 +3038,11 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'The Skeptic\'s Path',
     description: 'For those who arrived with objections. Starts with what is unknown, then builds the case.',
     steps: [
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert' },
-      { path: 'docs/governance/Evidence_Ladder.md', note: 'What counts as stronger proof and when claims must be downgraded' },
-      { path: 'docs/governance/Threat_Register.md', note: 'Every adversarial failure mode, kept visible' },
-      { path: 'docs/governance/Patch_Log.md', note: 'How the design has responded to threats' },
-      { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text itself' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Start here. This register lists every claim the project makes and grades each one: designed, tested, or still speculation. Watch for claims marked "needs evidence" — those are the live weaknesses.' },
+      { path: 'docs/governance/Evidence_Ladder.md', note: 'Before you evaluate the claims, understand the standard. This defines what counts as stronger or weaker proof and when a claim must be downgraded.' },
+      { path: 'docs/governance/Threat_Register.md', note: 'Every adversarial failure mode the project has identified against itself. Look for threats that are named but not yet patched — those are the honest open problems.' },
+      { path: 'docs/governance/Patch_Log.md', note: 'How the design has changed in response to each threat. A short patch log means the project hasn\'t been seriously stress-tested; a long one means it has.' },
+      { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text itself. Read it last — now you can evaluate whether the constitutional language actually closes the gaps you found in the previous four documents.' },
     ],
   },
   {
@@ -3040,12 +3050,12 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Economic Instruments',
     description: 'The five-instrument model: Flow, Essential Access, Voice, Service Record, and the survival floor.',
     steps: [
-      { path: 'docs/public/01_overview.md', note: 'Why the five-instrument model exists' },
-      { path: 'docs/annexes/ANNEX_Y.md', note: 'Constitutional Survival Minimum — the unconditional floor' },
-      { path: 'docs/annexes/ANNEX_X.md', note: 'Flow issuance architecture' },
-      { path: 'docs/annexes/ANNEX_Z.md', note: 'Voice and Service Record civic architecture' },
-      { path: 'docs/annexes/ANNEX_J.md', note: 'Monetary calibration and long-horizon capital discipline' },
-      { path: 'docs/annexes/ANNEX_K.md', note: 'Essential basket governance and participation fairness' },
+      { path: 'docs/public/01_overview.md', note: 'Start here. The one-page framing explains why five separate instruments are needed and what each one is supposed to prevent.' },
+      { path: 'docs/annexes/ANNEX_Y.md', note: 'The Constitutional Survival Minimum — the unconditional floor. Pay attention to what cannot be withdrawn and under what circumstances the floor is defended.' },
+      { path: 'docs/annexes/ANNEX_X.md', note: 'How Flow (the currency) is issued and how demurrage works. This is the monetary engine — notice how issuance is tied to real capacity rather than debt.' },
+      { path: 'docs/annexes/ANNEX_Z.md', note: 'Voice and Service Record — the civic instruments. Watch for where each one\'s limits are drawn and how they are prevented from becoming social credit.' },
+      { path: 'docs/annexes/ANNEX_J.md', note: 'Monetary calibration and long-horizon capital discipline. The numerical constraints that prevent the system from inflating or deflating its way out of its commitments.' },
+      { path: 'docs/annexes/ANNEX_K.md', note: 'Essential basket governance — how the survival floor is measured in real goods. This is where the system has to answer the hard question: measured by whom, and how.' },
     ],
   },
   {
@@ -3053,12 +3063,12 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Founding Order & Exit Rights',
     description: 'How subsidiarity, consent, and exit work. For anyone who wants to know whether — and how — they can leave.',
     steps: [
-      { path: 'founding/order/README.md', note: 'Subsidiarity, consent, and exit — the overview' },
-      { path: 'founding/order/subsidiarity_rule.md', note: 'How decisions are pushed to the lowest capable scale' },
-      { path: 'founding/order/consent_protocol.md', note: 'How consent is established and renewed' },
-      { path: 'founding/order/exit_protocol.md', note: 'How individuals and communities leave' },
-      { path: 'founding/order/reentry_protocol.md', note: 'How re-entry works after exit' },
-      { path: 'founding/order/jurisdictional_scales.md', note: 'The five governance scales (FC-122)' },
+      { path: 'founding/order/README.md', note: 'Start here. The overview of how subsidiarity, consent, and exit are structured together — why all three are needed and how they interact.' },
+      { path: 'founding/order/subsidiarity_rule.md', note: 'How decisions are pushed to the lowest capable scale. Watch for the test of when a higher scale may override — that is where the power question lives.' },
+      { path: 'founding/order/consent_protocol.md', note: 'How consent is established and renewed. Read this carefully — consent that cannot be withdrawn is not consent.' },
+      { path: 'founding/order/exit_protocol.md', note: 'How individuals and communities leave. The specifics here matter: exit rights that are procedurally expensive are not real exit rights.' },
+      { path: 'founding/order/reentry_protocol.md', note: 'How re-entry works after exit. A system that punishes return is coercive in a different direction — this is where to check.' },
+      { path: 'founding/order/jurisdictional_scales.md', note: 'The five governance scales and how authority flows between them. This is the structural backbone of subsidiarity.' },
     ],
   },
   {
@@ -3066,12 +3076,12 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Implementation Track',
     description: 'For those building or auditing a pilot. Specifications, operational mechanics, and the numerical lock-file.',
     steps: [
-      { path: 'docs/constitution/SPECIFICATIONS.md', note: 'Formal state machine every implementation must satisfy' },
-      { path: 'docs/constitution/Acceptance_Protocol.md', note: 'How patches reach operation' },
-      { path: 'founding/commitments.md', note: 'Numerical lock-file every implementation is bound to' },
-      { path: 'docs/annexes/INDEX.md', note: 'Operational extension layer — what each annex governs' },
-      { path: 'docs/annexes/ANNEX_N.md', note: 'Transition, genesis, and deployability preconditions' },
-      { path: 'docs/annexes/ANNEX_Q.md', note: 'Minimum viable pilot stack and transition doctrine' },
+      { path: 'docs/constitution/SPECIFICATIONS.md', note: 'Start here. The formal state machine every compliant implementation must satisfy — if your system can\'t pass these checks, it is not a compliant pilot.' },
+      { path: 'docs/constitution/Acceptance_Protocol.md', note: 'How patches reach operation. Read this to understand the governance chain your implementation is bound by — no patch takes effect without clearing this protocol.' },
+      { path: 'founding/commitments.md', note: 'The numerical lock-file: every architecturally fixed parameter and its value. These are the numbers your implementation cannot drift from without triggering a violation.' },
+      { path: 'docs/annexes/INDEX.md', note: 'The operational extension layer. Each annex governs a specific domain — use this index to find which annexes are mandatory for your pilot scope.' },
+      { path: 'docs/annexes/ANNEX_N.md', note: 'Transition, genesis, and deployability preconditions. The checklist of what must be true before a pilot can go live — read this before you plan a launch date.' },
+      { path: 'docs/annexes/ANNEX_Q.md', note: 'Minimum viable pilot stack. The smallest set of components a compliant pilot must include — and the transition doctrine for getting there from a legacy system.' },
     ],
   },
   {
@@ -3079,12 +3089,12 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Pilot & Deployment',
     description: 'What it takes to stand up a compliant pilot: evidence requirements, transition mechanics, and conglomerate handling.',
     steps: [
-      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'What must be tested before scale' },
-      { path: 'docs/public/03_readiness.md', note: 'Honest account of what is designed vs. what needs evidence' },
-      { path: 'docs/annexes/ANNEX_Q.md', note: 'Minimum viable pilot stack' },
-      { path: 'docs/annexes/ANNEX_N.md', note: 'Transition, genesis, and deployability preconditions' },
-      { path: 'docs/annexes/ANNEX_V.md', note: 'Transition mechanics, conversion, and legacy-system treatment' },
-      { path: 'docs/governance/Conglomerate_Transition_Dossier.md', note: 'How large incumbent firms are handled at transition' },
+      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'Start here. The staged testing path — what must be demonstrated at each phase before the next is permitted. This is the gate the pilot must pass through.' },
+      { path: 'docs/public/03_readiness.md', note: 'An honest account of where the design stands today: what is written, what is only designed, and what still needs outside evidence. Know this before committing resources.' },
+      { path: 'docs/annexes/ANNEX_Q.md', note: 'The minimum viable pilot stack — the smallest compliant configuration and the transition doctrine for building up from a legacy system.' },
+      { path: 'docs/annexes/ANNEX_N.md', note: 'Genesis and deployability preconditions. The specific conditions that must be met before activation — treat this as your pre-launch checklist.' },
+      { path: 'docs/annexes/ANNEX_V.md', note: 'Transition mechanics: how legacy money, debt, and ownership convert into the new system. The highest-risk operational phase is here.' },
+      { path: 'docs/governance/Conglomerate_Transition_Dossier.md', note: 'How large incumbent firms are handled at transition. Read this last — conglomerate resistance is the most likely source of pilot failure.' },
     ],
   },
   {
@@ -3092,10 +3102,10 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Identity & Personhood',
     description: 'Proof-of-personhood, identity tradeoffs, error doctrine, and residency. The layer everything else depends on.',
     steps: [
-      { path: 'docs/annexes/ANNEX_P.md', note: 'Proof-of-personhood, identity tradeoffs, and red lines' },
-      { path: 'docs/annexes/ANNEX_I.md', note: 'Residency, migration, and onboarding' },
-      { path: 'docs/annexes/ANNEX_AK.md', note: 'Identity asymmetric error doctrine — how false-negative and false-positive errors are weighted' },
-      { path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md', note: 'Evidence requirements for identity recovery systems' },
+      { path: 'docs/annexes/ANNEX_P.md', note: 'Start here. The core identity architecture — proof-of-personhood, the tradeoffs the design accepts, and the red lines it will not cross. Every other instrument depends on this layer being sound.' },
+      { path: 'docs/annexes/ANNEX_I.md', note: 'Residency, migration, and onboarding. Watch for how the system handles people who move, arrive, or exist in overlapping jurisdictions.' },
+      { path: 'docs/annexes/ANNEX_AK.md', note: 'Asymmetric error doctrine — how false-negatives (excluding someone who belongs) and false-positives (admitting someone who doesn\'t) are weighted. The design choice here has large equity consequences.' },
+      { path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md', note: 'The evidence requirements for identity recovery. This is the hardest edge case: what happens when someone loses access and needs to prove they are who they say they are.' },
     ],
   },
   {
@@ -3103,11 +3113,11 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Architectural Integrity',
     description: 'How the Tier 1 invariants are cryptographically locked against silent drift. For engineers and security reviewers.',
     steps: [
-      { path: 'architecture/parameter_registry.md', note: 'Every architecturally locked parameter and value' },
-      { path: 'architecture/amendment_protocol.md', note: '7-of-9 signature threshold and 180-day timelock' },
-      { path: 'architecture/drift_chain.md', note: 'Append-only hash chain — tamper detection at startup' },
-      { path: 'architecture/implementation_binding.md', note: 'Requirement that every operational service verifies the chain before running' },
-      { path: 'docs/annexes/ANNEX_AV.md', note: 'Two-key architectural precondition for Tier 1 invariant enforcement' },
+      { path: 'architecture/parameter_registry.md', note: 'Start here. Every architecturally locked parameter and its current value — the complete set of constraints your implementation cannot drift from.' },
+      { path: 'architecture/amendment_protocol.md', note: 'The 7-of-9 signature threshold and 180-day timelock. This is the constitutional amendment mechanism — understand it before evaluating whether the locks are real.' },
+      { path: 'architecture/drift_chain.md', note: 'The append-only hash chain used for tamper detection. Read this to understand how silent parameter drift would be caught at startup.' },
+      { path: 'architecture/implementation_binding.md', note: 'The binding requirement: every operational service must verify the chain before running. This is where the cryptographic guarantee becomes an operational constraint.' },
+      { path: 'docs/annexes/ANNEX_AV.md', note: 'The two-key architectural precondition for Tier 1 invariant enforcement. Without this, the locks described in the previous documents are not enforceable.' },
     ],
   },
   {
@@ -3115,13 +3125,13 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Governance Deep Dive',
     description: 'The full adversarial and evidence stack. For auditors, researchers, and red-teamers.',
     steps: [
-      { path: 'docs/governance/Threat_Register.md', note: 'Every catalogued failure mode' },
-      { path: 'docs/governance/Patch_Log.md', note: 'Structural responses to each threat' },
-      { path: 'docs/governance/Threat_Resolution_Matrix.md', note: 'Which threats are resolved, partially addressed, or open' },
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is allowed to assert' },
-      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'What must be tested before scale' },
-      { path: 'docs/governance/Founding_Preactivation_Disclosure.md', note: 'Pre-activation truth conditions' },
-      { path: 'docs/governance/Founding_Legitimacy_Dossier.md', note: 'The founding legitimacy record' },
+      { path: 'docs/governance/Threat_Register.md', note: 'Start here. Every catalogued failure mode — read through the full list before forming a view on whether any single threat is handled well.' },
+      { path: 'docs/governance/Patch_Log.md', note: 'Structural responses to each threat. Cross-reference with the Threat Register: every threat should have a corresponding patch, or be marked open.' },
+      { path: 'docs/governance/Threat_Resolution_Matrix.md', note: 'Which threats are resolved, partially addressed, or still open. This is the honest audit summary — the open column is where the real work remains.' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert. Watch for claims that are marked "designed" but not yet tested — those are the assurance gaps.' },
+      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'The staged testing path — what must be demonstrated before the design can be considered validated at each scale.' },
+      { path: 'docs/governance/Founding_Preactivation_Disclosure.md', note: 'Pre-activation truth conditions. The project\'s own statement of what must be true before it is legitimate to activate — a useful benchmark for auditors.' },
+      { path: 'docs/governance/Founding_Legitimacy_Dossier.md', note: 'The founding legitimacy record. End here — this is where to check whether the artifacts the project says are required actually exist yet.' },
     ],
   },
 ]
