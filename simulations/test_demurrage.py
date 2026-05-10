@@ -132,3 +132,20 @@ def test_demurrage_settled_state_does_not_affect_days_idle(agent):
     assert agent.days_idle == 10
     assert agent.flow_balance == 100.0
     assert agent.flow_state == FlowState.SETTLED
+
+def test_demurrage_committed_persistence_through_step(agent):
+    """
+    P-023: Verify that COMMITTED state and its idle accrual persist
+    through a full agent step (including market participation).
+    """
+    agent.flow_state = FlowState.COMMITTED
+    agent.days_idle = 0
+
+    # Simulate a full step (logic from CitizenAgent.step)
+    agent._receive_lc_allocation()
+    agent._redeem_lc()
+    agent._apply_flow_demurrage()
+    agent._participate_in_market()
+
+    assert agent.flow_state == FlowState.COMMITTED
+    assert agent.days_idle == 1

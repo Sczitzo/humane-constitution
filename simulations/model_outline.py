@@ -370,6 +370,11 @@ class CitizenAgent(Agent):
         Simplified market participation. Productive agents keep Flow in ACTIVE state.
         Idle agents accumulate demurrage pressure.
         """
+        # P-023: COMMITTED state (escrow) is persistent until milestone completion.
+        # It should not be randomly reset to ACTIVE/IDLE by market participation.
+        if self.flow_state == FlowState.COMMITTED:
+            return
+
         if np.random.random() < 0.7:  # 70% daily participation rate (simulation seed)
             self.flow_state = FlowState.ACTIVE
             self.days_idle = 0
@@ -463,9 +468,10 @@ class AdversarialAgent(CitizenAgent):
         Contract-commitment architecture: demurrage applies during escrow.
         Zero exemptions: no sector-based escape from demurrage.
         """
-        # Attempt to simulate "investment exemption" that P-023 explicitly prohibits
-        # In P-023 architecture, this attempt fails — demurrage continues in escrow
-        pass  # P-023: zero exemptions; demurrage continues regardless
+        # T-025 attempt: move Flow into escrow (COMMITTED) to avoid demurrage.
+        # P-023 mitigation: COMMITTED state accrues demurrage identical to IDLE.
+        if self.flow_state == FlowState.ACTIVE:
+            self.flow_state = FlowState.COMMITTED
 
     def _attempt_adversarial_action(self):
         if self.adversarial_type == "SHADOW":
