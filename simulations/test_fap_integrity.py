@@ -459,15 +459,13 @@ class TestButerinIncentiveAlignment:
         # Expected value of defection = private_benefit - (detection_prob * penalty)
         # At any detection_prob > 0 and infinite penalty: EV_defect → -∞
         # We test the structural case: penalty magnitude matters, not just probability
-        import math
-
         for detection_prob in [0.01, 0.1, 0.5, 1.0]:
             # Even with modest detection probability, infinite penalty dominates
             if detection_prob > 0:
                 ev_defect = (PRIVATE_BENEFIT_FROM_DEFECTION
                              - detection_prob * abs(DEFECTION_PENALTY))
                 # With infinite penalty this is -inf; the assertion holds structurally
-                assert math.isinf(ev_defect) or ev_defect < HONEST_PAYOFF, (
+                assert ev_defect < HONEST_PAYOFF, (
                     f"Buterin incentive FAIL at detection_prob={detection_prob}: "
                     f"defection EV={ev_defect} ≥ honest payoff={HONEST_PAYOFF}. "
                     f"Defection is not dominated — rational actor may defect."
