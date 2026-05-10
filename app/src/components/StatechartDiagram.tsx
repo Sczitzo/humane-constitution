@@ -14,7 +14,7 @@
  *   • >5 labeled edges  → numbered callouts + legend below SVG
  */
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useId } from 'react'
 
 function useDarkMode(): boolean {
   const [dark, setDark] = useState(
@@ -377,7 +377,7 @@ export function StatechartDiagram({ dsl }: { dsl: string }) {
   const p       = dark ? DARK : LIGHT
   const spec    = parseStatechartDsl(dsl)
   const layout  = computeLayout(spec)
-  const uid     = Math.random().toString(36).slice(2, 7)
+  const uid     = useId()
   const arrowId = `arr-${uid}`
   const shadowId = `shd-${uid}`
   const gradPrimary = `gp-${uid}`
