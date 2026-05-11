@@ -21,6 +21,11 @@ export function V009_ThreatPatchChain({ onInternalLink }: DiagramProps) {
   return (
     <DiagramShell figId="V-009" title="Threat–Patch–Annex Provenance Chain" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 660 170" className="w-full" style={{ height: 170 }}>
+        <defs>
+          <marker id="arrP" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L6,3 Z" fill={THEME.border} />
+          </marker>
+        </defs>
         {cols.map((c, i) => {
           const isActive = activeNodeId === c.id
           return (
@@ -40,11 +45,6 @@ export function V009_ThreatPatchChain({ onInternalLink }: DiagramProps) {
             </g>
           )
         })}
-        <defs>
-          <marker id="arrP" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L6,3 Z" fill={THEME.border} />
-          </marker>
-        </defs>
         <text x={330} y={155} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace">every clause exists because a threat made it necessary · see Provenance_Map.md</text>
       </svg>
     </DiagramShell>

@@ -25,8 +25,8 @@ export function V008_PilotTimeline({ onInternalLink }: DiagramProps) {
     <DiagramShell figId="V-008" title="Pilot Phase Sequence" nodes={PHASES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 700 130" className="w-full" style={{ height: 130 }}>
         <line x1={startX} y1={cy} x2={startX + spacing * 10} y2={cy} stroke={THEME.divider} strokeWidth={2}
-          strokeDasharray={600} strokeDashoffset={600}>
-          <animate attributeName="strokeDashoffset" from={600} to={0} dur="0.9s" begin="0.05s" fill="freeze" />
+          strokeDasharray={636} strokeDashoffset={636}>
+          <animate attributeName="strokeDashoffset" from={636} to={0} dur="0.9s" begin="0.05s" fill="freeze" />
         </line>
         {PHASES.map((p, i) => {
           const cx = startX + i * spacing
