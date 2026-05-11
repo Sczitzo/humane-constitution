@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-055**
+**Running change ledger aligned to the Humane Constitution · Current through P-062**
 
 ---
 
@@ -74,6 +74,13 @@
 | P-053 | Insider retaliation / reporter protection | **ACTIVE** | Critical | Whistleblower Protection and Anti-Retaliation Protocol: administrative freeze on respondent write-access from filing; automatic escalation of retaliatory modifications; 45-day "under review" cap; restoration on exoneration. ANNEX_AW; Article VII reporter-protection clause. |
 | P-054 | Identity disclosure as safety vector | **ACTIVE** | Critical | Confidential Enrollment and Safety-Identity Protocol: cryptographically sealed identity for safety-compromised persons; address-blind delivery; 30-day emergency enrollment; 72-hour token for undocumented persons; sealed-record governance. ANNEX_AX; Article II safety-shielded enrollment clause. |
 | P-055 | Delivery gap between guarantee and operation | **ACTIVE** | Critical | Delivery Sufficiency Standard: four operational conditions (path exists, accessible, monitored, accountable party); Delivery Sufficiency Register published quarterly; seven founding-population entries; cross-boundary delivery accounting. ANNEX_AY; Article IV delivery-sufficiency obligation. |
+| P-056 | T-002 / INV-001 | **PROPOSED** | Critical | Open-Access Survival Floor (Two-Tier Identity Model): separates non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments). Defines Tier 0 (open-access/pseudonymous survival floor) and Tier 1 (identity-gated services). Establishes civic accountability norm: the system trusts citizens because there is enough for everyone. Aggregate anomaly detection replaces individual surveillance at the survival tier. Token mechanism specification delegated to ANNEX_AZ §AZ2 as a pre-operational prerequisite. ANNEX_AK §AK8. |
+| P-057 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Site Selection Criteria: required, disqualifying, and preferred characteristics for pilot town site selection; Phase 1 capital reference ranges ($15–22M); site selection process with adversarial panel member approval requirement. |
+| P-058 | T-016 / constitutional void | **PROPOSED** | High | Jurisdiction Interface Clause: three-layer jurisdiction interface (RAC mediation → external courts → federal floor); matters governed by external law enumerated; pre-enrollment 7-day grace window; retaliation prohibition; filing assistance obligation. |
+| P-059 | ACL-010 / T-027 | **PROPOSED** | Critical | Vulnerable Population Consent Protocol (VPCP): ICA structure (civil-society nominated, 50% peer specialists, adverse-finding authority); VPCP-001 through VPCP-008 rules; 30-day cooling-off; teach-back verification as founding team obligation; non-waivable exit rights (60-day housing, 90-day healthcare, no clawback); pre-recruitment prerequisites gate. |
+| P-060 | ACL-005 / T-008 | **PROPOSED** | Critical | Founding Team Composition Standard: composition floor (FT-1 through FT-4); 9-seat keyholder allocation with distributed nomination (Seats 3–8 via civil-society organizations approved by adversarial panel member); founder sunset rules (FS-1 through FS-7); Perpetual Humility Review with Humility Declaration. |
+| P-061 | ACL-007 / Power-Wealth Convergence | **PROPOSED** | Critical | Founding Capital Framework: phase targets ($15–22M / $35–55M / $60–90M); 20%/30% funder concentration limits; Capital Steward independent fiduciary; constitutional primacy clause (non-negotiable in all funding agreements); government walk-away rule (4 trigger conditions); CLT land structure; wind-down reserve (6 months EA pre-funded). |
+| P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
 
 ---
 
@@ -1285,3 +1292,73 @@ Multiple vignettes in the Fairness Vignette Library showed that the constitution
 - **Dependencies:** Federated Ombuds fully constituted per P-025 (≥4 sub-Ombuds seated). Cross-register timing monitor operative (Annex AI §3.3). Enforcement Panel charter must include manufactured-flag referrals as a defined intake category.
 - **New risks introduced:** 24-hour decision window creates pressure that may produce errors in ambiguous cases. Mitigated by: asymmetric default toward PCRP activation when inconclusive, which is the conservative failure mode.
 - **Residual risk:** The 4-criterion assessment cannot definitively establish intent. A sophisticated actor who sequences enforcement actions to avoid triggering all four criteria simultaneously can manufacture a flag while technically passing the assessment. Accepted as bounded leakage — the standard raises the operational complexity and coordination cost of deliberate manufacture without eliminating it.
+
+---
+
+### P-056 — Open-Access Survival Floor (Two-Tier Identity Model)
+
+**Status:** PROPOSED  
+**Tier:** Tier 2  
+**Threat addressed:** T-002 (identity exclusion of vulnerable persons); INV-001 operationalization  
+**Annex:** ANNEX_AK §AK8  
+**Summary:** Separates non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments). Defines Tier 0 (open-access/pseudonymous survival floor) and Tier 1 (identity-gated services). Establishes civic accountability norm: the system trusts citizens because there is enough for everyone. Aggregate anomaly detection replaces individual surveillance at the survival tier. Token mechanism specification delegated to ANNEX_AZ §AZ2 as a pre-operational prerequisite.
+
+---
+
+### P-057 — Pilot Site Selection Criteria
+
+**Threat addressed:** Pilot farming (ACL-011), founding consent theater (ACL-010)
+**Status:** PROPOSED | **Priority:** High
+**Creates:** [docs/governance/Pilot_Site_Selection_Criteria.md](./Pilot_Site_Selection_Criteria.md)
+
+**Summary:** Defines required, disqualifying, and preferred characteristics for pilot site selection, including Phase 1 capital reference ranges. Prevents friendly-site selection from producing misleading pilot evidence and blocks sites where consent conditions or jurisdictional conflicts cannot be met.
+
+---
+
+### P-058 — Jurisdiction Interface Clause
+
+**Threat addressed:** Implementation drift (T-016), constitutional void under external law
+**Status:** PROPOSED | **Priority:** High
+**Creates:** [docs/governance/Jurisdiction_Interface_Clause.md](./Jurisdiction_Interface_Clause.md)
+
+**Summary:** Establishes three-layer jurisdiction interface; defines RAC as Layer 1; specifies matters governed by external law; pre-enrollment grace window; retaliation prohibition. Ensures the Humane Constitution operates coherently within, alongside, and—where necessary—in tension with external legal systems.
+
+---
+
+### P-059 — Vulnerable Population Consent Protocol
+
+**Threat addressed:** Founding consent theater (ACL-010), T-027 (dignity floor leverage)
+**Status:** PROPOSED | **Priority:** Critical
+**Creates:** [docs/governance/Vulnerable_Population_Consent_Protocol.md](./Vulnerable_Population_Consent_Protocol.md)
+
+**Summary:** Defines ICA structure, 30-day cooling-off, teach-back verification, non-waivable exit rights, and pre-recruitment prerequisites for VPCP-scope populations (homeless, justice-exiting, unemployed, disability, elder, refugee). Requires ICA staffed and exit support fund pre-capitalized before any VPCP-scope recruitment begins.
+
+---
+
+### P-060 — Founding Team Composition Standard
+
+**Threat addressed:** Keyholder social capture (ACL-005), bureaucratic elite formation (T-008)
+**Status:** PROPOSED | **Priority:** High
+**Creates:** [docs/governance/Founding_Team_Composition_Standard.md](./Founding_Team_Composition_Standard.md)
+
+**Summary:** Defines founding team composition floor, disqualifying conflicts, 9-seat keyholder allocation, founder sunset rules (FS-1 through FS-7), and Perpetual Humility Review. Seats 3–8 nominated by civil-society organizations approved by the adversarial panel member, not selected by the founding team.
+
+---
+
+### P-061 — Founding Capital Framework
+
+**Threat addressed:** Procurement shell capture (ACL-007), power-wealth convergence
+**Status:** PROPOSED | **Priority:** High
+**Creates:** [docs/governance/Founding_Capital_Framework.md](./Founding_Capital_Framework.md)
+
+**Summary:** Defines phase capital targets, 20%/30% concentration limits, Capital Steward structure, constitutional primacy clause, government walk-away rule, CLT land structure, and wind-down reserve. Capital Steward must be independent of the founding team; selection precedes first capital commitment.
+
+---
+
+### P-062 — Pilot Timeline Framework
+
+**Threat addressed:** Pilot farming (ACL-011), founding consent theater (ACL-010)
+**Status:** PROPOSED | **Priority:** High
+**Creates:** [docs/governance/Pilot_Timeline_Framework.md](./Pilot_Timeline_Framework.md)
+
+**Summary:** Five-track parallel timeline with critical-path gates; three recruitment windows; phased occupancy sequence; failure contingency requiring Resident Transition Protocol before Cohort 1. Track A (governance/legal), Track B (infrastructure), Track C (capital), Track D (community/consent), Track E (technology) must all clear defined gates before enrollment opens.

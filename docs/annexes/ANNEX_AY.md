@@ -56,6 +56,8 @@ For each population in the Register:
 | Last updated | The date of the most recent update to this row |
 | Evidence link | A link to the monitoring data or pilot evidence for this population |
 
+**Tier 0 populations (identity-unable or identity-unsafe enrollees):** Persons who cannot safely or practically enroll under Tier 1 identity verification — including undocumented persons, persons fleeing harm who cannot disclose location, persons without documentary identity, and persons in acute crisis — are served through the Tier 0 open-access channel (ANNEX_AK §AK8.1). The Delivery Sufficiency Register must track Tier 0 access points, session capacity, and geographic coverage separately from Tier 1 delivery infrastructure. Tier 0 access points are a founding population delivery obligation with the same quarterly reporting requirement as other populations.
+
 ### AY2.2 — Founding Register entries
 
 The following populations are entered in the Register at founding. Responsible parties must be named before system activation.

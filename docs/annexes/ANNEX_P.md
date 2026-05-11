@@ -8,6 +8,8 @@
 - **Evidence status:** Active constitutional design; the identity stack remains an unresolved prerequisite needing pilot evidence on Sybil resistance, false exclusion, recovery performance, and biometric minimization before scale.
 - **Linked risks:** T-002 identity exploits; P-003 proof-of-personhood; P-016 asymmetric identity errors; Annex AK.
 
+**Relationship to Tier 0 access:** The enrollment process defined in this annex governs Tier 1 identity-gated services (above-floor Essential Access, Voice, Service Record, Flow accounts). It does not govern Tier 0 survival-floor access. Tier 0 access (ANNEX_AK §AK8.1) requires no enrollment and no identity confirmation. Tier 1 enrollment is voluntary; no person may be denied CSM-tier access on the grounds that they have not enrolled under this annex.
+
 ### P1. Design goals and non-goals
 - **Goal:** one person can hold only one active core civic identity at a time, without turning ordinary life into a surveillance trail.
 - **Goal:** people lacking legacy documents, stable housing, or formal institutional records must still have a path to survival-floor protections and eventual full recognition.

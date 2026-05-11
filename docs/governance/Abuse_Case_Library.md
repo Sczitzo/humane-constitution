@@ -67,8 +67,8 @@ Each abuse case should name:
 - **Actor incentive:** pass or block Tier 1 change through personal, financial, or factional pressure.
 - **Attack path:** social coordination, shared donors, family leverage, reputational pressure, appointment pipelines.
 - **Collapse state:** Power-Wealth Convergence and control-plane failure.
-- **Current controls:** amendment protocol, drift chain, 7-of-9 threshold.
-- **Missing test:** keyholder conflict and coercion audit.
+- **Current controls:** amendment protocol, drift chain, 7-of-9 threshold, Founding Team Composition Standard (distributed nomination mechanism: Seats 3–8 nominated by civil-society organizations approved by adversarial panel member, not selected by founding team).
+- **Missing test:** keyholder conflict and coercion audit; nomination-organization independence verification (do nominating organizations have undisclosed financial relationships with funders?); adversarial panel member selection integrity test.
 - **Failure criterion:** threshold appears independent formally but not socially.
 - **False reassurance:** "The signatures are valid."
 
@@ -163,6 +163,18 @@ Each abuse case should name:
 - **Missing control:** No abuse case or hardening item specifically addresses adversarial data injection as distinct from methodological capture. INV-005's Tier-3 physical sampling requirement provides partial protection — a direct physical-sampling node is harder to poison remotely — but physical sampling itself can be corrupted through compromised inspectors or falsified chain-of-custody documentation.
 - **Missing test:** adversarial data-injection simulation against Phase 3 pilot oracle infrastructure; test should include: (a) spoofed sensor network for one essential category; (b) falsified physical-sampling report from an inspector with legitimate credentials; (c) coordinated submission timing attack during an active Shared Storehouse period. Failure criterion: poisoned data shifts the oracle's capacity reading by more than the FC-001/002/003 measurement error bounds without being detected within one deliberation cycle.
 - **Promotion path to Threat Register:** if the Phase 3 simulation shows a realistic attack path with plausible actors and undetected impact exceeding the measurement error bounds, promote to the Threat Register as a new T-entry (next available ID) and commission a patch targeting inspector chain-of-custody controls and adversarial-input detection at the oracle intake layer.
+
+---
+
+### ACL-015 — Tier 0 Token De-Anonymization
+
+- **Actor incentive:** state or institutional actor wants to identify persons receiving survival access without Tier 1 enrollment — e.g., immigration enforcement, domestic-abuse perpetrators, surveillance agencies.
+- **Attack path:** compromise token-issuance infrastructure to log session metadata (timestamp, location, device fingerprint) linkable to token ID; aggregate across sessions to reconstruct individual usage patterns; subpoena or coerce token records from issuing nodes.
+- **Collapse state:** Survival-Trade Bind (persons stop accessing CSM rather than risk identification); INV-001 violation (identity effectively becomes a precondition for survival access).
+- **Current controls:** ANNEX_AK §AK8.1 requires token mechanism to be designed so infrastructure cannot reconstruct session linkage after session closes; ANNEX_AZ §AZ2 (to be drafted) will specify technical constraints.
+- **Missing test:** adversarial token-infrastructure audit: can a compromised node operator reconstruct session linkage? Can aggregate patterns be used to fingerprint individuals? Does subpoena of token records yield individually identifying information?
+- **Failure criterion:** a motivated actor with node access or legal process can identify one or more Tier 0 session users with probability above chance.
+- **False reassurance:** "The tokens are pseudonymous."
 
 ---
 

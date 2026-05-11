@@ -55,6 +55,8 @@ Safety-shielded enrollment is valid for 24 months. Renewal requires re-verificat
 
 During safety-shielded enrollment, Essential Access is delivered through address-blind channels. The system must maintain at least one address-blind delivery option in every participating jurisdiction: anonymous pickup locations, delivery through trusted community organizations, or encrypted digital channels without geolocation metadata.
 
+**Tier 1 de-enrollment and Tier 0 reversion:** A person enrolled at Tier 1 who successfully invokes safety-shielded status under this section may revert to Tier 0 access (ANNEX_AK §AK8.1) without penalty and without forfeiting prior rights earned under Tier 1. The de-enrollment record is sealed under the same privacy protections as the safety-shielded enrollment record.
+
 ### AX2.5 — Emergency enrollment
 
 A person who asserts an immediate safety situation but cannot yet produce formal documentation may receive emergency enrollment for 30 days. Emergency enrollment provides Essential Access at the full floor level. During the 30-day window, the person must either produce safety documentation (triggering standard safety-shielded enrollment) or transition to standard enrollment. Emergency enrollment may not be denied on the grounds that the asserted safety situation cannot be immediately verified — the standard is credible assertion, not proved fact. False assertion of a safety situation for purposes of fraud is subject to the same accountability process as any other false claim.

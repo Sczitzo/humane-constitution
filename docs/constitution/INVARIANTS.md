@@ -40,6 +40,8 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), T-007 (definition drift on "essential"), T-018 (PCRP false-trigger exhaustion), T-022 (electoral cycle capture)
 
+**Implementation:** The two-tier access model (ANNEX_AK §AK8) operationalizes this invariant by separating non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments). Tier 0 access is open-access or pseudonymous; no real-world identity is ever a precondition for receiving a CSM allocation.
+
 ---
 
 ## INV-002 — Instrument Non-Convertibility

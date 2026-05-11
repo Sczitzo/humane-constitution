@@ -39,6 +39,7 @@ The project should not yet claim:
 | Dignity-floor plan | What unconditional minimum support reaches non-consenting communities and how it avoids pressure to join. | Humanitarian support becomes leverage for accession. |
 | Founder sunset | When founding authority ends and ordinary governance replaces it. | Founders keep exceptional power after activation. |
 | Independent review | Outside civil-society, legal, community, disability, labor, faith, and technical review. | Reviewers are selected for friendliness or dependence. |
+| Vulnerable-population consent evidence | VPCP-008 prerequisites met; ICA staffed and independent; exit support fund pre-capitalized; VPCP-scope pre-enrollment obligations checklist complete for each enrolling resident. | Recruitment targeting homeless/unemployed/justice-exiting populations begins before ICA is operational or exit support is funded. |
 
 ---
 
@@ -124,6 +125,7 @@ The table below is the authoritative row-level tracking mechanism for founding r
 | Founder sunset — mechanism by which founding members lose exceptional authority | Annex AH | **DESIGNED** | Specific date or condition on which founding-instrument authority expires, locked in Tier 1 and published before activation |
 | Independent civil-society review — assessment by parties structurally opposed to the founding coalition's interests | P-020 / Annex AH | **UNRESOLVED PREREQUISITE** | Written assessment by at least two civil-society bodies nominated by the adversarial panel member, published before activation |
 | Post-activation audit — independent review within 90 days of founding | P-014 §5 | **DESIGNED** | Audit conducted by reviewers not appointed by the coalition; findings published; any discrepancies between intended and actual activation addressed in writing |
+| Vulnerable-population consent evidence — ICA staffed, exit fund pre-capitalized, VPCP-008 prerequisites documented | VPCP-008 / Founding Team Composition Standard | **OPEN** | ICA selection complete (not appointed by founding team); exit support fund balance confirmed; VPCP-scope pre-enrollment checklist published and independently reviewed |
 
 **Status key:**
 - **PRODUCED** — artifact exists as a published, independently verifiable document

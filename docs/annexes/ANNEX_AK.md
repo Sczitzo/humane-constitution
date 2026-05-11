@@ -235,3 +235,47 @@ The AED is Tier 2 once adopted. The decision rule in Section 4 (including the pr
 ---
 
 *This document is Annex AK of the Humane Constitution. The commitment architecture is operative as a PROPOSED standard. FC-140 through FC-145 have been bound with evidence-grounded values before the first scale-up gate (see `/founding/commitments.md`). FC-146 through FC-150 remain reserved pending pilot data and are pre-launch blocking gates.*
+
+---
+
+## §AK8 — Two-Tier Access Model
+
+### AK8.1 — Tier 0: Open-Access Survival Floor
+
+Any person may receive Essential Access at the Constitutional Survival Minimum (CSM) without providing or confirming real-world identity.
+
+**Non-duplication mechanism:** A Tier 0 allocation is keyed to a single-session pseudonymous token generated at point of access. The token is non-transferable, expires after use, and cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom.
+
+The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. The technical specification for the token mechanism is defined in ANNEX_AZ §AZ2 (to be drafted) and is a pre-operational prerequisite under INV-LAUNCH-1.
+
+**Fraud model:** Deliberate double-claiming at the CSM tier is physically constrained (one body, one place, one time) and socially normed. The system trusts that there is enough for everyone. Citizens bear a collective duty to keep the commons honest: double-dipping is a civic wrong not because the system cannot afford it at the margin, but because it degrades the social trust that makes the open floor possible. Detection is aggregate: if per-capita consumption systematically exceeds physical capacity, the oracle flags a population-level anomaly for community review — not for individual surveillance.
+
+**What Tier 0 does not provide:**
+- Continuity across sessions (prior allocations are not retrievable without Tier 1 enrollment)
+- Above-CSM allocations
+- Access to Voice, Service Record, or Flow accounts
+- Enrollment in scheduled care, housing, or transit planning systems
+
+### AK8.2 — Tier 1: Identity-Gated Services
+
+Above-floor services, civic instruments (Voice, Service Record), and Flow accounts require confirmed identity under the enrollment process defined in §AK1–AK3 and ANNEX_P.
+
+Tier 1 enrollment is voluntary. No person may be coerced into Tier 1 enrollment by conditioning CSM-tier access on it.
+
+A person who enrolled at Tier 1 and subsequently demonstrates a documented safety reason for de-enrollment (per ANNEX_AX §AX2 — Safety-Shielded Enrollment) may revert to Tier 0 access without penalty. De-enrollment does not forfeit prior earned rights under Tier 1.
+
+A person enrolled at Tier 1 may not simultaneously claim Tier 0 sessions for the same Essential Access category in the same time window.
+
+### AK8.3 — Civic Accountability Norm and Aggregate Monitoring
+
+The open floor rests on a social compact: because there is enough for everyone, there is no legitimate reason to take more than one's share. The Tier 0 model does not surveil individuals to enforce this norm. It distributes trust and makes the cost of betraying it visible at the community level.
+
+Community-level anomaly findings are published in plain language on the public dashboard. The Federated Ombuds may investigate systematic Tier 0 anomaly only when aggregate consumption exceeds the anomaly threshold (FC-T0-01) for 30 or more consecutive days and no capacity-measurement explanation is found. Individual-level investigation under Tier 0 is prohibited.
+
+The anomaly threshold (FC-T0-01) is a Tier 3 operational parameter registered in the Parameter Calibration Register. The Federated Ombuds may adjust it by standard FAP process, provided the revised threshold is not lower than 2% or higher than 15% of CSM capacity in the relevant category.
+
+Community review of an aggregate anomaly finding is convened by the relevant Regional Essential Board within 30 days of Ombuds publication. The REB may recommend: (a) capacity reclassification, (b) token-mechanism audit, or (c) Tier 0 category suspension pending investigation (requires Ombuds concurrence). Category suspension is a PCRP-equivalent event and subject to the same unwind requirements under ANNEX_AQ.
+
+### AK8.4 — Relationship to INV-001
+
+This section implements, rather than amends, INV-001's existing protection: "Confirmation of identity is required to access civic instruments (Voice, Service Record, and deliberative standing) but is never a precondition for survival access." The two-tier model operationalizes that distinction.

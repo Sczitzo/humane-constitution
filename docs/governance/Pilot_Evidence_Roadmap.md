@@ -82,6 +82,20 @@ Every pilot needs:
 
 **Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) recurrence event and must be logged as such in the Threat Register.
 
+**Pilot town founding cascade (additional gates for real-persons occupancy):**
+
+The following additional gate conditions apply to any pilot that involves real-persons occupancy of a constructed site. These are prerequisites for Enrollment Window 3 (per the Pilot Timeline Framework), not just Phase 0 in the abstract:
+
+| Gate condition | Governing document | Unlocks |
+|---|---|---|
+| Site satisfies all required characteristics and no disqualifying characteristics | Pilot Site Selection Criteria | Site acquisition (Track B) |
+| Jurisdiction Interface Clause in effect with governing jurisdictions | Jurisdiction Interface Clause | Pre-enrollment outreach |
+| VPCP-008 prerequisites met (ICA staffed, exit fund pre-capitalized, transitional support operational) | Vulnerable Population Consent Protocol | Recruitment targeting VPCP-scope populations |
+| Founding team composition meets FT-1 and FT-2; keyholder seats 3–8 nomination process confirmed | Founding Team Composition Standard | Keyholder council activation |
+| Capital Steward selected; no funder exceeds FC-2 concentration limits; constitutional primacy clause in all funding agreements | Founding Capital Framework | Construction financing draws |
+| INV-LAUNCH-1 cleared by Ombuds (FC-YT1 and FC-YT2 confirmed) | INVARIANTS.md | First resident occupancy |
+| Resident Transition Protocol (Town Wind-Down Protocol) drafted and published | Pilot Timeline Framework § Failure Contingency | Cohort 1 enrollment |
+
 ## Phase 1 - Public understanding
 
 **Hypothesis:** A skeptical general reader can understand the basic claim: survival, markets, and civic power should not ride on the same rail.

@@ -296,6 +296,61 @@ These patches are part of the active constitutional architecture but are not one
 - 🔩 **Patches:** [P-053 — Whistleblower Protection](../governance/Patch_Log.md), [P-054 — Confidential Enrollment](../governance/Patch_Log.md), [P-055 — Delivery Sufficiency Standard](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AW.md](../annexes/ANNEX_AW.md) (reporter-protection clause, Article VII), [ANNEX_AX.md](../annexes/ANNEX_AX.md) (safety-shielded enrollment, Article II), [ANNEX_AY.md](../annexes/ANNEX_AY.md) (delivery sufficiency register, Article IV)
 
+### P-056 — Open-Access Survival Floor (Two-Tier Identity Model)
+
+> *This patch operationalizes INV-001 by separating non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments).*
+
+- 🔩 **Patch:** [P-056 — Open-Access Survival Floor](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Constitutional text:** [ANNEX_AK.md §AK8](../annexes/ANNEX_AK.md) — *§AK8 defines Tier 0 open-access survival floor and Tier 1 identity-gated services; establishes civic accountability norm and aggregate anomaly detection.*
+
+---
+
+## Pilot town founding documents — P-057 through P-062
+
+These patches establish the operational framework for the first real-persons pilot town. They are PROPOSED and must pass the Founding Legitimacy Dossier Gate A before any real-persons enrollment begins.
+
+### P-057 — Pilot Site Selection Criteria
+
+> *Defines how to choose a site that does not import capture risks, legal contradictions, or unresolvable social conditions into the pilot.*
+
+- 🔩 **Patch:** [P-057 — Pilot Site Selection Criteria](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Pilot_Site_Selection_Criteria.md](../governance/Pilot_Site_Selection_Criteria.md) — *Required/disqualifying/preferred site characteristics; Phase 1 capital reference ranges; site selection process.*
+
+### P-058 — Jurisdiction Interface Clause
+
+> *Resolves the constitutional void where internal governance meets external law.*
+
+- 🔩 **Patch:** [P-058 — Jurisdiction Interface Clause](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Jurisdiction_Interface_Clause.md](../governance/Jurisdiction_Interface_Clause.md) — *Three-layer jurisdiction interface; RAC Layer 1; external legal primacy list; pre-enrollment grace window; retaliation prohibition.*
+
+### P-059 — Vulnerable Population Consent Protocol
+
+> *Closes the consent gap for people in housing insecurity, unemployment, justice involvement, or other vulnerability at time of recruitment.*
+
+- 🔩 **Patch:** [P-059 — Vulnerable Population Consent Protocol](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Vulnerable_Population_Consent_Protocol.md](../governance/Vulnerable_Population_Consent_Protocol.md) — *VPCP-001 through VPCP-008; ICA structure; 30-day cooling-off; non-waivable exit rights; pre-recruitment prerequisites.*
+
+### P-060 — Founding Team Composition Standard
+
+> *Constrains who can found, how keyholders are selected without founding team control, and how founding authority ends.*
+
+- 🔩 **Patch:** [P-060 — Founding Team Composition Standard](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Founding_Team_Composition_Standard.md](../governance/Founding_Team_Composition_Standard.md) — *FT-1 through FT-4; 9-seat keyholder allocation; FS-1 through FS-7 sunset rules; Perpetual Humility Review.*
+
+### P-061 — Founding Capital Framework
+
+> *Prevents funder capture through concentration limits, Capital Steward independence, and constitutional primacy in every funding agreement.*
+
+- 🔩 **Patch:** [P-061 — Founding Capital Framework](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Founding_Capital_Framework.md](../governance/Founding_Capital_Framework.md) — *FC-1 through FC-12; 20%/30% concentration limits; constitutional primacy clause; government walk-away rule; CLT structure; wind-down reserve.*
+
+### P-062 — Pilot Timeline Framework
+
+> *Maps the five-track critical path from founding legitimacy through full-scale occupancy, with hard gates that cannot be rushed.*
+
+- 🔩 **Patch:** [P-062 — Pilot Timeline Framework](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Pilot_Timeline_Framework.md](../governance/Pilot_Timeline_Framework.md) — *Tracks A–E; three enrollment windows; A2 gate (Month 8); D2 gate (Month 26–30); INV-LAUNCH-1 clearance; failure contingency.*
+
 ---
 
 ## Read more
