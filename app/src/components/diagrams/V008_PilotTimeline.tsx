@@ -1,7 +1,10 @@
 // app/src/components/diagrams/V008_PilotTimeline.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const PHASES: Array<DiagramNode & { short: string; phase: string }> = [
   { id: 'p0',  phase: 'P0',  short: 'Founding',      label: 'Phase 0 — Founding Cascade Gate',             definition: 'All founding legitimacy artifacts must reach PRODUCED status before any pilot phase begins. Blocks T-017 recurrence.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.ss.accent,        accentBg: THEME.ss.accentBg },
@@ -14,40 +17,84 @@ const PHASES: Array<DiagramNode & { short: string; phase: string }> = [
   { id: 'p7',  phase: 'P7',  short: 'Anti-Rent',      label: 'Phase 7 — Anti-Rent & Ownership Review',      definition: 'Trusts, beneficial ownership, land control, and business control bounded without destroying stewardship. Elite workaround routes closed.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.sr.accent,        accentBg: THEME.sr.accentBg },
   { id: 'p8',  phase: 'P8',  short: 'Conglomerate',   label: 'Phase 8 — Essential-Sector Transition',       definition: 'Oil, energy, medicine, logistics, PBM-style intermediaries keep doing business without survival leverage. Largest-supplier refusal does not break CSM floor.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.ss.accent,        accentBg: THEME.ss.accentBg },
   { id: 'p9',  phase: 'P9',  short: 'Red Team',       label: 'Phase 9 — Governance Red-Team',               definition: 'Hostile actors cannot capture institutions, definitions, or emergency powers. Attack paths visible, challengeable, and patched before scale.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.emergency.accent, accentBg: THEME.emergency.accentBg },
-  { id: 'p10', phase: 'P10', short: 'Drift/Founding',  label: 'Phase 10 — Implementation Drift & Founding Legitimacy', definition: 'Hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure. Drift and founding failures visible before activation.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.neutral.accent,   accentBg: THEME.neutral.accentBg },
+  { id: 'p10', phase: 'P10', short: 'Drift/Founding',  label: 'Phase 10 — Implementation Drift & Founding Legitimacy', definition: 'Hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure. Drift and founding failures visible before activation.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.neutral.accent, accentBg: THEME.neutral.accentBg },
 ]
 
 export function V008_PilotTimeline({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
   const r = 22, spacing = 60, startX = 36, cy = 60
 
+  function handlePhaseClick(p: typeof PHASES[0], e: React.MouseEvent) {
+    if (infoCard?.title === p.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: p.label, description: p.definition, accentColor: p.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeId = infoCard ? PHASES.find(p => p.label === infoCard.title)?.id ?? null : null
+
   return (
-    <DiagramShell figId="V-008" title="Pilot Phase Sequence" nodes={PHASES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
+    <DiagramShell figId="V-008" title="Pilot Phase Sequence" nodes={PHASES} activeNodeId={activeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 700 130" className="w-full" style={{ height: 130 }}>
-        <line x1={startX} y1={cy} x2={startX + spacing * 10} y2={cy} stroke={THEME.divider} strokeWidth={2}
-          strokeDasharray={636} strokeDashoffset={636}>
+        {/* Rail */}
+        <line x1={startX} y1={cy} x2={startX + spacing * 10} y2={cy}
+          stroke={THEME.divider} strokeWidth={2}
+          strokeDasharray={636} strokeDashoffset={636}
+        >
           <animate attributeName="strokeDashoffset" from={636} to={0} dur="0.9s" begin="0.05s" fill="freeze" />
         </line>
+
         {PHASES.map((p, i) => {
           const cx = startX + i * spacing
-          const isActive = activeNodeId === p.id
+          const isActive = activeId === p.id
           return (
-            <g key={p.id} opacity={0} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick(p.id)}>
+            <g key={p.id} opacity={0} style={{ cursor: 'pointer' }} onClick={e => handlePhaseClick(p, e)}>
               <animate attributeName="opacity" from={0} to={1} dur="0.3s" begin={`${0.15 + i * 0.07}s`} fill="freeze" />
-              {isActive && (
-                <circle cx={cx} cy={cy} r={r + 6} fill="none" stroke={p.accent} strokeWidth={1} opacity={0.4}>
-                  <animate attributeName="r" values={`${r + 4};${r + 12};${r + 4}`} dur="1.8s" repeatCount="indefinite" />
-                  <animate attributeName="opacity" values="0.4;0;0.4" dur="1.8s" repeatCount="indefinite" />
-                </circle>
-              )}
-              <circle cx={cx} cy={cy} r={r} fill={THEME.cardBg} stroke={p.accent} strokeWidth={isActive ? 3 : 1.5}
-                style={{ filter: isActive ? `drop-shadow(0 0 6px ${p.accent})` : undefined }} />
+
+              {/* Active pulse ring */}
+              <AnimatePresence>
+                {isActive && (
+                  <motion.circle cx={cx} cy={cy} r={r + 6} fill="none"
+                    stroke={p.accent} strokeWidth={1}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0.5, 0, 0.5], r: [r + 4, r + 14, r + 4] }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.8, repeat: Infinity }}
+                  />
+                )}
+              </AnimatePresence>
+
+              <circle cx={cx} cy={cy} r={r}
+                fill={THEME.cardBg}
+                stroke={p.accent}
+                strokeWidth={isActive ? 3 : 1.5}
+                style={{ filter: isActive ? `drop-shadow(0 0 6px ${p.accent})` : undefined }}
+              />
               <text x={cx} y={cy + 5} textAnchor="middle" fontSize={10} fontWeight={700} fill={p.accent} fontFamily="monospace">{p.phase}</text>
               <text x={cx} y={cy + r + 16} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">{p.short}</text>
             </g>
           )
         })}
+
+        {/* START / COMPLETE labels */}
+        <text x={startX - 8} y={cy - r - 6} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">S</text>
+        <text x={startX - 8} y={cy - r + 4} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">T</text>
+        <text x={startX - 8} y={cy - r + 14} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">A</text>
+        <text x={startX - 8} y={cy - r + 24} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">R</text>
+        <text x={startX - 8} y={cy - r + 34} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">T</text>
+
+        <text x={startX + spacing * 10 + 18} y={cy - r - 6} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">C</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 4} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">O</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 14} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">M</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 24} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">P</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 34} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">L</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 44} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">E</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 54} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">T</text>
+        <text x={startX + spacing * 10 + 18} y={cy - r + 64} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">E</text>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

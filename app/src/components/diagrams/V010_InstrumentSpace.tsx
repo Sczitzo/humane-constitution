@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V010_InstrumentSpace.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   { id: 'market',    label: 'Market Lane — Flow',                      definition: 'Ordinary commerce: wages, contracts, savings, investment. Governed by market rules. Demurrage-subject. Cannot cross into survival or civic lanes.', docLink: 'ANNEX_AB.md', accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
@@ -11,7 +13,18 @@ const NODES: DiagramNode[] = [
 ]
 
 export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   const lanes = [
     { id: 'market',   label: 'MARKET LANE',   sub: 'Flow — commerce · wages · contracts',          stroke: THEME.flow.accent,  fill: THEME.flow.fill,  y: 20  },
@@ -25,7 +38,7 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
         {lanes.map((l, i) => {
           const isActive = activeNodeId === l.id
           return (
-            <g key={l.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${l.stroke})` : undefined }} onClick={() => handleNodeClick(l.id)}>
+            <g key={l.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${l.stroke})` : undefined }} onClick={e => handleNodeClick(l.id, e)}>
               <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.1 + i * 0.1}s`} fill="freeze" />
               {isActive && (
                 <rect x={18} y={l.y - 2} width={584} height={54} rx={6} fill="none" stroke={l.stroke} strokeWidth={1.5} opacity={0.5}>
@@ -39,7 +52,7 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
             </g>
           )
         })}
-        <g opacity={0} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('emergency')}>
+        <g opacity={0} style={{ cursor: 'pointer' }} onClick={e => handleNodeClick('emergency', e)}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.4s" fill="freeze" />
           <rect x={20} y={20} width={580} height={166} rx={6} fill="none"
             stroke={THEME.ss.accent} strokeWidth={activeNodeId === 'emergency' ? THEME.strokeWidth.active : 1.5} strokeDasharray="8,5"
@@ -52,6 +65,8 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
           instruments do not cross lanes · separation is constitutional, not contractual
         </text>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

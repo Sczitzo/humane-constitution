@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V004_AmendmentPyramid.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   {
@@ -31,7 +33,18 @@ const NODES: DiagramNode[] = [
 ]
 
 export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   const tiers = [
     { id: 't1', label: 'TIER 1', sub: 'Constitutional Core', y: 20,  w: 220, fill: THEME.ss.fill,    stroke: THEME.ss.accent },
@@ -54,7 +67,7 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
             key={t.id}
             opacity={0}
             style={{ cursor: 'pointer', filter: activeNodeId === t.id ? `drop-shadow(0 0 6px ${t.stroke})` : undefined }}
-            onClick={() => handleNodeClick(t.id)}
+            onClick={e => handleNodeClick(t.id, e)}
           >
             <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.06 + (2 - i) * 0.12}s`} fill="freeze" />
             {activeNodeId === t.id && (
@@ -78,6 +91,8 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
         <text x={560} y={185} textAnchor="start" fontSize={9} fill={THEME.dim} fontFamily="monospace">standard</text>
         <line x1={555} y1={55} x2={555} y2={178} stroke={THEME.border} strokeWidth={1}/>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

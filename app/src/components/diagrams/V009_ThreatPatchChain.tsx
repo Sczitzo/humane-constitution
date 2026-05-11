@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V009_ThreatPatchChain.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   { id: 'threat', label: 'Threat',  definition: 'Adversarial failure mode — the way the system can be captured, gamed, stalled, or made to harm people. Documented in the Threat Register with collapse-state classification.', docLink: 'Threat_Register.md', accent: THEME.ss.accent,    accentBg: THEME.ss.accentBg },
@@ -10,7 +12,18 @@ const NODES: DiagramNode[] = [
 ]
 
 export function V009_ThreatPatchChain({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   const cols = [
     { id: 'threat', label: 'THREAT', sub: 'failure mode identified',    stroke: THEME.ss.accent,    fill: THEME.ss.fill,    x: 60,  count: '28 documented' },
@@ -29,7 +42,7 @@ export function V009_ThreatPatchChain({ onInternalLink }: DiagramProps) {
         {cols.map((c, i) => {
           const isActive = activeNodeId === c.id
           return (
-            <g key={c.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${c.stroke})` : undefined }} onClick={() => handleNodeClick(c.id)}>
+            <g key={c.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${c.stroke})` : undefined }} onClick={e => handleNodeClick(c.id, e)}>
               <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.1 + i * 0.1}s`} fill="freeze" />
               {isActive && (
                 <rect x={c.x - 2} y={38} width={164} height={94} rx={7} fill="none" stroke={c.stroke} strokeWidth={1.5} opacity={0.5}>
@@ -47,6 +60,8 @@ export function V009_ThreatPatchChain({ onInternalLink }: DiagramProps) {
         })}
         <text x={330} y={155} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace">every clause exists because a threat made it necessary · see Provenance_Map.md</text>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

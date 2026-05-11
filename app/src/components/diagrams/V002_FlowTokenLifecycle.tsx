@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V002_FlowTokenLifecycle.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   { id: 'issuance', label: 'Issuance', definition: 'Flow is issued by protocol-authorized bodies against verified productive commitment. Not printed arbitrarily — issuance requires a corresponding contribution record.', docLink: 'ANNEX_AB.md', accent: THEME.flow.accent, accentBg: THEME.flow.accentBg },
@@ -18,8 +20,19 @@ const STAGES = [
 ]
 
 export function V002_FlowTokenLifecycle({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
   const boxW = 148, boxH = 70, gap = 24, startX = 20, cy = 60
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   return (
     <DiagramShell figId="V-002" title="Flow Token Lifecycle" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
@@ -28,7 +41,7 @@ export function V002_FlowTokenLifecycle({ onInternalLink }: DiagramProps) {
           const x = startX + i * (boxW + gap)
           const isActive = activeNodeId === s.id
           return (
-            <g key={s.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.stroke})` : undefined }} onClick={() => handleNodeClick(s.id)}>
+            <g key={s.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.stroke})` : undefined }} onClick={e => handleNodeClick(s.id, e)}>
               <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.08 + i * 0.1}s`} fill="freeze" />
               {i > 0 && <path d={`M${x - gap + 4},${cy + boxH / 2} L${x - 4},${cy + boxH / 2}`} fill="none" stroke={THEME.border} strokeWidth={1.5} markerEnd="url(#arr1)" />}
               {isActive && (
@@ -48,6 +61,8 @@ export function V002_FlowTokenLifecycle({ onInternalLink }: DiagramProps) {
           </marker>
         </defs>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }
