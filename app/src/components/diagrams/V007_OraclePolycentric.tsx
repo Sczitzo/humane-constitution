@@ -94,7 +94,7 @@ export function V007_OraclePolycentric({ onInternalLink }: DiagramProps) {
       activeNodeId={activeNodeId}
       onInternalLink={onInternalLink}
     >
-      <svg viewBox="0 0 700 296" className="w-full" style={{ height: 296 }}>
+      <svg viewBox="0 0 700 278" className="w-full" style={{ height: 278 }}>
         <defs>
           {/* Animated glow filter for hub */}
           <filter id="hub-glow" x="-50%" y="-50%" width="200%" height="200%">
@@ -229,11 +229,7 @@ export function V007_OraclePolycentric({ onInternalLink }: DiagramProps) {
           </text>
         </g>
 
-        {/* Caption */}
-        <text x={HUB_X} y={286} textAnchor="middle" fontSize={9}
-          fill={THEME.dim} fontFamily="monospace" letterSpacing="0.05em">
-          quorum required · no single node controls output · click any node to expand
-        </text>
+
       </svg>
     </DiagramShell>
   )

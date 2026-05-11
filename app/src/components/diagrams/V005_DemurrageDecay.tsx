@@ -44,13 +44,11 @@ export function V005_DemurrageDecay({ onInternalLink }: DiagramProps) {
       onInternalLink={onInternalLink}
     >
       <svg viewBox="0 0 720 200" className="w-full" style={{ height: 200 }}>
-        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke={THEME.border} strokeWidth={1.5}
-          strokeDasharray={h + 10} strokeDashoffset={h + 10}>
-          <animate attributeName="strokeDashoffset" from={h + 10} to={0} dur="0.4s" begin="0.05s" fill="freeze" />
+        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke={THEME.border} strokeWidth={1.5} opacity={0}>
+          <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin="0.05s" fill="freeze" />
         </line>
-        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke={THEME.border} strokeWidth={1.5}
-          strokeDasharray={w + 10} strokeDashoffset={w + 10}>
-          <animate attributeName="strokeDashoffset" from={w + 10} to={0} dur="0.5s" begin="0.05s" fill="freeze" />
+        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke={THEME.border} strokeWidth={1.5} opacity={0}>
+          <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin="0.1s" fill="freeze" />
         </line>
         <text x={ox - 8} y={oy - h} textAnchor="end" fontSize={9} fill={THEME.dim} fontFamily="monospace">balance</text>
         <text x={ox + w + 14} y={oy + 4} fontSize={9} fill={THEME.dim} fontFamily="monospace">time →</text>
@@ -69,13 +67,11 @@ export function V005_DemurrageDecay({ onInternalLink }: DiagramProps) {
           d={decayPath(ox, oy, w, h)}
           fill="none" stroke={THEME.flow.accent}
           strokeWidth={activeNodeId === 'curve' ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
-          pathLength={1000}
-          strokeDasharray={1000}
-          strokeDashoffset={1000}
+          opacity={0}
           style={{ cursor: 'pointer', filter: activeNodeId === 'curve' ? `drop-shadow(0 0 4px ${THEME.flow.accent})` : undefined }}
           onClick={() => handleNodeClick('curve')}
         >
-          <animate attributeName="strokeDashoffset" from={1000} to={0} dur="1.1s" begin="0.3s" fill="freeze" />
+          <animate attributeName="opacity" from={0} to={1} dur="0.5s" begin="0.3s" fill="freeze" />
         </path>
         <path
           d={decayPath(ox, oy, w, h) + ` L${ox + w},${oy} L${ox},${oy} Z`}

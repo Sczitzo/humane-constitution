@@ -44,23 +44,21 @@ export function V006_VoiceSRDecay({ onInternalLink }: DiagramProps) {
       onInternalLink={onInternalLink}
     >
       <svg viewBox="0 0 700 200" className="w-full" style={{ height: 200 }}>
-        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke={THEME.border} strokeWidth={1.5}
-          strokeDasharray={h + 10} strokeDashoffset={h + 10}>
-          <animate attributeName="strokeDashoffset" from={h + 10} to={0} dur="0.4s" begin="0.05s" fill="freeze" />
+        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke={THEME.border} strokeWidth={1.5} opacity={0}>
+          <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin="0.05s" fill="freeze" />
         </line>
-        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke={THEME.border} strokeWidth={1.5}
-          strokeDasharray={w + 10} strokeDashoffset={w + 10}>
-          <animate attributeName="strokeDashoffset" from={w + 10} to={0} dur="0.5s" begin="0.05s" fill="freeze" />
+        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke={THEME.border} strokeWidth={1.5} opacity={0}>
+          <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin="0.1s" fill="freeze" />
         </line>
         <text x={ox + w + 14} y={oy + 4} fontSize={9} fill={THEME.dim} fontFamily="monospace">time →</text>
 
         <path d={curvePath(ox, oy, w, h, 0.006)} fill="none" stroke={THEME.voice.accent}
           strokeWidth={activeNodeId === 'voice' ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
-          pathLength={1000} strokeDasharray={1000} strokeDashoffset={1000}
+          opacity={0}
           style={{ cursor: 'pointer', filter: activeNodeId === 'voice' ? `drop-shadow(0 0 4px ${THEME.voice.accent})` : undefined }}
           onClick={() => handleNodeClick('voice')}
         >
-          <animate attributeName="strokeDashoffset" from={1000} to={0} dur="0.9s" begin="0.3s" fill="freeze" />
+          <animate attributeName="opacity" from={0} to={1} dur="0.5s" begin="0.3s" fill="freeze" />
         </path>
         <text x={ox + 80} y={oy - h * Math.exp(-0.006 * 80) - 8} fontSize={9} fill={THEME.voice.accent} fontFamily="monospace"
           opacity={0}
@@ -71,11 +69,11 @@ export function V006_VoiceSRDecay({ onInternalLink }: DiagramProps) {
 
         <path d={curvePath(ox, oy, w, h, 0.003)} fill="none" stroke={THEME.sr.accent}
           strokeWidth={activeNodeId === 'sr' ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
-          pathLength={1000} strokeDasharray={1000} strokeDashoffset={1000}
+          opacity={0}
           style={{ cursor: 'pointer', filter: activeNodeId === 'sr' ? `drop-shadow(0 0 4px ${THEME.sr.accent})` : undefined }}
           onClick={() => handleNodeClick('sr')}
         >
-          <animate attributeName="strokeDashoffset" from={1000} to={0} dur="1.2s" begin="0.4s" fill="freeze" />
+          <animate attributeName="opacity" from={0} to={1} dur="0.5s" begin="0.5s" fill="freeze" />
         </path>
         <text x={ox + 200} y={oy - h * Math.exp(-0.003 * 200) - 8} fontSize={9} fill={THEME.sr.accent} fontFamily="monospace"
           opacity={0}
