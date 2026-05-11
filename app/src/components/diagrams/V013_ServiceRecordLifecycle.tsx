@@ -30,8 +30,14 @@ export function V013_ServiceRecordLifecycle({ onInternalLink }: DiagramProps) {
           const x = startX + i * (boxW + gap)
           const isActive = activeNodeId === s.id
           return (
-            <g key={s.id} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.stroke})` : undefined }} onClick={() => handleNodeClick(s.id)}>
+            <g key={s.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.stroke})` : undefined }} onClick={() => handleNodeClick(s.id)}>
+              <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.08 + i * 0.1}s`} fill="freeze" />
               {i > 0 && <path d={`M${x - gap + 3},${cy + boxH / 2} L${x - 3},${cy + boxH / 2}`} fill="none" stroke={THEME.border} strokeWidth={1.5} markerEnd="url(#arr4)" />}
+              {isActive && (
+                <rect x={x} y={cy} width={boxW} height={boxH} rx={6} fill="none" stroke={s.stroke} strokeWidth={1.5} opacity={0.5}>
+                  <animate attributeName="opacity" values="0.5;0;0.5" dur="1.8s" repeatCount="indefinite" />
+                </rect>
+              )}
               <rect x={x} y={cy} width={boxW} height={boxH} rx={6} fill={s.fill} stroke={s.stroke} strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal} />
               <text x={x + boxW / 2} y={cy + 27} textAnchor="middle" fontSize={10} fontWeight={700} fill={s.stroke} fontFamily="monospace">{s.label}</text>
               <text x={x + boxW / 2} y={cy + 46} textAnchor="middle" fontSize={9} fill={THEME.subtext} fontFamily="monospace">{s.sub}</text>
