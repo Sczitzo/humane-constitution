@@ -1,8 +1,8 @@
 # ANNEX AH — Founding Bootstrap Resolution
 
-> **Provenance:** Implements [P-014 — Bootstrap Activation Instrument] (§AH1–AH7) · Amended by [P-020 — Founding Window Extension] (§AH2.1–AH2.4) · Addresses T-017 · Status: **PROPOSED**
+> **Provenance:** Implements [P-014 — Bootstrap Activation Instrument] (§AH1–AH7) · Amended by [P-020 — Founding Window Extension] (§AH2.1–AH2.4) · Addresses T-017 · Status: **ACTIVE**
 
-**Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard Formal Acceptance Protocol activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE. Status: PROPOSED.
+**Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard Formal Acceptance Protocol activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE.
 
 **Constitutional anchor.** P-014 is explicitly modeled on the provisional authority framework in Annexes N and U2: explicit disclosure, public challenge window, time-limited authority, mandatory review, and non-transferable founding status. This makes P-014 coherent with the protocol's existing constitutional theory rather than introducing a foreign mechanism.
 
@@ -14,12 +14,22 @@ P-014 is not a standing patch. It is a one-time founding instrument with a singl
 - P-014 closes permanently upon P-013's ACTIVE status. No re-opening, no emergency extension, no analogical application.
 
 ### AH2. Stage 1 — Pre-Activation Disclosure (60 Days minimum, per P-020 amendment)
+
 Before any activation steps proceed, the following must be published and a 60-day minimum public challenge window must close:
-- **Full circular dependency analysis:** a written explanation of why the standard Formal Acceptance Protocol cannot coherently activate P-013, what the bootstrap problem is, and why no other resolution path is available.
-- **Founding exception statement from the Threat Register Owner:** 'We are using a founding exception. Here is why no other option is available. Here is what this exception cannot be used for. Here is what happens if we get it wrong.'
-- **Proposed activation panel composition** with full conflict disclosures — published before sign-off begins, not after.
-- **Public challenge window of 60 days minimum.** Any person, institution, or qualifying petition may file a written challenge. All challenges are addressed in published written responses before activation proceeds. No challenge is dismissed without a written substantive response.
-- **Founding Legitimacy Dossier snapshot.** The activation record must include a current [Founding Legitimacy Dossier](../governance/Founding_Legitimacy_Dossier.md) snapshot covering scope, conflicts, objection handling, consent assumptions, exit rehearsal, dignity-floor non-coercion review, and founder sunset. The dossier snapshot hash is included in the drift-chain founding record when the founding record is sealed.
+
+#### AH2.1 — Circular dependency analysis
+A written explanation of why the standard Formal Acceptance Protocol cannot coherently activate P-013, what the bootstrap problem is, and why no other resolution path is available. Published before the challenge window opens.
+
+#### AH2.2 — Founding exception statement
+From the Threat Register Owner: 'We are using a founding exception. Here is why no other option is available. Here is what this exception cannot be used for. Here is what happens if we get it wrong.' Published at the same time as AH2.1.
+
+#### AH2.3 — Panel composition and conflict disclosure
+Proposed activation panel composition with full conflict disclosures — published before sign-off begins, not after. Attestations are externally verified before the challenge window closes.
+
+#### AH2.4 — Public challenge window and Founding Legitimacy Dossier snapshot
+**Public challenge window of 60 days minimum.** Any person, institution, or qualifying petition may file a written challenge. All challenges are addressed in published written responses before activation proceeds. No challenge is dismissed without a written substantive response.
+
+**Founding Legitimacy Dossier snapshot.** The activation record must include a current [Founding Legitimacy Dossier](../governance/Founding_Legitimacy_Dossier.md) snapshot covering scope, conflicts, objection handling, consent assumptions, exit rehearsal, dignity-floor non-coercion review, and founder sunset. The dossier snapshot hash is included in the drift-chain founding record when the founding record is sealed.
 
 The 60-day pre-activation disclosure is itself a narrative defense: it converts the bootstrap paradox from a vulnerability into a public demonstration of system integrity. The hostile framing 'the system cannot fix itself' is rebutted by the published record of the system identifying and resolving its own problem transparently, with public challenge rights.
 
@@ -137,5 +147,8 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-026 | P-026 | ACTIVE | AH (Founding Order) | S9 |
 | T-027 | P-026 | ACTIVE | AH (Founding Order) | S9 |
 | T-028 | P-050 | ACTIVE | AT §AT6.6 | S10 |
+| — | P-053 | ACTIVE | AW | S10 |
+| — | P-054 | ACTIVE | AX | S10 |
+| — | P-055 | ACTIVE | AY | S10 |
 
-*P-014 is shown in blue to mark its unique status as a one-time founding instrument. 28 total threats. 24 ACTIVE patches. 1 PROPOSED patch (P-018 electoral staggering, awaiting pilot). 1 FOUNDING instrument (P-014). P-051 and P-052 added in S10 as primary controls for T-022 and T-019 respectively. T-028 (essential-sector refusal) closed by CASP (P-050). Bootstrap problem resolved. Acceptance sequence unblocked.*
+*P-014 marks its unique status as a one-time founding instrument. 28 total threats. 27 ACTIVE patches. 1 PROPOSED patch (P-018 electoral staggering, awaiting pilot). 1 FOUNDING instrument (P-014). P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. Bootstrap problem resolved. Acceptance sequence unblocked.*

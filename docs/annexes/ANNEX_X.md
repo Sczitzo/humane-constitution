@@ -117,30 +117,4 @@ Intellectual property is a modern rent-seeking vector and shall not remain outsi
 
 ---
 
-## ANNEX Y. Constitutional Survival Minimum and Essential Access Continuity Architecture
-**Purpose.** Procedural friction against narrowing is not enough. This annex defines the absolute survival floor beneath the adjustable basket and replaces the weekly Essential Access cliff with a continuity-preserving daily micro-issuance model. Where Annex Y conflicts with earlier weekly-expiry or implied-floor language, Annex Y governs.
-
-**Design principle: protect survival with an absolute floor, then deliver it in a way people can actually use.**
-
-### Y1. Constitutional Survival Minimum (CSM)
-- **The CSM is a Tier 1 floor.** It may not be narrowed through H-1 or H-2 process and may be amended only through H-3 Refounding Convention authority.
-- **The founding CSM schedule** must specify and publish minimum daily caloric sufficiency, minimum potable water access, weather-safe shelter thresholds, emergency medical stabilization, basic sanitation and hygiene, crisis mental-health stabilization, and continuity access for essential medicines.
-- **The ordinary essential basket** may expand above the CSM, specify richer quality floors, and add category-specific supports. It may never fall below the CSM even during scarcity, austerity pressure, or procedural narrowing cycles.
-- **Temporary substitution** is allowed only when functional equivalence is demonstrated and continuity of the survival floor is preserved for those already relying on the prior form of provision.
-
-### Y2. Essential Access daily micro-issuance
-Essential Access no longer expires as a single weekly cliff. The weekly baseline is divided into daily tranches, with each daily tranche carrying 72-hour rolling validity.
-- **This model preserves anti-hoarding discipline** while smoothing demand, reducing end-cycle panic purchases, and limiting the black-market extractable value of any momentary Essential Access balance.
-- **Maximum ordinary accumulation** is therefore limited to the rolling validity window unless a published continuity exception applies for disruption, travel, illness, provider outage, or caregiving emergency.
-- **Provider reimbursement and dashboard accounting** must support daily or rolling settlement so the issuance rhythm is matched operationally rather than left as a user-side abstraction.
-
-### Y3. Continuity protections and household management
-- A person may not lose survival-floor access merely because illness, caregiving load, temporary travel, disability disruption, or provider unavailability prevented redemption on a particular day.
-- **Continuity pathways** may include simple re-issuance, temporary pause-and-restart, narrow caregiver delegation, provider-side deferred redemption, or ombuds-certified restoration - whichever is least coercive and most operationally simple.
-- **Where a household pooling mechanism exists**, pooling caps apply at the household level as well as the individual level. Pooling may not recreate concentrated managerial control over large Essential Access balances through household scaling alone.
-- **Any shared household management tool** must support fast exit, dual-consent for changes where feasible, coercion alerts, and easy restoration of individual control.
-
-### Y4. Survival-floor review and anti-hollowing rule
-- Any change that would narrow ordinary basket coverage while leaving the CSM intact must still publish the functional floor test required by Annex U. Formal compliance without real usability is invalid.
-- Austerity or scarcity measures may change delivery form, substitution order, or timing, but they may not hollow out the CSM through procedural fragmentation, repeated sub-threshold narrowing, or synchronized delivery obstacles.
-- If repeated emergency conditions push ordinary basket provision toward the CSM for multiple cycles, root-cause review becomes mandatory. Permanent near-emergency is a governance failure, not an acceptable steady state.
+*Annex Y — Constitutional Survival Minimum and Essential Access Continuity Architecture is maintained as a separate controlling document. See [ANNEX_Y.md](./ANNEX_Y.md). Where any language in this file conflicts with Annex Y, Annex Y governs.*

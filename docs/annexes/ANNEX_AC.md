@@ -1,8 +1,8 @@
 # ANNEX AC — Governance Throughput, Measurement Lag, and Elite Formation Clauses
 
-> **Provenance:** Implements [P-005 — Governance Throughput Hardening] (§AC1), [P-006 — Measurement Lag and Supply Shock Hardening] (§AC2), [P-008 — Bureaucratic Elite Formation Hardening] (§AC3) · Status: **PROPOSED**
+> **Provenance:** Implements [P-005 — Governance Throughput Hardening] (§AC1), [P-006 — Measurement Lag and Supply Shock Hardening] (§AC2), [P-008 — Bureaucratic Elite Formation Hardening] (§AC3) · Status: **ACTIVE**
 
-**Purpose.** This annex introduces the operative clauses covering T-005 Governance Throughput Failure (P-005), T-006 Measurement Lag and Supply Shock Behavior (P-006), and T-008 Bureaucratic Elite Formation (P-008). Where clauses in this annex conflict with earlier language, this annex governs. Clauses are PROPOSED and become operative only when formally accepted into the constitution.
+**Purpose.** This annex introduces the operative clauses covering T-005 Governance Throughput Failure (P-005), T-006 Measurement Lag and Supply Shock Behavior (P-006), and T-008 Bureaucratic Elite Formation (P-008). Where clauses in this annex conflict with earlier language, this annex governs.
 
 **Interpretive rule.** These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and survival-floor protections are unaffected by any clause in this annex.
 

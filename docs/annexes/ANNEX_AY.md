@@ -1,8 +1,8 @@
 # ANNEX AY — Delivery Sufficiency Standard and Register
 
-> **Provenance:** Implements [P-052 — Delivery Sufficiency Standard] · Addresses the gap between the constitutional guarantee of Essential Access and the operational reality that some populations cannot currently receive it · Status: **ACTIVE**
+> **Provenance:** Implements [P-055 — Delivery Sufficiency Standard] · Addresses the gap between the constitutional guarantee of Essential Access and the operational reality that some populations cannot currently receive it · Status: **ACTIVE**
 
-**Status:** ACTIVE | **Priority:** Critical | **Patch:** P-052
+**Status:** ACTIVE | **Priority:** Critical | **Patch:** P-055
 **Authority:** Tier 2. The obligation to maintain the Delivery Sufficiency Register is Tier 1 adjacent — any change that would remove a population from the Register without demonstrating operational delivery requires H-2 supermajority.
 
 ---

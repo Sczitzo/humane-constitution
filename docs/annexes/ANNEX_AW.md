@@ -1,8 +1,8 @@
 # ANNEX AW — Whistleblower Protection and Anti-Retaliation Protocol
 
-> **Provenance:** Implements [P-050 — Whistleblower Protection and Anti-Retaliation Protocol] · Addresses retaliation risk against community alert reporters and Service Record audit requesters · Status: **ACTIVE**
+> **Provenance:** Implements [P-053 — Whistleblower Protection and Anti-Retaliation Protocol] · Addresses retaliation risk against community alert reporters and Service Record audit requesters · Status: **ACTIVE**
 
-**Status:** ACTIVE | **Priority:** Critical | **Patch:** P-050
+**Status:** ACTIVE | **Priority:** Critical | **Patch:** P-053
 **Authority:** Tier 2. Changes require standard FAP process. Reporter protection during active constitutional proceedings (§AW3.4) is Tier 1 adjacent and requires H-2 supermajority if the change would reduce protections below the floor defined in §AW2.
 
 ---

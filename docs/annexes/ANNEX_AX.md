@@ -1,8 +1,8 @@
 # ANNEX AX — Confidential Enrollment and Safety-Identity Protocol
 
-> **Provenance:** Implements [P-051 — Confidential Enrollment and Safety-Identity Protocol] · Addresses identity-verification gaps for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates documented risk · Status: **ACTIVE**
+> **Provenance:** Implements [P-054 — Confidential Enrollment and Safety-Identity Protocol] · Addresses identity-verification gaps for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates documented risk · Status: **ACTIVE**
 
-**Status:** ACTIVE | **Priority:** Critical | **Patch:** P-051
+**Status:** ACTIVE | **Priority:** Critical | **Patch:** P-054
 **Authority:** Tier 2. Changes require standard FAP process. The safety-shielded enrollment floor (§AX2.1) is Tier 1 adjacent — narrowing it below the floor defined here requires H-2 supermajority.
 
 ---

@@ -1,9 +1,9 @@
 # ANNEX AR — Contract-Commitment Architecture: Threshold Values and Governance Parameters
 
-> **Provenance:** Implements [P-023 — Contract-Commitment Architecture] threshold and governance parameters · Addresses T-025 · Status: **PROPOSED**
+> **Provenance:** Implements [P-023 — Contract-Commitment Architecture] threshold and governance parameters · Addresses T-025 · Status: **ACTIVE**
 
 **Tier 2 founding commitment — required before deployment · Governed as P-004 protected specification**
-**Status: PROPOSED (referenced by P-023)**
+**Status: ACTIVE (implements P-023)**
 
 ---
 

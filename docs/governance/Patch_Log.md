@@ -35,12 +35,12 @@
 | P-013 | T-016 | **ACTIVE** | Critical | FAP integrity: representativeness standard, deadlock timeline, audit epistemic independence, anti-gaming Tier 2. |
 | P-014 | T-017 | **ACTIVE** | Critical | Bootstrap activation: one-time founding instrument for P-013 activation only. |
 | P-015 | T-018 / T-019 | **ACTIVE** | High | PCRP attack surface: false-trigger escalation path, exhaustion alert, manufactured flag assessment. |
-| P-016 | T-002 | **PROPOSED** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. |
+| P-016 | T-002 | **ACTIVE** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. |
 | P-017 | T-020 / T-021 | **ACTIVE** | Critical | Oracle epistemological and algorithmic independence: methodology-class diversity, AI supply chain transparency, physical ground-truth requirement. Numerical floors (N≥5, ≥3 classes, ≤0.30 pairwise correlation, ≥1 adversarial seat) bound in `/founding/commitments.md` FC-030/FC-031/FC-032/FC-033. |
 | P-018 | T-022 | **PROPOSED** | Critical | Electoral cycle resilience: entrenchment ladder, Essential Access floor minimum persistence, administrative hollowing triggers, transition continuity protocol. |
 | P-019 | T-023 | **ACTIVE** | Med-High | Pilot external validity gate: stress-condition pilot requirement, red-team challenge window, crisis simulation mandate. |
-| P-020 | T-017 | **PROPOSED** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
-| P-021 | — | **PROPOSED** | High | Register disclosure protocol: bifurcation into public and restricted versions; operational security for detection thresholds. |
+| P-020 | T-017 | **ACTIVE** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
+| P-021 | — | **ACTIVE** | High | Register disclosure protocol: bifurcation into public and restricted versions; operational security for detection thresholds. |
 | P-022 | T-024 | **ACTIVE** | Critical | Shared Storehouse oracle-failure fallback: conservative hold, 48h REB first-responder window, 72h governance handoff, FC-100 14-day restoration verification, reconciliation review. Annex AQ ACTIVE. |
 | P-023 | T-025 | **ACTIVE** | High | Demurrage sector-capture: contract-commitment architecture, zero exemptions, demurrage-as-discipline, milestone escrow. |
 | P-024 | T-009 / TR-07 / T-018 | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
