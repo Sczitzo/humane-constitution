@@ -117,9 +117,21 @@ Good-faith disagreement is not defection. If the Plenum finds the issue was ambi
 - Cryptographic attestation envelope format and key-handling procedure are specified in AV7 through AV9.
 - Public defection-finding publication channel (Article VII dashboard) must support the attestation-history view.
 
+## AV11 — Compound-Capture Detection (T-022 × T-016 Scenario)
+
+The two-key precondition protects against single-actor FAP reviewer capture (T-016 alone) and single-actor adversarial panel seat failure. It does not by itself protect against a compound scenario where both the FAP reviewer role and the adversarial panel seat change or are compromised within the same short window — for example, during an electoral transition that also affects the oppose-coalition nominating body. T-022 (electoral cycle capture) combined with T-016 creates a window where the new governing coalition controls FAP appointment and simultaneously exercises sufficient pressure or legal threat to destabilize the oppose-coalition nominating body before a replacement seat is secured.
+
+**Compound-capture watch trigger:** If the FAP reviewer role changes AND the adversarial panel seat is either vacated or the seated member changes within any rolling 90-day window, this is automatically a constitutional watch event. The Federated Ombuds must publish the watch event in the Article VII dashboard within 7 days of the second change and initiate a 60-day independence assessment of both roles.
+
+**New-reviewer cooling-off period:** A newly seated FAP reviewer may not exercise intake authority over any `modifies_tier1=True` proposal during the first 30 days of their term. During this window, the Federated Ombuds designates a temporary first-check reviewer drawn from the CIP (AM8) or, if unavailable, from the oracle accreditation network (Annex AL). This prevents a governing coalition from moving immediately to admit Tier-1-touching proposals through a freshly appointed reviewer.
+
+**Oppose-coalition continuity requirement:** The oppose-coalition nominating body (Annex AH §AH2.3) must maintain a published succession list of at least three qualified successor candidates for the adversarial panel seat at all times. If the nominating body itself is dissolved, suspended, or materially incapacitated, the Federated Ombuds Plenum assumes the nominating function until a successor oppose-coalition body is constituted. Vacancy during Plenum-nominating authority is treated identically to vacancy under ordinary rules: no `modifies_tier1=True` proposal may advance.
+
 ## Residual Risk (Acknowledged)
 
 The adversarial panel member can be defected through external pressure not covered by the internal penalty structure (coercion, external blackmail, family threat). This is documented as a known residual rather than a resolved problem. Physical-world coercion cannot be fully eliminated by protocol design; the conservative failure mode (the panel member refuses to attest rather than attesting fraudulently under coercion) is the design target.
+
+The compound-capture scenario (AV11) reduces the attack window but cannot eliminate it. If the governing coalition, the FAP reviewer, and the Federated Ombuds Plenum are all compromised simultaneously, no in-system mechanism can detect or block the failure. This is the system's acknowledged single point of catastrophic capture; the only repair path is the H-3 re-founding convention or external civil-society pressure.
 
 ---
 

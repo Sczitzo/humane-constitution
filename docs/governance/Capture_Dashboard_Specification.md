@@ -124,6 +124,35 @@ This dashboard operates within the Evidence Ladder framework (see `Evidence_Ladd
 
 ---
 
+---
+
+## Threshold Anchors
+
+A dashboard without published thresholds is decorative. The failure-signal column in each domain describes qualitative patterns; this section gives starting numeric anchors for when each pattern rises to a formal watch or active-capture-signal finding. Anchors are Tier 3 parameters and may be revised by standard FAP process. They must be published before any capture dashboard round is run.
+
+| Domain | Metric | Watch threshold | Active-capture-signal threshold |
+|---|---|---|---|
+| Civic Role Concentration | Sector share of Service Record-governed roles | >20% (aligned with FC-060) | >30% or any sector evading cap through relabeling for 2+ review cycles |
+| Civic Role Concentration | Institutional-origin share | >35% from a single origin cluster in any governing pool | >50% from a single origin cluster |
+| Civic Role Concentration | Repeat-role frequency | Same person holds 3+ service-record-governed roles in any rolling 24-month window | Same person holds 2+ simultaneous governing roles with overlapping authority |
+| Ombuds & Review-Body Independence | Voting-pattern unanimity on contested cases | >80% unanimity rate over 12 consecutive months | >95% unanimity rate over 6 consecutive months |
+| Ombuds & Review-Body Independence | Staffing overlap (shared institutional origin) | >40% of sub-Ombuds nodes share a common employer, funder, or professional school cohort | >60% share common institutional origin |
+| Ombuds & Review-Body Independence | Reversal and correction rate | <5% of appeals change outcomes across 100+ cases | <2% reversal rate across 100+ cases |
+| Money, Procurement & Legal Wrapper | Procurement award concentration | >30% of essential-category spend to a single vendor or controlled group (aligned with FC-198) | >40% concentration or mandatory remediation threshold breached for 2 consecutive review periods |
+| Money, Procurement & Legal Wrapper | Beneficial-ownership concentration | Any natural person controls >5% of regional essential throughput across all entities | >10% concentration or sustained breach above 5% for 2+ review periods |
+| Money, Procurement & Legal Wrapper | Project escrow rollover rate | >20% of active escrows renew without milestone delivery for 2+ consecutive terms | >35% rollover rate or any escrow renews more than 3 times without delivery |
+| Identity & Access Gatekeeping | False exclusion rate by vulnerable group | False-exclusion rate for a tracked group exceeds 2× the overall population rate | 3× or greater disparity persisting across 2 consecutive measurement periods |
+| Identity & Access Gatekeeping | Abandonment rate | >15% of initiated recovery proceedings abandoned before decision | >25% abandonment rate or systematic abandonment in a specific office or region |
+| Implementation Drift | Operator pinned-reference age | Any operator lag exceeds the published compliance window | 10%+ of operators exceed the compliance window or any operator exceeds 2× the window |
+
+**How thresholds are used:** Crossing a Watch threshold requires the dashboard office to flag the domain in the quarterly report with a written explanation. Crossing an Active-capture-signal threshold requires: (a) a published finding within 14 days, (b) automatic referral to the Federated Ombuds for review, and (c) notation in the Evidence Ladder Claims and Evidence Register.
+
+**Threshold gaming rule:** Any pattern of metrics staying systematically just below a threshold — particularly across multiple domains simultaneously — is itself a reportable finding. The dashboard office must assess gaming suspicion as a standalone signal each quarter and publish its assessment. A gaming suspicion finding may escalate directly to Active-capture-signal without requiring any individual metric to cross its own threshold.
+
+**Annual calibration:** Threshold anchors are reviewed annually against pilot data and adjusted if they are causing either false-positive churn or systematic under-detection. Calibration changes require FAP approval and must be published with a comparison to the prior values and a plain-language explanation of why the change was made.
+
+---
+
 ## Residual Risk
 
 Capture dashboards can create a false sense of control. A sophisticated class can stay below thresholds, split labels, use informal networks, or pressure the dashboard office. The dashboard is an early-warning system, not proof that capture is solved.
