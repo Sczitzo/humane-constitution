@@ -1,6 +1,7 @@
 import { createContext, startTransition, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { StatechartDiagram } from './StatechartDiagram'
+import { DiagramRegistry } from './diagrams/index'
 import { invoke } from '@tauri-apps/api/core'
 import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
 import type { AppView } from './Layout'
@@ -1110,14 +1111,24 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
         <RefChip key={`${keyPrefix}-pathchip-${match.index}`} refKey={codeContent} display={codeContent} fallback={isPathLike ? undefined : codeEl} />
       )
     } else if (match[1]?.startsWith('!')) {
-      // Image: ![alt](src)
+      // Image: ![alt](src) — check registry first, fall back to <img>
+      const src = match[3] ?? ''
+      const vMatch = src.match(/\/images\/(V-\d+)\.png/)
+      const DiagramComponent = vMatch ? DiagramRegistry[vMatch[1]] : undefined
       parts.push(
-        <img
-          key={`${keyPrefix}-img-${match.index}`}
-          src={match[3]}
-          alt={match[2] ?? ''}
-          className="my-4 max-w-full rounded-lg"
-        />,
+        DiagramComponent ? (
+          <DiagramComponent
+            key={`${keyPrefix}-diagram-${match.index}`}
+            onInternalLink={onInternalLink ?? (() => {})}
+          />
+        ) : (
+          <img
+            key={`${keyPrefix}-img-${match.index}`}
+            src={src}
+            alt={match[2] ?? ''}
+            className="my-4 max-w-full rounded-lg"
+          />
+        ),
       )
     } else if (match[4] && match[5]) {
       const linkHref = match[5]
