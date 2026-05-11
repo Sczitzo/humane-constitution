@@ -117,7 +117,7 @@ Flow (ordinary money) is not evil. Markets are not abolished.
 
 But Flow (ordinary money) cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
 
-The system also uses an **idle-money fee** on large unused balances. The goal is to discourage hoarding and push money toward useful activity. That rule needs careful testing so it does not punish ordinary people or real long-term projects.
+The system also uses an **idle-money fee** on large unused balances. The goal is to discourage hoarding and push money toward useful activity. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the fee falls on large idle balances rather than on people with modest savings.
 
 ![Demurrage Decay Curve](/images/V-005.png)
 
@@ -230,6 +230,8 @@ Known risks include:
 - expert bodies becoming closed clubs
 - public records hiding more than they reveal
 
+The primary mitigation for corporate refusal (T-028) is the **Competitive Assurance and Substitution Protocol (CASP)**: essential-sector suppliers are pre-registered with automatic-activation contracts, so backup capacity can be triggered without a gap if a dominant supplier exits or refuses. CASP is the first line of defense before public receiver authority or treaty capacity is invoked.
+
 The project responds with:
 
 - hard walls between tools
@@ -266,6 +268,8 @@ The first institutions matter. If they are staffed by the wrong people, captured
 Some rules must be hard to change, or powerful people will hollow them out.
 
 But if every rule is too hard to change, mistakes become permanent.
+
+The independent body required to co-ratify Tier 1 amendments has been specified: the **Constitutional Integrity Panel (CIP)**, defined in Annex AM §AM8. No Tier 1 change takes effect without CIP co-ratification, preventing any single institution from quietly rewriting foundational protections.
 
 ## What Must Be Proven Before Scale
 

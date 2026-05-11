@@ -154,6 +154,52 @@ Each abuse case should name:
 
 ---
 
+## Service Record / Civic Tools Misuse
+
+### ACL-SR-01 — Employer Rank Signal
+
+- **Primary threat:** T-008 (Bureaucratic Elite Formation), T-009 (Grace Exploitation)
+- **Mechanism:** Employer uses Service Record score as a hiring filter, systematically favoring high-SR applicants without formally requiring disclosure.
+- **Detection:** Selection rate differential >5% between matched applicants with contrasting SR status.
+- **Mitigation:** API access controls blocking SR queries in hiring contexts; SR Misuse Test Package Stage ACL-SR-01; Federated Ombuds referral on detection.
+
+### ACL-SR-02 — Landlord Tenancy Screening
+
+- **Primary threat:** T-008, T-001 (survival floor leverage)
+- **Mechanism:** Property manager queries or requests SR status before approving tenancy, converting civic standing into housing access.
+- **Detection:** Rental platform integration attempts surfacing SR data; audit of platform API access logs.
+- **Mitigation:** API access denial for tenancy-context queries; logged audit trail; platform compliance review on detection.
+
+### ACL-SR-03 — Insurance Underwriting Signal
+
+- **Primary threat:** T-001, T-008
+- **Mechanism:** Insurer incorporates civic participation history as actuarial proxy via SR-correlated behavioral data.
+- **Detection:** Actuarial input audit; statistical correlation between SR patterns and insurance offer terms.
+- **Mitigation:** Insurance product audit in pilot jurisdictions; prohibition on SR data as actuarial input; Enforcement Panel referral.
+
+### ACL-SR-04 — Credit Scoring Proxy
+
+- **Primary threat:** T-001 (Flow/survival leverage), T-007 (definition drift)
+- **Mechanism:** Lender combines Flow transaction history and civic activity patterns as creditworthiness proxy, converting participation into financial standing.
+- **Detection:** Contrasting synthetic borrower profiles; offer term differential analysis.
+- **Mitigation:** Credit product audit; prohibition on civic activity data as credit input; lender compliance review.
+
+### ACL-SR-05 — School Admission Preference
+
+- **Primary threat:** T-008, T-009
+- **Mechanism:** Educational institution uses family SR history as admissions or merit-award factor, converting civic standing into educational opportunity.
+- **Detection:** Published admissions criteria review; test applications with contrasting SR profiles.
+- **Mitigation:** Prohibition on SR as admissions factor; application outcome monitoring; Ombuds referral on detection.
+
+### ACL-SR-06 — Platform Access Gating
+
+- **Primary threat:** T-001, T-007
+- **Mechanism:** Commercial platform (marketplace, professional network, social platform) uses SR status to gate features, listing rights, or verified status, converting civic standing into market access.
+- **Detection:** Feature access testing with contrasting SR profiles; platform terms audit.
+- **Mitigation:** Platform compliance review; API access controls; Enforcement Panel referral for commercial platforms gating on SR status.
+
+---
+
 ## Promotion Rule
 
 Promote an abuse case into the Threat Register when it has:

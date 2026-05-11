@@ -112,7 +112,37 @@ Should losing money mean losing food, medicine, shelter, safety, or dignity?
 
 If the answer is no, this design is worth testing seriously.
 
-## 18. Where should I start?
+## 18. What stops one company from holding essential goods hostage?
+
+Two layers.
+
+First, before any contract with an essential supplier is renewed, the system must have pre-registered backup suppliers with pre-committed contracts — these activate automatically if the primary supplier refuses or fails to deliver for 14 consecutive days. No political decision required.
+
+Second, strategic reserves cover the gap between the backup supplier activating and reaching full capacity.
+
+A company can still negotiate, sue, or exit a market. It cannot use people's survival needs as the negotiating chip.
+
+## 19. What stops a future government from dismantling the system?
+
+Several interlocking protections.
+
+Tier 1 rules — the non-negotiable core — require both a legislative supermajority and ratification by an independent Constitutional Integrity Panel: a 7-member body with staggered terms and constitutionally fixed funding that cannot be appointed by the current governing coalition.
+
+Essential Access delivery is self-executing at a minimum floor and cannot be suspended by executive action.
+
+If founding institutions go unfilled for more than 90 days or key publication deadlines lapse, an automatic constitutional review triggers — without the government's initiation.
+
+No single mechanism is guaranteed. The point is that dismantling requires defeating several independent barriers, not just one.
+
+## 20. How does the identity system avoid excluding vulnerable people?
+
+The system is designed around an Asymmetric Error Doctrine: it is explicitly calibrated to err on the side of inclusion rather than fraud prevention when the two conflict.
+
+Specific quarterly targets are published — for example, exclusion of displaced persons must stay below 6%, and exclusion of undocumented persons below 8%. Any Essential Access exclusion that goes more than 14 days without a formal determination is automatically reversed.
+
+These targets are Tier 2 founding commitments, meaning they require a formal public amendment to loosen — they cannot be quietly adjusted by administrators.
+
+## 21. Where should I start?
 
 Start with:
 

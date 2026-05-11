@@ -76,6 +76,8 @@ What it may not do is retaliate by cutting off survival access.
 
 If an essential producer refuses to cooperate or tries to punish the public, the system must protect the basic needs floor first. That can include emergency purchasing, substitute suppliers, temporary public operation, rationing during real shortage, or other lawful continuity measures.
 
+Before a company becomes the sole supplier of something essential, the system requires pre-registered backup suppliers with pre-committed procurement contracts. These contracts activate automatically — without a new government decision — if the primary supplier refuses to deliver for 14 consecutive days, exits the market, or is found to have crossed Watch-level concentration thresholds. This means the threat of a supplier walking away does not become leverage, because the system has already contracted around that threat before it materializes.
+
 The important rule is simple:
 
 > A fight with a company must not become a fight over whether people eat, receive medicine, stay warm, or keep basic transport.

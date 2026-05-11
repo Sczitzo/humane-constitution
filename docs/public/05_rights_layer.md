@@ -85,6 +85,10 @@ If the system makes a mistake, you must have:
 - continued access to the basic needs floor during review
 - public correction if the mistake is confirmed
 
+### Constitutional Integrity Panel
+
+The system includes a Constitutional Integrity Panel (CIP) — an independent 7-member body with staggered terms and constitutionally fixed funding — whose ratification is required before any Tier 1 constitutional rule can be changed. This body cannot be appointed by the governing coalition and cannot be defunded without a Tier 1 amendment. It provides structural protection against a future government rewriting fundamental rights through normal legislative channels.
+
 ### No permanent emergency rationing
 
 During a real shortage, the system may use **Shared Storehouse**, which means temporary rationing.
@@ -99,6 +103,8 @@ It must be public, time-limited, and reviewable. It cannot become the normal sys
 | A rule was applied to you by mistake | Protect basic accounts and give you a review path. |
 | Emergency rationing was started | Publish the reason, time limit, and end process. |
 | Measurement data is disputed | Default toward keeping basic access while the dispute is reviewed. |
+
+When access disputes involve identity verification or eligibility determinations, the system applies the Asymmetric Error Doctrine: it is calibrated to err toward inclusion, with published quarterly exclusion rate limits for vulnerable populations. Any exclusion lasting more than 14 days without a formal determination is automatically reversed.
 
 Silence about a serious failure is itself a failure.
 

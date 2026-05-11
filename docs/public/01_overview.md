@@ -58,6 +58,8 @@ The names matter less than the walls between them:
 - **Service Record** cannot become inherited rank.
 - **Shared Storehouse** cannot become permanent.
 
+One specific protection built into Essential Access: before any company in an essential sector (food, water, energy, housing, medicine) can legally refuse to serve, the system requires **pre-registered backup suppliers with pre-committed contracts that activate automatically** — the Compliant Alternative Supplier Pre-Registration (CASP) requirement. Crisis relief is not a political decision made after a crisis starts; the alternative supply chain is already contracted before any refusal can occur.
+
 For the source-backed architecture map behind this framing, see the [Architecture Source Map](../governance/Architecture_Source_Map.md).
 
 ---
@@ -65,6 +67,9 @@ For the source-backed architecture map behind this framing, see the [Architectur
 ## What Makes It Different
 
 This design tries to do **four hard things at once** — things most systems sacrifice one for another:
+
+> **Constitutional durability note:** Any Tier 1 amendment to the foundational rules requires co-ratification by a **Constitutional Integrity Panel (CIP)** — a 7-member independent body with staggered terms and its own budget. No single governing coalition can rewrite fundamental rules on its own.
+
 
 1. **Protect basic survival** *without* making people obey to receive it.
 2. **Keep markets** *without* letting markets decide who deserves safety.
@@ -97,9 +102,9 @@ This is a **serious design and public draft.** It is not a live government and n
 #### What still needs proof
 
 - Real pilot evidence
-- An identity system that does not become surveillance
+- An identity system that does not become surveillance. The design now includes published numerical targets under the **Asymmetric Error Doctrine (AED)**: the system is required to err toward inclusion rather than exclusion, with specific quarterly fraud tolerance ceilings and exclusion rate limits bound in the founding commitments.
 - Reliable measurement of food, housing, care, water, and energy
-- A legitimate founding group that people can trust
+- A legitimate founding group that people can trust. The founding process includes a **cascade gate**: pilots cannot begin until legitimacy artifacts are actually produced — not just designed — including consent evidence, a formal objection record, conflict-of-interest disclosures, and a completed exit rehearsal.
 
 > The right response is not faith.
 > The right response is **pressure, testing, and specific criticism.**

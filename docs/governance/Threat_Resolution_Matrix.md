@@ -218,6 +218,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **External evidence:** OECD public integrity sources anchor the risk that formally valid processes can still be manipulated without monitoring, conflict controls, and enforcement.
 - **Proof needed:** timing-monitor false-positive test, Ombuds four-hour decision drill, enforcement-manufacture red team, and appeal review.
 - **Residual risk:** intent is hard to prove under time pressure; precommitted criteria matter more than confidence after the fact.
+- **Resolution update:** Deliberate-manufacture criteria now specified in Annex AI §4.12 (P-052 ACTIVE). 24-hour Plenum window; asymmetric default favors PCRP. Open problem closed.
 
 ### T-020 - Epistemological Oracle Capture
 
@@ -226,6 +227,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Corruption route to assume:** measurement actors share standards, funders, professional assumptions, datasets, and model architecture while passing independence checks.
 - **Proof needed:** Capacity Measurement Evidence Test Package; methodology-class audit, standards-body capture review, direct-sampling pilot, and confidence-band comprehension test.
 - **Residual risk:** independence is partly social and epistemic, not just organizational; recurring review is permanent.
+- **Status note:** ADDRESSED* — methodology pilots and adversarial standards review still required.
 
 ### T-021 - Algorithmic Oracle Capture
 
@@ -234,6 +236,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Corruption route to assume:** vendors deploy shared models, hidden data pipelines, biased optimization targets, or contract incentives that satisfy formal independence while producing correlated error.
 - **Proof needed:** Capacity Measurement Evidence Test Package; AI supply-chain audit, model-correlation test, vendor conflict review, and manual fallback drill.
 - **Residual risk:** algorithmic systems can drift silently; the system needs recurring model review and non-AI physical anchors.
+- **Status note:** ADDRESSED* — methodology pilots and adversarial standards review still required.
 
 ### T-022 - Electoral Cycle Capture
 
@@ -243,6 +246,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **External evidence:** OECD public integrity indicators anchor the gap between formal rules and implementation capacity, especially when institutions are under political pressure.
 - **Proof needed:** transition-of-power simulation, administrative hollowing trigger test, budget-starvation scenario, and independent-body legitimacy review.
 - **Residual risk:** no constitutional design can fully prevent determined democratic repeal or authoritarian seizure; the project can only make hollowing visible and contested.
+- **Resolution update:** CIP specification in Annex AM §AM8 (P-051 ACTIVE): 7 members, staggered terms, constitutionally fixed funding, automatic hollowing triggers. Constitutional body and trigger infrastructure now defined.
 
 ### T-023 - Pilot External Validity Collapse
 
@@ -286,6 +290,15 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **External evidence:** Ostrom's commons research and the International Association for the Study of the Commons anchor the value and limits of local rule-making for shared-resource governance.
 - **Proof needed:** subsidiarity challenge simulation, aggregate-drift audit, soft-exception review, and floor-versus-uniform-rule case study.
 - **Residual risk:** centralization often happens through plausible individual decisions; only aggregate monitoring exposes the drift.
+
+### T-028 - Essential-Sector Refusal Leverage
+
+- **Current control:** [Annex AT](../annexes/ANNEX_AT.md) §AT6.6, [P-050](./Patch_Log.md)
+- **Resolution path:** CASP (Compliant Alternative Supplier Pre-Registration) establishes pre-committed automatic-activation contracts as primary mitigation. Public receiver authority demoted to fallback. Drill scope operationalized with 9 chokepoints and gap-window calculation requirement.
+- **Corruption route to assume:** essential-sector actors use refusal or credible threat of refusal to extract constitutional concessions, regulatory forbearance, or survival-floor policy changes.
+- **Proof needed:** CASP activation drill, chokepoint coverage audit, gap-window calculation review, and alternative-supplier readiness test.
+- **Residual risk:** pre-registration contracts can degrade if not tested; activation speed under real refusal conditions remains unproven until drilled.
+- **Resolution update:** CASP (ANNEX_AT §AT6.6, P-050 ACTIVE) establishes pre-committed automatic-activation contracts as primary mitigation. Public receiver authority demoted to fallback. Drill scope operationalized with 9 chokepoints and gap-window calculation requirement.
 
 ---
 

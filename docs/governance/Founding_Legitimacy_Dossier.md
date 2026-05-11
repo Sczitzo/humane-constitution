@@ -135,6 +135,43 @@ The table below is the authoritative row-level tracking mechanism for founding r
 
 ---
 
+## Artifact Production Sequence
+
+This section answers: in what order should these artifacts be produced, what does each require before it can be produced, and what does it unblock when complete?
+
+The two UNRESOLVED PREREQUISITE items must be resolved before any others can reach PRODUCED status — because the answers they require (what counts as consent, who counts as civil society) shape the content of every other artifact.
+
+### Step 1 — Resolve prerequisites (before any artifact can be PRODUCED)
+
+- Define "non-coercive consent" for this context: What opt-out paths exist? What is the practical cost of non-participation? Who is consulted and how?
+- Define "civil society" for the independent review: Which bodies qualify as structurally opposed to the founding coalition? What prevents the founding coalition from influencing their selection?
+
+These answers cannot come from the founding coalition alone. They require a public consultation process with published record.
+
+### Step 2 — Produce in dependency order
+
+1. **Conflict register** (requires: list of founding members; no other dependency)
+2. **Scope declaration** (requires: conflict register, so disclosed interests are visible in the scope claim)
+3. **Objection record** (requires: scope declaration published, 60-day public window open)
+4. **Independent civil-society review** (requires: scope declaration, objection record; reviewers read both before assessing)
+5. **Consent evidence** (requires: opt-out paths defined in Step 1; consultation documented)
+6. **Exit rehearsal** (requires: FC-121 unwind protocol designed; Essential Access continuity plan confirmed)
+7. **Founder sunset** (requires: scope declaration, so sunset condition is calibrated to the scope claimed)
+8. **Post-activation audit** (requires: all others PRODUCED; conducted within 90 days of activation)
+
+### Gate
+
+No pilot phase may begin until Steps 1–2 are complete for all artifacts upstream of that phase (see Pilot Evidence Roadmap Phase 0 founding cascade gate).
+
+### Estimated minimum calendar
+
+- Step 1 public consultation: ≥60 days (per P-020 disclosure window)
+- Steps 2–7: can overlap after Step 1 completes; estimated 90–180 days for a serious founding coalition with adequate resources
+- Step 8: 90 days post-activation
+- Total minimum: ~9–12 months from Step 1 initiation to Step 8 completion
+
+---
+
 ## Broader Artifact Status (legacy reference)
 
 The table below tracks the fuller set of founding artifacts defined in the Required Founding Artifacts section above. It is subordinate to the Dossier Artifact Status Register for founding-readiness purposes. **No stronger founding-legitimacy claim may be made until all rows in the register above reach PRODUCED.**

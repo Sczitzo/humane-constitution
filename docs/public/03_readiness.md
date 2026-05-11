@@ -20,7 +20,7 @@ The project is trying to prevent three collapses: survival becoming dependent on
 
 | Claim | Current status | What would make it stronger |
 |---|---|---|
-| Wealth should not buy basic needs or public power. | Designed as a core rule. | Stress tests against proxy markets and elite workarounds. |
+| Wealth should not buy basic needs or public power. | Designed as a core rule. Numerical anti-entrenchment targets (FC-140–FC-145) are now published founding commitments, not reserved placeholders. | Stress tests against proxy markets and elite workarounds. |
 | Basic survival can be protected without ending markets. | Design exists. | Pilot evidence for delivery, prices, and supply response. |
 | Voice and Service Record can avoid becoming social credit. | Limits are written. | User testing, abuse review, and strong privacy design. |
 | Real shortage can be handled more fairly than panic prices alone. | Shortage rules are written. | Emergency drills with real supply data. |
@@ -35,11 +35,11 @@ The project is trying to prevent three collapses: survival becoming dependent on
 | Constitutional text | **Written** | The main rule set exists as documents. |
 | Tool separation | **Written** | Flow, Essential Access, Voice, Service Record, and Shared Storehouse are separated in the design. |
 | Threat modeling | **Written, still active** | Many attack paths are named, but not all are proven solved. |
-| Identity and recovery | **Needs proof** | The system needs identity checks that do not become surveillance or exclusion. |
+| Identity and recovery | **Pilot gate criteria defined, proof still needed** | Pass conditions for the identity pilot are now specified in Annex AK §AK5. The system still needs a live pilot to prove those conditions can be met without surveillance or exclusion. |
 | Measuring essentials | **Needs proof** | Food, water, shelter, care, and energy capacity must be measured well enough. |
 | Economic transition | **Needs simulation** | Money, debt, business finance, and ownership changes need deeper testing. |
 | Essential-sector refusal | **Needs drills** | Oil, energy, medicine, logistics, and PBM-style intermediaries must be tested as survival-leverage actors, not only ordinary vendors. |
-| Founding legitimacy | **Dossier designed, evidence not produced** | The required founding artifacts are named, but real notice, deliberation, consent, exit rehearsal, and independent review do not exist yet. |
+| Founding legitimacy | **Dossier designed, evidence not produced** | The required founding artifacts are named and the Pilot Evidence Roadmap now includes a founding cascade gate — pilots are blocked until founding artifact production begins. All 8 dossier artifacts remain at 0 of 8 PRODUCED status. Real notice, deliberation, consent, exit rehearsal, and independent review do not exist yet. |
 | Reader app | **Working prototype** | The reader works, but still needs polish and accessibility review. |
 | Deployment | **Not ready** | This is a design and critique target, not a rollout plan. |
 

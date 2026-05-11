@@ -95,3 +95,33 @@ Use these questions when reviewing any threat, patch, annex, pilot, or public cl
 6. Does emergency authority automatically sunset, and can the public understand the sunset evidence?
 7. Can new participants enter without being permanently subordinate to early entrants?
 8. What evidence would falsify the claim that this mechanism resists the collapse state it targets?
+
+---
+
+## Recent Annex Additions
+
+This section records significant structural additions made to individual annexes after the initial architecture was established. For full threat-to-annex linkage see `ANNEX_AH.md § AH8` and `docs/governance/Provenance_Map.md`.
+
+### ANNEX_AM §AM8 — Constitutional Integrity Panel (CIP)
+
+Added by P-051. Addresses T-022 open problem: constitutional body now specified.
+
+§AM8 — Constitutional Integrity Panel (CIP): 7-member independent body with staggered terms, 0.01%-of-Flow-issuance constitutionally fixed funding, 5-of-7 quorum for Tier 1 ratification, automatic hollowing triggers (90-day vacancy, 30-day post-mortem lapse). Added by P-051. Addresses T-022 open problem: constitutional body now specified.
+
+### ANNEX_AT §AT6.6 — Compliant Alternative Supplier Pre-Registration (CASP)
+
+Added by P-050. CASP is primary T-028 mitigation; public receiver authority is fallback.
+
+§AT6.6 — CASP: mandatory pre-registration of backup suppliers with automatic-activation contracts (9 chokepoints specified, gap-window calculation required). Added by P-050. CASP is primary T-028 mitigation; public receiver authority is fallback.
+
+### ANNEX_AI §4.12 — Deliberate-Manufacture Standard
+
+Added by P-052. Closes T-019 open problem.
+
+§4.12 — Deliberate-manufacture standard: 4-criterion assessment (timing, proportionality, prior-basis, knowledge), 24-hour Plenum window, asymmetric default favoring PCRP. Added by P-052. Closes T-019 open problem.
+
+---
+
+## Founding Commitments Status
+
+FC-140 through FC-145 (AED fraud/exclusion bands) now bound. FC-052, FC-053, FC-054, FC-056, FC-072, FC-148 through FC-150 now have proposed values pending founding deliberation.

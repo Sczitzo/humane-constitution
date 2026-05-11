@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-049**
+**Running change ledger aligned to the Humane Constitution · Current through P-052**
 
 ---
 
@@ -27,22 +27,22 @@
 | P-003 | T-002 | **ACTIVE** | Critical | Replace single-gate identity with differential assurance and recovery-safe continuity. |
 | P-004 | T-007 | **ACTIVE** | Critical | Stop semantic capture through definition governance and anti-laundering rules. |
 | P-005 | T-005 | **ACTIVE** | Critical | Governance throughput: tiered CRP queues, throughput floor, emergency re-declaration. |
-| P-006 | T-006 | **PROPOSED** | Critical | Measurement lag: sentinel mandate, PCRP first-responder authority, Shared Storehouse unwind symmetry. |
-| P-008 | T-008 | **PROPOSED** | High | Elite formation: legibility audit, diversity mandates, verification independence, cohort cooling. |
-| P-009 | T-009 | **PROPOSED** | Med-High | Grace exploitation: graduated renewal, cross-quarter history, collusion detection, Service Record slow-decay. |
-| P-011 | T-011 | **PROPOSED** | Critical | Narrative hardening: RPCP, pre-committed failure doctrine, CFRL, adversarial narrative simulation. |
-| P-012 | T-012–T-015 | **PROPOSED** | Critical | Interface hardening: oracle independence, categorical throughput floors, deadlock protocol, demand-context flag. |
-| P-013 | T-016 | **PROPOSED** | Critical | FAP integrity: representativeness standard, deadlock timeline, audit epistemic independence, anti-gaming Tier 2. |
-| P-014 | T-017 | **PROPOSED** | Critical | Bootstrap activation: one-time founding instrument for P-013 activation only. |
-| P-015 | T-018 / T-019 | **PROPOSED** | High | PCRP attack surface: false-trigger escalation path, exhaustion alert, manufactured flag assessment. |
+| P-006 | T-006 | **ACTIVE** | Critical | Measurement lag: sentinel mandate, PCRP first-responder authority, Shared Storehouse unwind symmetry. |
+| P-008 | T-008 | **ACTIVE** | High | Elite formation: legibility audit, diversity mandates, verification independence, cohort cooling. |
+| P-009 | T-009 | **ACTIVE** | Med-High | Grace exploitation: graduated renewal, cross-quarter history, collusion detection, Service Record slow-decay. |
+| P-011 | T-011 | **ACTIVE** | Critical | Narrative hardening: RPCP, pre-committed failure doctrine, CFRL, adversarial narrative simulation. |
+| P-012 | T-012–T-015 | **ACTIVE** | Critical | Interface hardening: oracle independence, categorical throughput floors, deadlock protocol, demand-context flag. |
+| P-013 | T-016 | **ACTIVE** | Critical | FAP integrity: representativeness standard, deadlock timeline, audit epistemic independence, anti-gaming Tier 2. |
+| P-014 | T-017 | **ACTIVE** | Critical | Bootstrap activation: one-time founding instrument for P-013 activation only. |
+| P-015 | T-018 / T-019 | **ACTIVE** | High | PCRP attack surface: false-trigger escalation path, exhaustion alert, manufactured flag assessment. |
 | P-016 | T-002 | **PROPOSED** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. |
 | P-017 | T-020 / T-021 | **ACTIVE** | Critical | Oracle epistemological and algorithmic independence: methodology-class diversity, AI supply chain transparency, physical ground-truth requirement. Numerical floors (N≥5, ≥3 classes, ≤0.30 pairwise correlation, ≥1 adversarial seat) bound in `/founding/commitments.md` FC-030/FC-031/FC-032/FC-033. |
 | P-018 | T-022 | **PROPOSED** | Critical | Electoral cycle resilience: entrenchment ladder, Essential Access floor minimum persistence, administrative hollowing triggers, transition continuity protocol. |
-| P-019 | T-023 | **PROPOSED** | Med-High | Pilot external validity gate: stress-condition pilot requirement, red-team challenge window, crisis simulation mandate. |
+| P-019 | T-023 | **ACTIVE** | Med-High | Pilot external validity gate: stress-condition pilot requirement, red-team challenge window, crisis simulation mandate. |
 | P-020 | T-017 | **PROPOSED** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
 | P-021 | — | **PROPOSED** | High | Register disclosure protocol: bifurcation into public and restricted versions; operational security for detection thresholds. |
 | P-022 | T-024 | **ACTIVE** | Critical | Shared Storehouse oracle-failure fallback: conservative hold, 48h REB first-responder window, 72h governance handoff, FC-100 14-day restoration verification, reconciliation review. Annex AQ ACTIVE. |
-| P-023 | T-025 | **PROPOSED** | High | Demurrage sector-capture: contract-commitment architecture, zero exemptions, demurrage-as-discipline, milestone escrow. |
+| P-023 | T-025 | **ACTIVE** | High | Demurrage sector-capture: contract-commitment architecture, zero exemptions, demurrage-as-discipline, milestone escrow. |
 | P-024 | T-009 / TR-07 / T-018 | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
 | P-025 | T-008 | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | Founding Order — Subsidiarity, Consent & Exit: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with Essential Access continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/founding/order/` directory. |
@@ -68,6 +68,9 @@
 | P-047 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector conglomerate transition — profitable compliant path, refusal survivability tests, public fallback capacity, and numeric evidence anchors |
 | P-048 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector refusal test package — sector drills, FC-194 through FC-201 calibration rows, Annex AT receiver/licensing triggers, public explainer, and evidence-source expansion |
 | P-049 | Multiple evidence-gap bridges | **ACTIVE** | High | Cross-register bridge pass — aligns Hardening Queue, Open Problems, Pilot Roadmap, Public Readiness, README, and evidence-gap language with founding artifact status and essential-sector refusal testing |
+| P-050 | T-028 | **ACTIVE** | Critical | Compliant Alternative Supplier Pre-Registration (CASP): mandatory pre-registration of backup suppliers with automatic-activation contracts before essential-sector procurement renewal; gap-window calculation requirement; adversarial observation requirement for drill-secure classification. ANNEX_AT §AT6.6. |
+| P-051 | T-022 | **ACTIVE** | Critical | Constitutional Integrity Panel (CIP): 7-member independent body with staggered terms, constitutionally fixed funding (0.01% of annual Flow issuance), multi-body appointment preventing governing-coalition control, 5-of-7 quorum for Tier 1 ratification, automatic review triggers for institutional vacancy or publication lapses. ANNEX_AM §AM8. |
+| P-052 | T-019 | **ACTIVE** | High | Federated Ombuds deliberate-manufacture standard: pre-committed 4-criterion assessment (timing, proportionality, prior-basis, knowledge), 24-hour Plenum decision window, asymmetric default favoring PCRP activation when evidence is inconclusive, manufactured-flag referral to Enforcement Panel. ANNEX_AI §4.12. |
 
 ---
 
@@ -229,11 +232,9 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ## P-005 through P-012 — Governance and Operational Resilience
 
-**Status: PROPOSED.** These patches are not yet operative. They become operative only when formally integrated into the Humane Constitution and status updated to ACTIVE.
-
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-005 | T-005 | **PROPOSED** | Critical | structural + procedural + monitoring |
+| P-005 | T-005 | **ACTIVE** | Critical | structural + procedural + monitoring |
 
 ### P-005 — Governance Throughput Hardening
 
@@ -251,7 +252,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-006 | T-006 | **PROPOSED** | Critical | structural + authority definition + measurement architecture |
+| P-006 | T-006 | **ACTIVE** | Critical | structural + authority definition + measurement architecture |
 
 ### P-006 — Measurement Lag and Supply Shock Hardening
 
@@ -269,7 +270,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-008 | T-008 | **PROPOSED** | High | structural + measurement + institutional design |
+| P-008 | T-008 | **ACTIVE** | High | structural + measurement + institutional design |
 
 ### P-008 — Bureaucratic Elite Formation Hardening
 
@@ -288,7 +289,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-011 | T-011 | **PROPOSED** | Critical | communication architecture + transparency + pre-commitment |
+| P-011 | T-011 | **ACTIVE** | Critical | communication architecture + transparency + pre-commitment |
 
 ### P-011 — Narrative Attack Surface Hardening
 
@@ -306,7 +307,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-012 | T-012/013/014/015 | **PROPOSED** | Critical | structural + protocol + measurement |
+| P-012 | T-012/013/014/015 | **ACTIVE** | Critical | structural + protocol + measurement |
 
 ### P-012 — Interface Hardening and Deadlock Prevention
 
@@ -324,7 +325,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-009 | T-009 | **PROPOSED** | Med-High | behavioral + verification + structural |
+| P-009 | T-009 | **ACTIVE** | Med-High | behavioral + verification + structural |
 
 ### P-009 — Grace Exploitation Loop Hardening
 
@@ -343,7 +344,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-013 | T-016 | **PROPOSED** | Critical | structural + governance + audit architecture |
+| P-013 | T-016 | **ACTIVE** | Critical | structural + governance + audit architecture |
 
 ### P-013 — Formal Acceptance Process Integrity
 
@@ -361,7 +362,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-014 | T-017 | **PROPOSED** | Critical | founding governance + one-time exception |
+| P-014 | T-017 | **ACTIVE** | Critical | founding governance + one-time exception |
 
 ### P-014 — P-013 Bootstrap Activation (One-Time Founding Instrument)
 
@@ -383,13 +384,13 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 ## P-013 through P-025 — Founding Mechanics and Attack Surface Closure
 
-*Red-team hardening cycle. All patches PROPOSED. Addresses T-018 through T-023 and closes residual risks identified in T-001, T-002, T-017, and the register's own operational security posture.*
+*Red-team hardening cycle. Addresses T-018 through T-023 and closes residual risks identified in T-001, T-002, T-017, and the register's own operational security posture.*
 
 ---
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-015 | T-018 / T-019 | **PROPOSED** | High | structural + protocol + escalation path |
+| P-015 | T-018 / T-019 | **ACTIVE** | High | structural + protocol + escalation path |
 
 ### P-015 — PCRP Attack Surface Hardening
 
@@ -411,7 +412,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-016 | T-002 | **PROPOSED** | Critical | constitutional commitment + quantified doctrine |
+| P-016 | T-002 | **ACTIVE** | Critical | constitutional commitment + quantified doctrine |
 
 ### P-016 — Identity Asymmetric Error Doctrine
 
@@ -463,7 +464,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-018 | T-022 | **PROPOSED** | Critical | constitutional architecture + political durability |
+| P-018 | T-022 | **ACTIVE** | Critical | constitutional architecture + political durability |
 
 ### P-018 — Electoral Cycle Resilience
 
@@ -487,7 +488,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-019 | T-023 | **PROPOSED** | Med-High | evidence architecture + scale-up gating |
+| P-019 | T-023 | **ACTIVE** | Med-High | evidence architecture + scale-up gating |
 
 ### P-019 — Pilot External Validity Gate
 
@@ -509,7 +510,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-020 | T-017 | **PROPOSED** | Critical | founding governance + window extension |
+| P-020 | T-017 | **ACTIVE** | Critical | founding governance + window extension |
 
 ### P-020 — Founding Window Extension
 
@@ -532,7 +533,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-021 | — | **PROPOSED** | High | register architecture + disclosure policy |
+| P-021 | — | **ACTIVE** | High | register architecture + disclosure policy |
 
 ### P-021 — Register Disclosure Protocol
 
@@ -587,11 +588,11 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-023 | T-025 | **PROPOSED** | High | Flow monetary architecture / demurrage design |
+| P-023 | T-025 | **ACTIVE** | High | Flow monetary architecture / demurrage design |
 
 ### P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)
 
-- **Status:** PROPOSED
+- **Status:** ACTIVE
 
 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md)
 
@@ -668,27 +669,30 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-002 | P-003 | **ACTIVE** | Annex AB |
 | T-004 | P-002 | **ACTIVE** | Annex AB |
 | T-007 | P-004 | **ACTIVE** | Annex AB |
-| T-005 | P-005 | **PROPOSED** | Annex AC1 |
-| T-006 | P-006 | **PROPOSED** | Annex AC2 |
-| T-008 | P-008 | **PROPOSED** | Annex AC3 |
-| T-009 | P-009 | **PROPOSED** | Annex AF |
-| T-011 | P-011 | **PROPOSED** | Annex AD |
-| T-012–T-015 | P-012 | **PROPOSED** | Annex AE |
-| T-016 | P-013 | **PROPOSED** | Annex AG |
-| T-017 | P-014 | **PROPOSED** | Annex AH |
-| T-018 / T-019 | P-015 | **PROPOSED** | Annex AP · Annex AI |
-| T-002 | P-016 | **PROPOSED** | Annex AK |
+| T-005 | P-005 | **ACTIVE** | Annex AC1 |
+| T-006 | P-006 | **ACTIVE** | Annex AC2 |
+| T-008 | P-008 | **ACTIVE** | Annex AC3 |
+| T-009 | P-009 | **ACTIVE** | Annex AF |
+| T-011 | P-011 | **ACTIVE** | Annex AD |
+| T-012–T-015 | P-012 | **ACTIVE** | Annex AE |
+| T-016 | P-013 | **ACTIVE** | Annex AG |
+| T-017 | P-014 | **ACTIVE** | Annex AH |
+| T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
+| T-002 | P-016 | **ACTIVE** | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
-| T-022 | P-018 | **PROPOSED** | Annex AM |
-| T-023 | P-019 | **PROPOSED** | Annex AN |
-| T-017 | P-020 | **PROPOSED** | Annex AH2 |
-| — | P-021 | **PROPOSED** | Annex AO |
+| T-022 | P-018 | **ACTIVE** | Annex AM |
+| T-023 | P-019 | **ACTIVE** | Annex AN |
+| T-017 | P-020 | **ACTIVE** | Annex AH2 |
+| — | P-021 | **ACTIVE** | Annex AO |
 | T-024 | P-022 | **ACTIVE** | Annex AQ · FC-100 |
-| T-025 | P-023 | **PROPOSED** | Annex AR |
+| T-025 | P-023 | **ACTIVE** | Annex AR |
 | T-009 / TR-07 / T-018 | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
 | T-008 | P-025 | **ACTIVE** | Annex AI · FC-090/091/092 |
 | T-026 / T-027 | P-026 | **ACTIVE** | `founding/order/` · FC-120/121/122 |
 | T-005 / T-008 | P-027 | **ACTIVE** | `Humane_Constitution.md` · `docs/public/04_white_paper.md` |
+| T-028 | P-050 | **ACTIVE** | ANNEX_AT §AT6.6 |
+| T-022 | P-051 | **ACTIVE** | ANNEX_AM §AM8 |
+| T-019 | P-052 | **ACTIVE** | ANNEX_AI §4.12 |
 
 ---
 
@@ -1240,3 +1244,41 @@ Multiple vignettes in the Fairness Vignette Library showed that the constitution
 - Cross-boundary delivery through intermediary organizations could be used to build dependency relationships. Mitigated by: the no-enrollment-coercion rule (§AY3.3) prohibits conditioning delivery on future enrollment.
 
 **Residual risk:** The Register creates accountability; it does not create capacity. Physical infrastructure, institution enrollment, and intermediary organization funding must follow independently. P-052 makes the gap visible and governed; it does not close the gap operationally.
+
+---
+
+## P-050 through P-052 — Supply Chain Integrity, Constitutional Integrity Panel, and Ombuds Manufacture Standard
+
+### P-050 — Compliant Alternative Supplier Pre-Registration (CASP)
+
+**Threat addressed:** T-028  
+**Status:** ACTIVE | **Priority:** Critical | **Annex:** ANNEX_AT §AT6.6
+
+- **Introduced design:** Mandatory pre-registration of backup suppliers with automatic-activation contracts before any essential-sector procurement renewal. Procurement authorities must calculate and publish the gap-window — the period between a primary supplier exit and backup supplier operational readiness — before each renewal cycle. Any drill classified as drill-secure requires adversarial observation by at least one party outside the procurement authority's organizational chain.
+- **Dependencies:** Essential-sector supplier registry, automatic-activation contract templates approved by the CRP, gap-window calculation methodology published and P-004-protected.
+- **New risks introduced:** Pre-registered backup suppliers could become nominal alternatives with no real capacity. Mitigated by: adversarial observation requirement for drill-secure drills, and gap-window publication creates accountability for calibration accuracy.
+- **Residual risk:** Supplier pre-registration does not guarantee backup capacity is operationally ready in all stress conditions. Gap-window calculation relies on supplier self-reporting, which is subject to optimism bias.
+
+---
+
+### P-051 — Constitutional Integrity Panel (CIP)
+
+**Threat addressed:** T-022  
+**Status:** ACTIVE | **Priority:** Critical | **Annex:** ANNEX_AM §AM8
+
+- **Introduced design:** 7-member independent body with staggered terms. Funding is constitutionally fixed at 0.01% of annual Flow issuance — not subject to legislative appropriation and not reducible by the governing coalition. Appointment requires multi-body sign-off drawn from sources that cannot be simultaneously controlled by a single governing coalition. 5-of-7 quorum required for Tier 1 ratification. Automatic review triggers fire when institutional vacancies exceed 90 days or when mandatory publication lapses exceed 30 days, without requiring the governing coalition to initiate.
+- **Dependencies:** Founding appointment of the initial 7-member panel before constitutional activation. Staggered term schedule published at founding. Flow issuance tracking system for the 0.01% funding calculation.
+- **New risks introduced:** Multi-body appointment requires identifying genuinely independent appointing bodies at founding, which may be difficult in contexts with thin civil society. Mitigated by: P-020 oppose-coalition nomination pathways provide analogous alternatives.
+- **Residual risk:** Constitutional entrenchment of CIP funding can still be dismantled by a sufficiently determined supermajority willing to use the Tier 1 amendment process. The CIP raises the political cost; it does not make repeal impossible.
+
+---
+
+### P-052 — Federated Ombuds Deliberate-Manufacture Standard
+
+**Threat addressed:** T-019  
+**Status:** ACTIVE | **Priority:** High | **Annex:** ANNEX_AI §4.12
+
+- **Introduced design:** Pre-committed 4-criterion assessment that the Ombuds Plenum must apply when evaluating whether a demand-context flag was deliberately manufactured: (1) timing — whether the triggering enforcement action was initiated within a sentinel indicator movement window; (2) proportionality — whether the enforcement action's scope is proportionate to the stated enforcement basis; (3) prior basis — whether enforcement basis documentation existed before the sentinel indicator moved; (4) knowledge — whether the enforcing authority had actual or constructive knowledge of sentinel indicator status at initiation. The Plenum must reach a decision within 24 hours. When evidence is inconclusive across all four criteria, the asymmetric default favors PCRP activation rather than flag maintenance. A manufactured-flag finding is automatically referred to the Enforcement Panel, not held within the Ombuds system.
+- **Dependencies:** Federated Ombuds fully constituted per P-025 (≥4 sub-Ombuds seated). Cross-register timing monitor operative (Annex AI §3.3). Enforcement Panel charter must include manufactured-flag referrals as a defined intake category.
+- **New risks introduced:** 24-hour decision window creates pressure that may produce errors in ambiguous cases. Mitigated by: asymmetric default toward PCRP activation when inconclusive, which is the conservative failure mode.
+- **Residual risk:** The 4-criterion assessment cannot definitively establish intent. A sophisticated actor who sequences enforcement actions to avoid triggering all four criteria simultaneously can manufacture a flag while technically passing the assessment. Accepted as bounded leakage — the standard raises the operational complexity and coordination cost of deliberate manufacture without eliminating it.
