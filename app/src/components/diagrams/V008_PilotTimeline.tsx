@@ -24,12 +24,22 @@ export function V008_PilotTimeline({ onInternalLink }: DiagramProps) {
   return (
     <DiagramShell figId="V-008" title="Pilot Phase Sequence" nodes={PHASES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 700 130" className="w-full" style={{ height: 130 }}>
-        <line x1={startX} y1={cy} x2={startX + spacing * 10} y2={cy} stroke={THEME.divider} strokeWidth={2} />
+        <line x1={startX} y1={cy} x2={startX + spacing * 10} y2={cy} stroke={THEME.divider} strokeWidth={2}
+          strokeDasharray={600} strokeDashoffset={600}>
+          <animate attributeName="strokeDashoffset" from={600} to={0} dur="0.9s" begin="0.05s" fill="freeze" />
+        </line>
         {PHASES.map((p, i) => {
           const cx = startX + i * spacing
           const isActive = activeNodeId === p.id
           return (
-            <g key={p.id} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick(p.id)}>
+            <g key={p.id} opacity={0} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick(p.id)}>
+              <animate attributeName="opacity" from={0} to={1} dur="0.3s" begin={`${0.15 + i * 0.07}s`} fill="freeze" />
+              {isActive && (
+                <circle cx={cx} cy={cy} r={r + 6} fill="none" stroke={p.accent} strokeWidth={1} opacity={0.4}>
+                  <animate attributeName="r" values={`${r + 4};${r + 12};${r + 4}`} dur="1.8s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.4;0;0.4" dur="1.8s" repeatCount="indefinite" />
+                </circle>
+              )}
               <circle cx={cx} cy={cy} r={r} fill={THEME.cardBg} stroke={p.accent} strokeWidth={isActive ? 3 : 1.5}
                 style={{ filter: isActive ? `drop-shadow(0 0 6px ${p.accent})` : undefined }} />
               <text x={cx} y={cy + 5} textAnchor="middle" fontSize={10} fontWeight={700} fill={p.accent} fontFamily="monospace">{p.phase}</text>

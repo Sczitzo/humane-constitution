@@ -49,12 +49,22 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
       onInternalLink={onInternalLink}
     >
       <svg viewBox="0 0 600 230" className="w-full" style={{ height: 230 }}>
-        {tiers.map(t => (
+        {tiers.map((t, i) => (
           <g
             key={t.id}
+            opacity={0}
             style={{ cursor: 'pointer', filter: activeNodeId === t.id ? `drop-shadow(0 0 6px ${t.stroke})` : undefined }}
             onClick={() => handleNodeClick(t.id)}
           >
+            <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.06 + (2 - i) * 0.12}s`} fill="freeze" />
+            {activeNodeId === t.id && (
+              <rect
+                x={cx - t.w / 2 - 2} y={t.y - 2} width={t.w + 4} height={62}
+                rx={7} fill="none" stroke={t.stroke} strokeWidth={1.5} opacity={0.5}
+              >
+                <animate attributeName="opacity" values="0.5;0;0.5" dur="1.8s" repeatCount="indefinite" />
+              </rect>
+            )}
             <rect
               x={cx - t.w / 2} y={t.y} width={t.w} height={58}
               rx={6} fill={t.fill}

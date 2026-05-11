@@ -69,7 +69,14 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
           const y = 130 - i * 22
           const isActive = activeNodeId === id
           return (
-            <g key={id} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${colors[i]})` : undefined }} onClick={() => handleNodeClick(id)}>
+            <g key={id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${colors[i]})` : undefined }} onClick={() => handleNodeClick(id)}>
+              <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.08 + i * 0.1}s`} fill="freeze" />
+              {isActive && (
+                <rect x={x} y={y} width={140} height={52} rx={6}
+                  fill="none" stroke={colors[i]} strokeWidth={1.5} opacity={0.5}>
+                  <animate attributeName="opacity" values="0.5;0;0.5" dur="1.8s" repeatCount="indefinite" />
+                </rect>
+              )}
               <rect x={x} y={y} width={140} height={52} rx={6} fill={fills[i]} stroke={colors[i]} strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal} />
               <text x={x + 70} y={y + 22} textAnchor="middle" fontSize={11} fontWeight={700} fill={colors[i]} fontFamily="monospace">{labels[i]}</text>
               <text x={x + 70} y={y + 39} textAnchor="middle" fontSize={10} fill={THEME.subtext} fontFamily="monospace">{subs[i]}</text>
