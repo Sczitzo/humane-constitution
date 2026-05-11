@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-052**
+**Running change ledger aligned to the Humane Constitution · Current through P-055**
 
 ---
 
@@ -71,6 +71,9 @@
 | P-050 | T-028 | **ACTIVE** | Critical | Compliant Alternative Supplier Pre-Registration (CASP): mandatory pre-registration of backup suppliers with automatic-activation contracts before essential-sector procurement renewal; gap-window calculation requirement; adversarial observation requirement for drill-secure classification. ANNEX_AT §AT6.6. |
 | P-051 | T-022 | **ACTIVE** | Critical | Constitutional Integrity Panel (CIP): 7-member independent body with staggered terms, constitutionally fixed funding (0.01% of annual Flow issuance), multi-body appointment preventing governing-coalition control, 5-of-7 quorum for Tier 1 ratification, automatic review triggers for institutional vacancy or publication lapses. ANNEX_AM §AM8. |
 | P-052 | T-019 | **ACTIVE** | High | Federated Ombuds deliberate-manufacture standard: pre-committed 4-criterion assessment (timing, proportionality, prior-basis, knowledge), 24-hour Plenum decision window, asymmetric default favoring PCRP activation when evidence is inconclusive, manufactured-flag referral to Enforcement Panel. ANNEX_AI §4.12. |
+| P-053 | Insider retaliation / reporter protection | **ACTIVE** | Critical | Whistleblower Protection and Anti-Retaliation Protocol: administrative freeze on respondent write-access from filing; automatic escalation of retaliatory modifications; 45-day "under review" cap; restoration on exoneration. ANNEX_AW; Article VII reporter-protection clause. |
+| P-054 | Identity disclosure as safety vector | **ACTIVE** | Critical | Confidential Enrollment and Safety-Identity Protocol: cryptographically sealed identity for safety-compromised persons; address-blind delivery; 30-day emergency enrollment; 72-hour token for undocumented persons; sealed-record governance. ANNEX_AX; Article II safety-shielded enrollment clause. |
+| P-055 | Delivery gap between guarantee and operation | **ACTIVE** | Critical | Delivery Sufficiency Standard: four operational conditions (path exists, accessible, monitored, accountable party); Delivery Sufficiency Register published quarterly; seven founding-population entries; cross-boundary delivery accounting. ANNEX_AY; Article IV delivery-sufficiency obligation. |
 
 ---
 
@@ -1164,7 +1167,7 @@ Recent hardening work created stronger test artifacts, but the live dashboards s
 
 ---
 
-### P-050 — Whistleblower Protection and Anti-Retaliation Protocol
+### P-053 — Whistleblower Protection and Anti-Retaliation Protocol
 
 **Threats addressed:** Insider retaliation risk against community alert reporters and Service Record audit requesters; Priya-type attack path (retaliatory record modification by named respondent before investigation completes).
 **Status:** ACTIVE | **Priority:** Critical
@@ -1191,7 +1194,7 @@ The community alert pathway (Article VII) and Service Record audit mechanism (Ar
 
 ---
 
-### P-051 — Confidential Enrollment and Safety-Identity Protocol
+### P-054 — Confidential Enrollment and Safety-Identity Protocol
 
 **Threats addressed:** Identity disclosure as a safety vector for domestic violence survivors, trafficking victims, and persons in safety-compromised situations; Elena-type attack path (wallet identity creates tracking vector for abuser via compromised administrator).
 **Status:** ACTIVE | **Priority:** Critical
@@ -1200,7 +1203,7 @@ The community alert pathway (Article VII) and Service Record audit mechanism (Ar
 **Constitutional text:** [ANNEX_AX.md](../annexes/ANNEX_AX.md); Article II (safety-shielded enrollment clause)
 
 **Problem diagnosed:**
-The one-person-one-wallet requirement links identity to an administrator-visible record. For persons in documented safety situations, this creates a tracking vector for abusers, traffickers, or persecutors who have access to administrative channels. The Elena vignette documented this gap. The existing Asymmetric Error Doctrine (Annex AK) treats this as a calibration problem; P-051 treats it as a safety override — for persons in documented danger, the safety interest overrides the normal fraud/exclusion calibration.
+The one-person-one-wallet requirement links identity to an administrator-visible record. For persons in documented safety situations, this creates a tracking vector for abusers, traffickers, or persecutors who have access to administrative channels. The Elena vignette documented this gap. The existing Asymmetric Error Doctrine (Annex AK) treats this as a calibration problem; P-054 treats it as a safety override — for persons in documented danger, the safety interest overrides the normal fraud/exclusion calibration.
 
 **Introduced design:**
 
@@ -1219,7 +1222,7 @@ The one-person-one-wallet requirement links identity to an administrator-visible
 
 ---
 
-### P-052 — Delivery Sufficiency Standard
+### P-055 — Delivery Sufficiency Standard
 
 **Threats addressed:** Gap between constitutional guarantee of Essential Access and operational delivery for incarcerated persons, non-enrolled communities, persons unable to use digital interfaces, and persons in non-consenting jurisdictions.
 **Status:** ACTIVE | **Priority:** Critical
@@ -1243,11 +1246,11 @@ Multiple vignettes in the Fairness Vignette Library showed that the constitution
 - The Register could become a bureaucratic accounting exercise that satisfies the letter while missing the spirit. Mitigated by: the AY1 standard requires accessibility without extraordinary effort (not just existence of a path), and Federated Ombuds escalation authority for missed timelines.
 - Cross-boundary delivery through intermediary organizations could be used to build dependency relationships. Mitigated by: the no-enrollment-coercion rule (§AY3.3) prohibits conditioning delivery on future enrollment.
 
-**Residual risk:** The Register creates accountability; it does not create capacity. Physical infrastructure, institution enrollment, and intermediary organization funding must follow independently. P-052 makes the gap visible and governed; it does not close the gap operationally.
+**Residual risk:** The Register creates accountability; it does not create capacity. Physical infrastructure, institution enrollment, and intermediary organization funding must follow independently. P-055 makes the gap visible and governed; it does not close the gap operationally.
 
 ---
 
-## P-050 through P-052 — Supply Chain Integrity, Constitutional Integrity Panel, and Ombuds Manufacture Standard
+## P-050 through P-052 — CASP, Constitutional Integrity Panel, and Ombuds Manufacture Standard
 
 ### P-050 — Compliant Alternative Supplier Pre-Registration (CASP)
 

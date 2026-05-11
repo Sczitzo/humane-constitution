@@ -60,9 +60,9 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - [Annex AS](./ANNEX_AS.md) — makes high-impact witness statements carry risk if false.
 - [Annex AT](./ANNEX_AT.md) — trade rules for protecting basic domestic capacity.
 - [Annex AV](./ANNEX_AV.md) — requires two independent checks before top-level rules can be touched.
-- **[ANNEX AW](ANNEX_AW.md)** — Whistleblower Protection and Anti-Retaliation Protocol · P-050 · ACTIVE
-- **[ANNEX AX](ANNEX_AX.md)** — Confidential Enrollment and Safety-Identity Protocol · P-051 · ACTIVE
-- **[ANNEX AY](ANNEX_AY.md)** — Delivery Sufficiency Standard and Register · P-052 · ACTIVE
+- **[ANNEX AW](ANNEX_AW.md)** — Whistleblower Protection and Anti-Retaliation Protocol · P-053 · ACTIVE
+- **[ANNEX AX](ANNEX_AX.md)** — Confidential Enrollment and Safety-Identity Protocol · P-054 · ACTIVE
+- **[ANNEX AY](ANNEX_AY.md)** — Delivery Sufficiency Standard and Register · P-055 · ACTIVE
 
 ## Reading rule
 
