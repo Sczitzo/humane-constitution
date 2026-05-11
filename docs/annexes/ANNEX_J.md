@@ -19,7 +19,7 @@ The protocol therefore adopts a corridor rather than a sacred number.
 - **Household savings floor — the universal bucket:** every enrolled person receives an identical demurrage-free savings threshold equal to 18 months of the published regional median consumption expenditure. Below this threshold, Flow holds its value with no decay. Above it, the excess decays at the default demurrage rate. The threshold is the same for every person regardless of income, wealth, contribution level, or household composition — a person with 10M Flow and a person with 15,000 Flow each have the same protected bucket. Only the portion above the threshold decays. This is not a means-tested benefit; it is a universal floor on savings dignity, and it is published as a single number for each region.
 - **Why 18 months:** 6 months covers a typical job search. An additional 12 months covers slow markets, caregiving transitions, retraining, disability onset, or any other life disruption that makes fast re-employment impossible. 18 months is the point at which savings are no longer emergency planning and start to function as passive wealth preservation — which is what demurrage is designed to address.
 - **Operating-float exemption:** enterprises receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis. Balances above this threshold require either ordinary demurrage treatment or a protected-capital pathway. Enterprise float is separate from and does not reduce the household savings floor — an owner-operator receives both their personal household floor and the enterprise operating-float exemption.
-- **Equivalence rule:** any asset or instrument above the household-safe-harbor threshold that functions primarily as a non-decaying store of value — including foreign currency, collectible portfolios, non-productive durable stockpiles, or equivalent wrappers — is subject to review for Flow-equivalent carrying-cost treatment regardless of legal form.
+- **Equivalence rule:** any asset or instrument above the household-safe-harbor threshold that functions primarily as a non-decaying store of value — including foreign currency, collectible portfolios, non-productive durable stockpiles, or equivalent wrappers — is subject to review for Flow-equivalent carrying-cost treatment regardless of legal form. Equity compensation (shares, options, or equity-equivalent instruments received as payment for work) is explicitly covered by this rule: equity holdings are valued at their published Flow-equivalent market price and counted toward the holder's total balance for demurrage assessment purposes. Demurrage is assessed on the holder's idle Flow balance, but the threshold at which demurrage begins is determined by adding Flow holdings and equity Flow-equivalent value together. A person who receives equity above the floor cannot hold that equity as a demurrage-free store of value simply because it is not denominated in Flow. Dividends or distributions paid in additional equity are treated as Flow-equivalent income on the date of receipt and added to the balance assessment immediately. This rule applies regardless of whether the equity was received as worker compensation, founder equity, or investment return.
 - **Concentrated balances** above published thresholds may face higher effective carrying cost through progressive idle-balance rules even when the headline demurrage rate stays unchanged.
 - **Success signals:** lower inactive concentration, lower essential-goods speculation, healthy project starts, stable payroll timing, no material collapse in average project duration, and no evidence that ordinary emergency savings are being eroded by demurrage before the household floor is exceeded.
 
@@ -66,6 +66,24 @@ The protocol therefore adopts a corridor rather than a sacred number.
 | 500,000 Flow | 2,365 Flow/month | 2,365 Flow/month | ✓ Identical |
 
 The rate is the same. The bucket is the same. The only difference is how much of a wealthy person's balance sits above the floor — and that is the intended difference.
+
+---
+
+**Equity compensation — the loophole that does not exist**
+
+A worker receives 50,000 Flow worth of shares in their employer as part of annual compensation. They also hold 10,000 Flow in cash.
+
+| Asset | Flow-equivalent value | Counts toward balance? |
+| :--- | ---: | :--- |
+| Cash (Flow) | 10,000 Flow | Yes |
+| Employer shares (equity) | 50,000 Flow | Yes — valued at market price |
+| **Total assessed balance** | **60,000 Flow** | — |
+| Floor | 27,000 Flow | — |
+| **Above-floor amount** | **33,000 Flow** | Demurrage assessed on idle Flow holdings |
+
+The worker holds 10,000 Flow in cash. Their above-floor total is 33,000 Flow. Demurrage is assessed on their idle Flow balance (10,000 Flow) as if they are already 33,000 Flow above the floor — meaning the full 10,000 Flow cash balance is assessed at demurrage rate. The equity itself is not forcibly liquidated, but it eliminates the floor protection for the cash balance.
+
+At scale: an executive receives 2,000,000 Flow worth of equity and holds 50,000 Flow in cash. Their total assessed balance is 2,050,000 Flow — far above the 27,000 Flow floor. Their entire 50,000 Flow cash balance is assessed at demurrage rate. Paying compensation in shares rather than Flow does not reduce the demurrage obligation. The route is closed.
 
 ---
 
