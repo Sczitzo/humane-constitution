@@ -1,12 +1,12 @@
 // app/src/components/diagrams/V008_PilotTimeline.tsx
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
 import { InfoCard, type InfoCardData } from './InfoCard'
 
-const PHASES: Array<DiagramNode & { short: string; phase: string }> = [
+const PHASES: Array<DiagramNode & { phase: string; short: string }> = [
   { id: 'p0',  phase: 'P0',  short: 'Founding',      label: 'Phase 0 — Founding Cascade Gate',             definition: 'All founding legitimacy artifacts must reach PRODUCED status before any pilot phase begins. Blocks T-017 recurrence.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.ss.accent,        accentBg: THEME.ss.accentBg },
   { id: 'p1',  phase: 'P1',  short: 'Comprehension',  label: 'Phase 1 — Public Understanding',              definition: 'Skeptical general readers must understand Flow, Essential Access, Voice, Service Record, and Shared Storehouse without expert help.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.flow.accent,      accentBg: THEME.flow.accentBg },
   { id: 'p2',  phase: 'P2',  short: 'Identity',       label: 'Phase 2 — Identity & Recovery',               definition: 'People can recover access without surveillance, exclusion, or fraud collapse. False exclusion stays below published threshold.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.flow.accent,      accentBg: THEME.flow.accentBg },
@@ -20,79 +20,136 @@ const PHASES: Array<DiagramNode & { short: string; phase: string }> = [
   { id: 'p10', phase: 'P10', short: 'Drift/Founding',  label: 'Phase 10 — Implementation Drift & Founding Legitimacy', definition: 'Hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure. Drift and founding failures visible before activation.', docLink: 'Pilot_Evidence_Roadmap.md', accent: THEME.neutral.accent, accentBg: THEME.neutral.accentBg },
 ]
 
+const W = 680, NODE_Y = 97, NODE_R = 10, RAIL_LEFT = 40, RAIL_RIGHT = W - 40
+
 export function V008_PilotTimeline({ onInternalLink }: DiagramProps) {
+  const [activePhase, setActivePhase] = useState(0)
   const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
-  const r = 22, spacing = 60, startX = 36, cy = 60
+
+  useEffect(() => {
+    const t = setInterval(() => setActivePhase(p => (p + 1) % PHASES.length), 2000)
+    return () => clearInterval(t)
+  }, [])
 
   function handlePhaseClick(p: typeof PHASES[0], e: React.MouseEvent) {
-    if (infoCard?.title === p.label) {
-      setInfoCard(null)
-    } else {
-      setInfoCard({ title: p.label, description: p.definition, accentColor: p.accent, position: { x: e.clientX, y: e.clientY } })
-    }
+    if (infoCard?.title === p.label) { setInfoCard(null) }
+    else { setInfoCard({ title: p.label, description: p.definition, accentColor: p.accent, position: { x: e.clientX, y: e.clientY } }) }
   }
 
+  const railWidth = RAIL_RIGHT - RAIL_LEFT
+  const spacing = railWidth / (PHASES.length - 1)
   const activeId = infoCard ? PHASES.find(p => p.label === infoCard.title)?.id ?? null : null
 
   return (
     <DiagramShell figId="V-008" title="Pilot Phase Sequence" nodes={PHASES} activeNodeId={activeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 700 130" className="w-full" style={{ height: 130 }}>
-        {/* Rail */}
-        <line x1={startX} y1={cy} x2={startX + spacing * 10} y2={cy}
-          stroke={THEME.divider} strokeWidth={2}
-          strokeDasharray={636} strokeDashoffset={636}
-        >
-          <animate attributeName="strokeDashoffset" from={636} to={0} dur="0.9s" begin="0.05s" fill="freeze" />
-        </line>
+      <div className="flex flex-col items-center">
+        <svg width={W} height={160} className="mx-auto" style={{ height: 160 }}>
+          <defs>
+            <linearGradient id="rail-grad-v8" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#58a6ff" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#58a6ff" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#58a6ff" stopOpacity="0.3" />
+            </linearGradient>
+            <filter id="glow-v8">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
 
-        {PHASES.map((p, i) => {
-          const cx = startX + i * spacing
-          const isActive = activeId === p.id
-          return (
-            <g key={p.id} opacity={0} style={{ cursor: 'pointer' }} onClick={e => handlePhaseClick(p, e)}>
-              <animate attributeName="opacity" from={0} to={1} dur="0.3s" begin={`${0.15 + i * 0.07}s`} fill="freeze" />
+          {/* Background rail */}
+          <motion.rect x={RAIL_LEFT} y={NODE_Y - 2} width={railWidth} height={4}
+            fill="url(#rail-grad-v8)" filter="url(#glow-v8)"
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          />
 
-              {/* Active pulse ring */}
-              <AnimatePresence>
-                {isActive && (
-                  <motion.circle cx={cx} cy={cy} r={r + 6} fill="none"
+          {/* Progress fill */}
+          <motion.rect x={RAIL_LEFT} y={NODE_Y - 2} height={4} fill={THEME.flow.accent} filter="url(#glow-v8)"
+            animate={{ width: (activePhase / (PHASES.length - 1)) * railWidth }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          />
+
+          {/* Phase nodes */}
+          {PHASES.map((p, i) => {
+            const x = RAIL_LEFT + i * spacing
+            const isActive = i === activePhase
+            const isCompleted = i < activePhase
+            const isSelected = activeId === p.id
+
+            return (
+              <g key={p.id} style={{ cursor: 'pointer' }} onClick={e => handlePhaseClick(p, e)}>
+                {/* Auto-pulse ring */}
+                <AnimatePresence>
+                  {isActive && (
+                    <>
+                      <motion.circle cx={x} cy={NODE_Y} r={NODE_R} fill="none"
+                        stroke={THEME.flow.accent} strokeWidth="2"
+                        initial={{ r: NODE_R, opacity: 1 }}
+                        animate={{ r: NODE_R + 10, opacity: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeOut' }}
+                      />
+                      <motion.circle cx={x} cy={NODE_Y} r={NODE_R} fill="none"
+                        stroke={THEME.flow.accent} strokeWidth="2"
+                        initial={{ r: NODE_R, opacity: 1 }}
+                        animate={{ r: NODE_R + 10, opacity: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeOut', delay: 0.5 }}
+                      />
+                    </>
+                  )}
+                </AnimatePresence>
+
+                {/* Click-selected pulse ring */}
+                {isSelected && !isActive && (
+                  <motion.circle cx={x} cy={NODE_Y} r={NODE_R + 6} fill="none"
                     stroke={p.accent} strokeWidth={1}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: [0.5, 0, 0.5], r: [r + 4, r + 14, r + 4] }}
-                    exit={{ opacity: 0 }}
+                    animate={{ opacity: [0.5, 0, 0.5] }}
                     transition={{ duration: 1.8, repeat: Infinity }}
                   />
                 )}
-              </AnimatePresence>
 
-              <circle cx={cx} cy={cy} r={r}
-                fill={THEME.cardBg}
-                stroke={p.accent}
-                strokeWidth={isActive ? 3 : 1.5}
-                style={{ filter: isActive ? `drop-shadow(0 0 6px ${p.accent})` : undefined }}
-              />
-              <text x={cx} y={cy + 5} textAnchor="middle" fontSize={10} fontWeight={700} fill={p.accent} fontFamily="monospace">{p.phase}</text>
-              <text x={cx} y={cy + r + 16} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">{p.short}</text>
-            </g>
-          )
-        })}
+                {/* Node circle */}
+                <motion.circle cx={x} cy={NODE_Y} r={NODE_R}
+                  fill={isCompleted || isActive ? THEME.flow.accent : '#0d1117'}
+                  stroke={isSelected ? p.accent : (isCompleted || isActive ? THEME.flow.accent : '#30363d')}
+                  strokeWidth={isSelected ? 3 : 2}
+                  animate={{ scale: isActive ? [1, 1.3, 1] : 1 }}
+                  transition={{ duration: 1, ease: 'easeInOut' }}
+                  style={{ transformOrigin: `${x}px ${NODE_Y}px`, filter: isActive || isSelected ? `drop-shadow(0 0 6px ${p.accent})` : undefined }}
+                />
 
-        {/* START / COMPLETE labels */}
-        <text x={startX - 8} y={cy - r - 6} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">S</text>
-        <text x={startX - 8} y={cy - r + 4} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">T</text>
-        <text x={startX - 8} y={cy - r + 14} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">A</text>
-        <text x={startX - 8} y={cy - r + 24} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">R</text>
-        <text x={startX - 8} y={cy - r + 34} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">T</text>
+                {/* Phase number */}
+                <text x={x} y={NODE_Y + 4} textAnchor="middle" fontSize={8} fontWeight={700}
+                  fill={isCompleted || isActive ? '#0d1117' : THEME.flow.accent}
+                  fontFamily="monospace" style={{ pointerEvents: 'none' }}>
+                  {i}
+                </text>
 
-        <text x={startX + spacing * 10 + 18} y={cy - r - 6} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">C</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 4} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">O</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 14} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">M</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 24} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">P</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 34} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">L</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 44} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">E</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 54} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">T</text>
-        <text x={startX + spacing * 10 + 18} y={cy - r + 64} textAnchor="middle" fontSize={8} fill={THEME.dim} fontFamily="monospace">E</text>
-      </svg>
+                {/* Phase label below */}
+                <text x={x} y={NODE_Y + 28} textAnchor="middle" fontSize={8}
+                  fill="rgba(255,255,255,0.5)" fontFamily="monospace" style={{ pointerEvents: 'none' }}>
+                  {p.short}
+                </text>
+              </g>
+            )
+          })}
+
+          {/* START vertical label */}
+          {['S','T','A','R','T'].map((l, i) => (
+            <text key={`s${i}`} x={RAIL_LEFT - 22} y={40 + i * 12} textAnchor="middle" fontSize={9} fill="rgba(255,255,255,0.7)" fontFamily="monospace">{l}</text>
+          ))}
+
+          {/* COMPLETE vertical label */}
+          {['C','O','M','P','L','E','T','E'].map((l, i) => (
+            <text key={`c${i}`} x={RAIL_RIGHT + 14} y={28 + i * 12} textAnchor="middle" fontSize={9} fill="rgba(255,255,255,0.7)" fontFamily="monospace">{l}</text>
+          ))}
+        </svg>
+
+        <p className="font-mono text-xs text-white/50 text-center mt-2">
+          11-phase pilot progression — click any phase to expand
+        </p>
+      </div>
 
       <InfoCard card={infoCard} />
     </DiagramShell>

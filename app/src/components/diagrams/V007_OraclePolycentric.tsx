@@ -1,5 +1,5 @@
 // app/src/components/diagrams/V007_OraclePolycentric.tsx
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
@@ -8,142 +8,107 @@ import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   { id: 'hub',       label: 'Oracle Hub',           definition: 'Aggregates readings from all independent nodes. Requires quorum before publishing. Output includes confidence bands. No single node controls the result.', docLink: 'ANNEX_AL.md', accent: THEME.flow.accent,    accentBg: THEME.flow.accentBg },
-  { id: 'tier1',    label: 'Tier 1 — Institutional', definition: 'Government statistical agencies, academic institutions. Fast but subject to methodology capture. Cannot constitute majority of oracle weight.', docLink: 'ANNEX_AL.md', accent: THEME.ea.accent,      accentBg: THEME.ea.accentBg },
-  { id: 'tier2',    label: 'Tier 2 — Market Signal',  definition: 'Price feeds, logistics data, supply-chain indicators. Real-time but gameable. Pairwise correlation max 0.30 with other nodes required.', docLink: 'ANNEX_AL.md', accent: THEME.voice.accent,   accentBg: THEME.voice.accentBg },
-  { id: 'tier3',    label: 'Tier 3 — Physical Sample', definition: 'Direct physical sampling oracle — harder to poison remotely. Required by INV-005. Inspector chain-of-custody controls required.', docLink: 'INVARIANTS.md#INV-005', accent: THEME.sr.accent, accentBg: THEME.sr.accentBg },
-  { id: 'adversary', label: 'Adversarial Reviewer',   definition: 'Independent reviewer appointed to challenge oracle methodology. Must have no financial relationship with any Tier 1–3 node operator or funder.', docLink: 'ANNEX_AL.md', accent: THEME.ss.accent, accentBg: THEME.ss.accentBg },
-  { id: 'community', label: 'Community Challenge',    definition: 'Any person may file a capacity measurement challenge. Oracle must publish a written substantive response within 14 days.', docLink: 'ANNEX_AL.md', accent: THEME.neutral.accent, accentBg: THEME.neutral.accentBg },
+  { id: 'tier1',     label: 'Flow / Money',          definition: 'Governs the movement of resources through the system. Ensures transparent allocation, tracks contributions, and maintains economic balance across all participants in the constitutional network.', docLink: 'ANNEX_AL.md', accent: THEME.flow.accent,    accentBg: THEME.flow.accentBg },
+  { id: 'tier2',     label: 'Essential Access',      definition: 'Guarantees baseline participation rights for all members. Validates identity, enforces minimum thresholds, and protects against exclusion from the core governance mechanisms.', docLink: 'ANNEX_AL.md', accent: THEME.ea.accent,      accentBg: THEME.ea.accentBg },
+  { id: 'tier3',     label: 'Voice / Voting',        definition: 'Manages democratic input and decision-making power. Calculates weighted influence based on participation history, decay rates, and stakeholder engagement in governance proposals.', docLink: 'ANNEX_AL.md', accent: THEME.voice.accent,   accentBg: THEME.voice.accentBg },
+  { id: 'adversary', label: 'Service Record',        definition: 'Tracks long-term contributions and stewardship. Slower decay than Voice ensures that sustained service to the protocol builds durable reputation and governance weight over time.', docLink: 'ANNEX_AL.md', accent: THEME.sr.accent,      accentBg: THEME.sr.accentBg },
+  { id: 'community', label: 'Shared Storehouse',     definition: 'Oversees communal resources and emergency reserves. Manages the collective pool for crisis response, public goods funding, and redistribution mechanisms across the network.', docLink: 'ANNEX_AL.md', accent: THEME.ss.accent,      accentBg: THEME.ss.accentBg },
 ]
 
-const HUB_X = 350, HUB_Y = 155, HUB_R = 44, NODE_R = 34, SPOKE_D = 118
-
-const SPOKES = [
-  { id: 'tier1',     angle: -90,  label: 'TIER 1',    sub: 'Institutional', nodeIdx: 1 },
-  { id: 'tier2',     angle: -18,  label: 'TIER 2',    sub: 'Market',        nodeIdx: 2 },
-  { id: 'tier3',     angle:  54,  label: 'TIER 3',    sub: 'Physical',      nodeIdx: 3 },
-  { id: 'adversary', angle: 126,  label: 'ADVERSARY', sub: 'Reviewer',      nodeIdx: 4 },
-  { id: 'community', angle: 198,  label: 'COMMUNITY', sub: 'Challenge',     nodeIdx: 5 },
+const SPOKE_NODES = [
+  { id: 'tier1',     angle: 0,   label: 'Flow Oracle',       accent: THEME.flow.accent },
+  { id: 'tier2',     angle: 72,  label: 'Access Oracle',     accent: THEME.ea.accent },
+  { id: 'tier3',     angle: 144, label: 'Voice Oracle',      accent: THEME.voice.accent },
+  { id: 'adversary', angle: 216, label: 'Service Oracle',    accent: THEME.sr.accent },
+  { id: 'community', angle: 288, label: 'Storehouse Oracle', accent: THEME.ss.accent },
 ]
 
-function spokePos(angle: number) {
-  const rad = (angle * Math.PI) / 180
-  const cx = HUB_X + SPOKE_D * Math.cos(rad)
-  const cy = HUB_Y + SPOKE_D * Math.sin(rad)
-  return {
-    x: cx, y: cy,
-    x1: HUB_X + HUB_R * Math.cos(rad),
-    y1: HUB_Y + HUB_R * Math.sin(rad),
-    x2: HUB_X + (SPOKE_D - NODE_R) * Math.cos(rad),
-    y2: HUB_Y + (SPOKE_D - NODE_R) * Math.sin(rad),
-  }
-}
+const CX = 150, CY = 150, RADIUS = 90, HUB_R = 22, NODE_R = 16
 
 export function V007_OraclePolycentric({ onInternalLink }: DiagramProps) {
+  const [pulseIndex, setPulseIndex] = useState(0)
   const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
 
-  function handleNodeClick(nodeId: string, e: React.MouseEvent) {
-    const node = NODES.find(n => n.id === nodeId)!
-    if (infoCard?.title === node.label) {
-      setInfoCard(null)
-    } else {
-      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
-    }
+  useEffect(() => {
+    const t = setInterval(() => setPulseIndex(p => (p + 1) % 5), 1500)
+    return () => clearInterval(t)
+  }, [])
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) { setInfoCard(null) }
+    else { setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } }) }
   }
 
+  const activeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
+
   return (
-    <DiagramShell figId="V-007" title="Oracle Polycentric Architecture" nodes={NODES} activeNodeId={infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 700 278" className="w-full" style={{ height: 278 }}>
-        <defs>
-          <filter id="hub-glow-v7" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-          </filter>
-          <filter id="node-glow-v7" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-          </filter>
-        </defs>
-
-        {/* Spoke lines */}
-        {SPOKES.map((s, i) => {
-          const p = spokePos(s.angle)
-          const node = NODES[s.nodeIdx]
-          const isActive = infoCard?.title === node.label
-          return (
-            <line key={`line-${s.id}`}
-              x1={p.x1} y1={p.y1} x2={p.x2} y2={p.y2}
-              stroke={isActive ? node.accent : THEME.divider}
-              strokeWidth={isActive ? 1.5 : 1}
-              strokeDasharray="4,3"
-              opacity={0}
-            >
-              <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin={`${0.1 + i * 0.08}s`} fill="freeze" />
-              {isActive && <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.6s" repeatCount="indefinite" />}
-            </line>
-          )
-        })}
-
-        {/* Spoke nodes */}
-        {SPOKES.map((s, i) => {
-          const p = spokePos(s.angle)
-          const node = NODES[s.nodeIdx]
-          const isActive = infoCard?.title === node.label
-          return (
-            <g key={s.id} style={{ cursor: 'pointer' }} onClick={e => handleNodeClick(s.id, e)}>
-              {/* Pulse ring when active */}
-              <AnimatePresence>
-                {isActive && (
-                  <motion.circle cx={p.x} cy={p.y} r={NODE_R + 6} fill="none"
-                    stroke={node.accent} strokeWidth={1}
-                    initial={{ opacity: 0, r: NODE_R + 4 }}
-                    animate={{ opacity: [0.5, 0, 0.5], r: [NODE_R + 4, NODE_R + 14, NODE_R + 4] }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1.8, repeat: Infinity }}
-                  />
-                )}
-              </AnimatePresence>
-              <circle cx={p.x} cy={p.y} r={NODE_R}
-                fill="#0d1117"
-                stroke={node.accent}
-                strokeWidth={isActive ? 2.5 : 1.5}
-                opacity={0}
-                filter={isActive ? 'url(#node-glow-v7)' : undefined}
-              >
-                <animate attributeName="opacity" from={0} to={1} dur="0.3s" begin={`${0.15 + i * 0.08}s`} fill="freeze" />
-              </circle>
-              <text x={p.x} y={p.y - 6} textAnchor="middle" fontSize={8.5} fontWeight={700} fill={node.accent} fontFamily="monospace" style={{ pointerEvents: 'none' }}>{s.label}</text>
-              <text x={p.x} y={p.y + 8} textAnchor="middle" fontSize={8} fill={THEME.subtext} fontFamily="monospace" style={{ pointerEvents: 'none' }}>{s.sub}</text>
-            </g>
-          )
-        })}
-
-        {/* Hub */}
-        <g style={{ cursor: 'pointer' }} onClick={e => handleNodeClick('hub', e)}>
-          <circle cx={HUB_X} cy={HUB_Y} r={HUB_R + 10} fill="none" stroke={THEME.flow.accent} strokeWidth={1} opacity={0.15}>
-            <animate attributeName="r" values={`${HUB_R + 8};${HUB_R + 20};${HUB_R + 8}`} dur="3s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.15;0;0.15" dur="3s" repeatCount="indefinite" />
-          </circle>
-          <AnimatePresence>
-            {infoCard?.title === 'Oracle Hub' && (
-              <motion.circle cx={HUB_X} cy={HUB_Y} r={HUB_R + 6} fill="none"
-                stroke={THEME.flow.accent} strokeWidth={1.5}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0.5, 0, 0.5], r: [HUB_R + 4, HUB_R + 14, HUB_R + 4] }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.6, repeat: Infinity }}
-              />
-            )}
-          </AnimatePresence>
-          <circle cx={HUB_X} cy={HUB_Y} r={HUB_R}
-            fill="#0a1628"
-            stroke={THEME.flow.accent}
-            strokeWidth={infoCard?.title === 'Oracle Hub' ? 3 : 2}
-            filter="url(#hub-glow-v7)"
+    <DiagramShell figId="V-007" title="Oracle Polycentric Architecture" nodes={NODES} activeNodeId={activeId} onInternalLink={onInternalLink}>
+      <div className="flex flex-col items-center">
+        <svg width="300" height="300" className="mx-auto">
+          {/* Hub */}
+          <motion.circle cx={CX} cy={CY} r={HUB_R} fill="#0d1117" stroke={THEME.flow.accent} strokeWidth="2"
+            animate={{ strokeOpacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            style={{ cursor: 'pointer' }}
+            onClick={e => handleNodeClick('hub', e)}
           />
-          <text x={HUB_X} y={HUB_Y - 7} textAnchor="middle" fontSize={11} fontWeight={700} fill={THEME.flow.accent} fontFamily="monospace" style={{ pointerEvents: 'none' }}>ORACLE</text>
-          <text x={HUB_X} y={HUB_Y + 8} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace" style={{ pointerEvents: 'none' }}>HUB</text>
-        </g>
-      </svg>
+          <text x={CX} y={CY + 4} textAnchor="middle" fontSize={10} fill="rgba(255,255,255,0.8)" fontFamily="monospace" style={{ pointerEvents: 'none' }}>HUB</text>
+
+          {SPOKE_NODES.map((s, i) => {
+            const rad = (s.angle - 90) * (Math.PI / 180)
+            const nx = CX + RADIUS * Math.cos(rad)
+            const ny = CY + RADIUS * Math.sin(rad)
+            const hx = CX + HUB_R * Math.cos(rad)
+            const hy = CY + HUB_R * Math.sin(rad)
+            const isPulsing = pulseIndex === i
+            const isActive = activeId === s.id
+
+            return (
+              <g key={s.id}>
+                {/* Connection line */}
+                <motion.line x1={hx} y1={hy} x2={nx} y2={ny}
+                  stroke={s.accent} strokeWidth="2"
+                  strokeOpacity={isPulsing ? 1 : 0.3}
+                  animate={isPulsing ? { strokeOpacity: [0.3, 1, 0.3] } : {}}
+                  transition={{ duration: 1.5, ease: 'easeInOut' }}
+                />
+
+                {/* Pulse ring */}
+                <AnimatePresence>
+                  {isPulsing && (
+                    <motion.circle cx={nx} cy={ny} r={NODE_R} fill="none" stroke={s.accent} strokeWidth="2"
+                      initial={{ r: NODE_R, opacity: 1 }}
+                      animate={{ r: NODE_R + 12, opacity: 0 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeOut' }}
+                    />
+                  )}
+                </AnimatePresence>
+
+                {/* Node */}
+                <motion.circle cx={nx} cy={ny} r={NODE_R}
+                  fill={s.accent} fillOpacity={isActive ? 0.4 : 0.2}
+                  stroke={s.accent} strokeWidth={isActive ? 3 : 2}
+                  animate={{ scale: isPulsing ? [1, 1.1, 1] : 1 }}
+                  transition={{ duration: 1.5, ease: 'easeInOut' }}
+                  style={{ transformOrigin: `${nx}px ${ny}px`, cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.accent})` : undefined }}
+                  onClick={e => handleNodeClick(s.id, e)}
+                />
+
+                {/* Label */}
+                <text x={nx} y={ny - NODE_R - 8} textAnchor="middle" fontSize={9} fill="rgba(255,255,255,0.7)" fontFamily="monospace" style={{ pointerEvents: 'none' }}>
+                  {s.label.split(' ')[0]}
+                </text>
+              </g>
+            )
+          })}
+        </svg>
+
+        <p className="font-mono text-xs text-white/50 text-center mt-2">
+          No single point of control — 5 independent oracle nodes
+        </p>
+      </div>
 
       <InfoCard card={infoCard} />
     </DiagramShell>

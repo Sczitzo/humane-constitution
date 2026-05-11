@@ -1,116 +1,98 @@
 // app/src/components/diagrams/V006_VoiceSRDecay.tsx
 import { useState } from 'react'
+import { motion } from 'motion/react'
 import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
 import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
-  { id: 'voice', label: 'Voice Decay',         definition: 'Voice decays faster than Service Record. Without active civic contribution, Voice weight returns to the community pool within a full governance cycle. Prevents accumulation by passive holders.', docLink: 'ANNEX_Z.md', accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
-  { id: 'sr',    label: 'Service Record Decay', definition: 'Service Record decays more slowly — stewardship history persists longer than civic influence. Hardship pause rules can temporarily suspend decay without resetting the clock.', docLink: 'ANNEX_Z.md', accent: THEME.sr.accent, accentBg: THEME.sr.accentBg },
+  { id: 'voice', label: 'Voice Decay',         definition: 'Voice power decays rapidly to ensure governance remains responsive to current participation. This faster decay prevents dormant accounts from wielding disproportionate influence and keeps decision-making fresh.', docLink: 'ANNEX_Z.md', accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
+  { id: 'sr',    label: 'Service Record Decay', definition: 'Service contributions decay slowly, honoring sustained effort over time. This slower decay rewards long-term stewardship and prevents short-term actors from gaming the system through temporary bursts of activity.', docLink: 'ANNEX_Z.md', accent: THEME.sr.accent, accentBg: THEME.sr.accentBg },
 ]
 
-function generateCurve(ox: number, oy: number, w: number, h: number, decayRate: number): string {
-  const pts: string[] = []
+const W = 400, H = 250, PAD = 40
+
+function generateCurve(decayRate: number) {
+  const points: { x: number; y: number }[] = []
   for (let i = 0; i <= 100; i++) {
     const t = i / 100
     const value = Math.exp(-decayRate * t * 5)
-    const x = ox + t * w
-    const y = oy - value * h
-    pts.push(`${i === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`)
+    points.push({ x: PAD + t * (W - PAD * 2), y: H - PAD - value * (H - PAD * 2) })
   }
-  return pts.join(' ')
+  return points
+}
+
+function pathFromPoints(pts: { x: number; y: number }[]) {
+  return pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ')
 }
 
 export function V006_VoiceSRDecay({ onInternalLink }: DiagramProps) {
   const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
-  const ox = 60, oy = 160, w = 580, h = 120
+  const voiceCurve = generateCurve(2.5)
+  const serviceCurve = generateCurve(1.2)
 
   function handleClick(id: 'voice' | 'sr', e: React.MouseEvent) {
     const node = NODES.find(n => n.id === id)!
-    if (infoCard?.title === node.label) {
-      setInfoCard(null)
-    } else {
-      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
-    }
+    if (infoCard?.title === node.label) { setInfoCard(null) }
+    else { setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } }) }
   }
 
   const activeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   return (
     <DiagramShell figId="V-006" title="Voice vs. Service Record Decay Comparison" nodes={NODES} activeNodeId={activeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 700 200" className="w-full" style={{ height: 200 }}>
-        {/* Grid lines */}
-        {[0.25, 0.5, 0.75].map((t, i) => (
-          <line key={i}
-            x1={ox} y1={oy - t * h} x2={ox + w} y2={oy - t * h}
-            stroke={THEME.divider} strokeWidth={1} strokeDasharray="2,4"
+      <div className="flex flex-col items-center">
+        <svg width={W} height={H} className="mx-auto">
+          <defs>
+            <filter id="glow-v6"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          {[0, 0.25, 0.5, 0.75, 1].map((t, i) => (
+            <line key={i} x1={PAD} y1={H - PAD - t * (H - PAD * 2)} x2={W - PAD} y2={H - PAD - t * (H - PAD * 2)} stroke="#30363d" strokeWidth="1" strokeDasharray="2,4" />
+          ))}
+          <line x1={PAD} y1={H - PAD} x2={W - PAD} y2={H - PAD} stroke="#30363d" strokeWidth="2" />
+          <line x1={PAD} y1={PAD} x2={PAD} y2={H - PAD} stroke="#30363d" strokeWidth="2" />
+
+          <motion.path d={pathFromPoints(voiceCurve)} fill="none" stroke={THEME.voice.accent}
+            strokeWidth={activeId === 'voice' ? 4 : 3}
+            style={{ cursor: 'pointer', filter: activeId === 'voice' ? `drop-shadow(0 0 6px ${THEME.voice.accent})` : undefined }}
+            initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: 'easeInOut' }}
+            onClick={e => handleClick('voice', e)}
           />
-        ))}
+          <motion.circle cx={voiceCurve[100].x} cy={voiceCurve[100].y} r={5} fill={THEME.voice.accent}
+            style={{ cursor: 'pointer' }}
+            initial={{ scale: 0 }} animate={{ scale: [0, 1.5, 1] }} transition={{ duration: 1, delay: 2 }}
+            onClick={e => handleClick('voice', e)}
+          />
 
-        {/* Axes */}
-        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke={THEME.border} strokeWidth={1.5} opacity={0}>
-          <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin="0.05s" fill="freeze" />
-        </line>
-        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke={THEME.border} strokeWidth={1.5} opacity={0}>
-          <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin="0.1s" fill="freeze" />
-        </line>
-        <text x={ox + w + 14} y={oy + 4} fontSize={9} fill={THEME.dim} fontFamily="monospace">time →</text>
+          <motion.path d={pathFromPoints(serviceCurve)} fill="none" stroke={THEME.sr.accent}
+            strokeWidth={activeId === 'sr' ? 4 : 3}
+            style={{ cursor: 'pointer', filter: activeId === 'sr' ? `drop-shadow(0 0 6px ${THEME.sr.accent})` : undefined }}
+            initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: 'easeInOut' }}
+            onClick={e => handleClick('sr', e)}
+          />
+          <motion.circle cx={serviceCurve[100].x} cy={serviceCurve[100].y} r={5} fill={THEME.sr.accent}
+            style={{ cursor: 'pointer' }}
+            initial={{ scale: 0 }} animate={{ scale: [0, 1.5, 1] }} transition={{ duration: 1, delay: 2 }}
+            onClick={e => handleClick('sr', e)}
+          />
 
-        {/* Voice curve (faster decay) */}
-        <path
-          d={generateCurve(ox, oy, w, h, 2.5)}
-          fill="none"
-          stroke={THEME.voice.accent}
-          strokeWidth={activeId === 'voice' ? 2.5 : 1.5}
-          opacity={0}
-          style={{
-            cursor: 'pointer',
-            filter: activeId === 'voice' ? `drop-shadow(0 0 6px ${THEME.voice.accent})` : undefined,
-          }}
-          onClick={e => handleClick('voice', e)}
-        >
-          <animate attributeName="opacity" from={0} to={1} dur="0.5s" begin="0.3s" fill="freeze" />
-        </path>
-        <text
-          x={ox + 60} y={oy - h * Math.exp(-2.5 * 0.06 * 5) - 10}
-          fontSize={9} fill={THEME.voice.accent} fontFamily="monospace"
-          style={{ cursor: 'pointer' }} opacity={0}
-          onClick={e => handleClick('voice', e)}
-        >
-          Voice (faster decay)
-          <animate attributeName="opacity" from={0} to={1} dur="0.3s" begin="1.0s" fill="freeze" />
-        </text>
+          <text x={W / 2} y={H - 10} textAnchor="middle" fontSize={10} fill="rgba(255,255,255,0.5)" fontFamily="monospace">Time →</text>
+          <text x={15} y={H / 2} textAnchor="middle" fontSize={10} fill="rgba(255,255,255,0.5)" fontFamily="monospace" transform={`rotate(-90, 15, ${H / 2})`}>Weight</text>
+        </svg>
 
-        {/* Service Record curve (slower decay) */}
-        <path
-          d={generateCurve(ox, oy, w, h, 1.2)}
-          fill="none"
-          stroke={THEME.sr.accent}
-          strokeWidth={activeId === 'sr' ? 2.5 : 1.5}
-          opacity={0}
-          style={{
-            cursor: 'pointer',
-            filter: activeId === 'sr' ? `drop-shadow(0 0 6px ${THEME.sr.accent})` : undefined,
-          }}
-          onClick={e => handleClick('sr', e)}
-        >
-          <animate attributeName="opacity" from={0} to={1} dur="0.5s" begin="0.5s" fill="freeze" />
-        </path>
-        <text
-          x={ox + 200} y={oy - h * Math.exp(-1.2 * 0.2 * 5) - 10}
-          fontSize={9} fill={THEME.sr.accent} fontFamily="monospace"
-          style={{ cursor: 'pointer' }} opacity={0}
-          onClick={e => handleClick('sr', e)}
-        >
-          Service Record (slower decay)
-          <animate attributeName="opacity" from={0} to={1} dur="0.3s" begin="1.3s" fill="freeze" />
-        </text>
-
-        <text x={ox + w / 2} y={oy + 18} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace">
-          holding period without contribution
-        </text>
-      </svg>
+        <div className="flex items-center justify-center gap-6 mt-4">
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={e => handleClick('voice', e)}>
+            <div className="w-6 h-0.5" style={{ backgroundColor: THEME.voice.accent }} />
+            <span className="font-mono text-xs text-white/70">Voice (fast decay)</span>
+          </div>
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={e => handleClick('sr', e)}>
+            <div className="w-6 h-0.5" style={{ backgroundColor: THEME.sr.accent }} />
+            <span className="font-mono text-xs text-white/70">Service Record (slow decay)</span>
+          </div>
+        </div>
+      </div>
 
       <InfoCard card={infoCard} />
     </DiagramShell>
