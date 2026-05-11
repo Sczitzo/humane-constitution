@@ -35,6 +35,7 @@ Tightly bounded emergency issuance may preserve payments continuity during sever
 
 ### X4. Channel ceilings, dual-key review, and anti-capture governance
 No single ministry, central bank analogue, private bank, donor-backed vehicle, or political office may unilaterally create Flow. Issuance authority must be polycentric, rule-bound, and reviewable.
+- **Threshold definitions:** The *de minimis threshold* is 1× the published monthly Essential Access allocation for a single person at the Constitutional Survival Minimum. The *enhanced threshold* is the published household savings floor (18 months of regional median consumption expenditure). Both thresholds default to zero until the relevant founding commitments are published in `/founding/commitments.md`. Where the founding commitments have been published, the specific numeric values govern; where they have not, all issuance is treated as above the enhanced threshold pending publication.
 - **Every issuance** above the de minimis threshold requires dual-key approval: the sponsoring authority and an institutionally distinct independent reviewer.
 - **Issuance above the enhanced threshold** requires a third control signature from the published public-audit or counterparty-review layer.
 - **Issuance reviewers** must be distinct from the requesting issuer, publish conflicts, rotate under anti-capture rules analogous to oracle and CRP protections, and remain ineligible to review obligations where they or their affiliates benefit materially.

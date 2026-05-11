@@ -100,6 +100,8 @@ A retrospective audit of the P-014 activation is conducted within 90 days using 
 
 **If audit finds activation was compromised:** Published finding. P-013 is immediately suspended (not revoked). P-013 is re-submitted through the now-operative Formal Acceptance Protocol. P-014 non-precedent status is reaffirmed — the compromise does not authorize any other founding exception; it only re-opens P-013's specific activation.
 
+**Epistemic limitation of AH6:** This audit cannot be fully external to P-013 — the panel operates under P-013's own now-operative standards, which creates an inherent circularity. This is not a flaw that can be designed away; it is the structural condition of any bootstrapping procedure. The primary defenses against compromise are upstream: the AH2.4 public challenge window (where external parties may raise objections before activation) and the AH3 adversarial dissent requirement (where a panel member with a documented skeptical record produces a full written critique regardless of the overall vote). If AH6 finds that the activation was compromised and P-013 is suspended, the only repair path is the Dignity-Only Continuity Mode re-founding petition process in AH5.1 — there is no mechanism that restores P-013 without going through a re-convened founding panel. This residual risk is acknowledged and published as a known structural constraint, not concealed as a resolved problem. See also Threat_Register.md T-017.
+
 ### AH7. Sequencing After P-013 Activation
 The bootstrap resolution clears the path for the full acceptance sequence. Immediate priorities once P-013 reaches ACTIVE:
 

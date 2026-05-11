@@ -32,7 +32,7 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 ## INV-001 — Survival Is Unconditional
 
-**Statement:** Every confirmed identity holder receives a non-zero Essential Access allocation sufficient to meet the Constitutional Survival Minimum (CSM) at all times. No behavioral condition, contribution record, civic standing, outstanding obligation, or system state may reduce Essential Access below the CSM floor.
+**Statement:** Every person receives a non-zero Essential Access allocation sufficient to meet the Constitutional Survival Minimum (CSM) at all times. No behavioral condition, contribution record, civic standing, outstanding obligation, or system state may reduce Essential Access below the CSM floor. Confirmation of identity is required to access civic instruments (Voice, Service Record, and deliberative standing) but is never a precondition for survival access.
 
 **Mechanical boundary:** Essential Access allocation ≥ CSM at all times. The floor is a hard lower bound, not a target.
 
@@ -134,6 +134,54 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 ---
 
+## INV-008 — Money Creation Is Public
+
+**Statement:** No person, enterprise, or institution other than the constitutionally authorized issuance architecture may create Flow or any instrument that functions as Flow. A FAP proposal that would permit private issuance is rejected at intake without proceeding to technical review.
+
+**Mechanical boundary:** Flow issuance is a public function governed by ANNEX_X. Any instrument — digital, contractual, or otherwise — that circulates as a medium of exchange, store of value, or unit of account within the protocol is treated as Flow for purposes of this invariant regardless of its legal label.
+
+**Why this matters:** Private money creation is the primary mechanism by which financial power escapes public accountability. If private actors can issue Flow-equivalents, the non-convertibility firewall fails from outside.
+
+**Attack vectors that target this invariant:** T-001 (shadow convertibility), above-ledger bypass routes
+
+---
+
+## INV-009 — No Fees on Survival
+
+**Statement:** Survival access, Essential Access transactions, and labor income below the household savings floor may not be taxed, charged, or subjected to any system fee — including demurrage — regardless of the instrument used to access them or the administrative form the charge takes.
+
+**Mechanical boundary:** No system process may apply a fee, carrying cost, or deduction to: (a) CSM-tier Essential Access allocations, (b) any Flow balance below the published household savings floor, or (c) any labor income transaction where the income source brings the recipient's balance to or below the floor.
+
+**Why this matters:** A fee on survival is a survival condition in disguise. Even a small carrying cost on the survival floor erodes the unconditional guarantee over time and converts Essential Access into a timed benefit rather than a floor.
+
+**Attack vectors that target this invariant:** T-007 (definition drift on "essential"), demurrage miscalibration against low-balance households
+
+---
+
+## INV-010 — Succession Serves Continuity
+
+**Statement:** Inheritance mechanisms may transfer primary residence and working tools without limit. All other Flow-equivalent transfers above the household savings floor route through a published commons-return process at the rate defined in Article V. The rate is a Tier 2 founding commitment that must be set before deployment.
+
+**Mechanical boundary:** A transfer is a succession transfer if it occurs at death or through an irrevocable inter-vivos trust that removes the transferor's beneficial control. Succession transfers of primary-residence use-rights and working tools (productive capital in active use by the decedent) are exempt. All other succession transfers above the household savings floor are subject to the commons-return rate in Article V.
+
+**Why this matters:** Succession is the primary mechanism by which dynastic wealth recreates itself across generations without labor. The exemption for home and tools protects genuine continuity; the commons-return rate on everything else prevents the accumulation of heritable economic dominance.
+
+**Attack vectors that target this invariant:** PRD-009 (dynasty formation), trust and foundation bypass routes
+
+---
+
+## INV-011 — Legitimacy Requires Human Attestation
+
+**Statement:** No constitutional decision — amendment, activation, founding commitment, or Tier 1 parameter change — may execute by automated process alone. A named, conflict-screened human or panel must attest with full published disclosure before any such decision takes effect.
+
+**Mechanical boundary:** An automated process may prepare, route, draft, or summarize a constitutional decision. It may not execute one. Execution requires: (a) a named natural person or named panel composition, (b) a conflict disclosure published before attestation, and (c) the attestation record publicly available within 24 hours of execution.
+
+**Why this matters:** Automated systems can be captured, misconfigured, or weaponized without visible human decision. Constitutional changes require visible human accountability so that responsibility can be traced, challenged, and corrected.
+
+**Attack vectors that target this invariant:** T-016 (FAP capture through process automation), implementation drift at the execution layer
+
+---
+
 ## Invariant Violation Detection
 
 **Structural precondition check (P-034 — applied before all items below):**  
@@ -148,10 +196,26 @@ Any patch proposal submitted to FAP is evaluated against this document before te
 5. Permits issuance without physical verification (violates INV-005)
 6. Merges verification and beneficiary authority (violates INV-006)
 7. Proposes Tier 1 amendment through in-system process (violates INV-007)
+8. Would permit private Flow or Flow-equivalent creation (violates INV-008)
+9. Applies any fee, tax, or carrying cost to survival-floor access or below-floor balances (violates INV-009)
+10. Would create an uncapped succession transfer mechanism above the household savings floor (violates INV-010)
+11. Would permit a constitutional decision to execute without named human attestation (violates INV-011)
 
 ...is rejected at intake without proceeding to technical review. The FAP reviewer documents the violation by invariant ID.
 
 Implementation drift counts as an invariant-warning event when deployed code, generated corpus, runtime configuration, operator pinned reference, or binary hash operationally narrows a Tier 1 invariant without a valid Tier 1 amendment. The warning path is governed by the architecture implementation binding and the Implementation Drift Audit Package. A drift warning does not by itself prove bad faith, but it blocks affected Tier 1-dependent operation until the last valid state, exception rule, or amendment record is established.
+
+---
+
+## INV-LAUNCH-1 — Survival Floor Activation Gate
+
+**Statement:** The system may not begin any operational phase in which survival-floor access is extended to real persons until FC-YT1 (CSM failure pattern-detection trigger) and FC-YT2 (90-day CSM reserve requirement) are confirmed as bound values in `/founding/commitments.md` and independently verified by the Federated Ombuds. The Ombuds verification must publish the specific confirmed values, not merely confirm that confirmation occurred.
+
+**Mechanical boundary:** Any launch, pilot, or soft-start phase that enrolls real persons and issues real Essential Access is blocked until both FC-YT1 and FC-YT2 are: (a) assigned specific numeric values in `/founding/commitments.md`, (b) independently reviewed by the Federated Ombuds with published findings, and (c) incorporated into the CSM failure response protocol in ANNEX_Y §Y4. This gate cannot be waived by the founding coalition, the CRP, or any single governing body — it requires the Ombuds verification as a structural co-condition.
+
+**Why this matters:** FC-YT1 and FC-YT2 are the tripwires that convert survival-floor failures into constitutional emergencies. Launching without them means the system can experience CSM failures with no automatic escalation path. People can fall through the floor and the governance architecture has no mechanism to respond.
+
+**Attack vectors that target this invariant:** Founding-coalition time pressure to launch before evidence is ready; informal tolerance of unconfirmed parameters during transition
 
 ---
 

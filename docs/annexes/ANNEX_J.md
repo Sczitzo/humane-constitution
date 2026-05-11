@@ -92,7 +92,9 @@ At scale: an executive receives 2,000,000 Flow worth of equity and holds 50,000 
 A sole trader with 40,000 Flow total: 27,000 Flow personal savings floor + 13,000 Flow enterprise operating float (= 3 months of 4,333 Flow/month operating costs). Both exemptions apply simultaneously. Their effective demurrage-free threshold is 40,000 Flow — their entire balance. They pay nothing unless they accumulate beyond both.
 
 ### J3. Investment channel architecture (required, not optional)
-Long-horizon enterprise is impossible if all held Flow is treated as idle. The investment channel is therefore a constitutional subsystem, not a discretionary afterthought. There are four channels available to any enrolled person. All four are demurrage-free while the Flow is actively deployed. None of them can convert into Essential Access, Voice, Service Record eligibility, or housing queue priority.
+Long-horizon enterprise is impossible if all held Flow is treated as idle. The investment channel is therefore a constitutional subsystem, not a discretionary afterthought. There are four channels available to any enrolled person. None of them can convert into Essential Access, Voice, Service Record eligibility, or housing queue priority.
+
+**Demurrage treatment — concentration-indexed cap:** Project Escrow Accounts and Public Infrastructure Windows are fully demurrage-free while milestones remain current (real work is being funded, not wealth accumulated). Term Finance Pools and Retirement Horizon Locks are demurrage-free up to the Retirement Horizon Lock actuarial ceiling — defined as the total amount that would, at the published maximum Retirement Horizon Lock return rate and the published maximum 20-year term, produce a balance at maturity equal to the household savings floor. This ceiling is a Tier 2 founding commitment and is published before any Retirement Horizon Lock is offered. A person's combined TFP and RHL deposits above the actuarial ceiling are subject to full standard demurrage on the excess. The ceiling is the same for every person — it is not means-tested or contribution-adjusted. This prevents the investment channels from becoming unlimited demurrage shelters for concentrated wealth while preserving their function for ordinary retirement and lending.
 
 - **Project Escrow Accounts:** milestone-based build accounts for facilities, tooling, R&D, housing construction, grid upgrades, and other long-horizon work. Funds in approved project escrows do not incur ordinary idle decay while milestones remain current.
 - **Term Finance Pools:** transparent lending pools that price risk in Flow, publish loss rules, and pay a published return to depositors. Open to any enrolled person with no minimum deposit. See §J3-A for full specification.
@@ -122,6 +124,8 @@ Returns are paid in Flow quarterly and added to the depositor's wallet balance o
 
 **Hard limits:** Term Finance Pools may not use deposited Flow to purchase Essential Access access, Voice weight, Service Record eligibility, housing queue priority, or civic appointment influence. Pool investment decisions are published quarterly by sector and project type.
 
+**Concentration cap:** A depositor's TFP balance is demurrage-free up to the actuarial ceiling defined in §J3 (shared with Retirement Horizon Locks across both channels combined). Deposits above the ceiling are subject to full standard demurrage on the excess. The cap is assessed on the combined TFP + RHL balance, not on each channel separately — a person cannot evade the ceiling by splitting holdings across both.
+
 ---
 
 ### J3-B. Retirement Horizon Lock — full specification
@@ -143,6 +147,8 @@ Returns are paid annually in Flow into the depositor's wallet. The locked princi
 **The locked balance still counts toward total balance assessment.** Locking Flow does not reduce the equity-demurrage calculation described in the equivalence rule. A person with 200,000 Flow in a Retirement Horizon Lock and 30,000 Flow in their wallet is assessed as holding 230,000 Flow total — the lock protects them from demurrage on the locked amount, but does not reset their balance position for purposes of the equity compensation rule.
 
 **Early withdrawal:** the depositor may exit early but forfeits all accrued returns and pays a penalty equal to 6 months of demurrage on the withdrawn amount at the current standard rate. Early withdrawal is available without restriction — it is not trapped capital.
+
+**Concentration cap:** A depositor's RHL balance is demurrage-free up to the actuarial ceiling defined in §J3 (shared with Term Finance Pools across both channels combined). The ceiling is the total that would, at the published maximum return rate (currently 3.0% annually for a 20-year lock) and the 20-year maximum term, produce a maturity balance equal to the household savings floor. Deposits above the ceiling in either channel — assessed together — are subject to full standard demurrage on the excess. The ceiling is published as a single number each year alongside the household savings floor.
 
 **Why the returns are lower than today's index funds:** the Retirement Horizon Lock is not an equity market. It does not capture enterprise upside — it lends at a fixed rate to the economy and earns a fixed return. The tradeoff is certainty: the return is published and fixed at time of lock, the demurrage exposure is zero, and the principal is returned in full at maturity (absent pool default). Someone who needs their retirement savings to be predictable — especially approaching retirement age — may prefer this over equity exposure.
 
