@@ -258,6 +258,29 @@ One staff member drawn from the Federation (lot-drawn across all five sub-Ombuds
 
 Any sub-Ombuds may issue a **Public Ombuds Notice** on any matter within §1 mandate (prior). Notices carry the signature of the issuing sub-Ombuds; Plenum-affirmed notices (4 of 5) carry federation authority. Enforcement bodies are required to respond to a federation-authority notice within 14 days.
 
+### 4.12 Demand-Context Flag Assessment — Deliberate Manufacture Standard
+
+*Protocol-level — Plenum assessment required. Closes the open problem identified in T-019.*
+
+When a demand-context flag is active and PCRP co-certification is requested, the Federated Ombuds Plenum must assess whether the triggering enforcement action was deliberately manufactured. This assessment is a mandatory Plenum function, not delegable to a single Duty Sub-Ombuds. FC-091 (4-of-5 supermajority) applies to the determination.
+
+**Criteria for finding "deliberate manufacture."** The Plenum must evaluate all four of the following criteria:
+
+1. **Timing criterion.** The enforcement action was initiated within 48 hours of a sentinel indicator movement in the relevant supply category.
+2. **Proportionality criterion.** The enforcement action is disproportionate to the conduct alleged — the penalty or disruption caused exceeds what routine enforcement of comparable violations produces.
+3. **Prior-basis criterion.** No documented basis existed for the enforcement action before the sentinel indicator movement.
+4. **Knowledge criterion.** The actor initiating the enforcement action had observable knowledge of the sentinel indicator movement at the time of initiation.
+
+**Decision rule.** A finding of deliberate manufacture requires satisfaction of the timing criterion PLUS at least one of the other three criteria (proportionality, prior-basis, or knowledge). No single criterion alone is sufficient.
+
+**Decision timeline.** The Plenum must issue a written determination within 24 hours of receiving a deliberate-manufacture assessment request. The determination must be published immediately on the public dashboard.
+
+**Effect of a positive finding.** If the Plenum finds deliberate manufacture, the demand-context flag is lifted immediately and PCRP proceeds to its standard activation process without co-certification requirement. The enforcement action initiator is referred to the Enforcement Panel for investigation under the manufactured-flag provisions.
+
+**Burden of proof.** The burden is on the party seeking to maintain the demand-context flag to demonstrate the enforcement action was not manufactured. The Plenum's default, when evidence is inconclusive within the 24-hour window, is to lift the flag and allow PCRP to proceed — an asymmetric default favoring supply protection.
+
+**Authority basis.** This assessment is a mandatory Plenum function under §3.2 (protocol-level decisions). The 24-hour timeline and asymmetric default are pre-committed criteria that apply regardless of which sub-Ombuds holds Duty rotation at the time of the request.
+
 ---
 
 ## 5. Oversight of the Federation

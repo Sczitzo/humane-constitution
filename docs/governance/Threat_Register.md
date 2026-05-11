@@ -115,8 +115,8 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-017 | Bootstrap Problem | **Critical** | **ADDRESSED*** | Resolve P-013 circular dependency without normalizing urgency bypass. | 45 |
 | T-018 | PCRP False-Trigger Exhaustion | High | **PARTIAL** | Prevent deliberate engineering of false triggers to exhaust the audit-cap and suppress real responses. Attestation-vector component addressed by P-024 (Annex AS, FC-080/081/082); false-trigger-at-scale residual remains with P-015. | 36 |
 | T-019 | Demand-Context Flag Suppression | High | **ADDRESSED*** | Prevent strategically timed enforcement actions from suppressing legitimate PCRP activation. | 48 |
-| T-020 | Epistemological Oracle Capture | **Critical** | **ADDRESSED** | Prevent methodology-standard capture that biases oracle outputs without touching data directly. | 60 |
-| T-021 | Algorithmic Oracle Capture | **Critical** | **ADDRESSED** | Prevent AI/algorithmic manipulation of measurement systems that satisfies formal independence while being systematically biased. | 60 |
+| T-020 | Epistemological Oracle Capture | **Critical** | **ADDRESSED*** | Prevent methodology-standard capture that biases oracle outputs without touching data directly. | 60 |
+| T-021 | Algorithmic Oracle Capture | **Critical** | **ADDRESSED*** | Prevent AI/algorithmic manipulation of measurement systems that satisfies formal independence while being systematically biased. | 60 |
 | T-022 | Electoral Cycle Capture | **Critical** | **ADDRESSED*** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 |
 | T-023 | Pilot External Validity Collapse | Med-High | **ADDRESSED*** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **ADDRESSED** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Addressed in design by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18). | 60 |
@@ -184,15 +184,15 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-005 — Governance Throughput Failure
 
-- **Patch:** [P-005 — Governance Throughput Hardening](../governance/Patch_Log.md) · [ANNEX_AC.md](../annexes/ANNEX_AC.md) · Status: **PROPOSED**
+- **Patch:** [P-005 — Governance Throughput Hardening](../governance/Patch_Log.md) · [ANNEX_AC.md](../annexes/ANNEX_AC.md) · Status: **ACTIVE**
 - **Layer:** Decision flow / implementation latency
 - **Severity:** High
-- **Status:** ADDRESSED (P-005 PROPOSED)
+- **Status:** ADDRESSED (P-005 ACTIVE)
 - **Risk Score:** 5×4×(6-4)=40
 - **Mechanism:** layered review, challenge rights, audit loops, and safety gates create cumulative delay. Dual attack surface: slowdown attacks (proposal flooding, minority veto loops) and speedup attacks (emergency bypass normalization, deliberation theater).
 - **Impact:** essential decisions slow down, frustrations rise, emergency governance is normalized, anti-capture mechanisms are bypassed.
 - **Detection:** decision latency, review backlog, unresolved appeals, emergency path overuse, rising informal workaround rates, deliberation quality metrics.
-- **Mitigation direction:** P-005 PROPOSED: CRP dual-queue separation; minimum operational throughput floor; sequential emergency re-declaration cap; intake throttle with priority scoring; cross-quarter interim authorization bridge; decision quality audit metrics. See Patch Log P-005 and Annex AC1.
+- **Mitigation direction:** P-005 ACTIVE: CRP dual-queue separation; minimum operational throughput floor; sequential emergency re-declaration cap; intake throttle with priority scoring; cross-quarter interim authorization bridge; decision quality audit metrics. See Patch Log P-005 and Annex AC1.
 - **Open problem:** Operational sub-panel capture risk; throughput theater detection limits; interim bridge scope creep. Legacy single-Ombuds concentration risk inherited from the pre-federation design was the relevant P-008 concern.
 - **Compound linkages:** T-005 × T-006 (PCRP window sync); T-005 × T-008 (PCRP as power locus); T-005 × T-001 (paralysis extends exploit windows).
 
@@ -404,14 +404,14 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md) · Status: **PROPOSED**
 - **Layer:** PCRP / enforcement / measurement
 - **Severity:** High
-- **Status:** ADDRESSED* (P-015 / Annex AP PROPOSED)
+- **Status:** ADDRESSED* (P-015 / Annex AP PROPOSED; criteria in Annex AI §4.12)
 - **Risk Score:** 4×3×(6-2)=48
 - **Note:** Identified as residual risk in T-015 (P-012 AE2.4) but requires separate registration — distinct mechanism and control profile.
 - **Mechanism:** A coordinated actor *initiates a small, technically valid enforcement action* strategically timed to activate the demand-context flag, which then blocks PCRP Ombuds co-certification during a genuine supply shock. The enforcement action itself causes no significant harm; its purpose is flag activation to suppress emergency response.
 - **Impact:** PCRP blocked during a genuine supply shock. Potential double-deprivation: enforcement reduces Flow availability while false demand-context flag reduces Essential Access availability simultaneously.
 - **Detection:** D=2. The enforcement action is legitimate by construction; manipulation visible only by examining *timing* relative to supply indicators — requires cross-register monitoring not currently specified.
 - **Mitigation direction:** (1) Ombuds co-certification during demand-context periods must explicitly assess whether the triggering enforcement action was manufactured or strategically timed — required step, not optional. (2) Cross-register timing monitor flags enforcement actions initiated within 48 hours of sentinel indicator movement. (3) If Ombuds finds deliberate flag manufacture, demand-context designation is lifted. → P-015 PROPOSED.
-- **Open problem:** Ombuds assessment of "deliberate manufacture" requires judgment under time pressure. Criteria must be specified in advance in Annex AI (Federated Ombuds constitution) with explicit authority and defined timeline.
+- **Open problem:** Criteria specified in Annex AI §4.12. Plenum assessment required within 24 hours; asymmetric default favors PCRP activation when evidence is inconclusive.
 - **Compound linkages:** T-019 × T-015 (demand-context flag is the legitimate mitigation T-019 exploits). T-019 × T-008 (Ombuds determination quality depends on Ombuds independence). T-019 × T-018 (compound execution is highest-risk PCRP attack surface).
 
 ---
@@ -425,7 +425,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Patch:** [P-017 — Oracle Epistemological and Algorithmic Independence](../governance/Patch_Log.md) · [ANNEX_AL.md](../annexes/ANNEX_AL.md) · Status: **ACTIVE**
 - **Layer:** Measurement / RCS / oracle accreditation
 - **Severity:** Critical
-- **Status:** ADDRESSED by P-017 ACTIVE + Annex AL ACTIVE + Founding Commitments FC-030/FC-031/FC-032/FC-033 (Proposal 3 close-out, 2026-04-18)
+- **Status:** ADDRESSED* — P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033 bound; methodology pilots and adversarial standards review still required before evidence-backed resolution.
 - **Risk Score:** 5×4×(6-3)=60
 - **Mechanism:** A well-resourced actor does not manipulate oracle outputs directly (addressed by T-012). Instead, they fund and shape the *methodological standards bodies* that define what counts as valid measurement for RCS accreditation. Three pipelines: (1) Standards Funding — sustained funding of the academic and technical bodies that define housing price indices, nutritional equivalence standards, and care-delivery measurement frameworks, gradually orienting methodology toward favorable outputs. (2) Peer Review Capture — dominating the journals and conference venues whose approval is required for methodological legitimacy. (3) Technical Vocabulary Absorption — introducing new technical terms through legitimate standards processes that encode favorable assumptions without appearing to change definitions. None of these require illegal action or direct oracle contact.
 - **Impact:** Oracle outputs are systematically biased while satisfying all formal independence requirements. The measurement layer reports what the captor wants while appearing to report physical reality. Every downstream system (Essential Access issuance, Shared Storehouse activation, RCS confidence bands) is corrupted. T-012 (oracle independence) and T-015 (demand-context) protections become ineffective because the manipulation precedes the data, not the channel.
@@ -441,7 +441,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Patch:** [P-017 — Oracle Epistemological and Algorithmic Independence](../governance/Patch_Log.md) · [ANNEX_AL.md](../annexes/ANNEX_AL.md) · Status: **ACTIVE**
 - **Layer:** Measurement / RCS / algorithmic systems
 - **Severity:** Critical
-- **Status:** ADDRESSED by P-017 ACTIVE + Annex AL §4.2 (AI supply-chain concentration threshold = 2) + Founding Commitments FC-030/FC-031 (Proposal 3 close-out, 2026-04-18)
+- **Status:** ADDRESSED* — P-017 ACTIVE + Annex AL §4.2 (AI supply-chain concentration threshold = 2) + FC-030/FC-031 bound; physical sampling pilots and AI supply-chain audit required before evidence-backed resolution.
 - **Risk Score:** 5×3×(6-2)=60
 - **Mechanism:** The measurement layer is a concentration point for AI-driven manipulation at scale. A sophisticated actor who controls training data, model weights, or fine-tuning pipelines for any RCS measurement system can produce oracle outputs that satisfy formal independence requirements (different institutions, different hardware, different personnel) while being systematically biased through shared upstream AI infrastructure. Three specific attack surfaces: (1) Training Data Poisoning — gradual corruption of the historical datasets used to train forecasting models, producing models that systematically underestimate or overestimate specific categories. (2) Model Weight Manipulation — supply chain compromise of pre-trained model components used across multiple oracle nodes. (3) Shared API Exploitation — multiple "independent" oracle nodes that rely on a common commercial AI API introduce a shared dependency that is not visible in institutional independence audits.
 - **Impact:** Systematic measurement bias that passes oracle independence certification because the manipulation precedes the institutional layer. The oracle system reports false physical capacity with high internal consistency (making cross-publisher divergence detection fail). Shared Storehouse activations, Essential Access issuance, and PCRP triggers are all corrupted. This attack is increasingly realistic as measurement systems adopt ML pipelines.
@@ -559,7 +559,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-002 | Identity Exploits | **Critical** | **PARTIAL** | P-003 | 60 |
 | T-004 | Incentive Collapse | **Critical** | **PARTIAL** | P-002 | 48 |
 | T-007 | Definition Drift | **Critical** | **PARTIAL** | P-004 | 60 |
-| T-005 | Governance Throughput | High | **PROPOSED** | P-005 | 40 |
+| T-005 | Governance Throughput | High | **ADDRESSED** | P-005 | 40 |
 | T-006 | Measurement Lag | **Critical** | **PROPOSED** | P-006 | 60 |
 | T-008 | Bureaucratic Elite | High | **PROPOSED** | P-008 | 64 |
 | T-009 | Grace Exploitation | Med-High | **PROPOSED** | P-009 | 48 |
@@ -572,8 +572,8 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-017 | Bootstrap Problem | **Critical** | **PROPOSED** | P-014 / P-020 | 45 |
 | T-018 | PCRP False-Trigger Exhaustion | High | **PROPOSED** | P-015 | 36 |
 | T-019 | Demand-Context Suppression | High | **PROPOSED** | P-015 | 48 |
-| T-020 | Epistemological Oracle Capture | **Critical** | **ADDRESSED** | P-017 | 60 |
-| T-021 | Algorithmic Oracle Capture | **Critical** | **ADDRESSED** | P-017 | 60 |
+| T-020 | Epistemological Oracle Capture | **Critical** | **ADDRESSED*** | P-017 | 60 |
+| T-021 | Algorithmic Oracle Capture | **Critical** | **ADDRESSED*** | P-017 | 60 |
 | T-022 | Electoral Cycle Capture | **Critical** | **PROPOSED** | P-018 | 60 |
 | T-023 | Pilot External Validity Collapse | Med-High | **PROPOSED** | P-019 | 32 |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **ADDRESSED** | P-022 | 60 |
@@ -582,7 +582,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-027 | Subsidiarity Violation | High | **ADDRESSED** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 |
 | T-028 | Essential-Sector Refusal Leverage | **Critical** | **PARTIAL** | Prevent survival-leverage conglomerates from using essential-sector control to coerce the protocol or enrolled persons. | 72 |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 16 PROPOSED, 0 OPEN, 5 ADDRESSED. 28 total IDs — 26 active, 2 retired (T-003, T-010). These counts are design-state counts, not evidence-backed resolution counts. T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 are addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033, but still require measurement pilots and adversarial methodology review before any deployment claim. T-025 is addressed by P-023 (contract-commitment architecture, zero exemptions), but still needs parameter binding and legal/economic testing. T-026 and T-027 are addressed by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI), but remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 4 ACTIVE, 15 PROPOSED, 0 OPEN, 4 ADDRESSED, 2 ADDRESSED*. 28 total IDs — 26 active, 2 retired (T-003, T-010). These counts are design-state counts, not evidence-backed resolution counts. T-017 (Bootstrap Problem) is PROPOSED status; its patch P-014 is the FOUNDING instrument. T-020 and T-021 are addressed by P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033, but still require measurement pilots and adversarial methodology review before any deployment claim. T-025 is addressed by P-023 (contract-commitment architecture, zero exemptions), but still needs parameter binding and legal/economic testing. T-026 and T-027 are addressed by the Founding Order subsidiarity/consent/exit layer and the Federated Ombuds appeal infrastructure (Annex AI), but remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
 
 ---
 
@@ -631,6 +631,6 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Mechanism:** The actor controls a chokepoint in a CSM-delivery chain. Refusal to supply (or credible threat thereof) produces emergency political pressure to grant carve-outs, waive concentration rules, or extend favorable contract terms. Each concession normalizes leverage as a negotiating tool.
 - **Detection:** D=2 — refusal events are observable (Essential Access delivery gaps), but distinguishing genuine operational difficulty from strategic leverage requires the supply-chain concentration metrics in the Capture Dashboard and the Essential_Sector_Refusal_Test_Package audit trail.
 - **Severity:** Critical. A successful leverage event undermines non-coercion at the survival floor — the protocol's most fundamental guarantee.
-- **Mitigation direction:** P-047 (Essential-sector conglomerate operating rules, ANNEX_AT §AT2–AT6), P-048 (Essential-sector refusal response protocol, ANNEX_AT §AT6.5). Controls include: public receiver authority, compulsory licensing triggers, strategic reserve floors (FC-185–FC-201), multi-supplier mandates, and beneficial-ownership tracing through subcontractors.
-- **Residual risk:** Strategic reserves are provisional (FC-185–FC-193 reserved). Public receiver authority requires political will to invoke. Oracle and measurement capture (ACL-009, ACL-012) could allow a conglomerate to influence supply-chain concentration metrics and avoid Watch/Critical classification. No pilot evidence yet.
+- **Mitigation direction:** P-047/P-048 (ANNEX_AT §AT2–AT6.5). Primary mitigation: Compliant Alternative Supplier Pre-Registration (CASP — ANNEX_AT §AT6.6) with pre-committed automatic-activation contracts and annual capacity verification; activation is automatic on trigger, not discretionary. Fallback: public receiver authority, compulsory licensing triggers. Also: strategic reserve floors (FC-185–FC-201), multi-supplier mandates, and beneficial-ownership tracing through subcontractors.
+- **Residual risk:** Strategic reserves are provisional (FC-185–FC-193 reserved). CASP pre-committed contracts remove the need for political will in the primary mitigation path; political will is now required only for the fallback public receiver authority if CASP alternatives also fail or refuse. Oracle and measurement capture (ACL-009, ACL-012) could allow a conglomerate to influence supply-chain concentration metrics and avoid Watch/Critical classification. No pilot evidence yet.
 - **Compound linkages:** T-028 × T-007 (definitional capture of "essential sector" and "survival leverage" determines when AT6.5 triggers). T-028 × T-001 (refusal leverage exploits the same Essential Access delivery chain that shadow convertibility targets). T-028 × T-022 (a captured government may decline to invoke public receiver authority).

@@ -59,9 +59,9 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 
 | Instrument Tier | Fraud Rate Target (% of enrolled population per quarter) | Upper Tolerance Bound | Mandatory Audit Trigger |
 | :--- | :--- | :--- | :--- |
-| **Essential Access — Essential Access** | FC-140 — **≤0.5%** provisional (pre-launch blocking gate; recommended anchor promoted to provisional value pending pilot confirmation in /founding/commitments.md) | FC-140 upper bound — **1.0%** provisional (pre-launch blocking gate) | FC-140 trigger — **exceeded in 2 consecutive quarters** provisional (pre-launch blocking gate) |
-| **Voice — Voice** | FC-141 target (reserved) | FC-141 upper bound (reserved) | FC-141 trigger (reserved) |
-| **Service Record — Service Record** | FC-142 target (reserved) | FC-142 upper bound (reserved) | FC-142 trigger (reserved) |
+| **Essential Access — Essential Access** | FC-140 — **≤2%** (bound; anchored below SNAP program error rate 2–3%) | FC-140 upper bound — **≤5%** (bound) | FC-140 trigger — **≥3% in any quarter** (bound) |
+| **Voice — Voice** | FC-141 — **≤3%** (bound; looser than Essential Access; consistent with democratic-participation error tolerances) | FC-141 upper bound — **≤7%** (bound) | FC-141 trigger — **≥5% in any quarter** (bound) |
+| **Service Record — Service Record** | FC-142 — **≤5%** (bound; consistent with public-employment verification tolerances) | FC-142 upper bound — **≤10%** (bound) | FC-142 trigger — **≥7% in any quarter** (bound) |
 
 **Plain rationale for different tiers:** Essential Access fraud directly consumes physical supply: food, housing support, healthcare capacity. Voice and Service Record fraud distorts civic process but does not directly consume physical resources. The founding coalition should set stricter fraud tolerances for Essential Access than for Voice and Service Record, recognizing that Essential Access fraud has immediate physical consequences while fraud against the civic instruments has a slower and more diffuse effect.
 
@@ -77,9 +77,9 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 
 | Vulnerable Category | Exclusion Rate Target (% of estimated vulnerable population in that category per quarter) | Upper Tolerance Bound | Mandatory Audit Trigger |
 | :--- | :--- | :--- | :--- |
-| **Displaced persons (internal migration, emergency relocation)** | FC-143 target (reserved) | FC-143 upper bound (reserved) | FC-143 trigger (reserved) |
-| **Undocumented persons (no state-recognised documentation)** | FC-144 target (reserved) | FC-144 upper bound (reserved) | FC-144 trigger (reserved) |
-| **Digitally fragile persons (no smartphone, limited literacy, disability)** | FC-145 target (reserved) | FC-145 upper bound (reserved) | FC-145 trigger (reserved) |
+| **Displaced persons (internal migration, emergency relocation)** | FC-143 — **≤3%** (bound; tighter than UNHCR <5% target; displaced persons have no alternative access route) | FC-143 upper bound — **≤6%** (bound) | FC-143 trigger — **≥4% in any quarter** (bound) |
+| **Undocumented persons (no state-recognised documentation)** | FC-144 — **≤5%** (bound; documentation barriers produce structurally higher baseline) | FC-144 upper bound — **≤8%** (bound) | FC-144 trigger — **≥6% in any quarter** (bound) |
+| **Digitally fragile persons (no smartphone, limited literacy, disability)** | FC-145 — **≤5%** (bound; structural access barriers produce higher baseline; tracked separately to prevent aggregate masking) | FC-145 upper bound — **≤8%** (bound; hard ceiling requires mandatory architecture review) | FC-145 trigger — **≥6% in any quarter** (bound) |
 | **Recovery/crisis situations (domestic violence, trafficking, incapacity)** | FC-146 target (reserved) | FC-146 upper bound (reserved) | FC-146 trigger (reserved) |
 | **Overall population (all enrolled persons)** | FC-147 target (reserved) | FC-147 upper bound (reserved) | FC-147 trigger (reserved) |
 
@@ -202,7 +202,7 @@ The identity system faces a structural trade-off: any threshold stringent enough
 
 To complete this annex before deployment, the founding coalition must:
 
-1. **Bind FC-140 through FC-150** in Sections 1, 2, and 4, using first-year pilot data where available or conservative estimates where not.
+1. **FC-140 through FC-145 are now bound** (see `/founding/commitments.md`). **FC-146 through FC-150** in Sections 2 and 4 remain reserved; bind using first-year pilot data where available or conservative estimates where not before the first scale-up gate.
 2. **Specify the vulnerable population estimation methodology** for each category in Section 2, including the source and the rationale for choosing a conservative estimate.
 3. **State the pre-committed preference** in Section 4's third decision rule — whether, when both rates simultaneously exceed bounds, the default preference is to protect against exclusion or against fraud.
 4. **Convene the recalibration panel** before the first annual review, ensuring composition requirements are met.
@@ -212,4 +212,4 @@ The AED is Tier 2 once adopted. The decision rule in Section 4 (including the pr
 
 ---
 
-*This document is Annex AK of the Humane Constitution. The commitment architecture is operative as a PROPOSED standard. The specific rate targets remain an evidence gate: tracked today through reserved commitments FC-140 through FC-150, then bound from pilot evidence and locked as Tier 2 before the first scale-up gate.*
+*This document is Annex AK of the Humane Constitution. The commitment architecture is operative as a PROPOSED standard. FC-140 through FC-145 have been bound with evidence-grounded values before the first scale-up gate (see `/founding/commitments.md`). FC-146 through FC-150 remain reserved pending pilot data and are pre-launch blocking gates.*

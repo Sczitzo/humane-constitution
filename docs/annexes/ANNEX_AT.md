@@ -221,6 +221,21 @@ No essential-sector firm may be treated as non-critical merely because it is for
 
 For CSM-designated medicines, compulsory licensing and public or cooperative manufacturing activate when patent, exclusivity, PBM, formulary, foreign-affiliate, API-input, or manufacturing control creates a verified shortage risk, floor breach, unjustified access denial, or refusal to supply on published public-interest terms. Compensation must be lawful and transparent, but no exclusivity claim may override the CSM floor. Activation, rates, and deactivation are published through Article VII and tested against the Conglomerate Transition Dossier refusal drill.
 
+### AT6.6 — Compliant Alternative Supplier Pre-Registration (CASP)
+
+**CASP is a mandatory pre-condition, not a post-refusal remedy.**
+
+Before any essential-sector procurement contract can be renewed or extended beyond its initial term, the commissioning authority must maintain a register of at least two independently capable compliant alternative suppliers for each essential category (food, fuel, medicine, grid, logistics). The register must include:
+
+- Verified production capacity sufficient to cover the CSM floor for the relevant category for at least 90 days without the primary supplier
+- Pre-committed procurement contracts (not letters of intent) with each registered alternative supplier, with automatic activation clauses triggered by: (a) a Watch-level concentration finding for the primary supplier under AT6.2, or (b) the primary supplier issuing a refusal notice, or (c) the primary supplier failing to deliver against an existing contract for more than 14 consecutive days
+- Beneficial-ownership tracing confirming that no registered alternative is controlled by the same natural persons or state actors as the primary supplier
+- Annual capacity verification by an inspector independent of both the primary and alternative suppliers
+
+**Activation is automatic, not discretionary.** When a trigger condition is met (as above), pre-committed contracts with CASP-registered suppliers activate without requiring a new political decision. The public receiver authority remains available as a fallback if CASP-registered alternatives also fail or refuse, but CASP is the primary mitigation.
+
+**CASP exemptions:** A commissioning authority may apply for a CASP hardship exemption if: (a) fewer than two independently capable alternative suppliers exist for a category in the relevant geography, and (b) the authority publishes a written diversification plan with a binding 24-month timeline for developing at least one alternative supplier. The exemption is reviewed quarterly by the Capture Dashboard and lapses automatically if the diversification plan falls behind schedule.
+
 ---
 
 ## AT7 — Threat Surface and Failure Modes

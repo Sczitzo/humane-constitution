@@ -56,6 +56,50 @@ Where any annex (notably Annex AJ §enforcement-ledger publication) requires pub
 
 The standard is reviewed annually by the Federated Ombuds and updated when reidentification techniques outpace it.
 
+## AM8 — Constitutional Integrity Panel (CIP)
+
+The independent constitutional body named in AM1 is hereby specified as the **Constitutional Integrity Panel (CIP)**.
+
+### AM8.1 — Composition
+
+The CIP consists of **7 members** subject to the following constraints:
+
+- No more than 2 members may be appointed by any single branch of government (legislative, executive, or judicial).
+- At least 2 members must be appointed by bodies structurally independent of the current governing coalition — eligible appointing bodies include: prior-cycle ombudspersons, accredited academic constitutional law bodies, or civil society appointment processes ratified by the Federated Ombuds Plenum.
+- Appointments are **staggered**: no more than 2 seats may turn over in any single calendar year.
+
+### AM8.2 — Term
+
+Members serve **5-year non-renewable terms**. Staggering is maintained by the founding order, which must schedule initial terms of 3, 4, and 5 years across the first cohort to ensure continuity.
+
+### AM8.3 — Funding Independence
+
+The CIP budget is constitutionally fixed at **0.01% of annual Flow issuance** and is disbursed directly from the Essential Access reserve without legislative appropriation. The current governing coalition may not reduce, redirect, or freeze CIP funding except through a Tier 1 amendment ratified by the CIP itself (which requires a replacement funding structure to be established before the reduction takes effect).
+
+### AM8.4 — Removal
+
+A CIP member may be removed only by a **6-of-7 vote of the Federated Ombuds Plenum** (Annex AI §3), following a published finding of incapacity or a conduct violation that meets the threshold defined in the Founding Order's removal protocol. The governing coalition may not initiate removal proceedings. Any removal finding must be published in the Article VII dashboard within 48 hours of the vote.
+
+### AM8.5 — Quorum and Decision Threshold
+
+**5 of 7 members** constitute a quorum for any ratification decision on Tier 1 amendments. Ratification requires an affirmative vote of at least 5 members. Abstentions do not count toward the affirmative threshold.
+
+### AM8.6 — Trigger Conditions
+
+CIP ratification is required **concurrently** with any Tier 1 amendment; no Tier 1 amendment is effective without it.
+
+The CIP may also initiate a constitutionality review on its own motion when any of the following trigger conditions are met:
+
+- (a) Any founding institution seat is unfilled for more than **90 days** (consistent with AM3).
+- (b) Post-mortem publication (Article VII) lapses for more than **30 days** (consistent with AM3).
+- (c) Oracle accreditation count drops below the FC-030 minimum of **5 nodes**.
+
+A self-initiated review must be published in the Article VII dashboard at the moment of initiation and completed within 60 days unless the Federated Ombuds authorizes an extension (per AM5 extension authority).
+
+### AM8.7 — Activation Gate
+
+The CIP cannot be constituted until the **Founding Order's first post-activation audit is complete** (per P-014 §5). Until that gate is cleared, Tier 1 amendments are suspended. The audit completion date and CIP constitution date must both be recorded in the Article VII dashboard as founding-event entries.
+
 ---
 
 ## Dependencies
