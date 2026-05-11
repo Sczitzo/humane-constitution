@@ -1,10 +1,8 @@
 // app/src/components/diagrams/V006_VoiceSRDecay.tsx
-import { useState } from 'react'
 import { motion } from 'motion/react'
-import { DiagramShell } from './DiagramShell'
+import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
-import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   { id: 'voice', label: 'Voice Decay',         definition: 'Voice power decays rapidly to ensure governance remains responsive to current participation. This faster decay prevents dormant accounts from wielding disproportionate influence and keeps decision-making fresh.', docLink: 'ANNEX_Z.md', accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
@@ -28,26 +26,14 @@ function pathFromPoints(pts: { x: number; y: number }[]) {
 }
 
 export function V006_VoiceSRDecay({ onInternalLink }: DiagramProps) {
-  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
+  const { activeNodeId, handleNodeClick } = useDiagramState()
   const voiceCurve = generateCurve(2.5)
   const serviceCurve = generateCurve(1.2)
 
-  function handleClick(id: 'voice' | 'sr', e: React.MouseEvent) {
-    const node = NODES.find(n => n.id === id)!
-    if (infoCard?.title === node.label) { setInfoCard(null) }
-    else { setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } }) }
-  }
-
-  const activeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
-
   return (
-    <DiagramShell figId="V-006" title="Voice vs. Service Record Decay Comparison" nodes={NODES} activeNodeId={activeId} onInternalLink={onInternalLink}>
+    <DiagramShell figId="V-006" title="Voice vs. Service Record Decay Comparison" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <div className="flex flex-col items-center">
         <svg width={W} height={H} className="mx-auto">
-          <defs>
-            <filter id="glow-v6"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          </defs>
-
           {[0, 0.25, 0.5, 0.75, 1].map((t, i) => (
             <line key={i} x1={PAD} y1={H - PAD - t * (H - PAD * 2)} x2={W - PAD} y2={H - PAD - t * (H - PAD * 2)} stroke="#30363d" strokeWidth="1" strokeDasharray="2,4" />
           ))}
@@ -55,27 +41,27 @@ export function V006_VoiceSRDecay({ onInternalLink }: DiagramProps) {
           <line x1={PAD} y1={PAD} x2={PAD} y2={H - PAD} stroke="#30363d" strokeWidth="2" />
 
           <motion.path d={pathFromPoints(voiceCurve)} fill="none" stroke={THEME.voice.accent}
-            strokeWidth={activeId === 'voice' ? 4 : 3}
-            style={{ cursor: 'pointer', filter: activeId === 'voice' ? `drop-shadow(0 0 6px ${THEME.voice.accent})` : undefined }}
+            strokeWidth={activeNodeId === 'voice' ? 4 : 3}
+            style={{ cursor: 'pointer', filter: activeNodeId === 'voice' ? `drop-shadow(0 0 6px ${THEME.voice.accent})` : undefined }}
             initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: 'easeInOut' }}
-            onClick={e => handleClick('voice', e)}
+            onClick={() => handleNodeClick('voice')}
           />
           <motion.circle cx={voiceCurve[100].x} cy={voiceCurve[100].y} r={5} fill={THEME.voice.accent}
             style={{ cursor: 'pointer' }}
             initial={{ scale: 0 }} animate={{ scale: [0, 1.5, 1] }} transition={{ duration: 1, delay: 2 }}
-            onClick={e => handleClick('voice', e)}
+            onClick={() => handleNodeClick('voice')}
           />
 
           <motion.path d={pathFromPoints(serviceCurve)} fill="none" stroke={THEME.sr.accent}
-            strokeWidth={activeId === 'sr' ? 4 : 3}
-            style={{ cursor: 'pointer', filter: activeId === 'sr' ? `drop-shadow(0 0 6px ${THEME.sr.accent})` : undefined }}
+            strokeWidth={activeNodeId === 'sr' ? 4 : 3}
+            style={{ cursor: 'pointer', filter: activeNodeId === 'sr' ? `drop-shadow(0 0 6px ${THEME.sr.accent})` : undefined }}
             initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: 'easeInOut' }}
-            onClick={e => handleClick('sr', e)}
+            onClick={() => handleNodeClick('sr')}
           />
           <motion.circle cx={serviceCurve[100].x} cy={serviceCurve[100].y} r={5} fill={THEME.sr.accent}
             style={{ cursor: 'pointer' }}
             initial={{ scale: 0 }} animate={{ scale: [0, 1.5, 1] }} transition={{ duration: 1, delay: 2 }}
-            onClick={e => handleClick('sr', e)}
+            onClick={() => handleNodeClick('sr')}
           />
 
           <text x={W / 2} y={H - 10} textAnchor="middle" fontSize={10} fill="rgba(255,255,255,0.5)" fontFamily="monospace">Time →</text>
@@ -83,18 +69,16 @@ export function V006_VoiceSRDecay({ onInternalLink }: DiagramProps) {
         </svg>
 
         <div className="flex items-center justify-center gap-6 mt-4">
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={e => handleClick('voice', e)}>
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => handleNodeClick('voice')}>
             <div className="w-6 h-0.5" style={{ backgroundColor: THEME.voice.accent }} />
             <span className="font-mono text-xs text-white/70">Voice (fast decay)</span>
           </div>
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={e => handleClick('sr', e)}>
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => handleNodeClick('sr')}>
             <div className="w-6 h-0.5" style={{ backgroundColor: THEME.sr.accent }} />
             <span className="font-mono text-xs text-white/70">Service Record (slow decay)</span>
           </div>
         </div>
       </div>
-
-      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

@@ -1,5 +1,6 @@
 // app/src/components/diagrams/DiagramShell.tsx
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 
 export interface DiagramNode {
   id: string
@@ -11,12 +12,12 @@ export interface DiagramNode {
 }
 
 interface DiagramShellProps {
-  figId: string          // e.g. "V-001"
-  title: string          // e.g. "Five-Instrument Constitutional Architecture"
+  figId: string
+  title: string
   nodes: DiagramNode[]
   activeNodeId: string | null
   onInternalLink: (href: string) => void
-  children: React.ReactNode  // the SVG
+  children: React.ReactNode
 }
 
 export function DiagramShell({
@@ -36,46 +37,53 @@ export function DiagramShell({
         Fig. {figId} · {title}
       </div>
 
-      {/* SVG slot */}
+      {/* SVG / content slot */}
       {children}
 
-      {/* Expansion panel — content always mounted so CSS transition works */}
-      <div
-        className="overflow-hidden"
-        style={{
-          maxHeight: active ? '240px' : '0px',
-          opacity: active ? 1 : 0,
-          marginTop: active ? '16px' : '0px',
-          transition: 'max-height 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease',
-        }}
-      >
-        <div
-          className="rounded-r-lg py-3 px-5 flex flex-col gap-2"
-          style={{
-            borderLeft: `2px solid ${active?.accent ?? 'transparent'}`,
-            background: active?.accentBg ?? 'transparent',
-          }}
-        >
-          <div
-            className="font-mono text-[0.78em] font-bold uppercase tracking-[0.08em]"
-            style={{ color: active?.accent }}
+      {/* Expansion panel */}
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            key={active.id}
+            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+            animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
+            exit={{ opacity: 0, height: 0, marginTop: 0 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="relative rounded-lg overflow-hidden"
+            style={{ border: `2px solid ${active.accent}` }}
           >
-            {active?.label ?? ''}
-          </div>
-          <div className="text-[0.9em] leading-[1.55] text-[#dde1e7]">
-            {active?.definition ?? ''}
-          </div>
-          {active && (
-            <button
-              className="mt-1 text-left font-mono text-[0.82em] hover:underline"
-              style={{ color: active.accent, opacity: 0.85 }}
-              onClick={() => onInternalLink(active.docLink)}
+            {/* Pulsing border glow overlay */}
+            <motion.div
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              style={{ border: `2px solid ${active.accent}` }}
+              animate={{ opacity: [0.6, 0.15, 0.6] }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            />
+
+            <div
+              className="py-3 px-5 flex flex-col gap-2"
+              style={{ background: active.accentBg }}
             >
-              → {active.docLink.replace('.md', '').replace('#', ' §')}
-            </button>
-          )}
-        </div>
-      </div>
+              <div
+                className="font-mono text-[0.78em] font-bold uppercase tracking-[0.08em]"
+                style={{ color: active.accent }}
+              >
+                {active.label}
+              </div>
+              <div className="text-[0.9em] leading-[1.55] text-[#dde1e7]">
+                {active.definition}
+              </div>
+              <button
+                className="mt-1 text-left font-mono text-[0.82em] hover:underline"
+                style={{ color: active.accent, opacity: 0.85 }}
+                onClick={() => onInternalLink(active.docLink)}
+              >
+                → {active.docLink.replace('.md', '').replace('#', ' §')}
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Hint */}
       <div className="mt-4 text-center font-mono text-[0.8em] text-[#8b949e]">
@@ -85,7 +93,7 @@ export function DiagramShell({
   )
 }
 
-// Hook used by every diagram component
+// Hook used by diagram components
 export function useDiagramState() {
   const [activeNodeId, setActiveNodeId] = useState<string | null>(null)
   const handleNodeClick = (id: string) => {
