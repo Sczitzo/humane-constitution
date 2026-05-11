@@ -6,6 +6,10 @@ import { V003_ScarcityLadder } from './V003_ScarcityLadder'
 import { V004_AmendmentPyramid } from './V004_AmendmentPyramid'
 import { V005_DemurrageDecay } from './V005_DemurrageDecay'
 import { V006_VoiceSRDecay } from './V006_VoiceSRDecay'
+import { V007_OraclePolycentric } from './V007_OraclePolycentric'
+import { V008_PilotTimeline } from './V008_PilotTimeline'
+import { V009_ThreatPatchChain } from './V009_ThreatPatchChain'
+import { V010_InstrumentSpace } from './V010_InstrumentSpace'
 import { V011_EssentialAccessLifecycle } from './V011_EssentialAccessLifecycle'
 import { V012_VoiceLifecycle } from './V012_VoiceLifecycle'
 import { V013_ServiceRecordLifecycle } from './V013_ServiceRecordLifecycle'
@@ -30,6 +34,10 @@ export const DiagramRegistry: Record<string, ComponentType<DiagramProps>> = {
   'V-004': V004_AmendmentPyramid,
   'V-005': V005_DemurrageDecay,
   'V-006': V006_VoiceSRDecay,
+  'V-007': V007_OraclePolycentric,
+  'V-008': V008_PilotTimeline,
+  'V-009': V009_ThreatPatchChain,
+  'V-010': V010_InstrumentSpace,
   'V-011': V011_EssentialAccessLifecycle,
   'V-012': V012_VoiceLifecycle,
   'V-013': V013_ServiceRecordLifecycle,
