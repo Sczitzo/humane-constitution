@@ -316,3 +316,145 @@ The Humane Constitution is *more consistent* than most existing civic and econom
 It is *less consistent* with Jesus' teachings in its founding-group keyholder structure (which resists the servant-leadership model), its confidence in structural engineering as a substitute for ongoing moral transformation, its potential exclusion of invisible contributions from civic standing, and its occasionally cold administrative language about household composition and space allocation.
 
 The governing sentence applies with force: *This Constitution must serve humanity under God; it must never become humanity's substitute for God.* Section 0A already says this. The task of ongoing evaluation is to ensure the implementation does not quietly contradict the declaration.
+
+---
+
+## Session 5 Additions: CASP, CIP, AED, Founding Cascade
+
+*Appended following Round 2–3 governance additions. These mechanisms were not present when the original evaluation was written.*
+
+---
+
+### Compliant Alternative Supplier Pre-Registration (CASP) — Annex AT §AT6.6, P-050
+
+**Christ-Centered Alignment**
+
+CASP pre-registers backup suppliers and pre-commits activation contracts before any primary supplier becomes a chokepoint. This is structurally a hostage-prevention mechanism: it ensures that a single corporation cannot hold the survival floor hostage by threatening to exit. This aligns directly with Luke 4:18 ("good news to the poor… freedom for the prisoners") and with Jesus' consistent refusal to allow survival needs to become leverage instruments. The Matthew 25 logic applies: the system cannot fulfill "I was hungry and you gave me food" if a single corporation can veto food delivery. CASP is the structural response to that threat.
+
+The 14-consecutive-day automatic activation trigger — requiring no new government decision — is particularly consistent with servant-leadership design. It prevents the powerful from using delay to extract concessions during a humanitarian window. Speed of response for the vulnerable is a moral, not merely operational, requirement.
+
+**Babel-Risk Warning**
+
+CASP requires maintaining pre-committed contracts with ≥2 independent backup suppliers per essential category. This is a permanent procurement apparatus involving ongoing verification, contract management, and capacity testing. It creates a new class of relationship — "certified backup supplier" — that carries economic privilege. Those relationships will attract capture attempts. The Babel-risk is not the intent but the institutional gravity: what begins as a hostage-prevention mechanism tends to become a closed procurement club. The "annual capacity verification" requirement is the right safeguard, but it is only as independent as the auditor conducting it.
+
+**Human Dignity Test**
+
+**Strong pass.** The gap-window calculation (days-to-zero minus days-to-alternative) makes the human cost of a supplier exit concrete and public before the exit happens. This is transparent stewardship: it treats potential supply disruption as a threat to persons, not merely a logistics variable. The explicit requirement that survival access not depend on "goodwill of a foreign state, foreign corporation, or legacy capital market" is a direct dignity protection.
+
+**Revision Proposal**
+
+Add: *"Backup supplier certification must include verified capacity to serve the full range of the enrolled population, including those with dietary restrictions, disability-related needs, and remote geography. A backup supplier that can only serve the median user is not a backup for those who need it most."*
+
+**Fruit Test**
+
+- At least one CASP activation drill per year demonstrates the 14-day trigger works without new government authorization
+- Backup suppliers are not drawn predominantly from the same industry cluster as the primary suppliers they back
+- No backup supplier contract has been renewed more than three times without fresh competitive review
+
+---
+
+### Constitutional Integrity Panel (CIP) — Annex AM §AM8, P-051
+
+**Christ-Centered Alignment**
+
+The CIP — a 7-member independent body whose co-ratification is required before any Tier 1 rule change — is an institutionalization of the two-or-three-witnesses principle from Matthew 18:16 and Deuteronomy 19:15. Major decisions affecting the community require multiple independent witnesses who are not parties to the change. The appointment structure (≥2 members from coalition-independent bodies, ≤2 from any single branch) directly resists concentration of amendment power in the founding group, which addresses the most acute Babel-risk identified in the original evaluation (Article I, keyholder structure).
+
+The 0.01%-of-Flow-issuance budget — constitutionally fixed, not subject to ordinary legislative defunding — is consistent with servant-leadership design: those who hold power to review the system must be structurally protected from retaliation by those they review. This mirrors the prophetic tradition where the prophets' authority was external to and independent of the royal court they critiqued.
+
+**Babel-Risk Warning**
+
+The CIP risks becoming the system's equivalent of the Sanhedrin: an independent body that over time develops its own institutional interests, interpretive orthodoxies, and capture relationships, and uses procedural authority to resist legitimate reform rather than to enable honest review. The 6-of-7 Ombuds Plenum removal mechanism is the right check, but the Ombuds Plenum is itself a body whose independence must be maintained. The Babel-risk is nested: the check on the CIP is an institution that also requires a check.
+
+The 90-day vacancy automatic review trigger and the oracle-count hard-blocker (S1 signal) are good structural safeguards. But the CIP's authority to delay or block Tier 1 changes could in practice slow necessary reforms during genuine emergencies. The AG-LATENCY time bounds (see below) provide a partial answer, but the CIP itself is not subject to those bounds in the same way the FAP is.
+
+**Human Dignity Test**
+
+**Passes.** The CIP's primary function — ensuring that no government coalition can rewrite fundamental rights through normal legislative channels — is a dignity protection. The phrase "cannot be appointed by the governing coalition" is the critical design element. Dignity guarantees are only as strong as the institutions protecting them, and those institutions must be structurally independent of the governments they constrain.
+
+**Revision Proposal**
+
+Add: *"CIP members must include at least one person who has personally experienced Essential Access dependency, criminal justice contact, or documented housing instability within the past 10 years. Constitutional protection of dignity is not credibly designed by those who have never needed it. Lived experience of vulnerability is not disqualifying — it is constitutive of the knowledge required for this role."*
+
+**Fruit Test**
+
+- No Tier 1 amendment has been co-ratified without a dissenting CIP opinion being published, regardless of ultimate decision
+- At least one CIP member per cohort was appointed by a civil society body rather than a governmental body
+- CIP deliberations are published in full within 30 days of each decision
+
+---
+
+### Asymmetric Error Doctrine and Bound Numerical Targets (AED) — FC-140–FC-145, Annex AK
+
+**Christ-Centered Alignment**
+
+The AED calibrates the system's error posture: when uncertain, err toward inclusion, not exclusion. FC-140 through FC-145 bind specific false-exclusion thresholds (e.g., ≤2% false exclusion of correctly identified participants for general population, ≤3% for elderly, ≤5% for displaced/refugee, ≤3% for disability). The logic is explicit: the cost of wrongly excluding someone from Essential Access is greater than the cost of wrongly including someone. This is directly consistent with the parable of the lost sheep (Luke 15:4–7) — the shepherd leaves the 99 to find the 1. A system calibrated toward inclusion over exclusion reflects this logic institutionally.
+
+The 14-day automatic reversal rule — any exclusion lasting more than 14 days without formal determination is automatically reversed — applies the same logic mechanically. It refuses to let procedural inertia function as de facto exclusion. This is consistent with the Sermon on the Mount's expectation that even institutional systems should not allow the "least of these" to slip through administrative cracks.
+
+**Babel-Risk Warning**
+
+The AED is expressed as numerical targets. Numbers invite gaming. A system that achieves a 2.1% false-exclusion rate (just above the FC-140 trigger) will face institutional pressure to define the measurement method in a way that produces 1.9%. This is not a criticism of the targets — they are necessary — but a recognition that numerical compliance is not the same as genuine protection. The Babel-risk for AED is bureaucratic self-certification: the system reports it is meeting the targets because the targets are defined in ways that make them reportable.
+
+**Human Dignity Test**
+
+**Strong pass.** The population-specific thresholds (general vs. elderly vs. displaced/refugee vs. disability) refuse the administrative convenience of uniform treatment. They acknowledge that "equal treatment" in a structurally unequal world produces unequal outcomes, and that protecting dignity requires positive accommodation of vulnerability — the Golden Rule applied institutionally (Matt 7:12: "do to others what you would have them do to you" requires imagining yourself in the other's position).
+
+**Revision Proposal**
+
+Add: *"The false-exclusion targets must be accompanied by a direct narrative report: for each population class, the system must publish how many people were excluded in the reporting period, what happened to them during the exclusion, and how many were restored within the 14-day window. Numbers without stories obscure the human cost of error. The CIP should be required to receive and respond to this narrative report, not only the numerical summary."*
+
+**Fruit Test**
+
+- Annual narrative reports identify by name (or anonymized case number) a sample of individuals excluded and restored, with timeline of what happened
+- False-exclusion rates for displaced/refugee and disability populations are published separately, not aggregated into a general figure
+- At least one false-exclusion pattern per year results in a systemic audit of the identification process that produced it
+
+---
+
+### Founding Cascade Gate and Comprehension Rubric — Pilot Evidence Roadmap
+
+**Christ-Centered Alignment**
+
+The founding cascade gate — 8 founding artifacts that must reach PRODUCED before pilots can begin — enforces accountability before expansion. The Parable of the Towers (Luke 14:28–30) is directly relevant: "Suppose one of you wants to build a tower. Won't you first sit down and estimate the cost to see if you have enough money to complete it? For if you lay the foundation and are not able to finish it, everyone who sees it will ridicule you, saying 'This person began to build and wasn't able to finish.'" The cascade gate is a structural version of this wisdom: do not begin if you cannot see the foundation.
+
+The Phase 1 Comprehension Rubric — requiring ≥70% comprehension among 60 stratified participants, with no overclaiming rate exceeding 10% — is a commitment to honest communication. Jesus consistently used parables that were accessible to ordinary people, not just the educated. A constitutional system that requires a law degree to understand fails at the level of the Great Commandment: it does not love the neighbor it cannot explain itself to.
+
+**Babel-Risk Warning**
+
+The 8-artifact gate is a prerequisite condition controlled by the founding group. If the founding group is slow to produce artifacts, or produces them in a form that is formally compliant but substantively thin, the gate provides false assurance. The production timeline (9–12 months minimum) is appropriate but the quality of what is produced depends on the integrity of the founders. A gate that only checks whether documents exist, not whether they honestly confront founding conflicts of interest, is a Babel-risk: the appearance of process without the substance of accountability.
+
+The comprehension rubric requires 60 stratified participants. This is small. A comprehension test that reaches 60 people — even stratified — may miss systematic comprehension failures in communities that are geographically, linguistically, or culturally distant from the founding group's assumptions. The 10% overclaiming ceiling is particularly important and particularly hard to enforce: overclaiming that the system is ready, that its problems are solved, that its tests have been passed — this is the original Babel sin.
+
+**Human Dignity Test**
+
+**Passes.** The stratification requirement (education/political/digital access) explicitly includes people who are less equipped to navigate complex institutional language. This is a dignity requirement: the system must be legible to those it is for, not only to those who designed it. The ≤10% overclaiming rate treats honest limitation as a value, not a liability.
+
+**Revision Proposal**
+
+Add: *"The founding artifact register must include a 'dissent record': a documented account of what objections were raised during the founding process, by whom, and how they were resolved or left unresolved. A founding process that produces no dissent has either resolved all conflicts honestly or suppressed disagreement — and these outcomes look identical in the final documents. Only a published dissent record allows outside observers to evaluate which occurred."*
+
+**Fruit Test**
+
+- At least one founding artifact contains a section explicitly naming what the founders disagreed about
+- The comprehension rubric is re-run at 12 months post-pilot with a fresh stratified sample and the results are published without prior review by the founding group
+- The founding cascade gate is certified by an independent body, not by the founding group itself
+
+---
+
+## Session 5 Net Assessment
+
+The Round 2–3 additions — CASP, CIP, AED, founding cascade — represent genuine improvements on the Babel-risk profile of the Constitution, with two caveats:
+
+**Improvements:**
+- CASP closes the Matthew 25 gap: the survival guarantee can now survive corporate refusal without requiring a new government decision
+- CIP directly addresses the most acute Babel-risk from the original evaluation (keyholder concentration)
+- AED's inclusion-first posture is the right institutional expression of the lost-sheep parable
+- The founding cascade gate applies Lukan tower-building wisdom to system rollout
+
+**Remaining concerns:**
+- CIP itself requires a check (the nested independence problem)
+- Numerical AED targets invite compliance theater without narrative accountability
+- The founding cascade gate is self-certified by the founding group
+- CASP backup supplier certification creates a new capture surface
+
+None of these concerns disqualify the additions. They are the right mechanisms with the right intentions. The task is vigilance about the gap between institutional design and institutional behavior — which is precisely the gap Jesus addressed when he said "by their fruit you will recognize them" (Matt 7:16). Good fruit from these mechanisms will take years to observe. The evaluation should be reopened when evidence arrives.
