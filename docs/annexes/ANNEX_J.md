@@ -23,6 +23,56 @@ The protocol therefore adopts a corridor rather than a sacred number.
 - **Concentrated balances** above published thresholds may face higher effective carrying cost through progressive idle-balance rules even when the headline demurrage rate stays unchanged.
 - **Success signals:** lower inactive concentration, lower essential-goods speculation, healthy project starts, stable payroll timing, no material collapse in average project duration, and no evidence that ordinary emergency savings are being eroded by demurrage before the household floor is exceeded.
 
+### J2-A. Worked examples — household savings floor at both extremes
+
+*These examples use a published regional floor of 27,000 Flow (representing 18 months × 1,500 Flow median monthly consumption). The default demurrage rate is 0.5%/month on idle balances above the floor. All figures are illustrative; founding coalition must recalculate against the actual published floor and rate before deployment.*
+
+---
+
+**Person A — Modest savings, near or below the floor**
+
+| Situation | Balance | Amount above floor | Monthly demurrage | Annual demurrage | What they feel |
+| :--- | ---: | ---: | ---: | ---: | :--- |
+| Emergency fund, 6 months saved | 9,000 Flow | 0 | 0 | 0 | Nothing. Savings hold full value. |
+| Emergency fund, 18 months saved (at the floor) | 27,000 Flow | 0 | 0 | 0 | Nothing. Exactly at the ceiling of the protected bucket. |
+| Slightly above floor — saved for a car or home repair | 30,000 Flow | 3,000 Flow | 15 Flow | 180 Flow | Small signal. 180 Flow/year on 30,000 held — less than 0.6% effective rate on the total balance. Noticeable but not punishing. |
+| One year's wages saved after a windfall, no plan yet | 50,000 Flow | 23,000 Flow | 115 Flow | 1,380 Flow | Meaningful signal — 1,380 Flow/year on the above-floor portion. Strong incentive to either spend, invest in a project escrow, or deploy productively. Still affordable to ignore temporarily. |
+
+**Key point:** a person who has saved responsibly up to 18 months of living expenses pays nothing. Demurrage only starts when savings cross into passive wealth territory — and even then, the first 27,000 Flow is always free.
+
+---
+
+**Person B — Concentrated wealth, well above the floor**
+
+*Same 27,000 Flow floor. Same 0.5%/month rate. Same rules.*
+
+| Situation | Balance | Amount above floor | Monthly demurrage | Annual demurrage | What they feel |
+| :--- | ---: | ---: | ---: | ---: | :--- |
+| 500,000 Flow sitting idle | 500,000 Flow | 473,000 Flow | 2,365 Flow | 28,380 Flow | Significant. ~5.7% of the above-floor balance lost per year. Strong incentive to deploy into project escrow or productive use. |
+| 2,000,000 Flow sitting idle | 2,000,000 Flow | 1,973,000 Flow | 9,865 Flow | 118,380 Flow | Very large signal. ~118k Flow/year. At this scale, idle accumulation becomes expensive; productive deployment through J3 channels is almost always the rational choice. |
+| 10,000,000 Flow sitting idle | 10,000,000 Flow | 9,973,000 Flow | 49,865 Flow | 598,380 Flow | ~6% of total balance per year. Passive hoarding at this scale is economically irrational. The same person deploying into a project escrow pays nothing on that capital while milestones are current. |
+
+**Key point:** the wealthy person has the same 27,000 Flow free bucket as everyone else. The demurrage is on everything above it. At concentrated-wealth scales, the demurrage creates a strong signal to either use capital productively (protected) or circulate it through the economy. Sitting on it becomes expensive.
+
+---
+
+**Comparison: same balance, different person**
+
+| Balance held | Person A (modest saver) | Person B (concentrated wealth) | Same rule applied? |
+| :--- | :--- | :--- | :--- |
+| 10,000 Flow | 0 demurrage (below floor) | 0 demurrage (below floor) | ✓ Identical |
+| 27,000 Flow | 0 demurrage (at floor) | 0 demurrage (at floor) | ✓ Identical |
+| 50,000 Flow | 115 Flow/month on 23k above floor | 115 Flow/month on 23k above floor | ✓ Identical |
+| 500,000 Flow | 2,365 Flow/month | 2,365 Flow/month | ✓ Identical |
+
+The rate is the same. The bucket is the same. The only difference is how much of a wealthy person's balance sits above the floor — and that is the intended difference.
+
+---
+
+**Owner-operator example — personal floor plus enterprise float**
+
+A sole trader with 40,000 Flow total: 27,000 Flow personal savings floor + 13,000 Flow enterprise operating float (= 3 months of 4,333 Flow/month operating costs). Both exemptions apply simultaneously. Their effective demurrage-free threshold is 40,000 Flow — their entire balance. They pay nothing unless they accumulate beyond both.
+
 ### J3. Investment channel architecture (required, not optional)
 Long-horizon enterprise is impossible if all held Flow is treated as idle. The investment channel is therefore a constitutional subsystem, not a discretionary afterthought.
 - **Project Escrow Accounts:** milestone-based build accounts for facilities, tooling, R&D, housing construction, grid upgrades, and other long-horizon work. Funds in approved project escrows do not incur ordinary idle decay while milestones remain current.
