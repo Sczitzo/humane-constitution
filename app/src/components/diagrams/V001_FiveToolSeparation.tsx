@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V001_FiveToolSeparation.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   {
@@ -47,7 +49,18 @@ const NODES: DiagramNode[] = [
 ]
 
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   const nodeStyle = (id: string, stroke: string) => ({
     cursor: 'pointer' as const,
@@ -72,7 +85,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
         ))}
 
         {/* FLOW */}
-        <g opacity={0} style={nodeStyle('flow', THEME.flow.accent)} onClick={() => handleNodeClick('flow')}>
+        <g opacity={0} style={nodeStyle('flow', THEME.flow.accent)} onClick={e => handleNodeClick('flow', e)}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.1s" fill="freeze" />
           {activeNodeId === 'flow' && (
             <rect x={8} y={20} width={160} height={112} rx={7} fill="none" stroke={THEME.flow.accent} strokeWidth={1.5} opacity={0.5}>
@@ -86,7 +99,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
         </g>
 
         {/* ESSENTIAL ACCESS */}
-        <g opacity={0} style={nodeStyle('ea', THEME.ea.accent)} onClick={() => handleNodeClick('ea')}>
+        <g opacity={0} style={nodeStyle('ea', THEME.ea.accent)} onClick={e => handleNodeClick('ea', e)}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.2s" fill="freeze" />
           {activeNodeId === 'ea' && (
             <rect x={204} y={20} width={160} height={112} rx={7} fill="none" stroke={THEME.ea.accent} strokeWidth={1.5} opacity={0.5}>
@@ -100,7 +113,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
         </g>
 
         {/* VOICE */}
-        <g opacity={0} style={nodeStyle('voice', THEME.voice.accent)} onClick={() => handleNodeClick('voice')}>
+        <g opacity={0} style={nodeStyle('voice', THEME.voice.accent)} onClick={e => handleNodeClick('voice', e)}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.3s" fill="freeze" />
           {activeNodeId === 'voice' && (
             <rect x={380} y={20} width={160} height={112} rx={7} fill="none" stroke={THEME.voice.accent} strokeWidth={1.5} opacity={0.5}>
@@ -114,7 +127,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
         </g>
 
         {/* SERVICE RECORD */}
-        <g opacity={0} style={nodeStyle('sr', THEME.sr.accent)} onClick={() => handleNodeClick('sr')}>
+        <g opacity={0} style={nodeStyle('sr', THEME.sr.accent)} onClick={e => handleNodeClick('sr', e)}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.4s" fill="freeze" />
           {activeNodeId === 'sr' && (
             <rect x={556} y={20} width={160} height={112} rx={7} fill="none" stroke={THEME.sr.accent} strokeWidth={1.5} opacity={0.5}>
@@ -129,7 +142,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
         </g>
 
         {/* SHARED STOREHOUSE */}
-        <g opacity={0} style={nodeStyle('ss', THEME.ss.accent)} onClick={() => handleNodeClick('ss')}>
+        <g opacity={0} style={nodeStyle('ss', THEME.ss.accent)} onClick={e => handleNodeClick('ss', e)}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.5s" fill="freeze" />
           {activeNodeId === 'ss' && (
             <rect x={732} y={20} width={180} height={112} rx={7} fill="none" stroke={THEME.ss.accent} strokeWidth={1.5} opacity={0.5}>
@@ -148,6 +161,8 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
           CONSTITUTIONAL SURVIVAL MINIMUM — floor beneath all five instruments
         </text>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V012_VoiceLifecycle.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   { id: 'earn',   label: 'Earn Voice',    definition: 'Voice weight earned through verified civic contribution — committee work, community service, peer review, recognized caretaking. Cannot be purchased.', docLink: 'ANNEX_Z.md', accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
@@ -18,8 +20,19 @@ const STAGES = [
 ]
 
 export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
   const boxW = 148, boxH = 70, gap = 28, startX = 30, cy = 55
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   return (
     <DiagramShell figId="V-012" title="Voice — Civic Influence Lifecycle" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
@@ -28,7 +41,7 @@ export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
           const x = startX + i * (boxW + gap)
           const isActive = activeNodeId === s.id
           return (
-            <g key={s.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.stroke})` : undefined }} onClick={() => handleNodeClick(s.id)}>
+            <g key={s.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${s.stroke})` : undefined }} onClick={e => handleNodeClick(s.id, e)}>
               <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.08 + i * 0.1}s`} fill="freeze" />
               {i > 0 && <path d={`M${x - gap + 3},${cy + boxH / 2} L${x - 3},${cy + boxH / 2}`} fill="none" stroke={THEME.border} strokeWidth={1.5} markerEnd="url(#arr3)" />}
               {isActive && (
@@ -48,6 +61,8 @@ export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
           </marker>
         </defs>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }

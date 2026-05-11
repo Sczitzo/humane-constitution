@@ -1,7 +1,9 @@
 // app/src/components/diagrams/V003_ScarcityLadder.tsx
-import { DiagramShell, useDiagramState } from './DiagramShell'
+import { useState } from 'react'
+import { DiagramShell } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
+import { InfoCard, type InfoCardData } from './InfoCard'
 
 const NODES: DiagramNode[] = [
   {
@@ -47,7 +49,18 @@ const NODES: DiagramNode[] = [
 ]
 
 export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
-  const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [infoCard, setInfoCard] = useState<InfoCardData | null>(null)
+
+  function handleNodeClick(id: string, e: React.MouseEvent) {
+    const node = NODES.find(n => n.id === id)!
+    if (infoCard?.title === node.label) {
+      setInfoCard(null)
+    } else {
+      setInfoCard({ title: node.label, description: node.definition, accentColor: node.accent, position: { x: e.clientX, y: e.clientY } })
+    }
+  }
+
+  const activeNodeId = infoCard ? NODES.find(n => n.label === infoCard.title)?.id ?? null : null
 
   const colors = [THEME.ea.accent, THEME.flow.accent, THEME.voice.accent, THEME.ss.accent, THEME.emergency.accent]
   const fills  = [THEME.ea.fill, '#0d1a2e', THEME.voice.fill, THEME.ss.fill, THEME.emergency.fill]
@@ -69,7 +82,7 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
           const y = 130 - i * 22
           const isActive = activeNodeId === id
           return (
-            <g key={id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${colors[i]})` : undefined }} onClick={() => handleNodeClick(id)}>
+            <g key={id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${colors[i]})` : undefined }} onClick={e => handleNodeClick(id, e)}>
               <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.08 + i * 0.1}s`} fill="freeze" />
               {isActive && (
                 <rect x={x} y={y} width={140} height={52} rx={6}
@@ -88,6 +101,8 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
         })}
         <text x={400} y={172} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.05em">escalation →</text>
       </svg>
+
+      <InfoCard card={infoCard} />
     </DiagramShell>
   )
 }
