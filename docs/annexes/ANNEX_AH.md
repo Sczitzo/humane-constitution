@@ -113,26 +113,29 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-002 | P-003 | ACTIVE | AB | S1 |
 | T-004 | P-002 | ACTIVE | AB | S1 |
 | T-007 | P-004 | ACTIVE | AB | S1 |
-| T-005 | P-005 | PROPOSED | AC1 | S2 |
-| T-006 | P-006 | PROPOSED | AC2 | S2 |
-| T-008 | P-008 | PROPOSED | AC3 | S2 |
-| T-009 | P-009 | PROPOSED | AF | S4 |
-| T-011 | P-011 | PROPOSED | AD | S2 |
-| T-012 | P-012 | PROPOSED | AE2.1 | S3 |
-| T-013 | P-012 | PROPOSED | AE2.2 | S3 |
-| T-014 | P-012 | PROPOSED | AE2.3 | S3 |
-| T-015 | P-012 | PROPOSED | AE2.4 | S3 |
-| T-016 | P-013 | PROPOSED | AG | S5 |
-| T-017 | P-014 | PROPOSED | AH | S6 |
-| T-018 | P-015 | PROPOSED | AP | S7 |
-| T-019 | P-015 | PROPOSED | AP | S7 |
+| T-005 | P-005 | ACTIVE | AC1 | S2 |
+| T-006 | P-006 | ACTIVE | AC2 | S2 |
+| T-008 | P-008 | ACTIVE | AC3 | S2 |
+| T-009 | P-009 | ACTIVE | AF | S4 |
+| T-011 | P-011 | ACTIVE | AD | S2 |
+| T-012 | P-012 | ACTIVE | AE2.1 | S3 |
+| T-013 | P-012 | ACTIVE | AE2.2 | S3 |
+| T-014 | P-012 | ACTIVE | AE2.3 | S3 |
+| T-015 | P-012 | ACTIVE | AE2.4 | S3 |
+| T-016 | P-013 | ACTIVE | AG | S5 |
+| T-017 | P-014 | ACTIVE | AH | S6 |
+| T-018 | P-015 | ACTIVE | AP | S7 |
+| T-019 | P-015 | ACTIVE | AP | S7 |
+| T-019 | P-052 | ACTIVE | AI §4.12 | S10 |
 | T-020 | P-017 | ACTIVE | AL | S8 |
 | T-021 | P-017 | ACTIVE | AL | S8 |
 | T-022 | P-018 | PROPOSED | AM | S8 |
-| T-023 | P-019 | PROPOSED | AN | S8 |
+| T-022 | P-051 | ACTIVE | AM §AM8 | S10 |
+| T-023 | P-019 | ACTIVE | AN | S8 |
 | T-024 | P-022 | ACTIVE | AQ | S8 |
-| T-025 | P-023 | PROPOSED | AR | S8 |
+| T-025 | P-023 | ACTIVE | AR | S8 |
 | T-026 | P-026 | ACTIVE | AH (Founding Order) | S9 |
 | T-027 | P-026 | ACTIVE | AH (Founding Order) | S9 |
+| T-028 | P-050 | ACTIVE | AT §AT6.6 | S10 |
 
-*P-014 is shown in blue to mark its unique status as a one-time founding instrument. 27 total threats. 9 ACTIVE patches. 17 PROPOSED patches. 1 FOUNDING instrument (P-014). Bootstrap problem resolved. Acceptance sequence unblocked.*
+*P-014 is shown in blue to mark its unique status as a one-time founding instrument. 28 total threats. 24 ACTIVE patches. 1 PROPOSED patch (P-018 electoral staggering, awaiting pilot). 1 FOUNDING instrument (P-014). P-051 and P-052 added in S10 as primary controls for T-022 and T-019 respectively. T-028 (essential-sector refusal) closed by CASP (P-050). Bootstrap problem resolved. Acceptance sequence unblocked.*
