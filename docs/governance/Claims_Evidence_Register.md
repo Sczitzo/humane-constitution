@@ -86,6 +86,34 @@ The accurate claim is narrower: the repo contains a serious constitutional desig
 
 ---
 
+## Evidence Update and Claim Downgrade Protocol
+
+**When evidence arrives (positive):**
+
+1. The Independent Identity Auditor (P-045 §8) or relevant pilot lead publishes raw results with methodology.
+2. Within 30 days, update the following documents in this order: (a) the relevant Evidence Test Package (primary source), (b) the Threat Register entry for the relevant threat (residual-risk update), (c) this register's claim row (status upgrade if pass conditions met), (d) the Pilot Evidence Roadmap (phase advancement gate update).
+3. Status may only advance one level per update cycle: needs evidence → partly tested → evidence-backed. No skipping.
+4. The four-document update must be made in a single git commit with a commit message that names the claim, the evidence source, and the new status.
+
+**When evidence arrives (negative — pilot fails a gate):**
+
+1. The failure is published within 14 days of determination, with the specific gate criterion that failed and the measured value vs. the pass condition.
+2. Within 30 days, downgrade the claim status in this register. A claim that was "partly tested" reverts to "needs evidence" if the test fails. A claim that was "designed mechanism" and fails a gate reverts to "unresolved prerequisite" if the failure reveals a design problem, not merely an execution gap.
+3. The Threat Register entry for the relevant threat must be updated with the failure finding as a new residual-risk line within 30 days.
+4. No scale-up or claim strengthening may proceed in any document while a downgrade is pending.
+
+**Trigger — who initiates updates:**
+
+- Primary trigger: the Independent Identity Auditor (for identity claims), the Capture Dashboard operator (for measurement claims), or the relevant pilot lead (for delivery claims).
+- Secondary trigger: any registered participant in the Formal Acceptance Process may file a claim challenge if they have evidence that a claim's status is inaccurate. The FAP must acknowledge the challenge within 14 days and resolve it within 60 days.
+- Tertiary trigger: the Federated Ombuds Plenum may initiate a claim review if the Capture Dashboard shows metrics inconsistent with a current claim status.
+
+**Downgrade escalation:** If a Critical-severity claim (per the Threat Register severity column) is downgraded from "active-unproven control" or higher, the Federated Ombuds must be notified within 24 hours. The downgrade is published prominently in the next Capture Dashboard update.
+
+**Claim freeze rule:** Any claim that has been downgraded may not be re-upgraded until the specific gate or test that triggered the downgrade has been re-run with passing results. Upgrading a different claim in the same document does not reset a frozen claim.
+
+---
+
 ## How to use this register
 
 When editing public-facing or governance material:

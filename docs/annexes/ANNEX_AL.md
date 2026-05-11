@@ -171,6 +171,76 @@ Per the founding commitments, every oracle cohort for a high-volatility essentia
 
 ---
 
+## AL-COST — Physical Sampling Cost Model
+
+**Purpose:** Without a cost model, the physical sampling requirement (at least one Class 3 oracle per high-volatility category) becomes aspirational. This section bounds the minimum viable sampling effort so that "Class 3 coverage" cannot be satisfied by a token physical inspection program insufficient to detect real conditions.
+
+### Minimum Sampling Requirements by Category
+
+| Category | Minimum sampling unit | Frequency | Measurement point |
+| :--- | :--- | :--- | :--- |
+| **Food** | ≥50 direct physical observation points per 500,000-person population | Per quarter | Price, availability, and quality at point of purchase — not warehouse |
+| **Water** | ≥30 direct chemical/physical quality tests per 100,000-person population | Per quarter | Point of delivery — not source |
+| **Energy** | ≥20 grid delivery-point readings per 100,000-person population | Per month | Voltage, continuity, and access |
+| **Medicine** | ≥15 pharmacy-level availability audits per 100,000-person population | Per quarter | For each CSM-designated medicine |
+
+These are floors, not targets. Oracle cohorts are encouraged to exceed these minimums. A cohort that meets only the floor is classified as minimum-compliant, not fully adequate, in accreditation records.
+
+### Inspector Independence Rule
+
+Sampling inspectors may not be employed by, contracted by, or financially dependent on any entity whose supply is being measured. Inspector compensation must be publicly disclosed in the accreditation record and updated with each sampling cycle. Any compensation arrangement that creates a financial relationship between the inspector and the measured supply operator — including indirect relationships through parent organizations or shared funders — disqualifies the inspector and invalidates the sample.
+
+### Sampling Site Selection
+
+Sites must be selected by stratified random draw from a publicly published frame. The draw must be verifiable by a third party with access to the frame and the draw algorithm. Inspectors may not know their site assignments more than 48 hours in advance of the inspection. The published frame must be updated at least annually and must cover the full population for the category and geography being measured.
+
+### Pass Condition
+
+A physical sampling pilot passes if:
+
+**(a)** The oracle-reported figure and the physical sample agree within the FC-001 through FC-005 confidence intervals for that category.
+
+**(b)** Any discrepancy in the direction of oracle overstatement (oracle reports higher capacity than physical sampling finds) is flagged as a confidence-band failure and triggers a mandatory confidence band revision within 30 days. Failures in this direction are weighted more seriously than understatement failures because overstatement of capacity is the failure mode most likely to result in harmful rationing decisions.
+
+A pilot that fails condition (b) does not automatically disqualify the oracle cohort, but it removes the Class 3 node's reading from the activation-authorization quorum until the confidence band is revised and a clean follow-on sample confirms agreement.
+
+---
+
+## AL-CORR — Pairwise Correlation Verification Test
+
+**Purpose:** FC-032 sets a hard ceiling of 0.30 Pearson correlation between oracle node pairs. This section operationalizes the test procedure so that the ceiling can actually be enforced — not merely asserted.
+
+### When to Run
+
+Before any Shared Storehouse activation authority is granted to a new oracle cohort. Also triggered by: any change in cohort composition (addition or removal of a node), any change in a node's methodology class classification, and any standards-body or AI supply chain concentration review under Section 4.
+
+### Method
+
+For each oracle node pair within the cohort:
+
+1. Compute Pearson correlation on historical category readings over the longest available overlapping period, with a minimum of 4 consecutive quarters.
+2. Use the error series (each node's reading minus the ensemble median, or minus an independent ground-truth sample if available) rather than raw readings, to capture correlation in measurement error rather than correlation in the underlying phenomenon.
+3. If historical data is unavailable (new cohort or new node), run a parallel observation period of at least 1 full quarter in which all nodes are active and producing readings before granting activation authority. Activation is suspended during this period.
+4. Document the full correlation matrix — all pairwise coefficients — in the accreditation record. The matrix must be recomputed at each quarterly audit.
+
+### Failure Criterion
+
+Any node pair with Pearson correlation > FC-032 (0.30) must be treated as a single effective oracle node for quorum purposes. This means:
+
+- The cohort's effective N is reduced by one for each pair above threshold.
+- If the reduction drops effective N below FC-030 (5), Shared Storehouse activation authority is suspended until the structural dependency is resolved.
+- Resolution options: (a) replace one node in the pair with a genuinely independent node; (b) demonstrate in two consecutive quarterly measurements that the correlation has fallen below 0.30.
+
+Pairs above threshold but not yet resolved must remain flagged in the public accreditation record.
+
+### Adversarial Seat Role
+
+The adversarial oracle seat (FC-033) must receive the full correlation matrix before each Shared Storehouse activation vote. The adversarial seat may veto activation if the matrix shows any pair above threshold, even if no other governance process has flagged the pair.
+
+A veto under this section triggers a mandatory 14-day architecture review conducted by a panel independent of the RCS accreditation body. The review panel must assess: (a) whether the correlation reflects structural dependency or coincidental co-movement, (b) what architectural change would resolve the dependency, and (c) whether activation can proceed with reduced effective N pending resolution. The panel's findings are published in the public accreditation record. The adversarial seat may not be overridden on correlation grounds without the architecture review completing and documenting a specific remediation plan.
+
+---
+
 ## Section 4 — Anti-Monoculture Trigger
 
 ### 4.1 — Standards-Body Concentration Rule

@@ -221,6 +221,46 @@ Failure criterion: diversity thresholds are satisfied formally while the same co
 
 ---
 
+## Non-Civic Misuse Abuse Cases
+
+The following six cases are concrete, runnable scenarios for a red team. Each must produce a documented pass or fail result before the Service Record system exits pilot status.
+
+**ACL-SR-01 — Employer Rank Signal**
+Scenario: An employer requests a job applicant's Service Record score during hiring. The employer does not formally require it, but systematically favors applicants with high Service Record.
+Test: Present identical résumés with contrasting Service Record signals (one high, one low) to a simulated hiring process. Measure selection rate differential.
+Pass criterion: selection rate differential < 5% and no employer request for Service Record data occurs in any documented test case.
+Failure indicator: Any employer hiring workflow that includes a Service Record field, score, or rank.
+
+**ACL-SR-02 — Landlord Tenancy Screening**
+Scenario: A landlord or property management system queries or requests Service Record data before approving a tenancy application.
+Test: Attempt to register a rental platform integration that surfaces Service Record status. Measure whether the integration is technically possible and whether the platform terms prohibit it.
+Pass criterion: the system's API and data export paths do not permit Service Record data to be queried by landlords; any attempt returns an access-denied response with logged audit trail.
+Failure indicator: Any rental platform or landlord tool that can surface Service Record data in a tenancy decision context.
+
+**ACL-SR-03 — Insurance Underwriting Signal**
+Scenario: An insurance underwriter incorporates civic participation history (proxied by Service Record) into risk pricing models.
+Test: Audit a sample of insurance products available in the pilot area for actuarial inputs. Check whether any inputs correlate with or are derived from Service Record data or participation patterns.
+Pass criterion: No insurance product in the pilot jurisdiction uses Service Record data as an actuarial input, and the audit trail shows no vendor requests for Service Record data from the protocol.
+
+**ACL-SR-04 — Credit Scoring Proxy**
+Scenario: A lender uses Flow transaction history combined with Service Record civic activity as a creditworthiness proxy, effectively converting civic participation into a credit signal.
+Test: Construct two synthetic borrower profiles identical in financial history but contrasting in civic activity patterns. Submit to any lenders operating in the pilot jurisdiction and observe offer terms.
+Pass criterion: No statistically significant difference in credit terms between profiles. Any lender that requests civic activity data is flagged and reported to the Enforcement Panel.
+
+**ACL-SR-05 — School Admission Preference**
+Scenario: An educational institution (public or private) uses family Service Record history as a factor in admissions or merit-award decisions.
+Test: Review publicly stated admissions criteria for all institutions in the pilot jurisdiction. Submit test applications with contrasting Service Record profiles.
+Pass criterion: no institution lists civic participation as an admissions factor, and application outcomes show no correlation with Service Record status.
+
+**ACL-SR-06 — Platform Access Gating**
+Scenario: A commercial platform (marketplace, social network, professional network) uses Service Record status to gate access to features, listing rights, or verified status.
+Test: Attempt to access platform features with accounts that have contrasting Service Record profiles.
+Pass criterion: access to any commercial platform feature must not differ based on Service Record status. Any gate detected triggers a platform compliance review.
+
+**Test schedule:** Each of ACL-SR-01 through ACL-SR-06 must be run at least once before the Service Record system exits pilot status. Failure on any single case triggers a Federated Ombuds referral and a mandatory architectural review of the boundary enforcement mechanism before the next pilot cycle.
+
+---
+
 ## Minimum Evidence Before Stronger Claim
 
 The project may strengthen its claim only after producing:

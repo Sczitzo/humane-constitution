@@ -4,6 +4,8 @@
 
 **Purpose.** This annex strengthens the Formal Acceptance Protocol (FAP) against the exploit surfaces identified in T-016 (P-013). It amends the FAP directly and adds constitutional protections to its anti-gaming rules. Where this annex conflicts with the FAP document, this annex governs. Status: PROPOSED.
 
+**Sections:** AG1 Pilot Representativeness · AG2 Deadlock Resolution · AG3 Audit Epistemic Independence · AG4 Anti-Gaming Upgrade · AG5 Stagnation Documentation · AG6 Bootstrap Protocol · AG7 Concentration Controls · AG-LATENCY Emergency Time Bounds · AG8 Linkage Table
+
 ### AG1. Pilot Representativeness Standard (FAP Amendment)
 Pilot region designation requires a published representativeness assessment before the pilot begins. The assessment must document four dimensions against the national median:
 
@@ -66,6 +68,33 @@ The four FAP sign-off authorities collectively constitute a new institutional cl
 - **Epistemic diversity:** the audit body must satisfy the same three-axis diversity standard as P-008 oversight bodies (Annex AC3.3: institutional origin, contribution type, geography).
 - **Published quarterly:** FAP sign-off cluster composition is published in the Article VII concentration dashboard (extending AC3.7). A separate concentration monitoring function — independent of the Federated Ombuds — maintains this publication, because the Ombuds is itself a sign-off authority.
 - The FAP concentration controls are self-executing from Article VII infrastructure. They do not require a separate acceptance process.
+
+### AG-LATENCY — Emergency FAP Time Bounds
+
+**Purpose:** The FAP is designed to prevent hasty patches from degrading the constitutional architecture. But an FAP that has no maximum review time under emergency conditions creates inverse pressure: urgency becomes a bypass argument. This section locks maximum latency for each urgency class.
+
+**Urgency classification (for FAP intake):**
+
+| Class | Trigger condition | Maximum FAP review period |
+| :--- | :--- | :--- |
+| **Class E1 — Survival-floor threat** | Active PCRP or Shared Storehouse event; Essential Access delivery failure affecting >1% of enrolled population | 72 hours from intake to disposition |
+| **Class E2 — Structural control failure** | Oracle quorum loss; Ombuds Plenum unable to convene; Enforcement Panel unable to act | 7 days from intake to disposition |
+| **Class E3 — High-severity governance gap** | Newly identified Critical threat with no current mitigation; Tier 1 inconsistency discovered | 30 days from intake to disposition |
+| **Class S — Standard** | All other patches | Existing FAP timelines apply |
+
+**Disposition options within time bound:**
+- **Accept** — patch enters PROPOSED or ACTIVE status per standard FAP rules
+- **Emergency provisional** — patch enters a 14-day provisional-active status, subject to full FAP review within 30 days; automatically lapses if full review is not completed
+- **Defer with documented rationale** — patch is acknowledged but deferred; the deferral reason is published and the patch is re-queued within the class time bound
+- **Reject** — patch is declined with written published rationale
+
+**Anti-bypass rule:** Emergency provisional status may not be invoked more than 3 times in any 12-month period without a mandatory FAP concentration review (applying the AG7 concentration controls). If 3 provisional activations occur within 12 months, the 4th must go through full review regardless of urgency class.
+
+**Quorum under emergency conditions:**
+- For Class E1: 3-of-4 FAP sign-off authorities required (reduced from standard 4-of-4). Reduced quorum finding is published with the names of present and absent authorities.
+- For Class E2 and E3: standard quorum requirements apply.
+
+**Survival floor bridge:** Regardless of FAP disposition or timing, any patch touching Essential Access delivery must include an unconditional survival floor bridge clause: the current Essential Access level is maintained at minimum during any review period, regardless of outcome.
 
 ---
 

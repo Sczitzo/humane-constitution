@@ -63,6 +63,25 @@ Every pilot needs:
 | Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 9 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
 | Control-plane failure | Phase 9 governance red-team; Phase 10 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
 
+## Phase 0 — Founding Cascade Gate
+
+**Purpose:** Several pilot phases depend on founding authority that is not available until the Founding Legitimacy Dossier artifacts are produced. This gate makes those dependencies explicit so no pilot begins on borrowed legitimacy.
+
+**Gate conditions (all must be PRODUCED in the Founding Legitimacy Dossier Artifact Status Register before the downstream phase begins):**
+
+| Founding artifact | Unblocks |
+|---|---|
+| Scope declaration | Phase 1 (public comprehension testing) — comprehension test participants must know what the system claims authority to do |
+| Conflict register | Phase 1 (public comprehension testing) — published to participants as context |
+| Objection record | Phase 2 (identity pilot) — no enrollment in identity pilot before the 60-day objection window closes |
+| Consent evidence | Phase 2 (identity pilot), Phase 3 (Essential Access delivery pilot) — pilot participants must have a genuine non-coercive opt-out path |
+| Exit rehearsal | Phase 3 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
+| Founder sunset | Phase 4 (Service Record pilot) — civic participation pilot must not run under indefinite founding-exception authority |
+| Independent civil-society review | Phase 5 (Flow/demurrage simulation) — monetary architecture requires external legitimacy review before real-money simulation |
+| Post-activation audit | All phases — no phase may advance to scale-up without the post-activation audit finding confirmed |
+
+**Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) recurrence event and must be logged as such in the Threat Register.
+
 ## Phase 1 - Public understanding
 
 **Hypothesis:** A skeptical general reader can understand the basic claim: survival, markets, and civic power should not ride on the same rail.
@@ -86,6 +105,25 @@ Every pilot needs:
 - Readers cannot tell which controls are designed, active-unproven, or evidence-backed.
 
 **Documents to improve after this phase:** README, One-Page Overview, Public FAQ, Public Readiness Guide, Claims and Evidence Register.
+
+### Phase 1 Comprehension Test Rubric
+
+**Sample size:** Minimum 60 participants, stratified across: (a) education levels (no post-secondary / some post-secondary / university graduate), (b) political orientations (self-identified left / center / right), and (c) digital access levels (high / medium / low). No single stratum may constitute more than 40% of the sample.
+
+**Test design:** Each participant reads the public-facing documents (01_overview.md, 02_faq.md, 03_readiness.md, 05_rights_layer.md, 06_big_companies.md) with no coaching. They then answer 10 questions covering:
+
+- 3 questions distinguishing moral commitments from designed mechanisms ("is this a proven outcome or a design goal?")
+- 3 questions distinguishing DESIGNED status from EVIDENCE-BACKED status
+- 2 questions identifying failure modes the system acknowledges
+- 2 questions on what the system explicitly does NOT claim to guarantee
+
+**Pass conditions (all required):**
+
+- ≥70% of participants correctly classify at least 7 of 10 questions
+- ≥60% of participants in each stratum correctly classify at least 6 of 10 questions (no stratum may be left in the dark)
+- ≤10% of participants describe the system as "proven to work" or "guaranteed to succeed" (overclaiming test)
+
+**Failure trigger:** If the overclaiming rate exceeds 10%, the public documents must be revised to make the DESIGNED/EVIDENCE-BACKED distinction more prominent before any Phase 2 pilot begins.
 
 ## Phase 2 - Identity and recovery
 

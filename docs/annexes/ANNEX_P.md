@@ -50,6 +50,7 @@ The Protocol adopts a layered hybrid approach rather than choosing a single iden
 - No scale deployment may occur until the identity stack demonstrates acceptable Sybil resistance, false-positive control, false-negative control, and recovery performance in live pilots.
 - Every pilot must publish exclusion rates, appeal outcomes, recovery times, breach incidents, and documented failure cases.
 - If identity error rates exceed the published threshold for a protected group, scale-up pauses automatically until remediation is validated.
+- Before any Essential Access identity system deployment expands beyond a bounded pilot population, the pilot gate criteria in Annex AK §AK5 must be satisfied. Gate passage must be certified by the Independent Identity Auditor (Annex AK §8), not by system operators.
 
 ---
 

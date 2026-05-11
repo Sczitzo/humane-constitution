@@ -67,3 +67,45 @@ Demurrage is an anti-hoarding instrument, not a ban on patient capital. The foll
 - **The more patient the capital class**, the stronger the transparency, audit, and conflict-disclosure requirements.
 - **Perpetual dynastic wrappers are prohibited.** Trusts, entity chains, and similar legal structures may preserve continuity for dependents or mission-locked stewardship only within published limits; they may not preserve extractive control across generations.
 
+---
+
+## J-RED — Legal Wrapper Red Team Methodology
+
+**Purpose.** The anti-dynasty and stewardship rules in this Annex are only as strong as the beneficial-ownership tracing and enforcement architecture behind them. This section specifies the red team scenarios that must be tested before the anti-rent claims can move from DESIGNED to evidence-backed.
+
+### Wrapper type 1 — Dynasty trust with mission lock
+
+**Mechanism:** A wealthy family establishes a mission-locked entity (e.g., a private foundation or perpetual trust claiming charitable purpose) that holds land, enterprise equity, or housing portfolios. The mission lock prevents the asset from being classified as personal dynasty wealth, but the family controls all appointments to the foundation's board.
+
+**Red team test:** Trace beneficial ownership through 3 layers of foundation/trust structure. Verify that the count-through ownership rule in §R1 correctly identifies the natural persons with de facto control (board appointment power), not merely the named trustees.
+
+**Pass criterion:** Beneficial ownership trace reaches natural persons within 3 layers in all test cases.
+
+### Wrapper type 2 — Family office fragmentation
+
+**Mechanism:** A single economic actor fragments asset holdings across 8–12 family members and 3–4 LLCs, each below the concentration threshold individually but collectively constituting a dynasty-scale holding.
+
+**Red team test:** Construct a synthetic family office structure with 10 named natural persons and 4 holding entities. Apply the count-through ownership rule. Verify that the aggregate holding is correctly attributed to the coordinating family unit rather than each individual.
+
+**Pass criterion:** The enforcement system identifies aggregate concentration above the threshold when any natural person holds control rights across the full network.
+
+### Wrapper type 3 — Mission-lock capture
+
+**Mechanism:** An enterprise qualifies as mission-locked (worker-owned or community benefit) at founding, then gradually dilutes the mission through bylaw amendments, board stacking, or operational drift. The mission-lock classification is not revoked because no single amendment triggers review.
+
+**Red team test:** Simulate a 5-year bylaws drift sequence across 6 incremental amendments, each individually below the review trigger. Verify that cumulative drift monitoring detects mission-lock dilution and triggers a reclassification review before the enterprise loses its mission-locked status in practice.
+
+**Pass criterion:** Cumulative drift monitoring fires a review trigger within the 5-year drift sequence, before the enterprise's actual operations diverge from its mission-lock classification by more than 25%.
+
+### Wrapper type 4 — Successive-generation stewardship erosion
+
+**Mechanism:** An initial stewardship owner complies with all rules. At succession, the asset passes to a family member under the allowed continuity provision. The second-generation owner interprets stewardship obligations narrowly over time. By the third generation, the holding functions as passive extraction.
+
+**Red team test:** Simulate a three-succession sequence. Verify that the succession review at each transfer assesses actual use patterns, not merely formal compliance with succession paperwork.
+
+**Pass criterion:** The third-generation review detects extraction-pattern drift and either requires remediation or reclassifies the holding outside the stewardship exemption.
+
+### Test schedule
+
+All four red team scenarios must be completed before the anti-dynasty and stewardship ownership claims move from DESIGNED to partly tested. Each scenario must be reviewed by a legal analyst independent of the founding coalition.
+

@@ -146,6 +146,36 @@ If any stage fails, the failure becomes a Hardening Queue item and the affected 
 
 ---
 
+## Pre-Succession Drift Signal Requirements
+
+**Purpose:** The most consequential drift scenario is not technical misconfiguration — it is a legitimate successor government that inherits the system and gradually hollows it out while maintaining formal compliance. Drift detection must include signals that fire before hollowing becomes irreversible, not after.
+
+**Required signals — all must be active and publishing before any government succession handoff is certified as complete:**
+
+**Signal S1 — Oracle node count:**
+The oracle network must meet or exceed FC-030 minimum (5 nodes per cohort) on the day of succession. If oracle count has dropped below minimum at any point in the 90 days before succession, the Implementation Drift Audit Package flags this as a T-022 Administrative Hollowing precursor event, and the Constitutional Integrity Panel (CIP, Annex AM §AM8) is automatically notified.
+
+**Signal S2 — Post-mortem publication continuity:**
+The public post-mortem publication schedule must show no gap exceeding 30 days in the 180 days before succession. A gap triggers an automatic CIP review under the AM3 hollowing triggers. The Capture Dashboard must show the post-mortem publication record as a real-time metric.
+
+**Signal S3 — Founding institution seat vacancy:**
+No founding institution seat (Federated Ombuds, Constitutional Integrity Panel, oracle adversarial seat) may be vacant for >90 days as of the succession date. Vacancies exceeding 90 days as of succession day are flagged as potential T-022 administrative capture and logged in the drift audit before the successor government takes office.
+
+**Signal S4 — Tier 1 hash integrity:**
+The cryptographic hash of all Tier 1 documents (Humane Constitution, INVARIANTS, Founding Commitments Tier 1 rows) must be verified against the bound reference hashes and published in the drift audit within 7 days before succession. Any hash mismatch is a succession blocker — succession cannot be certified until the mismatch is explained and resolved.
+
+**Signal S5 — Enforcement Panel publication record:**
+The Enforcement Panel must have published at least 4 Annual Deterrence Audits (one per year) if the system has been running for 4+ years, or one per year of operation. A gap in the publication record before succession is logged as a T-022 precursor. The new government inherits the publication obligation with no grace period.
+
+**Signal S6 — Essential Access continuity confirmation:**
+On the day of succession, an independent confirmation (not self-reported by the outgoing government) must verify that Essential Access issuance and delivery are operating above the CSM floor for all enrolled persons. If any category is below floor, succession is not blocked but the status is published with the succession record and triggers a mandatory 30-day continuity review by the Constitutional Integrity Panel.
+
+**Succession certification block:** Signals S1 through S4 are hard blocks — succession is not certified until each signal is confirmed green. Signals S5 and S6 are soft flags — succession proceeds, but the flags are published and the CIP begins a mandatory 90-day review.
+
+**Responsibility:** The drift audit for succession purposes is conducted by the Constitutional Integrity Panel (Annex AM §AM8), not by the outgoing or incoming government. The incoming government receives a copy of the audit findings on day 1 of office.
+
+---
+
 ## Residual Risk
 
 Tamper evidence is not anti-corruption magic. It raises the cost of hidden change; it does not make holders virtuous, operators honest, or lawful hostile amendment impossible. The strongest honest claim is narrower: quiet drift should become visible fast enough that people can challenge, exit, or restore the last valid state.

@@ -33,6 +33,49 @@ The project should not claim:
 
 ---
 
+## Drill Scope Specification
+
+Required drill coverage — each sector must be tested at the specific chokepoints listed below. Generic sector names are not sufficient. The drill must identify the firm or firm type being simulated (e.g., "Firm A, which controls 58% of natural gas transmission in the region"). Named firms are redacted in public publication if they are not public entities, but the Capture Dashboard operator and the Federated Ombuds Plenum receive unredacted versions.
+
+### Energy sector chokepoints
+
+- **Natural gas transmission:** The single largest pipeline operator serving the test jurisdiction must be included in the refusal simulation. A 90-day absence must be modeled.
+- **Electricity dispatch:** The largest generation dispatcher by capacity share must be included. Fallback must demonstrate that reserve generation, imports, and demand response together can sustain the CSM energy floor.
+- **Petroleum refining:** At least one refinery serving the jurisdiction's motor fuel supply must be modeled as unavailable. The strategic reserve release timeline must be published. FC-185 is currently reserved; the drill must produce a provisional timeline even if FC-185 is not yet bound.
+
+### Medicine sector chokepoints
+
+- **CSM-designated medicine supply:** Each CSM-designated medicine must be individually tested. If the largest single supplier exits, the system must demonstrate 365-day stockpile coverage. The drill must name the specific medicine classes, not the sector in aggregate.
+- **PBM concentration:** If three PBMs process more than 80% of prescriptions in the jurisdiction, the drill must simulate the largest PBM exiting and document how prescriptions are rerouted.
+
+### Logistics sector chokepoints
+
+- **Port access:** If a single port handles more than 40% of essential goods imports, a 90-day port closure must be simulated. Fallback routes must be named and verified as operational.
+- **Last-mile distribution:** At least one scenario must test rural or low-density distribution failure, not only urban logistics.
+
+### Data and communications sector chokepoints
+
+- **ISP and cloud concentration:** If a single ISP or cloud provider controls more than 50% of critical infrastructure connections in the jurisdiction, a 30-day outage must be simulated. Essential Access delivery must be demonstrated via alternative channels.
+
+### Reserve drawdown timeline requirements
+
+For each sector, the drill must produce:
+
+1. **Days-to-zero:** How many days does the strategic reserve sustain the CSM floor without the primary supplier?
+2. **Days-to-alternative:** How many days does it take to bring a CASP-registered alternative supplier to full CSM-floor delivery capacity?
+3. **Gap window:** Days-to-zero minus days-to-alternative. If the gap window is greater than zero, the reserve is insufficient and the drill is a failure for that sector.
+4. The published gap window must be signed off by the Capture Dashboard operator and made public before any sector is classified as secure.
+
+### Pass condition for drill-secure classification
+
+A sector is classified as drill-secure only when all three conditions hold:
+
+- Gap window is zero or negative for all chokepoints in that sector.
+- At least two CASP-registered alternatives exist with pre-committed contracts.
+- The drill was conducted under adversarial observation: an independent party attempted to identify drill preparation in advance.
+
+---
+
 ## Drill 1 - Largest Oil/Fuel Supplier Exit
 
 **Purpose:** Test whether fuel, heating, cooking, emergency transport, refining, pipeline, port, storage, and industrial-feedstock access can survive the largest supplier's refusal.

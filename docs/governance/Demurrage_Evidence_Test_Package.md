@@ -276,6 +276,32 @@ Pass condition: readers can explain why demurrage exists, who pays, where funds 
 
 ---
 
+## Household Burden Distribution Test
+
+**What is being tested:** Does the demurrage fee (FC-050: 0.5%/month on idle balances above exemption) fall proportionally — or disproportionately — on low-wealth users compared to concentrated capital?
+
+**Why this matters:** A demurrage system that exempts large capital pools (through project escrows, investment vehicles, or classification arbitrage) while applying to small household balances functions as a regressive tax, not a wealth-circulation mechanism. This failure mode is not visible in aggregate revenue numbers.
+
+**Measurement method:**
+
+- Divide the pilot population into 5 income quintiles by Flow balance held at end of each month.
+- For each quintile, measure: (a) average demurrage paid per person per month as a fraction of total Flow balance, and (b) average demurrage paid per person per month as a fraction of monthly Essential Access allocation.
+- Compute the ratio of the top-quintile rate to the bottom-quintile rate. This is the burden ratio.
+
+**Pass condition:** Burden ratio ≤ 1.0 — meaning the top quintile pays demurrage at least as high a fraction of their balance as the bottom quintile. If the bottom quintile holds smaller balances but qualifies for the idle-threshold exemption, that counts in their favor (lower rate), not against.
+
+**Failure criteria:**
+
+- Burden ratio > 1.5 (bottom quintile paying more than 1.5× the rate of the top quintile as a fraction of balance) triggers mandatory architecture review before any scale claim is made.
+- Any quintile paying demurrage that exceeds 10% of their monthly Essential Access allocation is an automatic failure — the fee has become a survival-floor clawback.
+- If project-escrow-exempt balances are held predominantly (>60%) by the top two quintiles, this is flagged as a classification-arbitrage risk requiring the T-025 demurrage sector-capture controls to be revalidated.
+
+**Required reporting:** Results must be published by quintile (not in aggregate) in the Capture Dashboard before the demurrage system moves beyond pilot status. Aggregation that hides quintile-level burden is itself a failure criterion.
+
+**Interaction with FC-050 review corridor:** If the pilot burden ratio exceeds 1.2 (warning threshold) in the first year, the FC-051 review corridor (±0.25%/mo adjustment band) must be used to reduce the effective rate on lower-balance holders before scale-up. The specific mechanism (higher exemption threshold or lower rate for balances below a defined floor) is left to the calibration review, but a re-test must confirm burden ratio ≤ 1.0 before scale-up proceeds.
+
+---
+
 ## Minimum Evidence Tables
 
 The project should not move demurrage from **needs evidence** to **partly tested** until these tables exist.

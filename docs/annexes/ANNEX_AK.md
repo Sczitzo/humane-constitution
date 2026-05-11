@@ -198,6 +198,28 @@ The identity system faces a structural trade-off: any threshold stringent enough
 
 ---
 
+## AK5 — Pilot Gate Criteria
+
+Before the identity system can advance from DESIGNED to evidence-backed status, a pilot must demonstrate all five gates below in the same pilot period. Gate results must be reported by the Independent Identity Auditor (Section 8), not by system operators.
+
+**Gate 1 — False-exclusion rate below trigger threshold (required for each population class):**
+- Displaced persons: measured quarterly exclusion rate ≤ FC-143 upper bound (6%) in the pilot population.
+- Undocumented persons: measured quarterly exclusion rate ≤ FC-144 upper bound (8%) in the pilot population.
+- Digitally fragile persons: measured quarterly exclusion rate ≤ FC-145 upper bound (8%) in the pilot population.
+- Overall population: measured quarterly exclusion rate ≤ FC-147 upper bound (to be bound before first scale-up gate).
+
+**Gate 2 — Recovery path functional:** At least 95% of persons who initiated a recovery request received a determination within 14 days in the pilot period. Determinations must be independently audited, not self-reported.
+
+**Gate 3 — Asymmetric default active:** All Essential Access exclusions that lacked a timely determination within 14 days must have been automatically reversed. The pilot must document the count of automatic reversals and confirm no person remained excluded past the 14-day window without an active determination.
+
+**Gate 4 — False-acceptance rate below trigger threshold:** Essential Access fraud rate ≤ FC-140 trigger threshold (3%) in the pilot period, measured by independent audit of a stratified sample.
+
+**Gate 5 — No single-point failure:** The pilot must include at least one test of device loss, credential loss, or identity document destruction for each population class, with documented recovery outcomes.
+
+**Pilot advancement rule:** Gates 1–5 must all pass in the same pilot period before any claim moves from "needs evidence" to "partly tested." A single gate failure triggers a mandatory architecture review before the next pilot cycle. Gate passage is certified by the Independent Identity Auditor under Section 8.
+
+---
+
 ## Founding Coalition Instructions
 
 To complete this annex before deployment, the founding coalition must:

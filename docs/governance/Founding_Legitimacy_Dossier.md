@@ -110,9 +110,34 @@ Failure criterion: founders retain emergency, interpretive, keyholder, or appoin
 
 ---
 
-## Artifact Status Register
+## Dossier Artifact Status Register
 
-The table below shows the current production status of each required founding artifact. **No stronger founding-legitimacy claim may be made until all rows reach PRODUCED.**
+The table below is the authoritative row-level tracking mechanism for founding readiness. All other status language in this document defers to it. **No founding-legitimacy claim stronger than DESIGNED may be made until all eight rows reach PRODUCED.**
+
+| Artifact | Required by | Status | What counts as complete |
+|---|---|---|---|
+| Scope declaration — what the founding coalition is and is not claiming authority to do | Annex AH | **DESIGNED** | Published document signed by all founding members, specifying jurisdictional scope, what the coalition cannot bind, and what requires subsequent democratic ratification |
+| Conflict register — financial, institutional, and relational interests of each founding member | Annex AH | **DESIGNED** | Named list of each founding member with disclosed interests; reviewed by an independent party not appointed by the coalition |
+| Objection record — documented objections received during pre-activation disclosure window | P-020 / Annex AH | **DESIGNED** | Timestamped log of all objections received during the 60-day disclosure window, with written responses to each substantive objection |
+| Consent evidence — basis for claiming the founding process is non-coercive | Annex AH | **UNRESOLVED PREREQUISITE** | Published consent model: who was consulted, how, what dissent was possible, and what the practical exit cost was for non-participants |
+| Exit rehearsal — demonstration that exit is practically available, not just formally permitted | T-026 / FC-121 | **DESIGNED** | At least one documented simulation of a unit exit, including Essential Access continuity during unwind and re-entry procedure |
+| Founder sunset — mechanism by which founding members lose exceptional authority | Annex AH | **DESIGNED** | Specific date or condition on which founding-instrument authority expires, locked in Tier 1 and published before activation |
+| Independent civil-society review — assessment by parties structurally opposed to the founding coalition's interests | P-020 / Annex AH | **UNRESOLVED PREREQUISITE** | Written assessment by at least two civil-society bodies nominated by the adversarial panel member, published before activation |
+| Post-activation audit — independent review within 90 days of founding | P-014 §5 | **DESIGNED** | Audit conducted by reviewers not appointed by the coalition; findings published; any discrepancies between intended and actual activation addressed in writing |
+
+**Status key:**
+- **PRODUCED** — artifact exists as a published, independently verifiable document
+- **DESIGNED** — process or structure for producing it is defined; artifact not yet produced
+- **UNRESOLVED PREREQUISITE** — the artifact's content depends on answers not yet determined (e.g., who counts as civil society, what consent means in the specific context)
+- **BLOCKED** — production is waiting on another artifact being completed first
+
+**Advancement rule:** The founding process may not claim legitimacy until all eight artifacts reach PRODUCED status. The two UNRESOLVED PREREQUISITE items (consent evidence and civil-society review) must be resolved before any pilot that depends on founding authority can begin.
+
+---
+
+## Broader Artifact Status (legacy reference)
+
+The table below tracks the fuller set of founding artifacts defined in the Required Founding Artifacts section above. It is subordinate to the Dossier Artifact Status Register for founding-readiness purposes. **No stronger founding-legitimacy claim may be made until all rows in the register above reach PRODUCED.**
 
 | Artifact | Status | Notes |
 |---|---|---|
