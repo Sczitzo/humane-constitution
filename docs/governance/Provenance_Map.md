@@ -80,7 +80,7 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 - 📄 **Constitutional text:** [Founding Order](../../founding/order/README.md) — *The Founding Order locks the scale hierarchy, competence test, and default against escalation.*
 ---
 
-## PROPOSED patches — designed, awaiting formal acceptance
+## Active patches — Sessions 2 through 9
 
 ### Governance and operational resilience
 
@@ -88,63 +88,63 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This threat describes review and appeal systems becoming bottlenecks until emergency shortcuts feel normal.*
 
-- 🔩 **Patch:** [P-005 — Governance Throughput Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-005 — Governance Throughput Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AC.md § AC1](../annexes/ANNEX_AC.md) — *Annex AC creates dual queues, throughput floors, emergency caps, and interim bridge authority for time-sensitive decisions.*
 
 ### T-006 — Measurement Lag / Supply Shock
 
 > *This threat describes slow or noisy measurement causing either over-issuance during scarcity or restriction after recovery.*
 
-- 🔩 **Patch:** [P-006 — Measurement Lag and Supply Shock Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-006 — Measurement Lag and Supply Shock Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AC.md § AC2](../annexes/ANNEX_AC.md) — *Annex AC defines sentinel indicators, PCRP authority, recovery symmetry, and cadence-adjusted emergency bridges.*
 
 ### T-008 — Bureaucratic Elite Formation
 
 > *This threat describes legitimate verification and oversight roles hardening into a durable insider class.*
 
-- 🔩 **Patch:** [P-008 — Bureaucratic Elite Formation Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-008 — Bureaucratic Elite Formation Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AC.md § AC3](../annexes/ANNEX_AC.md) — *Annex AC adds legibility audits, diversity requirements, verifier independence, and cohort cooling controls.*
 
 ### T-009 — Grace Exploitation Loop
 
 > *This threat describes humane hardship pauses being used to preserve status without ongoing contribution.*
 
-- 🔩 **Patch:** [P-009 — Grace Exploitation Loop Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-009 — Grace Exploitation Loop Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AF.md](../annexes/ANNEX_AF.md) — *Annex AF graduates renewal review, tracks cross-quarter pause history, detects attestation collusion, and slows Service Record decay.*
 
 ### T-010/T-011 — Narrative Attack Surface
 
 > *This threat describes the system being publicly defined by hostile framing before it can explain or demonstrate itself.*
 
-- 🔩 **Patch:** [P-011 — Narrative Attack Surface Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-011 — Narrative Attack Surface Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AD.md](../annexes/ANNEX_AD.md) — *Annex AD creates rapid public communication, pre-committed failure doctrine, citizen-facing rights language, and annual narrative simulation.*
 
 ### T-012 — PCRP Poisoning via Oracle-Corroboration Collapse
 
 > *This threat describes a false emergency created when two apparent corroboration channels carry the same corrupted oracle signal.*
 
-- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AE.md § AE2.1](../annexes/ANNEX_AE.md) — *Annex AE requires structurally independent corroboration for PCRP activation and reduces scope when independence fails.*
 
 ### T-013 — Compound Crisis Throughput Starvation
 
 > *This threat describes one crisis consuming the guaranteed decision capacity needed by another simultaneous crisis.*
 
-- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AE.md § AE2.2](../annexes/ANNEX_AE.md) — *Annex AE turns the throughput floor into categorical minimums so one crisis type cannot consume every slot.*
 
 ### T-014 — Emergency Governance Triple Deadlock
 
 > *This threat describes multiple valid safety mechanisms blocking the same emergency decision at the same time.*
 
-- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AE.md § AE2.3](../annexes/ANNEX_AE.md) — *Annex AE creates an emergency deadlock protocol, rapid arbitration, scope freeze, and unconditional survival-floor bridge.*
 
 ### T-015 — Demand-Side Oracle Poisoning
 
 > *This threat describes demand spikes caused by enforcement or verification actions being mistaken for supply shocks.*
 
-- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-012 — Interface Hardening and Deadlock Prevention](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AE.md § AE2.4](../annexes/ANNEX_AE.md) — *Annex AE adds demand-context flags and Ombuds co-certification before PCRP acts on distorted demand signals.*
 ### Founding mechanics and acceptance hardening
 
@@ -152,49 +152,49 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This threat describes capture of the process that decides which patches can become constitutional text.*
 
-- 🔩 **Patch:** [P-013 — Formal Acceptance Process Integrity](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-013 — Formal Acceptance Process Integrity](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AG.md](../annexes/ANNEX_AG.md) — *Annex AG hardens pilot representativeness, sign-off deadlocks, audit independence, anti-gaming rules, and stagnation review.*
 
 ### T-017 — P-013 Bootstrap Problem
 
 > *This threat describes the circular problem of needing a hardened acceptance process to activate the patch that hardens acceptance.*
 
-- 🔩 **Patch:** [P-014 — P-013 Bootstrap Activation (One-Time Founding Instrument)](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-014 — P-013 Bootstrap Activation (One-Time Founding Instrument)](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AH.md § AH1–AH7](../annexes/ANNEX_AH.md) — *Annex AH creates a one-time founding instrument for activating P-013 and then permanently sealing that exception.*
 
 ### T-017 (amended) — Founding Window Extension
 
 > *This amendment addresses the risk that the original founding challenge window was too short to expose capture.*
 
-- 🔩 **Patch:** [P-020 — Founding Window Extension](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-020 — Founding Window Extension](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AH.md § AH2.1–AH2.4](../annexes/ANNEX_AH.md) — *Annex AH extends pre-activation disclosure and gives the adversarial member an oppose-coalition nomination path.*
 
 ### T-018 — PCRP False-Trigger Exhaustion Attack
 
 > *This threat describes engineered false emergency triggers being used to exhaust audit capacity or make operators hesitate during a real crisis.*
 
-- 🔩 **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AP.md](../annexes/ANNEX_AP.md) — *Annex AP separates manipulated false triggers from ordinary false-trigger caps and creates exhaustion alerts.*
 
 ### T-019 — Demand-Context Flag Suppression Attack
 
 > *This threat describes a legitimate-looking enforcement action being timed to suppress PCRP during a real supply shock.*
 
-- 🔩 **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AP.md](../annexes/ANNEX_AP.md) — *Annex AP requires manufactured-flag assessment and cross-register timing review during demand-context periods.*
 
 ### T-022 — Electoral Cycle Capture
 
 > *This threat describes a hostile successor government keeping the words of the system while dismantling its operation.*
 
-- 🔩 **Patch:** [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AM.md](../annexes/ANNEX_AM.md) — *Annex AM adds entrenchment, minimum Essential Access persistence, hollowing triggers, and transition-continuity rules.*
 
 ### T-023 — Pilot External Validity Collapse
 
 > *This threat describes a successful calm-condition pilot being mistaken for evidence that the system will survive stress.*
 
-- 🔩 **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AN.md](../annexes/ANNEX_AN.md) — *Annex AN requires stress-condition evidence, a red-team challenge window, and crisis simulation before scale-up.*
 ### Economic-system hardening
 
@@ -202,7 +202,7 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This threat describes investment exemptions becoming a way for capital-intensive actors to park Flow without demurrage.*
 
-- 🔩 **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md) — *Annex AR governs the thresholds and parameters for milestone escrow, force-majeure freezes, inspector pools, and publication.*
 
 ---
@@ -213,14 +213,14 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This patch extends T-002 by making identity fraud and exclusion tradeoffs explicit, measured, and governable.*
 
-- 🔩 **Patch:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md) — *Annex AK requires a published doctrine for fraud tolerance, vulnerable-population exclusion limits, review triggers, and tradeoff rules.*
 
 ### P-021 — Register Disclosure Protocol
 
 > *This patch treats the public threat register itself as an operational-security surface.*
 
-- 🔩 **Patch:** [P-021 — Register Disclosure Protocol](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 🔩 **Patch:** [P-021 — Register Disclosure Protocol](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AO.md](../annexes/ANNEX_AO.md) — *Annex AO splits threat-register content into public and restricted versions while preserving consistency and auditability.*
 
 ### P-024 — Attestation-at-Risk Stake Mechanism
@@ -263,6 +263,38 @@ These patches are part of the active constitutional architecture but are not one
 
 - 🔩 **Patch:** [P-034 — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AV.md](../annexes/ANNEX_AV.md) — *Annex AV requires independent adversarial-panel attestation before Tier-1-touching proposals can enter FAP intake.*
+
+---
+
+## Session 10 — Governance hardening and structural additions
+
+### T-028 — Essential-Sector Refusal Leverage
+
+> *This threat describes essential-sector conglomerates using control over survival goods as a bargaining chip against the constitutional floor.*
+
+- 🔩 **Patch:** [P-050 — Compliant Alternative Supplier Pre-Registration (CASP)](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 📄 **Constitutional text:** [ANNEX_AT.md § AT6.6](../annexes/ANNEX_AT.md) — *AT6.6 requires pre-registration of ≥2 independent backup suppliers per essential category, pre-committed automatic-activation contracts, and gap-window publication before each procurement renewal.*
+
+### T-022 (primary control) — Electoral Cycle Capture
+
+> *The Constitutional Integrity Panel (CIP) is the primary structural response to T-022, supplementing P-018.*
+
+- 🔩 **Patch:** [P-051 — Constitutional Integrity Panel](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 📄 **Constitutional text:** [ANNEX_AM.md § AM8](../annexes/ANNEX_AM.md) — *AM8 establishes a 7-member CIP with staggered terms, 0.01%-of-Flow-issuance constitutionally fixed funding, multi-body appointment structure, 5-of-7 quorum for Tier 1 ratification, and automatic hollowing-trigger reviews.*
+
+### T-019 (primary control) — Demand-Context Flag Suppression
+
+> *The Ombuds deliberate-manufacture standard closes the open problem in T-019.*
+
+- 🔩 **Patch:** [P-052 — Federated Ombuds Deliberate-Manufacture Standard](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 📄 **Constitutional text:** [ANNEX_AI.md § 4.12](../annexes/ANNEX_AI.md) — *§4.12 specifies 4-criterion assessment (timing, proportionality, prior-basis, knowledge), 24-hour Plenum decision window, asymmetric default favoring PCRP activation, and manufactured-flag referral to Enforcement Panel.*
+
+### Whistleblower protection and safety-identity gaps — P-053 through P-055
+
+> *Three patches close vignette-documented gaps between the constitutional guarantee and operational safety.*
+
+- 🔩 **Patches:** [P-053 — Whistleblower Protection](../governance/Patch_Log.md), [P-054 — Confidential Enrollment](../governance/Patch_Log.md), [P-055 — Delivery Sufficiency Standard](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 📄 **Constitutional text:** [ANNEX_AW.md](../annexes/ANNEX_AW.md) (reporter-protection clause, Article VII), [ANNEX_AX.md](../annexes/ANNEX_AX.md) (safety-shielded enrollment, Article II), [ANNEX_AY.md](../annexes/ANNEX_AY.md) (delivery sufficiency register, Article IV)
 
 ---
 
