@@ -300,6 +300,8 @@ Pass condition: readers can explain why demurrage exists, who pays, where funds 
 
 **Interaction with FC-050 review corridor:** If the pilot burden ratio exceeds 1.2 (warning threshold) in the first year, the FC-051 review corridor (±0.25%/mo adjustment band) must be used to reduce the effective rate on lower-balance holders before scale-up. The specific mechanism (higher exemption threshold or lower rate for balances below a defined floor) is left to the calibration review, but a re-test must confirm burden ratio ≤ 1.0 before scale-up proceeds.
 
+**Universal savings floor test:** The household savings floor (Annex J §J2: 18 months of regional median consumption, equal for all persons regardless of income or wealth) must be verified to be functioning as designed. A separate test within the burden distribution pilot must confirm: (a) no enrolled person with total Flow holdings below the floor is paying any demurrage; (b) the published floor value is displayed clearly in every wallet interface; (c) users in the bottom two quintiles can correctly state their floor amount and how close they are to it, without assistance. If any person below the floor is paying demurrage, this is an automatic system failure requiring immediate correction before any other burden metric is assessed.
+
 ---
 
 ## Minimum Evidence Tables
