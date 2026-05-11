@@ -1,6 +1,7 @@
 // app/src/components/diagrams/V005_DemurrageDecay.tsx
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
+import { THEME } from './DiagramTheme'
 
 const NODES: DiagramNode[] = [
   {
@@ -8,16 +9,16 @@ const NODES: DiagramNode[] = [
     label: 'Demurrage Decay Curve',
     definition: 'Flow balances decay at a constitutionally fixed annual rate. Decay is calculated on idle balances above the personal exemption floor. Proceeds fund the public commons rail — not extracted as profit.',
     docLink: 'ANNEX_AR.md',
-    accent: '#58a6ff',
-    accentBg: 'rgba(88,166,255,0.07)',
+    accent: THEME.flow.accent,
+    accentBg: THEME.flow.accentBg,
   },
   {
     id: 'exemption',
     label: 'Personal Exemption Floor',
     definition: 'Balances below the exemption floor are exempt from demurrage. Set to cover ordinary household liquidity needs. Reviewed annually by the oracle council.',
     docLink: 'ANNEX_AR.md',
-    accent: '#3fb950',
-    accentBg: 'rgba(63,185,80,0.07)',
+    accent: THEME.ea.accent,
+    accentBg: THEME.ea.accentBg,
   },
 ]
 
@@ -43,31 +44,31 @@ export function V005_DemurrageDecay({ onInternalLink }: DiagramProps) {
       onInternalLink={onInternalLink}
     >
       <svg viewBox="0 0 720 200" className="w-full" style={{ height: 200 }}>
-        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke="#30363d" strokeWidth={1.5} />
-        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke="#30363d" strokeWidth={1.5} />
-        <text x={ox - 8} y={oy - h} textAnchor="end" fontSize={9} fill="#8b949e" fontFamily="monospace">balance</text>
-        <text x={ox + w + 14} y={oy + 4} fontSize={9} fill="#8b949e" fontFamily="monospace">time →</text>
+        <line x1={ox} y1={oy - h - 10} x2={ox} y2={oy} stroke={THEME.border} strokeWidth={1.5} />
+        <line x1={ox} y1={oy} x2={ox + w + 10} y2={oy} stroke={THEME.border} strokeWidth={1.5} />
+        <text x={ox - 8} y={oy - h} textAnchor="end" fontSize={9} fill={THEME.dim} fontFamily="monospace">balance</text>
+        <text x={ox + w + 14} y={oy + 4} fontSize={9} fill={THEME.dim} fontFamily="monospace">time →</text>
 
-        <line x1={ox} y1={oy - 18} x2={ox + w} y2={oy - 18} stroke="#3fb950" strokeWidth={1} strokeDasharray="6,4"
+        <line x1={ox} y1={oy - 18} x2={ox + w} y2={oy - 18} stroke={THEME.ea.accent} strokeWidth={1} strokeDasharray="6,4"
           style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('exemption')} />
-        <text x={ox + w - 4} y={oy - 22} textAnchor="end" fontSize={9} fill="#3fb950" fontFamily="monospace"
+        <text x={ox + w - 4} y={oy - 22} textAnchor="end" fontSize={9} fill={THEME.ea.accent} fontFamily="monospace"
           style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('exemption')}>exemption floor</text>
 
         <path
           d={decayPath(ox, oy, w, h)}
-          fill="none" stroke="#58a6ff" strokeWidth={activeNodeId === 'curve' ? 2.5 : 2}
-          style={{ cursor: 'pointer', filter: activeNodeId === 'curve' ? 'drop-shadow(0 0 4px #58a6ff)' : undefined }}
+          fill="none" stroke={THEME.flow.accent} strokeWidth={activeNodeId === 'curve' ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
+          style={{ cursor: 'pointer', filter: activeNodeId === 'curve' ? `drop-shadow(0 0 4px ${THEME.flow.accent})` : undefined }}
           onClick={() => handleNodeClick('curve')}
         />
         <path
           d={decayPath(ox, oy, w, h) + ` L${ox + w},${oy} L${ox},${oy} Z`}
-          fill="rgba(88,166,255,0.06)"
+          fill={THEME.flow.accentBg}
           style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('curve')}
         />
 
-        <text x={ox + w / 2} y={oy + 18} textAnchor="middle" fontSize={9} fill="#8b949e" fontFamily="monospace">idle holding period</text>
-        <text x={ox + 8} y={oy - h + 4} fontSize={9} fill="#58a6ff" fontFamily="monospace">idle balance →</text>
-        <text x={ox + 8} y={oy - h + 16} fontSize={9} fill="#58a6ff" fontFamily="monospace">demurrage applied</text>
+        <text x={ox + w / 2} y={oy + 18} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace">idle holding period</text>
+        <text x={ox + 8} y={oy - h + 4} fontSize={9} fill={THEME.flow.accent} fontFamily="monospace">idle balance →</text>
+        <text x={ox + 8} y={oy - h + 16} fontSize={9} fill={THEME.flow.accent} fontFamily="monospace">demurrage applied</text>
       </svg>
     </DiagramShell>
   )
