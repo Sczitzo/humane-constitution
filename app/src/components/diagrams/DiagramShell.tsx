@@ -39,37 +39,42 @@ export function DiagramShell({
       {/* SVG slot */}
       {children}
 
-      {/* Expansion panel */}
+      {/* Expansion panel — content always mounted so CSS transition works */}
       <div
-        className="overflow-hidden transition-all duration-[280ms] ease-in-out"
-        style={{ maxHeight: active ? '220px' : '0', opacity: active ? 1 : 0, marginTop: active ? '16px' : '0' }}
+        className="overflow-hidden"
+        style={{
+          maxHeight: active ? '240px' : '0px',
+          opacity: active ? 1 : 0,
+          marginTop: active ? '16px' : '0px',
+          transition: 'max-height 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease',
+        }}
       >
-        {active && (
+        <div
+          className="rounded-r-lg py-3 px-5 flex flex-col gap-2"
+          style={{
+            borderLeft: `2px solid ${active?.accent ?? 'transparent'}`,
+            background: active?.accentBg ?? 'transparent',
+          }}
+        >
           <div
-            className="rounded-r-lg py-3 px-5 flex flex-col gap-2"
-            style={{
-              borderLeft: `2px solid ${active.accent}`,
-              background: active.accentBg,
-            }}
+            className="font-mono text-[0.78em] font-bold uppercase tracking-[0.08em]"
+            style={{ color: active?.accent }}
           >
-            <div
-              className="font-mono text-[0.78em] font-bold uppercase tracking-[0.08em]"
-              style={{ color: active.accent }}
-            >
-              {active.label}
-            </div>
-            <div className="text-[0.9em] leading-[1.55] text-[#dde1e7]">
-              {active.definition}
-            </div>
+            {active?.label ?? ''}
+          </div>
+          <div className="text-[0.9em] leading-[1.55] text-[#dde1e7]">
+            {active?.definition ?? ''}
+          </div>
+          {active && (
             <button
-              className="mt-1 text-left font-mono text-[0.82em] opacity-85 hover:opacity-100 hover:underline"
-              style={{ color: active.accent }}
+              className="mt-1 text-left font-mono text-[0.82em] hover:underline"
+              style={{ color: active.accent, opacity: 0.85 }}
               onClick={() => onInternalLink(active.docLink)}
             >
               → {active.docLink.replace('.md', '').replace('#', ' §')}
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {/* Hint */}
