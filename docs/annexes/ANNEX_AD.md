@@ -1,10 +1,8 @@
 # ANNEX AD — Narrative Attack Surface Clauses
 
-> **Provenance:** Implements [P-011 — Narrative Attack Surface Hardening] · Addresses T-010/T-011 · Status: **PROPOSED**
+> **Provenance:** Implements [P-011 — Narrative Attack Surface Hardening] · Addresses T-010/T-011 · Status: **ACTIVE**
 
 **Purpose.** This annex introduces the operative clauses for P-011 (T-011 Narrative Attack Surface). It extends Article VII, the White Paper governance rules, and the annual simulation mandate. Where clauses here conflict with earlier language, this annex governs.
-
-**Status:** PROPOSED. Clauses become operative only when formally accepted into the constitution.
 
 ### AD1. Rapid Public Communication Protocol (RPCP)
 For any operational event that crosses the public visibility threshold — defined as: affects more than the published population threshold, involves any restriction or modification of access, or generates confirmed external media coverage — a public communication must be published within 4 hours of confirmed event detection.

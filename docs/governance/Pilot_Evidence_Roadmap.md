@@ -78,7 +78,7 @@ Every pilot needs:
 | Exit rehearsal | Phase 3 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
 | Founder sunset | Phase 4 (Service Record pilot) — civic participation pilot must not run under indefinite founding-exception authority |
 | Independent civil-society review | Phase 5 (Flow/demurrage simulation) — monetary architecture requires external legitimacy review before real-money simulation |
-| Post-activation audit | All phases — no phase may advance to scale-up without the post-activation audit finding confirmed |
+| Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–9 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 10 and all scale-up promotions require a confirmed post-activation audit finding. |
 
 **Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) recurrence event and must be logged as such in the Threat Register.
 

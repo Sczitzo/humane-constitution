@@ -131,7 +131,11 @@ The table below is the authoritative row-level tracking mechanism for founding r
 - **UNRESOLVED PREREQUISITE** — the artifact's content depends on answers not yet determined (e.g., who counts as civil society, what consent means in the specific context)
 - **BLOCKED** — production is waiting on another artifact being completed first
 
-**Advancement rule:** The founding process may not claim legitimacy until all eight artifacts reach PRODUCED status. The two UNRESOLVED PREREQUISITE items (consent evidence and civil-society review) must be resolved before any pilot that depends on founding authority can begin.
+**Advancement rules (two-gate structure):**
+- **Gate A — Authorization to activate:** Artifacts 1–7 must reach PRODUCED status. The post-activation audit (artifact 8) cannot exist before activation, so it is not a precondition for activation itself.
+- **Gate B — Full post-activation legitimacy claim:** All eight artifacts must reach PRODUCED status. No stronger founding-legitimacy public claim may be made until Gate B clears.
+
+The two UNRESOLVED PREREQUISITE items (consent evidence and civil-society review) must be resolved before any pilot that depends on founding authority can begin — they are prerequisites for Gate A, not just Gate B.
 
 ---
 
@@ -172,7 +176,9 @@ No pilot phase may begin until Steps 1–2 are complete for all artifacts upstre
 
 ---
 
-## Broader Artifact Status (legacy reference)
+## Broader Artifact Status (superseded — for historical reference only)
+
+> **This table is superseded by the Dossier Artifact Status Register above.** Where this table conflicts with the register, the register governs. This section is retained only as a historical design-stage snapshot. Do not cite rows from this table for founding-readiness purposes.
 
 The table below tracks the fuller set of founding artifacts defined in the Required Founding Artifacts section above. It is subordinate to the Dossier Artifact Status Register for founding-readiness purposes. **No stronger founding-legitimacy claim may be made until all rows in the register above reach PRODUCED.**
 

@@ -61,8 +61,10 @@ Essential Access redemption velocity is a native sentinel for all essential cate
 PCRP authority rests with the Regional Executive Body. Activation requires joint action — no single actor may activate unilaterally. The Federated Ombuds must be notified within 1 hour of activation. PCRP activation is published immediately as a public record.
 
 **Permitted and prohibited actions:**
-- **Permitted:** Reduce Essential Access issuance to 70% of above-baseline for the affected category only. Humane floor issuance remains at 100%. Activate reserve release protocol for the affected category. Trigger expedited oracle review — must complete within 48 hours, not the normal cycle. Issue public notice that PCRP is active, specifying the category, trigger evidence, and named sources.
-- **Prohibited:** Activate full Shared Storehouse — requires oracle confirmation. Narrow survival floor access below 85% of baseline. Affect any category other than the one named in the trigger. Extend beyond 72 hours without oracle confirmation.
+- **Permitted:** Reduce Essential Access issuance to 70% of above-baseline for the affected category only (see definition below). CSM-floor issuance remains at 100% per INV-001 — this is absolute and is not subject to PCRP reduction. Activate reserve release protocol for the affected category. Trigger expedited oracle review — must complete within 48 hours, not the normal cycle. Issue public notice that PCRP is active, specifying the category, trigger evidence, and named sources.
+- **Prohibited:** Activate full Shared Storehouse — requires oracle confirmation. Reduce aggregate Essential Access delivery (CSM-floor + above-baseline combined, across all categories and all persons in the affected jurisdiction) below 85% of the normal delivery baseline. Affect any category other than the one named in the trigger. Extend beyond 72 hours without oracle confirmation.
+
+**Terminology clarification:** "Above-baseline Essential Access" means the issuance above the CSM floor (the additional Essential Access allocated beyond the Constitutional Survival Minimum). The permitted 70% reduction applies only to above-baseline issuance for the single affected category. The CSM floor itself is never reduced — this is governed by INV-001, which is absolute and applies regardless of PCRP status. The 85% prohibition threshold in the prohibited actions applies to *aggregate* Essential Access delivery across all categories and persons combined; it is a separate ceiling protecting against excessive above-baseline reduction compounding across multiple simultaneous PCRP activations. These are distinct protections at different levels, neither of which supersedes the other.
 
 **Oracle confirmation outcomes:**
 If oracle confirms crisis: full Shared Storehouse activates; PCRP is superseded; oracle process governs. If oracle contradicts (supply is adequate): PCRP immediately terminates; full issuance restored; mandatory post-mortem published within 7 days; activation is logged as a false trigger. Three false PCRP activations within four quarters by the same Regional Executive Body triggers mandatory independent audit of that body's measurement access and decision process.
@@ -134,11 +136,9 @@ When the concentration dashboard shows the cohort overlap index exceeding the pu
 | T-002 | P-003 | ACTIVE | AB |
 | T-004 | P-002 | ACTIVE | AB |
 | T-007 | P-004 | ACTIVE | AB |
-| T-005 | P-005 | PROPOSED | AC1 |
-| T-006 | P-006 | PROPOSED | AC2 |
-| T-008 | P-008 | PROPOSED | AC3 |
-
-*Green rows: ACTIVE patches (Annex AB). Yellow rows: PROPOSED patches (Annex AC). PROPOSED patches are not yet operative.*
+| T-005 | P-005 | ACTIVE | AC1 |
+| T-006 | P-006 | ACTIVE | AC2 |
+| T-008 | P-008 | ACTIVE | AC3 |
 
 ---
 

@@ -467,7 +467,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-018 | T-022 | **ACTIVE** | Critical | constitutional architecture + political durability |
+| P-018 | T-022 | **PROPOSED** | Critical | constitutional architecture + political durability |
 
 ### P-018 — Electoral Cycle Resilience
 
@@ -683,7 +683,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 | T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
 | T-002 | P-016 | **ACTIVE** | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
-| T-022 | P-018 | **ACTIVE** | Annex AM |
+| T-022 | P-018 | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **ACTIVE** | Annex AN |
 | T-017 | P-020 | **ACTIVE** | Annex AH2 |
 | — | P-021 | **ACTIVE** | Annex AO |

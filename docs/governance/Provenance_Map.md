@@ -187,7 +187,7 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This threat describes a hostile successor government keeping the words of the system while dismantling its operation.*
 
-- 🔩 **Patch:** [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 🔩 **Patch:** [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · Status: **PROPOSED** (awaiting pilot; see CIP/P-051 for primary T-022 control)
 - 📄 **Constitutional text:** [ANNEX_AM.md](../annexes/ANNEX_AM.md) — *Annex AM adds entrenchment, minimum Essential Access persistence, hollowing triggers, and transition-continuity rules.*
 
 ### T-023 — Pilot External Validity Collapse

@@ -200,6 +200,7 @@ Any patch proposal submitted to FAP is evaluated against this document before te
 9. Applies any fee, tax, or carrying cost to survival-floor access or below-floor balances (violates INV-009)
 10. Would create an uncapped succession transfer mechanism above the household savings floor (violates INV-010)
 11. Would permit a constitutional decision to execute without named human attestation (violates INV-011)
+12. Would amend any Founding Order file (`founding/order/`) through a sub-Tier-1 process (violates INV-012)
 
 ...is rejected at intake without proceeding to technical review. The FAP reviewer documents the violation by invariant ID.
 
@@ -216,6 +217,22 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 **Why this matters:** FC-YT1 and FC-YT2 are the tripwires that convert survival-floor failures into constitutional emergencies. Launching without them means the system can experience CSM failures with no automatic escalation path. People can fall through the floor and the governance architecture has no mechanism to respond.
 
 **Attack vectors that target this invariant:** Founding-coalition time pressure to launch before evidence is ready; informal tolerance of unconfirmed parameters during transition
+
+---
+
+---
+
+## INV-012 — Founding Order Files Are Tier 1 Protected
+
+**Statement:** The five Founding Order operational documents — `founding/order/subsidiarity_rule.md`, `founding/order/consent_protocol.md`, `founding/order/exit_protocol.md`, `founding/order/reentry_protocol.md`, and `founding/order/jurisdictional_scales.md` — are Tier 1 protected. They may not be amended, superseded, or removed by any Tier 2 or Tier 3 process. Changes to these files require the same 7-of-9 keyholder signatures (FC-110) and 180-day timelock (FC-111) as any other Tier 1 amendment.
+
+**Mechanical boundary:** The five listed files are explicitly included in the Tier 1 amendment scope alongside `Humane_Constitution.md §0`, `architecture/parameter_registry.md Tier 1 rows`, `Annex Y §Y1`, and `/founding/commitments.md Tier 1 rows`. The exit right (FC-120/121) and the consent threshold governing community adoption are Tier 1 parameters. Any patch tagged `modifies_tier1=True` that touches these files is subject to the two-key precondition (ANNEX_AV §AV1) before FAP intake.
+
+**Why this matters:** The consent and exit rules are the foundational legitimacy architecture. A Tier 2 amendment process that could restructure exit rights or consent thresholds without the 7-of-9 + 180-day gate would allow the governing coalition to entrench itself or block community departure through ordinary political process — precisely the threat these documents are designed to prevent.
+
+**Attack vectors:** T-022 (electoral cycle capture targeting the exit mechanism); PRD-009 (dynasty formation securing permanent institutional control by eliminating exit as a check).
+
+**Violation detection:** Any patch that modifies a Founding Order file without a valid Tier 1 attestation envelope (ANNEX_AV §AV8) is rejected at FAP intake as a Tier 1 violation under INV-007. Implementation drift that operationally narrows exit rights or consent thresholds without a valid Tier 1 amendment record is a drift-warning event per ANNEX_AV §AV9.
 
 ---
 

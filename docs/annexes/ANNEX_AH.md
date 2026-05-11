@@ -146,8 +146,8 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-023 | P-019 | ACTIVE | AN | S8 |
 | T-024 | P-022 | ACTIVE | AQ | S8 |
 | T-025 | P-023 | ACTIVE | AR | S8 |
-| T-026 | P-026 | ACTIVE | AH (Founding Order) | S9 |
-| T-027 | P-026 | ACTIVE | AH (Founding Order) | S9 |
+| T-026 | P-026 | ACTIVE | founding/order/ | S9 |
+| T-027 | P-026 | ACTIVE | founding/order/ | S9 |
 | T-028 | P-050 | ACTIVE | AT §AT6.6 | S10 |
 | — | P-053 | ACTIVE | AW | S10 |
 | — | P-054 | ACTIVE | AX | S10 |

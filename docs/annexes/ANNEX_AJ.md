@@ -261,7 +261,7 @@ Penalty adjudication is administered by the **Enforcement Panel** (a sub-body of
 2. **Gain quantification.** The enforcement body quantifies the functional gain per §4.1. Quantification methodology is documented and subject to the P-017 oracle-independence standards (Annex AL) where gain estimation requires measurement of market prices or cohort comparisons.
 3. **Notice and response.** The accused actor receives notice with the factual finding, the gain quantification, and the scheduled penalty. Actor has 30 days to contest findings or accept.
 4. **Adjudication.** Contested cases proceed to the Enforcement Panel. Panel composition: 3 seats drawn from the Article VII enforcement staff, 2 seats drawn from the Ombuds roster per Annex AI, 1 seat drawn from the affected-party advocacy roster. No Enforcement Panel member may have a prior relationship with the accused actor within 3 years.
-5. **Appeal.** Adjudicated penalties are appealable once, through the federated Ombuds process per Annex AI §AI-7 (appeal tier). Appeal pauses license actions but not gain-recoupment until resolved.
+5. **Appeal.** Adjudicated penalties are appealable once, through the federated Ombuds process per Annex AI §4.8 (Enforcement Panel Appeals). Appeal pauses license actions but not gain-recoupment until resolved.
 6. **Publication.** Final findings are published on the Enforcement Ledger (Article VII) in aggregate form, with individual findings published only where necessary for statutory notice or where the actor has consented. PII is stripped per Annex AM.
 
 ### 4.5 — Deterrence Audit

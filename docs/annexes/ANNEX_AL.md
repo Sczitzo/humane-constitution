@@ -317,7 +317,7 @@ The divergence report is the most operationally significant output. It surfaces 
 | Reference | Relationship |
 | :--- | :--- |
 | P-017 (Patch Log) | Annex AL is the definition document for all "methodology class" references in P-017 |
-| Annex AI (Ombuds Constitution) | Annex AI references Annex AL when requiring that PCRP oracles meet oracle independence requirements before co-certification; AL defines what "independent" means epistemologically |
+| Annex AP §AP2 (PCRP co-certification) | Annex AP §AP2 references Annex AL for the epistemological independence standard that oracles must meet before PCRP co-certification proceeds; AL defines what "independent" means in that context |
 | Annex AR (Contract-Commitment Architecture) | P-023.4 inspector pool uses "P-017 oracle-independence standards" — those standards for epistemological independence are defined here |
 | T-007 (Definition Drift) | The P-004 protection on Sections 1 and 2, combined with the explicit scope boundary on the annual audit (Section 5.2), is the primary control against T-007 targeting this definition |
 | T-020 / T-021 | The open problems in both threats are directly resolved by this annex |

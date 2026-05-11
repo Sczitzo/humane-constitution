@@ -127,6 +127,27 @@ Floor value must satisfy: above the exposed-caregiver equilibrium (0.13) to prov
 
 ---
 
+---
+
+## FC-YT1 and FC-YT2 — Survival Floor Activation Gate Parameters
+
+**FC-YT1 — CSM Delivery Failure Pattern-Detection Trigger**
+- **Value:** 3 verified delivery failures per jurisdictional cluster within any 30-day window
+- **Tier:** Tier 2 / pre-launch blocking gate
+- **Authority:** Required by INV-LAUNCH-1 and ANNEX_Y §Y4 before any operational phase enrolling real persons
+- **Ombuds verification required:** Yes — the Federated Ombuds must publish the confirmed numeric value before this gate clears
+- **Relationship to FC-071:** FC-071 defines the per-population rate (3 per 10,000 residents per 30 days) that triggers cluster-level review. FC-YT1 is the raw count threshold that triggers H-3 refounding review initiation regardless of per-population rate. Both apply independently.
+- **"Verified delivery failure"** means a failure confirmed by at least one Tier-3 (physical sampling) oracle node per ANNEX_Y §Y1.
+
+**FC-YT2 — 90-Day CSM Reserve Requirement**
+- **Value:** 90 days × CSM × enrolled population, by jurisdiction and essential category
+- **Tier:** Tier 2 / pre-launch blocking gate
+- **Authority:** Required by INV-LAUNCH-1 and ANNEX_Y §Y7 before any operational phase enrolling real persons
+- **Ombuds verification required:** Yes — same requirement as FC-YT1
+- **Relationship to FC-070:** FC-070 binds the general resilience reserve window at 45 days. FC-YT2 binds the CSM-specific reserve at 90 days. These are complementary: the general reserve (45 days) is an operational floor; the CSM reserve (90 days) is the survival-floor-specific gate. Both must be met; FC-YT2 is the binding pre-launch gate.
+
+---
+
 ## Hash Commitment
 
 At founding, the SHA-256 hash of this file (computed with the canonical line-ending, UTF-8 encoding, and without trailing whitespace normalization) is committed to the ledger genesis block. Subsequent amendments produce new hash commitments with version-chained history per `/architecture/drift_chain.md`.

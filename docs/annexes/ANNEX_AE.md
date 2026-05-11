@@ -1,10 +1,8 @@
 # ANNEX AE — Compound Interface Tests and Deadlock Prevention Clauses
 
-> **Provenance:** Implements [P-012 — Interface Hardening and Deadlock Prevention] (§AE2.1–AE2.4) · Addresses T-012, T-013, T-014, T-015 · Status: **PROPOSED**
+> **Provenance:** Implements [P-012 — Interface Hardening and Deadlock Prevention] (§AE2.1–AE2.4) · Addresses T-012, T-013, T-014, T-015 · Status: **ACTIVE**
 
 **Purpose.** This annex records compound interface test results, the new threats identified at patch interfaces (T-012 through T-015), and the operative clauses for P-012 (Interface Hardening and Deadlock Prevention). Where clauses here conflict with Annexes AC or AD, this annex governs.
-
-**Status:** PROPOSED. Clauses become operative only when formally accepted.
 
 ### AE1. Interface Vulnerability Register
 The following vulnerabilities were identified by running Annex T scenarios against previously adopted patches:
@@ -50,6 +48,8 @@ An Emergency Deadlock is declared automatically when a mandatory emergency decis
 - **Mandatory root-cause review:** Post-resolution post-mortem identifies which procedural rules enabled the triple-block and whether amendment is required.
 
 The arbitration panel has no authority over constitutional classification. It ensures the survival floor survives while the classification dispute resolves through normal channels. Second-generation deadlock (arbitration panel itself blocked) escalates immediately to Level 5 structural review.
+
+**Level 5 minimum procedure:** Level 5 structural review is a constitutional convention invoked when both the primary governance channel and the arbitration panel have failed simultaneously. Because the bodies normally responsible for convening a convention may themselves be parties to the deadlock, Level 5 must not require the consent of any body already blocked. The following minimum procedure applies: (a) *Convening authority:* the Federated Ombuds Plenum — which is operationally independent of the CRP and the governing coalition — convenes the Level 5 panel by 3-of-5 vote within 24 hours of the second-generation deadlock being declared. If the Ombuds Plenum is also deadlocked, the IIA (ANNEX_AK §8) and the standing adversarial panel member (ANNEX_AV §AV3) jointly issue a written convening notice and the Plenum is constituted from reserve members. (b) *Survival floor continuity during Level 5:* CSM issuance (ANNEX_Y §Y2) continues unconditionally. The Level 4 survival-floor bridge remains active and may not be suspended by Level 5 proceedings. (c) *Maximum clock:* if a Level 5 panel is not convened and seated within 72 hours, the Federated Ombuds Plenum issues a standing order maintaining the last-known CSM delivery baseline and the matter is escalated to the H-3 re-founding petition process (ANNEX_AH §AH5.1) without waiting for Level 5 resolution. The 72-hour clock is not waivable.
 
 #### AE2.4 Demand-Context Flag for Essential Access Velocity Oracle
 The Article I operations layer must maintain a demand-context register. When any of the following conditions are active, the Essential Access velocity oracle applies a demand-surge discount before triggering sentinel signals:
