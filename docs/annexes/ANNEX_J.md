@@ -92,12 +92,126 @@ At scale: an executive receives 2,000,000 Flow worth of equity and holds 50,000 
 A sole trader with 40,000 Flow total: 27,000 Flow personal savings floor + 13,000 Flow enterprise operating float (= 3 months of 4,333 Flow/month operating costs). Both exemptions apply simultaneously. Their effective demurrage-free threshold is 40,000 Flow — their entire balance. They pay nothing unless they accumulate beyond both.
 
 ### J3. Investment channel architecture (required, not optional)
-Long-horizon enterprise is impossible if all held Flow is treated as idle. The investment channel is therefore a constitutional subsystem, not a discretionary afterthought.
+Long-horizon enterprise is impossible if all held Flow is treated as idle. The investment channel is therefore a constitutional subsystem, not a discretionary afterthought. There are four channels available to any enrolled person. All four are demurrage-free while the Flow is actively deployed. None of them can convert into Essential Access, Voice, Service Record eligibility, or housing queue priority.
+
 - **Project Escrow Accounts:** milestone-based build accounts for facilities, tooling, R&D, housing construction, grid upgrades, and other long-horizon work. Funds in approved project escrows do not incur ordinary idle decay while milestones remain current.
-- **Term Finance Pools:** transparent lending pools that price risk in Flow, publish loss rules, and cannot purchase Essential Access access, Voice influence, Service Record service eligibility, or housing queue priority.
+- **Term Finance Pools:** transparent lending pools that price risk in Flow, publish loss rules, and pay a published return to depositors. Open to any enrolled person with no minimum deposit. See §J3-A for full specification.
 - **Public Infrastructure Windows:** federation or regional project accounts for transit, water, energy, health, and digital infrastructure with independent milestone review and public dashboarding.
 - **Maintenance and Warranty Reserves:** ring-fenced reserves for safety, replacement, and warranty obligations may receive tailored treatment when their use rules are published in advance.
 - **Anti-abuse rule:** any escrow or reserve that is diverted, repeatedly stale, or materially off-milestone loses special treatment and reverts to ordinary idle-balance rules plus review for evasion.
+
+### J3-A. Term Finance Pools — full specification
+
+Term Finance Pools are the ordinary person's investment account. They function like a savings account or bond fund: you deposit Flow, the pool lends it to compliant enterprises and infrastructure projects, and you earn a published return. Your deposited Flow is not idle — it is working — so no demurrage applies while it remains in the pool.
+
+**Who can participate:** any enrolled person. No minimum deposit. No accreditation requirement. No institutional intermediary required.
+
+**Return structure:**
+
+| Pool type | Typical return range | Risk profile | Backed by |
+| :--- | :--- | :--- | :--- |
+| **Public Infrastructure Pool** | 1.5–2.5% annually | Low — backed by federation/regional government | Transit, water, energy, health infrastructure projects |
+| **Enterprise Lending Pool** | 2.5–4.5% annually | Medium — diversified across compliant enterprises | Worker-owned firms, cooperatives, mission-locked enterprises |
+| **Innovation Pool** | 3.5–6% annually | Higher — early-stage or R&D projects | Long-horizon research, new cooperative formation |
+
+Returns are paid in Flow quarterly and added to the depositor's wallet balance on receipt. Return rates are published and updated quarterly. A depositor may hold multiple pool types simultaneously.
+
+**Loss rules:** If a pool's underlying loans default beyond the published reserve threshold, depositors share losses proportionally to their share of the pool. Loss rules are published in plain language before any deposit. No pool may describe itself as "guaranteed" unless backed by an explicit federation guarantee instrument.
+
+**Withdrawal:** A depositor may withdraw at any time with a published notice period (Standard pool: 30 days; Infrastructure pool: 90 days for amounts above 10,000 Flow). Early withdrawal does not trigger retroactive demurrage — the depositor simply stops earning the return and the withdrawn Flow returns to their wallet as normal balance subject to standard demurrage rules from that point forward.
+
+**Hard limits:** Term Finance Pools may not use deposited Flow to purchase Essential Access access, Voice weight, Service Record eligibility, housing queue priority, or civic appointment influence. Pool investment decisions are published quarterly by sector and project type.
+
+---
+
+### J3-B. Retirement Horizon Lock — full specification
+
+The Retirement Horizon Lock is the long-term savings instrument. It is designed for people who want to set money aside for decades and not think about demurrage while it grows. You declare a term, lock Flow into it, and earn a modest fixed return. No demurrage applies while the lock is active.
+
+**Terms available:**
+
+| Term | Annual return | Notes |
+| :--- | :--- | :--- |
+| 3 years | 1.5% | Shortest lock; suitable for medium-horizon goals |
+| 5 years | 2.0% | Standard retirement contribution horizon |
+| 10 years | 2.5% | Primary retirement vehicle for most people |
+| 20 years | 3.0% | Maximum return; suitable for younger savers |
+| Age-linked | 2.5% | Unlocks at a declared retirement age; rate fixed at time of lock |
+
+Returns are paid annually in Flow into the depositor's wallet. The locked principal earns no demurrage.
+
+**The locked balance still counts toward total balance assessment.** Locking Flow does not reduce the equity-demurrage calculation described in the equivalence rule. A person with 200,000 Flow in a Retirement Horizon Lock and 30,000 Flow in their wallet is assessed as holding 230,000 Flow total — the lock protects them from demurrage on the locked amount, but does not reset their balance position for purposes of the equity compensation rule.
+
+**Early withdrawal:** the depositor may exit early but forfeits all accrued returns and pays a penalty equal to 6 months of demurrage on the withdrawn amount at the current standard rate. Early withdrawal is available without restriction — it is not trapped capital.
+
+**Why the returns are lower than today's index funds:** the Retirement Horizon Lock is not an equity market. It does not capture enterprise upside — it lends at a fixed rate to the economy and earns a fixed return. The tradeoff is certainty: the return is published and fixed at time of lock, the demurrage exposure is zero, and the principal is returned in full at maturity (absent pool default). Someone who needs their retirement savings to be predictable — especially approaching retirement age — may prefer this over equity exposure.
+
+---
+
+### J3-C. Compliant enterprise equity markets
+
+Enrolled persons may purchase equity stakes in compliant enterprises — worker-owned cooperatives, mission-locked firms, or audited for-profit enterprises operating under the protocol. This is the closest equivalent to a stock market: you own a share of a productive enterprise, the enterprise earns Flow by producing real value, and a portion of that earnings is distributed to shareholders as dividends paid in Flow.
+
+**What equity ownership means:**
+- A fractional ownership stake in the enterprise's productive capacity and future earnings
+- Dividends paid in Flow when the enterprise distributes earnings
+- A published Flow-equivalent market value updated quarterly by independent auditor
+- No claim on Essential Access, Voice, Service Record eligibility, or housing queue priority
+- No civic authority: share ownership does not convert into governance influence over the protocol or civic panels
+
+**What equity ownership does not mean:**
+- It does not grant control over workers or override the enterprise's internal governance structure
+- In worker-owned cooperatives, equity investors are distinct from worker-members; investor returns are capped and worker governance is primary
+- Equity ownership above concentration thresholds (defined under Annex AT §AT6.2) triggers mandatory review regardless of whether the owner is an individual or institution
+
+**Demurrage treatment:** as specified in the J2 equivalence rule, equity holdings are valued at their published Flow-equivalent market price and counted toward the holder's total balance for demurrage assessment. Dividends received in Flow are added to the holder's wallet balance on receipt and subject to standard demurrage rules from that point.
+
+**Who may issue equity:** any enterprise registered under the protocol that has completed an independent financial audit and published its ownership structure, mission, and governance rules. Shell companies, beneficial-ownership-obscured structures, and entities without a published natural-person control map may not list equity for purchase.
+
+---
+
+### J3-D. Worked examples — investment channels vs. idle Flow vs. today
+
+*Floor = 27,000 Flow. Default demurrage = 0.5%/month on idle above-floor balance (~6.2%/year effective). Investment return rates are illustrative mid-points from J3-A and J3-B published ranges.*
+
+**Retirement saver — 150,000 Flow total**
+
+Strategy: keep 27,000 Flow in the free bucket; invest 123,000 Flow.
+
+| Investment choice | Annual demurrage | Annual return | Net annual position | vs. today (10% index fund = +15,000) |
+| :--- | ---: | ---: | ---: | :--- |
+| All idle | -7,589 | 0 | **-7,589** | -22,589 worse |
+| Public Infrastructure Pool (2%) | 0 | +2,460 | **+2,460** | -12,540 worse |
+| Enterprise Lending Pool (3.5%) | 0 | +4,305 | **+4,305** | -10,695 worse |
+| Retirement Horizon Lock 10yr (2.5%) | 0 | +3,075 | **+3,075** | -11,925 worse |
+| Enterprise equity (4% dividend yield) | 0 | +4,920 | **+4,920** | -10,080 worse |
+
+**The honest number:** even with investment vehicles, a 150,000 Flow retirement saver earns roughly 10,000–12,000 Flow less per year than a comparable US index fund investor today. The gap is real. The partial offset is that under this system, Essential Access covers healthcare, housing, food, and basic transit — the costs that make large retirement savings necessary in today's world. A person who does not need to self-insure against catastrophic healthcare costs or housing instability needs a smaller nest egg to retire comfortably.
+
+**Retirement saver — 400,000 Flow total**
+
+Strategy: keep 27,000 Flow in the free bucket; invest 373,000 Flow.
+
+| Investment choice | Annual demurrage | Annual return | Net annual position | vs. today (10% index fund = +40,000) |
+| :--- | ---: | ---: | ---: | :--- |
+| All idle | -23,014 | 0 | **-23,014** | -63,014 worse |
+| Enterprise Lending Pool (3.5%) | 0 | +13,055 | **+13,055** | -26,945 worse |
+| Retirement Horizon Lock 20yr (3%) | 0 | +11,190 | **+11,190** | -28,810 worse |
+| Enterprise equity (4% dividend yield) | 0 | +14,920 | **+14,920** | -25,080 worse |
+| Mixed: 50% Enterprise Pool + 50% equity | 0 | +13,987 | **+13,987** | -26,013 worse |
+
+**Retirement saver — 800,000 Flow total**
+
+Strategy: keep 27,000 Flow in the free bucket; invest 773,000 Flow.
+
+| Investment choice | Annual demurrage | Annual return | Net annual position | vs. today (10% index fund = +80,000) |
+| :--- | ---: | ---: | ---: | :--- |
+| All idle | -47,714 | 0 | **-47,714** | -127,714 worse |
+| Enterprise Lending Pool (3.5%) | 0 | +27,055 | **+27,055** | -52,945 worse |
+| Enterprise equity (4% dividend yield) | 0 | +30,920 | **+30,920** | -49,080 worse |
+| Mixed strategy | 0 | +28,987 | **+28,987** | -51,013 worse |
+
+**What the numbers show:** the investment channels eliminate the demurrage penalty entirely, and produce a modest positive return. The gap versus today's index fund returns (~10%) persists because Flow investment vehicles do not capture enterprise upside the way equity markets do — they lend at fixed rates or distribute dividends from current earnings rather than pricing future growth expectations. This is a design choice, not an oversight: the system is calibrated to circulate capital through productive enterprise rather than to reward passive accumulation of appreciating assets. Whether that tradeoff is acceptable is a question for the founding deliberation, not a hidden assumption.
 
 ### J4. Demurrage review protocol
 - **Quarterly review inputs:** inactive-balance concentration, project abandonment rates, enterprise complaints, speculative inventory behavior, velocity by sector, and essential-price divergence.
