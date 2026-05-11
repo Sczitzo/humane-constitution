@@ -22,10 +22,16 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
   return (
     <DiagramShell figId="V-010" title="Instrument Space — Four Primary Lanes + Emergency Overlay" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 720 230" className="w-full" style={{ height: 230 }}>
-        {lanes.map(l => {
+        {lanes.map((l, i) => {
           const isActive = activeNodeId === l.id
           return (
-            <g key={l.id} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${l.stroke})` : undefined }} onClick={() => handleNodeClick(l.id)}>
+            <g key={l.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${l.stroke})` : undefined }} onClick={() => handleNodeClick(l.id)}>
+              <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.1 + i * 0.1}s`} fill="freeze" />
+              {isActive && (
+                <rect x={18} y={l.y - 2} width={584} height={54} rx={6} fill="none" stroke={l.stroke} strokeWidth={1.5} opacity={0.5}>
+                  <animate attributeName="opacity" values="0.5;0;0.5" dur="1.8s" repeatCount="indefinite" />
+                </rect>
+              )}
               <rect x={20} y={l.y} width={580} height={50} rx={6} fill={l.fill} stroke={l.stroke} strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal} />
               <text x={40} y={l.y + 22} fontSize={11} fontWeight={700} fill={l.stroke} fontFamily="monospace">{l.label}</text>
               <text x={40} y={l.y + 40} fontSize={9} fill={THEME.subtext} fontFamily="monospace">{l.sub}</text>
@@ -33,7 +39,8 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
             </g>
           )
         })}
-        <g style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('emergency')}>
+        <g opacity={0} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('emergency')}>
+          <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.4s" fill="freeze" />
           <rect x={20} y={20} width={580} height={166} rx={6} fill="none"
             stroke={THEME.ss.accent} strokeWidth={activeNodeId === 'emergency' ? THEME.strokeWidth.active : 1.5} strokeDasharray="8,5"
             style={{ filter: activeNodeId === 'emergency' ? `drop-shadow(0 0 8px ${THEME.ss.accent})` : undefined }} />

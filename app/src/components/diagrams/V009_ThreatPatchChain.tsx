@@ -24,12 +24,16 @@ export function V009_ThreatPatchChain({ onInternalLink }: DiagramProps) {
         {cols.map((c, i) => {
           const isActive = activeNodeId === c.id
           return (
-            <g key={c.id}>
+            <g key={c.id} opacity={0} style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${c.stroke})` : undefined }} onClick={() => handleNodeClick(c.id)}>
+              <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin={`${0.1 + i * 0.1}s`} fill="freeze" />
+              {isActive && (
+                <rect x={c.x - 2} y={38} width={164} height={94} rx={7} fill="none" stroke={c.stroke} strokeWidth={1.5} opacity={0.5}>
+                  <animate attributeName="opacity" values="0.5;0;0.5" dur="1.8s" repeatCount="indefinite" />
+                </rect>
+              )}
               {i > 0 && <path d={`M${c.x - 40},85 L${c.x + 4},85`} fill="none" stroke={THEME.border} strokeWidth={1.5} markerEnd="url(#arrP)" />}
               <rect x={c.x} y={40} width={160} height={90} rx={8}
-                fill={c.fill} stroke={c.stroke} strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
-                style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 6px ${c.stroke})` : undefined }}
-                onClick={() => handleNodeClick(c.id)} />
+                fill={c.fill} stroke={c.stroke} strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal} />
               <text x={c.x + 80} y={82} textAnchor="middle" fontSize={13} fontWeight={700} fill={c.stroke} fontFamily="monospace">{c.label}</text>
               <text x={c.x + 80} y={100} textAnchor="middle" fontSize={9} fill={THEME.subtext} fontFamily="monospace">{c.sub}</text>
               <text x={c.x + 80} y={28} textAnchor="middle" fontSize={9} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.05em">{c.count}</text>
