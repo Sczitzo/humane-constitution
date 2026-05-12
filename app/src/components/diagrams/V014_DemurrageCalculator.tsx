@@ -15,39 +15,64 @@ const fmtAcct   = (v: number) => v < 0 ? '(' + fmtFull.format(-v) + ')' : fmtFul
 const COLORS = {
   nw:     THEME.flow.accent,   // blue   — net worth
   s:      THEME.ea.accent,     // green  — savings floor
-  wstar:  THEME.voice.accent,  // amber  — equilibrium ceiling
+  wstar:  THEME.voice.accent,  // amber  — upper tier boundary
   r:      THEME.sr.accent,     // purple — return rate
   income: THEME.ss.accent,     // red    — annual income
+  age:    '#8ba7c4',           // steel blue — age / retirement
 }
 
-function calc(nw: number, s: number, wstar: number, r: number, income: number) {
-  const E      = Math.max(0, nw - s)
-  const E_star = Math.max(1, wstar - s)
-  const lambda = E > 0 ? r * Math.sqrt(E / E_star) : 0
-  const D      = lambda * E
+// Tier boundaries (NW values, not excess) — Tier 2 founding commitments per §AZ3
+const TIER_NW = [1_000_000, 5_000_000, 22_000_000] as const
+const TIER_R_WORKING = [0.26, 0.20, 0.30, 0.46] as const  // T1–T4, age < 65
+const TIER_R_RETIRED = [0.18, 0.14, 0.30, 0.46] as const  // T1–T4, age ≥ 65 (§AZ3 retirement modifier)
+
+function calc(nw: number, s: number, _wstar: number, r: number, income: number, age: number) {
+  const E  = Math.max(0, nw - s)
+  const e1 = Math.max(0, TIER_NW[0] - s)
+  const e2 = Math.max(0, TIER_NW[1] - s)
+  const e3 = Math.max(0, TIER_NW[2] - s)
+  const TR = age >= 65 ? TIER_R_RETIRED : TIER_R_WORKING
+
+  const D_t1 = TR[0] * Math.min(E, e1)
+  const D_t2 = TR[1] * Math.max(0, Math.min(E, e2) - e1)
+  const D_t3 = TR[2] * Math.max(0, Math.min(E, e3) - e2)
+  const D_t4 = TR[3] * Math.max(0, E - e3)
+  const D      = D_t1 + D_t2 + D_t3 + D_t4
+  const lambda = E > 0 ? D / E : 0                  // effective (blended) rate
+
   const returns    = nw * r
-  const netAnnual  = income + returns - D          // net NW change per year
-  const breakEven  = Math.max(0, D - returns)      // min salary to not draw down
-  const yearsToFloor = netAnnual >= 0 ? Infinity : (nw - s) / Math.abs(netAnnual)
-  const aboveW   = nw > wstar ? nw - wstar : 0
+  const netAnnual  = income + returns - D
+  const breakEven  = Math.max(0, D - returns)
+  const belowFloor = nw < s
+
+  // Three cases:
+  // 1. Below S: time to accumulate UP to S (no demurrage applies below floor)
+  // 2. Above S, net negative: time to decay DOWN to S
+  // 3. Above S, net positive (or at S): wealth stable/growing, no floor in sight
+  const yearsToFloor = belowFloor
+    ? (netAnnual > 0 ? (s - nw) / netAnnual : Infinity)   // case 1
+    : (netAnnual < 0 ? (nw - s) / Math.abs(netAnnual) : Infinity)  // case 2/3
+
+  const aboveW   = nw > TIER_NW[2] ? nw - TIER_NW[2] : 0
   const netLoss  = D - returns - income
   const yearsToEquil = aboveW > 0 && netLoss > 0 ? aboveW / netLoss : null
-  return { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil }
+  const retired = age >= 65
+  return { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, belowFloor, yearsToEquil, retired }
 }
 
-interface Params { nw: number; s: number; wstar: number; r: number; income: number }
-const DEFAULTS: Params = { nw: 650_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 75_000 }
+interface Params { nw: number; s: number; wstar: number; r: number; income: number; age: number }
+const DEFAULTS: Params = { nw: 280_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 75_000, age: 38 }
 
 const PRESETS: { label: string; p: Params }[] = [
-  { label: 'Recent grad — first job',          p: { nw:    80_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  48_000 } },
-  { label: 'Middle-class worker',              p: { nw:   650_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  75_000 } },
-  { label: 'Dual-income household',            p: { nw: 1_500_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 160_000 } },
-  { label: 'Small business owner',             p: { nw: 3_200_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 220_000 } },
-  { label: 'Senior professional',              p: { nw: 8_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 350_000 } },
-  { label: 'Early retiree (living on assets)', p: { nw: 5_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:       0 } },
-  { label: 'Pre-retirement (winding down)',    p: { nw: 4_000_000, s: 50_000, wstar: 22_000_000, r: 0.05, income:  90_000 } },
-  { label: 'Approaching the ceiling',          p: { nw:20_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 500_000 } },
-  { label: 'Well above ceiling',               p: { nw:60_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 800_000 } },
+  { label: 'Recent grad — first job',           p: { nw:    80_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  48_000, age: 24 } },
+  { label: 'Middle-class worker',               p: { nw:   280_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  75_000, age: 38 } },
+  { label: 'Dual-income household',             p: { nw: 1_500_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 160_000, age: 46 } },
+  { label: 'Business owner / entrepreneur',     p: { nw: 3_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 300_000, age: 50 } },
+  { label: 'Senior professional',               p: { nw: 3_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 350_000, age: 52 } },
+  { label: 'Early retiree — no relief at 61',   p: { nw: 5_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:       0, age: 61 } },
+  { label: 'Retiree — age 65+ modifier active', p: { nw: 4_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  90_000, age: 68 } },
+  { label: 'Approaching the ceiling',           p: { nw:20_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 500_000, age: 45 } },
+  { label: 'Well above ceiling',                p: { nw:60_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 800_000, age: 40 } },
 ]
 
 function Slider({ label, id, min, max, step, value, fmt, color, onChange }: {
@@ -104,8 +129,24 @@ function autoView(nw: number, wstar: number): { xMin: number; xMax: number } {
 
 const CHART_MG = { top: 16, right: 16, bottom: 40, left: 72 }
 
+// Simulate NW forward year-by-year from a starting point to a target age.
+// Each year uses the current NW to recompute netAnnual (demurrage is progressive).
+function simulateNW(startNw: number, startAge: number, targetAge: number, params: Params): number {
+  let nw = startNw
+  const years = Math.round(targetAge - startAge)
+  for (let y = 0; y < years; y++) {
+    const age = startAge + y
+    const { netAnnual } = calc(nw, params.s, params.wstar, params.r, params.income, age)
+    nw = Math.max(0, nw + netAnnual)
+  }
+  return nw
+}
+
 export function V014_DemurrageCalculator(_props: DiagramProps) {
   const [p, setP] = useState<Params>(DEFAULTS)
+  // Snapshot anchors age-simulation: { nw, age } at the moment age dragging began
+  // or after the last manual NW change. Dragging age always simulates from here.
+  const ageSnapRef = useRef<{ nw: number; age: number } | null>(null)
   const [hoverNW, setHoverNW]   = useState<number | null>(null)
   const [hoverPos, setHoverPos] = useState<{ x: number; y: number } | null>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -113,7 +154,23 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
 
   const view = autoView(p.nw, p.wstar)
 
-  const set = (key: keyof Params) => (v: number) => setP(prev => ({ ...prev, [key]: v }))
+  const set = (key: keyof Params) => (v: number) => {
+    if (key === 'age') {
+      setP(prev => {
+        if (!ageSnapRef.current) {
+          ageSnapRef.current = { nw: prev.nw, age: prev.age }
+        }
+        const snap = ageSnapRef.current
+        const simNw = v >= snap.age
+          ? simulateNW(snap.nw, snap.age, v, { ...prev, age: snap.age })
+          : snap.nw
+        return { ...prev, age: v, nw: simNw }
+      })
+    } else {
+      if (key === 'nw') ageSnapRef.current = null
+      setP(prev => ({ ...prev, [key]: v }))
+    }
+  }
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current
@@ -141,7 +198,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     let maxD = 1000
     for (let i = 0; i <= steps; i++) {
       const xv = xMin + (i / steps) * span
-      const d = calc(xv, p.s, p.wstar, p.r, p.income).D
+      const d = calc(xv, p.s, p.wstar, p.r, p.income, p.age).D
       if (d > maxD) maxD = d
     }
     maxD *= 1.1
@@ -241,13 +298,13 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.setLineDash([])
     for (let i = 0; i <= 300; i++) {
       const xv = xMin + (i / 300) * span
-      const yv = calc(xv, p.s, p.wstar, p.r, p.income).D
+      const yv = calc(xv, p.s, p.wstar, p.r, p.income, p.age).D
       i === 0 ? ctx.moveTo(mx(xv), my(yv)) : ctx.lineTo(mx(xv), my(yv))
     }
     ctx.stroke()
 
     // Current NW marker (blue — matches NW slider)
-    const { D } = calc(p.nw, p.s, p.wstar, p.r, p.income)
+    const { D } = calc(p.nw, p.s, p.wstar, p.r, p.income, p.age)
     const markerX = mx(p.nw)
     const markerY = my(D)
     ctx.beginPath()
@@ -266,7 +323,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     // Hover crosshair
     if (hoverNW !== null && hoverNW >= xMin && hoverNW <= xMax) {
       const hx = mx(hoverNW)
-      const hd = calc(hoverNW, p.s, p.wstar, p.r, p.income).D
+      const hd = calc(hoverNW, p.s, p.wstar, p.r, p.income, p.age).D
       const hy = my(hd)
 
       ctx.beginPath()
@@ -296,17 +353,24 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
   }, [draw])
 
 
-  const { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r, p.income)
+  const { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, belowFloor, yearsToEquil, retired } = calc(p.nw, p.s, p.wstar, p.r, p.income, p.age)
 
   const yearsLabel = (() => {
-    if (p.nw <= p.s) return '—'
-    if (yearsToFloor === Infinity) return '∞'
+    if (p.nw === p.s) return '—'
+    if (yearsToFloor === Infinity) return belowFloor ? '—' : '∞'
     if (yearsToFloor > 999) return '>999 yrs'
     return yearsToFloor.toFixed(0) + ' yrs'
   })()
 
+  // Below floor: amber (accumulating toward S). Above floor: green=safe, amber=medium, red=urgent.
   const netAnnualColor = netAnnual >= 0 ? THEME.ea.accent : THEME.ss.accent
-  const yearsColor = yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent
+  const yearsColor = belowFloor
+    ? (yearsToFloor < Infinity ? COLORS.wstar : THEME.ss.accent)
+    : (yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent)
+  const yearsFloorLabel = belowFloor ? 'Yrs to S ↑' : 'Yrs to floor'
+  const yearsFloorDef   = belowFloor
+    ? 'Years to accumulate up to S at current income + returns (no demurrage below floor)'
+    : 'Years until NW hits S at current net rate'
 
   return (
     <div style={{
@@ -347,18 +411,25 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.nw} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.nw} onChange={set('nw')} />
           <Slider label="Savings Floor (S)" id="s" min={0} max={2_000_000} step={10_000}
             value={p.s} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.s} onChange={set('s')} />
-          <Slider label="Equilibrium Ceiling (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
+          <Slider label="Upper Tier Boundary (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
           <Slider label="Assumed Return (r)" id="r" min={0.01} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
           <Slider label="Annual Income (I)" id="income" min={0} max={2_000_000} step={5_000}
             value={p.income} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.income} onChange={set('income')} />
+          <Slider label="Age" id="age" min={18} max={90} step={1}
+            value={p.age} fmt={v => v.toFixed(0) + ' yrs'} color={p.age >= 65 ? THEME.voice.accent : COLORS.age} onChange={set('age')} />
+          {p.age >= 65 && (
+            <div style={{ fontSize: 9, color: THEME.voice.accent, letterSpacing: '0.05em', textAlign: 'center', background: '#1c200a', border: `1px solid ${THEME.voice.accent}33`, borderRadius: 3, padding: '3px 6px' }}>
+              RETIREMENT MODIFIER ACTIVE · T1 18 % · T2 14 %
+            </div>
+          )}
         </div>
 
         {/* Chart */}
         <div
           ref={wrapRef}
-          style={{ flex: '1 1 280px', minHeight: 220, position: 'relative' }}
+          style={{ flex: '1 1 280px', height: 220, minHeight: 220, maxHeight: 220, position: 'relative' }}
           onMouseMove={e => {
             const rect = wrapRef.current?.getBoundingClientRect()
             if (!rect) return
@@ -376,7 +447,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         >
           <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
           {hoverNW !== null && hoverPos && (() => {
-            const hs = calc(hoverNW, p.s, p.wstar, p.r, p.income)
+            const hs = calc(hoverNW, p.s, p.wstar, p.r, p.income, p.age)
             const left = hoverPos.x + 14
             return (
               <div style={{
@@ -412,13 +483,13 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 0, flex: 1, borderRight: `1px solid ${THEME.border}` }}>
           {[
             { label: 'Excess (E)',     value: fmtAcct(E),                    color: THEME.subtext,  def: 'NW above savings floor — taxable base' },
-            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: 'Demurrage rate; scales as √(E/E*)' },
+            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: retired ? 'Retirement rates active (age ≥ 65): T1 18%/T2 14%/T3 30%/T4 46%' : 'Effective (blended) rate = D÷E; tiers: T1 26%/T2 20%/T3 30%/T4 46%' },
             { label: 'Bi-weekly (D)',  value: fmtAcct(D / 26),               color: '#FFD700',      def: 'Demurrage per pay period (annual ÷ 26)' },
             { label: 'Annual (D)',     value: fmtAcct(D),                    color: '#e3b341',      def: 'Total demurrage owed this year' },
             { label: 'Returns',        value: fmtAcct(returns),              color: COLORS.r,       def: 'Passive income at assumed rate r on NW' },
             { label: 'Net annual Δ',   value: fmtAcct(netAnnual),            color: netAnnualColor, def: 'Income + returns − demurrage' },
             { label: 'Break-even (I)', value: breakEven > 0 ? fmtAcct(breakEven) : 'covered', color: breakEven > 0 ? COLORS.income : THEME.ea.accent, def: 'Min salary to avoid eroding principal' },
-            { label: 'Yrs to floor',   value: yearsLabel,                    color: yearsColor,     def: 'Years until NW hits S at current net rate' },
+            { label: yearsFloorLabel,   value: yearsLabel,                    color: yearsColor,     def: yearsFloorDef },
             ...(yearsToEquil !== null ? [{ label: 'Yrs to W*', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar, def: 'Years to descend to equilibrium ceiling' }] : []),
           ].map(({ label, value, color, def }) => (
             <StatTile key={label} label={label} value={value} color={color} def={def} />
@@ -435,7 +506,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             { swatch: '#FFD700',    line: true,  label: 'D(E) demurrage curve' },
             { swatch: COLORS.nw,   line: false, label: 'Current net worth' },
             { swatch: COLORS.s,    line: true,  label: 'S — savings floor' },
-            { swatch: COLORS.wstar,line: true,  label: 'W* — equilibrium ceiling' },
+            { swatch: COLORS.wstar,line: true,  label: 'W* — T3/T4 boundary' },
           ].map(({ swatch, line, label }) => (
             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
               {line
