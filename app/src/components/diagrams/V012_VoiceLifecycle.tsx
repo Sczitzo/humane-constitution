@@ -1,8 +1,7 @@
 // app/src/components/diagrams/V012_VoiceLifecycle.tsx
 // 2×2 grid forming a closed cycle: EARN → POOL → USE → DECAY → POOL (cycle)
-// The DECAY → POOL return arc (dashed) shows unused voice returning to the community pool,
-// not disappearing — it's a redistribution, not destruction.
-// Animated particles trace clockwise flow + return arc.
+// Left padding gives the DECAY→POOL return arc room to breathe.
+// Label sits horizontally near the arc midpoint — no rotation needed.
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
@@ -14,19 +13,28 @@ const NODES: DiagramNode[] = [
   { id: 'decay',  label: 'Decay',         definition: 'Unused Voice decays back to the community pool within one governance cycle. Prevents accumulation by passive holders or institutional actors. Voice that returns to pool can be re-earned.', docLink: 'ANNEX_Z.md', accent: THEME.ss.accent,    accentBg: THEME.ss.accentBg },
 ]
 
-// 2×2 grid: EARN(TL) POOL(TR) / DECAY(BL) USE(BR)
-const BW = 148, BH = 68, HGAP = 60, VGAP = 50
-const TLX = 28,  TLY = 28   // EARN
-const TRX = 28 + BW + HGAP, TRY = 28   // POOL
-const BLX = 28,  BLY = 28 + BH + VGAP  // DECAY
-const BRX = 28 + BW + HGAP, BRY = 28 + BH + VGAP  // USE
+// 2×2 grid shifted right to leave room for the return arc on the left
+const BW = 148, BH = 68, HGAP = 70, VGAP = 54
+const PAD = 80   // left padding for the arc
 
-// Arrow path segments
-const P_EARN_POOL    = `M${TLX + BW + 4},${TLY + BH / 2} L${TRX - 4},${TRY + BH / 2}`
-const P_POOL_USE     = `M${TRX + BW / 2},${TRY + BH + 4} L${BRX + BW / 2},${BRY - 4}`
-const P_USE_DECAY    = `M${BRX - 4},${BRY + BH / 2} L${BLX + BW + 4},${BLY + BH / 2}`
-// Return arc: DECAY top → curves up → POOL bottom  (dashed, redistribution)
-const P_DECAY_POOL   = `M${BLX + BW / 2},${BLY - 4} C${BLX + BW / 2},${TLY + BH / 2} ${TRX + BW / 2},${TRY + BH + 20} ${TRX + BW / 2},${TRY + BH + 4}`
+const TLX = PAD,           TLY = 20   // EARN  (top-left)
+const TRX = PAD + BW + HGAP, TRY = 20   // POOL  (top-right)
+const BLX = PAD,           BLY = 20 + BH + VGAP  // DECAY (bottom-left)
+const BRX = PAD + BW + HGAP, BRY = 20 + BH + VGAP  // USE   (bottom-right)
+
+// Arrow paths
+const P_EARN_POOL  = `M${TLX + BW + 4},${TLY + BH / 2} L${TRX - 4},${TRY + BH / 2}`
+const P_POOL_USE   = `M${TRX + BW / 2},${TRY + BH + 4} L${BRX + BW / 2},${BRY - 4}`
+const P_USE_DECAY  = `M${BRX - 4},${BRY + BH / 2} L${BLX + BW + 4},${BLY + BH / 2}`
+// Return arc: DECAY top → sweeps left then up → POOL bottom
+// Control points pull the arc well clear of the nodes into the left padding
+const P_DECAY_POOL = `M${BLX + BW / 2},${BLY - 4} C${BLX - 40},${BLY - 20} ${TRX - 40},${TRY + BH + 30} ${TRX + BW / 2},${TRY + BH + 4}`
+
+// Arc midpoint (t≈0.5 on the cubic bezier) — used to position the label
+const ARC_LABEL_X = PAD - 14
+const ARC_LABEL_Y = TLY + BH + VGAP / 2
+
+const VW = PAD + BW + HGAP + BW + 20   // total width
 
 export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
@@ -40,7 +48,7 @@ export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
 
   return (
     <DiagramShell figId="V-012" title="Voice — Civic Influence Lifecycle" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 440 220" className="w-full" style={{ height: 220 }}>
+      <svg viewBox={`0 0 ${VW} 230`} className="w-full" style={{ height: 230 }}>
         <defs>
           <marker id="arrV12" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
             <path d="M0,0 L0,6 L6,3 Z" fill={THEME.border} />
@@ -59,13 +67,18 @@ export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
         <path d={P_POOL_USE}  fill="none" stroke={THEME.border} strokeWidth={1.5} markerEnd="url(#arrV12)" />
         <path d={P_USE_DECAY} fill="none" stroke={THEME.border} strokeWidth={1.5} markerEnd="url(#arrV12)" />
 
-        {/* Return arc: DECAY → POOL (redistribution, not destruction) */}
+        {/* Return arc: DECAY → POOL through left-side space */}
         <path d={P_DECAY_POOL} fill="none" stroke={THEME.ss.accent} strokeWidth={1.5}
-          strokeDasharray="6,4" markerEnd="url(#arrV12ret)" opacity={0.7} />
-        <text x={BLX - 6} y={(TLY + BLY + BH) / 2} textAnchor="end"
-          fontSize={7.5} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.8}
-          transform={`rotate(-90,${BLX - 6},${(TLY + BLY + BH) / 2})`}>
-          returns to pool ↑
+          strokeDasharray="6,4" markerEnd="url(#arrV12ret)" opacity={0.75} />
+
+        {/* Label near arc midpoint — horizontal, in the left padding zone */}
+        <text x={ARC_LABEL_X} y={ARC_LABEL_Y}
+          textAnchor="middle" fontSize={8} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.85}>
+          ↺ returns
+        </text>
+        <text x={ARC_LABEL_X} y={ARC_LABEL_Y + 13}
+          textAnchor="middle" fontSize={8} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.85}>
+          to pool
         </text>
 
         {/* Animated particles */}
@@ -82,8 +95,8 @@ export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
             <animateMotion dur="2.4s" repeatCount="indefinite" begin={`${d}s`}><mpath href="#v12p3" /></animateMotion>
           </circle>
         ))}
-        <circle r={3} fill={THEME.ss.accent} opacity={0.6}>
-          <animateMotion dur="2s" repeatCount="indefinite" begin="0.5s"><mpath href="#v12p4" /></animateMotion>
+        <circle r={3} fill={THEME.ss.accent} opacity={0.65}>
+          <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#v12p4" /></animateMotion>
         </circle>
 
         {/* Stage boxes */}
