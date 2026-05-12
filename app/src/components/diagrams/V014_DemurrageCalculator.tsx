@@ -58,7 +58,7 @@ const PRESETS: { label: string; p: Params }[] = [
   { label: 'Recent grad — first job',           p: { nw:    80_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  48_000, age: 24 } },
   { label: 'Middle-class worker',               p: { nw:   280_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  75_000, age: 38 } },
   { label: 'Dual-income household',             p: { nw: 1_500_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 160_000, age: 46 } },
-  { label: 'Business owner / entrepreneur',     p: { nw: 3_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 420_000, age: 50 } },
+  { label: 'Business owner / entrepreneur',     p: { nw: 3_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 300_000, age: 50 } },
   { label: 'Senior professional',               p: { nw: 3_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 350_000, age: 52 } },
   { label: 'Early retiree — no relief at 61',   p: { nw: 5_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:       0, age: 61 } },
   { label: 'Retiree — age 65+ modifier active', p: { nw: 4_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  90_000, age: 68 } },
