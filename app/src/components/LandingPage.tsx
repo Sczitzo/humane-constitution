@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { Logo } from './Logo'
+import { V001_FiveToolSeparation } from './diagrams/V001_FiveToolSeparation'
 
 const PATHS = [
   { id: 'first-time', emoji: '🌱', title: 'First-Time Reader', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~20 min', color: '#2d6a4f' },
@@ -13,13 +14,6 @@ const PATHS = [
   { id: 'governance-deep', emoji: '🗳️', title: 'Governance Deep Dive', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d1a' },
 ]
 
-const INSTRUMENTS = [
-  { label: 'Flow', desc: 'Ordinary money for markets, wages, contracts, saving, and business', num: '01', accent: '#c9a84c' },
-  { label: 'Essential Access', desc: 'The basic needs floor — never cash, never collateral, never patronage', num: '02', accent: '#6fa86f' },
-  { label: 'Voice', desc: 'Bounded civic priority-setting that cannot buy goods, rights, or protection', num: '03', accent: '#7eb8c9' },
-  { label: 'Service Record', desc: 'Verified stewardship for rotating roles — not a score of human worth', num: '04', accent: '#c97e6f' },
-  { label: 'Shared Storehouse', desc: 'Temporary rationing during verified shortage, not normal life', num: '05', accent: '#a08fc9' },
-]
 
 const STATS = [
   { raw: 90, suffix: '+', label: 'Documents in the corpus' },
@@ -46,7 +40,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   const [scrollProgress, setScrollProgress] = useState(0)
   const [statCounts, setStatCounts] = useState([0, 0, 0])
   const [statsVisible, setStatsVisible] = useState(false)
-  const [, setHoveredInstrument] = useState<number | null>(null)
   const [navVisible, setNavVisible] = useState(false)
   const [mouseX, setMouseX] = useState(0)
   const [mouseY, setMouseY] = useState(0)
@@ -411,9 +404,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           letter-spacing: 0.01em;
         }
 
-        /* ─── Instruments ─── */
+        /* ─── Instruments / Diagram ─── */
         .lp-instruments-section {
-          padding: 120px 48px 140px;
+          padding: 100px 48px 120px;
           max-width: 1100px;
           margin: 0 auto;
         }
@@ -423,61 +416,24 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           font-weight: 600;
           color: #f5f0e8;
           line-height: 1.08;
-          margin: 24px 0 80px;
+          margin: 24px 0 48px;
           max-width: 680px;
         }
         .lp-section-head em { font-style: italic; color: #c9a84c; }
-        .lp-instruments-list {
-          display: flex; flex-direction: column; gap: 0;
+        .lp-diagram-wrap {
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid rgba(245,240,232,0.08);
+          background: rgba(245,240,232,0.03);
         }
-        .lp-instrument {
-          display: grid;
-          grid-template-columns: 56px 1fr 1fr;
-          align-items: center;
-          gap: 40px;
-          padding: 32px 0;
-          border-bottom: 1px solid rgba(245,240,232,0.07);
-          cursor: default;
-          transition: background 0.3s;
-          position: relative;
-        }
-        .lp-instrument::after {
-          content: '';
-          position: absolute;
-          left: 0; bottom: -1px;
-          width: 0; height: 1px;
-          background: var(--inst-accent, #c9a84c);
-          transition: width 0.5s cubic-bezier(0.16,1,0.3,1);
-        }
-        .lp-instrument:hover::after { width: 100%; }
-        .lp-instrument:first-child { border-top: 1px solid rgba(245,240,232,0.07); }
-        .lp-instrument-num {
+        .lp-diagram-hint {
+          margin-top: 16px;
           font-family: 'DM Mono', monospace;
-          font-size: 11px;
-          color: rgba(245,240,232,0.2);
+          font-size: 10px;
           letter-spacing: 0.12em;
-        }
-        .lp-instrument-label {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 32px; font-weight: 500;
-          color: #f5f0e8;
-          transition: color 0.3s;
-        }
-        .lp-instrument:hover .lp-instrument-label {
-          color: var(--inst-accent, #c9a84c);
-        }
-        .lp-instrument-desc {
-          font-size: 14px;
-          color: rgba(245,240,232,0.4);
-          line-height: 1.6;
-          opacity: 0;
-          transform: translateX(12px);
-          transition: opacity 0.4s cubic-bezier(0.16,1,0.3,1),
-                      transform 0.4s cubic-bezier(0.16,1,0.3,1);
-        }
-        .lp-instrument:hover .lp-instrument-desc {
-          opacity: 1;
-          transform: none;
+          text-transform: uppercase;
+          color: rgba(245,240,232,0.2);
+          text-align: center;
         }
 
         /* ─── Transition zone ─── */
@@ -668,10 +624,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-stat:last-child { padding-left: 0; border-bottom: none; }
           .lp-stat-num { font-size: 72px; }
           .lp-instruments-section { padding: 64px 24px; }
-          .lp-instrument { grid-template-columns: 40px 1fr; gap: 16px; padding: 22px 0; }
-          .lp-instrument-desc { display: none; }
-          .lp-instrument:hover .lp-instrument-desc { display: none; }
-          .lp-section-head { margin-bottom: 48px; }
+          .lp-section-head { margin-bottom: 32px; }
           .lp-paths-section { padding: 72px 20px 100px; }
           .lp-paths-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
           .lp-path-card { padding: 18px 14px 16px; }
@@ -793,28 +746,17 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         </div>
       </div>
 
-      {/* ── INSTRUMENTS ── */}
+      {/* ── INSTRUMENTS DIAGRAM ── */}
       <div className="lp-instruments-section">
         <p className="lp-reveal lp-eyebrow" style={{ color: '#c9a84c' }}>The Design</p>
         <h2 className="lp-section-head lp-reveal">
           Five interlocking instruments.<br />
           <em>One coherent system.</em>
         </h2>
-        <div className="lp-instruments-list">
-          {INSTRUMENTS.map((inst, i) => (
-            <div
-              key={i}
-              className={`lp-instrument lp-reveal lp-d${i + 1}`}
-              style={{ '--inst-accent': inst.accent } as React.CSSProperties}
-              onMouseEnter={() => setHoveredInstrument(i)}
-              onMouseLeave={() => setHoveredInstrument(null)}
-            >
-              <span className="lp-instrument-num">{inst.num}</span>
-              <span className="lp-instrument-label">{inst.label}</span>
-              <span className="lp-instrument-desc">{inst.desc}</span>
-            </div>
-          ))}
+        <div className="lp-reveal lp-diagram-wrap">
+          <V001_FiveToolSeparation onInternalLink={() => {}} />
         </div>
+        <p className="lp-diagram-hint">Click any instrument to explore its definition</p>
       </div>
 
       {/* ── TRANSITION + PATHS ── */}
