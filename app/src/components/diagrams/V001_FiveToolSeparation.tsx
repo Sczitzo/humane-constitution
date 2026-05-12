@@ -29,38 +29,50 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
     <DiagramShell figId="V-001" title="Five-Instrument Constitutional Architecture" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 720 204" className="w-full" style={{ height: 204 }}>
 
-        {/* Firewall barriers — animated sparks slide between columns */}
+        {/* Firewall barriers — repulsion arrows + ⊗ no-crossing indicator */}
         {[0, 1, 2, 3].map(i => {
           const fw = startX + (i + 1) * (colW + gap) - gap / 2
-          const dur1 = `${2.4 + i * 0.5}s`
-          const dur2 = `${1.9 + i * 0.4}s`
-          const leftCol  = COLS[i].stroke
-          const rightCol = COLS[i + 1].stroke
+          const midY = cy + colH / 2
+          const arrowY1 = cy + colH * 0.28
+          const arrowY2 = cy + colH * 0.72
+          const dur = `${2.8 + i * 0.35}s`
+          const del = `${i * 0.45}s`
           return (
             <g key={i}>
-              {/* Divider line — slightly brighter */}
-              <line x1={fw} y1={cy - 10} x2={fw} y2={cy + colH + 10} stroke="#3d4450" strokeWidth={1} strokeDasharray="4,3" />
-              <text x={fw} y={cy - 14} textAnchor="middle" fontSize={7} fill={THEME.dim} fontFamily="monospace">▐</text>
+              {/* Divider line */}
+              <line x1={fw} y1={cy - 4} x2={fw} y2={cy + colH + 4} stroke="#3d4450" strokeWidth={1} strokeDasharray="3,3" />
 
-              {/* Spark 1 — top-to-bottom, left column color */}
-              <circle cx={fw} cy={cy + 12} r={2.5} fill={leftCol} filter={`url(#spark-glow-${i})`}>
-                <animate attributeName="cy" values={`${cy + 12};${cy + colH - 12};${cy + 12}`} dur={dur1} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0;1;0.9;0.2;0" dur={dur1} repeatCount="indefinite" />
-              </circle>
+              {/* ⊗ static no-crossing badge at center */}
+              <circle cx={fw} cy={midY} r={7} fill={THEME.cardBg} stroke="#3d4450" strokeWidth={1} />
+              <text x={fw} y={midY + 4} textAnchor="middle" fontSize={9} fill="#5a6270" fontFamily="monospace" fontWeight={600}>⊗</text>
 
-              {/* Spark 2 — bottom-to-top, right column color, offset phase */}
-              <circle cx={fw} cy={cy + colH - 12} r={2} fill={rightCol} filter={`url(#spark-glow-${i})`}>
-                <animate attributeName="cy" values={`${cy + colH - 12};${cy + 12};${cy + colH - 12}`} dur={dur2} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" begin={`${0.7 + i * 0.3}s`} />
-                <animate attributeName="opacity" values="0;0.8;0.7;0.1;0" dur={dur2} repeatCount="indefinite" begin={`${0.7 + i * 0.3}s`} />
-              </circle>
+              {/* Left arrow — approaches from left, fades at wall (top position) */}
+              <text textAnchor="end" fontSize={8} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 3}>
+                <animate attributeName="x" values={`${fw - 6};${fw - 2};${fw - 6}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={del} repeatCount="indefinite" />
+                ›
+              </text>
 
-              {/* Glow filter per divider */}
-              <defs>
-                <filter id={`spark-glow-${i}`} x="-200%" y="-200%" width="500%" height="500%">
-                  <feGaussianBlur stdDeviation="2.5" result="blur" />
-                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                </filter>
-              </defs>
+              {/* Right arrow — approaches from right, fades at wall (top position) */}
+              <text textAnchor="start" fontSize={8} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 3}>
+                <animate attributeName="x" values={`${fw + 6};${fw + 2};${fw + 6}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={del} repeatCount="indefinite" />
+                ‹
+              </text>
+
+              {/* Left arrow bottom — offset phase */}
+              <text textAnchor="end" fontSize={8} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 3}>
+                <animate attributeName="x" values={`${fw - 6};${fw - 2};${fw - 6}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+                ›
+              </text>
+
+              {/* Right arrow bottom — offset phase */}
+              <text textAnchor="start" fontSize={8} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 3}>
+                <animate attributeName="x" values={`${fw + 6};${fw + 2};${fw + 6}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+                ‹
+              </text>
             </g>
           )
         })}
