@@ -54,18 +54,6 @@ function Slider({ label, id, min, max, step, value, fmt, color, onChange }: {
   )
 }
 
-function Stat({ label, value, color, dim }: { label: string; value: string; color?: string; dim?: boolean }) {
-  return (
-    <div style={{
-      display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-      fontSize: 12, fontFamily: MONOSPACE, paddingBottom: 5,
-      borderBottom: `1px dashed ${THEME.border}`,
-    }}>
-      <span style={{ color: THEME.dim }}>{label}</span>
-      <span style={{ fontWeight: 600, color: color ?? (dim ? THEME.dim : THEME.subtext) }}>{value}</span>
-    </div>
-  )
-}
 
 export function V014_DemurrageCalculator(_props: DiagramProps) {
   const [p, setP] = useState<Params>(DEFAULTS)
