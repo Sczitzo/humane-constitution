@@ -43,34 +43,34 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               <line x1={fw} y1={cy - 4} x2={fw} y2={cy + colH + 4} stroke="#3d4450" strokeWidth={1} strokeDasharray="3,3" />
 
               {/* ⊗ static no-crossing badge at center — red, large */}
-              <circle cx={fw} cy={midY} r={11} fill={THEME.cardBg} stroke="#f85149" strokeWidth={1.5} />
-              <text x={fw} y={midY + 5.5} textAnchor="middle" fontSize={14} fill="#f85149" fontFamily="monospace" fontWeight={700}>⊗</text>
+              <circle cx={fw} cy={midY} r={16} fill={THEME.cardBg} stroke="#f85149" strokeWidth={2} />
+              <text x={fw} y={midY + 8} textAnchor="middle" fontSize={22} fill="#f85149" fontFamily="monospace" fontWeight={700}>⊗</text>
 
               {/* Left arrow — slides right toward wall, fades out (top) */}
-              <text textAnchor="end" fontSize={11} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 4}>
-                <animate attributeName="x" values={`${fw - 16};${fw - 4};${fw - 16}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={del} repeatCount="indefinite" />
+              <text textAnchor="end" fontSize={18} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={900} y={arrowY1 + 7}>
+                <animate attributeName="x" values={`${fw - 18};${fw - 5};${fw - 18}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={del} repeatCount="indefinite" />
                 ›
               </text>
 
               {/* Right arrow — slides left toward wall, fades out (top) */}
-              <text textAnchor="start" fontSize={11} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 4}>
-                <animate attributeName="x" values={`${fw + 16};${fw + 4};${fw + 16}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={del} repeatCount="indefinite" />
+              <text textAnchor="start" fontSize={18} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={900} y={arrowY1 + 7}>
+                <animate attributeName="x" values={`${fw + 18};${fw + 5};${fw + 18}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={del} repeatCount="indefinite" />
                 ‹
               </text>
 
               {/* Left arrow bottom — offset phase */}
-              <text textAnchor="end" fontSize={11} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 4}>
-                <animate attributeName="x" values={`${fw - 16};${fw - 4};${fw - 16}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+              <text textAnchor="end" fontSize={18} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={900} y={arrowY2 + 7}>
+                <animate attributeName="x" values={`${fw - 18};${fw - 5};${fw - 18}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
                 ›
               </text>
 
               {/* Right arrow bottom — offset phase */}
-              <text textAnchor="start" fontSize={11} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 4}>
-                <animate attributeName="x" values={`${fw + 16};${fw + 4};${fw + 16}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+              <text textAnchor="start" fontSize={18} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={900} y={arrowY2 + 7}>
+                <animate attributeName="x" values={`${fw + 18};${fw + 5};${fw + 18}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
                 ‹
               </text>
             </g>
@@ -106,10 +106,10 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
                 strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
                 strokeDasharray={col.dashed ? '7,4' : undefined}
               />
-              <text x={x + colW / 2} y={cy + 30} textAnchor="middle" fontSize={11} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l1}</text>
-              <text x={x + colW / 2} y={cy + 48} textAnchor="middle" fontSize={11} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l2}</text>
-              <text x={x + colW / 2} y={cy + 70} textAnchor="middle" fontSize={8.5} fill={THEME.subtext} fontFamily="monospace">{col.l3}</text>
-              <text x={x + colW / 2} y={cy + 83} textAnchor="middle" fontSize={8.5} fill={THEME.subtext} fontFamily="monospace">{col.l3b}</text>
+              <text x={x + colW / 2} y={cy + 30} textAnchor="middle" fontSize={12} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l1}</text>
+              <text x={x + colW / 2} y={cy + 48} textAnchor="middle" fontSize={12} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l2}</text>
+              <text x={x + colW / 2} y={cy + 70} textAnchor="middle" fontSize={9.5} fill={THEME.subtext} fontFamily="monospace">{col.l3}</text>
+              <text x={x + colW / 2} y={cy + 84} textAnchor="middle" fontSize={9.5} fill={THEME.subtext} fontFamily="monospace">{col.l3b}</text>
             </motion.g>
           )
         })}
