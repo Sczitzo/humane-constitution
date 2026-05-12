@@ -64,7 +64,7 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
               ))}
 
               {/* Firewall label on right */}
-              <text x={LANE_X + LANE_W + 8} y={l.y + LANE_H / 2 + 4} fontSize={7.5} fill={THEME.border} fontFamily="monospace" letterSpacing="0.05em">▐ FIREWALL</text>
+              <text x={LANE_X + LANE_W + 8} y={l.y + LANE_H / 2 + 4} fontSize={9} fontWeight={700} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.06em">▐ FIREWALL</text>
             </g>
           )
         })}
@@ -73,13 +73,13 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
         <g opacity={0} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('emergency')}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.45s" fill="freeze" />
           <rect x={LANE_X} y={18} width={LANE_W} height={182} rx={6} fill="none"
-            stroke={THEME.ss.accent} strokeWidth={activeNodeId === 'emergency' ? THEME.strokeWidth.active : 1.5}
+            stroke={THEME.ss.accent} strokeWidth={activeNodeId === 'emergency' ? 3 : 2.5}
             strokeDasharray="8,5"
             style={{ filter: activeNodeId === 'emergency' ? `drop-shadow(0 0 8px ${THEME.ss.accent})` : undefined }}
           />
-          <text x={LANE_X + LANE_W + 8} y={108} fontSize={7.5} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">EMERGENCY</text>
-          <text x={LANE_X + LANE_W + 8} y={120} fontSize={7.5} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">OVERLAY</text>
-          <text x={LANE_X + LANE_W + 8} y={132} fontSize={7} fill={THEME.dim} fontFamily="monospace">(scarcity only)</text>
+          <text x={LANE_X + LANE_W + 8} y={104} fontSize={10} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">EMERGENCY</text>
+          <text x={LANE_X + LANE_W + 8} y={117} fontSize={10} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">OVERLAY</text>
+          <text x={LANE_X + LANE_W + 8} y={131} fontSize={8.5} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.7}>(scarcity only)</text>
         </g>
 
         {/* Separator note */}

@@ -62,9 +62,10 @@ export function V012_VoiceLifecycle({ onInternalLink }: DiagramProps) {
         {/* Return arc: DECAY → POOL (redistribution, not destruction) */}
         <path d={P_DECAY_POOL} fill="none" stroke={THEME.ss.accent} strokeWidth={1.5}
           strokeDasharray="6,4" markerEnd="url(#arrV12ret)" opacity={0.7} />
-        <text x={(BLX + TRX + BW) / 2 - 10} y={TLY + BH / 2 + 10} textAnchor="middle"
-          fontSize={7.5} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.8}>
-          returns to pool
+        <text x={BLX - 6} y={(TLY + BLY + BH) / 2} textAnchor="end"
+          fontSize={7.5} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.8}
+          transform={`rotate(-90,${BLX - 6},${(TLY + BLY + BH) / 2})`}>
+          returns to pool ↑
         </text>
 
         {/* Animated particles */}

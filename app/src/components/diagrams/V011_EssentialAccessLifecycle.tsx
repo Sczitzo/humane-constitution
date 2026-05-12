@@ -34,7 +34,7 @@ export function V011_EssentialAccessLifecycle({ onInternalLink }: DiagramProps) 
 
   return (
     <DiagramShell figId="V-011" title="Essential Access — Entitlement Lifecycle" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 720 168" className="w-full" style={{ height: 168 }}>
+      <svg viewBox="0 0 720 188" className="w-full" style={{ height: 188 }}>
         <defs>
           <marker id="arrV11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
             <path d="M0,0 L0,6 L6,3 Z" fill={THEME.border} />

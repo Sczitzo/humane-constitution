@@ -46,7 +46,7 @@ export function V013_ServiceRecordLifecycle({ onInternalLink }: DiagramProps) {
 
   return (
     <DiagramShell figId="V-013" title="Service Record — Civic Eligibility Lifecycle" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 720 200" className="w-full" style={{ height: 200 }}>
+      <svg viewBox="0 0 720 220" className="w-full" style={{ height: 220 }}>
         <defs>
           <marker id="arrV13" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
             <path d="M0,0 L0,6 L6,3 Z" fill={THEME.border} />
