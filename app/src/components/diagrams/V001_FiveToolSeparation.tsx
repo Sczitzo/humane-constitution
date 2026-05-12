@@ -75,7 +75,9 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.06 + i * 0.1, duration: 0.35 }}
-              style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 7px ${col.stroke})` : undefined }}
+              whileHover={{ rotate: [0, -1.5, 1.5, -1, 1, 0], y: -3, transition: { rotate: { duration: 0.45, ease: 'easeInOut' }, y: { duration: 0.2, ease: 'easeOut' } } }}
+              whileTap={{ scale: 0.97 }}
+              style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 7px ${col.stroke})` : undefined, originX: `${startX + i * (colW + gap) + colW / 2}px`, originY: `${cy + colH}px` }}
               onClick={() => handleNodeClick(col.id)}
             >
               {isActive && (
