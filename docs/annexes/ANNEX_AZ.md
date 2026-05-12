@@ -49,8 +49,8 @@ Demurrage is computed by applying progressive marginal rates to successive brack
 | Tier | NW bracket | Marginal annual rate | Marginal bi-weekly rate |
 | :--- | :--- | :--- | :--- |
 | T1 | $50,000 – $1,000,000 | 26 % | 1.00 % |
-| T2 | $1,000,000 – $5,000,000 | 20 % | 0.77 % |
-| T3 | $5,000,000 – $22,000,000 | 30 % | 1.15 % |
+| T2 | $1,000,000 – $5,000,000 | 30 % | 1.15 % |
+| T3 | $5,000,000 – $22,000,000 | 38 % | 1.46 % |
 | T4 | $22,000,000 + | 46 % | 1.77 % |
 
 *Bi-weekly rate = annual rate ÷ 26. Annual rate is the canonical definition.*
