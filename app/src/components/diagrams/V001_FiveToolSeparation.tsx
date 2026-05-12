@@ -20,7 +20,7 @@ const COLS = [
   { id: 'ss',    l1: 'SHARED',    l2: 'STOREHOUSE',     l3: 'scarcity only ·',   l3b: 'oracle-gated',    stroke: THEME.ss.accent,    fill: THEME.ss.fill,    dashed: true  },
 ]
 
-const colW = 118, gap = 16, startX = 10, colH = 124, cy = 28
+const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
 
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
@@ -42,35 +42,35 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               {/* Divider line */}
               <line x1={fw} y1={cy - 4} x2={fw} y2={cy + colH + 4} stroke="#3d4450" strokeWidth={1} strokeDasharray="3,3" />
 
-              {/* ⊗ static no-crossing badge at center */}
-              <circle cx={fw} cy={midY} r={7} fill={THEME.cardBg} stroke="#3d4450" strokeWidth={1} />
-              <text x={fw} y={midY + 4} textAnchor="middle" fontSize={9} fill="#5a6270" fontFamily="monospace" fontWeight={600}>⊗</text>
+              {/* ⊗ static no-crossing badge at center — red, large */}
+              <circle cx={fw} cy={midY} r={11} fill={THEME.cardBg} stroke="#f85149" strokeWidth={1.5} />
+              <text x={fw} y={midY + 5.5} textAnchor="middle" fontSize={14} fill="#f85149" fontFamily="monospace" fontWeight={700}>⊗</text>
 
-              {/* Left arrow — approaches from left, fades at wall (top position) */}
-              <text textAnchor="end" fontSize={8} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 3}>
-                <animate attributeName="x" values={`${fw - 6};${fw - 2};${fw - 6}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={del} repeatCount="indefinite" />
+              {/* Left arrow — slides right toward wall, fades out (top) */}
+              <text textAnchor="end" fontSize={11} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 4}>
+                <animate attributeName="x" values={`${fw - 16};${fw - 4};${fw - 16}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={del} repeatCount="indefinite" />
                 ›
               </text>
 
-              {/* Right arrow — approaches from right, fades at wall (top position) */}
-              <text textAnchor="start" fontSize={8} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 3}>
-                <animate attributeName="x" values={`${fw + 6};${fw + 2};${fw + 6}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={del} repeatCount="indefinite" />
+              {/* Right arrow — slides left toward wall, fades out (top) */}
+              <text textAnchor="start" fontSize={11} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY1 + 4}>
+                <animate attributeName="x" values={`${fw + 16};${fw + 4};${fw + 16}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={del} repeatCount="indefinite" />
                 ‹
               </text>
 
               {/* Left arrow bottom — offset phase */}
-              <text textAnchor="end" fontSize={8} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 3}>
-                <animate attributeName="x" values={`${fw - 6};${fw - 2};${fw - 6}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+              <text textAnchor="end" fontSize={11} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 4}>
+                <animate attributeName="x" values={`${fw - 16};${fw - 4};${fw - 16}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
                 ›
               </text>
 
               {/* Right arrow bottom — offset phase */}
-              <text textAnchor="start" fontSize={8} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 3}>
-                <animate attributeName="x" values={`${fw + 6};${fw + 2};${fw + 6}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
-                <animate attributeName="opacity" values="0.55;0.08;0.55" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+              <text textAnchor="start" fontSize={11} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={700} y={arrowY2 + 4}>
+                <animate attributeName="x" values={`${fw + 16};${fw + 4};${fw + 16}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.7;0.0;0.7" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
                 ‹
               </text>
             </g>
