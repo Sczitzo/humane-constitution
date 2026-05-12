@@ -82,7 +82,7 @@ C₃ = C₂ + 0.30 × 17,000,000 = 6,147,000  [T1+T2+T3 fully filled]
 
 ### Illustrative schedule
 
-| Consolidated net worth | Excess E | Effective rate λ | Annual demurrage D |
+| Consolidated net worth | Excess E | Rate of decay λ | Annual demurrage D |
 | :--- | :--- | :--- | :--- |
 | $30,000 (below floor) | $0 | 0 % | $0 |
 | $50,000 (floor) | $0 | 0 % | $0 |
