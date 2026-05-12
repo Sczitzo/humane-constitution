@@ -189,12 +189,12 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     }
     ctx.stroke()
 
-    // Current NW marker (amber)
+    // Current NW marker (blue — matches NW slider)
     const { D } = calc(p.nw, p.s, p.wstar, p.r)
     const markerX = mx(p.nw)
     const markerY = my(D)
     ctx.beginPath()
-    ctx.strokeStyle = '#e3b341'
+    ctx.strokeStyle = COLORS.nw
     ctx.lineWidth = 1.5
     ctx.setLineDash([4, 4])
     ctx.moveTo(markerX, mg.top)
@@ -202,7 +202,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.stroke()
     ctx.setLineDash([])
     ctx.beginPath()
-    ctx.fillStyle = '#e3b341'
+    ctx.fillStyle = COLORS.nw
     ctx.arc(markerX, markerY, 5, 0, Math.PI * 2)
     ctx.fill()
   }, [p])
