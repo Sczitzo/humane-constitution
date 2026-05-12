@@ -148,11 +148,9 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
       ctx.strokeStyle = COLORS.s
       ctx.lineWidth = 1
       ctx.setLineDash([2, 5])
-      ctx.globalAlpha = 0.5
       ctx.moveTo(sLine, mg.top)
       ctx.lineTo(sLine, mg.top + dh)
       ctx.stroke()
-      ctx.globalAlpha = 1
       ctx.setLineDash([])
       ctx.fillStyle = COLORS.s
       ctx.font = `9px ${MONOSPACE}`
@@ -179,7 +177,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
 
     // Curve
     ctx.beginPath()
-    ctx.strokeStyle = COLORS.nw
+    ctx.strokeStyle = '#f07840'
     ctx.lineWidth = 2
     ctx.setLineDash([])
     for (let i = 0; i <= 300; i++) {
@@ -301,7 +299,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
 
       {/* Footer */}
       <div style={{ fontSize: 10, color: THEME.dim, opacity: 0.55, textAlign: 'right', letterSpacing: '0.04em' }}>
-        <span style={{ color: COLORS.nw }}>━</span> D(E) = (r/√E*)·E^1.5
+        <span style={{ color: '#f07840' }}>━</span> D(E) = (r/√E*)·E^1.5
         <span style={{ margin: '0 6px' }}>·</span>
         <span style={{ color: COLORS.s }}>╌</span> S floor
         <span style={{ margin: '0 6px' }}>·</span>
