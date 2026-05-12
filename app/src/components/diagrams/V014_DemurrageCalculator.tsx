@@ -20,16 +20,28 @@ const COLORS = {
   income: THEME.ss.accent,     // red    — annual income
 }
 
-function calc(nw: number, s: number, wstar: number, r: number, income: number) {
-  const E      = Math.max(0, nw - s)
-  const E_star = Math.max(1, wstar - s)
-  const lambda = E > 0 ? r * Math.sqrt(E / E_star) : 0
-  const D      = lambda * E
+// Tier boundaries (NW values, not excess) — Tier 2 founding commitments per §AZ3
+const TIER_NW = [1_000_000, 5_000_000, 22_000_000] as const
+const TIER_R  = [0.26, 0.20, 0.30, 0.46] as const       // marginal annual rates T1–T4
+
+function calc(nw: number, s: number, _wstar: number, r: number, income: number) {
+  const E  = Math.max(0, nw - s)
+  const e1 = Math.max(0, TIER_NW[0] - s)
+  const e2 = Math.max(0, TIER_NW[1] - s)
+  const e3 = Math.max(0, TIER_NW[2] - s)
+
+  const D_t1 = TIER_R[0] * Math.min(E, e1)
+  const D_t2 = TIER_R[1] * Math.max(0, Math.min(E, e2) - e1)
+  const D_t3 = TIER_R[2] * Math.max(0, Math.min(E, e3) - e2)
+  const D_t4 = TIER_R[3] * Math.max(0, E - e3)
+  const D      = D_t1 + D_t2 + D_t3 + D_t4
+  const lambda = E > 0 ? D / E : 0                  // effective (blended) rate
+
   const returns    = nw * r
-  const netAnnual  = income + returns - D          // net NW change per year
-  const breakEven  = Math.max(0, D - returns)      // min salary to not draw down
+  const netAnnual  = income + returns - D
+  const breakEven  = Math.max(0, D - returns)
   const yearsToFloor = netAnnual >= 0 ? Infinity : (nw - s) / Math.abs(netAnnual)
-  const aboveW   = nw > wstar ? nw - wstar : 0
+  const aboveW   = nw > TIER_NW[2] ? nw - TIER_NW[2] : 0
   const netLoss  = D - returns - income
   const yearsToEquil = aboveW > 0 && netLoss > 0 ? aboveW / netLoss : null
   return { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil }
@@ -347,7 +359,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.nw} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.nw} onChange={set('nw')} />
           <Slider label="Savings Floor (S)" id="s" min={0} max={2_000_000} step={10_000}
             value={p.s} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.s} onChange={set('s')} />
-          <Slider label="Equilibrium Ceiling (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
+          <Slider label="Upper Tier Boundary (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
           <Slider label="Assumed Return (r)" id="r" min={0.01} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
@@ -358,7 +370,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         {/* Chart */}
         <div
           ref={wrapRef}
-          style={{ flex: '1 1 280px', minHeight: 220, position: 'relative' }}
+          style={{ flex: '1 1 280px', height: 220, minHeight: 220, maxHeight: 220, position: 'relative' }}
           onMouseMove={e => {
             const rect = wrapRef.current?.getBoundingClientRect()
             if (!rect) return
@@ -412,7 +424,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 0, flex: 1, borderRight: `1px solid ${THEME.border}` }}>
           {[
             { label: 'Excess (E)',     value: fmtAcct(E),                    color: THEME.subtext,  def: 'NW above savings floor — taxable base' },
-            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: 'Demurrage rate; scales as √(E/E*)' },
+            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: 'Effective (blended) rate = D÷E; marginal tiers: 26%/20%/30%/46%' },
             { label: 'Bi-weekly (D)',  value: fmtAcct(D / 26),               color: '#FFD700',      def: 'Demurrage per pay period (annual ÷ 26)' },
             { label: 'Annual (D)',     value: fmtAcct(D),                    color: '#e3b341',      def: 'Total demurrage owed this year' },
             { label: 'Returns',        value: fmtAcct(returns),              color: COLORS.r,       def: 'Passive income at assumed rate r on NW' },
@@ -435,7 +447,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             { swatch: '#FFD700',    line: true,  label: 'D(E) demurrage curve' },
             { swatch: COLORS.nw,   line: false, label: 'Current net worth' },
             { swatch: COLORS.s,    line: true,  label: 'S — savings floor' },
-            { swatch: COLORS.wstar,line: true,  label: 'W* — equilibrium ceiling' },
+            { swatch: COLORS.wstar,line: true,  label: 'W* — T3/T4 boundary' },
           ].map(({ swatch, line, label }) => (
             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
               {line
