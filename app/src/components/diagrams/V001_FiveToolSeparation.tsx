@@ -13,21 +13,21 @@ const NODES: DiagramNode[] = [
 ]
 
 const COLS = [
-  { id: 'flow',  l1: 'FLOW',      l2: 'market money',   l3: 'wages · contracts · savings', stroke: THEME.flow.accent,  fill: THEME.flow.fill,  dashed: false },
-  { id: 'ea',    l1: 'ESSENTIAL', l2: 'ACCESS',         l3: 'unconditional floor',          stroke: THEME.ea.accent,    fill: THEME.ea.fill,    dashed: false },
-  { id: 'voice', l1: 'VOICE',     l2: 'civic priority', l3: 'bounded · non-purchasable',   stroke: THEME.voice.accent, fill: THEME.voice.fill, dashed: false },
-  { id: 'sr',    l1: 'SERVICE',   l2: 'RECORD',         l3: 'verified stewardship',         stroke: THEME.sr.accent,    fill: THEME.sr.fill,    dashed: false },
-  { id: 'ss',    l1: 'SHARED',    l2: 'STOREHOUSE',     l3: 'scarcity only · oracle-gated', stroke: THEME.ss.accent,    fill: THEME.ss.fill,    dashed: true  },
+  { id: 'flow',  l1: 'FLOW',      l2: 'market money',   l3: 'wages · contracts', l3b: '· savings',      stroke: THEME.flow.accent,  fill: THEME.flow.fill,  dashed: false },
+  { id: 'ea',    l1: 'ESSENTIAL', l2: 'ACCESS',         l3: 'unconditional',     l3b: 'floor',           stroke: THEME.ea.accent,    fill: THEME.ea.fill,    dashed: false },
+  { id: 'voice', l1: 'VOICE',     l2: 'civic priority', l3: 'bounded ·',         l3b: 'non-purchasable', stroke: THEME.voice.accent, fill: THEME.voice.fill, dashed: false },
+  { id: 'sr',    l1: 'SERVICE',   l2: 'RECORD',         l3: 'verified',          l3b: 'stewardship',     stroke: THEME.sr.accent,    fill: THEME.sr.fill,    dashed: false },
+  { id: 'ss',    l1: 'SHARED',    l2: 'STOREHOUSE',     l3: 'scarcity only ·',   l3b: 'oracle-gated',    stroke: THEME.ss.accent,    fill: THEME.ss.fill,    dashed: true  },
 ]
 
-const colW = 118, gap = 16, startX = 10, colH = 110, cy = 28
+const colW = 118, gap = 16, startX = 10, colH = 124, cy = 28
 
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
 
   return (
     <DiagramShell figId="V-001" title="Five-Instrument Constitutional Architecture" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 720 188" className="w-full" style={{ height: 188 }}>
+      <svg viewBox="0 0 720 204" className="w-full" style={{ height: 204 }}>
 
         {/* Firewall barriers — animated sparks slide between columns */}
         {[0, 1, 2, 3].map(i => {
@@ -74,6 +74,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               <text x={x + colW / 2} y={cy + 30} textAnchor="middle" fontSize={11} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l1}</text>
               <text x={x + colW / 2} y={cy + 48} textAnchor="middle" fontSize={11} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l2}</text>
               <text x={x + colW / 2} y={cy + 70} textAnchor="middle" fontSize={8.5} fill={THEME.subtext} fontFamily="monospace">{col.l3}</text>
+              <text x={x + colW / 2} y={cy + 83} textAnchor="middle" fontSize={8.5} fill={THEME.subtext} fontFamily="monospace">{col.l3b}</text>
             </motion.g>
           )
         })}

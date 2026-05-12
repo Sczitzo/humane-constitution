@@ -399,7 +399,7 @@ function NavDropdown({
                   {doc.section}
                 </span>
                 <span className="mt-0.5 block line-clamp-2 text-[12px] leading-snug text-[var(--forest-text)]">
-                  {doc.title}
+                  {doc.title.replace(/^(INVARIANTS|SPECIFICATIONS)(?:\.md)?\s*[—–]\s*/, '')}
                 </span>
               </button>
             ))

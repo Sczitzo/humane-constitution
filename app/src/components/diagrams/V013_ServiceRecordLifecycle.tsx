@@ -25,7 +25,7 @@ const boxW = 130, boxH = 68, gap = 16, startX = 8, cy = 22
 
 // Decay branch geometry — hangs below RECORD (index 2)
 const recordCx = startX + 2 * (boxW + gap) + boxW / 2
-const decayBoxW = 140, decayBoxH = 68
+const decayBoxW = 140, decayBoxH = 90
 const decayX = recordCx - decayBoxW / 2
 const decayY = cy + boxH + 50
 
@@ -46,7 +46,7 @@ export function V013_ServiceRecordLifecycle({ onInternalLink }: DiagramProps) {
 
   return (
     <DiagramShell figId="V-013" title="Service Record — Civic Eligibility Lifecycle" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 720 220" className="w-full" style={{ height: 220 }}>
+      <svg viewBox="0 0 720 242" className="w-full" style={{ height: 242 }}>
         <defs>
           <marker id="arrV13" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
             <path d="M0,0 L0,6 L6,3 Z" fill={THEME.border} />
@@ -95,7 +95,7 @@ export function V013_ServiceRecordLifecycle({ onInternalLink }: DiagramProps) {
         <g opacity={0} style={{ cursor: 'pointer', filter: activeNodeId === 'decay' ? `drop-shadow(0 0 6px ${THEME.voice.accent})` : undefined }} onClick={() => handleNodeClick('decay')}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.6s" fill="freeze" />
           {activeNodeId === 'decay' && (
-            <rect x={decayX - 2} y={decayY - 2} width={decayBoxW + 4} height={decayBoxH + 4} rx={7}
+            <rect x={decayX - 2} y={decayY - 2} width={decayBoxW + 4} height={decayBoxH + 4} rx={8}
               fill="none" stroke={THEME.voice.accent} strokeWidth={1.5} opacity={0.5}>
               <animate attributeName="opacity" values="0.5;0;0.5" dur="1.8s" repeatCount="indefinite" />
             </rect>
@@ -105,19 +105,20 @@ export function V013_ServiceRecordLifecycle({ onInternalLink }: DiagramProps) {
             strokeWidth={activeNodeId === 'decay' ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
           />
 
-          {/* Mini decay curve inside box */}
-          <path d={miniDecay(decayX + 8, decayY + decayBoxH - 10, decayBoxW - 16, 30)}
+          {/* Mini decay curve in upper portion of box */}
+          <path d={miniDecay(decayX + 8, decayY + 46, decayBoxW - 16, 28)}
             fill="none" stroke={THEME.voice.accent} strokeWidth={1} opacity={0.6}>
             <animate attributeName="stroke-dasharray" from="200 200" to="0 0" dur="1s" begin="0.8s" fill="freeze" />
           </path>
 
           {/* Pause dashed line across the mini curve */}
-          <line x1={decayX + 50} y1={decayY + decayBoxH - 28} x2={decayX + 80} y2={decayY + decayBoxH - 28}
+          <line x1={decayX + 50} y1={decayY + 30} x2={decayX + 90} y2={decayY + 30}
             stroke={THEME.ea.accent} strokeWidth={1.5} strokeDasharray="4,2" opacity={0.8} />
-          <text x={decayX + 65} y={decayY + decayBoxH - 32} textAnchor="middle" fontSize={7} fill={THEME.ea.accent} fontFamily="monospace">PAUSE</text>
+          <text x={decayX + 70} y={decayY + 26} textAnchor="middle" fontSize={7} fill={THEME.ea.accent} fontFamily="monospace">PAUSE</text>
 
-          <text x={decayX + decayBoxW / 2} y={decayY + 22} textAnchor="middle" fontSize={10} fontWeight={700} fill={THEME.voice.accent} fontFamily="monospace">DECAY/PAUSE</text>
-          <text x={decayX + decayBoxW / 2} y={decayY + 38} textAnchor="middle" fontSize={8} fill={THEME.subtext} fontFamily="monospace">slow · suspendable</text>
+          {/* Labels at the bottom */}
+          <text x={decayX + decayBoxW / 2} y={decayY + decayBoxH - 28} textAnchor="middle" fontSize={10} fontWeight={700} fill={THEME.voice.accent} fontFamily="monospace">DECAY/PAUSE</text>
+          <text x={decayX + decayBoxW / 2} y={decayY + decayBoxH - 12} textAnchor="middle" fontSize={8} fill={THEME.subtext} fontFamily="monospace">slow · suspendable</text>
         </g>
 
         {/* Branch label */}

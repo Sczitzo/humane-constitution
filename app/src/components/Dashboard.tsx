@@ -2000,7 +2000,7 @@ function ReaderPanel({
           data-testid="reader-title"
           className="mt-2 font-serif text-[1.7rem] leading-[1.15] text-ink-strong sm:mt-3 sm:text-[2.6rem] sm:leading-tight"
         >
-          {doc.title}
+          {doc.title.replace(/^(INVARIANTS|SPECIFICATIONS)(?:\.md)?\s*[—–]\s*/, '')}
         </h2>
         {doc.summary ? (
           <p className="mt-3 max-w-[40rem] text-[14px] leading-[1.65] text-ink-soft sm:mt-4 sm:text-[15px] sm:leading-7">{doc.summary}</p>
