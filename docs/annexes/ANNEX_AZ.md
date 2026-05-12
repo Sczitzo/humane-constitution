@@ -16,7 +16,9 @@
 
 ## AZ1 — Constitutional Basis
 
-Wealth demurrage is an Article V carrying-cost instrument. It is not a tax on income, labor, or survival. It is a recurring cost on the *stock* of net worth held above a defined savings floor, calibrated to approach a rate equal to the expected return on capital at the equilibrium ceiling — making indefinite passive accumulation economically neutral at the ceiling and increasingly costly above it.
+Wealth demurrage is an Article V carrying-cost instrument. It is not a tax on income, labor, or survival. It is a recurring cost on the *stock* of net worth held above a defined participation buffer (S), calibrated to approach a rate equal to the expected return on capital at the equilibrium ceiling — making indefinite passive accumulation economically neutral at the ceiling and increasingly costly above it.
+
+**S is not a survival floor.** Life access — food, shelter, healthcare, and Essential Access — is guaranteed unconditionally through the CSM and commons systems and is never purchased with Flow. S is a minimal participation buffer: a small protected stake that prevents demurrage from biting at trivial balances. Everything above S represents luxury wealth accumulation, and holding it requires ongoing contribution sufficient to offset the carrying cost. Luxury wealth that is not continuously earned decays toward S.
 
 Demurrage revenue routes to the commons pool in the same manner as land-use charges and gateway fees (see [ANNEX_X §X6](./ANNEX_X.md)).
 
@@ -26,9 +28,9 @@ Demurrage revenue routes to the commons pool in the same manner as land-use char
 
 | Symbol | Term | Value (Tier 2 founding commitment) |
 | :----- | :--- | :--------------------------------- |
-| **S** | Household savings floor | $500,000 (oracle-indexed to purchasing-power basket; reviewed annually) |
+| **S** | Participation buffer floor | $50,000 (oracle-indexed to purchasing-power basket; reviewed annually) |
 | **W\*** | Equilibrium wealth ceiling | $22,000,000 (oracle-indexed; reviewed annually) |
-| **E\*** | Excess ceiling | W\* − S = $21,500,000 |
+| **E\*** | Excess ceiling | W\* − S = $21,950,000 |
 | **r** | Expected return on capital | 7 % / yr (long-run real-asset benchmark; oracle-adjusted) |
 | **E** | Taxable excess net worth | max(0, NW − S), where NW = consolidated net worth |
 | **λ(E)** | Instantaneous demurrage rate | see §AZ3 |
@@ -54,23 +56,23 @@ D(E) = λ(E) · E
 Substituting the founding values:
 
 ```
-D(E) = 0.07 / √21,500,000 · E^1.5
-     ≈ 0.0000000151 · E^1.5          [annual Flow units]
+D(E) = 0.07 / √21,950,000 · E^1.5
+     ≈ 0.00000001494 · E^1.5          [annual Flow units]
 ```
 
 ### Illustrative schedule
 
 | Consolidated net worth | Excess E | Annual rate λ | Annual demurrage D |
 | :--- | :--- | :--- | :--- |
-| $500,000 (floor) | $0 | 0 % | $0 |
-| $1,000,000 | $500,000 | 1.0 % | $5,022 |
-| $2,000,000 | $1,500,000 | 1.7 % | $25,877 |
-| $5,000,000 | $4,500,000 | 3.0 % | $134,350 |
-| $10,000,000 | $9,500,000 | 4.3 % | $411,049 |
-| $15,000,000 | $14,500,000 | 5.3 % | $766,894 |
-| $22,000,000 (W\*) | $21,500,000 | 7.0 % | $1,505,000 |
-| $30,000,000 | $29,500,000 | 8.2 % | $2,420,060 |
-| $50,000,000 | $49,500,000 | 10.6 % | $5,232,600 |
+| $50,000 (floor) | $0 | 0 % | $0 |
+| $1,000,000 | $950,000 | 1.5 % | $13,849 |
+| $2,000,000 | $1,950,000 | 2.1 % | $40,685 |
+| $5,000,000 | $4,950,000 | 3.3 % | $164,550 |
+| $10,000,000 | $9,950,000 | 4.7 % | $468,900 |
+| $15,000,000 | $14,950,000 | 5.8 % | $863,700 |
+| $22,000,000 (W\*) | $21,950,000 | 7.0 % | $1,536,500 |
+| $30,000,000 | $29,950,000 | 8.2 % | $2,449,000 |
+| $50,000,000 | $49,950,000 | 10.6 % | $5,274,700 |
 
 At W\* the rate equals r, so holding wealth at the ceiling costs approximately what it earns — making passive indefinite accumulation economically neutral rather than attractive.
 
@@ -99,7 +101,7 @@ Demurrage applies to **unassigned cash balances** held by enterprises above a do
 U = max(0, liquid_assets − operating_budget)
 
 D_corp(U) = (r / √E*) · U^1.5
-           ≈ 0.0000000151 · U^1.5        [annual Flow units]
+           ≈ 0.00000001494 · U^1.5        [annual Flow units]
 ```
 
 **Operating budget** is the sum of: documented payroll obligations (12-month rolling), supplier and contractor commitments, capital expenditure plans filed with the governance registry, and a liquidity buffer not exceeding 90 days of the foregoing.

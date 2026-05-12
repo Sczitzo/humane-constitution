@@ -9,31 +9,46 @@ const MONOSPACE = 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, mon
 const fmtCompact = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 })
 const fmtFull   = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
 const fmtPct    = (v: number) => (v * 100).toFixed(2) + '%'
+const fmtAcct   = (v: number) => v < 0 ? '(' + fmtFull.format(-v) + ')' : fmtFull.format(v)
 
 // Slider accent colors mapped to instrument palette
 const COLORS = {
-  nw:    THEME.flow.accent,   // blue   — net worth
-  s:     THEME.ea.accent,     // green  — savings floor
-  wstar: THEME.voice.accent,  // amber  — equilibrium ceiling
-  r:     THEME.sr.accent,     // purple — return rate
+  nw:     THEME.flow.accent,   // blue   — net worth
+  s:      THEME.ea.accent,     // green  — savings floor
+  wstar:  THEME.voice.accent,  // amber  — equilibrium ceiling
+  r:      THEME.sr.accent,     // purple — return rate
+  income: THEME.ss.accent,     // red    — annual income
 }
 
-function calc(nw: number, s: number, wstar: number, r: number) {
+function calc(nw: number, s: number, wstar: number, r: number, income: number) {
   const E      = Math.max(0, nw - s)
   const E_star = Math.max(1, wstar - s)
   const lambda = E > 0 ? r * Math.sqrt(E / E_star) : 0
   const D      = lambda * E
   const returns    = nw * r
-  const netPassive = returns - D
-  const yearsToFloor = D > 0 ? (nw - s) / D : Infinity
-  const aboveW = nw > wstar ? nw - wstar : 0
-  const netLoss = D - returns
+  const netAnnual  = income + returns - D          // net NW change per year
+  const breakEven  = Math.max(0, D - returns)      // min salary to not draw down
+  const yearsToFloor = netAnnual >= 0 ? Infinity : (nw - s) / Math.abs(netAnnual)
+  const aboveW   = nw > wstar ? nw - wstar : 0
+  const netLoss  = D - returns - income
   const yearsToEquil = aboveW > 0 && netLoss > 0 ? aboveW / netLoss : null
-  return { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil }
+  return { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil }
 }
 
-interface Params { nw: number; s: number; wstar: number; r: number }
-const DEFAULTS: Params = { nw: 10_000_000, s: 500_000, wstar: 22_000_000, r: 0.07 }
+interface Params { nw: number; s: number; wstar: number; r: number; income: number }
+const DEFAULTS: Params = { nw: 650_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 75_000 }
+
+const PRESETS: { label: string; p: Params }[] = [
+  { label: 'Recent grad — first job',          p: { nw:    80_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  48_000 } },
+  { label: 'Middle-class worker',              p: { nw:   650_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:  75_000 } },
+  { label: 'Dual-income household',            p: { nw: 1_500_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 160_000 } },
+  { label: 'Small business owner',             p: { nw: 3_200_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 220_000 } },
+  { label: 'Senior professional',              p: { nw: 8_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 350_000 } },
+  { label: 'Early retiree (living on assets)', p: { nw: 5_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income:       0 } },
+  { label: 'Pre-retirement (winding down)',    p: { nw: 4_000_000, s: 50_000, wstar: 22_000_000, r: 0.05, income:  90_000 } },
+  { label: 'Approaching the ceiling',          p: { nw:20_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 500_000 } },
+  { label: 'Well above ceiling',               p: { nw:60_000_000, s: 50_000, wstar: 22_000_000, r: 0.07, income: 800_000 } },
+]
 
 function Slider({ label, id, min, max, step, value, fmt, color, onChange }: {
   label: string; id: string; min: number; max: number; step: number
@@ -55,10 +70,48 @@ function Slider({ label, id, min, max, step, value, fmt, color, onChange }: {
 }
 
 
+function StatTile({ label, value, color, def }: { label: string; value: string; color: string; def: string }) {
+  const [hovered, setHovered] = useState(false)
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{ background: '#161b22', padding: '7px 10px', display: 'flex', flexDirection: 'column', gap: 1, cursor: 'default', position: 'relative', borderRight: `1px solid ${THEME.border}`, borderBottom: `1px solid ${THEME.border}` }}
+    >
+      <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>{label.toUpperCase()}</div>
+      <div style={{ fontSize: 12, fontWeight: 700, color, marginTop: 1 }}>{value}</div>
+      {hovered && (
+        <div style={{
+          position: 'absolute', bottom: '100%', left: 0, zIndex: 10,
+          background: '#1c2128', border: `1px solid #FFD700`, borderRadius: 4,
+          padding: '5px 8px', fontSize: 10, color: THEME.subtext, whiteSpace: 'nowrap',
+          pointerEvents: 'none', marginBottom: 4, lineHeight: 1.4,
+          boxShadow: '0 0 12px 4px rgba(255, 215, 0, 0.6), 0 0 24px 8px rgba(255, 215, 0, 0.25)',
+        }}>
+          {def}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function autoView(nw: number, wstar: number): { xMin: number; xMax: number } {
+  const lo = Math.min(nw, wstar)
+  const hi = Math.max(nw, wstar)
+  const pad = Math.max((hi - lo) * 0.25, hi * 0.1, 500_000)
+  return { xMin: Math.max(0, lo - pad), xMax: hi + pad }
+}
+
+const CHART_MG = { top: 16, right: 16, bottom: 40, left: 72 }
+
 export function V014_DemurrageCalculator(_props: DiagramProps) {
   const [p, setP] = useState<Params>(DEFAULTS)
+  const [hoverNW, setHoverNW]   = useState<number | null>(null)
+  const [hoverPos, setHoverPos] = useState<{ x: number; y: number } | null>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const wrapRef   = useRef<HTMLDivElement>(null)
+
+  const view = autoView(p.nw, p.wstar)
 
   const set = (key: keyof Params) => (v: number) => setP(prev => ({ ...prev, [key]: v }))
 
@@ -76,29 +129,49 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.scale(dpr, dpr)
     ctx.clearRect(0, 0, w, h)
 
-    const mg = { top: 16, right: 16, bottom: 40, left: 72 }
+    const mg = CHART_MG
     const dw = w - mg.left - mg.right
     const dh = h - mg.top - mg.bottom
 
-    const maxNW = 100_000_000
-    const maxD  = Math.max(1000, calc(maxNW, p.s, p.wstar, p.r).D * 1.1)
+    const { xMin, xMax } = view
+    const span = xMax - xMin
 
-    const mx = (v: number) => mg.left + (v / maxNW) * dw
+    // Auto-scale Y to max D in visible range
+    const steps = 200
+    let maxD = 1000
+    for (let i = 0; i <= steps; i++) {
+      const xv = xMin + (i / steps) * span
+      const d = calc(xv, p.s, p.wstar, p.r, p.income).D
+      if (d > maxD) maxD = d
+    }
+    maxD *= 1.1
+
+    const mx = (v: number) => mg.left + ((v - xMin) / span) * dw
     const my = (v: number) => mg.top + dh - (v / maxD) * dh
 
     ctx.font = `10px ${MONOSPACE}`
 
-    // Grid
+    // Grid — pick a nice tick step based on visible span
+    const rawStep = span / 5
+    const mag = Math.pow(10, Math.floor(Math.log10(rawStep)))
+    const tickStep = Math.ceil(rawStep / mag) * mag
+    const firstTick = Math.ceil(xMin / tickStep) * tickStep
+
     ctx.strokeStyle = THEME.divider
     ctx.lineWidth = 1
     ctx.beginPath()
-    for (let x = 0; x <= maxNW; x += 20_000_000) {
-      ctx.moveTo(mx(x), mg.top)
-      ctx.lineTo(mx(x), mg.top + dh)
+    for (let x = firstTick; x <= xMax + tickStep * 0.01; x += tickStep) {
+      const px = mx(x)
+      if (px < mg.left - 1 || px > mg.left + dw + 1) continue
+      ctx.moveTo(px, mg.top)
+      ctx.lineTo(px, mg.top + dh)
       ctx.fillStyle = THEME.dim
       ctx.textAlign = 'center'
       ctx.textBaseline = 'top'
-      ctx.fillText(x === 0 ? '0' : `${x / 1_000_000}M`, mx(x), mg.top + dh + 6)
+      const label = x >= 1_000_000 ? `${(x / 1_000_000).toFixed(x % 1_000_000 === 0 ? 0 : 1)}M`
+                  : x >= 1_000     ? `${(x / 1_000).toFixed(0)}K`
+                  : `${x}`
+      ctx.fillText(label, px, mg.top + dh + 6)
     }
     for (let i = 0; i <= 4; i++) {
       const yv = (maxD / 4) * i
@@ -128,7 +201,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.restore()
 
     // S (floor) marker
-    if (p.s > 0 && p.s < maxNW) {
+    if (p.s > 0 && p.s < xMax) {
       const sLine = mx(p.s)
       ctx.beginPath()
       ctx.strokeStyle = COLORS.s
@@ -167,14 +240,14 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.lineWidth = 2
     ctx.setLineDash([])
     for (let i = 0; i <= 300; i++) {
-      const xv = (i / 300) * maxNW
-      const yv = calc(xv, p.s, p.wstar, p.r).D
+      const xv = xMin + (i / 300) * span
+      const yv = calc(xv, p.s, p.wstar, p.r, p.income).D
       i === 0 ? ctx.moveTo(mx(xv), my(yv)) : ctx.lineTo(mx(xv), my(yv))
     }
     ctx.stroke()
 
     // Current NW marker (blue — matches NW slider)
-    const { D } = calc(p.nw, p.s, p.wstar, p.r)
+    const { D } = calc(p.nw, p.s, p.wstar, p.r, p.income)
     const markerX = mx(p.nw)
     const markerY = my(D)
     ctx.beginPath()
@@ -189,7 +262,31 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.fillStyle = COLORS.nw
     ctx.arc(markerX, markerY, 5, 0, Math.PI * 2)
     ctx.fill()
-  }, [p])
+
+    // Hover crosshair
+    if (hoverNW !== null && hoverNW >= xMin && hoverNW <= xMax) {
+      const hx = mx(hoverNW)
+      const hd = calc(hoverNW, p.s, p.wstar, p.r, p.income).D
+      const hy = my(hd)
+
+      ctx.beginPath()
+      ctx.strokeStyle = 'rgba(255,215,0,0.35)'
+      ctx.lineWidth = 1
+      ctx.setLineDash([3, 3])
+      ctx.moveTo(hx, mg.top)
+      ctx.lineTo(hx, mg.top + dh)
+      ctx.stroke()
+      ctx.setLineDash([])
+
+      ctx.beginPath()
+      ctx.shadowColor = '#FFD700'
+      ctx.shadowBlur = 14
+      ctx.fillStyle = '#FFD700'
+      ctx.arc(hx, hy, 5, 0, Math.PI * 2)
+      ctx.fill()
+      ctx.shadowBlur = 0
+    }
+  }, [p, view, hoverNW])
 
   useEffect(() => { draw() }, [draw])
   useEffect(() => {
@@ -198,7 +295,8 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     return () => ro.disconnect()
   }, [draw])
 
-  const { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r)
+
+  const { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r, p.income)
 
   const yearsLabel = (() => {
     if (p.nw <= p.s) return '—'
@@ -207,7 +305,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     return yearsToFloor.toFixed(0) + ' yrs'
   })()
 
-  const netPassiveColor = netPassive >= 0 ? THEME.ea.accent : THEME.ss.accent
+  const netAnnualColor = netAnnual >= 0 ? THEME.ea.accent : THEME.ss.accent
   const yearsColor = yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent
 
   return (
@@ -217,10 +315,24 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
       fontFamily: MONOSPACE,
     }}>
       {/* Header */}
-      <div style={{ fontSize: 11, color: THEME.dim, letterSpacing: '0.06em', borderBottom: `1px solid ${THEME.border}`, paddingBottom: 8 }}>
-        <span style={{ color: COLORS.nw, fontWeight: 700 }}>V-014</span>
-        <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
-        Progressive Net-Worth Demurrage Calculator
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: `1px solid ${THEME.border}`, paddingBottom: 8, flexWrap: 'wrap', gap: 8 }}>
+        <div style={{ fontSize: 11, color: THEME.dim, letterSpacing: '0.06em' }}>
+          <span style={{ color: COLORS.nw, fontWeight: 700 }}>V-014</span>
+          <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
+          Progressive Net-Worth Demurrage Calculator
+        </div>
+        <select
+          onChange={e => { const preset = PRESETS[+e.target.value]; if (preset) setP(preset.p) }}
+          style={{
+            background: '#161b22', border: `1px solid ${THEME.border}`, borderRadius: 4,
+            color: THEME.subtext, fontSize: 11, fontFamily: MONOSPACE, padding: '3px 6px',
+            cursor: 'pointer', outline: 'none',
+          }}
+          defaultValue=""
+        >
+          <option value="" disabled>Scenario…</option>
+          {PRESETS.map((pr, i) => <option key={i} value={i}>{pr.label}</option>)}
+        </select>
       </div>
 
       {/* Body: sliders left, chart right */}
@@ -231,7 +343,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
           padding: 10, display: 'flex', flexDirection: 'column', gap: 10,
           minWidth: 200, flex: '0 0 200px',
         }}>
-          <Slider label="Net Worth (NW)" id="nw" min={0} max={100_000_000} step={100_000}
+          <Slider label="Net Worth (NW)" id="nw" min={0} max={144_000_000} step={10_000}
             value={p.nw} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.nw} onChange={set('nw')} />
           <Slider label="Savings Floor (S)" id="s" min={0} max={2_000_000} step={10_000}
             value={p.s} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.s} onChange={set('s')} />
@@ -239,46 +351,100 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
           <Slider label="Assumed Return (r)" id="r" min={0.01} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
+          <Slider label="Annual Income (I)" id="income" min={0} max={2_000_000} step={5_000}
+            value={p.income} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.income} onChange={set('income')} />
         </div>
 
         {/* Chart */}
-        <div ref={wrapRef} style={{ flex: '1 1 280px', minHeight: 220, position: 'relative' }}>
+        <div
+          ref={wrapRef}
+          style={{ flex: '1 1 280px', minHeight: 220, position: 'relative' }}
+          onMouseMove={e => {
+            const rect = wrapRef.current?.getBoundingClientRect()
+            if (!rect) return
+            const dw = rect.width - CHART_MG.left - CHART_MG.right
+            const relX = e.clientX - rect.left - CHART_MG.left
+            const nwVal = view.xMin + (relX / dw) * (view.xMax - view.xMin)
+            if (nwVal >= 0 && relX >= 0 && relX <= dw) {
+              setHoverNW(nwVal)
+              setHoverPos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+            } else {
+              setHoverNW(null); setHoverPos(null)
+            }
+          }}
+          onMouseLeave={() => { setHoverNW(null); setHoverPos(null) }}
+        >
           <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
+          {hoverNW !== null && hoverPos && (() => {
+            const hs = calc(hoverNW, p.s, p.wstar, p.r, p.income)
+            const left = hoverPos.x + 14
+            return (
+              <div style={{
+                position: 'absolute', top: Math.max(8, hoverPos.y - 90), left,
+                zIndex: 20, pointerEvents: 'none',
+                background: '#1c2128', border: '1px solid #FFD700', borderRadius: 6,
+                padding: '8px 12px', fontFamily: MONOSPACE, whiteSpace: 'nowrap',
+                boxShadow: '0 0 12px 4px rgba(255,215,0,0.6), 0 0 28px 10px rgba(255,215,0,0.22)',
+              }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: '#FFD700', marginBottom: 5 }}>
+                  {fmtCompact.format(hoverNW)}
+                </div>
+                {[
+                  { label: 'Annual D',   value: fmtAcct(hs.D),        color: '#e3b341' },
+                  { label: 'Bi-weekly',  value: fmtAcct(hs.D / 26),   color: '#FFD700' },
+                  { label: 'Rate (λ)',   value: fmtPct(hs.lambda),     color: THEME.dim },
+                  { label: 'Net Δ',      value: fmtAcct(hs.netAnnual), color: hs.netAnnual >= 0 ? THEME.ea.accent : THEME.ss.accent },
+                ].map(({ label, value, color }) => (
+                  <div key={label} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, fontSize: 11, color: THEME.dim, marginTop: 2 }}>
+                    <span>{label}</span>
+                    <span style={{ color, fontWeight: 600 }}>{value}</span>
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
         </div>
       </div>
 
-      {/* Stats strip — horizontal grid below */}
-      <div style={{
-        display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
-        gap: 1, background: THEME.border, border: `1px solid ${THEME.border}`, borderRadius: 6, overflow: 'hidden',
-      }}>
-        {[
-          { label: 'Excess (E)',      value: fmtFull.format(E),           color: THEME.subtext },
-          { label: 'Rate (λ)',        value: fmtPct(lambda),              color: THEME.subtext },
-          { label: 'Bi-weekly (D)',   value: fmtFull.format(D / 26),      color: '#FFD700' },
-          { label: 'Annual (D)',      value: fmtFull.format(D),           color: '#e3b341' },
-          { label: 'Returns',         value: fmtFull.format(returns),     color: COLORS.r },
-          { label: 'After demurrage', value: fmtFull.format(netPassive),  color: netPassiveColor },
-          { label: 'Years to floor',  value: yearsLabel,                  color: yearsColor },
-          ...(yearsToEquil !== null ? [{ label: 'Yrs to W*', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar }] : []),
-        ].map(({ label, value, color }) => (
-          <div key={label} style={{
-            background: '#161b22', padding: '7px 10px',
-            display: 'flex', flexDirection: 'column', gap: 2,
-          }}>
-            <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>{label.toUpperCase()}</div>
-            <div style={{ fontSize: 12, fontWeight: 700, color }}>{value}</div>
-          </div>
-        ))}
-      </div>
+      {/* Stats + Legend row */}
+      <div style={{ display: 'flex', gap: 0, border: `1px solid ${THEME.border}`, borderRadius: 6, overflow: 'visible' }}>
+        {/* Stats tiles */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 0, flex: 1, borderRight: `1px solid ${THEME.border}` }}>
+          {[
+            { label: 'Excess (E)',     value: fmtAcct(E),                    color: THEME.subtext,  def: 'NW above savings floor — taxable base' },
+            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: 'Demurrage rate; scales as √(E/E*)' },
+            { label: 'Bi-weekly (D)',  value: fmtAcct(D / 26),               color: '#FFD700',      def: 'Demurrage per pay period (annual ÷ 26)' },
+            { label: 'Annual (D)',     value: fmtAcct(D),                    color: '#e3b341',      def: 'Total demurrage owed this year' },
+            { label: 'Returns',        value: fmtAcct(returns),              color: COLORS.r,       def: 'Passive income at assumed rate r on NW' },
+            { label: 'Net annual Δ',   value: fmtAcct(netAnnual),            color: netAnnualColor, def: 'Income + returns − demurrage' },
+            { label: 'Break-even (I)', value: breakEven > 0 ? fmtAcct(breakEven) : 'covered', color: breakEven > 0 ? COLORS.income : THEME.ea.accent, def: 'Min salary to avoid eroding principal' },
+            { label: 'Yrs to floor',   value: yearsLabel,                    color: yearsColor,     def: 'Years until NW hits S at current net rate' },
+            ...(yearsToEquil !== null ? [{ label: 'Yrs to W*', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar, def: 'Years to descend to equilibrium ceiling' }] : []),
+          ].map(({ label, value, color, def }) => (
+            <StatTile key={label} label={label} value={value} color={color} def={def} />
+          ))}
+        </div>
 
-      {/* Footer */}
-      <div style={{ fontSize: 10, color: THEME.dim, opacity: 0.55, textAlign: 'right', letterSpacing: '0.04em' }}>
-        <span style={{ color: '#FFD700' }}>━</span> D(E) = (r/√E*)·E^1.5
-        <span style={{ margin: '0 6px' }}>·</span>
-        <span style={{ color: COLORS.s }}>╌</span> S
-        <span style={{ margin: '0 6px' }}>·</span>
-        <span style={{ color: COLORS.wstar }}>╌</span> W*
+        {/* Legend — chart colors only */}
+        <div style={{
+          background: '#161b22', padding: '10px 12px', width: 170, flexShrink: 0,
+          display: 'flex', flexDirection: 'column', gap: 6, justifyContent: 'center',
+        }}>
+          <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>CHART</div>
+          {[
+            { swatch: '#FFD700',    line: true,  label: 'D(E) demurrage curve' },
+            { swatch: COLORS.nw,   line: false, label: 'Current net worth' },
+            { swatch: COLORS.s,    line: true,  label: 'S — savings floor' },
+            { swatch: COLORS.wstar,line: true,  label: 'W* — equilibrium ceiling' },
+          ].map(({ swatch, line, label }) => (
+            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
+              {line
+                ? <span style={{ width: 16, height: 2, background: swatch, flexShrink: 0, borderRadius: 1 }} />
+                : <span style={{ width: 8, height: 8, borderRadius: '50%', background: swatch, flexShrink: 0, margin: '0 4px' }} />}
+              {label}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   )
