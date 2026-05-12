@@ -93,7 +93,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     const dh = h - mg.top - mg.bottom
 
     const maxNW = 100_000_000
-    const maxD  = Math.max(1000, calc(maxNW, p.s, p.wstar, p.r, p.r).D * 1.1)
+    const maxD  = Math.max(1000, calc(maxNW, p.s, p.wstar, p.r).D * 1.1)
 
     const mx = (v: number) => mg.left + (v / maxNW) * dw
     const my = (v: number) => mg.top + dh - (v / maxD) * dh
@@ -180,13 +180,13 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.setLineDash([])
     for (let i = 0; i <= 300; i++) {
       const xv = (i / 300) * maxNW
-      const yv = calc(xv, p.s, p.wstar, p.r, p.r).D
+      const yv = calc(xv, p.s, p.wstar, p.r).D
       i === 0 ? ctx.moveTo(mx(xv), my(yv)) : ctx.lineTo(mx(xv), my(yv))
     }
     ctx.stroke()
 
     // Current NW marker (blue — matches NW slider)
-    const { D } = calc(p.nw, p.s, p.wstar, p.r, p.r)
+    const { D } = calc(p.nw, p.s, p.wstar, p.r)
     const markerX = mx(p.nw)
     const markerY = my(D)
     ctx.beginPath()
@@ -210,7 +210,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     return () => ro.disconnect()
   }, [draw])
 
-  const { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r, p.r)
+  const { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r)
 
   const yearsLabel = (() => {
     if (p.nw <= p.s) return '—'
