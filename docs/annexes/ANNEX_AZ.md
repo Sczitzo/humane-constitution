@@ -65,8 +65,8 @@ e₂ = max(0, 5,000,000 − S)       ≈ 4,950,000  at founding S
 e₃ = max(0, 22,000,000 − S)      ≈ 21,950,000 at founding S
 
 D(E) = 0.26 · min(E, e₁)
-     + 0.20 · max(0, min(E, e₂) − e₁)
-     + 0.30 · max(0, min(E, e₃) − e₂)
+     + 0.30 · max(0, min(E, e₂) − e₁)
+     + 0.38 · max(0, min(E, e₃) − e₂)
      + 0.46 · max(0, E − e₃)
 ```
 
@@ -74,11 +74,11 @@ Tier cap charges at founding S:
 
 ```
 C₁ = 0.26 × 950,000   =    247,000   [T1 fully filled]
-C₂ = C₁ + 0.20 × 4,000,000 = 1,047,000   [T1+T2 fully filled]
-C₃ = C₂ + 0.30 × 17,000,000 = 6,147,000  [T1+T2+T3 fully filled]
+C₂ = C₁ + 0.30 × 4,000,000 = 1,447,000   [T1+T2 fully filled]
+C₃ = C₂ + 0.38 × 17,000,000 = 7,907,000  [T1+T2+T3 fully filled]
 ```
 
-**Anti-rentier design.** At every NW above S, annual demurrage exceeds expected capital returns at r = 7 %. At M\* ($1,000,000 NW), demurrage ($247,000) is 3.5 × expected returns ($70,000), making passive wealth maintenance impossible without active income. Wealth above S that is not continuously earned decays toward S.
+**Anti-rentier design.** At every NW above S, annual demurrage exceeds expected capital returns at r = 7 %. At M\* ($1,000,000 NW), demurrage ($247,000) is 3.5 × expected returns ($70,000), making passive wealth maintenance impossible without active income. At $5,000,000 NW, demurrage ($1,447,000) is 4.1 × expected returns ($350,000). Wealth above S that is not continuously earned decays toward S.
 
 ### Illustrative schedule
 
@@ -143,8 +143,8 @@ Demurrage applies to **unassigned cash balances** held by enterprises above a do
 U = max(0, liquid_assets − operating_budget)
 
 D_corp(U) = 0.26 · min(U, 950,000)
-           + 0.20 · max(0, min(U, 4,950,000) − 950,000)
-           + 0.30 · max(0, min(U, 21,950,000) − 4,950,000)
+           + 0.30 · max(0, min(U, 4,950,000) − 950,000)
+           + 0.38 · max(0, min(U, 21,950,000) − 4,950,000)
            + 0.46 · max(0, U − 21,950,000)
 ```
 
@@ -216,7 +216,7 @@ The following parameters in this annex are **Tier 2 founding commitments** and m
 
 - S (participation buffer founding value)
 - W\* (upper tier boundary founding value)
-- The four marginal tier rates (26 %, 20 %, 30 %, 46 %) and their bracket boundaries
+- The four marginal tier rates (26 %, 30 %, 38 %, 46 %) and their bracket boundaries
 - The revenue-routing minimum for EA commons pool (60 %)
 - The consolidated-ownership aggregation rule (§AZ4)
 - The no-credit-offset rule (§AZ4)
