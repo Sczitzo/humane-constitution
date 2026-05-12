@@ -103,6 +103,21 @@ C₃ = C₂ + 0.30 × 17,000,000 = 6,147,000  [T1+T2+T3 fully filled]
 
 At W\* ($22,000,000 NW) the effective rate is 28.0 % — four times the expected return on capital (r = 7 %). Wealth above W\* incurs the T4 marginal rate (46 %) on every additional dollar, ensuring concentrated holdings decay rapidly toward the upper tier boundary on a 3–10 year timescale rather than compounding across generations.
 
+### Retirement modifier (age ≥ 65)
+
+Holders who have reached age 65 qualify for a reduced carrying cost on Tiers 1 and 2, recognising a lifetime of active productive contribution. Tiers 3 and 4 are unchanged — wealth above $5,000,000 NW decays at full rate regardless of age.
+
+| Tier | Working rate | Retirement rate (age ≥ 65) |
+| :--- | :--- | :--- |
+| T1 | 26 % | 18 % |
+| T2 | 20 % | 14 % |
+| T3 | 30 % | 30 % (unchanged) |
+| T4 | 46 % | 46 % (unchanged) |
+
+**Design intent.** A person retiring at 65 with $4,000,000 NW and $90,000 annual income sees their savings last approximately 18 years — reaching the participation floor around age 83. Life access and service-record retirement contributions cover essential needs thereafter. Retiring before 65 receives no adjustment; the system does not subsidise passive early withdrawal from productive life. (A person attempting to live off $5,000,000 passively at age 61 — still below the threshold — reaches floor in approximately 7 years.)
+
+**Age verification.** Retirement status is attested annually to the oracle network. Biological age is confirmed via civil registry. Employment status is self-reported and subject to audit if productive-activity records are inconsistent.
+
 ![Demurrage Calculator](/images/V-014.png)
 
 ---
