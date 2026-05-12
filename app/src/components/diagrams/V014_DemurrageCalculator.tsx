@@ -21,10 +21,10 @@ const COLORS = {
   age:    '#8ba7c4',           // steel blue — age / retirement
 }
 
-// Tier boundaries (NW values, not excess) — Tier 2 founding commitments per §AZ3
+// Tier boundaries (NW values, not excess) — strictly progressive: no discount for higher wealth
 const TIER_NW = [1_000_000, 5_000_000, 22_000_000] as const
-const TIER_R_WORKING = [0.26, 0.20, 0.30, 0.46] as const  // T1–T4, age < 65
-const TIER_R_RETIRED = [0.18, 0.14, 0.30, 0.46] as const  // T1–T4, age ≥ 65 (§AZ3 retirement modifier)
+const TIER_R_WORKING = [0.26, 0.30, 0.38, 0.46] as const  // T1–T4, age < 65
+const TIER_R_RETIRED = [0.18, 0.22, 0.30, 0.46] as const  // T1–T4, age ≥ 65 (senior discount on lower tiers only)
 
 function calc(nw: number, s: number, _wstar: number, r: number, income: number, age: number) {
   const E  = Math.max(0, nw - s)
@@ -421,7 +421,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.age} fmt={v => v.toFixed(0) + ' yrs'} color={p.age >= 65 ? THEME.voice.accent : COLORS.age} onChange={set('age')} />
           {p.age >= 65 && (
             <div style={{ fontSize: 9, color: THEME.voice.accent, letterSpacing: '0.05em', textAlign: 'center', background: '#1c200a', border: `1px solid ${THEME.voice.accent}33`, borderRadius: 3, padding: '3px 6px' }}>
-              RETIREMENT MODIFIER ACTIVE · T1 18 % · T2 14 %
+              RETIREMENT MODIFIER ACTIVE · T1 18 % · T2 22 %
             </div>
           )}
         </div>
@@ -483,7 +483,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 0, flex: 1, borderRight: `1px solid ${THEME.border}` }}>
           {[
             { label: 'Excess (E)',     value: fmtAcct(E),                    color: THEME.subtext,  def: 'NW above savings floor — taxable base' },
-            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: retired ? 'Retirement rates active (age ≥ 65): T1 18%/T2 14%/T3 30%/T4 46%' : 'Effective (blended) rate = D÷E; tiers: T1 26%/T2 20%/T3 30%/T4 46%' },
+            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: retired ? 'Retirement rates active (age ≥ 65): T1 18%/T2 22%/T3 38%/T4 46%' : 'Effective (blended) rate = D÷E; tiers: T1 26%/T2 30%/T3 38%/T4 46%' },
             { label: 'Bi-weekly (D)',  value: fmtAcct(D / 26),               color: '#FFD700',      def: 'Demurrage per pay period (annual ÷ 26)' },
             { label: 'Annual (D)',     value: fmtAcct(D),                    color: '#e3b341',      def: 'Total demurrage owed this year' },
             { label: 'Returns',        value: fmtAcct(returns),              color: COLORS.r,       def: 'Passive income at assumed rate r on NW' },
