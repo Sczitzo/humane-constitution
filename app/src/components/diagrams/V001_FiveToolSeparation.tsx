@@ -32,14 +32,35 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
         {/* Firewall barriers — animated sparks slide between columns */}
         {[0, 1, 2, 3].map(i => {
           const fw = startX + (i + 1) * (colW + gap) - gap / 2
+          const dur1 = `${2.4 + i * 0.5}s`
+          const dur2 = `${1.9 + i * 0.4}s`
+          const leftCol  = COLS[i].stroke
+          const rightCol = COLS[i + 1].stroke
           return (
             <g key={i}>
-              <line x1={fw} y1={cy - 8} x2={fw} y2={cy + colH + 8} stroke={THEME.divider} strokeWidth={1} strokeDasharray="4,3" />
-              <text x={fw} y={cy - 12} textAnchor="middle" fontSize={7} fill={THEME.dim} fontFamily="monospace">▐</text>
-              <circle cx={fw} cy={cy + 20} r={1.8} fill={THEME.border}>
-                <animate attributeName="cy" values={`${cy + 12};${cy + colH - 12};${cy + 12}`} dur={`${3 + i * 0.6}s`} repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.8;0.15;0.8" dur={`${3 + i * 0.6}s`} repeatCount="indefinite" />
+              {/* Divider line — slightly brighter */}
+              <line x1={fw} y1={cy - 10} x2={fw} y2={cy + colH + 10} stroke="#3d4450" strokeWidth={1} strokeDasharray="4,3" />
+              <text x={fw} y={cy - 14} textAnchor="middle" fontSize={7} fill={THEME.dim} fontFamily="monospace">▐</text>
+
+              {/* Spark 1 — top-to-bottom, left column color */}
+              <circle cx={fw} cy={cy + 12} r={2.5} fill={leftCol} filter={`url(#spark-glow-${i})`}>
+                <animate attributeName="cy" values={`${cy + 12};${cy + colH - 12};${cy + 12}`} dur={dur1} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0;1;0.9;0.2;0" dur={dur1} repeatCount="indefinite" />
               </circle>
+
+              {/* Spark 2 — bottom-to-top, right column color, offset phase */}
+              <circle cx={fw} cy={cy + colH - 12} r={2} fill={rightCol} filter={`url(#spark-glow-${i})`}>
+                <animate attributeName="cy" values={`${cy + colH - 12};${cy + 12};${cy + colH - 12}`} dur={dur2} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" begin={`${0.7 + i * 0.3}s`} />
+                <animate attributeName="opacity" values="0;0.8;0.7;0.1;0" dur={dur2} repeatCount="indefinite" begin={`${0.7 + i * 0.3}s`} />
+              </circle>
+
+              {/* Glow filter per divider */}
+              <defs>
+                <filter id={`spark-glow-${i}`} x="-200%" y="-200%" width="500%" height="500%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur" />
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
             </g>
           )
         })}
