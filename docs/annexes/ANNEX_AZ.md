@@ -16,7 +16,7 @@
 
 ## AZ1 — Constitutional Basis
 
-Wealth demurrage is an Article V carrying-cost instrument. It is not a tax on income, labor, or survival. It is a recurring cost on the *stock* of net worth held above a defined participation buffer (S), applying progressive marginal rates across wealth tiers so that every bracket of excess net worth costs more than it earns in passive returns — making indefinite passive accumulation impossible at any level above S.
+Wealth demurrage is an Article V carrying-cost instrument. It is not a tax on income, labor, or survival. It is a recurring cost on the *stock* of net worth held above a defined participation buffer (S), applying progressive annual decay rates across wealth tiers so that every bracket of excess net worth costs more than it earns in passive returns — making indefinite passive accumulation impossible at any level above S.
 
 **S is not a survival floor.** Life access — food, shelter, healthcare, and Essential Access — is guaranteed unconditionally through the CSM and commons systems and is never purchased with Flow. S is a minimal participation buffer: a small protected stake that prevents demurrage from biting at trivial balances. Everything above S represents accumulated wealth, and holding it requires ongoing active contribution to offset the carrying cost. Wealth that is not continuously earned decays toward S.
 
@@ -30,10 +30,10 @@ Demurrage revenue routes to the commons pool in the same manner as land-use char
 | :----- | :--- | :--------------------------------- |
 | **S** | Participation buffer floor | $50,000 (oracle-indexed to purchasing-power basket; reviewed annually) |
 | **M\*** | Must-earn threshold | $1,000,000 NW — above this, demurrage exceeds expected capital returns at r; active income required to maintain wealth |
-| **W\*** | Upper tier boundary | $22,000,000 NW — above this, the highest marginal rate (T4) applies; founding value, oracle-indexed |
+| **W\*** | Upper tier boundary | $22,000,000 NW — above this, the highest annual decay rate (T4) applies; founding value, oracle-indexed |
 | **r** | Expected return on capital | 7 % / yr (long-run real-asset benchmark; oracle-adjusted; used for return projection, not rate formula) |
 | **E** | Taxable excess net worth | max(0, NW − S), where NW = consolidated net worth |
-| **λ(E)** | Effective demurrage rate | D(E) / E — weighted average of marginal tier rates; see §AZ3 |
+| **λ(E)** | Effective demurrage rate | D(E) / E — weighted average of annual decay rates; see §AZ3 |
 | **D(E)** | Annual demurrage charge | see §AZ3 |
 
 **S and W\* are Tier 2 founding commitments.** They may be adjusted by oracle-indexed annual review within ±20 % of the founding value; any change beyond that band requires a Tier 2 amendment with full FAP process.
@@ -42,18 +42,18 @@ Demurrage revenue routes to the commons pool in the same manner as land-use char
 
 ## AZ3 — Rate Function
 
-Demurrage is computed by applying progressive marginal rates to successive brackets of excess net worth E = max(0, NW − S), collected bi-weekly (26 periods per year):
+Demurrage is computed by applying progressive annual decay rates to successive brackets of excess net worth E = max(0, NW − S), collected bi-weekly (26 periods per year):
 
-### Marginal rate schedule
+### Annual decay rate schedule
 
-| Tier | NW bracket | Marginal annual rate | Marginal bi-weekly rate |
+| Tier | NW bracket | Annual decay rate | Bi-weekly decay rate |
 | :--- | :--- | :--- | :--- |
 | T1 | $50,000 – $1,000,000 | 26 % | 1.00 % |
 | T2 | $1,000,000 – $5,000,000 | 30 % | 1.15 % |
 | T3 | $5,000,000 – $22,000,000 | 38 % | 1.46 % |
 | T4 | $22,000,000 + | 46 % | 1.77 % |
 
-*Bi-weekly rate = annual rate ÷ 26. Annual rate is the canonical definition.*
+*Bi-weekly decay rate = annual decay rate ÷ 26. Annual decay rate is the canonical definition.*
 
 ### Annual demurrage formula
 
@@ -101,7 +101,7 @@ C₃ = C₂ + 0.38 × 17,000,000 = 7,907,000  [T1+T2+T3 fully filled]
 | $500,000,000 | $499,950,000 | 45.6 % | $227,787,000 |
 | $1,000,000,000 | $999,950,000 | 45.8 % | $457,787,000 |
 
-At W\* ($22,000,000 NW) the effective rate is 36.0 % — more than five times the expected return on capital (r = 7 %). Wealth above W\* incurs the T4 marginal rate (46 %) on every additional dollar, ensuring concentrated holdings decay rapidly toward the upper tier boundary on a 3–10 year timescale rather than compounding across generations.
+At W\* ($22,000,000 NW) the effective rate is 36.0 % — more than five times the expected return on capital (r = 7 %). Wealth above W\* incurs the T4 annual decay rate (46 %) on every additional dollar, ensuring concentrated holdings decay rapidly toward the upper tier boundary on a 3–10 year timescale rather than compounding across generations.
 
 ### Retirement modifier (age ≥ 65)
 
@@ -137,7 +137,7 @@ There is **no credit offset**. Debt is not subtracted from net worth for purpose
 
 ## AZ5 — Corporate and Institutional Unassigned Balances
 
-Demurrage applies to **unassigned cash balances** held by enterprises above a documented operating reserve, using the same tiered rate structure as personal demurrage (§AZ3):
+Demurrage applies to **unassigned cash balances** held by enterprises above a documented operating reserve, using the same tiered annual decay rate structure as personal demurrage (§AZ3):
 
 ```
 U = max(0, liquid_assets − operating_budget)
@@ -216,7 +216,7 @@ The following parameters in this annex are **Tier 2 founding commitments** and m
 
 - S (participation buffer founding value)
 - W\* (upper tier boundary founding value)
-- The four marginal tier rates (26 %, 30 %, 38 %, 46 %) and their bracket boundaries
+- The four annual decay rates (26 %, 30 %, 38 %, 46 %) and their bracket boundaries
 - The revenue-routing minimum for EA commons pool (60 %)
 - The consolidated-ownership aggregation rule (§AZ4)
 - The no-credit-offset rule (§AZ4)
