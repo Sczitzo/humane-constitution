@@ -129,8 +129,24 @@ function autoView(nw: number, wstar: number): { xMin: number; xMax: number } {
 
 const CHART_MG = { top: 16, right: 16, bottom: 40, left: 72 }
 
+// Simulate NW forward year-by-year from a starting point to a target age.
+// Each year uses the current NW to recompute netAnnual (demurrage is progressive).
+function simulateNW(startNw: number, startAge: number, targetAge: number, params: Params): number {
+  let nw = startNw
+  const years = Math.round(targetAge - startAge)
+  for (let y = 0; y < years; y++) {
+    const age = startAge + y
+    const { netAnnual } = calc(nw, params.s, params.wstar, params.r, params.income, age)
+    nw = Math.max(0, nw + netAnnual)
+  }
+  return nw
+}
+
 export function V014_DemurrageCalculator(_props: DiagramProps) {
   const [p, setP] = useState<Params>(DEFAULTS)
+  // Snapshot anchors age-simulation: { nw, age } at the moment age dragging began
+  // or after the last manual NW change. Dragging age always simulates from here.
+  const ageSnapRef = useRef<{ nw: number; age: number } | null>(null)
   const [hoverNW, setHoverNW]   = useState<number | null>(null)
   const [hoverPos, setHoverPos] = useState<{ x: number; y: number } | null>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -138,7 +154,23 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
 
   const view = autoView(p.nw, p.wstar)
 
-  const set = (key: keyof Params) => (v: number) => setP(prev => ({ ...prev, [key]: v }))
+  const set = (key: keyof Params) => (v: number) => {
+    if (key === 'age') {
+      setP(prev => {
+        if (!ageSnapRef.current) {
+          ageSnapRef.current = { nw: prev.nw, age: prev.age }
+        }
+        const snap = ageSnapRef.current
+        const simNw = v >= snap.age
+          ? simulateNW(snap.nw, snap.age, v, { ...prev, age: snap.age })
+          : snap.nw
+        return { ...prev, age: v, nw: simNw }
+      })
+    } else {
+      if (key === 'nw') ageSnapRef.current = null
+      setP(prev => ({ ...prev, [key]: v }))
+    }
+  }
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current
