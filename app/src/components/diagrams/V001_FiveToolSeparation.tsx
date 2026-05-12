@@ -42,8 +42,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               {/* Divider line */}
               <line x1={fw} y1={cy - 4} x2={fw} y2={cy + colH + 4} stroke="#3d4450" strokeWidth={1} strokeDasharray="3,3" />
 
-              {/* ⊗ static no-crossing badge at center — red, large */}
-              <circle cx={fw} cy={midY} r={16} fill={THEME.cardBg} stroke="#f85149" strokeWidth={2} />
+              {/* ⊗ static no-crossing indicator — red, large, no background circle */}
               <text x={fw} y={midY + 8} textAnchor="middle" fontSize={22} fill="#f85149" fontFamily="monospace" fontWeight={700}>⊗</text>
 
               {/* Left arrow — slides right toward wall, fades out (top) */}
