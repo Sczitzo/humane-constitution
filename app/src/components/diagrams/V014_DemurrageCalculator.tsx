@@ -220,11 +220,12 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
   })()
 
   const netPassiveColor = netPassive >= 0 ? THEME.ea.accent : THEME.ss.accent
+  const yearsColor = yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent
 
   return (
     <div style={{
       background: '#0d1117', border: `1px solid ${THEME.border}`, borderRadius: 8,
-      padding: 16, display: 'flex', flexDirection: 'column', gap: 12,
+      padding: 12, display: 'flex', flexDirection: 'column', gap: 10,
       fontFamily: MONOSPACE,
     }}>
       {/* Header */}
@@ -234,14 +235,13 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         Progressive Net-Worth Demurrage Calculator
       </div>
 
-      {/* Body */}
-      <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-
-        {/* Left: sliders + stats */}
+      {/* Body: sliders left, chart right */}
+      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+        {/* Sliders only — compact */}
         <div style={{
           background: '#161b22', border: `1px solid ${THEME.border}`, borderRadius: 6,
-          padding: 14, display: 'flex', flexDirection: 'column', gap: 12,
-          minWidth: 220, flex: '0 0 220px',
+          padding: 10, display: 'flex', flexDirection: 'column', gap: 10,
+          minWidth: 200, flex: '0 0 200px',
         }}>
           <Slider label="Net Worth (NW)" id="nw" min={0} max={100_000_000} step={100_000}
             value={p.nw} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.nw} onChange={set('nw')} />
@@ -251,57 +251,46 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
           <Slider label="Assumed Return (r)" id="r" min={0.01} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
-
-          {/* Demurrage stats */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingTop: 8, borderTop: `1px solid ${THEME.border}` }}>
-            <div style={{ fontSize: 10, color: THEME.dim, letterSpacing: '0.05em', marginBottom: 2 }}>DEMURRAGE</div>
-            <Stat label="Excess (E)"  value={fmtFull.format(E)} />
-            <Stat label="Rate (λ)"    value={fmtPct(lambda)} />
-            <Stat label="Annual (D)"  value={fmtFull.format(D)} color='#e3b341' />
-            <Stat label="Monthly"     value={fmtFull.format(D / 12)} dim />
-          </div>
-
-          {/* Sustainability stats */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingTop: 8, borderTop: `1px solid ${THEME.border}` }}>
-            <div style={{ fontSize: 10, color: THEME.dim, letterSpacing: '0.05em', marginBottom: 2 }}>PASSIVE INCOME</div>
-            <Stat label="Returns (r × NW)"  value={fmtFull.format(returns)} color={COLORS.r} />
-            <Stat label="After demurrage"   value={fmtFull.format(netPassive)} color={netPassiveColor} />
-            <div style={{ fontSize: 10, color: THEME.dim, marginTop: 2, lineHeight: 1.5 }}>
-              {netPassive >= 0
-                ? 'Sustainable indefinitely — returns exceed demurrage.'
-                : 'Returns do not cover demurrage. Wealth declines even without spending.'}
-            </div>
-          </div>
-
-          {/* Years to floor */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingTop: 8, borderTop: `1px solid ${THEME.border}` }}>
-            <div style={{ fontSize: 10, color: THEME.dim, letterSpacing: '0.05em', marginBottom: 2 }}>IF SPENDING ALL RETURNS</div>
-            <Stat label="Years to floor (S)"
-              value={yearsLabel}
-              color={yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent}
-            />
-            {yearsToEquil !== null && (
-              <Stat label="Years to W* equilibrium" value={yearsToEquil.toFixed(0) + ' yrs'} color={COLORS.wstar} />
-            )}
-            <div style={{ fontSize: 10, color: THEME.dim, lineHeight: 1.5 }}>
-              Assumes spending = r × NW/yr. Only demurrage draws down principal.
-            </div>
-          </div>
         </div>
 
-        {/* Right: chart */}
-        <div ref={wrapRef} style={{ flex: '1 1 300px', minHeight: 260, position: 'relative' }}>
+        {/* Chart */}
+        <div ref={wrapRef} style={{ flex: '1 1 280px', minHeight: 220, position: 'relative' }}>
           <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
         </div>
+      </div>
+
+      {/* Stats strip — horizontal grid below */}
+      <div style={{
+        display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+        gap: 1, background: THEME.border, border: `1px solid ${THEME.border}`, borderRadius: 6, overflow: 'hidden',
+      }}>
+        {[
+          { label: 'Excess (E)',      value: fmtFull.format(E),           color: THEME.subtext },
+          { label: 'Rate (λ)',        value: fmtPct(lambda),              color: THEME.subtext },
+          { label: 'Bi-weekly (D)',   value: fmtFull.format(D / 26),      color: '#FFD700' },
+          { label: 'Annual (D)',      value: fmtFull.format(D),           color: '#e3b341' },
+          { label: 'Returns',         value: fmtFull.format(returns),     color: COLORS.r },
+          { label: 'After demurrage', value: fmtFull.format(netPassive),  color: netPassiveColor },
+          { label: 'Years to floor',  value: yearsLabel,                  color: yearsColor },
+          ...(yearsToEquil !== null ? [{ label: 'Yrs to W*', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar }] : []),
+        ].map(({ label, value, color }) => (
+          <div key={label} style={{
+            background: '#161b22', padding: '7px 10px',
+            display: 'flex', flexDirection: 'column', gap: 2,
+          }}>
+            <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>{label.toUpperCase()}</div>
+            <div style={{ fontSize: 12, fontWeight: 700, color }}>{value}</div>
+          </div>
+        ))}
       </div>
 
       {/* Footer */}
       <div style={{ fontSize: 10, color: THEME.dim, opacity: 0.55, textAlign: 'right', letterSpacing: '0.04em' }}>
         <span style={{ color: '#FFD700' }}>━</span> D(E) = (r/√E*)·E^1.5
         <span style={{ margin: '0 6px' }}>·</span>
-        <span style={{ color: COLORS.s }}>╌</span> S floor
+        <span style={{ color: COLORS.s }}>╌</span> S
         <span style={{ margin: '0 6px' }}>·</span>
-        <span style={{ color: COLORS.wstar }}>╌</span> W* ceiling
+        <span style={{ color: COLORS.wstar }}>╌</span> W*
       </div>
     </div>
   )
