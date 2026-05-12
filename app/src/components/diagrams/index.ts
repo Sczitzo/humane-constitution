@@ -13,6 +13,7 @@ import { V010_InstrumentSpace } from './V010_InstrumentSpace'
 import { V011_EssentialAccessLifecycle } from './V011_EssentialAccessLifecycle'
 import { V012_VoiceLifecycle } from './V012_VoiceLifecycle'
 import { V013_ServiceRecordLifecycle } from './V013_ServiceRecordLifecycle'
+import { V014_DemurrageCalculator } from './V014_DemurrageCalculator'
 
 export interface DiagramProps {
   onInternalLink: (href: string) => void
@@ -41,4 +42,5 @@ export const DiagramRegistry: Record<string, ComponentType<DiagramProps>> = {
   'V-011': V011_EssentialAccessLifecycle,
   'V-012': V012_VoiceLifecycle,
   'V-013': V013_ServiceRecordLifecycle,
+  'V-014': V014_DemurrageCalculator,
 }

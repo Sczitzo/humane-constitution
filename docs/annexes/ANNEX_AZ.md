@@ -74,6 +74,8 @@ D(E) = 0.07 / √21,500,000 · E^1.5
 
 At W\* the rate equals r, so holding wealth at the ceiling costs approximately what it earns — making passive indefinite accumulation economically neutral rather than attractive.
 
+![Demurrage Calculator](/images/V-014.png)
+
 ---
 
 ## AZ4 — Consolidated Beneficial Ownership
