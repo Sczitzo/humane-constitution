@@ -90,18 +90,18 @@ C₃ = C₂ + 0.30 × 17,000,000 = 6,147,000  [T1+T2+T3 fully filled]
 | $250,000 | $200,000 | 26.0 % | $52,000 |
 | $500,000 | $450,000 | 26.0 % | $117,000 |
 | $1,000,000 (M\*) | $950,000 | 26.0 % | $247,000 |
-| $2,000,000 | $1,950,000 | 22.9 % | $447,000 |
-| $5,000,000 | $4,950,000 | 21.2 % | $1,047,000 |
-| $10,000,000 | $9,950,000 | 25.6 % | $2,547,000 |
-| $22,000,000 (W\*) | $21,950,000 | 28.0 % | $6,147,000 |
-| $30,000,000 | $29,950,000 | 32.8 % | $9,827,000 |
-| $50,000,000 | $49,950,000 | 38.1 % | $19,027,000 |
-| $100,000,000 | $99,950,000 | 42.1 % | $42,027,000 |
-| $250,000,000 | $249,950,000 | 44.4 % | $111,027,000 |
-| $500,000,000 | $499,950,000 | 45.2 % | $226,027,000 |
-| $1,000,000,000 | $999,950,000 | 45.6 % | $456,027,000 |
+| $2,000,000 | $1,950,000 | 28.1 % | $547,000 |
+| $5,000,000 | $4,950,000 | 29.2 % | $1,447,000 |
+| $10,000,000 | $9,950,000 | 33.6 % | $3,347,000 |
+| $22,000,000 (W\*) | $21,950,000 | 36.0 % | $7,907,000 |
+| $30,000,000 | $29,950,000 | 38.7 % | $11,587,000 |
+| $50,000,000 | $49,950,000 | 41.6 % | $20,787,000 |
+| $100,000,000 | $99,950,000 | 43.8 % | $43,787,000 |
+| $250,000,000 | $249,950,000 | 45.1 % | $112,787,000 |
+| $500,000,000 | $499,950,000 | 45.6 % | $227,787,000 |
+| $1,000,000,000 | $999,950,000 | 45.8 % | $457,787,000 |
 
-At W\* ($22,000,000 NW) the effective rate is 28.0 % — four times the expected return on capital (r = 7 %). Wealth above W\* incurs the T4 marginal rate (46 %) on every additional dollar, ensuring concentrated holdings decay rapidly toward the upper tier boundary on a 3–10 year timescale rather than compounding across generations.
+At W\* ($22,000,000 NW) the effective rate is 36.0 % — more than five times the expected return on capital (r = 7 %). Wealth above W\* incurs the T4 marginal rate (46 %) on every additional dollar, ensuring concentrated holdings decay rapidly toward the upper tier boundary on a 3–10 year timescale rather than compounding across generations.
 
 ### Retirement modifier (age ≥ 65)
 
@@ -110,8 +110,8 @@ Holders who have reached age 65 qualify for a reduced carrying cost on Tiers 1 a
 | Tier | Working rate | Retirement rate (age ≥ 65) |
 | :--- | :--- | :--- |
 | T1 | 26 % | 18 % |
-| T2 | 20 % | 14 % |
-| T3 | 30 % | 30 % (unchanged) |
+| T2 | 30 % | 22 % |
+| T3 | 38 % | 38 % (unchanged) |
 | T4 | 46 % | 46 % (unchanged) |
 
 **Design intent.** A person retiring at 65 with $4,000,000 NW and $90,000 annual income sees their savings last approximately 18 years — reaching the participation floor around age 83. Life access and service-record retirement contributions cover essential needs thereafter. Retiring before 65 receives no adjustment; the system does not subsidise passive early withdrawal from productive life. (A person attempting to live off $5,000,000 passively at age 61 — still below the threshold — reaches floor in approximately 7 years.)
