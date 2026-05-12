@@ -119,3 +119,5 @@ Intellectual property is a modern rent-seeking vector and shall not remain outsi
 ---
 
 *Annex Y — Constitutional Survival Minimum and Essential Access Continuity Architecture is maintained as a separate controlling document. See [ANNEX_Y.md](./ANNEX_Y.md). Where any language in this file conflicts with Annex Y, Annex Y governs.*
+
+*Annex AZ — Progressive Net-Worth Demurrage Architecture is the controlling specification for the progressive wealth carrying-cost instrument referenced throughout this annex. See [ANNEX_AZ.md](./ANNEX_AZ.md). The rate function, consolidation methodology, corporate balance demurrage, and exemptions in Annex AZ govern over any summary language here.*

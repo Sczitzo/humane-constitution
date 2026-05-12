@@ -146,6 +146,8 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), above-ledger bypass routes
 
+**Progressive net-worth demurrage:** Concentrated wealth holdings above the household savings floor (S) carry a progressive annual demurrage charge calibrated to approach the expected return on capital at the equilibrium ceiling (W\*). This is a public carrying cost on the *stock* of net worth — not a tax on income or labor — and is constitutional under Article V. The rate function, consolidated beneficial ownership rules, and corporate unassigned-balance demurrage are specified in [ANNEX_AZ](../annexes/ANNEX_AZ.md). Demurrage revenue routes to the Essential Access commons pool and public infrastructure. No credit offset is permitted; holdings through nominees, trusts, or shell structures are attributed to the ultimate beneficial owner.
+
 ---
 
 ## INV-009 — No Fees on Survival

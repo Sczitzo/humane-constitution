@@ -12,7 +12,7 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 | How rules can change without being captured | Annexes H, AG, AH, AV |
 | Who counts, how people recover identity, and how migration works | Annexes I, P, AK |
 | How basic needs, scarcity, and survival continuity work | Annexes K, M, Q, U, Y, AQ |
-| How money, housing, land, business, and public funding work | Annexes J, V, X, AR, AT |
+| How money, housing, land, business, and public funding work | Annexes J, V, X, AR, AT, AZ |
 | How public voice, service, and review bodies avoid capture | Annexes L, S, Z, AC, AF, AI |
 | How public communication and evidence gates work | Annexes AD, AM, AN, AO, AP, AS |
 
@@ -63,6 +63,7 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - **[ANNEX AW](ANNEX_AW.md)** — Whistleblower Protection and Anti-Retaliation Protocol · P-053 · ACTIVE
 - **[ANNEX AX](ANNEX_AX.md)** — Confidential Enrollment and Safety-Identity Protocol · P-054 · ACTIVE
 - **[ANNEX AY](ANNEX_AY.md)** — Delivery Sufficiency Standard and Register · P-055 · ACTIVE
+- **[ANNEX AZ](ANNEX_AZ.md)** — Progressive Net-Worth Demurrage Architecture · 2026-05-11 · ACTIVE
 
 ## Reading rule
 
