@@ -429,7 +429,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         {/* Chart */}
         <div
           ref={wrapRef}
-          style={{ flex: '1 1 280px', height: 220, minHeight: 220, maxHeight: 220, position: 'relative' }}
+          style={{ flex: '1 1 320px', minHeight: 320, position: 'relative' }}
           onMouseMove={e => {
             const rect = wrapRef.current?.getBoundingClientRect()
             if (!rect) return
