@@ -18,12 +18,12 @@ const COLORS = {
   r:     THEME.sr.accent,     // purple — return rate
 }
 
-function calc(nw: number, s: number, wstar: number, r: number, personalR: number) {
+function calc(nw: number, s: number, wstar: number, r: number) {
   const E      = Math.max(0, nw - s)
   const E_star = Math.max(1, wstar - s)
   const lambda = E > 0 ? r * Math.sqrt(E / E_star) : 0
   const D      = lambda * E
-  const returns    = nw * personalR
+  const returns    = nw * r
   const netPassive = returns - D
   const yearsToFloor = D > 0 ? (nw - s) / D : Infinity
   const aboveW = nw > wstar ? nw - wstar : 0
@@ -32,8 +32,8 @@ function calc(nw: number, s: number, wstar: number, r: number, personalR: number
   return { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil }
 }
 
-interface Params { nw: number; s: number; wstar: number; r: number; personalR: number }
-const DEFAULTS: Params = { nw: 10_000_000, s: 500_000, wstar: 22_000_000, r: 0.07, personalR: 0.07 }
+interface Params { nw: number; s: number; wstar: number; r: number }
+const DEFAULTS: Params = { nw: 10_000_000, s: 500_000, wstar: 22_000_000, r: 0.07 }
 
 function Slider({ label, id, min, max, step, value, fmt, color, onChange }: {
   label: string; id: string; min: number; max: number; step: number
@@ -93,7 +93,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     const dh = h - mg.top - mg.bottom
 
     const maxNW = 100_000_000
-    const maxD  = Math.max(1000, calc(maxNW, p.s, p.wstar, p.r, p.personalR).D * 1.1)
+    const maxD  = Math.max(1000, calc(maxNW, p.s, p.wstar, p.r, p.r).D * 1.1)
 
     const mx = (v: number) => mg.left + (v / maxNW) * dw
     const my = (v: number) => mg.top + dh - (v / maxD) * dh
@@ -180,13 +180,13 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.setLineDash([])
     for (let i = 0; i <= 300; i++) {
       const xv = (i / 300) * maxNW
-      const yv = calc(xv, p.s, p.wstar, p.r, p.personalR).D
+      const yv = calc(xv, p.s, p.wstar, p.r, p.r).D
       i === 0 ? ctx.moveTo(mx(xv), my(yv)) : ctx.lineTo(mx(xv), my(yv))
     }
     ctx.stroke()
 
     // Current NW marker (blue — matches NW slider)
-    const { D } = calc(p.nw, p.s, p.wstar, p.r, p.personalR)
+    const { D } = calc(p.nw, p.s, p.wstar, p.r, p.r)
     const markerX = mx(p.nw)
     const markerY = my(D)
     ctx.beginPath()
@@ -210,7 +210,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     return () => ro.disconnect()
   }, [draw])
 
-  const { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r, p.personalR)
+  const { E, lambda, D, returns, netPassive, yearsToFloor, yearsToEquil } = calc(p.nw, p.s, p.wstar, p.r, p.r)
 
   const yearsLabel = (() => {
     if (p.nw <= p.s) return '—'
@@ -249,10 +249,8 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.s} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.s} onChange={set('s')} />
           <Slider label="Equilibrium Ceiling (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
-          <Slider label="Constitutional Rate (r)" id="r" min={0.01} max={0.15} step={0.001}
+          <Slider label="Assumed Return (r)" id="r" min={0.01} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
-          <Slider label="Your Return Rate" id="personalR" min={0} max={0.30} step={0.001}
-            value={p.personalR} fmt={v => (v * 100).toFixed(1) + '%'} color={THEME.neutral.accent} onChange={set('personalR')} />
 
           {/* Demurrage stats */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingTop: 8, borderTop: `1px solid ${THEME.border}` }}>
