@@ -251,7 +251,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.s} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.s} onChange={set('s')} />
           <Slider label="Equilibrium Ceiling (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
-          <Slider label="Return Rate (r)" id="r" min={0.01} max={0.20} step={0.001}
+          <Slider label="Return Rate (r)" id="r" min={0} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
 
           {/* Demurrage stats */}
