@@ -43,12 +43,21 @@ function calc(nw: number, s: number, _wstar: number, r: number, income: number, 
   const returns    = nw * r
   const netAnnual  = income + returns - D
   const breakEven  = Math.max(0, D - returns)
-  const yearsToFloor = netAnnual >= 0 ? Infinity : (nw - s) / Math.abs(netAnnual)
+  const belowFloor = nw < s
+
+  // Three cases:
+  // 1. Below S: time to accumulate UP to S (no demurrage applies below floor)
+  // 2. Above S, net negative: time to decay DOWN to S
+  // 3. Above S, net positive (or at S): wealth stable/growing, no floor in sight
+  const yearsToFloor = belowFloor
+    ? (netAnnual > 0 ? (s - nw) / netAnnual : Infinity)   // case 1
+    : (netAnnual < 0 ? (nw - s) / Math.abs(netAnnual) : Infinity)  // case 2/3
+
   const aboveW   = nw > TIER_NW[2] ? nw - TIER_NW[2] : 0
   const netLoss  = D - returns - income
   const yearsToEquil = aboveW > 0 && netLoss > 0 ? aboveW / netLoss : null
   const retired = age >= 65
-  return { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil, retired }
+  return { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, belowFloor, yearsToEquil, retired }
 }
 
 interface Params { nw: number; s: number; wstar: number; r: number; income: number; age: number }
@@ -312,17 +321,24 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
   }, [draw])
 
 
-  const { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, yearsToEquil, retired } = calc(p.nw, p.s, p.wstar, p.r, p.income, p.age)
+  const { E, lambda, D, returns, netAnnual, breakEven, yearsToFloor, belowFloor, yearsToEquil, retired } = calc(p.nw, p.s, p.wstar, p.r, p.income, p.age)
 
   const yearsLabel = (() => {
-    if (p.nw <= p.s) return '—'
-    if (yearsToFloor === Infinity) return '∞'
+    if (p.nw === p.s) return '—'
+    if (yearsToFloor === Infinity) return belowFloor ? '—' : '∞'
     if (yearsToFloor > 999) return '>999 yrs'
     return yearsToFloor.toFixed(0) + ' yrs'
   })()
 
+  // Below floor: amber (accumulating toward S). Above floor: green=safe, amber=medium, red=urgent.
   const netAnnualColor = netAnnual >= 0 ? THEME.ea.accent : THEME.ss.accent
-  const yearsColor = yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent
+  const yearsColor = belowFloor
+    ? (yearsToFloor < Infinity ? COLORS.wstar : THEME.ss.accent)
+    : (yearsToFloor > 50 || yearsToFloor === Infinity ? THEME.ea.accent : yearsToFloor > 20 ? COLORS.wstar : THEME.ss.accent)
+  const yearsFloorLabel = belowFloor ? 'Yrs to S ↑' : 'Yrs to floor'
+  const yearsFloorDef   = belowFloor
+    ? 'Years to accumulate up to S at current income + returns (no demurrage below floor)'
+    : 'Years until NW hits S at current net rate'
 
   return (
     <div style={{
@@ -441,7 +457,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             { label: 'Returns',        value: fmtAcct(returns),              color: COLORS.r,       def: 'Passive income at assumed rate r on NW' },
             { label: 'Net annual Δ',   value: fmtAcct(netAnnual),            color: netAnnualColor, def: 'Income + returns − demurrage' },
             { label: 'Break-even (I)', value: breakEven > 0 ? fmtAcct(breakEven) : 'covered', color: breakEven > 0 ? COLORS.income : THEME.ea.accent, def: 'Min salary to avoid eroding principal' },
-            { label: 'Yrs to floor',   value: yearsLabel,                    color: yearsColor,     def: 'Years until NW hits S at current net rate' },
+            { label: yearsFloorLabel,   value: yearsLabel,                    color: yearsColor,     def: yearsFloorDef },
             ...(yearsToEquil !== null ? [{ label: 'Yrs to W*', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar, def: 'Years to descend to equilibrium ceiling' }] : []),
           ].map(({ label, value, color, def }) => (
             <StatTile key={label} label={label} value={value} color={color} def={def} />
