@@ -57,22 +57,30 @@ Substituting the founding values:
 
 ```
 D(E) = 0.07 / √21,950,000 · E^1.5
-     ≈ 0.00000001494 · E^1.5          [annual Flow units]
+     ≈ 0.00001494 · E^1.5             [annual Flow units]
 ```
 
 ### Illustrative schedule
 
 | Consolidated net worth | Excess E | Annual rate λ | Annual demurrage D |
 | :--- | :--- | :--- | :--- |
+| $30,000 (below floor) | $0 | 0 % | $0 |
 | $50,000 (floor) | $0 | 0 % | $0 |
-| $1,000,000 | $950,000 | 1.5 % | $13,849 |
+| $100,000 | $50,000 | 0.3 % | $167 |
+| $250,000 | $200,000 | 0.7 % | $1,336 |
+| $500,000 | $450,000 | 1.0 % | $4,510 |
+| $1,000,000 | $950,000 | 1.5 % | $13,835 |
 | $2,000,000 | $1,950,000 | 2.1 % | $40,685 |
-| $5,000,000 | $4,950,000 | 3.3 % | $164,550 |
-| $10,000,000 | $9,950,000 | 4.7 % | $468,900 |
-| $15,000,000 | $14,950,000 | 5.8 % | $863,700 |
+| $5,000,000 | $4,950,000 | 3.3 % | $164,546 |
+| $10,000,000 | $9,950,000 | 4.7 % | $468,938 |
+| $15,000,000 | $14,950,000 | 5.8 % | $863,660 |
 | $22,000,000 (W\*) | $21,950,000 | 7.0 % | $1,536,500 |
-| $30,000,000 | $29,950,000 | 8.2 % | $2,449,000 |
-| $50,000,000 | $49,950,000 | 10.6 % | $5,274,700 |
+| $30,000,000 | $29,950,000 | 8.2 % | $2,448,928 |
+| $50,000,000 | $49,950,000 | 10.6 % | $5,274,533 |
+| $100,000,000 | $99,950,000 | 14.9 % | $14,929,834 |
+| $250,000,000 | $249,950,000 | 23.6 % | $59,041,922 |
+| $500,000,000 | $499,950,000 | 33.4 % | $167,020,830 |
+| $1,000,000,000 | $999,950,000 | 47.2 % | $472,441,680 |
 
 At W\* the rate equals r, so holding wealth at the ceiling costs approximately what it earns — making passive indefinite accumulation economically neutral rather than attractive.
 
@@ -101,7 +109,7 @@ Demurrage applies to **unassigned cash balances** held by enterprises above a do
 U = max(0, liquid_assets − operating_budget)
 
 D_corp(U) = (r / √E*) · U^1.5
-           ≈ 0.00000001494 · U^1.5        [annual Flow units]
+           ≈ 0.00001494 · U^1.5           [annual Flow units]
 ```
 
 **Operating budget** is the sum of: documented payroll obligations (12-month rolling), supplier and contractor commitments, capital expenditure plans filed with the governance registry, and a liquidity buffer not exceeding 90 days of the foregoing.
