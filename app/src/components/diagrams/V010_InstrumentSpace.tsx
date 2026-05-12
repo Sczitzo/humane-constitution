@@ -1,6 +1,6 @@
 // app/src/components/diagrams/V010_InstrumentSpace.tsx
 // Three horizontal lanes + emergency overlay — with animated flow particles in each lane
-// Firewall columns on the right enforce lane separation visually
+// Two FIREWALL labels sit centered in the gaps between adjacent lanes (not on the right edge)
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
@@ -12,28 +12,54 @@ const NODES: DiagramNode[] = [
   { id: 'emergency', label: 'Emergency Overlay — Shared Storehouse', definition: 'Temporary rationing overlay. Activates only during verified scarcity. Overrides normal market lane for the affected category only. Mandatory unwind when scarcity resolves.', docLink: 'ANNEX_AC.md',          accent: THEME.ss.accent,    accentBg: THEME.ss.accentBg },
 ]
 
+// Spread lanes out with a 30px gap so FIREWALL labels fit between them
+const LANE_H = 54, LANE_W = 570, LANE_X = 20, LANE_GAP = 30
+
 const LANES = [
-  { id: 'market',   label: 'MARKET LANE',   sub: 'Flow — commerce · wages · contracts',       stroke: THEME.flow.accent,  fill: THEME.flow.fill,  y: 18  },
-  { id: 'survival', label: 'SURVIVAL LANE', sub: 'Essential Access — unconditional floor',     stroke: THEME.ea.accent,    fill: THEME.ea.fill,    y: 82  },
-  { id: 'civic',    label: 'CIVIC LANE',    sub: 'Voice & Service Record — bounded influence', stroke: THEME.voice.accent, fill: THEME.voice.fill, y: 146 },
+  { id: 'market',   label: 'MARKET LANE',   sub: 'Flow — commerce · wages · contracts',       stroke: THEME.flow.accent,  fill: THEME.flow.fill,  y: 16  },
+  { id: 'survival', label: 'SURVIVAL LANE', sub: 'Essential Access — unconditional floor',     stroke: THEME.ea.accent,    fill: THEME.ea.fill,    y: 16 + LANE_H + LANE_GAP  },
+  { id: 'civic',    label: 'CIVIC LANE',    sub: 'Voice & Service Record — bounded influence', stroke: THEME.voice.accent, fill: THEME.voice.fill, y: 16 + (LANE_H + LANE_GAP) * 2 },
 ]
 
-const LANE_H = 54, LANE_W = 570, LANE_X = 20
+// Firewall separator y positions — centered in each gap
+const FW_LABELS = [
+  { y: 16 + LANE_H + LANE_GAP / 2 },        // between Market and Survival
+  { y: 16 + (LANE_H + LANE_GAP) + LANE_H + LANE_GAP / 2 }, // between Survival and Civic
+]
 
-// Particle path per lane (horizontal movement within lane)
 const particlePaths = LANES.map(lane => `M${LANE_X + 10},${lane.y + LANE_H / 2} L${LANE_X + LANE_W - 10},${lane.y + LANE_H / 2}`)
+
+const totalLanesH = LANE_H * 3 + LANE_GAP * 2   // 162 + 60 = 222
+const overlayH = totalLanesH                      // same as 3 lanes span
 
 export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
 
   return (
     <DiagramShell figId="V-010" title="Instrument Space — Four Primary Lanes + Emergency Overlay" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 720 240" className="w-full" style={{ height: 240 }}>
+      <svg viewBox="0 0 720 268" className="w-full" style={{ height: 268 }}>
         <defs>
           {LANES.map((_lane, i) => (
             <path key={i} id={`v10p${i}`} d={particlePaths[i]} />
           ))}
         </defs>
+
+        {/* FIREWALL separator labels — 2 labels between 3 lanes */}
+        {FW_LABELS.map((fw, i) => (
+          <g key={i} opacity={0}>
+            <animate attributeName="opacity" from={0} to={1} dur="0.4s" begin={`${0.5 + i * 0.1}s`} fill="freeze" />
+            {/* Dashed separator line across full lane width */}
+            <line x1={LANE_X} y1={fw.y} x2={LANE_X + LANE_W} y2={fw.y}
+              stroke={THEME.divider} strokeWidth={1} strokeDasharray="6,4" />
+            {/* Centred label */}
+            <rect x={LANE_X + LANE_W / 2 - 42} y={fw.y - 9} width={84} height={18} rx={4}
+              fill="#0d1117" stroke={THEME.divider} strokeWidth={1} />
+            <text x={LANE_X + LANE_W / 2} y={fw.y + 5} textAnchor="middle"
+              fontSize={10} fontWeight={700} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.08em">
+              ⬡ FIREWALL ⬡
+            </text>
+          </g>
+        ))}
 
         {/* Lane rows */}
         {LANES.map((l, i) => {
@@ -62,9 +88,6 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
                   </animateMotion>
                 </circle>
               ))}
-
-              {/* Firewall label on right */}
-              <text x={LANE_X + LANE_W + 8} y={l.y + LANE_H / 2 + 4} fontSize={9} fontWeight={700} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.06em">▐ FIREWALL</text>
             </g>
           )
         })}
@@ -72,18 +95,18 @@ export function V010_InstrumentSpace({ onInternalLink }: DiagramProps) {
         {/* Emergency overlay — dashed rect spanning all 3 lanes */}
         <g opacity={0} style={{ cursor: 'pointer' }} onClick={() => handleNodeClick('emergency')}>
           <animate attributeName="opacity" from={0} to={1} dur="0.35s" begin="0.45s" fill="freeze" />
-          <rect x={LANE_X} y={18} width={LANE_W} height={182} rx={6} fill="none"
+          <rect x={LANE_X} y={16} width={LANE_W} height={overlayH} rx={6} fill="none"
             stroke={THEME.ss.accent} strokeWidth={activeNodeId === 'emergency' ? 3 : 2.5}
             strokeDasharray="8,5"
             style={{ filter: activeNodeId === 'emergency' ? `drop-shadow(0 0 8px ${THEME.ss.accent})` : undefined }}
           />
-          <text x={LANE_X + LANE_W + 8} y={104} fontSize={10} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">EMERGENCY</text>
-          <text x={LANE_X + LANE_W + 8} y={117} fontSize={10} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">OVERLAY</text>
-          <text x={LANE_X + LANE_W + 8} y={131} fontSize={8.5} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.7}>(scarcity only)</text>
+          <text x={LANE_X + LANE_W + 10} y={16 + overlayH / 2 - 14} fontSize={10} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">EMERGENCY</text>
+          <text x={LANE_X + LANE_W + 10} y={16 + overlayH / 2}      fontSize={10} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace" letterSpacing="0.05em">OVERLAY</text>
+          <text x={LANE_X + LANE_W + 10} y={16 + overlayH / 2 + 14} fontSize={8.5} fill={THEME.ss.accent} fontFamily="monospace" opacity={0.7}>(scarcity only)</text>
         </g>
 
         {/* Separator note */}
-        <text x={LANE_X + LANE_W / 2} y={220} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.05em">
+        <text x={LANE_X + LANE_W / 2} y={16 + overlayH + 22} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.05em">
           instruments do not cross lanes · separation is constitutional, not contractual
         </text>
       </svg>
