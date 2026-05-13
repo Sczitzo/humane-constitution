@@ -11,12 +11,19 @@ let generator: TextGenerationPipeline | null = null
 let loadPromise: Promise<void> | null = null
 let useWasm = false
 
+// Accumulate per-file byte counts so overall progress never jumps backwards
+const fileProgress = new Map<string, { loaded: number; total: number }>()
+
 function handleProgress(info: ProgressInfo) {
-  if (info.status === 'download' || info.status === 'progress') {
-    const p = (info as { progress?: number }).progress
-    if (typeof p === 'number') {
-      self.postMessage({ type: 'progress', progress: Math.round(p) })
-    }
+  if (info.status !== 'download' && info.status !== 'progress') return
+  const p = info as { file?: string; loaded?: number; total?: number; progress?: number }
+  if (p.file && typeof p.loaded === 'number' && typeof p.total === 'number' && p.total > 0) {
+    fileProgress.set(p.file, { loaded: p.loaded, total: p.total })
+    let totalLoaded = 0, totalSize = 0
+    for (const f of fileProgress.values()) { totalLoaded += f.loaded; totalSize += f.total }
+    self.postMessage({ type: 'progress', progress: Math.round((totalLoaded / totalSize) * 100) })
+  } else if (typeof p.progress === 'number') {
+    self.postMessage({ type: 'progress', progress: Math.round(p.progress) })
   }
 }
 
