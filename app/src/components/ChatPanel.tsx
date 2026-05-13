@@ -8,6 +8,7 @@ function scoreDoc(doc: CorpusDoc, terms: string[]): number {
   let score = 0
   const titleLower = doc.title.toLowerCase()
   const summaryLower = doc.summary.toLowerCase()
+  const contentLower = doc.content.toLowerCase()
 
   for (const term of terms) {
     if (titleLower === term) score += 10
@@ -19,6 +20,10 @@ function scoreDoc(doc: CorpusDoc, terms: string[]): number {
     for (const h of doc.headings) {
       if (h.text.toLowerCase().includes(term)) score += 4
     }
+
+    // Count occurrences in body — cap contribution so one dense doc doesn't swamp all others
+    const bodyMatches = contentLower.split(term).length - 1
+    score += Math.min(bodyMatches, 5) * 1
   }
 
   if (doc.section === 'constitution' || doc.section === 'founding_order') {
