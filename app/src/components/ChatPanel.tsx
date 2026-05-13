@@ -28,7 +28,7 @@ function scoreDoc(doc: CorpusDoc, terms: string[]): number {
   return score
 }
 
-function getTopDocs(allDocs: CorpusDoc[], query: string, n = 3): CorpusDoc[] {
+function getTopDocs(allDocs: CorpusDoc[], query: string, n = 2): CorpusDoc[] {
   const terms = query
     .toLowerCase()
     .split(/\s+/)
@@ -45,9 +45,10 @@ function buildContext(docs: CorpusDoc[]): string {
   return docs
     .map(d => {
       const headings = d.headings.map(h => `  slug: ${h.slug} — ${h.text}`).join('\n')
-      return `**${d.id}** — ${d.title}\n${d.summary}\nHeadings:\n${headings}`
+      const body = d.content.length > 2000 ? d.content.slice(0, 2000) + '\n…[truncated]' : d.content
+      return `**${d.id}** — ${d.title}\n${d.summary}\nHeadings:\n${headings}\n\nContent:\n${body}`
     })
-    .join('\n\n')
+    .join('\n\n---\n\n')
 }
 
 // ── Markdown renderer ─────────────────────────────────────────────────────────
@@ -122,22 +123,34 @@ function renderMarkdown(
   const lines = text.split('\n')
   const nodes: React.ReactNode[] = []
   let key = 0
+  const listBuffer: React.ReactNode[] = []
+
+  function flushList() {
+    if (listBuffer.length > 0) {
+      nodes.push(<ul key={key++} className="chat-ul">{listBuffer}</ul>)
+      listBuffer.length = 0
+    }
+  }
 
   for (const line of lines) {
     if (line.startsWith('## ')) {
+      flushList()
       nodes.push(<h2 key={key++} className="chat-h2">{line.slice(3)}</h2>)
     } else if (line.startsWith('### ')) {
+      flushList()
       nodes.push(<h3 key={key++} className="chat-h3">{line.slice(4)}</h3>)
     } else if (line.startsWith('- ') || line.startsWith('* ')) {
-      nodes.push(
+      listBuffer.push(
         <li key={key++} className="chat-li">
           {renderInline(line.slice(2), allDocIds, onNavigate, key)}
         </li>,
       )
       key += 100
     } else if (line.trim() === '') {
+      flushList()
       nodes.push(<br key={key++} />)
     } else {
+      flushList()
       nodes.push(
         <p key={key++} className="chat-p">
           {renderInline(line, allDocIds, onNavigate, key)}
@@ -146,6 +159,8 @@ function renderMarkdown(
       key += 100
     }
   }
+
+  flushList()
 
   return nodes
 }
@@ -161,13 +176,18 @@ interface ChatPanelProps {
 }
 
 export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: ChatPanelProps) {
-  const { status, downloadProgress, webgpuAvailable, isDesktopBrowser, output, error, generate } = useAIWorker()
+  const { status, downloadProgress, webgpuAvailable, isDesktopBrowser, messages, streamingOutput, error, generate, abort, clearHistory } = useAIWorker()
   const inputRef = useRef<HTMLInputElement>(null)
   const outputRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
 
   const allDocIds = new Set(allDocs.map(d => d.id))
   const isGenerating = status === 'generating'
+
+  // Build display list — append in-progress assistant turn while streaming
+  const displayMessages = isGenerating && streamingOutput
+    ? [...messages, { role: 'assistant' as const, text: streamingOutput }]
+    : messages
 
   // Focus on open
   useEffect(() => {
@@ -176,8 +196,8 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
 
   // Scroll to bottom as tokens stream in
   useEffect(() => {
-    if (output) outputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
-  }, [output])
+    if (streamingOutput) outputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+  }, [streamingOutput])
 
   // Escape closes
   useEffect(() => {
@@ -241,7 +261,7 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
 
   const isReady = status === 'ready'
   const isLoading = status === 'loading'
-  const inputDisabled = !isReady || isGenerating
+  const inputDisabled = status === 'loading' || status === 'generating'
 
   return (
     <>
@@ -291,16 +311,32 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
                     : 'Initializing…'}
             </span>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close"
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 6, background: 'transparent', border: 'none', cursor: 'pointer', color: textSoft }}
-          >
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" width={16} height={16}>
-              <path strokeLinecap="round" d="M5 5l10 10M15 5L5 15" />
-            </svg>
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {messages.length > 0 && (
+              <button
+                type="button"
+                onClick={clearHistory}
+                style={{
+                  fontSize: 11, padding: '3px 8px', borderRadius: 5,
+                  background: 'transparent',
+                  border: `1px solid ${border}`,
+                  color: textSoft, cursor: 'pointer',
+                }}
+              >
+                Clear
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close"
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 6, background: 'transparent', border: 'none', cursor: 'pointer', color: textSoft }}
+            >
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" width={16} height={16}>
+                <path strokeLinecap="round" d="M5 5l10 10M15 5L5 15" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Download progress bar */}
@@ -336,14 +372,14 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
                 </div>
               )}
 
-              {isLoading && !output && (
+              {isLoading && messages.length === 0 && (
                 <div style={{ color: textSoft, fontSize: 13, lineHeight: 1.7 }}>
                   <p style={{ marginBottom: 6 }}>Downloading Gemma 4 2B weights — {downloadProgress}% complete.</p>
                   <p style={{ fontSize: 12 }}>This happens once. The model is cached locally after download.</p>
                 </div>
               )}
 
-              {!isLoading && !output && !error && (
+              {!isLoading && messages.length === 0 && !error && (
                 <div style={{ color: textSoft, fontSize: 13, lineHeight: 1.7, paddingTop: 4 }}>
                   <p style={{ marginBottom: 10 }}>Ask anything about the Humane Constitution corpus.</p>
                   <p style={{ fontSize: 12, marginBottom: 6 }}>Suggested questions:</p>
@@ -355,12 +391,37 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
                 </div>
               )}
 
-              {output && (
-                <div className="chat-response" style={{ fontSize: 13, lineHeight: 1.65, color: textColor }}>
-                  {renderMarkdown(output, allDocIds, handleNavigate)}
-                  {isGenerating && <span className="chat-thinking"> ▋</span>}
+              {displayMessages.map((msg, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: msg.role === 'user' ? 'flex-end' : 'flex-start',
+                  }}
+                >
+                  {msg.role === 'user' ? (
+                    <div style={{
+                      maxWidth: '85%',
+                      background: isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)',
+                      borderRadius: '12px 12px 2px 12px',
+                      padding: '8px 12px',
+                      fontSize: 13,
+                      lineHeight: 1.5,
+                      color: textColor,
+                    }}>
+                      {msg.text}
+                    </div>
+                  ) : (
+                    <div className="chat-response" style={{ fontSize: 13, lineHeight: 1.65, color: textColor, width: '100%' }}>
+                      {renderMarkdown(msg.text, allDocIds, handleNavigate)}
+                      {isGenerating && i === displayMessages.length - 1 && (
+                        <span className="chat-thinking"> ▋</span>
+                      )}
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
 
               {error && (
                 <div style={{ background: 'rgba(180,50,50,0.12)', border: '1px solid rgba(180,50,50,0.25)', borderRadius: 8, padding: '10px 12px', fontSize: 12, color: isDark ? '#f08080' : '#8b2020', lineHeight: 1.55 }}>
@@ -382,13 +443,23 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
                 placeholder={isLoading ? `Calibrating… ${downloadProgress}%` : 'Ask about the corpus…'}
                 style={{ flex: 1, fontSize: 13, padding: '8px 12px', borderRadius: 8, border: `1px solid ${border}`, background: bg, color: textColor, outline: 'none', opacity: inputDisabled ? 0.6 : 1 }}
               />
-              <button
-                type="submit"
-                disabled={inputDisabled}
-                style={{ fontSize: 13, padding: '8px 14px', borderRadius: 8, background: inputDisabled ? 'rgba(155,123,58,0.35)' : 'var(--accent, #9b7b3a)', color: '#fff', border: 'none', cursor: inputDisabled ? 'default' : 'pointer', transition: 'background 0.15s' }}
-              >
-                Ask
-              </button>
+              {isGenerating ? (
+                <button
+                  type="button"
+                  onClick={abort}
+                  style={{ fontSize: 13, padding: '8px 14px', borderRadius: 8, background: isDark ? '#8b2020' : '#c0392b', color: '#fff', border: 'none', cursor: 'pointer', transition: 'background 0.15s' }}
+                >
+                  Stop
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={inputDisabled}
+                  style={{ fontSize: 13, padding: '8px 14px', borderRadius: 8, background: inputDisabled ? 'rgba(155,123,58,0.35)' : 'var(--accent, #9b7b3a)', color: '#fff', border: 'none', cursor: inputDisabled ? 'default' : 'pointer', transition: 'background 0.15s' }}
+                >
+                  Ask
+                </button>
+              )}
             </form>
           </>
         )}

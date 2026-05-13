@@ -9,6 +9,7 @@ const DTYPE = 'q4f16'
 
 let generator: TextGenerationPipeline | null = null
 let loadPromise: Promise<void> | null = null
+let useWasm = false
 
 function handleProgress(info: ProgressInfo) {
   if (info.status === 'download' || info.status === 'progress') {
@@ -31,14 +32,22 @@ async function loadModel(): Promise<void> {
       progress_callback: handleProgress,
     }
 
-    try {
-      generator = await pipeline('text-generation', MODEL_ID, {
-        ...opts,
-        device: 'webgpu',
-      }) as TextGenerationPipeline
-    } catch {
-      // WebGPU unavailable — fall back to single-threaded WASM
-      self.postMessage({ type: 'webgpu_fallback' })
+    if (!useWasm) {
+      try {
+        generator = await pipeline('text-generation', MODEL_ID, {
+          ...opts,
+          device: 'webgpu',
+        }) as TextGenerationPipeline
+      } catch {
+        // WebGPU unavailable at load time — fall back to WASM
+        useWasm = true
+        self.postMessage({ type: 'webgpu_fallback' })
+        generator = await pipeline('text-generation', MODEL_ID, {
+          ...opts,
+          device: 'wasm',
+        }) as TextGenerationPipeline
+      }
+    } else {
       generator = await pipeline('text-generation', MODEL_ID, {
         ...opts,
         device: 'wasm',
@@ -51,10 +60,18 @@ async function loadModel(): Promise<void> {
   return loadPromise
 }
 
+async function resetToWasm(): Promise<void> {
+  generator = null
+  loadPromise = null
+  useWasm = true
+  self.postMessage({ type: 'webgpu_fallback' })
+  await loadModel()
+}
+
 self.addEventListener('message', async (event: MessageEvent) => {
   const msg = event.data as
     | { type: 'PREFETCH_MODEL' }
-    | { type: 'generate'; query: string; context: string }
+    | { type: 'generate'; messages: { role: 'system' | 'user' | 'assistant'; content: string }[] }
 
   if (msg.type === 'PREFETCH_MODEL') {
     try {
@@ -73,45 +90,42 @@ self.addEventListener('message', async (event: MessageEvent) => {
       return
     }
 
-    const { query, context } = msg
+    const { messages } = msg
 
-    const messages = [
+    const makeStreamer = () => new TextStreamer(
+      generator!.tokenizer,
       {
-        role: 'system' as const,
-        content:
-          'You are the authoritative expert on the Humane Constitution corpus — a collection of governance documents for ethical AI. ' +
-          'Answer questions using only information in the corpus. ' +
-          'Cite every factual claim as [Document Title](docId#heading-slug) using the exact IDs and slugs from the context provided. ' +
-          'Use Markdown: ## headers for multi-part answers, **bold** for key terms. ' +
-          'If the corpus does not contain the answer, say so — do not speculate.',
+        skip_prompt: true,
+        skip_special_tokens: true,
+        callback_function: (token: string) => {
+          self.postMessage({ type: 'token', token })
+        },
       },
-      {
-        role: 'user' as const,
-        content: `## Relevant corpus documents\n\n${context}\n\n## Question\n\n${query}`,
-      },
-    ]
+    )
+
+    const runInference = () => generator!(messages, {
+      max_new_tokens: 600,
+      do_sample: false,
+      streamer: makeStreamer(),
+    })
 
     try {
-      const streamer = new TextStreamer(
-        generator!.tokenizer,
-        {
-          skip_prompt: true,
-          skip_special_tokens: true,
-          callback_function: (token: string) => {
-            self.postMessage({ type: 'token', token })
-          },
-        },
-      )
-
-      await generator!(messages, {
-        max_new_tokens: 600,
-        do_sample: false,
-        streamer,
-      })
-
+      await runInference()
       self.postMessage({ type: 'done' })
     } catch (err) {
-      self.postMessage({ type: 'error', message: String(err) })
+      const errMsg = String(err)
+      // WebGPU device lost during inference — reset to WASM and retry once
+      if (!useWasm && (errMsg.includes('OrtRun') || errMsg.includes('external Instance') || errMsg.includes('WebGPU'))) {
+        try {
+          await resetToWasm()
+          await runInference()
+          self.postMessage({ type: 'done' })
+        } catch (err2) {
+          self.postMessage({ type: 'error', message: String(err2) })
+        }
+      } else {
+        self.postMessage({ type: 'error', message: errMsg })
+      }
     }
   }
 })
