@@ -18,20 +18,20 @@ function isDesktop(): boolean {
   if (typeof navigator === 'undefined') return false
   const ua = navigator.userAgent
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)) return false
-  // Treat narrow viewports as mobile regardless of UA
   if (typeof window !== 'undefined' && window.innerWidth < 768) return false
   return true
 }
 
-// Module-level singleton — worker is created (and PREFETCH_MODEL sent) the
-// instant this module is first imported, but only on desktop.
+function hasWebGPU(): boolean {
+  return typeof navigator !== 'undefined' && 'gpu' in navigator
+}
+
+// Module-level singleton — only used on the WebGPU path
 let sharedWorker: Worker | null = null
 let prefetchSent = false
 
 function getWorker(): Worker {
-  if (!sharedWorker) {
-    sharedWorker = new AIWorker() as Worker
-  }
+  if (!sharedWorker) sharedWorker = new AIWorker() as Worker
   return sharedWorker as Worker
 }
 
@@ -46,6 +46,7 @@ interface AIWorkerHook {
   status: AIStatus
   downloadProgress: number
   webgpuAvailable: boolean
+  isCloudFallback: boolean
   isDesktopBrowser: boolean
   messages: ChatMessage[]
   streamingOutput: string
@@ -57,23 +58,27 @@ interface AIWorkerHook {
 
 export function useAIWorker(): AIWorkerHook {
   const desktop = isDesktop()
-  const [status, setStatus] = useState<AIStatus>(desktop ? 'loading' : 'unsupported')
+  const webgpu = hasWebGPU()
+
+  const [status, setStatus] = useState<AIStatus>(() => {
+    if (!desktop) return 'unsupported'
+    if (!webgpu) return 'ready'   // cloud path — ready immediately, no download
+    return 'loading'
+  })
   const [downloadProgress, setDownloadProgress] = useState(0)
-  const [webgpuAvailable, setWebgpuAvailable] = useState(true)
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [streamingOutput, setStreamingOutput] = useState('')
   const [error, setError] = useState<string | null>(null)
+
   const outputRef = useRef('')
   const messagesRef = useRef<ChatMessage[]>([])
   const listenerRef = useRef<((e: MessageEvent) => void) | null>(null)
+  const abortControllerRef = useRef<AbortController | null>(null)
+
+  // ── WebGPU worker path ────────────────────────────────────────────────────
 
   useEffect(() => {
-    // Skip everything on mobile/tablet
-    if (!desktop) return
-
-    if (typeof navigator !== 'undefined' && !('gpu' in navigator)) {
-      setWebgpuAvailable(false)
-    }
+    if (!desktop || !webgpu) return
 
     const worker = getWorker()
 
@@ -86,7 +91,6 @@ export function useAIWorker(): AIWorkerHook {
       const msg = event.data as
         | { type: 'progress'; progress: number }
         | { type: 'ready' }
-        | { type: 'webgpu_fallback' }
         | { type: 'token'; token: string }
         | { type: 'done' }
         | { type: 'error'; message: string }
@@ -95,9 +99,6 @@ export function useAIWorker(): AIWorkerHook {
         case 'progress':
           setStatus('loading')
           setDownloadProgress(msg.progress)
-          break
-        case 'webgpu_fallback':
-          setWebgpuAvailable(false)
           break
         case 'ready':
           setStatus('ready')
@@ -126,54 +127,114 @@ export function useAIWorker(): AIWorkerHook {
     listenerRef.current = handleMessage
     worker.addEventListener('message', handleMessage)
     return () => worker.removeEventListener('message', handleMessage)
-  }, [desktop])
+  }, [desktop, webgpu])
+
+  // ── Abort ─────────────────────────────────────────────────────────────────
 
   const abort = useCallback(() => {
-    if (!sharedWorker || !listenerRef.current) return
-    sharedWorker.removeEventListener('message', listenerRef.current)
-    sharedWorker.terminate()
-    sharedWorker = null
-    prefetchSent = false
-    outputRef.current = ''
-    setStreamingOutput('')
-    setError(null)
-    setStatus('loading')
-    // Recreate and reattach
-    const newWorker = getWorker()
-    newWorker.addEventListener('message', listenerRef.current)
-    prefetchSent = true
-    newWorker.postMessage({ type: 'PREFETCH_MODEL' })
-  }, [])
+    if (webgpu) {
+      if (!sharedWorker || !listenerRef.current) return
+      sharedWorker.removeEventListener('message', listenerRef.current)
+      sharedWorker.terminate()
+      sharedWorker = null
+      prefetchSent = false
+      outputRef.current = ''
+      setStreamingOutput('')
+      setError(null)
+      setStatus('loading')
+      const newWorker = getWorker()
+      newWorker.addEventListener('message', listenerRef.current)
+      prefetchSent = true
+      newWorker.postMessage({ type: 'PREFETCH_MODEL' })
+    } else {
+      abortControllerRef.current?.abort()
+      abortControllerRef.current = null
+      outputRef.current = ''
+      setStreamingOutput('')
+      setStatus('ready')
+    }
+  }, [webgpu])
+
+  // ── Shared pipeline message builder ───────────────────────────────────────
+
+  function buildPipelineMessages(_query: string, context: string) {
+    type PipelineMsg = { role: 'system' | 'user' | 'assistant'; content: string }
+    return [
+      { role: 'system' as const, content: SYSTEM_PROMPT },
+      ...messagesRef.current.map((m, i): PipelineMsg => {
+        if (m.role === 'user' && i === messagesRef.current.length - 1) {
+          return {
+            role: 'user',
+            content: `## Relevant corpus documents\n\n${context}\n\n## Question\n\n${m.text}`,
+          }
+        }
+        return { role: m.role, content: m.text }
+      }),
+    ]
+  }
+
+  // ── Generate ──────────────────────────────────────────────────────────────
 
   function generate(query: string, context: string) {
     if (!desktop) return
 
-    // Add user turn to history synchronously via ref
     const userMsg: ChatMessage = { role: 'user', text: query }
     messagesRef.current = [...messagesRef.current, userMsg]
     setMessages(messagesRef.current)
-
     outputRef.current = ''
     setStreamingOutput('')
     setError(null)
     setStatus('generating')
 
-    // Build pipeline messages: system + full history, context injected into latest user turn
-    type PipelineMsg = { role: 'system' | 'user' | 'assistant'; content: string }
-    const pipelineMessages: PipelineMsg[] = [
-      { role: 'system', content: SYSTEM_PROMPT },
-      ...messagesRef.current.map((m, i) => {
-        if (m.role === 'user' && i === messagesRef.current.length - 1) {
-          return {
-            role: 'user' as const,
-            content: `## Relevant corpus documents\n\n${context}\n\n## Question\n\n${m.text}`,
-          }
-        }
-        return { role: m.role as 'user' | 'assistant', content: m.text }
-      }),
-    ]
+    const pipelineMessages = buildPipelineMessages(query, context)
 
-    getWorker().postMessage({ type: 'generate', messages: pipelineMessages })
+    if (webgpu) {
+      getWorker().postMessage({ type: 'generate', messages: pipelineMessages })
+    } else {
+      generateCloud(pipelineMessages)
+    }
+  }
+
+  async function generateCloud(
+    pipelineMessages: { role: 'system' | 'user' | 'assistant'; content: string }[],
+  ) {
+    const controller = new AbortController()
+    abortControllerRef.current = controller
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: pipelineMessages }),
+        signal: controller.signal,
+      })
+
+      if (!response.ok) throw new Error(`API error ${response.status}`)
+
+      const reader = response.body!.getReader()
+      const decoder = new TextDecoder()
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        const chunk = decoder.decode(value, { stream: true })
+        outputRef.current += chunk
+        setStreamingOutput(outputRef.current)
+      }
+
+      const assistantMsg: ChatMessage = { role: 'assistant', text: outputRef.current }
+      messagesRef.current = [...messagesRef.current, assistantMsg]
+      setMessages(messagesRef.current)
+      outputRef.current = ''
+      setStreamingOutput('')
+      setStatus('ready')
+    } catch (err) {
+      if ((err as Error).name === 'AbortError') return
+      setStatus('error')
+      setError(String(err))
+    } finally {
+      abortControllerRef.current = null
+    }
   }
 
   function clearHistory() {
@@ -185,7 +246,16 @@ export function useAIWorker(): AIWorkerHook {
   }
 
   return {
-    status, downloadProgress, webgpuAvailable, isDesktopBrowser: desktop,
-    messages, streamingOutput, error, generate, abort, clearHistory,
+    status,
+    downloadProgress,
+    webgpuAvailable: webgpu,
+    isCloudFallback: desktop && !webgpu,
+    isDesktopBrowser: desktop,
+    messages,
+    streamingOutput,
+    error,
+    generate,
+    abort,
+    clearHistory,
   }
 }

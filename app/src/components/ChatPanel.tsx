@@ -181,7 +181,7 @@ interface ChatPanelProps {
 }
 
 export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: ChatPanelProps) {
-  const { status, downloadProgress, webgpuAvailable, isDesktopBrowser, messages, streamingOutput, error, generate, abort, clearHistory } = useAIWorker()
+  const { status, downloadProgress, isCloudFallback, isDesktopBrowser, messages, streamingOutput, error, generate, abort, clearHistory } = useAIWorker()
   const inputRef = useRef<HTMLInputElement>(null)
   const outputRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -310,7 +310,9 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
               {isLoading
                 ? `Calibrating… ${downloadProgress}%`
                 : isReady
-                  ? `Gemma 4 2B · ${webgpuAvailable ? 'WebGPU' : 'WASM'} · local`
+                  ? isCloudFallback
+                    ? 'Llama 3 · Groq · cloud'
+                    : 'Gemma 4 2B · WebGPU · local'
                   : status === 'error'
                     ? 'Model error'
                     : 'Initializing…'}
@@ -371,9 +373,9 @@ export function ChatPanel({ isOpen, onClose, allDocs, onNavigate, isDark }: Chat
             {/* Body */}
             <div style={{ flex: 1, overflowY: 'auto', padding: '16px', display: 'flex', flexDirection: 'column', gap: 12 }}>
 
-              {!webgpuAvailable && isReady && (
+              {isCloudFallback && isReady && (
                 <div style={{ fontSize: 12, color: textSoft, background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)', borderRadius: 8, padding: '8px 12px', lineHeight: 1.5 }}>
-                  WebGPU unavailable on this device — running on WASM. Responses will be slower.
+                  WebGPU unavailable — using Groq cloud inference. Responses leave your device.
                 </div>
               )}
 

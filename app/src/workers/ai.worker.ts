@@ -5,12 +5,10 @@ import type { ProgressInfo, TextGenerationPipeline } from '@huggingface/transfor
 env.allowLocalModels = false
 
 const MODEL_ID = 'onnx-community/gemma-4-E2B-it-ONNX'
-const WEBGPU_DTYPE = 'q4f16'  // GPU-only block quantization, requires WebGPU kernels
-const WASM_DTYPE = 'q8'       // 8-bit quant uses standard ONNX ops supported by WASM
+const DTYPE = 'q4f16'
 
 let generator: TextGenerationPipeline | null = null
 let loadPromise: Promise<void> | null = null
-let useWasm = false
 
 // Accumulate per-file byte counts so overall progress never jumps backwards
 const fileProgress = new Map<string, { loaded: number; total: number }>()
@@ -34,48 +32,15 @@ async function loadModel(): Promise<void> {
 
   loadPromise = (async () => {
     self.postMessage({ type: 'progress', progress: 0 })
-
-    const baseOpts = { progress_callback: handleProgress }
-
-    if (!useWasm) {
-      try {
-        generator = await pipeline('text-generation', MODEL_ID, {
-          ...baseOpts,
-          dtype: WEBGPU_DTYPE as 'q4f16',
-          device: 'webgpu',
-        }) as TextGenerationPipeline
-      } catch {
-        // WebGPU unavailable at load time — fall back to WASM with CPU-compatible dtype
-        useWasm = true
-        fileProgress.clear()  // reset progress tracking for the new download
-        self.postMessage({ type: 'webgpu_fallback' })
-        generator = await pipeline('text-generation', MODEL_ID, {
-          ...baseOpts,
-          dtype: WASM_DTYPE as 'q8',
-          device: 'wasm',
-        }) as TextGenerationPipeline
-      }
-    } else {
-      generator = await pipeline('text-generation', MODEL_ID, {
-        ...baseOpts,
-        dtype: WASM_DTYPE as 'q8',
-        device: 'wasm',
-      }) as TextGenerationPipeline
-    }
-
+    generator = await pipeline('text-generation', MODEL_ID, {
+      dtype: DTYPE as 'q4f16',
+      device: 'webgpu',
+      progress_callback: handleProgress,
+    }) as TextGenerationPipeline
     self.postMessage({ type: 'ready' })
   })()
 
   return loadPromise
-}
-
-async function resetToWasm(): Promise<void> {
-  generator = null
-  loadPromise = null
-  useWasm = true
-  fileProgress.clear()
-  self.postMessage({ type: 'webgpu_fallback' })
-  await loadModel()
 }
 
 self.addEventListener('message', async (event: MessageEvent) => {
@@ -124,18 +89,8 @@ self.addEventListener('message', async (event: MessageEvent) => {
       self.postMessage({ type: 'done' })
     } catch (err) {
       const errMsg = String(err)
-      // WebGPU device lost during inference — reset to WASM and retry once
-      if (!useWasm && (errMsg.includes('OrtRun') || errMsg.includes('external Instance') || errMsg.includes('WebGPU'))) {
-        try {
-          await resetToWasm()
-          await runInference()
-          self.postMessage({ type: 'done' })
-        } catch (err2) {
-          self.postMessage({ type: 'error', message: String(err2) })
-        }
-      } else {
-        self.postMessage({ type: 'error', message: errMsg })
-      }
+      // WebGPU device lost during inference — surface the error, no WASM retry
+      self.postMessage({ type: 'error', message: errMsg })
     }
   }
 })
