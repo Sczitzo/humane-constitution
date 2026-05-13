@@ -27,8 +27,13 @@ export default defineConfig(async () => ({
   // https://tauri.app/v1/api/config/#buildconfig.beforedevcommand
   envPrefix: ['VITE_', 'TAURI_'],
   build: {
-    // Tauri uses Chromium on Windows and WebKit on macOS and Linux
-    target: process.env.TAURI_PLATFORM === 'windows' ? 'chrome105' : 'safari13',
+    // Tauri uses Chromium on Windows and WebKit on macOS and Linux.
+    // For web (Vercel) builds, target modern browsers that support WebGPU / BigInt.
+    target: process.env.TAURI_PLATFORM === 'windows'
+      ? 'chrome105'
+      : process.env.TAURI_PLATFORM
+        ? 'safari16'
+        : 'es2022',
     // don't minify for debug builds
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
     // produce sourcemaps for debug builds
@@ -37,5 +42,8 @@ export default defineConfig(async () => ({
     // lazy renderer chunk is large by design, so keep Vite warnings focused on
     // unexpected first-load regressions instead of the known diagram payload.
     chunkSizeWarningLimit: 700,
+  },
+  worker: {
+    format: 'es',
   },
 }))

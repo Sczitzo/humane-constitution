@@ -5,6 +5,8 @@ import { DiagramRegistry } from './diagrams/index'
 import { invoke } from '@tauri-apps/api/core'
 import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
 import type { AppView } from './Layout'
+import { ChatPanel } from './ChatPanel'
+import { useAIWorker } from '../hooks/useAIWorker'
 
 // ─── Ref-chip system ────────────────────────────────────────────────────────
 
@@ -3258,6 +3260,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const [activePathId, setActivePathId] = useState<string | null>(() => window.localStorage.getItem(ACTIVE_PATH_STORAGE_KEY))
   const [showGlobalSearch, setShowGlobalSearch] = useState(false)
   const [showCheatsheet, setShowCheatsheet] = useState(false)
+  const [showChatPanel, setShowChatPanel] = useState(false)
+  const { status: aiStatus, downloadProgress, isDesktopBrowser } = useAIWorker()
   const [readingMode, setReadingMode] = useState(() => readStoredBoolean(READING_MODE_STORAGE_KEY))
   const [staleCorpusNotice, setStaleCorpusNotice] = useState<string | null>(null)
   const [sourceFeedback, setSourceFeedback] = useState<SourceFeedback>({
@@ -3518,6 +3522,11 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       if (event.key === '?') {
         event.preventDefault()
         setShowCheatsheet(v => !v)
+      }
+
+      if (event.key === 'a' || event.key === 'A') {
+        event.preventDefault()
+        setShowChatPanel(v => !v)
       }
     }
 
@@ -4063,6 +4072,13 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
       {showCheatsheet && (
         <KeyboardCheatsheet onClose={() => setShowCheatsheet(false)} />
       )}
+      <ChatPanel
+        isOpen={showChatPanel}
+        onClose={() => setShowChatPanel(false)}
+        allDocs={allDocs}
+        onNavigate={handleNavToRef}
+        isDark={isDark}
+      />
       {staleCorpusNotice && (
         <div
           role="status"
@@ -4138,6 +4154,68 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
         />
       )}
     </div>
+
+    {/* Ask button — desktop only, doubles as calibration status indicator */}
+    {isDesktopBrowser && typeof document !== 'undefined' && createPortal(
+      <button
+        type="button"
+        onClick={() => setShowChatPanel(v => !v)}
+        aria-label={aiStatus === 'loading' ? `Calibrating model… ${downloadProgress}%` : 'Ask the corpus AI'}
+        title="Ask the corpus AI (A)"
+        style={{
+          position: 'fixed',
+          bottom: 28,
+          right: 28,
+          zIndex: 9989,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 6,
+          padding: '8px 14px 8px 10px',
+          borderRadius: 24,
+          background: showChatPanel
+            ? (isDark ? '#2a3a28' : '#3a2e1a')
+            : (isDark ? '#1c2a1a' : '#2a2018'),
+          border: `1px solid ${isDark ? 'rgba(120,200,100,0.2)' : 'rgba(255,255,255,0.14)'}`,
+          color: '#fff',
+          fontSize: 13,
+          fontWeight: 500,
+          cursor: 'pointer',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.32)',
+          transition: 'background 0.15s',
+          letterSpacing: '0.01em',
+          overflow: 'hidden',
+          minWidth: 90,
+        }}
+      >
+        {/* Calibration fill bar — grows behind button text */}
+        {aiStatus === 'loading' && (
+          <span
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: `${downloadProgress}%`,
+              background: 'rgba(155,123,58,0.35)',
+              transition: 'width 0.4s ease',
+              borderRadius: 24,
+            }}
+          />
+        )}
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" width={15} height={15} aria-hidden="true" style={{ position: 'relative', flexShrink: 0 }}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10 2a8 8 0 110 16A8 8 0 0110 2zm0 0v0zM7 9h6M7 12h4" />
+        </svg>
+        <span style={{ position: 'relative' }}>
+          {aiStatus === 'loading'
+            ? `Calibrating… ${downloadProgress}%`
+            : aiStatus === 'generating'
+              ? 'Thinking…'
+              : aiStatus === 'ready'
+                ? 'Ask ✦'
+                : 'Ask'}
+        </span>
+      </button>,
+      document.body
+    )}
 
     {/* Back-navigation float — appears after clicking a ref chip, auto-dismisses after 12s */}
     {backTarget && typeof document !== 'undefined' && createPortal(
