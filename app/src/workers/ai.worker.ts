@@ -5,7 +5,8 @@ import type { ProgressInfo, TextGenerationPipeline } from '@huggingface/transfor
 env.allowLocalModels = false
 
 const MODEL_ID = 'onnx-community/gemma-4-E2B-it-ONNX'
-const DTYPE = 'q4f16'
+const WEBGPU_DTYPE = 'q4f16'  // GPU-only quantization, requires WebGPU kernels
+const WASM_DTYPE = 'q4'       // CPU-compatible quantization for WASM fallback
 
 let generator: TextGenerationPipeline | null = null
 let loadPromise: Promise<void> | null = null
@@ -34,29 +35,30 @@ async function loadModel(): Promise<void> {
   loadPromise = (async () => {
     self.postMessage({ type: 'progress', progress: 0 })
 
-    const opts = {
-      dtype: DTYPE as 'q4f16',
-      progress_callback: handleProgress,
-    }
+    const baseOpts = { progress_callback: handleProgress }
 
     if (!useWasm) {
       try {
         generator = await pipeline('text-generation', MODEL_ID, {
-          ...opts,
+          ...baseOpts,
+          dtype: WEBGPU_DTYPE as 'q4f16',
           device: 'webgpu',
         }) as TextGenerationPipeline
       } catch {
-        // WebGPU unavailable at load time — fall back to WASM
+        // WebGPU unavailable at load time — fall back to WASM with CPU-compatible dtype
         useWasm = true
+        fileProgress.clear()  // reset progress tracking for the new download
         self.postMessage({ type: 'webgpu_fallback' })
         generator = await pipeline('text-generation', MODEL_ID, {
-          ...opts,
+          ...baseOpts,
+          dtype: WASM_DTYPE as 'q4',
           device: 'wasm',
         }) as TextGenerationPipeline
       }
     } else {
       generator = await pipeline('text-generation', MODEL_ID, {
-        ...opts,
+        ...baseOpts,
+        dtype: WASM_DTYPE as 'q4',
         device: 'wasm',
       }) as TextGenerationPipeline
     }
@@ -71,6 +73,7 @@ async function resetToWasm(): Promise<void> {
   generator = null
   loadPromise = null
   useWasm = true
+  fileProgress.clear()
   self.postMessage({ type: 'webgpu_fallback' })
   await loadModel()
 }
