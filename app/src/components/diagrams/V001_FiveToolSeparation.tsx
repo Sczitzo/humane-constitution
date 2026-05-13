@@ -20,7 +20,7 @@ const COLS = [
   { id: 'ss',    l1: 'SHARED',    l2: 'STOREHOUSE',     l3: 'scarcity only ·',   l3b: 'oracle-gated',    stroke: THEME.ss.accent,    fill: THEME.ss.fill,    dashed: true  },
 ]
 
-const colW = 118, gap = 16, startX = 10, colH = 124, cy = 28
+const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
 
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
@@ -29,17 +29,49 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
     <DiagramShell figId="V-001" title="Five-Instrument Constitutional Architecture" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <svg viewBox="0 0 720 204" className="w-full" style={{ height: 204 }}>
 
-        {/* Firewall barriers — animated sparks slide between columns */}
+        {/* Firewall barriers — repulsion arrows + ⊗ no-crossing indicator */}
         {[0, 1, 2, 3].map(i => {
           const fw = startX + (i + 1) * (colW + gap) - gap / 2
+          const midY = cy + colH / 2
+          const arrowY1 = cy + colH * 0.28
+          const arrowY2 = cy + colH * 0.72
+          const dur = `${2.8 + i * 0.35}s`
+          const del = `${i * 0.45}s`
           return (
             <g key={i}>
-              <line x1={fw} y1={cy - 8} x2={fw} y2={cy + colH + 8} stroke={THEME.divider} strokeWidth={1} strokeDasharray="4,3" />
-              <text x={fw} y={cy - 12} textAnchor="middle" fontSize={7} fill={THEME.dim} fontFamily="monospace">▐</text>
-              <circle cx={fw} cy={cy + 20} r={1.8} fill={THEME.border}>
-                <animate attributeName="cy" values={`${cy + 12};${cy + colH - 12};${cy + 12}`} dur={`${3 + i * 0.6}s`} repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.8;0.15;0.8" dur={`${3 + i * 0.6}s`} repeatCount="indefinite" />
-              </circle>
+              {/* Divider line */}
+              <line x1={fw} y1={cy - 4} x2={fw} y2={cy + colH + 4} stroke="#3d4450" strokeWidth={1} strokeDasharray="3,3" />
+
+              {/* ⊗ static no-crossing indicator — red, large, no background circle */}
+              <text x={fw} y={midY + 8} textAnchor="middle" fontSize={22} fill="#f85149" fontFamily="monospace" fontWeight={700}>⊗</text>
+
+              {/* Left arrow — slides right toward wall, fades out (top) */}
+              <text textAnchor="end" fontSize={18} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={900} y={arrowY1 + 7}>
+                <animate attributeName="x" values={`${fw - 18};${fw - 5};${fw - 18}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={del} repeatCount="indefinite" />
+                ›
+              </text>
+
+              {/* Right arrow — slides left toward wall, fades out (top) */}
+              <text textAnchor="start" fontSize={18} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={900} y={arrowY1 + 7}>
+                <animate attributeName="x" values={`${fw + 18};${fw + 5};${fw + 18}`} dur={dur} begin={del} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={del} repeatCount="indefinite" />
+                ‹
+              </text>
+
+              {/* Left arrow bottom — offset phase */}
+              <text textAnchor="end" fontSize={18} fill={COLS[i].stroke} fontFamily="monospace" fontWeight={900} y={arrowY2 + 7}>
+                <animate attributeName="x" values={`${fw - 18};${fw - 5};${fw - 18}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+                ›
+              </text>
+
+              {/* Right arrow bottom — offset phase */}
+              <text textAnchor="start" fontSize={18} fill={COLS[i + 1].stroke} fontFamily="monospace" fontWeight={900} y={arrowY2 + 7}>
+                <animate attributeName="x" values={`${fw + 18};${fw + 5};${fw + 18}`} dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" />
+                <animate attributeName="opacity" values="0.85;0.0;0.85" dur={dur} begin={`${i * 0.45 + 1.4}s`} repeatCount="indefinite" />
+                ‹
+              </text>
             </g>
           )
         })}
@@ -54,7 +86,9 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.06 + i * 0.1, duration: 0.35 }}
-              style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 7px ${col.stroke})` : undefined }}
+              whileHover={{ rotate: [0, -1.5, 1.5, -1, 1, 0], y: -3, transition: { rotate: { duration: 0.45, ease: 'easeInOut' }, y: { duration: 0.2, ease: 'easeOut' } } }}
+              whileTap={{ scale: 0.97 }}
+              style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 7px ${col.stroke})` : undefined, originX: `${startX + i * (colW + gap) + colW / 2}px`, originY: `${cy + colH}px` }}
               onClick={() => handleNodeClick(col.id)}
             >
               {isActive && (
@@ -71,10 +105,10 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
                 strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
                 strokeDasharray={col.dashed ? '7,4' : undefined}
               />
-              <text x={x + colW / 2} y={cy + 30} textAnchor="middle" fontSize={11} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l1}</text>
-              <text x={x + colW / 2} y={cy + 48} textAnchor="middle" fontSize={11} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l2}</text>
-              <text x={x + colW / 2} y={cy + 70} textAnchor="middle" fontSize={8.5} fill={THEME.subtext} fontFamily="monospace">{col.l3}</text>
-              <text x={x + colW / 2} y={cy + 83} textAnchor="middle" fontSize={8.5} fill={THEME.subtext} fontFamily="monospace">{col.l3b}</text>
+              <text x={x + colW / 2} y={cy + 30} textAnchor="middle" fontSize={12} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l1}</text>
+              <text x={x + colW / 2} y={cy + 48} textAnchor="middle" fontSize={12} fontWeight={700} fill={col.stroke} fontFamily="monospace">{col.l2}</text>
+              <text x={x + colW / 2} y={cy + 70} textAnchor="middle" fontSize={9.5} fill={THEME.subtext} fontFamily="monospace">{col.l3}</text>
+              <text x={x + colW / 2} y={cy + 84} textAnchor="middle" fontSize={9.5} fill={THEME.subtext} fontFamily="monospace">{col.l3b}</text>
             </motion.g>
           )
         })}
