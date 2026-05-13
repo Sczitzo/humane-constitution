@@ -17,7 +17,7 @@ export default async function handler(req: Request): Promise<Response> {
   const result = await streamText({
     model: groq('llama-3-8b-instruct'),
     messages,
-    maxTokens: 600,
+    maxOutputTokens: 600,
   })
 
   return result.toTextStreamResponse()
