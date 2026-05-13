@@ -35,6 +35,15 @@ function getWorker(): Worker {
   return sharedWorker as Worker
 }
 
+function terminateWorker(listener: ((e: MessageEvent) => void) | null) {
+  if (sharedWorker) {
+    if (listener) sharedWorker.removeEventListener('message', listener)
+    sharedWorker.terminate()
+    sharedWorker = null
+    prefetchSent = false
+  }
+}
+
 const SYSTEM_PROMPT =
   'You are the authoritative expert on the Humane Constitution corpus — a collection of governance documents for ethical AI. ' +
   'Answer questions using only information in the corpus. ' +
@@ -45,7 +54,6 @@ const SYSTEM_PROMPT =
 interface AIWorkerHook {
   status: AIStatus
   downloadProgress: number
-  webgpuAvailable: boolean
   isCloudFallback: boolean
   isDesktopBrowser: boolean
   messages: ChatMessage[]
@@ -60,9 +68,13 @@ export function useAIWorker(): AIWorkerHook {
   const desktop = isDesktop()
   const webgpu = hasWebGPU()
 
+  // cloudOverride flips to true if WebGPU exists in the browser but fails to init
+  const cloudOverrideRef = useRef(false)
+  const [cloudOverride, setCloudOverride] = useState(false)
+
   const [status, setStatus] = useState<AIStatus>(() => {
     if (!desktop) return 'unsupported'
-    if (!webgpu) return 'ready'   // cloud path — ready immediately, no download
+    if (!webgpu) return 'ready'   // cloud path — ready immediately
     return 'loading'
   })
   const [downloadProgress, setDownloadProgress] = useState(0)
@@ -118,15 +130,21 @@ export function useAIWorker(): AIWorkerHook {
           break
         }
         case 'error': {
+          const isNoBackend = /no available backend|Failed to get GPU adapter|enable.*webgpu/i.test(msg.message)
           const isDeviceLost = /ERROR_CODE:\s*1|device.?lost|MapAsync|external Instance/i.test(msg.message)
-          if (isDeviceLost) {
-            // GPU device lost — worker is unrecoverable; terminate and reload silently
-            if (sharedWorker && listenerRef.current) {
-              sharedWorker.removeEventListener('message', listenerRef.current)
-              sharedWorker.terminate()
-              sharedWorker = null
-              prefetchSent = false
-            }
+
+          if (isNoBackend) {
+            // WebGPU present in browser but no real adapter — silently fall back to cloud
+            terminateWorker(listenerRef.current)
+            cloudOverrideRef.current = true
+            setCloudOverride(true)
+            outputRef.current = ''
+            setStreamingOutput('')
+            setError(null)
+            setStatus('ready')
+          } else if (isDeviceLost) {
+            // GPU device lost mid-inference — terminate and reload
+            terminateWorker(listenerRef.current)
             outputRef.current = ''
             setStreamingOutput('')
             setError('WebGPU device lost — reloading model, please try again in a moment.')
@@ -152,18 +170,14 @@ export function useAIWorker(): AIWorkerHook {
   // ── Abort ─────────────────────────────────────────────────────────────────
 
   const abort = useCallback(() => {
-    if (webgpu) {
-      if (!sharedWorker || !listenerRef.current) return
-      sharedWorker.removeEventListener('message', listenerRef.current)
-      sharedWorker.terminate()
-      sharedWorker = null
-      prefetchSent = false
+    if (webgpu && !cloudOverrideRef.current) {
+      terminateWorker(listenerRef.current)
       outputRef.current = ''
       setStreamingOutput('')
       setError(null)
       setStatus('loading')
       const newWorker = getWorker()
-      newWorker.addEventListener('message', listenerRef.current)
+      if (listenerRef.current) newWorker.addEventListener('message', listenerRef.current)
       prefetchSent = true
       newWorker.postMessage({ type: 'PREFETCH_MODEL' })
     } else {
@@ -208,7 +222,7 @@ export function useAIWorker(): AIWorkerHook {
 
     const pipelineMessages = buildPipelineMessages(query, context)
 
-    if (webgpu) {
+    if (webgpu && !cloudOverrideRef.current) {
       getWorker().postMessage({ type: 'generate', messages: pipelineMessages })
     } else {
       generateCloud(pipelineMessages)
@@ -265,11 +279,12 @@ export function useAIWorker(): AIWorkerHook {
     setError(null)
   }
 
+  const useCloud = !webgpu || cloudOverride
+
   return {
     status,
     downloadProgress,
-    webgpuAvailable: webgpu,
-    isCloudFallback: desktop && !webgpu,
+    isCloudFallback: desktop && useCloud,
     isDesktopBrowser: desktop,
     messages,
     streamingOutput,
