@@ -117,10 +117,30 @@ export function useAIWorker(): AIWorkerHook {
           setStatus('ready')
           break
         }
-        case 'error':
-          setStatus('error')
-          setError(msg.message)
+        case 'error': {
+          const isDeviceLost = /ERROR_CODE:\s*1|device.?lost|MapAsync|external Instance/i.test(msg.message)
+          if (isDeviceLost) {
+            // GPU device lost — worker is unrecoverable; terminate and reload silently
+            if (sharedWorker && listenerRef.current) {
+              sharedWorker.removeEventListener('message', listenerRef.current)
+              sharedWorker.terminate()
+              sharedWorker = null
+              prefetchSent = false
+            }
+            outputRef.current = ''
+            setStreamingOutput('')
+            setError('WebGPU device lost — reloading model, please try again in a moment.')
+            setStatus('loading')
+            const newWorker = getWorker()
+            if (listenerRef.current) newWorker.addEventListener('message', listenerRef.current)
+            prefetchSent = true
+            newWorker.postMessage({ type: 'PREFETCH_MODEL' })
+          } else {
+            setStatus('error')
+            setError(msg.message)
+          }
           break
+        }
       }
     }
 
