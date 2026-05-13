@@ -5,8 +5,8 @@ import type { ProgressInfo, TextGenerationPipeline } from '@huggingface/transfor
 env.allowLocalModels = false
 
 const MODEL_ID = 'onnx-community/gemma-4-E2B-it-ONNX'
-const WEBGPU_DTYPE = 'q4f16'  // GPU-only quantization, requires WebGPU kernels
-const WASM_DTYPE = 'q4'       // CPU-compatible quantization for WASM fallback
+const WEBGPU_DTYPE = 'q4f16'  // GPU-only block quantization, requires WebGPU kernels
+const WASM_DTYPE = 'q8'       // 8-bit quant uses standard ONNX ops supported by WASM
 
 let generator: TextGenerationPipeline | null = null
 let loadPromise: Promise<void> | null = null
@@ -51,14 +51,14 @@ async function loadModel(): Promise<void> {
         self.postMessage({ type: 'webgpu_fallback' })
         generator = await pipeline('text-generation', MODEL_ID, {
           ...baseOpts,
-          dtype: WASM_DTYPE as 'q4',
+          dtype: WASM_DTYPE as 'q8',
           device: 'wasm',
         }) as TextGenerationPipeline
       }
     } else {
       generator = await pipeline('text-generation', MODEL_ID, {
         ...baseOpts,
-        dtype: WASM_DTYPE as 'q4',
+        dtype: WASM_DTYPE as 'q8',
         device: 'wasm',
       }) as TextGenerationPipeline
     }
