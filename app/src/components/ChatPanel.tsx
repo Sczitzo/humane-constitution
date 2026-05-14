@@ -57,8 +57,10 @@ export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
   const { messages, sendMessage, status, error } = useChat({ transport })
   const [input, setInput] = useState('')
   const bottomRef = useRef<HTMLDivElement>(null)
+  const lastAssistantRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const isLoading = status === 'submitted' || status === 'streaming'
+  const prevMessageCountRef = useRef(0)
 
   // Build source-path → docId lookup from corpus
   const sourceToDocId = useMemo(() => {
@@ -74,7 +76,16 @@ export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
   }, [corpus])
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
+    const newMessage = messages.length > prevMessageCountRef.current
+    prevMessageCountRef.current = messages.length
+    // When a new assistant message arrives, scroll to its top so the user
+    // reads from the beginning. While streaming or on user messages, track bottom.
+    const lastMsg = messages[messages.length - 1]
+    if (newMessage && lastMsg?.role === 'assistant') {
+      lastAssistantRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
+    }
   }, [messages, isLoading])
 
   function submit(text: string) {
@@ -120,11 +131,16 @@ export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
           </div>
         )}
 
-        {messages.map((m: UIMessage) => {
+        {messages.map((m: UIMessage, idx: number) => {
           const text = m.parts?.find((p) => p.type === 'text')?.text ?? ''
           const isUser = m.role === 'user'
+          const isLastAssistant = !isUser && idx === messages.length - 1
           return (
-            <div key={m.id} className={`flex gap-2 ${isUser ? 'justify-end' : 'justify-start'}`}>
+            <div
+              key={m.id}
+              ref={isLastAssistant ? lastAssistantRef : undefined}
+              className={`flex gap-2 ${isUser ? 'justify-end' : 'justify-start'}`}
+            >
               {!isUser && (
                 <div className="shrink-0 w-6 h-6 rounded-full bg-accent-soft border border-accent/30 flex items-center justify-center mt-0.5">
                   <span className="text-accent text-[9px] font-bold">AI</span>
