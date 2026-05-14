@@ -3049,8 +3049,8 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'The Skeptic\'s Path',
     description: 'For those who arrived with objections. Starts with what is unknown, then builds the case.',
     steps: [
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Start here. This register lists every claim the project makes and grades each one: designed, tested, or still speculation. Watch for claims marked "needs evidence" — those are the live weaknesses.' },
-      { path: 'docs/governance/Evidence_Ladder.md', note: 'Before you evaluate the claims, understand the standard. This defines what counts as stronger or weaker proof and when a claim must be downgraded.' },
+      { path: 'docs/governance/Evidence_Ladder.md', note: 'Start here. This defines what counts as stronger or weaker proof and when a claim must be downgraded — establish the standard before you evaluate anything.' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Every claim the project makes, graded against the standard you just read: designed, tested, or still speculation. Watch for claims marked "needs evidence" — those are the live weaknesses.' },
       { path: 'docs/governance/Threat_Register.md', note: 'Every adversarial failure mode the project has identified against itself. Look for threats that are named but not yet patched — those are the honest open problems.' },
       { path: 'docs/governance/Patch_Log.md', note: 'How the design has changed in response to each threat. A short patch log means the project hasn\'t been seriously stress-tested; a long one means it has.' },
       { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text itself. Read it last — now you can evaluate whether the constitutional language actually closes the gaps you found in the previous four documents.' },
