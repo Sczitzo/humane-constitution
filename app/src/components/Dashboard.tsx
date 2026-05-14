@@ -3102,8 +3102,8 @@ const READING_PATHS: ReadingPathDef[] = [
     steps: [
       { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'Start here. The staged testing path — what must be demonstrated at each phase before the next is permitted. This is the gate the pilot must pass through.' },
       { path: 'docs/public/03_readiness.md', note: 'An honest account of where the design stands today: what is written, what is only designed, and what still needs outside evidence. Know this before committing resources.' },
+      { path: 'docs/annexes/ANNEX_N.md', note: 'Genesis and deployability preconditions. The specific conditions that must be met before activation — know the go/no-go gate before planning what to build.' },
       { path: 'docs/annexes/ANNEX_Q.md', note: 'The minimum viable pilot stack — the smallest compliant configuration and the transition doctrine for building up from a legacy system.' },
-      { path: 'docs/annexes/ANNEX_N.md', note: 'Genesis and deployability preconditions. The specific conditions that must be met before activation — treat this as your pre-launch checklist.' },
       { path: 'docs/annexes/ANNEX_V.md', note: 'Transition mechanics: how legacy money, debt, and ownership convert into the new system. The highest-risk operational phase is here.' },
       { path: 'docs/governance/Conglomerate_Transition_Dossier.md', note: 'How large incumbent firms are handled at transition. Read this last — conglomerate resistance is the most likely source of pilot failure.' },
     ],
