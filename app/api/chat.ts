@@ -34,7 +34,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     value: userQuery,
   });
 
-  // 2. Retrieve top-5 relevant chunks
+  // 2. Retrieve top-10 relevant chunks at a lower threshold
   const supabase = createClient(
     process.env.SUPABASE_URL!,
     process.env.SUPABASE_ANON_KEY!
@@ -42,8 +42,8 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
 
   const { data: docs, error } = await supabase.rpc('match_documents', {
     query_embedding: queryEmbedding,
-    match_threshold: 0.45,
-    match_count: 5,
+    match_threshold: 0.35,
+    match_count: 10,
   });
 
   if (error) {
@@ -61,9 +61,18 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   // 3. Stream a grounded Gemini answer
   const result = streamText({
     model: google('gemini-2.5-flash'),
-    system: `You are a knowledgeable assistant for the Twelve Pillar Protocol — a governance framework for humane AI. Answer questions accurately and concisely using ONLY the context below. If the context does not contain enough information to answer, say so clearly rather than speculating.
+    system: `You are a deep subject-matter expert on the Humane Constitution and its governance framework — a living document built from constitutional clauses, threat patches, annexes, and pilot implementation guides.
 
-Context:
+Your job is to give clear, confident, expert-level answers grounded in the source material below. Synthesize across documents rather than quoting one at a time. When the question touches funding, institutions, mechanisms, or philosophy, connect the dots and explain how the pieces fit together.
+
+Rules:
+- Be direct and substantive. Don't hedge unless the documents genuinely conflict or are silent.
+- If the context is partial, reason from what's there and note what's not covered rather than refusing to answer.
+- Use plain language. Define jargon the first time you use it.
+- Format with bullet points or short sections when listing multiple mechanisms or steps.
+- Never say "I don't have enough information" if you can give a useful partial answer.
+
+Source documents:
 ${context}`,
     messages: await convertToModelMessages(messages),
   });
