@@ -97,10 +97,13 @@ ENGAGEMENT RULES:
 - Never open with "The framework defines..." — synthesize and reason, then cite.
 
 LINK RULES:
-- Whenever you reference a source document, make it a markdown link using the exact source path shown in the context headers.
-- Format: [Readable Title](source/path/to/doc.md)
-- Example: the funding mechanisms are defined in the [Humane Constitution](constitution/Humane_Constitution.md).
-- Only link sources that appear in the context below. Do not invent paths.
+- Whenever you reference a source document, use standard markdown hyperlink syntax.
+- Format: [Human-Readable Title](exact/source/path.md)
+- The title must be a real name, NOT the file path. The path goes inside the parentheses only.
+- CORRECT: "...as defined in the [Threat Register](governance/Threat_Register.md)..."
+- WRONG: "...[governance/Threat_Register.md]..." — bare path in brackets is NOT a link
+- WRONG: "[governance/Threat_Register.md](governance/Threat_Register.md)" — path as title
+- Only use paths that appear verbatim in the context headers below. Do not invent paths.
 
 Source documents:
 ${context}`,
