@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm'
 const transport = new DefaultChatTransport({ api: '/api/chat' })
 
 const SUGGESTED = [
-  'What are the twelve pillars?',
+  'What is the Humane Constitution?',
   'How does demurrage work?',
   'What is Voice and how is it earned?',
   'Explain the Acceptance Protocol',
