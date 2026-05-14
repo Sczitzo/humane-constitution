@@ -104,6 +104,7 @@ LINK RULES:
 - WRONG: "...[governance/Threat_Register.md]..." — bare path in brackets is NOT a link
 - WRONG: "[governance/Threat_Register.md](governance/Threat_Register.md)" — path as title
 - Only use paths that appear verbatim in the context headers below. Do not invent paths.
+- NEVER use absolute URLs (https://...) or hash anchors (#section). Bare path only: annexes/ANNEX_AV.md
 
 Source documents:
 ${context}`,

@@ -27,9 +27,23 @@ interface LinkRendererProps {
   onNavigateToDoc: (docId: string) => void
 }
 
+function normalizeLinkHref(href: string): string {
+  try {
+    const url = new URL(href)
+    // Strip domain if it's our own site (model sometimes emits full URLs)
+    if (url.hostname.includes('humane-constitution') || url.hostname === 'localhost') {
+      return url.pathname.replace(/^\//, '') // strip leading slash, ignore hash
+    }
+  } catch {
+    // Not a full URL — use as-is, just strip hash fragment
+  }
+  return href.split('#')[0]
+}
+
 function LinkRenderer({ href, children, sourceToDocId, onNavigateToDoc }: LinkRendererProps) {
   if (href) {
-    const docId = sourceToDocId.get(href)
+    const normalized = normalizeLinkHref(href)
+    const docId = sourceToDocId.get(normalized)
     if (docId) {
       return (
         <button
