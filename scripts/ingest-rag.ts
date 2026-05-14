@@ -33,10 +33,7 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY || !GOOGLE_API_KEY) {
   process.exit(1);
 }
 
-const google = createGoogleGenerativeAI({
-  apiKey: GOOGLE_API_KEY,
-  baseURL: 'https://generativelanguage.googleapis.com/v1',
-});
+const google = createGoogleGenerativeAI({ apiKey: GOOGLE_API_KEY });
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
 const DOCS_ROOT = join(__dirname, '..', 'docs');
