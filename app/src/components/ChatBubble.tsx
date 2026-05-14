@@ -4,7 +4,7 @@ import type { CorpusPayload } from '../generated/corpus'
 
 interface ChatBubbleProps {
   corpus: CorpusPayload | null
-  onNavigateToDoc: (docId: string) => void
+  onNavigateToDoc: (docId: string, slug?: string) => void
 }
 
 export function ChatBubble({ corpus, onNavigateToDoc }: ChatBubbleProps) {

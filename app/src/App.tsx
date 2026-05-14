@@ -182,10 +182,10 @@ export default function App() {
           onPendingPathConsumed={() => setPendingPathId(null)}
         />
       </Layout>
-      <ChatBubble corpus={corpus} onNavigateToDoc={(docId) => {
+      <ChatBubble corpus={corpus} onNavigateToDoc={(docId, headingSlug) => {
         if (!corpus) return
         const doc = corpus.docs.find((d) => d.id === docId)
-        if (doc) handleSelectNavDoc(doc)
+        if (doc) handleSelectNavDoc(doc, headingSlug)
       }} />
     </>
   )
