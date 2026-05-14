@@ -3089,8 +3089,8 @@ const READING_PATHS: ReadingPathDef[] = [
     steps: [
       { path: 'docs/constitution/SPECIFICATIONS.md', note: 'Start here. The formal state machine every compliant implementation must satisfy — if your system can\'t pass these checks, it is not a compliant pilot.' },
       { path: 'docs/constitution/Acceptance_Protocol.md', note: 'How patches reach operation. Read this to understand the governance chain your implementation is bound by — no patch takes effect without clearing this protocol.' },
-      { path: 'founding/commitments.md', note: 'The numerical lock-file: every architecturally fixed parameter and its value. These are the numbers your implementation cannot drift from without triggering a violation.' },
-      { path: 'docs/annexes/INDEX.md', note: 'The operational extension layer. Each annex governs a specific domain — use this index to find which annexes are mandatory for your pilot scope.' },
+      { path: 'docs/annexes/INDEX.md', note: 'The operational extension layer. Each annex governs a specific domain — use this index to orient yourself to what exists before reading the locked parameters.' },
+      { path: 'founding/commitments.md', note: 'The numerical lock-file: every architecturally fixed parameter and its value. Now that you know the annex landscape, these are the numbers your implementation cannot drift from.' },
       { path: 'docs/annexes/ANNEX_N.md', note: 'Transition, genesis, and deployability preconditions. The checklist of what must be true before a pilot can go live — read this before you plan a launch date.' },
       { path: 'docs/annexes/ANNEX_Q.md', note: 'Minimum viable pilot stack. The smallest set of components a compliant pilot must include — and the transition doctrine for getting there from a legacy system.' },
     ],
