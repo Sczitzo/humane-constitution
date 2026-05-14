@@ -20,6 +20,39 @@ interface ChatPanelProps {
   onNavigateToDoc: (docId: string) => void
 }
 
+interface LinkRendererProps {
+  href?: string
+  children?: React.ReactNode
+  sourceToDocId: Map<string, string>
+  onNavigateToDoc: (docId: string) => void
+}
+
+function LinkRenderer({ href, children, sourceToDocId, onNavigateToDoc }: LinkRendererProps) {
+  if (href) {
+    const docId = sourceToDocId.get(href)
+    if (docId) {
+      return (
+        <button
+          onClick={() => onNavigateToDoc(docId)}
+          className="text-accent underline underline-offset-2 hover:text-accent-deep cursor-pointer bg-transparent border-none p-0 font-[inherit] text-[inherit]"
+        >
+          {children}
+        </button>
+      )
+    }
+  }
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-accent underline underline-offset-2 hover:text-accent-deep"
+    >
+      {children}
+    </a>
+  )
+}
+
 export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
   const { messages, sendMessage, status, error } = useChat({ transport })
   const [input, setInput] = useState('')
@@ -56,32 +89,6 @@ export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
       e.preventDefault()
       submit(input)
     }
-  }
-
-  function LinkRenderer({ href, children }: { href?: string; children?: React.ReactNode }) {
-    if (href) {
-      const docId = sourceToDocId.get(href)
-      if (docId) {
-        return (
-          <button
-            onClick={() => onNavigateToDoc(docId)}
-            className="text-accent underline underline-offset-2 hover:text-accent-deep cursor-pointer bg-transparent border-none p-0 font-[inherit] text-[inherit]"
-          >
-            {children}
-          </button>
-        )
-      }
-    }
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-2 hover:text-accent-deep"
-      >
-        {children}
-      </a>
-    )
   }
 
   return (
@@ -138,7 +145,14 @@ export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
                       ol: ({ children }) => <ol className="list-decimal list-inside mb-2 space-y-0.5">{children}</ol>,
                       li: ({ children }) => <li>{children}</li>,
                       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      a: ({ href, children }: any) => <LinkRenderer href={href} children={children} />,
+                      a: ({ href, children }: any) => (
+                        <LinkRenderer
+                          href={href}
+                          children={children}
+                          sourceToDocId={sourceToDocId}
+                          onNavigateToDoc={onNavigateToDoc}
+                        />
+                      ),
                       code: ({ children, className }: { children?: React.ReactNode; className?: string }) => {
                         const isBlock = className?.includes('language-')
                         return isBlock
