@@ -1,7 +1,7 @@
 // app/api/chat.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { google } from '@ai-sdk/google';
-import { streamText, embed } from 'ai';
+import { streamText, embed, convertToModelMessages } from 'ai';
 import { createClient } from '@supabase/supabase-js';
 
 function readBody(req: IncomingMessage): Promise<string> {
@@ -65,7 +65,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
 
 Context:
 ${context}`,
-    messages,
+    messages: convertToModelMessages(messages),
   });
 
   const response = result.toUIMessageStreamResponse();
