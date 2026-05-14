@@ -21,7 +21,11 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 
   const body = await readBody(req);
-  const { messages } = JSON.parse(body);
+  const parsed = JSON.parse(body);
+  console.log('REQUEST BODY KEYS:', Object.keys(parsed));
+  console.log('messages type:', typeof parsed.messages, Array.isArray(parsed.messages));
+  console.log('body sample:', body.slice(0, 500));
+  const messages = parsed.messages;
   const lastMsg = messages[messages.length - 1];
   const userQuery: string =
     lastMsg.content ??
