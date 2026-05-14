@@ -3075,11 +3075,11 @@ const READING_PATHS: ReadingPathDef[] = [
     description: 'How subsidiarity, consent, and exit work. For anyone who wants to know whether — and how — they can leave.',
     steps: [
       { path: 'founding/order/README.md', note: 'Start here. The overview of how subsidiarity, consent, and exit are structured together — why all three are needed and how they interact.' },
+      { path: 'founding/order/jurisdictional_scales.md', note: 'The five governance scales and how authority flows between them. Read this before the mechanisms — it is the structural frame that makes subsidiarity, consent, and exit intelligible.' },
       { path: 'founding/order/subsidiarity_rule.md', note: 'How decisions are pushed to the lowest capable scale. Watch for the test of when a higher scale may override — that is where the power question lives.' },
       { path: 'founding/order/consent_protocol.md', note: 'How consent is established and renewed. Read this carefully — consent that cannot be withdrawn is not consent.' },
       { path: 'founding/order/exit_protocol.md', note: 'How individuals and communities leave. The specifics here matter: exit rights that are procedurally expensive are not real exit rights.' },
-      { path: 'founding/order/reentry_protocol.md', note: 'How re-entry works after exit. A system that punishes return is coercive in a different direction — this is where to check.' },
-      { path: 'founding/order/jurisdictional_scales.md', note: 'The five governance scales and how authority flows between them. This is the structural backbone of subsidiarity.' },
+      { path: 'founding/order/reentry_protocol.md', note: 'End here. How re-entry works after exit — a system that punishes return is coercive in a different direction.' },
     ],
   },
   {
