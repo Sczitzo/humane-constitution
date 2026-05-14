@@ -118,8 +118,8 @@ Persons employed in the construction of the pilot site who live on-site for more
 
 **Immigration:** Section 2.8 disclaims authority over immigration status but does not specify what the pilot governance will do if federal immigration enforcement arrives at the site. This requires a separate operational policy — not constitutional language — developed with legal counsel before activation.
 
-**Exit with dignity for Tier 0 residents:** If a Tier 0 resident's enrollment is terminated, the pilot actively assists connection to external services (housing, SNAP, etc.) before exit. This obligation exists in the Vulnerable Population Consent Protocol and the Pilot Timeline Framework.
+**Exit with dignity for Tier 0 residents:** If a Tier 0 resident's enrollment is terminated, the pilot actively assists connection to external services (housing, SNAP, etc.) before exit. This obligation exists in the Vulnerable Population Consent Protocol and the Pilot Evidence Roadmap's operations and timeline framework.
 
 ---
 
-*Governing references: INVARIANTS.md; Pilot Site Selection Criteria; Vulnerable Population Consent Protocol; Founding Capital Framework; Pilot Timeline Framework.*
+*Governing references: INVARIANTS.md; Pilot Site Selection Criteria; Vulnerable Population Consent Protocol; Founding Capital Framework; Pilot Evidence Roadmap.*

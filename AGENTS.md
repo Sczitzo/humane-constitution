@@ -21,7 +21,7 @@ npx playwright test tests/e2e/reader-shell.spec.ts
 Run repository validation from the repo root:
 
 ```bash
-python3 scripts/validate_corpus.py
+node scripts/run_python.mjs scripts/validate_corpus.py
 ```
 
 ## Corpus Rules

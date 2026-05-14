@@ -18,7 +18,42 @@ The project is organized around preventing three structural collapse states.
 
 These collapse states are a diagnostic lens, not a status label. A mechanism can be written, proposed, active, or evidence-backed only under the status language in the [Claims and Evidence Register](./Claims_Evidence_Register.md).
 
-For the threat-by-threat mapping, use the [Collapse-State Crosswalk](./Collapse_State_Crosswalk.md). For the test ladder that decides when a collapse-state claim may be strengthened, use the [Evidence Ladder](./Evidence_Ladder.md).
+For the threat-by-threat mapping, use the concise crosswalk below. For the test ladder that decides when a collapse-state claim may be strengthened, use the [Evidence Ladder](./Evidence_Ladder.md).
+
+### Collapse-State Threat Crosswalk
+
+This crosswalk is diagnostic only. Threat status still comes from the Threat Register, Claims and Evidence Register, and hardening/evidence tracks. Many threats also attack the control plane: the machinery that observes, decides, repairs, explains, or legitimates the system.
+
+| Threat | Primary pressure | Secondary pressure | Main proof path |
+|---|---|---|---|
+| T-001 Shadow Convertibility | Survival-Trade Bind | Power-Wealth Convergence | Proxy-market and broker-profitability red team. |
+| T-002 Identity Exploits | Survival-Trade Bind | Control-plane identity gate | Identity and Recovery Evidence Test Package. |
+| T-003 | Retired; scope absorbed into T-002. | - | - |
+| T-004 Incentive Collapse | Survival-Trade Bind | Static-Advantage Loop | Service Record Misuse Evidence Test Package. |
+| T-005 Governance Throughput Failure | Control-plane failure | Static-Advantage Loop | Backlog, emergency-bypass, and throughput-theater simulation. |
+| T-006 Measurement Lag / Supply Shock | Control-plane failure | Survival-Trade Bind | Capacity Measurement Evidence Test Package. |
+| T-007 Political Definition Drift | Static-Advantage Loop | Power-Wealth Convergence | Protected-term registry red team and semantic-effect audit. |
+| T-008 Bureaucratic Elite Formation | Power-Wealth Convergence | Static-Advantage Loop | Capture Dashboard Specification and Service Record misuse tests. |
+| T-009 Grace Exploitation Loop | Power-Wealth Convergence | Static-Advantage Loop | Hardship-ring, pause-saturation, and attestation-collusion tests. |
+| T-010/T-011 Narrative Attack Surface | Control-plane legitimacy | All three collapse states | Public comprehension, hostile-frame, and failure-communication tests. |
+| T-012 PCRP Oracle Poisoning | Control-plane failure | Survival-Trade Bind | Oracle independence and emergency-response drill. |
+| T-013 Compound Crisis Throughput Starvation | Control-plane failure | Static-Advantage Loop | Crisis category throughput simulation. |
+| T-014 Emergency Governance Triple Deadlock | Control-plane failure | Survival-Trade Bind | Mandatory emergency deadlock drill. |
+| T-015 Demand-Side Oracle Poisoning | Control-plane failure | Survival-Trade Bind | Demand-context and oracle-corroboration tests. |
+| T-016 Formal Acceptance Process Capture | Static-Advantage Loop | Control-plane patch capture | FAP audit, adversarial reviewer independence, and evidence-farming red team. |
+| T-017 Bootstrap Problem | Control-plane founding | Static-Advantage Loop | Founding Legitimacy Dossier. |
+| T-018 PCRP False-Trigger Exhaustion | Control-plane failure | Survival-Trade Bind | False-trigger-at-scale simulation. |
+| T-019 Demand-Context Flag Suppression | Control-plane failure | Survival-Trade Bind | Timing monitor and Ombuds four-hour decision drill. |
+| T-020 Epistemological Oracle Capture | Power-Wealth Convergence | Static-Advantage Loop | Methodology-class independence audit. |
+| T-021 Algorithmic Oracle Capture | Power-Wealth Convergence | Control-plane oracle supply chain | AI supply-chain and model-governance audit. |
+| T-022 Electoral Cycle Capture | Static-Advantage Loop | Power-Wealth Convergence | Administrative hollowing and transition-of-power simulation. |
+| T-023 Pilot External Validity Collapse | Static-Advantage Loop | All three collapse states | Pilot Evidence Roadmap and Evidence Ladder gates. |
+| T-024 Shared Storehouse Oracle-Failure | Control-plane failure | Survival-Trade Bind | Oracle blackout during active rationing drill. |
+| T-025 Demurrage Sector-Capture | Power-Wealth Convergence | Static-Advantage Loop | Demurrage Evidence Package and legal-wrapper review. |
+| T-026 Exit Denial | Survival-Trade Bind | Control-plane federation coercion | Exit rehearsal and non-retaliation audit. |
+| T-027 Subsidiarity Violation | Static-Advantage Loop | Power-Wealth Convergence | Venue-drift dashboard and remand-case audit. |
+
+Use this crosswalk when adding or revising a threat, patch, annex, pilot, or public claim: name the guarded collapse state, name any control-plane function that could fail, state the proof path, keep status language from the Claims and Evidence Register, and verify that any new control mechanism has a Patch Log entry. If an item cannot be mapped to at least one collapse state or control-plane function, it may be decorative rather than load-bearing.
 
 ---
 

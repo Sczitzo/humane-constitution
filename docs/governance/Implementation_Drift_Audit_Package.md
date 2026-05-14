@@ -142,7 +142,7 @@ The project may strengthen its claim only after producing:
 
 The drift layer remains **designed mechanism, needs implementation audit** unless unauthorized change is reliably detected, valid change is publicly reviewable, and non-compliant software cannot become accredited without visible exception.
 
-If any stage fails, the failure becomes a Hardening Queue item and the affected architecture file must be revised before the project claims Tier 1 drift is controlled.
+If any stage fails, the failure becomes an Open Problems Resolution Docket item and the affected architecture file must be revised before the project claims Tier 1 drift is controlled.
 
 ---
 

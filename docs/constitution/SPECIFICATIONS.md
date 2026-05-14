@@ -239,7 +239,7 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 |---|---|---|---|
 | Flow demurrage rate (r) | 0.5%/month (±0.25%/mo corridor) | Binding design commitment — rate provisional pending evidence calibration (Phase 5). See Claims_Evidence_Register.md FC-050 entry. FC-050 / FC-051 (founding/commitments.md) | Tier 2 (supermajority + adversarial panel) |
 
-> FC-050 sets the demurrage rate. FC-160–FC-184 govern the contract-commitment architecture through which that rate is implemented. Evidence from the Demurrage Evidence Test Package (see Hardening_Queue.md) may inform revisions to both the rate (FC-050, via standard Tier 3 FAP) and the commitment architecture (FC-160–FC-184).
+> FC-050 sets the demurrage rate. FC-160–FC-184 govern the contract-commitment architecture through which that rate is implemented. Evidence from the Demurrage Evidence Test Package (see the Open Problems Resolution Docket) may inform revisions to both the rate (FC-050, via standard Tier 3 FAP) and the commitment architecture (FC-160–FC-184).
 
 | Flow idle threshold (θ) | Resolved in founding/commitments.md | Resolved | Tier 2 |
 | Essential Access validity window | 72 hours | Specified | Tier 2 |

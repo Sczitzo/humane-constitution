@@ -3,7 +3,7 @@
 > **Provenance:** Implements [P-021 — Register Disclosure Protocol] · Addresses threat-register operational security and T-007 consistency risk · Status: **PROPOSED**
 
 **Governing document for Threat Register bifurcation**
-**Status: PROPOSED (P-021)**
+**Status:** ACTIVE (P-021)
 
 ---
 

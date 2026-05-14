@@ -6,7 +6,7 @@ Each pilot asks one plain question:
 
 > Does this part still protect people when it meets real incentives, real mistakes, real limits, and bad actors?
 
-The macro risks named in the [Conceptual Refinement Audit](./Conceptual_Refinement_Audit.md) organize this roadmap. A pilot is not successful merely because a mechanism works for friendly users in calm conditions. It must expose whether the mechanism still protects people under error, scarcity, capture pressure, and public misunderstanding.
+The macro risks consolidated in the [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md#integrated-refinement-and-hardening-roadmap) organize this roadmap. A pilot is not successful merely because a mechanism works for friendly users in calm conditions. It must expose whether the mechanism still protects people under error, scarcity, capture pressure, and public misunderstanding.
 
 ## Pilot rules
 
@@ -84,7 +84,7 @@ Every pilot needs:
 
 **Pilot town founding cascade (additional gates for real-persons occupancy):**
 
-The following additional gate conditions apply to any pilot that involves real-persons occupancy of a constructed site. These are prerequisites for Enrollment Window 3 (per the Pilot Timeline Framework), not just Phase 0 in the abstract:
+The following additional gate conditions apply to any pilot that involves real-persons occupancy of a constructed site. These are prerequisites for Enrollment Window 3 under the operations/timeline framework below, not just Phase 0 in the abstract:
 
 | Gate condition | Governing document | Unlocks |
 |---|---|---|
@@ -94,7 +94,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 | Founding team composition meets FT-1 and FT-2; keyholder seats 3–8 nomination process confirmed | Founding Team Composition Standard | Keyholder council activation |
 | Capital Steward selected; no funder exceeds FC-2 concentration limits; constitutional primacy clause in all funding agreements | Founding Capital Framework | Construction financing draws |
 | INV-LAUNCH-1 cleared by Ombuds (FC-YT1 and FC-YT2 confirmed) | INVARIANTS.md | First resident occupancy |
-| Resident Transition Protocol (Town Wind-Down Protocol) drafted and published | Pilot Timeline Framework § Failure Contingency | Cohort 1 enrollment |
+| Resident Transition Protocol (Town Wind-Down Protocol) drafted and published | This roadmap's Failure Contingency section | Cohort 1 enrollment |
 
 ## Phase 1 - Public understanding
 
@@ -412,6 +412,84 @@ The following additional gate conditions apply to any pilot that involves real-p
 - dashboards publish personal ranking signals or are gamed while appearing healthy.
 
 **Bridge rule:** Phase 10 cannot pass with only technical integrity. The implementation drift tests, founding artifact-status register, claim-status review, and capture dashboard baseline must all be current together. A clean hash, clean build, or complete document checklist does not prove legitimate activation.
+
+## Pilot Operations And Timeline Framework
+
+This section consolidates the operational planning content formerly maintained as a standalone timeline file. It is a planning instrument for a founding pilot town of 1-5,000 residents built from scratch, not a governance guarantee. Timelines are estimates; gate dependencies are hard constraints.
+
+### Five Parallel Tracks
+
+Track A is the critical path. No other track may pass a major gate until the corresponding Track A gate clears. Preparatory work may proceed in advance, but no binding commitments, site closings, construction contracts, financing draws, or resident enrollments may execute until the relevant founding legitimacy gate is confirmed.
+
+| Track | Purpose |
+|---|---|
+| Track A - Founding Legitimacy | Constitutional prerequisites, artifact production, and post-activation audit. |
+| Track B - Site Acquisition | Site search, due diligence, land acquisition, and Community Land Trust establishment. |
+| Track C - Design and Permitting | Design principles, full site plan, and regulatory permitting. |
+| Track D - Construction | Infrastructure, residential units, shared facilities, and scale buildout. |
+| Track E - Recruitment and Pre-Enrollment | Awareness outreach, pre-enrollment, and cohort enrollment. |
+
+### Critical Path Gates
+
+| Gate | Timing estimate | Prerequisites | Unlocks |
+|---|---|---|---|
+| A0 - Initiation | Month 0 | Public consultation begins; 60-day window opens on "non-coercive consent" and "civil society" definitions. | Site search and information-only awareness outreach. |
+| A1 - Prerequisites resolved | Month 2 | 60-day window closes; definitions finalized and recorded in the Founding Legitimacy Dossier. | Production of conflict register, scope declaration, objection record, civil-society review, consent evidence, exit rehearsal, and founder sunset plan. |
+| A2 - Gate A clears | Month 8 | All seven pre-activation artifacts reach PRODUCED status. | Site securing, Window 2 pre-enrollment, and construction financing draws. |
+| B2 - Site secured | Month 7-9, after A2 | Due diligence complete; site satisfies Site Selection Criteria; CLT structure established. | Design completion and construction preparation. |
+| C2 - Permitting complete | Month 16-18 | Site secured, full design complete, all local/county/state permits in hand, Jurisdiction Interface Clause in effect. | Groundbreaking. |
+| D2 - First residential units complete | Month 26-30 | Core infrastructure complete and inspected; 100-150 habitable units; minimum viable healthcare operation. | Window 3 enrollment for Cohort 1. |
+| INV-LAUNCH-1 cleared | Before first occupancy | D2 complete plus Ombuds verification of launch preconditions. | First resident occupancy. |
+| A3 - Founder sunset | Post-activation | Earlier of 90 days after full occupancy or 24 months after first resident occupancy, per Founding Team Composition Standard FS-1. | Transition away from founding-team mode. |
+| A4 - Gate B | Post-activation + 90 days | Post-activation audit complete. | Full founding-legitimacy claim for the pilot. |
+
+Gates A2, D2, and INV-LAUNCH-1 may not be declared complete based on projected completion. They require confirmed, documented, independently verifiable status. Delay is preferable to premature occupancy.
+
+### Recruitment Windows
+
+| Window | Opens | Rules |
+|---|---|---|
+| Window 1 - Awareness | Month 4, parallel with design-principles publication | Information only. No commitments, no guaranteed spots, no urgency messaging, and no identifying information beyond anonymous interest registration. |
+| Window 2 - Pre-Enrollment | After A2 clears | Requires Founding Legitimacy Dossier Gate A at PRODUCED, VPCP-008 prerequisites met, and INV-LAUNCH-1 preconditions confirmed by the Ombuds. Statements of intent are nonbinding and withdrawable without penalty. VPCP-scope residents require VPCP-002 materials and an initial ICA session. |
+| Window 3 - Enrollment | After D2, Month 26-30 estimate | Requires habitable residential units, all Window 2 prerequisites still in force, and Ombuds clearance before first occupancy. Cohort 1 target is 100-150 people: 40-50% skilled/innovative volunteers, 40-50% VPCP-scope, and 10% mixed families, elders, children, or medical needs. |
+
+Full-age-range occupancy planning is required. Pediatric healthcare, elder support, and school-age education must be at minimum viable operation before any family with children enrolls.
+
+### VPCP-Scope Pre-Enrollment Obligations
+
+Before a VPCP-scope resident may enter Window 3 enrollment and sign any commitment document:
+
+1. VPCP-002 materials must be produced and delivered, including 90-day transitional support, benefits impact assessment, and three documented alternatives to enrollment.
+2. The ICA initial session must be complete.
+3. A 30-day cooling-off period must be complete, counted from the ICA initial session.
+4. Understanding verification by teach-back must be complete and recorded.
+5. No commitment documents may be signed in Window 2.
+
+The ICA verifies and documents items 1-4 before any commitment document is presented. The founding team may not present commitment documents to VPCP-scope residents; the ICA presents them.
+
+### Phased Occupancy
+
+| Cohort | Timing estimate | Scope |
+|---|---|---|
+| Cohort 1 | D2 gate, Month 26-30 | 100-150 residents; operational testing of core systems, oracle calibration at small scale, Tier 0 and Tier 1 onboarding, and VPCP-scope integration. Governance remains in founding-team mode with resident advisory input. Post-activation audit completes during this phase. |
+| Cohort 2 | D3 gate, Month 36-42 | 300-500 residents; full population mix; agriculture and production zones operational; earned income economy begins; governance transitions toward constitutional governance as resident numbers allow. |
+| Cohort 3+ | D4 gate, Month 48-60 | Scale to 1,000+ residents; Shared Storehouse and emergency rationing systems fully operational and tested; governance structures at full constitutional operation; founder sunset completed. |
+
+### Failure Contingency
+
+If the pilot must wind down at any phase:
+
+- the wind-down reserve under Founding Capital Framework FC-12 activates immediately;
+- the Resident Transition Protocol governs housing continuity, healthcare continuity, data export rights, and transition support;
+- no resident loses Essential Access because of wind-down;
+- the named alternative EA provider required by the Town Wind-Down Protocol activates before any resident loses access;
+- the founding team publishes a public post-mortem within 90 days.
+
+The Resident Transition Protocol is a prerequisite for Cohort 1 enrollment. It must be drafted and reviewed by the ICA before the first resident takes occupancy.
+
+### Long-Arc Alignment
+
+The honest timeline from first public consultation to full-scale operation at 1,000+ residents is 9-12 years. Regulatory approvals, site availability, funder patience, and political conditions may change the schedule. If any track falls behind, critical-path gates must not be rushed. The founding team commits to publishing an annual timeline update showing each track's status against these estimates and explaining delays honestly.
 
 ## Minimum evidence before scale-up
 

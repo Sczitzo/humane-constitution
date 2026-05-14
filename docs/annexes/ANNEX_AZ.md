@@ -1,6 +1,8 @@
 # ANNEX AZ — Progressive Net-Worth Demurrage Architecture
 
-> **Provenance:** Created 2026-05-11 as the controlling technical specification for progressive wealth demurrage under Article V. Implements the anti-hoarding function referenced in [ANNEX_X](./ANNEX_X.md) and anchored by [INV-008](../constitution/INVARIANTS.md#inv-008--money-creation-is-public).
+> **Provenance:** Created 2026-05-11 as the controlling technical specification for progressive wealth demurrage under Article V. Implements the anti-hoarding function referenced in [ANNEX_X](./ANNEX_X.md) and anchored by [INV-008](../constitution/INVARIANTS.md#inv-008-money-creation-is-public).
+
+**Status:** ACTIVE | **Patch:** Progressive net-worth demurrage architecture
 
 ---
 

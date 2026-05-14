@@ -67,7 +67,7 @@
 | P-046 | Multiple | **ACTIVE** | Critical | Evidence and capture hardening — seven proof artifacts, drift audit, parameter calibration, abuse cases, evidence ladder, founding dossier, and capture dashboard |
 | P-047 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector conglomerate transition — profitable compliant path, refusal survivability tests, public fallback capacity, and numeric evidence anchors |
 | P-048 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector refusal test package — sector drills, FC-194 through FC-201 calibration rows, Annex AT receiver/licensing triggers, public explainer, and evidence-source expansion |
-| P-049 | Multiple evidence-gap bridges | **ACTIVE** | High | Cross-register bridge pass — aligns Hardening Queue, Open Problems, Pilot Roadmap, Public Readiness, README, and evidence-gap language with founding artifact status and essential-sector refusal testing |
+| P-049 | Multiple evidence-gap bridges | **ACTIVE** | High | Cross-register bridge pass — aligns Open Problems, Pilot Roadmap, Public Readiness, README, and evidence-gap language with founding artifact status and essential-sector refusal testing |
 | P-050 | T-028 | **ACTIVE** | Critical | Compliant Alternative Supplier Pre-Registration (CASP): mandatory pre-registration of backup suppliers with automatic-activation contracts before essential-sector procurement renewal; gap-window calculation requirement; adversarial observation requirement for drill-secure classification. ANNEX_AT §AT6.6. |
 | P-051 | T-022 | **ACTIVE** | Critical | Constitutional Integrity Panel (CIP): 7-member independent body with staggered terms, constitutionally fixed funding (0.01% of annual Flow issuance), multi-body appointment preventing governing-coalition control, 5-of-7 quorum for Tier 1 ratification, automatic review triggers for institutional vacancy or publication lapses. ANNEX_AM §AM8. |
 | P-052 | T-019 | **ACTIVE** | High | Federated Ombuds deliberate-manufacture standard: pre-committed 4-criterion assessment (timing, proportionality, prior-basis, knowledge), 24-hour Plenum decision window, asymmetric default favoring PCRP activation when evidence is inconclusive, manufactured-flag referral to Enforcement Panel. ANNEX_AI §4.12. |
@@ -80,7 +80,7 @@
 | P-059 | ACL-010 / T-027 | **PROPOSED** | Critical | Vulnerable Population Consent Protocol (VPCP): ICA structure (civil-society nominated, 50% peer specialists, adverse-finding authority); VPCP-001 through VPCP-008 rules; 30-day cooling-off; teach-back verification as founding team obligation; non-waivable exit rights (60-day housing, 90-day healthcare, no clawback); pre-recruitment prerequisites gate. |
 | P-060 | ACL-005 / T-008 | **PROPOSED** | Critical | Founding Team Composition Standard: composition floor (FT-1 through FT-4); 9-seat keyholder allocation with distributed nomination (Seats 3–8 via civil-society organizations approved by adversarial panel member); founder sunset rules (FS-1 through FS-7); Perpetual Humility Review with Humility Declaration. |
 | P-061 | ACL-007 / Power-Wealth Convergence | **PROPOSED** | Critical | Founding Capital Framework: phase targets ($15–22M / $35–55M / $60–90M); 20%/30% funder concentration limits; Capital Steward independent fiduciary; constitutional primacy clause (non-negotiable in all funding agreements); government walk-away rule (4 trigger conditions); CLT land structure; wind-down reserve (6 months EA pre-funded). |
-| P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
+| P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Operations and Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
 
 ---
 
@@ -1071,7 +1071,7 @@ The project had strong mechanisms and evidence packages, but seven proof surface
 **Introduced design:**
 
 - **Implementation Drift Audit Package** — adds tests for reproducible hashes, append-only log behavior, publication-channel divergence, startup refusal, key custody, timelock response, and supply-chain bypass.
-- **Collapse-State Crosswalk** — maps every threat to Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane failure.
+- **Architecture Source Map collapse-state crosswalk** — maps every threat to Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane failure.
 - **Parameter Calibration Register** — tracks high-risk FC values, current status, rationale, capture route, evidence needed, revision trigger, and governing documents.
 - **Capture Dashboard Specification** — defines privacy-preserving public indicators for civic role concentration, Ombuds independence, definition capture, procurement/legal-wrapper capture, identity gatekeeping, and implementation drift.
 - **Abuse Case Library** — introduces reusable bad-actor patterns so patch intake and closure must test against plausible corruption routes and false reassurances.
@@ -1160,7 +1160,7 @@ Recent hardening work created stronger test artifacts, but the live dashboards s
 
 **Introduced design:**
 
-- **Hardening Queue alignment** — connects essential-sector refusal to the dedicated test package and reframes founding legitimacy around artifact production, not only design existence.
+- **Open Problems alignment** — connects essential-sector refusal to the dedicated test package and reframes founding legitimacy around artifact production, not only design existence.
 - **Open Problems bridge** — updates essential-sector and founding rows so required proof points include the newest refusal drills, artifact-status register, medicine/PBM refusal path, grid/logistics delay path, and parameter/capture links.
 - **Pilot Roadmap bridge rules** — adds explicit Phase 8 and Phase 10 pass boundaries: paper capacity and clean technical integrity cannot substitute for refusal evidence or legitimate founding artifacts.
 - **Public readiness bridge** — adds plain-language warnings for essential-company refusal and founding-vote theater.
@@ -1355,10 +1355,10 @@ Multiple vignettes in the Fairness Vignette Library showed that the constitution
 
 ---
 
-### P-062 — Pilot Timeline Framework
+### P-062 — Pilot Operations and Timeline Framework
 
 **Threat addressed:** Pilot farming (ACL-011), founding consent theater (ACL-010)
 **Status:** PROPOSED | **Priority:** High
-**Creates:** [docs/governance/Pilot_Timeline_Framework.md](./Pilot_Timeline_Framework.md)
+**Creates:** [Pilot_Evidence_Roadmap.md - Pilot Operations And Timeline Framework](./Pilot_Evidence_Roadmap.md#pilot-operations-and-timeline-framework)
 
 **Summary:** Five-track parallel timeline with critical-path gates; three recruitment windows; phased occupancy sequence; failure contingency requiring Resident Transition Protocol before Cohort 1. Track A (governance/legal), Track B (infrastructure), Track C (capital), Track D (community/consent), Track E (technology) must all clear defined gates before enrollment opens.

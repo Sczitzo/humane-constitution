@@ -344,12 +344,12 @@ These patches establish the operational framework for the first real-persons pil
 - 🔩 **Patch:** [P-061 — Founding Capital Framework](../governance/Patch_Log.md) · Status: **PROPOSED**
 - 📄 **Governing document:** [Founding_Capital_Framework.md](../governance/Founding_Capital_Framework.md) — *FC-1 through FC-12; 20%/30% concentration limits; constitutional primacy clause; government walk-away rule; CLT structure; wind-down reserve.*
 
-### P-062 — Pilot Timeline Framework
+### P-062 — Pilot Operations and Timeline Framework
 
 > *Maps the five-track critical path from founding legitimacy through full-scale occupancy, with hard gates that cannot be rushed.*
 
-- 🔩 **Patch:** [P-062 — Pilot Timeline Framework](../governance/Patch_Log.md) · Status: **PROPOSED**
-- 📄 **Governing document:** [Pilot_Timeline_Framework.md](../governance/Pilot_Timeline_Framework.md) — *Tracks A–E; three enrollment windows; A2 gate (Month 8); D2 gate (Month 26–30); INV-LAUNCH-1 clearance; failure contingency.*
+- 🔩 **Patch:** [P-062 — Pilot Operations and Timeline Framework](../governance/Patch_Log.md) · Status: **PROPOSED**
+- 📄 **Governing document:** [Pilot_Evidence_Roadmap.md](../governance/Pilot_Evidence_Roadmap.md) — *Tracks A–E; three enrollment windows; A2 gate (Month 8); D2 gate (Month 26–30); INV-LAUNCH-1 clearance; failure contingency.*
 
 ---
 

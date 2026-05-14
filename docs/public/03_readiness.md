@@ -142,4 +142,4 @@ For how the project handles its own failure modes:
 
 - **[Threat Register](../governance/Threat_Register.md)** — catalogues known failure modes (T-001 through T-027+)
 - **[Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md)** — shows which threats are resolved, partially addressed, or open
-- **[Hardening Queue](../governance/Hardening_Queue.md)** — shows which controls are designed, active-unproven, or evidence-backed
+- **[Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md)** — shows which controls are designed, active-unproven, or evidence-backed

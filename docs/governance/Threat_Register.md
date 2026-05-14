@@ -15,7 +15,7 @@ How could the system fail, be gamed, or be captured? Each threat names a failure
 
 **Status discipline.** This register tracks design posture, not deployment proof. `ACTIVE` means a control is integrated into the document set; it does not mean the control has been proven in field conditions. `RESOLVED` should be used only after defined tests, pilots, or audits produce evidence and the residual risk is updated.
 
-**Resolution discipline.** Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Collapse-State Crosswalk](./Collapse_State_Crosswalk.md), [Abuse Case Library](./Abuse_Case_Library.md), and [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) as the working plan for moving threats toward evidence-backed resolution. A threat is not solved merely because it has a patch; it needs a corruption model, outside evidence, a test path, failure criteria, abuse-case mapping, evidence level, and a residual-risk statement. Threats may also be read through the [Architecture Source Map](./Architecture_Source_Map.md) collapse-state lens: Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane or compound failures.
+**Resolution discipline.** Use the [Threat Resolution Matrix](./Threat_Resolution_Matrix.md), [Architecture Source Map](./Architecture_Source_Map.md), [Abuse Case Library](./Abuse_Case_Library.md), and [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) as the working plan for moving threats toward evidence-backed resolution. A threat is not solved merely because it has a patch; it needs a corruption model, outside evidence, a test path, failure criteria, abuse-case mapping, evidence level, and a residual-risk statement. Threats may also be read through the Architecture Source Map collapse-state lens: Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane or compound failures.
 
 **Scoring convention.** Risk Score = I × L × (6 − D) where I = Impact, L = Likelihood, D = Detectability (each 1–5; higher D = more detectable = lower risk multiplier).
 
@@ -86,7 +86,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### Maintenance rules for this dashboard
 
-- Move a threat off the dashboard only when its remaining work is tracked in the Hardening Queue as `ACTIVE-UNPROVEN`, `ONGOING`, or `EVIDENCE-BACKED`, with a named test or audit path.
+- Move a threat off the dashboard only when its remaining work is tracked in the Open Problems Resolution Docket as `ACTIVE-UNPROVEN`, `ONGOING`, or `EVIDENCE-BACKED`, with a named test or audit path.
 - Partial threats should also have an entry in the Open Problems Resolution Docket before they are removed from this dashboard.
 - When a threat is fully `RESOLVED` (evidence-backed), strike it through here in one update cycle, then remove on the next.
 - Newly added threats go on this dashboard at creation, not at resolution.

@@ -2,7 +2,8 @@
 
 > **Provenance:** Implements [P-018 — Electoral Cycle Resilience] · Addresses T-022 · Status: **PROPOSED**
 
-**Status:** PROPOSED | **Priority:** Critical | **Patch:** P-018
+**Status:** MIXED - P-018 electoral-cycle resilience remains PROPOSED; AM8 / P-051 Constitutional Integrity Panel provisions are ACTIVE.
+**Priority:** Critical | **Patch:** P-018 / P-051
 **Threat addressed:** T-022 (Electoral Cycle Capture)
 **Authority:** Tier 1 for AM1, AM2, AM3, AM6 (entrenchment, Essential Access floor minimum, hollowing triggers, treaty override). Tier 2 for AM4, AM5 (transition continuity, audit scope).
 

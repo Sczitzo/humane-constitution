@@ -14,7 +14,7 @@ npm run check:corpus         # verify corpus is in sync (used in CI)
 npm run test:e2e             # builds first, then runs against preview server on :1420
 npm run test:e2e:headed
 npx playwright test tests/e2e/reader-shell.spec.ts   # single test file
-python3 ../scripts/validate_corpus.py                # validate links, identifiers, annex index
+node ../scripts/run_python.mjs ../scripts/validate_corpus.py  # validate links, identifiers, annex index
 ```
 
 E2E tests take ~30s to start. Port 1420 must be free unless `PLAYWRIGHT_REUSE_SERVER=true`.

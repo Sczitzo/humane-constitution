@@ -614,4 +614,4 @@ These vignettes test the same eight questions as the Christ-Centered Evaluation,
 
 ---
 
-*Document status: Initial draft. Each vignette should be reviewed against the specific annex language (Annex Y, Annex Z, Annex AB, Annex AJ, Annex AQ) as annexes are finalized. Findings should be cross-referenced with the Hardening Queue and Open Problems Resolution Docket.*
+*Document status: Initial draft. Each vignette should be reviewed against the specific annex language (Annex Y, Annex Z, Annex AB, Annex AJ, Annex AQ) as annexes are finalized. Findings should be cross-referenced with the Open Problems Resolution Docket.*

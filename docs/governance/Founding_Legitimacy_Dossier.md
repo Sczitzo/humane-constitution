@@ -4,7 +4,7 @@ This dossier defines the evidence required before the project can claim that a f
 
 It does not solve the bootstrap problem. It makes the bootstrap problem visible, contestable, and harder to exploit.
 
-Existing founding artifacts, including [Founding Preactivation Disclosure](./Founding_Preactivation_Disclosure.md), become source records inside this broader dossier. P-014 disclosure is necessary but not sufficient for founding legitimacy.
+Existing founding artifacts, including the P-014 preactivation disclosure record now incorporated in Appendix A, become source records inside this broader dossier. P-014 disclosure is necessary but not sufficient for founding legitimacy.
 
 ---
 
@@ -221,3 +221,73 @@ The project may strengthen its founding-legitimacy claim only after producing:
 ## Residual Risk
 
 No founding process can fully escape circularity. A constitution must begin somewhere. The honest goal is to prevent that beginning from becoming unchallengeable authority. Founders must be visible, limited, reviewable, replaceable, and first in line for correction.
+
+---
+
+## Appendix A - P-014 Preactivation Disclosure Record
+
+This appendix incorporates the durable P-014/P-020 disclosure record formerly maintained as a standalone file. It remains a source record for the dossier. It does not by itself prove founding legitimacy; it records the one-time preactivation materials that must be tested against the scope, conflict, objection, consent, exit, dignity-floor, and founder-sunset requirements above.
+
+**Founding instrument:** P-013 Bootstrap Resolution
+**Published by:** Threat Register Owner
+**Challenge window opened:** April 10, 2026
+**Challenge window closed:** June 9, 2026
+**Challenge channel:** [GitHub Issues - label `p014-challenge`](https://github.com/Sczitzo/humane-constitution/issues/new?template=p014-challenge.md)
+
+The disclosure fulfilled the Stage 1 disclosure requirement of Annex AH and AH2 (P-020). It opened a 60-day public challenge window under AH2.1. No activation steps could proceed until the window closed and all filed structural challenges received written substantive responses. An unresponded structural challenge extended the window by 14 days, non-cumulatively.
+
+### Circular Dependency Analysis
+
+P-013 hardens the Formal Acceptance Protocol (FAP) against capture by adding pilot representativeness standards, deadlock timelines, audit independence requirements, and anti-gaming rules. The FAP normally activates patches, including P-013. That creates the T-017 bootstrap loop: P-013 governs the FAP, while the FAP governs P-013's activation.
+
+Three alternatives were rejected:
+
+- waiving P-013's standards for its own activation, because that would make the hardening patch's first act sanction the exploit it was designed to prevent;
+- amending the FAP first, because that amendment would still need the unhardened FAP and would regress into the same loop;
+- using emergency governance, because emergency paths are for operational continuity, not governance evolution, and would normalize emergency bypass for non-emergency patch acceptance.
+
+The disclosure therefore treated P-014 as a one-time founding instrument: a named, limited exception for activating P-013 only.
+
+### Founding Exception Limits
+
+P-014 may activate P-013 and nothing else. It may not be invoked for another patch, used as urgency-bypass precedent, used to modify P-013's scope, or used to create ongoing governance power. These constraints are Tier 2 protected under AH1 and cannot be removed without an H-2 amendment process.
+
+Once P-013 reaches ACTIVE status, P-014 closes permanently. There is no reopening, emergency extension, or analogical application.
+
+If the AH6 post-activation audit, due within 90 days of activation, finds that the P-014 process was compromised by capture, gamed case selection, undisclosed side agreements, or similar defects, the finding must be published immediately. P-013 is suspended, not revoked, and resubmitted through the now-operative hardened FAP. P-014's non-precedent status remains intact.
+
+### Proposed Activation Panel
+
+P-014 requires a five-member founding panel in place of the standard sign-off authorities. All members must be disclosed before activation begins and must attest, with external verification, that they have not co-published, co-presented, or held institutional affiliation with any P-013 design team member in the prior five years.
+
+| Seat | Selection basis | Conflict disclosure requirement |
+|---|---|---|
+| Threat Register Owner | Ex officio | Full disclosure of all contributions to P-013 design |
+| CRP Reserve Member | Lot-drawn from reserve pool; not involved in P-013 design or review | Attestation and external verification |
+| External Systems Reviewer | Nominated for expertise not represented in the P-013 design team | Attestation and external verification |
+| Ombuds Office Officer | Ex officio Ombuds designee | Standard Ombuds conflict screening, published |
+| Public-Interest Advocate | Lot-drawn from founding petition pool; no affiliation with institutions that co-designed or funded P-013 work | Attestation and external verification |
+
+One adversarial panel member must have a documented professional history of arguing against process-hardening mechanisms. Under AH2.3, that member may not be nominated by the same process as the other four members; the nominating body must be structurally opposed to or independent from the founding coalition, and its rationale must be published before the challenge window opens. The adversarial member's written dissent is published regardless of the panel vote.
+
+### Activation Sequence
+
+| Stage | What happens | AH clause |
+|---|---|---|
+| Stage 1 | Disclosure published; 60-day challenge window open; oppose-coalition nominating body and rationale published. | AH2 |
+| Stage 2 | Founding panel confirmed; conflict attestations externally verified; 4-of-5 sign-off required. | AH3 |
+| Stage 3 | Substitute evidence standard: desk review of 3+ real-world analogues selected by the adversarial member, adversarial red-team analysis of P-013's remaining exploits, scope-limitation certification, and sunset compatibility check. | AH4 |
+| Stage 4 | P-013 moves to ACTIVE; P-014 closes permanently; full activation record published; non-precedent statement embedded with Tier 2 protection; 90-day post-activation audit commissioned. | AH5 |
+| Stage 5 | Post-activation audit completed using P-013's own now-operative standards. If sound, the record is permanently sealed. If compromised, P-013 is suspended and resubmitted. | AH6 |
+
+Once P-013 is ACTIVE, the next patches enter the FAP pilot stage in priority order: P-006 (PCRP), P-009 (Grace exploitation loop), P-005 (Governance throughput), P-011 (Narrative), P-008 bootstrap micro-patch, P-012 (Interface hardening), and the P-008 full package.
+
+### Challenge Standard
+
+A qualifying challenge identifies a specific flaw in the circular dependency analysis, founding exception statement, proposed panel composition, or P-014 design as specified in Annex AH. Objections to P-013's substance belong in the standard review process once P-013 is ACTIVE. Broader objections to protocol design belong in repository issues under the standard critique template.
+
+A structural challenge identifies a specific P-013 standard not met by P-014 and must receive a written response before the window closes. A process challenge that does not identify a specific P-013 standard gap is acknowledged but does not extend the window.
+
+### Non-Precedent Statement
+
+P-014 is invoked once, for P-013 only, because no other process was available. It may not be cited as authority for any future activation, exception, or urgency bypass. Any invocation of P-014 logic for any purpose, including as historical analogy, requires an H-2 amendment process before it takes effect.

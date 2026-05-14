@@ -158,6 +158,6 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | ACL-010 / T-027 | P-059 | PROPOSED | Vulnerable_Population_Consent_Protocol | Founding |
 | ACL-005 / T-008 | P-060 | PROPOSED | Founding_Team_Composition_Standard | Founding |
 | ACL-007 | P-061 | PROPOSED | Founding_Capital_Framework | Founding |
-| ACL-011 / ACL-010 | P-062 | PROPOSED | Pilot_Timeline_Framework | Founding |
+| ACL-011 / ACL-010 | P-062 | PROPOSED | Pilot_Evidence_Roadmap - Pilot Operations And Timeline Framework | Founding |
 
 *P-014 marks its unique status as a one-time founding instrument. 28 total threats. 27 ACTIVE patches. 8 PROPOSED patches (P-018 electoral staggering, awaiting pilot; P-056 open-access survival floor; P-057 through P-062 pilot town founding framework). 1 FOUNDING instrument (P-014). P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. P-056 operationalizes INV-001 two-tier access model. P-057–P-062 establish operational framework for first real-persons pilot town. Bootstrap problem resolved. Acceptance sequence unblocked.*

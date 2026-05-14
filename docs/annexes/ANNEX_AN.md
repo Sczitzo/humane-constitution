@@ -2,7 +2,7 @@
 
 > **Provenance:** Implements [P-019 — Pilot External Validity Gate] · Addresses T-023 · Status: **PROPOSED**
 
-**Status:** PROPOSED | **Priority:** Med-High | **Patch:** P-019
+**Status:** ACTIVE | **Priority:** Med-High | **Patch:** P-019
 **Threat addressed:** T-023 (Pilot External Validity Collapse)
 **Authority:** Tier 2. Strengthening (more conditions, larger window) is Tier 2; weakening (removing a stress condition, shortening the challenge window) is Tier 1.
 

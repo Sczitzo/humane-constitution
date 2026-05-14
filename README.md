@@ -114,7 +114,7 @@ npm run dev          # opens in browser at http://localhost:5173
 npm run tauri dev    # opens as a desktop window
 ```
 
-`npm run dev` and `npm run build` both regenerate the corpus first via `python3 ../scripts/export_corpus.py`, so the reader always reflects the live markdown on disk. To regenerate manually: `npm run generate:corpus`. To verify the generated corpus matches what's checked in: `npm run check:corpus`.
+`npm run dev` and `npm run build` both regenerate the corpus first via the repository Python launcher (`node ../scripts/run_python.mjs ../scripts/export_corpus.py`), so the reader always reflects the live markdown on disk. To regenerate manually: `npm run generate:corpus`. To verify the generated corpus matches what's checked in: `npm run check:corpus`.
 
 **Build a release binary:**
 
@@ -237,11 +237,10 @@ The constitution is built in five layers. Each layer depends on the one above it
 
 | Document | Purpose |
 |---|---|
-| [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) | First-principles collapse-state framing and source boundaries. |
-| [Collapse-State Crosswalk](./docs/governance/Collapse_State_Crosswalk.md) | Threat-by-threat map to Survival-Trade Bind, Power-Wealth Convergence, Static-Advantage Loop, and control-plane failure. |
+| [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) | First-principles collapse-state framing, source boundaries, and collapse-state threat crosswalk. |
 | [Fairness Vignette Library](./docs/governance/Fairness_Vignette_Library.md) | Realistic life scenarios and fairness pressure tests across different patterns of work, care, status, and need. |
 | [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md) | Public claim status, evidence needs, and proof gaps. |
-| [Corpus Refinement Roadmap](./docs/governance/Corpus_Refinement_Roadmap.md) | Rewrite priorities for making the corpus more legible, curious, rigorous, and less skepticism-triggering. |
+| [Open Problems Resolution Docket](./docs/governance/Open_Problems_Resolution_Docket.md) | Open risk work, integrated hardening roadmap, and corpus refinement workstream. |
 | [Evidence Ladder](./docs/governance/Evidence_Ladder.md) | Upgrade and downgrade rules for claim strength. |
 | [Abuse Case Library](./docs/governance/Abuse_Case_Library.md) | Reusable adversarial patterns used to pressure-test patches and public claims. |
 | [Founding Legitimacy Dossier](./docs/governance/Founding_Legitimacy_Dossier.md) | Evidence burden for any founding coalition before activation claims. |
@@ -259,7 +258,7 @@ The constitution is built in five layers. Each layer depends on the one above it
 | [Humane Constitution](./docs/constitution/Humane_Constitution.md) | Primary rule text, with links into the standalone annex corpus. |
 | [Threat Register](./docs/governance/Threat_Register.md) | Known attack paths, design-state counts, mitigation posture, and residual-risk notes. |
 | [Patch Log](./docs/governance/Patch_Log.md) | Change history and current patch inventory, including ACTIVE and PROPOSED status. |
-| [Hardening Queue](./docs/governance/Hardening_Queue.md) | Red-team hardening queue — session history, closed items, open items, and standing simulation requirements. |
+| [Open Problems Resolution Docket](./docs/governance/Open_Problems_Resolution_Docket.md) | Red-team hardening work, open items, and standing simulation requirements. |
 | [Acceptance Protocol](./docs/constitution/Acceptance_Protocol.md) | Process for moving patches from design to operation. |
 
 ## Technical Specifications
@@ -270,7 +269,7 @@ The constitution is built in five layers. Each layer depends on the one above it
 | [Formal Specifications](./docs/constitution/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
 | [Adversarial Narrative Simulation](./docs/simulations/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
 | [Annual Compound Simulation](./docs/simulations/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
-| [Founding Pre-Activation Disclosure](./docs/governance/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
+| [Founding Legitimacy Dossier](./docs/governance/Founding_Legitimacy_Dossier.md) | Founding legitimacy evidence, artifact status, and pre-activation disclosure record. |
 | [Simulation Model Outline](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
@@ -281,9 +280,9 @@ The annex corpus now lives entirely as standalone documents. Use the [Annex Dire
 
 The repository includes a corpus validator for the live constitutional document set:
 
-- `python3 -m pip install -e .[test]` installs the reproducible simulation and test dependencies.
-- `python3 scripts/validate_corpus.py` checks local markdown links, annex-index coverage, FC/T/P identifier integrity, and deprecated live terminology.
-- `python3 -m pytest -q` runs the simulation test suite from the packaged environment.
+- `py -3 -m pip install -e .[test]` on Windows, or `python3 -m pip install -e .[test]` on Unix-like systems, installs the reproducible simulation and test dependencies.
+- `node scripts/run_python.mjs scripts/validate_corpus.py` checks local markdown links, annex-index coverage, FC/T/P identifier integrity, and deprecated live terminology.
+- `py -3 -m pytest -q` on Windows, or `python3 -m pytest -q` on Unix-like systems, runs the simulation test suite from the packaged environment.
 - `npm run check:corpus` from `app/` regenerates the reader corpus and fails if generated files are not committed.
 - GitHub Actions runs the same validator on every push and pull request, alongside frontend build, generated-corpus drift, and reader regression checks.
 

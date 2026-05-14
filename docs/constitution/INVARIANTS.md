@@ -164,9 +164,9 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 ## INV-010 — Succession Serves Continuity
 
-**Statement:** Inheritance mechanisms may transfer primary residence and working tools without limit. All other Flow-equivalent transfers above the household savings floor route through a published commons-return process at the rate defined in [Article V](Humane_Constitution.md#article-v-markets-commons--public-finance). The rate is a Tier 2 founding commitment that must be set before deployment.
+**Statement:** Inheritance mechanisms may transfer primary residence and working tools without limit. All other Flow-equivalent transfers above the household savings floor route through a published commons-return process at the rate defined in [Article V](Humane_Constitution.md#article-v-markets-commons-public-finance). The rate is a Tier 2 founding commitment that must be set before deployment.
 
-**Mechanical boundary:** A transfer is a succession transfer if it occurs at death or through an irrevocable inter-vivos trust that removes the transferor's beneficial control. Succession transfers of primary-residence use-rights and working tools (productive capital in active use by the decedent) are exempt. All other succession transfers above the household savings floor are subject to the commons-return rate in [Article V](Humane_Constitution.md#article-v-markets-commons--public-finance).
+**Mechanical boundary:** A transfer is a succession transfer if it occurs at death or through an irrevocable inter-vivos trust that removes the transferor's beneficial control. Succession transfers of primary-residence use-rights and working tools (productive capital in active use by the decedent) are exempt. All other succession transfers above the household savings floor are subject to the commons-return rate in [Article V](Humane_Constitution.md#article-v-markets-commons-public-finance).
 
 **Why this matters:** Succession is the primary mechanism by which dynastic wealth recreates itself across generations without labor. The exemption for home and tools protects genuine continuity; the commons-return rate on everything else prevents the accumulation of heritable economic dominance.
 
@@ -230,13 +230,13 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 
 **Statement:** The five Founding Order operational documents — `founding/order/subsidiarity_rule.md`, `founding/order/consent_protocol.md`, `founding/order/exit_protocol.md`, `founding/order/reentry_protocol.md`, and `founding/order/jurisdictional_scales.md` — are Tier 1 protected. They may not be amended, superseded, or removed by any Tier 2 or Tier 3 process. Changes to these files require the same 7-of-9 keyholder signatures (FC-110) and 180-day timelock (FC-111) as any other Tier 1 amendment.
 
-**Mechanical boundary:** The five listed files are explicitly included in the Tier 1 amendment scope alongside `Humane_Constitution.md §0`, `architecture/parameter_registry.md Tier 1 rows`, `Annex Y §Y1`, and `/founding/commitments.md Tier 1 rows`. The exit right (FC-120/121) and the consent threshold governing community adoption are Tier 1 parameters. Any patch tagged `modifies_tier1=True` that touches these files is subject to the two-key precondition ([ANNEX_AV §AV1](../annexes/ANNEX_AV.md#av1--two-key-precondition)) before FAP intake.
+**Mechanical boundary:** The five listed files are explicitly included in the Tier 1 amendment scope alongside `Humane_Constitution.md §0`, `architecture/parameter_registry.md Tier 1 rows`, `Annex Y §Y1`, and `/founding/commitments.md Tier 1 rows`. The exit right (FC-120/121) and the consent threshold governing community adoption are Tier 1 parameters. Any patch tagged `modifies_tier1=True` that touches these files is subject to the two-key precondition ([ANNEX_AV §AV1](../annexes/ANNEX_AV.md#av1-two-key-precondition)) before FAP intake.
 
 **Why this matters:** The consent and exit rules are the foundational legitimacy architecture. A Tier 2 amendment process that could restructure exit rights or consent thresholds without the 7-of-9 + 180-day gate would allow the governing coalition to entrench itself or block community departure through ordinary political process — precisely the threat these documents are designed to prevent.
 
 **Attack vectors:** T-022 (electoral cycle capture targeting the exit mechanism); PRD-009 (dynasty formation securing permanent institutional control by eliminating exit as a check).
 
-**Violation detection:** Any patch that modifies a Founding Order file without a valid Tier 1 attestation envelope ([ANNEX_AV §AV8](../annexes/ANNEX_AV.md#av8--attestation-envelope-format)) is rejected at FAP intake as a Tier 1 violation under INV-007. Implementation drift that operationally narrows exit rights or consent thresholds without a valid Tier 1 amendment record is a drift-warning event per [ANNEX_AV §AV9](../annexes/ANNEX_AV.md#av9--intake-verification-procedure).
+**Violation detection:** Any patch that modifies a Founding Order file without a valid Tier 1 attestation envelope ([ANNEX_AV §AV8](../annexes/ANNEX_AV.md#av8-attestation-envelope-format)) is rejected at FAP intake as a Tier 1 violation under INV-007. Implementation drift that operationally narrows exit rights or consent thresholds without a valid Tier 1 amendment record is a drift-warning event per [ANNEX_AV §AV9](../annexes/ANNEX_AV.md#av9-intake-verification-procedure).
 
 ---
 

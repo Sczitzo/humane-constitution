@@ -84,4 +84,4 @@ This keeps annexes navigable without weakening their legal or technical precisio
 
 ## Audit history
 
-The 2026-04-25 review removed annexes D and O (no operative content; superseded by AJ + Q), merged G into H/L/V, R into J + U, W into P, and AA into N + U + X. Annexes AM, AN, AP, AV were created from existing Patch Log + Acceptance Protocol context to close dangling references.
+The 2026-04-25 review removed annexes D and O (no operative content; superseded by AJ + Q), merged G into H/L/V, R into J + U, W into P, and AA into N + U + X. Annexes E, F, and AU are intentionally unused/reserved so existing citations do not shift. Annexes AM, AN, AP, AV were created from existing Patch Log + Acceptance Protocol context to close dangling references.

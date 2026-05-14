@@ -224,7 +224,7 @@ Run fifth. Requires that the Conservative Hold protocol is documented and that a
 
 **Priority 6 — Adversarial Oracle Seat Test (Test 4.8)**
 
-Run sixth, concurrent with or immediately after the oracle failure drill. Requires an operational adversarial seat. Update [Hardening\_Queue.md](./Hardening_Queue.md) with any procedural barrier findings.
+Run sixth, concurrent with or immediately after the oracle failure drill. Requires an operational adversarial seat. Update the [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) with any procedural barrier findings.
 
 **Priority 7 — Synthetic Shock Simulation (Test 4.7)**
 
@@ -243,7 +243,7 @@ Run last. Requires a near-final dashboard implementation. Comprehension test res
 - [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) — open problems relating to oracle independence and measurement lag
 - [Threat Resolution Matrix](./Threat_Resolution_Matrix.md) — control status for T-006, T-020, T-021, T-024
 - [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md) — sequencing and resource requirements for physical sampling and oracle drills
-- [Hardening Queue](./Hardening_Queue.md) — items pending constitutional hardening that depend on measurement evidence
+- [Open Problems Resolution Docket](./Open_Problems_Resolution_Docket.md) — items pending constitutional hardening that depend on measurement evidence
 - [ANNEX\_AL.md](../annexes/ANNEX_AL.md) — capacity measurement annex: methodology-class requirements, oracle architecture, and evidence class rules
 - [Threat Register — T-006](./Threat_Register.md) — Measurement Lag / Supply Shock
 - [Threat Register — T-020](./Threat_Register.md) — Measurement Source Corruption
