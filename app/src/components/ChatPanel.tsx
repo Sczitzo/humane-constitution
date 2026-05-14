@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport, type UIMessage } from 'ai'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import type { CorpusPayload } from '../generated/corpus'
 
 const transport = new DefaultChatTransport({ api: '/api/chat' })
 
@@ -14,12 +15,30 @@ const SUGGESTED = [
   'What threats does P-020 address?',
 ]
 
-export function ChatPanel() {
+interface ChatPanelProps {
+  corpus: CorpusPayload | null
+  onNavigateToDoc: (docId: string) => void
+}
+
+export function ChatPanel({ corpus, onNavigateToDoc }: ChatPanelProps) {
   const { messages, sendMessage, status, error } = useChat({ transport })
   const [input, setInput] = useState('')
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const isLoading = status === 'submitted' || status === 'streaming'
+
+  // Build source-path → docId lookup from corpus
+  const sourceToDocId = useMemo(() => {
+    const map = new Map<string, string>()
+    if (!corpus) return map
+    for (const doc of corpus.docs) {
+      // doc.path is like "docs/constitution/Humane_Constitution.md"
+      // source in AI response links is like "constitution/Humane_Constitution.md"
+      const source = doc.path.replace(/^docs\//, '')
+      map.set(source, doc.id)
+    }
+    return map
+  }, [corpus])
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -39,26 +58,53 @@ export function ChatPanel() {
     }
   }
 
+  function LinkRenderer({ href, children }: { href?: string; children?: React.ReactNode }) {
+    if (href) {
+      const docId = sourceToDocId.get(href)
+      if (docId) {
+        return (
+          <button
+            onClick={() => onNavigateToDoc(docId)}
+            className="text-accent underline underline-offset-2 hover:text-accent-deep cursor-pointer bg-transparent border-none p-0 font-[inherit] text-[inherit]"
+          >
+            {children}
+          </button>
+        )
+      }
+    }
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent underline underline-offset-2 hover:text-accent-deep"
+      >
+        {children}
+      </a>
+    )
+  }
+
   return (
-    <div className="flex flex-col h-full bg-paper dark:bg-paper rounded-xl border border-line overflow-hidden">
+    <div className="flex flex-col h-full bg-paper rounded-xl border border-line overflow-hidden">
+      {/* Header */}
+      <div className="px-4 py-3 border-b border-line flex items-center gap-2 bg-paper-strong shrink-0">
+        <div className="w-2 h-2 rounded-full bg-accent" />
+        <span className="text-xs font-medium text-ink-soft">Ask the Protocol</span>
+      </div>
 
-      {/* message list */}
-      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
-
+      {/* Message list */}
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-5 min-h-0">
         {messages.length === 0 && (
-          <div className="flex flex-col items-center gap-6 mt-8 px-2">
-            <div className="text-center space-y-1">
-              <p className="text-base font-medium text-ink">Ask the Protocol</p>
-              <p className="text-sm text-ink-soft">
-                Questions are grounded in the constitution, annexes, and threat registry.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-2 max-w-lg">
+          <div className="flex flex-col items-center gap-5 mt-4 px-1">
+            <p className="text-xs text-ink-soft text-center">
+              Answers grounded in the constitution, annexes, and threat registry.
+            </p>
+            <div className="flex flex-wrap justify-center gap-1.5">
               {SUGGESTED.map((q) => (
                 <button
                   key={q}
                   onClick={() => submit(q)}
-                  className="text-xs px-3 py-1.5 rounded-full border border-line bg-paper-strong hover:bg-accent-soft hover:border-accent text-ink-soft hover:text-ink transition-colors"
+                  className="text-[11px] px-2.5 py-1 rounded-full border border-line bg-paper-strong hover:bg-accent-soft hover:border-accent text-ink-soft hover:text-ink transition-colors"
                 >
                   {q}
                 </button>
@@ -70,18 +116,16 @@ export function ChatPanel() {
         {messages.map((m: UIMessage) => {
           const text = m.parts?.find((p) => p.type === 'text')?.text ?? ''
           const isUser = m.role === 'user'
-
           return (
-            <div key={m.id} className={`flex gap-3 ${isUser ? 'justify-end' : 'justify-start'}`}>
+            <div key={m.id} className={`flex gap-2 ${isUser ? 'justify-end' : 'justify-start'}`}>
               {!isUser && (
-                <div className="shrink-0 w-7 h-7 rounded-full bg-accent-soft border border-accent/30 flex items-center justify-center mt-0.5">
-                  <span className="text-accent text-xs font-semibold">AI</span>
+                <div className="shrink-0 w-6 h-6 rounded-full bg-accent-soft border border-accent/30 flex items-center justify-center mt-0.5">
+                  <span className="text-accent text-[9px] font-bold">AI</span>
                 </div>
               )}
-
               <div className={isUser
-                ? 'max-w-[72%] rounded-2xl rounded-tr-sm px-4 py-2.5 text-sm bg-accent text-paper leading-relaxed'
-                : 'max-w-[88%] rounded-2xl rounded-tl-sm px-4 py-3 text-sm bg-paper-strong border border-line text-ink leading-relaxed'
+                ? 'max-w-[78%] rounded-2xl rounded-tr-sm px-3 py-2 text-xs bg-accent text-paper leading-relaxed'
+                : 'max-w-[90%] rounded-2xl rounded-tl-sm px-3 py-2.5 text-xs bg-paper-strong border border-line text-ink leading-relaxed'
               }>
                 {isUser ? text : (
                   <ReactMarkdown
@@ -92,29 +136,30 @@ export function ChatPanel() {
                       em: ({ children }) => <em className="italic">{children}</em>,
                       ul: ({ children }) => <ul className="list-disc list-inside mb-2 space-y-0.5">{children}</ul>,
                       ol: ({ children }) => <ol className="list-decimal list-inside mb-2 space-y-0.5">{children}</ol>,
-                      li: ({ children }) => <li className="text-ink">{children}</li>,
-                      code: ({ children, className }) => {
+                      li: ({ children }) => <li>{children}</li>,
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      a: ({ href, children }: any) => <LinkRenderer href={href} children={children} />,
+                      code: ({ children, className }: { children?: React.ReactNode; className?: string }) => {
                         const isBlock = className?.includes('language-')
                         return isBlock
-                          ? <code className="block bg-paper border border-line rounded px-3 py-2 font-mono text-xs my-2 overflow-x-auto">{children}</code>
-                          : <code className="bg-paper border border-line rounded px-1 py-0.5 font-mono text-xs">{children}</code>
+                          ? <code className="block bg-paper border border-line rounded px-2 py-1.5 font-mono text-[10px] my-1.5 overflow-x-auto">{children}</code>
+                          : <code className="bg-paper border border-line rounded px-1 py-0.5 font-mono text-[10px]">{children}</code>
                       },
                       blockquote: ({ children }) => (
-                        <blockquote className="border-l-2 border-accent pl-3 italic text-ink-soft my-2">{children}</blockquote>
+                        <blockquote className="border-l-2 border-accent pl-2 italic text-ink-soft my-2">{children}</blockquote>
                       ),
-                      h1: ({ children }) => <h1 className="font-semibold text-base text-ink-strong mb-1">{children}</h1>,
-                      h2: ({ children }) => <h2 className="font-semibold text-sm text-ink-strong mb-1">{children}</h2>,
-                      h3: ({ children }) => <h3 className="font-medium text-sm text-ink mb-1">{children}</h3>,
+                      h1: ({ children }) => <h1 className="font-semibold text-sm text-ink-strong mb-1">{children}</h1>,
+                      h2: ({ children }) => <h2 className="font-semibold text-xs text-ink-strong mb-1">{children}</h2>,
+                      h3: ({ children }) => <h3 className="font-medium text-xs text-ink mb-1">{children}</h3>,
                     }}
                   >
                     {text}
                   </ReactMarkdown>
                 )}
               </div>
-
               {isUser && (
-                <div className="shrink-0 w-7 h-7 rounded-full bg-accent flex items-center justify-center mt-0.5">
-                  <span className="text-paper text-xs font-semibold">You</span>
+                <div className="shrink-0 w-6 h-6 rounded-full bg-accent flex items-center justify-center mt-0.5">
+                  <span className="text-paper text-[9px] font-bold">You</span>
                 </div>
               )}
             </div>
@@ -122,11 +167,11 @@ export function ChatPanel() {
         })}
 
         {isLoading && (
-          <div className="flex gap-3 justify-start">
-            <div className="shrink-0 w-7 h-7 rounded-full bg-accent-soft border border-accent/30 flex items-center justify-center">
-              <span className="text-accent text-xs font-semibold">AI</span>
+          <div className="flex gap-2 justify-start">
+            <div className="shrink-0 w-6 h-6 rounded-full bg-accent-soft border border-accent/30 flex items-center justify-center">
+              <span className="text-accent text-[9px] font-bold">AI</span>
             </div>
-            <div className="rounded-2xl rounded-tl-sm px-4 py-3 bg-paper-strong border border-line">
+            <div className="rounded-2xl rounded-tl-sm px-3 py-2.5 bg-paper-strong border border-line">
               <span className="flex gap-1 items-center">
                 <span className="w-1.5 h-1.5 rounded-full bg-ink-faint animate-bounce [animation-delay:0ms]" />
                 <span className="w-1.5 h-1.5 rounded-full bg-ink-faint animate-bounce [animation-delay:150ms]" />
@@ -137,15 +182,15 @@ export function ChatPanel() {
         )}
 
         {error && (
-          <p className="text-center text-xs text-red-500 dark:text-red-400 px-4">{error.message}</p>
+          <p className="text-center text-[11px] text-red-500 px-3">{error.message}</p>
         )}
 
         <div ref={bottomRef} />
       </div>
 
-      {/* input bar */}
-      <div className="border-t border-line bg-paper px-3 py-3">
-        <div className="flex items-end gap-2 rounded-xl border border-line bg-paper-strong px-3 py-2 focus-within:border-accent/60 focus-within:ring-1 focus-within:ring-accent/20 transition-all">
+      {/* Input */}
+      <div className="border-t border-line bg-paper px-3 py-2.5 shrink-0">
+        <div className="flex items-end gap-2 rounded-xl border border-line bg-paper-strong px-2.5 py-1.5 focus-within:border-accent/60 focus-within:ring-1 focus-within:ring-accent/20 transition-all">
           <textarea
             ref={inputRef}
             rows={1}
@@ -153,25 +198,22 @@ export function ChatPanel() {
             onChange={(e) => {
               setInput(e.target.value)
               e.target.style.height = 'auto'
-              e.target.style.height = Math.min(e.target.scrollHeight, 120) + 'px'
+              e.target.style.height = Math.min(e.target.scrollHeight, 100) + 'px'
             }}
             onKeyDown={handleKeyDown}
-            placeholder="Ask about the protocol… (Enter to send)"
+            placeholder="Ask about the protocol…"
             disabled={isLoading}
-            className="flex-1 resize-none bg-transparent text-sm text-ink placeholder-ink-faint focus:outline-none leading-relaxed py-0.5 max-h-[120px] disabled:opacity-50"
-            style={{ height: '24px' }}
+            className="flex-1 resize-none bg-transparent text-xs text-ink placeholder-ink-faint focus:outline-none leading-relaxed py-0.5 max-h-[100px] disabled:opacity-50"
+            style={{ height: '20px' }}
           />
           <button
             onClick={() => submit(input)}
             disabled={isLoading || !input.trim()}
-            className="shrink-0 rounded-lg bg-accent hover:bg-accent-deep disabled:opacity-30 text-paper px-3 py-1.5 text-xs font-medium transition-colors mb-0.5"
+            className="shrink-0 rounded-lg bg-accent hover:bg-accent-deep disabled:opacity-30 text-paper px-2.5 py-1 text-[11px] font-medium transition-colors mb-0.5"
           >
             Send
           </button>
         </div>
-        <p className="text-[10px] text-ink-faint mt-1.5 text-center">
-          Shift+Enter for new line · answers grounded in protocol documents
-        </p>
       </div>
     </div>
   )

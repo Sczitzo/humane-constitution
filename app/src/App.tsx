@@ -168,7 +168,10 @@ export default function App() {
       allDocs={corpus?.docs ?? []}
     >
       {view === 'chat' ? (
-        <ChatPanel />
+        <ChatPanel corpus={corpus} onNavigateToDoc={(docId) => {
+          const doc = corpus?.docs.find((d) => d.id === docId)
+          if (doc) handleSelectNavDoc(doc)
+        }} />
       ) : (
         <Dashboard
           view={view}
