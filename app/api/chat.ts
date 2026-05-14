@@ -22,7 +22,11 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
 
   const body = await readBody(req);
   const { messages } = JSON.parse(body);
-  const userQuery: string = messages[messages.length - 1].content;
+  const lastMsg = messages[messages.length - 1];
+  const userQuery: string =
+    lastMsg.content ??
+    lastMsg.parts?.find((p: { type: string; text?: string }) => p.type === 'text')?.text ??
+    '';
 
   // 1. Embed the query
   const { embedding: queryEmbedding } = await embed({
