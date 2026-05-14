@@ -1,14 +1,27 @@
 // app/api/chat.ts
+import type { IncomingMessage, ServerResponse } from 'http';
 import { google } from '@ai-sdk/google';
 import { streamText, embed } from 'ai';
 import { createClient } from '@supabase/supabase-js';
 
-export default async function handler(req: Request): Promise<Response> {
+function readBody(req: IncomingMessage): Promise<string> {
+  return new Promise((resolve, reject) => {
+    let data = '';
+    req.on('data', (chunk) => { data += chunk; });
+    req.on('end', () => resolve(data));
+    req.on('error', reject);
+  });
+}
+
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
   if (req.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 405 });
+    res.writeHead(405);
+    res.end('Method Not Allowed');
+    return;
   }
 
-  const { messages } = await req.json();
+  const body = await readBody(req);
+  const { messages } = JSON.parse(body);
   const userQuery: string = messages[messages.length - 1].content;
 
   // 1. Embed the query
@@ -30,7 +43,9 @@ export default async function handler(req: Request): Promise<Response> {
   });
 
   if (error) {
-    return new Response(`Retrieval error: ${error.message}`, { status: 500 });
+    res.writeHead(500);
+    res.end(`Retrieval error: ${error.message}`);
+    return;
   }
 
   const context = docs?.length
@@ -49,5 +64,14 @@ ${context}`,
     messages,
   });
 
-  return result.toUIMessageStreamResponse();
+  const response = result.toUIMessageStreamResponse();
+  res.writeHead(response.status, Object.fromEntries(response.headers.entries()));
+  const reader = response.body!.getReader();
+  const decoder = new TextDecoder();
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    res.write(decoder.decode(value));
+  }
+  res.end();
 }
