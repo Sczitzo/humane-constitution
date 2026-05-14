@@ -3083,6 +3083,31 @@ const READING_PATHS: ReadingPathDef[] = [
     ],
   },
   {
+    id: 'identity-personhood',
+    title: 'Identity & Personhood',
+    description: 'Proof-of-personhood, identity tradeoffs, error doctrine, and residency. The layer everything else depends on.',
+    steps: [
+      { path: 'docs/annexes/ANNEX_P.md', note: 'Start here. The core identity architecture — proof-of-personhood, the tradeoffs the design accepts, and the red lines it will not cross. Every other instrument depends on this layer being sound.' },
+      { path: 'docs/annexes/ANNEX_I.md', note: 'Residency, migration, and onboarding. Watch for how the system handles people who move, arrive, or exist in overlapping jurisdictions.' },
+      { path: 'docs/annexes/ANNEX_AK.md', note: 'Asymmetric error doctrine — how false-negatives (excluding someone who belongs) and false-positives (admitting someone who doesn\'t) are weighted. The design choice here has large equity consequences.' },
+      { path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md', note: 'The evidence requirements for identity recovery. This is the hardest edge case: what happens when someone loses access and needs to prove they are who they say they are.' },
+    ],
+  },
+  {
+    id: 'governance-deep',
+    title: 'Governance Deep Dive',
+    description: 'The full adversarial and evidence stack. For auditors, researchers, and red-teamers.',
+    steps: [
+      { path: 'docs/governance/Threat_Register.md', note: 'Start here. Every catalogued failure mode — read through the full list before forming a view on whether any single threat is handled well.' },
+      { path: 'docs/governance/Patch_Log.md', note: 'Structural responses to each threat. Cross-reference with the Threat Register: every threat should have a corresponding patch, or be marked open.' },
+      { path: 'docs/governance/Threat_Resolution_Matrix.md', note: 'Which threats are resolved, partially addressed, or still open. This is the honest audit summary — the open column is where the real work remains.' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert. Watch for claims that are marked "designed" but not yet tested — those are the assurance gaps.' },
+      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'The staged testing path — what must be demonstrated before the design can be considered validated at each scale.' },
+      { path: 'docs/governance/Founding_Preactivation_Disclosure.md', note: 'Pre-activation truth conditions. The project\'s own statement of what must be true before it is legitimate to activate — a useful benchmark for auditors.' },
+      { path: 'docs/governance/Founding_Legitimacy_Dossier.md', note: 'The founding legitimacy record. End here — this is where to check whether the artifacts the project says are required actually exist yet.' },
+    ],
+  },
+  {
     id: 'implementer',
     title: 'Implementation Track',
     description: 'For those building or auditing a pilot. Specifications, operational mechanics, and the numerical lock-file.',
@@ -3109,17 +3134,6 @@ const READING_PATHS: ReadingPathDef[] = [
     ],
   },
   {
-    id: 'identity-personhood',
-    title: 'Identity & Personhood',
-    description: 'Proof-of-personhood, identity tradeoffs, error doctrine, and residency. The layer everything else depends on.',
-    steps: [
-      { path: 'docs/annexes/ANNEX_P.md', note: 'Start here. The core identity architecture — proof-of-personhood, the tradeoffs the design accepts, and the red lines it will not cross. Every other instrument depends on this layer being sound.' },
-      { path: 'docs/annexes/ANNEX_I.md', note: 'Residency, migration, and onboarding. Watch for how the system handles people who move, arrive, or exist in overlapping jurisdictions.' },
-      { path: 'docs/annexes/ANNEX_AK.md', note: 'Asymmetric error doctrine — how false-negatives (excluding someone who belongs) and false-positives (admitting someone who doesn\'t) are weighted. The design choice here has large equity consequences.' },
-      { path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md', note: 'The evidence requirements for identity recovery. This is the hardest edge case: what happens when someone loses access and needs to prove they are who they say they are.' },
-    ],
-  },
-  {
     id: 'architectural-integrity',
     title: 'Architectural Integrity',
     description: 'How the Tier 1 invariants are cryptographically locked against silent drift. For engineers and security reviewers.',
@@ -3129,20 +3143,6 @@ const READING_PATHS: ReadingPathDef[] = [
       { path: 'architecture/drift_chain.md', note: 'The append-only hash chain used for tamper detection. Read this to understand how silent parameter drift would be caught at startup.' },
       { path: 'architecture/implementation_binding.md', note: 'The binding requirement: every operational service must verify the chain before running. This is where the cryptographic guarantee becomes an operational constraint.' },
       { path: 'docs/annexes/ANNEX_AV.md', note: 'The two-key architectural precondition for Tier 1 invariant enforcement. Without this, the locks described in the previous documents are not enforceable.' },
-    ],
-  },
-  {
-    id: 'governance-deep',
-    title: 'Governance Deep Dive',
-    description: 'The full adversarial and evidence stack. For auditors, researchers, and red-teamers.',
-    steps: [
-      { path: 'docs/governance/Threat_Register.md', note: 'Start here. Every catalogued failure mode — read through the full list before forming a view on whether any single threat is handled well.' },
-      { path: 'docs/governance/Patch_Log.md', note: 'Structural responses to each threat. Cross-reference with the Threat Register: every threat should have a corresponding patch, or be marked open.' },
-      { path: 'docs/governance/Threat_Resolution_Matrix.md', note: 'Which threats are resolved, partially addressed, or still open. This is the honest audit summary — the open column is where the real work remains.' },
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert. Watch for claims that are marked "designed" but not yet tested — those are the assurance gaps.' },
-      { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'The staged testing path — what must be demonstrated before the design can be considered validated at each scale.' },
-      { path: 'docs/governance/Founding_Preactivation_Disclosure.md', note: 'Pre-activation truth conditions. The project\'s own statement of what must be true before it is legitimate to activate — a useful benchmark for auditors.' },
-      { path: 'docs/governance/Founding_Legitimacy_Dossier.md', note: 'The founding legitimacy record. End here — this is where to check whether the artifacts the project says are required actually exist yet.' },
     ],
   },
 ]
