@@ -1,16 +1,25 @@
-import { useEffect, useRef } from 'react'
-import { useChat } from 'ai/react'
+import { useState, useEffect, useRef } from 'react'
+import { useChat } from '@ai-sdk/react'
+import { DefaultChatTransport, type UIMessage } from 'ai'
+
+const transport = new DefaultChatTransport({ api: '/api/chat' })
 
 export function ChatPanel() {
-  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
-    api: '/api/chat',
-  })
-
+  const { messages, sendMessage, status, error } = useChat({ transport })
+  const [input, setInput] = useState('')
   const bottomRef = useRef<HTMLDivElement>(null)
+  const isLoading = status === 'submitted' || status === 'streaming'
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, isLoading])
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!input.trim() || isLoading) return
+    sendMessage({ text: input })
+    setInput('')
+  }
 
   return (
     <div className="flex flex-col h-full bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
@@ -22,22 +31,25 @@ export function ChatPanel() {
           </p>
         )}
 
-        {messages.map((m) => (
-          <div
-            key={m.id}
-            className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
-          >
+        {messages.map((m: UIMessage) => {
+          const text = m.parts?.find((p) => p.type === 'text')?.text ?? ''
+          return (
             <div
-              className={
-                m.role === 'user'
-                  ? 'max-w-[75%] rounded-2xl rounded-tr-sm px-4 py-2.5 text-sm bg-blue-600 text-white'
-                  : 'max-w-[75%] rounded-2xl rounded-tl-sm px-4 py-2.5 text-sm bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100'
-              }
+              key={m.id}
+              className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
-              {m.content}
+              <div
+                className={
+                  m.role === 'user'
+                    ? 'max-w-[75%] rounded-2xl rounded-tr-sm px-4 py-2.5 text-sm bg-blue-600 text-white'
+                    : 'max-w-[75%] rounded-2xl rounded-tl-sm px-4 py-2.5 text-sm bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100'
+                }
+              >
+                {text}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
 
         {isLoading && (
           <div className="flex justify-start">
@@ -66,7 +78,7 @@ export function ChatPanel() {
       >
         <input
           value={input}
-          onChange={handleInputChange}
+          onChange={(e) => setInput(e.target.value)}
           placeholder="Ask about the protocol…"
           className="flex-1 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-2 text-sm placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           disabled={isLoading}
