@@ -11,7 +11,6 @@ export type AppView =
   | 'paths'
   | 'validation'
   | 'settings'
-  | 'chat'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -36,7 +35,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'topics', label: 'Topics' },
   { id: 'paths', label: 'Reading Paths' },
   { id: 'validation', label: 'Validation' },
-  { id: 'chat', label: 'Ask AI' },
 ]
 
 // ── appearance settings ───────────────────────────────────────────────────────

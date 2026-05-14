@@ -2,7 +2,7 @@ import { startTransition, useEffect, useRef, useState } from 'react'
 import { Layout, type AppView } from './components/Layout'
 import { Dashboard } from './components/Dashboard'
 import { LandingPage } from './components/LandingPage'
-import { ChatPanel } from './components/ChatPanel'
+import { ChatBubble } from './components/ChatBubble'
 import { loadCorpus, type CorpusDoc, type CorpusPayload } from './generated/corpus'
 
 const VIEW_STORAGE_KEY = 'humane-reader:last-view'
@@ -36,8 +36,7 @@ function readStoredView(): AppView {
     value === 'topics' ||
     value === 'paths' ||
     value === 'validation' ||
-    value === 'settings' ||
-    value === 'chat'
+    value === 'settings'
   ) {
     // Map legacy 'overview' and 'settings' → 'home'.
     return (value === 'overview' || value === 'settings') ? 'home' : value
@@ -156,23 +155,18 @@ export default function App() {
   }
 
   return (
-    <Layout
-      activeNav={view}
-      onNavChange={handleNavChange}
-      onLogoClick={handleLogoClick}
-      readingProgress={readingProgress}
-      recentDocs={recentDocs}
-      shelfDocs={shelfDocs}
-      shelfLabel={shelfLabel}
-      onSelectDoc={handleSelectNavDoc}
-      allDocs={corpus?.docs ?? []}
-    >
-      {view === 'chat' ? (
-        <ChatPanel corpus={corpus} onNavigateToDoc={(docId) => {
-          const doc = corpus?.docs.find((d) => d.id === docId)
-          if (doc) handleSelectNavDoc(doc)
-        }} />
-      ) : (
+    <>
+      <Layout
+        activeNav={view}
+        onNavChange={handleNavChange}
+        onLogoClick={handleLogoClick}
+        readingProgress={readingProgress}
+        recentDocs={recentDocs}
+        shelfDocs={shelfDocs}
+        shelfLabel={shelfLabel}
+        onSelectDoc={handleSelectNavDoc}
+        allDocs={corpus?.docs ?? []}
+      >
         <Dashboard
           view={view}
           corpus={corpus}
@@ -187,7 +181,12 @@ export default function App() {
           pendingPathId={pendingPathId}
           onPendingPathConsumed={() => setPendingPathId(null)}
         />
-      )}
-    </Layout>
+      </Layout>
+      <ChatBubble corpus={corpus} onNavigateToDoc={(docId) => {
+        if (!corpus) return
+        const doc = corpus.docs.find((d) => d.id === docId)
+        if (doc) handleSelectNavDoc(doc)
+      }} />
+    </>
   )
 }

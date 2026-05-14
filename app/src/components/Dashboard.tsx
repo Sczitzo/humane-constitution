@@ -637,11 +637,6 @@ const VIEW_META: Record<AppView, { title: string; subtitle: string; railLabel: s
     subtitle: 'This reader now prioritizes the corpus itself; remaining shell work is convenience tooling around it.',
     railLabel: 'Settings',
   },
-  chat: {
-    title: 'Ask the Protocol',
-    subtitle: 'Ask questions grounded in the governance documents.',
-    railLabel: 'Chat',
-  },
 }
 
 const SECTION_LABELS: Record<CorpusDoc['section'], string> = {

@@ -24,7 +24,6 @@ export function ChatBubble({ corpus, onNavigateToDoc }: ChatBubbleProps) {
             : 'opacity-0 scale-95 pointer-events-none',
         ].join(' ')}
       >
-        {/* @ts-expect-error Task 3 will add these props */}
         <ChatPanel corpus={corpus} onNavigateToDoc={onNavigateToDoc} />
       </div>
 
