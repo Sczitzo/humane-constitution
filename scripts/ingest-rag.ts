@@ -69,7 +69,7 @@ function chunkText(text: string): string[] {
 
 async function embedText(chunk: string): Promise<number[]> {
   const result = await embed({
-    model: google.textEmbeddingModel('gemini-embedding-001'),
+    model: google.textEmbeddingModel('gemini-embedding-001', { outputDimensionality: 768 }),
     value: chunk,
   });
   return result.embedding;
@@ -95,7 +95,7 @@ async function main() {
 
     const rows: { content: string; source: string; chunk_idx: number; embedding: number[] }[] = [];
     for (let i = 0; i < chunks.length; i++) {
-      if (i > 0) await new Promise(r => setTimeout(r, 250)); // rate limit
+      if (i > 0) await new Promise(r => setTimeout(r, 4200)); // 15 RPM free-tier limit
       const embedding = await embedText(chunks[i]);
       rows.push({ content: chunks[i], source, chunk_idx: i, embedding });
     }
