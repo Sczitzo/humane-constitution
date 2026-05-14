@@ -7,9 +7,11 @@ import { createClient } from '@supabase/supabase-js';
 function titleFromSource(source: string): string {
   const filename = source.split('/').pop() ?? source
   return filename
-    .replace(/\.md$/, '')
-    .replace(/_/g, ' ')
-    .replace(/^ANNEX /, 'Annex ')
+    .replace(/\.md$/i, '')
+    .replace(/_+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/^ANNEX /i, 'Annex ')
 }
 
 function readBody(req: IncomingMessage): Promise<string> {
@@ -29,11 +31,21 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 
   const body = await readBody(req);
-  const { messages } = JSON.parse(body);
-  const lastMsg = messages[messages.length - 1];
+  let messages: unknown[];
+  try {
+    const parsed = JSON.parse(body);
+    messages = parsed.messages;
+    if (!Array.isArray(messages) || messages.length === 0) throw new Error('invalid');
+  } catch {
+    res.writeHead(400);
+    res.end('Bad Request: invalid message body');
+    return;
+  }
+  const lastMsg = messages[messages.length - 1] as Record<string, unknown>;
   const userQuery: string =
-    lastMsg.content ??
-    lastMsg.parts?.find((p: { type: string; text?: string }) => p.type === 'text')?.text ??
+    (lastMsg.content as string | undefined) ??
+    (lastMsg.parts as Array<{ type: string; text?: string }> | undefined)
+      ?.find((p) => p.type === 'text')?.text ??
     '';
 
   // 1. Embed the query
