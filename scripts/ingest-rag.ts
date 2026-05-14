@@ -69,7 +69,7 @@ function chunkText(text: string): string[] {
 
 async function embedText(chunk: string): Promise<number[]> {
   const result = await embed({
-    model: google.textEmbeddingModel('gemini-embedding-001', { outputDimensionality: 768 }),
+    model: google.textEmbeddingModel('gemini-embedding-001'),
     value: chunk,
   });
   return result.embedding;
