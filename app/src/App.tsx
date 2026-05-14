@@ -2,6 +2,7 @@ import { startTransition, useEffect, useRef, useState } from 'react'
 import { Layout, type AppView } from './components/Layout'
 import { Dashboard } from './components/Dashboard'
 import { LandingPage } from './components/LandingPage'
+import { ChatPanel } from './components/ChatPanel'
 import { loadCorpus, type CorpusDoc, type CorpusPayload } from './generated/corpus'
 
 const VIEW_STORAGE_KEY = 'humane-reader:last-view'
@@ -35,7 +36,8 @@ function readStoredView(): AppView {
     value === 'topics' ||
     value === 'paths' ||
     value === 'validation' ||
-    value === 'settings'
+    value === 'settings' ||
+    value === 'chat'
   ) {
     // Map legacy 'overview' and 'settings' → 'home'.
     return (value === 'overview' || value === 'settings') ? 'home' : value
@@ -165,20 +167,24 @@ export default function App() {
       onSelectDoc={handleSelectNavDoc}
       allDocs={corpus?.docs ?? []}
     >
-      <Dashboard
-        view={view}
-        corpus={corpus}
-        loadError={loadError}
-        onViewChange={handleViewChange}
-        onProgressChange={setReadingProgress}
-        onNavDocsChange={handleNavDocsChange}
-        corpusQuery={corpusQuery}
-        onCorpusQueryChange={setCorpusQuery}
-        pendingDocTarget={pendingDocTarget}
-        onPendingDocTargetConsumed={() => setPendingDocTarget(null)}
-        pendingPathId={pendingPathId}
-        onPendingPathConsumed={() => setPendingPathId(null)}
-      />
+      {view === 'chat' ? (
+        <ChatPanel />
+      ) : (
+        <Dashboard
+          view={view}
+          corpus={corpus}
+          loadError={loadError}
+          onViewChange={handleViewChange}
+          onProgressChange={setReadingProgress}
+          onNavDocsChange={handleNavDocsChange}
+          corpusQuery={corpusQuery}
+          onCorpusQueryChange={setCorpusQuery}
+          pendingDocTarget={pendingDocTarget}
+          onPendingDocTargetConsumed={() => setPendingDocTarget(null)}
+          pendingPathId={pendingPathId}
+          onPendingPathConsumed={() => setPendingPathId(null)}
+        />
+      )}
     </Layout>
   )
 }
