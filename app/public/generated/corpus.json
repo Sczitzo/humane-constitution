@@ -12,7 +12,7 @@
     "threatCount": 28,
     "patchCount": 59,
     "validatorStatus": "pass",
-    "buildStamp": "corpus-d5e4597274b8"
+    "buildStamp": "corpus-e56c878a7366"
   },
   "docs": [
     {
@@ -5515,6 +5515,80 @@
       "headingCount": 7
     },
     {
+      "id": "founding__order__README_md",
+      "path": "founding/order/README.md",
+      "section": "founding_order",
+      "title": "Founding Order \u2014 Subsidiarity, Consent & Exit",
+      "status": "Status: ACTIVE \u2014 Proposal 5 close-out, 2026-04-18",
+      "statusBucket": "active",
+      "summary": "Every major operating component in the prior protocol operated under an implicit assumption: that the continental federation is the default scale of decision, and that participation is a standing condition rather than a renewable act. That assumption had three costs:",
+      "content": "# Founding Order \u2014 Subsidiarity, Consent & Exit\n\n**Status:** ACTIVE \u2014 Proposal 5 close-out, 2026-04-18\n**Authority:** Tier 1 (FC-120 exit supermajority, FC-121 unwind window, FC-122 scale tiers).\n**Scope:** Foundational layer beneath every constitutional article. The Founding Order defines *who consents to be governed by this protocol, at what scale, on what matters, and how they withdraw.*\n\n---\n\n## The Problem the Founding Order Resolves\n\nEvery major operating component in the prior protocol operated under an implicit assumption: that the continental federation is the default scale of decision, and that participation is a standing condition rather than a renewable act. That assumption had three costs:\n\n1. **It presumed consent without producing it.** A protocol that binds units which have not affirmatively consented is, in classical-liberal terms, coercive regardless of how just its internal rules are.\n2. **It centralized by default.** Decisions flowed upward unless the protocol explicitly authorized a smaller scale \u2014 the inverse of Ostrom's principle 2 (rules match local conditions) and of subsidiarity as articulated from Althusius through Catholic social teaching.\n3. **It had no exit.** Any internal protection is only as robust as the captors' willingness to honor it. Without a defined exit, a captured federation could narrow every protection to the point of meaninglessness and no unit would have a legitimate, published pathway out.\n\nThe Founding Order closes all three gaps at the architectural layer.\n\n## Plain-Language Guide\n\nThe Founding Order answers three reader questions:\n\n- Who agreed to join?\n- Who gets to decide which issues?\n- How can a place leave if the system stops serving it?\n\nThe answer is: the smallest capable group should decide, no place is bound unless it clearly joins, and any locality or larger unit can leave through a published process that protects ordinary people during the transition.\n\n---\n\n## The Three Rules\n\n### Rule 1 \u2014 Subsidiarity\n\nDecisions default to the smallest viable unit. The **Federation** (continental scope) is the exception, not the default. See `subsidiarity_rule.md` for the test that determines when an issue may move above the smallest capable scale.\n\n### Rule 2 \u2014 Consent-of-Founding\n\nNo unit is bound by the protocol without an affirmative, published consent event. Units that do not join keep their earlier arrangements, with one narrow exception: the human survival floor still applies. See `consent_protocol.md`.\n\n### Rule 3 \u2014 Exit\n\nAny unit of locality scale or larger may leave if **2/3 of resident personhoods** vote for exit (FC-120). The exit then takes **730 days** (FC-121), so people keep Essential Access during the transition, Flow remains portable, and civic balances decay normally. Re-entry is allowed through the same basic process in reverse. See `exit_protocol.md` and `reentry_protocol.md`.\n\n---\n\n## Jurisdictional Scales (FC-122)\n\n| Scale | Upper bound | Typical decision domain |\n| :--- | :--- | :--- |\n| **Household** | Family unit (no formal ceiling) | Home-level choices, care duties, basic household exchange |\n| **Neighborhood** | \u2264500 persons | Local coordination, shared wells/paths/commons, first-step dispute help |\n| **Locality** | \u22645,000 persons | Town-scale choices, local Shared Storehouse rules within federation limits, local CRP representation |\n| **Region** | \u2264500,000 persons | Regional measurement, enforcement, and delegation |\n| **Federation** | Continental scope | Core promises, instrument separation, cross-region disputes, issues no smaller scale can handle |\n\nSee `jurisdictional_scales.md` for boundary rules, population-threshold behavior at scale boundaries, and the \"multi-scale competence\" test.\n\n---\n\n## What the Founding Order Does NOT Touch\n\nThe Founding Order is about scale, consent, and exit. It does **not**:\n\n- Repeal any Tier 1 human-dignity invariant. CSM (Annex Y \u00a7Y1) binds everywhere the protocol reaches, including during exit unwind. A unit cannot vote to starve its residents.\n- Repeal Flow/Essential Access non-convertibility. The instrument-level architecture is federation-scale by design (cross-unit externalities require a federation-level rule).\n- Create new central authority. Every Founding Order rule reduces or constrains the federation's default reach; no rule extends it.\n- Override individual personhood. Exit is a unit-level right but does not override the individual's right to remain within the protocol by relocation. The unwind window exists precisely to make individual relocation feasible.\n\n---\n\n## How the Founding Order Interacts with the Rest of the Protocol\n\n- **Humane Constitution \u00a70** \u2014 the Founding Order is the foundational layer beneath the current seven articles. The \u00a70 invariants (survival unconditional, CSM floor, separation of concerns, etc.) are federation-scale and not subject to unit-level modification or unit-level exit.\n- **Articles I\u2013VII** \u2014 each article is read through the Founding Order: its default scale is the smallest competent unit; its exceptions-to-smallest-scale are specified with subsidiarity rationale.\n- **Founding commitments** \u2014 FC-120, FC-121, FC-122 are the numerical anchors for the Founding Order. They are Tier 1 protected per `/architecture/parameter_registry.md` (Category D \u2014 Governance & Exit).\n- **Architecture layer** \u2014 the Founding Order integrates with the drift chain: a unit-exit event is drift-chain-logged (new row, federation scope reduced, signatures of the exiting unit's representatives and 7 of 9 Tier 1 holders acknowledging). An exit cannot proceed silently.\n- **Threat Register** \u2014 two new threat classes: T-026 \"Exit Denial\" and T-027 \"Subsidiarity Violation.\" See the register for mechanism and mitigation.\n\n---\n\n## Files in This Directory\n\n| File | Purpose |\n| :--- | :--- |\n| `README.md` | This overview |\n| `subsidiarity_rule.md` | Smallest-unit-first decision rule and escalation test |\n| `consent_protocol.md` | Founding-consent event requirements |\n| `exit_protocol.md` | FC-120 supermajority + FC-121 730-day unwind procedure |\n| `reentry_protocol.md` | Rejoining protocol after prior exit |\n| `jurisdictional_scales.md` | FC-122 scale-tier definitions with boundary behavior |\n\n---\n\n## Governance of the Founding Order\n\nThis entire directory is Tier 1 protected per `/architecture/parameter_registry.md`. Changes to the smallest-scale rule, consent rule, exit threshold (FC-120), unwind window (FC-121), or scale tiers (FC-122) require the full amendment protocol (7-of-9 signatures, 180-day timelock).\n\nExtension \u2014 adding finer-grained scales (e.g., sub-neighborhood clusters for specific decision classes), adding consent mechanisms, or strengthening exit rights \u2014 may proceed by Tier 2 amendment. **Weakening any Founding Order right requires Tier 1 amendment with the full H-3 Refounding Convention.**\n\n---\n\n*The Founding Order is the answer to \"does this protocol respect the people it governs?\" The answer is: only to the extent that they can decline it, customize it at their own scale, and leave it at bounded cost. The Founding Order makes all three operative.*\n",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Founding Order \u2014 Subsidiarity, Consent & Exit",
+          "slug": "founding-order-subsidiarity-consent-exit"
+        },
+        {
+          "level": 2,
+          "text": "The Problem the Founding Order Resolves",
+          "slug": "the-problem-the-founding-order-resolves"
+        },
+        {
+          "level": 2,
+          "text": "Plain-Language Guide",
+          "slug": "plain-language-guide"
+        },
+        {
+          "level": 2,
+          "text": "The Three Rules",
+          "slug": "the-three-rules"
+        },
+        {
+          "level": 3,
+          "text": "Rule 1 \u2014 Subsidiarity",
+          "slug": "rule-1-subsidiarity"
+        },
+        {
+          "level": 3,
+          "text": "Rule 2 \u2014 Consent-of-Founding",
+          "slug": "rule-2-consent-of-founding"
+        },
+        {
+          "level": 3,
+          "text": "Rule 3 \u2014 Exit",
+          "slug": "rule-3-exit"
+        },
+        {
+          "level": 2,
+          "text": "Jurisdictional Scales (FC-122)",
+          "slug": "jurisdictional-scales-fc-122"
+        },
+        {
+          "level": 2,
+          "text": "What the Founding Order Does NOT Touch",
+          "slug": "what-the-founding-order-does-not-touch"
+        },
+        {
+          "level": 2,
+          "text": "How the Founding Order Interacts with the Rest of the Protocol",
+          "slug": "how-the-founding-order-interacts-with-the-rest-of-the-protocol"
+        },
+        {
+          "level": 2,
+          "text": "Files in This Directory",
+          "slug": "files-in-this-directory"
+        },
+        {
+          "level": 2,
+          "text": "Governance of the Founding Order",
+          "slug": "governance-of-the-founding-order"
+        }
+      ],
+      "wordCount": 1028,
+      "headingCount": 12
+    },
+    {
       "id": "founding__order__consent_protocol_md",
       "path": "founding/order/consent_protocol.md",
       "section": "founding_order",
@@ -5750,80 +5824,6 @@
       ],
       "wordCount": 1779,
       "headingCount": 17
-    },
-    {
-      "id": "founding__order__README_md",
-      "path": "founding/order/README.md",
-      "section": "founding_order",
-      "title": "Founding Order \u2014 Subsidiarity, Consent & Exit",
-      "status": "Status: ACTIVE \u2014 Proposal 5 close-out, 2026-04-18",
-      "statusBucket": "active",
-      "summary": "Every major operating component in the prior protocol operated under an implicit assumption: that the continental federation is the default scale of decision, and that participation is a standing condition rather than a renewable act. That assumption had three costs:",
-      "content": "# Founding Order \u2014 Subsidiarity, Consent & Exit\n\n**Status:** ACTIVE \u2014 Proposal 5 close-out, 2026-04-18\n**Authority:** Tier 1 (FC-120 exit supermajority, FC-121 unwind window, FC-122 scale tiers).\n**Scope:** Foundational layer beneath every constitutional article. The Founding Order defines *who consents to be governed by this protocol, at what scale, on what matters, and how they withdraw.*\n\n---\n\n## The Problem the Founding Order Resolves\n\nEvery major operating component in the prior protocol operated under an implicit assumption: that the continental federation is the default scale of decision, and that participation is a standing condition rather than a renewable act. That assumption had three costs:\n\n1. **It presumed consent without producing it.** A protocol that binds units which have not affirmatively consented is, in classical-liberal terms, coercive regardless of how just its internal rules are.\n2. **It centralized by default.** Decisions flowed upward unless the protocol explicitly authorized a smaller scale \u2014 the inverse of Ostrom's principle 2 (rules match local conditions) and of subsidiarity as articulated from Althusius through Catholic social teaching.\n3. **It had no exit.** Any internal protection is only as robust as the captors' willingness to honor it. Without a defined exit, a captured federation could narrow every protection to the point of meaninglessness and no unit would have a legitimate, published pathway out.\n\nThe Founding Order closes all three gaps at the architectural layer.\n\n## Plain-Language Guide\n\nThe Founding Order answers three reader questions:\n\n- Who agreed to join?\n- Who gets to decide which issues?\n- How can a place leave if the system stops serving it?\n\nThe answer is: the smallest capable group should decide, no place is bound unless it clearly joins, and any locality or larger unit can leave through a published process that protects ordinary people during the transition.\n\n---\n\n## The Three Rules\n\n### Rule 1 \u2014 Subsidiarity\n\nDecisions default to the smallest viable unit. The **Federation** (continental scope) is the exception, not the default. See `subsidiarity_rule.md` for the test that determines when an issue may move above the smallest capable scale.\n\n### Rule 2 \u2014 Consent-of-Founding\n\nNo unit is bound by the protocol without an affirmative, published consent event. Units that do not join keep their earlier arrangements, with one narrow exception: the human survival floor still applies. See `consent_protocol.md`.\n\n### Rule 3 \u2014 Exit\n\nAny unit of locality scale or larger may leave if **2/3 of resident personhoods** vote for exit (FC-120). The exit then takes **730 days** (FC-121), so people keep Essential Access during the transition, Flow remains portable, and civic balances decay normally. Re-entry is allowed through the same basic process in reverse. See `exit_protocol.md` and `reentry_protocol.md`.\n\n---\n\n## Jurisdictional Scales (FC-122)\n\n| Scale | Upper bound | Typical decision domain |\n| :--- | :--- | :--- |\n| **Household** | Family unit (no formal ceiling) | Home-level choices, care duties, basic household exchange |\n| **Neighborhood** | \u2264500 persons | Local coordination, shared wells/paths/commons, first-step dispute help |\n| **Locality** | \u22645,000 persons | Town-scale choices, local Shared Storehouse rules within federation limits, local CRP representation |\n| **Region** | \u2264500,000 persons | Regional measurement, enforcement, and delegation |\n| **Federation** | Continental scope | Core promises, instrument separation, cross-region disputes, issues no smaller scale can handle |\n\nSee `jurisdictional_scales.md` for boundary rules, population-threshold behavior at scale boundaries, and the \"multi-scale competence\" test.\n\n---\n\n## What the Founding Order Does NOT Touch\n\nThe Founding Order is about scale, consent, and exit. It does **not**:\n\n- Repeal any Tier 1 human-dignity invariant. CSM (Annex Y \u00a7Y1) binds everywhere the protocol reaches, including during exit unwind. A unit cannot vote to starve its residents.\n- Repeal Flow/Essential Access non-convertibility. The instrument-level architecture is federation-scale by design (cross-unit externalities require a federation-level rule).\n- Create new central authority. Every Founding Order rule reduces or constrains the federation's default reach; no rule extends it.\n- Override individual personhood. Exit is a unit-level right but does not override the individual's right to remain within the protocol by relocation. The unwind window exists precisely to make individual relocation feasible.\n\n---\n\n## How the Founding Order Interacts with the Rest of the Protocol\n\n- **Humane Constitution \u00a70** \u2014 the Founding Order is the foundational layer beneath the current seven articles. The \u00a70 invariants (survival unconditional, CSM floor, separation of concerns, etc.) are federation-scale and not subject to unit-level modification or unit-level exit.\n- **Articles I\u2013VII** \u2014 each article is read through the Founding Order: its default scale is the smallest competent unit; its exceptions-to-smallest-scale are specified with subsidiarity rationale.\n- **Founding commitments** \u2014 FC-120, FC-121, FC-122 are the numerical anchors for the Founding Order. They are Tier 1 protected per `/architecture/parameter_registry.md` (Category D \u2014 Governance & Exit).\n- **Architecture layer** \u2014 the Founding Order integrates with the drift chain: a unit-exit event is drift-chain-logged (new row, federation scope reduced, signatures of the exiting unit's representatives and 7 of 9 Tier 1 holders acknowledging). An exit cannot proceed silently.\n- **Threat Register** \u2014 two new threat classes: T-026 \"Exit Denial\" and T-027 \"Subsidiarity Violation.\" See the register for mechanism and mitigation.\n\n---\n\n## Files in This Directory\n\n| File | Purpose |\n| :--- | :--- |\n| `README.md` | This overview |\n| `subsidiarity_rule.md` | Smallest-unit-first decision rule and escalation test |\n| `consent_protocol.md` | Founding-consent event requirements |\n| `exit_protocol.md` | FC-120 supermajority + FC-121 730-day unwind procedure |\n| `reentry_protocol.md` | Rejoining protocol after prior exit |\n| `jurisdictional_scales.md` | FC-122 scale-tier definitions with boundary behavior |\n\n---\n\n## Governance of the Founding Order\n\nThis entire directory is Tier 1 protected per `/architecture/parameter_registry.md`. Changes to the smallest-scale rule, consent rule, exit threshold (FC-120), unwind window (FC-121), or scale tiers (FC-122) require the full amendment protocol (7-of-9 signatures, 180-day timelock).\n\nExtension \u2014 adding finer-grained scales (e.g., sub-neighborhood clusters for specific decision classes), adding consent mechanisms, or strengthening exit rights \u2014 may proceed by Tier 2 amendment. **Weakening any Founding Order right requires Tier 1 amendment with the full H-3 Refounding Convention.**\n\n---\n\n*The Founding Order is the answer to \"does this protocol respect the people it governs?\" The answer is: only to the extent that they can decline it, customize it at their own scale, and leave it at bounded cost. The Founding Order makes all three operative.*\n",
-      "headings": [
-        {
-          "level": 1,
-          "text": "Founding Order \u2014 Subsidiarity, Consent & Exit",
-          "slug": "founding-order-subsidiarity-consent-exit"
-        },
-        {
-          "level": 2,
-          "text": "The Problem the Founding Order Resolves",
-          "slug": "the-problem-the-founding-order-resolves"
-        },
-        {
-          "level": 2,
-          "text": "Plain-Language Guide",
-          "slug": "plain-language-guide"
-        },
-        {
-          "level": 2,
-          "text": "The Three Rules",
-          "slug": "the-three-rules"
-        },
-        {
-          "level": 3,
-          "text": "Rule 1 \u2014 Subsidiarity",
-          "slug": "rule-1-subsidiarity"
-        },
-        {
-          "level": 3,
-          "text": "Rule 2 \u2014 Consent-of-Founding",
-          "slug": "rule-2-consent-of-founding"
-        },
-        {
-          "level": 3,
-          "text": "Rule 3 \u2014 Exit",
-          "slug": "rule-3-exit"
-        },
-        {
-          "level": 2,
-          "text": "Jurisdictional Scales (FC-122)",
-          "slug": "jurisdictional-scales-fc-122"
-        },
-        {
-          "level": 2,
-          "text": "What the Founding Order Does NOT Touch",
-          "slug": "what-the-founding-order-does-not-touch"
-        },
-        {
-          "level": 2,
-          "text": "How the Founding Order Interacts with the Rest of the Protocol",
-          "slug": "how-the-founding-order-interacts-with-the-rest-of-the-protocol"
-        },
-        {
-          "level": 2,
-          "text": "Files in This Directory",
-          "slug": "files-in-this-directory"
-        },
-        {
-          "level": 2,
-          "text": "Governance of the Founding Order",
-          "slug": "governance-of-the-founding-order"
-        }
-      ],
-      "wordCount": 1028,
-      "headingCount": 12
     },
     {
       "id": "founding__order__reentry_protocol_md",
