@@ -15,7 +15,7 @@ export default async function handler(req: Request): Promise<Response> {
 
   // 1. Embed the query
   const { embedding: queryEmbedding } = await embed({
-    model: google.textEmbeddingModel('text-embedding-004'),
+    model: google.textEmbeddingModel('gemini-embedding-001'),
     value: userQuery,
   });
 
