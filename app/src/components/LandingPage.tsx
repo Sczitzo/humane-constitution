@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import { Logo } from './Logo'
 import { V001_FiveToolSeparation } from './diagrams/V001_FiveToolSeparation'
 
@@ -40,6 +40,9 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const pulseRawRef = useRef(0)
   const rafRef = useRef<number>(0)
   const hoveredIdxRef = useRef<number | null>(null)
+  const leaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const pointerXRef   = useRef(0)
+  const pointerYRef   = useRef(0)
 
   useEffect(() => {
     const el = containerRef.current
@@ -121,15 +124,15 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   // Sorted by trunkT. Alternating above/below.
   // Distance from centre: 0.08 → 0.12 → 0.18 → 0.23 → 0.28 → 0.33 → 0.38 → 0.42 → 0.44
   const BRANCH_DEFS = [
-    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.34, above: true,  wobbleMult: 0.8 }, // close, gentle
-    { trunkT: 0.14, endXFrac: 0.24, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
+    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.42, above: true,  wobbleMult: 0.8 }, // close, gentle
+    { trunkT: 0.14, endXFrac: 0.30, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
     { trunkT: 0.22, endXFrac: 0.36, endYFrac: 0.32, above: true,  wobbleMult: 1.3 },
     { trunkT: 0.31, endXFrac: 0.48, endYFrac: 0.73, above: false, wobbleMult: 1.1 },
     { trunkT: 0.42, endXFrac: 0.56, endYFrac: 0.22, above: true,  wobbleMult: 1.5 },
-    { trunkT: 0.50, endXFrac: 0.62, endYFrac: 0.83, above: false, wobbleMult: 1.6 },
-    { trunkT: 0.61, endXFrac: 0.70, endYFrac: 0.12, above: true,  wobbleMult: 1.8 },
-    { trunkT: 0.70, endXFrac: 0.80, endYFrac: 0.92, above: false, wobbleMult: 1.4 },
-    { trunkT: 0.82, endXFrac: 0.90, endYFrac: 0.06, above: true,  wobbleMult: 2.0 }, // widest
+    { trunkT: 0.50, endXFrac: 0.62, endYFrac: 0.68, above: false, wobbleMult: 1.6 },
+    { trunkT: 0.61, endXFrac: 0.70, endYFrac: 0.32, above: true,  wobbleMult: 1.8 },
+    { trunkT: 0.70, endXFrac: 0.80, endYFrac: 0.62, above: false, wobbleMult: 1.4 },
+    { trunkT: 0.82, endXFrac: 0.90, endYFrac: 0.42, above: true,  wobbleMult: 2.0 },
   ]
 
   const UNIFORM_WEIGHT  = 1.5
@@ -146,44 +149,26 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     opacity:    UNIFORM_OPACITY,
   })), [paths]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const RING_R = 18
-
   // ─── Branch geometry ─────────────────────────────────────────────────────────
-  // Branches are scaled-down versions of the trunk: a gentle perpendicular S-wave
-  // along the path, finishing with a vertical approach into the node attachment.
-  // Attachment: 6 o'clock for above-trunk nodes, 12 o'clock for below-trunk.
+  // Perpendicular S-wave: amplitude is relative to path length so it's visible
+  // on both steep (above-trunk) and shallow (below-trunk) paths.
   function getBranchCPs(b: BranchConfig) {
     const o  = pointOnTrunk(b.trunkT)
     const ex = w * b.endXFrac
     const ey = h * b.endYFrac
-
-    // Fixed cardinal attachment
-    const nx = ex
-    const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
-
-    const totalDx = nx - o.x
-    const totalDy = ny - o.y
-    const pathLen = Math.sqrt(totalDx * totalDx + totalDy * totalDy) || 1
-
-    // Perpendicular unit vector (same as trunk wave direction)
-    const px = -totalDy / pathLen
-    const py =  totalDx / pathLen
-
-    // S-wave: cp1 bulges one way, cp2 counter-bulges the other close to the node
-    // — creates a dramatic S-curve just before attachment
-    const sideSign = b.above ? -1 : 1
-    const amp = pathLen * 0.20 * b.wobbleMult
-    const cp1x = o.x + totalDx * 0.30 + px * amp * sideSign
-    const cp1y = o.y + totalDy * 0.30 + py * amp * sideSign
-
-    // cp2: strong counter-swing close to the node for dramatic final S
-    const amp2 = pathLen * 0.38 * b.wobbleMult
-    const cp2x = nx - px * amp2 * sideSign
-    const cp2y = b.above
-      ? ny + Math.abs(totalDy) * 0.28 - py * amp2 * sideSign
-      : ny - Math.abs(totalDy) * 0.28 - py * amp2 * sideSign
-
-    return { o, ex, ey, nx, ny, cp1x, cp1y, cp2x, cp2y }
+    const dx = ex - o.x
+    const dy = ey - o.y
+    const pathLen = Math.sqrt(dx * dx + dy * dy) || 1
+    // Perpendicular unit vector (rotate 90° CCW)
+    const px = -dy / pathLen
+    const py =  dx / pathLen
+    // S-wave: cp1 bulges one way, cp2 the other
+    const amp = pathLen * 0.16 * b.wobbleMult * (b.above ? -1 : 1)
+    const cp1x = o.x + dx * 0.28 + px * amp
+    const cp1y = o.y + dy * 0.28 + py * amp
+    const cp2x = o.x + dx * 0.72 - px * amp * 0.6
+    const cp2y = o.y + dy * 0.72 - py * amp * 0.6
+    return { o, ex, ey, cp1x, cp1y, cp2x, cp2y }
   }
 
   function makeBranchPath(b: BranchConfig) {
@@ -191,20 +176,75 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${ex} ${ey}`
   }
 
-  function pointOnBranchMid(b: BranchConfig): { x: number; y: number } {
-    const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
-    return {
-      x: cubicBezierPoint(0.5, o.x, cp1x, cp2x, ex),
-      y: cubicBezierPoint(0.5, o.y, cp1y, cp2y, ey),
-    }
-  }
+  const RING_R = 18
 
   function makeBranchPathTrimmed(b: BranchConfig) {
-    const { o, nx, ny, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
+    const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
+    // Connect at the node perimeter point closest to the trunk origin —
+    // direction from node center toward the trunk origin, offset by RING_R.
+    const dirX = o.x - ex
+    const dirY = o.y - ey
+    const dirLen = Math.sqrt(dirX * dirX + dirY * dirY) || 1
+    const nx = ex + (dirX / dirLen) * (RING_R + 2)
+    const ny = ey + (dirY / dirLen) * (RING_R + 2)
     return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}`
   }
 
-  function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
+  function makeArcLabel(
+    text: string, cx: number, cy: number, R: number, above: boolean,
+    fontSize: number, fillOpacity: number, fontFamily: string,
+    fontWeight: number | string, fill: string
+  ): React.ReactElement[] {
+    const chars = [...text]
+    const widths = chars.map(ch => {
+      if (/\p{Emoji_Presentation}/u.test(ch)) return fontSize * 1.05
+      if (ch === ' ') return fontSize * 0.28
+      if ('WMm'.includes(ch)) return fontSize * 0.78
+      if ("il|1'\"!.,;:()[]".includes(ch)) return fontSize * 0.36
+      return fontSize * 0.58
+    })
+    const totalWidth = widths.reduce((a, b) => a + b, 0)
+    let cursor = -totalWidth / 2
+    return chars.map((ch, i) => {
+      const hw = widths[i] / 2
+      cursor += hw
+      const arcPos = cursor
+      cursor += hw
+      const δ = arcPos / R
+      let x: number, y: number, rot: number
+      let dominantBaseline: 'auto' | 'hanging'
+      if (above) {
+        const θ = δ
+        x = cx + R * Math.sin(θ)
+        y = cy - R * Math.cos(θ)
+        rot = θ * (180 / Math.PI)
+        dominantBaseline = 'auto'
+      } else {
+        const θ = Math.PI - δ
+        x = cx + R * Math.sin(θ)
+        y = cy - R * Math.cos(θ)
+        rot = (θ + Math.PI) * (180 / Math.PI)
+        dominantBaseline = 'hanging'
+      }
+      return (
+        <text
+          key={i}
+          x={x} y={y}
+          textAnchor="middle"
+          dominantBaseline={dominantBaseline}
+          fontSize={fontSize}
+          fontFamily={fontFamily}
+          fontWeight={fontWeight}
+          fill={fill}
+          fillOpacity={fillOpacity}
+          transform={`rotate(${rot}, ${x}, ${y})`}
+          style={{ userSelect: 'none' }}
+        >{ch}</text>
+      )
+    })
+  }
+
+function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
     const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
     return {
       x: cubicBezierPoint(t, o.x, cp1x, cp2x, ex),
@@ -243,26 +283,41 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   }
 
   function handleBranchEnter(i: number) {
+    if (leaveTimerRef.current) {
+      clearTimeout(leaveTimerRef.current)
+      leaveTimerRef.current = null
+    }
     hoveredIdxRef.current = i
     setHoveredIdx(i)
-    const svg = svgRef.current
-    if (!svg) return
-    const rect = svg.getBoundingClientRect()
-    const pt = pointOnBranchMid(branches[i])
-    setCardPos({ x: (pt.x / w) * rect.width, y: (pt.y / h) * rect.height })
+    setCardPos({ x: pointerXRef.current, y: pointerYRef.current })
   }
 
   function handleBranchLeave() {
-    hoveredIdxRef.current = null
-    setHoveredIdx(null)
-    setCardPos(null)
+    leaveTimerRef.current = setTimeout(() => {
+      hoveredIdxRef.current = null
+      setHoveredIdx(null)
+      setCardPos(null)
+      leaveTimerRef.current = null
+    }, 200)
   }
 
   const hovered = hoveredIdx !== null ? branches[hoveredIdx] : null
   const GOLD = '#c9a84c'
 
   return (
-    <div className="lp-timeline-wrap" ref={containerRef}>
+    <div
+      className="lp-timeline-wrap"
+      ref={containerRef}
+      onMouseMove={(e) => {
+        const rect = containerRef.current?.getBoundingClientRect()
+        if (!rect) return
+        pointerXRef.current = e.clientX - rect.left
+        pointerYRef.current = e.clientY - rect.top
+        if (hoveredIdxRef.current !== null) {
+          setCardPos({ x: pointerXRef.current, y: pointerYRef.current })
+        }
+      }}
+    >
       <svg
         ref={svgRef}
         className="lp-timeline-svg"
@@ -301,7 +356,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           return (
             <path
               key={`glow-${b.path.id}`}
-              d={makeBranchPath(b)}
+              d={makeBranchPathTrimmed(b)}
               fill="none" stroke={GOLD}
               strokeWidth={isHovered ? 14 : 6}
               strokeLinecap="round"
@@ -318,7 +373,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           return (
             <path
               key={`line-${b.path.id}`}
-              d={makeBranchPath(b)}
+              d={makeBranchPathTrimmed(b)}
               fill="none" stroke={GOLD}
               strokeWidth={isHovered ? 3.0 : 1.5}
               strokeLinecap="round"
@@ -386,72 +441,70 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           )
         })}
 
-        {/* Endpoint nodes */}
+        {/* Endpoint nodes — numbered circles */}
         {branches.map((b, i) => {
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
           return (
-            <g key={`node-${b.path.id}`} style={{ pointerEvents: 'none' }}>
-              <circle cx={ex} cy={ey} r={isHovered ? 11 : 8}
-                fill="none" stroke={GOLD} strokeWidth="1"
-                opacity={dimmed ? 0.07 : isHovered ? 0.55 : 0.28}
+            <g key={`node-${b.path.id}`} style={{ cursor: 'pointer' }}
+              onMouseEnter={() => handleBranchEnter(i)}
+              onMouseLeave={handleBranchLeave}
+              onClick={() => onSelect(b.path.id)}
+            >
+              {/* Sustained pulse ring — animates only while hovered */}
+              <circle cx={ex} cy={ey} r={RING_R}
+                fill="none" stroke={GOLD} strokeWidth={1.5}
+                opacity={dimmed ? 0 : 1}
+                className={isHovered ? 'tva-node-pulse' : ''}
                 style={{ transition: 'opacity 0.25s' }}
               />
-              <circle cx={ex} cy={ey} r={isHovered ? 5 : 3.5}
+              {/* Outer glow halo */}
+              <circle cx={ex} cy={ey} r={RING_R + 8}
                 fill={GOLD}
-                opacity={dimmed ? 0.08 : isHovered ? 1.0 : 0.62}
+                opacity={dimmed ? 0.01 : isHovered ? 0.28 : 0.07}
+                filter="url(#tva-glow)"
+                style={{ transition: 'opacity 0.25s' }}
+              />
+              {/* Dark fill */}
+              <circle cx={ex} cy={ey} r={RING_R}
+                fill="#0c0a14"
+                opacity={dimmed ? 0.4 : 1}
+                style={{ transition: 'opacity 0.25s' }}
+              />
+              {/* Gold ring */}
+              <circle cx={ex} cy={ey} r={RING_R}
+                fill="none" stroke={GOLD}
+                strokeWidth={isHovered ? 2.5 : 1.5}
+                opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.80}
                 filter={isHovered ? 'url(#tva-glow)' : undefined}
+                style={{ transition: 'opacity 0.25s, stroke-width 0.25s' }}
+              />
+              {/* Center dot */}
+              <circle cx={ex} cy={ey} r={3}
+                fill={GOLD}
+                opacity={dimmed ? 0.1 : isHovered ? 1.0 : 0.55}
                 style={{ transition: 'opacity 0.25s' }}
               />
             </g>
           )
         })}
 
-        {/* Labels — clear of the endpoint node, on the outer side */}
+        {/* Labels — curved arc text around endpoint nodes */}
         {branches.map((b, i) => {
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
-          // Offset label away from the node (12px gap) then stack title + time
-          // above → label sits above, time above that
-          // below → label sits below, time below that
-          const NODE_R = 9          // rough node radius for clearance
-          const GAP    = 8          // extra gap between node edge and text baseline
-          const TITLE_SIZE = 13
-          const TIME_SIZE  = 10
-          const titleY = b.above
-            ? ey - NODE_R - GAP                          // baseline above node
-            : ey + NODE_R + GAP + TITLE_SIZE             // baseline below node
-          const timeY = b.above
-            ? titleY - TIME_SIZE - 3                     // time sits above title
-            : titleY + TIME_SIZE + 3                     // time sits below title
+          const TITLE_R = RING_R + 22
           return (
             <g key={`lbl-${b.path.id}`}
               style={{ pointerEvents: 'none', transition: 'opacity 0.25s' }}
               opacity={dimmed ? 0.06 : isHovered ? 1.0 : 0.72}
             >
-              <text
-                x={ex} y={titleY}
-                textAnchor="middle"
-                fontSize={TITLE_SIZE}
-                fontFamily="Inter, sans-serif"
-                fontWeight={isHovered ? 700 : 500}
-                fill="#ffffff" fillOpacity={0.92}
-              >
-                {b.path.emoji} {b.path.title}
-              </text>
-              <text
-                x={ex} y={timeY}
-                textAnchor="middle"
-                fontSize={TIME_SIZE}
-                fontFamily="'IBM Plex Mono', monospace"
-                fill="#ffffff" fillOpacity={0.65}
-              >
-                {b.path.time}
-              </text>
+              {makeArcLabel(b.path.title, ex, ey, TITLE_R, b.above, 11.5, 0.90,
+                'Inter, sans-serif', isHovered ? 700 : 500, '#ffffff')}
             </g>
           )
         })}
@@ -474,52 +527,51 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
         })()}
       </svg>
 
-      {/* Floating hover card */}
-      {hovered && cardPos && (
-        <div
-          className="lp-branch-card visible"
-          style={{
-            left: Math.min(Math.max(cardPos.x - 136, 8), dims.w - 290),
-            top: hovered.above
-              ? Math.min(cardPos.y + 20, dims.h - 260)
-              : Math.max(cardPos.y - 240, 8),
-          }}
-        >
-          <div className="lp-branch-card-bar" />
-          <div className="lp-branch-card-body">
-            <div className="lp-branch-card-header">
-              <div className="lp-branch-card-title">
-                <span>{hovered.path.emoji}</span>
-                {hovered.path.title}
-              </div>
-              <span className="lp-branch-card-time">{hovered.path.time}</span>
-            </div>
-            <p className="lp-branch-card-desc">{hovered.path.desc}</p>
-          </div>
+      {/* Floating hover card — pointer-relative */}
+      {hovered && cardPos && (() => {
+        const CARD_W = 260, CARD_H = 170, PAD = 12
+        const spaceRight = dims.w - cardPos.x
+        const left = spaceRight < CARD_W + PAD * 2
+          ? cardPos.x - CARD_W - PAD
+          : cardPos.x + PAD
+        const top = Math.max(8, Math.min(cardPos.y - CARD_H / 2, dims.h - CARD_H - 8))
+        return (
           <div
-            className="lp-branch-card-cta"
-            style={{ cursor: 'pointer' }}
+            className="lp-branch-card visible"
+            style={{ left, top }}
             onClick={() => onSelect(hovered.path.id)}
           >
-            <span>Begin this path</span>
-            <span>→</span>
+            <div className="lp-branch-card-bar" />
+            <div className="lp-branch-card-body">
+              <div className="lp-branch-card-header">
+                <div className="lp-branch-card-title">
+                  {hovered.path.title}
+                </div>
+                <span className="lp-branch-card-time">{hovered.path.time}</span>
+              </div>
+              <p className="lp-branch-card-desc">{hovered.path.desc}</p>
+              <p style={{
+                fontSize: 10, color: 'rgba(201,168,76,0.55)', letterSpacing: '0.06em',
+                marginTop: 8, fontFamily: "'IBM Plex Mono', monospace",
+              }}>click to read</p>
+            </div>
           </div>
-        </div>
-      )}
+        )
+      })()}
     </div>
   )
 }
 
 const PATHS = [
-  { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~35 min', color: '#2d6a4f' },
-  { id: 'skeptic', emoji: '🔍', title: 'Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~20 min', color: '#1a3a5c' },
-  { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~45 min', color: '#4a1c40' },
-  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~40 min', color: '#5c3d00' },
-  { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~30 min', color: '#1c3040' },
-  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Ready', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~35 min', color: '#3d1a1a' },
-  { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~25 min', color: '#1a3040' },
-  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~30 min', color: '#2d1a4a' },
-  { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~55 min', color: '#1a2d1a' },
+  { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~20 min', color: '#2d6a4f' },
+  { id: 'skeptic', emoji: '🔍', title: 'Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~25 min', color: '#1a3a5c' },
+  { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~35 min', color: '#4a1c40' },
+  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~30 min', color: '#5c3d00' },
+  { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~25 min', color: '#1c3040' },
+  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Ready', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1a1a' },
+  { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~20 min', color: '#1a3040' },
+  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~25 min', color: '#2d1a4a' },
+  { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d1a' },
 ]
 
 
@@ -544,6 +596,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   const [navVisible, setNavVisible] = useState(false)
   const [mouseX, setMouseX] = useState(0)
   const [mouseY, setMouseY] = useState(0)
+  const [openThreatIdx, setOpenThreatIdx] = useState<number | null>(null)
 
   const transitionRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
@@ -809,6 +862,18 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           animation: lp-arrow-pulse 2.2s ease-in-out infinite;
         }
 
+        /* ─── Timeline node sustained pulse ─── */
+        @keyframes tva-node-pulse {
+          0%   { transform: scale(1);   opacity: 0.85; }
+          70%  { transform: scale(1.7); opacity: 0.12; }
+          100% { transform: scale(2.1); opacity: 0; }
+        }
+        .tva-node-pulse {
+          animation: tva-node-pulse 1.1s ease-out infinite;
+          transform-box: fill-box;
+          transform-origin: center;
+        }
+
         /* ─── Marquee ticker ─── */
         .lp-marquee-wrap {
           overflow: hidden;
@@ -848,69 +913,120 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           max-width: 1100px;
           margin: 0 auto;
         }
-        .lp-threats-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 20px;
-          margin-top: 56px;
-        }
-        .lp-threat-card {
-          background: rgba(245,240,232,0.03);
-          border: 1px solid rgba(245,240,232,0.07);
-          border-radius: 14px;
-          padding: 32px 28px 28px;
+        /* accordion */
+        .lp-threats-list {
           display: flex;
           flex-direction: column;
-          gap: 20px;
-          transition: border-color 0.25s, background 0.25s;
-          cursor: default;
+          gap: 4px;
+          margin-top: 56px;
         }
-        .lp-threat-card:hover {
-          border-color: rgba(201,168,76,0.25);
+        @keyframes lp-pulse-border {
+          0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.9); border-color: #c9a84c; }
+          55%  { box-shadow: 0 0 0 10px rgba(201,168,76,0.2); }
+          100% { box-shadow: 0 0 0 18px rgba(201,168,76,0); border-color: rgba(201,168,76,0.45); }
+        }
+        .lp-threat-card {
+          border: 1px solid rgba(245,240,232,0.09);
+          border-radius: 12px;
+          overflow: hidden;
+          cursor: pointer;
+          background: rgba(245,240,232,0.02);
+          transition: background 0.2s;
+        }
+        .lp-threat-card:not(.lp-threat-open):hover {
+          animation: lp-pulse-border 1.4s ease;
+          background: rgba(14,12,24,0.9);
+        }
+        .lp-threat-card.lp-threat-open {
+          border-color: rgba(201,168,76,0.35);
           background: rgba(201,168,76,0.04);
         }
-        .lp-threat-pill {
-          display: inline-flex;
+        .lp-threat-header {
+          display: flex;
           align-items: center;
-          gap: 7px;
-          font-size: 10.5px;
-          font-weight: 600;
-          letter-spacing: 0.09em;
-          text-transform: uppercase;
-          color: rgba(245,240,232,0.35);
-          background: rgba(245,240,232,0.06);
-          border-radius: 100px;
-          padding: 5px 11px;
-          width: fit-content;
+          gap: 20px;
+          padding: 20px 26px;
         }
-        .lp-threat-pill-dot {
-          width: 5px; height: 5px;
+        .lp-threat-num {
+          font-size: 11px;
+          font-family: 'IBM Plex Mono', monospace;
+          color: rgba(201,168,76,0.45);
+          min-width: 24px;
+          transition: color 0.2s;
+        }
+        .lp-threat-card.lp-threat-open .lp-threat-num { color: #c9a84c; }
+        .lp-threat-headline {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgba(245,240,232,0.72);
+          flex: 1;
+          transition: color 0.2s;
+        }
+        .lp-threat-card.lp-threat-open .lp-threat-headline { color: #f5f0e8; }
+        .lp-threat-chevron {
+          width: 20px; height: 20px;
           border-radius: 50%;
-          background: #c44;
+          border: 1px solid rgba(255,255,255,0.14);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 10px;
+          color: rgba(255,255,255,0.3);
+          transition: transform 0.25s, border-color 0.2s, color 0.2s;
           flex-shrink: 0;
         }
+        .lp-threat-card.lp-threat-open .lp-threat-chevron {
+          transform: rotate(180deg);
+          border-color: #c9a84c;
+          color: #c9a84c;
+        }
+        /* animated expand via grid */
+        .lp-threat-body {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.3s ease;
+        }
+        .lp-threat-card.lp-threat-open .lp-threat-body {
+          grid-template-rows: 1fr;
+        }
+        .lp-threat-body-inner { overflow: hidden; }
+        .lp-threat-body-label {
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: rgba(201,168,76,0.6);
+          margin-bottom: 10px;
+        }
+        .lp-threat-body-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+          padding: 0 26px 28px 70px;
+        }
+        .lp-threat-pill {
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #c44;
+          margin-bottom: 10px;
+        }
+        .lp-threat-pill-dot { display: none; }
         .lp-threat-problem {
           font-size: 14px;
-          color: rgba(245,240,232,0.5);
-          line-height: 1.6;
+          color: rgba(245,240,232,0.55);
+          line-height: 1.65;
           font-style: italic;
         }
         .lp-threat-arrow {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          color: rgba(201,168,76,0.5);
-          font-size: 11px;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
+          font-size: 10px;
           font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #c9a84c;
+          margin-bottom: 10px;
+          display: block;
         }
-        .lp-threat-arrow::before {
-          content: '';
-          flex: 1;
-          height: 1px;
-          background: rgba(201,168,76,0.2);
-        }
+        .lp-threat-arrow::before { display: none; }
         .lp-threat-response {
           font-size: 14.5px;
           color: #f5f0e8;
@@ -918,11 +1034,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           font-weight: 400;
         }
         .lp-threat-annex {
-          font-size: 11px;
-          color: rgba(201,168,76,0.45);
-          letter-spacing: 0.05em;
+          font-size: 10px;
+          color: rgba(201,168,76,0.4);
+          letter-spacing: 0.07em;
           font-family: 'IBM Plex Mono', monospace;
-          margin-top: auto;
+          margin-top: 12px;
+          display: block;
         }
 
         /* ─── Instruments / Diagram ─── */
@@ -1151,7 +1268,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-hero-cta { flex-direction: column; width: 100%; }
           .lp-btn-primary, .lp-btn-ghost { width: 100%; padding: 15px 24px; }
           .lp-threats-section { padding: 72px 24px; }
-          .lp-threats-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
+          .lp-threats-list { gap: 4px; margin-top: 40px; }
+          .lp-threat-body-content { grid-template-columns: 1fr; gap: 16px; padding: 0 20px 24px 20px; }
           .lp-stat { padding: 28px 0; border-right: none;
             border-bottom: 1px solid rgba(245,240,232,0.08); }
           .lp-stat:nth-child(2) { padding: 28px 0; }
@@ -1272,58 +1390,81 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         <h2 className="lp-section-head lp-reveal" style={{ fontSize: 'clamp(32px, 4vw, 58px)', marginBottom: 0 }}>
           Real problems.<br /><em>Constitutional responses.</em>
         </h2>
-        <div className="lp-threats-grid">
+        <div className="lp-threats-list">
           {[
             {
-              threat: 'Dynastic wealth',
-              problem: 'Inherited fortunes compound across generations, crowding out land, labor markets, and opportunity for everyone else.',
-              response: 'Progressive demurrage applies carrying costs that exceed passive returns at every wealth tier — wealth not continuously earned decays toward the participation floor.',
-              annex: 'ANNEX AZ · §AZ3',
-            },
-            {
-              threat: 'Survival held hostage',
-              problem: 'Food, shelter, and healthcare become leverage — withheld to enforce compliance, extract labor, or punish dissent.',
-              response: 'Essential Access is unconditional and non-convertible. It exists beneath the market, not inside it. No entity — public or private — may price, gatekeep, or revoke it.',
+              num: '01',
+              headline: 'Rent that prices you out',
+              problem: 'Your landlord raises rent 30% because the neighborhood got popular. You can\'t afford to stay and can\'t afford to move somewhere better.',
+              response: 'Housing is part of Essential Access — unconditional and non-convertible. No entity, public or private, may use shelter as financial leverage.',
               annex: 'INVARIANTS · INV-001',
             },
             {
-              threat: 'Civic voice for sale',
-              problem: 'Money buys political influence. Concentrated wealth shapes law, regulation, and enforcement in its own interest.',
-              response: 'Voice is a separate instrument that cannot be purchased with Flow, cannot be accumulated without contribution, and decays over time to prevent entrenchment.',
+              num: '02',
+              headline: 'One bill wipes you out',
+              problem: 'A single hospital visit — yours, or your kid\'s — erases years of savings and follows you as debt for decades.',
+              response: 'Healthcare sits beneath the market. It cannot be priced, gated, or revoked for inability to pay. The floor is constitutionally fixed, not budget-dependent.',
+              annex: 'INVARIANTS · INV-001',
+            },
+            {
+              num: '03',
+              headline: 'Your vote vs. their donation',
+              problem: 'A corporation\'s annual lobbying budget exceeds your lifetime earnings. Elected officials return their calls first.',
+              response: 'Voice is a separate instrument that cannot be purchased. It cannot be accumulated without contribution and decays over time to prevent permanent influence.',
               annex: 'ANNEX Z · §Z2',
             },
             {
-              threat: 'Emergency as pretext',
-              problem: 'Crises are invoked to justify permanent expansions of power that outlast the emergency that triggered them.',
-              response: 'Shared Storehouse activates only on oracle-verified scarcity and carries a mandatory unwind clause. Emergency powers cannot self-extend.',
+              num: '04',
+              headline: 'Born rich, stay rich',
+              problem: 'Someone who inherited a portfolio at 25 has more security at 50 than someone who worked two jobs and raised a family.',
+              response: 'Wealth that isn\'t continuously earned through contribution decays toward a participation floor. Passive accumulation across generations carries a structural cost.',
+              annex: 'ANNEX AZ · §AZ3',
+            },
+            {
+              num: '05',
+              headline: 'Lose your job, lose everything',
+              problem: 'Employment is the only thread connecting you to healthcare, housing stability, and financial survival. Cut the thread and everything falls.',
+              response: 'Essential Access is decoupled from employment. Food, shelter, healthcare, and a basic income floor exist outside the labor market — not as charity, but as constitutional right.',
+              annex: 'ANNEX AC · §AC2',
+            },
+            {
+              num: '06',
+              headline: 'Emergency powers that never end',
+              problem: 'A crisis justifies new government powers. The crisis passes. The powers don\'t.',
+              response: 'Emergency provisions carry mandatory unwind clauses. They cannot self-extend, cannot waive other protections, and require oracle-verified conditions to stay active.',
               annex: 'ANNEX AC · §AC4',
             },
-            {
-              threat: 'Contribution erased',
-              problem: 'Decades of community work leave no record. Civic roles go to the connected, not the proven.',
-              response: 'Service Record is a verified, tamper-resistant history of stewardship — used for rotating civic roles, never as a credit proxy or employability score.',
-              annex: 'ANNEX Z · §Z4',
-            },
-            {
-              threat: 'Rules changed quietly',
-              problem: 'Constitutional protections are quietly weakened through incremental amendments, reinterpretation, or enforcement gaps.',
-              response: 'Core invariants are Tier 1 — unamendable by design. Tier 2 changes require supermajority + oracle review. No provision can waive another.',
-              annex: 'INVARIANTS · §Amendment',
-            },
-          ].map((item, i) => (
-            <div key={i} className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}`}>
-              <div>
-                <span className="lp-threat-pill">
-                  <span className="lp-threat-pill-dot" />
-                  Threat
-                </span>
-                <p className="lp-threat-problem" style={{ marginTop: 14 }}>"{item.problem}"</p>
+          ].map((item, i) => {
+            const isOpen = openThreatIdx === i
+            return (
+              <div
+                key={i}
+                className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}${isOpen ? ' lp-threat-open' : ''}`}
+                onClick={() => setOpenThreatIdx(isOpen ? null : i)}
+              >
+                <div className="lp-threat-header">
+                  <span className="lp-threat-num">{item.num}</span>
+                  <span className="lp-threat-headline">{item.headline}</span>
+                  <span className="lp-threat-chevron">{isOpen ? '▴' : '▾'}</span>
+                </div>
+                <div className="lp-threat-body">
+                  <div className="lp-threat-body-inner">
+                    <div className="lp-threat-body-content">
+                      <div>
+                        <p className="lp-threat-body-label">The problem</p>
+                        <p className="lp-threat-problem">"{item.problem}"</p>
+                      </div>
+                      <div>
+                        <p className="lp-threat-body-label">Constitutional response</p>
+                        <p className="lp-threat-response">{item.response}</p>
+                        <span className="lp-threat-annex">{item.annex}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="lp-threat-arrow">Constitutional response</div>
-              <p className="lp-threat-response">{item.response}</p>
-              <span className="lp-threat-annex">{item.annex}</span>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 
