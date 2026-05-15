@@ -498,7 +498,6 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
           const TITLE_R = RING_R + 22
-          const TIME_R  = RING_R + 36
           return (
             <g key={`lbl-${b.path.id}`}
               style={{ pointerEvents: 'none', transition: 'opacity 0.25s' }}
@@ -506,8 +505,6 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
             >
               {makeArcLabel(b.path.title, ex, ey, TITLE_R, b.above, 11.5, 0.90,
                 'Inter, sans-serif', isHovered ? 700 : 500, '#ffffff')}
-              {makeArcLabel(b.path.time, ex, ey, TIME_R, b.above, 9, 0.60,
-                "'IBM Plex Mono', monospace", 400, '#ffffff')}
             </g>
           )
         })}
