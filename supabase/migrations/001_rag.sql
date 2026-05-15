@@ -1,7 +1,5 @@
 -- supabase/migrations/001_rag.sql
 -- Run this in the Supabase SQL editor (free tier: Dashboard > SQL Editor)
--- Uses gemini-embedding-001 (3072 dims). No IVFFlat index — exact search is
--- fast enough for ~1000 chunks and avoids the 2000-dim index limit.
 
 create extension if not exists vector;
 
@@ -10,12 +8,17 @@ create table if not exists documents (
   content   text        not null,
   source    text        not null,
   chunk_idx integer     not null,
-  embedding vector(3072)
+  embedding vector(768)
 );
+
+-- IVFFlat index — tune lists=100 after ingestion
+create index if not exists documents_embedding_idx
+  on documents using ivfflat (embedding vector_cosine_ops)
+  with (lists = 100);
 
 -- Semantic search RPC used by the chat API
 create or replace function match_documents(
-  query_embedding vector(3072),
+  query_embedding vector(768),
   match_threshold float,
   match_count     int
 )

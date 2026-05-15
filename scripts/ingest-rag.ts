@@ -1,11 +1,16 @@
-// Usage: NODE_PATH=../app/node_modules npx tsx --tsconfig ../app/tsconfig.json ingest-rag.ts
-// Run from the scripts/ directory.
+// Usage: cd scripts && npx tsx --tsconfig ../app/tsconfig.json ingest-rag.ts
 
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import fs from 'fs';
-import { join } from 'path';
-import { createClient } from '@supabase/supabase-js';
-import { embed } from 'ai';
-import { createGoogleGenerativeAI } from '@ai-sdk/google';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Point Node to app/node_modules so imports below resolve
+process.env.NODE_PATH = join(__dirname, '..', 'app', 'node_modules');
+// @ts-ignore
+(await import('module')).default._initPaths();
 
 // Load scripts/.env manually
 const envPath = join(__dirname, '.env');
@@ -26,14 +31,19 @@ if (fs.existsSync(envPath)) {
 
 const SUPABASE_URL = process.env.SUPABASE_URL!;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY!;
-const GOOGLE_API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY!;
+const GOOGLE_GENERATIVE_AI_API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY!;
 
-if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY || !GOOGLE_API_KEY) {
+if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY || !GOOGLE_GENERATIVE_AI_API_KEY) {
   console.error('Missing required env vars: SUPABASE_URL, SUPABASE_SERVICE_KEY, GOOGLE_GENERATIVE_AI_API_KEY');
   process.exit(1);
 }
 
-const google = createGoogleGenerativeAI({ apiKey: GOOGLE_API_KEY });
+// Dynamic imports after NODE_PATH is set
+const { createClient } = await import('@supabase/supabase-js');
+const { embed } = await import('ai');
+const { createGoogleGenerativeAI } = await import('@ai-sdk/google');
+
+const google = createGoogleGenerativeAI({ apiKey: GOOGLE_GENERATIVE_AI_API_KEY });
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
 const DOCS_ROOT = join(__dirname, '..', 'docs');
@@ -69,25 +79,29 @@ function chunkText(text: string): string[] {
 
 async function embedText(chunk: string): Promise<number[]> {
   const result = await embed({
-    model: google.textEmbeddingModel('gemini-embedding-001'),
+    model: google.textEmbeddingModel('text-embedding-004'),
     value: chunk,
   });
   return result.embedding;
+}
+
+function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function main() {
   const files = collectMdFiles(DOCS_ROOT);
   console.log(`Found ${files.length} markdown files`);
 
+  // Wipe existing rows
   const { error: deleteError } = await supabase.from('documents').delete().neq('id', 0);
   if (deleteError) {
-    console.error('Failed to clear documents:', deleteError.message);
+    console.error('Failed to delete existing rows:', deleteError.message);
     process.exit(1);
   }
-  console.log('Cleared existing documents\n');
+  console.log('Cleared existing documents');
 
   let totalChunks = 0;
-
   for (const filePath of files) {
     const source = filePath.replace(DOCS_ROOT + '/', '');
     const text = fs.readFileSync(filePath, 'utf8');
@@ -95,21 +109,24 @@ async function main() {
 
     const rows: { content: string; source: string; chunk_idx: number; embedding: number[] }[] = [];
     for (let i = 0; i < chunks.length; i++) {
-      if (i > 0) await new Promise(r => setTimeout(r, 4200)); // 15 RPM free-tier limit
+      if (i > 0) await sleep(250);
       const embedding = await embedText(chunks[i]);
       rows.push({ content: chunks[i], source, chunk_idx: i, embedding });
     }
 
     const { error } = await supabase.from('documents').insert(rows);
     if (error) {
-      console.error(`  ✗ ${source}: ${error.message}`);
+      console.error(`  Error inserting ${source}:`, error.message);
     } else {
-      console.log(`  ✓ ${source}: ${rows.length} chunk(s)`);
+      console.log(`  ${source}: ${rows.length} chunk(s)`);
       totalChunks += rows.length;
     }
   }
 
-  console.log(`\nDone. ${totalChunks} chunks from ${files.length} files.`);
+  console.log(`\nDone. Inserted ${totalChunks} total chunks from ${files.length} files.`);
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
