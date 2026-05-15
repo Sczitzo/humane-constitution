@@ -86,18 +86,34 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     cp2x: w*0.68, cp2y: CY + h*0.07,
     x1:  w*0.76, y1:  CY,
   }
+  // Last branch-off is at trunkT=0.82 — trunk ends there.
+  // s3 is clipped: x1 becomes the point at t=0.82 on the full curve.
+  // We parameterise: full s3 went 0.76→1.0, so local t for 0.82 = (0.82-0.76)/0.24 = 0.25
+  const s3EndT = (0.82 - 0.76) / 0.24  // ≈ 0.25
   const s3 = {
     x0:  w*0.76, y0:  CY,
     cp1x: w*0.83, cp1y: CY - h*0.06,
     cp2x: w*0.91, cp2y: CY + h*0.04,
     x1:  w,      y1:  CY + h*0.02,
   }
+  // Evaluate the cubic at s3EndT to find the terminal trunk point
+  const trunkEnd = {
+    x: cubicBezierPoint(s3EndT, s3.x0, s3.cp1x, s3.cp2x, s3.x1),
+    y: cubicBezierPoint(s3EndT, s3.y0, s3.cp1y, s3.cp2y, s3.y1),
+  }
+  // Split s3 at s3EndT using De Casteljau — gives us the cp's for the trimmed segment
+  const s3cp1x = s3.x0 + (s3.cp1x - s3.x0) * s3EndT
+  const s3cp1y = s3.y0 + (s3.cp1y - s3.y0) * s3EndT
+  const midx    = s3.cp1x + (s3.cp2x - s3.cp1x) * s3EndT
+  const midy    = s3.cp1y + (s3.cp2y - s3.cp1y) * s3EndT
+  const s3cp2x  = s3cp1x + (midx - s3cp1x) * s3EndT
+  const s3cp2y  = s3cp1y + (midy - s3cp1y) * s3EndT
 
   const trunkPath = [
     `M ${s1.x0} ${s1.y0}`,
     `C ${s1.cp1x} ${s1.cp1y} ${s1.cp2x} ${s1.cp2y} ${s1.x1} ${s1.y1}`,
     `C ${s2.cp1x} ${s2.cp1y} ${s2.cp2x} ${s2.cp2y} ${s2.x1} ${s2.y1}`,
-    `C ${s3.cp1x} ${s3.cp1y} ${s3.cp2x} ${s3.cp2y} ${s3.x1} ${s3.y1}`,
+    `C ${s3cp1x} ${s3cp1y} ${s3cp2x} ${s3cp2y} ${trunkEnd.x} ${trunkEnd.y}`,
   ].join(' ')
 
   function pointOnTrunk(t: number): { x: number; y: number } {
