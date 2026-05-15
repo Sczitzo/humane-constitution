@@ -100,9 +100,13 @@ Current order: First-Time → Skeptic → Economic → Founding → Identity →
 ## Critical rules
 
 - Run `npm run generate:corpus` after every markdown change under `docs/` or any corpus-registered markdown source.
-- Do not modify `docs/constitution/Humane_Constitution.md`, `Acceptance_Protocol.md`, or `INVARIANTS.md` without explicit instruction.
+- Do not modify these files without explicit instruction:
+  - `docs/constitution/Humane_Constitution.md`
+  - `docs/constitution/Acceptance_Protocol.md`
+  - `docs/constitution/INVARIANTS.md`
 - Vercel deployment root is `app/`, not the repo root. Deploy with `vercel --prod` from inside `app/`.
 - For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review in `.claude/rules/constitution-review.md`.
+- Run relevant verification before marking any code or corpus task complete.
 
 ## Scoped protocols
 
