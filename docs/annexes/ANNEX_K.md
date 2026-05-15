@@ -1,5 +1,14 @@
 # ANNEX K — Essential Basket Governance and Civic Participation Fairness
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Governs how the essential basket is contested and revised over time, ensures civic instruments recognize informal and care work, and protects civic continuity for people in hardship through the Protected Pause mechanism. |
+> | **Who it protects** | People whose essential needs fall outside current basket definitions (mental health, reproductive care, disability supports); caregivers and informal workers whose contributions are not institutionally legible; anyone facing a life disruption that would otherwise sever their civic standing. |
+> | **Failure risk** | Administrative drift silently narrows the basket without public action; Voice and Service Record reward only people whose lives fit institutional records, recreating class hierarchy inside civic instruments. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | P-009 Protected Pause; TR-06 civic-elite capture; Annex U §U5 (cumulative basket anti-erosion); Annex Z; essential basket vendor rules in §K5. |
+
 > **Provenance:** Foundational constitutional annex · Governs Essential Basket contestation, civic participation fairness, and protected pause rules later amended by P-009 · Status: **ACTIVE**
 
 **Purpose.** This annex addresses two persistent risks: first, that the essential basket will be treated as a settled technical list when it is actually a recurring constitutional conflict zone; second, that Voice and Service Record can quietly reward only people whose lives are already legible to institutions.

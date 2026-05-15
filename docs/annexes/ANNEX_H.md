@@ -1,5 +1,14 @@
 # ANNEX H — Amendment Article and Constitutional Change Control
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Classifies every kind of rule change (clerical, operational, statutory, invariant) and sets the notice periods, vote thresholds, judicial review triggers, and anti-entrenchment rules each class requires — so no rule can be quietly rewritten through a software release, treaty, or emergency order. |
+> | **Who it protects** | Everyone whose rights, survival access, civic standing, or privacy could be diminished by unannounced or misclassified constitutional changes. |
+> | **Failure risk** | Amendment capture — powerful actors misclassify a rights-narrowing change as a Tier 3 parameter tweak, bypass public scrutiny, and lock in the change before it can be challenged. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | H-1 dual-key repair (Annex U §U7); CRP capture risk (Annex S); founding anti-capture rules (Annex N §N3); Annex AV. |
+
 > **Provenance:** Foundational constitutional annex · Governs amendment classes and constitutional change control · Status: **ACTIVE**
 **Purpose.** This annex turns “change” itself into a governed object. It defines which rules may change, who may propose change, what notice and evidence are required, when judicial review is mandatory, and how emergency powers are prevented from mutating into permanent rewrites. No amendment may be smuggled in through software releases, procurement terms, treaty language, or administrative custom.
 

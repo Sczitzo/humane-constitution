@@ -1,5 +1,14 @@
 # ANNEX V — Transition Mechanics, Conversion, and Legacy-System Treatment
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Adds operational mechanics to the transition doctrine — conversion-rate methodology, debt restructuring hierarchy, banking conversion sequence, foreign-claims inventory, and phase gates — so the move from legacy systems to the protocol cannot be improvised after panic begins. |
+> | **Who it protects** | Households whose deposits, pensions, and debt obligations could be wiped out by chaotic or captured conversion; workers whose payroll continuity depends on the payment rail surviving transition; essential providers whose reimbursement cannot pause. |
+> | **Failure risk** | Charismatic or opaque conversion decisions favor incumbent creditors; run dynamics destroy protected household savings before they can be ring-fenced; foreign obligations are uncounted until they create a systemic crisis; conversion proceeds phase by phase without published stop conditions. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | Annex Q §Q4 (political resistance mapping); Annex N §N2 (genesis governance); Annex X §X3 (issuance channels); boundary membrane rules in §V6. |
+
 > **Provenance:** Foundational constitutional annex · Defines transition mechanics, conversion, and legacy-system treatment · Status: **ACTIVE**
 
 **Purpose.** Annex Q states the transition doctrine. This Annex adds operational mechanics so transition is not left at the level of aspiration. Where Annex V conflicts with looser transition language elsewhere, Annex V governs.

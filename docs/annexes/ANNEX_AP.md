@@ -1,5 +1,23 @@
 # ANNEX AP — PCRP Attack Surface Hardening
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Harden the Public Coercion Response Protocol against two known attack vectors: exhausting its trigger cap with manufactured false alarms, and suppressing it with strategically timed enforcement flags. |
+> | **Who it protects** | People experiencing genuine public coercion whose protection is diluted or blocked because adversaries have gamed the PCRP trigger and demand-context mechanisms. |
+> | **Failure risk** | False-trigger exhaustion (T-018): adversary floods the PCRP cap with manufactured triggers, leaving no audit capacity when real coercion occurs. Demand-context suppression (T-019): a strategically timed enforcement action is used to block PCRP activation during a genuine coercion event. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-018 (PCRP False-Trigger Exhaustion); T-019 (Demand-Context Flag Suppression); P-015; Annex AI (Federated Ombuds); Annex AS (attestation-at-risk) |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Harden the Public Coercion Response Protocol against two known attack vectors: exhausting its trigger cap with manufactured false alarms, and suppressing it with strategically timed enforcement flags. |
+> | **Who it protects** | People experiencing genuine public coercion whose protection is diluted or blocked because adversaries have gamed the PCRP trigger and demand-context mechanisms. |
+> | **Failure risk** | False-trigger exhaustion (T-018): adversary floods the PCRP cap with manufactured triggers, leaving no audit capacity when real coercion occurs. Demand-context suppression (T-019): a strategically timed enforcement action is used to block PCRP activation during a genuine coercion event. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-018 (PCRP False-Trigger Exhaustion); T-019 (Demand-Context Flag Suppression); P-015; Annex AI (Federated Ombuds); Annex AS (attestation-at-risk) |
+
 > **Provenance:** Implements [P-015 — PCRP Attack Surface Hardening] · Addresses T-018 and T-019 · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** High | **Patch:** P-015

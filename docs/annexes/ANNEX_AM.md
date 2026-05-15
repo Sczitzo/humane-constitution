@@ -1,5 +1,14 @@
 # ANNEX AM — Electoral Cycle Resilience
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Protect the constitutional architecture from being dismantled or hollowed out by hostile electoral cycles — preserving founding commitments across governing-coalition changes. |
+> | **Who it protects** | Everyone whose Essential Access, enforcement rights, or constitutional protections depend on institutions that a new government might defund, unfill, or quietly dismantle. |
+> | **Failure risk** | Electoral capture: a governing coalition wins a supermajority and uses the transition window to appoint loyalists, lapse post-mortems, and starve oversight bodies before constitutional review can fire. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-022 (Electoral Cycle Capture); P-018; Annex AI (Federated Ombuds); Annex AJ (enforcement ledger); Annex AL (oracle accreditation) |
+
 > **Provenance:** Implements [P-018 — Electoral Cycle Resilience] · Addresses T-022 · Status: **PROPOSED**
 
 **Status:** PROPOSED | **Priority:** Critical | **Patch:** P-018

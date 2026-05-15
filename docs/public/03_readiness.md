@@ -1,145 +1,111 @@
 # Public Readiness Guide
 
-This guide is for people who are skeptical, worried, or trying to decide whether this project deserves serious attention.
+This is a serious design draft, not a deployment plan. The constitutional text exists. The threat register exists. The governance chain — Threat → Patch → Annex — is documented and public. What does not yet exist is field evidence: no pilots have run, no founding legitimacy artifacts have been produced, no independent red-team review has completed. The design makes specific, named claims about separating survival from markets from political power. Those claims are either testable or they are not serious. This guide is for people who want to know which ones are which.
 
-Short answer: **do not trust it blindly. Test it. Pressure it. Look for failure points.**
+---
 
-The Humane Constitution is a design, not a finished society. It only matters if it can survive real greed, real scarcity, real corruption, and real transition pressure.
+## Four entry paths
 
-## How the governance chain works
+Pick the one that fits where you are.
 
-Every design decision in this project follows a three-part chain: Threat → Patch → Annex. A threat (T-NNN) identifies a failure mode. A patch (P-NNN) describes what was changed in response. An annex (ANNEX_XX.md) contains the full resulting constitutional text. The master linkage table is in [ANNEX_AH.md § AH8](../annexes/ANNEX_AH.md). This chain is the permanent record of why each constitutional clause exists.
+### 5-minute start
 
-![Threat–Patch–Annex Provenance Chain](/images/V-009.png)
+Read these three documents in order:
 
-The public question comes first: can we separate basic needs, markets, and public power without creating something worse?
+1. **[One-Page Overview](./01_overview.md)** — the core problem and the five-tool design in plain language
+2. **[Life Under The System](./07_life_under_the_system.md)** — what a year of actual experience might feel like, including pressure cases
+3. **[Claims & Evidence Register](../governance/Claims_Evidence_Register.md)** — what the project claims and what evidence currently backs each claim
 
-The project is trying to prevent three collapses: survival becoming dependent on trade, wealth becoming public power, and temporary advantage becoming permanent class position. Those are architecture claims, not proof. Every one of them still has to survive pilots, outside review, and adversarial testing.
+That gives you the structure, a lived sense of the stakes, and an honest audit in one reading pass.
 
-## What The Project Claims
+---
 
-| Claim | Current status | What would make it stronger |
+### Lived fairness path
+
+For people who want to understand what this means for real people before understanding the mechanism.
+
+Start with **[Life Under The System](./07_life_under_the_system.md)** — realistic one-year pressure stories across different circumstances. Then read **[Rights Layer](./05_rights_layer.md)** — what the design is specifically trying to protect and why those protections have explicit limits. Then **[How Big Companies Work Here](./06_big_companies.md)** — how profit can remain without hostage power, and what the design does when an essential-sector company refuses.
+
+These documents answer the question: *does this actually protect anyone, or does it just move the levers?*
+
+---
+
+### Skeptic path
+
+For people who arrived with objections.
+
+The right documents are the ones that treat your objection as a design problem, not a failure of imagination:
+
+- **[Claims & Evidence Register](../governance/Claims_Evidence_Register.md)** — every major claim the project makes, with current evidence status and what would change it
+- **[Evidence Ladder](../governance/Evidence_Ladder.md)** — how the project ranks and weights different kinds of evidence
+- **[Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md)** — problems the project knows it has not solved, in plain language
+
+The useful objection is not "people are greedy, so this will fail." The useful objection is: "a wealthy actor could convert Flow into Essential Access through a proxy redemption network without triggering the current detection rules." The docket is where those specific objections go and either get resolved or stay open.
+
+---
+
+### Technical audit path
+
+For researchers, implementers, and red-teamers.
+
+- **[Threat Register](../governance/Threat_Register.md)** — failure modes T-001 through T-027+, each with a named mechanism
+- **[Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md)** — which threats are resolved, partially addressed, or still open
+- **[Hardening Queue](../governance/Hardening_Queue.md)** — which controls are designed, active-but-unproven, or evidence-backed
+- **[Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md)** — what should be tested, in what order, with what stop/go gates
+- Annexes: the full constitutional text by area, traceable to the threat that motivated each clause. Master linkage table: [ANNEX_AH.md § AH8](../annexes/ANNEX_AH.md)
+
+---
+
+## Honest readiness status
+
+| Area | Status | What it means |
 |---|---|---|
-| Wealth should not buy basic needs or public power. | Designed as a core rule. Numerical anti-entrenchment targets (FC-140–FC-145) are now published founding commitments, not reserved placeholders. | Stress tests against proxy markets and elite workarounds. |
-| Basic survival can be protected without ending markets. | Design exists. | Pilot evidence for delivery, prices, and supply response. |
-| Voice and Service Record can avoid becoming social credit. | Limits are written. | User testing, abuse review, and strong privacy design. |
-| Real shortage can be handled more fairly than panic prices alone. | Shortage rules are written. | Emergency drills with real supply data. |
-| Public money rails can reduce predatory banking. | Design direction exists. | Cost models, finance pilots, and transition plans. |
-| Capture can be made harder and easier to see. | Threat register and patch log exist. | Outside red-team review and independent audits. |
-
-## Readiness Dashboard
-
-| Area | Status | Meaning |
-|---|---|---|
-| Public explanation | **Designed** | General readers can see the core idea and objections. |
 | Constitutional text | **Written** | The main rule set exists as documents. |
-| Tool separation | **Written** | Flow, Essential Access, Voice, Service Record, and Shared Storehouse are separated in the design. |
-| Threat modeling | **Written, still active** | Many attack paths are named, but not all are proven solved. |
-| Identity and recovery | **Pilot gate criteria defined, proof still needed** | Pass conditions for the identity pilot are now specified in Annex AK §AK5. The system still needs a live pilot to prove those conditions can be met without surveillance or exclusion. |
-| Measuring essentials | **Needs proof** | Food, water, shelter, care, and energy capacity must be measured well enough. |
-| Economic transition | **Needs simulation** | Money, debt, business finance, and ownership changes need deeper testing. |
-| Essential-sector refusal | **Needs drills** | Oil, energy, medicine, logistics, and PBM-style intermediaries must be tested as survival-leverage actors, not only ordinary vendors. |
-| Founding legitimacy | **Dossier designed, evidence not produced** | The required founding artifacts are named and the Pilot Evidence Roadmap now includes a founding cascade gate — pilots are blocked until founding artifact production begins. All 8 dossier artifacts remain at 0 of 8 PRODUCED status. Real notice, deliberation, consent, exit rehearsal, and independent review do not exist yet. |
-| Reader app | **Working prototype** | The reader works, but still needs polish and accessibility review. |
-| Deployment | **Not ready** | This is a design and critique target, not a rollout plan. |
+| Public explanation | **Designed** | General readers can see the core idea and objections. |
+| Five-tool separation | **Written** | Flow, Essential Access, Voice, Service Record, and Shared Storehouse are separated in the design and walls are specified. |
+| Threat modeling | **Written, still active** | Many attack paths are named. Not all are proven solved. |
+| Anti-entrenchment targets | **Published founding commitments** | Numerical targets (FC-140–FC-145) are public, not reserved placeholders. Compliance mechanisms are unproven. |
+| Identity and recovery | **Pilot gate criteria defined, proof still needed** | Pass conditions for the identity pilot are specified in Annex AK §AK5. A live pilot has not run. Asymmetric Error Doctrine (AED) targets — err toward inclusion, with quarterly fraud tolerance ceilings and exclusion rate limits — are written into founding commitments. |
+| Measuring essentials | **Needs proof** | Food, water, shelter, care, and energy capacity must be measured reliably enough to trigger shortage rules fairly. |
+| Economic transition | **Needs simulation** | Money, debt, business finance, and ownership changes need deeper modeling and adversarial testing. |
+| Essential-sector refusal | **Needs drills** | The Compliant Alternative Supplier Pre-Registration (CASP) requirement is designed. It has not been tested against a real company refusal. |
+| Founding legitimacy | **Dossier designed, evidence not produced** | All 8 required founding artifacts remain at 0 of 8 produced. Required notice records, deliberation records, consent evidence, conflict registers, exit rehearsals, and independent review do not exist yet. Pilots are blocked by a cascade gate until this changes. |
+| Reader app | **Working prototype** | The reader works. Accessibility review and polish still needed. |
+| Deployment | **Not ready** | This is a design and critique target. Not a rollout plan. |
 
-## Strong Objections To Test
+---
 
-### Could this become bureaucracy with nicer words?
+## What would change the assessment
 
-Yes. That is a major risk.
+This section is where skeptics and supporters can agree on what honesty looks like. Each item below describes evidence that would upgrade or downgrade specific design claims — not the project's credibility in general, but the particular claim it makes.
 
-The answer cannot be "trust the officials." The answer has to be limits, public records, appeal rights, outside review, and narrow powers.
+**Would upgrade**
 
-### Could wealthy people recreate control anyway?
-
-Yes. They may use shell companies, trusts, proxy markets, finance tricks, or ownership structures.
-
-That is why anti-rent and anti-conversion rules must be tested constantly.
-
-### Could Essential Access become coercive?
-
-Yes. If food, shelter, medicine, or identity checks become tools of punishment, the system has failed.
-
-Survival access must not depend on obedience, popularity, work status, or civic participation.
-
-### Could Voice and Service Record become social credit?
-
-Yes, if they escape their limits.
-
-They must never buy rights, goods, housing, money, immunity, or human worth.
-
-### Could transition create instability?
-
-Yes. A forced rollout would be dangerous.
-
-The safer path is pilots, parallel systems, public measurement, appeal testing, and clear stop/go gates.
-
-### Could big essential companies simply say no?
-
-Yes. The project should assume some will leave, litigate, lobby, delay, route control through affiliates, or demand special treatment.
-
-That is why the test is not whether the system has good intentions. The test is whether reserves, substitute suppliers, public or cooperative fallback capacity, treaty capacity, and public receiver authority can keep the CSM floor intact when the largest essential-sector actor refuses.
-
-### Could a founding vote become theater?
-
-Yes. A vote is not legitimate if ordinary affected people cannot understand the proposal, object, abstain, or leave without punishment.
-
-That is why the Founding Legitimacy Dossier now tracks required artifacts separately. Until conflict registers, notice records, deliberation records, consent evidence, exit rehearsals, dignity-floor non-coercion review, and independent review are produced, the honest status remains unresolved.
-
-## Evidence To Look For
-
-| Area | Useful evidence |
+| Claim | Evidence that would strengthen it |
 |---|---|
-| Basic needs | Cash-transfer pilots, universal basic services, food security, housing-first programs, emergency medicine access. |
-| Money and idle-money fees | Public banking, payment-rail costs, local currency experiments, monetary velocity research. |
-| Anti-rent rules | Community land trusts, cooperative ownership, anti-vacancy policy, worker-owned firms, trust-law studies. |
-| Identity recovery | Refugee documentation, privacy-preserving credentials, account recovery failures, guardianship abuse prevention. |
-| Measuring real capacity | Supply-chain data, public-health monitoring, audit systems, standards-body capture cases. |
-| Anti-capture design | Constitutional backsliding research, anti-corruption bodies, public audit logs, emergency-powers abuse history. |
+| Wealth cannot buy basic needs | Proxy market stress tests showing anti-conversion rules hold against sophisticated shell structures. |
+| Basic survival can be protected without ending markets | Pilot evidence for delivery costs, real prices, and supply response at scale. |
+| Voice and Service Record cannot become social credit | User testing under adversarial conditions; independent privacy and abuse review. |
+| Real shortage can be handled more fairly than panic prices | Emergency drills with real supply data and documented outcome disparity. |
+| Public money rails can reduce predatory access | Cost models, finance pilots, and transition plans from jurisdictions with comparable public banking experiments. |
+| Capture is harder to execute and easier to see | Outside red-team review with named methods; independent audit of the threat register by researchers with no stake in the design. |
+| Founding was legitimate | All 8 dossier artifacts produced, reviewed, and published: conflict register, notice records, deliberation records, consent evidence, exit rehearsal results, dignity-floor non-coercion review, and independent review. |
 
-## How To Critique Usefully
+**Would downgrade**
 
-A useful critique names the way the system fails.
+- A proxy redemption network achieving Essential Access conversion in a controlled scenario without triggering detection rules.
+- Identity pilots producing exclusion rates above the AED ceiling in demographic stress tests.
+- Shortage simulation showing that CASP contracts fail to activate when the largest essential-sector actor refuses.
+- Founding artifact production that substitutes theater for deliberation — a vote where ordinary affected people could not object, abstain, or leave without cost.
+- An independent red-team finding failure modes not currently in the threat register.
 
-Weak critique:
+---
 
-> People are greedy, so this will fail.
+## Governance documents
 
-Useful critique:
-
-> A wealthy actor could convert Flow into Essential Access through a proxy redemption network without triggering the current detection rules.
-
-Weak critique:
-
-> This is too complicated.
-
-Useful critique:
-
-> This section creates three review bodies with overlapping authority, so a dispute could deadlock here.
-
-Weak critique:
-
-> This is utopian.
-
-Useful critique:
-
-> This claim depends on measuring capacity, but the repo does not yet show how measurement error changes access during shortage.
-
-## Bottom Line
-
-The Humane Constitution should not ask for faith.
-
-It should earn attention by making its claims clear, its weak points visible, and its failure modes testable.
-
-For the detailed claim-by-claim audit, use the [Claims & Evidence Register](../governance/Claims_Evidence_Register.md).
-
-For the staged testing path, use the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md).
-
-## Governance Documents
-
-For how the project handles its own failure modes:
-
-- **[Threat Register](../governance/Threat_Register.md)** — catalogues known failure modes (T-001 through T-027+)
-- **[Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md)** — shows which threats are resolved, partially addressed, or open
-- **[Hardening Queue](../governance/Hardening_Queue.md)** — shows which controls are designed, active-unproven, or evidence-backed
+- **[Threat Register](../governance/Threat_Register.md)** — named failure modes with mechanisms
+- **[Threat Resolution Matrix](../governance/Threat_Resolution_Matrix.md)** — resolution status per threat
+- **[Claims & Evidence Register](../governance/Claims_Evidence_Register.md)** — claim-by-claim audit
+- **[Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md)** — staged testing with stop/go gates
+- **[Hardening Queue](../governance/Hardening_Queue.md)** — control status by area
+- **[Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md)** — what is not yet solved

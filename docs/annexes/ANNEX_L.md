@@ -1,5 +1,14 @@
 # ANNEX L — Judicial Architecture and Constitutional Review Institutions
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Constitutes the three-tier review architecture (Local Review Offices, Regional Constitutional Chambers, Constitutional Review Panel), defines CRP composition via sortition, sets standards of review for each tier, specifies the remedy ladder, and maps dispute classes to forum and appeal path. |
+> | **Who it protects** | Anyone who suffers an adverse decision — loss of Essential Access, identity denial, oracle dispute, emergency-power overreach — and needs a legible, fast-acting path to challenge it. |
+> | **Failure risk** | Without a constituted review body, the CRP remains implicit and therefore capturable; no single office can quietly reinterpret the constitution, but multiple offices in concert can if there is no independent check. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | CRP capture scenarios (Annex S); amendment classification risk (Annex H §H4); sortition integrity; TR-08 verifier capture; TR-10 emergency pause abuse. |
+
 > **Provenance:** Foundational constitutional annex · Constitutes judicial architecture and constitutional review institutions · Status: **ACTIVE**
 
 **Purpose.** Annexes G and H require a review body, but a body this load-bearing cannot remain implicit. This annex constitutes the review architecture, forum selection, standards of review, and remedy ladder needed to keep tier boundaries, rights, and instrument separation enforceable.

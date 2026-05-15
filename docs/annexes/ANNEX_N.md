@@ -1,5 +1,14 @@
 # ANNEX N — Transition, Genesis, and Deployability Preconditions
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Names the minimum preconditions for launch, governs the first 90 days of rollout (genesis governance), imposes anti-capture rules on founding bodies, and states plainly when the protocol is not yet legitimately deployable. |
+> | **Who it protects** | Everyone who could be harmed if founding institutions are captured by incumbent power before ordinary safeguards are live — and future generations who would inherit the capture. |
+> | **Failure risk** | The founding moment is captured by legacy banks, dominant landlords, platform incumbents, or donor blocs, locking in privilege before democratic accountability can function; or rollout proceeds before continuity and review capacity actually exist. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | Annex U §U2 (founding safeguards); Annex Q (pilot doctrine); Annex AH (bootstrap problem); Annex H §H6 (anti-entrenchment). |
+
 > **Provenance:** Foundational constitutional annex · Governs transition, genesis, and deployability preconditions later amended by founding-process patches · Status: **ACTIVE**
 **Purpose.** Steady-state architecture is not enough. The first 90 days of rollout can lock in capture for generations. This annex therefore expands the transition pathway, names who decides what at genesis, and states when the protocol is not yet legitimately deployable.
 

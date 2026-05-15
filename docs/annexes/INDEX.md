@@ -1,5 +1,14 @@
 # Annex Directory
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Navigation layer for the full set of constitutional annexes — tells readers which annex governs which part of the system and how to move from the Humane Constitution into the detailed rules behind it. |
+> | **Who it protects** | Any reader — resident, auditor, advocate, or implementer — who needs to find the operative rule without being lost in the full document set. |
+> | **Failure risk** | If readers cannot locate controlling annexes quickly, important protections become invisible, capture goes undetected, and accountability work is impeded by navigation overhead. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | General corpus navigability; all annexes cross-referenced below. |
+
 This directory holds the detailed support documents for the Humane Constitution.
 
 Plain meaning: start with the [Humane Constitution](../constitution/Humane_Constitution.md). Come here when you need the deeper rules, tests, failure plans, or implementation details behind a section.

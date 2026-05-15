@@ -1,5 +1,14 @@
 # ANNEX M — Oracle, Physical Reality, and Measurement Limits
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines what counts as evidence for capacity measurement, how scarcity declarations must be justified, and what the system must do by default when oracle data is uncertain, disputed, or fraudulent — so measurement failure defaults toward continuity rather than silent deprivation. |
+> | **Who it protects** | Everyone whose Essential Access, housing, or survival continuity depends on honest, challengeable capacity data — especially during scarcity events when measurement failure most endangers vulnerable people. |
+> | **Failure risk** | Confident measurement error; single-source oracle manipulation; "verified disruption" claims used to tighten access without adequate evidence; emergency scarcity becoming normalized rather than prompting root-cause remediation. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | TR-03 oracle manipulation; P-006, P-017, P-022; Annex U §U4; Annex AQ oracle-failure fallback; Annex AL measurement independence. |
+
 > **Provenance:** Foundational constitutional annex · Governs oracle evidence, physical-reality measurement, and measurement-failure defaults later hardened by P-006, P-017, and P-022 · Status: **ACTIVE**
 **Purpose.** The protocol does not just need data; it needs defensible contact with physical reality. Capacity measurement is therefore a constitutional concern. The danger is not only manipulation, but confident error in systems that are harder to measure than they first appear.
 

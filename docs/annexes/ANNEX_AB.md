@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-001 — Shadow Convertibility Containment] (§AB2), [P-002 — Incentive System Stabilization] (§AB3), [P-003 — Identity System Hardening] (§AB4), [P-004 — Definition Drift Protection] (§AB5) · Addresses T-001, T-004, T-002, T-007 · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Integrates the first adversarial hardening cycle into the constitutional corpus: containment rules for shadow convertibility, incentive architecture, layered identity, and semantic anti-capture. |
+> | **Who it protects** | Everyone enrolled — from arbitrage that drains the survival floor, from contribution frameworks that ignore unpaid care work, and from definitional capture that quietly erodes constitutional rights. |
+> | **Failure risk** | Sophisticated actors exploit ledger gaps, definition reinterpretation, or informal brokerage to convert Essential Access into Flow-equivalent value or to capture the governing vocabulary itself. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-001 / P-001 (shadow convertibility); T-002 / P-003 (identity assurance); T-004 / P-002 (incentive stability); T-007 / P-004 (definition drift) |
+
 **Purpose.** This annex integrates the first adversarial review cycle into the Humane Constitution document set without deleting predecessor content. It formalises the running-document discipline, names the highest-priority threats, and converts design decisions into controlling constitutional and operational language.
 
 ### AB1. Merge Integrity and Running-Document Governance

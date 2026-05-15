@@ -1,5 +1,14 @@
 # ANNEX C — Threat Register Operations (Workflow and Evidence)
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Converts the Threat Register from a static table into a living operational control system — defining intake, triage, ownership, evidence requirements, review cadence, change control, and scale readiness gates. |
+> | **Who it protects** | Anyone who relies on system controls actually being maintained and tested rather than existing only on paper. |
+> | **Failure risk** | Without an operational workflow, the Threat Register degrades into compliance theater — entries accumulate, ownership drifts, tests go stale, and real vulnerabilities are missed until they cause harm. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | All TR-01 through TR-13 entries in Annex B; pilot gate and scale gate criteria; Annex A §A3–A4. |
+
 > **Provenance:** Foundational constitutional annex · Defines threat-register workflow and evidence discipline · Status: **ACTIVE**
 This annex defines how the Threat Register is maintained, tested, audited, and patched over time. It converts the register from a static table into an operational control system.
 

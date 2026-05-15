@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-011 — Narrative Attack Surface Hardening] · Addresses T-010/T-011 · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Closes the narrative attack surface: establishes rapid public communication protocols, pre-committed failure disclosures, a plain-language rights document, and adversarial narrative simulation requirements. |
+> | **Who it protects** | People who depend on truthful public information to understand what the system is doing during crises; journalists, advocates, and researchers who scrutinize system behavior; the system itself from being defined by hostile framing in the absence of a prepared response. |
+> | **Failure risk** | Operational events become public scandals when the system has no pre-committed communication doctrine; bad-faith narratives fill the gap between event and accountability record; false triggers are treated as system failure rather than designed behavior. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-011 / P-011 (narrative attack surface); T-010 (public trust erosion); PCRP false-trigger events; White Paper sync requirements |
+
 **Purpose.** This annex introduces the operative clauses for P-011 (T-011 Narrative Attack Surface). It extends Article VII, the White Paper governance rules, and the annual simulation mandate. Where clauses here conflict with earlier language, this annex governs.
 
 ### AD1. Rapid Public Communication Protocol (RPCP)

@@ -1,5 +1,14 @@
 # ANNEX I — Residency, Migration, and Onboarding Article
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines who may enter, reside, onboard, and gain full civic standing — with staged rights-attachment, a humane survival floor for all persons physically present, and anti-purchase and anti-exploitation rules across all status classes. |
+> | **Who it protects** | Migrants, refugees, displaced persons, undocumented residents, children, dependents, trafficking survivors, and anyone whose belonging is precarious or contested. |
+> | **Failure risk** | Membership becomes a purchasable asset; capacity declarations are weaponized to exclude disfavored groups; employer or sponsor control over housing is used to coerce labor or identity transfer. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | TR-11 Sybil attacks; TR-12 account takeover; P-003 proof-of-personhood; Annex P; Annex AK; founding preconditions in Annex N. |
+
 > **Provenance:** Foundational constitutional annex · Governs residency, migration, onboarding, and humane membership continuity · Status: **ACTIVE**
 **Purpose.** This annex defines who may enter, reside, onboard, and gain full civic standing in the system. It protects humane treatment, identity continuity, and family stability while preventing membership from becoming a purchasable asset, a political-stacking tool, or a backdoor pressure valve on Essential Access, housing, Voice, or Service Record.
 

@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-009 — Grace Exploitation Loop Hardening] · Addresses T-009 · Status: **PROPOSED**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Closes the grace period exploitation loop: adds graduated renewal intensity, cross-quarter pause history review, collusion detection in hardship attestation networks, and slow Service Record decay during extended pauses. |
+> | **Who it protects** | Genuine long-term hardship users who need the Protected Pause Window without penalty; the contribution and civic pools from coordinated exploitation that rotates fake hardship claims to preserve elite governance eligibility. |
+> | **Failure risk** | A coordinated network uses mutual attestation and category-switching to maintain permanent pause status, preserving Service Record and civic eligibility indefinitely without genuine contribution; grace mechanisms created for the vulnerable are captured by sophisticated actors. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-009 / P-009 (grace exploitation loop); T-008 / P-008 (elite formation bypass); Annex K4 (Protected Pause Window); AC3.5 (cooling-off cohort rule) |
+
 **Purpose.** This annex introduces operative clauses for P-009 (T-009 Grace Exploitation Loop). It amends Annex K4 (Protected Pause), extends P-002 collusion analytics to hardship attestation, and closes the T-009 × T-008 bypass route. Status: PROPOSED.
 
 ### AF1. Graduated Renewal Intensity (Annex K4 Amendment)

@@ -5,11 +5,14 @@
 **Tier 2 founding commitment — required before deployment · Governed as P-004 protected specification**
 **Status: PROPOSED (referenced by T-002 and P-016)**
 
-- **Plain-language purpose:** Sets the rule for identity mistakes: how much fraud and exclusion risk the system may tolerate, how those rates are published, and who gets priority when the two risks trade off.
-- **Who it protects:** Real eligible people most likely to be excluded by document, digital, disability, displacement, or coercion barriers; also protects Essential Access supply from serious identity fraud.
-- **What could go wrong:** Political pressure could swing the identity system toward harsh exclusion after a fraud incident or toward uncontrolled over-issuance after an exclusion scandal, without a public doctrine.
-- **Evidence status:** Designed mechanism, needs evidence; status is PROPOSED, FC-140 has provisional anchors, and FC-141 through FC-150 still need pilot-calibrated commitments before scale.
-- **Linked risks:** T-002 identity exploits; P-003 identity calibration; P-016 asymmetric identity errors; Annex P.
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Sets the constitutional rule for identity mistakes: pre-commits maximum acceptable fraud and exclusion rates per instrument tier, establishes a public decision rule for trade-offs, and creates an Independent Identity Auditor to publish quarterly evidence against the targets. |
+> | **Who it protects** | People most likely to be excluded by document, digital, disability, displacement, or coercion barriers — displaced persons, undocumented persons, digitally fragile persons, people in recovery or crisis situations; also protects Essential Access supply from identity fraud that consumes physical goods. |
+> | **Failure risk** | Without a pre-committed public doctrine, political pressure swings the identity system toward harsh exclusion after fraud incidents or toward uncontrolled over-issuance after exclusion scandals; reactive calibration produces worse outcomes than a principled trade-off framework. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-002 / P-003 / P-016 (identity assurance and asymmetric error); FC-140 through FC-150; Annex P (identity stack); IIA quarterly reporting |
 
 ---
 

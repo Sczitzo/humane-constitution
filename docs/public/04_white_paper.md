@@ -6,67 +6,73 @@ title: White Paper
 
 ## Public White Paper
 
-The Humane Constitution is a design for a society where:
+*This is a draft constitutional design — serious, internally consistent, and named. It is not a live system, not a deployment plan, and not a finished argument. Read it as a structure under pressure, not a promise. Tell us where it fails.*
 
-- everyone has a basic needs floor
-- markets still work
-- wealth cannot buy public power
+---
 
-## The Core Problem
+## What this is about
 
-Survival is not a wage.
+Imagine a person who loses their job.
 
-A person may lose work, status, health, documents, popularity, or money and still remain a person whose hunger, shelter, medicine, and basic dignity matter. The design asks whether a society can protect that truth without crushing markets, local freedom, enterprise, dissent, or responsibility.
+Not a dramatic fall — just an ordinary interruption. Hours cut, a contract not renewed, a business that couldn't hold on. Within weeks, food gets harder. Then rent. Then the calculus shifts: take whatever is offered, on whatever terms, because the alternative is worse. The person is not less capable, not less willing to contribute. They are just out of leverage, and the people with leverage know it.
+
+Now consider what happens when that same dynamic operates at political scale. When the people with enough money can also buy the legal help, the political access, the protection from consequences that people without money cannot. Not through visible corruption, but through structure — through the way one tool, money, ends up doing too many jobs at once.
+
+That is the problem this design addresses. Not poverty in the abstract. Not inequality as a moral category. A specific structural failure: **when one instrument controls survival, markets, and public power simultaneously, having more of it means power over other people's lives — not just more comfort.**
+
+The Humane Constitution is an attempt to break that link. It tries to keep three things — survival, markets, and civic voice — from collapsing into a single convertible currency where the richest person holds the most keys.
+
+---
+
+## What we claim, what we haven't proven, and how it could fail
+
+This document makes a structural argument: that separating survival, market activity, and civic power into distinct, non-convertible instruments could prevent specific failure modes that have historically plagued human societies.
+
+Here is the honest version of what that means:
+
+**What the design claims:** If the five instruments described here — Flow, Essential Access, Voice, Service Record, and Shared Storehouse — are kept genuinely separate and non-convertible, a participating society would be structurally less vulnerable to three specific collapse states. Those states are described below.
+
+**What we haven't proven:** None of the major operational claims have been validated at scale. We have not run a pilot. We have not tested whether real delivery of Essential Access is feasible in the conditions we describe. We have not demonstrated that the walls between instruments can hold against sustained pressure from people with strong incentives to breach them.
+
+**How it could fail:** The most obvious failure modes are these — proxy markets (people create informal exchange to convert instruments the design intended to keep separate), measurement failure (the system promises what it cannot actually deliver because no one correctly assessed physical capacity), founding capture (the first institutions are staffed by the wrong people before the rules can protect against it), and emergency creep (temporary shortage powers become permanent without formal reversal). Each of these is named, tracked, and given mitigation design in the threat register. None of the mitigations have been stress-tested in the real world.
+
+The right response to this document is not faith. It is not dismissal either. It is **pressure: find the specific claim that you think is wrong and push on it.** See the [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) and [Readiness Guide](03_readiness.md) for the formal honest accounting of what exists and what doesn't.
+
+---
+
+## The problem in full
 
 In most societies, one kind of money does too much.
 
 It buys food, housing, medicine, transport, business tools, legal help, political access, and protection from consequences. When one tool controls all of that, people with money do not only have more comfort. They have more safety and more power over the rules.
 
-The Humane Constitution starts from a simple belief:
+This creates three distinct failure modes, each serious on its own, catastrophic in combination.
 
-> Losing money should not mean losing the basics of life.
+The first is the **survival-trade bind**: people must trade dignity, obedience, rights, or health just to survive. When food and shelter depend on employment, and employment depends on terms set by people with more leverage, the person with less leverage has no real choice. They comply — not because the terms are fair, but because the alternative is worse.
 
-It also believes:
+The second is **power-wealth convergence**: resource success becomes authority over rules, enforcement, and public design. This is not simple corruption. It is structural. When money can buy legal defense, political access, media presence, and regulatory influence, the rules that nominally govern everyone in fact respond to the preferences of the wealthy. Over time, those rules compound the original advantage.
 
-> Having money should not let a person buy control over public life.
+The third is the **static-advantage loop**: early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. The problem is not that some people have more. The problem is when "more" becomes a self-reinforcing mechanism that blocks later participants from competing, contributing, or challenging.
 
-The project tries to make those two beliefs practical.
+These three failures are not new observations. What this project attempts is a structural answer: not redistribution alone, not regulation alone, but **channel separation** — keeping the instruments for survival, markets, and public power from being mutually convertible.
 
-## Current Status
+---
 
-This is a constitutional design and critique target, not a deployed or deployment-ready system. No major operational claim has been validated at scale.
-
-The right response is neither blind trust nor quick dismissal. It is pressure, testing, and specific criticism. See the [Readiness Guide](03_readiness.md) and [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) for the honest status of each claim.
-
-## A Concrete Way In
+## Four situations that reveal the stakes
 
 The design is easiest to read through ordinary pressure, not abstractions. These examples are not promises, and they are not evidence. They are the kinds of situations the rules are meant to survive.
 
-### After lost work
+**After lost work:** A person loses hours, a job, or a business. The design asks whether food, shelter support, basic care, and basic transit can stay steady long enough for that person to make real choices instead of panic bargains. They still need Flow for ordinary market life, but survival should not be thrown immediately into the wage market.
 
-A person loses hours, a job, or a business. The design asks whether food, shelter support, basic care, and basic transit can stay steady long enough for that person to make real choices instead of panic bargains.
+**During unpaid care:** A parent, spouse, adult child, or neighbor does care work that is hard to price. The system should not treat that person as less civic, less useful, or less worthy because the work is unpaid, interrupted, or invisible to a market.
 
-They still need Flow for ordinary market life, but survival should not be thrown immediately into the wage market.
+**During a long build:** A builder, farmer, clinic, or repair cooperative needs money for work that takes years. The system should discourage idle hoarding without choking real long-term work. That difference needs clear funding paths, milestone checks, and testing against fake projects used to hide unused wealth.
 
-### During unpaid care
-
-A parent, spouse, adult child, or neighbor does care work that is hard to price.
-
-The system should not treat that person as less civic, less useful, or less worthy because the work is unpaid, interrupted, or invisible to a market.
-
-### During a long build
-
-A builder, farmer, clinic, or repair cooperative needs money for work that takes years.
-
-The system should discourage idle hoarding without choking real long-term work. That difference needs clear funding paths, milestone checks, and testing against fake projects used to hide unused wealth.
-
-### During a shortage
-
-A region faces a water, medicine, energy, or logistics shortage.
-
-The system should not pretend that high prices are neutral rationing. It should publish the evidence, protect basic access, limit emergency rules, and end those rules when the shortage ends.
+**During a shortage:** A region faces a water, medicine, energy, or logistics shortage. The system should not pretend that high prices are neutral rationing. It should publish the evidence, protect basic access, limit emergency rules, and end those rules when the shortage ends.
 
 For longer one-year pressure stories, see [Life Under The System](07_life_under_the_system.md).
+
+---
 
 ## Three Collapse States
 

@@ -1,5 +1,14 @@
 # ANNEX B — Threat Register
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Names and scores every known threat to the system across Essential Access, identity, oracle data, smart contracts, Flow issuance, and civic instruments — giving each a risk score, key controls, test plan, and residual-risk owner. |
+> | **Who it protects** | People at risk of coercion, exclusion, fraud, or supply manipulation — particularly caregivers, dependents, and low-wealth residents most exposed to collapse of the survival floor. |
+> | **Failure risk** | A threat register that is never updated becomes false assurance; threats move off the list when they should be escalating, or controls are claimed without passing tests. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | TR-01 through TR-13; Annex A (test methodology); Annex C (operational workflow). |
+
 > **Provenance:** Foundational constitutional annex · Houses the original threat-register layer now extended by governance provenance records · Status: **ACTIVE**
 Scoring uses Impact (I), Likelihood (L), Detectability (D). Risk Score = I × L × (6 − D). Owners are accountable for test coverage and response playbooks.
 

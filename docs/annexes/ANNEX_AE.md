@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-012 — Interface Hardening and Deadlock Prevention] (§AE2.1–AE2.4) · Addresses T-012, T-013, T-014, T-015 · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Closes the interface vulnerabilities discovered when earlier patches interact: oracle manipulation that poisons multiple corroboration sources simultaneously, governance throughput consumed by a single crisis type, procedural deadlocks that block mandatory emergency decisions, and demand-side signal confusion in the velocity oracle. |
+> | **Who it protects** | Anyone whose Essential Access depends on correct scarcity determination and on governance bodies that can still decide under compound crisis conditions. |
+> | **Failure risk** | A single actor can manufacture conditions that satisfy multi-source PCRP requirements from one corrupted source; sequential procedural rules block legitimate emergency response; demand surges from enforcement actions are misread as supply shortfalls. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-012 / P-012 (oracle independence at PCRP); T-013 / P-012 (categorical throughput); T-014 / P-012 (triple deadlock); T-015 / P-012 (demand-context velocity) |
+
 **Purpose.** This annex records compound interface test results, the new threats identified at patch interfaces (T-012 through T-015), and the operative clauses for P-012 (Interface Hardening and Deadlock Prevention). Where clauses here conflict with Annexes AC or AD, this annex governs.
 
 ### AE1. Interface Vulnerability Register

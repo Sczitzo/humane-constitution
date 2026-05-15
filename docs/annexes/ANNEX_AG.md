@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-013 — Formal Acceptance Process Integrity] · Addresses T-016 · Status: **PROPOSED**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Hardens the Formal Acceptance Protocol against the exploit surfaces in T-016: cherry-picked pilot regions, sign-off deadlocks, intellectual-cousin auditors, urgency bypass, stagnation documentation gaming, circular bootstrap dependencies, and concentration in the sign-off cluster itself. |
+> | **Who it protects** | Everyone who depends on patches being genuinely tested before activation; the protocol's constitutional architecture from being degraded by hastily accepted or captured acceptance decisions. |
+> | **Failure risk** | Urgency arguments bypass evidence requirements; audit teams are staffed by professionals who share the same assumptions as designers; favorable pilot regions produce evidence that does not hold in stress-tested populations. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-016 / P-013 (acceptance process capture); AG1 pilot representativeness; AG3 epistemic independence; AG4 anti-gaming Tier 2 reclassification |
+
 **Purpose.** This annex strengthens the Formal Acceptance Protocol (FAP) against the exploit surfaces identified in T-016 (P-013). It amends the FAP directly and adds constitutional protections to its anti-gaming rules. Where this annex conflicts with the FAP document, this annex governs. Status: PROPOSED.
 
 **Sections:** AG1 Pilot Representativeness · AG2 Deadlock Resolution · AG3 Audit Epistemic Independence · AG4 Anti-Gaming Upgrade · AG5 Stagnation Documentation · AG6 Bootstrap Protocol · AG7 Concentration Controls · AG-LATENCY Emergency Time Bounds · AG8 Linkage Table

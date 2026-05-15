@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-001 — Shadow Convertibility Containment] above-ledger worked examples · Addresses T-001 · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Extends the convertibility prohibition above the ledger: enumerates specific prohibited patterns for each instrument boundary (Essential Access/Flow, Voice/Service Record, Shared Storehouse/Flow) so that social-layer workarounds are named, detectable, and subject to a graduated penalty schedule. |
+> | **Who it protects** | Genuine Essential Access recipients from preferential treatment schemes that invert the survival floor into a status currency; people rationed during Shared Storehouse periods from Flow-wealthy actors who exit or hoard; contributors without institutional backing from civic standing being purchased through Flow resources. |
+> | **Failure risk** | On-ledger detection leaves the social layer unguarded; sophisticated actors use employer-sponsored contribution accumulation, side queues, or anticipatory hoarding to reproduce the convertibility relationship without touching the ledger. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-001 / P-001 (shadow convertibility); FC-010 (leakage thresholds); FC-040 (deterrence multiplier); FC-041 (detection probability); Annex AI (Enforcement Panel appeals) |
+
 **Pre-launch gate: required before system deployment · Governed as P-004 protected specification**
 **Status: ACTIVE — penalty schedule bound to Founding Commitments FC-010, FC-040, FC-041 (Proposal 7 close-out, 2026-04-18)**
 

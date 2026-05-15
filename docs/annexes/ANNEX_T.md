@@ -1,5 +1,14 @@
 # ANNEX T — Compound Failure Scenarios and Interface Stress Tests
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Supplements the single-threat register with compound stress tests that deliberately cross articles, instruments, and institutions — scarcity plus oracle fraud, identity pressure plus housing shortage, civic capture during emergency CRP split, issuance abuse plus membrane leakage — because complex systems fail at interfaces, not in isolation. |
+> | **Who it protects** | Everyone whose survival floor, identity continuity, or civic standing depends on multiple subsystems working together correctly under simultaneous stress. |
+> | **Failure risk** | A system that passes only single-threat tests but fails at the interfaces between identity, scarcity, issuance, adjudication, and civic instruments is not scale-ready — interface failures are where the most severe, least anticipated harm occurs. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | P-011; P-019; Annex A (red-team methodology); Annex AE (combined-failure tests); annual simulation requirement in §T5. |
+
 > **Provenance:** Foundational constitutional annex · Defines compound failure simulations later extended by P-011 and P-019 · Status: **ACTIVE**
 
 **Purpose.** Complex systems fail at interfaces. This Annex supplements the single-threat register by defining compound stress tests that deliberately cross articles, instruments, and institutions.

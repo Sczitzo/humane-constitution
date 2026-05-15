@@ -1,16 +1,24 @@
 # ANNEX AZ — Progressive Net-Worth Demurrage Architecture
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Define how holding costs on concentrated wealth scale with the degree of concentration — steeply enough to discourage multi-generational hoarding while permitting normal saving and productive investment. |
+> | **Who it protects** | Everyone whose access to land, labor markets, and commons is crowded out by wealth concentration that serves no productive purpose. |
+> | **Failure risk** | A flat or too-gentle rate invites storage near the ceiling with minimal cost; a miscalibrated rate destroys productive enterprise capital alongside passive hoarding. Fragmentation through corporate shells, trusts, or nominees recreates dynastic wealth while technically complying with the bracket structure. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | INV-008 (money creation is public); INV-009 (no fees on survival); INV-010 (succession); ANNEX_X (commons revenue routing); Article V (Flow demurrage) |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Define how holding costs on concentrated wealth scale with the degree of concentration — steeply enough to discourage multi-generational hoarding while permitting normal saving and productive investment. |
+> | **Who it protects** | Everyone whose access to land, labor markets, and commons is crowded out by wealth concentration that serves no productive purpose. |
+> | **Failure risk** | A flat or too-gentle rate invites storage near the ceiling with minimal cost; a miscalibrated rate destroys productive enterprise capital alongside passive hoarding. Fragmentation through corporate shells, trusts, or nominees recreates dynastic wealth while technically complying with the bracket structure. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | INV-008 (money creation is public); INV-009 (no fees on survival); INV-010 (succession); ANNEX_X (commons revenue routing); Article V (Flow demurrage) |
+
 > **Provenance:** Created 2026-05-11 as the controlling technical specification for progressive wealth demurrage under Article V. Implements the anti-hoarding function referenced in [ANNEX_X](./ANNEX_X.md) and anchored by [INV-008](../constitution/INVARIANTS.md#inv-008--money-creation-is-public).
-
----
-
-**Plain-language purpose:** Define how holding costs on concentrated wealth scale with the degree of concentration — steeply enough to discourage multi-generational hoarding while permitting normal saving and productive investment.
-
-**Who it protects:** Everyone whose access to land, labor markets, and commons is crowded out by wealth concentration that serves no productive purpose.
-
-**What could go wrong:** A flat or too-gentle demurrage invites storage near the ceiling with minimal cost. A miscalibrated rate destroys productive enterprise capital alongside passive hoarding. This annex draws those boundaries explicitly.
-
-**Evidence status:** Mathematical model designed; oracle-verification mechanisms and enforcement rails are active-unproven pending deployment.
 
 ---
 

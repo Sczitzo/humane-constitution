@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-014 — Bootstrap Activation Instrument] (§AH1–AH7) · Amended by [P-020 — Founding Window Extension] (§AH2.1–AH2.4) · Addresses T-017 · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Resolves the founding bootstrap paradox: P-013 governs the acceptance process that would normally activate it, making standard activation structurally incoherent. This annex creates a one-time, precisely bounded founding instrument (P-014) that activates P-013 and then closes permanently. |
+> | **Who it protects** | The integrity of the entire acceptance process architecture; anyone whose rights depend on patches being genuinely vetted before activation; future generations from a corrupted or illegitimate founding decision. |
+> | **Failure risk** | The founding exception is later cited as precedent for other urgency bypasses; the activation panel is captured through intellectual-cousin selection; the post-activation audit fails to catch a compromised founding; or the bootstrap problem is used as permanent justification for avoiding formal acceptance. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-017 / P-014 (bootstrap paradox); T-016 / P-013 (acceptance process integrity); AH5.1 (Dignity-Only Continuity Mode); AH6 (post-activation audit) |
+
 **Purpose.** This annex defines P-014, a one-time founding instrument that resolves the P-013 bootstrap problem: P-013 governs the acceptance process that would normally be used to activate it, making standard Formal Acceptance Protocol activation structurally incoherent. P-014 creates a precisely bounded exception, activates P-013, and then closes permanently. It has no standing effect after P-013 reaches ACTIVE.
 
 **Constitutional anchor.** P-014 is explicitly modeled on the provisional authority framework in Annexes N and U2: explicit disclosure, public challenge window, time-limited authority, mandatory review, and non-transferable founding status. This makes P-014 coherent with the protocol's existing constitutional theory rather than introducing a foreign mechanism.

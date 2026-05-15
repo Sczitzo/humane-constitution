@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-025 — Federated Ombuds Constitution] · Addresses T-008 auditor-capture residual and supports T-019, T-026, and T-027 enforcement · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Constitutes the Federated Ombuds as five structurally independent sub-nodes, replacing a single-commissioner design that was the protocol's highest-value capture target. Governs manufactured-flag authority, PCRP co-certification, oracle seat certification, enforcement appeals, and attestation adjudication. |
+> | **Who it protects** | Everyone who depends on independent oversight of the enforcement, identity, and supply systems; populations harmed by manufactured enforcement actions; the protocol's constitutional architecture from being controlled through a single captured institution. |
+> | **Failure risk** | A single pressure campaign, legal compulsion, or coercion event captures the Ombuds and produces systematically wrong determinations; one sub-node being captured is insufficient to compromise a 4-of-5 supermajority threshold. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-008 / P-008 (elite formation and auditor capture); T-019 / P-052 (manufactured demand-context flags); T-026 / P-026; T-027 / P-026; FC-090, FC-091, FC-092 |
+
 **Status:** ACTIVE — Proposal 8 close-out, 2026-04-18
 **Authority:** Tier 1 structural (FC-090, FC-091 lock the federation and its threshold; FC-092 governs terms).
 **Supersedes:** The prior single-commissioner draft of Annex AI. Every load-bearing function previously carried by the "Ombuds Office" is now carried by the **Federated Ombuds** — five structurally independent sub-nodes, each a full Ombuds office, with explicit protocol-level decision rules.

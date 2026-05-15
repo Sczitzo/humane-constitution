@@ -1,5 +1,14 @@
 # ANNEX J — Monetary Calibration, Long-Horizon Capital, and Instrument Discipline
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines the demurrage rate, household savings floor, enterprise operating-float exemption, and four investment channels (Project Escrow, Term Finance Pools, Public Infrastructure Windows, Retirement Horizon Locks) so Flow punishes idle extraction without impeding patient productive capital. |
+> | **Who it protects** | Ordinary savers who need emergency reserves without penalty; long-horizon enterprises that need build time; workers whose retirement security should not require passive wealth accumulation; and everyone harmed by rent-seeking and hoarding. |
+> | **Failure risk** | Legal wrappers (trusts, mission-lock entities, equity compensation, family-office fragmentation) could recreate dynastic accumulation; investment channels could become unlimited demurrage shelters for concentrated wealth; demurrage calibrated too high could impair small enterprise or emergency savings. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | TR-04 demurrage evasion via rent extraction; P-031 anti-dynasty; P-032 stewardship ownership; Annex AR; Annex AZ; red-team scenarios in §J-RED. |
+
 > **Provenance:** Implements [P-031 — Anti-Dynasty Ownership] (§R2), [P-032 — Stewardship Ownership Standard] (§R1–R2), [P-033 — Worker-Owned and Mission-Locked Enterprise Preference] (§R1) · Status: **ACTIVE**
 **Purpose.** This annex refines the monetary architecture where hidden economic failure would otherwise appear: demurrage theory, long-horizon investment, instrument naming discipline, and calibration rules. It does not alter the constitutional separation among Flow, Essential Access, Voice, Service Record, and Shared Storehouse; it clarifies how the system uses Flow without punishing productive build time or silently recreating rent-seeking.
 

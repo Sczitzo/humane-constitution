@@ -1,5 +1,14 @@
 # ANNEX X — Flow Issuance Architecture
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines how Flow comes into existence — against verified productive commitments only — specifying authorized channels (payroll, project escrow, essential services procurement, public infrastructure, continuity backstop), dual-key and third-signature controls, channel ceilings, anti-capture governance, and six red-team scenarios issuance must survive before scale-up. |
+> | **Who it protects** | Everyone harmed by money creation that inflates asset prices, rewards political allies, rescues failed speculation, or manufactures demand without linked productive capacity — and wage earners and essential providers who need error-correction to be staged, not sudden. |
+> | **Failure risk** | Fake payroll rings, circular invoice schemes, zombie rollovers, factional allocation, unwind shock, and offshore leakage — each a path by which the issuance system becomes a capture vehicle rather than a productive-economy instrument. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | P-029; P-030; TR-09 smart-contract failure; Annex J (demurrage and investment channels); Annex AZ (progressive demurrage); red-team scenarios in §X7. |
+
 > **Provenance:** Implements [P-029 — Public Finance & Commons Revenue] (§X8) and [P-030 — Protocol-Only Money Creation and Household Finance Boundaries] (§X1–X8) · Status: **ACTIVE**
 
 **Purpose.** The protocol cannot be capture-resistant if the point of money creation remains vague. This annex defines how Flow comes into existence, who may authorize it, how issuance is bounded, and how issuance abuse is red-team tested. Where Annex X conflicts with looser issuance language elsewhere, Annex X governs.

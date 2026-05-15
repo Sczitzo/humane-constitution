@@ -1,5 +1,14 @@
 # ANNEX S — Constitutional Review Panel Anti-Capture and Failure Recovery
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Hardens the Constitutional Review Panel against capture through composition rules, downgrade safeguards, capture indicators, and a four-stage failure-recovery ladder that preserves constitutional protection even if the CRP itself becomes compromised. |
+> | **Who it protects** | Everyone whose rights depend on the CRP functioning as an independent check — not as an arm of incumbents or a captured body that quietly reclassifies Tier 1 violations as Tier 3 operational adjustments. |
+> | **Failure risk** | The CRP is a small, high-value capture target; synchronized financial conflicts, pro-incumbent outlier rulings, or suppressed dissent could hollow out the review layer before the damage is visible. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | TR-08 verifier capture; TR-10 emergency pause abuse; Annex L §L2–L3 (CRP composition); Annex H §H4 (mandatory judicial review triggers); Annex AV. |
+
 > **Provenance:** Foundational constitutional annex · Hardens the Constitutional Review Panel against capture and failure · Status: **ACTIVE**
 **Purpose.** The CRP is a small but load-bearing institution. This Annex hardens it against capture and defines what happens if the CRP itself becomes compromised.
 

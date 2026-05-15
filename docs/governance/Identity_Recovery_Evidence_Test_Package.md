@@ -364,7 +364,167 @@ If those conditions fail, the project must pause scale-up, keep survival access 
 
 ---
 
-## Residual Risk Statement
+## Failure Thresholds
+
+This section defines specific numeric thresholds that constitute failure. These are not aspirational targets. They are ceilings: breach means the system has failed in a constitutional sense and must trigger the escalation path described below. Thresholds without empirical analogues are marked **precautionary — no field analogue**.
+
+Auditors should treat any threshold left as "TBD" at scale-up as a governance failure in itself.
+
+---
+
+### T-1: False Exclusion Ceiling
+
+**Threshold:** Fewer than 0.5% of Essential Access attempts denied per quarter due to identity verification failure, across the full eligible population including abandonment.
+
+**Rationale:** Essential Access is the Constitutional Survival Minimum. A system that correctly identifies 99.5% of users still excludes thousands at population scale. The 0.5% ceiling is not lenient — it is chosen because lower thresholds are not achievable with current best-practice ID systems in low-documentation contexts (see: UNHCR registration data, World Bank ID4D exclusion audits). Anything above 0.5% at scale implies structural exclusion, not edge-case error. The ceiling applies to the full denominator including people who abandoned the enrollment or recovery process, not only people who completed it.
+
+**Measurement:** Requires enrollment-attempt tracking from the moment of first contact, not from the moment of enrollment completion. Abandonment must be coded by point of exit and reason where ascertainable. Stage 2 pilot must produce this data disaggregated by vulnerable group. Confidence intervals required; point estimates alone do not pass.
+
+**Evidence basis:** Precautionary — no field analogue in a survival-floor context. 0.5% is borrowed from NHS digital access failure rate targets and EU eIDAS high-assurance rejection benchmarks, neither of which concerns survival access. The value is conservatively tight because the consequence of false exclusion here is not inconvenience but denial of survival resources.
+
+**Breach escalation:** Any quarter where measured false exclusion exceeds 0.5% triggers:
+1. Immediate mandatory override to manual-human review pathway for all affected categories;
+2. Public notification within 72 hours via Article VII dashboard;
+3. Independent audit panel convened within 14 days;
+4. Scale-up halt until two consecutive quarters show compliance;
+5. Annex AK FC-143 through FC-147 recalibration hearing if the breach is in a vulnerable category.
+
+---
+
+### T-2: Recovery Delay Ceiling
+
+**Threshold (tiered):**
+
+| Recovery tier | Ceiling |
+|---|---|
+| Emergency provisional access (food, medicine, shelter) | 4 hours from dispute filing |
+| Standard provisional access (all Essential Access) | 24 hours from dispute filing |
+| Full identity restoration with clean record | 14 calendar days from dispute filing |
+| Complex cases (displacement, abuse, statelessness, guardianship) | 30 calendar days with mandatory human case manager |
+
+The survival floor must be maintained at provisional access level throughout the recovery window regardless of outcome. A disputed identity does not reduce Essential Access below the Constitutional Survival Minimum while the dispute is open.
+
+**Rationale for 4-hour emergency tier:** Food and medicine access delays beyond one missed meal cycle constitute a health harm. Four hours is the minimum operationally credible emergency manual pathway; faster is better but must be tested. This is based on humanitarian registration precedent (UNHCR same-day food ration access targets) adapted to a non-disaster context.
+
+**Rationale for 14-day full restoration:** Longer recovery windows create persistent second-class status. Identity flags left unresolved past 14 days begin to compound: credit, housing, civic, and health records may degrade based on unresolved status. 14 days matches the outer bound of UK Universal Credit identity dispute resolution targets, which is itself considered too long by welfare advocates.
+
+**Rationale for 30-day complex cases:** Some cases require independent corroboration, document reconstruction, or specialist interviews. 30 days is the ceiling, not the target. Every complex case must have a named human case manager, a written status update every 5 days, and a documented reason if the 30-day ceiling is missed.
+
+**Evidence basis:** Emergency tier — precautionary adapted from UNHCR field data. Standard and full tiers — adapted from UK Universal Credit and EU eIDAS dispute resolution benchmarks. Complex case tier — precautionary, no direct analogue for survival-floor context.
+
+**Breach escalation:** Any case that breaches the applicable tier ceiling:
+1. Triggers an immediate case flag and supervisor review within 2 hours;
+2. Is logged in the Article VII dashboard as a recovery failure event;
+3. Counts toward the quarterly appeal failure rate (T-4 below);
+4. Is subject to independent audit if five or more breach events occur in the same quarter.
+
+If the survival floor is interrupted during recovery (i.e., Essential Access falls below CSM while dispute is pending), this is a Category A constitutional failure regardless of whether subsequent restoration occurs.
+
+---
+
+### T-3: Data Exposure Failure Conditions
+
+**Threshold:** Zero tolerance for any of the following; each is a discrete failure event triggering immediate audit:
+
+| Failure event | Definition |
+|---|---|
+| Unauthorized access | Any access to identity or recovery data by a party not listed in the purpose-limitation map at the time of access |
+| Scope creep use | Identity data used for a purpose not stated at the time of collection, including internal analytics, law enforcement disclosure, or inter-agency sharing not authorized in the data inventory |
+| Unconsented sharing | Any identification data — including recovery metadata, dispute history, or biometric indicators — shared with a third party without the subject's explicit, specific, and revocable consent |
+| Linkage attack success | A successful test demonstrating that a realistic adversary can re-link sector-tokenized identifiers across two or more service domains |
+| Retention breach | Any data retained past its scheduled deletion date without a documented and subject-notified extension |
+
+**Rationale:** Identity and recovery data in a survival-floor system is among the most sensitive data a system can hold. It reveals displacement, abuse, disability, undocumented status, and dependency relationships. Zero-tolerance is appropriate here because the harm of exposure is not merely financial but can include deportation, domestic violence escalation, and denial of protection. A single unauthorized access event can enable an abuser, an employer, or a hostile state actor to locate and target a person.
+
+**Evidence basis:** Zero-tolerance for unauthorized access is standard in HIPAA, GDPR Article 5, and NIST SP 800-53 high-impact controls. Applying it here is consistent with those frameworks adapted to a higher harm context.
+
+**Breach escalation:** Each failure event triggers:
+1. Immediate system audit covering the full scope of the compromised data class;
+2. Subject notification within 24 hours if the person can be safely contacted;
+3. Public summary report within 7 days (redacted for safety);
+4. Independent privacy panel review within 30 days;
+5. Scale-up halt until the audit is complete and remediation is verified;
+6. If linkage attack succeeds: mandatory architecture review of the tokenization and compartmentalization design before resuming operations.
+
+---
+
+### T-4: Appeal Failure Rate Ceiling
+
+**Threshold:**
+
+| Metric | Ceiling |
+|---|---|
+| Appeals resolved without any human review | 0% — all appeals must have at least one human decision-maker |
+| Appeals denied past the applicable recovery delay ceiling (T-2) | Less than 2% per quarter |
+| Appeals with no written reason provided | 0% — denial without written reason is void |
+| Appeals reviewed exclusively by identity-system operators | 0% — at least one reviewer must be organizationally independent of the identity system |
+
+**Rationale for 0% no-human-review:** Automated denial of an appeal in a survival-floor system is constitutionally incompatible with Voice rights and the right to challenge denial. There is no exclusion-risk acceptable enough to justify machine-only appeal resolution. This is not aspirational; it is a design constraint.
+
+**Rationale for 2% breach-ceiling on delayed appeals:** Some cases will be genuinely hard. A 2% allowance acknowledges operational reality. Anything above 2% suggests systemic processing failure rather than case complexity. The 2% is per quarter of all appeals filed, not per quarter of contested appeals.
+
+**Who audits:** Appeal outcomes must be reviewed by an independent body that includes:
+- at least one person with no institutional affiliation with the identity system operators;
+- at least one person with lived experience of identity exclusion, displacement, or documentation barriers;
+- access to the full appeal record including staff notes and reason codes.
+
+**Evidence basis:** Human-review requirement — adapted from EU AI Act Article 14 (human oversight for high-risk AI decisions). Delay ceiling — precautionary, no direct analogue. Independent reviewer requirement — adapted from ombudsman and tribunal independence standards (UK Administrative Court practice direction).
+
+**Breach escalation:** Exceeding any appeal failure ceiling:
+1. Triggers an immediate internal audit of the appeal processing pipeline;
+2. Results in all pending appeals being reassigned to independent reviewers;
+3. Is reported in the Article VII dashboard by category and quarter;
+4. Counts as a governance failure for purposes of the Annex AK FC-150 simultaneous breach assessment.
+
+---
+
+### T-5: Discretion Floor
+
+**Threshold:** Every staff-discretion decision in identity verification or recovery must meet all of the following minimum documentation requirements:
+
+| Required element | Standard |
+|---|---|
+| Decision reason | At least one of a defined reason-code set; free-text supplemental required if reason is "other" |
+| Evidence considered | List of specific evidence types reviewed; "insufficient evidence" is not sufficient without specifying what was present and why it was inadequate |
+| Alternatives offered | Documentation that at least one alternative pathway was offered or explicitly determined inapplicable, with reason |
+| Supervisor flag | Flag required if the decision contradicts the default outcome for this evidence combination |
+| Audit log | Timestamped, tamper-evident, accessible to independent auditors |
+
+**Audit rate:** 10% of all staff-discretion decisions must be independently audited per quarter. Audits must specifically test for pattern discrimination: whether denial rates differ by demographic group controlling for documented evidence quality.
+
+**Threshold for pattern finding:** If any demographic subgroup shows a denial rate more than 1.5x the baseline denial rate after controlling for evidence quality, this constitutes a pattern finding and triggers escalation.
+
+**Rationale for 10% audit rate:** Below 10%, pattern discrimination can persist invisibly for years. Above 10%, audit burden may distort frontline behavior in ways that reduce documentation honesty. 10% is the threshold used in healthcare implicit-bias audits (Joint Commission standard) and adapted here. The 1.5x disparity threshold matches EEOC adverse impact analysis standards (the "four-fifths rule" adapted for ratio rather than proportion).
+
+**Evidence basis:** Audit rate — adapted from Joint Commission healthcare audit standards. Disparity threshold — adapted from EEOC adverse impact doctrine. Documentation requirements — adapted from UK administrative law procedural fairness standards.
+
+**Breach escalation:** Pattern finding triggers:
+1. Mandatory retraining for affected staff within 30 days;
+2. Increased audit rate (25%) for the affected decision category for two subsequent quarters;
+3. Review of training materials and reason-code design for structural bias;
+4. Public summary report (anonymized) in the Article VII dashboard within 60 days;
+5. If the pattern persists through two consecutive escalated-audit quarters, the discretion point must be redesigned or removed.
+
+---
+
+### Threshold Summary Table
+
+| ID | Metric | Ceiling | Breach trigger |
+|---|---|---|---|
+| T-1 | False exclusion rate (Essential Access) | <0.5% per quarter | Manual override, public notice, audit panel, scale-up halt |
+| T-2a | Emergency access restoration | 4 hours | Case flag, supervisor review, dashboard log |
+| T-2b | Full Essential Access restoration | 24 hours | Case flag, supervisor review, dashboard log |
+| T-2c | Full identity restoration | 14 calendar days | Case flag, supervisor review, dashboard log |
+| T-2d | Complex case restoration | 30 calendar days | As T-2c, plus mandatory case manager review |
+| T-2e | CSM interruption during recovery | 0 instances | Category A constitutional failure, immediate escalation |
+| T-3 | Unauthorized data access or scope creep | 0 instances | Immediate audit, subject notification, scale-up halt |
+| T-4a | Appeals without human review | 0% | Pipeline audit, reassignment, dashboard report |
+| T-4b | Appeals denied past delay ceiling | <2% per quarter | Internal audit, independent reviewer reassignment |
+| T-4c | Denials without written reason | 0% | Decision void, reprocess |
+| T-5a | Staff discretion audit rate | ≥10% per quarter | Governance failure flag |
+| T-5b | Demographic disparity in denial rate | <1.5x baseline | Retraining, increased audit, dashboard report |
+
+---
 
 Even if the tests pass, identity will remain a permanent danger surface. A humane identity system must fight fraud and protect access at the same time, and those goals will always conflict under stress. The correct goal is not perfect identity. The goal is a bounded, appealable, privacy-preserving system that makes fraud costly while making exclusion visible, reversible, and unable to interrupt the survival floor.
 

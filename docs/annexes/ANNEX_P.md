@@ -1,5 +1,14 @@
 # ANNEX P — Proof-of-Personhood, Identity Tradeoffs, and Red Lines
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines admissible identity evidence classes, the layered hybrid approach the protocol uses, a status ladder from survival-floor personhood to full civic activation, hard red lines no identity system may cross, and worked paths through hard cases (stateless persons, trafficking survivors, disaster-displaced people). |
+> | **Who it protects** | Displaced, undocumented, digitally fragile, abused, trafficked, and disaster-affected people who need the survival floor and a fair path to full standing without being locked out by fraud controls designed for simpler cases. |
+> | **Failure risk** | Fraud controls become exclusion controls; biometrics become permanent surveillance; legacy documents or secret risk scores become the real gate to survival; identity stack scales before exclusion-rate and recovery-performance evidence exists. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | TR-11 Sybil attacks; TR-12 account takeover; P-003 proof-of-personhood; P-016 asymmetric identity errors; Annex AK. |
+
 > **Provenance:** Foundational constitutional annex · Governs proof-of-personhood and identity tradeoffs later extended by P-003 and P-016 · Status: **ACTIVE**
 
 - **Plain-language purpose:** Proof-of-personhood is load-bearing. The protocol treats identity as a bounded tradeoff problem, not a solved technical detail. This annex defines admissible solution classes, red lines, fallback defaults, and the selected constitutional stance for pilot and scale deployment.

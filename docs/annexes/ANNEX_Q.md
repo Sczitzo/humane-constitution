@@ -1,5 +1,14 @@
 # ANNEX Q — Minimum Viable Pilot Stack and Transition Doctrine
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines the transition doctrine (parallel institution-building first, limited public integration second, full adoption only after demonstrated capacity), specifies six pilot phases in sequence, names stop conditions, and requires political resistance mapping before any rollout plan is considered complete. |
+> | **Who it protects** | Everyone who would depend on the system to actually deliver — the transition path must prove delivery capability rather than allowing false readiness claims to lock people into a system that cannot yet function. |
+> | **Failure risk** | Full deployment is declared before survival-floor delivery, identity recovery, and adjudication have been demonstrated under stress; or rollout is driven by political momentum rather than published evidence gates. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | Annex N (deployability preconditions); Annex AN (what pilots must prove before scale-up); Annex A §A4 (pilot test checklist); Annex C §C7 (readiness gates). |
+
 > **Provenance:** Foundational constitutional annex · Defines minimum viable pilot stack and transition doctrine · Status: **ACTIVE**
 **Purpose.** The protocol is not an all-at-once deployment blueprint. This Annex defines the minimum coherent subset that can be piloted and states the transition doctrine explicitly.
 

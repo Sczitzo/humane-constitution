@@ -183,7 +183,109 @@ Assume capacity numbers will be attacked because they move survival access, rati
 
 ---
 
-## 5. Failure Criteria Summary
+## 5. Test Criteria
+
+This section defines the standing operational thresholds that govern whether the measurement system is functioning within acceptable bounds during live operation — as distinct from the one-time tests in Section 4. These criteria apply once measurement is operational. Breach of any criterion below triggers a defined response without requiring a full test re-run.
+
+---
+
+### TC-1 — Oracle Latency Threshold
+
+**Criterion:** Every measurement update must occur within **30 calendar days** of a material change in essential category capacity.
+
+**Definition of material change:** A change is material if it moves the measured capacity of any essential basket category by **5% or more** from the most recently published figure, or if it moves any category across a governance threshold (e.g., from adequate to watch, from watch to scarcity). Changes below 5% that do not cross a threshold may be captured in the next scheduled update cycle without triggering the 30-day requirement.
+
+**Proposed value basis:** The 30-day ceiling is proposed precautionary — no field analogue. The IPC Phase Classification process operates on roughly monthly cycles for food security assessment in crisis contexts; IEA energy data publishes with 6–8 week lag. Thirty days is tighter than most analogues and is proposed as a forcing function to prevent slow drift going undetected across multiple update cycles. Evidence from a pilot deployment should be used to test whether 30 days is achievable without overstating precision.
+
+**Rationale:** The issuance mechanism and Shared Storehouse thresholds respond to published capacity figures. If published figures lag physical reality by more than one month, the system can issue at rates inconsistent with actual supply, or fail to trigger rationing that physical shortage already requires. The 48-hour detection threshold in Test 4.2 governs simulated shock response; TC-1 governs routine update discipline under non-emergency conditions.
+
+**Evidence basis:** Proposed precautionary — no field analogue for a ledger-linked capacity oracle system. The 30-day figure is drawn from analogy to IPC and IEA update cycles, not from operational experience with this architecture.
+
+**Breach response:** If a material change is not reflected in a published update within 30 days: (1) the oracle council must publish a written explanation of the delay within 5 business days of the breach being identified; (2) the conservative prior (most recently published figure, or a downward-adjusted estimate if shortage direction is known) governs issuance and threshold decisions until the update is published; (3) three consecutive latency breaches in any 12-month period trigger a mandatory governance review of oracle resourcing, measurement methodology, and update obligations.
+
+---
+
+### TC-2 — Disagreement Resolution Protocol
+
+**Criterion:** When two or more independent measurement sources report values for the same essential basket category that diverge by more than **5%** for the same period and geography, a formal disagreement review is triggered.
+
+**Trigger threshold:** A **5% divergence** between any two oracle node outputs for the same category, period, and geographic unit initiates the review process. The 5% threshold is proposed precautionary — no field analogue. It is chosen to be tight enough to catch systematic drift before it propagates into issuance decisions, while being loose enough to accommodate legitimate methodological variation between sources.
+
+**Who adjudicates:** The oracle council (as defined in ANNEX_AL.md), including the adversarial oracle seat. The adversarial seat may not be excluded from disagreement review. If the oracle council cannot reach resolution within 10 business days, the matter escalates to the independent Measurement Oversight Body (or equivalent governance body defined in the constitutional architecture).
+
+**Fallback while review is underway:** The **conservative estimate** applies. For categories where lower capacity is harmful (food, water, energy), the lower of the two divergent values governs issuance and threshold decisions during review. For categories where over-reporting triggers premature rationing (shelter count), the lower value likewise applies, because false scarcity is preferable to false abundance during unresolved disagreement. The fallback value and its basis must be published on the public dashboard for the duration of the review, explicitly labeled as "under disagreement review."
+
+**Review outputs:** The oracle council must publish: the two divergent source values, the resolution method used, the agreed figure (or the continued conservative prior if resolution fails), and whether the disagreement exposed a methodological defect requiring protocol revision.
+
+**Evidence basis:** The 5% threshold is proposed precautionary. The IPC classification process uses structured expert consensus to resolve inter-analyst disagreement, but does not specify a numeric divergence trigger. The conservative-estimate fallback is consistent with the Conservative Hold principle already present in the oracle failure architecture.
+
+**Breach response:** Failure to initiate a formal review within 5 business days of a detected 5% divergence constitutes a process breach. The conservative estimate continues to apply and the breach is logged in the public disagreement register. Repeated failures to initiate review trigger an audit of the oracle council's operating procedures.
+
+---
+
+### TC-3 — Physical Sampling Requirement
+
+**Criterion:** At least **20%** of essential basket categories, by count, must be verified through direct physical or transactional sampling in each **calendar quarter**. No quarter may pass in which zero physical sampling occurs across any category that has triggered a watch or scarcity designation in the prior quarter.
+
+**Definition of physical or transactional sampling:** Direct physical sampling means in-person measurement, site inspection, or direct transaction-level data collection (e.g., point-of-sale records, delivery manifests, facility inspection checklists) conducted by parties independent of the entities being measured and independent of oracle node funding. Purely modeled estimates, satellite inference without ground-truth validation, or administrative self-reporting by suppliers do not qualify as physical sampling for this criterion.
+
+**Proposed minimum — 20% per quarter:** This is proposed precautionary — no field analogue at this coverage rate for a multi-category essential basket system. The Sphere Handbook requires direct field surveys to validate humanitarian response thresholds. WHO SARA requires on-site facility assessments. Neither specifies a quarterly coverage rate. 20% per quarter means that across four quarters, at least 80% of categories receive at least one physical sample per year, with the expectation that high-risk or watch-status categories are prioritized for repeat sampling.
+
+**Sampling failure definition:** Sampling failure occurs when: (a) fewer than 20% of categories are physically sampled in a calendar quarter; (b) a category that is in watch or scarcity status receives no physical sampling in a quarter; (c) the sampling party has a financial relationship with the entity being measured; (d) sampling locations are disclosed to the measured entity in advance with sufficient specificity to allow selective preparation; or (e) sampling results are not published within 30 days of collection.
+
+**Rationale:** Model-only measurement is gameable by anyone who understands the model's inputs. Physical sampling is the primary mechanism for detecting administrative self-reporting inflation by suppliers (see Abuse Model §3). Coverage of 20% per quarter is the minimum necessary to provide a credible deterrent signal.
+
+**Evidence basis:** Proposed precautionary. The 20% figure has no field precedent for this architecture. It should be refined based on actual cost and logistical findings from the Physical Sampling Pilot (Test 4.3).
+
+**Breach response:** (1) Immediate publication of the sampling gap and affected categories on the public dashboard; (2) conservative priors apply to all under-sampled categories that are in watch or scarcity status; (3) oracle council must publish a corrective plan within 15 business days; (4) three consecutive quarterly sampling failures trigger a mandatory external audit of the oracle council's physical verification capacity.
+
+---
+
+### TC-4 — Standards Concentration Risk
+
+**Criterion:** No single entity — vendor, agency, methodology provider, AI model supplier, or standards body — may control more than **33%** of essential basket measurement for any single basket category, where control is measured by: primary data provision, primary methodology determination, or AI model supply for oracle node computation.
+
+**Definition of control:** An entity controls a measurement dimension if its data, methodology, or AI model is the primary input used by the oracle to produce a published capacity figure for that category. Control is assessed at the oracle-input level, not at the public-facing output level. Shared funding is a yellow flag, not a bright-line trigger, but must be documented.
+
+**Audit mechanism:** The oracle council must publish an annual **Measurement Concentration Report** that maps, for each essential basket category: the entities providing primary data, primary methodology, and AI model supply; their estimated share of oracle input; and any financial or institutional connections between them. The adversarial oracle seat has the right to commission an independent audit of the Measurement Concentration Report at any time.
+
+**Rationale:** Standards bodies and AI model vendors can concentrate influence across formally independent oracle nodes without violating diversity requirements (see Abuse Model §3, "Oracle vendor" row). A 33% ceiling per category prevents any single entity from controlling more than one-third of any category's measurement without triggering a review. This does not guarantee independence, but it creates a surface against which concentration can be measured.
+
+**Proposed value basis:** The 33% ceiling is proposed precautionary — no field analogue for oracle-linked measurement systems. It is derived by analogy from antitrust concepts of significant market influence (typically 25–33% in concentrated-market analysis) rather than from measurement-specific precedent. It should be reviewed after the first Measurement Concentration Report is produced.
+
+**Evidence basis:** Proposed precautionary. No analogous concentration threshold exists in the IPC, WHO SARA, or IEA frameworks reviewed in Section 2.
+
+**Breach response:** If any entity exceeds 33% concentration in any category: (1) the breach is published in the Measurement Concentration Report with the affected category and entity named; (2) the oracle council must submit a de-concentration plan within 60 days; (3) issuance and threshold decisions for the affected category shift to conservative priors until concentration falls below 33% or the governance body approves a documented exception with time-limited justification; (4) the exception cannot be renewed more than twice without a constitutional review.
+
+---
+
+### TC-5 — Public Confidence-Band Readability
+
+**Criterion:** All published capacity measurements must include explicit uncertainty bands. A publication that omits any required element below is non-compliant and must be retracted and reissued.
+
+**Minimum required elements for a compliant capacity measurement publication:**
+
+| Element | Required content |
+|---|---|
+| Point estimate | The single best estimate of current category capacity, expressed in the category's defined unit (e.g., kcal/person/day, litres/person/day, habitable units available) |
+| Low bound | The lower bound of the uncertainty range at a stated confidence level (minimum: 80% confidence interval) |
+| High bound | The upper bound of the uncertainty range at the same confidence level as the low bound |
+| Method description | A plain-language statement (maximum 150 words) of how the estimate was produced, including whether it is model-derived, physically sampled, administratively reported, or a composite |
+| Data sources | A list of primary data sources used, with the date range of data collection |
+| Revision flag | Whether this figure has been revised from the previously published estimate, and if so, the direction and magnitude of revision |
+| Oracle status | Whether the figure was produced under normal oracle operation, Conservative Hold, or disagreement-review conditions |
+
+**Non-compliant publication definition:** A publication is non-compliant if it omits any of the seven elements above, presents the confidence band in a format that a non-specialist reader would interpret as an error range rather than an uncertainty range (e.g., a "±" notation without explanation), or presents only the point estimate without bounds.
+
+**Rationale:** The Dashboard Comprehension Test (4.6) requires that 75% of non-technical readers correctly interpret the confidence band as uncertainty rather than error. Non-compliant publication formats make this threshold harder to reach and give measured actors a false picture of precision that suppresses challenge.
+
+**Evidence basis:** The UN Fundamental Principles of Official Statistics require transparency about quality and uncertainty. The OECD Good Statistical Practice recommends explicit quality indicators. Neither specifies the seven-element minimum above; that requirement is proposed based on the comprehension-test standard in §4.6.
+
+**Breach response:** (1) Non-compliant publications must be retracted and reissued with all required elements within 5 business days of the deficiency being identified; (2) during the reissue period, the prior compliant publication remains the operative figure for issuance and threshold decisions; (3) three non-compliance events in any 12-month period trigger a mandatory review of oracle publication procedures and dashboard design; (4) all non-compliance events are logged in a public compliance register.
+
+---
+
+## 6. Failure Criteria Summary
 
 | Test | Failure criterion |
 |---|---|
@@ -195,10 +297,15 @@ Assume capacity numbers will be attacked because they move survival access, rati
 | 4.6 Dashboard Comprehension Test | Fewer than 75% of ordinary readers correctly identify current supply level and confidence band |
 | 4.7 Synthetic Shock Simulation | Incorrect activation threshold, or failure to de-escalate within 14-day mandatory sunset window |
 | 4.8 Adversarial Oracle Seat Test | Adversarial seat cannot register dissent, trigger a challenge, or publish a minority report in practice |
+| TC-1 Oracle Latency Threshold | Material capacity change not reflected in a published update within 30 days |
+| TC-2 Disagreement Resolution Protocol | Formal review not initiated within 5 business days of a detected 5% divergence between sources |
+| TC-3 Physical Sampling Requirement | Fewer than 20% of basket categories physically sampled in a calendar quarter; or any watch/scarcity category receives zero sampling |
+| TC-4 Standards Concentration Risk | Any single entity controls more than 33% of essential basket measurement for any single category without an approved exception |
+| TC-5 Public Confidence-Band Readability | Any publication omits a required element, or presents bounds in a format that implies error rather than uncertainty |
 
 ---
 
-## 6. Evidence Priority
+## 7. Evidence Priority
 
 The following sequence reflects dependency order: later tests depend on work done in earlier stages.
 

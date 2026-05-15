@@ -1,5 +1,14 @@
 # ANNEX AN — Pilot External Validity Gate
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Require that scale-up from pilot to full deployment is gated on evidence of system performance under real stress — not just favorable conditions. |
+> | **Who it protects** | Populations who would live under a scaled-up system that was only ever tested under optimal conditions; communities who bear the cost of system failure at scale. |
+> | **Failure risk** | Pilot validity collapse: scale-up proceeds on evidence from a hand-picked, stress-free pilot, leaving the system untested against the conditions — economic shocks, political opposition, supply disruption — most likely to cause failure at scale. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-023 (Pilot External Validity Collapse); P-019; Annex AG (P-013 pilot representativeness); Annex T (annual simulation) |
+
 > **Provenance:** Implements [P-019 — Pilot External Validity Gate] · Addresses T-023 · Status: **PROPOSED**
 
 **Status:** PROPOSED | **Priority:** Med-High | **Patch:** P-019

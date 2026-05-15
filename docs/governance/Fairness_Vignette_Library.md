@@ -528,6 +528,246 @@ Each story asks: what does the system protect, what does it still make people ca
 
 **Likely verdict.** Conditional. The exit protocol must protect dissenters in practice, not just in formal language.
 
+### Year Story 9 — Addiction and Relapse
+
+**Who they are.** Caleb is 31. He has been in and out of recovery from opioid dependence for four years. He works seasonal labor when he is stable. He is enrolled in Essential Access. He wants to be clean.
+
+**The year.** In February he finishes a 60-day treatment program and returns to work. In May he relapses after a painful injury — the same pain pathway that started his addiction the first time. He misses a Service Record review deadline. In July a local Essential Access provider flags suspicious redemption patterns: he redeemed food credits, then traded them for cash to buy drugs. In August he enters treatment again. In September the provider review is complete. The flag is accurate. The trade violated the no-monetization rule. The question is what happens next.
+
+**What the system should do.**
+- Essential Access cannot be withdrawn as punishment. The no-monetization violation is an enforcement matter, not a survival cancellation trigger.
+- The system should distinguish between Caleb trading credits out of addiction-driven desperation and Caleb running a coordinated resale operation.
+- Protected Pause should cover his treatment episodes — illness is an explicit trigger.
+- The abuse detection system must respond to real violations without treating relapse itself as the offense.
+
+**Where fairness strains.**
+- The provider's flag is legitimate. If Essential Access is routinely converted to cash for substances, provider trust in the system erodes and the basket gets smaller for everyone.
+- If the enforcement response is to suspend Caleb's access, it achieves the opposite of what the system claims to guarantee — and will likely accelerate his crisis.
+- If Protected Pause is not automatically triggered by documented treatment entry, Caleb must claim it while in the worst period of his life.
+- Caleb's Service Record gap grows. When he stabilizes again, the gap is still there, and it affects his credibility in any future dispute.
+- The year ends with Caleb clean, re-enrolled, and still afraid that the flag will follow him. He is not wrong to be afraid.
+
+**Fairness question.** Can the system respond to relapse without either abandoning the person or pretending harm never happened?
+
+**Likely verdict.** Conditional. The enforcement mechanism must be calibrated to scale: counseling and restoration for first-time or desperation-driven violations, escalating intervention for organized misuse. Access must continue through treatment. Protected Pause must trigger on documented treatment entry without requiring Caleb to file anything while actively relapsing. The flag should not be permanently visible to every future administrator without a restoration path.
+
+---
+
+### Year Story 10 — Single Parent With Adolescent Conflict
+
+**Who they are.** Diane is 44. She is a single mother of two. Her older child, Marcus, is 16. Her younger child is 11. She works part-time at a community health center and receives Essential Access for the household.
+
+**The year.** In January Marcus is expelled from school for a fight that injured another student. In February Diane learns he is being charged under a juvenile diversion program that requires her to attend hearings. She misses two work shifts for hearings and one for a mental health evaluation the court orders. Her supervisor, not covered by any attendance protection rule, cuts her hours permanently. In April, with reduced income and increased legal costs, her rent becomes unaffordable. She applies for emergency housing support but the queue is long. In June she and the children move to a smaller unit in a different neighborhood. Marcus's diversion program is attached to his original school district. The move creates a compliance gap — he is technically out of bounds for the program. By August the diversion program closes his case as incomplete. A permanent mark appears on his juvenile record. In October Diane applies for a voice advisory role on the health center's patient panel. Her Service Record shows the past year as mostly inactive due to hearing attendance, school coordination, and moving. She is rejected.
+
+**What the system should do.**
+- Essential Access keeps the family from losing food and medical care during the crisis.
+- The housing queue should prioritize households with minors experiencing acute instability.
+- Service Record should recognize that court attendance and crisis caregiving are not inactivity.
+- Diversion program compliance rules should have geographic flex when the family is displaced for economic reasons.
+
+**Where fairness strains.**
+- The system cannot prevent Diane's supervisor from cutting hours. It is not a labor rights enforcement mechanism.
+- The housing queue is a resource constraint problem. Priority rules help but do not create units that do not exist.
+- Marcus's diversion compliance gap is caused by the housing displacement the system should have prevented but did not, fast enough. The mark on his record may follow him.
+- Diane's Service Record reflects a year of intensive caregiving and crisis management that the system does not see as contribution. She pays a civic cost for a year of giving everything she had.
+
+**Fairness question.** Can the system protect a parent whose household crisis creates cascading institutional failures across housing, employment, education, and civic standing?
+
+**Likely verdict.** Weak to conditional. The individual protections exist but are not coordinated. Each institution — the school district, the diversion program, the housing queue, the employer, the Service Record system — handles its piece without anyone watching the whole family. Required coordination: crisis cases with minors should trigger a case-navigator assignment to prevent cascading compliance gaps across systems. Service Record must recognize crisis caregiving and court-required attendance as protected contribution periods.
+
+---
+
+### Year Story 11 — Rural Isolation
+
+**Who they are.** Ruth is 68. She lives in a county with one clinic, no public transit, poor broadband, and two approved Essential Access vendors: a gas station and a grocery forty minutes away. On paper, her access is enrolled and active.
+
+**The year.** In January the clinic loses a physician and goes to telehealth-only for primary care. Ruth has a ten-year-old phone that cannot run the telehealth app. In March a spring flood closes the only road to the grocery for eleven days. She uses gas station credits for overpriced shelf-stable food and runs out of a prescription. In May she receives a digital notice requiring her to confirm residency information within 30 days or face suspension. Her internet connection fails twice when she tries to complete it. A neighbor's daughter completes it for her with four days to spare. In August a new policy requires Essential Access pharmacy credits to be redeemed through a digital portal; the county's only pharmacist is not yet enrolled. By October she has learned to route everything through her neighbor's daughter — an informal access dependency that is not in any system record and could collapse if the neighbor moves.
+
+**What the system should do.**
+- Physical access is required by constitutional design, not optional.
+- Vendor enrollment in thin-coverage areas is the system's responsibility, not the resident's.
+- Digital-only verification notices are not constitutional when the person does not have reliable digital access.
+- Essential Access must reach the person, not just exist in an account.
+
+**Where fairness strains.**
+- Vendor enrollment depends on willing vendors. In a county with two vendors, neither may have the volume to make enrollment worth their administrative cost.
+- The system cannot force a pharmacist to enroll if the enrollment is voluntary.
+- The informal dependency on Ruth's neighbor is a real access path. It is also invisible to the system and fragile. If it breaks, Ruth has no documented alternative.
+- Outage events — floods, fires, equipment failures — disproportionately affect rural residents and are not one-time anomalies. They are the ordinary condition of rural life.
+
+**Fairness question.** Does the right still mean anything when delivery is inconvenient, rural, offline, and expensive?
+
+**Likely verdict.** Weak. The rural delivery gap is structural, not accidental. Required fixes: mandatory minimum vendor enrollment per population threshold; physical alternatives for all digital verification requirements; outage continuity protocols that do not require the resident to prove the outage. The informal access network Ruth has built is not a system feature — it is evidence that the system has not solved the problem.
+
+---
+
+### Year Story 12 — Language Access and Immigrant Elders
+
+**Who they are.** Hana is 77. She immigrated 25 years ago. She speaks Amharic fluently and conversational English at a basic level. Her daughter has been her navigator through every institutional interaction: medical, civic, financial. In February her daughter accepts a job in another city.
+
+**The year.** In March Hana receives a notice about a provider network change. It is written in English at an eighth-grade reading level. She misreads it and continues using a provider who is no longer in-network. In May her Essential Access pharmacy credits are declined. She does not know why. She calls the help line and cannot understand the automated system well enough to reach a human. In June she goes to the local enrollment office. The office has no Amharic interpreter. A staffer speaks to her slowly in English. She nods at things she does not fully understand and leaves without resolving the issue. In July a community health worker from her church helps her navigate the issue — it takes three visits and a written appeal. In September she attends a neighborhood civic meeting on Essential Access basket contents. She cannot follow the technical language. She raises her hand once, and the moderator, not understanding her question, moves on. By November she is re-enrolled correctly. She has avoided another trip to the office unless absolutely necessary.
+
+**What the system should do.**
+- Identity verification must be possible without fluency in the operating language.
+- Notices must be available in community languages at a minimum, or paired with a translation service contact.
+- The enrollment office must have interpreter access — by phone or in person — as a baseline.
+- Civic deliberation must have accessible participation options for people who cannot follow technical English.
+
+**Where fairness strains.**
+- Interpreter services are expensive and require advance coordination. Small enrollment offices may not have the resources.
+- Digital translation tools exist but are not always accurate for elder-facing official documents.
+- Hana's resolution depended on a community health worker from her church — an informal resource that is not available to everyone in her position.
+- Her civic exclusion at the neighborhood meeting was not hostile. It was ordinary administrative momentum. That is not less excluding.
+
+**Fairness question.** Are rights real for people who cannot understand the system's language, forms, deadlines, or meetings?
+
+**Likely verdict.** Weak to conditional. Language access is constitutionally required but operationally thin. Required fixes: interpreter access at every enrollment point as a non-optional service standard; community-language notices for any action requiring response; civic deliberation accommodations for non-native-language participants that are built into meeting design rather than improvised.
+
+---
+
+### Year Story 13 — False Accusation and Appeal Speed
+
+**Who they are.** Anika is 38. She is a single parent with two teenagers. She coordinates grocery sharing with another parent in her building — they split a bulk food credit to avoid waste. In March a neighbor reports her for selling Essential Access items. The accusation is wrong.
+
+**The year.** In April her account is flagged and her credits are suspended pending investigation. She cannot use her pharmacy access or food credits during the review. She borrows from family. In May a local administrator tells her the review will take six to eight weeks. She asks whether she can continue accessing essential services during review. The administrator says the flag prevents it until the review is complete. In June the investigation closes: the accusation was unfounded. The administrator restores her access and issues a notice of clearance. The notice is internal. No public correction is made. In July Anika applies for a community advisory role. The application system shows a prior flag with a clearance note. She is not selected. In October she learns the neighbor who reported her still believes she is guilty. Anika does not know whether the system told the neighbor the outcome.
+
+**What the system should do.**
+- Essential Access should not be suspended during investigation — it is a survival guarantee, not a reward for good behavior.
+- The review timeline must be measured in days, not weeks, for suspension decisions.
+- A clearance must include public correction proportional to the public impact of the accusation.
+- Prior cleared flags should not appear in ways that functionally penalize the accused.
+
+**Where fairness strains.**
+- Suspension during investigation is a strong enforcement tool. It deters organized misuse. But for Anika, it was six weeks without pharmacy access for a false accusation.
+- The six-to-eight week timeline reflects real administrative capacity. The system cannot fabricate reviewer bandwidth.
+- Internal clearance is easier to administer than public correction. Public correction creates its own complications — it notifies the community that the original report was wrong, which may discourage future reporting.
+- The flag appearing in the advisory role application reflects a system design choice, not malice. That distinction does not help Anika.
+
+**Fairness question.** Can the system investigate abuse without making accusation itself a punishment?
+
+**Likely verdict.** Weak on the suspension rule, conditional on the rest. Required fixes: Essential Access must continue during investigation with enhanced monitoring rather than suspension; investigation timelines for suspension decisions must be constitutionally capped at a short period (e.g., 72 hours for access restoration, 30 days for full resolution); cleared flags must not appear in civic role applications without an explicit waiver.
+
+---
+
+### Year Story 14 — Clique-Controlled Local Community
+
+**Who they are.** Jerome is 45. He moved to a small rural town of 800 people three years ago from a larger city. He enrolled in Essential Access, has a modest Service Record, and participates in civic meetings. The town has been stable for decades. Several extended families account for most of the town council, most of the employer base, most of the volunteer leadership, and most of the informal social infrastructure. No rules have been broken. The network simply formed before Jerome arrived.
+
+**The year.** In January Jerome applies for a spot on the local emergency preparedness committee. The application is reviewed by the town council, which is dominated by three families. He is not selected; a member of one of those families is. In March he notices that Essential Access vendor approvals for the town were all awarded to businesses owned by the same three families. In May he raises this at a civic meeting. He is told the vendors met all criteria. He asks for the criteria. He is given a summary. In August he files a community alert about potential capture in local vendor selection. In September the regional review acknowledges the concentration but finds no rule violations. In November Jerome is still here. He has not been threatened or formally excluded. He has simply found that every door that is technically open is practically guarded.
+
+**What the system should do.**
+- The capture dashboard should detect vendor concentration at the local level, not only city-wide.
+- Conflict-of-interest rules should apply to vendor selection panels when panelists have familial or financial connections to applicants.
+- Community alerts about concentration should trigger published analysis with specific findings, not only generic clearances.
+- New residents should have a documented path to civic standing that is not entirely mediated by existing networks.
+
+**Where fairness strains.**
+- The families have not broken rules. The system cannot punish community trust that formed organically over decades.
+- Vendor concentration in a small town may reflect genuine capacity constraints: if only three businesses in the town can meet the logistical requirements, concentration is structural, not conspiratorial.
+- The community alert mechanism caught the pattern. The clearance finding is accurate: no rules were broken. That is correct. It is also a limit.
+- Jerome's civic participation is real and unimpeded in the formal sense. The friction he experiences is social, not administrative. The constitution cannot legislate social openness.
+
+**Fairness question.** Does the system protect newcomers and outsiders from informal exclusion that is technically compliant with every rule?
+
+**Likely verdict.** Conditional to weak. The constitution addresses capture through aggregate metrics that may miss small-town clique dynamics. Required fixes: local-level concentration metrics in vendor selection with automatic disclosure requirements; explicit conflict-of-interest rules that include familial relationships in selection panels; a community alert pathway that can produce structural findings with actionable recommendations, not only clearance-or-violation binaries.
+
+---
+
+### Year Story 15 — Disaster Displacement
+
+**Who they are.** Elise is 52. She rents an apartment in a river town. She has lived there for nine years. Her Essential Access is enrolled in that jurisdiction. In June a three-day flood destroys her building. She evacuates with her cat, her phone with a cracked screen, and one bag.
+
+**The year.** In the first week she stays with a cousin in a neighboring city. She needs medication, food, and transit. Her Essential Access account is active, but the network vendors in her cousin's city do not recognize out-of-jurisdiction enrollment in real time. She waits four days for cross-jurisdiction access to clear. Her phone screen breaks completely in week two. She cannot access her digital wallet. In July she goes to the enrollment office in her cousin's city to register a new contact method. She does not have her lease, her ID card, or her bank statements — they were in the flood. She has her face, her name, her enrollment number from memory, and a photograph on her cousin's phone. The enrollment office requires two forms of documentation. She cannot provide them. A community navigator at the office finds a workaround: a sworn affidavit from her cousin, her enrollment number, and a biometric check. It takes six days. In August she learns her home jurisdiction is processing a disaster continuity transfer, which will register her displacement and protect her Service Record continuity. The process takes 90 days. Until it completes, she is in an ambiguous status in both jurisdictions. In October the transfer completes. In November she is still in her cousin's city. She has a job lead. She does not know yet whether to treat the move as permanent.
+
+**What the system should do.**
+- Cross-jurisdiction access should activate within hours of a declared disaster, not days.
+- Documentation-free emergency enrollment must be available for disaster-displaced persons as a named constitutional provision.
+- Disaster continuity transfer timelines must be short enough to matter — 90 days covers the bureaucratic timeline but misses the crisis window.
+- Service Record continuity during disaster displacement should be automatic, not a separate application.
+
+**Where fairness strains.**
+- Cross-jurisdiction identity verification has a fraud-prevention reason: displacement events are also used by bad actors to claim double enrollment. The system's caution is not irrational.
+- The documentation requirement exists for the same reason. The workaround the community navigator found was good. It should not be informal — it should be the standard.
+- Elise's ambiguous status between jurisdictions during the 90-day transfer is a real structural gap. Neither jurisdiction knows whether she is a temporary or permanent resident, so neither is fully responsible for her.
+
+**Fairness question.** Can the system follow a person through displacement faster than paperwork can fail them?
+
+**Likely verdict.** Conditional. The disaster provisions exist in intent but not in operational speed. Required fixes: pre-declared disaster corridors that auto-activate cross-jurisdiction access within 24 hours; biometric-plus-enrollment-number as sufficient for emergency re-enrollment during declared disasters; disaster continuity transfer completed within 14 days, not 90.
+
+---
+
+### Year Story 16 — Year-Ten Status Hardening
+
+**Who they are.** Petra is 48. She was an early enthusiastic participant. She served on three advisory panels, built a strong Service Record over eight years, and helped design her neighborhood's Essential Access vendor network. She is trusted, well-regarded, and used to being listened to. She is also the reason it is hard to get onto some panels if you are new.
+
+**The year.** No single thing goes wrong. Petra follows all rules. She continues to participate in good faith. In March a young resident, Lila, applies for a seat on the neighborhood infrastructure panel. She is well-qualified. The panel selection vote goes to Petra's preferred candidate — someone Petra knows and trusts. Lila was also qualified. The vote was not rigged. In May a new vendor applies to join the network. The vendor is excellent. The selection committee, which Petra effectively leads through informal influence, is slow to approve it because they are comfortable with the existing vendors. Nothing improper happens. In August a community newcomer raises concerns at a civic meeting. Several long-term participants — including Petra — visibly disengage when she speaks. It is not hostile. It is the familiar weariness of people who think they have heard the concern before. By December, the infrastructure panel has had the same core members for five years. The vendor network has not changed in three years. New voices are technically welcome. In practice, entry is slow.
+
+**What the system should do.**
+- Service Record accumulated over ten years should grant eligibility, not tenure.
+- Panel composition should be subject to rotation rules that prevent informal incumbency.
+- Vendor selection should be reviewed on a cycle, with open competition, not perpetual renewal.
+- The capture dashboard should flag stability that looks like hardening, not only instability that looks like chaos.
+
+**Where fairness strains.**
+- Petra has earned her standing honestly. Penalizing expertise and experience is not fairness.
+- Long-term participants have institutional memory that newcomers lack. Rotation for rotation's sake loses that memory.
+- Informal deference to established voices is not rule-breaking. The constitution cannot prohibit human social dynamics.
+- The system's capture detection is designed for financial and political capture. Social capital hardening is harder to quantify and easier to rationalize.
+
+**Fairness question.** Does the system detect status hardening after years of ordinary habit, not only during founding?
+
+**Likely verdict.** Conditional. The year-ten problem is a success problem: it emerges because the system has been stable, and stability creates incumbency. Required fixes: explicit rotation requirements for advisory panels with staggered terms; periodic open competition for vendor networks rather than perpetual renewal; capture dashboard flags for year-over-year panel composition stability combined with declining newcomer participation rates.
+
+---
+
+### Year Story 17 — Expensive Permanent Need
+
+**Who they are.** Dr. Sen is 55. She has a rare autoimmune condition that requires a biologic medication that costs substantially more than the Essential Access pharmacy basket covers. She retired early due to her condition. She has no market income and no ability to perform sustained work. She is enrolled in Essential Access. The monthly shortfall between her medication's cost and her covered amount is real, consistent, and not going away.
+
+**The year.** In January she begins navigating the supplemental access process. The application requires documented medical necessity, physician attestation, and a cost-justification statement. Her physician attests. In March the regional review board approves partial supplemental coverage — not the full gap, but enough that she can manage with careful rationing. In June a budget review flags her case as high-cost. The review board is asked to reconsider the supplemental allocation. In July she learns that three other patients with similar conditions are also under review. In August a public deliberation on the Essential Access basket scope includes a discussion of "high-cost edge cases." The framing is careful but the implication is that her needs are exceptions straining the commons. In September the supplemental allocation is reduced by 15%. She adjusts dosing. Her physician documents this as a medical compromise. In October she considers whether to raise her case publicly — but speaking publicly about her condition means giving up privacy she does not want to give up.
+
+**What the system should do.**
+- Essential Access covers genuine medical necessity. High-cost conditions are not exceptions to this guarantee — they are its hardest tests.
+- Supplemental access should not require periodic re-justification of needs that are medically permanent and documented.
+- Public deliberation on basket scope should not frame individual high-cost users as responsible for commons strain.
+- Privacy protection for medical conditions must be explicit: participation in medical necessity reviews must not require public disclosure.
+
+**Where fairness strains.**
+- The supplemental review process exists because unlimited supplemental coverage is not fiscally sustainable. The budget question is real.
+- Public deliberation on basket scope is a legitimate governance function. The framing problem is real but hard to mandate away — civic discussions produce the speech they produce.
+- The 15% reduction is presented as a budget decision, not a medical decision. The distinction protects the review board from the accusation of making health judgments. It does not change what happens to Dr. Sen's body.
+- Privacy is expensive to protect in a system that requires documentation and review for supplemental access. Every person who reviews her file knows her condition.
+
+**Fairness question.** Does the system protect unpopular need, or only need that is cheap and emotionally sympathetic?
+
+**Likely verdict.** Conditional to weak. The expensive permanent need test is where dignity-floor language is most tested. Required fixes: permanent medical necessity determinations that do not require cyclical re-review unless medical evidence changes; budget deliberations that use aggregate anonymized data, not case-level framing; a sealed supplemental review track where medical details are not shared outside the clinical review panel.
+
+---
+
+### Year Story 18 — Honest Small-Business Failure
+
+**Who they are.** Marco is 41. He ran a small bakery for six years. He employed four people. He paid his suppliers, his workers, and his taxes. His failure was not fraud, negligence, or misconduct: a road construction project diverted foot traffic for eight months and his lease obligations outlasted his cash flow. In December of the prior year he closed.
+
+**The year.** In January Marco files for dissolution. He has no income and business debts he cannot service. He enrolls in Essential Access for the first time. His Service Record shows six years of employer contribution (his workers' contributions registered to them; his own as owner were minimal and irregularly recognized). His own Service Record contribution history is thin. He has no Protected Pause history — he was never in the system's hardship mechanisms because he was running a business. In February he attends an Essential Access enrollment orientation designed for individuals transitioning from non-enrollment. The framing is helpful but assumes a simpler story than his. In April a creditor files a claim that encumbers some of his remaining Flow. In June he explores starting again — a smaller operation, a market stall. The operating-float rules require him to maintain a minimum reserve. He does not have the reserve because it went to his debts. In September he finds a community cooperative incubator that can provide shared infrastructure without requiring him to hold capital reserves himself. He joins. By December he has a stall and a plan.
+
+**What the system should do.**
+- The survival floor catches him — Essential Access is available regardless of his business history.
+- Business failure through no misconduct should not affect Service Record continuity in a way that signals unreliability.
+- Operating-float requirements for small new ventures should not use capital minimums that are out of reach for someone restarting from zero.
+- Cooperative infrastructure that shares capital overhead should be actively supported as a restart pathway.
+
+**Where fairness strains.**
+- Marco's case is less dramatic than it could be. His workers were covered because their contributions were registered in their names. He was the one who fell through.
+- The operating-float requirements are size-neutral — they apply to all operating businesses. They exist to prevent people from running businesses on Essential Access float. The reason is legitimate. The effect on honest restarters is a side effect.
+- The cooperative incubator solved his problem informally. It is not a constitutional mechanism — it is a lucky social resource.
+- His debts are real. The system does not clear them. The constitution does not eliminate the consequences of honest risk.
+
+**Fairness question.** Can the system distinguish honest failure from fraud, misconduct, and strategic defaulting — and treat them differently?
+
+**Likely verdict.** Conditional. The survival floor holds. The restart pathway is not constitutionally specified and depends on available cooperative infrastructure. Required fixes: Service Record continuity protection for dissolved businesses where no misconduct is found; operating-float cooperative-share provision — a person can satisfy capital reserve requirements through verified membership in a shared-capital cooperative; explicit guidance in the constitution distinguishing honest failure from misconduct for enrollment and Service Record purposes.
+
+---
+
 ### Annual Fairness Findings
 
 These year stories suggest four fairness layers:

@@ -1,5 +1,23 @@
 # ANNEX AY — Delivery Sufficiency Standard and Register
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Name the populations for whom the constitutional guarantee of Essential Access exists but operational delivery does not yet — and govern the gap until delivery is real, not just promised. |
+> | **Who it protects** | Incarcerated people, undocumented people in non-consenting jurisdictions, people who cannot use digital interfaces, people in communities that refuse enrollment, minors with disrupted guardianship, and anyone for whom the guarantee is constitutionally real but operationally hollow. |
+> | **Failure risk** | Delivery gap laundering: the constitutional guarantee is cited as evidence of protection while populations without functioning delivery paths remain invisible in the record — the gap between commitment and reality is never formally acknowledged or governed. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | P-055; Annex AX (confidential enrollment — closes safety-shielded delivery gap); Annex AW (whistleblower protection); Annex AK (identity error doctrine); Annex I (residency and onboarding); Article IV (Essential Access guarantee) |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Name the populations for whom the constitutional guarantee of Essential Access exists but operational delivery does not yet — and govern the gap until delivery is real, not just promised. |
+> | **Who it protects** | Incarcerated people, undocumented people in non-consenting jurisdictions, people who cannot use digital interfaces, people in communities that refuse enrollment, minors with disrupted guardianship, and anyone for whom the guarantee is constitutionally real but operationally hollow. |
+> | **Failure risk** | Delivery gap laundering: the constitutional guarantee is cited as evidence of protection while populations without functioning delivery paths remain invisible in the record — the gap between commitment and reality is never formally acknowledged or governed. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | P-055; Annex AX (confidential enrollment — closes safety-shielded delivery gap); Annex AW (whistleblower protection); Annex AK (identity error doctrine); Annex I (residency and onboarding); Article IV (Essential Access guarantee) |
+
 > **Provenance:** Implements [P-055 — Delivery Sufficiency Standard] · Addresses the gap between the constitutional guarantee of Essential Access and the operational reality that some populations cannot currently receive it · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-055

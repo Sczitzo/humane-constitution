@@ -1,5 +1,23 @@
 # ANNEX AX — Confidential Enrollment and Safety-Identity Protocol
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Provide a safe enrollment pathway for people whose standard identity disclosure creates a documented risk of violence or persecution — ensuring the system's identity architecture does not become an instrument of harm to the people it most needs to protect. |
+> | **Who it protects** | Domestic violence survivors, trafficking victims, people fleeing persecution, and anyone for whom a traceable identity record creates a documented safety threat. |
+> | **Failure risk** | Safety-identity capture: the identity wallet becomes a tracking vector for abusers or traffickers; sealed records are accessed through administrative channels by the very actors the person is fleeing; emergency enrollment is used to deny access to those who cannot produce immediate documentation. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | P-054; Annex AK (identity asymmetric error doctrine); Annex AI (Federated Ombuds sealed-record access); Annex AY (delivery sufficiency register); Annex I (residency and onboarding) |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Provide a safe enrollment pathway for people whose standard identity disclosure creates a documented risk of violence or persecution — ensuring the system's identity architecture does not become an instrument of harm to the people it most needs to protect. |
+> | **Who it protects** | Domestic violence survivors, trafficking victims, people fleeing persecution, and anyone for whom a traceable identity record creates a documented safety threat. |
+> | **Failure risk** | Safety-identity capture: the identity wallet becomes a tracking vector for abusers or traffickers; sealed records are accessed through administrative channels by the very actors the person is fleeing; emergency enrollment is used to deny access to those who cannot produce immediate documentation. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | P-054; Annex AK (identity asymmetric error doctrine); Annex AI (Federated Ombuds sealed-record access); Annex AY (delivery sufficiency register); Annex I (residency and onboarding) |
+
 > **Provenance:** Implements [P-054 — Confidential Enrollment and Safety-Identity Protocol] · Addresses identity-verification gaps for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates documented risk · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-054

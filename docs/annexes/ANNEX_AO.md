@@ -1,5 +1,23 @@
 # ANNEX AO — Register Disclosure Protocol
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Govern the split of the Threat Register into a fully public version and a restricted version containing operational calibration data — keeping accountability visible while denying adversaries a precision attack manual. |
+> | **Who it protects** | The public's right to know what threats exist and what mitigations are in place; also the system's operational integrity against sophisticated attackers who would use threshold details to calibrate exploits. |
+> | **Failure risk** | Accountability gap: the bifurcation becomes a secrecy mechanism — threats are silently tracked in the restricted annex without any public acknowledgment, or the public register misrepresents mitigations that don't exist. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-007 (Definition Drift); P-021; Threat Register consistency obligations; Annex AJ (enforcement ledger) |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Govern the split of the Threat Register into a fully public version and a restricted version containing operational calibration data — keeping accountability visible while denying adversaries a precision attack manual. |
+> | **Who it protects** | The public's right to know what threats exist and what mitigations are in place; also the system's operational integrity against sophisticated attackers who would use threshold details to calibrate exploits. |
+> | **Failure risk** | Accountability gap: the bifurcation becomes a secrecy mechanism — threats are silently tracked in the restricted annex without any public acknowledgment, or the public register misrepresents mitigations that don't exist. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | T-007 (Definition Drift); P-021; Threat Register consistency obligations; Annex AJ (enforcement ledger) |
+
 > **Provenance:** Implements [P-021 — Register Disclosure Protocol] · Addresses threat-register operational security and T-007 consistency risk · Status: **PROPOSED**
 
 **Governing document for Threat Register bifurcation**

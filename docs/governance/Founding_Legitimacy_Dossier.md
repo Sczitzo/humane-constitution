@@ -43,6 +43,152 @@ The project should not yet claim:
 
 ---
 
+## Founding Preconditions
+
+This section closes the "who decides?" question by specifying concrete, independently auditable criteria that must all be satisfied before any person or body may declare the founding phase begun. These criteria are designed, not yet tested. They are written to resist manipulation by those who are eager to declare victory prematurely.
+
+No founding declaration is valid unless every precondition below is independently certified as met. Self-certification by the founding coalition is not sufficient for any criterion.
+
+---
+
+### Precondition 1 — Founding Coalition Legitimacy
+
+**Definition**
+
+The founding coalition must satisfy all of the following structural requirements simultaneously:
+
+- **Geographic distribution:** no more than 40% of founding members may be drawn from a single nation-state or legal jurisdiction.
+- **Wealth distribution:** no more than 30% of founding members may be individuals or organizations whose primary constituency is high-income populations (defined as the top income quintile of their national context). At least 20% of founding members must directly represent or be drawn from populations in the bottom two income quintiles.
+- **Dependency population representation:** at least three founding members must represent, be drawn from, or be formally accountable to communities that are materially dependent on survival-floor services (income support, emergency housing, primary care, food assistance). This requirement cannot be satisfied by appointed advocates; it requires persons with direct lived experience or formal constituency accountability to these populations.
+- **No single funder controlling majority:** no single donor, foundation, government, or corporate entity may account for more than 25% of founding coalition operating budget at the time of activation.
+- **Disciplinary breadth:** the coalition must include representation from civil society, law, technical systems, labor, disability rights, and at least one faith or community-ethics tradition. No single professional category may constitute more than 35% of coalition membership.
+
+**What failure looks like**
+
+A founding coalition is invalid if: it is composed primarily of technologists, donors, academics, or policy professionals without accountability to affected populations; if a single national government, foundation, or corporate sponsor controls more than 25% of coalition funding; or if there is no founding member with direct accountability to survival-floor-dependent populations.
+
+**Who audits this**
+
+An independent Founding Composition Auditor must be nominated by the adversarial panel member (per the conflict register process), not by the founding coalition. The auditor publishes a written determination with supporting evidence at least 30 days before any founding declaration. The founding coalition may respond, but the auditor's determination is final for this precondition. The auditor's own conflicts of interest must be publicly disclosed.
+
+---
+
+### Precondition 2 — Objection Channels
+
+**Definition**
+
+Before activation may occur in any jurisdiction, a formal objection process must be open and demonstrated functional. The following minimum standards apply:
+
+- **Duration:** the objection window must be open for at least 60 consecutive days. Emergency compression of this window for any reason — including urgency of need, funding timelines, or political opportunity — renders any founding declaration invalid.
+- **Accessibility:** objection channels must be available in at least the primary languages of the affected jurisdiction, accessible to people without internet access (via mail, phone, or in-person submission), and free of cost to the objector.
+- **Recording:** all objections must be timestamped, assigned a reference number, and logged in a publicly accessible register. Anonymous objections are accepted and logged. Objections may not be filtered, summarized without consent, or grouped in ways that reduce individual objections to aggregate statistics before the response period closes.
+- **Response duty:** each substantive objection — defined as an objection that identifies a specific claim, rule, or consequence it contests — must receive a written response within 30 days of the close of the objection window. The response must address the specific claim raised. Boilerplate responses that do not engage with the substance of the objection do not satisfy this requirement.
+- **What makes a valid objection:** an objection is substantive if it identifies a rule, consequence, or process and argues that it causes harm, violates a stated commitment, or rests on a factual error. An objection does not need to propose an alternative to be valid. A valid objection may come from a single individual.
+- **What does not constitute a veto:** an objection, even a substantive one, does not give the objector the power to permanently block activation. The founding coalition must respond and may proceed — but it must demonstrate, in its founding declaration, that it has considered each substantive objection and either modified the design or explained in writing why it has not.
+
+**What failure looks like**
+
+The objection channel is invalid if: the window is shorter than 60 days; objections require technical access or financial cost that ordinary affected people cannot bear; objections are logged but not individually responded to; objections cannot influence the timing or content of activation; or the founding coalition characterizes opposition as bad-faith hostility rather than legitimate input.
+
+**Who audits this**
+
+The objection record, including the full log and all responses, must be reviewed by the independent civil-society reviewers required under the Dossier Artifact Status Register. Reviewers assess whether responses engaged substantively with objections. A summary of their assessment is published before any founding declaration.
+
+---
+
+### Precondition 3 — Consent Thresholds
+
+**Definition**
+
+Activation in any jurisdiction requires affirmative consent meeting all of the following standards:
+
+- **What counts as consent:** consent must be active, not passive. Silence, non-response, failure to object, or absence from a meeting does not constitute consent. Affirmative consent means a recorded act — vote, signature, community resolution, or equivalent — by an eligible participant expressing support for activation.
+- **Eligible participants:** all adult residents of the jurisdiction who would be subject to the governance framework are eligible to participate. Eligibility cannot be restricted by property ownership, income, prior participation in the founding process, or institutional affiliation.
+- **Minimum threshold:** at least 60% of eligible participants who actively participate in the consent process must affirmatively consent. Additionally, total active participation must reach at least 25% of all eligible participants in the jurisdiction. A consent event with less than 25% participation is not a valid consent event regardless of the affirmative rate among participants.
+- **Community endorsement path:** for communities where individual plebiscite is impractical, a community endorsement path is available if: the endorsing body (council, assembly, cooperative governance body) is itself directly elected or selected by the community; the endorsement process is public and observable; dissent within the endorsing body is recorded; and the endorsement is ratified by a subsequent community meeting open to all eligible participants with at least 14 days public notice.
+- **Coerced consent — definition and invalidation:** consent is coerced, and therefore invalid, if any of the following are present:
+  - access to essential services, housing, income support, or medical care is conditioned on participation or affirmative consent;
+  - employment, social standing, or community membership is used as leverage to induce consent;
+  - the consent process takes place during a crisis in which non-participation would carry immediate material penalty;
+  - participants cannot verify that their vote or record is secret if they request secrecy;
+  - a significant share of participants report, in a post-event survey conducted by an independent party, that they felt pressured or lacked a real alternative.
+- **Post-consent cooling period:** after a consent event, a 14-day cooling period must pass before activation. During this period, any participant may submit a coercion complaint to the Founding Composition Auditor. If coercion complaints are filed, the auditor must investigate and publish a finding before activation proceeds. If the auditor finds credible evidence of coercion affecting a material share of participants, the consent event is invalidated and must be re-run.
+
+**What failure looks like**
+
+Consent is invalid if: it is inferred from silence or inaction; participation falls below 25% of eligible residents; essential services or economic security were used as leverage; the cooling period was waived; or coercion complaints were not independently investigated before activation.
+
+**Who audits this**
+
+The consent event must be observed by at least two independent observers not appointed by the founding coalition. Their findings are published before the cooling period begins. The post-event coercion survey is administered by an independent party using a methodology published before the consent event occurs.
+
+---
+
+### Precondition 4 — Exit Rehearsal Requirement
+
+**Definition**
+
+Before activation, at least one complete exit rehearsal must be conducted, documented, and published. The rehearsal must simulate a real exit scenario — either a participating unit (neighborhood, municipality, cooperative) or an individual withdrawal — and demonstrate that exit is practically available, not only formally permitted.
+
+The exit rehearsal must demonstrate all of the following:
+
+- **Process completeness:** the full exit sequence described in `founding/order/exit_protocol.md` is executed from initiation to completion, including data export, service transition, account closure, and re-entry eligibility confirmation.
+- **Essential Access continuity:** the exiting unit or individual retains access to Essential Access services — income floor, emergency housing, primary care — without interruption during and after the exit sequence. Any gap in Essential Access during exit is a rehearsal failure.
+- **Prohibited costs:** exit imposes no financial penalty, no forfeiture of rights accrued during participation, and no data retention that the exiting party has not consented to. If the rehearsal reveals that exit would impose such costs, this is a failure requiring design correction before activation.
+- **Duration test:** the rehearsal must run in real time or compressed simulation; the total time from exit initiation to full disentanglement must be documented. If the process exceeds 90 days in simulation, the design must be revised.
+- **Failure documentation:** any step in the exit process that fails, stalls, or requires improvisation is documented explicitly in the rehearsal report. The report may not describe a failure as a minor issue without explaining the design change made in response.
+- **Publication:** the full rehearsal report — including all failures, corrections, and open questions — must be published at least 30 days before any founding declaration. Suppression or selective editing of the rehearsal report invalidates the rehearsal.
+
+**What failure looks like**
+
+The exit rehearsal is invalid if: it was never conducted; it was conducted but the report was not published; the report omits failures; Essential Access was interrupted during the simulated exit; or exit required costs, penalties, or data retention the exiting party did not consent to.
+
+**Who audits this**
+
+The exit rehearsal is observed and its report reviewed by the independent civil-society reviewers. They publish a one-page certification confirming whether the rehearsal meets minimum requirements. The founding coalition may not certify its own exit rehearsal.
+
+---
+
+### Precondition 5 — Pre-Activation Disclosure Checklist
+
+**Definition**
+
+Before any founding declaration, the following minimum disclosures must be publicly accessible, in plain language, without paywalls or access barriers, translated into the primary languages of the affected jurisdiction:
+
+1. **Proposed governance structure:** the full constitutional text, a plain-language summary, and a description of how authority is distributed across tiers.
+2. **Initial parameter values:** the specific numerical thresholds, floors, and limits proposed for activation (income floor level, Essential Access scope, measurement intervals, sunset dates). Vague commitments to "set parameters appropriately" do not satisfy this requirement.
+3. **Measurement methodology:** how the survival floor and dignity metrics are calculated, what data sources are used, who controls those data sources, and what the audit interval is.
+4. **Founding team conflicts of interest:** the full conflict register, including funding sources, institutional affiliations, prior employment, family ties to vendors or governments, and any financial interest in technologies or services that the governance framework would use.
+5. **Objection period duration and channels:** exact start and end dates of the objection period, with all submission methods described.
+6. **What is still unproven:** a plain-language statement of the design elements that have not yet been empirically tested, where the founding coalition is acting on reasonable expectation rather than demonstrated evidence.
+7. **What the founding declaration does not authorize:** explicit enumeration of actions the founding coalition cannot take after declaration — scope expansion, parameter changes without specified process, emergency powers.
+
+**Disclosure timing:** all seven items must be publicly accessible for at least the full 60-day objection window. Publishing any item less than 60 days before a founding declaration is insufficient.
+
+**What failure looks like**
+
+The disclosure is incomplete if: any of the seven items is missing, vague, or available only to people with technical or financial access the general public lacks; if the conflicts of interest register names categories without naming individuals; if the "what is still unproven" statement is absent or describes the design as proven when it is not; or if the disclosure period is shorter than the objection window.
+
+**Who audits this**
+
+The Founding Composition Auditor is responsible for certifying that all seven disclosure items are complete, publicly accessible, and have been available for the full objection window. The auditor's certification must be published before any founding declaration. If any item is missing or inadequate, the auditor specifies what is required and the founding declaration may not proceed until a revised certification is issued.
+
+---
+
+### Precondition Summary Table
+
+| Precondition | Minimum standard | Failure criterion | Auditor |
+|---|---|---|---|
+| 1. Founding coalition legitimacy | Geographic, wealth, dependency-population, funder, and disciplinary diversity thresholds all met simultaneously | Any single threshold missed; no member accountable to survival-floor populations; single funder exceeds 25% | Independent Founding Composition Auditor, nominated by adversarial panel member |
+| 2. Objection channels | 60-day window; accessible; individual responses to substantive objections within 30 days of close | Window shorter than 60 days; objections not individually responded to; opposition characterized as bad faith | Independent civil-society reviewers |
+| 3. Consent thresholds | 60% affirmative among active participants; 25% participation of all eligible; no coerced consent; 14-day cooling period | Silence counted as consent; participation below 25%; coercion complaints not investigated; cooling period waived | Independent observers; post-event independent survey |
+| 4. Exit rehearsal | Full sequence demonstrated; Essential Access uninterrupted; no prohibited costs; report published 30 days pre-declaration | Rehearsal not conducted; report suppressed or edited; Essential Access gap; exit costs imposed | Independent civil-society reviewers |
+| 5. Pre-activation disclosure | All seven items public for full 60-day objection window | Any item missing, vague, or inaccessible; disclosure period shorter than objection window | Founding Composition Auditor |
+
+**All five preconditions must be certified as met before a founding declaration is valid. Partial compliance does not permit partial activation.**
+
+---
+
 ## Founding Abuse Model
 
 | Abuse path | Why it is dangerous | Required test |

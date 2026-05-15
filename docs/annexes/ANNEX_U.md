@@ -1,5 +1,14 @@
 # ANNEX U — Operational Bypass Closure and Superseding Clauses
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Closes the bypass channels identified in adversarial review — founding-body conflicts, investment-channel shelters, oracle independence gaps, cumulative basket erosion, housing stewardship loopholes, civic-layer verification gaps, and the Shared Storehouse bridge — and supplies superseding clauses that override looser earlier language in Annexes H, I, K, M, N, P, Q, R, and S where they conflict. |
+> | **Who it protects** | Everyone who relies on the stated protections actually being unbypassable — founding promises that can be quietly circumvented offer false security, not real protection. |
+> | **Failure risk** | Exception systems become the new capture layer; each individually justified carve-out aggregates into a regime where the rules have more holes than substance; narrowing faces weaker friction than expansion. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | P-022; P-024; Annex N §N3 (founding anti-capture); Annex J §J3 (investment channels); Annex M §M4 (oracle failure defaults); Annex K §K1 (basket contestation). |
+
 > **Provenance:** Foundational constitutional annex · Closes operational bypass channels and supplies superseding clauses later extended by P-022 and P-024 · Status: **ACTIVE**
 
 **Purpose.** This Annex closes operational bypass channels identified in adversarial review. Where Annex U conflicts with earlier language in Annexes H, I, K, M, N, P, Q, R, or S, Annex U governs.

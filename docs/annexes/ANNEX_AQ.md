@@ -1,5 +1,23 @@
 # ANNEX AQ — Shared Storehouse Oracle-Failure Fallback Protocol
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Define what the Shared Storehouse rationing system does when the oracle network fails during an active rationing period — establishing a designed protocol instead of an improvised one. |
+> | **Who it protects** | People dependent on Shared Storehouse rationing during a supply shortage; their access must not be cut off simply because the measurement system went offline. |
+> | **Failure risk** | Oracle failure during active rationing creates an operational void: either the system lapses (leaving people without access) or continues unchecked (overreach). Both defaults are exploitable. A coordinated attacker can silence the oracle to manipulate the outcome either way. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-024 (Shared Storehouse Oracle-Failure During Active Rationing); T-018 × T-024 compound; P-022; Annex Y (CSM survival floor); Annex AL (oracle accreditation); FC-100 |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Define what the Shared Storehouse rationing system does when the oracle network fails during an active rationing period — establishing a designed protocol instead of an improvised one. |
+> | **Who it protects** | People dependent on Shared Storehouse rationing during a supply shortage; their access must not be cut off simply because the measurement system went offline. |
+> | **Failure risk** | Oracle failure during active rationing creates an operational void: either the system lapses (leaving people without access) or continues unchecked (overreach). Both defaults are exploitable. A coordinated attacker can silence the oracle to manipulate the outcome either way. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-024 (Shared Storehouse Oracle-Failure During Active Rationing); T-018 × T-024 compound; P-022; Annex Y (CSM survival floor); Annex AL (oracle accreditation); FC-100 |
+
 > **Provenance:** Implements [P-022 — Shared Storehouse Oracle-Failure Fallback Protocol] · Addresses T-024 · Status: **ACTIVE**
 
 **Status: ACTIVE — FC-100 bound; Proposal 6 close-out, 2026-04-18**

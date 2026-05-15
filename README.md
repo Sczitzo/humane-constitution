@@ -9,15 +9,52 @@ title: Project Guide & Reader Overview
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> A public design workbook for separating basic needs, markets, and public power so wealth cannot quietly become control over other people.
+---
 
-Start with a life, not a mechanism: a person may lose work, status, health, documents, popularity, or money and still remain a person whose hunger, shelter, medicine, and basic dignity matter. This project asks whether a society can protect that truth without crushing markets, local freedom, enterprise, dissent, or responsibility.
+## The problem this is trying to solve
 
-That is a serious claim, and this draft does not ask to be trusted because the aim sounds humane. It is a human attempt to design rules that serve people rather than dominate them. It must be judged by whether it protects the vulnerable, preserves dignity, tells the truth about failure, and remains open to correction.
+Imagine losing your job. Then your housing. Then your ID, because you had no fixed address when it expired. Then being told by the agency administering emergency food support that you don't qualify — because the system expects proof of address to process a claim, and you no longer have one.
+
+Nothing illegal happened. No single person decided to harm you. The machinery just worked the way it was built to work, and you fell through it.
+
+That situation is not rare. It is structurally predictable — because in most societies, food, rent, medicine, legal help, and civic access all depend on the same instrument: money. When one thing does all of those jobs, losing it sets off a cascade. And the cascade tends to accelerate: each loss makes the next one harder to stop, and the people best positioned to help you regain footing are the ones least likely to encounter you once you're in it.
+
+This project is organized around three specific versions of that failure:
+
+**Survival-Trade Bind** — when people must trade dignity, obedience, health, or safety just to meet basic needs, because no floor exists below market price.
+
+**Power-Wealth Convergence** — when accumulated financial advantage becomes authority over the rules, the enforcement mechanisms, and the public systems that are supposed to be neutral.
+
+**Static-Advantage Loop** — when early gains, inheritance, or gatekeeping become self-reinforcing — not through ongoing merit, but through compounding control over who gets access next.
+
+These are not ideology. They are failure modes. The question this project tries to answer is whether a society can be designed to interrupt them — without crushing markets, local autonomy, enterprise, or individual responsibility.
+
+---
+
+## What this project attempts
+
+The Humane Constitution is a public working draft of constitutional design. It proposes separating three things that most societies allow to merge: basic survival needs, market exchange, and public power. The claim is that when all three depend on the same instrument — money — wealth becomes power over other people's safety, and that power compounds quietly until it's structural.
+
+The design uses five distinct tools with explicit walls between them: ordinary money for markets and wages; a separate floor for basic needs that cannot be bought, sold, or conditioned on compliance; a bounded voice mechanism for civic priorities; a service record for rotating public roles; and a temporary rationing instrument for verified shortages only. The walls between these tools are the system. Without the walls, it's just another arrangement of familiar pieces.
+
+This is not a finished solution. There is no pilot evidence yet. The founding coalition does not exist. The identity and recovery system is designed but unproven. This is an honest design attempt with named failure modes, public evidence gaps, and a stated sequence for what must be tested before any scale-up claim would be credible.
+
+---
+
+## What makes this different from a manifesto
+
+A manifesto tells you what should be true. This project tries to say what it cannot yet prove.
+
+The Claims & Evidence Register lists every load-bearing assertion with its current evidence status — designed, plausible, or demonstrated. The Pilot Evidence Roadmap names what must be tested before scale-up gates open. The Threat Register names known attack paths, including capture routes and retaliation scenarios. The Abuse Case Library documents bad-actor patterns used to pressure-test patches before they're accepted. The Hardening Queue is public — including what was found in red-team sessions and what remains open.
+
+The design also pre-commits to its failure modes before they occur: oracle disputes will happen; PCRP false triggers will happen; enforcement errors will happen. The commitment is that every failure in those categories is published publicly with a timeline and a correction path. Silence is the violation, not the failure.
+
+The goal is to be harder to fool — including harder to fool by this project's own framing. A reader who finishes the Readiness Guide and the Claims Register should know exactly where the design is strong, where it is only plausible, and where it still needs evidence that does not yet exist.
+
+---
 
 ## Contents
 
-- [What this is](#what-this-is)
 - [If you're new](#if-youre-new)
 - [If you're skeptical](#if-youre-skeptical)
 - [Reader app](#reader-app) — open in browser · download desktop app · run from source
@@ -37,13 +74,7 @@ That is a serious claim, and this draft does not ask to be trusted because the a
 - [Fork, remix, or adapt this](#fork-remix-or-adapt-this)
 - [License](#license)
 
-## What this is
-
-The Humane Constitution is a design for a society where everyone has a basic needs floor, markets still work, and public power cannot be bought.
-
-The core problem is simple: when food, housing, medicine, business, and political influence all depend on the same money, wealth becomes power over other people's safety.
-
-This is not a live government. It is not a finished rollout plan. It is a public working draft with stress tests, known failure paths, proposed fixes, and validation checks.
+---
 
 ## If you're new
 

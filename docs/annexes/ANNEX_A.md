@@ -1,5 +1,14 @@
 # ANNEX A — Adversarial Test Suite
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Defines the repeatable adversarial test program — red-team scenarios, scoring methodology, acceptance criteria, and pilot checklists — used to stress-test the system against coercion, fraud, capture, and technical failure before and after deployment. |
+> | **Who it protects** | Everyone whose survival floor, identity, civic standing, or fair access could be undermined by undetected attacks on the system. |
+> | **Failure risk** | Without a standing test discipline, vulnerabilities accumulate silently; a one-time audit is captured or becomes stale, and no mechanism forces remediation before scale-up. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | TR-01 through TR-13; Annex B; Annex C; Annex T; pilot acceptance gates in Annex Q. |
+
 > **Provenance:** Foundational constitutional annex · Supports adversarial validation and pilot acceptance testing · Status: **ACTIVE**
 
 This annex operationalises the protocol's adversarial testing discipline by defining how the system is continuously stress-tested against coercion, fraud, capture, and technical failure. It expands the threat-summary in Section IV into a repeatable test program.

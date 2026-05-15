@@ -2,6 +2,15 @@
 
 > **Provenance:** Implements [P-005 — Governance Throughput Hardening] (§AC1), [P-006 — Measurement Lag and Supply Shock Hardening] (§AC2), [P-008 — Bureaucratic Elite Formation Hardening] (§AC3) · Status: **ACTIVE**
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Hardens the three systemic failure modes identified in the second adversarial cycle: governance queues that stall under crisis, supply oracles too slow to detect shocks, and elite professional networks that capture oversight bodies. |
+> | **Who it protects** | Everyone whose Essential Access depends on timely governance decisions; populations vulnerable to supply shortfalls that lag in measurement; contributors in informal, care, and non-institutional categories excluded from verification. |
+> | **Failure risk** | A single crisis consumes all governance capacity; a supply shock is not detected until after harm; credentialed professionals monopolize audit and review pools through slow concentration rather than overt capture. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | T-005 / P-005 (governance throughput); T-006 / P-006 (measurement lag); T-008 / P-008 (bureaucratic elite formation) |
+
 **Purpose.** This annex introduces the operative clauses covering T-005 Governance Throughput Failure (P-005), T-006 Measurement Lag and Supply Shock Behavior (P-006), and T-008 Bureaucratic Elite Formation (P-008). Where clauses in this annex conflict with earlier language, this annex governs.
 
 **Interpretive rule.** These clauses follow the same interpretive hierarchy as Annex AB. Unconditional survival, non-convertibility, and survival-floor protections are unaffected by any clause in this annex.

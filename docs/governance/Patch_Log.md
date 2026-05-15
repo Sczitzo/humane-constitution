@@ -982,7 +982,7 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 
 - **ANNEX_AH.md §AH2 header** — Updated heading from "14 Days" to "60 Days minimum, per P-020 amendment." Heading was not updated when P-020 extended the window.
 - **Patch_Log.md P-014 entry** — Added parenthetical noting P-020 extended the 14-day challenge window to 60 days minimum.
-- **Threat_Register.md Complete Register Summary** — Corrected T-001, T-002, T-004, T-007 status from ACTIVE to PARTIAL to match the dashboard and individual entries.
+- **Threat_Register.md Complete Register Summary** — Corrected T-001, T-002, T-004, T-007 status from ACTIVE to Active — unproven to match the dashboard and individual entries.
 - **INVARIANTS.md INV-007** — Resolved the Tier 1 amendment paradox. "Unamendable by any in-system process" is replaced with precise language: Tier 1 is changeable only via the Tier 1 process (7-of-9 keyholder signatures + 180-day timelock, FC-110/FC-111). FC-110 and FC-111 are themselves Tier 1 protected. Changes to the amendment mechanism require H-3 refounding authority. P-014 is permanently closed.
 - **SPECIFICATIONS.md §3.4** — Replaced "full constitutional refounding under P-014 procedure" with Tier 1 amendment process language and H-3 refounding authority reference.
 - **ANNEX_Y.md §Y5** — Added: H-3 refounding authority is a full constitutional convention, superseding the closed P-014.
@@ -1007,7 +1007,7 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 **Status:** ACTIVE  
 **Date:** 2026-05-02  
 **Related threats:** T-001, T-002, T-004, T-005, T-007, T-018, T-019  
-**Core change:** Close mitigation gaps identified by systematic threat survey. Tighten PARTIAL-status threats, add missing evidentiary standards, and fill operational voids in audit timelines and authority chains.
+**Core change:** Close mitigation gaps identified by systematic threat survey. Tighten Active — unproven threats with open gaps, add missing evidentiary standards, and fill operational voids in audit timelines and authority chains.
 
 **Changes included in this patch:**
 
@@ -1037,7 +1037,7 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 **Constitutional text:** ANNEX_AB.md (§AB2, §AB3, §AB5), ANNEX_AK.md (§7, §8), ANNEX_AH.md (§AH5.1)
 
 **Problem diagnosed:**
-Five critical threats remained at PARTIAL status with specific unresolved gaps: T-001 lacked threshold derivation logic (arbitrary numbers); T-002 had no procedural protection for excluded persons before rate targets are formally bound; T-004 had no enumerated floor for invisible/care work; T-007's registry started empty (first-mover capture window); IC-004 had no recovery path after P-013 suspension.
+Five critical threats remained at Active — unproven status with specific unresolved gaps: T-001 lacked threshold derivation logic (arbitrary numbers); T-002 had no procedural protection for excluded persons before rate targets are formally bound; T-004 had no enumerated floor for invisible/care work; T-007's registry started empty (first-mover capture window); IC-004 had no recovery path after P-013 suspension.
 
 **Introduced design:**
 
@@ -1053,7 +1053,7 @@ Five critical threats remained at PARTIAL status with specific unresolved gaps: 
 - The 14-day independent review deadline for identity exclusions requires review infrastructure to be operational at launch — this is a pre-launch blocking gate.
 - The 180-day dignity-only continuity period may be too long for urgent governance needs — mitigated by the automatic petition window at 180 days and the Federated Ombuds continuing to operate throughout.
 
-**Residual risk:** T-001, T-002, T-004, and T-007 remain PARTIAL pending pilot data confirmation. IC-004 is ADDRESSED — the governance gap is now resolved with a specified fallback mechanism.
+**Residual risk:** T-001, T-002, T-004, and T-007 remain Active — unproven pending pilot data confirmation. IC-004 is Active — unproven — the governance gap is now specified with a fallback mechanism but has not been field-tested.
 
 ---
 

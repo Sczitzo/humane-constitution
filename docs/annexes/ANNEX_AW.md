@@ -1,5 +1,23 @@
 # ANNEX AW — Whistleblower Protection and Anti-Retaliation Protocol
 
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Protect people who report wrongdoing through the community alert or Service Record audit pathways from retaliation by the very administrators they reported — specifically the window between filing a report and the Ombuds issuing a finding. |
+> | **Who it protects** | Anyone who names a corrupt or negligent administrator; the integrity of the community alert and audit mechanisms, which fail if reporters face immediate retaliation. |
+> | **Failure risk** | Administrative retaliation: a named respondent uses remaining record-write access to downgrade the reporter's Service Record, revoke a civic role, or flag contributions "under review" before any investigation concludes — chilling future reporting. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | Retaliation risk (Priya vignette — Fairness Vignette Library); P-053; Annex AI (Federated Ombuds); Article VII (community alert pathway) |
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Protect people who report wrongdoing through the community alert or Service Record audit pathways from retaliation by the very administrators they reported — specifically the window between filing a report and the Ombuds issuing a finding. |
+> | **Who it protects** | Anyone who names a corrupt or negligent administrator; the integrity of the community alert and audit mechanisms, which fail if reporters face immediate retaliation. |
+> | **Failure risk** | Administrative retaliation: a named respondent uses remaining record-write access to downgrade the reporter's Service Record, revoke a civic role, or flag contributions "under review" before any investigation concludes — chilling future reporting. |
+> | **Evidence status** | Active — unproven |
+> | **Linked risks** | Retaliation risk (Priya vignette — Fairness Vignette Library); P-053; Annex AI (Federated Ombuds); Article VII (community alert pathway) |
+
 > **Provenance:** Implements [P-053 — Whistleblower Protection and Anti-Retaliation Protocol] · Addresses retaliation risk against community alert reporters and Service Record audit requesters · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-053
