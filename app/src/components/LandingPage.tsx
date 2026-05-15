@@ -180,13 +180,9 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
   function makeBranchPathTrimmed(b: BranchConfig) {
     const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
-    // Connect at the node perimeter point closest to the trunk origin —
-    // direction from node center toward the trunk origin, offset by RING_R.
-    const dirX = o.x - ex
-    const dirY = o.y - ey
-    const dirLen = Math.sqrt(dirX * dirX + dirY * dirY) || 1
-    const nx = ex + (dirX / dirLen) * (RING_R + 2)
-    const ny = ey + (dirY / dirLen) * (RING_R + 2)
+    // Fixed cardinal attachment: 6 o'clock for above-trunk nodes, 12 o'clock for below
+    const nx = ex
+    const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
     return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}`
   }
 
