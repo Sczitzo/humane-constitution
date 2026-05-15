@@ -124,15 +124,15 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   // Sorted by trunkT. Alternating above/below.
   // Distance from centre: 0.08 → 0.12 → 0.18 → 0.23 → 0.28 → 0.33 → 0.38 → 0.42 → 0.44
   const BRANCH_DEFS = [
-    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.42, above: true,  wobbleMult: 0.8 }, // close, gentle
-    { trunkT: 0.14, endXFrac: 0.30, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
-    { trunkT: 0.22, endXFrac: 0.36, endYFrac: 0.32, above: true,  wobbleMult: 1.3 },
-    { trunkT: 0.31, endXFrac: 0.48, endYFrac: 0.73, above: false, wobbleMult: 1.1 },
-    { trunkT: 0.42, endXFrac: 0.56, endYFrac: 0.22, above: true,  wobbleMult: 1.5 },
-    { trunkT: 0.50, endXFrac: 0.62, endYFrac: 0.68, above: false, wobbleMult: 1.6 },
-    { trunkT: 0.61, endXFrac: 0.70, endYFrac: 0.32, above: true,  wobbleMult: 1.8 },
-    { trunkT: 0.70, endXFrac: 0.80, endYFrac: 0.62, above: false, wobbleMult: 1.4 },
-    { trunkT: 0.82, endXFrac: 0.90, endYFrac: 0.42, above: true,  wobbleMult: 2.0 },
+    { trunkT: 0.19, endXFrac: 0.18, endYFrac: 0.48, above: true,  wobbleMult: 1.2 }, // First Read
+    { trunkT: 0.24, endXFrac: 0.29, endYFrac: 0.66, above: false, wobbleMult: 1.2 }, // Skeptic
+    { trunkT: 0.30, endXFrac: 0.35, endYFrac: 0.26, above: true,  wobbleMult: 1.2 }, // Implementer
+    { trunkT: 0.36, endXFrac: 0.43, endYFrac: 0.75, above: false, wobbleMult: 1.2 }, // Economics
+    { trunkT: 0.43, endXFrac: 0.49, endYFrac: 0.17, above: true,  wobbleMult: 1.2 }, // Founding Order
+    { trunkT: 0.49, endXFrac: 0.56, endYFrac: 0.73, above: false, wobbleMult: 1.2 }, // Pilot Ready
+    { trunkT: 0.56, endXFrac: 0.62, endYFrac: 0.23, above: true,  wobbleMult: 1.2 }, // Personhood
+    { trunkT: 0.63, endXFrac: 0.67, endYFrac: 0.70, above: false, wobbleMult: 1.2 }, // Architecture
+    { trunkT: 0.79, endXFrac: 0.78, endYFrac: 0.49, above: false, wobbleMult: 1.2 }, // Governance
   ]
 
   const UNIFORM_WEIGHT  = 1.5
