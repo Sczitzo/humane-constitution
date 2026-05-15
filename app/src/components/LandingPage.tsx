@@ -596,6 +596,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   const [navVisible, setNavVisible] = useState(false)
   const [mouseX, setMouseX] = useState(0)
   const [mouseY, setMouseY] = useState(0)
+  const [openThreatIdx, setOpenThreatIdx] = useState<number | null>(null)
 
   const transitionRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
@@ -900,69 +901,120 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           max-width: 1100px;
           margin: 0 auto;
         }
-        .lp-threats-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 20px;
-          margin-top: 56px;
-        }
-        .lp-threat-card {
-          background: rgba(245,240,232,0.03);
-          border: 1px solid rgba(245,240,232,0.07);
-          border-radius: 14px;
-          padding: 32px 28px 28px;
+        /* accordion */
+        .lp-threats-list {
           display: flex;
           flex-direction: column;
-          gap: 20px;
-          transition: border-color 0.25s, background 0.25s;
-          cursor: default;
+          gap: 4px;
+          margin-top: 56px;
         }
-        .lp-threat-card:hover {
-          border-color: rgba(201,168,76,0.25);
+        @keyframes lp-pulse-border {
+          0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.9); border-color: #c9a84c; }
+          55%  { box-shadow: 0 0 0 10px rgba(201,168,76,0.2); }
+          100% { box-shadow: 0 0 0 18px rgba(201,168,76,0); border-color: rgba(201,168,76,0.45); }
+        }
+        .lp-threat-card {
+          border: 1px solid rgba(245,240,232,0.09);
+          border-radius: 12px;
+          overflow: hidden;
+          cursor: pointer;
+          background: rgba(245,240,232,0.02);
+          transition: background 0.2s;
+        }
+        .lp-threat-card:not(.lp-threat-open):hover {
+          animation: lp-pulse-border 1.4s ease;
+          background: rgba(14,12,24,0.9);
+        }
+        .lp-threat-card.lp-threat-open {
+          border-color: rgba(201,168,76,0.35);
           background: rgba(201,168,76,0.04);
         }
-        .lp-threat-pill {
-          display: inline-flex;
+        .lp-threat-header {
+          display: flex;
           align-items: center;
-          gap: 7px;
-          font-size: 10.5px;
-          font-weight: 600;
-          letter-spacing: 0.09em;
-          text-transform: uppercase;
-          color: rgba(245,240,232,0.35);
-          background: rgba(245,240,232,0.06);
-          border-radius: 100px;
-          padding: 5px 11px;
-          width: fit-content;
+          gap: 20px;
+          padding: 20px 26px;
         }
-        .lp-threat-pill-dot {
-          width: 5px; height: 5px;
+        .lp-threat-num {
+          font-size: 11px;
+          font-family: 'IBM Plex Mono', monospace;
+          color: rgba(201,168,76,0.45);
+          min-width: 24px;
+          transition: color 0.2s;
+        }
+        .lp-threat-card.lp-threat-open .lp-threat-num { color: #c9a84c; }
+        .lp-threat-headline {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgba(245,240,232,0.72);
+          flex: 1;
+          transition: color 0.2s;
+        }
+        .lp-threat-card.lp-threat-open .lp-threat-headline { color: #f5f0e8; }
+        .lp-threat-chevron {
+          width: 20px; height: 20px;
           border-radius: 50%;
-          background: #c44;
+          border: 1px solid rgba(255,255,255,0.14);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 10px;
+          color: rgba(255,255,255,0.3);
+          transition: transform 0.25s, border-color 0.2s, color 0.2s;
           flex-shrink: 0;
         }
+        .lp-threat-card.lp-threat-open .lp-threat-chevron {
+          transform: rotate(180deg);
+          border-color: #c9a84c;
+          color: #c9a84c;
+        }
+        /* animated expand via grid */
+        .lp-threat-body {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.3s ease;
+        }
+        .lp-threat-card.lp-threat-open .lp-threat-body {
+          grid-template-rows: 1fr;
+        }
+        .lp-threat-body-inner { overflow: hidden; }
+        .lp-threat-body-label {
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: rgba(201,168,76,0.6);
+          margin-bottom: 10px;
+        }
+        .lp-threat-body-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+          padding: 0 26px 28px 70px;
+        }
+        .lp-threat-pill {
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #c44;
+          margin-bottom: 10px;
+        }
+        .lp-threat-pill-dot { display: none; }
         .lp-threat-problem {
           font-size: 14px;
-          color: rgba(245,240,232,0.5);
-          line-height: 1.6;
+          color: rgba(245,240,232,0.55);
+          line-height: 1.65;
           font-style: italic;
         }
         .lp-threat-arrow {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          color: rgba(201,168,76,0.5);
-          font-size: 11px;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
+          font-size: 10px;
           font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #c9a84c;
+          margin-bottom: 10px;
+          display: block;
         }
-        .lp-threat-arrow::before {
-          content: '';
-          flex: 1;
-          height: 1px;
-          background: rgba(201,168,76,0.2);
-        }
+        .lp-threat-arrow::before { display: none; }
         .lp-threat-response {
           font-size: 14.5px;
           color: #f5f0e8;
@@ -970,11 +1022,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           font-weight: 400;
         }
         .lp-threat-annex {
-          font-size: 11px;
-          color: rgba(201,168,76,0.45);
-          letter-spacing: 0.05em;
+          font-size: 10px;
+          color: rgba(201,168,76,0.4);
+          letter-spacing: 0.07em;
           font-family: 'IBM Plex Mono', monospace;
-          margin-top: auto;
+          margin-top: 12px;
+          display: block;
         }
 
         /* ─── Instruments / Diagram ─── */
@@ -1203,7 +1256,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-hero-cta { flex-direction: column; width: 100%; }
           .lp-btn-primary, .lp-btn-ghost { width: 100%; padding: 15px 24px; }
           .lp-threats-section { padding: 72px 24px; }
-          .lp-threats-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
+          .lp-threats-list { gap: 4px; margin-top: 40px; }
+          .lp-threat-body-content { grid-template-columns: 1fr; gap: 16px; padding: 0 20px 24px 20px; }
           .lp-stat { padding: 28px 0; border-right: none;
             border-bottom: 1px solid rgba(245,240,232,0.08); }
           .lp-stat:nth-child(2) { padding: 28px 0; }
@@ -1324,58 +1378,81 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         <h2 className="lp-section-head lp-reveal" style={{ fontSize: 'clamp(32px, 4vw, 58px)', marginBottom: 0 }}>
           Real problems.<br /><em>Constitutional responses.</em>
         </h2>
-        <div className="lp-threats-grid">
+        <div className="lp-threats-list">
           {[
             {
-              threat: 'Dynastic wealth',
-              problem: 'Inherited fortunes compound across generations, crowding out land, labor markets, and opportunity for everyone else.',
-              response: 'Progressive demurrage applies carrying costs that exceed passive returns at every wealth tier — wealth not continuously earned decays toward the participation floor.',
-              annex: 'ANNEX AZ · §AZ3',
-            },
-            {
-              threat: 'Survival held hostage',
-              problem: 'Food, shelter, and healthcare become leverage — withheld to enforce compliance, extract labor, or punish dissent.',
-              response: 'Essential Access is unconditional and non-convertible. It exists beneath the market, not inside it. No entity — public or private — may price, gatekeep, or revoke it.',
+              num: '01',
+              headline: 'Rent that prices you out',
+              problem: 'Your landlord raises rent 30% because the neighborhood got popular. You can\'t afford to stay and can\'t afford to move somewhere better.',
+              response: 'Housing is part of Essential Access — unconditional and non-convertible. No entity, public or private, may use shelter as financial leverage.',
               annex: 'INVARIANTS · INV-001',
             },
             {
-              threat: 'Civic voice for sale',
-              problem: 'Money buys political influence. Concentrated wealth shapes law, regulation, and enforcement in its own interest.',
-              response: 'Voice is a separate instrument that cannot be purchased with Flow, cannot be accumulated without contribution, and decays over time to prevent entrenchment.',
+              num: '02',
+              headline: 'One bill wipes you out',
+              problem: 'A single hospital visit — yours, or your kid\'s — erases years of savings and follows you as debt for decades.',
+              response: 'Healthcare sits beneath the market. It cannot be priced, gated, or revoked for inability to pay. The floor is constitutionally fixed, not budget-dependent.',
+              annex: 'INVARIANTS · INV-001',
+            },
+            {
+              num: '03',
+              headline: 'Your vote vs. their donation',
+              problem: 'A corporation\'s annual lobbying budget exceeds your lifetime earnings. Elected officials return their calls first.',
+              response: 'Voice is a separate instrument that cannot be purchased. It cannot be accumulated without contribution and decays over time to prevent permanent influence.',
               annex: 'ANNEX Z · §Z2',
             },
             {
-              threat: 'Emergency as pretext',
-              problem: 'Crises are invoked to justify permanent expansions of power that outlast the emergency that triggered them.',
-              response: 'Shared Storehouse activates only on oracle-verified scarcity and carries a mandatory unwind clause. Emergency powers cannot self-extend.',
+              num: '04',
+              headline: 'Born rich, stay rich',
+              problem: 'Someone who inherited a portfolio at 25 has more security at 50 than someone who worked two jobs and raised a family.',
+              response: 'Wealth that isn\'t continuously earned through contribution decays toward a participation floor. Passive accumulation across generations carries a structural cost.',
+              annex: 'ANNEX AZ · §AZ3',
+            },
+            {
+              num: '05',
+              headline: 'Lose your job, lose everything',
+              problem: 'Employment is the only thread connecting you to healthcare, housing stability, and financial survival. Cut the thread and everything falls.',
+              response: 'Essential Access is decoupled from employment. Food, shelter, healthcare, and a basic income floor exist outside the labor market — not as charity, but as constitutional right.',
+              annex: 'ANNEX AC · §AC2',
+            },
+            {
+              num: '06',
+              headline: 'Emergency powers that never end',
+              problem: 'A crisis justifies new government powers. The crisis passes. The powers don\'t.',
+              response: 'Emergency provisions carry mandatory unwind clauses. They cannot self-extend, cannot waive other protections, and require oracle-verified conditions to stay active.',
               annex: 'ANNEX AC · §AC4',
             },
-            {
-              threat: 'Contribution erased',
-              problem: 'Decades of community work leave no record. Civic roles go to the connected, not the proven.',
-              response: 'Service Record is a verified, tamper-resistant history of stewardship — used for rotating civic roles, never as a credit proxy or employability score.',
-              annex: 'ANNEX Z · §Z4',
-            },
-            {
-              threat: 'Rules changed quietly',
-              problem: 'Constitutional protections are quietly weakened through incremental amendments, reinterpretation, or enforcement gaps.',
-              response: 'Core invariants are Tier 1 — unamendable by design. Tier 2 changes require supermajority + oracle review. No provision can waive another.',
-              annex: 'INVARIANTS · §Amendment',
-            },
-          ].map((item, i) => (
-            <div key={i} className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}`}>
-              <div>
-                <span className="lp-threat-pill">
-                  <span className="lp-threat-pill-dot" />
-                  Threat
-                </span>
-                <p className="lp-threat-problem" style={{ marginTop: 14 }}>"{item.problem}"</p>
+          ].map((item, i) => {
+            const isOpen = openThreatIdx === i
+            return (
+              <div
+                key={i}
+                className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}${isOpen ? ' lp-threat-open' : ''}`}
+                onClick={() => setOpenThreatIdx(isOpen ? null : i)}
+              >
+                <div className="lp-threat-header">
+                  <span className="lp-threat-num">{item.num}</span>
+                  <span className="lp-threat-headline">{item.headline}</span>
+                  <span className="lp-threat-chevron">{isOpen ? '▴' : '▾'}</span>
+                </div>
+                <div className="lp-threat-body">
+                  <div className="lp-threat-body-inner">
+                    <div className="lp-threat-body-content">
+                      <div>
+                        <p className="lp-threat-body-label">The problem</p>
+                        <p className="lp-threat-problem">"{item.problem}"</p>
+                      </div>
+                      <div>
+                        <p className="lp-threat-body-label">Constitutional response</p>
+                        <p className="lp-threat-response">{item.response}</p>
+                        <span className="lp-threat-annex">{item.annex}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="lp-threat-arrow">Constitutional response</div>
-              <p className="lp-threat-response">{item.response}</p>
-              <span className="lp-threat-annex">{item.annex}</span>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 
