@@ -1,6 +1,6 @@
 import type { CorpusDoc } from '../generated/corpus'
 
-// ── Types ───────────────────────────────────────────────────────────────────
+// ── Types ────────────────────────────────────────────────────────────────────
 
 export interface MarkdownHeading {
   type: 'heading'

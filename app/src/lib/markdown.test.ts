@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { parseMarkdown } from './markdown'
 import type { CorpusDoc } from '../generated/corpus'
 
-function makeDoc(content: string): CorpusDoc {
+function makeDoc(content: string, headings: { level: number; text: string; slug: string }[] = []): CorpusDoc {
   return {
     id: 'test',
     path: 'test.md',
@@ -12,10 +12,7 @@ function makeDoc(content: string): CorpusDoc {
     statusBucket: 'reference',
     summary: '',
     content,
-    headings: [
-      { level: 1, text: 'Hello', slug: 'hello' },
-      { level: 3, text: 'Sub', slug: 'sub' },
-    ],
+    headings,
     wordCount: 0,
     headingCount: 0,
   }
@@ -23,13 +20,13 @@ function makeDoc(content: string): CorpusDoc {
 
 describe('parseMarkdown', () => {
   it('parses h1 heading', () => {
-    const blocks = parseMarkdown(makeDoc('# Hello'))
-    expect(blocks).toMatchObject([{ type: 'heading', level: 1, text: 'Hello' }])
+    const blocks = parseMarkdown(makeDoc('# Hello', [{ level: 1, text: 'Hello', slug: 'hello' }]))
+    expect(blocks).toMatchObject([{ type: 'heading', level: 1, text: 'Hello', slug: 'hello' }])
   })
 
   it('parses h3 heading', () => {
-    const blocks = parseMarkdown(makeDoc('### Sub'))
-    expect(blocks).toMatchObject([{ type: 'heading', level: 3, text: 'Sub' }])
+    const blocks = parseMarkdown(makeDoc('### Sub', [{ level: 3, text: 'Sub', slug: 'sub' }]))
+    expect(blocks).toMatchObject([{ type: 'heading', level: 3, text: 'Sub', slug: 'sub' }])
   })
 
   it('parses ordered list', () => {
@@ -52,9 +49,15 @@ describe('parseMarkdown', () => {
     expect(blocks).toMatchObject([{ type: 'mermaid', code: 'graph TD' }])
   })
 
-  it('parses blockquote containing table rows', () => {
-    const content = '> **At a glance**\n> | | |\n> |---|---|\n> | **Purpose** | Does stuff |'
+  it('parses blockquote with interleaved table', () => {
+    const content = [
+      '> **At a glance**',
+      '> | | |',
+      '> |---|---|',
+      '> | **Purpose** | Does stuff |',
+    ].join('\n')
     const blocks = parseMarkdown(makeDoc(content))
+    // Should produce a quote block for the text line and table blocks for the table rows
     const types = blocks.map(b => b.type)
     expect(types).toContain('quote')
     expect(types).toContain('table')
@@ -63,5 +66,11 @@ describe('parseMarkdown', () => {
   it('parses plain paragraph', () => {
     const blocks = parseMarkdown(makeDoc('Hello world'))
     expect(blocks).toMatchObject([{ type: 'paragraph', text: 'Hello world' }])
+  })
+
+  it('strips YAML frontmatter', () => {
+    const content = '---\ntitle: Test\n---\n# After frontmatter'
+    const blocks = parseMarkdown(makeDoc(content, [{ level: 1, text: 'After frontmatter', slug: 'after-frontmatter' }]))
+    expect(blocks[0]).toMatchObject({ type: 'heading', text: 'After frontmatter' })
   })
 })
