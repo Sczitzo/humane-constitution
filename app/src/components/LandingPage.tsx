@@ -14,6 +14,7 @@ interface PathDef {
 }
 
 interface BranchConfig {
+  onTrunk?: boolean
   path: PathDef
   trunkT: number      // where on trunk the branch peels off (0–1)
   endXFrac: number    // x position of endpoint as fraction of width
@@ -69,21 +70,25 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const CY = h * 0.5
 
   // ─── Trunk: horizontal line of scrimmage ─────────────────────────────────────
-  // ─── Trunk: horizontal spine ─────────────────────────────────────────────────
-  const trunkPath = `M 0 ${CY} L ${w} ${CY}`
+  // ─── Trunk: starts at node 1, ends at node 9 ────────────────────────────────
+  const TRUNK_START = 0.08
+  const TRUNK_END   = 0.92
+  const trunkPath = `M ${w * TRUNK_START} ${CY} L ${w * TRUNK_END} ${CY}`
   function pointOnTrunk(xFrac: number) { return { x: w * xFrac, y: CY } }
 
-  // ─── Branch/node definitions — evenly spaced along trunk, spreading outward ──
+  // ─── Branch/node definitions ─────────────────────────────────────────────────
+  // Nodes 1 & 9 sit directly ON the trunk (endYFrac 0.5) — no branch path.
+  // Nodes 2–8 have leaf-arc branches off the trunk.
   const BRANCH_DEFS = [
-    { trunkX: 0.08, endXFrac: 0.08, endYFrac: 0.20, above: true  },
-    { trunkX: 0.19, endXFrac: 0.19, endYFrac: 0.80, above: false },
-    { trunkX: 0.30, endXFrac: 0.30, endYFrac: 0.16, above: true  },
-    { trunkX: 0.41, endXFrac: 0.41, endYFrac: 0.84, above: false },
-    { trunkX: 0.52, endXFrac: 0.52, endYFrac: 0.12, above: true  },
-    { trunkX: 0.61, endXFrac: 0.61, endYFrac: 0.86, above: false },
-    { trunkX: 0.71, endXFrac: 0.71, endYFrac: 0.16, above: true  },
-    { trunkX: 0.81, endXFrac: 0.81, endYFrac: 0.80, above: false },
-    { trunkX: 0.92, endXFrac: 0.92, endYFrac: 0.22, above: true  },
+    { trunkX: 0.08, endXFrac: 0.08, endYFrac: 0.50, above: true,  onTrunk: true  },
+    { trunkX: 0.19, endXFrac: 0.19, endYFrac: 0.80, above: false, onTrunk: false },
+    { trunkX: 0.30, endXFrac: 0.30, endYFrac: 0.16, above: true,  onTrunk: false },
+    { trunkX: 0.41, endXFrac: 0.41, endYFrac: 0.84, above: false, onTrunk: false },
+    { trunkX: 0.52, endXFrac: 0.52, endYFrac: 0.12, above: true,  onTrunk: false },
+    { trunkX: 0.61, endXFrac: 0.61, endYFrac: 0.86, above: false, onTrunk: false },
+    { trunkX: 0.71, endXFrac: 0.71, endYFrac: 0.16, above: true,  onTrunk: false },
+    { trunkX: 0.81, endXFrac: 0.81, endYFrac: 0.80, above: false, onTrunk: false },
+    { trunkX: 0.92, endXFrac: 0.92, endYFrac: 0.50, above: true,  onTrunk: true  },
   ]
 
   const RING_R = 18
@@ -94,6 +99,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     endXFrac:   BRANCH_DEFS[i].endXFrac,
     endYFrac:   BRANCH_DEFS[i].endYFrac,
     above:      BRANCH_DEFS[i].above,
+    onTrunk:    BRANCH_DEFS[i].onTrunk,
     wobbleMult: 1,
     weight:     1.5,
     opacity:    0.62,
@@ -252,8 +258,9 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
         <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="16" strokeLinecap="round" opacity="0.08" />
         <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="3" strokeLinecap="round" opacity="0.85" filter="url(#tva-glow)" />
 
-        {/* Route glow layers */}
+        {/* Route glow layers — skip on-trunk nodes */}
         {branches.map((b, i) => {
+          if (b.onTrunk) return null
           const { d } = makeLeafPath(b)
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
@@ -266,8 +273,9 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           )
         })}
 
-        {/* Route lines */}
+        {/* Route lines — skip on-trunk nodes */}
         {branches.map((b, i) => {
+          if (b.onTrunk) return null
           const { d } = makeLeafPath(b)
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
@@ -284,8 +292,9 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           )
         })}
 
-        {/* Hit areas */}
+        {/* Hit areas — skip on-trunk nodes (node circle handles clicks) */}
         {branches.map((b, i) => {
+          if (b.onTrunk) return null
           const { d } = makeLeafPath(b)
           return (
             <path key={`rhit-${b.path.id}`} d={d} fill="none" stroke="transparent" strokeWidth="28"
