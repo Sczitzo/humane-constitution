@@ -448,7 +448,11 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
           return (
-            <g key={`node-${b.path.id}`} style={{ pointerEvents: 'none' }}>
+            <g key={`node-${b.path.id}`} style={{ cursor: 'pointer' }}
+              onMouseEnter={() => handleBranchEnter(i)}
+              onMouseLeave={handleBranchLeave}
+              onClick={() => onSelect(b.path.id)}
+            >
               {/* Outer glow halo */}
               <circle cx={ex} cy={ey} r={RING_R + 8}
                 fill={GOLD}
