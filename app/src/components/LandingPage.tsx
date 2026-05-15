@@ -24,11 +24,7 @@ interface BranchConfig {
   opacity: number
 }
 
-// De Casteljau cubic bezier point evaluation
-function cubicBezierPoint(t: number, p0: number, p1: number, p2: number, p3: number) {
-  const mt = 1 - t
-  return mt**3*p0 + 3*mt**2*t*p1 + 3*mt*t**2*p2 + t**3*p3
-}
+
 
 function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: string) => void }) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -70,77 +66,63 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   }, [])
 
   const { w, h } = dims
+  const CY = h * 0.5
 
-  // ─── Node positions (alternating above/below, spreading outward) ──────────────
-  const NODE_DEFS = [
-    { xFrac: 0.06, yFrac: 0.28, above: true  },
-    { xFrac: 0.18, yFrac: 0.72, above: false },
-    { xFrac: 0.30, yFrac: 0.24, above: true  },
-    { xFrac: 0.42, yFrac: 0.76, above: false },
-    { xFrac: 0.54, yFrac: 0.20, above: true  },
-    { xFrac: 0.63, yFrac: 0.78, above: false },
-    { xFrac: 0.73, yFrac: 0.24, above: true  },
-    { xFrac: 0.83, yFrac: 0.72, above: false },
-    { xFrac: 0.94, yFrac: 0.32, above: true  },
+  // ─── Trunk: horizontal line of scrimmage ─────────────────────────────────────
+  const trunkPath = `M 0 ${CY} L ${w} ${CY}`
+  function pointOnTrunk(xFrac: number) { return { x: w * xFrac, y: CY } }
+
+  // ─── Route definitions (football play style) ─────────────────────────────────
+  // Each node peels off the trunk at trunkX, curves to its endpoint.
+  // Routes fan out symmetrically and spread wider as they go further.
+  const BRANCH_DEFS = [
+    { trunkX: 0.08, endXFrac: 0.06, endYFrac: 0.22, above: true  },
+    { trunkX: 0.18, endXFrac: 0.20, endYFrac: 0.78, above: false },
+    { trunkX: 0.28, endXFrac: 0.30, endYFrac: 0.18, above: true  },
+    { trunkX: 0.39, endXFrac: 0.42, endYFrac: 0.82, above: false },
+    { trunkX: 0.50, endXFrac: 0.52, endYFrac: 0.14, above: true  },
+    { trunkX: 0.59, endXFrac: 0.62, endYFrac: 0.84, above: false },
+    { trunkX: 0.69, endXFrac: 0.72, endYFrac: 0.18, above: true  },
+    { trunkX: 0.79, endXFrac: 0.82, endYFrac: 0.78, above: false },
+    { trunkX: 0.90, endXFrac: 0.92, endYFrac: 0.24, above: true  },
   ]
 
   const RING_R = 18
 
   const branches: BranchConfig[] = useMemo(() => paths.map((p, i) => ({
     path: p,
-    trunkT:     NODE_DEFS[i].xFrac,  // reused as position fraction
-    endXFrac:   NODE_DEFS[i].xFrac,
-    endYFrac:   NODE_DEFS[i].yFrac,
-    above:      NODE_DEFS[i].above,
+    trunkT:     BRANCH_DEFS[i].trunkX,
+    endXFrac:   BRANCH_DEFS[i].endXFrac,
+    endYFrac:   BRANCH_DEFS[i].endYFrac,
+    above:      BRANCH_DEFS[i].above,
     wobbleMult: 1,
     weight:     1.5,
     opacity:    0.62,
   })), [paths]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ─── Single winding path through all nodes ───────────────────────────────────
-  // Attach point: bottom of circle for above-nodes, top for below-nodes.
-  // Control points are pulled vertically so the curve arrives/departs straight up/down.
-  const nodeAttach = branches.map(b => ({
-    x: w * b.endXFrac,
-    y: h * b.endYFrac + (b.above ? RING_R + 2 : -(RING_R + 2)),
-    above: b.above,
-  }))
-
-  // Build bezier segments between consecutive attachment points
-  type Seg = { x0:number; y0:number; cp1x:number; cp1y:number; cp2x:number; cp2y:number; x1:number; y1:number }
-  const segments: Seg[] = []
-  for (let i = 0; i < nodeAttach.length - 1; i++) {
-    const p0 = nodeAttach[i]
-    const p1 = nodeAttach[i + 1]
-    const dx = p1.x - p0.x
-    const dy = p1.y - p0.y
-    const len = Math.sqrt(dx*dx + dy*dy) || 1
-    const pull = len * 0.5
-    // depart vertically from p0: if above-node, exit downward (below attachment); below-node exit upward
-    const cp1y = p0.above ? p0.y + pull : p0.y - pull
-    // arrive vertically at p1: if above-node, enter from below; below-node enter from above
-    const cp2y = p1.above ? p1.y + pull : p1.y - pull
-    segments.push({ x0: p0.x, y0: p0.y, cp1x: p0.x, cp1y, cp2x: p1.x, cp2y, x1: p1.x, y1: p1.y })
+  // ─── Route geometry (football play curves) ───────────────────────────────────
+  // Each route starts straight off the trunk (vertical), then curves toward the node.
+  // cp1 goes straight up/down from the trunk point, cp2 pulls into the endpoint vertically.
+  function makeRoutePath(b: BranchConfig) {
+    const o  = pointOnTrunk(b.trunkT)
+    const ex = w * b.endXFrac
+    const ey = h * b.endYFrac
+    // Attach point: bottom of circle for above-nodes, top for below-nodes
+    const nx = ex
+    const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
+    const dy = Math.abs(ny - o.y)
+    // cp1: straight off the trunk, pulling hard in the up/down direction
+    const cp1x = o.x
+    const cp1y = b.above ? o.y - dy * 0.7 : o.y + dy * 0.7
+    // cp2: pull vertically into the attachment point
+    const cp2x = nx
+    const cp2y = b.above ? ny + dy * 0.5 : ny - dy * 0.5
+    return { o, nx, ny, cp1x, cp1y, cp2x, cp2y,
+      d: `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}` }
   }
 
-  const mainPath = segments.length === 0 ? '' : [
-    `M ${segments[0].x0} ${segments[0].y0}`,
-    ...segments.map(s => `C ${s.cp1x} ${s.cp1y} ${s.cp2x} ${s.cp2y} ${s.x1} ${s.y1}`),
-  ].join(' ')
-
-  // Evaluate a point on the full winding path given t ∈ [0,1]
-  function pointOnMainPath(t: number): { x: number; y: number } {
-    if (segments.length === 0) return { x: 0, y: 0 }
-    const n = segments.length
-    const segT = t * n
-    const idx  = Math.min(Math.floor(segT), n - 1)
-    const lt   = segT - idx
-    const s    = segments[idx]
-    return {
-      x: cubicBezierPoint(lt, s.x0, s.cp1x, s.cp2x, s.x1),
-      y: cubicBezierPoint(lt, s.y0, s.cp1y, s.cp2y, s.y1),
-    }
-  }
+  // ─── Pulse: travels the trunk ────────────────────────────────────────────────
+  function pointOnMainPath(t: number) { return pointOnTrunk(t) }
 
   function makeArcLabel(
     text: string, cx: number, cy: number, R: number, above: boolean,
@@ -196,7 +178,6 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     })
   }
 
-  // ─── Pulse: travels the single winding path start → end ──────────────────────
   function getPulsePos(): { x: number; y: number } {
     return pointOnMainPath(pulseT)
   }
@@ -261,10 +242,54 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
         <rect width={w} height={h} fill="url(#panel-glow)" />
 
-        {/* Main winding path — glow layer */}
-        <path d={mainPath} fill="none" stroke={GOLD} strokeWidth="16" strokeLinecap="round" opacity="0.10" />
-        {/* Main winding path — core line */}
-        <path d={mainPath} fill="none" stroke={GOLD} strokeWidth="3.5" strokeLinecap="round" opacity="0.90" filter="url(#tva-glow)" />
+        {/* Trunk — line of scrimmage */}
+        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="16" strokeLinecap="round" opacity="0.08" />
+        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="3" strokeLinecap="round" opacity="0.85" filter="url(#tva-glow)" />
+
+        {/* Route glow layers */}
+        {branches.map((b, i) => {
+          const { d } = makeRoutePath(b)
+          const isHovered = hoveredIdx === i
+          const dimmed = hoveredIdx !== null && !isHovered
+          return (
+            <path key={`rglow-${b.path.id}`} d={d} fill="none" stroke={GOLD}
+              strokeWidth={isHovered ? 14 : 6} strokeLinecap="round"
+              opacity={dimmed ? 0.02 : isHovered ? 0.30 : 0.12}
+              style={{ transition: 'opacity 0.3s, stroke-width 0.3s' }}
+            />
+          )
+        })}
+
+        {/* Route lines */}
+        {branches.map((b, i) => {
+          const { d } = makeRoutePath(b)
+          const isHovered = hoveredIdx === i
+          const dimmed = hoveredIdx !== null && !isHovered
+          return (
+            <path key={`rline-${b.path.id}`} d={d} fill="none" stroke={GOLD}
+              strokeWidth={isHovered ? 3 : 1.5} strokeLinecap="round"
+              opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.65}
+              filter={isHovered ? 'url(#tva-glow)' : undefined}
+              style={{ cursor: 'pointer', transition: 'opacity 0.25s, stroke-width 0.25s' }}
+              onMouseEnter={() => handleBranchEnter(i)}
+              onMouseLeave={handleBranchLeave}
+              onClick={() => onSelect(b.path.id)}
+            />
+          )
+        })}
+
+        {/* Hit areas */}
+        {branches.map((b, i) => {
+          const { d } = makeRoutePath(b)
+          return (
+            <path key={`rhit-${b.path.id}`} d={d} fill="none" stroke="transparent" strokeWidth="28"
+              style={{ cursor: 'pointer' }}
+              onMouseEnter={() => handleBranchEnter(i)}
+              onMouseLeave={handleBranchLeave}
+              onClick={() => onSelect(b.path.id)}
+            />
+          )
+        })}
 
         {/* Endpoint nodes — numbered circles */}
         {branches.map((b, i) => {
