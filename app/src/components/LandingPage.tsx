@@ -453,10 +453,17 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
               onMouseLeave={handleBranchLeave}
               onClick={() => onSelect(b.path.id)}
             >
+              {/* Sustained pulse ring — animates only while hovered */}
+              <circle cx={ex} cy={ey} r={RING_R}
+                fill="none" stroke={GOLD} strokeWidth={1.5}
+                opacity={dimmed ? 0 : 1}
+                className={isHovered ? 'tva-node-pulse' : ''}
+                style={{ transition: 'opacity 0.25s' }}
+              />
               {/* Outer glow halo */}
               <circle cx={ex} cy={ey} r={RING_R + 8}
                 fill={GOLD}
-                opacity={dimmed ? 0.01 : isHovered ? 0.12 : 0.07}
+                opacity={dimmed ? 0.01 : isHovered ? 0.14 : 0.07}
                 filter="url(#tva-glow)"
                 style={{ transition: 'opacity 0.25s' }}
               />
@@ -473,17 +480,12 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
                 opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.80}
                 style={{ transition: 'opacity 0.25s, stroke-width 0.25s' }}
               />
-              {/* Number */}
-              <text
-                x={ex} y={ey}
-                textAnchor="middle" dominantBaseline="middle"
-                fontSize={14}
-                fontFamily="'IBM Plex Mono', monospace"
-                fontWeight={600}
+              {/* Center dot */}
+              <circle cx={ex} cy={ey} r={3}
                 fill={GOLD}
-                fillOpacity={dimmed ? 0.15 : isHovered ? 1.0 : 0.95}
-                style={{ userSelect: 'none', transition: 'fill-opacity 0.25s' }}
-              >{i + 1}</text>
+                opacity={dimmed ? 0.1 : isHovered ? 1.0 : 0.55}
+                style={{ transition: 'opacity 0.25s' }}
+              />
             </g>
           )
         })}
@@ -860,6 +862,18 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           width: 1px; height: 56px;
           background: linear-gradient(to bottom, rgba(201,168,76,0.7), transparent);
           animation: lp-arrow-pulse 2.2s ease-in-out infinite;
+        }
+
+        /* ─── Timeline node sustained pulse ─── */
+        @keyframes tva-node-pulse {
+          0%   { transform: scale(1);   opacity: 0.85; }
+          70%  { transform: scale(1.7); opacity: 0.12; }
+          100% { transform: scale(2.1); opacity: 0; }
+        }
+        .tva-node-pulse {
+          animation: tva-node-pulse 1.1s ease-out infinite;
+          transform-box: fill-box;
+          transform-origin: center;
         }
 
         /* ─── Marquee ticker ─── */
