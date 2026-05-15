@@ -33,11 +33,11 @@ export const RefNavContext = createContext<RefNavContextValue>({
 
 // ─── Status styling ───────────────────────────────────────────────────────────
 
-type StatusVisualKey =
+export type StatusVisualKey =
   | 'active' | 'addressed' | 'designed' | 'proposed' | 'partial'
   | 'open' | 'ongoing' | 'evidence' | 'moral' | 'reference' | ''
 
-function statusVisualKey(status: string): StatusVisualKey {
+export function statusVisualKey(status: string): StatusVisualKey {
   const n = status.toLowerCase().trim().replace(/\*\*/g, '').replace(/`/g, '').replace(/\s+/g, ' ')
   if (!n) return ''
   if (n.includes('evidence-backed') || n === 'resolved') return 'evidence'
@@ -67,24 +67,44 @@ const STATUS_CHIP_STYLES: Record<string, string> = {
   '':        'bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200',
 }
 
-const STATUS_DOT_COLORS: Record<StatusVisualKey, string> = {
+const STATUS_CHIP_STYLES_DARK: Record<string, string> = {
+  active:    'bg-emerald-950/70 text-emerald-300 border border-emerald-700/50 hover:bg-emerald-900/70',
+  addressed: 'bg-teal-950/70 text-teal-300 border border-teal-700/50 hover:bg-teal-900/70',
+  designed:  'bg-amber-950/70 text-amber-300 border border-amber-700/50 hover:bg-amber-900/70',
+  proposed:  'bg-amber-950/70 text-amber-300 border border-amber-700/50 hover:bg-amber-900/70',
+  partial:   'bg-orange-950/70 text-orange-300 border border-orange-700/50 hover:bg-orange-900/70',
+  open:      'bg-red-950/70 text-red-300 border border-red-700/50 hover:bg-red-900/70',
+  ongoing:   'bg-sky-950/70 text-sky-300 border border-sky-700/50 hover:bg-sky-900/70',
+  evidence:  'bg-emerald-950/70 text-emerald-300 border border-emerald-700/50 hover:bg-emerald-900/70',
+  moral:     'bg-lime-950/70 text-lime-300 border border-lime-700/50 hover:bg-lime-900/70',
+  reference: 'bg-sky-950/70 text-sky-300 border border-sky-700/50 hover:bg-sky-900/70',
+  '':        'bg-white/10 text-stone-300 border border-white/20 hover:bg-white/15',
+}
+
+export const STATUS_DOT_COLORS: Record<StatusVisualKey, string> = {
   active: '#10b981', addressed: '#14b8a6', designed: '#f59e0b', proposed: '#f59e0b',
   partial: '#f97316', open: '#ef4444', ongoing: '#0ea5e9', evidence: '#059669',
   moral: '#65a30d', reference: '#38bdf8', '': '#a8a29e',
 }
 
-const STATUS_BADGE_PALETTE: Record<StatusVisualKey, { bg: string; color: string }> = {
-  active:    { bg: '#dcfce7', color: '#166534' },
-  addressed: { bg: '#ccfbf1', color: '#115e59' },
-  designed:  { bg: '#fef3c7', color: '#92400e' },
-  proposed:  { bg: '#fef3c7', color: '#92400e' },
-  partial:   { bg: '#ffedd5', color: '#9a3412' },
-  open:      { bg: '#fee2e2', color: '#991b1b' },
-  ongoing:   { bg: '#e0f2fe', color: '#075985' },
-  evidence:  { bg: '#d1fae5', color: '#065f46' },
-  moral:     { bg: '#ecfccb', color: '#3f6212' },
-  reference: { bg: '#e0f2fe', color: '#075985' },
-  '':        { bg: '#f5f5f4', color: '#57534e' },
+export const STATUS_DOT_COLORS_DARK: Record<StatusVisualKey, string> = {
+  active: '#34d399', addressed: '#2dd4bf', designed: '#fbbf24', proposed: '#fbbf24',
+  partial: '#fb923c', open: '#f87171', ongoing: '#38bdf8', evidence: '#6ee7b7',
+  moral: '#a3e635', reference: '#38bdf8', '': '#78716c',
+}
+
+export const STATUS_BADGE_PALETTE: Record<StatusVisualKey, { bg: string; color: string; darkBg: string; darkColor: string }> = {
+  active:    { bg: '#dcfce7', color: '#166534', darkBg: 'rgba(6,78,59,0.7)',    darkColor: '#6ee7b7' },
+  addressed: { bg: '#ccfbf1', color: '#115e59', darkBg: 'rgba(19,78,74,0.72)', darkColor: '#5eead4' },
+  designed:  { bg: '#fef3c7', color: '#92400e', darkBg: 'rgba(78,52,10,0.7)',  darkColor: '#fcd34d' },
+  proposed:  { bg: '#fef3c7', color: '#92400e', darkBg: 'rgba(78,52,10,0.7)',  darkColor: '#fcd34d' },
+  partial:   { bg: '#ffedd5', color: '#9a3412', darkBg: 'rgba(124,45,18,0.7)', darkColor: '#fdba74' },
+  open:      { bg: '#fee2e2', color: '#991b1b', darkBg: 'rgba(127,29,29,0.72)',darkColor: '#fca5a5' },
+  ongoing:   { bg: '#e0f2fe', color: '#075985', darkBg: 'rgba(7,68,100,0.7)',  darkColor: '#7dd3fc' },
+  evidence:  { bg: '#d1fae5', color: '#065f46', darkBg: 'rgba(6,78,59,0.74)', darkColor: '#6ee7b7' },
+  moral:     { bg: '#ecfccb', color: '#3f6212', darkBg: 'rgba(54,83,20,0.7)', darkColor: '#bef264' },
+  reference: { bg: '#e0f2fe', color: '#075985', darkBg: 'rgba(7,68,100,0.7)', darkColor: '#7dd3fc' },
+  '':        { bg: '#f5f5f4', color: '#57534e', darkBg: 'rgba(68,64,60,0.72)',darkColor: '#d6d3d1' },
 }
 
 // ─── RefChip component ────────────────────────────────────────────────────────
@@ -92,7 +112,7 @@ const STATUS_BADGE_PALETTE: Record<StatusVisualKey, { bg: string; color: string 
 interface TooltipPos { x: number; y: number; align: 'left' | 'right' }
 
 export function RefChip({ refKey, display, fallback }: { refKey: string; display: string; fallback?: React.ReactNode }) {
-  const { lookup, onNavigate } = useContext(RefNavContext)
+  const { lookup, onNavigate, isDark } = useContext(RefNavContext)
   const strippedKey = refKey.replace(/\s*§.*$/, '').trim()
   const strippedDisplay = display.replace(/\s*§.*$/, '').trim()
   const entry = lookup.get(refKey) || lookup.get(display) || lookup.get(strippedKey) || lookup.get(strippedDisplay)
@@ -101,8 +121,9 @@ export function RefChip({ refKey, display, fallback }: { refKey: string; display
 
   if (!entry) return fallback !== undefined ? <>{fallback}</> : <>{display}</>
 
+  const chipStyles = isDark ? STATUS_CHIP_STYLES_DARK : STATUS_CHIP_STYLES
   const visualStatus = statusVisualKey(entry.status)
-  const chipStyle = STATUS_CHIP_STYLES[visualStatus] ?? STATUS_CHIP_STYLES['']
+  const chipStyle = chipStyles[visualStatus] ?? chipStyles['']
   const tooltipTitle = entry.title.replace(/^(P-\d+|T-\d+|PRD-\d+|TR-\d+|INV-\d+|ANNEX\s+[A-Z\d]+|FC-\d+)\s*[—–\-]+\s*/i, '').trim()
 
   const TOOLTIP_W = 220
@@ -124,15 +145,18 @@ export function RefChip({ refKey, display, fallback }: { refKey: string; display
     onNavigate(entry!.docId, entry!.slug)
   }
 
-  const tipBg = '#ffffff'
-  const tipBorder = 'rgba(0,0,0,0.1)'
-  const tipShadow = '0 4px 20px rgba(0,0,0,0.14)'
-  const tipLabel = '#6b7280'
-  const tipTitle = '#1f2937'
-  const tipBody = '#6b7280'
-  const tipHint = '#9ca3af'
-  const dotColor = STATUS_DOT_COLORS[visualStatus]
-  const badge = STATUS_BADGE_PALETTE[visualStatus] ?? STATUS_BADGE_PALETTE.reference
+  const tipBg     = isDark ? '#232018' : '#ffffff'
+  const tipBorder = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+  const tipShadow = isDark ? '0 4px 24px rgba(0,0,0,0.55)' : '0 4px 20px rgba(0,0,0,0.14)'
+  const tipLabel  = isDark ? '#a09680' : '#6b7280'
+  const tipTitle  = isDark ? '#ede8df' : '#1f2937'
+  const tipBody   = isDark ? '#7d7567' : '#6b7280'
+  const tipHint   = isDark ? '#5a5246' : '#9ca3af'
+
+  const badgePalette = STATUS_BADGE_PALETTE[visualStatus] ?? STATUS_BADGE_PALETTE.reference
+  const badgeBg      = isDark ? badgePalette.darkBg    : badgePalette.bg
+  const badgeColor   = isDark ? badgePalette.darkColor : badgePalette.color
+  const dotColor     = isDark ? STATUS_DOT_COLORS_DARK[visualStatus] : STATUS_DOT_COLORS[visualStatus]
 
   const tooltip = pos && typeof document !== 'undefined'
     ? createPortal(
@@ -165,7 +189,7 @@ export function RefChip({ refKey, display, fallback }: { refKey: string; display
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: dotColor, flexShrink: 0 }} />
               <span style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: tipLabel }}>{entry.label}</span>
-              <span style={{ marginLeft: 'auto', borderRadius: 4, padding: '1px 5px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', background: badge.bg, color: badge.color }}>
+              <span style={{ marginLeft: 'auto', borderRadius: 4, padding: '1px 5px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', background: badgeBg, color: badgeColor }}>
                 {entry.status || 'ref'}
               </span>
             </div>
@@ -198,7 +222,7 @@ export function RefChip({ refKey, display, fallback }: { refKey: string; display
         onBlur={hideTooltip}
         className={`inline-flex cursor-pointer items-center rounded px-1.5 py-0.5 font-mono text-[0.78em] font-semibold leading-none whitespace-nowrap transition-colors ${chipStyle}`}
       >
-        {display}
+        {(/[/\\]/.test(display) || display.endsWith('.md') || display.endsWith('.ts') || display.endsWith('.json')) ? entry.title : display}
       </button>
       {tooltip}
     </span>
@@ -409,6 +433,12 @@ export function buildRefLookup(docs: CorpusDoc[]): RefLookup {
       if (!map.has(k)) map.set(k, entry)
     }
     if (!map.has(filename)) map.set(filename, { ...entry, label: filename })
+    const dir = path.substring(0, path.lastIndexOf('/') + 1)
+    if (dir && (filename === 'README.md' || filename === 'index.md')) {
+      for (const k of [dir, `/${dir}`, dir.replace(/\/$/, ''), `/${dir.replace(/\/$/, '')}`]) {
+        if (!map.has(k)) map.set(k, { ...entry, label: dir })
+      }
+    }
   }
 
   // Doc phrase keywords

@@ -13,7 +13,8 @@ Checks:
 9. No FC/T/P identifier is defined more than once in its authoritative registry.
 10. Banned status synonyms do not appear in the four governance status docs.
 11. Every T-NNN in Threat_Register is cross-referenced in Patch_Log.
-12. Blockquote-embedded tables have a separator row and consistent column counts.
+12. AH8 T→P→ANNEX linkage: each T-NNN row in AH8 has its P-NNN heading in Patch_Log and its ANNEX file on disk.
+13. Blockquote-embedded tables have a separator row and consistent column counts.
 """
 
 from __future__ import annotations
@@ -535,6 +536,89 @@ def validate_threat_patch_cross_reference(result: ValidationResult) -> None:
             )
 
 
+def validate_ah8_linkage(result: ValidationResult) -> None:
+    """SC-4b: AH8 table is the authoritative T→P→ANNEX map.
+
+    For each row where Threat is a T-NNN:
+    - Verify that P-NNN appears as a '### P-NNN' heading in Patch_Log.md.
+    - Verify that the corresponding ANNEX file exists on disk.
+      Rows whose Annex column is a directory path (contains '/') are skipped.
+    """
+    annex_ah = ROOT / "docs" / "annexes" / "ANNEX_AH.md"
+    patch_log = ROOT / "docs" / "governance" / "Patch_Log.md"
+    annexes_dir = ROOT / "docs" / "annexes"
+
+    if not annex_ah.exists() or not patch_log.exists():
+        return
+
+    patch_text = patch_log.read_text(encoding="utf-8")
+    ah_text = annex_ah.read_text(encoding="utf-8")
+
+    # Collect all ### P-NNN headings from Patch_Log for strict check
+    patch_headings: set[str] = set(re.findall(r"^###\s+(P-\d+)\b", patch_text, re.MULTILINE))
+
+    # Locate the AH8 section and parse its table rows
+    in_ah8 = False
+    header_seen = False
+    for line in ah_text.splitlines():
+        if re.match(r"^###\s+AH8\b", line):
+            in_ah8 = True
+            continue
+        if in_ah8 and re.match(r"^###", line):
+            break  # next subsection — stop
+        if not in_ah8:
+            continue
+        if not line.strip().startswith("|"):
+            continue
+
+        cells = [c.strip() for c in line.strip("|").split("|")]
+        if len(cells) < 4:
+            continue
+
+        threat_cell, patch_cell, _status, annex_cell = cells[0], cells[1], cells[2], cells[3]
+
+        # Skip header and separator rows
+        if not header_seen:
+            if threat_cell.lower() == "threat":
+                header_seen = True
+            continue
+        if re.match(r"^[:\-\s]+$", threat_cell):
+            continue
+
+        # Only process rows where Threat is a plain T-NNN
+        if not re.match(r"^T-\d+$", threat_cell):
+            continue
+
+        threat_id = threat_cell
+        patch_id_match = re.match(r"^(P-\d+)$", patch_cell)
+        if not patch_id_match:
+            continue
+        patch_id = patch_id_match.group(1)
+
+        # Check P-NNN heading exists in Patch_Log
+        if patch_id not in patch_headings:
+            result.error(
+                f"docs/annexes/ANNEX_AH.md (AH8): {threat_id} → {patch_id} — "
+                f"no '### {patch_id}' heading found in Patch_Log.md"
+            )
+
+        # Check ANNEX file exists; skip directory paths and section refs
+        annex_raw = annex_cell.split()[0]  # "AE2.1", "AI", "AT", "founding/order/"
+        if "/" in annex_raw:
+            continue  # directory path, not an annex file
+
+        # Strip subsection digits/dots: "AE2" → "AE", "AC1" → "AC", "AT" → "AT"
+        annex_code = re.match(r"^([A-Z]+)", annex_raw)
+        if not annex_code:
+            continue
+        annex_file = annexes_dir / f"ANNEX_{annex_code.group(1)}.md"
+        if not annex_file.exists():
+            result.error(
+                f"docs/annexes/ANNEX_AH.md (AH8): {threat_id} → {patch_id} → "
+                f"ANNEX_{annex_code.group(1)}.md does not exist"
+            )
+
+
 _BQ_TABLE_LINE_RE = re.compile(r"^>\s*\|")
 _TABLE_SEP_RE = re.compile(r"^\|[\s|:=-]+\|$")
 
@@ -599,6 +683,7 @@ def main() -> int:
     validate_duplicate_identifiers(result)
     validate_status_vocab_in_governance_docs(result)
     validate_threat_patch_cross_reference(result)
+    validate_ah8_linkage(result)
     validate_blockquote_table_structure(result, markdown_files)
 
     if result.errors:
