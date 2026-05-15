@@ -121,8 +121,8 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   // Sorted by trunkT. Alternating above/below.
   // Distance from centre: 0.08 → 0.12 → 0.18 → 0.23 → 0.28 → 0.33 → 0.38 → 0.42 → 0.44
   const BRANCH_DEFS = [
-    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.42, above: true,  wobbleMult: 0.8 }, // close, gentle
-    { trunkT: 0.14, endXFrac: 0.30, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
+    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.34, above: true,  wobbleMult: 0.8 }, // close, gentle
+    { trunkT: 0.14, endXFrac: 0.24, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
     { trunkT: 0.22, endXFrac: 0.36, endYFrac: 0.32, above: true,  wobbleMult: 1.3 },
     { trunkT: 0.31, endXFrac: 0.48, endYFrac: 0.73, above: false, wobbleMult: 1.1 },
     { trunkT: 0.42, endXFrac: 0.56, endYFrac: 0.22, above: true,  wobbleMult: 1.5 },
@@ -146,26 +146,44 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     opacity:    UNIFORM_OPACITY,
   })), [paths]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  const RING_R = 18
+
   // ─── Branch geometry ─────────────────────────────────────────────────────────
-  // Single cubic bezier per branch. Wobble is x-lateral only so the path never
-  // crosses the trunk (y always monotonically moves toward the endpoint side).
+  // Branches are scaled-down versions of the trunk: a gentle perpendicular S-wave
+  // along the path, finishing with a vertical approach into the node attachment.
+  // Attachment: 6 o'clock for above-trunk nodes, 12 o'clock for below-trunk.
   function getBranchCPs(b: BranchConfig) {
     const o  = pointOnTrunk(b.trunkT)
     const ex = w * b.endXFrac
     const ey = h * b.endYFrac
-    const dx = ex - o.x
-    const dy = ey - o.y
-    // Lateral (x) oscillation — pushes midpoint sideways to create organic wave.
-    // Sign alternates with above/below so adjacent pairs mirror each other.
-    const lat = Math.min(Math.abs(dx) * 0.20, w * 0.05) * b.wobbleMult
-                * (b.above ? 1 : -1)
-    // cp1: depart along trunk direction (nearly horizontal), then rise/fall
-    // cp2: arrive near endpoint y, pulled slightly laterally
-    const cp1x = o.x  + dx * 0.25 + lat
-    const cp1y = o.y  + dy * 0.08
-    const cp2x = o.x  + dx * 0.72 + lat
-    const cp2y = ey   - dy * 0.06
-    return { o, ex, ey, cp1x, cp1y, cp2x, cp2y }
+
+    // Fixed cardinal attachment
+    const nx = ex
+    const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
+
+    const totalDx = nx - o.x
+    const totalDy = ny - o.y
+    const pathLen = Math.sqrt(totalDx * totalDx + totalDy * totalDy) || 1
+
+    // Perpendicular unit vector (same as trunk wave direction)
+    const px = -totalDy / pathLen
+    const py =  totalDx / pathLen
+
+    // S-wave: cp1 bulges one way, cp2 counter-bulges the other close to the node
+    // — creates a dramatic S-curve just before attachment
+    const sideSign = b.above ? -1 : 1
+    const amp = pathLen * 0.20 * b.wobbleMult
+    const cp1x = o.x + totalDx * 0.30 + px * amp * sideSign
+    const cp1y = o.y + totalDy * 0.30 + py * amp * sideSign
+
+    // cp2: strong counter-swing close to the node for dramatic final S
+    const amp2 = pathLen * 0.38 * b.wobbleMult
+    const cp2x = nx - px * amp2 * sideSign
+    const cp2y = b.above
+      ? ny + Math.abs(totalDy) * 0.28 - py * amp2 * sideSign
+      : ny - Math.abs(totalDy) * 0.28 - py * amp2 * sideSign
+
+    return { o, ex, ey, nx, ny, cp1x, cp1y, cp2x, cp2y }
   }
 
   function makeBranchPath(b: BranchConfig) {
@@ -179,6 +197,11 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
       x: cubicBezierPoint(0.5, o.x, cp1x, cp2x, ex),
       y: cubicBezierPoint(0.5, o.y, cp1y, cp2y, ey),
     }
+  }
+
+  function makeBranchPathTrimmed(b: BranchConfig) {
+    const { o, nx, ny, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
+    return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}`
   }
 
   function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
