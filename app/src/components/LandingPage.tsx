@@ -163,7 +163,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     const px = -dy / pathLen
     const py =  dx / pathLen
     // S-wave: cp1 bulges one way, cp2 the other
-    const amp = pathLen * 0.16 * b.wobbleMult * (b.above ? 1 : -1)
+    const amp = pathLen * 0.16 * b.wobbleMult * (b.above ? -1 : 1)
     const cp1x = o.x + dx * 0.28 + px * amp
     const cp1y = o.y + dy * 0.28 + py * amp
     const cp2x = o.x + dx * 0.72 - px * amp * 0.6
