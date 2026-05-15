@@ -1,7 +1,7 @@
 // app/api/chat.ts
 import type { IncomingMessage, ServerResponse } from 'http';
 import { google } from '@ai-sdk/google';
-import { streamText, embed, convertToModelMessages } from 'ai';
+import { streamText, embed, convertToModelMessages, type UIMessage } from 'ai';
 import { createClient } from '@supabase/supabase-js';
 
 function titleFromSource(source: string): string {
@@ -31,7 +31,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 
   const body = await readBody(req);
-  let messages: unknown[];
+  let messages: UIMessage[];
   try {
     const parsed = JSON.parse(body);
     messages = parsed.messages;
