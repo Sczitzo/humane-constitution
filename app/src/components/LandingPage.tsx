@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import { Logo } from './Logo'
 import { V001_FiveToolSeparation } from './diagrams/V001_FiveToolSeparation'
 
@@ -40,6 +40,9 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const pulseRawRef = useRef(0)
   const rafRef = useRef<number>(0)
   const hoveredIdxRef = useRef<number | null>(null)
+  const leaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const pointerXRef   = useRef(0)
+  const pointerYRef   = useRef(0)
 
   useEffect(() => {
     const el = containerRef.current
@@ -126,10 +129,10 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     { trunkT: 0.22, endXFrac: 0.36, endYFrac: 0.32, above: true,  wobbleMult: 1.3 },
     { trunkT: 0.31, endXFrac: 0.48, endYFrac: 0.73, above: false, wobbleMult: 1.1 },
     { trunkT: 0.42, endXFrac: 0.56, endYFrac: 0.22, above: true,  wobbleMult: 1.5 },
-    { trunkT: 0.50, endXFrac: 0.62, endYFrac: 0.83, above: false, wobbleMult: 1.6 },
-    { trunkT: 0.61, endXFrac: 0.70, endYFrac: 0.12, above: true,  wobbleMult: 1.8 },
-    { trunkT: 0.70, endXFrac: 0.80, endYFrac: 0.92, above: false, wobbleMult: 1.4 },
-    { trunkT: 0.82, endXFrac: 0.90, endYFrac: 0.06, above: true,  wobbleMult: 2.0 }, // widest
+    { trunkT: 0.50, endXFrac: 0.62, endYFrac: 0.68, above: false, wobbleMult: 1.6 },
+    { trunkT: 0.61, endXFrac: 0.70, endYFrac: 0.32, above: true,  wobbleMult: 1.8 },
+    { trunkT: 0.70, endXFrac: 0.80, endYFrac: 0.62, above: false, wobbleMult: 1.4 },
+    { trunkT: 0.82, endXFrac: 0.90, endYFrac: 0.42, above: true,  wobbleMult: 2.0 },
   ]
 
   const UNIFORM_WEIGHT  = 1.5
@@ -147,24 +150,24 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   })), [paths]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ─── Branch geometry ─────────────────────────────────────────────────────────
-  // Single cubic bezier per branch. Wobble is x-lateral only so the path never
-  // crosses the trunk (y always monotonically moves toward the endpoint side).
+  // Perpendicular S-wave: amplitude is relative to path length so it's visible
+  // on both steep (above-trunk) and shallow (below-trunk) paths.
   function getBranchCPs(b: BranchConfig) {
     const o  = pointOnTrunk(b.trunkT)
     const ex = w * b.endXFrac
     const ey = h * b.endYFrac
     const dx = ex - o.x
     const dy = ey - o.y
-    // Lateral (x) oscillation — pushes midpoint sideways to create organic wave.
-    // Sign alternates with above/below so adjacent pairs mirror each other.
-    const lat = Math.min(Math.abs(dx) * 0.20, w * 0.05) * b.wobbleMult
-                * (b.above ? 1 : -1)
-    // cp1: depart along trunk direction (nearly horizontal), then rise/fall
-    // cp2: arrive near endpoint y, pulled slightly laterally
-    const cp1x = o.x  + dx * 0.25 + lat
-    const cp1y = o.y  + dy * 0.08
-    const cp2x = o.x  + dx * 0.72 + lat
-    const cp2y = ey   - dy * 0.06
+    const pathLen = Math.sqrt(dx * dx + dy * dy) || 1
+    // Perpendicular unit vector (rotate 90° CCW)
+    const px = -dy / pathLen
+    const py =  dx / pathLen
+    // S-wave: cp1 bulges one way, cp2 the other
+    const amp = pathLen * 0.16 * b.wobbleMult * (b.above ? 1 : -1)
+    const cp1x = o.x + dx * 0.28 + px * amp
+    const cp1y = o.y + dy * 0.28 + py * amp
+    const cp2x = o.x + dx * 0.72 - px * amp * 0.6
+    const cp2y = o.y + dy * 0.72 - py * amp * 0.6
     return { o, ex, ey, cp1x, cp1y, cp2x, cp2y }
   }
 
@@ -173,15 +176,75 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${ex} ${ey}`
   }
 
-  function pointOnBranchMid(b: BranchConfig): { x: number; y: number } {
+  const RING_R = 18
+
+  function makeBranchPathTrimmed(b: BranchConfig) {
     const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
-    return {
-      x: cubicBezierPoint(0.5, o.x, cp1x, cp2x, ex),
-      y: cubicBezierPoint(0.5, o.y, cp1y, cp2y, ey),
-    }
+    // Connect at the node perimeter point closest to the trunk origin —
+    // direction from node center toward the trunk origin, offset by RING_R.
+    const dirX = o.x - ex
+    const dirY = o.y - ey
+    const dirLen = Math.sqrt(dirX * dirX + dirY * dirY) || 1
+    const nx = ex + (dirX / dirLen) * (RING_R + 2)
+    const ny = ey + (dirY / dirLen) * (RING_R + 2)
+    return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}`
   }
 
-  function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
+  function makeArcLabel(
+    text: string, cx: number, cy: number, R: number, above: boolean,
+    fontSize: number, fillOpacity: number, fontFamily: string,
+    fontWeight: number | string, fill: string
+  ): React.ReactElement[] {
+    const chars = [...text]
+    const widths = chars.map(ch => {
+      if (/\p{Emoji_Presentation}/u.test(ch)) return fontSize * 1.05
+      if (ch === ' ') return fontSize * 0.28
+      if ('WMm'.includes(ch)) return fontSize * 0.78
+      if ("il|1'\"!.,;:()[]".includes(ch)) return fontSize * 0.36
+      return fontSize * 0.58
+    })
+    const totalWidth = widths.reduce((a, b) => a + b, 0)
+    let cursor = -totalWidth / 2
+    return chars.map((ch, i) => {
+      const hw = widths[i] / 2
+      cursor += hw
+      const arcPos = cursor
+      cursor += hw
+      const δ = arcPos / R
+      let x: number, y: number, rot: number
+      let dominantBaseline: 'auto' | 'hanging'
+      if (above) {
+        const θ = δ
+        x = cx + R * Math.sin(θ)
+        y = cy - R * Math.cos(θ)
+        rot = θ * (180 / Math.PI)
+        dominantBaseline = 'auto'
+      } else {
+        const θ = Math.PI - δ
+        x = cx + R * Math.sin(θ)
+        y = cy - R * Math.cos(θ)
+        rot = (θ + Math.PI) * (180 / Math.PI)
+        dominantBaseline = 'hanging'
+      }
+      return (
+        <text
+          key={i}
+          x={x} y={y}
+          textAnchor="middle"
+          dominantBaseline={dominantBaseline}
+          fontSize={fontSize}
+          fontFamily={fontFamily}
+          fontWeight={fontWeight}
+          fill={fill}
+          fillOpacity={fillOpacity}
+          transform={`rotate(${rot}, ${x}, ${y})`}
+          style={{ userSelect: 'none' }}
+        >{ch}</text>
+      )
+    })
+  }
+
+function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
     const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
     return {
       x: cubicBezierPoint(t, o.x, cp1x, cp2x, ex),
@@ -220,26 +283,41 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   }
 
   function handleBranchEnter(i: number) {
+    if (leaveTimerRef.current) {
+      clearTimeout(leaveTimerRef.current)
+      leaveTimerRef.current = null
+    }
     hoveredIdxRef.current = i
     setHoveredIdx(i)
-    const svg = svgRef.current
-    if (!svg) return
-    const rect = svg.getBoundingClientRect()
-    const pt = pointOnBranchMid(branches[i])
-    setCardPos({ x: (pt.x / w) * rect.width, y: (pt.y / h) * rect.height })
+    setCardPos({ x: pointerXRef.current, y: pointerYRef.current })
   }
 
   function handleBranchLeave() {
-    hoveredIdxRef.current = null
-    setHoveredIdx(null)
-    setCardPos(null)
+    leaveTimerRef.current = setTimeout(() => {
+      hoveredIdxRef.current = null
+      setHoveredIdx(null)
+      setCardPos(null)
+      leaveTimerRef.current = null
+    }, 200)
   }
 
   const hovered = hoveredIdx !== null ? branches[hoveredIdx] : null
   const GOLD = '#c9a84c'
 
   return (
-    <div className="lp-timeline-wrap" ref={containerRef}>
+    <div
+      className="lp-timeline-wrap"
+      ref={containerRef}
+      onMouseMove={(e) => {
+        const rect = containerRef.current?.getBoundingClientRect()
+        if (!rect) return
+        pointerXRef.current = e.clientX - rect.left
+        pointerYRef.current = e.clientY - rect.top
+        if (hoveredIdxRef.current !== null) {
+          setCardPos({ x: pointerXRef.current, y: pointerYRef.current })
+        }
+      }}
+    >
       <svg
         ref={svgRef}
         className="lp-timeline-svg"
@@ -278,7 +356,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           return (
             <path
               key={`glow-${b.path.id}`}
-              d={makeBranchPath(b)}
+              d={makeBranchPathTrimmed(b)}
               fill="none" stroke={GOLD}
               strokeWidth={isHovered ? 14 : 6}
               strokeLinecap="round"
@@ -295,7 +373,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           return (
             <path
               key={`line-${b.path.id}`}
-              d={makeBranchPath(b)}
+              d={makeBranchPathTrimmed(b)}
               fill="none" stroke={GOLD}
               strokeWidth={isHovered ? 3.0 : 1.5}
               strokeLinecap="round"
@@ -363,7 +441,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           )
         })}
 
-        {/* Endpoint nodes */}
+        {/* Endpoint nodes — numbered circles */}
         {branches.map((b, i) => {
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
@@ -371,64 +449,58 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           const ey = h * b.endYFrac
           return (
             <g key={`node-${b.path.id}`} style={{ pointerEvents: 'none' }}>
-              <circle cx={ex} cy={ey} r={isHovered ? 11 : 8}
-                fill="none" stroke={GOLD} strokeWidth="1"
-                opacity={dimmed ? 0.07 : isHovered ? 0.55 : 0.28}
-                style={{ transition: 'opacity 0.25s' }}
-              />
-              <circle cx={ex} cy={ey} r={isHovered ? 5 : 3.5}
+              {/* Outer glow halo */}
+              <circle cx={ex} cy={ey} r={RING_R + 8}
                 fill={GOLD}
-                opacity={dimmed ? 0.08 : isHovered ? 1.0 : 0.62}
-                filter={isHovered ? 'url(#tva-glow)' : undefined}
+                opacity={dimmed ? 0.01 : isHovered ? 0.12 : 0.07}
+                filter="url(#tva-glow)"
                 style={{ transition: 'opacity 0.25s' }}
               />
+              {/* Dark fill */}
+              <circle cx={ex} cy={ey} r={RING_R}
+                fill="#0c0a14"
+                opacity={dimmed ? 0.4 : 1}
+                style={{ transition: 'opacity 0.25s' }}
+              />
+              {/* Gold ring */}
+              <circle cx={ex} cy={ey} r={RING_R}
+                fill="none" stroke={GOLD}
+                strokeWidth={isHovered ? 2 : 1.5}
+                opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.80}
+                style={{ transition: 'opacity 0.25s, stroke-width 0.25s' }}
+              />
+              {/* Number */}
+              <text
+                x={ex} y={ey}
+                textAnchor="middle" dominantBaseline="middle"
+                fontSize={14}
+                fontFamily="'IBM Plex Mono', monospace"
+                fontWeight={600}
+                fill={GOLD}
+                fillOpacity={dimmed ? 0.15 : isHovered ? 1.0 : 0.95}
+                style={{ userSelect: 'none', transition: 'fill-opacity 0.25s' }}
+              >{i + 1}</text>
             </g>
           )
         })}
 
-        {/* Labels — clear of the endpoint node, on the outer side */}
+        {/* Labels — curved arc text around endpoint nodes */}
         {branches.map((b, i) => {
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
-          // Offset label away from the node (12px gap) then stack title + time
-          // above → label sits above, time above that
-          // below → label sits below, time below that
-          const NODE_R = 9          // rough node radius for clearance
-          const GAP    = 8          // extra gap between node edge and text baseline
-          const TITLE_SIZE = 13
-          const TIME_SIZE  = 10
-          const titleY = b.above
-            ? ey - NODE_R - GAP                          // baseline above node
-            : ey + NODE_R + GAP + TITLE_SIZE             // baseline below node
-          const timeY = b.above
-            ? titleY - TIME_SIZE - 3                     // time sits above title
-            : titleY + TIME_SIZE + 3                     // time sits below title
+          const TITLE_R = RING_R + 22
+          const TIME_R  = RING_R + 36
           return (
             <g key={`lbl-${b.path.id}`}
               style={{ pointerEvents: 'none', transition: 'opacity 0.25s' }}
               opacity={dimmed ? 0.06 : isHovered ? 1.0 : 0.72}
             >
-              <text
-                x={ex} y={titleY}
-                textAnchor="middle"
-                fontSize={TITLE_SIZE}
-                fontFamily="Inter, sans-serif"
-                fontWeight={isHovered ? 700 : 500}
-                fill="#ffffff" fillOpacity={0.92}
-              >
-                {b.path.emoji} {b.path.title}
-              </text>
-              <text
-                x={ex} y={timeY}
-                textAnchor="middle"
-                fontSize={TIME_SIZE}
-                fontFamily="'IBM Plex Mono', monospace"
-                fill="#ffffff" fillOpacity={0.65}
-              >
-                {b.path.time}
-              </text>
+              {makeArcLabel(b.path.title, ex, ey, TITLE_R, b.above, 11.5, 0.90,
+                'Inter, sans-serif', isHovered ? 700 : 500, '#ffffff')}
+              {makeArcLabel(b.path.time, ex, ey, TIME_R, b.above, 9, 0.60,
+                "'IBM Plex Mono', monospace", 400, '#ffffff')}
             </g>
           )
         })}
@@ -451,38 +523,37 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
         })()}
       </svg>
 
-      {/* Floating hover card */}
-      {hovered && cardPos && (
-        <div
-          className="lp-branch-card visible"
-          style={{
-            left: Math.min(Math.max(cardPos.x - 136, 8), dims.w - 290),
-            top: hovered.above
-              ? Math.min(cardPos.y + 20, dims.h - 260)
-              : Math.max(cardPos.y - 240, 8),
-          }}
-        >
-          <div className="lp-branch-card-bar" />
-          <div className="lp-branch-card-body">
-            <div className="lp-branch-card-header">
-              <div className="lp-branch-card-title">
-                <span>{hovered.path.emoji}</span>
-                {hovered.path.title}
-              </div>
-              <span className="lp-branch-card-time">{hovered.path.time}</span>
-            </div>
-            <p className="lp-branch-card-desc">{hovered.path.desc}</p>
-          </div>
+      {/* Floating hover card — pointer-relative */}
+      {hovered && cardPos && (() => {
+        const CARD_W = 260, CARD_H = 170, PAD = 12
+        const spaceRight = dims.w - cardPos.x
+        const left = spaceRight < CARD_W + PAD * 2
+          ? cardPos.x - CARD_W - PAD
+          : cardPos.x + PAD
+        const top = Math.max(8, Math.min(cardPos.y - CARD_H / 2, dims.h - CARD_H - 8))
+        return (
           <div
-            className="lp-branch-card-cta"
-            style={{ cursor: 'pointer' }}
+            className="lp-branch-card visible"
+            style={{ left, top }}
             onClick={() => onSelect(hovered.path.id)}
           >
-            <span>Begin this path</span>
-            <span>→</span>
+            <div className="lp-branch-card-bar" />
+            <div className="lp-branch-card-body">
+              <div className="lp-branch-card-header">
+                <div className="lp-branch-card-title">
+                  {hovered.path.title}
+                </div>
+                <span className="lp-branch-card-time">{hovered.path.time}</span>
+              </div>
+              <p className="lp-branch-card-desc">{hovered.path.desc}</p>
+              <p style={{
+                fontSize: 10, color: 'rgba(201,168,76,0.55)', letterSpacing: '0.06em',
+                marginTop: 8, fontFamily: "'IBM Plex Mono', monospace",
+              }}>click to read</p>
+            </div>
           </div>
-        </div>
-      )}
+        )
+      })()}
     </div>
   )
 }
