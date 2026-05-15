@@ -25,88 +25,15 @@ E2E tests take ~30s to start. Port 1420 must be free unless `PLAYWRIGHT_REUSE_SE
 
 Never edit `corpus.ts` or `corpus.json` by hand. Current count: 100 docs.
 
-**Adding new docs:**
-- `docs/annexes/ANNEX_*.md` — auto-discovered via glob. Also add a row to `docs/annexes/INDEX.md`.
-- Everything else (`docs/governance/*.md`, etc.) — must be registered in **three places** in `scripts/export_corpus.py`: the `CORE_DOCS` tuple, the `section_for()` list, and `FEATURED_PATHS` if it should appear on the home screen.
+For doc registration rules, validator gotchas, status vocabulary, annex block standard, and document model, see [`.claude/rules/corpus-contracts.md`](.claude/rules/corpus-contracts.md).
 
-**Validator gotcha:** `validate_corpus.py` parses markdown links even inside code fences. Avoid bare Markdown-link examples in docs outside `docs/` (e.g. plan files) — use inline code instead, or the validator will try to resolve the path from the wrong directory.
+## Reader architecture
 
-## Reading paths
-
-Path metadata lives in two arrays that must stay in sync by `id`:
-
-- `app/src/components/LandingPage.tsx` — `PATHS` array: `id`, `emoji`, `title`, `desc`, `time`, `color`. Controls landing page display order and card metadata. `desc` only renders in a hover tooltip, not the main SVG tree.
-- `app/src/components/Dashboard.tsx` — `READING_PATHS` array: `id`, `title`, `description`, `steps[]`. Each step has `path` (doc path) and `note` (reader guidance). Controls step sequences.
-
-Current path order (conceptual → operational): First-Time → Skeptic → Economic → Founding → Identity → Governance → Implementer → Pilot → Architectural.
-
-## Status language standard
-
-All governance docs (Threat_Register, Patch_Log, Hardening_Queue, Claims_Evidence_Register) use this exact vocabulary — no synonyms:
-
-| Status | Meaning |
-|---|---|
-| `Proposed` | Suggested but not formally incorporated |
-| `Designed` | Specified in corpus, not yet active |
-| `Active — unproven` | Incorporated, no field evidence |
-| `Partly tested` | Some pilot/analogue evidence, not sufficient |
-| `Evidence-backed` | Sufficient external evidence |
-| `Resolved` | Evidence-backed controls + documented residual risk |
-
-Never use: Closed, Addressed, Partial, Complete, Open (as a status).
-
-## Annex opening block standard
-
-Every annex must have this block immediately after the H1 title:
-
-```markdown
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | [plain-language purpose] |
-> | **Who it protects** | [whose dignity, access, freedom, or accountability] |
-> | **Failure risk** | [abuse, capture, exclusion, or failure path] |
-> | **Evidence status** | [Designed / Active — unproven / Partly tested / Evidence-backed] |
-> | **Linked risks** | [T-NNN, P-NNN, or named risks] |
-```
-
-## Architecture
-
-`Dashboard.tsx` is ~4000 lines and contains the entire reader. Internal order: ref-chip system (`buildRefLookup`, `RefChip`, `RefNavContext`) → utility functions → `parseMarkdown()` → `renderInline()` → `resolveInternalDoc()` → `MarkdownDocument` → `ReaderOutline` → `ReaderPanel` → `ReaderWorkspace` → `Dashboard` (default export, manages state/routing).
-
-All prose styles are in `index.css` under `.reader-prose`. `--font-serif` is misnamed — it controls body prose and points to the Inter stack.
-
-## Document model
-
-Every threat (T-NNN) has a patch (P-NNN) and an annex (ANNEX_XX.md) with the resulting constitutional text. Master linkage table: `ANNEX_AH.md § AH8`. Human-readable entry point: `docs/governance/Provenance_Map.md`.
-
-**Annex naming:** "AH2" is not a file — it refers to sections AH2.1–AH2.4 inside `ANNEX_AH.md` added by P-020. "(P-020 / Annex AH2)" means: patch P-020, clauses in `ANNEX_AH.md` under the AH2 subsections.
-
-Section → nav view mapping lives in `section_for()` in the export script.
+`Dashboard.tsx` is ~4000 lines. For component order, reading-path sync, large-file handling rules, and safe refactor protocol, see [`.claude/rules/reader-refactor.md`](.claude/rules/reader-refactor.md).
 
 ## Critical rules
 
 - Run `npm run generate:corpus` after every markdown change.
 - Do not modify `docs/constitution/Humane_Constitution.md`, `Acceptance_Protocol.md`, or `INVARIANTS.md` without explicit instruction.
 - Vercel deployment root is `app/`, not the repo root. Deploy with `vercel --prod` from inside `app/`.
-
-## Standing evaluative requirement: Christ-centered ethical review
-
-When evaluating or proposing changes to any document in `docs/constitution/`, use the teachings of Jesus Christ as the interpretive lens. Treat the Humane Constitution as a human-made framework — humble, accountable, corrigible, and subordinate to Christ's teachings. Do not treat it as Scripture or revelation.
-
-Evaluate each area against these eight questions:
-
-1. Does this reflect love of God and love of neighbor? (Matt 22:37–40)
-2. Does this serve people rather than exalt the system or its authorities? (Mark 10:42–45; John 13:12–17)
-3. Does this protect the vulnerable, the poor, the outcast, and the burdened? (Matt 25:35–40; Luke 4:18–19)
-4. Does this honor truth, mercy, justice, forgiveness, and reconciliation? (Matt 5–7; Matt 18:21–35)
-5. Does this preserve human dignity rather than reducing people to data or compliance? (Gen 1:26–27; Matt 7:12)
-6. Does this resist Babel-like temptations: pride, domination, coercive unity, replacing dependence on God? (Gen 11:1–9; Matt 6:1–6)
-7. Does this produce good fruit in practice? (Matt 7:15–20; Gal 5:22–23)
-8. Does this remain open to correction, repentance, and wise counsel? (Matt 18:15–20; Prov 11:14)
-
-For each area, provide: **Christ-centered alignment** · **Babel-risk warning** · **Human dignity test** · **Revision proposal** · **Fruit test**
-
-Do not say "God endorses this Constitution." Assess consistency with Jesus' teachings as found in Scripture.
-
-*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+- For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review in [`.claude/rules/constitution-review.md`](.claude/rules/constitution-review.md).
