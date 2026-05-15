@@ -39,6 +39,7 @@ IGNORED_DIRS = {
     "__pycache__",
     "node_modules",
     "dist",
+    "superpowers",
 }
 
 DEPRECATED_TERM_EXEMPTIONS = set()
@@ -164,7 +165,7 @@ def github_anchor_slug(text: str) -> str:
     cleaned = strip_markdown_inline(text).lower()
     cleaned = re.sub(r"[^\w\- ]", "", cleaned)
     cleaned = cleaned.replace(" ", "-")
-    cleaned = re.sub(r"-{2,}", "-", cleaned).strip("-")
+    cleaned = cleaned.strip("-")
     return cleaned
 
 
