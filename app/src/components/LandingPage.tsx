@@ -14,7 +14,6 @@ interface PathDef {
 }
 
 interface BranchConfig {
-  onTrunk?: boolean
   path: PathDef
   trunkT: number      // where on trunk the branch peels off (0–1)
   endXFrac: number    // x position of endpoint as fraction of width
@@ -25,7 +24,11 @@ interface BranchConfig {
   opacity: number
 }
 
-
+// De Casteljau cubic bezier point evaluation
+function cubicBezierPoint(t: number, p0: number, p1: number, p2: number, p3: number) {
+  const mt = 1 - t
+  return mt**3*p0 + 3*mt**2*t*p1 + 3*mt*t**2*p2 + t**3*p3
+}
 
 function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: string) => void }) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -69,78 +72,123 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const { w, h } = dims
   const CY = h * 0.5
 
-  // ─── Trunk: horizontal line of scrimmage ─────────────────────────────────────
-  // ─── Trunk: wavy line from node 1 to node 9 ─────────────────────────────────
-  const TRUNK_START = 0.08
-  const TRUNK_END   = 0.92
-  const tx0 = w * TRUNK_START, tx1 = w * TRUNK_END
-  const trunkPath = [
-    `M ${tx0} ${CY}`,
-    `C ${tx0 + (tx1-tx0)*0.18} ${CY - h*0.16}  ${tx0 + (tx1-tx0)*0.32} ${CY + h*0.16}  ${tx0 + (tx1-tx0)*0.46} ${CY - h*0.08}`,
-    `C ${tx0 + (tx1-tx0)*0.58} ${CY - h*0.18}  ${tx0 + (tx1-tx0)*0.72} ${CY + h*0.17}  ${tx0 + (tx1-tx0)*0.85} ${CY - h*0.10}`,
-    `C ${tx0 + (tx1-tx0)*0.92} ${CY - h*0.04}  ${tx1 - 10} ${CY}  ${tx1} ${CY}`,
-  ].join(' ')
-  function pointOnTrunk(xFrac: number) { return { x: w * xFrac, y: CY } }
+  // ─── Trunk: 3-segment smooth wave ────────────────────────────────────────────
+  // keeps roughly horizontal but undulates gently
+  const s1 = {
+    x0: 0,      y0: CY,
+    cp1x: w*0.14, cp1y: CY - h*0.07,
+    cp2x: w*0.31, cp2y: CY + h*0.05,
+    x1:  w*0.46, y1:  CY - h*0.03,
+  }
+  const s2 = {
+    x0:  w*0.46, y0:  CY - h*0.03,
+    cp1x: w*0.58, cp1y: CY - h*0.09,
+    cp2x: w*0.68, cp2y: CY + h*0.07,
+    x1:  w*0.76, y1:  CY,
+  }
+  const s3 = {
+    x0:  w*0.76, y0:  CY,
+    cp1x: w*0.83, cp1y: CY - h*0.06,
+    cp2x: w*0.91, cp2y: CY + h*0.04,
+    x1:  w,      y1:  CY + h*0.02,
+  }
 
-  // ─── Branch/node definitions ─────────────────────────────────────────────────
-  // Nodes 1 & 9 sit directly ON the trunk (endYFrac 0.5) — no branch path.
-  // Nodes 2–8 have leaf-arc branches off the trunk.
+  const trunkPath = [
+    `M ${s1.x0} ${s1.y0}`,
+    `C ${s1.cp1x} ${s1.cp1y} ${s1.cp2x} ${s1.cp2y} ${s1.x1} ${s1.y1}`,
+    `C ${s2.cp1x} ${s2.cp1y} ${s2.cp2x} ${s2.cp2y} ${s2.x1} ${s2.y1}`,
+    `C ${s3.cp1x} ${s3.cp1y} ${s3.cp2x} ${s3.cp2y} ${s3.x1} ${s3.y1}`,
+  ].join(' ')
+
+  function pointOnTrunk(t: number): { x: number; y: number } {
+    if (t <= 0.46) {
+      const lt = t / 0.46
+      return { x: cubicBezierPoint(lt, s1.x0, s1.cp1x, s1.cp2x, s1.x1),
+               y: cubicBezierPoint(lt, s1.y0, s1.cp1y, s1.cp2y, s1.y1) }
+    } else if (t <= 0.76) {
+      const lt = (t - 0.46) / 0.30
+      return { x: cubicBezierPoint(lt, s2.x0, s2.cp1x, s2.cp2x, s2.x1),
+               y: cubicBezierPoint(lt, s2.y0, s2.cp1y, s2.cp2y, s2.y1) }
+    } else {
+      const lt = (t - 0.76) / 0.24
+      return { x: cubicBezierPoint(lt, s3.x0, s3.cp1x, s3.cp2x, s3.x1),
+               y: cubicBezierPoint(lt, s3.y0, s3.cp1y, s3.cp2y, s3.y1) }
+    }
+  }
+
+  // ─── Branch definitions ───────────────────────────────────────────────────────
+  // Nodes taper outward: the further along the trunk, the farther the endpoint
+  // sits from the centreline. Early branches are close, late ones fan wide.
+  // endYFrac distance from 0.5 grows with trunkT index.
+  //
+  // Sorted by trunkT. Alternating above/below.
+  // Distance from centre: 0.08 → 0.12 → 0.18 → 0.23 → 0.28 → 0.33 → 0.38 → 0.42 → 0.44
   const BRANCH_DEFS = [
-    { trunkX: 0.08, endXFrac: 0.08, endYFrac: 0.50, above: true,  onTrunk: true  },
-    { trunkX: 0.19, endXFrac: 0.19, endYFrac: 0.80, above: false, onTrunk: false },
-    { trunkX: 0.30, endXFrac: 0.30, endYFrac: 0.16, above: true,  onTrunk: false },
-    { trunkX: 0.41, endXFrac: 0.41, endYFrac: 0.84, above: false, onTrunk: false },
-    { trunkX: 0.52, endXFrac: 0.52, endYFrac: 0.12, above: true,  onTrunk: false },
-    { trunkX: 0.61, endXFrac: 0.61, endYFrac: 0.86, above: false, onTrunk: false },
-    { trunkX: 0.71, endXFrac: 0.71, endYFrac: 0.16, above: true,  onTrunk: false },
-    { trunkX: 0.81, endXFrac: 0.81, endYFrac: 0.80, above: false, onTrunk: false },
-    { trunkX: 0.92, endXFrac: 0.92, endYFrac: 0.50, above: true,  onTrunk: true  },
+    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.42, above: true,  wobbleMult: 0.8 }, // close, gentle
+    { trunkT: 0.14, endXFrac: 0.30, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
+    { trunkT: 0.22, endXFrac: 0.36, endYFrac: 0.32, above: true,  wobbleMult: 1.3 },
+    { trunkT: 0.31, endXFrac: 0.48, endYFrac: 0.73, above: false, wobbleMult: 1.1 },
+    { trunkT: 0.42, endXFrac: 0.56, endYFrac: 0.22, above: true,  wobbleMult: 1.5 },
+    { trunkT: 0.50, endXFrac: 0.62, endYFrac: 0.68, above: false, wobbleMult: 1.6 },
+    { trunkT: 0.61, endXFrac: 0.70, endYFrac: 0.32, above: true,  wobbleMult: 1.8 },
+    { trunkT: 0.70, endXFrac: 0.80, endYFrac: 0.62, above: false, wobbleMult: 1.4 },
+    { trunkT: 0.82, endXFrac: 0.90, endYFrac: 0.42, above: true,  wobbleMult: 2.0 },
   ]
 
-  const RING_R = 18
+  const UNIFORM_WEIGHT  = 1.5
+  const UNIFORM_OPACITY = 0.62
 
   const branches: BranchConfig[] = useMemo(() => paths.map((p, i) => ({
     path: p,
-    trunkT:     BRANCH_DEFS[i].trunkX,
+    trunkT:     BRANCH_DEFS[i].trunkT,
     endXFrac:   BRANCH_DEFS[i].endXFrac,
     endYFrac:   BRANCH_DEFS[i].endYFrac,
     above:      BRANCH_DEFS[i].above,
-    onTrunk:    BRANCH_DEFS[i].onTrunk,
-    wobbleMult: 1,
-    weight:     1.5,
-    opacity:    0.62,
+    wobbleMult: BRANCH_DEFS[i].wobbleMult,
+    weight:     UNIFORM_WEIGHT,
+    opacity:    UNIFORM_OPACITY,
   })), [paths]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ─── Leaf-arc geometry ───────────────────────────────────────────────────────
-  // Each branch is a smooth convex arc from the trunk point up/down to the node.
-  // Both control points are pulled to the SAME side (no S-wave), creating a
-  // clean leaf-vein / football-lobe silhouette.
-  function makeLeafPath(b: BranchConfig) {
+  // ─── Branch geometry ─────────────────────────────────────────────────────────
+  // Perpendicular S-wave: amplitude is relative to path length so it's visible
+  // on both steep (above-trunk) and shallow (below-trunk) paths.
+  function getBranchCPs(b: BranchConfig) {
     const o  = pointOnTrunk(b.trunkT)
     const ex = w * b.endXFrac
     const ey = h * b.endYFrac
-    // Attach at bottom of circle (above) or top (below)
-    const nx = ex
-    const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
-    // Chord vector
-    const dx = nx - o.x
-    const dy = ny - o.y
-    const len = Math.sqrt(dx*dx + dy*dy) || 1
-    // Perpendicular unit vector — points away from trunk (same direction as node offset)
-    const perpX = -dy / len
-    const perpY =  dx / len
-    // Bulge amount: makes the arc feel like a leaf lobe
-    const bulge = len * 0.55
-    // Both cps pulled to the SAME side — smooth convex arc
-    const cp1x = o.x + dx * 0.25 + perpX * bulge
-    const cp1y = o.y + dy * 0.25 + perpY * bulge
-    const cp2x = o.x + dx * 0.75 + perpX * bulge
-    const cp2y = o.y + dy * 0.75 + perpY * bulge
-    return { o, nx, ny, cp1x, cp1y, cp2x, cp2y,
-      d: `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}` }
+    const dx = ex - o.x
+    const dy = ey - o.y
+    const pathLen = Math.sqrt(dx * dx + dy * dy) || 1
+    // Perpendicular unit vector (rotate 90° CCW)
+    const px = -dy / pathLen
+    const py =  dx / pathLen
+    // S-wave: cp1 bulges one way, cp2 the other
+    const amp = pathLen * 0.16 * b.wobbleMult * (b.above ? -1 : 1)
+    const cp1x = o.x + dx * 0.28 + px * amp
+    const cp1y = o.y + dy * 0.28 + py * amp
+    const cp2x = o.x + dx * 0.72 - px * amp * 0.6
+    const cp2y = o.y + dy * 0.72 - py * amp * 0.6
+    return { o, ex, ey, cp1x, cp1y, cp2x, cp2y }
   }
 
-  function pointOnMainPath(t: number) { return pointOnTrunk(t) }
+  function makeBranchPath(b: BranchConfig) {
+    const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
+    return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${ex} ${ey}`
+  }
+
+  const RING_R = 18
+
+  function makeBranchPathTrimmed(b: BranchConfig) {
+    const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
+    // Connect at the node perimeter point closest to the trunk origin —
+    // direction from node center toward the trunk origin, offset by RING_R.
+    const dirX = o.x - ex
+    const dirY = o.y - ey
+    const dirLen = Math.sqrt(dirX * dirX + dirY * dirY) || 1
+    const nx = ex + (dirX / dirLen) * (RING_R + 2)
+    const ny = ey + (dirY / dirLen) * (RING_R + 2)
+    return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}`
+  }
 
   function makeArcLabel(
     text: string, cx: number, cy: number, R: number, above: boolean,
@@ -196,8 +244,42 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     })
   }
 
+function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
+    const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
+    return {
+      x: cubicBezierPoint(t, o.x, cp1x, cp2x, ex),
+      y: cubicBezierPoint(t, o.y, cp1y, cp2y, ey),
+    }
+  }
+
+  // ─── Constant-speed pulse ─────────────────────────────────────────────────────
+  // Allocate animation time proportional to chord length of each path segment
+  // so the dot moves at a consistent apparent speed regardless of split position.
   function getPulsePos(): { x: number; y: number } {
-    return pointOnMainPath(pulseT)
+    const hi = hoveredIdxRef.current
+    if (hi !== null && branches[hi]) {
+      const b = branches[hi]
+      const origin = pointOnTrunk(b.trunkT)
+      const endX   = w * b.endXFrac
+      const endY   = h * b.endYFrac
+
+      // Approximate chord lengths
+      const trunkChord  = origin.x                          // x distance from 0 to split
+      const branchChord = Math.sqrt((endX - origin.x) ** 2 + (endY - origin.y) ** 2)
+      const total       = trunkChord + branchChord
+      const trunkFrac   = trunkChord / (total || 1)         // fraction of period for trunk
+      // branchFrac = 1 - trunkFrac
+
+      if (pulseT < trunkFrac) {
+        // Still on trunk — map pulseT to trunkT proportionally
+        return pointOnTrunk((pulseT / trunkFrac) * b.trunkT)
+      } else {
+        // Diverted onto branch
+        const bf = (pulseT - trunkFrac) / Math.max(1 - trunkFrac, 0.001)
+        return pointOnBranchAt(b, Math.min(bf, 1))
+      }
+    }
+    return pointOnTrunk(pulseT)
   }
 
   function handleBranchEnter(i: number) {
@@ -260,35 +342,42 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
         <rect width={w} height={h} fill="url(#panel-glow)" />
 
-        {/* Trunk — line of scrimmage */}
-        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="32" strokeLinecap="round" opacity="0.10" />
-        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="6" strokeLinecap="round" opacity="0.90" filter="url(#tva-glow)" />
+        {/* Trunk glow + line */}
+        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="16" strokeLinecap="round" opacity="0.10" />
+        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="3.5" strokeLinecap="round" opacity="0.90" filter="url(#tva-glow)" />
 
-        {/* Route glow layers — skip on-trunk nodes */}
+        {/* Origin pulse */}
+        <circle cx={0} cy={CY} r="6" fill={GOLD} filter="url(#tva-glow-strong)" opacity="0.9" />
+
+        {/* Branch glow layers */}
         {branches.map((b, i) => {
-          if (b.onTrunk) return null
-          const { d } = makeLeafPath(b)
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           return (
-            <path key={`rglow-${b.path.id}`} d={d} fill="none" stroke={GOLD}
-              strokeWidth={isHovered ? 14 : 6} strokeLinecap="round"
-              opacity={dimmed ? 0.02 : isHovered ? 0.30 : 0.12}
+            <path
+              key={`glow-${b.path.id}`}
+              d={makeBranchPathTrimmed(b)}
+              fill="none" stroke={GOLD}
+              strokeWidth={isHovered ? 14 : 6}
+              strokeLinecap="round"
+              opacity={dimmed ? 0.02 : isHovered ? 0.28 : 0.14}
               style={{ transition: 'opacity 0.3s, stroke-width 0.3s' }}
             />
           )
         })}
 
-        {/* Route lines — skip on-trunk nodes */}
+        {/* Branch main lines */}
         {branches.map((b, i) => {
-          if (b.onTrunk) return null
-          const { d } = makeLeafPath(b)
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           return (
-            <path key={`rline-${b.path.id}`} d={d} fill="none" stroke={GOLD}
-              strokeWidth={isHovered ? 3 : 1.5} strokeLinecap="round"
-              opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.65}
+            <path
+              key={`line-${b.path.id}`}
+              d={makeBranchPathTrimmed(b)}
+              fill="none" stroke={GOLD}
+              strokeWidth={isHovered ? 3.0 : 1.5}
+              strokeLinecap="round"
+              opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.62}
               filter={isHovered ? 'url(#tva-glow)' : undefined}
               style={{ cursor: 'pointer', transition: 'opacity 0.25s, stroke-width 0.25s' }}
               onMouseEnter={() => handleBranchEnter(i)}
@@ -298,17 +387,57 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           )
         })}
 
-        {/* Hit areas — skip on-trunk nodes (node circle handles clicks) */}
+        {/* Hit areas */}
+        {branches.map((b, i) => (
+          <path
+            key={`hit-${b.path.id}`}
+            d={makeBranchPath(b)}
+            fill="none" stroke="transparent" strokeWidth="28"
+            style={{ cursor: 'pointer' }}
+            onMouseEnter={() => handleBranchEnter(i)}
+            onMouseLeave={handleBranchLeave}
+            onClick={() => onSelect(b.path.id)}
+          />
+        ))}
+
+        {/* Branch-off nodes — crystalline black diamonds with gold glow */}
         {branches.map((b, i) => {
-          if (b.onTrunk) return null
-          const { d } = makeLeafPath(b)
+          const o = pointOnTrunk(b.trunkT)
+          const isHovered = hoveredIdx === i
+          const dimmed = hoveredIdx !== null && !isHovered
+          const s = isHovered ? 11 : 8  // half-size of diamond
+          const pts = `${o.x},${o.y - s} ${o.x + s},${o.y} ${o.x},${o.y + s} ${o.x - s},${o.y}`
           return (
-            <path key={`rhit-${b.path.id}`} d={d} fill="none" stroke="transparent" strokeWidth="28"
-              style={{ cursor: 'pointer' }}
-              onMouseEnter={() => handleBranchEnter(i)}
-              onMouseLeave={handleBranchLeave}
-              onClick={() => onSelect(b.path.id)}
-            />
+            <g key={`origin-${b.path.id}`} style={{ pointerEvents: 'none' }}>
+              {/* Pulsing outer ring */}
+              <circle cx={o.x} cy={o.y} r="10"
+                fill="none" stroke={GOLD} strokeWidth="1"
+                opacity={dimmed ? 0 : 0.5}
+                className="tva-node-ring"
+                style={{ animationDelay: `${i * 0.22}s` }}
+              />
+              {/* Gold glow halo */}
+              <circle cx={o.x} cy={o.y} r={s + 5}
+                fill={GOLD}
+                opacity={dimmed ? 0.03 : isHovered ? 0.22 : 0.10}
+                filter="url(#tva-glow)"
+                style={{ transition: 'opacity 0.25s' }}
+              />
+              {/* Crystalline black diamond */}
+              <polygon points={pts}
+                fill="#06050a"
+                stroke={GOLD}
+                strokeWidth={isHovered ? 1.5 : 1}
+                opacity={dimmed ? 0.15 : 1}
+                style={{ transition: 'opacity 0.25s' }}
+              />
+              {/* Inner sparkle dot */}
+              <circle cx={o.x} cy={o.y} r="1.5"
+                fill={GOLD}
+                opacity={dimmed ? 0.1 : isHovered ? 1.0 : 0.7}
+                style={{ transition: 'opacity 0.25s' }}
+              />
+            </g>
           )
         })}
 
@@ -369,6 +498,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
           const TITLE_R = RING_R + 22
+          const TIME_R  = RING_R + 36
           return (
             <g key={`lbl-${b.path.id}`}
               style={{ pointerEvents: 'none', transition: 'opacity 0.25s' }}
@@ -376,6 +506,8 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
             >
               {makeArcLabel(b.path.title, ex, ey, TITLE_R, b.above, 11.5, 0.90,
                 'Inter, sans-serif', isHovered ? 700 : 500, '#ffffff')}
+              {makeArcLabel(b.path.time, ex, ey, TIME_R, b.above, 9, 0.60,
+                "'IBM Plex Mono', monospace", 400, '#ffffff')}
             </g>
           )
         })}
