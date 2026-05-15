@@ -69,22 +69,21 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const CY = h * 0.5
 
   // ─── Trunk: horizontal line of scrimmage ─────────────────────────────────────
+  // ─── Trunk: horizontal spine ─────────────────────────────────────────────────
   const trunkPath = `M 0 ${CY} L ${w} ${CY}`
   function pointOnTrunk(xFrac: number) { return { x: w * xFrac, y: CY } }
 
-  // ─── Route definitions (football play style) ─────────────────────────────────
-  // Each node peels off the trunk at trunkX, curves to its endpoint.
-  // Routes fan out symmetrically and spread wider as they go further.
+  // ─── Branch/node definitions — evenly spaced along trunk, spreading outward ──
   const BRANCH_DEFS = [
-    { trunkX: 0.08, endXFrac: 0.06, endYFrac: 0.22, above: true  },
-    { trunkX: 0.18, endXFrac: 0.20, endYFrac: 0.78, above: false },
-    { trunkX: 0.28, endXFrac: 0.30, endYFrac: 0.18, above: true  },
-    { trunkX: 0.39, endXFrac: 0.42, endYFrac: 0.82, above: false },
-    { trunkX: 0.50, endXFrac: 0.52, endYFrac: 0.14, above: true  },
-    { trunkX: 0.59, endXFrac: 0.62, endYFrac: 0.84, above: false },
-    { trunkX: 0.69, endXFrac: 0.72, endYFrac: 0.18, above: true  },
-    { trunkX: 0.79, endXFrac: 0.82, endYFrac: 0.78, above: false },
-    { trunkX: 0.90, endXFrac: 0.92, endYFrac: 0.24, above: true  },
+    { trunkX: 0.08, endXFrac: 0.08, endYFrac: 0.20, above: true  },
+    { trunkX: 0.19, endXFrac: 0.19, endYFrac: 0.80, above: false },
+    { trunkX: 0.30, endXFrac: 0.30, endYFrac: 0.16, above: true  },
+    { trunkX: 0.41, endXFrac: 0.41, endYFrac: 0.84, above: false },
+    { trunkX: 0.52, endXFrac: 0.52, endYFrac: 0.12, above: true  },
+    { trunkX: 0.61, endXFrac: 0.61, endYFrac: 0.86, above: false },
+    { trunkX: 0.71, endXFrac: 0.71, endYFrac: 0.16, above: true  },
+    { trunkX: 0.81, endXFrac: 0.81, endYFrac: 0.80, above: false },
+    { trunkX: 0.92, endXFrac: 0.92, endYFrac: 0.22, above: true  },
   ]
 
   const RING_R = 18
@@ -100,28 +99,35 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     opacity:    0.62,
   })), [paths]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ─── Route geometry (football play curves) ───────────────────────────────────
-  // Each route starts straight off the trunk (vertical), then curves toward the node.
-  // cp1 goes straight up/down from the trunk point, cp2 pulls into the endpoint vertically.
-  function makeRoutePath(b: BranchConfig) {
+  // ─── Leaf-arc geometry ───────────────────────────────────────────────────────
+  // Each branch is a smooth convex arc from the trunk point up/down to the node.
+  // Both control points are pulled to the SAME side (no S-wave), creating a
+  // clean leaf-vein / football-lobe silhouette.
+  function makeLeafPath(b: BranchConfig) {
     const o  = pointOnTrunk(b.trunkT)
     const ex = w * b.endXFrac
     const ey = h * b.endYFrac
-    // Attach point: bottom of circle for above-nodes, top for below-nodes
+    // Attach at bottom of circle (above) or top (below)
     const nx = ex
     const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
-    const dy = Math.abs(ny - o.y)
-    // cp1: straight off the trunk, pulling hard in the up/down direction
-    const cp1x = o.x
-    const cp1y = b.above ? o.y - dy * 0.7 : o.y + dy * 0.7
-    // cp2: pull vertically into the attachment point
-    const cp2x = nx
-    const cp2y = b.above ? ny + dy * 0.5 : ny - dy * 0.5
+    // Chord vector
+    const dx = nx - o.x
+    const dy = ny - o.y
+    const len = Math.sqrt(dx*dx + dy*dy) || 1
+    // Perpendicular unit vector — points away from trunk (same direction as node offset)
+    const perpX = -dy / len
+    const perpY =  dx / len
+    // Bulge amount: makes the arc feel like a leaf lobe
+    const bulge = len * 0.55
+    // Both cps pulled to the SAME side — smooth convex arc
+    const cp1x = o.x + dx * 0.25 + perpX * bulge
+    const cp1y = o.y + dy * 0.25 + perpY * bulge
+    const cp2x = o.x + dx * 0.75 + perpX * bulge
+    const cp2y = o.y + dy * 0.75 + perpY * bulge
     return { o, nx, ny, cp1x, cp1y, cp2x, cp2y,
       d: `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}` }
   }
 
-  // ─── Pulse: travels the trunk ────────────────────────────────────────────────
   function pointOnMainPath(t: number) { return pointOnTrunk(t) }
 
   function makeArcLabel(
@@ -248,7 +254,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
         {/* Route glow layers */}
         {branches.map((b, i) => {
-          const { d } = makeRoutePath(b)
+          const { d } = makeLeafPath(b)
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           return (
@@ -262,7 +268,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
         {/* Route lines */}
         {branches.map((b, i) => {
-          const { d } = makeRoutePath(b)
+          const { d } = makeLeafPath(b)
           const isHovered = hoveredIdx === i
           const dimmed = hoveredIdx !== null && !isHovered
           return (
@@ -280,7 +286,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
         {/* Hit areas */}
         {branches.map((b, i) => {
-          const { d } = makeRoutePath(b)
+          const { d } = makeLeafPath(b)
           return (
             <path key={`rhit-${b.path.id}`} d={d} fill="none" stroke="transparent" strokeWidth="28"
               style={{ cursor: 'pointer' }}
