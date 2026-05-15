@@ -70,10 +70,16 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const CY = h * 0.5
 
   // ─── Trunk: horizontal line of scrimmage ─────────────────────────────────────
-  // ─── Trunk: starts at node 1, ends at node 9 ────────────────────────────────
+  // ─── Trunk: wavy line from node 1 to node 9 ─────────────────────────────────
   const TRUNK_START = 0.08
   const TRUNK_END   = 0.92
-  const trunkPath = `M ${w * TRUNK_START} ${CY} L ${w * TRUNK_END} ${CY}`
+  const tx0 = w * TRUNK_START, tx1 = w * TRUNK_END
+  const trunkPath = [
+    `M ${tx0} ${CY}`,
+    `C ${tx0 + (tx1-tx0)*0.18} ${CY - h*0.16}  ${tx0 + (tx1-tx0)*0.32} ${CY + h*0.16}  ${tx0 + (tx1-tx0)*0.46} ${CY - h*0.08}`,
+    `C ${tx0 + (tx1-tx0)*0.58} ${CY - h*0.18}  ${tx0 + (tx1-tx0)*0.72} ${CY + h*0.17}  ${tx0 + (tx1-tx0)*0.85} ${CY - h*0.10}`,
+    `C ${tx0 + (tx1-tx0)*0.92} ${CY - h*0.04}  ${tx1 - 10} ${CY}  ${tx1} ${CY}`,
+  ].join(' ')
   function pointOnTrunk(xFrac: number) { return { x: w * xFrac, y: CY } }
 
   // ─── Branch/node definitions ─────────────────────────────────────────────────
@@ -255,8 +261,8 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
         <rect width={w} height={h} fill="url(#panel-glow)" />
 
         {/* Trunk — line of scrimmage */}
-        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="16" strokeLinecap="round" opacity="0.08" />
-        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="3" strokeLinecap="round" opacity="0.85" filter="url(#tva-glow)" />
+        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="32" strokeLinecap="round" opacity="0.10" />
+        <path d={trunkPath} fill="none" stroke={GOLD} strokeWidth="6" strokeLinecap="round" opacity="0.90" filter="url(#tva-glow)" />
 
         {/* Route glow layers — skip on-trunk nodes */}
         {branches.map((b, i) => {
