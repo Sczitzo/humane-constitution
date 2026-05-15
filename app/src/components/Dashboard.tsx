@@ -3037,6 +3037,7 @@ const READING_PATHS: ReadingPathDef[] = [
     steps: [
       { path: 'docs/public/01_overview.md', note: 'Start here. One page that names the three problems and the five-instrument response — read this before anything else.' },
       { path: 'docs/public/07_life_under_the_system.md', note: 'Watch how the system behaves under real pressure. These are one-year stories for ordinary people — a caregiver, a small business owner, a person in housing crisis.' },
+      { path: 'docs/governance/Fairness_Vignette_Library.md', note: 'See how the principles play out in concrete human situations.' },
       { path: 'docs/public/05_rights_layer.md', note: 'What the design is trying to protect in plain language. Read this to understand what "working" looks like from a person\'s perspective.' },
       { path: 'docs/public/06_big_companies.md', note: 'The hardest political economy question: can large profitable firms coexist with this system? This is where to look for the honest answer.' },
       { path: 'docs/public/02_faq.md', note: 'Common objections answered directly. If you have a specific doubt, check here before going deeper.' },
@@ -3049,11 +3050,10 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'The Skeptic\'s Path',
     description: 'For those who arrived with objections. Starts with what is unknown, then builds the case.',
     steps: [
-      { path: 'docs/governance/Evidence_Ladder.md', note: 'Start here. This defines what counts as stronger or weaker proof and when a claim must be downgraded — establish the standard before you evaluate anything.' },
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Every claim the project makes, graded against the standard you just read: designed, tested, or still speculation. Watch for claims marked "needs evidence" — those are the live weaknesses.' },
-      { path: 'docs/governance/Threat_Register.md', note: 'Every adversarial failure mode the project has identified against itself. Look for threats that are named but not yet patched — those are the honest open problems.' },
-      { path: 'docs/governance/Patch_Log.md', note: 'How the design has changed in response to each threat. A short patch log means the project hasn\'t been seriously stress-tested; a long one means it has.' },
-      { path: 'docs/constitution/Humane_Constitution.md', note: 'The governing text itself. Read it last — now you can evaluate whether the constitutional language actually closes the gaps you found in the previous four documents.' },
+      { path: 'docs/governance/Evidence_Ladder.md', note: 'Understand the standard before evaluating claims.' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Grade each claim against the evidence standard.' },
+      { path: 'docs/governance/Open_Problems_Resolution_Docket.md', note: 'See what the framework admits it hasn\'t solved.' },
+      { path: 'docs/constitution/Humane_Constitution.md', note: 'Read the final document knowing where the gaps are.' },
     ],
   },
   {
@@ -3101,7 +3101,8 @@ const READING_PATHS: ReadingPathDef[] = [
       { path: 'docs/governance/Threat_Register.md', note: 'Start here. Every catalogued failure mode — read through the full list before forming a view on whether any single threat is handled well.' },
       { path: 'docs/governance/Patch_Log.md', note: 'Structural responses to each threat. Cross-reference with the Threat Register: every threat should have a corresponding patch, or be marked open.' },
       { path: 'docs/governance/Threat_Resolution_Matrix.md', note: 'Which threats are resolved, partially addressed, or still open. This is the honest audit summary — the open column is where the real work remains.' },
-      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'What the project is and is not allowed to assert. Watch for claims that are marked "designed" but not yet tested — those are the assurance gaps.' },
+      { path: 'docs/governance/Abuse_Case_Library.md', note: 'Stress-test the framework against adversarial misuse scenarios.' },
+      { path: 'docs/simulations/Adversarial_Narrative_Simulation.md', note: 'See how bad actors might exploit or subvert the system.' },
       { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'The staged testing path — what must be demonstrated before the design can be considered validated at each scale.' },
       { path: 'docs/governance/Founding_Preactivation_Disclosure.md', note: 'Pre-activation truth conditions. The project\'s own statement of what must be true before it is legitimate to activate — a useful benchmark for auditors.' },
       { path: 'docs/governance/Founding_Legitimacy_Dossier.md', note: 'The founding legitimacy record. End here — this is where to check whether the artifacts the project says are required actually exist yet.' },
