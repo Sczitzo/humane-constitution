@@ -2401,6 +2401,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   const [backTarget, setBackTarget] = useState<{ docId: string; scrollTop: number } | null>(null)
   const backTimeoutRef = useRef<number | null>(null)
   const isGoingBackRef = useRef(false)
+  const pendingDocRafRef = useRef<number>(0)
 
   const deferredQuery = useDeferredValue(corpusQuery)
   const allDocs = corpus?.docs ?? []
@@ -2454,8 +2455,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     }
     setSelectedDocId(pendingDocTarget.id)
     onPendingDocTargetConsumed?.()
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
+    pendingDocRafRef.current = requestAnimationFrame(() => {
+      pendingDocRafRef.current = requestAnimationFrame(() => {
         const targetDoc = allDocs.find((doc) => doc.id === pendingDocTarget.id)
         if (targetDoc && pendingDocTarget.headingSlug) {
           queueHeadingJump(targetDoc, pendingDocTarget.headingSlug)
@@ -2467,6 +2468,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
         document.getElementById('reader-panel-start')?.scrollIntoView({ behavior: 'instant', block: 'start' })
       })
     })
+    return () => cancelAnimationFrame(pendingDocRafRef.current)
   }, [allDocs, pendingDocTarget])
 
   // Auto-start a path selected from the landing page
