@@ -498,7 +498,6 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
           const ex = w * b.endXFrac
           const ey = h * b.endYFrac
           const TITLE_R = RING_R + 22
-          const TIME_R  = RING_R + 36
           return (
             <g key={`lbl-${b.path.id}`}
               style={{ pointerEvents: 'none', transition: 'opacity 0.25s' }}
