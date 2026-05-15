@@ -41,12 +41,9 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     res.end('Bad Request: invalid message body');
     return;
   }
-  const lastMsg = messages[messages.length - 1] as Record<string, unknown>;
+  const lastMsg = messages[messages.length - 1];
   const userQuery: string =
-    (lastMsg.content as string | undefined) ??
-    (lastMsg.parts as Array<{ type: string; text?: string }> | undefined)
-      ?.find((p) => p.type === 'text')?.text ??
-    '';
+    lastMsg.parts?.find((p) => p.type === 'text' && 'text' in p)?.text as string ?? '';
 
   // 1. Embed the query
   const { embedding: queryEmbedding } = await embed({
