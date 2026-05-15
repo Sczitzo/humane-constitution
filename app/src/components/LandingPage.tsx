@@ -463,7 +463,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
               {/* Outer glow halo */}
               <circle cx={ex} cy={ey} r={RING_R + 8}
                 fill={GOLD}
-                opacity={dimmed ? 0.01 : isHovered ? 0.14 : 0.07}
+                opacity={dimmed ? 0.01 : isHovered ? 0.28 : 0.07}
                 filter="url(#tva-glow)"
                 style={{ transition: 'opacity 0.25s' }}
               />
@@ -476,8 +476,9 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
               {/* Gold ring */}
               <circle cx={ex} cy={ey} r={RING_R}
                 fill="none" stroke={GOLD}
-                strokeWidth={isHovered ? 2 : 1.5}
+                strokeWidth={isHovered ? 2.5 : 1.5}
                 opacity={dimmed ? 0.10 : isHovered ? 1.0 : 0.80}
+                filter={isHovered ? 'url(#tva-glow)' : undefined}
                 style={{ transition: 'opacity 0.25s, stroke-width 0.25s' }}
               />
               {/* Center dot */}
