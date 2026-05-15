@@ -179,10 +179,18 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   const RING_R = 18
 
   function makeBranchPathTrimmed(b: BranchConfig) {
-    const { o, ex, ey, cp1x, cp1y, cp2x, cp2y } = getBranchCPs(b)
-    // Connect at bottom of circle for above-trunk nodes, top for below-trunk nodes.
+    const { o, ex, ey, cp1x, cp1y } = getBranchCPs(b)
+    // Attach at bottom (above-trunk) or top (below-trunk) of circle
     const nx = ex
     const ny = b.above ? ey + RING_R + 2 : ey - RING_R - 2
+    // Pull cp2 straight up/down from the attachment point so the curve
+    // arrives vertically — how far back controls the drama of the approach
+    const dx = ex - o.x
+    const dy = ey - o.y
+    const pathLen = Math.sqrt(dx * dx + dy * dy) || 1
+    const pullback = pathLen * 0.35
+    const cp2x = nx
+    const cp2y = b.above ? ny + pullback : ny - pullback
     return `M ${o.x} ${o.y} C ${cp1x} ${cp1y} ${cp2x} ${cp2y} ${nx} ${ny}`
   }
 
