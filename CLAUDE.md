@@ -23,13 +23,52 @@ E2E tests take ~30s to start. Port 1420 must be free unless `PLAYWRIGHT_REUSE_SE
 
 `scripts/export_corpus.py` → `app/src/generated/corpus.ts` + `app/public/generated/corpus.json`
 
-Never edit `corpus.ts` or `corpus.json` by hand.
+Never edit `corpus.ts` or `corpus.json` by hand. Current count: 100 docs.
 
 **Adding new docs:**
 - `docs/annexes/ANNEX_*.md` — auto-discovered via glob. Also add a row to `docs/annexes/INDEX.md`.
 - Everything else (`docs/governance/*.md`, etc.) — must be registered in **three places** in `scripts/export_corpus.py`: the `CORE_DOCS` tuple, the `section_for()` list, and `FEATURED_PATHS` if it should appear on the home screen.
 
 **Validator gotcha:** `validate_corpus.py` parses markdown links even inside code fences. Avoid bare Markdown-link examples in docs outside `docs/` (e.g. plan files) — use inline code instead, or the validator will try to resolve the path from the wrong directory.
+
+## Reading paths
+
+Path metadata lives in two arrays that must stay in sync by `id`:
+
+- `app/src/components/LandingPage.tsx` — `PATHS` array: `id`, `emoji`, `title`, `desc`, `time`, `color`. Controls landing page display order and card metadata. `desc` only renders in a hover tooltip, not the main SVG tree.
+- `app/src/components/Dashboard.tsx` — `READING_PATHS` array: `id`, `title`, `description`, `steps[]`. Each step has `path` (doc path) and `note` (reader guidance). Controls step sequences.
+
+Current path order (conceptual → operational): First-Time → Skeptic → Economic → Founding → Identity → Governance → Implementer → Pilot → Architectural.
+
+## Status language standard
+
+All governance docs (Threat_Register, Patch_Log, Hardening_Queue, Claims_Evidence_Register) use this exact vocabulary — no synonyms:
+
+| Status | Meaning |
+|---|---|
+| `Proposed` | Suggested but not formally incorporated |
+| `Designed` | Specified in corpus, not yet active |
+| `Active — unproven` | Incorporated, no field evidence |
+| `Partly tested` | Some pilot/analogue evidence, not sufficient |
+| `Evidence-backed` | Sufficient external evidence |
+| `Resolved` | Evidence-backed controls + documented residual risk |
+
+Never use: Closed, Addressed, Partial, Complete, Open (as a status).
+
+## Annex opening block standard
+
+Every annex must have this block immediately after the H1 title:
+
+```markdown
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | [plain-language purpose] |
+> | **Who it protects** | [whose dignity, access, freedom, or accountability] |
+> | **Failure risk** | [abuse, capture, exclusion, or failure path] |
+> | **Evidence status** | [Designed / Active — unproven / Partly tested / Evidence-backed] |
+> | **Linked risks** | [T-NNN, P-NNN, or named risks] |
+```
 
 ## Architecture
 
