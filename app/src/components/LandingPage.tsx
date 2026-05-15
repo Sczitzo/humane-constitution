@@ -124,14 +124,14 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   // Sorted by trunkT. Alternating above/below.
   // Distance from centre: 0.08 → 0.12 → 0.18 → 0.23 → 0.28 → 0.33 → 0.38 → 0.42 → 0.44
   const BRANCH_DEFS = [
-    { trunkT: 0.19, endXFrac: 0.18, endYFrac: 0.48, above: true,  wobbleMult: 1.2 }, // First Read
-    { trunkT: 0.24, endXFrac: 0.29, endYFrac: 0.63, above: false, wobbleMult: 1.2 }, // Skeptic
-    { trunkT: 0.30, endXFrac: 0.36, endYFrac: 0.35, above: true,  wobbleMult: 1.2 }, // Implementer
-    { trunkT: 0.36, endXFrac: 0.43, endYFrac: 0.69, above: false, wobbleMult: 1.2 }, // Economics
-    { trunkT: 0.43, endXFrac: 0.50, endYFrac: 0.27, above: true,  wobbleMult: 1.2 }, // Founding Order
-    { trunkT: 0.50, endXFrac: 0.56, endYFrac: 0.69, above: false, wobbleMult: 1.2 }, // Pilot Ready
-    { trunkT: 0.56, endXFrac: 0.64, endYFrac: 0.34, above: true,  wobbleMult: 1.2 }, // Personhood
-    { trunkT: 0.63, endXFrac: 0.69, endYFrac: 0.65, above: false, wobbleMult: 1.2 }, // Architecture
+    { trunkT: 0.15, endXFrac: 0.14, endYFrac: 0.48, above: true,  wobbleMult: 1.2 }, // First Read
+    { trunkT: 0.22, endXFrac: 0.28, endYFrac: 0.66, above: false, wobbleMult: 1.2 }, // Skeptic
+    { trunkT: 0.29, endXFrac: 0.34, endYFrac: 0.32, above: true,  wobbleMult: 1.2 }, // Implementer
+    { trunkT: 0.36, endXFrac: 0.42, endYFrac: 0.70, above: false, wobbleMult: 1.2 }, // Economics
+    { trunkT: 0.43, endXFrac: 0.50, endYFrac: 0.26, above: true,  wobbleMult: 1.2 }, // Founding Order
+    { trunkT: 0.50, endXFrac: 0.57, endYFrac: 0.72, above: false, wobbleMult: 1.2 }, // Pilot Ready
+    { trunkT: 0.57, endXFrac: 0.64, endYFrac: 0.34, above: true,  wobbleMult: 1.2 }, // Personhood
+    { trunkT: 0.65, endXFrac: 0.70, endYFrac: 0.66, above: false, wobbleMult: 1.2 }, // Architecture
     { trunkT: 0.79, endXFrac: 0.78, endYFrac: 0.49, above: false, wobbleMult: 1.2 }, // Governance
   ]
 
