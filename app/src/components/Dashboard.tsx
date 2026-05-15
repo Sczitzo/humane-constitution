@@ -876,7 +876,29 @@ function parseMarkdown(doc: CorpusDoc): MarkdownBlock[] {
         quoteLines.push(lines[index].trim().replace(/^>\s?/, ''))
         index += 1
       }
-      blocks.push({ type: 'quote', text: quoteLines.join(' ') })
+      // Split quote contents into interleaved text-runs and embedded tables.
+      // A line like "| **Purpose** | ... |" inside a blockquote is a table row.
+      const segments: Array<{ kind: 'text'; lines: string[] } | { kind: 'table'; lines: string[] }> = []
+      let seg: { kind: 'text'; lines: string[] } | { kind: 'table'; lines: string[] } = { kind: 'text', lines: [] }
+      for (const ql of quoteLines) {
+        const isTableRow = isTableLine(ql.trim())
+        if (isTableRow && seg.kind !== 'table') {
+          if (seg.lines.length) segments.push(seg)
+          seg = { kind: 'table', lines: [] }
+        } else if (!isTableRow && seg.kind !== 'text') {
+          if (seg.lines.length) segments.push(seg)
+          seg = { kind: 'text', lines: [] }
+        }
+        seg.lines.push(ql)
+      }
+      if (seg.lines.length) segments.push(seg)
+      for (const s of segments) {
+        if (s.kind === 'table') {
+          blocks.push({ type: 'table', lines: s.lines })
+        } else {
+          blocks.push({ type: 'quote', text: s.lines.join(' ') })
+        }
+      }
       continue
     }
 
@@ -1234,6 +1256,9 @@ const STATUS_BADGE_PALETTE: Record<StatusVisualKey, { bg: string; color: string;
   '':        { bg: '#f5f5f4', color: '#57534e', darkBg: 'rgba(68,64,60,0.72)', darkColor: '#d6d3d1' },
 }
 
+// Headers that indicate a column carries status/level values eligible for badge rendering.
+const STATUS_HEADER_RE = /status|level|evidence|severity|priority|state|type|risk/i
+
 const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
   { pattern: /^ACTIVE-UNPROVEN$/i,           meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
   { pattern: /^ACTIVE$/i,                    meta: { badgeClass: 's-active',          rowClass: 'row-active',          label: 'ACTIVE' } },
@@ -1292,22 +1317,25 @@ function matchStatus(cell: string): StatusMeta | null {
   return null
 }
 
-function getRowStatusClass(row: string[]): string {
-  for (const cell of row) {
+function getRowStatusClass(row: string[], statusCols: Set<number>): string {
+  for (const [i, cell] of row.entries()) {
+    if (statusCols.size > 0 && !statusCols.has(i)) continue
     const meta = matchStatus(cell)
     if (meta?.rowClass) return meta.rowClass
   }
   return ''
 }
 
-function renderTableCell(text: string, keyPrefix: string, query: string, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode {
-  const meta = matchStatus(text.trim())
-  if (meta) {
-    return (
-      <span className={`status-badge ${meta.badgeClass}`}>
-        {meta.label}
-      </span>
-    )
+function renderTableCell(text: string, keyPrefix: string, query: string, isStatusCol: boolean, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode {
+  if (isStatusCol) {
+    const meta = matchStatus(text.trim())
+    if (meta) {
+      return (
+        <span className={`status-badge ${meta.badgeClass}`}>
+          {meta.label}
+        </span>
+      )
+    }
   }
   // Annex code in a table cell, optionally followed by a parenthetical label
   // e.g. "AB", "AH2", "AE2.1", "AH (Founding Order)"
@@ -1867,6 +1895,12 @@ function MarkdownDocument({
             )
           }
 
+          const statusCols = new Set(
+            parsedTable.headers
+              .map((h, i) => (STATUS_HEADER_RE.test(h) ? i : -1))
+              .filter((i) => i >= 0)
+          )
+
           return (
             <div key={`${doc.id}-table-${index}`} className="reader-table-wrap">
               <table className="reader-table">
@@ -1881,12 +1915,12 @@ function MarkdownDocument({
                 </thead>
                 <tbody>
                   {parsedTable.rows.map((row, rowIndex) => {
-                    const rowClass = getRowStatusClass(row)
+                    const rowClass = getRowStatusClass(row, statusCols)
                     return (
                       <tr key={`${doc.id}-table-row-${index}-${rowIndex}`} className={rowClass || undefined}>
                         {row.map((cell, cellIndex) => (
                           <td key={`${doc.id}-table-cell-${index}-${rowIndex}-${cellIndex}`}>
-                            {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery, handleInternalLink, doc.path)}
+                            {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery, statusCols.has(cellIndex), handleInternalLink, doc.path)}
                           </td>
                         ))}
                       </tr>

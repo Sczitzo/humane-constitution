@@ -466,6 +466,21 @@ function navSearch(allDocs: CorpusDoc[], rawQuery: string): NavSearchResult[] {
     }
   }
 
+  // Sort by match quality: exact title > title prefix > title contains > heading > body.
+  results.sort((a, b) => {
+    const score = (r: NavSearchResult): number => {
+      if (r.matchType === 'title') {
+        const t = r.doc.title.toLowerCase()
+        if (t === q) return 0
+        if (t.startsWith(q)) return 1
+        return 2
+      }
+      if (r.matchType === 'heading') return 3
+      return 4
+    }
+    return score(a) - score(b)
+  })
+
   return results.slice(0, 40)
 }
 
