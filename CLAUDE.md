@@ -2,6 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Operating posture
+
+- Preserve existing behavior unless the user explicitly approves a change.
+- Prefer small, reversible diffs over broad rewrites.
+- Use existing repo patterns before introducing new libraries or architecture.
+- Do not introduce new frameworks, libraries, or major architecture patterns without explicit user approval.
+- Treat source docs and validation scripts as source of truth; generated corpus outputs are build artifacts.
+- When unsure, inspect narrowly and report the uncertainty before editing.
+
 ## Commands
 
 All commands run from the `app/` directory.
@@ -23,13 +32,11 @@ E2E tests take ~30s to start. Port 1420 must be free unless `PLAYWRIGHT_REUSE_SE
 
 `scripts/export_corpus.py` → `app/src/generated/corpus.ts` + `app/public/generated/corpus.json`
 
-Never edit `corpus.ts` or `corpus.json` by hand. Current count: 100 docs.
+Never hand-edit `app/src/generated/corpus.ts` or `app/public/generated/corpus.json`. Current count: 100 docs.
 
 **Adding new docs:**
 - `docs/annexes/ANNEX_*.md` — auto-discovered via glob. Also add a row to `docs/annexes/INDEX.md`.
 - Everything else (`docs/governance/*.md`, etc.) — must be registered in **three places** in `scripts/export_corpus.py`: the `CORE_DOCS` tuple, the `section_for()` list, and `FEATURED_PATHS` if it should appear on the home screen.
-
-See [`.claude/rules/corpus-contracts.md`](.claude/rules/corpus-contracts.md) for validator gotchas and full registration rules.
 
 ## Status vocabulary
 
@@ -61,7 +68,7 @@ Every annex must have this block immediately after the H1 title:
 > | **Linked risks** | T-NNN, P-NNN |
 ```
 
-Full template in [`.claude/rules/corpus-contracts.md`](.claude/rules/corpus-contracts.md).
+Full template in `.claude/rules/corpus-contracts.md`.
 
 ## Document model
 
@@ -81,8 +88,6 @@ Before extracting `parseMarkdown()`, ref-chip logic, or localStorage helpers, ad
 
 If a fix fails 3 times, stop and report: command, error, files touched, suspected cause, safest next step.
 
-See [`.claude/rules/reader-refactor.md`](.claude/rules/reader-refactor.md) for full refactor protocol.
-
 ## Reading paths
 
 Path metadata lives in two arrays that must stay in sync by `id`:
@@ -94,7 +99,17 @@ Current order: First-Time → Skeptic → Economic → Founding → Identity →
 
 ## Critical rules
 
-- Run `npm run generate:corpus` after every markdown change.
+- Run `npm run generate:corpus` after every markdown change under `docs/` or any corpus-registered markdown source.
 - Do not modify `docs/constitution/Humane_Constitution.md`, `Acceptance_Protocol.md`, or `INVARIANTS.md` without explicit instruction.
 - Vercel deployment root is `app/`, not the repo root. Deploy with `vercel --prod` from inside `app/`.
-- For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review — see [`.claude/rules/constitution-review.md`](.claude/rules/constitution-review.md).
+- For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review in `.claude/rules/constitution-review.md`.
+
+## Scoped protocols
+
+Before work in these areas, read the matching rule file first:
+
+- Corpus validation, governance docs, annexes, statuses, or links: `.claude/rules/corpus-contracts.md`
+- Reader app, `Dashboard.tsx`, parser, ref chips, localStorage, or reading paths: `.claude/rules/reader-refactor.md`
+- Proposed changes to `docs/constitution/`: `.claude/rules/constitution-review.md`
+
+Root `CLAUDE.md` contains global rules only. Area-specific protocols live in `.claude/rules/`.
