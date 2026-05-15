@@ -48,6 +48,22 @@ Before extracting `parseMarkdown()`, ref-chip logic (`buildRefLookup`, `RefChip`
 
 Prefer automated validation over convention.
 
+## Renderer invariants
+
+When refactoring the parser or renderer, always preserve these rendering behaviors:
+- blockquotes-as-tables (the `> | | |` pattern used in annex blocks)
+- ordered and unordered lists
+- code fences (inline and block)
+- mermaid diagram blocks
+- ref chips (`buildRefLookup`, `RefChip`, `RefNavContext`)
+- internal document navigation (`resolveInternalDoc`)
+
+Any extraction that silently drops one of these is a regression.
+
+## Test commands
+
+Use the repo's existing test framework. Check `app/package.json` before choosing commands — do not assume `jest` or `vitest`. The E2E suite lives in `app/tests/e2e/` and runs via `npm run test:e2e`.
+
 ## 3-strikes rule
 
 If a fix fails 3 times in a row, stop. Report:
