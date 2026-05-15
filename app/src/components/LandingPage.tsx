@@ -124,7 +124,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
   // Sorted by trunkT. Alternating above/below.
   // Distance from centre: 0.08 → 0.12 → 0.18 → 0.23 → 0.28 → 0.33 → 0.38 → 0.42 → 0.44
   const BRANCH_DEFS = [
-    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.42, above: true,  wobbleMult: 0.8 }, // close, gentle
+    { trunkT: 0.06, endXFrac: 0.16, endYFrac: 0.28, above: true,  wobbleMult: 0.8 }, // close, gentle
     { trunkT: 0.14, endXFrac: 0.30, endYFrac: 0.62, above: false, wobbleMult: 1.0 },
     { trunkT: 0.22, endXFrac: 0.36, endYFrac: 0.32, above: true,  wobbleMult: 1.3 },
     { trunkT: 0.31, endXFrac: 0.48, endYFrac: 0.73, above: false, wobbleMult: 1.1 },
@@ -506,8 +506,6 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
             >
               {makeArcLabel(b.path.title, ex, ey, TITLE_R, b.above, 11.5, 0.90,
                 'Inter, sans-serif', isHovered ? 700 : 500, '#ffffff')}
-              {makeArcLabel(b.path.time, ex, ey, TIME_R, b.above, 9, 0.60,
-                "'IBM Plex Mono', monospace", 400, '#ffffff')}
             </g>
           )
         })}
