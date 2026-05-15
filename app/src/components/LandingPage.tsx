@@ -593,6 +593,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   const [mouseX, setMouseX] = useState(0)
   const [mouseY, setMouseY] = useState(0)
   const [openThreatIdx, setOpenThreatIdx] = useState<number | null>(null)
+  const [revealedThreatCards, setRevealedThreatCards] = useState<Set<number>>(new Set())
 
   const transitionRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
@@ -636,6 +637,25 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
     return () => obs.disconnect()
   }, [])
 
+  // Threat card reveal — tracked in React state so className re-renders don't strip lp-visible
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const idx = Number((e.target as HTMLElement).dataset.threatIdx)
+          setRevealedThreatCards((prev) => {
+            if (prev.has(idx)) return prev
+            const next = new Set(prev)
+            next.add(idx)
+            return next
+          })
+        }
+      }),
+      { threshold: 0.01 }
+    )
+    document.querySelectorAll('[data-threat-idx]').forEach((el) => obs.observe(el))
+    return () => obs.disconnect()
+  }, [])
 
   const handleEnter = useCallback((pathId?: string) => {
     setExiting(true)
@@ -1435,7 +1455,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             return (
               <div
                 key={i}
-                className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}${isOpen ? ' lp-threat-open' : ''}`}
+                data-threat-idx={i}
+                className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}${revealedThreatCards.has(i) ? ' lp-visible' : ''}${isOpen ? ' lp-threat-open' : ''}`}
                 onClick={() => setOpenThreatIdx(isOpen ? null : i)}
               >
                 <div className="lp-threat-header">
