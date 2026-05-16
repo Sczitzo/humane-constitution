@@ -63,3 +63,9 @@ outreach/
 docs/content/
 docs/Source_Grounded_Content_Prompts.md
 .vercel
+
+# Local agent/tooling artifacts
+.superpowers/
+app/.claude/
+docs/superpowers/plans/
+mockup/
