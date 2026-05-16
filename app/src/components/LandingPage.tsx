@@ -1471,6 +1471,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-status-strip { border-radius: 12px; }
           .lp-trust-block { grid-template-columns: 1fr; }
           .lp-verify-links { flex-direction: column; align-items: center; gap: 12px; }
+          .lp-scroll-hint { display: none; }
           .lp-threats-section { padding: 72px 24px; }
           .lp-threats-list { gap: 4px; margin-top: 40px; }
           .lp-threat-body-content { grid-template-columns: 1fr; gap: 16px; padding: 0 20px 24px 20px; }
@@ -1479,13 +1480,17 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-stat:nth-child(2) { padding: 28px 0; }
           .lp-stat:last-child { padding-left: 0; border-bottom: none; }
           .lp-stat-num { font-size: 72px; }
-          .lp-instruments-section { padding: 64px 24px; }
+          .lp-instruments-section { padding: 56px 20px; }
           .lp-section-head { margin-bottom: 32px; }
+          .lp-diagram-wrap { border-radius: 14px; }
+          .lp-diagram-wrap > div { margin: 0; padding: 16px 12px; overflow-x: auto; }
+          .lp-diagram-wrap svg { min-width: 620px; }
+          .lp-diagram-hint { font-size: 9px; line-height: 1.6; }
           .lp-paths-section { padding: 72px 0 100px; }
           .lp-paths-eyebrow, .lp-paths-head, .lp-paths-sub, .lp-skip { padding-left: 20px; padding-right: 20px; }
           .lp-paths-sub { margin-bottom: 28px; }
-          .lp-timeline-wrap { height: 300px; pointer-events: none; opacity: 0.72; }
-          .lp-path-list { display: grid; grid-template-columns: 1fr; padding: 0 20px; margin-top: 22px; }
+          .lp-timeline-wrap { display: none; }
+          .lp-path-list { display: grid; grid-template-columns: 1fr; padding: 0 20px; margin-top: 28px; }
           .lp-path-button { min-height: 0; padding: 16px; }
           .lp-nav { display: none; }
         }
