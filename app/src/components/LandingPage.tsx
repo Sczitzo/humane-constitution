@@ -1483,8 +1483,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-instruments-section { padding: 56px 20px; }
           .lp-section-head { margin-bottom: 32px; }
           .lp-diagram-wrap { border-radius: 14px; }
-          .lp-diagram-wrap > div { margin: 0; padding: 16px 12px; overflow-x: auto; }
-          .lp-diagram-wrap svg { min-width: 620px; }
+          .lp-diagram-wrap > div { margin: 0; padding: 16px 12px; }
           .lp-diagram-hint { font-size: 9px; line-height: 1.6; }
           .lp-paths-section { padding: 72px 0 100px; }
           .lp-paths-eyebrow, .lp-paths-head, .lp-paths-sub, .lp-skip { padding-left: 20px; padding-right: 20px; }

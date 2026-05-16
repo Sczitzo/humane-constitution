@@ -1,4 +1,5 @@
 // app/src/components/diagrams/V001_FiveToolSeparation.tsx
+import { useState } from 'react'
 import { motion } from 'motion/react'
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
@@ -24,10 +25,76 @@ const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
 
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
+  const [mobileIndex, setMobileIndex] = useState(0)
+  const mobileCol = COLS[mobileIndex]
+  const mobileNode = NODES[mobileIndex]
+
+  const goToMobileInstrument = (direction: -1 | 1) => {
+    setMobileIndex((current) => (current + direction + COLS.length) % COLS.length)
+  }
 
   return (
     <DiagramShell figId="V-001" title="Five-Instrument Constitutional Architecture" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 720 204" className="w-full" style={{ height: 204 }}>
+      <div className="sm:hidden">
+        <div className="flex items-center justify-between gap-3">
+          <button
+            type="button"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117] font-mono text-lg text-[#8b949e]"
+            aria-label="Previous instrument"
+            onClick={() => goToMobileInstrument(-1)}
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            className="min-h-[9.5rem] flex-1 rounded-lg border-2 px-4 py-5 text-center"
+            style={{
+              borderColor: mobileCol.stroke,
+              background: mobileCol.fill,
+              boxShadow: activeNodeId === mobileCol.id ? `0 0 18px ${mobileCol.stroke}44` : undefined,
+            }}
+            aria-label={`${mobileNode.label}. ${mobileNode.definition}`}
+            aria-pressed={activeNodeId === mobileCol.id}
+            onClick={() => handleNodeClick(mobileCol.id)}
+          >
+            <div className="font-mono text-[0.92rem] font-bold uppercase tracking-[0.08em]" style={{ color: mobileCol.stroke }}>
+              {mobileCol.l1}
+            </div>
+            <div className="mt-1 font-mono text-[0.92rem] font-bold uppercase tracking-[0.08em]" style={{ color: mobileCol.stroke }}>
+              {mobileCol.l2}
+            </div>
+            <div className="mt-5 font-mono text-[0.78rem] leading-relaxed text-[#c9d1d9]">
+              {mobileCol.l3}<br />{mobileCol.l3b}
+            </div>
+          </button>
+          <button
+            type="button"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117] font-mono text-lg text-[#8b949e]"
+            aria-label="Next instrument"
+            onClick={() => goToMobileInstrument(1)}
+          >
+            ›
+          </button>
+        </div>
+        <div className="mt-4 flex justify-center gap-2" aria-label="Instrument carousel position">
+          {COLS.map((col, i) => (
+            <button
+              key={col.id}
+              type="button"
+              className="h-2.5 w-2.5 rounded-full"
+              style={{ background: i === mobileIndex ? col.stroke : '#30363d' }}
+              aria-label={`Show ${NODES[i].label}`}
+              aria-current={i === mobileIndex}
+              onClick={() => setMobileIndex(i)}
+            />
+          ))}
+        </div>
+        <div className="mt-4 text-center font-mono text-[0.72rem] uppercase tracking-[0.12em] text-[#8b949e]">
+          Tap the instrument to expand its definition
+        </div>
+      </div>
+
+      <svg viewBox="0 0 720 204" className="hidden w-full sm:block" style={{ height: 204 }}>
 
         {/* Firewall barriers — repulsion arrows + ⊗ no-crossing indicator */}
         {[0, 1, 2, 3].map(i => {
