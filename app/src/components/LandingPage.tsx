@@ -697,7 +697,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
   }, [reduceMotion])
 
   const heroParallax = reduceMotion ? 0 : Math.min(scrollY * 0.35, window.innerHeight * 0.5)
-  const heroOpacity = reduceMotion ? 1 : Math.max(0, 1 - scrollY / (window.innerHeight * 0.65))
+  const heroFadeStart = window.innerHeight * 1.05
+  const heroOpacity = reduceMotion ? 1 : Math.max(0, 1 - Math.max(0, scrollY - heroFadeStart) / (window.innerHeight * 0.5))
   const marqueeOpacity = reduceMotion ? 1 : Math.max(0, 1 - scrollY / (window.innerHeight * 0.5))
 
   return (
@@ -839,8 +840,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         .lp-human-line {
           margin: 0 0 18px;
           color: rgba(245,240,232,0.9);
-          font-size: clamp(20px, 3vw, 30px);
-          line-height: 1.25;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(28px, 3.8vw, 48px);
+          line-height: 1.12;
           font-weight: 600;
           animation: lp-fade-up 0.8s ease 0.38s both;
         }
@@ -1235,8 +1237,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           padding: 0 48px;
         }
         .lp-paths-head {
-          font-size: clamp(32px, 4vw, 52px);
-          font-weight: 700;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(38px, 5.5vw, 76px);
+          font-weight: 600;
           padding: 0 48px;
           color: #f5f0e8;
           line-height: 1.08;
@@ -1250,7 +1253,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           padding: 0 48px;
         }
         .lp-path-list {
-          display: grid;
+          display: none;
           grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 12px;
           max-width: 1100px;
@@ -1482,12 +1485,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-paths-eyebrow, .lp-paths-head, .lp-paths-sub, .lp-skip { padding-left: 20px; padding-right: 20px; }
           .lp-paths-sub { margin-bottom: 28px; }
           .lp-timeline-wrap { height: 300px; pointer-events: none; opacity: 0.72; }
-          .lp-path-list { grid-template-columns: 1fr; padding: 0 20px; margin-top: 22px; }
+          .lp-path-list { display: grid; grid-template-columns: 1fr; padding: 0 20px; margin-top: 22px; }
           .lp-path-button { min-height: 0; padding: 16px; }
           .lp-nav { display: none; }
         }
         @media (min-width: 641px) and (max-width: 960px) {
-          .lp-path-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .lp-path-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
         @media (max-width: 900px) {
           .lp-instrument { grid-template-columns: 48px 1fr; }
