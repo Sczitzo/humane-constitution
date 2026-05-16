@@ -34,6 +34,35 @@ The simple rule:
 
 ---
 
+## Section 0 — Pre-Signature Public Notice
+
+### 0.1 — Publication Requirement
+
+Any Tier 1 amendment proposal must be published on the public amendment log **at least 30 days before any keyholder may sign** the proposal. This notice period is a minimum; holders may choose to begin signing only after a longer period of public deliberation.
+
+The publication must include:
+1. The full text of the proposed amendment, including every redline to affected files.
+2. The SHA-256 hash of the proposed new protected state.
+3. The names and affiliations of the initiating parties.
+4. Identification of affected clauses, annexes, patches, and acceptance tests, where the affected scope is determinable from the proposal text.
+5. The date the notice period opens and the earliest date keyholder signing may begin.
+
+The federated Ombuds must be notified of each publication on the date it is posted to the amendment log.
+
+### 0.2 — Signatures Before Notice Period Are Void
+
+Keyholder signatures collected before the 30-day notice period has elapsed are void and may not be counted toward the 7-of-9 threshold for that amendment attempt. A new notice period must be opened if the proposal is resubmitted.
+
+### 0.3 — No Emergency or Urgency Bypass
+
+No urgency claim, emergency, or expedited process may shorten or eliminate the 30-day notice requirement. Urgency is a reason to accelerate proposal preparation; it is not grounds for shortening the public challenge window before signing begins.
+
+### 0.4 — Audit Artifact
+
+The notice publication, its timestamp, and the Ombuds notification confirmation are an audit artifact. They must be preserved in the public amendment log as a permanent record of the amendment attempt, regardless of whether signing subsequently proceeds.
+
+---
+
 ## Section 1 — The M-of-N Signature Requirement (FC-110)
 
 ### 1.1 — Holder Count (N = 9)
@@ -128,6 +157,16 @@ At the end of the 180-day window:
 - The prior version is archived (not deleted) in the drift chain.
 
 If signatures have dropped below threshold, a process defect is found, or the amendment has been withdrawn, the amendment does not take effect. The drift chain records the failed attempt in a public audit archive, but it does not advance the head.
+
+### 3.4 — Concurrent CIP Ratification Required
+
+No Tier 1 amendment takes effect — even after the 180-day waiting period expires with 7 valid signatures — without concurrent ratification by the Constitutional Integrity Panel (CIP) under ANNEX_AM §AM8.6.
+
+CIP ratification requires an affirmative vote of at least **5 of 7 CIP members** (ANNEX_AM §AM8.5). Ratification must occur within the 180-day waiting period. If ratification is not achieved within that window, the amendment does not take effect; the proposal must re-enter the process from the beginning, including a new pre-signature notice period under Section 0.
+
+**Ratification artifact:** The CIP ratification vote must be published in the Article VII dashboard and recorded on the public amendment log before the amendment is declared effective. The ratification record is a required component of the amendment effectiveness audit trail; §3.3 completion without a lodged ratification artifact does not constitute a valid amendment.
+
+**Scope of this section:** The CIP ratification requirement is an additional co-condition for Tier 1 amendment effectiveness. It does not alter the 7-of-9 signature threshold (FC-110), the 180-day timelock (FC-111), the drift-chain publication requirement, the Section 0 pre-signature notice period, or any other architectural protection established by this protocol.
 
 ---
 
