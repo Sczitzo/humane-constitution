@@ -46,6 +46,24 @@ Demurrage revenue routes to the commons pool in the same manner as land-use char
 
 **S and W\* are Tier 2 founding commitments.** They may be adjusted by oracle-indexed annual review within ±20 % of the founding value; any change beyond that band requires a Tier 2 amendment with full FAP process.
 
+### AZ2.1 — Tier 0 Token Mechanism (Constitutional Framework)
+
+A Tier 0 token is an access authorization artifact issued to persons who have received provisional personhood confirmation under Article II. It is not identity, not currency, not reputation, and not transferable governance power.
+
+**Issuance conditions.** A Tier 0 token is issued upon: (1) provisional personhood confirmation; and (2) minimal eligibility attestation sufficient for Tier 0 access, as defined by the Technical Specifications Package (TSP) designated for this mechanism. Full identity verification is not required at Tier 0. The issuance process must not require disclosure of real-world identity.
+
+**Scope.** A Tier 0 token authorizes CSM basket allocation only. It does not authorize civic participation, governance voting, office eligibility, ownership, currency conversion, reputation attribution, or any upgrade of identity status.
+
+**Lifetime.** A Tier 0 token is single-session. Reissuance requires the same provisional confirmation process; tokens may not be indefinite.
+
+**Pseudonymity requirement.** The token mechanism must not create real-world identity linkage at Tier 0. A Tier 0 token must not become a durable tracking identifier. The specific cryptographic or technical mechanism that satisfies these constraints is delegated to the TSP designated for this mechanism.
+
+**Audit trail.** The token mechanism must produce an audit artifact recording issuance, expiration, scope, and revocation status for each token without exposing the real-world identity of the token holder.
+
+**TSP responsibility.** The technical implementation — including cryptographic scheme, issuance oracle, pseudonymity guarantees, and audit infrastructure — is delegated to the TSP designated for Tier 0 identity and access. The TSP must satisfy all constitutional constraints in this section. No implementation that fails any constraint above is compliant regardless of TSP endorsement.
+
+**Pre-launch gate.** Launch remains blocked under INV-LAUNCH-1 until this section exists and the TSP responsible for implementing the Tier 0 token mechanism has been formally assigned.
+
 ---
 
 ## AZ3 — Rate Function

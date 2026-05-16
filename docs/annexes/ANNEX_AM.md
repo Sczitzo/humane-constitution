@@ -91,7 +91,9 @@ The CIP budget is constitutionally fixed at **0.01% of annual Flow issuance** an
 
 ### AM8.4 — Removal
 
-A CIP member may be removed only by a **6-of-7 vote of the Federated Ombuds Plenum** (Annex AI §3), following a published finding of incapacity or a conduct violation that meets the threshold defined in the Founding Order's removal protocol. The governing coalition may not initiate removal proceedings. Any removal finding must be published in the Article VII dashboard within 48 hours of the vote.
+A CIP member may be removed only by a **4-of-5 vote of the Federated Ombuds Plenum** (Annex AI §3), following a published finding of incapacity or a conduct violation that meets the threshold defined in the Founding Order's removal protocol. The governing coalition may not initiate removal proceedings. Any removal finding must be published in the Article VII dashboard within 48 hours of the vote.
+
+Before the vote, each voting Plenum member must disclose any conflict of interest with the removal proceeding on the public record; a member with a disclosed material conflict may not vote. The published finding must include a written rationale stating the specific basis for removal and the evidence supporting it. No urgency claim, emergency, or expedited process may shorten or bypass the evidence basis, conflict-disclosure, or publication requirements of this section. A permanent audit artifact recording the vote count, disclosed conflicts, and evidence basis must be lodged in the Article VII dashboard at the time of publication.
 
 ### AM8.5 — Quorum and Decision Threshold
 

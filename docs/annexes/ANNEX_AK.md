@@ -249,7 +249,7 @@ Any person may receive Essential Access at the Constitutional Survival Minimum (
 
 **Non-duplication mechanism:** A Tier 0 allocation is keyed to a single-session pseudonymous token generated at point of access. The token is non-transferable, expires after use, and cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom.
 
-The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. The technical specification for the token mechanism is defined in ANNEX_AZ §AZ2 (to be drafted) and is a pre-operational prerequisite under INV-LAUNCH-1.
+The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. The constitutional framework for the Tier 0 token mechanism is defined in ANNEX_AZ §AZ2.1; technical implementation is delegated to the TSP designated for Tier 0 identity and access, as specified there. This mechanism is a pre-operational prerequisite under INV-LAUNCH-1.
 
 **Fraud model:** Deliberate double-claiming at the CSM tier is physically constrained (one body, one place, one time) and socially normed. The system trusts that there is enough for everyone. Citizens bear a collective duty to keep the commons honest: double-dipping is a civic wrong not because the system cannot afford it at the margin, but because it degrades the social trust that makes the open floor possible. Detection is aggregate: if per-capita consumption systematically exceeds physical capacity, the oracle flags a population-level anomaly for community review — not for individual surveillance.
 
