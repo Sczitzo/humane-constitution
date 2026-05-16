@@ -134,9 +134,23 @@ Listed in priority order by blocking impact.
 
 4. **P1-E: AM3 interim initiating body.** Implemented and verified — see P1-E Verification Addendum below.
 
-5. **HC §VIII constitutional reconciliation.** Formal amendment process for the demurrage safe harbor. Not blocking for enforcement (ANNEX_J governing clause controls), but creates ongoing formal inconsistency risk if ever challenged.
+5. **P2-D: AM3 inaction consequence.** Implemented and verified — see P2-D Verification Addendum below.
 
-6. **P2-B through P2-G.** Remaining Phase 2 enforcement chain repairs (IOA trigger standard, emergency taxonomy, founding panel independence, etc.) were not implemented in this session. Prioritize once P0-C and P1-E are complete.
+### A. Remaining human governance actions
+
+- **Constitute Federated Ombuds.** Appoint, publish, and run challenge period for at least 4 of 5 sub-Ombuds seats (ANNEX_AI §2.1). Unblocks: FC-YT1/FC-YT2 Ombuds verification, AG4 gate clearance, P0-A Ombuds verification, all operational enforcement chains in P2-H1 and P2-H2, and AM3 Ombuds dispute review path.
+- **FC-YT1/FC-YT2 Ombuds review and published findings.** Depends on Ombuds constitution. Clears INV-LAUNCH-1 gate condition (a).
+- **TSP formal assignment for Tier 0 token mechanism.** Formally designate the Technical Specifications Package for ANNEX_AZ §AZ2.1. Clears the second condition of the AZ2.1 pre-launch gate.
+
+### B. Remaining formal constitutional-process items
+
+- **HC §VIII demurrage safe harbor reconciliation.** Requires Tier 2 or Tier 3 amendment process to update HC §VIII from 6 months to 18 months. Not blocking for enforcement (ANNEX_J governing clause controls), but formal inconsistency persists in the Constitution until completed.
+
+### C. Remaining optional future hardening items (not in scope for this remediation session)
+
+- **P2-B through P2-G.** Remaining Phase 2 enforcement chain repairs: IOA trigger standard (P2-B), emergency taxonomy (P2-C), founding panel independence (P2-G), and others. These are enforcement chain repairs that are not launch blockers but should be in place before any enforcement action is needed.
+- **Acceptance_Protocol Tier 0 token mechanism gate entry.** Confirm or add an explicit gate row for "Tier 0 token mechanism specification complete and independently verified." P0-A batch did not add this entry; verify in a follow-up audit.
+- **P2-D findings authority annotation.** The "existing corpus provisions" delegation for review findings during the pre-CIP period may warrant a follow-up annotation naming the specific governance body for each trigger condition.
 
 ---
 
@@ -190,14 +204,75 @@ The paragraph states explicitly: "The Ombuds Plenum holds this initiation author
 
 ### Remaining ambiguity
 
-**P2-D (AM3 timeline and consequence for inaction)** is out of scope for this fix and remains unimplemented. The remediation plan (line 283-286) specifies adding a 14-day trigger-to-review-start requirement, 60-day written-findings deadline, "review lapsed" dashboard entry, Ombuds escalation for lapsed reviews, and a 14-day dispute window. These are follow-on enforcement chain repairs that depend on P1-E being in place first. P1-E clears the initiation gap; P2-D would close the consequence-for-inaction gap.
-
-**Findings authority.** The paragraph delegates findings authority to "existing corpus provisions for the applicable governance body." This is correct for an initiation-only rule but means that during the pre-CIP period, the body that produces the review findings is not explicitly named in §AM3. The applicable governance bodies for the four trigger conditions (founding institution seats, Article VII publication, oracle count, dashboard cadence) are named in other annexes. This is not a new gap introduced by P1-E — it existed before — but it may warrant a follow-up annotation in P2-D.
+**Findings authority.** The P1-E paragraph delegates findings authority to "existing corpus provisions for the applicable governance body." During the pre-CIP period, the body that produces review findings for each trigger condition is named in other annexes but not consolidated in §AM3. This is an annotation gap, not an enforcement gap — P2-D's "findings authority follows existing corpus provisions" language is correct and proportionate.
 
 ### Remaining action
 
-None for P1-E. The AM3 interim initiation gap is closed. P2-D (AM3 consequence for inaction) is the next related corpus fix and is independent of this item.
+None for P1-E. Closed.
 
 ---
 
-*This report is read-only analysis. No source corpus files were modified during the original verification. ANNEX_AM.md was modified in the P1-E implementation batch (commit 3018ba9) prior to this addendum. No source files were modified during this addendum.*
+## P2-D Verification Addendum
+
+**Date:** 2026-05-15
+**Commit verified:** `d074c3a` — fix(governance): add AM3 review timeline and inaction consequence (P2-D)
+
+### Status: Verified
+
+### Source files checked
+
+- `docs/annexes/ANNEX_AM.md` — primary change location (§AM3 "Review timeline and inaction consequence" paragraph)
+- `docs/annexes/ANNEX_AI.md` — Federated Ombuds authority basis for dispute review
+- `architecture/amendment_protocol.md` — hard-lock integrity check
+
+### Evidence
+
+**1. Named initiating actor present.**
+
+§AM3 retains the P1-E "Interim initiation authority (pre-CIP period)" paragraph naming the Federated Ombuds Plenum (4-of-5) for the pre-CIP period and the constitutional body (AM1 / CIP) for the post-CIP period. The P2-D paragraph references "the initiating actor" generically, applying to both periods without duplicating the actor designation.
+
+**2. Initiation and findings deadlines present.**
+
+"An AM3 constitutional review must be initiated within **14 days** of the trigger condition being detected." "Once initiated, written findings must be published in the Article VII dashboard within **60 days** of initiation." Both deadlines confirmed in source.
+
+**3. Consequences for missed initiation and missed findings present.**
+
+Missed initiation: "the trigger is entered as a 'review lapsed - initiation overdue' record in the Article VII dashboard; this is a permanent audit artifact and is not removed by subsequent initiation. The initiating actor must publish a written explanation of the delay in the Article VII dashboard within **7 days** of the lapsed-review entry."
+
+Missed findings: "a 'review lapsed - findings overdue' record is entered in the dashboard and the 7-day written explanation requirement applies again."
+
+**4. Permanent dashboard audit artifacts present.**
+
+Both lapsed records ("initiation overdue" and "findings overdue") are explicitly permanent: "this is a permanent audit artifact and is not removed by subsequent initiation." The trigger-close rule reinforces this: "A trigger is not formally closed until written findings are published; the underlying trigger condition having been independently corrected does not close the trigger record."
+
+**5. Quarterly compliance report escalation present.**
+
+"All active unresolved AM3 triggers -- whether at the initiation-overdue or findings-overdue stage -- must be reported in every subsequent Article VI quarterly compliance report until findings are published and the trigger is formally closed." Corpus term "Article VI quarterly compliance report" matches existing ANNEX_AC usage.
+
+**6. Dispute window present.**
+
+"any person may file a written dispute of a triggering finding within **14 days** of its dashboard publication; disputes are reviewed by the Federated Ombuds within **30 days** of filing; the trigger remains active and deadlines continue to run during dispute review."
+
+Note: The Ombuds reviewing a dispute of the triggering finding (i.e., whether the factual trigger condition was correctly identified) is not circular with the Ombuds Plenum's pre-CIP initiation role. The dispute covers the factual determination; the initiation act is separate and already subject to the lapsed-review consequences above.
+
+**7. No urgency or emergency bypass present.**
+
+"No urgency claim or emergency may waive the 14-day initiation deadline, the 60-day findings deadline, the lapsed-review publication requirements, or the dispute review period." Confirmed in source.
+
+**8. Hard-lock, CIP, 7-of-9, 180-day timelock, and drift-chain protections unchanged.**
+
+`architecture/amendment_protocol.md` confirms FC-110 (7-of-9), FC-111 (180 days), Section 3.4 CIP concurrent ratification, and drift-chain publication are all unchanged. The P2-D paragraph is confined to §AM3 process mechanics and has no effect on Tier 1 amendment procedure, CIP quorum, or removal thresholds.
+
+### Remaining ambiguity
+
+**Findings authority in pre-CIP period.** The paragraph delegates findings authority to "existing corpus provisions for the applicable governance body." The specific body that produces findings for each of the four AM3 trigger conditions (founding institution seat, Article VII publication, oracle count, dashboard cadence) is named in other annexes but not consolidated in §AM3. This is an annotation gap that could be addressed in a follow-up; it does not affect the enforcement chain added by P2-D.
+
+**90-day no-remedial-action consequence.** The remediation plan (line 285) suggested "if no remedial action is taken within 90 days of written findings being published, the trigger remains active in the dashboard." The P2-D implementation covers this through the "trigger not formally closed until written findings are published" rule combined with the quarterly compliance report obligation. The 90-day explicit threshold was not added; the ongoing accountability mechanism (quarterly reporting + permanent dashboard record) achieves the same transparency outcome without creating a new milestone that could itself be disputed.
+
+### Remaining action
+
+None for P2-D. The AM3 inaction consequence gap is closed.
+
+---
+
+*This report is read-only analysis. No source corpus files were modified during any verification addendum. ANNEX_AM.md was modified in implementation batches P1-E (commit 3018ba9) and P2-D (commit d074c3a) prior to these addenda. No source files were modified during verification.*
