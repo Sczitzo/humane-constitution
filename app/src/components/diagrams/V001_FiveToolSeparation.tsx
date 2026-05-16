@@ -22,6 +22,8 @@ const COLS = [
 ]
 
 const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
+const MOBILE_CARD_SPACING_PX = 86
+const MOBILE_SWIPE_LIMIT_PX = 116
 
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
@@ -59,7 +61,9 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               return
             }
             if (Math.abs(dx) > 6) dragRef.current.moved = true
-            setSwipeDeltaX(Math.max(-90, Math.min(90, dx)))
+            const resistance = 1 - Math.min(Math.abs(dx), 260) / 900
+            const resistedDx = dx * resistance
+            setSwipeDeltaX(Math.max(-MOBILE_SWIPE_LIMIT_PX, Math.min(MOBILE_SWIPE_LIMIT_PX, resistedDx)))
           }}
           onPointerUp={(event) => {
             if (!dragRef.current.active) return
@@ -68,7 +72,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
             const moved = dragRef.current.moved
             dragRef.current = { startX: 0, startY: 0, active: false, moved }
             setSwipeDeltaX(0)
-            if (Math.abs(dx) < 42 || Math.abs(dx) < Math.abs(dy) * 1.2) return
+            if (Math.abs(dx) < 54 || Math.abs(dx) < Math.abs(dy) * 1.2) return
             goToMobileInstrument(dx < 0 ? 1 : -1)
           }}
           onPointerCancel={() => {
@@ -93,11 +97,11 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               <button
                 key={col.id}
                 type="button"
-                className={`absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center ${swipeDeltaX === 0 ? 'transition-[transform,opacity,box-shadow] duration-300 ease-out' : ''}`}
+                className={`absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center will-change-transform ${swipeDeltaX === 0 ? 'transition-[transform,opacity,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]' : ''}`}
                 style={{
                   width: '12.5rem',
                   minHeight: '10.75rem',
-                  transform: `translateX(calc(-50% + ${offset * 5.4}rem + ${swipeDeltaX}px)) scale(${isCurrent ? 1 : 0.88})`,
+                  transform: `translate3d(calc(-50% + ${offset * MOBILE_CARD_SPACING_PX}px + ${swipeDeltaX}px), 0, 0) scale(${isCurrent ? 1 : 0.88})`,
                   zIndex: 10 - Math.abs(offset),
                   opacity: isVisible ? (isCurrent ? 1 : 0.74) : 0,
                   pointerEvents: isVisible ? 'auto' : 'none',
