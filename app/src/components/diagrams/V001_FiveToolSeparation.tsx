@@ -26,50 +26,73 @@ const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
   const [mobileIndex, setMobileIndex] = useState(0)
-  const mobileCol = COLS[mobileIndex]
-  const mobileNode = NODES[mobileIndex]
 
   const goToMobileInstrument = (direction: -1 | 1) => {
     setMobileIndex((current) => (current + direction + COLS.length) % COLS.length)
   }
 
+  const mobileCardOffset = (index: number) => {
+    const raw = index - mobileIndex
+    if (raw > COLS.length / 2) return raw - COLS.length
+    if (raw < -COLS.length / 2) return raw + COLS.length
+    return raw
+  }
+
   return (
     <DiagramShell figId="V-001" title="Five-Instrument Constitutional Architecture" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <div className="sm:hidden">
-        <div className="flex items-center justify-between gap-3">
+        <div className="relative h-60 overflow-hidden">
           <button
             type="button"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117] font-mono text-lg text-[#8b949e]"
+            className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117]/90 font-mono text-lg text-[#c9d1d9]"
             aria-label="Previous instrument"
             onClick={() => goToMobileInstrument(-1)}
           >
             ‹
           </button>
+          {COLS.map((col, i) => {
+            const offset = mobileCardOffset(i)
+            const isCurrent = offset === 0
+            const isVisible = Math.abs(offset) <= 2
+            const node = NODES[i]
+            return (
+              <button
+                key={col.id}
+                type="button"
+                className="absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center transition-all duration-300"
+                style={{
+                  width: isCurrent ? '12.5rem' : '9.75rem',
+                  minHeight: isCurrent ? '10.75rem' : '9.25rem',
+                  transform: `translateX(calc(-50% + ${offset * 5.4}rem)) translateY(${Math.abs(offset) * 0.65}rem) scale(${isCurrent ? 1 : 0.88})`,
+                  zIndex: 10 - Math.abs(offset),
+                  opacity: isVisible ? (isCurrent ? 1 : 0.74) : 0,
+                  pointerEvents: isVisible ? 'auto' : 'none',
+                  borderColor: col.stroke,
+                  background: `linear-gradient(145deg, ${col.fill}, rgba(13,17,23,0.96))`,
+                  boxShadow: isCurrent ? `0 18px 42px rgba(0,0,0,0.38), 0 0 22px ${col.stroke}33` : '0 12px 28px rgba(0,0,0,0.32)',
+                }}
+                aria-label={`${node.label}. ${node.definition}`}
+                aria-pressed={activeNodeId === col.id}
+                onClick={() => {
+                  if (isCurrent) handleNodeClick(col.id)
+                  else setMobileIndex(i)
+                }}
+              >
+                <div className="font-mono text-[0.92rem] font-bold uppercase tracking-[0.08em]" style={{ color: col.stroke }}>
+                  {col.l1}
+                </div>
+                <div className="mt-1 font-mono text-[0.92rem] font-bold uppercase tracking-[0.08em]" style={{ color: col.stroke }}>
+                  {col.l2}
+                </div>
+                <div className="mt-5 font-mono text-[0.78rem] leading-relaxed text-[#c9d1d9]">
+                  {col.l3}<br />{col.l3b}
+                </div>
+              </button>
+            )
+          })}
           <button
             type="button"
-            className="min-h-[9.5rem] flex-1 rounded-lg border-2 px-4 py-5 text-center"
-            style={{
-              borderColor: mobileCol.stroke,
-              background: mobileCol.fill,
-              boxShadow: activeNodeId === mobileCol.id ? `0 0 18px ${mobileCol.stroke}44` : undefined,
-            }}
-            aria-label={`${mobileNode.label}. ${mobileNode.definition}`}
-            aria-pressed={activeNodeId === mobileCol.id}
-            onClick={() => handleNodeClick(mobileCol.id)}
-          >
-            <div className="font-mono text-[0.92rem] font-bold uppercase tracking-[0.08em]" style={{ color: mobileCol.stroke }}>
-              {mobileCol.l1}
-            </div>
-            <div className="mt-1 font-mono text-[0.92rem] font-bold uppercase tracking-[0.08em]" style={{ color: mobileCol.stroke }}>
-              {mobileCol.l2}
-            </div>
-            <div className="mt-5 font-mono text-[0.78rem] leading-relaxed text-[#c9d1d9]">
-              {mobileCol.l3}<br />{mobileCol.l3b}
-            </div>
-          </button>
-          <button
-            type="button"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117] font-mono text-lg text-[#8b949e]"
+            className="absolute right-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117]/90 font-mono text-lg text-[#c9d1d9]"
             aria-label="Next instrument"
             onClick={() => goToMobileInstrument(1)}
           >

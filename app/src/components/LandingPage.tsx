@@ -606,7 +606,7 @@ interface LandingPageProps {
   returningVisitor?: boolean
 }
 
-export function LandingPage({ onEnter, returningVisitor = false }: LandingPageProps) {
+export function LandingPage({ onEnter, returningVisitor: _returningVisitor = false }: LandingPageProps) {
   const reduceMotion = usePrefersReducedMotion()
   const [exiting, setExiting] = useState(false)
   const [scrollY, setScrollY] = useState(0)
@@ -1593,15 +1593,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         </p>
 
         <div className="lp-hero-cta" style={{ position: 'relative', zIndex: 1 }}>
-          {returningVisitor ? (
-            <button className="lp-btn-primary" onClick={() => handleEnter()}>Return to Reader</button>
-          ) : (
-            <>
-              <button className="lp-btn-primary" onClick={() => handleEnter('first-time')}>Start First Read</button>
-              <button className="lp-btn-ghost" onClick={() => handleEnter('skeptic')}>Start with Objections</button>
-              <button className="lp-btn-ghost" onClick={() => handleEnter()}>Browse Full Library</button>
-            </>
-          )}
+          <button className="lp-btn-primary" onClick={() => handleEnter('first-time')}>Start First Read</button>
+          <button className="lp-btn-ghost" onClick={() => handleEnter('skeptic')}>Start with Objections</button>
+          <button className="lp-btn-ghost" onClick={() => handleEnter()}>Browse Full Library</button>
         </div>
 
         <div className="lp-trust-block" aria-label="Project status boundaries">
