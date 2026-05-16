@@ -28,6 +28,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const [mobileIndex, setMobileIndex] = useState(0)
   const [swipeStartX, setSwipeStartX] = useState<number | null>(null)
   const [swipeStartY, setSwipeStartY] = useState<number | null>(null)
+  const [swipeDeltaX, setSwipeDeltaX] = useState(0)
 
   const goToMobileInstrument = (direction: -1 | 1) => {
     setMobileIndex((current) => (current + direction + COLS.length) % COLS.length)
@@ -49,6 +50,15 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
             const touch = event.touches[0]
             setSwipeStartX(touch.clientX)
             setSwipeStartY(touch.clientY)
+            setSwipeDeltaX(0)
+          }}
+          onTouchMove={(event) => {
+            if (swipeStartX === null || swipeStartY === null) return
+            const touch = event.touches[0]
+            const dx = touch.clientX - swipeStartX
+            const dy = touch.clientY - swipeStartY
+            if (Math.abs(dy) > Math.abs(dx) * 1.2) return
+            setSwipeDeltaX(Math.max(-90, Math.min(90, dx)))
           }}
           onTouchEnd={(event) => {
             if (swipeStartX === null || swipeStartY === null) return
@@ -57,8 +67,14 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
             const dy = touch.clientY - swipeStartY
             setSwipeStartX(null)
             setSwipeStartY(null)
+            setSwipeDeltaX(0)
             if (Math.abs(dx) < 42 || Math.abs(dx) < Math.abs(dy) * 1.2) return
             goToMobileInstrument(dx < 0 ? 1 : -1)
+          }}
+          onTouchCancel={() => {
+            setSwipeStartX(null)
+            setSwipeStartY(null)
+            setSwipeDeltaX(0)
           }}
         >
           <button
@@ -78,11 +94,11 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               <button
                 key={col.id}
                 type="button"
-                className="absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center transition-[transform,opacity,box-shadow] duration-300 ease-out"
+                className={`absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center ${swipeDeltaX === 0 ? 'transition-[transform,opacity,box-shadow] duration-300 ease-out' : ''}`}
                 style={{
-                  width: isCurrent ? '12.5rem' : '9.75rem',
-                  minHeight: isCurrent ? '10.75rem' : '9.25rem',
-                  transform: `translateX(calc(-50% + ${offset * 5.4}rem)) scale(${isCurrent ? 1 : 0.88})`,
+                  width: '12.5rem',
+                  minHeight: '10.75rem',
+                  transform: `translateX(calc(-50% + ${offset * 5.4}rem + ${swipeDeltaX}px)) scale(${isCurrent ? 1 : 0.88})`,
                   zIndex: 10 - Math.abs(offset),
                   opacity: isVisible ? (isCurrent ? 1 : 0.74) : 0,
                   pointerEvents: isVisible ? 'auto' : 'none',
