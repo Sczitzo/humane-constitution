@@ -132,7 +132,7 @@ Listed in priority order by blocking impact.
 
 3. **TSP formal assignment for Tier 0 token mechanism.** Human governance decision. Unblocks the second condition of the AZ2.1 pre-launch gate.
 
-4. **P1-E: AM3 interim initiating body.** Not implemented in this session. ANNEX_AM §AM3 specifies automatic constitutional review triggers but does not name the initiating body for the period before the CIP is constituted. This is a next-batch corpus fix.
+4. **P1-E: AM3 interim initiating body.** Implemented and verified — see P1-E Verification Addendum below.
 
 5. **HC §VIII constitutional reconciliation.** Formal amendment process for the demurrage safe harbor. Not blocking for enforcement (ANNEX_J governing clause controls), but creates ongoing formal inconsistency risk if ever challenged.
 
@@ -140,4 +140,64 @@ Listed in priority order by blocking impact.
 
 ---
 
-*This report is read-only analysis. No source corpus files were modified. No generated files were modified.*
+## P1-E Verification Addendum
+
+**Date:** 2026-05-15
+**Commit verified:** `3018ba9` — fix(governance): add AM3 interim initiation authority for pre-CIP period (P1-E)
+
+### Status: Verified
+
+### Source files checked
+
+- `docs/annexes/ANNEX_AM.md` — primary change location
+- `docs/annexes/ANNEX_AI.md` — Federated Ombuds authority basis
+- `architecture/amendment_protocol.md` — hard-lock integrity check
+
+### Evidence
+
+**1. Interim initiating actor named in §AM3.**
+
+ANNEX_AM §AM3 now contains the paragraph "Interim initiation authority (pre-CIP period)." It names the Federated Ombuds Plenum (Annex AI Section 3) acting by 4-of-5 affirmative vote as the body that initiates AM3 reviews before the CIP is constituted under AM8.7.
+
+**2. Selected actor is supported by existing corpus authority.**
+
+ANNEX_AI confirms three independent sources of authority for the Ombuds Plenum:
+- Protocol-level decisions require "Plenum vote under FC-091 — 4 of 5 affirmative required" (ANNEX_AI §3.2 header).
+- Tier 1 Amendment Integrity Reports are already a 4-of-5 Plenum matter (ANNEX_AI §3.2 item 1).
+- ANNEX_AM §AM8.4 (CIP member removal) already uses the same body and threshold for constitutional-body oversight.
+
+The Ombuds Plenum is the only body that: (a) exists before the CIP, (b) already holds analogous constitutional oversight authority, and (c) has an established supermajority threshold in existing text.
+
+**3. Interim actor initiates only; does not gain outcome-deciding power.**
+
+The paragraph states explicitly: "The Ombuds Plenum holds this initiation authority for the sole purpose of triggering AM3 reviews during the pre-CIP period; it does not acquire CIP ratification authority, removal authority, or any other CIP power." And: "This initiation authority does not include authority to decide the outcome of the review; findings authority follows existing corpus provisions for the applicable governance body."
+
+**4. Publication and audit artifact requirements present.**
+
+"The initiation must be published in the Article VII dashboard within 24 hours of the Plenum vote, including the triggering condition identified, the vote count, and the date the trigger condition was first detected." The dashboard publication is the mandatory audit artifact.
+
+**5. Handoff rule after CIP constitution present.**
+
+"Once the CIP is constituted under AM8.7, all AM3 initiation authority transfers to the CIP and this interim authority lapses automatically without further action." No affirmative transition action is required; lapse is automatic.
+
+**6. Hard-lock, 7-of-9, 180-day timelock, and drift-chain protections unchanged.**
+
+`architecture/amendment_protocol.md` confirms: FC-110 (`TIER1_AMENDMENT_SIGNATURES_MIN` = 7 of 9) and FC-111 (`TIER1_AMENDMENT_TIMELOCK_DAYS` = 180 days) are unchanged. Section 3.4 CIP concurrent ratification requirement is unchanged. Drift-chain publication requirement is unchanged. The P1-E paragraph touches only §AM3 initiation mechanics and has no effect on the amendment procedure.
+
+**7. No emergency or urgency bypass introduced.**
+
+"No urgency claim or emergency may waive the publication requirement or the 4-of-5 vote threshold." Explicit no-bypass language is present.
+
+### Remaining ambiguity
+
+**P2-D (AM3 timeline and consequence for inaction)** is out of scope for this fix and remains unimplemented. The remediation plan (line 283-286) specifies adding a 14-day trigger-to-review-start requirement, 60-day written-findings deadline, "review lapsed" dashboard entry, Ombuds escalation for lapsed reviews, and a 14-day dispute window. These are follow-on enforcement chain repairs that depend on P1-E being in place first. P1-E clears the initiation gap; P2-D would close the consequence-for-inaction gap.
+
+**Findings authority.** The paragraph delegates findings authority to "existing corpus provisions for the applicable governance body." This is correct for an initiation-only rule but means that during the pre-CIP period, the body that produces the review findings is not explicitly named in §AM3. The applicable governance bodies for the four trigger conditions (founding institution seats, Article VII publication, oracle count, dashboard cadence) are named in other annexes. This is not a new gap introduced by P1-E — it existed before — but it may warrant a follow-up annotation in P2-D.
+
+### Remaining action
+
+None for P1-E. The AM3 interim initiation gap is closed. P2-D (AM3 consequence for inaction) is the next related corpus fix and is independent of this item.
+
+---
+
+*This report is read-only analysis. No source corpus files were modified during the original verification. ANNEX_AM.md was modified in the P1-E implementation batch (commit 3018ba9) prior to this addendum. No source files were modified during this addendum.*
