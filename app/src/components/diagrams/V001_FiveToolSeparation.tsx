@@ -26,6 +26,8 @@ const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
   const [mobileIndex, setMobileIndex] = useState(0)
+  const [swipeStartX, setSwipeStartX] = useState<number | null>(null)
+  const [swipeStartY, setSwipeStartY] = useState<number | null>(null)
 
   const goToMobileInstrument = (direction: -1 | 1) => {
     setMobileIndex((current) => (current + direction + COLS.length) % COLS.length)
@@ -41,7 +43,24 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   return (
     <DiagramShell figId="V-001" title="Five-Instrument Constitutional Architecture" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
       <div className="sm:hidden">
-        <div className="relative h-60 overflow-hidden">
+        <div
+          className="relative h-60 overflow-hidden touch-pan-y"
+          onTouchStart={(event) => {
+            const touch = event.touches[0]
+            setSwipeStartX(touch.clientX)
+            setSwipeStartY(touch.clientY)
+          }}
+          onTouchEnd={(event) => {
+            if (swipeStartX === null || swipeStartY === null) return
+            const touch = event.changedTouches[0]
+            const dx = touch.clientX - swipeStartX
+            const dy = touch.clientY - swipeStartY
+            setSwipeStartX(null)
+            setSwipeStartY(null)
+            if (Math.abs(dx) < 42 || Math.abs(dx) < Math.abs(dy) * 1.2) return
+            goToMobileInstrument(dx < 0 ? 1 : -1)
+          }}
+        >
           <button
             type="button"
             className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#30363d] bg-[#0d1117]/90 font-mono text-lg text-[#c9d1d9]"
@@ -59,11 +78,11 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
               <button
                 key={col.id}
                 type="button"
-                className="absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center transition-all duration-300"
+                className="absolute left-1/2 top-4 rounded-xl border-2 px-4 py-5 text-center transition-[transform,opacity,box-shadow] duration-300 ease-out"
                 style={{
                   width: isCurrent ? '12.5rem' : '9.75rem',
                   minHeight: isCurrent ? '10.75rem' : '9.25rem',
-                  transform: `translateX(calc(-50% + ${offset * 5.4}rem)) translateY(${Math.abs(offset) * 0.65}rem) scale(${isCurrent ? 1 : 0.88})`,
+                  transform: `translateX(calc(-50% + ${offset * 5.4}rem)) scale(${isCurrent ? 1 : 0.88})`,
                   zIndex: 10 - Math.abs(offset),
                   opacity: isVisible ? (isCurrent ? 1 : 0.74) : 0,
                   pointerEvents: isVisible ? 'auto' : 'none',
