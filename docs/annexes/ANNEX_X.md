@@ -53,7 +53,7 @@ No single ministry, central bank analogue, private bank, donor-backed vehicle, o
 
 ### X5. Operating float, anti-evasion, and equivalence
 The constitutional operating-float exemption supersedes prior generic publication language.
-- **Households** receive a safe harbor equal to 6 months of median regional consumption expenditure.
+- **Households** receive a safe harbor equal to 18 months of median regional consumption expenditure.
 - **Enterprises** receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis.
 - **Any higher protected balance** requires project escrow, catastrophe reserve, lifecycle fund, or other protected-capital qualification under the published rules.
 - **Any asset or instrument** that functions as a non-decaying store of value above the household-safe-harbor threshold is subject to equivalence review for Flow-like carrying costs regardless of label, wrapper, or legal form.
