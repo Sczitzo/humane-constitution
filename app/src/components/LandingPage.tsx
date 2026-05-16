@@ -841,8 +841,8 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           margin: 0 0 18px;
           color: rgba(245,240,232,0.9);
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(28px, 3.8vw, 48px);
-          line-height: 1.12;
+          font-size: clamp(48px, 7.5vw, 108px);
+          line-height: 1.06;
           font-weight: 600;
           animation: lp-fade-up 0.8s ease 0.38s both;
         }
