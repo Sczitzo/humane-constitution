@@ -1,5 +1,5 @@
 // app/src/components/diagrams/V001_FiveToolSeparation.tsx
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'motion/react'
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
@@ -26,9 +26,8 @@ const colW = 108, gap = 40, startX = 10, colH = 124, cy = 28
 export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
   const [mobileIndex, setMobileIndex] = useState(0)
-  const [swipeStartX, setSwipeStartX] = useState<number | null>(null)
-  const [swipeStartY, setSwipeStartY] = useState<number | null>(null)
   const [swipeDeltaX, setSwipeDeltaX] = useState(0)
+  const dragRef = useRef({ startX: 0, startY: 0, active: false, moved: false })
 
   const goToMobileInstrument = (direction: -1 | 1) => {
     setMobileIndex((current) => (current + direction + COLS.length) % COLS.length)
@@ -46,34 +45,34 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
       <div className="sm:hidden">
         <div
           className="relative h-60 overflow-hidden touch-pan-y"
-          onTouchStart={(event) => {
-            const touch = event.touches[0]
-            setSwipeStartX(touch.clientX)
-            setSwipeStartY(touch.clientY)
+          onPointerDown={(event) => {
+            dragRef.current = { startX: event.clientX, startY: event.clientY, active: true, moved: false }
             setSwipeDeltaX(0)
+            event.currentTarget.setPointerCapture(event.pointerId)
           }}
-          onTouchMove={(event) => {
-            if (swipeStartX === null || swipeStartY === null) return
-            const touch = event.touches[0]
-            const dx = touch.clientX - swipeStartX
-            const dy = touch.clientY - swipeStartY
-            if (Math.abs(dy) > Math.abs(dx) * 1.2) return
+          onPointerMove={(event) => {
+            if (!dragRef.current.active) return
+            const dx = event.clientX - dragRef.current.startX
+            const dy = event.clientY - dragRef.current.startY
+            if (Math.abs(dy) > Math.abs(dx) * 1.2) {
+              setSwipeDeltaX(0)
+              return
+            }
+            if (Math.abs(dx) > 6) dragRef.current.moved = true
             setSwipeDeltaX(Math.max(-90, Math.min(90, dx)))
           }}
-          onTouchEnd={(event) => {
-            if (swipeStartX === null || swipeStartY === null) return
-            const touch = event.changedTouches[0]
-            const dx = touch.clientX - swipeStartX
-            const dy = touch.clientY - swipeStartY
-            setSwipeStartX(null)
-            setSwipeStartY(null)
+          onPointerUp={(event) => {
+            if (!dragRef.current.active) return
+            const dx = event.clientX - dragRef.current.startX
+            const dy = event.clientY - dragRef.current.startY
+            const moved = dragRef.current.moved
+            dragRef.current = { startX: 0, startY: 0, active: false, moved }
             setSwipeDeltaX(0)
             if (Math.abs(dx) < 42 || Math.abs(dx) < Math.abs(dy) * 1.2) return
             goToMobileInstrument(dx < 0 ? 1 : -1)
           }}
-          onTouchCancel={() => {
-            setSwipeStartX(null)
-            setSwipeStartY(null)
+          onPointerCancel={() => {
+            dragRef.current = { startX: 0, startY: 0, active: false, moved: false }
             setSwipeDeltaX(0)
           }}
         >
@@ -109,6 +108,10 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
                 aria-label={`${node.label}. ${node.definition}`}
                 aria-pressed={activeNodeId === col.id}
                 onClick={() => {
+                  if (dragRef.current.moved) {
+                    dragRef.current.moved = false
+                    return
+                  }
                   if (isCurrent) handleNodeClick(col.id)
                   else setMobileIndex(i)
                 }}
