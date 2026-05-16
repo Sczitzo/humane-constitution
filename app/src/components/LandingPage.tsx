@@ -149,7 +149,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     { trunkT: 0.29, endXFrac: 0.34, endYFrac: 0.32, above: true,  wobbleMult: 1.2 }, // Implementer
     { trunkT: 0.36, endXFrac: 0.42, endYFrac: 0.70, above: false, wobbleMult: 1.2 }, // Economics
     { trunkT: 0.43, endXFrac: 0.50, endYFrac: 0.26, above: true,  wobbleMult: 1.2 }, // Founding Order
-    { trunkT: 0.50, endXFrac: 0.57, endYFrac: 0.72, above: false, wobbleMult: 1.2 }, // Pilot Ready
+    { trunkT: 0.50, endXFrac: 0.57, endYFrac: 0.72, above: false, wobbleMult: 1.2 }, // Pilot Evidence Roadmap
     { trunkT: 0.57, endXFrac: 0.64, endYFrac: 0.34, above: true,  wobbleMult: 1.2 }, // Personhood
     { trunkT: 0.65, endXFrac: 0.70, endYFrac: 0.66, above: false, wobbleMult: 1.2 }, // Architecture
     { trunkT: 0.79, endXFrac: 0.78, endYFrac: 0.49, above: false, wobbleMult: 1.2 }, // Governance
@@ -585,7 +585,7 @@ const PATHS = [
   { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~35 min', color: '#4a1c40' },
   { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~30 min', color: '#5c3d00' },
   { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~25 min', color: '#1c3040' },
-  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Ready', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1a1a' },
+  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Evidence Roadmap', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1a1a' },
   { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~20 min', color: '#1a3040' },
   { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~25 min', color: '#2d1a4a' },
   { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d1a' },
@@ -818,8 +818,31 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           letter-spacing: 0.18em;
           text-transform: uppercase;
           color: #c9a84c;
-          margin-bottom: 40px;
+          margin-bottom: 22px;
           animation: lp-fade-up 0.8s ease 0.2s both;
+        }
+        .lp-status-strip {
+          display: inline-flex;
+          max-width: min(760px, 100%);
+          margin: 0 0 22px;
+          padding: 8px 14px;
+          border: 1px solid rgba(201,168,76,0.35);
+          border-radius: 999px;
+          background: rgba(12,11,9,0.52);
+          color: rgba(245,240,232,0.82);
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 11px;
+          line-height: 1.45;
+          letter-spacing: 0.04em;
+          animation: lp-fade-up 0.8s ease 0.3s both;
+        }
+        .lp-human-line {
+          margin: 0 0 18px;
+          color: rgba(245,240,232,0.9);
+          font-size: clamp(20px, 3vw, 30px);
+          line-height: 1.25;
+          font-weight: 600;
+          animation: lp-fade-up 0.8s ease 0.38s both;
         }
         .lp-headline {
           font-family: 'Cormorant Garamond', serif;
@@ -849,9 +872,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         .lp-subhead {
           font-size: 18px;
           line-height: 1.72;
-          color: rgba(245,240,232,0.5);
+          color: rgba(245,240,232,0.68);
           max-width: 540px;
-          margin: 0 0 56px;
+          margin: 0 0 34px;
           animation: lp-fade-up 0.9s ease 1.5s both;
         }
         .lp-hero-cta {
@@ -878,7 +901,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-btn-ghost {
           background: transparent;
-          color: rgba(245,240,232,0.6);
+          color: rgba(245,240,232,0.76);
           border: 1px solid rgba(245,240,232,0.18);
           padding: 16px 36px;
           font-family: 'Inter', sans-serif;
@@ -892,6 +915,61 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           color: rgba(245,240,232,0.95);
           background: rgba(245,240,232,0.05);
           transform: translateY(-2px);
+        }
+        .lp-trust-block {
+          position: relative;
+          z-index: 1;
+          width: min(780px, 100%);
+          margin-top: 28px;
+          padding: 18px 20px;
+          border: 1px solid rgba(245,240,232,0.12);
+          border-radius: 12px;
+          background: rgba(245,240,232,0.035);
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 18px;
+          text-align: left;
+          animation: lp-fade-up 0.9s ease 1.85s both;
+        }
+        .lp-trust-block strong {
+          display: block;
+          margin-bottom: 6px;
+          color: #f5f0e8;
+          font-size: 12px;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        .lp-trust-block span {
+          color: rgba(245,240,232,0.66);
+          font-size: 13px;
+          line-height: 1.55;
+        }
+        .lp-verify-links {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          gap: 18px;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 18px;
+          color: rgba(245,240,232,0.62);
+          font-size: 13px;
+          animation: lp-fade-up 0.9s ease 1.95s both;
+        }
+        .lp-verify-links a,
+        .lp-verify-links button {
+          color: inherit;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          text-decoration: underline;
+          text-decoration-color: rgba(201,168,76,0.45);
+          text-underline-offset: 4px;
+        }
+        .lp-verify-links a:hover,
+        .lp-verify-links button:hover {
+          color: rgba(245,240,232,0.9);
         }
         .lp-scroll-hint {
           position: absolute;
@@ -1136,7 +1214,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           font-size: 10px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: rgba(245,240,232,0.2);
+          color: rgba(245,240,232,0.48);
           text-align: center;
         }
 
@@ -1166,7 +1244,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-paths-sub {
           font-size: 15px;
-          color: rgba(245,240,232,0.38);
+          color: rgba(245,240,232,0.58);
           margin: 0 0 48px;
           line-height: 1.6;
           padding: 0 48px;
@@ -1221,7 +1299,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         }
         .lp-path-button-desc {
           margin: 0;
-          color: rgba(245,240,232,0.48);
+          color: rgba(245,240,232,0.62);
           font-size: 12.5px;
           line-height: 1.55;
         }
@@ -1309,12 +1387,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         .lp-skip button {
           background: none; border: none;
           font-size: 13px;
-          color: rgba(245,240,232,0.25);
+          color: rgba(245,240,232,0.5);
           cursor: pointer;
           letter-spacing: 0.02em;
           transition: color 0.2s;
         }
-        .lp-skip button:hover { color: rgba(245,240,232,0.5); }
+        .lp-skip button:hover { color: rgba(245,240,232,0.72); }
 
         /* ─── Reveal system ─── */
         .lp-reveal {
@@ -1387,6 +1465,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-subhead { margin-bottom: 36px; }
           .lp-hero-cta { flex-direction: column; width: 100%; }
           .lp-btn-primary, .lp-btn-ghost { width: 100%; padding: 15px 24px; }
+          .lp-status-strip { border-radius: 12px; }
+          .lp-trust-block { grid-template-columns: 1fr; }
+          .lp-verify-links { flex-direction: column; align-items: center; gap: 12px; }
           .lp-threats-section { padding: 72px 24px; }
           .lp-threats-list { gap: 4px; margin-top: 40px; }
           .lp-threat-body-content { grid-template-columns: 1fr; gap: 16px; padding: 0 20px 24px 20px; }
@@ -1447,7 +1528,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         <span className="lp-nav-logo" aria-hidden="true"><Logo size={20} color="rgba(245,240,232,0.5)" /></span>
         <span className="lp-nav-sep" aria-hidden="true" />
         <button className="lp-nav-ghost" onClick={scrollToPaths}>Reading Paths</button>
-        <button className="lp-nav-btn" onClick={() => handleEnter()}>Open Reader</button>
+        <button className="lp-nav-btn" onClick={() => handleEnter()}>Browse Library</button>
       </nav>
 
       {/* ── HERO ── */}
@@ -1478,6 +1559,12 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         </div>
 
         <p className="lp-eyebrow" style={{ position: 'relative', zIndex: 1 }}>Open Constitutional Design</p>
+        <p className="lp-status-strip" style={{ position: 'relative', zIndex: 1 }}>
+          Public working draft · Reader prototype · Not active governance · No pilot evidence yet
+        </p>
+        <p className="lp-human-line" style={{ position: 'relative', zIndex: 1 }}>
+          What if basic needs could never be used as leverage?
+        </p>
 
         <h1 className="lp-headline" style={{
           transform: `translateY(${heroParallax * -0.08}px)`,
@@ -1500,13 +1587,38 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
 
         <div className="lp-hero-cta" style={{ position: 'relative', zIndex: 1 }}>
           {returningVisitor ? (
-            <button className="lp-btn-primary" onClick={() => handleEnter()}>← Back to Reader</button>
+            <button className="lp-btn-primary" onClick={() => handleEnter()}>Return to Reader</button>
           ) : (
             <>
-              <button className="lp-btn-primary" onClick={scrollToPaths}>Choose a Reading Path</button>
-              <button className="lp-btn-ghost" onClick={() => handleEnter()}>Open Full Reader</button>
+              <button className="lp-btn-primary" onClick={() => handleEnter('first-time')}>Start First Read</button>
+              <button className="lp-btn-ghost" onClick={() => handleEnter('skeptic')}>Start with Objections</button>
+              <button className="lp-btn-ghost" onClick={() => handleEnter()}>Browse Full Library</button>
             </>
           )}
+        </div>
+
+        <div className="lp-trust-block" aria-label="Project status boundaries">
+          <div>
+            <strong>What this is</strong>
+            <span>A public working draft and reader prototype for review.</span>
+          </div>
+          <div>
+            <strong>What this is not</strong>
+            <span>Not active governance, not a deployed system, and not pilot-proven.</span>
+          </div>
+          <div>
+            <strong>What is still required</strong>
+            <span>Pilot evidence and governance actions before any real-world claim.</span>
+          </div>
+        </div>
+
+        <div className="lp-verify-links" aria-label="Verify the project">
+          <a href="https://github.com/Sczitzo/humane-constitution" target="_blank" rel="noreferrer">
+            Source on GitHub
+          </a>
+          <button type="button" onClick={() => handleEnter('skeptic')}>
+            Review evidence path
+          </button>
         </div>
 
         <div className="lp-scroll-hint" aria-hidden="true">

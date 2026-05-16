@@ -5,8 +5,8 @@ test.describe('landing flow', () => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/')
 
-    await expect(page.getByRole('button', { name: 'Open Full Reader' })).toBeVisible()
-    await page.getByRole('button', { name: 'Open Full Reader' }).click()
+    await expect(page.getByRole('button', { name: 'Browse Full Library' })).toBeVisible()
+    await page.getByRole('button', { name: 'Browse Full Library' }).click()
 
     await expect(page.getByTestId('reader-main')).toBeVisible()
     await page.reload()
@@ -17,8 +17,7 @@ test.describe('landing flow', () => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/')
 
-    await page.getByRole('button', { name: 'Choose a Reading Path' }).click()
-    await page.getByRole('button', { name: /The Skeptic/ }).click()
+    await page.getByRole('button', { name: 'Start with Objections' }).click()
 
     await expect(page.getByTestId('reader-title')).toHaveText('Public Readiness Guide')
     await expect(page.getByText("The Skeptic's Path", { exact: true }).first()).toBeVisible()
