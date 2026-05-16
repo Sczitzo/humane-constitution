@@ -30,9 +30,24 @@ function cubicBezierPoint(t: number, p0: number, p1: number, p2: number, p3: num
   return mt**3*p0 + 3*mt**2*t*p1 + 3*mt*t**2*p2 + t**3*p3
 }
 
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(false)
+
+  useEffect(() => {
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setReduced(query.matches)
+    update()
+    query.addEventListener('change', update)
+    return () => query.removeEventListener('change', update)
+  }, [])
+
+  return reduced
+}
+
 function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: string) => void }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const svgRef = useRef<SVGSVGElement>(null)
+  const reduceMotion = usePrefersReducedMotion()
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null)
   const [cardPos, setCardPos] = useState<{ x: number; y: number } | null>(null)
   const [dims, setDims] = useState({ w: 1200, h: 560 })
@@ -56,6 +71,11 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
 
   // ─── Pulse animation (RAF) ────────────────────────────────────────────────────
   useEffect(() => {
+    if (reduceMotion) {
+      setPulseT(0.35)
+      return
+    }
+
     const PERIOD = 3200 // ms for one full trunk pass
     let last = performance.now()
     const tick = (now: number) => {
@@ -67,7 +87,7 @@ function TimelinePanel({ paths, onSelect }: { paths: PathDef[]; onSelect: (id: s
     }
     rafRef.current = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(rafRef.current)
-  }, [])
+  }, [reduceMotion])
 
   const { w, h } = dims
   const CY = h * 0.5
@@ -320,6 +340,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
         viewBox={`0 0 ${w} ${h}`}
         preserveAspectRatio="none"
         style={{ overflow: 'visible' }}
+        aria-hidden="true"
       >
         <defs>
           <filter id="tva-glow" x="-50%" y="-50%" width="200%" height="200%">
@@ -505,7 +526,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
           )
         })}
         {/* Traveling pulse dot */}
-        {(() => {
+        {!reduceMotion && (() => {
           const pos = getPulsePos()
           return (
             <g style={{ pointerEvents: 'none' }}>
@@ -586,6 +607,7 @@ interface LandingPageProps {
 }
 
 export function LandingPage({ onEnter, returningVisitor = false }: LandingPageProps) {
+  const reduceMotion = usePrefersReducedMotion()
   const [exiting, setExiting] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const [, setScrollProgress] = useState(0)
@@ -619,13 +641,19 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
 
   // Mouse parallax on hero
   useEffect(() => {
+    if (reduceMotion) {
+      setMouseX(0)
+      setMouseY(0)
+      return
+    }
+
     const onMove = (e: MouseEvent) => {
       setMouseX((e.clientX / window.innerWidth - 0.5) * 2)
       setMouseY((e.clientY / window.innerHeight - 0.5) * 2)
     }
     window.addEventListener('mousemove', onMove, { passive: true })
     return () => window.removeEventListener('mousemove', onMove)
-  }, [])
+  }, [reduceMotion])
 
   // Intersection-based reveal
   useEffect(() => {
@@ -662,8 +690,15 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
     setTimeout(() => onEnter(pathId), 600)
   }, [onEnter])
 
-  const heroParallax = Math.min(scrollY * 0.35, window.innerHeight * 0.5)
-  const heroOpacity = Math.max(0, 1 - scrollY / (window.innerHeight * 0.65))
+  const scrollToPaths = useCallback(() => {
+    document.getElementById('lp-paths-anchor')?.scrollIntoView({
+      behavior: reduceMotion ? 'auto' : 'smooth',
+    })
+  }, [reduceMotion])
+
+  const heroParallax = reduceMotion ? 0 : Math.min(scrollY * 0.35, window.innerHeight * 0.5)
+  const heroOpacity = reduceMotion ? 1 : Math.max(0, 1 - scrollY / (window.innerHeight * 0.65))
+  const marqueeOpacity = reduceMotion ? 1 : Math.max(0, 1 - scrollY / (window.innerHeight * 0.5))
 
   return (
     <div
@@ -945,7 +980,6 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           border: 1px solid rgba(245,240,232,0.09);
           border-radius: 12px;
           overflow: hidden;
-          cursor: pointer;
           background: rgba(245,240,232,0.02);
           transition: background 0.2s;
         }
@@ -957,11 +991,24 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           border-color: rgba(201,168,76,0.35);
           background: rgba(201,168,76,0.04);
         }
-        .lp-threat-header {
+        .lp-threat-heading {
+          margin: 0;
+        }
+        .lp-threat-trigger {
           display: flex;
           align-items: center;
           gap: 20px;
+          width: 100%;
           padding: 20px 26px;
+          border: none;
+          background: transparent;
+          color: inherit;
+          text-align: left;
+          cursor: pointer;
+        }
+        .lp-threat-trigger:focus-visible {
+          outline: 2px solid rgba(201,168,76,0.7);
+          outline-offset: -4px;
         }
         .lp-threat-num {
           font-size: 11px;
@@ -999,6 +1046,9 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           display: grid;
           grid-template-rows: 0fr;
           transition: grid-template-rows 0.3s ease;
+        }
+        .lp-threat-body[hidden] {
+          display: none;
         }
         .lp-threat-card.lp-threat-open .lp-threat-body {
           grid-template-rows: 1fr;
@@ -1120,6 +1170,60 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           margin: 0 0 48px;
           line-height: 1.6;
           padding: 0 48px;
+        }
+        .lp-path-list {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
+          max-width: 1100px;
+          margin: 28px auto 0;
+          padding: 0 48px;
+        }
+        .lp-path-button {
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+          min-height: 136px;
+          border: 1px solid rgba(245,240,232,0.09);
+          border-radius: 10px;
+          background: rgba(245,240,232,0.025);
+          color: #f5f0e8;
+          padding: 18px;
+          text-align: left;
+          cursor: pointer;
+          transition: border-color 0.2s, background 0.2s, transform 0.15s;
+        }
+        .lp-path-button:hover {
+          border-color: rgba(201,168,76,0.35);
+          background: rgba(201,168,76,0.055);
+          transform: translateY(-2px);
+        }
+        .lp-path-button:focus-visible {
+          outline: 2px solid rgba(201,168,76,0.7);
+          outline-offset: 3px;
+        }
+        .lp-path-button-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+        .lp-path-button-title {
+          font-size: 15px;
+          font-weight: 700;
+        }
+        .lp-path-button-time {
+          color: rgba(201,168,76,0.62);
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 10px;
+          letter-spacing: 0.06em;
+          white-space: nowrap;
+        }
+        .lp-path-button-desc {
+          margin: 0;
+          color: rgba(245,240,232,0.48);
+          font-size: 12.5px;
+          line-height: 1.55;
         }
 
         /* ── TVA Timeline panel ── */
@@ -1295,29 +1399,54 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
           .lp-section-head { margin-bottom: 32px; }
           .lp-paths-section { padding: 72px 0 100px; }
           .lp-paths-eyebrow, .lp-paths-head, .lp-paths-sub, .lp-skip { padding-left: 20px; padding-right: 20px; }
-          .lp-paths-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-          .lp-path-card { padding: 18px 14px 16px; }
+          .lp-paths-sub { margin-bottom: 28px; }
+          .lp-timeline-wrap { height: 300px; pointer-events: none; opacity: 0.72; }
+          .lp-path-list { grid-template-columns: 1fr; padding: 0 20px; margin-top: 22px; }
+          .lp-path-button { min-height: 0; padding: 16px; }
           .lp-nav { display: none; }
         }
-        @media (max-width: 400px) {
-          .lp-paths-grid { grid-template-columns: 1fr; }
+        @media (min-width: 641px) and (max-width: 960px) {
+          .lp-path-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
         @media (max-width: 900px) {
           .lp-instrument { grid-template-columns: 48px 1fr; }
           .lp-instrument-desc { display: none; }
         }
+        @media (prefers-reduced-motion: reduce) {
+          .lp-root,
+          .lp-root *,
+          .lp-root *::before,
+          .lp-root *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+          }
+          .lp-grain,
+          .lp-marquee-track,
+          .lp-scroll-arrow,
+          .tva-node-pulse,
+          .tva-node-ring {
+            animation: none !important;
+          }
+          .lp-reveal,
+          .lp-reveal-left,
+          .lp-word {
+            opacity: 1 !important;
+            transform: none !important;
+            transition-delay: 0s !important;
+          }
+        }
       `}</style>
 
       {/* Grain */}
-      <div className="lp-grain" />
+      <div className="lp-grain" aria-hidden="true" />
 
       {/* Floating nav */}
       <nav className={`lp-nav${navVisible ? ' lp-nav-visible' : ''}`}>
-        <span className="lp-nav-logo"><Logo size={20} color="rgba(245,240,232,0.5)" /></span>
-        <span className="lp-nav-sep" />
-        <button className="lp-nav-ghost" onClick={() => {
-          document.getElementById('lp-paths-anchor')?.scrollIntoView({ behavior: 'smooth' })
-        }}>Reading Paths</button>
+        <span className="lp-nav-logo" aria-hidden="true"><Logo size={20} color="rgba(245,240,232,0.5)" /></span>
+        <span className="lp-nav-sep" aria-hidden="true" />
+        <button className="lp-nav-ghost" onClick={scrollToPaths}>Reading Paths</button>
         <button className="lp-nav-btn" onClick={() => handleEnter()}>Open Reader</button>
       </nav>
 
@@ -1328,13 +1457,13 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         style={{ opacity: heroOpacity }}
       >
         {/* Parallax orbs */}
-        <div className="lp-hero-orb lp-hero-orb-1" style={{
+        <div className="lp-hero-orb lp-hero-orb-1" aria-hidden="true" style={{
           transform: `translate(${mouseX * 18}px, ${mouseY * 18 + heroParallax * 0.15}px)`,
         }} />
-        <div className="lp-hero-orb lp-hero-orb-2" style={{
+        <div className="lp-hero-orb lp-hero-orb-2" aria-hidden="true" style={{
           transform: `translate(${mouseX * -12}px, ${mouseY * -12 + heroParallax * 0.08}px)`,
         }} />
-        <div className="lp-hero-orb lp-hero-orb-3" style={{
+        <div className="lp-hero-orb lp-hero-orb-3" aria-hidden="true" style={{
           transform: `translate(${mouseX * 8}px, ${mouseY * 8}px)`,
         }} />
 
@@ -1374,27 +1503,25 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             <button className="lp-btn-primary" onClick={() => handleEnter()}>← Back to Reader</button>
           ) : (
             <>
-              <button className="lp-btn-primary" onClick={() => {
-                document.getElementById('lp-paths-anchor')?.scrollIntoView({ behavior: 'smooth' })
-              }}>Choose a Reading Path</button>
+              <button className="lp-btn-primary" onClick={scrollToPaths}>Choose a Reading Path</button>
               <button className="lp-btn-ghost" onClick={() => handleEnter()}>Open Full Reader</button>
             </>
           )}
         </div>
 
-        <div className="lp-scroll-hint">
+        <div className="lp-scroll-hint" aria-hidden="true">
           <span>Scroll</span>
           <div className="lp-scroll-arrow" />
         </div>
       </section>
 
       {/* ── MARQUEE ── */}
-      <div className="lp-marquee-wrap" style={{ opacity: Math.max(0, 1 - scrollY / (window.innerHeight * 0.5)) }}>
+      <div className="lp-marquee-wrap" style={{ opacity: marqueeOpacity }} aria-hidden="true">
         <div className="lp-marquee-track">
           {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
             <span key={i} className="lp-marquee-item">
               {item}
-              <span className="lp-marquee-dot" />
+              <span className="lp-marquee-dot" aria-hidden="true" />
             </span>
           ))}
         </div>
@@ -1452,19 +1579,35 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
             },
           ].map((item, i) => {
             const isOpen = openThreatIdx === i
+            const panelId = `lp-threat-panel-${item.num}`
+            const buttonId = `lp-threat-trigger-${item.num}`
             return (
               <div
                 key={i}
                 data-threat-idx={i}
                 className={`lp-threat-card lp-reveal lp-d${(i % 3) + 1}${revealedThreatCards.has(i) ? ' lp-visible' : ''}${isOpen ? ' lp-threat-open' : ''}`}
-                onClick={() => setOpenThreatIdx(isOpen ? null : i)}
               >
-                <div className="lp-threat-header">
-                  <span className="lp-threat-num">{item.num}</span>
-                  <span className="lp-threat-headline">{item.headline}</span>
-                  <span className="lp-threat-chevron">{isOpen ? '▴' : '▾'}</span>
-                </div>
-                <div className="lp-threat-body">
+                <h3 className="lp-threat-heading">
+                  <button
+                    id={buttonId}
+                    type="button"
+                    className="lp-threat-trigger"
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => setOpenThreatIdx(isOpen ? null : i)}
+                  >
+                    <span className="lp-threat-num">{item.num}</span>
+                    <span className="lp-threat-headline">{item.headline}</span>
+                    <span className="lp-threat-chevron" aria-hidden="true">{isOpen ? '▴' : '▾'}</span>
+                  </button>
+                </h3>
+                <div
+                  id={panelId}
+                  className="lp-threat-body"
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
+                >
                   <div className="lp-threat-body-inner">
                     <div className="lp-threat-body-content">
                       <div>
@@ -1495,7 +1638,7 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
         <div className="lp-reveal lp-diagram-wrap">
           <V001_FiveToolSeparation onInternalLink={() => {}} />
         </div>
-        <p className="lp-diagram-hint">Click any instrument to explore its definition</p>
+        <p className="lp-diagram-hint">Click any instrument to expand its definition</p>
       </div>
 
       {/* ── TRANSITION + PATHS ── */}
@@ -1504,8 +1647,26 @@ export function LandingPage({ onEnter, returningVisitor = false }: LandingPagePr
       <div className="lp-reveal lp-paths-section">
         <p className="lp-paths-eyebrow">Reading Paths</p>
         <h2 className="lp-paths-head">Choose your path.</h2>
-        <p className="lp-paths-sub">Nine entry points into the corpus. Hover a branch to preview — click to begin.</p>
+        <p className="lp-paths-sub">Nine entry points into the corpus. Preview a branch or choose a path to begin.</p>
         <TimelinePanel paths={PATHS} onSelect={handleEnter} />
+        <div className="lp-path-list" role="list" aria-label="Reading path choices">
+          {PATHS.map((path) => (
+            <div key={path.id} role="listitem">
+              <button
+                type="button"
+                className="lp-path-button"
+                onClick={() => handleEnter(path.id)}
+                aria-label={`The ${path.title} path, ${path.time}. ${path.desc}`}
+              >
+                <span className="lp-path-button-top">
+                  <span className="lp-path-button-title">{path.title}</span>
+                  <span className="lp-path-button-time">{path.time}</span>
+                </span>
+                <span className="lp-path-button-desc">{path.desc}</span>
+              </button>
+            </div>
+          ))}
+        </div>
         <div className="lp-skip">
           <button onClick={() => handleEnter()}>
             Skip — open the full reader without a path
