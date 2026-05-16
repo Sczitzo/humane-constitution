@@ -1128,7 +1128,7 @@ function ReaderPanel({
           <span>{doc.wordCount.toLocaleString()} words</span>
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5">
+        <div className="reader-doc-toolbar mt-4 flex flex-wrap items-center gap-2 sm:mt-5">
           <ActionButton
             label={pinned ? 'Unpin' : 'Pin'}
             onClick={onTogglePinned}
