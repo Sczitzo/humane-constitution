@@ -69,7 +69,7 @@ Source: ANNEX_AI Section 2.1 requires "a 2/3 vote of the CRP" to confirm each su
 
 - CRP composition: 11 members; 4 jurists (lot-drawn from qualified regional appellate pools), 3 systems reviewers (lot from certified pools), 2 ombuds/public-interest advocates (lot from independent advocacy pool), 2 civic auditors (sortition). (ANNEX_L Section L2)
 - CRP constitution mechanism: sortition from screened eligibility pools; staggered non-renewable terms; conflict screening required. (ANNEX_L Section L2; ANNEX_S Section S)
-- If the CRP is not yet constituted: OWNER DECISION REQUIRED -- the founding team must resolve this bootstrap dependency before sub-Ombuds appointment can proceed.
+- If the CRP is not yet constituted: the founding authority has adopted the provisional CRP mechanism as the bootstrap path. See docs/governance/OQ_CRP_1_Adopted_Interpretation.md (Option A adopted: provisional CRP under ANNEX_N and ANNEX_U Section U2 may confirm sub-Ombuds Commissioners during the founding period, for that limited purpose only). Execution requires completing the draw and certification process per docs/governance/Provisional_CRP_Draw_and_Roster_Certification_Packet.md and satisfying all ANNEX_U Section U2 pre-effect conditions before any confirmation vote may proceed. Process parameters are recorded in docs/governance/Provisional_CRP_Owner_Decision_Record.md.
 
 **Precondition 2: Five appointing bodies have been designated, one per institutional-origin class.**
 

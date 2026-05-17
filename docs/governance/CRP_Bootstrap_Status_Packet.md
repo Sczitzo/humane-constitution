@@ -167,7 +167,9 @@ This is the central interpretive question for the bootstrap path. The corpus doe
 
 ## 8. Options for Resolution
 
-These options are presented for owner decision. This packet does not implement any option.
+**Resolution status as of 2026-05-16:** Option D has been executed (see docs/governance/OQ_CRP_1_Adopted_Interpretation.md). The founding authority adopted Option B (provisional CRP mechanism) as the bootstrap path. Option A (locate existing record) was not applicable -- no record was found. Option C (wait for full P-014 completion) was assessed and rejected as timeline risk is unacceptable. The owner decision record for the provisional CRP draw and process parameters is at docs/governance/Provisional_CRP_Owner_Decision_Record.md.
+
+These options are presented as historical record of the analysis. The decision has been made.
 
 ### Option A -- Locate Existing Record
 
@@ -203,13 +205,14 @@ This option is not mutually exclusive with B or C -- it is the required predicat
 
 ## 9. Recommended Next Action
 
-**Step 1 (required before any other step):** Owner decision per Option D. The founding team must rule on whether ANNEX_AI Section 2.1 "CRP" includes the ANNEX_N provisional CRP. This is a founding interpretation that must be documented, not inferred.
+**Status as of 2026-05-16: Step 1 is complete.** The founding authority has issued the interpretation ruling (Option D) and adopted Option B. The required founding record is at docs/governance/OQ_CRP_1_Adopted_Interpretation.md. The Federated_Ombuds_Constitution_Packet.md Precondition 1 has been updated to cross-reference the adopted interpretation.
 
-**If ruling = provisional CRP is in scope:** Proceed with Option B. Create a CRP constitution packet specifically for the provisional CRP. Seat provisional CRP members via the ANNEX_N mixed-lot process. Then proceed to Ombuds appointment using Federated_Ombuds_Constitution_Packet.md.
+**Remaining steps:**
 
-**If ruling = provisional CRP is out of scope:** Option C is the only clean path. Document the expected timeline for full P-014 completion and full CRP sortition. Assess whether INV-LAUNCH-1 clearance timeline is acceptable.
-
-In either case: document the ruling in a named founding record and cross-reference it in the Federated_Ombuds_Constitution_Packet.md OQ-1 field.
+1. Complete docs/governance/Provisional_CRP_Human_Input_Form.md with real data (eligibility pool, observer panel, seed source, sponsor list, written reasons, minority views).
+2. Execute the draw and certification process per docs/governance/Provisional_CRP_Draw_and_Roster_Certification_Packet.md.
+3. Satisfy all ANNEX_U Section U2 pre-effect conditions before any provisional CRP confirmation vote may proceed.
+4. Proceed to sub-Ombuds confirmation per docs/governance/Federated_Ombuds_Constitution_Packet.md.
 
 ---
 
@@ -246,7 +249,7 @@ TEMPLATE -- NOT ADOPTED
 
 | ID | Question | Source | Status |
 |---|---|---|---|
-| OQ-CRP-1 | Does ANNEX_AI Section 2.1 "CRP" include the provisional CRP defined in ANNEX_N? | ANNEX_AI.md Section 2.1; ANNEX_N.md | Owner decision required |
+| OQ-CRP-1 | Does ANNEX_AI Section 2.1 "CRP" include the provisional CRP defined in ANNEX_N? | ANNEX_AI.md Section 2.1; ANNEX_N.md | RESOLVED -- Option A adopted. See docs/governance/OQ_CRP_1_Adopted_Interpretation.md |
 | OQ-CRP-2 | Who administers the initial mixed-lot draw for the provisional CRP? | ANNEX_N.md | Not specified in source; founding team presumed |
 | OQ-CRP-3 | What are the eligibility pool definitions for the full ANNEX_L sortition? | ANNEX_L.md Section L2 | Not published in accessible corpus |
 | OQ-CRP-4 | Where is the founding interpretation record published before the Article VII dashboard is operational? | None found | Gap; provisional location needed |

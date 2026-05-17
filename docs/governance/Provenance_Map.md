@@ -243,6 +243,17 @@ These patches are part of the active constitutional architecture but are not one
 - 🔩 **Patch:** [P-025 — Federated Ombuds Constitution](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AI.md](../annexes/ANNEX_AI.md) — *Annex AI replaces the single-Ombuds model with a five-node Federated Ombuds structure and 4-of-5 protocol-level threshold.*
 
+**Bootstrap governance packets for P-025 constitution chain (all packets are templates/process docs only -- no governance actions have occurred):**
+
+- [CRP Bootstrap Status Packet](CRP_Bootstrap_Status_Packet.md) -- CRP constitution status analysis; OQ-CRP-1 identified and resolved
+- [OQ-CRP-1 Adopted Interpretation](OQ_CRP_1_Adopted_Interpretation.md) -- Founding authority ruling: provisional CRP may confirm sub-Ombuds during bootstrap period (limited scope only)
+- [OQ-CRP-1 Interpretation Ruling (background)](OQ_CRP_1_Provisional_CRP_Interpretation_Ruling.md) -- Draft analysis retained as background record; not adopted
+- [Provisional CRP Constitution Packet](Provisional_CRP_Constitution_Packet.md) -- Operational process template for constituting the provisional CRP via mixed-lot draw
+- [Provisional CRP Owner Decision Record](Provisional_CRP_Owner_Decision_Record.md) -- Process parameters OQ-PCRP-1 through OQ-PCRP-10 (5 seats; 14-day challenge window; 4-of-5 confirmation threshold; etc.)
+- [Provisional CRP Draw and Roster Certification Packet](Provisional_CRP_Draw_and_Roster_Certification_Packet.md) -- Step-by-step execution packet for the draw, challenge window, and roster certification
+- [Provisional CRP Human Input Form](Provisional_CRP_Human_Input_Form.md) -- Blank data-collection form; must be completed with real data before draw can run
+- [Federated Ombuds Constitution Packet](Federated_Ombuds_Constitution_Packet.md) -- Full operational checklist for constituting the Federated Ombuds once the provisional CRP is seated
+
 ### P-027 — Founding Order and Seven-Article Structural Consolidation
 
 > *This patch reduces fragmentation by consolidating rights, execution, markets, civic instruments, and transparency into one constitutional architecture.*

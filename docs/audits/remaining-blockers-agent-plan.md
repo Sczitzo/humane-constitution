@@ -75,11 +75,15 @@ These items require founding team decisions and operational execution. No implem
 
 **Source:** P0-C, ANNEX_AI Section 2.1
 **Corpus basis:** ANNEX_AI Section 2.1 states: "protocol is not operative and the Federated Ombuds Plenum may not exercise any FC-091 protocol-level authority until at least four of five sub-Ombuds have been appointed, challenged, and seated." ANNEX_AI status is ACTIVE.
+
+**Bootstrap path adopted (2026-05-16):** The CRP bootstrap chain has been resolved. The founding authority adopted Option A (provisional CRP as bootstrap mechanism) per docs/governance/OQ_CRP_1_Adopted_Interpretation.md. Process parameters are recorded in docs/governance/Provisional_CRP_Owner_Decision_Record.md. The full execution chain -- eligibility pool, observer panel, seed/draw, challenge window, and roster certification -- is templated in docs/governance/Provisional_CRP_Draw_and_Roster_Certification_Packet.md. The human input form at docs/governance/Provisional_CRP_Human_Input_Form.md must be completed with real data before the draw can run. All ANNEX_U Section U2 pre-effect conditions must be satisfied before any confirmation vote takes effect.
+
 **What the founding team must do:**
-1. Identify candidates for at least 4 of 5 sub-Ombuds seats from structurally independent bodies (per ANNEX_AI Section 1.1 independence requirements).
-2. Publish each appointment publicly with the appointing body and basis for independence.
-3. Run the prescribed challenge period for each seat.
-4. Confirm seating of at least 4 sub-Ombuds on the public record.
+1. Complete the Provisional CRP Human Input Form with real eligibility pool, observer panel, seed source, sponsor list, and written reasons.
+2. Execute the provisional CRP draw and certification process per the Draw and Roster Certification Packet.
+3. Satisfy all ANNEX_U Section U2 pre-effect publication conditions and close the 14-day challenge window.
+4. Once the provisional CRP is certified, run sub-Ombuds confirmation votes per docs/governance/Federated_Ombuds_Constitution_Packet.md.
+5. Confirm seating of at least 4 sub-Ombuds on the public record.
 
 **What this unblocks:**
 - FC-YT1/FC-YT2 Ombuds review (A2)

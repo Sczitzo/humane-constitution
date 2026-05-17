@@ -50,7 +50,7 @@ For the Federated Ombuds to be operative on day one:
 
 1. **At least four of five Sub-Ombuds Commissioners have been:**
    - Nominated by the appointing body assigned to their sub-node's institutional-origin class (ANNEX_AI §1.2)
-   - Confirmed by a 2/3 vote of the Constitutional Review Panel (CRP)
+   - Confirmed by a 2/3 vote of the Constitutional Review Panel (CRP). During the founding/bootstrap period, the provisional CRP under ANNEX_N and ANNEX_U Section U2 is the authorized mechanism for this confirmation role, per the adopted interpretation at docs/governance/OQ_CRP_1_Adopted_Interpretation.md. Execution requires completing the provisional CRP draw and certification process per docs/governance/Provisional_CRP_Draw_and_Roster_Certification_Packet.md and satisfying all ANNEX_U Section U2 pre-effect conditions before any vote may proceed.
    - Subjected to a full 60-day public challenge period (running and closed without disqualifying outcome)
    - Seated — holding office and able to act
 
