@@ -11,7 +11,7 @@ export function ChatBubble({ corpus, onNavigateToDoc }: ChatBubbleProps) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-5 right-5 z-30 flex flex-col items-end gap-3">
       {/* Panel — always mounted so chat history persists, visibility toggled via CSS */}
       <div
         className={[
