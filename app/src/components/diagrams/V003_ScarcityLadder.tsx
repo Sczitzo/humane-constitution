@@ -30,6 +30,7 @@ const RUNG_X = 70, RUNG_W = 530
 export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
   const [level, setLevel] = useState(0) // 0=normal … 4=emergency (auto-cycles)
+  const displayedRungs = [...RUNGS].reverse()
 
   useEffect(() => {
     const t = setInterval(() => setLevel(l => (l + 1) % 5), 2200)
@@ -42,7 +43,7 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
 
   return (
     <DiagramShell figId="V-003" title="Scarcity Escalation Ladder" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 660 290" className="w-full" style={{ height: 290 }}>
+      <svg viewBox="0 0 660 330" className="w-full" style={{ height: 330 }}>
 
         {/* Thermometer tube background */}
         <rect x={TUBE_X} y={tubeY} width={TUBE_W} height={totalH} rx={11} fill="#0d1117" stroke={THEME.border} strokeWidth={1.5} />
@@ -62,9 +63,9 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
           return <line key={i} x1={TUBE_X - 4} y1={tickY} x2={TUBE_X} y2={tickY} stroke={THEME.border} strokeWidth={1} />
         })}
 
-        {/* Rungs (right side) — stacked bottom to top */}
-        {RUNGS.map((r, i) => {
-          const rungIndex = RUNGS.length - 1 - i // 0=normal at bottom → 4=emergency at top
+        {/* Rungs (right side) — emergency at top, normal at base */}
+        {displayedRungs.map((r, i) => {
+          const rungIndex = RUNGS.findIndex((rung) => rung.id === r.id)
           const ry = tubeY + i * (RUNG_H + RUNG_GAP)
           const isActive = activeNodeId === r.id
           const isCurrent = level === rungIndex
@@ -103,12 +104,12 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
           <motion.text
             key={level}
             x={TUBE_X + TUBE_W / 2} y={tubeY + totalH + 22}
-            textAnchor="middle" fontSize={8} fill={RUNGS[RUNGS.length - 1 - level].stroke}
+            textAnchor="middle" fontSize={8} fill={RUNGS[level].stroke}
             fontFamily="monospace" letterSpacing="0.06em"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            ▲ {RUNGS[RUNGS.length - 1 - level].label}
+            ▲ {RUNGS[level].label}
           </motion.text>
         </AnimatePresence>
 
