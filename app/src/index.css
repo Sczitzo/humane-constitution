@@ -548,11 +548,20 @@
 }
 
 .diagram-viewport > svg {
-  display: block;
   width: 100%;
   min-width: var(--reader-figure-min-width, 0);
   max-width: none;
   height: auto !important;
+}
+
+.diagram-viewport > svg.hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .diagram-viewport > svg.sm\:block {
+    display: block;
+  }
 }
 
 .diagram-viewport > * {
