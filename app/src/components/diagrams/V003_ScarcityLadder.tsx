@@ -51,12 +51,13 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
         <rect x={TUBE_X} y={tubeY} width={TUBE_W} height={totalH} rx={11} fill="#0d1117" stroke={THEME.border} strokeWidth={1.5} />
 
         {/* Mercury fill — animates as level changes */}
-        <motion.rect
+        <rect
           x={TUBE_X + 3} y={tubeY + totalH - mercuryH + 3} width={TUBE_W - 6} height={Math.max(0, mercuryH - 6)} rx={8}
           fill={RUNGS[level].stroke}
-          animate={{ y: tubeY + totalH - mercuryH + 3, height: Math.max(0, mercuryH - 6), fill: RUNGS[level].stroke }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          style={{ filter: `drop-shadow(0 0 4px ${RUNGS[level].stroke})` }}
+          style={{
+            filter: `drop-shadow(0 0 4px ${RUNGS[level].stroke})`,
+            transition: 'y 0.6s ease-out, height 0.6s ease-out, fill 0.6s ease-out',
+          }}
         />
 
         {/* Level tick marks on tube */}
@@ -114,8 +115,8 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
         </motion.g>
 
         {/* Axis labels */}
-        <text x={TUBE_X + TUBE_W / 2} y={tubeY - 6} textAnchor="middle" fontSize={8} fill={THEME.emergency.accent} fontFamily="monospace">max</text>
-        <text x={TUBE_X + TUBE_W / 2} y={tubeY + totalH + 36} textAnchor="middle" fontSize={8} fill={THEME.ea.accent} fontFamily="monospace">base</text>
+        <text x={TUBE_X - 8} y={tubeY + 4} textAnchor="end" fontSize={8} fill={THEME.emergency.accent} fontFamily="monospace">max</text>
+        <text x={TUBE_X - 8} y={tubeY + totalH - 2} textAnchor="end" fontSize={8} fill={THEME.ea.accent} fontFamily="monospace">base</text>
       </svg>
     </DiagramShell>
   )
