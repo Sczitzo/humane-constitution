@@ -378,6 +378,95 @@
   border-bottom: none;
 }
 
+.reader-table-cards {
+  display: none;
+}
+
+.reader-table-card-group {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.reader-table-card-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.reader-table-card-group + .reader-table-card-group {
+  margin-top: 1.1rem;
+}
+
+.reader-table-card-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin: 0;
+  color: var(--ink-strong);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.reader-table-card-group-title span {
+  color: var(--ink-muted);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+}
+
+.reader-table-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-left: 3px solid rgba(130, 130, 130, 0.35);
+  border-radius: 0.85rem;
+  padding: 0.95rem;
+  background: var(--paper-strong);
+  overflow-wrap: anywhere;
+}
+
+.reader-table-card-header {
+  display: grid;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.reader-table-card-label,
+.reader-table-card-field dt {
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reader-table-card-title {
+  color: var(--ink-strong);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.reader-table-card-fields {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.reader-table-card-field {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.reader-table-card-field dd {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
 /* ── Status row tints ────────────────────────────────────────────────────── */
 
 .reader-table tr.row-active   { background: rgba(74, 160, 90, 0.07); }
@@ -411,6 +500,22 @@
 .reader-table tr.row-evidence-backed td:first-child { border-left: 3px solid rgba(34, 150, 90, 0.58); }
 .reader-table tr.row-moral td:first-child { border-left: 3px solid rgba(110, 140, 80, 0.50); }
 .reader-table tr.row-founding td:first-child { border-left: 3px solid rgba(155, 108, 44, 0.65); }
+
+.reader-table-card.row-active { border-left-color: rgba(74, 160, 90, 0.55); background: rgba(74, 160, 90, 0.07); }
+.reader-table-card.row-addressed { border-left-color: rgba(20, 184, 166, 0.50); background: rgba(20, 184, 166, 0.07); }
+.reader-table-card.row-designed { border-left-color: rgba(194, 142, 44, 0.50); background: rgba(194, 142, 44, 0.07); }
+.reader-table-card.row-active-unproven { border-left-color: rgba(20, 184, 166, 0.50); background: rgba(20, 184, 166, 0.07); }
+.reader-table-card.row-proposed { border-left-color: rgba(194, 142, 44, 0.55); background: rgba(194, 142, 44, 0.08); }
+.reader-table-card.row-partial { border-left-color: rgba(210, 110, 40, 0.55); background: rgba(210, 110, 40, 0.07); }
+.reader-table-card.row-needs-evidence { border-left-color: rgba(210, 110, 40, 0.55); background: rgba(210, 110, 40, 0.07); }
+.reader-table-card.row-open { border-left-color: rgba(196, 60, 60, 0.55); background: rgba(196, 60, 60, 0.07); }
+.reader-table-card.row-unresolved { border-left-color: rgba(196, 60, 60, 0.55); background: rgba(196, 60, 60, 0.07); }
+.reader-table-card.row-closed { border-left-color: rgba(130, 130, 130, 0.35); background: rgba(100, 100, 100, 0.04); }
+.reader-table-card.row-ongoing { border-left-color: rgba(60, 130, 180, 0.50); background: rgba(60, 130, 180, 0.07); }
+.reader-table-card.row-partly-tested { border-left-color: rgba(92, 95, 180, 0.50); background: rgba(92, 95, 180, 0.07); }
+.reader-table-card.row-evidence-backed { border-left-color: rgba(34, 150, 90, 0.58); background: rgba(34, 150, 90, 0.08); }
+.reader-table-card.row-moral { border-left-color: rgba(110, 140, 80, 0.50); background: rgba(110, 140, 80, 0.07); }
+.reader-table-card.row-founding { border-left-color: rgba(155, 108, 44, 0.65); background: rgba(155, 108, 44, 0.10); }
 
 /* ── Status badge pills ──────────────────────────────────────────────────── */
 
@@ -879,29 +984,26 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Tables: drop the desktop minimum so narrow tables fit on phone screens
-     without forcing horizontal scroll, but keep wide tables scrollable
-     (the wrapper retains overflow-x: auto). */
-  .reader-table {
-    min-width: 0;
-    font-size: 0.92em;
-  }
-
-  .reader-table th,
-  .reader-table td {
-    padding: 0.55rem 0.7rem;
-  }
-
   .reader-table-wrap {
-    -webkit-overflow-scrolling: touch;
-    /* Soft right-edge fade hint that more content is scrollable */
-    background-image: linear-gradient(to right, transparent calc(100% - 18px), rgba(0,0,0,0.04));
-    background-repeat: no-repeat;
-    background-attachment: local, scroll;
+    display: none;
   }
 
-  [data-theme="dark"] .reader-table-wrap {
-    background-image: linear-gradient(to right, transparent calc(100% - 18px), rgba(255,255,255,0.04));
+  .reader-table-cards {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .reader-table-card {
+    padding: 0.9rem;
+    border-radius: 0.75rem;
+  }
+
+  .reader-table-card-title {
+    font-size: 1rem;
+  }
+
+  .reader-table-card-field dd {
+    font-size: 0.95rem;
   }
 
   .topic-tag {

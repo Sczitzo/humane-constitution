@@ -525,6 +525,21 @@ function getRowStatusClass(row: string[], statusCols: Set<number>): string {
   return ''
 }
 
+function getTableGroupColumn(headers: string[]): number | null {
+  const groupHeaders = new Set(['status', 'honest status', 'state', 'level', 'severity', 'priority'])
+  const groupIndex = headers.findIndex((header) => groupHeaders.has(cleanStatusCell(header).toLowerCase()))
+  return groupIndex >= 0 ? groupIndex : null
+}
+
+function getTableCardTitleColumn(headers: string[], statusCols: Set<number>): number {
+  const titleIndex = headers.findIndex((_, index) => !statusCols.has(index))
+  return titleIndex >= 0 ? titleIndex : 0
+}
+
+function getTableGroupLabel(cell: string): string {
+  return matchStatus(cell)?.label ?? (cleanStatusCell(cell) || 'Unspecified')
+}
+
 function renderTableCell(text: string, keyPrefix: string, query: string, isStatusCol: boolean, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode {
   if (isStatusCol) {
     const meta = matchStatus(text.trim())
@@ -980,34 +995,96 @@ function MarkdownDocument({
               .map((h, i) => (STATUS_HEADER_RE.test(h) ? i : -1))
               .filter((i) => i >= 0)
           )
+          const groupColumn = getTableGroupColumn(parsedTable.headers)
+          const titleColumn = getTableCardTitleColumn(parsedTable.headers, statusCols)
+          const groupedRows = parsedTable.rows.reduce<Array<{ label: string; rows: Array<{ row: string[]; rowIndex: number }> }>>((groups, row, rowIndex) => {
+            const label = groupColumn === null ? '' : getTableGroupLabel(row[groupColumn] ?? '')
+            const existingGroup = groups.find((group) => group.label === label)
+            if (existingGroup) {
+              existingGroup.rows.push({ row, rowIndex })
+            } else {
+              groups.push({ label, rows: [{ row, rowIndex }] })
+            }
+            return groups
+          }, [])
 
           return (
-            <div key={`${doc.id}-table-${index}`} className="reader-table-wrap">
-              <table className="reader-table">
-                <thead>
-                  <tr>
-                    {parsedTable.headers.map((header, headerIndex) => (
-                      <th key={`${doc.id}-table-header-${index}-${headerIndex}`}>
-                        {renderInline(header, `${doc.id}-table-header-inline-${index}-${headerIndex}`, searchQuery, false, undefined, doc.path)}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {parsedTable.rows.map((row, rowIndex) => {
-                    const rowClass = getRowStatusClass(row, statusCols)
-                    return (
-                      <tr key={`${doc.id}-table-row-${index}-${rowIndex}`} className={rowClass || undefined}>
-                        {row.map((cell, cellIndex) => (
-                          <td key={`${doc.id}-table-cell-${index}-${rowIndex}-${cellIndex}`}>
-                            {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery, statusCols.has(cellIndex), handleInternalLink, doc.path)}
-                          </td>
-                        ))}
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
+            <div key={`${doc.id}-table-${index}`} className="reader-table-set">
+              <div className="reader-table-wrap">
+                <table className="reader-table">
+                  <thead>
+                    <tr>
+                      {parsedTable.headers.map((header, headerIndex) => (
+                        <th key={`${doc.id}-table-header-${index}-${headerIndex}`}>
+                          {renderInline(header, `${doc.id}-table-header-inline-${index}-${headerIndex}`, searchQuery, false, undefined, doc.path)}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {parsedTable.rows.map((row, rowIndex) => {
+                      const rowClass = getRowStatusClass(row, statusCols)
+                      return (
+                        <tr key={`${doc.id}-table-row-${index}-${rowIndex}`} className={rowClass || undefined}>
+                          {row.map((cell, cellIndex) => (
+                            <td key={`${doc.id}-table-cell-${index}-${rowIndex}-${cellIndex}`}>
+                              {renderTableCell(cell, `${doc.id}-table-cell-inline-${index}-${rowIndex}-${cellIndex}`, searchQuery, statusCols.has(cellIndex), handleInternalLink, doc.path)}
+                            </td>
+                          ))}
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              <div className="reader-table-cards">
+                {groupedRows.map((group, groupIndex) => (
+                  <section key={`${doc.id}-table-card-group-${index}-${groupIndex}`} className="reader-table-card-group">
+                    {groupColumn !== null ? (
+                      <h3 className="reader-table-card-group-title">
+                        {group.label}
+                        <span>{group.rows.length}</span>
+                      </h3>
+                    ) : null}
+                    <div className="reader-table-card-list" role="list" aria-label={groupColumn === null ? 'Table rows' : `${group.label} rows`}>
+                      {group.rows.map(({ row, rowIndex }) => {
+                        const rowClass = getRowStatusClass(row, statusCols)
+                        return (
+                          <article
+                            key={`${doc.id}-table-card-${index}-${rowIndex}`}
+                            className={`reader-table-card ${rowClass}`}
+                            role="listitem"
+                          >
+                            <div className="reader-table-card-header">
+                              <span className="reader-table-card-label">
+                                {renderInline(parsedTable.headers[titleColumn] ?? 'Item', `${doc.id}-table-card-title-label-${index}-${rowIndex}`, searchQuery, false, undefined, doc.path)}
+                              </span>
+                              <div className="reader-table-card-title">
+                                {renderTableCell(row[titleColumn] ?? '', `${doc.id}-table-card-title-${index}-${rowIndex}`, searchQuery, statusCols.has(titleColumn), handleInternalLink, doc.path)}
+                              </div>
+                            </div>
+                            <dl className="reader-table-card-fields">
+                              {parsedTable.headers.map((header, cellIndex) => {
+                                if (cellIndex === titleColumn || !row[cellIndex]?.trim()) return null
+                                return (
+                                  <div key={`${doc.id}-table-card-field-${index}-${rowIndex}-${cellIndex}`} className="reader-table-card-field">
+                                    <dt>
+                                      {renderInline(header, `${doc.id}-table-card-field-label-${index}-${rowIndex}-${cellIndex}`, searchQuery, false, undefined, doc.path)}
+                                    </dt>
+                                    <dd>
+                                      {renderTableCell(row[cellIndex], `${doc.id}-table-card-field-value-${index}-${rowIndex}-${cellIndex}`, searchQuery, statusCols.has(cellIndex), handleInternalLink, doc.path)}
+                                    </dd>
+                                  </div>
+                                )
+                              })}
+                            </dl>
+                          </article>
+                        )
+                      })}
+                    </div>
+                  </section>
+                ))}
+              </div>
             </div>
           )
         }
