@@ -2,7 +2,7 @@
 // Vertical thermometer escalation — NORMAL at base, EMERGENCY at apex
 // A mercury-style fill animates up the severity tube on auto-cycle
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { motion } from 'motion/react'
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
@@ -39,11 +39,13 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
 
   const totalH = RUNGS.length * (RUNG_H + RUNG_GAP) - RUNG_GAP
   const tubeY = 18
+  const svgHeight = tubeY + totalH + 42
   const mercuryH = ((level + 1) / 5) * totalH
+  const currentLevelY = tubeY + (RUNGS.length - 1 - level) * (RUNG_H + RUNG_GAP) + RUNG_H / 2
 
   return (
     <DiagramShell figId="V-003" title="Scarcity Escalation Ladder" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 660 330" className="w-full" style={{ height: 330 }}>
+      <svg viewBox={`0 0 660 ${svgHeight}`} className="w-full" style={{ height: svgHeight }}>
 
         {/* Thermometer tube background */}
         <rect x={TUBE_X} y={tubeY} width={TUBE_W} height={totalH} rx={11} fill="#0d1117" stroke={THEME.border} strokeWidth={1.5} />
@@ -99,19 +101,17 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
           )
         })}
 
-        {/* Current level label */}
-        <AnimatePresence mode="wait">
-          <motion.text
-            key={level}
-            x={TUBE_X + TUBE_W / 2} y={tubeY + totalH + 22}
-            textAnchor="middle" fontSize={8} fill={RUNGS[level].stroke}
-            fontFamily="monospace" letterSpacing="0.06em"
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            ▲ {RUNGS[level].label}
-          </motion.text>
-        </AnimatePresence>
+        {/* Current level pointer */}
+        <motion.g
+          animate={{ y: currentLevelY }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          style={{ filter: `drop-shadow(0 0 4px ${RUNGS[level].stroke})` }}
+        >
+          <path
+            d={`M ${TUBE_X - 7} 0 L ${TUBE_X - 15} -6 L ${TUBE_X - 15} 6 Z`}
+            fill={RUNGS[level].stroke}
+          />
+        </motion.g>
 
         {/* Axis labels */}
         <text x={TUBE_X + TUBE_W / 2} y={tubeY - 6} textAnchor="middle" fontSize={8} fill={THEME.emergency.accent} fontFamily="monospace">max</text>
