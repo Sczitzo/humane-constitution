@@ -54,9 +54,9 @@ const GATES = [
     id: 't3',
     touch: 'Operational parameter',
     gate: 'Tier 3',
-    path: 'FAP vote + public notice',
+    path: ['FAP vote', 'public notice'],
     examples: 'thresholds · cadence · pilot settings',
-    y: 38,
+    y: 34,
     accent: THEME.flow.accent,
     fill: THEME.flow.fill,
   },
@@ -64,9 +64,9 @@ const GATES = [
     id: 't2',
     touch: 'Structural rule',
     gate: 'Tier 2',
-    path: 'supermajority + adversarial panel',
+    path: ['supermajority', 'adversarial panel'],
     examples: 'annexes · quorum · oracle rules',
-    y: 112,
+    y: 122,
     accent: THEME.voice.accent,
     fill: THEME.voice.fill,
   },
@@ -74,9 +74,9 @@ const GATES = [
     id: 't1',
     touch: 'Constitutional core',
     gate: 'Tier 1',
-    path: '7-of-9 + 180-day timelock',
+    path: ['7-of-9 keyholders', '180-day timelock'],
     examples: 'invariants · survival floor · separation',
-    y: 186,
+    y: 210,
     accent: THEME.ss.accent,
     fill: THEME.ss.fill,
   },
@@ -84,18 +84,18 @@ const GATES = [
     id: 'refounding',
     touch: 'Amendment mechanism',
     gate: 'Refounding',
-    path: 'H-3 constitutional reconstitution',
+    path: ['H-3 authority', 'constitutional reconstitution'],
     examples: 'changing FC-110 / FC-111',
-    y: 260,
+    y: 298,
     accent: THEME.emergency.accent,
     fill: THEME.emergency.fill,
   },
 ]
 
 const SVG_W = 720
-const GATE_X = 344
-const GATE_W = 340
-const GATE_H = 58
+const GATE_X = 330
+const GATE_W = 362
+const GATE_H = 72
 
 export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
@@ -103,7 +103,7 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
 
   return (
     <DiagramShell figId="V-004" title="Amendment Gate Classifier" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox={`0 0 ${SVG_W} 392`} className="w-full" style={{ height: 392 }}>
+      <svg viewBox={`0 0 ${SVG_W} 448`} className="w-full" style={{ height: 448 }}>
         <defs>
           <marker id="v4arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
             <path d="M0,0 L8,4 L0,8 Z" fill={THEME.dim} />
@@ -118,17 +118,17 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
           style={{ cursor: 'pointer', filter: activeNodeId === 'classify' ? `drop-shadow(0 0 7px ${THEME.neutral.accent})` : undefined }}
           onClick={() => handleNodeClick('classify')}
         >
-          <rect x={28} y={128} width={128} height={86} rx={9}
+          <rect x={28} y={150} width={130} height={96} rx={9}
             fill={activeNodeId === 'classify' ? THEME.neutral.accentBg : '#0d1117'}
             stroke={activeNodeId === 'classify' ? THEME.neutral.accent : THEME.border}
             strokeWidth={activeNodeId === 'classify' ? 2.5 : 1.5}
           />
-          <text x={92} y={158} textAnchor="middle" fontSize={14} fontWeight={700} fill="#dde1e7" fontFamily="monospace">proposed</text>
-          <text x={92} y={179} textAnchor="middle" fontSize={14} fontWeight={700} fill="#dde1e7" fontFamily="monospace">change</text>
-          <text x={92} y={199} textAnchor="middle" fontSize={10.5} fill={THEME.dim} fontFamily="monospace">classify first</text>
+          <text x={93} y={184} textAnchor="middle" fontSize={16} fontWeight={700} fill="#dde1e7" fontFamily="monospace">proposed</text>
+          <text x={93} y={207} textAnchor="middle" fontSize={16} fontWeight={700} fill="#dde1e7" fontFamily="monospace">change</text>
+          <text x={93} y={229} textAnchor="middle" fontSize={11.5} fill={THEME.dim} fontFamily="monospace">classify first</text>
         </motion.g>
 
-        <line x1={164} y1={171} x2={198} y2={171} stroke={THEME.dim} strokeWidth={1.5} markerEnd="url(#v4arrow)" />
+        <line x1={166} y1={198} x2={196} y2={198} stroke={THEME.dim} strokeWidth={1.5} markerEnd="url(#v4arrow)" />
 
         {/* Classification gate */}
         <motion.g
@@ -139,22 +139,22 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
           onClick={() => handleNodeClick('classify')}
         >
           <path
-            d="M250,96 L318,171 L250,246 L182,171 Z"
+            d="M250,112 L326,198 L250,284 L174,198 Z"
             fill={activeNodeId === 'classify' ? THEME.neutral.accentBg : '#111923'}
             stroke={activeNodeId === 'classify' ? THEME.neutral.accent : THEME.border}
             strokeWidth={activeNodeId === 'classify' ? 2.5 : 1.5}
           />
-          <text x={250} y={154} textAnchor="middle" fontSize={13} fontWeight={700} fill="#dde1e7" fontFamily="monospace">what does</text>
-          <text x={250} y={174} textAnchor="middle" fontSize={13} fontWeight={700} fill="#dde1e7" fontFamily="monospace">it touch?</text>
-          <text x={250} y={196} textAnchor="middle" fontSize={9.5} fill={THEME.dim} fontFamily="monospace">CRP / legality gate</text>
+          <text x={250} y={180} textAnchor="middle" fontSize={14.5} fontWeight={700} fill="#dde1e7" fontFamily="monospace">what does</text>
+          <text x={250} y={202} textAnchor="middle" fontSize={14.5} fontWeight={700} fill="#dde1e7" fontFamily="monospace">it touch?</text>
+          <text x={250} y={226} textAnchor="middle" fontSize={10.5} fill={THEME.dim} fontFamily="monospace">CRP / legality gate</text>
         </motion.g>
 
         {/* Route lines */}
         {GATES.map((gate, index) => (
           <motion.line
             key={gate.id}
-            x1={318}
-            y1={171}
+            x1={326}
+            y1={198}
             x2={GATE_X - 10}
             y2={gate.y + GATE_H / 2}
             stroke={gate.accent}
@@ -184,32 +184,33 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
                 stroke={gate.accent}
                 strokeWidth={isActive ? 2.5 : 1.6}
               />
-              <text x={GATE_X + 18} y={gate.y + 20} fontSize={12} fill={THEME.subtext} fontFamily="monospace">{gate.touch}</text>
-              <text x={GATE_X + 18} y={gate.y + 39} fontSize={15} fontWeight={700} fill={gate.accent} fontFamily="monospace">{gate.gate}</text>
-              <text x={GATE_X + 132} y={gate.y + 39} fontSize={11.5} fill="#dde1e7" fontFamily="monospace">{gate.path}</text>
-              <text x={GATE_X + 18} y={gate.y + 53} fontSize={9.5} fill={THEME.dim} fontFamily="monospace">{gate.examples}</text>
+              <text x={GATE_X + 18} y={gate.y + 20} fontSize={13.5} fill={THEME.subtext} fontFamily="monospace">{gate.touch}</text>
+              <text x={GATE_X + 18} y={gate.y + 45} fontSize={18} fontWeight={700} fill={gate.accent} fontFamily="monospace">{gate.gate}</text>
+              <text x={GATE_X + 150} y={gate.y + 35} fontSize={12.5} fill="#dde1e7" fontFamily="monospace">{gate.path[0]}</text>
+              <text x={GATE_X + 150} y={gate.y + 51} fontSize={12.5} fill="#dde1e7" fontFamily="monospace">{gate.path[1]}</text>
+              <text x={GATE_X + 18} y={gate.y + 64} fontSize={10.5} fill={THEME.dim} fontFamily="monospace">{gate.examples}</text>
             </motion.g>
           )
         })}
 
         {/* Anti-bypass rule */}
         <g>
-          <rect x={30} y={340} width={654} height={34} rx={8}
+          <rect x={30} y={398} width={654} height={34} rx={8}
             fill="rgba(248,81,73,0.06)"
             stroke={THEME.ss.accent}
             strokeWidth={1.4}
             strokeDasharray="7,4"
           />
-          <text x={48} y={361} fontSize={12.5} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace">
+          <text x={48} y={419} fontSize={13.5} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace">
             NO LOWER-TIER BYPASS
           </text>
-          <text x={238} y={361} fontSize={11.5} fill="#dde1e7" fontFamily="monospace">
+          <text x={252} y={419} fontSize={12} fill="#dde1e7" fontFamily="monospace">
             Tier 3 cannot alter Tier 2/Tier 1 · Tier 2 cannot alter Tier 1
           </text>
         </g>
 
         {activeAccent && (
-          <rect x={20} y={20} width={680} height={364} rx={10}
+          <rect x={20} y={18} width={680} height={420} rx={10}
             fill="none" stroke={activeAccent} strokeWidth={1.5} opacity={0.28}
             pointerEvents="none"
           />
