@@ -55,7 +55,7 @@ Plain meaning: the idle-money fee is aimed at hoarding, not at survival, wages, 
 
 **Charge routing:** Let `C(t) = B_before(t) − B_after(t)` and `α` = PFCR routing share (FC-054 reserved). Then `PFCR_receipt(t) = α × C(t)` and `Retired_Flow(t) = (1 − α) × C(t)`.
 
-`r` must be calibrated so that the deployment window produces a meaningful anti-hoarding signal without suppressing long-horizon productive investment. Annex AR Section 2 contains worked examples at r = 0.5%, 1.0%, 2.0% monthly. P-023 establishes that investment exemptions are prohibited; demurrage applies during escrow periods — the discipline is the point. `α` must be published, reviewable, and fiscally bounded under PFCR rules.
+`r` must be calibrated so that the deployment window produces a meaningful anti-hoarding signal without suppressing long-horizon productive investment. Annex AR Section 2 contains escrow-deployment examples using an illustrative 5% annual Flow-demurrage rate; those examples must be recalculated against FC-050 or its amended successor before activation. P-023 establishes that investment exemptions are prohibited; demurrage applies during escrow periods — the discipline is the point. Annex AZ separately governs progressive net-worth demurrage on concentrated wealth and unassigned enterprise balances; it does not replace the FC-050 Flow-demurrage parameter for circulating or escrowed Flow. `α` must be published, reviewable, and fiscally bounded under PFCR rules.
 
 ### 2.4 Issuance Constraints
 

@@ -50,7 +50,7 @@ This annex specifies five things:
 4. **Inspector pool governance** — pool size floors, rotation schedule, disqualification criteria
 5. **Publication commitment** — what is reported publicly, how often, and in what form
 
-Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples retain a round-number annual demurrage illustration of **5% per year** for comparability; before activation they must be recalculated against FC-050 or its amended successor.
+Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples retain a round-number annual demurrage illustration of **5% per year** for comparability; before activation they must be recalculated against FC-050 or its amended successor. These escrow-deployment examples do not modify Annex AZ's progressive net-worth demurrage schedule, which separately governs concentrated wealth and unassigned enterprise balances.
 
 ---
 
@@ -126,7 +126,7 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 ### 2.2 — Demurrage Interaction Worked Examples
 
-*These examples use a 5% annual demurrage rate. Founding coalition must recalibrate if the actual rate differs.*
+*These examples use a 5% annual Flow-demurrage rate for escrow-deployment signal testing. The founding coalition must recalibrate them against FC-050 or its amended successor before activation. Annex AZ's progressive net-worth demurrage schedule remains the controlling rate architecture for concentrated wealth and unassigned enterprise balances.*
 
 **Essential Access-essential: 5M Flow housing fund, 90-day deployment window**
 
