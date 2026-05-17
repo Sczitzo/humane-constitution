@@ -1,107 +1,219 @@
 // app/src/components/diagrams/V004_AmendmentPyramid.tsx
-// Centered pyramid tiers with protection-level metadata badges
-// Tier widths narrow at apex = harder to amend; lock icons scale with protection
+// Amendment gate classifier: proposals are sorted by what they touch, then routed
+// through the minimum required safeguard. Lower tiers cannot rewrite higher tiers.
 import { motion } from 'motion/react'
 import { DiagramShell, useDiagramState } from './DiagramShell'
 import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
 
 const NODES: DiagramNode[] = [
-  { id: 't1', label: 'Tier 1 — Constitutional Core', definition: 'Highest protection. Requires 7-of-9 keyholder signatures plus a 180-day public timelock. Covers invariants, instrument separation, survival floor, and the amendment process itself.', docLink: 'INVARIANTS.md', accent: THEME.ss.accent,    accentBg: THEME.ss.accentBg },
-  { id: 't2', label: 'Tier 2 — Structural Rules',    definition: 'Requires supermajority vote plus adversarial panel review. Covers annexes, thresholds, oracle rules, and governance procedures that implement Tier 1 principles.', docLink: 'ANNEX_AH.md',  accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
-  { id: 't3', label: 'Tier 3 — Standard Amendment',  definition: 'Formal Acceptance Protocol (FAP). Standard governance vote with public notice and challenge window. Covers operational parameters, pilot rules, and non-structural patches.', docLink: 'ANNEX_AG.md',  accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
+  {
+    id: 'classify',
+    label: 'Classification Gate',
+    definition: 'Every proposal is first classified by what it touches. The gate prevents a rights-impacting or structural change from being smuggled through as an ordinary parameter update.',
+    docLink: 'ANNEX_H.md',
+    accent: THEME.neutral.accent,
+    accentBg: THEME.neutral.accentBg,
+  },
+  {
+    id: 't3',
+    label: 'Tier 3 — Operational Parameters',
+    definition: 'Standard FAP path for bounded dials already authorized elsewhere: audit cadence, dashboard refresh, pilot settings, and technical parameters inside published ranges.',
+    docLink: 'ANNEX_H.md',
+    accent: THEME.flow.accent,
+    accentBg: THEME.flow.accentBg,
+  },
+  {
+    id: 't2',
+    label: 'Tier 2 — Structural Rules',
+    definition: 'Founding commitments and durable operating rules require supermajority approval plus adversarial review. Tier 2 can tune the structure, but cannot narrow Tier 1 protections.',
+    docLink: 'ANNEX_H.md',
+    accent: THEME.voice.accent,
+    accentBg: THEME.voice.accentBg,
+  },
+  {
+    id: 't1',
+    label: 'Tier 1 — Constitutional Core',
+    definition: 'Constitutional invariants require the highest in-system gate: 7-of-9 keyholder signatures, 180-day timelock, and required independent review where specified.',
+    docLink: 'INVARIANTS.md',
+    accent: THEME.ss.accent,
+    accentBg: THEME.ss.accentBg,
+  },
+  {
+    id: 'refounding',
+    label: 'Refounding Gate',
+    definition: 'Changes to the amendment mechanism itself require H-3 refounding authority. The system cannot weaken its own highest gate through a lower-tier path.',
+    docLink: 'INVARIANTS.md',
+    accent: THEME.emergency.accent,
+    accentBg: THEME.emergency.accentBg,
+  },
 ]
 
-const TIERS = [
+const GATES = [
   {
-    id: 't1', label: 'TIER 1', sub: 'Constitutional Core',
-    req1: '7-of-9 keyholders', req2: '180-day timelock',
-    y: 18, w: 210, stroke: THEME.ss.accent, fill: THEME.ss.fill, locks: 3,
+    id: 't3',
+    touch: 'Operational parameter',
+    gate: 'Tier 3',
+    path: 'FAP vote + public notice',
+    examples: 'thresholds · cadence · pilot settings',
+    y: 38,
+    accent: THEME.flow.accent,
+    fill: THEME.flow.fill,
   },
   {
-    id: 't2', label: 'TIER 2', sub: 'Structural Rules',
-    req1: 'supermajority vote', req2: 'adversarial panel',
-    y: 96, w: 370, stroke: THEME.voice.accent, fill: THEME.voice.fill, locks: 2,
+    id: 't2',
+    touch: 'Structural rule',
+    gate: 'Tier 2',
+    path: 'supermajority + adversarial panel',
+    examples: 'annexes · quorum · oracle rules',
+    y: 112,
+    accent: THEME.voice.accent,
+    fill: THEME.voice.fill,
   },
   {
-    id: 't3', label: 'TIER 3', sub: 'Standard Amendment',
-    req1: 'governance vote', req2: 'public notice window',
-    y: 174, w: 530, stroke: THEME.flow.accent, fill: '#0d1a2e', locks: 1,
+    id: 't1',
+    touch: 'Constitutional core',
+    gate: 'Tier 1',
+    path: '7-of-9 + 180-day timelock',
+    examples: 'invariants · survival floor · separation',
+    y: 186,
+    accent: THEME.ss.accent,
+    fill: THEME.ss.fill,
+  },
+  {
+    id: 'refounding',
+    touch: 'Amendment mechanism',
+    gate: 'Refounding',
+    path: 'H-3 constitutional reconstitution',
+    examples: 'changing FC-110 / FC-111',
+    y: 260,
+    accent: THEME.emergency.accent,
+    fill: THEME.emergency.fill,
   },
 ]
 
-const CX = 300, TIER_H = 66
-
-// Tiny lock path (centered at 0,0, ~10×13px)
-const LOCK = 'M-4,-1 L-4,5 Q-4,7 -2,7 L2,7 Q4,7 4,5 L4,-1 Q4,-3 2,-3 L-2,-3 Q-4,-3 -4,-1 Z M-1.5,-3 L-1.5,-6 Q-1.5,-9 0,-9 Q1.5,-9 1.5,-6 L1.5,-3'
+const SVG_W = 720
+const GATE_X = 344
+const GATE_W = 340
+const GATE_H = 58
 
 export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
+  const activeAccent = NODES.find((node) => node.id === activeNodeId)?.accent
 
   return (
-    <DiagramShell figId="V-004" title="Amendment Tier Pyramid" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox="0 0 660 262" className="w-full" style={{ height: 262 }}>
+    <DiagramShell figId="V-004" title="Amendment Gate Classifier" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
+      <svg viewBox={`0 0 ${SVG_W} 392`} className="w-full" style={{ height: 392 }}>
+        <defs>
+          <marker id="v4arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill={THEME.dim} />
+          </marker>
+        </defs>
 
-        {/* Pyramid tiers — widest at base, narrowest at top */}
-        {TIERS.map((t, i) => {
-          const isActive = activeNodeId === t.id
-          const x = CX - t.w / 2
+        {/* Proposal intake */}
+        <motion.g
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.35 }}
+          style={{ cursor: 'pointer', filter: activeNodeId === 'classify' ? `drop-shadow(0 0 7px ${THEME.neutral.accent})` : undefined }}
+          onClick={() => handleNodeClick('classify')}
+        >
+          <rect x={28} y={128} width={128} height={86} rx={9}
+            fill={activeNodeId === 'classify' ? THEME.neutral.accentBg : '#0d1117'}
+            stroke={activeNodeId === 'classify' ? THEME.neutral.accent : THEME.border}
+            strokeWidth={activeNodeId === 'classify' ? 2.5 : 1.5}
+          />
+          <text x={92} y={158} textAnchor="middle" fontSize={14} fontWeight={700} fill="#dde1e7" fontFamily="monospace">proposed</text>
+          <text x={92} y={179} textAnchor="middle" fontSize={14} fontWeight={700} fill="#dde1e7" fontFamily="monospace">change</text>
+          <text x={92} y={199} textAnchor="middle" fontSize={10.5} fill={THEME.dim} fontFamily="monospace">classify first</text>
+        </motion.g>
+
+        <line x1={164} y1={171} x2={198} y2={171} stroke={THEME.dim} strokeWidth={1.5} markerEnd="url(#v4arrow)" />
+
+        {/* Classification gate */}
+        <motion.g
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.08, duration: 0.35 }}
+          style={{ cursor: 'pointer', filter: activeNodeId === 'classify' ? `drop-shadow(0 0 8px ${THEME.neutral.accent})` : undefined }}
+          onClick={() => handleNodeClick('classify')}
+        >
+          <path
+            d="M250,96 L318,171 L250,246 L182,171 Z"
+            fill={activeNodeId === 'classify' ? THEME.neutral.accentBg : '#111923'}
+            stroke={activeNodeId === 'classify' ? THEME.neutral.accent : THEME.border}
+            strokeWidth={activeNodeId === 'classify' ? 2.5 : 1.5}
+          />
+          <text x={250} y={154} textAnchor="middle" fontSize={13} fontWeight={700} fill="#dde1e7" fontFamily="monospace">what does</text>
+          <text x={250} y={174} textAnchor="middle" fontSize={13} fontWeight={700} fill="#dde1e7" fontFamily="monospace">it touch?</text>
+          <text x={250} y={196} textAnchor="middle" fontSize={9.5} fill={THEME.dim} fontFamily="monospace">CRP / legality gate</text>
+        </motion.g>
+
+        {/* Route lines */}
+        {GATES.map((gate, index) => (
+          <motion.line
+            key={gate.id}
+            x1={318}
+            y1={171}
+            x2={GATE_X - 10}
+            y2={gate.y + GATE_H / 2}
+            stroke={gate.accent}
+            strokeWidth={1.3}
+            strokeDasharray={gate.id === 'refounding' ? '4,4' : undefined}
+            markerEnd="url(#v4arrow)"
+            opacity={0}
+            animate={{ opacity: 0.55 }}
+            transition={{ delay: 0.22 + index * 0.05, duration: 0.25 }}
+          />
+        ))}
+
+        {/* Safeguard gates */}
+        {GATES.map((gate, index) => {
+          const isActive = activeNodeId === gate.id
           return (
             <motion.g
-              key={t.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.06 + (2 - i) * 0.13, duration: 0.4 }}
-              style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 8px ${t.stroke})` : undefined }}
-              onClick={() => handleNodeClick(t.id)}
+              key={gate.id}
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.16 + index * 0.08, duration: 0.35 }}
+              style={{ cursor: 'pointer', filter: isActive ? `drop-shadow(0 0 8px ${gate.accent})` : undefined }}
+              onClick={() => handleNodeClick(gate.id)}
             >
-              {isActive && (
-                <motion.rect
-                  x={x - 2} y={t.y - 2} width={t.w + 4} height={TIER_H + 4} rx={7}
-                  fill="none" stroke={t.stroke} strokeWidth={1.5}
-                  animate={{ opacity: [0.5, 0, 0.5] }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-                />
-              )}
-              <rect x={x} y={t.y} width={t.w} height={TIER_H} rx={6}
-                fill={t.fill} stroke={t.stroke}
-                strokeWidth={isActive ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
+              <rect x={GATE_X} y={gate.y} width={GATE_W} height={GATE_H} rx={8}
+                fill={isActive ? gate.fill : '#111923'}
+                stroke={gate.accent}
+                strokeWidth={isActive ? 2.5 : 1.6}
               />
-
-              {/* Labels */}
-              <text x={CX} y={t.y + 22} textAnchor="middle" fontSize={12} fontWeight={700} fill={t.stroke} fontFamily="monospace">{t.label}</text>
-              <text x={CX} y={t.y + 38} textAnchor="middle" fontSize={9.5} fill={THEME.subtext} fontFamily="monospace">{t.sub}</text>
-
-              {/* Requirement badges */}
-              <text x={CX} y={t.y + 55} textAnchor="middle" fontSize={8} fill={t.stroke} fontFamily="monospace" opacity={0.75}>
-                {t.req1} · {t.req2}
-              </text>
-
-              {/* Lock icons on right side (count = protection level) */}
-              {Array.from({ length: t.locks }).map((_, li) => (
-                <g key={li} transform={`translate(${x + t.w + 14 + li * 16}, ${t.y + TIER_H / 2})`}>
-                  <path d={LOCK} fill={t.stroke} opacity={0.7} transform="scale(0.9)" />
-                </g>
-              ))}
+              <text x={GATE_X + 18} y={gate.y + 20} fontSize={12} fill={THEME.subtext} fontFamily="monospace">{gate.touch}</text>
+              <text x={GATE_X + 18} y={gate.y + 39} fontSize={15} fontWeight={700} fill={gate.accent} fontFamily="monospace">{gate.gate}</text>
+              <text x={GATE_X + 132} y={gate.y + 39} fontSize={11.5} fill="#dde1e7" fontFamily="monospace">{gate.path}</text>
+              <text x={GATE_X + 18} y={gate.y + 53} fontSize={9.5} fill={THEME.dim} fontFamily="monospace">{gate.examples}</text>
             </motion.g>
           )
         })}
 
-        {/* Protection scale annotation */}
-        <motion.g initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
-          <line x1={590} y1={25} x2={590} y2={233} stroke={THEME.border} strokeWidth={1} />
-          <text x={600} y={30}  fontSize={8} fill={THEME.ss.accent}    fontFamily="monospace">highest</text>
-          <text x={600} y={236} fontSize={8} fill={THEME.flow.accent}  fontFamily="monospace">standard</text>
-          <text x={600} y={130} fontSize={8} fill={THEME.dim}          fontFamily="monospace" transform="rotate(90,600,130)">protection →</text>
-        </motion.g>
+        {/* Anti-bypass rule */}
+        <g>
+          <rect x={30} y={340} width={654} height={34} rx={8}
+            fill="rgba(248,81,73,0.06)"
+            stroke={THEME.ss.accent}
+            strokeWidth={1.4}
+            strokeDasharray="7,4"
+          />
+          <text x={48} y={361} fontSize={12.5} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace">
+            NO LOWER-TIER BYPASS
+          </text>
+          <text x={238} y={361} fontSize={11.5} fill="#dde1e7" fontFamily="monospace">
+            Tier 3 cannot alter Tier 2/Tier 1 · Tier 2 cannot alter Tier 1
+          </text>
+        </g>
 
-        {/* Tier connector lines */}
-        <motion.g initial={{ opacity: 0 }} animate={{ opacity: 0.3 }} transition={{ delay: 0.5 }}>
-          <line x1={CX - 105} y1={84} x2={CX - 185} y2={96} stroke={THEME.border} strokeWidth={1} strokeDasharray="3,2" />
-          <line x1={CX + 105} y1={84} x2={CX + 185} y2={96} stroke={THEME.border} strokeWidth={1} strokeDasharray="3,2" />
-          <line x1={CX - 185} y1={162} x2={CX - 265} y2={174} stroke={THEME.border} strokeWidth={1} strokeDasharray="3,2" />
-          <line x1={CX + 185} y1={162} x2={CX + 265} y2={174} stroke={THEME.border} strokeWidth={1} strokeDasharray="3,2" />
-        </motion.g>
+        {activeAccent && (
+          <rect x={20} y={20} width={680} height={364} rx={10}
+            fill="none" stroke={activeAccent} strokeWidth={1.5} opacity={0.28}
+            pointerEvents="none"
+          />
+        )}
       </svg>
     </DiagramShell>
   )

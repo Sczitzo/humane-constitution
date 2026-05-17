@@ -206,7 +206,7 @@ The Founding Order says:
 
 This matters because a system that people cannot leave can become coercive even if its language sounds humane.
 
-![Amendment Tier Pyramid](/images/V-004.png)
+![Amendment Gate Classifier](/images/V-004.png)
 
 ## The Seven Main Articles
 
