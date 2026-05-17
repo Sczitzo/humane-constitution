@@ -24,8 +24,9 @@ const RUNGS = [
 ]
 
 // Thermometer geometry
-const TUBE_X = 30, TUBE_W = 22, RUNG_H = 46, RUNG_GAP = 6
-const RUNG_X = 70, RUNG_W = 530
+const SVG_W = 540
+const TUBE_X = 44, TUBE_W = 26, RUNG_H = 52, RUNG_GAP = 8
+const RUNG_X = 92, RUNG_W = 420
 
 export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
   const { activeNodeId, handleNodeClick } = useDiagramState()
@@ -45,7 +46,7 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
 
   return (
     <DiagramShell figId="V-003" title="Scarcity Escalation Ladder" nodes={NODES} activeNodeId={activeNodeId} onInternalLink={onInternalLink}>
-      <svg viewBox={`0 0 660 ${svgHeight}`} className="w-full" style={{ height: svgHeight }}>
+      <svg viewBox={`0 0 ${SVG_W} ${svgHeight}`} className="w-full" style={{ height: svgHeight }}>
 
         {/* Thermometer tube background */}
         <rect x={TUBE_X} y={tubeY} width={TUBE_W} height={totalH} rx={11} fill="#0d1117" stroke={THEME.border} strokeWidth={1.5} />
@@ -92,8 +93,8 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
                 strokeWidth={(isActive || isCurrent) ? THEME.strokeWidth.active : THEME.strokeWidth.normal}
                 strokeDasharray={r.id === 'emergency' ? '6,3' : undefined}
               />
-              <text x={RUNG_X + RUNG_W / 2} y={ry + 19} textAnchor="middle" fontSize={11} fontWeight={700} fill={r.stroke} fontFamily="monospace">{r.label}</text>
-              <text x={RUNG_X + RUNG_W / 2} y={ry + 35} textAnchor="middle" fontSize={9} fill={THEME.subtext} fontFamily="monospace">{r.sub}</text>
+              <text x={RUNG_X + RUNG_W / 2} y={ry + 22} textAnchor="middle" fontSize={15} fontWeight={700} fill={r.stroke} fontFamily="monospace">{r.label}</text>
+              <text x={RUNG_X + RUNG_W / 2} y={ry + 42} textAnchor="middle" fontSize={12} fill={THEME.subtext} fontFamily="monospace">{r.sub}</text>
 
               {/* Connector from tube to rung */}
               <line x1={TUBE_X + TUBE_W} y1={ry + RUNG_H / 2} x2={RUNG_X} y2={ry + RUNG_H / 2}
@@ -115,8 +116,8 @@ export function V003_ScarcityLadder({ onInternalLink }: DiagramProps) {
         </motion.g>
 
         {/* Axis labels */}
-        <text x={TUBE_X - 8} y={tubeY + 4} textAnchor="end" fontSize={8} fill={THEME.emergency.accent} fontFamily="monospace">max</text>
-        <text x={TUBE_X - 8} y={tubeY + totalH - 2} textAnchor="end" fontSize={8} fill={THEME.ea.accent} fontFamily="monospace">base</text>
+        <text x={TUBE_X - 10} y={tubeY + 5} textAnchor="end" fontSize={10} fill={THEME.emergency.accent} fontFamily="monospace">max</text>
+        <text x={TUBE_X - 10} y={tubeY + totalH - 3} textAnchor="end" fontSize={10} fill={THEME.ea.accent} fontFamily="monospace">base</text>
       </svg>
     </DiagramShell>
   )
