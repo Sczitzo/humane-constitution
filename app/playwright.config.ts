@@ -1,5 +1,9 @@
 import { defineConfig } from '@playwright/test'
 
+const localServerCommand = process.env.CI
+  ? 'npm run build && npm run preview -- --host 127.0.0.1 --port 1420 --strictPort'
+  : 'npm run dev -- --host 127.0.0.1 --port 1420 --strictPort'
+
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: false,
@@ -9,7 +13,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'npm run build && npm run preview -- --host 127.0.0.1 --port 1420 --strictPort',
+    command: localServerCommand,
     port: 1420,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
