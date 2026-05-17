@@ -11,7 +11,7 @@ export function ChatBubble({ corpus, onNavigateToDoc }: ChatBubbleProps) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-5 right-5 z-30 flex flex-col items-end gap-3">
+    <div className="pointer-events-none fixed bottom-5 right-5 z-30 flex flex-col items-end gap-3">
       {/* Panel — always mounted so chat history persists, visibility toggled via CSS */}
       <div
         className={[
@@ -32,6 +32,7 @@ export function ChatBubble({ corpus, onNavigateToDoc }: ChatBubbleProps) {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? 'Close chat' : 'Ask AI'}
         className={[
+          'pointer-events-auto',
           'w-14 h-14 rounded-full shadow-lg',
           'bg-accent hover:bg-accent-deep text-paper',
           'flex items-center justify-center transition-all duration-200',
