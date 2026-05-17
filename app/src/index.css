@@ -459,12 +459,18 @@
 .reader-table-card-field {
   display: grid;
   gap: 0.2rem;
+  text-align: left;
 }
 
 .reader-table-card-field dd {
   margin: 0;
   color: var(--ink);
   line-height: 1.55;
+  text-align: left;
+}
+
+.reader-table-card-field dd button {
+  text-align: left;
 }
 
 /* ── Status row tints ────────────────────────────────────────────────────── */
