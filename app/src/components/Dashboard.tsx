@@ -7,8 +7,8 @@ import type { CorpusDoc, CorpusPayload } from '../generated/corpus'
 import type { AppView } from './Layout'
 import { parseMarkdown } from '../lib/markdown'
 import {
-  readFontSize, readColumnWidth, applyFontSize, applyColumnWidth,
-  readTheme, applyTheme,
+  applyReaderPreferences,
+  readReaderPreferences,
   selectedDocStorageKey,
   readStoredSelectedDocId, readStoredDocList, readStoredBoolean, readStoredPaneScroll,
 } from '../lib/persistence'
@@ -76,6 +76,10 @@ const VIEW_META: Record<AppView, { title: string; subtitle: string; railLabel: s
     subtitle: 'This reader now prioritizes the corpus itself; remaining shell work is convenience tooling around it.',
     railLabel: 'Settings',
   },
+}
+
+function readerScrollBehavior(): ScrollBehavior {
+  return document.documentElement.getAttribute('data-motion') === 'reduced' ? 'auto' : 'smooth'
 }
 
 const SECTION_LABELS: Record<CorpusDoc['section'], string> = {
@@ -861,7 +865,7 @@ function MarkdownDocument({
             document.getElementById(`${finalTarget.id}--${anchor}`) ??
             document.getElementById(anchor)
           if (!el) return
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          el.scrollIntoView({ behavior: readerScrollBehavior(), block: 'start' })
           el.classList.remove('link-pulse')
           void el.offsetWidth
           el.classList.add('link-pulse')
@@ -2750,10 +2754,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }, [selectedDoc?.id, documentQuery])
 
   useEffect(() => {
-    // Apply persisted appearance settings immediately on mount
-    applyFontSize(readFontSize())
-    applyColumnWidth(readColumnWidth())
-    applyTheme(readTheme())
+    // Apply persisted reader preferences immediately on mount.
+    applyReaderPreferences(readReaderPreferences())
   }, [])
 
   // Track dark-mode changes so RefChip can switch colour palettes reactively
@@ -2815,7 +2817,9 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     }
 
     window.requestAnimationFrame(() => {
-      const hits = readerPaneRef.current?.querySelectorAll<HTMLElement>('mark[data-reader-search-hit="true"]') ?? []
+      const hits = Array
+        .from(readerPaneRef.current?.querySelectorAll<HTMLElement>('mark[data-reader-search-hit="true"]') ?? [])
+        .filter((hit) => hit.getClientRects().length > 0)
       setDocumentMatchCount(hits.length)
       setActiveMatchIndex((index) => (hits.length ? Math.min(index, hits.length - 1) : 0))
     })
@@ -2876,7 +2880,9 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
   }, [selectedDoc?.id])
 
   useEffect(() => {
-    const hits = readerPaneRef.current?.querySelectorAll<HTMLElement>('mark[data-reader-search-hit="true"]') ?? []
+    const hits = Array
+      .from(readerPaneRef.current?.querySelectorAll<HTMLElement>('mark[data-reader-search-hit="true"]') ?? [])
+      .filter((hit) => hit.getClientRects().length > 0)
 
     hits.forEach((hit, index) => {
       hit.dataset.activeHit = index === activeMatchIndex ? 'true' : 'false'
@@ -2888,7 +2894,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
     shouldScrollToActiveMatchRef.current = false
     hits[activeMatchIndex]?.scrollIntoView({
-      behavior: 'smooth',
+      behavior: readerScrollBehavior(),
       block: 'center',
     })
   }, [activeMatchIndex, documentMatchCount, selectedDoc?.id, documentQuery])
@@ -2990,7 +2996,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           if (isGoingBackRef.current) return  // back navigation will restore scroll itself
           if (window.matchMedia('(max-width: 1279px)').matches) {
             document.getElementById('reader-panel-start')?.scrollIntoView({
-              behavior: 'smooth',
+              behavior: readerScrollBehavior(),
               block: 'start',
             })
           } else {

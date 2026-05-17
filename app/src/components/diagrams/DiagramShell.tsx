@@ -29,26 +29,29 @@ export function DiagramShell({
   children,
 }: DiagramShellProps) {
   const active = nodes.find(n => n.id === activeNodeId) ?? null
+  const reduceMotion = typeof document !== 'undefined' && document.documentElement.getAttribute('data-motion') === 'reduced'
 
   return (
-    <div className="my-6 rounded-xl border border-[#30363d] bg-[#161b22] px-7 py-6">
+    <div className="diagram-shell my-6 rounded-xl border border-[#30363d] bg-[#161b22] px-7 py-6">
       {/* Title */}
-      <div className="mb-5 font-mono text-[0.82em] uppercase tracking-[0.1em] text-[#8b949e]">
+      <div className="diagram-title mb-5 font-mono text-[0.82em] uppercase tracking-[0.1em] text-[#8b949e]">
         Fig. {figId} · {title}
       </div>
 
       {/* SVG / content slot */}
-      {children}
+      <div className="diagram-viewport">
+        {children}
+      </div>
 
       {/* Expansion panel */}
       <AnimatePresence>
         {active && (
           <motion.div
             key={active.id}
-            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+            initial={reduceMotion ? false : { opacity: 0, height: 0, marginTop: 0 }}
             animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
-            exit={{ opacity: 0, height: 0, marginTop: 0 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
+            exit={reduceMotion ? { opacity: 1, height: 'auto', marginTop: 16 } : { opacity: 0, height: 0, marginTop: 0 }}
+            transition={{ duration: reduceMotion ? 0 : 0.25, ease: 'easeOut' }}
             className="relative rounded-lg overflow-hidden"
             style={{ border: `2px solid ${active.accent}` }}
           >
@@ -56,8 +59,8 @@ export function DiagramShell({
             <motion.div
               className="absolute inset-0 rounded-lg pointer-events-none"
               style={{ border: `2px solid ${active.accent}` }}
-              animate={{ opacity: [0.6, 0.15, 0.6] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              animate={reduceMotion ? { opacity: 0.25 } : { opacity: [0.6, 0.15, 0.6] }}
+              transition={{ duration: reduceMotion ? 0 : 2, repeat: reduceMotion ? 0 : Infinity, ease: 'easeInOut' }}
             />
 
             <div

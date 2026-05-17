@@ -1,5 +1,39 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CorpusDoc } from '../generated/corpus'
+import {
+  applyReaderPreferences,
+  readColumnWidth,
+  readContrast,
+  readFigureSize,
+  readFigureWidth,
+  readFontSize,
+  readLineSpacing,
+  readMotion,
+  readParagraphSpacing,
+  readReaderPreferences,
+  readTableView,
+  readTheme,
+  storeColumnWidth,
+  storeContrast,
+  storeFigureSize,
+  storeFigureWidth,
+  storeFontSize,
+  storeLineSpacing,
+  storeMotion,
+  storeParagraphSpacing,
+  storeTableView,
+  storeTheme,
+  type ColumnWidthOption,
+  type ContrastOption,
+  type FigureSizeOption,
+  type FigureWidthOption,
+  type FontSizeOption,
+  type LineSpacingOption,
+  type MotionOption,
+  type ParagraphSpacingOption,
+  type TableViewOption,
+  type ThemeOption,
+} from '../lib/persistence'
 import { Logo } from './Logo'
 
 export type AppView =
@@ -37,52 +71,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'validation', label: 'Validation' },
 ]
 
-// ── appearance settings ───────────────────────────────────────────────────────
-
-const FONT_SIZE_KEY    = 'humane-reader:font-size'
-const COLUMN_WIDTH_KEY = 'humane-reader:column-width'
-const THEME_KEY        = 'humane-reader:theme'
-
-type FontSizeOption    = 'sm' | 'md' | 'lg' | 'xl'
-type ColumnWidthOption = 'narrow' | 'normal' | 'wide'
-type ThemeOption       = 'light' | 'dark' | 'system'
-
-const FONT_SIZE_VALUES: Record<FontSizeOption, string> = {
-  sm: '14px', md: '16px', lg: '18px', xl: '20px',
-}
-const COLUMN_WIDTH_VALUES: Record<ColumnWidthOption, string> = {
-  narrow: '38rem', normal: '52rem', wide: '68rem',
-}
-
-function readFontSize(): FontSizeOption {
-  const v = typeof window !== 'undefined' ? window.localStorage.getItem(FONT_SIZE_KEY) : null
-  return (v === 'sm' || v === 'md' || v === 'lg' || v === 'xl') ? v : 'md'
-}
-function readColumnWidth(): ColumnWidthOption {
-  const v = typeof window !== 'undefined' ? window.localStorage.getItem(COLUMN_WIDTH_KEY) : null
-  return (v === 'narrow' || v === 'normal' || v === 'wide') ? v : 'normal'
-}
-function readTheme(): ThemeOption {
-  const v = typeof window !== 'undefined' ? window.localStorage.getItem(THEME_KEY) : null
-  return (v === 'light' || v === 'dark' || v === 'system') ? v : 'system'
-}
-function applyFontSize(size: FontSizeOption) {
-  document.documentElement.style.setProperty('--reader-font-size', FONT_SIZE_VALUES[size])
-}
-function applyColumnWidth(width: ColumnWidthOption) {
-  document.documentElement.style.setProperty('--reader-column-width', COLUMN_WIDTH_VALUES[width])
-}
-function applyTheme(pref: ThemeOption) {
-  const resolved = pref === 'system'
-    ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-    : pref
-  if (resolved === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark')
-  } else {
-    document.documentElement.removeAttribute('data-theme')
-  }
-}
-
 function isTypingElement(target: EventTarget | null): boolean {
   if (!(target instanceof HTMLElement)) {
     return false
@@ -100,18 +88,33 @@ function isTypingElement(target: EventTarget | null): boolean {
 // ── SettingsDropdown ──────────────────────────────────────────────────────────
 
 function SettingsDropdown() {
-  const [open, setOpen]         = useState(false)
-  const [fontSize, setFs]       = useState<FontSizeOption>(readFontSize)
-  const [colWidth, setCw]       = useState<ColumnWidthOption>(readColumnWidth)
-  const [theme, setTh]          = useState<ThemeOption>(readTheme)
-  const containerRef            = useRef<HTMLDivElement>(null)
+  const [open, setOpen] = useState(false)
+  const [fontSize, setFs] = useState<FontSizeOption>(readFontSize)
+  const [colWidth, setCw] = useState<ColumnWidthOption>(readColumnWidth)
+  const [theme, setTh] = useState<ThemeOption>(readTheme)
+  const [figureSize, setFigureSize] = useState<FigureSizeOption>(readFigureSize)
+  const [lineSpacing, setLineSpacing] = useState<LineSpacingOption>(readLineSpacing)
+  const [paragraphSpacing, setParagraphSpacing] = useState<ParagraphSpacingOption>(readParagraphSpacing)
+  const [contrast, setContrast] = useState<ContrastOption>(readContrast)
+  const [motion, setMotion] = useState<MotionOption>(readMotion)
+  const [figureWidth, setFigureWidth] = useState<FigureWidthOption>(readFigureWidth)
+  const [tableView, setTableView] = useState<TableViewOption>(readTableView)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   // Apply saved preferences on first mount
   useEffect(() => {
-    applyFontSize(fontSize)
-    applyColumnWidth(colWidth)
-    applyTheme(theme)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    applyReaderPreferences(readReaderPreferences())
+
+    const colorScheme = window.matchMedia('(prefers-color-scheme: dark)')
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const handleSystemPreferenceChange = () => applyReaderPreferences(readReaderPreferences())
+
+    colorScheme.addEventListener('change', handleSystemPreferenceChange)
+    reducedMotion.addEventListener('change', handleSystemPreferenceChange)
+    return () => {
+      colorScheme.removeEventListener('change', handleSystemPreferenceChange)
+      reducedMotion.removeEventListener('change', handleSystemPreferenceChange)
+    }
   }, [])
 
   // Close on outside click or Escape
@@ -133,23 +136,49 @@ function SettingsDropdown() {
 
   function handleFontSize(v: FontSizeOption) {
     setFs(v)
-    window.localStorage.setItem(FONT_SIZE_KEY, v)
-    applyFontSize(v)
+    storeFontSize(v)
   }
   function handleColWidth(v: ColumnWidthOption) {
     setCw(v)
-    window.localStorage.setItem(COLUMN_WIDTH_KEY, v)
-    applyColumnWidth(v)
+    storeColumnWidth(v)
   }
   function handleTheme(v: ThemeOption) {
     setTh(v)
-    window.localStorage.setItem(THEME_KEY, v)
-    applyTheme(v)
+    storeTheme(v)
+  }
+  function handleFigureSize(v: FigureSizeOption) {
+    setFigureSize(v)
+    storeFigureSize(v)
+  }
+  function handleLineSpacing(v: LineSpacingOption) {
+    setLineSpacing(v)
+    storeLineSpacing(v)
+  }
+  function handleParagraphSpacing(v: ParagraphSpacingOption) {
+    setParagraphSpacing(v)
+    storeParagraphSpacing(v)
+  }
+  function handleContrast(v: ContrastOption) {
+    setContrast(v)
+    storeContrast(v)
+  }
+  function handleMotion(v: MotionOption) {
+    setMotion(v)
+    storeMotion(v)
+  }
+  function handleFigureWidth(v: FigureWidthOption) {
+    setFigureWidth(v)
+    storeFigureWidth(v)
+  }
+  function handleTableView(v: TableViewOption) {
+    setTableView(v)
+    storeTableView(v)
   }
 
-  const btnBase = 'focus-ring rounded border px-3 py-1.5 text-[12px] font-medium transition'
+  const btnBase = 'focus-ring rounded border px-2.5 py-1.5 text-[12px] font-medium transition'
   const btnActive = 'border-[var(--accent)] bg-[var(--accent)] text-[var(--forest)] font-semibold'
   const btnIdle = 'border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.06)] text-[var(--forest-text-muted)] hover:border-[rgba(255,255,255,0.35)] hover:text-[var(--forest-text)]'
+  const sectionTitle = 'font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--forest-text-muted)] opacity-60'
 
   return (
     <div ref={containerRef} className="relative" data-no-drag>
@@ -175,7 +204,7 @@ function SettingsDropdown() {
         <div
           role="dialog"
           aria-label="Reading preferences"
-          className="absolute right-0 top-full z-50 mt-2 w-72 rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] p-4 shadow-2xl"
+          className="absolute right-0 top-full z-50 mt-2 max-h-[min(82vh,680px)] w-[min(24rem,calc(100vw-1rem))] overflow-y-auto rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] p-4 shadow-2xl"
         >
           <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--forest-text-muted)]">
             Reading preferences
@@ -183,7 +212,7 @@ function SettingsDropdown() {
 
           {/* Font size */}
           <div className="mb-4 space-y-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--forest-text-muted)] opacity-60">Text size</p>
+            <p className={sectionTitle}>Text size</p>
             <div className="flex gap-1.5">
               {(['sm', 'md', 'lg', 'xl'] as FontSizeOption[]).map(opt => (
                 <button
@@ -198,9 +227,43 @@ function SettingsDropdown() {
             </div>
           </div>
 
+          {/* Line spacing */}
+          <div className="mb-4 space-y-2">
+            <p className={sectionTitle}>Line spacing</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['compact', 'normal', 'relaxed'] as LineSpacingOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleLineSpacing(opt)}
+                  className={`${btnBase} ${lineSpacing === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'compact' ? 'Compact' : opt === 'normal' ? 'Normal' : 'Relaxed'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Paragraph spacing */}
+          <div className="mb-4 space-y-2">
+            <p className={sectionTitle}>Paragraph spacing</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['compact', 'normal', 'relaxed'] as ParagraphSpacingOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleParagraphSpacing(opt)}
+                  className={`${btnBase} ${paragraphSpacing === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'compact' ? 'Compact' : opt === 'normal' ? 'Normal' : 'Relaxed'}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Column width */}
           <div className="mb-4 space-y-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--forest-text-muted)] opacity-60">Reading width</p>
+            <p className={sectionTitle}>Reading width</p>
             <div className="flex gap-1.5">
               {(['narrow', 'normal', 'wide'] as ColumnWidthOption[]).map(opt => (
                 <button
@@ -215,10 +278,61 @@ function SettingsDropdown() {
             </div>
           </div>
 
+          {/* Figure text */}
+          <div className="mb-4 space-y-2 border-t border-[rgba(255,255,255,0.08)] pt-4">
+            <p className={sectionTitle}>Figure size</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['linked', 'sm', 'md', 'lg', 'xl'] as FigureSizeOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleFigureSize(opt)}
+                  className={`${btnBase} ${figureSize === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'linked' ? 'Linked' : opt === 'sm' ? 'S' : opt === 'md' ? 'M' : opt === 'lg' ? 'L' : 'XL'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Figure width */}
+          <div className="mb-4 space-y-2">
+            <p className={sectionTitle}>Figure width</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['column', 'wide', 'full'] as FigureWidthOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleFigureWidth(opt)}
+                  className={`${btnBase} ${figureWidth === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'column' ? 'Column' : opt === 'wide' ? 'Wide' : 'Full'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Table view */}
+          <div className="mb-4 space-y-2">
+            <p className={sectionTitle}>Tables</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['auto', 'table', 'cards'] as TableViewOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleTableView(opt)}
+                  className={`${btnBase} ${tableView === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'auto' ? 'Auto' : opt === 'table' ? 'Table' : 'Cards'}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Theme */}
-          <div className="space-y-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--forest-text-muted)] opacity-60">Appearance</p>
-            <div className="flex gap-1.5">
+          <div className="mb-4 space-y-2 border-t border-[rgba(255,255,255,0.08)] pt-4">
+            <p className={sectionTitle}>Appearance</p>
+            <div className="flex flex-wrap gap-1.5">
               {([
                 { id: 'light' as ThemeOption, label: 'Light', icon: '☀' },
                 { id: 'dark'  as ThemeOption, label: 'Dark',  icon: '☽' },
@@ -232,6 +346,40 @@ function SettingsDropdown() {
                 >
                   <span aria-hidden="true">{opt.icon}</span>
                   {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Contrast */}
+          <div className="mb-4 space-y-2">
+            <p className={sectionTitle}>Contrast</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['normal', 'high'] as ContrastOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleContrast(opt)}
+                  className={`${btnBase} ${contrast === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'normal' ? 'Normal' : 'High'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Motion */}
+          <div className="space-y-2">
+            <p className={sectionTitle}>Motion</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(['system', 'reduced', 'full'] as MotionOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => handleMotion(opt)}
+                  className={`${btnBase} ${motion === opt ? btnActive : btnIdle}`}
+                >
+                  {opt === 'system' ? 'System' : opt === 'reduced' ? 'Reduced' : 'Full'}
                 </button>
               ))}
             </div>
@@ -884,15 +1032,16 @@ export function Layout({
           </button>
 
           {/* Right controls */}
-          <div className="hidden sm:flex shrink-0 items-center gap-1">
-            <NavDropdown
-              label="Recent"
-              docs={recentDocs}
-              onSelect={handleSelectDoc}
-              testId="nav-recent"
-              emptyText="No recently viewed documents."
-            />
-            {shelfDocs.length > 0 && shelfLabel && (
+          <div className="flex shrink-0 items-center gap-1">
+            <div className="hidden items-center gap-1 sm:flex">
+              <NavDropdown
+                label="Recent"
+                docs={recentDocs}
+                onSelect={handleSelectDoc}
+                testId="nav-recent"
+                emptyText="No recently viewed documents."
+              />
+              {shelfDocs.length > 0 && shelfLabel && (
               <NavDropdown
                 label={shelfLabel}
                 docs={shelfDocs}
@@ -900,7 +1049,8 @@ export function Layout({
                 testId="nav-shelf"
                 emptyText="No documents in this section."
               />
-            )}
+              )}
+            </div>
             <SettingsDropdown />
           </div>
         </div>
