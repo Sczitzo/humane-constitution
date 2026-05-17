@@ -125,7 +125,7 @@ But Flow (ordinary money) cannot buy everything. It cannot buy another person's 
 
 The system also uses an **idle-money fee** on large unused balances. The goal is to discourage hoarding and push money toward useful activity. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the fee falls on large idle balances rather than on people with modest savings.
 
-![Demurrage Decay Curve](/images/V-005.png)
+![Progressive Net-Worth Demurrage](/images/V-005.png)
 
 ## Essential Access: The Basic Needs Floor
 
