@@ -100,9 +100,8 @@ function Slider({ label, id, min, max, step, value, fmt, color, tipKey, onChange
     <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 12, fontFamily: MONOSPACE }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-          <span style={{ color: THEME.dim }}>{label}</span>
           {tip && (
-            <span style={{ position: 'relative', display: 'inline-flex' }}>
+            <span style={{ position: 'relative', display: 'inline-flex', flexShrink: 0 }}>
               <span
                 onMouseEnter={() => setTipOpen(true)}
                 onMouseLeave={() => setTipOpen(false)}
@@ -128,6 +127,7 @@ function Slider({ label, id, min, max, step, value, fmt, color, tipKey, onChange
               )}
             </span>
           )}
+          <span style={{ color: THEME.dim }}>{label}</span>
         </div>
         <span style={{ color, fontWeight: 600 }}>{fmt(value)}</span>
       </div>
