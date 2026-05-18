@@ -22,7 +22,8 @@ const COLORS = {
 
 // Constitutional tier boundaries (NW values) — ANNEX_D §D2.2
 // M*=$1M (T1/T2), W*=$22M (T2/T3), W**=$50M (T3/T4)
-const TIER_NW = [1_000_000, 22_000_000, 50_000_000] as const
+const TIER_NW     = [1_000_000, 22_000_000, 50_000_000] as const
+const TIER_COLORS = ['#58a6ff', '#3fb950', '#f0883e', '#ff7b72'] as const  // T1→T4
 const TIER_R_WORKING = [0.26, 0.30, 0.38, 0.46] as const
 const TIER_R_RETIRED = [0.18, 0.30, 0.38, 0.46] as const  // T1 only per §D10.1
 
@@ -106,10 +107,11 @@ function Slider({ label, id, min, max, step, value, fmt, color, tipKey, onChange
                 onMouseEnter={() => setTipOpen(true)}
                 onMouseLeave={() => setTipOpen(false)}
                 style={{
-                  fontSize: 9, color: THEME.dim, opacity: 0.55, cursor: 'help',
-                  border: `1px solid ${THEME.dim}55`, borderRadius: '50%',
-                  width: 13, height: 13, display: 'inline-flex', alignItems: 'center',
+                  fontSize: 10, color: '#8ba7c4', cursor: 'help',
+                  border: '1px solid #8ba7c4', borderRadius: '50%',
+                  width: 15, height: 15, display: 'inline-flex', alignItems: 'center',
                   justifyContent: 'center', lineHeight: 1, userSelect: 'none',
+                  fontWeight: 700, background: 'rgba(139,167,196,0.12)',
                 }}
               >i</span>
               {tipOpen && (
@@ -340,17 +342,59 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     drawMarker(TIER_NW[1], 'W*',  [3, 4])
     drawMarker(TIER_NW[2], 'W**', [1, 5])
 
-    // Curve
-    ctx.beginPath()
-    ctx.strokeStyle = '#FFD700'
-    ctx.lineWidth = 2
+    // Tier zone fills (faint background)
+    const TIER_RANGES = [
+      { lo: 0,          hi: TIER_NW[0], color: TIER_COLORS[0] },
+      { lo: TIER_NW[0], hi: TIER_NW[1], color: TIER_COLORS[1] },
+      { lo: TIER_NW[1], hi: TIER_NW[2], color: TIER_COLORS[2] },
+      { lo: TIER_NW[2], hi: xMax + 1,   color: TIER_COLORS[3] },
+    ]
+    ctx.save()
+    TIER_RANGES.forEach(({ lo, hi, color }) => {
+      const lx = Math.max(mx(lo), mg.left)
+      const rx = Math.min(mx(hi), mg.left + dw)
+      if (lx >= rx) return
+      ctx.fillStyle = color
+      ctx.globalAlpha = 0.07
+      ctx.fillRect(lx, mg.top, rx - lx, dh)
+    })
+    ctx.restore()
+
+    // Colored x-axis tier bands
+    const BAND_H = 5
+    TIER_RANGES.forEach(({ lo, hi, color }) => {
+      const lx = Math.max(mx(lo), mg.left)
+      const rx = Math.min(mx(hi), mg.left + dw)
+      if (lx >= rx) return
+      ctx.fillStyle = color
+      ctx.globalAlpha = 0.5
+      ctx.fillRect(lx, mg.top + dh - BAND_H, rx - lx, BAND_H)
+      ctx.globalAlpha = 1
+    })
+
+    // Curve — drawn in 4 tier-colored segments
     ctx.setLineDash([])
-    for (let i = 0; i <= 300; i++) {
-      const xv = xMin + (i / 300) * span
-      const yv = calc(xv, p.s, p.r, p.income, p.age).D
-      i === 0 ? ctx.moveTo(mx(xv), my(yv)) : ctx.lineTo(mx(xv), my(yv))
-    }
-    ctx.stroke()
+    const tierSegs = [
+      { lo: 0,          hi: TIER_NW[0], color: TIER_COLORS[0] },
+      { lo: TIER_NW[0], hi: TIER_NW[1], color: TIER_COLORS[1] },
+      { lo: TIER_NW[1], hi: TIER_NW[2], color: TIER_COLORS[2] },
+      { lo: TIER_NW[2], hi: Infinity,   color: TIER_COLORS[3] },
+    ]
+    tierSegs.forEach(({ lo, hi, color }) => {
+      const segLo = Math.max(lo, xMin)
+      const segHi = hi === Infinity ? xMax : Math.min(hi, xMax)
+      if (segLo >= segHi) return
+      const pts = 80
+      ctx.beginPath()
+      ctx.strokeStyle = color
+      ctx.lineWidth = 2.5
+      for (let i = 0; i <= pts; i++) {
+        const xv = segLo + (i / pts) * (segHi - segLo)
+        const yv = calc(xv, p.s, p.r, p.income, p.age).D
+        i === 0 ? ctx.moveTo(mx(xv), my(yv)) : ctx.lineTo(mx(xv), my(yv))
+      }
+      ctx.stroke()
+    })
 
     // Current NW marker
     const { D } = calc(p.nw, p.s, p.r, p.income, p.age)
@@ -474,9 +518,9 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
           <div style={{ borderTop: `1px solid ${THEME.border}`, paddingTop: 8, display: 'flex', flexDirection: 'column', gap: 3 }}>
             <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>TIER BOUNDARIES (constitutional)</div>
             {[
-              { label: 'M* — T1/T2', val: '$1M',  color: COLORS.mstar },
-              { label: 'W* — T2/T3', val: '$22M', color: COLORS.mstar },
-              { label: 'W** — T3/T4', val: '$50M', color: COLORS.mstar },
+              { label: 'M* — T1/T2',  val: '$1M',  color: TIER_COLORS[1] },
+              { label: 'W* — T2/T3',  val: '$22M', color: TIER_COLORS[2] },
+              { label: 'W** — T3/T4', val: '$50M', color: TIER_COLORS[3] },
             ].map(({ label, val, color }) => (
               <div key={label} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10 }}>
                 <span style={{ color: THEME.dim }}>{label}</span>
@@ -561,12 +605,13 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         }}>
           <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>CHART</div>
           {[
-            { swatch: '#FFD700',   line: true,  label: 'D(E) demurrage curve' },
-            { swatch: COLORS.nw,  line: false, label: 'Current net worth' },
-            { swatch: COLORS.s,   line: true,  label: 'S — participation floor' },
-            { swatch: COLORS.mstar, line: true, label: 'M* — T1/T2 ($1M)' },
-            { swatch: COLORS.mstar, line: true, label: 'W* — T2/T3 ($22M)' },
-            { swatch: COLORS.mstar, line: true, label: 'W** — T3/T4 ($50M)' },
+            { swatch: TIER_COLORS[0], line: true,  label: 'T1 — < M* ($1M)' },
+            { swatch: TIER_COLORS[1], line: true,  label: 'T2 — M* → W* ($22M)' },
+            { swatch: TIER_COLORS[2], line: true,  label: 'T3 — W* → W** ($50M)' },
+            { swatch: TIER_COLORS[3], line: true,  label: 'T4 — > W**' },
+            { swatch: COLORS.nw,      line: false, label: 'Current net worth' },
+            { swatch: COLORS.s,       line: true,  label: 'S — floor' },
+            { swatch: COLORS.mstar,   line: true,  label: 'M* / W* / W** bounds' },
           ].map(({ swatch, line, label }) => (
             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
               {line
