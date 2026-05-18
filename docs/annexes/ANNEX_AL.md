@@ -172,6 +172,15 @@ Per the founding commitments, every oracle cohort for a high-volatility essentia
 
 **Cohort composition example (minimum-compliant):** 5 nodes total = 2 Class 1 (Institutional Statistical) + 2 Class 2 (CBPR) + 1 Class 3 (Independent Physical Sampling), with the Class 3 node designated adversarial seat. Pairwise error correlation verified ≤ 0.30 across all pairs. This is the minimum, not the target — cohorts are encouraged to exceed the floors.
 
+### AI Supply Chain Disclosure at Accreditation Intake
+
+Accreditation applicants must disclose the following at intake and update the disclosure on any material change:
+- AI system vendor identity for any AI or ML component used in measurement.
+- Training data provenance, including the original data source and any known shared upstream data sources.
+- Any known shared upstream AI dependencies with other nodes currently accredited or pending accreditation in the same essential category cohort.
+
+A shared upstream AI vendor, base model, or training dataset between any two nodes in the same cohort is treated as a concentration trigger requiring independent architecture review before both nodes may vote on oracle consensus, equivalent to the AI supply chain concentration trigger in Section 4.2. Disclosure is a mandatory intake condition; an application that omits required AI supply chain information is incomplete and may not proceed to accreditation review until the disclosure is provided.
+
 ---
 
 ## AL-COST — Physical Sampling Cost Model
@@ -235,6 +244,24 @@ Any node pair with Pearson correlation > FC-032 (0.30) must be treated as a sing
 - Resolution options: (a) replace one node in the pair with a genuinely independent node; (b) demonstrate in two consecutive quarterly measurements that the correlation has fallen below 0.30.
 
 Pairs above threshold but not yet resolved must remain flagged in the public accreditation record.
+
+### Suspension Declaration
+
+When effective N drops below FC-030 (5) under the Failure Criterion above, the following enforcement chain applies.
+
+**Owner.** The RCS accreditation body is the declaring authority for Shared Storehouse suspension under this section.
+
+**Timeline.** Upon detection that effective N has dropped below FC-030, the RCS accreditation body must issue a formal suspension declaration within **14 days**. The clock begins when the correlation matrix that produces the threshold failure is computed and available to the accreditation body.
+
+**Publication.** The suspension declaration must be published to the public accreditation record and the Article VII transparency dashboard within 24 hours of the declaration.
+
+**Ombuds notification.** The Federated Ombuds must be notified within **24 hours** of the suspension declaration. The Ombuds may initiate a review of the accreditation body's handling of the suspension on its own motion.
+
+**Dispute by oracle operator.** An oracle operator whose node is implicated in a correlation-threshold breach may file a written dispute within **14 days** of the suspension declaration. The dispute is reviewed by the adversarial oracle seat (FC-033) within **30 days**, with a written finding published in the public accreditation record. A pending dispute does not lift the suspension; oracle output from a suspended cohort may not be relied upon for Shared Storehouse activation until the suspension is lifted by confirmed resolution under the resolution options above.
+
+**Audit artifact.** The RCS accreditation body must update the accreditation record within **7 days** of any suspension to document: effective N at the time of suspension, specific node pairs above threshold, suspension declaration date, and expected resolution path. This update is the mandatory audit artifact for the suspension event.
+
+**No urgency bypass.** No urgency claim, emergency, or time pressure may shorten the dispute period, waive the publication requirement, or permit reliance on oracle output from a suspended cohort before suspension is lifted by confirmed resolution.
 
 ### Adversarial Seat Role
 

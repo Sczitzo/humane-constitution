@@ -21,7 +21,7 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 | How rules can change without being captured | Annexes H, AG, AH, AV |
 | Who counts, how people recover identity, and how migration works | Annexes I, P, AK |
 | How basic needs, scarcity, and survival continuity work | Annexes K, M, Q, U, Y, AQ |
-| How money, housing, land, business, and public funding work | Annexes J, V, X, AR, AT, AZ |
+| How money, housing, land, business, and public funding work | Annexes D, V, X, AR, AT |
 | How public voice, service, and review bodies avoid capture | Annexes L, S, Z, AC, AF, AI |
 | How public communication and evidence gates work | Annexes AD, AM, AN, AO, AP, AS |
 
@@ -30,9 +30,9 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - [Annex A](./ANNEX_A.md) — how the project stress-tests itself.
 - [Annex B](./ANNEX_B.md) — baseline list of known threats.
 - [Annex C](./ANNEX_C.md) — how threats are tracked, reviewed, and updated.
+- [Annex D](./ANNEX_D.md) — progressive net-worth demurrage: the single carrying-cost instrument on idle accumulated wealth.
 - [Annex H](./ANNEX_H.md) — how major rules can change.
 - [Annex I](./ANNEX_I.md) — residency, migration, and onboarding.
-- [Annex J](./ANNEX_J.md) — money settings, idle-money fee, and tool boundaries.
 - [Annex K](./ANNEX_K.md) — essential basket governance and civic participation fairness.
 - [Annex L](./ANNEX_L.md) — courts, review panels, and appeal structure.
 - [Annex M](./ANNEX_M.md) — how real-world capacity is measured and where measurement can fail.
@@ -65,14 +65,13 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - [Annex AO](./ANNEX_AO.md) — what threat details are public and what details are restricted for safety.
 - [Annex AP](./ANNEX_AP.md) — protects emergency response signals from manipulation.
 - [Annex AQ](./ANNEX_AQ.md) — Shared Storehouse oracle-failure fallback protocol.
-- [Annex AR](./ANNEX_AR.md) — prevents investment accounts from becoming idle-money-fee escape routes.
+- [Annex AR](./ANNEX_AR.md) — prevents investment accounts from becoming demurrage escape routes.
 - [Annex AS](./ANNEX_AS.md) — makes high-impact witness statements carry risk if false.
 - [Annex AT](./ANNEX_AT.md) — trade rules for protecting basic domestic capacity.
 - [Annex AV](./ANNEX_AV.md) — requires two independent checks before top-level rules can be touched.
 - **[ANNEX AW](ANNEX_AW.md)** — Whistleblower Protection and Anti-Retaliation Protocol · P-053 · ACTIVE
 - **[ANNEX AX](ANNEX_AX.md)** — Confidential Enrollment and Safety-Identity Protocol · P-054 · ACTIVE
 - **[ANNEX AY](ANNEX_AY.md)** — Delivery Sufficiency Standard and Register · P-055 · ACTIVE
-- **[ANNEX AZ](ANNEX_AZ.md)** — Progressive Net-Worth Demurrage Architecture · 2026-05-11 · ACTIVE
 
 ## Reading rule
 

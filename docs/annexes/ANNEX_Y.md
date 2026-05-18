@@ -132,7 +132,7 @@ Plain meaning: even one confirmed failure matters. It must be disclosed, investi
 - **Mandatory investigation:** the Federated Ombuds opens an investigation within 72 hours.
 - **Mandatory restitution:** the affected person receives retroactive CSM provision, plus dignity-preserving redress, within 7 days of confirmation.
 - **Mandatory root-cause review:** capacity gap, process failure, or capture is published within 30 days; patches registered per Patch Log.
-- **Mandatory pattern detection:** if more than **3 verified delivery failures** (FC-YT1, Tier 2 Founding Commitment — provisional; must be confirmed in /founding/commitments.md before operational activation; pre-launch blocking gate) occur in any jurisdictional cluster within a 30-day window, the protocol enters Scarcity L3 for that cluster regardless of oracle status, and H-3 refounding review is initiated at the next scheduled opportunity.
+- **Mandatory pattern detection:** if more than **3 verified delivery failures** (FC-YT1 / `CSM_FAILURE_COUNT_THRESHOLD`, Tier 2 Founding Commitment — confirmed in `/founding/commitments.md`; Ombuds review and INV-LAUNCH-1 clearance required before operational activation; pre-launch blocking gate) occur in any jurisdictional cluster within a 30-day window, the protocol enters Scarcity L3 for that cluster regardless of oracle status, and H-3 refounding review is initiated at the next scheduled opportunity.
 
 ## Y5. Amendment and Lock
 
@@ -153,7 +153,7 @@ Example — the broader basket may include "basic clothing" or "basic local tran
 - **Article III (Capacity):** the RCS publishes CSM × population estimates continuously. Any projected shortfall triggers §Y3 substitution planning immediately — not when the shortfall arrives.
 - **Article I (Rule-bound execution):** enforcement actions are architecturally prohibited from targeting CSM channels. Account partitioning in the constitutional monetary architecture ensures enforcement on Flow or other channels does not touch Essential Access/CSM.
 - **Article VII (Transparency):** CSM delivery rate, substitution events, and Critical Incidents are published in aggregate at the jurisdictional-cluster level. Individual-level CSM data is never published.
-- **Article III (Reserves):** resilience reserves are sized to cover CSM × population × **90 days** (FC-YT2, Tier 2 Founding Commitment — provisional; must be confirmed in /founding/commitments.md before operational activation; pre-launch blocking gate).
+- **Article III (Reserves):** resilience reserves are sized to cover CSM × population × **90 days** (FC-YT2 / `CSM_SURVIVAL_RESERVE_DAYS`, Tier 2 Founding Commitment — confirmed in `/founding/commitments.md`; Ombuds review and INV-LAUNCH-1 clearance required before operational activation; pre-launch blocking gate).
 
 ---
 
