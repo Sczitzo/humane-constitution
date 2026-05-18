@@ -107,9 +107,9 @@ function Slider({ label, id, min, max, step, value, fmt, color, tipKey, onChange
                 onMouseEnter={() => setTipOpen(true)}
                 onMouseLeave={() => setTipOpen(false)}
                 style={{
-                  fontSize: 10, color: '#8ba7c4', cursor: 'help',
+                  fontSize: 9, color: '#8ba7c4', cursor: 'help',
                   border: '1px solid #8ba7c4', borderRadius: '50%',
-                  width: 15, height: 15, display: 'inline-flex', alignItems: 'center',
+                  width: 13, height: 13, display: 'inline-flex', alignItems: 'center',
                   justifyContent: 'center', lineHeight: 1, userSelect: 'none',
                   fontWeight: 700, background: 'rgba(139,167,196,0.12)',
                 }}
