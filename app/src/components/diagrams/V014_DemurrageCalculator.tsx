@@ -610,7 +610,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             { swatch: TIER_COLORS[2], style: 'solid', label: 'T3 — W* → W** ($50M)' },
             { swatch: TIER_COLORS[3], style: 'solid', label: 'T4 — > W**' },
             { swatch: COLORS.nw,      style: 'dot',   label: 'Current net worth' },
-            { swatch: COLORS.s,       style: 'solid', label: 'S — floor' },
+            { swatch: COLORS.s,       style: 'dashed', label: 'S — floor' },
             { swatch: COLORS.mstar,   style: 'dashed', label: 'M* / W* / W** bounds' },
           ].map(({ swatch, style, label }) => (
             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
