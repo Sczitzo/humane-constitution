@@ -48,7 +48,7 @@ During any period where the regional consumption oracle is not yet operational, 
 
 Bracket boundaries M*, W*, and W** are Tier 2 founding values. They may be adjusted by the oracle to maintain real-terms equivalence within a ±20% corridor without triggering the Founding Amendment Process; adjustments beyond that corridor require FAP.
 
-**D2.3 Expected return on capital (r).** r is the oracle-published rolling 10-year median real return on actively deployed capital within the Flow jurisdiction, annualized. During any period where fewer than 10 years of Flow operational data exist, r = 3.0% real (bootstrap default). r is updated annually by the oracle panel. r may not be set below 1.5% real for purposes of the structural constraint in §D3.3, regardless of observed returns.
+**D2.3 Expected return on capital (r).** r is the oracle-published rolling 10-year median real return on actively deployed capital within the Flow jurisdiction, annualized. During any period where fewer than 10 years of Flow operational data exist, r = 3.0% real (bootstrap default). r is updated annually by the oracle panel. r may not be set below 1.5% real for purposes of the structural constraint in §D3.5, regardless of observed returns.
 
 **D2.4 Annual decay rates (λ₁, λ₂, λ₃, λ₄).** The decay rate for each tier. The founding calibration values are:
 
@@ -59,7 +59,7 @@ Bracket boundaries M*, W*, and W** are Tier 2 founding values. They may be adjus
 | T3 | W* to W** | 38% per year |
 | T4 | Above W** | 46% per year |
 
-These calibration values are not founding law. They document design intent and serve as the baseline for the first published rate schedule. See §D3 and §D11 for tier classification and amendment constraints.
+These calibration values are not founding law. They document design intent and serve as the baseline for the first published rate schedule. See §D3.5 and §D11 for tier classification and amendment constraints.
 
 **D2.5 Retirement modifier (λ₁ᴿ).** The modified T1 rate applicable to qualifying holders under §D10.1. Founding calibration value: 18% per year. Subject to the same Tier 3 review process as λ₁.
 
@@ -77,7 +77,52 @@ Demurrage accrues daily (or at the settlement cadence specified in the Technical
 
 **D3.2** Demurrage is settled by the holder through any combination of: Flow currency transfer to the commons settlement address; in-kind contribution of non-exempt assets at oracle-assessed value; or enrollment of assets in an approved investment channel under §D6.3–D6.7.
 
-**D3.3 Structural constraints on rates (Tier 2).** The rate review process under §D11.3 may adjust λ₁–λ₄ within the following structural constraints, which are Tier 2 founding commitments and cannot be changed without the Founding Amendment Process:
+**D3.3 Worked formula.** Let E = W − S (net worth in excess of the participation floor). Let bracket widths at founding S = $50,000 be:
+
+```
+e₁ = M* − S  =   $950,000   (T1 bracket width)
+e₂ = W* − S  = $21,950,000  (T1 + T2 combined)
+e₃ = W** − S = $49,950,000  (T1 + T2 + T3 combined)
+
+D(E) = λ₁ · min(E, e₁)
+     + λ₂ · max(0, min(E, e₂) − e₁)
+     + λ₃ · max(0, min(E, e₃) − e₂)
+     + λ₄ · max(0, E − e₃)
+```
+
+At founding calibration rates (λ₁ = 26%, λ₂ = 30%, λ₃ = 38%, λ₄ = 46%), tier cap charges are:
+
+```
+C₁ = 0.26 × 950,000                       =   $247,000   [T1 fully filled at M*]
+C₂ = C₁ + 0.30 × 21,000,000               = $6,547,000   [T1+T2 fully filled at W*]
+C₃ = C₂ + 0.38 × 28,000,000               = $17,187,000  [T1+T2+T3 fully filled at W**]
+```
+
+**Anti-rentier check.** At M* ($1,000,000 NW), annual demurrage at founding calibration rates ($247,000) is approximately 3.5× expected passive capital returns at r = 7% ($70,000), making passive wealth maintenance above the floor impossible without active productive contribution. The instrument is intentionally calibrated so that continuous earning is required to sustain any position above S.
+
+**D3.4 Illustrative schedule.** At founding calibration rates and bootstrap S = $50,000:
+
+| Consolidated net worth | Excess E | Effective rate | Annual demurrage |
+| :--- | :--- | :--- | :--- |
+| $30,000 (below floor) | $0 | 0% | $0 |
+| $50,000 (floor, S) | $0 | 0% | $0 |
+| $100,000 | $50,000 | 26.0% | $13,000 |
+| $250,000 | $200,000 | 26.0% | $52,000 |
+| $500,000 | $450,000 | 26.0% | $117,000 |
+| $1,000,000 (M*) | $950,000 | 24.7% | $247,000 |
+| $2,000,000 | $1,950,000 | 27.4% | $547,000 |
+| $5,000,000 | $4,950,000 | 28.9% | $1,447,000 |
+| $10,000,000 | $9,950,000 | 29.5% | $2,947,000 |
+| $22,000,000 (W*) | $21,950,000 | 29.8% | $6,547,000 |
+| $30,000,000 | $29,950,000 | 32.0% | $9,587,000 |
+| $50,000,000 (W**) | $49,950,000 | 34.4% | $17,187,000 |
+| $100,000,000 | $99,950,000 | 40.2% | $40,187,000 |
+| $250,000,000 | $249,950,000 | 43.7% | $109,187,000 |
+| $1,000,000,000 | $999,950,000 | 45.4% | $454,187,000 |
+
+Effective rate = D / NW. It rises continuously as net worth increases. The schedule is illustrative; actual charges use oracle-assessed values and current Tier 3 rates. Rates marked as founding calibration (λ₁–λ₄) are subject to Tier 3 review and may change.
+
+**D3.5 Structural constraints on rates (Tier 2).** The rate review process under §D11.3 may adjust λ₁–λ₄ within the following structural constraints, which are Tier 2 founding commitments and cannot be changed without the Founding Amendment Process:
 
 - (a) λ₁ must be set no lower than r as defined in §D2.3;
 - (b) λ₄ must be set no lower than 2r;
