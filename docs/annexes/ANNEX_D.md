@@ -122,6 +122,8 @@ C₃ = C₂ + 0.38 × 28,000,000               = $17,187,000  [T1+T2+T3 fully fi
 
 Effective rate = D / NW. It rises continuously as net worth increases. The schedule is illustrative; actual charges use oracle-assessed values and current Tier 3 rates. Rates marked as founding calibration (λ₁–λ₄) are subject to Tier 3 review and may change.
 
+![Progressive Net-Worth Demurrage Calculator](/images/V-014.png)
+
 **D3.5 Structural constraints on rates (Tier 2).** The rate review process under §D11.3 may adjust λ₁–λ₄ within the following structural constraints, which are Tier 2 founding commitments and cannot be changed without the Founding Amendment Process:
 
 - (a) λ₁ must be set no lower than r as defined in §D2.3;
