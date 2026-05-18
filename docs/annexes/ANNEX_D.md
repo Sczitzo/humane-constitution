@@ -1,4 +1,4 @@
-# ANNEX_D — Progressive Net-Worth Demurrage
+# ANNEX D — Progressive Net-Worth Demurrage
 
 > **At a glance**
 > | | |

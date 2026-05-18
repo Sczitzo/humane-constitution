@@ -134,7 +134,20 @@ function docsForView(view: AppView, docs: CorpusDoc[], featuredPaths: string[]):
     )
   }
   if (view === 'annexes') {
-    return docs.filter((doc) => doc.section === 'annex')
+    const annexCode = (doc: CorpusDoc) => {
+      const m = doc.path.match(/ANNEX_([A-Z]+)\.md$/)
+      return m ? m[1] : ''
+    }
+    return docs
+      .filter((doc) => doc.section === 'annex')
+      .sort((a, b) => {
+        const ca = annexCode(a), cb = annexCode(b)
+        if (ca === '' && cb === '') return 0
+        if (ca === '') return -1
+        if (cb === '') return 1
+        if (ca.length !== cb.length) return ca.length - cb.length
+        return ca.localeCompare(cb)
+      })
   }
   if (view === 'registries') {
     return docs.filter((doc) => doc.section === 'registry')
