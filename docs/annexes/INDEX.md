@@ -33,7 +33,6 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - [Annex D](./ANNEX_D.md) — progressive net-worth demurrage: the single carrying-cost instrument on idle accumulated wealth.
 - [Annex H](./ANNEX_H.md) — how major rules can change.
 - [Annex I](./ANNEX_I.md) — residency, migration, and onboarding.
-- [Annex J](./ANNEX_J.md) — investment channel governance: project escrow, term finance, infrastructure windows, retirement locks.
 - [Annex K](./ANNEX_K.md) — essential basket governance and civic participation fairness.
 - [Annex L](./ANNEX_L.md) — courts, review panels, and appeal structure.
 - [Annex M](./ANNEX_M.md) — how real-world capacity is measured and where measurement can fail.
@@ -66,14 +65,13 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - [Annex AO](./ANNEX_AO.md) — what threat details are public and what details are restricted for safety.
 - [Annex AP](./ANNEX_AP.md) — protects emergency response signals from manipulation.
 - [Annex AQ](./ANNEX_AQ.md) — Shared Storehouse oracle-failure fallback protocol.
-- [Annex AR](./ANNEX_AR.md) — prevents investment accounts from becoming idle-money-fee escape routes.
+- [Annex AR](./ANNEX_AR.md) — prevents investment accounts from becoming demurrage escape routes.
 - [Annex AS](./ANNEX_AS.md) — makes high-impact witness statements carry risk if false.
 - [Annex AT](./ANNEX_AT.md) — trade rules for protecting basic domestic capacity.
 - [Annex AV](./ANNEX_AV.md) — requires two independent checks before top-level rules can be touched.
 - **[ANNEX AW](ANNEX_AW.md)** — Whistleblower Protection and Anti-Retaliation Protocol · P-053 · ACTIVE
 - **[ANNEX AX](ANNEX_AX.md)** — Confidential Enrollment and Safety-Identity Protocol · P-054 · ACTIVE
 - **[ANNEX AY](ANNEX_AY.md)** — Delivery Sufficiency Standard and Register · P-055 · ACTIVE
-- **[ANNEX AZ](ANNEX_AZ.md)** — Progressive Net-Worth Demurrage Architecture · 2026-05-11 · ACTIVE
 
 ## Reading rule
 
