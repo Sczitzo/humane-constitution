@@ -605,18 +605,20 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         }}>
           <div style={{ fontSize: 9, color: THEME.dim, letterSpacing: '0.05em' }}>CHART</div>
           {[
-            { swatch: TIER_COLORS[0], line: true,  label: 'T1 — < M* ($1M)' },
-            { swatch: TIER_COLORS[1], line: true,  label: 'T2 — M* → W* ($22M)' },
-            { swatch: TIER_COLORS[2], line: true,  label: 'T3 — W* → W** ($50M)' },
-            { swatch: TIER_COLORS[3], line: true,  label: 'T4 — > W**' },
-            { swatch: COLORS.nw,      line: false, label: 'Current net worth' },
-            { swatch: COLORS.s,       line: true,  label: 'S — floor' },
-            { swatch: COLORS.mstar,   line: true,  label: 'M* / W* / W** bounds' },
-          ].map(({ swatch, line, label }) => (
+            { swatch: TIER_COLORS[0], style: 'solid', label: 'T1 — < M* ($1M)' },
+            { swatch: TIER_COLORS[1], style: 'solid', label: 'T2 — M* → W* ($22M)' },
+            { swatch: TIER_COLORS[2], style: 'solid', label: 'T3 — W* → W** ($50M)' },
+            { swatch: TIER_COLORS[3], style: 'solid', label: 'T4 — > W**' },
+            { swatch: COLORS.nw,      style: 'dot',   label: 'Current net worth' },
+            { swatch: COLORS.s,       style: 'solid', label: 'S — floor' },
+            { swatch: COLORS.mstar,   style: 'dashed', label: 'M* / W* / W** bounds' },
+          ].map(({ swatch, style, label }) => (
             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
-              {line
-                ? <span style={{ width: 16, height: 2, background: swatch, flexShrink: 0, borderRadius: 1 }} />
-                : <span style={{ width: 8, height: 8, borderRadius: '50%', background: swatch, flexShrink: 0, margin: '0 4px' }} />}
+              {style === 'dot'
+                ? <span style={{ width: 8, height: 8, borderRadius: '50%', background: swatch, flexShrink: 0, margin: '0 4px' }} />
+                : style === 'dashed'
+                ? <span style={{ width: 16, height: 2, flexShrink: 0, borderRadius: 1, background: `repeating-linear-gradient(to right, ${swatch} 0, ${swatch} 3px, transparent 3px, transparent 6px)` }} />
+                : <span style={{ width: 16, height: 2, background: swatch, flexShrink: 0, borderRadius: 1 }} />}
               {label}
             </span>
           ))}
