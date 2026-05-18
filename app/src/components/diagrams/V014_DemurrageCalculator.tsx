@@ -21,10 +21,10 @@ const COLORS = {
   age:    '#8ba7c4',           // steel blue — age / retirement
 }
 
-// Tier boundaries (NW values, not excess) — strictly progressive: no discount for higher wealth
-const TIER_NW = [1_000_000, 5_000_000, 22_000_000] as const
+// Tier boundaries (NW values, not excess) — M*=$1M, W*=$22M, W**=$50M per ANNEX_D §D2.2
+const TIER_NW = [1_000_000, 22_000_000, 50_000_000] as const
 const TIER_R_WORKING = [0.26, 0.30, 0.38, 0.46] as const  // T1–T4, age < 65
-const TIER_R_RETIRED = [0.18, 0.22, 0.30, 0.46] as const  // T1–T4, age ≥ 65 (senior discount on lower tiers only)
+const TIER_R_RETIRED = [0.18, 0.30, 0.38, 0.46] as const  // T1–T4, age ≥ 65 — T1 only (§D10.1)
 
 function calc(nw: number, s: number, _wstar: number, r: number, income: number, age: number) {
   const E  = Math.max(0, nw - s)
@@ -275,7 +275,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
       ctx.fillText('S', sLine, mg.top + 2)
     }
 
-    // W* marker
+    // W* marker (T2/T3 boundary, $22M)
     const wxLine = mx(p.wstar)
     ctx.beginPath()
     ctx.strokeStyle = COLORS.wstar
@@ -290,6 +290,25 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
     ctx.textAlign = 'center'
     ctx.textBaseline = 'top'
     ctx.fillText('W*', wxLine, mg.top + 2)
+
+    // W** marker (T3/T4 boundary, $50M) — only draw if in viewport
+    const wdstar = TIER_NW[2]
+    if (wdstar >= xMin && wdstar <= xMax) {
+      const wdLine = mx(wdstar)
+      ctx.beginPath()
+      ctx.strokeStyle = COLORS.wstar
+      ctx.lineWidth = 1
+      ctx.setLineDash([1, 5])
+      ctx.moveTo(wdLine, mg.top)
+      ctx.lineTo(wdLine, mg.top + dh)
+      ctx.stroke()
+      ctx.setLineDash([])
+      ctx.fillStyle = COLORS.wstar
+      ctx.font = `9px ${MONOSPACE}`
+      ctx.textAlign = 'center'
+      ctx.textBaseline = 'top'
+      ctx.fillText('W**', wdLine, mg.top + 2)
+    }
 
     // Curve
     ctx.beginPath()
@@ -411,7 +430,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.nw} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.nw} onChange={set('nw')} />
           <Slider label="Savings Floor (S)" id="s" min={0} max={2_000_000} step={10_000}
             value={p.s} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.s} onChange={set('s')} />
-          <Slider label="Upper Tier Boundary (W*)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
+          <Slider label="W* Boundary (T2/T3)" id="wstar" min={1_000_000} max={100_000_000} step={500_000}
             value={p.wstar} fmt={fmtCompact.format.bind(fmtCompact)} color={COLORS.wstar} onChange={set('wstar')} />
           <Slider label="Assumed Return (r)" id="r" min={0.01} max={0.30} step={0.001}
             value={p.r} fmt={v => (v * 100).toFixed(1) + '%'} color={COLORS.r} onChange={set('r')} />
@@ -421,7 +440,7 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             value={p.age} fmt={v => v.toFixed(0) + ' yrs'} color={p.age >= 65 ? THEME.voice.accent : COLORS.age} onChange={set('age')} />
           {p.age >= 65 && (
             <div style={{ fontSize: 9, color: THEME.voice.accent, letterSpacing: '0.05em', textAlign: 'center', background: '#1c200a', border: `1px solid ${THEME.voice.accent}33`, borderRadius: 3, padding: '3px 6px' }}>
-              RETIREMENT MODIFIER ACTIVE · T1 18 % · T2 22 %
+              RETIREMENT MODIFIER ACTIVE · T1 18 % (§D10.1)
             </div>
           )}
         </div>
@@ -483,14 +502,14 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 0, flex: 1, borderRight: `1px solid ${THEME.border}` }}>
           {[
             { label: 'Excess (E)',     value: fmtAcct(E),                    color: THEME.subtext,  def: 'NW above savings floor — taxable base' },
-            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: retired ? 'Retirement rates active (age ≥ 65): T1 18%/T2 22%/T3 38%/T4 46%' : 'Effective (blended) rate = D÷E; tiers: T1 26%/T2 30%/T3 38%/T4 46%' },
+            { label: 'Rate (λ)',       value: fmtPct(lambda),                color: THEME.subtext,  def: retired ? 'Retirement modifier active (§D10.1): T1 18%/T2 30%/T3 38%/T4 46% — T1 only reduced' : 'Effective (blended) rate = D÷E; tiers: T1 26%/T2 30%/T3 38%/T4 46%' },
             { label: 'Bi-weekly (D)',  value: fmtAcct(D / 26),               color: '#FFD700',      def: 'Demurrage per pay period (annual ÷ 26)' },
             { label: 'Annual (D)',     value: fmtAcct(D),                    color: '#e3b341',      def: 'Total demurrage owed this year' },
             { label: 'Returns',        value: fmtAcct(returns),              color: COLORS.r,       def: 'Passive income at assumed rate r on NW' },
             { label: 'Net annual Δ',   value: fmtAcct(netAnnual),            color: netAnnualColor, def: 'Income + returns − demurrage' },
             { label: 'Break-even (I)', value: breakEven > 0 ? fmtAcct(breakEven) : 'covered', color: breakEven > 0 ? COLORS.income : THEME.ea.accent, def: 'Min salary to avoid eroding principal' },
             { label: yearsFloorLabel,   value: yearsLabel,                    color: yearsColor,     def: yearsFloorDef },
-            ...(yearsToEquil !== null ? [{ label: 'Yrs to W*', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar, def: 'Years to descend to equilibrium ceiling' }] : []),
+            ...(yearsToEquil !== null ? [{ label: 'Yrs to W**', value: yearsToEquil.toFixed(0) + ' yrs', color: COLORS.wstar, def: 'Years to descend from above W** ($50M) to equilibrium' }] : []),
           ].map(({ label, value, color, def }) => (
             <StatTile key={label} label={label} value={value} color={color} def={def} />
           ))}
@@ -506,7 +525,8 @@ export function V014_DemurrageCalculator(_props: DiagramProps) {
             { swatch: '#FFD700',    line: true,  label: 'D(E) demurrage curve' },
             { swatch: COLORS.nw,   line: false, label: 'Current net worth' },
             { swatch: COLORS.s,    line: true,  label: 'S — savings floor' },
-            { swatch: COLORS.wstar,line: true,  label: 'W* — T3/T4 boundary' },
+            { swatch: COLORS.wstar,line: true,  label: 'W* — T2/T3 ($22M)' },
+            { swatch: COLORS.wstar,line: true,  label: 'W** — T3/T4 ($50M)' },
           ].map(({ swatch, line, label }) => (
             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 10, color: THEME.subtext }}>
               {line
