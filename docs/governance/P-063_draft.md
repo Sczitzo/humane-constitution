@@ -1,8 +1,8 @@
-# P-063 — Productive-Use Extraction Limit: Pay-Ratio Disqualification (Draft v5)
+# P-063 — Productive-Use Extraction Limit: Pay-Ratio Disqualification (Draft v6)
 
 > **DRAFT — Not published. Not committed. Not corpus-registered.**
 > Do not add to Patch_Log.md, ANNEX_D.md, or INDEX.md until reviewed and approved.
-> Supersedes drafts v1, v2, v3, v4. Incorporates 5-agent red-team findings from v4 round.
+> Supersedes drafts v1–v5. Incorporates 5-agent red-team findings from v5 round.
 
 ---
 
@@ -10,10 +10,10 @@
 - **Status:** PROPOSED
 - **Priority:** High
 - **Related threat / pressure:** T-025 (Demurrage Sector-Capture) / extraction-through-labor within productive-use exemption
-- **Constitutional text target:** ANNEX_D.md — amendment to §D6.2(d) clause text; new §D6.9 (graduated extraction limit); new §D6.10 (labor-displacement limit); conforming notes to §D6.7 and §D8
+- **Constitutional text target:** ANNEX_D.md — amendment to §D6.2(d); new §D6.9 (graduated extraction limit); new §D6.10 (labor-displacement limit); conforming amendments to §D6.7 and §D8
 - **Linked patches:** P-017 (oracle independence), P-023 (contract-commitment architecture), P-029 (PFCR demurrage routing), P-031 (anti-dynasty ownership), P-033 (worker-owned enterprise preference), P-045 (enforcement panel)
-- **Tier classification:** Extraction caps and graduation formula are **Tier 3 calibration parameters** subject to oracle-calibrated adjustment within stated ranges. The existence of an extraction-limit eligibility condition on §D6.2(d) is a Tier 3 amendment to eligibility conditions, not a change to its basic terms.
-- **Operative status prerequisite:** This patch remains at status **Designed** until the TSP confirms that oracle payroll pipelines, extraction reporting, worldwide disclosure processing, and affiliated-entity consolidation protocols are operational. TSP prerequisite has no expiration; if not published within 36 months of adoption, the CRP shall conduct a status review.
+- **Tier classification:** Extraction formula bounds and calibration ranges are **Tier 3 parameters** adjustable by the oracle within stated ranges. The existence of an extraction-limit eligibility condition on §D6.2(d) is an interpretive clarification of what constitutes "active enterprise assets" under a shared-surplus standard — not a change to the basic terms of the §D6.2(d) instrument. The CRP has issued an interpretive ruling confirming this reading does not require FAP. That ruling is published to the corpus as a prerequisite for Active status. If any court of competent jurisdiction determines FAP is required, this patch is suspended pending FAP completion; no retroactive clawback of accrued demurrage follows from that suspension.
+- **Operative status prerequisite:** This patch remains at status **Designed** until: (i) the CRP interpretive ruling is published; (ii) the TSP confirms oracle payroll pipelines, extraction reporting, worldwide disclosure processing, affiliated-entity consolidation, scheduling-record requirements, franchise/subcontractor reporting, exit-event tracking, and certified worker-band filing protocols are operational; (iii) the Jubilee fund governance structure is constituted; and (iv) the §D8.2 conforming amendment is adopted. If not published within 36 months of adoption, the CRP shall conduct a status review.
 
 ---
 
@@ -21,13 +21,11 @@
 
 The §D6.2(d) productive-use exclusion shields active enterprise assets from demurrage. This is correct: capital genuinely at work should not carry the same cost as passive hoarded wealth.
 
-But the exclusion does not currently distinguish between an enterprise that shares its surplus broadly and one that concentrates it entirely at the top. An owner extracting fifty times what a worker earns gets the same constitutional protection as one extracting three times — even though one relationship is productive and mutual, and the other is dispossession wearing the clothes of enterprise.
+But the exclusion does not distinguish between an enterprise that shares its surplus broadly and one that concentrates it entirely at the top. An owner extracting fifty times what a worker earns gets the same constitutional protection as one extracting three times — even though one relationship is productive and mutual, and the other is dispossession wearing the clothes of enterprise.
 
-The Jubilee Directive (§D8) exists to transfer productive assets toward households near the participation floor S. The demurrage system exists to prevent static wealth accumulation. A productive-use exclusion that shelters 50:1 or 100:1 extraction ratios undermines both.
+**What this patch does:** it narrows who qualifies for the §D6.2(d) exclusion. No new instrument or rate is created. Assets that no longer qualify re-enter assessed net worth and face standard demurrage tiers. This is consistent with §D9.1 — no new charge is introduced; the existing charge applies to a narrower class of sheltered assets. The demurrage collected from re-entered assets is standard demurrage flowing through the §D8 routing structure, with the §D8.2 Jubilee allocation for this category directed 100% to productive-asset restoration.
 
-**Constitutional framing:** This patch narrows the eligibility test for §D6.2(d). No new instrument or rate is created. Assets that no longer qualify re-enter assessed net worth and face standard demurrage tiers. This is consistent with §D9.1 — no new charge is introduced; the existing charge applies to a narrower class of sheltered assets.
-
-**Jubilee and Christ-centered grounding:** The Jubilee in Leviticus 25 set a categorical boundary — past this point, accumulation is not stewardship, it is dispossession. This patch encodes the same logic. The graduated structure below says: the further you are from sharing the surplus, the less of your business is shielded. And the penalties for gaming the rule flow entirely back to the workers who were harmed — not to administrative overhead, not to the state, but to the people whose labor generated the disparity.
+**Jubilee and Christ-centered grounding:** The Jubilee in Leviticus 25 set a categorical boundary — past this point, accumulation is not stewardship, it is dispossession. This patch encodes the same logic: the further an owner is from sharing the surplus, the less of their business is shielded. The §D8 Jubilee routing ensures that demurrage generated by disparity returns to the households whose labor generated it. The constitution's purpose is mutual flourishing under God; an exemption that shelters extraction at any ratio contradicts that purpose.
 
 ---
 
@@ -37,9 +35,9 @@ The Jubilee Directive (§D8) exists to transfer productive assets toward househo
 
 **Amend §D6.2(d) of ANNEX_D to read:**
 
-> **(d) Active enterprise assets.** The net assessed value of an operating business in which the holder is a material participant, not a passive investor, is excluded from the net worth base. A holder is a material participant if they actively direct operations, contribute substantial personal services, and hold a beneficial ownership interest in the enterprise. **This exclusion is graduated based on the holder's personal extraction ratio as defined in §D6.9. A holder whose extraction ratio exceeds the disqualification threshold in §D6.9 does not qualify for any portion of this exclusion with respect to the affected enterprise during the period of disqualification.**
+> **(d) Active enterprise assets.** The net assessed value of an operating business in which the holder is a material participant, not a passive investor, is excluded from the net worth base. A holder is a material participant if they actively direct operations, contribute substantial personal services, and hold a beneficial ownership interest in the enterprise. **This exclusion is graduated based on the holder's personal extraction ratio as defined in §D6.9. A holder whose extraction ratio exceeds the disqualification threshold in §D6.9 does not qualify for any portion of this exclusion with respect to the affected enterprise during the period of disqualification.** For purposes of this clause, "active enterprise" means an enterprise in which surplus is shared in a manner consistent with the constitution's productive-use standard; an enterprise used primarily to concentrate surplus at the holder does not constitute active enterprise for exclusion purposes regardless of the holder's operational involvement.
 
-*The eligibility condition is a Tier 3 parameter. This amendment does not require the Founding Amendment Process.*
+*This amendment is an interpretive clarification of the productive-use standard, confirmed by CRP interpretive ruling as not requiring FAP. It does not alter the rate structure, shelter cap, or basic terms of the §D6.2(d) instrument.*
 
 ---
 
@@ -51,174 +49,168 @@ The Jubilee Directive (§D8) exists to transfer productive assets toward househo
 >
 > **(a) Purpose.** This section establishes graduated eligibility conditions for the §D6.2(d) enterprise-asset exclusion, calibrated to the relationship between the holder's personal extraction and the compensation of the enterprise's lowest-paid worker.
 >
-> **(b) Scope.** Applies to any holder claiming the §D6.2(d) exclusion as a material participant. Applies to the holder's share of enterprise assets. Enterprises with fewer than 10 workers (per §P-063.5) are outside scope, subject to the worker-count aggregation rule in §P-063.5(d).
+> **(b) Scope.** Applies to any holder claiming the §D6.2(d) exclusion as a material participant. Enterprises with fewer than 10 workers (per §P-063.5) are outside scope, subject to the worker-count aggregation rule in §P-063.5(d).
 >
-> **(c) Graduated exclusion formula.** The fraction of the §D6.2(d) exclusion the holder may claim is:
+> **(c) Graduated exclusion formula.**
 >
 > **exempt_fraction = max(0, 1 − (R − 3.0) / 2.0)**
 >
 > Where R is the holder's personal extraction ratio as defined in §P-063.3(f).
 >
-> - At R ≤ 3.0: full exclusion (100%)
-> - At R = 4.0: 50% exclusion
-> - At R ≥ 5.0: no exclusion (0%) — full disqualification
-> - Between 3.0 and 5.0: proportional exclusion declining linearly
+> - R ≤ 3.0: full exclusion (100%)
+> - R = 4.0: 50% exclusion
+> - R ≥ 5.0: no exclusion (0%)
+> - Between 3.0 and 5.0: proportional, declining linearly
 >
-> The 3.0 lower bound and 5.0 upper bound are Tier 3 calibration values. Oracle may adjust within [2.0, 5.0] for the lower bound and [4.0, 8.0] for the upper bound. Oracle may not simultaneously calibrate both bounds to their respective minimums without FAP approval.
+> The 3.0 lower bound and 5.0 upper bound are Tier 3 calibration values. Oracle may adjust within [2.0, 5.0] lower and [4.0, 8.0] upper. Oracle may not simultaneously set both to their minimums without FAP.
 >
-> **(d) Floor-proximity tightening.** Where the enterprise's lowest-paid worker earns below the participation floor S, the lower bound tightens to 2.0 and the upper bound tightens to 4.0. The formula narrows to:
+> **(d) Floor-proximity tightening.** If any worker in the enterprise earns below S, the formula tightens to:
 >
 > **exempt_fraction = max(0, 1 − (R − 2.0) / 2.0)**
 >
-> This condition is evaluated per worker. If any worker in the enterprise earns below S, the tighter formula applies to the entire exclusion claim for that holder.
+> **(e) Cure window — two-stage, 30 days.**
 >
-> **(e) Cure window — two-stage, 30 days.** A holder whose ratio first exceeds the applicable upper bound receives oracle notification. The holder has 30 days from notification to cure the breach before disqualification is formally confirmed.
+> Stage 1 (days 1–7): Holder files a binding cure commitment — a signed legal instrument specifying the changes committed to — and an escrow deposit equal to all demurrage accrued from the breach date (not the notification date) through day 7.
 >
-> Stage 1 (days 1–7): The holder files a binding cure commitment with the oracle — a signed legal instrument specifying the wage increases or extraction reductions committed to, together with an escrow deposit equal to the demurrage accrued through day 7. Filing a cure commitment by day 7 sets day 1 as the cure initiation date for any safe-harbor purposes.
+> Stage 2 (days 8–30): Actual changes take effect. Cure is valid only if: (i) R returns below the applicable upper bound, AND (ii) the lowest-paid worker's wage increases by an amount sufficient to bring the post-cure R to ≤ 3.0 given current extraction, or by 10%, whichever is greater. Cure achieved solely by reducing the holder's own extraction is valid only if worker wages are simultaneously maintained at or above CPI+2% relative to their pre-breach level. Holder files a sworn attestation: the improvement came from wage increases or genuine extraction reduction — not accounting reclassification, temporary schedule changes, or entity restructuring.
 >
-> Stage 2 (days 8–30): The actual compensation changes take effect. Cure is valid only if both conditions are met: (i) the holder's personal extraction ratio returns below the applicable upper bound, AND (ii) the lowest-paid worker's wage increases by at least 10% within the cure period. Cure achieved solely by reducing the holder's own extraction without raising the lowest-paid worker's wage is not valid. The holder must file a sworn attestation confirming the improvement came from wage increases or reduced extraction — not from accounting reclassification, temporary schedule changes, or entity restructuring.
+> Cured wages must remain at or above the post-cure level in real terms (CPI-adjusted) for 36 months after the cure date. Wage reversion within 36 months voids the cure retroactively; disqualification reattaches from the cure date, and accrued demurrage from the cure date forward becomes immediately owing.
 >
-> During the cure window, demurrage accrues on the disqualified fraction at standard assessed net worth rates from the date of oracle notification. This accrual is owed regardless of cure outcome and is not reversed on cure. If cure is achieved, the graduated exclusion is restored prospectively from the compliance date.
+> Demurrage accrues from the breach date regardless of cure outcome and is not reversed on cure.
 >
-> If cure does not occur within 30 days, full disqualification (0% exclusion) applies from the oracle notification date and continues until compliance is achieved.
+> The cure window may be used once per 7 years. A holder who has used it within the prior 7 years faces immediate disqualification upon breach. A holder who breaches more than twice in any 10-year period is ineligible for cure windows for 10 years; reinstatement per §D6.9(j).
 >
-> The 30-day cure window may not be used as a recurring mechanism. A holder who has used the cure window within the prior 7 years is not entitled to a new window; upon breach detection, disqualification applies immediately from the notification date. A holder who breaches more than twice in any 10-year period is ineligible for future cure windows for 10 years; any future breach results in immediate disqualification from notification date. After 10 years of ineligibility, the holder may seek reinstatement per §D6.9(j).
+> **(f) Disqualification.** Below the upper bound, proportional. At or above the upper bound, total (0% exclusion) until compliance is achieved.
 >
-> **(f) Disqualification and graduated partial loss.** Below the upper bound, disqualification is proportional per the formula in (c) and (d). At or above the upper bound, disqualification is total — the holder claims 0% of the §D6.2(d) exclusion for the affected enterprise.
+> **(g) §D6.7 interaction.** Re-entering enterprise assets do not constitute a §D6.7 breach for 12 months following disqualification. After 12 months, full assessed net worth applies.
 >
-> **(g) D6.7 aggregate shelter cap interaction.** Enterprise assets re-entering assessed net worth due to partial or full disqualification do not by themselves constitute a §D6.7 cap breach. The oracle shall not treat re-entry as a §D6.7 violation for 12 months following the disqualification date. After 12 months, the full assessed net worth base is used for §D6.7 calculations.
+> **(h) Demurrage routing — §D8 integration.** Demurrage collected from enterprise assets that re-enter assessed net worth under this section is standard demurrage. It is included in total demurrage revenue for purposes of the §D8.1 Essential Access floor calculation. Within the §D8.2 Jubilee allocation, demurrage from assets disqualified under this section is directed 100% to the productive-asset restoration fund — not split across other §D8.2 uses. The tripartite Jubilee fund in §D6.9(h-gov) governs disbursement of this amount. No portion is retained for administrative overhead; oracle and enforcement costs are funded through the TSP operational budget. This is operative on Active date.
 >
-> **(h) Demurrage revenue routing — Jubilee.** One hundred percent of demurrage collected under this section from disqualified enterprise assets shall be routed to the Jubilee productive-asset restoration fund established under §D8. This is an operative routing clause. The purpose is restitution: revenue generated by extraction disparity returns to the workers and households harmed by it. No portion is retained for administrative overhead; oracle and enforcement costs are funded separately through the TSP operational budget.
+> **§D6.9(h-gov) Jubilee fund governance.** The productive-asset restoration fund is governed by a tripartite board: (i) one-third of seats filled by self-nominated eligible households (those within 50% of S lacking productive assets), confirmed by post-selection sworn declaration, subject to random audit — any post-selection ineligibility finding triggers re-draw; (ii) one-third independent fiduciaries with documented fiduciary obligation to priority beneficiaries and no commercial relationship to contributing enterprises; (iii) one-third public nominees confirmed through a transparent non-partisan process. Disbursement begins within 18 months of receipt. "Productive assets" includes tools, equipment, vehicles, business equity, vocational training, and housing equity; excludes purely speculative assets. Annual public report in beneficiary-accessible format. A binding complaint mechanism with 60-day response obligation and independent arbitration fallback is required. Workers at contributing firms have priority for disbursement for the first 24 months after each contribution. TSP specifies governance terms as a prerequisite for Active status.
 >
-> The Jubilee fund shall be governed by a tripartite board: one-third of members drawn by lot from verified priority beneficiary households (those within 50% of S lacking productive assets); one-third independent fiduciaries with documented obligation to priority beneficiaries; one-third public nominees confirmed through a non-partisan public process. Disbursement from the fund must begin within 18 months of receipt. "Productive assets" includes but is not limited to: tools, equipment, vehicles, business equity, vocational training, and housing equity — and explicitly excludes purely speculative assets. Annual public reporting is required in a format accessible to eligible beneficiaries. A worker-accessible complaint mechanism shall be established to challenge violation of priority rules. TSP shall specify full governance terms as a prerequisite for Active status.
+> **(i) Appeal rights.** All oracle determinations under §D6.9 and §P-063.3–P-063.6 are appealable through an independent mechanism that does not require oracle approval to initiate. Oracle succession determinations (§P-063.3(g)) are also independently appealable; the appellate body may grant provisional greenfield certification pending final decision. Demurrage accrual is not stayed pending appeal. If an appeal succeeds on a jurisdictional ground (enterprise wrongly assessed as in-scope), demurrage accrued during the appeal period on assets that were never in scope is credited against future demurrage obligations in the next settlement period; this is a correction, not a reversal. This mechanism is a prerequisite for Active status.
 >
-> **(i) Oracle appeal rights.** The TSP shall specify an independent appeal mechanism for all oracle determinations under §D6.9, §D6.10, and §P-063.3–P-063.6. Appeals shall not require oracle approval to initiate and shall be decided by a body independent of the oracle panel. For enterprises in the 5–9 worker tier under §P-063.5(e), the appeal window is 15 days from oracle notification — the appeal contests the oracle's factual determination but does not suspend demurrage accrual pending resolution. This is a prerequisite condition for Active status.
->
-> **(j) Reinstatement after ineligibility.** After 10 years of cure-window ineligibility, a holder may seek reinstatement by demonstrating: (a) a third-party worker-dignity audit conducted with meaningful worker participation, confirming the enterprise meets basic standards; (b) sustained R below the applicable upper bound for 3 consecutive years prior to application; and (c) a one-time Jubilee fund contribution equal to 150% of the demurrage that would have accrued on the disqualified assets during the 10-year ineligibility period. Upon certification by the oracle, a single future cure window is granted.
+> **(j) Reinstatement.** After 10-year cure-window ineligibility: (a) third-party worker-dignity audit, conducted by an oracle-certified independent auditor with meaningful worker participation — current and former lowest-wage workers from the violation period must be offered interview access; (b) R ≤ applicable upper bound for 3 consecutive years; (c) one-time Jubilee fund contribution equal to 150% of demurrage that would have accrued on disqualified assets during the 10-year period. Upon oracle certification, one future cure window is granted.
 
 ---
 
 ### P-063.3 — Personal Extraction Definition
 
-**(a) Functional definition.** The extraction numerator includes any transfer of economic value from the enterprise or affiliated entities that accrues to the benefit of the holder, the holder's household, or any entity in which the holder, or any household member, holds any beneficial interest — net of bona fide enterprise expenses paid to arm's-length third parties.
+**(a) Functional definition.** The extraction numerator includes any transfer of economic value from the enterprise or affiliated entities that accrues to the benefit of the holder, the holder's household, or any entity or person the holder directs, controls, or to whose benefit the holder has arranged value to flow — directly or through any intermediary — net of bona fide enterprise expenses paid to arm's-length third parties. Substance governs over form.
 
-**(b) Household aggregate rule.** The extraction numerator aggregates compensation received by the holder and all members of the holder's household from the enterprise and affiliated entities. Compensation paid to household members in their own names — as employees, officers, or contractors — is included in the numerator if the role was created or materially expanded after this patch's proposal date, or if the compensation exceeds documented market rate for that role. The holder may not split extraction across household members to reduce the apparent ratio. For market-rate determination, the oracle applies the 25th–50th percentile of the relevant industry and geography survey band. A safe harbor exists if the enterprise produces two bona fide external hire offers at or above the paid rate for an equivalent role. Non-cash household benefits (health coverage, vehicle allowance, housing) are included at imputed value using TSP-specified published tables.
+**(b) Household aggregate rule.** The extraction numerator aggregates compensation received by the holder and all members of the holder's household. Compensation paid to household members is included if the role was created or materially expanded after this patch's proposal date, or if the compensation exceeds documented market rate. Market rate = 25th–50th percentile of the relevant industry and geography survey band. Safe harbor: two bona fide external hire offers at or above the paid rate for an equivalent role. Non-cash household benefits are included at imputed value using TSP-specified published tables.
 
 **(c) Forms of extraction include (illustrative, not exhaustive):**
 
 - (i) Cash salary, wages, and officer compensation;
 - (ii) Cash bonuses, performance payments, and distributions;
 - (iii) Dividends paid to the holder or any household member as beneficial owner;
-- (iv) Non-cash personal benefits with imputed value above $5,000 per year (indexed to S: 10% of S annually). Includes: personal-use corporate aircraft, housing, vehicles, family compensation above market rate, personal entertainment booked as business expense. For assets used partly personally and partly commercially, the personal-use fraction (personal use days ÷ total days) is counted as extraction — the commercial fraction is not. **Personal use of assets held by private foundations, donor-advised funds, charitable LLCs, or similar charitable vehicles in which the holder or any household member serves as officer, director, trustee, or exercises any governance authority is included at fair market use rates**, regardless of whether the holder has formal ownership of the vehicle;
+- (iv) Non-cash personal benefits with imputed value above 10% of S annually. Includes: personal-use corporate aircraft, housing, vehicles, entertainment. For mixed-use assets: personal-use fraction (personal use days ÷ total days) = extraction; commercial fraction = not. **Personal use of assets held by any charitable vehicle — private foundation, donor-advised fund, charitable LLC, or similar — in which the holder or any household member holds a governance role is included at fair market use rates.** Every charitable vehicle with a holder or household member in a governance role must file an annual certified asset-use schedule with the oracle as a condition of the holder's §D6.2(d) claim, certified by an independent trustee (not a household member). Failure to file: oracle presumes 50% of the vehicle's total asset-days were personal use at published market rates. Non-disclosure is more expensive than disclosure;
 - (v) Below-market loans from the enterprise or affiliated entities — treated as constructive distributions in the period the below-market benefit is received;
-- (vi) **No deferred compensation recognition.** Any promise of future payment from an enterprise to a material participant — including non-qualified deferred compensation plans (NQDCs), phantom stock, synthetic equity, performance units, and split-dollar life insurance arrangements — is counted as extraction in the year the services giving rise to the entitlement are performed, valued at the face value of the promise or, where face value is contingent, at the minimum guaranteed value. Deferred compensation arrangements that obscure extraction timing are not recognized. The oracle does not accept "I'll be paid later" as a reason to exclude current-year extraction;
-- (vii) Employer contributions to defined-benefit pension or retirement plans, to the extent they exceed proportional contributions made for workers;
-- (viii) Payments from any consolidated enterprise to any entity in which the holder or any household member holds any beneficial interest, to the extent exceeding independently determined fair-value pricing. The holder bears the burden of demonstrating fair value with contemporaneous third-party valuation for transactions exceeding the TSP-specified materiality threshold;
-- (ix) **Related-party conduit rule.** Distributions or payments from the enterprise or affiliated entities to any non-household person who receives more than 15% of the holder's total disclosed extraction in the same measurement year are presumed nominee arrangements. The holder bears the burden to rebut this presumption by demonstrating the payments reflect genuine arm's-length economic activity independent of the holder's benefit. This rule applies regardless of the recipient's ownership percentage, title, or formal relationship to the enterprise.
+- (vi) **No deferred compensation.** Any promise of future payment — NQDCs, phantom stock, synthetic equity, performance units, split-dollar arrangements — is extraction in the year services are performed, valued at face or minimum guaranteed value. The oracle does not recognize "paid later" as a reason to exclude current-year extraction;
+- (vii) Employer contributions to defined-benefit plans exceeding proportional contributions made for workers;
+- (viii) Payments from any consolidated enterprise to any related party, to the extent exceeding fair-value pricing. Holder bears burden of proof with contemporaneous third-party valuation above the TSP materiality threshold. The arm's-length fair-value requirement applies to **all** reinvestment-excluded categories — capex, equipment leases, facility leases, inventory, and all other items in §P-063.3(e) — whenever the counterparty has a familial or organizational relationship to the holder, as defined by TSP attribution rules (consistent with IRS attribution rule analogues). Above-market payments on any reinvestment-excluded category to a related party are treated as extraction;
+- (ix) **Economic-attribution conduit rule.** Distributions or payments from the enterprise or affiliated entities to any person or entity — whether or not a household member, whether or not above 25% ownership — are included in the extraction numerator if the holder receives more than 15% of total worldwide disclosed extraction from that person or entity through any vehicle the holder wholly or majority controls, or if the payment pattern is consistent with a nominee arrangement under the substance-over-form standard in (a). No ownership threshold governs this rule; economic flow governs.
 
-**(d) Worldwide disclosure obligation.** To claim the §D6.2(d) exclusion in any assessment period, the holder must file a sworn annual worldwide disclosure certifying: (i) all entities worldwide in which the holder or any household member holds any beneficial interest; (ii) all value received by the holder or household from any such entity in the measurement year, regardless of the entity's jurisdiction; and (iii) all charitable vehicles — including private foundations, donor-advised funds, and charitable LLCs — in which the holder or any household member serves in a governance capacity. The disclosure is filed under oath with the oracle and is subject to random audit. Any foreign entity comprising more than 5% of the consolidated group's revenues must submit annual audited financials from an oracle-approved auditor; absent such audited financials, the holder's disclosure for that entity is treated as incomplete.
+**(d) Worldwide disclosure obligation — universal and comprehensive.** To claim the §D6.2(d) exclusion, the holder must file a sworn annual worldwide disclosure certifying: (i) all entities worldwide in which the holder or any household member holds any beneficial interest; (ii) all value received by the holder or household from any such entity, regardless of jurisdiction; (iii) all charitable vehicles in which the holder or any household member holds a governance role, including all asset-use schedules; (iv) an itemized schedule of all payments made by the enterprise or affiliated entities to any non-household person or entity exceeding the lower of 5% of prior-year claimed extraction or the TSP-specified dollar floor; (v) all franchise or subcontractor relationships where the revenue-dependency thresholds in §P-063.6(f)–(g) are met; and (vi) all exit events in the prior year.
 
-If a subsequent oracle investigation or third-party disclosure reveals that the holder failed to disclose any entity or receipt in a prior year, the §D6.2(d) exclusion is void prospectively from the date the incompleteness is discovered, and a 5-year lookback applies: back-demurrage accrues for the 5 years immediately preceding discovery for any year in which the exclusion was claimed and the disclosure was incomplete. Intentional false certification is referred to the Enforcement Panel under P-045 as a separate enforcement action, which may result in additional penalties beyond demurrage back-accrual. The prospective void and 5-year lookback are not the same as the Enforcement Panel action; both may apply simultaneously.
+Any foreign entity comprising more than 5% of consolidated group revenues must submit annual audited financials from an oracle-approved auditor as a condition of the holder's exclusion claim. Absent such financials, the oracle treats the entity's disclosure as incomplete.
 
-**(e) Reinvestment exclusions (not counted as extraction).**
+If a subsequent oracle investigation or third-party disclosure reveals that the holder failed to disclose any entity, receipt, charitable vehicle, or payment in a prior year: the §D6.2(d) exclusion is void prospectively from the date of discovery, and a 5-year lookback applies — back-demurrage accrues for the 5 years preceding discovery for every year in which the exclusion was claimed and the disclosure was incomplete. Intentional false certification is referred to the Enforcement Panel under P-045 as a separate proceeding, which may impose penalties beyond demurrage back-accrual. Both consequences apply simultaneously.
+
+**(e) Reinvestment exclusions (not extraction).**
 
 - Worker wages, salaries, and benefits for all workers other than the highest-compensated participant;
-- Capitalized equipment, machinery, and tools used in operations (subject to §D6.10 labor-displacement limit);
-- Facility lease payments, build-out costs, and utilities;
-- Inventory purchases and raw material inputs;
+- Capitalized equipment, machinery, and tools used in operations (subject to §D6.10; arm's-length requirement applies to related-party counterparties per (c)(viii));
+- Facility lease payments, build-out costs, and utilities (arm's-length requirement applies to related-party counterparties);
+- Inventory purchases and raw material inputs (arm's-length requirement applies);
 - Documented research and development expenditures;
 - Marketing and customer acquisition costs at arm's-length rates to independent third parties;
 - Retained earnings held within the enterprise and not distributed or constructively received.
 
-**(f) Measurement — extraction ratio R.** R is the three-year rolling average of annual extraction ratios. The annual extraction ratio for a year is (total extraction per (c) in that year) ÷ (lowest-paid worker's annual cash compensation per §P-063.4 in that year).
+**(f) Extraction ratio R.** R is the 3-year rolling average of annual extraction ratios. The annual extraction ratio = (total extraction per (c)) ÷ (lowest-paid worker's annual cash compensation per §P-063.4). For new enterprises: R = current-year ratio until 3 years accumulate.
 
-For new enterprises: R defaults to the current-year ratio until three years of data accumulate. A successor enterprise (as defined in (g)) inherits the prior enterprise's extraction history.
+**(g) Successor-enterprise rule.** An enterprise that receives more than 33% of the revenue-generating assets or workforce of a prior enterprise — whether in a single transfer or cumulatively over any rolling 48-month window — inherits the prior enterprise's extraction history, active disqualification status, breach count, and cure-window eligibility. Oracle certification is required before a new enterprise can establish greenfield status. If a legacy enterprise reduces below 10 FTE within 36 months of transferring assets or workers to a new entity, the oracle presumes succession. Successor-enterprise determinations are independently appealable per §D6.9(i), including provisional greenfield certification pending appeal.
 
-**(g) Successor-enterprise rule.** An enterprise that receives more than 33% of the revenue-generating assets or more than 33% of the workforce of an enterprise previously subject to this section inherits the prior enterprise's extraction history, active disqualification status, breach count, and cure window eligibility. Oracle certification is required before the new-enterprise default applies to any enterprise that cannot demonstrate a bona fide greenfield commercial origin predating this patch's proposal date. If a legacy enterprise reduces below 10 FTE within 36 months of transferring assets or workers to a new entity, the oracle presumes succession unless the holder proves the enterprises serve materially different markets.
+**(h) Exit-event provision.** Upon any sale, IPO, majority-stake transfer, or dissolution of a consolidated enterprise, the beneficial owner's realized capital gain on the enterprise — net of documented acquisition cost and documented reinvestment in enterprise infrastructure after the Active date — is treated as a lump-sum extraction event for the post-Active-date holding period. The oracle amortizes the post-Active-date portion of the gain over the years held after the Active date, adds the amortized amount to the extraction numerator for each such year, and computes a normalized R. If normalized R would have placed the holder in a disqualified bracket in any year, back-demurrage accrues for those years at standard rates on the disqualified fraction. Pre-Active-date accumulation is excluded (§P-063.9(b)). The exit-event provision applies prospectively to enterprise value accumulated after the Active date.
 
 ---
 
 ### P-063.4 — Denominator: Lowest-Paid Worker
 
-**(a) Primary denominator.** The extraction ratio denominator is the annual cash compensation of the lowest-paid worker in the enterprise, as defined in §P-063.5, measured over the full 12-month assessment period.
+**(a) Primary denominator.** The annual cash compensation of the lowest-paid worker in the consolidated enterprise workforce (including franchise and subcontractor workers per §P-063.6(f)–(g) and international workers per (e)), measured as the 12-month trailing average over the assessment year.
 
-**(b) What counts.** Cash wages and cash bonuses only. No imputed equity. No non-cash benefits. For tipped workers: cash compensation includes tip credits counted at the applicable statutory minimum, not the employer-declared subminimum base. For commissioned workers: commissions are included at the 12-month trailing realized average, not at estimated or projected figures. Items the worker is required to purchase to perform the job (tools, uniforms, required equipment rental) are excluded from any non-cash benefit calculation that would reduce apparent cash compensation. Company-store or employer-controlled housing arrangements are included in compensation at market rate.
-
-Part-time workers are annualized at their actual expected annual earnings: **actual hours worked × hourly rate × realized-hours factor** — not at a 2,080-hour FTE equivalent.
+**(b) What counts.** Cash wages and cash bonuses. For tipped workers: tip credits at the statutory minimum, not the employer-declared subminimum. For commissioned workers: 12-month trailing realized average. Items the worker is required to purchase to perform the job are excluded from any non-cash offset. Company-store or employer-controlled housing at market rate. Part-time workers are annualized at actual expected annual earnings: **actual hours × rate × realized-hours factor** — not at 2,080-hr FTE.
 
 **(c) Realized-hours factor — definition and floor.**
 
-The realized-hours factor is defined as:
+**realized-hours factor = (hours actually worked + employer-cancelled scheduled hours) ÷ employer-scheduled hours**
 
-**(hours actually worked + employer-cancelled scheduled hours) ÷ employer-scheduled hours**
+Employer-cancelled scheduled hours means shifts posted on the certified digital scheduling record and cancelled by the employer fewer than 24 hours before shift start. Worker-initiated cancellations, approved leave, and mutual adjustments are excluded.
 
-Employer-cancelled scheduled hours means shifts posted on the official schedule and cancelled by the employer fewer than 24 hours before the shift start. Worker-initiated cancellations, approved leave, and mutual schedule adjustments are excluded from the employer-cancelled count.
+Floor: 0.85. The denominator may not fall below 85% of total employer-scheduled hours unless the shortfall is fully documented as worker-initiated (holder bears burden).
 
-The realized-hours factor has a floor of 0.85: the denominator may not fall below 85% of total employer-scheduled hours regardless of actual realization, unless the shortfall is fully documented as worker-initiated. The holder bears the burden of proof on any claimed worker-initiated reduction.
+**Scheduling documentation requirement.** As a condition of claiming the §D6.2(d) exclusion, the holder must maintain a certified digital scheduling record (in a TSP-specified format) for all workers in the lowest-wage quartile and make it available to the oracle on request. A holder who cannot produce a scheduling record for any lowest-wage-quartile worker is subject to a default realized-hours factor of 0.75 for that worker — non-documentation is more expensive than documentation.
 
-**(d) Anti-manipulation rules.**
+**(d) Anti-manipulation and denominator floor rules.**
 
-- **Ghost-worker floor anchor.** If the count of workers in the enterprise's lowest-wage quartile (measured against the enterprise's own prior-period wage distribution) declines by more than 15% between the current assessment year and the year three periods prior, the denominator is the higher of: (i) the actual current lowest-paid worker's compensation, or (ii) the wage that would have been paid to the missing lowest-wage-quartile workers at their prior-period rate. This prevents the owner from improving the ratio by eliminating the workers who anchor it. Burden of proof for workforce reduction attributable to legitimate business contraction (not denominator optimization) lies with the holder.
+- **CPI floor.** The denominator = the higher of (i) the 12-month trailing average as computed above, or (ii) the current-year lowest-paid worker's hourly rate × their scheduled hours, indexed to CPI from the start of the 3-year rolling window. This prevents inflation erosion of the denominator while wages stagnate.
 
-- **Staffing-firm presumption.** Workers employed by staffing agencies, subcontractors, or other intermediaries where the enterprise directs day-to-day work are presumptively included in the denominator workforce. The holder bears the burden of demonstrating the arrangement is arm's-length and does not substitute for direct employment.
+- **Annual certified worker-band filing.** As a condition of claiming the §D6.2(d) exclusion, the holder must file an annual certified schedule of all workers, sorted into wage bands (bottom 25%, 25–50%, 50–75%, top 25%), showing headcount and average hourly rate per band. If a year's certified schedule is not filed, the prior year's denominator carries forward automatically — the holder may not substitute a more favorable current-year figure. Oracle uses filed schedules as the comparator for the ghost-worker anchor below.
 
-- **Pre-assessment surge rule.** If the lowest-paid worker's compensation increases by more than 20% in the 3 calendar months preceding an assessment date, the oracle presumes manipulation. The denominator for that year reverts to the pre-increase figure unless the holder demonstrates: (i) the increase was unconditional and ongoing (not contingent on post-assessment continuation), and (ii) the worker remained employed at the increased rate for at least 6 months after the assessment date. The oracle applies this rule retroactively if manipulation is discovered post-assessment.
+- **Ghost-worker floor anchor.** If the lowest-wage-quartile headcount in the current certified filing is more than 15% lower than the corresponding year 3 periods prior in the same holder's filing history, the denominator is the higher of (i) the current actual lowest-paid worker's compensation or (ii) the compensation that would have been paid to the missing workers at their prior-period rate. Holder may rebut with documented legitimate business contraction. Staffing-firm workers are presumptively included; holder bears burden to demonstrate arm's-length arrangement.
 
-- **12-month trailing average.** The denominator for the lowest-paid worker is the 12-month trailing average of monthly cash compensation within the assessment year, not any single point-in-time snapshot. This eliminates single-month manipulation.
+- **Pre-assessment surge rule.** If the lowest-paid worker's compensation increases more than 20% in the 3 calendar months preceding an assessment date, the oracle presumes manipulation. Denominator reverts to the pre-increase figure unless the holder demonstrates: (i) the increase was unconditional and ongoing, and (ii) the worker remained employed at the increased rate for at least 6 months after the assessment date. Post-continuity wages must not revert in real terms (CPI-adjusted) within 18 months of assessment; real-terms reversion triggers retrospective reclassification.
 
-- **Q4 schedule suppression rule.** If the lowest-paid worker's actual hours in Q4 (October–December) fall more than 15% below the Q1–Q3 average for that year, and the same worker's hours return to within 10% of the Q1–Q3 average in Q1 of the following year, the oracle presumes the Q4 reduction was employer-directed scheduling manipulation. The denominator is calculated using the Q1–Q3 annualized figure for that year rather than the realized Q4 hours. Holder may rebut with documented business seasonality if Q4 reduction can be demonstrated across the full workforce (not limited to the lowest-paid worker).
+- **Q4 schedule suppression rule.** If a lowest-wage-quartile worker's actual hours in Q4 fall more than 15% below the Q1–Q3 average for that year, and the same worker's hours recover within 10% of the Q1–Q3 average in Q1 of the following year, the oracle presumes employer-directed manipulation. Denominator uses Q1–Q3 annualized figure. Holder may rebut with documented business seasonality across the full workforce (not limited to the lowest-paid worker).
 
-- **Termination anti-avoidance.** Terminating the lowest-paid worker does not change the denominator: the next-lowest-paid worker becomes the denominator, and the ghost-worker floor anchor applies as described above.
+- **Minimum annualization floor.** If any worker's annualized compensation at their actual hourly rate × 1,040 hours/year (half-time) would exceed the current denominator worker's actual annual compensation, the denominator is calculated as: rate × max(actual_hours, 1,040) × realized-hours factor. This prevents a deliberately low-hours high-nominal-rate position from anchoring the denominator below a half-time equivalent.
 
-- **General headcount floor.** If total worker count declines by more than 15% from the baseline assessment year, the denominator is floored at the prior-period lowest-paid worker's compensation, regardless of current workforce composition, unless the holder demonstrates the reduction arose from genuine business contraction.
+- **General headcount floor.** If total worker count declines more than 15% from the baseline assessment year, the denominator is floored at the prior-period figure unless legitimate business contraction is demonstrated.
 
-- **Contractor-threshold clustering.** Scheduling and assignment patterns that systematically produce worker engagements at 85–92 days — near the contractor inclusion threshold — shift the burden of proof to the holder to demonstrate a legitimate operational rationale.
+**(e) International workers.** All workers over whom the beneficial owner exercises functional control, regardless of jurisdiction, are included in the denominator workforce. Where foreign workers cannot be individually verified, the oracle applies the living-wage benchmark for the relevant jurisdiction as the imputed lowest-paid worker compensation for those workers. The denominator is the lowest figure across the consolidated workforce and jurisdiction floors. Holders may not improve the denominator by offshoring the lowest-paid roles.
 
-**(e) International workers.** Workers employed by foreign subsidiaries, affiliated entities, or controlled operations over which the beneficial owner exercises functional control are included in the denominator workforce regardless of jurisdiction. Where foreign workers cannot be individually verified, the oracle applies the living-wage benchmark for the relevant jurisdiction as the imputed lowest-paid worker compensation for those workers. The denominator is then the lowest figure across: domestic lowest-paid worker, verified foreign lowest-paid worker, or jurisdiction living-wage floor — whichever is least. The holder may not improve the denominator by concentrating domestic employment in higher-wage roles while maintaining lower-paid operations abroad.
-
-**(f) Floor-proximity condition.** The floor-proximity tightening in §D6.9(d) applies whenever any worker in the denominator workforce earns below S. There is no band or threshold — if anyone earns below S, the tighter formula governs.
+**(f) Floor-proximity condition.** The §D6.9(d) tighter formula applies whenever any worker in the denominator workforce earns below S.
 
 ---
 
 ### P-063.5 — Worker Definition and Threshold
 
-**(a) Who counts as a worker.**
-
+**(a) Who counts.**
 - Full-time and part-time direct employees;
-- Independent contractors who perform more than 90 cumulative work days (not calendar days of engagement) in any rolling 12-month period, OR who derive more than 30% of their annual income from the enterprise AND meet the functional-employee test;
-- Workers employed by staffing agencies, subcontractors, or franchise operators where the enterprise directs the work and the labor is integral to the enterprise's primary operations (functional-employee test).
+- Independent contractors with more than 90 cumulative work days in any rolling 12 months, OR deriving more than 30% of annual income from the enterprise AND meeting the functional-employee test;
+- Workers at staffing agencies, subcontractors, or franchise operators where the enterprise directs the work and the labor is integral to primary operations (functional-employee test);
+- Franchisee workers and integral subcontractor workers per §P-063.6(f)–(g).
 
-**(b) Who does not count.** The highest-compensated participant. Contractors with fewer than 30 cumulative work days in a rolling 12-month period with no ongoing operational dependency.
+**(b) Who does not count.** The highest-compensated participant. Contractors with fewer than 30 cumulative work days in a rolling 12 months with no ongoing operational dependency.
 
 **(c) Minimum threshold.** §D6.9 applies to enterprises with 10 or more workers. Tier 3 calibration parameter, range [5, 15].
 
-**(d) Worker-count aggregation.** For purposes of the 10-worker threshold, all workers across all enterprises in which the holder holds any beneficial ownership interest are aggregated, regardless of the consolidation threshold in §P-063.6.
+**(d) Worker-count aggregation.** For threshold purposes, workers across all enterprises in which the holder holds any beneficial ownership interest are aggregated.
 
-**(e) Small enterprise tier (5–9 workers).** Enterprises with 5–9 workers are not outside scope. They face a modified formula with tighter bounds: lower bound 2.0, upper bound 4.0 (the floor-proximity formula applies by default). The 30-day cure window does not apply to enterprises in this tier — disqualification is immediate upon breach detection, because the power asymmetry in small enterprises is greater and the harm more direct.
-
-Notwithstanding the absence of a cure window, a holder in the 5–9-worker tier may contest the oracle's factual determination through an expedited 15-day appeal. The appeal may challenge: (i) whether the worker count correctly falls in the 5–9 tier, (ii) arithmetic errors in the extraction ratio calculation, or (iii) classification of specific income items. The appeal does not stay demurrage accrual. The appeal must be decided within 30 days of filing by an independent appellate body per §D6.9(i). This appeal right is not a cure window and does not restore the exemption pending decision.
-
-**Phased entry for first-time threshold crossings.** An enterprise crossing from 4 workers to 5 workers for the first time shall be treated as follows: in the first 12 months at or above 5 workers, the enterprise remains subject to the tighter 5–9 formula, but the holder receives a single cure window under the conditions of §D6.9(e) (adapted for the 5–9 tier). The cure must satisfy the wage-increase condition in §D6.9(e). After 12 months, the 5–9 tier rules apply without modification. This phased entry is available only once; subsequent returns to the 5–9 tier after a drop to 4 or fewer workers do not re-open the phased entry.
-
-Enterprises below 5 workers are excluded from scope only if the holder can demonstrate they are genuinely below scale, not structured to evade.
+**(e) Small enterprise tier (5–9 workers).** In scope with tighter formula (lower 2.0, upper 4.0). No cure window — immediate disqualification. 15-day expedited factual appeal (demurrage not stayed; appeal contests oracle arithmetic or scope classification only). First-time 4→5 crossing: 12-month phased entry with a single cure window in year 1 only, available once per 5-year period. After the phased-entry period, no cure window applies. Enterprises below 5 workers are excluded only on demonstrated genuine scale, not structural avoidance.
 
 ---
 
-### P-063.6 — Affiliated-Entity Consolidation
+### P-063.6 — Affiliated-Entity and Extended-Workforce Consolidation
 
-**(a) Control-plus-aggregation test.** Extraction ratio computed on consolidated basis across enterprises where:
+**(a) Control-plus-aggregation test.** Consolidated when:
+- (i) Holder's combined beneficial ownership exceeds 25%; or
+- (ii) Holder is the largest single economic participant by revenue dependency or equity control; or
+- (iii) Shared governance, pooled treasury (>10% intercompany transfers), non-arm's-length receivables, or shared key personnel spanning entities; or
+- (iv) **Economic-attribution test.** Holder receives more than 15% of total worldwide disclosed extraction from any enterprise — directly or through any intermediary the holder wholly or majority controls — regardless of formal ownership percentage. This test consolidates entities that a holder directs, benefits from, or has arranged to receive value through, even below the 25% ownership threshold.
 
-- (i) The holder's combined direct and indirect beneficial ownership (including interests held through trusts, nominees, family members acting in concert, or tiered structures) exceeds 25% in any single enterprise; or
-- (ii) The holder is the largest single economic participant measured by share of gross revenue contractually dependent on the holder or by share of equity controlled; or
-- (iii) Two or more enterprises share: common governance controlled by the holder, pooled treasury or intercompany cash transfers exceeding 10% of either entity's revenues, intercompany receivables on non-arm's-length terms, or shared key personnel whose authority spans both entities.
+**(b) Restructuring presumption.** Any restructuring within 36 months of this patch's proposal date that reduces ownership below 25% triggers rebuttable presumption of consolidation evasion.
 
-**(b) Retroactive consolidation presumption.** Any restructuring executed within 36 months of this patch's proposal date that reduces any ownership stake below 25% triggers a rebuttable presumption of consolidation evasion. Prospective effect only — no retroactive recharacterization of prior-period extraction ratios.
+**(c) Substance-over-form.** Shared ownership, management, cash flow, or workforce = single enterprise.
 
-**(c) Substance-over-form.** Shared ownership, management, cash flow, or workforce = single enterprise regardless of formal structure.
+**(d) Extraction numerator.** Total personal extraction across all consolidated entities.
 
-**(d) Extraction numerator on consolidated basis.** Total personal extraction from all consolidated entities combined.
+**(e) Denominator.** Lowest-paid worker across the full consolidated workforce including international workers (§P-063.4(e)).
 
-**(e) Denominator on consolidated basis.** Lowest-paid worker across the full consolidated workforce, including international workers per §P-063.4(e).
+**(f) Franchisor consolidation.** Where a holder receives royalty, licensing, or mandated-supply income from a franchisee that exceeds 10% of that franchisee's gross revenue, the franchisee's lowest-paid workers enter the holder's consolidated denominator at the applicable living-wage floor. Holder carries disclosure burden; the annual worldwide disclosure must identify all franchise relationships meeting this threshold. This applies regardless of whether the holder formally "employs" any franchisee workers.
+
+**(g) Subcontractor consolidation.** Where a holder's spend on a single subcontractor exceeds 20% of that subcontractor's gross revenue AND the subcontracted work is operationally integral to the holder's enterprise (same worksite, dedicated capacity, or brand-controlled process), the subcontractor's lowest-paid workers enter the holder's consolidated denominator at the living-wage floor. Operationally integral is defined by the TSP; holder carries disclosure burden. Subcontractor must provide payroll data as a condition of any contract that would trigger this provision.
 
 ---
 
@@ -228,94 +220,95 @@ Enterprises below 5 workers are excluded from scope only if the holder can demon
 
 > **§D6.10 Labor-Displacement Limit on Productive-Use Exclusion**
 >
-> **(a) Purpose.** The §D6.2(d) exclusion is conditioned on the enterprise relationship being genuinely productive for workers, not merely substituting capital for labor to extract wealth while displacing people. This is an independent eligibility condition alongside the extraction ratio in §D6.9.
+> **(a) Purpose.** Independent eligibility condition: the enterprise must be genuinely productive for workers, not substituting capital for labor.
 >
-> **(b) Single-window limit.** Automation capital expenditures whose primary function is substituting capital for human labor do not qualify as reinvestment under §P-063.3(e) if they result in a decline of more than 10% in the enterprise's FTE headcount in the 24 months following the investment.
+> **(b) Single-window limit.** Automation capex whose primary function is substituting capital for human labor does not qualify as reinvestment if it results in more than 10% FTE decline in 24 months following the investment. For enterprises with fewer than 20 workers, this threshold is absolute: automation capex is disqualified only if it corresponds to ≥ 3 FTE reduction in 24 months. Percentage thresholds apply above 20 workers.
 >
-> **(c) Cumulative limit.** Automation capex does not qualify as reinvestment if cumulative FTE reduction attributable to automation exceeds 20% of the baseline FTE count over any rolling 60-month window. This closes the staged-reduction strategy.
+> **(c) Cumulative limit.** Automation capex does not qualify as reinvestment if cumulative FTE reduction attributable to automation exceeds 20% of the baseline FTE count over any rolling 60-month window. For enterprises with fewer than 20 workers: cumulative threshold is 5 FTE in 60 months.
 >
-> **(d) Tracker follows beneficial owner.** The 60-month cumulative FTE tracker is attached to the beneficial owner, not the enterprise entity. If the owner holds a beneficial interest in a successor enterprise, the predecessor's FTE history aggregates into the 60-month window.
+> **(d) Tracker follows beneficial owner.** The 60-month tracker attaches to the beneficial owner, not the enterprise entity.
 >
-> **(e) Baseline.** Oracle maintains a continuous FTE baseline from the patch's Active date. The 60-month cumulative test applies only prospectively; the 24-month single-window test applies prospectively for capex made after the Active date.
+> **(e) Baseline.** Prospective from the Active date.
 >
-> **(f) Appeal.** Holder may demonstrate that headcount decline was attributable to voluntary attrition, business-line exit, or market contraction rather than automation capex. Holder bears burden of proof. This is an appealable oracle determination subject to §D6.9(i).
+> **(f) Appeal.** Holder may demonstrate headcount decline was voluntary attrition, business-line exit, or market contraction rather than automation. Holder bears burden. Appealable under §D6.9(i).
 
 ---
 
 ### P-063.8 — Anti-Gaming Provisions
 
-**(a) Compensation reclassification.** Substance-over-form analysis. Commercially unreasonable instruments treated as constructive distributions.
+**(a) Substance-over-form.** The oracle applies substance-over-form analysis to all extraction and consolidation questions. Economic reality governs; formal legal structure is evidence, not dispositive.
 
-**(b) Workforce reduction gaming.** If the lowest-paid worker's compensation declines in absolute terms after a ratio assessment, the applicable upper bound tightens by 0.5 for the subsequent assessment period. Cutting the lowest-paid worker to clean the ratio makes the formula harder to satisfy.
+**(b) Workforce reduction penalty.** If the lowest-paid worker's compensation declines in absolute terms after a ratio assessment, the applicable upper bound tightens by 0.5 for the subsequent period.
 
-**(c) Strategic fragmentation.** Deliberately splitting an operating enterprise to evade §P-063.6 consolidation is an audit trigger and grounds for retroactive consolidation from fragmentation date.
+**(c) Strategic fragmentation.** Deliberately splitting an operating enterprise to evade consolidation is an audit trigger and grounds for retroactive consolidation from fragmentation date.
 
-**(d) Timing arbitrage.** Oracle may reallocate distributions to the period economically earned. Deferred compensation is always attributed to the year earned — oracle re-timing does not override or double-count.
+**(d) Calibration front-loading.** When an oracle calibration takes effect, the oracle applies a calibration lookback: if the holder's extraction in the 12 months preceding the calibration effective date exceeded 150% of their trailing 24-month average, the oracle computes a parallel R excluding that 12-month period for the first 3 years after the new bound takes effect. If the parallel R would place the holder in a different bracket under the new bound, the parallel R is used.
 
-**(e) Oracle calibration independence.** Calibration officers responsible for Tier 3 parameter adjustments under §D6.9 may not hold any beneficial ownership interest in any enterprise subject to this section. Proposed calibration adjustments must be published 90 days before taking effect with supporting oracle data. 60-day public challenge window precedes any adjustment. All calibration decisions and supporting data are published to the corpus. Post-service restriction: oracle personnel who issued findings on a specific holder may not receive compensation from that holder or any enterprise they control for 3 years following service. Oracle firms must rotate off a holder after 5 consecutive years of service.
+**(e) Oracle independence.** Calibration officers may not hold any beneficial interest in any enterprise subject to this section. Calibration adjustments published 90 days before effect; 60-day public challenge window. Post-service: 3-year restriction on compensation from any enterprise the officer issued findings on. Firms rotate off a holder after 5 consecutive years.
 
-**(f) Enforcement.** Material misrepresentation in extraction or payroll data, or false worldwide disclosure certification, is grounds for: (i) prospective §D6.2(d) disqualification plus 5-year lookback per §P-063.3(d); (ii) demurrage back-accrual for the 5-year lookback period; (iii) referral to the Enforcement Panel under P-045 protocols; (iv) 24-month enhanced-audit designation. The Enforcement Panel action under P-045 is a separate proceeding and may impose additional penalties beyond the demurrage consequences.
-
-**(g) Geographic wage floor arbitrage.** An owner may not improve the extraction ratio by locating the lowest-paid workers exclusively in high-wage domestic jurisdictions while employing lower-paid workers in foreign subsidiaries. The full consolidated workforce, including all international workers per §P-063.4(e), constitutes the denominator workforce. Where a foreign entity's worker compensation cannot be individually verified, the oracle uses the jurisdiction's living-wage benchmark as a floor for those workers in the denominator calculation.
+**(f) False certification.** Material misrepresentation in extraction or payroll data, or false worldwide disclosure certification, is grounds for: (i) prospective disqualification plus 5-year lookback (§P-063.3(d)); (ii) back-demurrage for the 5-year lookback period; (iii) referral to Enforcement Panel under P-045; (iv) 24-month enhanced-audit designation. Both consequences apply simultaneously.
 
 ---
 
 ### P-063.9 — Transitional Relief
 
-**(a) Notification window.** Holders currently operating above the applicable upper bound have 12 months from Active date to restructure. During this window the §D6.9 disqualification does not apply and the §D6.2(d) exclusion continues at its prior level. This window is distinct from the 30-day cure window — the notification window applies to holders already over cap at Active date; the 30-day cure window applies to future breaches.
+**(a) Notification window.** Holders currently operating above the applicable upper bound have 12 months from the Active date to restructure. During this window: the formal disqualification designation does not apply and no enforcement action is initiated. However, demurrage accrues on the disqualified fraction of enterprise assets at standard rates from the Active date — the window pauses enforcement, not the meter. Holders restructure knowing the obligation is accumulating.
 
 **(b) No retroactive clawback.** Extraction before the Active date is not subject to retroactive demurrage assessment solely because it exceeds the cap.
 
-**(c) Asset fire-sale protection.** A disqualified holder has no immediate obligation to sell enterprise assets. Disqualified assets re-enter assessed net worth; demurrage accrues at standard rates. The holder may cure at any time by reducing the extraction ratio.
+**(c) Asset fire-sale protection.** No immediate obligation to sell enterprise assets. Disqualified assets re-enter assessed net worth; demurrage accrues at standard rates. Holder may cure at any time.
 
 ---
 
 ### P-063.10 — Conforming Amendments
 
-**(a) §D6.2(d) operative text.** Amended on its face per §P-063.1.
+**(a) §D6.2(d) operative text.** Amended per §P-063.1.
 
-**(b) §D6.7 conforming note.** Add: *"Enterprise assets partially or fully disqualified under §D6.9 re-enter assessed net worth. This re-entry does not by itself constitute a §D6.7 breach for 12 months following disqualification. After 12 months, the full assessed net worth base applies to §D6.7 calculations."*
+**(b) §D6.7 conforming note.** Add: *"Enterprise assets partially or fully disqualified under §D6.9 re-enter assessed net worth. This re-entry does not by itself constitute a §D6.7 breach for 12 months. After 12 months, full assessed net worth applies."*
 
-**(c) §D8 Jubilee routing — operative amendment.** Amend §D8 to add as an operative clause: *"Demurrage collected from enterprise assets disqualified under §D6.9 is routed in full (100%) to the Jubilee productive-asset restoration fund. No portion is retained for administrative costs. Oracle and enforcement costs under this section are funded through the TSP operational budget. The purpose of this routing is restitution: revenue generated by extraction disparity returns to the workers and households from whom it was extracted. The fund is governed per §D6.9(h)."*
+**(c) §D8 conforming amendment — operative routing and Jubilee sub-allocation.** Amend §D8 to add: *"Demurrage collected from enterprise assets that re-enter assessed net worth under §D6.9 is standard demurrage included in the §D8.1 total revenue calculation. Within the §D8.2 Jubilee productive-asset restoration allocation, demurrage arising from §D6.9 disqualifications is directed 100% to the productive-asset restoration fund governed under §D6.9(h-gov), not split across other §D8.2 uses. The purpose is restitution: demurrage generated by extraction disparity returns to the households whose labor generated it."* This is a conforming §D8.2 sub-allocation amendment. TSP publishes the consolidated revenue-flow accounting schedule before Active status.
 
 **(d) Technical Specifications Package delegation.** TSP shall define:
-- (i) Valuation methodology for non-cash personal benefits above the 10%-of-S floor;
-- (ii) Oracle payroll data submission requirements, cadence, and audit protocols;
-- (iii) Arm's-length interest rate standard for constructive distribution analysis;
-- (iv) Materiality threshold for related-party payment fair-value certification;
+- (i) Valuation methodology for non-cash personal benefits;
+- (ii) Oracle payroll, scheduling-record, and certified worker-band filing requirements and audit protocols;
+- (iii) Arm's-length interest rate standard for constructive-distribution analysis;
+- (iv) Related-party attribution rule definitions (familial and organizational relationships);
 - (v) Affiliated-entity beneficial ownership tracing protocol;
-- (vi) Realized-hours factor verification and audit methodology; employer-cancelled-shift tracking requirements; schedule-suppression audit protocol;
-- (vii) Successor-enterprise oracle certification process and timeline (90-day deemed-approval if oracle takes no action on complete application);
-- (viii) Worldwide disclosure form, submission process, foreign entity audit requirements, and random audit selection protocol;
-- (ix) Independent appeal mechanism and expedited 15-day appeal mechanism for §P-063.5(e), consistent with §D7.5 — prerequisite condition for Active status;
-- (x) Jubilee fund governance structure, board selection process, disbursement criteria, beneficiary qualification, and annual reporting format — prerequisite condition for Active status;
-- (xi) Living-wage benchmark sources by jurisdiction for international denominator floor purposes;
-- (xii) Market-rate compensation methodology for household-member roles, including safe-harbor process.
+- (vi) Realized-hours factor verification; scheduling documentation requirements; default-factor protocol for undocumented schedules;
+- (vii) Successor-enterprise oracle certification process (90-day deemed-approval);
+- (viii) Worldwide disclosure form including franchise/subcontractor schedules, exit-event reporting, charitable-vehicle asset-use schedule, and payment-to-third-party itemization;
+- (ix) Independent appeal and expedited small-enterprise appeal mechanism (§D7.5 prerequisite);
+- (x) Jubilee fund governance, self-nomination process, post-selection audit protocol, disbursement criteria, beneficiary qualification, binding complaint mechanism (Active status prerequisite);
+- (xi) Living-wage benchmark sources by jurisdiction, updated annually;
+- (xii) Market-rate compensation methodology for household-member roles;
+- (xiii) Oracle cadence for receiving payroll data prospectively (to support breach-date accrual start);
+- (xiv) Exit-event capital-gain computation and normalized-R methodology;
+- (xv) Franchisor and subcontractor revenue-dependency verification protocol;
+- (xvi) Consolidated §D8.1/§D8.2 revenue-flow accounting schedule.
 
-**(e) P-017 oracle conformance mandate.** TSP shall confirm that all payroll, extraction, deferred-compensation, affiliated-entity, worldwide-disclosure, and international-denominator data pipelines fall under P-017 oracle independence standards. If not currently covered, a conforming P-017 amendment is a prerequisite for Active status.
+**(e) P-017 oracle conformance mandate.** TSP shall confirm all data pipelines (payroll, extraction, deferred compensation, affiliated-entity, worldwide disclosure, scheduling records, franchise/subcontractor, exit-event) fall under P-017 oracle independence standards. Conforming P-017 amendment is a prerequisite for Active status if not already covered.
 
 ---
 
 ## Open Questions for Evidence Review
 
-1. **Graduated formula bounds:** [3.0, 5.0] are provisional. Oracle to collect actual extraction ratio distributions from pilot enterprises and publish calibration report within 24 months of activation.
-2. **Ghost-worker 15% threshold:** Provisional. Pilot data will reveal whether 15% is the right trigger or whether a different quartile-decline figure better captures manipulation without penalizing organic contraction.
-3. **5–9 worker sliding scale:** Tighter formula and phased entry are provisional. Pilot enforcement will reveal whether 12 months is sufficient for phased entry and whether immediate disqualification (with expedited appeal) is proportionate.
-4. **Jubilee fund governance:** TSP must specify the full governance structure as a prerequisite for Active status. Priority: households within 50% of S who lack productive assets. Living-wage definitions per jurisdiction must be established before international denominator floor is operational.
-5. **Related-party 15% conduit threshold:** Provisional. Oracle may calibrate within [10%, 25%] after pilot data.
+1. **Formula bounds [3.0, 5.0]:** provisional. Oracle calibration report due within 24 months of activation.
+2. **Ghost-worker 15% threshold:** provisional. Pilot data will inform.
+3. **Exit-event amortization methodology:** TSP to specify (straight-line vs. weighted). Applies only to post-Active-date retained earnings.
+4. **Franchisor 10% / subcontractor 20% thresholds:** provisional. Oracle may calibrate within Tier 3 ranges after pilot.
+5. **CRP interpretive ruling:** must be published before Active status.
 
 ---
 
-## New Risks Introduced
+## New Risks Introduced by v6
 
 | Risk | Severity | Mitigation |
 |---|---|---|
-| Ghost-worker floor over-captures organic contraction | Medium | Holder can rebut with documented business reasons; 15% threshold provides headroom |
-| Two-stage cure adds complexity for small operators | Medium | §P-063.5(e) phased entry; TSP to provide simplified cure form |
-| International denominator floor is hard to verify | Medium | Living-wage benchmark is a floor, not a precise measure; benefits the worker directionally |
-| Tripartite Jubilee board governance lag | Medium | TSP prerequisite; board must be constituted before Active status |
-| Charitable vehicle rule creates chilling on genuine philanthropy | Low | Rule limited to governance participation + personal-use benefit; passive donors not covered |
-| Pre-assessment surge rule could capture genuine wage improvements | Low | 6-month post-assessment continuity requirement as safe harbor; rebuttable presumption |
+| Exit-event provision may chill legitimate enterprise sale | Medium | Only post-Active retained earnings; no retroactive clawback |
+| Franchisor rule affects franchise viability models | Medium | Living-wage floor, not full payroll parity; 10% revenue threshold |
+| Economic-attribution 15% threshold creates uncertainty for LP structures | Low | Substance-over-form standard; legitimate passive investors can rebut |
+| Certified worker-band filing adds annual compliance burden | Low | Standard payroll data; TSP specifies simplified form |
+| CPI indexing of denominator requires annual benchmark publication | Low | TSP responsibility; oracle-published index |
 
 ---
 
@@ -323,32 +316,36 @@ Enterprises below 5 workers are excluded from scope only if the holder can demon
 
 - P-017 — oracle independence; conformance mandate in §P-063.10(e)
 - P-023 — demurrage universality; no conflict
-- P-029 (PFCR) — §D8 Jubilee routing now operative
-- P-031 / P-033 — consistent; §D6.10 is distinct from P-033
+- P-029 (PFCR) — §D8 Jubilee routing now operative and clarified
+- P-031 / P-033 — consistent; §D6.10 distinct from P-033
 - P-045 — enforcement panel; §P-063.8(f) misrepresentation referral
 - ANNEX_D §D6.2(d), §D6.7, §D8, §D9.1 — direct text targets
+- CRP interpretive ruling — prerequisite for Active status
 
 ---
 
-## v4 → v5 Change Summary
+## v5 → v6 Change Summary
 
-| Area | v4 | v5 |
+| Area | v5 | v6 |
 |---|---|---|
-| Realized-hours factor | Undefined; delegated to TSP | Defined: (worked + employer-cancelled) ÷ scheduled; floor 0.85; Q4 suppression rule added |
-| Pre-assessment denominator surge | 6-month post-assessment audit only | 12-month trailing average; >20% in 3 months before assessment = rebuttable presumption; 6-month post-assessment continuity safe harbor |
-| Ghost-worker denominator gaming | Termination anti-avoidance + 15% headcount floor | Ghost-worker floor anchor: lowest-wage quartile decline >15% vs. 3 years prior → denominator uses what missing workers would have earned |
-| Staffing-firm attribution | Claimant must prove functional-employee status | Presumptive: holder must disprove arm's-length arrangement |
-| Related-party conduit | Not addressed | Distributions to any non-household person >15% of disclosed extraction = presumed nominee |
-| Charitable vehicle extraction | Not addressed | Personal use of foundation/DAF assets with governance role = extraction at fair market use rate |
-| International workers in denominator | Not addressed | Full consolidated workforce including foreign; living-wage benchmark floor if unverifiable |
-| Foreign entity audit verification | Sworn disclosure only; no verification mechanism | Foreign entities >5% of revenues must supply oracle-approved audited financials |
-| Retroactive void — disclosure | All prior years, no limit | Prospective from discovery + 5-year lookback; intentional fraud → separate Enforcement Panel action |
-| Cure window — structure | 30-day, single stage | Two-stage: day 1–7 binding commitment + escrow; day 8–30 actual changes |
-| Cure window — worker benefit | Not required; ratio could improve via owner pay cut | Required: lowest-paid worker wage must increase ≥10% within cure period; accounting reclassification invalid |
-| Small enterprise appeal | No appeal, no cure | Expedited 15-day factual appeal (not cure window); demurrage accrual not stayed |
-| 5-to-9 cliff | Immediate full application at 5 workers | 12-month phased entry for first-time crossings; single cure window in year 1 only |
-| Permanent ineligibility | After 3rd breach: permanent | After 3rd breach: 10-year ineligibility; reinstatement pathway at year 10 (dignity audit + 3yr sustained compliance + 150% Jubilee contribution) |
-| Jubilee fund governance | Priority class stated; governance delegated to TSP as open question | Tripartite board (lot-drawn beneficiaries, independent fiduciaries, public nominees); 18-month disbursement requirement; public annual report; complaint mechanism; TSP prerequisite for Active status |
-| Household member market-rate | Oracle methodology not specified | 25th–50th percentile survey band; safe harbor for documented external offers; non-cash benefits at imputed value |
-| Tip/commission denominator | Not addressed | Tip credits at statutory minimum; commissions at 12-month trailing realized average |
-| Geographic wage floor arbitrage | Not addressed | Full consolidated denominator including international; living-wage floor for unverifiable foreign workers |
+| Accrual start date | Oracle notification date | Breach date (first assessment period ratio exceeded upper bound); oracle reconciles back-accrual; escrow covers from breach date |
+| §D8.1 accounting | Ambiguous — parallel fund may have excluded P-063 demurrage from §D8.1 floor | Explicit: P-063 demurrage is standard demurrage included in §D8.1 total; within §D8.2 Jubilee allocation, directed 100% to productive-asset restoration track |
+| Transitional window | Disqualification and accrual both paused for 12 months | Enforcement paused; accrual runs on disqualified fraction from Active date |
+| Tier 2/3 classification | Bare assertion; no constitutional reasoning | CRP interpretive ruling as Active prerequisite; constitutional reasoning in §D6.2(d) text; suspension-without-clawback safety valve |
+| 24.9% multi-entity evasion | Only 25%+ ownership triggers consolidation | Economic-attribution test added: >15% of worldwide extraction from any entity through any controlled intermediary = consolidated regardless of ownership % |
+| Retained earnings parking | Annual flow test with no exit-event provision | Exit-event provision: capital gain amortized over post-Active holding period; normalized R computed; back-demurrage if any year would have been disqualified |
+| Related-party capex/facility leases | Arm's-length required only for marketing | Arm's-length required for ALL reinvestment-excluded categories when counterparty has familial or organizational relationship |
+| Successor trigger | Single-transfer >33% | Cumulative over 48-month rolling window; oracle tracks per beneficial owner |
+| Rolling average smoothing weapon | 3-year average with no inflation floor | Denominator = higher of 3-year rolling average or CPI-indexed current-year rate |
+| Cure depth | Greater of 10% or enough to reach R ≤ 3.0 | Same; added: 36-month CPI-adjusted wage maintenance; reversion voids cure retroactively |
+| Ghost-worker enforcement | Required continuous workforce census | Replaced by annual certified worker-band filing; no filing = prior year carries forward (punitive default) |
+| Charitable vehicle enforcement | Annual filing with 50% default | Same (consolidated into filing requirement; certified by independent trustee) |
+| Small enterprise oscillation | Phased entry once per crossing | Phased entry available once per 5-year period; prevents repeated threshold cycling |
+| Labor displacement — small firm | Percentage thresholds for all firm sizes | Absolute-number thresholds for firms <20 workers; percentage only for 20+ |
+| Franchisee shield | Not addressed | Franchisor consolidation: royalty/licensing/supply >10% of franchisee gross revenue → franchisee's lowest-paid workers enter denominator at living-wage floor |
+| Subcontractor cascade | Not addressed | Subcontractor consolidation: holder spend >20% of subcontractor gross revenue + operationally integral → subcontractor's lowest-paid workers enter denominator at living-wage floor |
+| Scheduling records | Certification required; 0.75 default if undocumented | Same; consolidated as explicit exclusion condition |
+| Calibration front-loading | Not addressed | Calibration lookback: if extraction in pre-calibration 12 months >150% of trailing 24-month average, parallel R used for 3 years post-calibration |
+| Successor appeal | General appeal reference | Explicitly independently appealable; provisional greenfield certification available pending appeal |
+| Wrongful scope classification | Credit mechanism added | Consolidated in §D6.9(i): credit against future obligations; correction not reversal |
+| Jubilee beneficiary registry | Self-nomination with post-selection audit | Same; lottery from self-nominated pool; ineligibility triggers re-draw |
