@@ -38,6 +38,20 @@
       "allowed_changes": [],
       "validation": []
     },
+    "codex-synthesize-latest-report": {
+      "description": "Locate the latest report and invoke Codex as a secondary synthesizer",
+      "prompt_file": "prompts/tasks/codex-synthesize-latest-report.md",
+      "mode": "read-only",
+      "allow_constitution": false,
+      "allow_p063": false,
+      "allowed_changes": [],
+      "validation": [],
+      "codex": {
+        "enabled": true,
+        "mode": "synthesize",
+        "prompt": "prompts/codex/synthesize-latest-report.md"
+      }
+    },
     "pre-commit-verification": {
       "description": "Verify staged changes: corpus sync, links, no protected-file drift",
       "prompt_file": "prompts/tasks/pre-commit-verification.md",

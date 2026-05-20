@@ -124,4 +124,4 @@ Root `CLAUDE.md` contains global rules only. Area-specific protocols live in `.c
 scripts/review-loop.sh <task-name>
 ```
 
-Runs a saved Claude prompt by task name with guardrails. Tasks defined in `review-tasks.json`. Prompts in `prompts/tasks/`. Reports written to `reports/`. Never modifies protected files; exits non-zero on guardrail violation.
+Runs a saved Claude prompt by task name with guardrails. Tasks defined in `review-tasks.json`. Prompts in `prompts/tasks/`. Reports written to `reports/`. Never modifies protected files; exits non-zero on guardrail violation. Tasks with `"codex": { "enabled": true }` invoke `codex exec` as a secondary synthesizer after the Claude run; Codex output is advisory and saved as a `-codex.md` secondary report. Push is always manual.
