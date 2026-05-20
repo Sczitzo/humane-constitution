@@ -8,7 +8,7 @@ This file is a **reader-facing design artifact**. It is not operative constituti
 - Decimal codes are display labels for reader navigation only.
 - No file renaming is performed by this artifact.
 - ANNEX_D is and remains the sole demurrage instrument.
-- P-063 remains draft-only and is not corpus-registered.
+- Draft patches that are not corpus-registered are not implied as adopted by this document.
 
 ---
 
