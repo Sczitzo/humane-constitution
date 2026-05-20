@@ -32,7 +32,7 @@ E2E tests take ~30s to start. Port 1420 must be free unless `PLAYWRIGHT_REUSE_SE
 
 `scripts/export_corpus.py` → `app/src/generated/corpus.ts` + `app/public/generated/corpus.json`
 
-Never hand-edit `app/src/generated/corpus.ts` or `app/public/generated/corpus.json`. Current count: 100 docs.
+Never hand-edit `app/src/generated/corpus.ts` or `app/public/generated/corpus.json`. Current count: 103 docs.
 
 **Adding new docs:**
 - `docs/annexes/ANNEX_*.md` — auto-discovered via glob. Also add a row to `docs/annexes/INDEX.md`.
