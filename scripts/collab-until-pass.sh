@@ -178,40 +178,12 @@ echo "========================================"
 
 git diff > "$RUN_DIR/final.diff"
 
-codex exec "
-You are producing the final collaboration report.
-
-Original goal:
-$(cat "$TASK_FILE")
-
-Final verdict from loop:
-$VERDICT
-
-Final git diff:
-$(cat "$RUN_DIR/final.diff")
-
-Review files in the run folder if needed:
-$RUN_DIR
-
-Return:
-
-## Final Verdict
-PASS / NEEDS HUMAN REVIEW / FAIL
-
-## What Changed
-- Concise list.
-
-## Validation Status
-- What appears validated.
-- What still needs manual validation.
-
-## Remaining Risks
-- Concise list.
-
-## Recommended Next Action
-- Commit / continue loop / inspect specific files / run specific command.
-" | tee "$FINAL_REPORT"
-
 echo
+echo "Final loop verdict: $VERDICT"
 echo "Run folder: $RUN_DIR"
-echo "Final report: $FINAL_REPORT"
+echo "Final diff: $RUN_DIR/final.diff"
+echo
+echo "Last Codex review:"
+echo "$CODEX_OUT"
+echo
+cat "$CODEX_OUT"
