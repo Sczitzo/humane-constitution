@@ -46,7 +46,7 @@ Constitutional mechanics: how rules change, how the system legitimately begins.
 | Decimal | Legacy ID | Title |
 |---|---|---|
 | 1.1 | ANNEX_H | Amendment Article and Constitutional Change Control |
-| 1.2 | ANNEX_AV | Dual-Key Amendment Safeguard and Top-Level Rule Protection |
+| 1.2 | ANNEX_AV | Two-Key Architectural Precondition for Tier-1 Invariant Enforcement |
 | 1.3 | ANNEX_N | Transition, Genesis, and Deployability Preconditions |
 | 1.4 | ANNEX_AH | Founding Bootstrap Problem and Initial Authority Resolution |
 
@@ -64,7 +64,7 @@ Who is protected, how identity is established, and what floor of provision is gu
 | 2.2 | ANNEX_P | Proof-of-Personhood, Identity Tradeoffs, and Red Lines |
 | 2.3 | ANNEX_Y | Constitutional Survival Minimum |
 | 2.4 | ANNEX_K | Essential Basket Governance and Civic Participation Fairness |
-| 2.5 | ANNEX_AK | Identity Rule Fairness Balancing and Wrongful Exclusion Prevention |
+| 2.5 | ANNEX_AK | Identity Asymmetric Error Doctrine |
 | 2.6 | ANNEX_AX | Confidential Enrollment and Safety-Identity Protocol |
 | 2.7 | ANNEX_AZ | Tier 0 Token Mechanism |
 
@@ -82,8 +82,8 @@ Independent review institutions, complaint pathways, and civic accountability ar
 | 3.2 | ANNEX_S | Constitutional Review Panel Anti-Capture and Failure Recovery |
 | 3.3 | ANNEX_AI | Federated Ombuds Constitution |
 | 3.4 | ANNEX_AW | Whistleblower Protection and Anti-Retaliation Protocol |
-| 3.5 | ANNEX_AS | High-Impact Witness Statement Risk Assignment |
-| 3.6 | ANNEX_AM | Public Explanation Before Opposition Frames Failure |
+| 3.5 | ANNEX_AS | Attestation-at-Risk Stake Mechanism |
+| 3.6 | ANNEX_AM | Electoral Cycle Resilience |
 | 3.7 | ANNEX_Z | Voice and Service Record Civic Architecture |
 
 *Reserved: 3.8–3.9*
@@ -99,8 +99,8 @@ Money creation, wealth carrying costs, investment containment, and trade boundar
 | 4.1 | ANNEX_D | Progressive Net-Worth Demurrage *(sole demurrage instrument)* |
 | 4.2 | ANNEX_X | Flow Issuance Architecture |
 | 4.3 | ANNEX_V | Transition Mechanics, Conversion, and Legacy-System Treatment |
-| 4.4 | ANNEX_AT | Trade Rules for Basic Domestic Capacity Protection |
-| 4.5 | ANNEX_AR | Investment Account Anti-Demurrage-Escape Containment |
+| 4.4 | ANNEX_AT | External Trade Architecture: Strategic Floors, Export Caps, and the Reciprocity Membrane |
+| 4.5 | ANNEX_AR | Contract-Commitment Architecture: Threshold Values and Governance Parameters |
 
 *Reserved: 4.6–4.9*
 
@@ -113,7 +113,7 @@ Architectural requirements for measurement independence, corroboration, and supp
 | Decimal | Legacy ID | Title |
 |---|---|---|
 | 5.1 | ANNEX_M | Oracle, Physical Reality, and Measurement Limits |
-| 5.2 | ANNEX_AL | Measurement Source Independence and Corroboration Requirement |
+| 5.2 | ANNEX_AL | Methodology-Class Definitions for Oracle Independence |
 | 5.3 | ANNEX_AQ | Shared Storehouse Oracle-Failure Fallback Protocol |
 
 *Reserved: 5.4–5.9*
@@ -122,15 +122,14 @@ Architectural requirements for measurement independence, corroboration, and supp
 
 ### Title 6 — Emergency and Continuity
 
-Signal integrity, deadlock prevention, and bypass closure that keep the protocol operational under stress.
+Deadlock prevention and bypass closure that keep the protocol operational under compound stress.
 
 | Decimal | Legacy ID | Title |
 |---|---|---|
-| 6.1 | ANNEX_AP | Emergency Response Signal Integrity and Anti-Manipulation Protocol |
-| 6.2 | ANNEX_AE | Compound Interface Tests and Deadlock Prevention Clauses |
-| 6.3 | ANNEX_U | Operational Bypass Closure and Superseding Clauses |
+| 6.1 | ANNEX_AE | Compound Interface Tests and Deadlock Prevention Clauses |
+| 6.2 | ANNEX_U | Operational Bypass Closure and Superseding Clauses |
 
-*Reserved: 6.4–6.9*
+*Reserved: 6.3–6.9*
 
 ---
 
@@ -145,7 +144,7 @@ Testing methodology, acceptance-process integrity, and the staged pathway from p
 | 7.3 | ANNEX_AD | Narrative Attack Surface Clauses |
 | 7.4 | ANNEX_AC | Governance Throughput, Measurement Lag, and Elite Formation Clauses |
 | 7.5 | ANNEX_Q | Minimum Viable Pilot Stack and Transition Doctrine |
-| 7.6 | ANNEX_AN | Pilot Evidence Requirements Before Scale-up |
+| 7.6 | ANNEX_AN | Pilot External Validity Gate |
 | 7.7 | ANNEX_AY | Delivery Sufficiency Standard and Register |
 
 *Reserved: 7.8–7.9*
@@ -161,12 +160,13 @@ Threat catalog, operational threat controls, compound failure scenarios, disclos
 | 8.1 | ANNEX_B | Threat Register |
 | 8.2 | ANNEX_C | Threat Register Operations |
 | 8.3 | ANNEX_T | Compound Failure Scenarios and Interface Stress Tests |
-| 8.4 | ANNEX_AO | Threat Disclosure Boundaries and Public-Safety Information Gate |
+| 8.4 | ANNEX_AO | Register Disclosure Protocol |
 | 8.5 | ANNEX_AB | Document Governance and Integration Clauses |
-| 8.6 | ANNEX_AJ | Side Deal and Instrument-Conversion Examples |
+| 8.6 | ANNEX_AJ | Above-Ledger Bypass Worked Examples |
 | 8.7 | ANNEX_AF | Grace Period Exploitation Clauses |
+| 8.8 | ANNEX_AP | PCRP Attack Surface Hardening |
 
-*Reserved: 8.8–8.9*
+*Reserved: 8.9*
 
 ---
 
@@ -178,12 +178,12 @@ These annexes have significant secondary relevance outside their primary Title. 
 |---|---|---|
 | ANNEX_AZ (2.7) | Rights and Access | Also relates to identity architecture and privacy; classified here because its constitutional purpose is survival-floor *access* without prior identity disclosure. |
 | ANNEX_Z (3.7) | Governance and Review | Also relates to civic data and privacy; classified here because its constitutional purpose is preventing civic status aggregation — a governance architecture question. |
-| ANNEX_AP (6.1) | Emergency and Continuity | Also relates to measurement integrity (Title 5); classified here because its purpose is protecting emergency escalation signals, not measurement methodology. |
+| ANNEX_AP (8.8) | Threats and Hardening | Also relates to governance (Title 3) via dependency on Federated Ombuds (Annex AI) for cap-reset audit authority; classified under hardening because its constitutional function is closing two named attack vectors (T-018, T-019) against the Public Coercion Response Protocol. |
 | ANNEX_V (4.3) | Economy and Stewardship | Also relates to transition continuity (Title 6); classified here because its operative clauses govern conversion mechanics and legacy banking treatment, which are economic instruments. |
 | ANNEX_AQ (5.3) | Oracles, Measurement, and Supply Data | Also relates to emergency fallback (Title 6); classified here because its constitutional function is decentralized supply measurement architecture, not crisis response. |
-| ANNEX_AR (4.5) | Economy and Stewardship | Also relates to hardening (Title 8); classified here because it is an instrument-governance document defining investment account rules, not a threat-catalog document. |
+| ANNEX_AR (4.5) | Economy and Stewardship | Also relates to hardening (Title 8) via parameter-capture failure risk; classified here because its operative clauses govern numerical thresholds, deployment windows, and inspector-pool parameters for infrastructure financing — economic stewardship instruments, not threat documentation. |
 | ANNEX_AB (8.5) | Threats and Hardening | Contains economic anti-convertibility clauses; classified under hardening because it integrates the first adversarial hardening cycle (P-001 through P-004), making it a patch-cycle document rather than an instrument-governance document. |
-| ANNEX_AJ (8.6) | Threats and Hardening | Documents worked examples of instrument-conversion attacks against economic instruments; classified under hardening because its constitutional function is threat documentation, not instrument governance. |
+| ANNEX_AJ (8.6) | Threats and Hardening | Documents above-ledger bypass attack worked examples against economic instruments; classified under hardening because its constitutional function is threat documentation, not instrument governance. |
 
 ---
 
@@ -213,9 +213,9 @@ The following letters have no corresponding annex file. **Gaps should not be fil
 | 3 — Governance and Review | 7 |
 | 4 — Economy and Stewardship | 5 |
 | 5 — Oracles, Measurement, and Supply Data | 3 |
-| 6 — Emergency and Continuity | 3 |
+| 6 — Emergency and Continuity | 2 |
 | 7 — Evidence, Audits, and Pilots | 7 |
-| 8 — Threats and Hardening | 7 |
+| 8 — Threats and Hardening | 8 |
 | **Total** | **43** |
 
 ---
