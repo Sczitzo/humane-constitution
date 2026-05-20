@@ -7,6 +7,23 @@
 
 ---
 
+## 0. How to read this package
+
+The full review package consists of these files. Read in this order, going as deep as your reviewer role requires:
+
+| # | File | Purpose | Note |
+|---|---|---|---|
+| 1 | `P-063_v15_executive_summary.md` | Plain-language entry point — start here | New |
+| 2 | `P-063_v15_broader_review_brief.md` | Full reviewer guide — this document | |
+| 3 | `P-063_v15_glossary.md` | Plain-language definitions for all technical terms | New |
+| 4 | `P-063_draft.md` | Operative patch text (commit `11292a9`) | |
+| 5 | `Christ_Centered_Evaluation.md`, Session 6 | Christ-centered theological evaluation | **Evaluated v14, not v15.** Remains relevant; does not cover the v15 should-fix integrations (Labor L7/L8, Oracle D3, Const A2, Tax C, Oracle C1/C3/E1) |
+| 6 | `P-063_v14_vignette_stress_test.md` | Fruit-test against concrete human cases | **Evaluated v14, not v15.** Remains relevant for the vignettes it covers; does not cover v15 additions |
+| 7 | `P-063_v16_followup_draft.md` | Seven non-blocking v16 refinements | Read if you want to know what is already tracked |
+| 8 | `P-063_v15_reviewer_response_form.md` | Structured form for submitting findings | New — use when submitting your review |
+
+---
+
 ## 1. What is P-063 and why does it exist?
 
 The Humane Constitution's productive-use exemption (§D6.2(d)) allows enterprises that productively deploy assets to exclude those assets from demurrage assessment. Without further conditions, this exemption could shelter holdings that grow extremely concentrated while paying workers poverty wages — treating "productive" as a formal label rather than a substantive reality. P-063 adds a pay-ratio disqualification: if a holder's personal extraction exceeds a calibrated multiple of the compensation of their lowest-paid worker, the enterprise loses a proportional share of the productive-use exclusion. The patch does not cap wages, impose a maximum income, or regulate compensation as such; it adjusts the scope of a constitutional exemption based on the ratio between what the holder takes and what the lowest-paid worker receives.
@@ -67,6 +84,8 @@ The patch does not claim 10/10 closure overall. The honest ceiling is: 10/10 on 
 
 All review rounds were structured AI red-teams. No human expert review has occurred. This is the primary reason P-063 remains draft-only.
 
+> **Note on v14 vs. v15 scope:** Both `Christ_Centered_Evaluation.md` Session 6 and `P-063_v14_vignette_stress_test.md` evaluated the v14 patch (commit `dd779d0`). They remain relevant — Session 6 explicitly flagged several items (Labor L7 worker intervenor standing, Labor L8 tapered post-window presumption, Oracle E1 prior-year-claimed-extraction safe harbor, Const A2 certification-appeal mechanism) that were subsequently integrated in v15. Reviewers relying on those documents should be aware that the v15 integrations they anticipated have been made, but neither document has been updated to evaluate v15 directly.
+
 ---
 
 ## 4. Known residuals and open follow-ups
@@ -112,6 +131,7 @@ None of these block circulation or adoption by themselves, but S-1 (severity 5) 
 
 ### B. Labor / worker protection
 - Does the denominator-anchor-worker protection (12-month strong presumption + 13–24 month taper) actually protect the relevant worker in practice?
+- The patch structurally identifies one specific worker as the "constitutional focal point" of the owner's exemption — without consulting that worker about the role. Does this identification adequately preserve the worker's dignity, or does it primarily instrumentalize them regardless of the protections added? (This tension was flagged in Session 6 and the vignette stress test; it has not been resolved by drafting.)
 - Is the phantom-worker denominator construction robust against automation-plus-dismissal strategies?
 - Are the redeployment and placement carve-outs genuinely protective, or do they create a checklist that can be satisfied on paper?
 - Does intervenor-of-right status for worker-advocacy organizations arrive in time to be useful in fast-moving appeals?
@@ -133,8 +153,12 @@ None of these block circulation or adoption by themselves, but S-1 (severity 5) 
 - Is the fiscal-year-to-calendar-year conversion methodology (for the 3-in-7 window) sufficiently specified, or does it require more TSP guidance?
 - Is the worldwide disclosure obligation administrable for a multi-jurisdiction SME without dedicated compliance infrastructure?
 - Are the minimum-records standards (six categories) calibrated correctly for different enterprise sizes?
+- Does the oracle have, or can it realistically build, the institutional capacity to administer minimum-records verification, worldwide disclosure review, denominator-anchor identification, Jubilee fund outreach, and appeal administration at scale? What infrastructure must exist before Active date?
 
 ### F. Theology / ethics
+
+*The theological framework applied in prior review rounds uses eight questions drawn from the teachings of Jesus: love of neighbor; service over domination; protection of the vulnerable; truth, mercy, justice, and forgiveness; human dignity over utility; resistance to Babel-temptation (pride, totalizing systems, coercive unity); good fruit in practice; and openness to correction. See `Christ_Centered_Evaluation.md` for the full eight-question framework and Session 6 for how it was applied to v14. The v15 integrations flagged by Session 6 have been made, but Session 6 itself has not been updated for v15.*
+
 - Does the Tier 1 / Tier 2 distinction adequately honor both the Zacchaeus and Davidic repentance patterns without implying that one form of contrition is less genuine?
 - Does the patch treat workers as persons with dignity, or does it reduce them to denominator anchors and phantom-worker counts?
 - Does the proportionality-and-non-totalization structure prevent the system from becoming a surveillance idol — claiming godlike reach under the guise of protection?
@@ -151,6 +175,16 @@ None of these block circulation or adoption by themselves, but S-1 (severity 5) 
 - Is the k-10 anonymity standard for the aggregate anomaly report adequate to prevent re-identification?
 - Is the oracle's authority over worker-identifier data appropriately bounded and subject to meaningful oversight?
 - Are there data-protection jurisdictions (GDPR, PDPA, etc.) whose requirements would conflict with the worldwide disclosure obligation or the denominator-worker identification process?
+
+### I. Affected community
+
+*Affected-community reviewers include workers at qualifying enterprises, small business owners, people who would potentially benefit from the Jubilee fund, pastors and community leaders who serve these populations, and others with direct lived experience relevant to the patch. These reviewers cannot evaluate implementation determinism, but they can assess whether the protections make sense from the inside and whether the costs fall appropriately.*
+
+- If you are (or have been) a worker at a business like the ones this patch covers: Does the denominator-anchor-worker protection feel like something that would actually protect you, or does it feel like a mechanism an employer could work around?
+- If you are (or have been) a small business owner: Does the compliance burden (disclosure obligations, ratio tracking, filing requirements) feel proportionate to what your business could reasonably manage?
+- Does the Jubilee fund governance structure feel like it would actually deliver resources to the people it is meant to serve? What would most likely prevent that from happening?
+- Is there anything in how this draft is framed that feels dishonest, misleading, or missing — something important that is not being said?
+- Is being identified as the denominator-anchor worker something that would feel protective or something that would feel like unwanted exposure?
 
 ---
 
