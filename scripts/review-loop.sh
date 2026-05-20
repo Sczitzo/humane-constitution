@@ -1,16 +1,37 @@
 #!/usr/bin/env bash
 # Review-loop: run a saved Claude prompt by task name with guardrails.
 # Optionally invokes Codex as a secondary reviewer when the task config enables it.
-# Usage: scripts/review-loop.sh <task-name>
+#
+# Usage:
+#   scripts/review-loop.sh <task-name>
+#   scripts/review-loop.sh <task-name> --codex-report-out <file>
+#     (auto-loop uses --codex-report-out to learn where the Codex report was saved)
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 TASKS_FILE="$REPO_ROOT/review-tasks.json"
 REPORTS_DIR="$REPO_ROOT/reports"
 
-# ── argument check ─────────────────────────────────────────────────────────────
+# ── argument parsing ───────────────────────────────────────────────────────────
 
-if [ $# -lt 1 ]; then
+TASK_NAME=""
+CODEX_REPORT_OUT_FILE=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --codex-report-out)
+      CODEX_REPORT_OUT_FILE="$2"; shift 2 ;;
+    -*)
+      echo "Unknown option: $1" >&2; exit 1 ;;
+    *)
+      if [ -z "$TASK_NAME" ]; then TASK_NAME="$1"; else
+        echo "Unexpected argument: $1" >&2; exit 1
+      fi
+      shift ;;
+  esac
+done
+
+if [ -z "$TASK_NAME" ]; then
   echo "Usage: scripts/review-loop.sh <task-name>" >&2
   echo "" >&2
   echo "Available tasks:" >&2
@@ -23,8 +44,6 @@ for name, t in d['tasks'].items():
 "
   exit 1
 fi
-
-TASK_NAME="$1"
 
 # ── load task config from JSON ─────────────────────────────────────────────────
 
@@ -47,9 +66,12 @@ out = {
     'validation':         task.get('validation', []),
     'description':        task.get('description', ''),
     'protected_files':    config.get('protected_files', []),
+    'auto_commit':        task.get('auto_commit', False),
+    'commit_message':     task.get('commit_message', ''),
     'codex_enabled':      codex_cfg.get('enabled', False),
     'codex_prompt':       codex_cfg.get('prompt', ''),
     'codex_mode':         codex_cfg.get('mode', 'review'),
+    'codex_target':       codex_cfg.get('target', 'own_report'),
 }
 print(json.dumps(out))
 ")"
@@ -59,6 +81,7 @@ TASK_MODE="$(echo "$TASK_JSON"       | python3 -c "import json,sys; print(json.l
 TASK_DESC="$(echo "$TASK_JSON"       | python3 -c "import json,sys; print(json.load(sys.stdin)['description'])")"
 CODEX_ENABLED="$(echo "$TASK_JSON"   | python3 -c "import json,sys; print('1' if json.load(sys.stdin)['codex_enabled'] else '0')")"
 CODEX_PROMPT_REL="$(echo "$TASK_JSON"| python3 -c "import json,sys; print(json.load(sys.stdin)['codex_prompt'])")"
+CODEX_TARGET="$(echo "$TASK_JSON"    | python3 -c "import json,sys; print(json.load(sys.stdin)['codex_target'])")"
 PROMPT_FILE="$REPO_ROOT/$PROMPT_FILE_REL"
 
 if [ ! -f "$PROMPT_FILE" ]; then
@@ -91,7 +114,7 @@ echo "=== review-loop: $TASK_NAME ==="
 echo "Mode:   $TASK_MODE"
 echo "Prompt: $PROMPT_FILE_REL"
 echo "Report: $REPORT_FILE"
-[ "$CODEX_ENABLED" = "1" ] && echo "Codex:  enabled ($(command -v codex))"
+[ "$CODEX_ENABLED" = "1" ] && echo "Codex:  enabled ($(command -v codex)), target=$CODEX_TARGET"
 echo ""
 
 # ── snapshot tracked changed files before run ──────────────────────────────────
@@ -226,13 +249,41 @@ CODEX_VERDICT=""
 CODEX_OUTPUT=""
 
 if [ "$CODEX_ENABLED" = "1" ] && [ "$FINAL_VERDICT" != "FAIL" ]; then
+
+  # Resolve which report Codex should synthesize
+  if [ "$CODEX_TARGET" = "latest_session_report" ]; then
+    # Find the latest *.md in reports/ that is:
+    # - not a -codex.md secondary report
+    # - not a report for the codex-synthesize-latest-report task itself
+    CODEX_ACTUAL_REPORT="$(python3 -c "
+import os, glob, sys
+
+reports_dir = '$REPORTS_DIR'
+pattern = os.path.join(reports_dir, '*.md')
+candidates = [
+    f for f in glob.glob(pattern)
+    if not f.endswith('-codex.md')
+    and '/codex-synthesize-latest-report_' not in f
+]
+if not candidates:
+    print('', end='')
+else:
+    print(sorted(candidates, key=os.path.getmtime)[-1])
+")"
+    if [ -z "$CODEX_ACTUAL_REPORT" ]; then
+      echo "HOLD: codex_target=latest_session_report but no qualifying report found in $REPORTS_DIR" >&2
+      CODEX_ACTUAL_REPORT="$REPORT_FILE"
+    fi
+  else
+    CODEX_ACTUAL_REPORT="$REPORT_FILE"
+  fi
+
   echo ""
   echo "Running Codex synthesis ($(basename "$CODEX_PROMPT_REL"))..."
-  echo "Codex command: codex exec [prompt with REPORT_PATH=$REPORT_FILE]"
+  echo "Codex command: codex exec [prompt with REPORT_PATH=$(basename "$CODEX_ACTUAL_REPORT")]"
 
-  # Build the Codex prompt: prepend context vars, append the prompt template
   CODEX_FULL_PROMPT="TASK_NAME=$TASK_NAME
-REPORT_PATH=$REPORT_FILE
+REPORT_PATH=$CODEX_ACTUAL_REPORT
 REPO_ROOT=$REPO_ROOT
 
 $(cat "$CODEX_PROMPT_FILE")"
@@ -248,22 +299,28 @@ $(cat "$CODEX_PROMPT_FILE")"
 
 $CODEX_OUTPUT"
   else
-    CODEX_VERDICT="$(echo "$CODEX_OUTPUT" | grep -oE '\b(PASS|HOLD|FAIL|STOP|PUSH READY|SAFE EDIT|RUN EXISTING TASK|CREATE NEW TASK)\b' | head -1 || echo "PASS")"
+    CODEX_VERDICT="$(echo "$CODEX_OUTPUT" | grep -oE '\bACTION: (RUN_EXISTING_TASK|CREATE_AND_RUN_TASK|SAFE_EDIT|PUSH_READY|HUMAN_DECISION_REQUIRED)\b' | head -1 | sed 's/ACTION: //' || echo "UNKNOWN")"
+    [ -z "$CODEX_VERDICT" ] && CODEX_VERDICT="UNKNOWN"
   fi
 
   # write Codex report
   {
   printf "# Codex Synthesis Report: %s\n\n" "$TASK_NAME"
-  printf "**Source report:** %s  \n" "$REPORT_FILE"
+  printf "**Source report:** %s  \n" "$CODEX_ACTUAL_REPORT"
   printf "**Codex prompt:** %s  \n" "$CODEX_PROMPT_REL"
   printf "**Timestamp:** %s  \n" "$TIMESTAMP"
-  printf "**Codex verdict:** %s\n\n" "$CODEX_VERDICT"
+  printf "**Codex action:** %s\n\n" "$CODEX_VERDICT"
   printf '%s\n\n' "---"
   printf "%s\n" "$CODEX_OUTPUT"
   } > "$CODEX_REPORT_FILE"
 
-  echo "Codex verdict: $CODEX_VERDICT"
-  echo "Codex report:  $CODEX_REPORT_FILE"
+  echo "Codex action: $CODEX_VERDICT"
+  echo "Codex report: $CODEX_REPORT_FILE"
+
+  # If caller wants the codex report path written to a file (used by auto-loop)
+  if [ -n "$CODEX_REPORT_OUT_FILE" ]; then
+    echo "$CODEX_REPORT_FILE" > "$CODEX_REPORT_OUT_FILE"
+  fi
 fi
 
 # ── print summary ──────────────────────────────────────────────────────────────

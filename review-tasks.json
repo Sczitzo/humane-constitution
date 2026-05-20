@@ -39,7 +39,7 @@
       "validation": []
     },
     "codex-synthesize-latest-report": {
-      "description": "Locate the latest report and invoke Codex as a secondary synthesizer",
+      "description": "Locate the latest session report and invoke Codex as a structured-action synthesizer",
       "prompt_file": "prompts/tasks/codex-synthesize-latest-report.md",
       "mode": "read-only",
       "allow_constitution": false,
@@ -49,7 +49,8 @@
       "codex": {
         "enabled": true,
         "mode": "synthesize",
-        "prompt": "prompts/codex/synthesize-latest-report.md"
+        "prompt": "prompts/codex/synthesize-latest-report.md",
+        "target": "latest_session_report"
       }
     },
     "pre-commit-verification": {
