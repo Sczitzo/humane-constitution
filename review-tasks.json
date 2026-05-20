@@ -29,6 +29,15 @@
       "allowed_changes": [],
       "validation": []
     },
+    "christ-centered-session7-review": {
+      "description": "Read-only Christ-centered review of ANNEX_AW, ANNEX_AX, ANNEX_AY (Session 7 coverage)",
+      "prompt_file": "prompts/tasks/christ-centered-session7-review.md",
+      "mode": "read-only",
+      "allow_constitution": false,
+      "allow_p063": false,
+      "allowed_changes": [],
+      "validation": []
+    },
     "pre-commit-verification": {
       "description": "Verify staged changes: corpus sync, links, no protected-file drift",
       "prompt_file": "prompts/tasks/pre-commit-verification.md",
