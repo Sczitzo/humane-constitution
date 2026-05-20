@@ -111,7 +111,8 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 | ANNEX_AW | Whistleblower Protection and Anti-Retaliation Protocol | CSB, PWC | Protects community alert reporters from retaliation by the administrators they reported on, preserving the coercion-detection pathways that depend on ordinary people being willing to name wrongdoing. |
 | ANNEX_AX | Confidential Enrollment and Safety-Identity Protocol | CSB | Provides a shielded identity enrollment path for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates a documented safety threat. |
 | ANNEX_AY | Delivery Sufficiency Standard and Register | CSB | Closes the gap between the constitutional guarantee of Essential Access and operational delivery by requiring a public register of populations without a working delivery path and mandating remediation. |
-| ANNEX_AZ | Progressive Net-Worth Demurrage Architecture | PWC, SAL | Defines steeply progressive holding costs on concentrated wealth so multi-generational passive hoarding is economically unsustainable while productive investment and ordinary saving remain viable. |
+| ANNEX_D | Progressive Net-Worth Demurrage Architecture | PWC, SAL | Defines steeply progressive holding costs on concentrated wealth so multi-generational passive hoarding is economically unsustainable while productive investment and ordinary saving remain viable. (ANNEX_AZ formerly contained this content; ANNEX_D is now the sole demurrage instrument.) |
+| ANNEX_AZ | Tier 0 Token Mechanism | CSB | Defines the constitutional constraints for the pseudonymous single-session token mechanism that protects Tier 0 survival-access recipients from identification and surveillance. |
 
 ---
 
@@ -120,15 +121,15 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 **Collapse state coverage count** (annexes with primary or co-primary defense):
 
 - **CSB (Survival-Trade Bind):** ANNEX_I, K, M, P, Q, T, U, V, Y, AB, AE, AJ, AK, AP, AQ, AT, AW, AX, AY — approximately 19 annexes
-- **PWC (Power-Wealth Convergence):** ANNEX_H, J, L, N, S, T, U, V, X, Z, AB, AC, AF, AG, AH*, AI, AJ, AL, AM, AO, AR, AS, AV, AW, AZ — approximately 25 annexes
-- **SAL (Static-Advantage Loop):** ANNEX_H, J, K, S, T, U, X, Z, AB, AC, AF, AG, AH*, AM, AN, AR, AS, AT, AZ — approximately 19 annexes
+- **PWC (Power-Wealth Convergence):** ANNEX_H, J, L, N, S, T, U, V, X, Z, AB, AC, AF, AG, AH*, AI, AJ, AL, AM, AO, AR, AS, AV, AW, D — approximately 25 annexes
+- **SAL (Static-Advantage Loop):** ANNEX_H, J, K, S, T, U, X, Z, AB, AC, AF, AG, AH*, AM, AN, AR, AS, AT, D — approximately 19 annexes
 - **CPF (Control-Plane Failure — cross-cutting):** ANNEX_A, C, M, N, P, Q, T, U, AD, AE, AG, AH, AI, AL, AN, AO, AP, AQ, AV — approximately 19 annexes
 
 *ANNEX_AH's founding-bootstrap focus is primarily CPF; SAL is secondary.
 
-**Which collapse state has the most coverage:** PWC. Wealth-to-power conversion receives the broadest protection, with dedicated annexes covering monetary architecture (J, X, AZ), civic-layer separation (Z, AF, AS), oracle independence (AL), institutional composition (S, L, AI), amendment classification (H, AV), and transition integrity (V, AM).
+**Which collapse state has the most coverage:** PWC. Wealth-to-power conversion receives the broadest protection, with dedicated annexes covering monetary architecture (J, X, D), civic-layer separation (Z, AF, AS), oracle independence (AL), institutional composition (S, L, AI), amendment classification (H, AV), and transition integrity (V, AM).
 
-**Which has the least:** CSB and SAL are roughly tied, but SAL has a relative coverage gap in the delivery and access layer — the annexes defending against static advantage concentrate heavily on institutional capture (S, AM, AG) and monetary architecture (J, X, AZ), with less explicit coverage of how early-entrant advantage in Essential Access queueing, credential recognition, or pilot geography can harden into permanent class position. ANNEX_AN is the primary SAL counter here and it is PROPOSED, not ACTIVE.
+**Which has the least:** CSB and SAL are roughly tied, but SAL has a relative coverage gap in the delivery and access layer — the annexes defending against static advantage concentrate heavily on institutional capture (S, AM, AG) and monetary architecture (J, X, D), with less explicit coverage of how early-entrant advantage in Essential Access queueing, credential recognition, or pilot geography can harden into permanent class position. ANNEX_AN is the primary SAL counter here and it is PROPOSED, not ACTIVE.
 
 **Annexes where the defense connection is unclear or indirect:**
 - **ANNEX_AB** — primarily an integration document; its defense function is inherited from the patches it integrates (P-001 through P-004) rather than from a self-standing mechanism.

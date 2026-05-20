@@ -162,7 +162,7 @@ npm run tauri build  # produces a platform-native installer in src-tauri/target/
 |---|---|
 | **Home** | Featured documents and the recommended reading path. Start here on your first visit. |
 | **Constitution** | The charter text, white paper, public-facing explainers, and Founding Order. |
-| **Annexes** | All operational annexes (A through AV). Search and filter by topic. |
+| **Annexes** | All operational annexes (A through AZ). Search and filter by topic. |
 | **Threats & Patches** | Threat Register, Patch Log, Founding Commitments, Claims & Evidence, Pilot Roadmap. |
 | **Validation** | Activation gates, integrity status, and structural-check output. |
 | **Settings** | Font size, column width, and dark mode. The reader remembers your last view between sessions. |

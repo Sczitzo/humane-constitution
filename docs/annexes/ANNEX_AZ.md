@@ -1,0 +1,42 @@
+# ANNEX AZ — Tier 0 Token Mechanism
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Define the constitutional constraints that any Tier 0 pseudonymous single-session token mechanism must satisfy, ensuring open-floor survival access cannot be used to track, identify, or surveil the persons it serves. |
+> | **Who it protects** | Any person accessing the Constitutional Survival Minimum without providing or confirming real-world identity — particularly persons in safety situations, undocumented persons, and anyone exercising the right not to disclose identity at the survival tier. |
+> | **Failure risk** | Token-issuance infrastructure is compromised and used to reconstruct session linkage; tokens become durable tracking identifiers; the open-floor promise of pseudonymous access is satisfied on paper but not in practice. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | INV-001 (survival access not conditioned on identity); INV-LAUNCH-1 (pre-launch blocking gate); ANNEX_AK §AK8 (two-tier access model); ANNEX_AX (safety-shielded enrollment) |
+
+> **Scope note.** This annex previously contained a progressive net-worth demurrage architecture (§AZ1–AZ3). That content was superseded by [ANNEX_D](./ANNEX_D.md), which is now the sole demurrage instrument. This annex now exists only for the Tier 0 token mechanism constitutional framework (§AZ1 below). No demurrage content is present or intended here.
+
+> **Provenance.** §AZ2.1 was originally drafted in the P0-A adversarial audit remediation batch (2026-05-15) to resolve the pre-operational gate in INV-LAUNCH-1. The demurrage sections (former §AZ1–AZ3) were deleted in a subsequent commit when ANNEX_D was designated the sole demurrage instrument; §AZ2.1 was not demurrage content and was restored here to keep the INV-LAUNCH-1 gate intact.
+
+---
+
+## AZ1 — Tier 0 Token Mechanism (Constitutional Framework)
+
+A Tier 0 token is an access authorization artifact issued to persons who have received provisional personhood confirmation under Article II. It is not identity, not currency, not reputation, and not transferable governance power.
+
+**Issuance conditions.** A Tier 0 token is issued upon: (1) provisional personhood confirmation; and (2) minimal eligibility attestation sufficient for Tier 0 access, as defined by the Technical Specifications Package (TSP) designated for this mechanism. Full identity verification is not required at Tier 0. The issuance process must not require disclosure of real-world identity.
+
+**Scope.** A Tier 0 token authorizes CSM basket allocation only. It does not authorize civic participation, governance voting, office eligibility, ownership, currency conversion, reputation attribution, or any upgrade of identity status.
+
+**Lifetime.** A Tier 0 token is single-session. Reissuance requires the same provisional confirmation process; tokens may not be indefinite.
+
+**Pseudonymity requirement.** The token mechanism must not create real-world identity linkage at Tier 0. A Tier 0 token must not become a durable tracking identifier. The specific cryptographic or technical mechanism that satisfies these constraints is delegated to the TSP designated for this mechanism.
+
+**Non-aggregation requirement.** The token cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom.
+
+**Session-linkage prohibition.** The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. This is a constitutional constraint, not a technical recommendation; no TSP implementation that fails this constraint is compliant regardless of endorsement.
+
+**Audit trail.** The token mechanism must produce an audit artifact recording issuance, expiration, scope, and revocation status for each token without exposing the real-world identity of the token holder.
+
+**TSP responsibility.** The technical implementation — including cryptographic scheme, issuance oracle, pseudonymity guarantees, and audit infrastructure — is delegated to the TSP designated for Tier 0 identity and access. The TSP must satisfy all constitutional constraints in this section. No implementation that fails any constraint above is compliant regardless of TSP endorsement.
+
+**Pre-launch gate.** Launch remains blocked under INV-LAUNCH-1 until:
+1. This section exists in the corpus (constitutional-spec condition — satisfied by this annex); and
+2. The TSP responsible for implementing the Tier 0 token mechanism has been formally assigned (TSP-assignment condition — **not yet complete** as of corpus date; see `docs/governance/Federated_Ombuds_Constitution_Packet.md`).
+
+Both conditions must be confirmed before INV-LAUNCH-1 can be cleared.

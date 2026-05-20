@@ -368,8 +368,8 @@ These records must exist after the Federated Ombuds is constituted and all Ombud
 | FC-YT2 value registered in founding/commitments.md | No | COMPLETE (P0-B batch, 2026-05-15) | commitments.md row FC-YT2 = CSM_SURVIVAL_RESERVE_DAYS = 90 | Condition (a) -- cleared |
 | FC-YT1 values incorporated into ANNEX_Y Section Y4 | No | COMPLETE | ANNEX_Y Section Y4 inline reference | Condition (c) -- cleared |
 | FC-YT2 values incorporated into ANNEX_Y Section Y7 | No | COMPLETE | ANNEX_Y Section Y7 inline reference | Condition (c) -- cleared |
-| Tier 0 token mechanism constitutional spec exists | No | COMPLETE (P0-A batch) | ANNEX_AZ Section AZ2.1 | Condition in AZ2.1 pre-launch gate -- cleared |
-| TSP formally assigned for Tier 0 token mechanism | No | NOT COMPLETE | TSP designation record | Yes (AZ2.1 pre-launch gate, separate condition) |
+| Tier 0 token mechanism constitutional spec exists | No | COMPLETE (P0-A batch; restored 2026-05-20) | ANNEX_AZ §AZ1 | Constitutional-spec condition of INV-LAUNCH-1 pre-launch gate -- cleared |
+| TSP formally assigned for Tier 0 token mechanism | No | NOT COMPLETE | TSP designation record | Yes (INV-LAUNCH-1 pre-launch gate, separate condition; INV-LAUNCH-1 cannot clear until this is done) |
 | FC-YT1 independently reviewed by Federated Ombuds, published findings | Yes -- cannot perform until Ombuds seated | NOT COMPLETE -- Ombuds not constituted | FC-YT1 Ombuds findings document signed by >= 4 sub-Ombuds | Yes -- condition (b) |
 | FC-YT2 independently reviewed by Federated Ombuds, published findings | Yes -- cannot perform until Ombuds seated | NOT COMPLETE -- Ombuds not constituted | FC-YT2 Ombuds findings document signed by >= 4 sub-Ombuds | Yes -- condition (b) |
 | Ombuds Oversight Assembly seated | Yes -- requires Ombuds interaction | NOT COMPLETE | Assembly composition record; initial dispersal and independence review | Yes (P-015 blocking gate) |

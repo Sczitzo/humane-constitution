@@ -7,7 +7,7 @@
 > | **Who it protects** | Everyone harmed by money creation that inflates asset prices, rewards political allies, rescues failed speculation, or manufactures demand without linked productive capacity — and wage earners and essential providers who need error-correction to be staged, not sudden. |
 > | **Failure risk** | Fake payroll rings, circular invoice schemes, zombie rollovers, factional allocation, unwind shock, and offshore leakage — each a path by which the issuance system becomes a capture vehicle rather than a productive-economy instrument. |
 > | **Evidence status** | Designed |
-> | **Linked risks** | P-029; P-030; TR-09 smart-contract failure; Annex J (demurrage and investment channels); Annex AZ (progressive demurrage); red-team scenarios in §X7. |
+> | **Linked risks** | P-029; P-030; TR-09 smart-contract failure; Annex J (demurrage and investment channels); Annex D (progressive net-worth demurrage — sole demurrage instrument); red-team scenarios in §X7. |
 
 > **Provenance:** Implements [P-029 — Public Finance & Commons Revenue] (§X8) and [P-030 — Protocol-Only Money Creation and Household Finance Boundaries] (§X1–X8) · Status: **ACTIVE**
 
@@ -129,4 +129,4 @@ Intellectual property is a modern rent-seeking vector and shall not remain outsi
 
 *Annex Y — Constitutional Survival Minimum and Essential Access Continuity Architecture is maintained as a separate controlling document. See [ANNEX_Y.md](./ANNEX_Y.md). Where any language in this file conflicts with Annex Y, Annex Y governs.*
 
-*Annex AZ — Progressive Net-Worth Demurrage Architecture is the controlling specification for the progressive wealth carrying-cost instrument referenced throughout this annex. See [ANNEX_AZ.md](./ANNEX_AZ.md). The rate function, consolidation methodology, corporate balance demurrage, and exemptions in Annex AZ govern over any summary language here.*
+*Annex D — Progressive Net-Worth Demurrage Architecture is the controlling specification for the progressive wealth carrying-cost instrument referenced throughout this annex. See [ANNEX_D.md](./ANNEX_D.md). The rate function, consolidation methodology, corporate balance demurrage, and exemptions in Annex D govern over any summary language here. (Annex AZ formerly contained this content; it has been superseded by Annex D. Annex AZ now governs the Tier 0 token mechanism only.)*

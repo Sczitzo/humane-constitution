@@ -72,6 +72,7 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 - **[ANNEX AW](ANNEX_AW.md)** — Whistleblower Protection and Anti-Retaliation Protocol · P-053 · ACTIVE
 - **[ANNEX AX](ANNEX_AX.md)** — Confidential Enrollment and Safety-Identity Protocol · P-054 · ACTIVE
 - **[ANNEX AY](ANNEX_AY.md)** — Delivery Sufficiency Standard and Register · P-055 · ACTIVE
+- **[ANNEX AZ](ANNEX_AZ.md)** — Tier 0 Token Mechanism (constitutional constraints for pseudonymous single-session survival-access tokens) · P-056 · DESIGNED
 
 ## Reading rule
 

@@ -171,7 +171,7 @@ Each abuse case should name:
 - **Actor incentive:** state or institutional actor wants to identify persons receiving survival access without Tier 1 enrollment — e.g., immigration enforcement, domestic-abuse perpetrators, surveillance agencies.
 - **Attack path:** compromise token-issuance infrastructure to log session metadata (timestamp, location, device fingerprint) linkable to token ID; aggregate across sessions to reconstruct individual usage patterns; subpoena or coerce token records from issuing nodes.
 - **Collapse state:** Survival-Trade Bind (persons stop accessing CSM rather than risk identification); INV-001 violation (identity effectively becomes a precondition for survival access).
-- **Current controls:** ANNEX_AK §AK8.1 requires token mechanism to be designed so infrastructure cannot reconstruct session linkage after session closes; ANNEX_AZ §AZ2 (to be drafted) will specify technical constraints.
+- **Current controls:** ANNEX_AK §AK8.1 requires token mechanism to be designed so infrastructure cannot reconstruct session linkage after session closes; ANNEX_AZ §AZ1 specifies the constitutional constraints the token mechanism must satisfy (pseudonymity, non-aggregation, session-linkage prohibition, audit trail, TSP delegation).
 - **Missing test:** adversarial token-infrastructure audit: can a compromised node operator reconstruct session linkage? Can aggregate patterns be used to fingerprint individuals? Does subpoena of token records yield individually identifying information?
 - **Failure criterion:** a motivated actor with node access or legal process can identify one or more Tier 0 session users with probability above chance.
 - **False reassurance:** "The tokens are pseudonymous."
