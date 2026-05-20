@@ -458,3 +458,239 @@ The Round 2–3 additions — CASP, CIP, AED, founding cascade — represent gen
 - CASP backup supplier certification creates a new capture surface
 
 None of these concerns disqualify the additions. They are the right mechanisms with the right intentions. The task is vigilance about the gap between institutional design and institutional behavior — which is precisely the gap Jesus addressed when he said "by their fruit you will recognize them" (Matt 7:16). Good fruit from these mechanisms will take years to observe. The evaluation should be reopened when evidence arrives.
+
+---
+
+## Session 5 Follow-up — Resolution Status of Prior Concerns
+
+The Session 5 net assessment named four unresolved concerns. This follow-up reports their resolution status against the available evidence (Patch_Log.md, the docs/audits/ suite, and the Federated Ombuds / CRP Bootstrap packets), distinguishing evidence from inference. No concern is papered over.
+
+| # | Session 5 concern | Status | Evidence (from corpus) | Inference (interpretive) | Residual |
+|---|---|---|---|---|---|
+| 1 | **CIP nested-independence check** ("CIP itself requires a check; the nested independence problem") | **Partially addressed.** | P-051 (Patch_Log) is ACTIVE. CIP design now includes: 7-member independent body, staggered terms, constitutionally-fixed funding (0.01% of annual Flow issuance), multi-body appointment "preventing governing-coalition control," 5-of-7 quorum for Tier 1 ratification, and automatic review triggers for institutional vacancy or publication lapses (ANNEX_AM §AM8). The Patch_Log explicitly lists a residual: *"Constitutional entrenchment of CIP funding can still be dismantled by a sufficiently determined supermajority willing to use the Tier 1 amendment process. The CIP raises the political cost; it does not make repeal impossible."* | The structural protections raised the cost of CIP capture but did not invent a body that watches CIP. The "who watches the watchers" question (Juvenal's *quis custodiet ipsos custodes*) is answered structurally (multi-body appointment + Tier 1 entrenchment of funding) but not theologically resolved — Scripture treats no human council as final (Matt 18:15–20's three-step appeal terminates in the gathered community, not in any single committee). | Open by acknowledged design — supermajority capture remains possible. |
+| 2 | **AED narrative accountability beyond numerical targets** ("Numerical AED targets invite compliance theater without narrative accountability") | **Still open / not yet patched.** | Grep on `Patch_Log.md` for "narrative report," "narrative account," "exclusion stor[ies]" returns zero hits since Session 5. P-054 added a safety-override for documented-danger persons (Elena vignette), which is a different gap. The original Session 5 ask — *"the system must publish how many people were excluded, what happened to them during the exclusion, and how many were restored within the 14-day window"* alongside narrative case stories, with the CIP required to receive and respond — has not been added to any patch I can identify. | The structural temptation Session 5 named — numbers without stories — remains live. This is the precise pattern Jesus warned against when he used parables that named individual persons (the man going from Jerusalem to Jericho; the rich fool; Lazarus) where Pharisaic teaching used aggregates. A protocol that publishes false-exclusion *rates* without false-exclusion *stories* still treats persons as data points. | **Open.** Recommend Session 7 propose a specific narrative-report obligation for the CIP. |
+| 3 | **Founding-cascade gate self-certification** ("The founding cascade gate is self-certified by the founding group") | **Partially addressed via the CRP pathway.** | The Provisional CRP Constitution Packet, the Federated Ombuds Constitution Packet, and the CRP Bootstrap Status Packet (all governance docs added since Session 5) collectively specify: 11-member CRP composition (4 jurists lot-drawn from qualified regional appellate pools, 3 systems reviewers from certified pools, 2 ombuds/public-interest advocates from independent advocacy pool, 2 civic auditors by sortition); appointment via formal nomination from named appointing bodies external to the founding group; eligibility screening; CRP confirmation vote. The Federated Ombuds packet specifies sub-ombuds counts, role/jurisdiction requirements, and a five-step appointment/confirmation workflow. | The structural pathway from "founders certify themselves" toward "independent body certifies the founders" is now clearly drawn. But the CRP Bootstrap Status Packet itself notes "Gaps in the CRP Constitution Specification" and the current CRP status is "Unknown" pending bootstrap completion. The risk Session 5 named — that founders certify themselves — is being moved from a structural feature to a transitional bootstrap problem. The transition is the new locus of the original concern. | **Partially addressed by design; resolution depends on bootstrap completion.** The CRP must be operational before its independence can be tested. Recommend Session 7 reopen this once the first CRP confirmation vote concludes. |
+| 4 | **CASP backup-supplier capture surface** ("CASP backup supplier certification creates a new capture surface") | **Partially addressed; structural capture surface acknowledged.** | P-050 (Patch_Log) is ACTIVE. Mitigations: mandatory adversarial observation by at least one party outside the procurement authority's organizational chain for any drill classified as drill-secure; mandatory gap-window publication; auto-activation contracts before essential-sector procurement renewal. The Patch_Log explicitly notes the residual: *"Pre-registered backup suppliers could become nominal alternatives with no real capacity. Mitigated by: adversarial observation requirement for drill-secure drills, and gap-window publication creates accountability for calibration accuracy."* | The Session 5 concern was that *pre-registration itself creates a capture vector* — backup suppliers know they are the designated alternates and can collude with primaries. The adversarial-observation requirement is a real mitigation; it does not eliminate the structural feature that the system depends on a small set of pre-registered alternates. This is the *Matthew 25* gap re-described at one level of remove: when the primary fails, will the backup actually feed the hungry, or will it have been quietly cultivated into compliance theatre? | **Open by design.** The mitigations raise the operational cost of capture; they cannot remove the structural surface. Ongoing vigilance against backup-supplier-and-primary collusion remains a continuous obligation, not a closed item. |
+
+**Session 5 follow-up net judgment.** Two of the four concerns (CIP independence, founding-cascade certification) are *partially* closed by genuine structural work that was the right response to the original observation. One (AED narrative accountability) is *still open* — the patch system has moved on without addressing the specific theological ask, and a Session 7 should propose a remedy. One (CASP capture surface) is *open by design* — pre-registration is the mechanism; its capture vector is irreducible by structural means and must be lived with under continuous adversarial observation. None of the four has been silently abandoned, but none has been fully resolved either. Vigilance posture, not closure posture, is the honest reading.
+
+The Session 5 closing prediction — *"good fruit from these mechanisms will take years to observe"* — remains correct. None of the partial closures has yet produced operational evidence.
+
+---
+
+## Session 6 — Demurrage Refinement: P-063 v14, commit `dd779d0`
+
+**Scope:** P-063 v14 (DRAFT — not corpus-registered; not in Patch_Log.md; not in ANNEX_D.md or INDEX.md per locked DRAFT-ONLY constraint). The patch narrows the §D6.2(d) productive-use exemption: business owners whose personal extraction is disproportionate to their single lowest-paid worker lose the exemption, and the recovered demurrage routes to the §D8.2 Jubilee productive-asset restoration fund. The patch grounds itself explicitly in Leviticus 25, Deuteronomy 15 and 24, Isaiah 58, Amos 5, Micah 6:8, Luke 4 and 19, and James 5. This evaluation asks whether the patch lives up to its own stated grounding.
+
+**Method note on epistemic categories.** Each mechanism below distinguishes (a) **clear biblical command** — directly stated in Scripture; (b) **theological inference** — reasoned application of biblical theology; (c) **prudential political judgment** — administrative judgment that is not directly resolvable from Scripture; (d) **unresolved uncertainty** — questions Scripture leaves open or that this civil instrument cannot answer. The framework is borrowed from the project's own Christ-centered review discipline, applied here for the first time at the patch level.
+
+---
+
+### §D6.2(d) productive-use eligibility narrowing + §D6.9 graduated extraction limit
+
+**Christ-centered alignment.** The core move — narrowing a tax exemption for owners whose extraction is disproportionate to their lowest-paid worker — is the cleanest biblically-anchored mechanism in the entire patch. Leviticus 25 sets a categorical boundary against unbounded accumulation while neighbors fall into debt and dispossession; Deuteronomy 24:14–15 prohibits withholding the hired servant's wages overnight; James 5:1–6 explicitly condemns "the cries of the harvesters" reaching the Lord of hosts. The graduated formula (`exempt_fraction = max(0, 1 − (R − 3.0) / 2.0)`) does not invent a new doctrine; it operationalizes a clear biblical command into a calibratable tax architecture. This is a clear biblical command at its root. The calibratable bounds [3.0, 5.0] are prudential political judgment built on the biblical floor.
+
+**Babel-risk warning.** The risk is not in narrowing the exemption — that is the Jubilee logic itself — but in the system's confidence that a single dimensionless ratio R can carry the moral weight Scripture places on the entire relationship between owner and worker. Scripture's protections (Lev 19:13, Deut 24:14–15, Jas 5:4) are formulated in *relational* and *concrete* terms ("the wages of the laborer are not to abide with thee all night until the morning"). The patch reduces this to a numerator and a denominator. The reduction is necessary for civil enforcement; it is also a partial flattening. The Babel-risk is not that the formula exists; it is that the formula could come to be taken as the *measure* of justice between owner and worker rather than a single indicator within a broader moral relationship the civil instrument cannot administer.
+
+**Human-dignity test.** Passes structurally — the formula ties the owner's tax position to the actual lowest-paid worker's actual cash compensation, which forces the owner to attend to that person concretely. Partial tension — the worker becomes, in effect, the constitutional focal point of the owner's tax exemption (named directly in §P-063.4(g) as "the constitutional focal point"). This is structurally protective and §P-063.4(g) explicitly designs around the focal-point exposure with anchor-worker protection. But it remains a tension that the civil instrument cannot resolve: the system depends on identifying one worker; identifying that worker creates exposure; the v14 protections mitigate but do not erase that exposure.
+
+**Revision proposal.** None urgent. The mechanism is Scripture-grounded; the v14 calibration bounds [3.0, 5.0] are prudential and remain open to evidence-based recalibration through the Tier 3 process. A Session 7 may wish to ask whether the framing accompanying the §D6.9(c) formula in the patch's published rationale adequately names the formula as a *single indicator* and not as the *measure* of the owner-worker relationship.
+
+**Fruit test.** Observable outcomes that would show the mechanism is serving people well: (i) lowest-paid workers in enterprises subject to §D6.9 report rising real wages year-over-year, not merely nominal compliance; (ii) §D8.2 productive-asset restoration disbursements actually reach households at or below S in geographies where contributing enterprises operated; (iii) no detectable pattern of holders parking at R = 4.9 (or any post-v14 calibration threshold) for years before exiting; (iv) Fairness Vignettes featuring low-wage workers (Rosa, Daniel, the Kahananui Family) are visibly better off under simulated v14 application than under pre-patch baseline.
+
+**Epistemic categorization:**
+- *Clear biblical command:* unbounded extractive accumulation alongside dispossessed labor is unjust (Lev 25; Deut 15, 24; Isa 58; Amos 5; Jas 5).
+- *Theological inference:* a graduated penalty on the exemption is a defensible civil approximation of Jubilee logic.
+- *Prudential political judgment:* the calibration bounds [3.0, 5.0], the linear interpolation, and the Tier 3 calibration range.
+- *Unresolved uncertainty:* whether R as a single-ratio measure adequately captures relational obligation, or whether complementary qualitative measures are required.
+
+---
+
+### §D6.9(e) Tier 1 / Tier 2 repentance tiers (both routing 100% to workers)
+
+**Christ-centered alignment.** Scripture recognizes two patterns of genuine repentance: the self-initiated (Luke 19:1–10, Zacchaeus declaring restitution before being asked) and the confronted-then-restored (2 Sam 12 / Ps 51, David after Nathan). Both are accepted as genuine; neither is graded as "less" repentance in Scripture. The v14 architecture honors both: Tier 1 (pre-inquiry self-disclosure) and Tier 2 (post-inquiry written acknowledgment with factual-contest waiver) are both *available* paths. Critically, v14 routes **100% of breach-period demurrage to workers in both tiers** — the procedural distinction (Tier 1 carries no cap consumption; Tier 2 counts as ½ breach) operates only on the holder's standing, never on the workers' restitution. This is the right ordering: the harm to workers is independent of how the holder repents, and the patch refuses to reduce worker restitution because the holder repented later. The Session 6 v14 architecture closes a v13 regression that briefly inverted this ordering; that closure is a real theological improvement.
+
+The "factual-contest waiver" in Tier 2 mirrors a Scriptural pattern — Zacchaeus's restitution was *publicly declared*, not privately negotiated. Asking the confronted repentant to give up further factual contest is the civil parallel of public acknowledgment. The right to appeal oracle arithmetic, scope, methodology, and jurisdiction is preserved (§D6.9(i)), so the waiver does not eliminate due process; it only forecloses re-litigation of the historical breach facts.
+
+**Babel-risk warning.** The procedural distinction between Tier 1 and Tier 2 (no cap consumption vs. ½ breach) is a *prudential* civil limit on the apparatus's ability to verify interior repentance. v14 names this honestly in its "Theological clarification" block: *"the patch does not claim to read hearts; the procedural difference reflects what the civil instrument cannot verify."* This naming is itself anti-Babel — it refuses to claim a divine prerogative for the civil body. The risk that remains: future readers may treat the procedural difference as a *theological* gradation. The clarification block reduces but does not eliminate that risk; it depends on careful reading.
+
+**Human-dignity test.** Passes. Both repentance patterns are honored. Workers are not punished for the holder's choice of repentance pattern (the 100% routing in both tiers). §D7.1 is preserved — demurrage accrual is never abated, only routed — which means the workers' restitution claim is fully honored regardless of tier.
+
+**Revision proposal.** None urgent. The architecture is theologically defensible and structurally clean. A Session 7 may wish to test whether the "84-month cooldown" on Tier 2 (once-per-84-months) is administratively right — Matthew 18:21–35 ("seventy times seven") binds personal forgiveness rather than civil instruments, and Scripture pairs personal forgiveness with structural correction (Deut 15's seven-year debt release was structural and bounded), so the cooldown is prudentially defensible. But the *interaction* between Tier 1's unlimited frequency and Tier 2's 84-month limit should be monitored for unintended effect on first-cohort holders.
+
+**Fruit test.** (i) Holders using Tier 1 self-disclosure can be cited by name in annual reports as good-faith disclosers; the system honors what it asks; (ii) §P-063.8(f) willful-evasion findings remain rare and never co-occur with Tier 1 or Tier 2 use (since both tiers are unavailable to willful evaders); (iii) workers in enterprises whose holders used either tier report receiving restitution payments comparable to or greater than workers in enterprises that did not repent.
+
+**Epistemic categorization:**
+- *Clear biblical command:* genuine repentance is accepted by God in both self-initiated and confronted forms (Luke 15:11–32; 2 Sam 12; Ps 51).
+- *Theological inference:* a civil instrument can distinguish procedural standing without claiming to grade interior repentance.
+- *Prudential political judgment:* the 84-month cooldown; the 50%/50% v13 routing was wrong, the 100%/100% v14 routing is right.
+- *Unresolved uncertainty:* whether holders who genuinely cycle through repeated good-faith repentance will be served well by Tier 1's unlimited frequency or will face informal pressure to use Tier 2 instead.
+
+---
+
+### §D6.9(f) minor / full disqualified year — L + τ ≤ 4.5 anti-parking; 3-in-7 aggregation
+
+**Christ-centered alignment.** Deuteronomy 25:1–3 caps proportional punishment at a level that does not "make thy brother vile." The v14 minor / full distinction enacts this directly: a holder at R = 3.01 is not punished procedurally as severely as a holder at R = 8.0. Lev 19:15 demands impartial justice — penalty must fit offense — and the v14 grading honors this in both directions (the worker harmed by R = 8.0 receives proportionally more restitution than the worker affected by R = 3.01; the holder at R = 3.01 is not crushed alongside the holder at R = 8.0).
+
+The 3-in-7 cumulative aggregation simultaneously honors Micah 6:8 ("do justice"): a sustained pattern of mild injustice is itself injustice and aggregates into the full procedural response. The combination of (i) proportional restitution for every disqualified year, (ii) procedural escalation only for full or aggregated years, and (iii) the L + τ ≤ 4.5 anti-parking constraint that guarantees R = 4.9 is always full, is internally coherent with both Deut 25 (proportionality) and Mic 6:8 (sustained mild extraction is not righteousness).
+
+**Babel-risk warning.** The risk is in the *calibratable parameters*. L (effective lower bound), τ (minor/full threshold), and the [0.25, 1.0] Tier 3 range for τ create an apparatus the system uses to draw the line between "minor" and "full." A captured oracle could push τ to 1.0 without FAP, and only the L + τ ≤ 4.5 cap (a Tier 2 constraint, FAP-only to relax) prevents the parking exploit from reopening. The v14 design discovered and closed this hole between v13 and v14. The episode itself is a Babel-warning made concrete: the *first* attempt at proportional escalation introduced a calibration-extreme hole that two honest oracles could have produced opposite outcomes from. Structural ingenuity is not enough; ongoing vigilance is required.
+
+**Human-dignity test.** Passes for the worker (proportional restitution flows in every disqualified year, minor or full). Passes for the holder (Deut 25:3 proportional punishment honored). The patch refuses the v13 flat severity-grading after a single round of theological red-team review caught the proportionality gap; that responsiveness is good fruit (Matt 18:15–20's reception of correction).
+
+**Revision proposal.** None urgent. A Session 7 may wish to monitor whether the L + τ ≤ 4.5 ceiling is too generous in low-cost-of-living jurisdictions where R = 4.5 still represents meaningful inequality, and whether the 3-in-7 aggregation rule produces the predicted closure of chronic-near-bound parking in pilot evidence.
+
+**Fruit test.** (i) No detectable pattern of holders parking at R = L + 0.49 for multi-year stretches in pilot data; (ii) holders who experience a single minor disqualified year and return to compliance are not procedurally crushed; (iii) the 3-in-7 aggregation triggers in a small but non-zero number of cases, demonstrating the rule has teeth without being draconian.
+
+**Epistemic categorization:**
+- *Clear biblical command:* proportionality in civil punishment (Deut 25:1–3); sustained injustice is injustice (Mic 6:8; Amos 5).
+- *Theological inference:* a numerical line between "minor" and "full" disqualification is a defensible civil approximation; an anti-parking constraint is a defensible structural backstop against the parking gaming pattern.
+- *Prudential political judgment:* the specific value 0.5 for τ; the L + τ ≤ 4.5 cap; the [0.25, 1.0] Tier 3 range; the 3-year and 7-year windows.
+- *Unresolved uncertainty:* whether pilot evidence will validate these specific numerical lines or require recalibration.
+
+---
+
+### §D6.9(h-gov) Jubilee fund governance
+
+**Christ-centered alignment.** Leviticus 25 is the most quoted Old Testament passage in the patch, and §D6.9(h-gov) is where the Jubilee grounding is operationalized: tripartite board (eligible-households self-nominees, independent fiduciaries, public nominees via independent civil society nominating committee with mandatory worker-advocacy / faith / academic representation); 18-month disbursement timeline; "productive assets" defined to include relief of predatory-lending or medical debt for households below S — the patch states, in plain terms: *"A Jubilee that does not relieve debt is not the Leviticus 25 Jubilee on which this section is grounded."* That sentence is the cleanest single piece of theological self-restraint in the patch. The patch refuses to claim Jubilee status while substituting consumption-only routing for debt relief. This is alignment with the Lev 25 substance, not appropriation of the Lev 25 name.
+
+The priority for current and former workers (24-month priority window; tolling during oracle appeal; multi-channel direct outreach; language access; proxy registration via worker centers and faith institutions) operationalizes Prov 31:8–9 ("open thy mouth for the dumb in the cause of all such as are appointed to destruction"). Workers do not have to find the system; the system is required to reach them.
+
+**Babel-risk warning.** Civil society nominating committees and tripartite boards are structural protections against capture. They are not theological warrants. The committee composition — worker-advocacy organizations, faith institutions, academic labor economists — is a careful selection, but it remains a human-made committee. Babel-risk lives in the possibility that the committee believes its design adequately protects against the kind of capture the design is meant to prevent. The patch hedges with revolving-door restrictions (5-year), beneficial-interest exclusions (no de minimis), and arbitration fallback to the §D6.9(i) appeal body. The structural sophistication is real; whether the sophistication produces the intended outcome cannot be determined from the text alone.
+
+**Human-dignity test.** Strong. The direct-outreach requirement (text/SMS + worker centers + community organizations + faith institutions), language access, and proxy registration explicitly treat workers as persons whom the system must reach in their own language and through trusted intermediaries — not as data points to be processed. The tolling of the 6-month registration window during oracle appeal protects workers from being timed out of restitution by procedural delays they did not control.
+
+**Revision proposal.** None urgent. A Session 7 may wish to test whether the 1% beneficial-interest exclusion applied to fiduciaries — and the patch-wide "no de minimis" attribution standard for the worldwide disclosure — is operationally workable, or whether some defined threshold (proposed in v15 deferred items) becomes necessary.
+
+**Fruit test.** (i) Within the first three years post-Active, named households below S in the geographies of contributing enterprises receive productive-asset transfers, debt relief, or income support during vocational training, and report this in annual public beneficiary reports; (ii) the proportion of board seats filled by self-nominated eligible households is achieved, not approached; (iii) no documented case of a contributing-enterprise-affiliated entity being represented on the nominating committee.
+
+**Epistemic categorization:**
+- *Clear biblical command:* periodic, structural release for the poor and the indebted (Lev 25; Deut 15).
+- *Theological inference:* a tripartite governance structure is a defensible civil approximation of communal accountability; debt relief is a non-negotiable component of any Jubilee-named instrument.
+- *Prudential political judgment:* the specific composition (one-third / one-third / one-third); the 18-month disbursement timeline; the 24-month priority window; the 5-year revolving-door restriction.
+- *Unresolved uncertainty:* whether the nominating-committee structure will in practice produce a board that genuinely advocates for the poor or will, over generations, drift toward respectability politics.
+
+---
+
+### §D6.10 labor-displacement limit + §D6.10(g) marker (v) due-process certification
+
+**Christ-centered alignment.** James 5:4 ("the hire of the labourers ... which is of you kept back by fraud, crieth") and Jeremiah 22:13 ("Woe unto him ... that useth his neighbour's service without wages, and giveth him not for his work") form the biblical floor against displacement-and-wage-suppression. §D6.10 narrows the productive-use exemption further: automation investment does not qualify as reinvestment if it produces more than 10% FTE decline without redeployment or verified placement at ≥90% real compensation. The phantom-worker denominator (§D6.10(g)) prevents the holder from displacing the lowest-paid workers and improving the ratio by removing the persons who anchored it — this is the structural refusal of Matthew 25:43's "I was a stranger, and ye took me not in" applied to automation: the system refuses to let a worker disappear from the constitutional accounting just because the holder dismissed them.
+
+Marker (v) (retaliation finding by labor authority) operationalizes Prov 31:8–9 by protecting workers who complained from being structurally disappeared from the denominator pool. The v14 due-process certification regime (irrebuttable only on certified forums; strong rebuttable presumption otherwise; clear-and-convincing rebuttal standard; transition rule favoring workers until certification list is published) honors Lev 19:15 — *"in righteousness shalt thou judge thy neighbour"* — in both directions: it does not weaponize uncertified labor-authority findings against the accused holder, and it does not abandon the worker who won at an uncertified forum.
+
+**Babel-risk warning.** The certification regime expands the §D6.9(i) appeal body's reach into certifying *other* forums' due process. This is not Gen 11-shaped reach (the appeal body is certifying admissibility within its own enforcement, not claiming jurisdiction over those external forums); but it is an enlargement of the appeal body's authority that deserves continuous scrutiny. The transition rule (worker-favoring default for ≥36 months) and the appealability of certifications (by workers, holders, and worker-advocacy organizations) provide structural humility checks. Whether the appeal body itself remains independent enough to certify external forums fairly is the live question; this is a category-1 Session 5 carryover question (the "who watches the watchers" problem).
+
+**Human-dignity test.** Passes strongly. The phantom-worker rule and marker (v) certification both treat the displaced or retaliated-against worker as constitutionally consequential — not erasable by holder action. The worker who filed a complaint and was later separated remains in the denominator pool at their phantom-period CPI-adjusted rate. The Federated Ombuds Constitution Packet (Session 5 successor) provides the institutional pathway for the worker to be heard outside the holder-controlled channel.
+
+**Revision proposal.** None urgent. Deferred to v15: worker intervenor-of-right standing in §D6.9(i) marker (v) rebuttal appeals (Labor L7 in v15 follow-up). A Session 7 should monitor whether the v15 implementation of that standing creates the predicted worker-protection enhancement.
+
+**Fruit test.** (i) Automation events do not produce visible bottom-quartile displacement in pilot data; (ii) workers separating with §D6.10(g) markers receive phantom-worker-rate restitution; (iii) marker (v) retaliation findings, where issued, result in worker-restoration-pool distributions, not in holder rebuttal-by-paper-trail.
+
+**Epistemic categorization:**
+- *Clear biblical command:* wages withheld and workers displaced without provision is unjust (Jas 5:4; Jer 22:13; Deut 24:14–15).
+- *Theological inference:* a phantom-worker denominator and a verified-placement-at-90% test are defensible civil mechanisms for refusing the moral disappearance of the displaced.
+- *Prudential political judgment:* the 10% FTE threshold; the 12-month placement window; the four-element forum-equivalence test for certification.
+- *Unresolved uncertainty:* whether the certification regime will produce a stable, defensible list of certified forums over time or will be subject to forum-shopping and de-certification disputes.
+
+---
+
+### §P-063.4(g) denominator-anchor-worker protection
+
+**Christ-centered alignment.** Proverbs 31:8–9 commands the defense of those who cannot defend themselves; James 5:4 names the cries of withheld wages reaching God. §P-063.4(g) names the specific worker whose compensation anchored the §P-063.4(a) denominator as "the constitutional focal point" and creates a strong rebuttable presumption of retaliation for any adverse action against that worker within 12 months of assessment. The post-identification documentation-presumed-pretextual rule (v14 addition) prevents the most common holder counter-maneuver — building a "performance management file" after the assessment date — unless the same documentation pattern was applied uniformly to comparably-situated non-anchor workers. The expanded coerced-acknowledgment list (housing dependency, family employment, immigration sponsorship, minors, language access, counsel access) refuses to honor consent extracted under structural coercion. Tie cases are protected (every tied lowest-wage worker is an anchor).
+
+**Babel-risk warning.** This clause comes closest to the *imago Dei* tension Session 5 worried about in a different form — the system identifies one worker as the constitutional focal point of the holder's exemption. The worker becomes, in a structural sense, a metric. The v14 design partly answers this by holding that the protection follows the *role*, not a unique individual (tie cases), and by requiring oracle-delivered (not holder-delivered) multilingual notification that explicitly informs the worker of their structural position and their right to consult a worker advocate. But the structural fact remains: the worker was not asked whether they wanted to anchor the system. They are made the constitutional focal point by virtue of being the lowest-paid. The patch acknowledges this only obliquely.
+
+**Human-dignity test.** Passes within the locked design. The clear-and-convincing rebuttal standard, the post-identification pretextual-documentation presumption, the coerced-acknowledgment list, the multi-channel multilingual oracle-delivered notification, and the holder-funded worker-advocacy consultation access are all the right structural protections. The remaining tension is the locked design itself: that the patch's enforcement architecture depends on identifying one specific person.
+
+**Revision proposal.** None urgent. The v15 deferred items include a tapered presumption for months 13–24 (Labor L8), which would extend protection past the 12-month edge. A Session 7 may wish to ask whether the patch's published rationale adequately names the worker as a *person with a structural role*, not as a *metric who happens to be a person* — the framing matters.
+
+**Fruit test.** (i) Identified denominator-anchor workers are not separated within 12 months of assessment at a rate higher than comparable non-anchor workers in the same wage band; (ii) where adverse action occurs, holders rebuttals succeed on documented non-anchor-related cause, not on post-identification paper trails; (iii) the multi-channel notification reaches workers in their primary language with confirmed read-receipt in the great majority of cases.
+
+**Epistemic categorization:**
+- *Clear biblical command:* defense of the vulnerable; refusal to honor coerced "consent" extracted from those who are dependent (Lev 19:13; Prov 31:8–9; Jas 5:4).
+- *Theological inference:* a strong rebuttable presumption with clear-and-convincing rebuttal is the right civil mechanism; coerced acknowledgments are not consents.
+- *Prudential political judgment:* the 12-month window; the 80% scheduled-hours floor; the specific enumerated coercive conditions.
+- *Unresolved uncertainty:* whether the worker, in practice, feels protected by being identified or feels exposed; pilot evidence is needed.
+
+---
+
+### §P-063.3(d-limit) proportionality and non-totalization limits
+
+**Christ-centered alignment.** This is the explicit anti-Babel firewall in the patch. The clause names three structural limits: (1) bounded reach (the disclosure regime touches only the holder, household, and enterprise-connected entities, not unrelated economic life); (2) no determination on a bare irrebuttable presumption (every adverse presumption is rebuttable before the §D6.9(i) appeal body, with two narrow exceptions resting on independent adjudication); (3) purpose limitation on worker data (worker-identifier and scheduling data are usable only for §D6.9–§D6.10 determinations and worker restitution, not transferable, retained no longer than the longest applicable lookback). Revelation 13:16–17 names a total economic-surveillance order as the canonical icon of beastly power. §P-063.3(d-limit) refuses that silhouette and names the refusal in the patch text.
+
+The closing sentence of (d-limit) — *"deny the system the godlike attributes — omniscience, infallible presumption, unbounded reach — that would make it an idol rather than a humane instrument"* — is the cleanest single piece of Babel-refusing self-restraint in the patch. The civil instrument names what it cannot be and what it must not become.
+
+**Babel-risk warning.** The risk is not in the clause; the risk is in subsequent patches that quietly expand any of the three limits without subjecting them to FAP-level scrutiny. The v14 addition of an aggregate-line backstop and an anomaly-reporting commitment under §P-063.3(d)(ix) is a defensible extension within the existing limits (k-anonymity bounded, no individualized enforcement, no holder identification, re-identification = §P-063.3(d-limit)(3) violation appealable). But the pattern of "small extensions to the reach" is itself the Babel pattern: structural creep, justified one increment at a time. The v14 architecture explicitly anchors against this through TSP item (xxiv) per-source floor and TSP item (xxvii) anomaly-report format with retention/purpose-limitation oversight. The structural protections are real; the discipline of refusing future creep is a continuous obligation, not a closed item.
+
+**Human-dignity test.** Passes — the (d-limit)(3) purpose limitation on worker data, the no-individualized-enforcement-use of anomaly reports, the prohibition on re-identification, and the §D6.9(i) appeal-body oversight on data handling all treat workers as persons, not as data points to be aggregated. The marker (v) due-process certification under (d-limit)(2) ensures the system does not punish image-bearers (workers or holders) on bare uncertified procedural presumptions.
+
+**Revision proposal.** None urgent. A Session 7 may wish to monitor whether subsequent patches respect (d-limit) discipline or quietly expand reach. The v15 deferred items include a tightening of the (d)(ix) aggregate-line backstop to a dual-base (Tax C); that tightening is within (d-limit) discipline and is welcome.
+
+**Fruit test.** (i) No documented case of worker-identifier data being used outside §D6.9–§D6.10 enforcement; (ii) anomaly-report cohorts always meet the k=10 minimum; (iii) the §D6.9(i) appeal body successfully adjudicates a (d-limit)(3) violation challenge within the first three years post-Active, demonstrating the limit has teeth.
+
+**Epistemic categorization:**
+- *Clear biblical command:* the civil power is not God; total economic-surveillance is idolatrous (Rom 13 limits; Rev 13 warning; Gen 11 Babel).
+- *Theological inference:* bounded reach + rebuttable presumptions + purpose limitation is the right structural form of self-restraint.
+- *Prudential political judgment:* the specific 25%-of-S per-source floor; the 36-month transition default; the k=10 anonymity threshold.
+- *Unresolved uncertainty:* whether future patches will respect the discipline or erode it incrementally.
+
+---
+
+### R-1 and R-2 as honest irreducible detection residuals
+
+**Christ-centered alignment.** Proverbs 11:1 — *"A false balance is abomination to the LORD: but a just weight is his delight."* James 4:13–16 — *"Whereas ye know not what shall be on the morrow ... For that ye ought to say, If the Lord will, we shall live, and do this, or that."* The v14 patch documents two pure-detection problems (R-1 reciprocal arm's-length structures via genuinely-unrelated counterparties; R-2 diffuse institutional benefit via genuinely-independent foundation committees) as **irreducible residuals with NO drafting-closable 10/10 solution.** The patch refuses to claim closure where closure is not honestly available. This refusal is itself a Christ-centered act: it tells the truth about what the civil instrument can and cannot do.
+
+The v14 mitigation commitments (annual TSP aggregate-payment anomaly report; pilot-phase reciprocal-flow monitoring; recipient-institution household-employment concentration review; FAP review at first calibration) are honest monitoring, not false closure. The patch explicitly states *"honest monitoring substitutes for false claims of closure"* and *"any v15 revision claiming '10/10 on R-1 or R-2' is wrong and should be rejected"* (in `P-063_v15_followup_draft.md`). The discipline of refusing to overstate is preserved at the next-version handoff.
+
+**Babel-risk warning.** None within R-1/R-2 themselves. The Babel-risk is the *opposite* failure — overclaiming closure on detection problems that cannot be closed by drafting. The patch refuses that failure mode.
+
+**Human-dignity test.** Passes. The honest naming of what the system cannot detect treats the reader as capable of receiving difficult truth — it does not flatten the residual into reassuring formulae.
+
+**Revision proposal.** None. The honest documentation is the correct posture. A Session 7 should ensure that any future expansion of detection capacity (TSP anomaly-report tightening, pilot-phase findings) is reported transparently and does not silently re-categorize R-1 or R-2 as "closed" without a substantively different drafting mechanism.
+
+**Fruit test.** (i) The TSP anomaly reports are published annually and reviewed by the FAP, not buried; (ii) where the anomaly reports surface patterns the existing rules cannot reach, the FAP discusses them publicly rather than quietly absorbing them; (iii) no future patch claims to have closed R-1 or R-2 without producing a substantively new drafting mechanism that closes the underlying detection problem.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest weights and honest speech (Prov 11:1; Eph 4:25; Jas 4:13–16).
+- *Theological inference:* honest monitoring of unclosable detection problems is the right posture; false closure claims are a category of dishonesty.
+- *Prudential political judgment:* the specific monitoring mechanisms; the k=10 cohort threshold; the FAP review cadence.
+- *Unresolved uncertainty:* irreducible — that is the point.
+
+---
+
+### Session 6 Net Assessment
+
+**Where the patch is most consistent with the teachings of Jesus.** The §D6.9(h-gov) Jubilee fund governance with its explicit self-restraint ("a Jubilee that does not relieve debt is not the Leviticus 25 Jubilee"); the dual-tier repentance recognition (§D6.9(e)) routing 100% to workers in both tiers; the §P-063.3(d-limit) proportionality and non-totalization limits; and the honest documentation of R-1 and R-2 as irreducible detection residuals. These four elements together name what the civil instrument is and is not — Christ-measured, not Christ. The patch refuses both overclaiming and underclaiming with unusual discipline.
+
+**Where the patch carries the most Babel-risk.** Three live tensions: (1) the apparatus's confidence that a single dimensionless ratio R can carry the moral weight of the entire owner-worker relationship — necessary for civil enforcement, partial as theology; (2) the calibration apparatus itself (Tier 3 bounds, the L + τ ≤ 4.5 anti-parking constraint, the breadth_floor parameter) — designed with care, vulnerable to incremental creep across patch versions; (3) the §P-063.4(g) anchor-worker focal-point dynamic — the worker is named as constitutional focal point and protected accordingly, but is not consulted about the role. None of these is a fatal Babel-risk; each is a continuous-vigilance obligation.
+
+**Net assessment.** The patch is among the most Scripture-anchored civil instruments in the corpus. Its grounding in Lev 25, Deut 15 and 24, Isa 58, Amos 5, Mic 6:8, Luke 4 and 19, Jas 5, and Prov 31:8–9 is substantive, not decorative. Its discipline in distinguishing prudential calibration from biblical command is unusually strong. Its self-restraint clauses (§D6.9(h-gov) Jubilee-name humility, §P-063.3(d-limit) anti-Babel firewall, R-1/R-2 honest residual documentation) name what the civil instrument cannot be. The procedural fix between v13 and v14 — closing the worker-routing regression and the proportional-escalation gap — demonstrates that the patch is itself corrigible (Matt 18:15–20).
+
+The work remaining is operational. Whether the patch produces good fruit (Matt 7:16–20) cannot be determined from the text alone. Pilot evidence will be the test. The Christ-centered evaluation of P-063 should be reopened, like Session 5's, when fruit-test evidence arrives.
+
+**Items requiring follow-up in a future Session 7:**
+1. Whether the AED narrative-accountability gap from Session 5 has been addressed in any pending patch.
+2. Whether the published rationale for the §D6.9(c) graduated formula adequately names R as a *single indicator* and not as the *measure* of the owner-worker relationship.
+3. Whether the §P-063.4(g) anchor-worker framing adequately names the worker as a *person with a structural role* and not as a *metric*.
+4. Whether the v15 deferred should-fixes (Tax C dual-base backstop; Labor L7 worker intervenor standing; Labor L8 tapered post-12-month presumption; Oracle E1 prior-year-claimed-extraction safe harbor; Constitutional A2 certification-appeal mechanism) have been integrated and theologically cross-checked.
+5. Whether `docs/constitution/SPECIFICATIONS.md` (added after Session 5 and not yet covered in this evaluation) should be reviewed under the rule-file trigger.
+6. Whether the Fairness Vignette Library has been cross-referenced against v14 mechanisms (the empirical fruit-test).
+7. Whether the first FAP review of TSP anomaly reports (R-1 monitoring) and the first FAP review of recipient-institution household-employment concentration (R-2 monitoring) produce findings that confirm or revise the "irreducible residual" classification.
+
+---
+
+## Files consulted (Session 5 Follow-up + Session 6)
+
+- `docs/governance/P-063_draft.md` (commit `dd779d0`, v14 — DRAFT, not corpus-registered)
+- `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
+- `docs/governance/Patch_Log.md` (P-035, P-036, P-040, P-050, P-051, P-054, P-016 inventory and entries)
+- `docs/governance/Federated_Ombuds_Constitution_Packet.md` (CRP composition; appointing-body workflow)
+- `docs/governance/Provisional_CRP_Constitution_Packet.md` (CRP role map; constitution preconditions)
+- `docs/governance/CRP_Bootstrap_Status_Packet.md` (membership; quorum; independence; current "Unknown" status)
+- `docs/governance/Corpus_Refinement_Roadmap.md` ("Moral Posture" editorial standard)
+- `docs/annexes/ANNEX_D.md` (§D8.2 Jubilee directive; Lev 25 / Luke 12 / Matt 25 supporting rationale)
+- `docs/audits/post-remediation-verification-report.md` (Phase 1–3 remediation scope)
+- `docs/governance/Open_Problems_Resolution_Docket.md` (open-problem categories)
+- `.claude/rules/constitution-review.md` (8-question Christ-centered review protocol; 5-element output format)
+
+**Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
