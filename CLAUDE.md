@@ -117,3 +117,11 @@ Before work in these areas, read the matching rule file first:
 - Proposed changes to `docs/constitution/`: `.claude/rules/constitution-review.md`
 
 Root `CLAUDE.md` contains global rules only. Area-specific protocols live in `.claude/rules/`.
+
+## Review-loop automation
+
+```bash
+scripts/review-loop.sh <task-name>
+```
+
+Runs a saved Claude prompt by task name with guardrails. Tasks defined in `review-tasks.json`. Prompts in `prompts/tasks/`. Reports written to `reports/`. Never modifies protected files; exits non-zero on guardrail violation.

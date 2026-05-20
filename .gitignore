@@ -70,3 +70,6 @@ app/.claude/
 docs/superpowers/plans/
 mockup/
 .agent/
+
+# Review-loop reports (generated; keep directory via reports/.gitkeep)
+reports/*.md

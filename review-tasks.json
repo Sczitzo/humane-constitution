@@ -1,0 +1,48 @@
+{
+  "protected_files": [
+    "docs/constitution/",
+    "docs/governance/P-063_draft.md",
+    "docs/annexes/ANNEX_D.md",
+    "docs/governance/Patch_Log.md",
+    "scripts/export_corpus.py",
+    "app/src/generated/corpus.ts",
+    "app/public/generated/corpus.json"
+  ],
+  "tasks": {
+    "corpus-triage": {
+      "description": "Read-only corpus health check: links, identifiers, opening blocks, index coverage",
+      "prompt_file": "prompts/tasks/corpus-triage.md",
+      "mode": "read-only",
+      "allow_constitution": false,
+      "allow_p063": false,
+      "allowed_changes": [],
+      "validation": [
+        "python3 scripts/validate_corpus.py"
+      ]
+    },
+    "taxonomy-validate": {
+      "description": "Validate docs/annexes/TAXONOMY.md decimal labels against actual annex H1 titles",
+      "prompt_file": "prompts/tasks/taxonomy-validate.md",
+      "mode": "read-only",
+      "allow_constitution": false,
+      "allow_p063": false,
+      "allowed_changes": [],
+      "validation": []
+    },
+    "pre-commit-verification": {
+      "description": "Verify staged changes: corpus sync, links, no protected-file drift",
+      "prompt_file": "prompts/tasks/pre-commit-verification.md",
+      "mode": "controlled-edit",
+      "allow_constitution": false,
+      "allow_p063": false,
+      "allowed_changes": [
+        "app/src/generated/corpus.ts",
+        "app/public/generated/corpus.json"
+      ],
+      "validation": [
+        "npm run check:corpus --prefix app",
+        "python3 scripts/validate_corpus.py"
+      ]
+    }
+  }
+}
