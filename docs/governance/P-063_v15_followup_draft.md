@@ -1,8 +1,9 @@
 # P-063 v15 Follow-Up — Deferred Should-Fixes (Tracking Note)
 
-> **Status: Draft-only / not corpus-registered / not published.**
-> Do not add to Patch_Log.md, ANNEX_D.md, or INDEX.md.
-> This is a tracking note for items deferred from P-063 v14 review rounds. It is not itself a patch. When v15 is drafted, this note becomes its work-list.
+> **Status: SUPERSEDED by P-063_draft.md (Draft v15, 2026-05-19).**
+> All items tracked in this note have been integrated into P-063_draft.md v15.
+> This note is retained for historical reference only. Do not use as a work-list — see the v14→v15 Change Summary in P-063_draft.md for the integration record.
+> Original note preamble preserved below.
 
 ## Scope
 
