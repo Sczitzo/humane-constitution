@@ -53,6 +53,22 @@
         "target": "latest_session_report"
       }
     },
+    "session7-evaluation-append": {
+      "description": "Append Session 7 Christ-centered evaluation (AW, AX, AY) to Christ_Centered_Evaluation.md",
+      "prompt_file": "prompts/tasks/session7-evaluation-append.md",
+      "mode": "controlled-edit",
+      "allow_constitution": false,
+      "allow_p063": false,
+      "allowed_changes": [
+        "docs/governance/Christ_Centered_Evaluation.md",
+        "app/src/generated/corpus.ts",
+        "app/public/generated/corpus.json"
+      ],
+      "validation": [
+        "npm run generate:corpus --prefix app",
+        "python3 scripts/validate_corpus.py"
+      ]
+    },
     "pre-commit-verification": {
       "description": "Verify staged changes: corpus sync, links, no protected-file drift",
       "prompt_file": "prompts/tasks/pre-commit-verification.md",

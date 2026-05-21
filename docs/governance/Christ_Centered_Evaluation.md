@@ -679,7 +679,114 @@ The work remaining is operational. Whether the patch produces good fruit (Matt 7
 
 ---
 
-## Files consulted (Session 5 Follow-up + Session 6)
+## Session 7 Christ-Centered Evaluation
+
+**Date:** 2026-05-20  
+**Scope:** ANNEX_AW — Whistleblower Protection and Anti-Retaliation Protocol; ANNEX_AX — Confidential Enrollment and Safety-Identity Protocol; ANNEX_AY — Delivery Sufficiency Standard and Register
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX AW — Whistleblower Protection and Anti-Retaliation Protocol
+
+**Christ-centered alignment.** The prophets themselves faced institutional retaliation for naming corruption — Jeremiah's arrest, Amos's expulsion from Bethel. Proverbs 31:8–9 commands speaking for those without power; Leviticus 19:15 forbids bending justice toward the powerful. The scenario AW closes — an administrator using institutional tools to silence the person who named them — is the exact oppression pattern condemned in Amos 5 and James 5:1–6. The annex preserves a key ethical distinction: the administrative freeze is "not a finding of wrongdoing" against the respondent (AW2.1), reflecting Leviticus 19:15's mandate of impartial justice. Restoration on exoneration (AW2.4) — records and civic roles restored, or queue-prioritized if the role has been filled — reflects restorative rather than merely corrective justice. The annex attempts to make the reporter whole, not just to undo the retaliatory action.
+
+**Babel-risk warning.** Low overall. The annex subordinates the named respondent's administrative power to independent Ombuds oversight — structurally anti-Babel. One structural gap: AW does not address the scenario in which the Federated Ombuds itself is the named respondent. If the Ombuds is the subject of the complaint, the AW2 mechanism depends on the body it exists to protect the reporter against. No fallback watchdog is specified. This is a Babel-adjacent structural failure — concentrated accountability with no independent fallback when the accountable body is itself under scrutiny.
+
+**Human-dignity test.** Passes. The reporter is the structurally vulnerable party — an ordinary person who has named an administrator. The annex deliberately inverts the default power differential during the protected period without presupposing the respondent's guilt. Both parties are subject to accountability: the respondent through the normal process; the reporter through the limits in AW3.1–3.3, which include non-immunity from criminal accountability for knowingly false and malicious reporting. These limits prevent AW from becoming a blank shield for abuse. The balance is consistent with Leviticus 19:15.
+
+**Revision proposal.** Two items. (1) Add a fallback mechanism for the scenario in which the Federated Ombuds is the named respondent — designating a Tier 1-adjacent body or a supermajority CRP panel as the fallback accountable authority. (2) Specify the evidence standard for "knowingly false and malicious reporting" (AW3.1): what constitutes "knowing" falsity must be defined and published to prevent the standard from being weaponized against good-faith reporters who are ultimately wrong.
+
+**Fruit test.** (i) Administrators named in community alerts do not successfully use system record-write access against reporters during the protected period; (ii) cases of exonerated respondents result in prompt restoration or queue-prioritization under AW2.4; (iii) claims of bad-faith reporting under AW3.1 are adjudicated against a published evidence standard rather than at the discretion of the named respondent's allies.
+
+**Epistemic categorization:**
+- *Clear biblical command:* protection of truth-tellers against retaliation by institutional power; impartial justice for both parties (Prov 31:8–9; Lev 19:15; Jer 20; Amos 7:12–13).
+- *Theological inference:* restorative provision — role restoration, not merely record restoration — is the right form of remediation; the distinction between administrative freeze and guilt-finding reflects impartial justice.
+- *Prudential political judgment:* the specific duration of the protection period; the access-suspension and cryptographic-timestamp mechanism; the supermajority-gated extension rule.
+- *Unresolved uncertainty:* whether the Ombuds-as-subject gap will be exploited before it is closed; whether the evidence standard for bad-faith reporting will be calibrated correctly in practice.
+
+**Executive theological verdict: 8 / 10.** Strong prophetic and restorative grounding. Should-fix: Ombuds-as-subject fallback and bad-faith evidence standard. Monitor: filing-record data retention.
+
+---
+
+### ANNEX AX — Confidential Enrollment and Safety-Identity Protocol
+
+**Christ-centered alignment.** This is among the most urgent mercy provisions in the corpus. Isaiah 1:17 — *"Defend the oppressed, take up the cause of the fatherless, plead the case of the widow."* Luke 4:18 — *"freedom for prisoners... release to the oppressed."* Matthew 25:35 — *"I was a stranger and you welcomed me."* The decisive moral claim in AX0 is that for persons in documented safety situations, the fraud-vs-exclusion trade-off is overridden by a third value: the duty not to be an instrument of harm to the persons the system is designed to protect. This is theologically exact — James 2:13 (*mercy triumphs over judgment*) applied to system design. Emergency enrollment on credible assertion, not proved fact (AX2.5), reflects Luke 14:21–23: the invitation extended before all conditions are verified, not withheld pending documentation. The documentation-free path (AX4 — 72-hour token, five renewals, connection to support organization) is an operational expression of Matthew 25:43 reversed: refusing to leave anyone without the floor because they lack the right paper. The explicit exclusion of immigration enforcement from sealed-record court orders (AX3.2) is the single most important anti-Babel clause in the annex — it names the specific abuse path and forecloses it by constitutional text.
+
+**Babel-risk warning.** Moderate — and well-handled. The sealed record concentrates access in three parties: court order, Federated Ombuds finding, or the enrolled person themselves. The Babel risk is that "court order" becomes routine — that law enforcement normalizes access requests and courts in less independent jurisdictions become complicit in de-anonymizing the vulnerable. AX3.2's immigration-enforcement exclusion and AX3.3's notification-on-any-access-attempt (including unsuccessful ones, within 72 hours) are well-constructed Babel-resistance. The remaining gap: the system cannot guarantee judicial independence in compromised jurisdictions. A court in a state with a captured judiciary is a weaker protection than the annex assumes. This is acknowledged implicitly but not named explicitly. The proposed check: a Federated Ombuds notification pathway plus an amicus-review pathway for any court order seeking sealed AX records — creating visibility and a formal objection mechanism before the seal is broken, with the Ombuds empowered to raise the AX3.2 exclusion before a court.
+
+**Human-dignity test.** Passes strongly. Human dignity is named explicitly as the override value in the fraud-vs-exclusion calculus. The de-enrollment-without-penalty provision (AX2.4) — reversion to Tier 0 without forfeiting prior rights — refuses to penalize a person for having been in danger. The 24-month renewable enrollment with no cap on renewals reflects the recognition that safety situations do not resolve on administrative timelines. One gap: the trusted-community-organization pathway (AX2.2.1) does not specify how organizations are certified, how their independence is maintained, or what protection exists if a community organization is captured by the same actors the enrolled person is fleeing. For trafficking victims specifically, this is not theoretical — trafficker institutional capture of social service organizations is a documented pattern. This gap must be named: the protection mechanism contains an enrollment pathway that could be reversed into a control mechanism.
+
+**Revision proposal.** Three items. (1) Specify a certification standard, independence audit mechanism, and revocation procedure for trusted-community-organization enrollment authority (AX2.2.1). This is a should-fix before any public claim of operational protection for trafficking victims; the risk is a real exploitation vector, not a theoretical one. (2) Specify enrollment officer confidentiality obligations — the enrollment officer sees the legal identity of the enrolled person, and coercion of enrollment officers by state actors is a real exposure pathway. (3) Specify the enrollment record storage location, access controls, and retention period; even a minimal record (wallet ID, enrollment date, safety-documentation category, certifying organization) confirms safety-shielded status, which is itself sensitive information.
+
+**Fruit test.** (i) No safety-shielded identity wallet becomes a tracking vector for the enrolled person's abuser or trafficker through any pathway, including through the community organization enrollment pathway; (ii) the 72-hour documentation-free token reaches persons in crisis before they disengage from the enrollment point; (iii) immigration enforcement does not obtain sealed AX records through any pathway, including court orders, in any enrolled jurisdiction.
+
+**Epistemic categorization:**
+- *Clear biblical command:* protection of persons fleeing harm; mercy as the override value when safety and administrative procedure conflict (Isa 1:17; Matt 25:35–40; Luke 4:18; Jas 2:13).
+- *Theological inference:* the ordering of safety over fraud prevention for documented danger is the right ordering; emergency enrollment on credible assertion reflects the Luke 14 posture of invitation extended before conditions are verified.
+- *Prudential political judgment:* the 24-month enrollment period; the five-renewal cap on documentation-free tokens; the 72-hour access-attempt notification window; the three parties authorized to break the seal.
+- *Unresolved uncertainty:* whether judicial independence holds in jurisdictions where courts have been compromised; whether the trusted-community-organization gap will be exploited before a certification standard is published.
+
+**Executive theological verdict: 9 / 10.** Closest to Matthew 25 and Luke 4:18 in operational form in the corpus. Should-fix: trusted-community-organization audit gap (highest theological-risk finding in this set — real trafficking exploitation vector). Monitor: judicial independence assumption; enrollment officer confidentiality; enrollment record storage.
+
+---
+
+### ANNEX AY — Delivery Sufficiency Standard and Register
+
+**Christ-centered alignment.** Isaiah 58 is the controlling text. God condemns Israel for fasting and praying while not feeding the hungry, clothing the naked, or setting the oppressed free — not for false belief, but for institutional performance that claims righteousness without producing its fruit. "Delivery gap laundering" is the Isaiah 58 pattern applied to social systems: performing the constitutional guarantee while the people the guarantee names remain uncovered. James 2:14–17 is directly operative: *"What does it profit if someone says he has faith but does not have works?"* The founding Register's populations — incarcerated, undocumented, disabled, community-refusing, minors without stable guardianship, mental health crisis — are Matthew 25:35–40 in operational form. The annex names them individually rather than subsuming them under a general category, reflecting biblical particularity of care for specific persons. AY3.3 — *the system may not use Essential Access delivery as leverage to induce a community to join* — is theologically acute: the unconditional gift cannot become a conditional offer. Matthew 5:45 (*"he makes his sun rise on the evil and the good"*) is the model. AY5's honest limit statement — that the Register creates accountability but not capacity, and that no stronger public claim of operational universality may be made until actual delivery infrastructure exists — is rare institutional humility: the structural opposite of Isaiah 58's condemned behavior.
+
+**Babel-risk warning.** Low, with one monitoring point. AY2.4 prohibits removing populations from the Register because they are "too small to matter," "have not complained," or "can use the standard pathway if they try hard enough." This is among the strongest anti-Babel clauses in the corpus: it refuses the logic that those least able to complain loudly enough do not warrant resources. The Matthew 25 populations are defined precisely by their inability to advocate for themselves; AY2.4 refuses to honor institutional inertia on that basis. The monitoring point: a Register with named responsible parties and quarterly reporting but no enforcement mechanism beyond Federated Ombuds escalation after 12 missed months could become a performance of accountability rather than accountability itself. A responsible party who is nominally named but structurally unable to act converts the Register from accountability to appearance.
+
+**Human-dignity test.** Passes. The founding Register treats each population as particular persons, not aggregate statistics. The Tier 0 populations tracking (AY2.1 final paragraph) — separate monitoring of Tier 0 access points, session capacity, and geographic coverage — ensures identity-unable and identity-unsafe persons are not lost in aggregate enrollment counts. AY3.2's cross-boundary delivery through trusted intermediaries — the system goes to the person rather than requiring the person to come to the system — is operationally humble. One gap: AY3.2 requires delivery through organizations "trusted by those communities" but does not specify how that trust is established or what the consent mechanism is. Who determines trustedness, and by what process? The community must have a formal voice in the designation.
+
+**Revision proposal.** Two items. (1) Add a minimum independence and capacity standard for named responsible parties in the Register: a party who is nominally named but subordinate to the entity creating the delivery gap, or lacking adequate resources to act, converts the Register from accountability to performance. (2) Specify the consent and verification mechanism for AY3.2 intermediary "trust by those communities" — the community must have a formal voice in the designation; unilateral state certification is insufficient.
+
+**Fruit test.** (i) No population is removed from the Register on grounds of being "too small to matter" or "has not complained"; (ii) the incarcerated-persons row is not retroactively marked as "covered" without a specific documented delivery mechanism; (iii) AY5's restraint on public claims holds — no institutional communications claim Essential Access is operationally universal before the Register shows all rows have documented delivery paths.
+
+**Epistemic categorization:**
+- *Clear biblical command:* the obligation to close the gap between promised care and operational delivery (Isa 58; Jas 2:14–17; Matt 25:31–46).
+- *Theological inference:* the ordering of operational sufficiency over constitutional declaration is the right posture; the unconditional nature of the gift (AY3.3) is the structural form of grace as distinct from leverage.
+- *Prudential political judgment:* the quarterly reporting cadence; the 12-month Ombuds escalation threshold; the specific founding-Register population list; the privacy-preserving aggregate monitoring requirement.
+- *Unresolved uncertainty:* whether named responsible parties will have real independence and capacity; whether the Register will become accountability-in-appearance as political will for delivery investment declines.
+
+**Executive theological verdict: 9 / 10.** Most theologically mature annex in this set. AY5 and AY3.3 stand as exemplary institutional humility. Should-fix: responsible-party independence and capacity standard; AY3.2 intermediary-trust consent mechanism. Monitor: potential for Register to become bureaucratic performance without independent responsible-party requirements.
+
+---
+
+### Session 7 Crosswalk
+
+*Following the Session 5 follow-up precedent, this section records prior unresolved items and their current status.*
+
+**(a) Session 5 AED narrative-accountability gap (Session 6 follow-up item 1).** AY's population-level Delivery Sufficiency Register partially but not fully addresses this gap. The Register tracks delivery gaps at population level and makes them publicly accountable through quarterly reporting and Federated Ombuds annual review. It does not create the individual-case narrative-report obligation that Session 5 requested — a specific documented pathway for an individual who was denied access to receive a written explanation of why, and for that explanation to enter a reviewable record. Both are needed: the population-level Register (accountability for systemic delivery gaps) and an individual-case narrative-report obligation (accountability to the specific person denied access). Status: **partially addressed, open remainder**.
+
+**(b) AX immigration enforcement exclusion (AX3.2): should-fix.** The explicit text of AX3.2 excludes immigration enforcement from sealed-record court orders. The gap: the annex does not specify what happens if a jurisdiction's court issues a sealed-record order that on its face does not cite immigration enforcement but is in practice serving that purpose. The proposed check: a Federated Ombuds notification pathway plus an amicus-review pathway for any court order seeking AX sealed records — creating visibility and a formal objection mechanism before the seal is broken, with the Ombuds empowered to raise the AX3.2 exclusion before a court. Without this mechanism, the sealed-record protection may not hold in politically hostile jurisdictions. Status: **should-fix open**.
+
+**(c) AY trusted-intermediary designation (AY3.2): should-fix.** AY3.2 requires delivery through intermediaries "trusted by those communities" but does not specify the consent mechanism. Who determines trustedness, and by what process? The risk is that trust is certified unilaterally by the system or by state actors rather than by the communities themselves. The community must have a formal voice in the designation — either through direct consent, representative body authorization, or an independent auditor accountable to the community rather than to the certifying authority. Status: **should-fix open**.
+
+---
+
+### Session 7 Net Assessment
+
+**Where AW/AX/AY are most consistent with the teachings of Jesus.** Three provisions stand as exceptional. AX's ordering of safety over administrative procedure for persons in documented danger — grounded in the prophetic mercy tradition (James 2:13; Matt 25) — is the operational form of mercy triumphing over judgment. AY2.4's explicit refusal to remove populations from the Register because they "have not complained" is the most direct protection for the Matthew 25 populations in the corpus: the persons who cannot advocate for themselves are named and protected from institutional inertia by constitutional text. AY5's institutional self-restraint against overclaiming — naming the Isaiah 58 pattern and refusing it — sets a standard for institutional humility that civil instruments rarely achieve. Together, these three provisions know what they are, name what they are not, and refuse to perform righteousness without producing it.
+
+**Where they carry the most Babel-risk.** Two live tensions. First, the AX sealed-record concentration: three parties can break the seal, but the court-order pathway depends on judicial independence that cannot be assumed across all enrolled jurisdictions. AX3.2 forecloses the most obvious abuse path, but the structural vulnerability remains — the protection is as strong as the judiciary enforcing it. Second, the AY responsible-party designation: a Register that names responsible parties without requiring their independence or capacity is a Babel instrument in miniature. It performs accountability without producing it — the Isaiah 58 condemnation applied to governance structure.
+
+**Net assessment.** All three annexes are theologically ready for pilot. None contain provisions that are biblically disqualifying, structurally idolatrous, or dignity-reducing in their core purpose. No must-fix blockers exist before pilot. AX is the most urgent mercy provision in the corpus — its documentation-free path (AX4) and its ordering of safety over fraud prevention are the strongest operational expressions of Matthew 25 in the current corpus set. AY is the most theologically mature, with AY5 setting an institutional-humility standard for the rest of the corpus. AW's anti-retaliation framework stands in the prophetic tradition with two addressable should-fix items. The should-fix items across the set can be addressed in a revision cycle before broader deployment; none prevent a pilot.
+
+**Items requiring follow-up in a future Session 8:**
+1. Whether the AX trusted-community-organization certification standard (AX2.2.1) has been specified — including an independence audit mechanism and revocation procedure — and whether this was addressed before any public claim of operational protection for trafficking victims.
+2. Whether the AW Federated Ombuds-as-subject fallback has been specified, designating a Tier 1-adjacent body or supermajority CRP panel as the fallback when the Ombuds is itself the named respondent.
+3. Whether the AW evidence standard for "knowingly false and malicious reporting" (AW3.1) has been defined and published.
+4. Whether the AY responsible-party independence and capacity standard has been added to the Register's governance requirements.
+5. Whether the AY3.2 intermediary-trust consent mechanism has been specified, giving the community a formal voice in the designation.
+6. Whether the Session 5 AED narrative-accountability open remainder (individual-case narrative-report obligation, distinct from population-level Register) has been addressed in any subsequent patch.
+7. Whether AX3.2's Federated Ombuds amicus-review pathway for court orders seeking sealed records has been added and tested in practice.
+8. Whether the first Federated Ombuds annual review of the Delivery Sufficiency Register (AY2.3) confirms or revises the classification of the incarcerated-persons row and other rows with no currently documented delivery mechanism.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–7)
 
 - `docs/governance/P-063_draft.md` (commit `dd779d0`, v14 — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -692,5 +799,10 @@ The work remaining is operational. Whether the patch produces good fruit (Matt 7
 - `docs/audits/post-remediation-verification-report.md` (Phase 1–3 remediation scope)
 - `docs/governance/Open_Problems_Resolution_Docket.md` (open-problem categories)
 - `.claude/rules/constitution-review.md` (8-question Christ-centered review protocol; 5-element output format)
+
+- `docs/annexes/ANNEX_AW.md`
+- `docs/annexes/ANNEX_AX.md`
+- `docs/annexes/ANNEX_AY.md`
+- `reports/christ-centered-session7-review_20260520_155148.md` (Session 7 diagnostic)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
