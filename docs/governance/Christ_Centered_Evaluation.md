@@ -1436,7 +1436,132 @@ This session turns to how money is created (X), how households cross from the le
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–12)
+## Session 13 Christ-Centered Evaluation — Measurement and Continuity Integrity
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_M — Oracle, Physical Reality, and Measurement Limits; ANNEX_AL — Methodology-Class Definitions for Oracle Independence; ANNEX_AE — Compound Interface Tests and Deadlock Prevention; ANNEX_U — Operational Bypass Closure and Superseding Clauses
+
+This session turns to how the system measures reality honestly (M), how it keeps its "witnesses" genuinely independent rather than one voice in many masks (AL), how it keeps acting to protect the vulnerable under compound crisis rather than freezing (AE), and how it closes the bypass channels that would let stated protections be quietly evaded (U). The governing teachings are honest weights and true measures (Lev 19:35–36; Prov 11:1; 20:10), genuinely independent witnesses (Deut 19:15), acting for the neighbor in your power to help (Luke 10; Prov 3:27–28; Jas 4:17), and refusing to let clever tradition void the commandment (Mark 7:9–13). One finding recurs across all four.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX M — Oracle, Physical Reality, and Measurement Limits
+
+**Christ-centered alignment.** §M1/§M2 require every published capacity value to declare its evidence class and forbid counting "roofline without placement feasibility" — honest weights and true measures made operational (Lev 19:35–36 "just balances, just weights, a just ephah"; Prov 11:1; Prov 20:10 "divers measures… both alike abomination"): a roof no one can live in is a false ephah. The annex's measurement humility — "if reality is uncertain, the system must behave humbly, not theatrically," publishing "what is missing, and… the likely error bands" — is honest confession of partial knowledge (Prov 16:2; Jas 4:14; 1 Cor 13:12, "we see through a glass, darkly"). §M3 places the burden on the one who would withhold ("verified disruption is insufficient on its own"; any authority tightening Essential Access must publish why less-restrictive continuity is insufficient) — a guard against manufactured scarcity (Amos 8:5). §M4's default-to-continuity ("uncertain data may justify conservative expansion restraint, but not silent deprivation"; the 85%/7-day auto-activation of provisional Shared Storehouse) is the gleaning instinct — when in doubt, leave the corners of the field (Lev 19:9–10) — favoring the vulnerable over administrative tidiness.
+
+**Babel-risk warning.** The sharpest point: §M4 builds an automatic default-to-life and then hands a single "expedited review body" the power to issue a "written block" against it. The annex's deepest virtue — that survival should not depend on an authority's discretion — is partially surrendered at the exact point it matters most; a lone scribe can quietly rewrite the verdict. Secondary: §M1 forbids scarcity resting on "a single opaque model," but two coordinated opaque models satisfy the letter while defeating the spirit, and error bands themselves can be modeled with false precision.
+
+**Human-dignity test.** Strong pass. The annex treats measurement as something owed *to persons* whose survival depends on it; §M2's insistence on "placeable units" and "staffed capacity" refuses to reduce a person's housing or care to a spreadsheet count detached from whether a real human can be sheltered or treated — dignity protected exactly where it is most fragile.
+
+**Revision proposal.** (1) Should-fix: guard the §M4 written-block override — any block must be public, must name the alternative continuity measures and their evidence class, and must itself be challengeable on an expedited timeline, so one human override cannot silently defeat the default-to-life (cross-cutting — see §S13-X1). (2) Should-fix: strengthen §M1/§M3 so any model driving a scarcity *consequence* must be auditable in method by the named challenge path, closing the two-coordinated-opaque-models loophole (cross-cutting — see §S13-X2). (3) Monitor: error-band false precision; (4) Monitor: the 85%/7-day threshold for downward drift.
+
+**Fruit test.** (i) Measurements that confess their limits; (ii) the burden of proof on those who would tighten access; (iii) continuity defaulting during uncertainty; (iv) no scarcity declaration resting on an unauditable model; (v) no lone override quietly defeating the survival default.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest weights and measures; do not manufacture false scarcity against the poor (Lev 19:35–36; Prov 11:1; 20:10; Amos 8:5).
+- *Theological inference:* default-to-continuity under uncertainty as mercy toward the vulnerable (Lev 19:9–10; Matt 25:35–40).
+- *Prudential political judgment:* the 85% baseline; the 7-day window; the supervised-mode/dissolution remedies.
+- *Unresolved uncertainty:* whether automated Shared Storehouse activation helps more than it harms across real events; whether error-band honesty survives institutions motivated to game it.
+
+**Executive theological verdict: 9 / 10.** One of the most biblically grounded annexes in the corpus — just-weights and default-to-life almost clause-for-clause; the single notable gap is the unguarded human override in §M4.
+
+---
+
+### ANNEX AL — Methodology-Class Definitions for Oracle Independence
+
+**Christ-centered alignment.** The annex operationalizes the genuinely-independent-witnesses command: the three-class floor and N≥5 instantiate Deut 19:15 / Matt 18:16 / 2 Cor 13:1 — and §1's any-two-of-three-shared → same-class rule enforces the *spirit*, refusing to count echoes as witnesses (the rightly-read Prov 11:14: safety lives in *real* multitude, not headcount). The §2 error-independence test and the 0.30 pairwise-correlation ceiling are the sharpest move — they treat *correlated error as false witness even when no one lies*, disqualifying witnesses who "fail in the same direction under the same manipulation" (the subtlest dishonesty: sincere unanimity that is structurally blind). §215 weights *overstatement* of capacity more heavily than understatement "because overstatement… is the failure mode most likely to result in harmful rationing" — Matthew 25 / Luke 4:18 encoded into the math, tuning the system to err toward the hungry. The paid adversarial/red-team seat institutionalizes the dissenting prophet with veto power and dissent credit (Matt 18:15–17), and "no urgency bypass" refuses emergency as license to suspend accountability.
+
+**Babel-risk warning.** The annex's whole subject is the Genesis 11 risk — a measurement monoculture is "one language, one speech" disguised as many. It maps shared-standards-body, shared-data/model, and AI-inference collapse well, but two residual Babel risks remain. First, all independence judgments flow through *one* annual review panel and *one* accreditation body, applying the standard recursively to themselves — the deepest guard against monoculture is itself a monoculture of one definition-keeper; if the panel's epistemology drifts, every oracle inherits the drift. Second, AI/foundation-model monoculture is policed largely by *self-reported* disclosure and a *retrospective* 18-month correlation check — distinct-looking products sharing a hidden upstream model could pass disclosure honestly while the true correlation stays invisible until all oracles fail together.
+
+**Human-dignity test.** Notably strong pass. Class 2 (community-based participatory) exists precisely because institutional statistics "systematically under-count informal economic activity, stigmatized need, and populations with low state contact" — the person invisible to the state's ledger is treated as real and load-bearing (Matt 7:12; Gen 1:26–27), and physical-sampling floors check "capacity" against bread that actually exists.
+
+**Revision proposal.** (1) Should-fix: add a foundation-model lineage disclosure tier and an *independent technical attestation* (not solely self-report) for shared upstream model weights, since distinct-looking AI products increasingly share one base model (cross-cutting — see §S13-X2). (2) Should-fix: add an external, rotating audit of the *review panel itself* — a meta-independence check so the one tongue that defines independence is itself subject to two-or-three-witness scrutiny (cross-cutting — see §S13-X1). (3) Monitor: whether real cohorts reach the 18-month correlation window before their first Storehouse-gating decision; (4) Monitor: null-divergence on the adversarial seat flagged as suspicious, not reassuring.
+
+**Fruit test.** (i) Scarcity readings the informally-counted can trust; (ii) storehouse activation that cannot be triggered or suppressed by a single captured standards body or AI vendor; (iii) a standing dissenter with teeth; (iv) foundation-model monoculture caught by attestation before correlated failure, not after.
+
+**Epistemic categorization:**
+- *Clear biblical command:* genuinely independent multiple witnesses; correlated/echoing witness is not corroboration (Deut 19:15; Matt 18:16; 2 Cor 13:1).
+- *Theological inference:* weighting capacity-overstatement more heavily follows from preferential protection of the vulnerable (Matt 25).
+- *Prudential political judgment:* the N=5, the 0.30 ceiling, the AI threshold of 2, the 18-month lookback, the sampling floors.
+- *Unresolved uncertainty:* whether self-reported AI-supply-chain disclosure surfaces hidden foundation-model monoculture before correlated failure; whether one review panel stays independent over decades.
+
+**Executive theological verdict: 9 / 10.** A rigorous, dignity-protecting instantiation of the multiple-independent-witnesses command; its one real exposure is that the AI/foundation-model monoculture it most fears is policed largely by self-disclosure and retrospective correlation.
+
+---
+
+### ANNEX AE — Compound Interface Tests and Deadlock Prevention
+
+**Christ-centered alignment.** §AE2.3's Emergency Deadlock Resolution is the theological heart: the "immediate survival-floor bridge" activates *unconditionally* regardless of deadlock, and CSM issuance continues through Level 5 — the structural answer to the priest and Levite who "passed by on the other side" while the Samaritan acted (Luke 10:31–34), and to "to him that knoweth to do good, and doeth it not, to him it is sin" (Jas 4:17). The 72-hour non-waivable clock enacts "say not unto thy neighbour, Go, and come again… when thou hast it by thee" (Prov 3:27–28). §AE2.2's categorical throughput minimums prevent a loud crisis from starving the quiet needs of the poor (Matt 25:40). §AE2.1/§AE2.4's demand-context and oracle-independence clauses are truth-discipline — refusing to punish people on a manufactured or confused signal (Matt 5:37; the true-witness requirement). And the emergency power is fenced against capture: the arbitration panel has "no authority over constitutional classification," and a scope freeze forbids new power expansion during deadlock — power that acts in crisis but cannot redefine the constitution while doing so.
+
+**Babel-risk warning.** The greatest virtue and the greatest danger are the same clause. The automatic deadlock-breaker stops the system from passing by — but an automatic, fast, smaller-quorum override is exactly the shape captured "dominion" takes (Matt 20:25). A sophisticated faction could *manufacture* deadlock (deliberately triggering a second blocking process) to force a smaller panel it can influence, or to weaponize the scope freeze itself (freezing legitimate activations an adversary wants stopped) — and the root-cause review is *post hoc* only. The Level-5 convening fallback concentrates extraordinary power in very few hands at peak stress; independence is asserted, not proven.
+
+**Human-dignity test.** Strongly passes. The animating move is to keep persons receiving survival access *during* institutional failure — CSM continues unconditionally; the floor "may not be suspended by Level 5 proceedings." Demand-context flagging protects people from being mis-scored as a supply threat. One caution: §AE2.6's "effective decision space" metric is abstract and could treat constitutional erosion as a mere metric exercise.
+
+**Revision proposal.** (1) Should-fix: add anti-gaming detection for *induced* deadlock — the arbitration panel and root-cause review must assess whether either blocking process was initiated or sustained in bad faith, with a presumption against any party that benefits from the scope freeze, in real time, not only post-mortem (cross-cutting — see §S13-X1). (2) Should-fix: add a scope-freeze carve-out so a genuinely new, unrelated survival-floor-protective activation is not blocked during a deadlock about something else — otherwise the freeze itself makes the system "pass by on the other side" (see §S13-X3). (3) Should-fix: specify a conflict-of-interest bar and recusal rule for the Level-5 convening fallback (the system's last non-blocked actor). (4) Monitor: the §AE2.6 metric; the reduced-scope single-source PCRP not chaining into de facto full PCRP.
+
+**Fruit test.** (i) Relief does not freeze because two committees are deadlocked; (ii) survival access persists through constitutional crisis; (iii) induced-deadlock gaming is caught in real time; (iv) the scope freeze never blocks legitimate unrelated aid; (v) the last-resort convener is conflict-screened.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not withhold deliverable good from your neighbor when it is in your power to act (Prov 3:27–28; Jas 4:17; Luke 10:30–37).
+- *Theological inference:* guaranteed categorical throughput and truth-disciplined signals as love-of-neighbor and just witness.
+- *Prudential political judgment:* the 5 slots / 3-of-5 cap; the 6/24/72-hour clocks; the drift triggers.
+- *Unresolved uncertainty:* whether automatic deadlock declaration is net-protective or net-exploitable; whether the Level-5 fallback is genuinely capture-resistant.
+
+**Executive theological verdict: 8.5 / 10.** Among the most Christ-consonant annexes because it is built to keep the body *acting* to protect the vulnerable in compound crisis rather than freezing, and it fences the emergency power against constitutional capture; it loses points because the deadlock-trigger and last-resort convening path are gameable and unproven.
+
+---
+
+### ANNEX U — Operational Bypass Closure and Superseding Clauses
+
+**Christ-centered alignment.** §U1's anti-loophole supremacy clause — "where Annex U conflicts with earlier language… Annex U governs," and no restatement "may weaken these protections without ordinary amendment review" — is the structural answer to Mark 7:9–13: it refuses to let a later "tradition" (a cleaner restatement, a technical carve-out) make void the substantive commandment. The §U1/§U5 asymmetric friction (narrowing, concentration, and concealment face deliberately stronger friction than expansion and transparency) enacts Isaiah 10:1–2 — the unrighteous decree that robs the poor is made harder to pass than the protective one — and the functional-floor test ("usable for median bottom-quintile households in real conditions, not merely compliant on paper") is the precise rebuke of letter-over-substance. §U2's founding self-exclusion bars those who would lord it over from writing their own permanent advantage (Mark 10:42–45; John 13). §U3/§U4 honest-weights provisions forbid grading your own milestones or passing a modeled estimate off as observed fact. §U7–§U9's mercy floors keep feeding people even as the system fails (Matt 25:35–40), and "dissolution cannot suspend the survival floor."
+
+**Babel-risk warning.** The annex names its own deepest temptation — "exception systems become the new capture layer" — and does not fully escape it. Annex U is now the single most powerful document in the corpus: it overrides nine annexes by fiat, so whoever controls future edits to U controls all of them at once, and the only stated protection is "ordinary amendment review" — precisely the channel a captor would use. The supremacy clause that protects the poor today is a master key tomorrow. Second: several closures rest on undefined human-judgment *dials* ("published market-share conflict thresholds," "disclosure threshold," "imminent-serious-harm," "median bottom-quintile… real conditions") — set the number high enough and the closure passes review while admitting the very abuse it names. U closes the *channels* but delegates the *numbers*, and the prophets' loophole lived in the numbers (the ephah's size, the corban amount).
+
+**Human-dignity test.** Passes strongly. The functional-floor test rejects paper-compliance; anonymized attestation maps study clustering "without exposing ordinary people to behavioral dossiers"; identity failure defaults to "last-known-good continuity plus manual adjudication rather than hard lockout." One soft spot: §U7's "scale verification burden with claimed influence" plus "elevated audit probability" risks subtly profiling the poor in low-trust communities — mitigated, not eliminated, by the cross-regional rotating panel.
+
+**Revision proposal.** (1) Should-fix: add an anti-self-amendment ratchet to §U1/§U14 — weakening any U protection must face a strictly higher bar than ordinary amendment (the same asymmetric narrowing-friction U imposes elsewhere), so the master key cannot be quietly downgraded through the very channel it relies on (cross-cutting — see §S13-X1). (2) Should-fix: require that each delegated threshold-setting act itself face the §U5 narrowing-friction, so the hard channel-closures are not undone by soft dials (cross-cutting — see §S13-X2). (3) Monitor: an external periodic audit verifying §U4 claimed independence rather than relying on self-disclosure; (4) Monitor: §U7 audit-probability distribution by community wealth, to catch disparate burden on the poor.
+
+**Fruit test.** (i) Real, non-paper protection for bottom-quintile households; (ii) founders barred from entrenching themselves; (iii) survival access preserved through system failure; (iv) the override authority and the numeric dials kept from becoming capture instruments — the friction stays asymmetric in the poor's favor over time.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest weights and measures; do not make void the substance through tradition; mercy to the burdened; do not decree to rob the poor (Lev 19:35–36; Mark 7:9–13; Matt 25; Isa 10:1–2).
+- *Theological inference:* asymmetric procedural friction as the right mechanism to honor the anti-loophole command; founding self-exclusion as servant-leadership applied.
+- *Prudential political judgment:* the 8-quarter expiry; the 7-year term; the 10% rolling-erosion trigger; the 85%/7-day bridge.
+- *Unresolved uncertainty:* whether a single supreme override annex stays servant rather than becomes master; whether self-disclosed independence is detectable in practice.
+
+**Executive theological verdict: 8.5 / 10.** Among the most Christ-aligned documents in the corpus — the protocol's institutional repentance, naming its own loopholes and shutting them with friction biased toward the poor; it loses ground because the override supremacy and the soft numeric thresholds leave the exception-system-as-capture-layer risk acknowledged but not structurally foreclosed.
+
+---
+
+### Session 13 Cross-Cutting Findings
+
+**§S13-X1 — The definition-keeper with no witness above it (should-fix).** This cluster repeats the oversight cluster's lesson one level deeper: each annex builds an honest mechanism and then places a *single* meta-authority over it with no witness above — ANNEX_M's lone "expedited review body" that can block the default-to-life, ANNEX_AL's single panel that defines "independent" and accredits itself, ANNEX_AE's automatic deadlock-breaker that can be induced, ANNEX_U's supremacy clause amendable through the ordinary channel a captor would use. The biblical answer is the same as in Session 10: no human definition-keeper is its own final witness (Deut 19:15 applied recursively; the regress ends humbly in publication and lot-drawn citizens, not a final office). The fix: make each meta-authority public and challengeable (M's written block), externally meta-audited (AL's panel), real-time anti-gaming-checked (AE's deadlock), and protected by an anti-self-amendment ratchet (U). Status: **should-fix open** (cluster-wide).
+
+**§S13-X2 — The loophole lives in the dials (should-fix).** Several annexes close the *channel* hard but leave the *number* soft: ANNEX_U's delegated thresholds, ANNEX_M's "single opaque model" that two coordinated models evade, ANNEX_AL's self-reported foundation-model lineage. The prophets' loophole was always in the measure, not the law (Amos 8:5 — the small ephah). The fix: bind the dial-setting act with the same friction as the channel — threshold-setting under U's narrowing-friction, model-auditability-in-method for M, independent attestation for AL's AI lineage. Status: **should-fix open** (cluster-wide).
+
+**§S13-X3 — The freeze that passes by (should-fix, AE).** ANNEX_AE's scope freeze rightly stops new power-grabs during a deadlock, but as written it would also block a *genuinely unrelated* new survival-floor activation — making the safeguard itself "pass by on the other side" (Luke 10:31). The fix: a carve-out so survival-floor-protective activations certified as unrelated to the contested classification are exempt from the freeze. Status: **should-fix open.**
+
+---
+
+### Session 13 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** It keeps the measure honest and confesses its own blindness (M), insists its witnesses genuinely differ rather than echo (AL), keeps the body *acting* to feed the vulnerable through compound crisis rather than freezing (AE), and shuts its own loopholes with friction biased toward the poor — institutional repentance made structural (U). These are the prophets' honest-weights ethic and the Samaritan's bias-to-act rendered as machinery.
+
+**Where the cluster carries the most Babel-risk.** The recurring shape: an honest mechanism crowned by a single meta-authority with no witness above it (§S13-X1), and hard channel-closures undone by soft numeric dials (§S13-X2). The annexes resist capture well at the operating level; the residual risk concentrates at the meta level and in the numbers — the two places Scripture warns the loophole always hides (the false definition, the small ephah).
+
+**Net assessment.** No must-fix blockers; the cluster scores **8.5–9**, and its should-fixes are closeable. Christ-measured, these are disciplined, honest, vulnerable-protecting instruments — and their deepest remaining discipline is the one this whole evaluation keeps returning to: no human meta-authority is its own final witness, so the corpus must make every definition-keeper public, challengeable, externally audited, and ratchet-protected, and bind its soft dials as tightly as its hard channels. Civil measurement and continuity are not the kingdom of God; they are a steward's honest instruments, most faithful when even the keeper of the measure is himself measured.
+
+**Items requiring follow-up in a future Session 14:**
+1. Whether the §S13-X1 meta-authorities have been guarded (M public/challengeable block; AL external meta-audit; AE induced-deadlock anti-gaming + Level-5 recusal; U anti-self-amendment ratchet).
+2. Whether the §S13-X2 dials are bound (U threshold-setting under narrowing-friction; M model-auditability; AL AI-lineage attestation).
+3. Whether the §S13-X3 AE scope-freeze life-safety carve-out has been added.
+4. The remaining unevaluated evidence/audit/threat annexes (A, AG, AD, AC, T, AO, AB, AS) and the AM completion, for the final session(s).
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–13)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1475,5 +1600,9 @@ This session turns to how money is created (X), how households cross from the le
 - `docs/annexes/ANNEX_V.md` (Session 12 — transition mechanics and conversion)
 - `docs/annexes/ANNEX_AR.md` (Session 12 — contract-commitment architecture)
 - `docs/annexes/ANNEX_AT.md` (Session 12 — external trade architecture)
+- `docs/annexes/ANNEX_M.md` (Session 13 — oracle, physical reality, measurement limits)
+- `docs/annexes/ANNEX_AL.md` (Session 13 — oracle methodology-class independence)
+- `docs/annexes/ANNEX_AE.md` (Session 13 — compound interface tests, deadlock prevention)
+- `docs/annexes/ANNEX_U.md` (Session 13 — operational bypass closure)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
