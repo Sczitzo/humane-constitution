@@ -45,7 +45,7 @@ No punishment, budget problem, emergency, identity delay, or software update may
 
 ## Y1. CSM Basket — Per-Person Daily Minimums
 
-The following minimums apply to every personhood-verified resident, regardless of contribution status, civic record, pause status, employment, or identity state above provisional personhood.
+The following minimums apply to every person physically present, regardless of contribution status, civic record, pause status, employment, or identity state — including persons who are present but not yet verified or only provisionally verified. Identity status gates only above-floor civic powers, never the scope of these minimums.
 
 ### Y1.1 Caloric sufficiency
 - **Minimum: 2,100 kcal/person/day** for adults. Age-adjusted minimums published below.
@@ -101,14 +101,14 @@ The following minimums apply to every personhood-verified resident, regardless o
 
 ## Y2. CSM Issuance Rule (Architecturally Enforced)
 
-CSM issuance is not a governance decision. It is an automatic function of personhood verification.
+CSM issuance is not a governance decision. It is an automatic function of physical presence.
 
-- **Trigger:** valid personhood commitment under Article II, including provisional personhood states.
-- **Mechanism:** ledger-layer automatic Essential Access tranche issuance against CSM basket per 72-hour rolling window. Governance actors — including the Constitutional Review Panel, Regional Executive Body, Federated Ombuds, and any emergency authority — are architecturally *unable* to halt CSM issuance for any verified personhood.
-- **Identity uncertainty does not halt CSM.** Provisional personhood receives the survival-floor subset of the CSM basket while verification is in progress.
+- **Trigger:** the presence of a living person within the jurisdiction. The full CSM basket attaches to any person physically present, independent of their identity-legibility tier. Personhood verification under Article II governs access to above-floor civic powers; it is never a precondition of the CSM floor itself.
+- **Mechanism:** ledger-layer automatic Essential Access tranche issuance against CSM basket per 72-hour rolling window. Governance actors — including the Constitutional Review Panel, Regional Executive Body, Federated Ombuds, and any emergency authority — are architecturally *unable* to halt CSM issuance for any present person.
+- **Identity uncertainty does not halt CSM.** A person whose personhood is provisional or unverified receives the full CSM basket while verification is in progress. Identity uncertainty reduces only above-floor civic powers — Flow, Voice, Service Record, enterprise participation, and legal standing — never the scope of the CSM floor.
 - **Scarcity does not halt CSM.** During Scarcity L2/L3, the CSM is preserved by invoking the substitution rules in §Y3. Capacity below CSM × population is a declared System Failure triggering §Y4.
 - **Sanction does not halt CSM.** No judicial, regulatory, criminal, or contractual process may produce withdrawal of CSM access. Enforcement acts on Flow, Voice, Service Record, liberty (per due process), or civic privileges — never on CSM.
-- **Administrative error does not halt CSM.** Any system action that reduces CSM below §Y1 minimums to any personhood-verified resident is, by definition, a Critical Incident (§Y4) regardless of intent.
+- **Administrative error does not halt CSM.** Any system action that reduces CSM below §Y1 minimums to any person physically present is, by definition, a Critical Incident (§Y4) regardless of intent.
 
 ## Y3. Scarcity Substitution Protocol
 
@@ -139,6 +139,7 @@ Plain meaning: even one confirmed failure matters. It must be disclosed, investi
 - **Every numerical value above is locked** by cryptographic hash commitment at founding (Proposal 1 architectural enforcement). Hash appears in `/architecture/drift_chain.md` and is referenced in the ledger genesis block.
 - **Amendment requires H-3 refounding authority** as defined in the Humane Constitution amendment ladder. No Tier 2 or Tier 3 process may modify §Y1. H-3 refounding authority is a full constitutional convention. It supersedes P-014, which was the one-time founding instrument (now permanently closed).
 - **Upward amendment** (increasing floors) is permitted through ordinary Tier 2 process. Only *downward* changes require H-3 refounding.
+- **Permanent-floor review (upward bias).** The §Y1 minimums are grounded in WHO/Sphere *emergency* standards: they are the line below which survival is threatened, not a target ceiling. As system capacity grows, the emergency minimum must not silently harden into the permanent standard of living for the poorest residents. The Federated Ombuds therefore publishes, on a recurring schedule through Article VII transparency infrastructure, a review of whether the ordinary Tier 2 upward-amendment path is being used to lift the floor above bare-emergency level in step with available capacity. The review carries a standing upward bias: where capacity demonstrably exceeds the emergency floor, the published finding states the case for raising the floor through Tier 2 process. This review is a monitoring and advisory commitment only. It cannot, and does not, alter the locked §Y1 numbers — those remain fixed at their founding values, raisable solely upward through Tier 2 and lowerable only through H-3 refounding.
 - **Temporary suspension prohibited.** No emergency, treaty, budget cycle, or transition process may suspend CSM. If capacity cannot meet CSM × population, the protocol is in System Failure and Y4 applies.
 
 ## Y6. Relationship to Broader Essential Basket
@@ -149,7 +150,7 @@ Example — the broader basket may include "basic clothing" or "basic local tran
 
 ## Y7. Interaction with Other Articles
 
-- **Article II (Identity):** CSM applies to provisional personhood, full personhood, and civic-activated personhood alike. Identity uncertainty reduces civic powers, not CSM access.
+- **Article II (Identity):** CSM attaches to physical presence, not to a tier of identity legibility. It applies equally to unverified persons, provisional personhood, full personhood, and civic-activated personhood. Identity status may gate only above-floor privileges — Flow, Voice, Service Record, enterprise participation, and legal standing — and identity uncertainty reduces those civic powers alone, never CSM access.
 - **Article III (Capacity):** the RCS publishes CSM × population estimates continuously. Any projected shortfall triggers §Y3 substitution planning immediately — not when the shortfall arrives.
 - **Article I (Rule-bound execution):** enforcement actions are architecturally prohibited from targeting CSM channels. Account partitioning in the constitutional monetary architecture ensures enforcement on Flow or other channels does not touch Essential Access/CSM.
 - **Article VII (Transparency):** CSM delivery rate, substitution events, and Critical Incidents are published in aggregate at the jurisdictional-cluster level. Individual-level CSM data is never published.

@@ -39,12 +39,14 @@ The Protocol adopts a layered hybrid approach rather than choosing a single iden
 - **No person is required** to rely on only one class of evidence.
 - **No one class of evidence** may become the sole gate to survival-floor protections.
 - **Full Core Resident activation** requires a threshold combination of evidence classes rather than a single decisive credential.
+- **The threshold combination rule is published and contestable.** The rule by which evidence classes combine to meet an activation threshold is published in full and is appealable in any individual case. The combination rule may not operate as a secret risk score, and it is bound by the red line in P5 prohibiting any secret score from determining personhood, continuity, or queue priority.
 - **Biometrics**, if used at all, must be optional or secondary, revocable in their operational role, and never published as a reusable global identifier.
 - **Identity verification** and activity monitoring must remain legally separated. The system may verify that a person exists and is continuous without creating a unified behavioral dossier.
 - **The stricter the consequence** of a decision, the higher the evidentiary threshold and the stronger the appeal rights.
 
 ### P4. Status ladder and failure-safe defaults
 - **Survival-Floor Personhood:** any person physically present is entitled to immediate life-preserving treatment, emergency food, emergency shelter triage, and emergency medical stabilization even before full identity resolution.
+- **The survival floor attaches to physical presence, not to identity legibility.** The full Constitutional Survival Minimum defined in Annex Y attaches to Survival-Floor Personhood on the basis of presence alone. The status ladder gates only above-floor privileges — Voice, Service Record, Flow accounts, enterprise participation, and legal standing — and never the survival floor itself. No person may receive less than the full survival floor on the grounds that their identity is only provisionally established or not yet established.
 - **Provisional Personhood:** a time-limited status granted on weaker but reviewable evidence so displaced or undocumented persons are not trapped outside the system.
 - **Core Resident Identity:** a fully activated status for ordinary Essential Access continuity, enterprise participation, and legal standing after threshold evidence and review.
 - **Civic Activation:** Voice participation and Service Record eligibility remain separate and later-gated, so hurried identity decisions do not immediately shift civic power.
@@ -56,6 +58,8 @@ The Protocol adopts a layered hybrid approach rather than choosing a single iden
 - No fusion of all identity evidence into a permanently queryable behavioral surveillance graph.
 - No secret risk score may determine personhood, continuity, or queue priority.
 - No irreversible identity denial without human review, recorded reasons, and appeal.
+
+These red lines are enforced by the Independent Identity Auditor (Annex AK §8) and the published-metrics regime in P6. Until both enforcement institutions are operational, the red-line protections are designed, not yet operationally enforced. No deployment may claim these protections are operationally enforced before the Independent Identity Auditor and the P6 metrics regime are live.
 
 ### P6. Pilot and scale gates
 - No scale deployment may occur until the identity stack demonstrates acceptable Sybil resistance, false-positive control, false-negative control, and recovery performance in live pilots.
@@ -81,7 +85,14 @@ The Protocol adopts a layered hybrid approach rather than choosing a single iden
 - A protected interviewer, trauma-informed review path, and sealed corroboration channel must be available so the person is not forced to prove continuity using evidence controlled by the abuser.
 - Biometrics, if used at all, remain optional accelerants rather than mandatory gates. Refusal of biometrics alone may not defeat survival-floor or provisional status.
 
-### P7.3 — Disaster-displaced person with interrupted records
+### P7.3 — Genuinely isolated person with no documents, no community, and no web-of-trust
+
+- Because social attestation can exclude the isolated, isolation alone may never defeat a path to provisional personhood and the survival floor.
+- A person with no documents, no community ties, and no web-of-trust reaches provisional personhood through a low-burden, Ombuds-certified self-declaration of identity and continuity, mirroring the equivalent fallbacks in Annex I §I3 and Annex K §K3.
+- The absence of corroborating persons may not be counted as evidence against the person. Self-declaration may not be refused on the ground that no one else can vouch for the declarant.
+- Survival-floor protections remain available on presence throughout, independent of whether self-declaration has yet been certified.
+
+### P7.4 — Disaster-displaced person with interrupted records
 
 - Emergency continuity may rely on disaster rosters, shelter logs, utility-disruption records, family-link corroboration, and cross-regional service traces until normal records recover.
 - Recovery performance is measured by time to restore continuity without forcing the person into a unified behavioral dossier assembled from every emergency interaction.

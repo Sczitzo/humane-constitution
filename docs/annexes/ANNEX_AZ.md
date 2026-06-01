@@ -21,6 +21,8 @@ A Tier 0 token is an access authorization artifact issued to persons who have re
 
 **Issuance conditions.** A Tier 0 token is issued upon: (1) provisional personhood confirmation; and (2) minimal eligibility attestation sufficient for Tier 0 access, as defined by the Technical Specifications Package (TSP) designated for this mechanism. Full identity verification is not required at Tier 0. The issuance process must not require disclosure of real-world identity.
 
+**Survival-floor precedence.** The Tier 0 token governs pseudonymous CSM allocation for persons who have received provisional personhood confirmation; it is never a precondition of the survival floor. A person who is physically present but not yet even provisionally confirmed must not fall into a gap. The physically-present emergency survival path of [ANNEX_P](./ANNEX_P.md) §P4 (Survival-Floor Personhood), which requires no token and no identity confirmation, and the full Constitutional Survival Minimum of [ANNEX_Y](./ANNEX_Y.md), which attaches to physical presence, are available without and prior to any Tier 0 token issuance. Survival access never waits on token issuance or on provisional personhood confirmation. No node may withhold, delay, or condition the survival floor on the existence, validity, or issuance of a Tier 0 token.
+
 **Scope.** A Tier 0 token authorizes CSM basket allocation only. It does not authorize civic participation, governance voting, office eligibility, ownership, currency conversion, reputation attribution, or any upgrade of identity status.
 
 **Lifetime.** A Tier 0 token is single-session. Reissuance requires the same provisional confirmation process; tokens may not be indefinite.
@@ -40,3 +42,5 @@ A Tier 0 token is an access authorization artifact issued to persons who have re
 2. The TSP responsible for implementing the Tier 0 token mechanism has been formally assigned (TSP-assignment condition — **not yet complete** as of corpus date; see `docs/governance/Federated_Ombuds_Constitution_Packet.md`).
 
 Both conditions must be confirmed before INV-LAUNCH-1 can be cleared.
+
+**Operational-claim constraint.** Pseudonymous Tier 0 access is DESIGNED, not operational, until both of the following hold: (1) the TSP responsible for the Tier 0 token mechanism is formally assigned; and (2) the session-linkage prohibition above is demonstrated in implementation — verified in a deployed mechanism — rather than merely specified in this annex or in a TSP document. Until both hold, no pilot, deployment, communication, or governance representation may claim that operational pseudonymous Tier 0 access exists, is available, or is in effect. A specification of pseudonymity is not a demonstration of pseudonymity, and the two must never be conflated in any claim made to the persons this mechanism serves or to any oversight body. This is a constitutional constraint on what may be claimed, binding regardless of TSP endorsement.
