@@ -786,7 +786,115 @@ The work remaining is operational. Whether the patch produces good fruit (Matt 7
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–7)
+## Session 8 Christ-Centered Evaluation — The Survival Floor and the Identity Gate
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_P — Proof-of-Personhood, Identity Tradeoffs, and Red Lines; ANNEX_Y — Constitutional Survival Minimum; ANNEX_AZ — Tier 0 Token Mechanism
+
+This session completes the survival-and-identity cluster begun in Session 7 (ANNEX_AX). Where AX governs safe enrollment for persons at risk, these three annexes govern the floor beneath all enrollment: who must be fed before anyone asks who they are (P), the minimum that may never be cut (Y), and the pseudonymous door that lets a person receive the floor without disclosing identity (AZ). The unifying question is the gospel question — *does a person have to become legible to eat?*
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX P — Proof-of-Personhood, Identity Tradeoffs, and Red Lines
+
+**Christ-centered alignment.** P4's status ladder opens with "Survival-Floor Personhood: any person physically present is entitled to immediate life-preserving treatment, emergency food, emergency shelter triage, and emergency medical stabilization even before full identity resolution." This is the Good Samaritan refusing to check papers before binding wounds (Luke 10:30–37), and Matthew 25:35–40 — the stranger is received *as a stranger*. P7.2 is its sharpest expression: a trafficking survivor's missing documents and inconsistent narrative are treated "as possible indicators of coercion, not automatic fraud," with a protected interviewer and a sealed corroboration channel so the person "is not forced to prove continuity using evidence controlled by the abuser." That is "I desire mercy, and not sacrifice" (Matt 12:7; Hos 6:6) written into procedure. The P5 red lines — no mandatory permanent biometric database as the sole path to personhood, no requirement of legacy state documents for survival-floor access, no fusion of identity evidence into a permanently queryable surveillance graph, no secret risk score determining personhood or queue priority, no irreversible identity denial without human review and appeal — are a direct refusal of the Revelation 13:16–17 icon, where no one may buy or sell without the mark. The protocol declines to make survival contingent on being captured by a system.
+
+**Babel-risk warning.** Two live tensions. First, the red lines are *stated* but their enforcement depends on the Independent Identity Auditor (Annex AK §8) and pilot gates (P6) that are not yet operational — a stated red line with unbuilt enforcement is a promise, not yet a protection. Second, the layered-hybrid "threshold combination" of evidence classes (P3) could itself become an opaque scoring system if the thresholds are not published and contestable; the secret-risk-score red line (P5) could then be violated through the back door of an unpublished aggregation rule. The Babel-risk is not in the design — which is unusually restrained — but in the gap between the design's promises and the institutions that must keep them.
+
+**Human-dignity test.** Passes strongly. The annex is built to refuse the reduction of persons to data: identity verification and activity monitoring are "legally separated" (P3) so the system "may verify that a person exists and is continuous without creating a unified behavioral dossier." The status ladder reduces *civic powers* under uncertainty, never survival access. Biometrics, "if used at all," must be optional or secondary, revocable in operational role, and never published as a reusable global identifier. The dignity protection is real; its weak point is enforcement maturity, not design intent.
+
+**Revision proposal.** Two should-fix items. (1) **Feed-first seam (cross-cutting — see §S8-X1):** make explicit that the *full* Constitutional Survival Minimum attaches to physical presence (Survival-Floor Personhood), with the identity ladder gating only above-floor privileges — closing any reading in which the full floor requires provisional-personhood legibility. (2) **Threshold transparency:** require that the P3 evidence-threshold combinations be published and contestable, so the layered-hybrid model cannot become the secret risk score that P5 prohibits. (3) **Honest labeling (cross-cutting — see §S8-X3):** the red lines and pilot gates should be labeled designed-not-yet-enforced until the Independent Identity Auditor and the P6 published-metrics regime are operational.
+
+**Fruit test.** (i) No person is denied survival-floor protections for lack of legacy documents or refusal of biometrics; (ii) trafficking survivors and the coercively undocumented obtain provisional status through the P7.2 sealed channel rather than being forced to produce abuser-controlled evidence; (iii) no person is subject to an unpublished aggregate score determining personhood or queue priority; (iv) every pilot publishes exclusion rates, appeal outcomes, recovery times, and breach incidents per P6, certified by the Independent Identity Auditor and not by system operators.
+
+**Epistemic categorization:**
+- *Clear biblical command:* receive and aid the stranger before credentialing; mercy over sacrifice; do not make survival contingent on a mark (Luke 10; Matt 25:35–40; Matt 12:7; Rev 13:16–17 as warning).
+- *Theological inference:* a layered-hybrid identity model with red lines and a failure-safe survival default is a defensible civil structure for refusing both exclusion and total surveillance.
+- *Prudential political judgment:* the five evidence classes; the specific status-ladder tiers; the pilot-gate thresholds and Sybil-resistance criteria.
+- *Unresolved uncertainty:* whether the stated red lines hold under real institutional pressure before the Identity Auditor and pilot-metrics regime exist; whether the isolated person with neither documents nor a web-of-trust has a real path (P2 names this exclusion risk; P7 does not fully close it).
+
+**Executive theological verdict: 9 / 10.** Among the most dignity-protective designs in the corpus; the red lines are exceptional. The deduction is entirely enforcement maturity, not design: stated protections await the institutions that keep them.
+
+---
+
+### ANNEX Y — Constitutional Survival Minimum
+
+**Christ-centered alignment.** This is the most direct operationalization of Matthew 25:35–40 in the corpus — food, water, weather-safe shelter, emergency stabilization, sanitation, crisis mental-health care, and essential medicines named as a hard floor with concrete daily minimums. The decisive clause is §Y2: governance actors — the Constitutional Review Panel, executive bodies, the Federated Ombuds, "and any emergency authority" — are "architecturally *unable* to halt CSM issuance for any verified personhood." And §Y2 again: "Sanction does not halt CSM… Enforcement acts on Flow, Voice, Service Record, liberty (per due process), or civic privileges — never on CSM." This is radical grace made structural: even the sanctioned, even the convicted, even the one in the middle of an enforcement action still eats. It mirrors the gleaning laws, where the corner of the field belongs to the poor and the alien by right and is not the owner's to withhold (Lev 19:9–10; Deut 24:19–21), and Matthew 5:45 — the Father "maketh his sun to rise on the evil and on the good." §Y4 treats a *single* confirmed failure as a Critical Incident requiring disclosure, investigation, and restitution — the shepherd who leaves the ninety-nine for the one (Luke 15:4–7). §Y1.6's coercion prohibition (mental-health stabilization "may never be used to gate Essential Access") refuses to let care become a leash.
+
+**Babel-risk warning.** The risk here is inverted and subtle. Every CSM number is grounded in WHO/Sphere *emergency* standards — 2,100 kcal/day, 50 L water (15 L in scarcity), 3.5 m²/person shelter. These are the right floor for a crisis. But Y declares them the *permanent* Tier 1 floor, changeable downward only by full refounding. The Babel-risk is that an emergency minimum, made permanent, quietly becomes the *ceiling* for the poor — a structurally sanctioned underclass living at refugee-camp dignity while the broader basket and the wider economy expand around them. This is precisely the partiality the prophets condemn (Amos 5:11–12; Isa 58:6–7; Jas 2:1–6 — honoring the rich and shaming the poor). The annex's own language ("physical viability plus a dignity margin — not desirable comfort," §Y0) acknowledges the line is drawn tight. The §Y5 upward-amendment path (ordinary Tier 2 process can *raise* floors; only lowering requires refounding) is the right structural safeguard — the discipline is to actually use it.
+
+**Human-dignity test.** Passes, with the monitoring caveat above. The architecture treats survival as a right attached to personhood, not a reward for contribution (§Y1: minimums apply "regardless of contribution status, civic record, pause status, employment"). §Y4's restitution-plus-redress and §Y7's prohibition on publishing individual-level CSM data both protect the person as a person rather than a case. The dignity question is not whether Y respects persons — it plainly does — but whether the *level* of the permanent floor honors the dignity margin it claims, or settles the poor permanently at crisis-minimum.
+
+**Revision proposal.** (1) **Emergency-minimum-as-permanent-floor (monitor — see §S8-X2):** flag, as a standing prophetic-tension monitor item, that Sphere/WHO crisis standards set as the permanent floor risk institutionalizing a permanent underclass; commit to periodic review of whether the §Y5 upward-amendment path is actually being used to lift the floor above bare-emergency level on dimensions where viability and dignity diverge (notably §Y1.3 shelter area). This is deliberately *not* a demand to raise the numbers now: an unfundable floor promised but undelivered would be the worse failure (Isa 58 — the fast God did not choose). (2) **Honest reserve/threshold labeling (cross-cutting — see §S8-X3):** §Y4's failure threshold (FC-YT1) and §Y7's 90-day reserve sizing (FC-YT2) are Tier 2 pre-launch gates "not yet operationally activated"; they should be labeled as such wherever Y's protections are described as live.
+
+**Fruit test.** (i) No enforcement, sanction, scarcity declaration, or administrative action reduces any verified person below the §Y1 minimums; (ii) where a failure occurs, the §Y4 disclosure-investigation-restitution chain fires within its stated windows and pattern detection triggers Scarcity L3 review; (iii) the §Y5 upward-amendment path is used over time to lift the floor as capacity grows, rather than the emergency minimum becoming the permanent settled level for the poor; (iv) scarcity is met by §Y3 substitution (changing *how* the floor is delivered) and never by quietly narrowing the floor itself.
+
+**Epistemic categorization:**
+- *Clear biblical command:* the survival floor belongs to every person by right, including the sanctioned and the alien; do not withhold it; one failure matters (Lev 19:9–10; Deut 24; Matt 25:35–40; Matt 5:45; Luke 15:4–7).
+- *Theological inference:* architecturally un-haltable issuance, substitution-not-narrowing under scarcity, and single-failure-as-Critical-Incident are the right structural forms of an unconditional floor.
+- *Prudential political judgment:* the specific numerical minimums; the WHO/Sphere grounding; the 3-failure cluster threshold; the 90-day reserve sizing; the 90-day shelter-substitution limit.
+- *Unresolved uncertainty:* whether a permanent floor pinned to emergency standards honors the dignity margin over time; whether the floor is actually resourceable at CSM × population before scale (the AY delivery-gap concern applied to the floor itself).
+
+**Executive theological verdict: 9 / 10.** The un-haltable, sanction-proof, unconditional floor is among the most Scripture-anchored structures in the corpus. The reservation is the permanent-emergency-minimum tension and the not-yet-proven resourcing — monitored, not disqualifying.
+
+---
+
+### ANNEX AZ — Tier 0 Token Mechanism
+
+**Christ-centered alignment.** INV-001 — survival access is not conditioned on identity — is the gleaning model precisely: "the issuing node records only that one CSM allocation was consumed from available capacity — not by whom" (§AZ1, Non-aggregation requirement). The poor took from the corner of the field and no one wrote down their names (Lev 19:9–10; Ruth 2). The pseudonymity, non-aggregation, and session-linkage prohibitions protect the person who cannot or will not disclose identity at the survival tier — the domestic-violence survivor, the undocumented person, the one fleeing — from having the act of receiving bread turned into a tracking event. This is the same Revelation 13 refusal as ANNEX_P, applied at the most exposed point: the moment of receiving food. The annex also models honesty in its own scope note, plainly recording that its former demurrage content was moved to ANNEX_D — truthful self-description rather than quiet overlap.
+
+**Babel-risk warning.** Low in design, real in maturity. The session-linkage prohibition is declared "a constitutional constraint, not a technical recommendation; no TSP implementation that fails this constraint is compliant regardless of endorsement" — strong language. But the annex's evidence status is "Designed," and its own pre-launch gate records that the TSP responsible for actually building the pseudonymity guarantee is "**not yet complete** as of corpus date." A pseudonymous-survival promise whose privacy lock has not been built or even assigned is, until built, a promise. The Babel-risk is not surveillance-by-design; it is the temptation to claim the pseudonymous door is open when only its blueprint exists (Isa 58:7 — the coat promised but not given).
+
+**Human-dignity test.** Passes in design. The mechanism is explicitly bounded: a Tier 0 token "is not identity, not currency, not reputation, and not transferable governance power" (§AZ1), authorizes "CSM basket allocation only," and "must not become a durable tracking identifier." It refuses to let the survival door double as an identification or scoring instrument. The dignity protection is genuine; its delivery is unproven.
+
+**Revision proposal.** (1) **Honest labeling (cross-cutting — see §S8-X3):** wherever AZ's pseudonymous access is described, it should be labeled designed-not-yet-operational until the TSP-assignment condition of INV-LAUNCH-1 is met and the session-linkage prohibition is demonstrated in implementation; no pilot should claim pseudonymous Tier 0 access is live before then. (2) **Feed-first seam (cross-cutting — see §S8-X1):** clarify the relationship between the physically-present emergency layer (ANNEX_P §P4 Survival-Floor Personhood, which requires no token) and the Tier 0 token (issued "upon provisional personhood confirmation"), so that the genuinely pre-provisional person — present but not yet even provisionally confirmed — has an unambiguous, documented survival path that does not wait on token issuance.
+
+**Fruit test.** (i) No person is identified, tracked, or re-identified through the act of receiving Tier 0 survival access; (ii) the session-linkage prohibition is demonstrated, not merely asserted, before any claim that pseudonymous access is operational; (iii) the TSP-assignment gate (INV-LAUNCH-1) is honestly reported as open until met; (iv) a person who refuses identity disclosure still receives the survival floor.
+
+**Epistemic categorization:**
+- *Clear biblical command:* the poor may receive without being named or tracked; survival is not contingent on disclosure (Lev 19:9–10; Ruth 2; Rev 13:16–17 as warning).
+- *Theological inference:* pseudonymity, non-aggregation, and session-linkage prohibition are the right structural form of "receive without a mark."
+- *Prudential political judgment:* the single-session token lifetime; the TSP delegation; the specific audit-artifact design.
+- *Unresolved uncertainty:* whether the privacy guarantee can be technically delivered as specified; whether the not-yet-assigned TSP will satisfy the constitutional constraint in practice.
+
+**Executive theological verdict: 8 / 10.** The design is faithful to the gleaning model and well-bounded. The deduction is maturity: it is only "Designed," its enabling TSP is unassigned, and the privacy promise is unproven — strong intent awaiting real delivery.
+
+---
+
+### Session 8 Cross-Cutting Findings
+
+Three findings span all three annexes; they are recorded once here and referenced from each annex above.
+
+**§S8-X1 — The feed-first seam (should-fix).** Across P, Y, and AZ a gradient exists: physically-present emergency aid (P4, no token) → Tier 0 token (AZ, issued upon *provisional* personhood, full CSM basket, pseudonymous) → Tier 1 (identity-gated, above-floor). ANNEX_Y attaches the full CSM basket to "personhood-verified" residents and gives provisional personhood a "survival-floor *subset*." The theological standard — feed the stranger because they are hungry, not because they have been made legible (Matt 25; Luke 10) — asks that the *full* survival floor attach to physical presence, with the identity ladder gating only privileges above the floor. The current design is close and defensible, but the seam should be closed explicitly so that no reading survives in which a person must reach provisional-personhood legibility to receive the full floor rather than a subset. Status: **should-fix open.**
+
+**§S8-X2 — Emergency-minimum as permanent floor (monitor).** ANNEX_Y pins the permanent Tier 1 floor to WHO/Sphere *emergency* standards. Correct for crisis; as a permanent floor it risks settling the poor at crisis-minimum dignity in perpetuity — the partiality the prophets condemn (Amos 5:11–12; Jas 2:1–6). This is recorded as a standing **monitor** item, not a demand to raise the numbers now: an unfundable floor promised but undelivered would be the worse failure (Isa 58). The monitoring obligation is to verify that the §Y5 upward-amendment path is actually used to lift the floor above bare-emergency level as capacity grows, especially on dimensions where viability and dignity diverge (e.g. §Y1.3 shelter area at 3.5 m²/person). Status: **monitor.**
+
+**§S8-X3 — Promised-but-not-built (should-fix + honest labeling).** P's red lines depend on the not-yet-operational Independent Identity Auditor and pilot-metrics regime; Y's failure threshold (FC-YT1) and 90-day reserve (FC-YT2) are unactivated pre-launch gates; AZ is "Designed" with an unassigned TSP. None of this forbids a bounded pilot — but the Isaiah 58 discipline (the AY delivery-gap standard from Session 7) requires that these protections be honestly labeled *designed, not yet operational* wherever they are described, and that no pilot claim them live before the enabling institutions and implementations exist. Status: **should-fix open** (honest labeling required; bounded non-overclaiming pilot not blocked).
+
+---
+
+### Session 8 Net Assessment
+
+**Where P/Y/AZ are most consistent with the teachings of Jesus.** The unconditional, sanction-proof survival floor (Y §Y2) — even the convicted and the sanctioned eat — is radical grace made structural, and the most Scripture-anchored single mechanism reviewed in this cluster. P4's aid-before-credentialing and P7.2's mercy toward the coercively undocumented embody the Good Samaritan and "mercy, not sacrifice." AZ's no-name gleaning model (receive without being tracked) protects the most exposed person at the most exposed moment. Together they answer the gospel question well: a person does *not* have to become legible to eat — at least at the emergency layer.
+
+**Where they carry the most Babel-risk.** Not in surveillance-by-design — the red lines and pseudonymity protections are exceptional — but in the gap between promise and delivery. P's red lines, Y's reserves, and AZ's privacy lock are stated more firmly than they are yet built or enforced. The second tension is Y's permanent-emergency-minimum floor, which could harden into a sanctioned underclass if the upward-amendment path is never used.
+
+**Net assessment.** All three are pilot-ready in design, with no must-fix blockers, provided the §S8-X3 honest-labeling discipline holds. ANNEX_Y is the spine of the corpus's claim to be a humane system — an unconditional floor that no authority can switch off — and it earns that claim in design. ANNEX_P guards the gate to that floor with unusually disciplined red lines. ANNEX_AZ opens the door without a name attached. The remaining work is institutional and technical, not theological: build the enforcement (Identity Auditor, pilot metrics), assign and prove the AZ TSP, fund the floor at CSM × population, and use the upward-amendment path so the minimum does not become the ceiling. Christ-measured, this cluster is among the strongest in the corpus — civil mercy structured with real teeth — and it must never be mistaken for the kingdom it serves.
+
+**Items requiring follow-up in a future Session 9:**
+1. Whether the §S8-X1 feed-first seam has been closed so the full CSM floor attaches to physical presence, with identity gating only above-floor privileges.
+2. Whether the P3 evidence-threshold combinations have been made published and contestable, closing the secret-risk-score back door.
+3. Whether the isolated person with neither documents nor a web-of-trust (P2's named exclusion risk) has been given a real path beyond the P7 hard cases.
+4. Whether the §Y5 upward-amendment path is being used to lift the floor above bare-emergency level as capacity grows (§S8-X2 monitor).
+5. Whether the AZ session-linkage prohibition has been *demonstrated in implementation* and the INV-LAUNCH-1 TSP-assignment gate met, before any claim of operational pseudonymous access.
+6. Whether the Y reserves (FC-YT2) and failure threshold (FC-YT1) have cleared their pre-launch gates and whether CSM × population is actually resourced before scale.
+7. Whether `docs/constitution/SPECIFICATIONS.md` (flagged since Session 5) has been reviewed under the rule-file trigger.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–8)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -804,5 +912,8 @@ The work remaining is operational. Whether the patch produces good fruit (Matt 7
 - `docs/annexes/ANNEX_AX.md`
 - `docs/annexes/ANNEX_AY.md`
 - `reports/christ-centered-session7-review_20260520_155148.md` (Session 7 diagnostic)
+- `docs/annexes/ANNEX_P.md` (Session 8 — proof-of-personhood, identity red lines)
+- `docs/annexes/ANNEX_Y.md` (Session 8 — Constitutional Survival Minimum)
+- `docs/annexes/ANNEX_AZ.md` (Session 8 — Tier 0 pseudonymous token mechanism)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
