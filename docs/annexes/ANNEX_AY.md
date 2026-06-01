@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | P-055; Annex AX (confidential enrollment — closes safety-shielded delivery gap); Annex AW (whistleblower protection); Annex AK (identity error doctrine); Annex I (residency and onboarding); Article IV (Essential Access guarantee) |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Name the populations for whom the constitutional guarantee of Essential Access exists but operational delivery does not yet — and govern the gap until delivery is real, not just promised. |
-> | **Who it protects** | Incarcerated people, undocumented people in non-consenting jurisdictions, people who cannot use digital interfaces, people in communities that refuse enrollment, minors with disrupted guardianship, and anyone for whom the guarantee is constitutionally real but operationally hollow. |
-> | **Failure risk** | Delivery gap laundering: the constitutional guarantee is cited as evidence of protection while populations without functioning delivery paths remain invisible in the record — the gap between commitment and reality is never formally acknowledged or governed. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | P-055; Annex AX (confidential enrollment — closes safety-shielded delivery gap); Annex AW (whistleblower protection); Annex AK (identity error doctrine); Annex I (residency and onboarding); Article IV (Essential Access guarantee) |
-
 > **Provenance:** Implements [P-055 — Delivery Sufficiency Standard] · Addresses the gap between the constitutional guarantee of Essential Access and the operational reality that some populations cannot currently receive it · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-055
@@ -49,9 +40,19 @@ A constitutional guarantee of Essential Access is operationally satisfied for a 
 
 3. **The delivery path is monitored:** the system tracks whether people in the population are actually receiving Essential Access, at what rate, and with what gaps. Monitoring uses privacy-preserving methods that do not require individual-level tracking of the population.
 
-4. **The delivery path has a responsible party:** there is a named institutional actor accountable for maintaining the delivery path and reporting on its performance quarterly.
+4. **The delivery path has a responsible party:** there is a named institutional actor accountable for maintaining the delivery path and reporting on its performance quarterly. The responsible party must meet the independence and capacity standard in AY1.1; a named party who is subordinate to the bodies creating the delivery gap, or who lacks the means to act, converts the Register from accountability into performance.
 
 Until all four conditions are met for a population, that population appears in the Delivery Sufficiency Register as an open commitment.
+
+### AY1.1 — Responsible-party independence and capacity standard
+
+A named responsible party satisfies the accountability condition only when both of the following hold:
+
+1. **Structural independence:** the responsible party is structurally independent of the bodies that create or benefit from the delivery gap. A party that reports to, is funded at the discretion of, or can be removed by an entity responsible for the gap does not satisfy this standard, because such a party cannot be expected to report failure against its own principals.
+
+2. **Adequate capacity:** the responsible party has, or is furnished with, the authority, staffing, and resources necessary to maintain the delivery path and to act when delivery fails. A party that is named but starved of the means to act is accountable in name only.
+
+The Federated Ombuds annual review under AY2.3 verifies both independence and capacity for each named responsible party. A responsible party that fails either test is escalated to constitutional review, and the population it serves remains an open commitment on the Register until a party meeting this standard is named.
 
 ---
 
@@ -92,7 +93,7 @@ The following populations are entered in the Register at founding. Responsible p
 
 ### AY2.3 — Register publication
 
-The Register is published as part of the Article VII public dashboards. It is updated quarterly. The Federated Ombuds reviews the Register annually and may escalate any row to constitutional review if the timeline has been missed by more than 12 months without a documented explanation.
+The Register is published as part of the Article VII public dashboards. It is updated quarterly. The Federated Ombuds reviews the Register annually and may escalate any row to constitutional review if the timeline has been missed by more than 12 months without a documented explanation. The annual review also verifies, for each named responsible party, both the structural independence and the capacity required by AY1.1; a party failing either test is escalated to constitutional review and the affected row remains an open commitment until a party meeting the AY1.1 standard is named.
 
 ### AY2.4 — Removal from Register
 
@@ -122,6 +123,14 @@ Each participating jurisdiction must publish a quarterly accounting showing:
 ### AY3.2 — Intermediary organizations
 
 Cross-boundary delivery to non-consenting communities must flow through intermediary organizations trusted by those communities (humanitarian agencies, religious organizations, mutual aid networks) rather than directly from system infrastructure, where direct delivery is refused. The system does not require a community to enroll in order to receive Essential Access through a trusted intermediary.
+
+Trust is established by the community, not asserted on its behalf. An intermediary is designated "trusted" only through one of the following:
+
+1. **Direct community consent:** the community itself consents to the intermediary, through whatever process that community recognizes as legitimate.
+2. **Representative authorization:** a representative body of the community, accountable to that community, authorizes the intermediary.
+3. **Community-accountable certification:** an independent auditor certifies the intermediary, where that auditor is accountable to the community rather than to the certifying authority, the system, or any state.
+
+An intermediary may never be designated "trusted" by unilateral system or state designation. Where none of these consent paths is available, delivery proceeds only through whatever channel the community has itself indicated it accepts, and the gap is recorded on the Register rather than papered over by an imposed intermediary.
 
 ### AY3.3 — No enrollment coercion
 

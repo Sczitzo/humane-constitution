@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | Retaliation risk (Priya vignette — Fairness Vignette Library); P-053; Annex AI (Federated Ombuds); Article VII (community alert pathway) |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Protect people who report wrongdoing through the community alert or Service Record audit pathways from retaliation by the very administrators they reported — specifically the window between filing a report and the Ombuds issuing a finding. |
-> | **Who it protects** | Anyone who names a corrupt or negligent administrator; the integrity of the community alert and audit mechanisms, which fail if reporters face immediate retaliation. |
-> | **Failure risk** | Administrative retaliation: a named respondent uses remaining record-write access to downgrade the reporter's Service Record, revoke a civic role, or flag contributions "under review" before any investigation concludes — chilling future reporting. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | Retaliation risk (Priya vignette — Fairness Vignette Library); P-053; Annex AI (Federated Ombuds); Article VII (community alert pathway) |
-
 > **Provenance:** Implements [P-053 — Whistleblower Protection and Anti-Retaliation Protocol] · Addresses retaliation risk against community alert reporters and Service Record audit requesters · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-053
@@ -92,6 +83,17 @@ If the Federated Ombuds finds that a retaliatory modification was made:
 3. The finding is published in the Article VII integrity dashboard.
 4. The respondent's administrative access is reviewed for permanent restriction.
 
+### AW2.5 — Ombuds as named respondent
+
+The protections in AW2.1–AW2.4 depend on the Federated Ombuds performing the alerting, finding, and restoration functions. When the Federated Ombuds itself — or any sub-node, panel, or officer of it — is a named respondent in a protected report, the Ombuds is structurally disqualified from acting on that report, and the alerting, finding, restoration, and "under review" oversight functions transfer to a substitute authority composed so that no part of it answers to the named respondent:
+
+1. A Tier 1-adjacent constitutional authority convenes the substitute process and assumes the routing obligations that AW2.1–AW2.4 otherwise assign to the Federated Ombuds.
+2. The finding on retaliation and on the original report is made by a Constitutional Review Panel bench under Annex H, seated by H-2 supermajority and excluding any member affiliated with the named Ombuds node.
+3. A lot-drawn citizen oversight cohort, selected through the sortition process governing independent panels (Annex L / Annex S), observes the substitute process, holds access to the same evidence as the bench, and may publish a dissent in the Article VII integrity dashboard.
+4. The administrative freeze under AW2.1 takes effect immediately on filing, before the substitute authority convenes, so that no protection lapses during the handoff.
+
+The reporter's protection does not collapse, narrow, or pause because the named respondent is the body that ordinarily administers it. Substitution is automatic on the naming of the Ombuds, not discretionary.
+
 ---
 
 ## AW3 — Limits and Safeguards
@@ -99,6 +101,8 @@ If the Federated Ombuds finds that a retaliatory modification was made:
 ### AW3.1 — Not a shield from legitimate review
 
 Reporter protection does not prevent legitimate independent review of the reporter's records. A finding that the reporter's own Service Record entries were fraudulent is a valid outcome; the requirement is that the review is independent (not initiated by the named respondent) and the evidence standard is the same as for any other audit.
+
+A determination that a report was filed in bad faith is held to a published, demanding standard, so that the protections of this annex cannot be turned against a good-faith reporter who happens to be wrong. Such a determination requires clear-and-convincing evidence of **both** elements together: that the reporter knew the report was false at the time of filing, **and** that the reporter filed with malicious intent. A report that is merely mistaken, unproven, unsuccessful, or ultimately not upheld is not bad-faith reporting, and the absence of corroboration is never by itself evidence of bad faith. The determination is made by a body independent of the named respondent — and, where the Federated Ombuds is itself a named respondent, by the substitute authority under AW2.5 — and the determination is itself appealable through the same channel as the underlying finding, with the reporter's protections remaining in force until the appeal window closes.
 
 ### AW3.2 — Not a shield from criminal accountability
 

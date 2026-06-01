@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | T-009; TR-07 (Contribution fraud / attestation rings); T-018 (PCRP False-Trigger Exhaustion); P-024; Annex AF (grace exploitation); Annex AI (Federated Ombuds); FC-080, FC-081, FC-082 |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Add skin-in-the-game to attestation: attestors place a portion of their own civic balance at risk when they vouch for others, so the cost of a false attestation is paid before detection rather than only after. |
-> | **Who it protects** | People whose access to Service Record credits, Protected Pauses, and civic roles depends on honest attestation from their networks; also the system's integrity against coordinated attestation rings. |
-> | **Failure risk** | Costless false attestation: without stake, attestors have no reason to refuse a favor or reciprocal arrangement before they are caught — and social reputation penalties are slow, socially mediated, and absorbable by dense networks. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | T-009; TR-07 (Contribution fraud / attestation rings); T-018 (PCRP False-Trigger Exhaustion); P-024; Annex AF (grace exploitation); Annex AI (Federated Ombuds); FC-080, FC-081, FC-082 |
-
 > **Provenance:** Implements [P-024 — Attestation-at-Risk Stake Mechanism] · Addresses T-009, TR-07, and T-018 · Status: **ACTIVE**
 
 **Status: ACTIVE — founding commitments bound (FC-080, FC-081, FC-082) — Proposal 9 close-out, 2026-04-18**

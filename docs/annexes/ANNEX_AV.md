@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | T-016 (FAP capture); INV-007 (single point of failure); P-034; Annex AH (oppose-coalition); Annex AI (Federated Ombuds); Annex AM (CIP) |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Require that any proposal touching a Tier 1 invariant must carry a cryptographic attestation from a structurally independent adversarial panel member before it can be admitted for review — eliminating the single point of failure where one captured reviewer could admit any invariant-breaking change. |
-> | **Who it protects** | Everyone whose rights depend on Tier 1 invariants remaining intact; the constitutional architecture itself against insider bypass. |
-> | **Failure risk** | FAP capture (T-016): a single captured FAP reviewer admits a Tier-1-touching proposal without the required independent check, voiding all seven invariants simultaneously through a single procedural failure. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | T-016 (FAP capture); INV-007 (single point of failure); P-034; Annex AH (oppose-coalition); Annex AI (Federated Ombuds); Annex AM (CIP) |
-
 > **Provenance:** Implements [P-034 — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement] · Addresses T-016 and INV-007 · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-034

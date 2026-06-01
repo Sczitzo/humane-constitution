@@ -9,15 +9,6 @@
 > | **Evidence status** | Designed |
 > | **Linked risks** | T-025; P-023; Annex AK (identity AED — parallel parameter-commitment pattern); Annex AJ (above-ledger bypass); Annex AL (P-017 oracle-independence standards); FC-160 through FC-184 |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Specify the numerical thresholds, deployment windows, force majeure caps, and inspector pool rules that make the contract-commitment architecture for long-horizon infrastructure projects enforceable in practice. |
-> | **Who it protects** | Communities depending on infrastructure delivery (housing, healthcare, utilities); taxpayers whose capital is escrowed for projects; the public whose accountability depends on verifiable milestone completion. |
-> | **Failure risk** | Parameter capture: loose thresholds recreate the investment exemption problem P-023 was designed to close — contractors fragment milestones, over-invoke force majeure, or influence an under-sized inspector pool to avoid genuine verification. |
-> | **Evidence status** | Designed |
-> | **Linked risks** | T-025; P-023; Annex AK (identity AED — parallel parameter-commitment pattern); Annex AJ (above-ledger bypass); Annex AL (P-017 oracle-independence standards); FC-160 through FC-184 |
-
 > **Provenance:** Implements [P-023 — Contract-Commitment Architecture] threshold and governance parameters · Addresses T-025 · Status: **ACTIVE**
 
 **Tier 2 founding commitment — required before deployment · Governed as P-004 protected specification**

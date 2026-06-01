@@ -9,15 +9,6 @@
 > | **Evidence status** | Designed |
 > | **Linked risks** | T-003 (external dependency capture); T-005 (supply-shock coercion); PRD-008 (import-leverage); Annex Y (CSM floor); Annex AI (Federated Ombuds); Conglomerate Transition Dossier |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Close the four trade-architecture gaps left by the constitution's two-sentence treatment: define strategic floors below which import dependency is not permitted, export caps that activate during scarcity, mandatory capital conversion rules, and a graduated reciprocity response to extractive counterparties. |
-> | **Who it protects** | Everyone whose Essential Access depends on supply chains that a foreign actor could weaponize; domestic producers undercut by extraction-based trade practices; populations in countries the protocol does not control but whose food or medicine supply is at stake. |
-> | **Failure risk** | Dependency capture (T-003): a single foreign supplier controls a survival-critical category and uses that control as coercion. Export-induced shortage: domestic essentials drain outward during global scarcity. Capital-inflow arbitrage recreates accumulation dynamics from outside the system. Reciprocity void leaves the protocol defenseless against extractive counterparties. |
-> | **Evidence status** | Designed |
-> | **Linked risks** | T-003 (external dependency capture); T-005 (supply-shock coercion); PRD-008 (import-leverage); Annex Y (CSM floor); Annex AI (Federated Ombuds); Conglomerate Transition Dossier |
-
 > **Provenance:** Implements external trade architecture for strategic floors, export caps, capital conversion, and reciprocity membrane governance · Addresses external dependency capture, supply-shock coercion, and PRD-008 import-leverage risk · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** High

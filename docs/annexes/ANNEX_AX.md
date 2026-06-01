@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | P-054; Annex AK (identity asymmetric error doctrine); Annex AI (Federated Ombuds sealed-record access); Annex AY (delivery sufficiency register); Annex I (residency and onboarding) |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Provide a safe enrollment pathway for people whose standard identity disclosure creates a documented risk of violence or persecution — ensuring the system's identity architecture does not become an instrument of harm to the people it most needs to protect. |
-> | **Who it protects** | Domestic violence survivors, trafficking victims, people fleeing persecution, and anyone for whom a traceable identity record creates a documented safety threat. |
-> | **Failure risk** | Safety-identity capture: the identity wallet becomes a tracking vector for abusers or traffickers; sealed records are accessed through administrative channels by the very actors the person is fleeing; emergency enrollment is used to deny access to those who cannot produce immediate documentation. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | P-054; Annex AK (identity asymmetric error doctrine); Annex AI (Federated Ombuds sealed-record access); Annex AY (delivery sufficiency register); Annex I (residency and onboarding) |
-
 > **Provenance:** Implements [P-054 — Confidential Enrollment and Safety-Identity Protocol] · Addresses identity-verification gaps for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates documented risk · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** Critical | **Patch:** P-054
@@ -65,6 +56,34 @@ Under safety-shielded enrollment:
 4. The enrollment officer records only: wallet ID, enrollment date, safety-documentation category (not the specific document), and the identity of the certifying organization.
 5. Essential Access is activated immediately.
 
+#### AX2.2.1 — Enrollment officer confidentiality
+
+The enrollment officer sees the legal identity of the enrolled person and is bound by the same non-disclosure obligations that attach to the sealed identity record. An enrollment officer may not disclose, confirm, or deny an enrolled person's legal identity, location, or safety-shielded status to any actor outside the sealed-record access process (§AX3). This obligation survives the officer's separation from their role and is enforceable through the same accountability process that governs sealed-record breach.
+
+If an enrollment officer is compelled — by subpoena, court order, or state or administrative pressure — to disclose any information about an enrolled person, the officer must:
+
+1. Decline to disclose pending review, treating the demand as a request to access a sealed record under §AX3.2 rather than a matter within the officer's discretion.
+2. Notify the Federated Ombuds without delay, so that the Ombuds may intervene under §AX3.4.
+3. Notify the enrolled person, on the same terms and timeline as a sealed-record access request under §AX3.3.
+
+An enrollment officer who discloses under compulsion without first invoking this process commits a sealed-record breach.
+
+#### AX2.2.2 — Enrollment record storage
+
+The minimal enrollment record (wallet ID, enrollment date, safety-documentation category, and certifying organization) itself confirms a person's safety-shielded status and is therefore treated as sensitive. It is held under the same non-disclosure and access protections as the sealed identity record (§AX3): it is stored in cryptographically protected form, segregated from the administrator-visible database, and not linkable to any location field. Access to the enrollment record is governed by §AX3.1 and §AX3.2; any access request triggers notification under §AX3.3. The record is retained only for as long as the person holds safety-shielded status and for a defined wind-down period after de-enrollment, after which it is destroyed; the safety-documentation category is the most specific document information ever retained, and the underlying safety document is never stored.
+
+#### AX2.2.3 — Trusted community organization certification and audit
+
+A trusted community organization with enrollment authority gains access to the legal identity of the most vulnerable enrollees. A trafficker, an abuser, or a hostile administration can attempt to capture such an organization, pose as one, or stand one up for the purpose of harvesting identities. Enrollment authority is therefore granted only under a certification-and-audit regime:
+
+1. **Certification standard.** An organization is granted enrollment authority only on meeting a published certification standard: a verifiable institutional track record of serving the protected populations; a named, accountable governance body; demonstrated separation from any actor that could benefit from disclosure; staff bound by the confidentiality obligations of §AX2.2.1; and technical controls sufficient to hold enrollment records under §AX2.2.2.
+
+2. **Independence and audit.** Certification is granted and reviewed by an independent body answerable to the Federated Ombuds, not by local administration. Each certified organization is audited at recurring intervals and on any credible signal of capture or coercion. Audits test for conflicts of interest, undisclosed control, and disclosure leakage.
+
+3. **Revocation.** On any credible sign that an organization has been captured, coerced, or is controlled by or porous to an actor the enrolled persons are fleeing, enrollment authority is suspended immediately and the organization's active enrollment records are protected under §AX3. Revocation does not invalidate the enrollment or Essential Access of persons enrolled through that organization; their records are migrated under sealed-record protections, and affected persons are notified under §AX3.3.
+
+4. **No premature claim of protection.** No public claim that this protocol provides operational protection for trafficking victims, or for any other protected population, may be made until the certification-and-audit regime in this section is operational. Until then, the protection is **Designed**, not operational, and must be described as such.
+
 ### AX2.3 — Duration and renewal
 
 Safety-shielded enrollment is valid for 24 months. Renewal requires re-verification of the safety situation through a certified organization. A person may remain in safety-shielded status indefinitely if re-verification confirms the safety situation persists. There is no cap on the number of renewals.
@@ -104,6 +123,16 @@ Sealed identity records may be accessed only by:
 ### AX3.3 — Notification on access request
 
 Any request to access a sealed record — even an unsuccessful one — must be logged and a notification sent to the enrolled person within 72 hours. The notification must identify the requester category (law enforcement, administrator, other) without identifying the specific requester if the identity would create a safety risk.
+
+### AX3.4 — Court-order notification and amicus review
+
+Any court order seeking access to sealed AX records — including the sealed identity record and the enrollment record under §AX2.2.2 — triggers a Federated Ombuds notification and amicus-review pathway before any seal is broken. On receipt of such an order:
+
+1. The Federated Ombuds is notified before disclosure, and the seal is not broken until the Ombuds has had a defined opportunity to respond.
+2. The Ombuds may intervene and is empowered to appear before the court as amicus.
+3. The Ombuds is empowered to raise the §AX3.2 exclusions before the court — in particular that sealed records may not be accessed for immigration enforcement or administrative convenience — so that these limits are argued before, not after, the seal is broken.
+
+This pathway applies to every court order seeking sealed AX records, in every jurisdiction, so that the protection holds even where local courts are politically hostile to the protected populations. Where giving the Ombuds an opportunity to respond is itself impossible without endangering the enrolled person, the disclosure prohibitions of §AX3.1 and the immigration-enforcement exclusion of §AX3.2 remain controlling.
 
 ---
 
