@@ -1559,7 +1559,132 @@ This session turns to how the system measures reality honestly (M), how it keeps
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–13)
+## Session 14 Christ-Centered Evaluation — Self-Examination and Accountable Governance
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_A — Adversarial Test Suite; ANNEX_AG — Formal Acceptance Process Integrity; ANNEX_AD — Narrative Attack Surface; ANNEX_AC — Governance Throughput, Measurement Lag, and Elite Formation
+
+This session turns to how the system examines itself (A), vets its own changes before trusting them (AG), tells the truth about its failures (AD), and keeps its governance timely and its oversight open rather than captured by a credentialed elite (AC). The governing teachings are honest self-examination ("examine yourselves," 2 Cor 13:5; "prove all things," 1 Thess 5:21), genuinely independent witnesses (Deut 19:15), walking in the light (John 3:20–21; Eph 5:11–13), and servant-not-lording authority with the door of knowledge held open (Mark 10:42–45; Luke 11:52). One pattern recurs across all four — the appearance of diligence without its substance (Matt 23:27, the whitewashed tomb).
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX A — Adversarial Test Suite
+
+**Christ-centered alignment.** §A1's standing red-team discipline — four-axis scoring, tabletop before automation, invariants defined *first* (no survival denial, no rights denial via Voice/Service Record/Flow) — is institutionalized self-examination: "examine yourselves, whether ye be in the faith; prove your own selves" (2 Cor 13:5), "prove all things; hold fast that which is good" (1 Thess 5:21), and the builder who tests the tower's strength before trusting it (Luke 14:28). Subordinating the test to a fixed standard of protecting the least, not the system's convenience, is Matthew 25:35–40. The §A2 scenarios each target the strong's exploitation of the weak — coercion of dependents and caregivers, hoarding essentials in scarcity, civic capture by "a small class" — the prudent man who "looketh well to his going" rather than the simple who "believeth every word" (Prov 14:15). §A3's "publicly logged vulnerabilities, mandatory post-mortems, and upgrade paths that cannot be blocked by entrenched beneficiaries" aims to keep the discipline corrigible (Prov 28:13; Matt 18:15–20).
+
+**Babel-risk warning.** The central weakness is test-as-theater. §A3 says the protocol "supports rapid patching" with "mandatory post-mortems" — but nowhere does it *bind* a discovered failure to a fix on a deadline that blocks scale-up. A post-mortem can be filed while the vulnerability persists: the builder who tests the tower but builds anyway has only added a ceremony (Luke 14:28–30; Matt 7:21 — "not every one that saith… but he that doeth"). Second: §A1/§A2 scenarios are authored by the same protocol they test, with no requirement of external/adversarial authorship or rotation — a self-graded exam tends toward the Pharisee's self-justifying prayer (Luke 18:11). Third: the suite is framed as "high-probability attacks" but does not admit non-exhaustiveness and budget for unknown-unknowns.
+
+**Human-dignity test.** Strong. §A2 refuses to reduce persons to compliance — enforcement must be "targeted," protect "innocents" and "dependents," avoid "chilling legitimate participation," and recovery must avoid "surveillance overreach." One caution: the heavy reliance on anomaly detection and collusion-graph analytics carries a surveillance load the annex names but does not bound with a privacy invariant.
+
+**Revision proposal.** (1) Should-fix: add a true forced-remediation gate — any vulnerability scored above a defined impact threshold becomes a *blocking gate*: scale-up / pilot-to-production promotion is barred until the fix is verified, not merely until a post-mortem is filed (cross-cutting — see §S14-X1). (2) Should-fix: require externally-authored adversarial scenarios and rotating red-teamers, so the system is not solely its own examiner (cross-cutting — see §S14-X2). (3) Should-fix: add a privacy invariant in §A1 bounding the surveillance footprint of detection tooling, parallel to the survival-floor invariant. (4) Monitor: a non-exhaustiveness clause requiring periodic scenario refresh.
+
+**Fruit test.** (i) A living discipline that surfaces coercion and capture risks and protects dependents; (ii) discovered high-impact vulnerabilities actually block scale-up until fixed, not just documented; (iii) external red-teamers find what insiders cannot; (iv) detection tooling bounded by a privacy invariant.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest self-examination and testing before trusting (2 Cor 13:5; 1 Thess 5:21; Luke 14:28; Prov 14:15).
+- *Theological inference:* that forced remediation (a blocking gate) is morally required, not optional, follows from counting the cost *and acting on it*.
+- *Prudential political judgment:* the four-axis scoring; the scenario categories; the patch levers.
+- *Unresolved uncertainty:* whether algorithmic detection at scale can protect the weak without becoming a surveillance instrument that diminishes dignity.
+
+**Executive theological verdict: 7.5 / 10.** Biblically well-grounded as institutionalized self-examination protecting the vulnerable, but it stops at the threshold of its own deepest requirement — it tests for failure without textually forcing the fix, leaving the box-ticking door open. *(Highest-leverage should-fixes in the cluster; closing them lifts it to 9.)*
+
+---
+
+### ANNEX AG — Formal Acceptance Process Integrity
+
+**Christ-centered alignment.** §AG1's anti-cherry-pick rule (a published representativeness assessment and a second *stress-tested*, below-median region before ACTIVE status) is the prudent who considers his steps rather than believing the flattering report (Prov 14:15), and a refusal to bear false witness about readiness (Ex 20:16). §AG3's auditor independence is the sharpest, most faithful clause: the 4-year no-affiliation bar, domain diversity, and an *adversarial member* "who has professionally argued against similar mechanisms" concede that fellow-believers in a design's premises are not independent witnesses — genuine, not nominal, corroboration (Deut 19:15; 1 Thess 5:21). §AG4's anti-urgency-bypass (forbidding emergency invocation to push a PROPOSED patch past the threshold) resists the rushed verdict — "doth our law judge a man before it hear him?" (John 7:51) — and the *maximum*-latency bounds rightly recognize that infinite delay is itself a bypass tool. §AG7's concentration monitor, deliberately independent of the Ombuds "because the Ombuds is itself a sign-off authority," refuses to let the watchman watch himself. And the survival-floor bridge maintains Essential Access throughout any review (Matt 25:35–40).
+
+**Babel-risk warning.** The integrity is real, but capture is *relocated*, not eliminated. §AG3 defines the *property* of independence but names no body that verifies "demonstrated adversarial professional background" — a cluster controlling auditor *certification* can supply nominally-adversarial-but-tame auditors: a whitewashed tomb, rigorous exterior, captured interior (Matt 23:27). Second: the urgency-class *classifier* is unspecified, so whoever defines "urgent" inherits the bypass power §AG4 tried to remove. Third: the §AG6 two-authority micro-patch path is exactly where a determined cluster would route a contested patch dressed as a "circular dependency."
+
+**Human-dignity test.** Passes well. The survival-floor bridge refuses to let procedural disputes starve real people; §AG1's representativeness demographic test guards against piloting only on convenient populations and stress-testing on the harder ones — persons are not reduced to throughput data.
+
+**Revision proposal.** (1) Should-fix: name the auditor-qualification authority and require it to be subject to §AG7 concentration controls and independent of the design team, so §AG3's independence is verifiable, not merely asserted (cross-cutting — see §S14-X1). (2) Should-fix: require urgency-class assignment to be published with written rationale at intake and challengeable, with mis-classification counting toward the §AG7 concentration trigger. (3) Monitor: §AG6 micro-patch frequency as a capture signal; (4) Monitor: §AG-LATENCY E1 reduced-quorum classification clustering around the same absent authority.
+
+**Fruit test.** (i) Patches reach ACTIVE tested across favorable *and* hostile conditions; (ii) auditors are genuinely, verifiably independent — not just nominally; (iii) urgency cannot be declared to bypass vetting; (iv) the vulnerable keep their floor throughout.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not bear false witness about readiness; require genuinely independent witnesses; prove everything before trusting; do not decide before hearing (Ex 20:16; Deut 19:15; 1 Thess 5:21; John 7:51).
+- *Theological inference:* that auditor independence must extend to *epistemic* independence (shared assumptions = co-interest).
+- *Prudential political judgment:* the 30%/±20% representativeness thresholds; the 4-year bar; the review windows.
+- *Unresolved uncertainty:* whether procedural independence survives contact with the real staffing/certification institutions.
+
+**Executive theological verdict: 8 / 10.** One of the more genuinely self-suspicious clauses in the corpus; it closes the intellectual-cousin and urgency-bypass exploits with real teeth, and loses ground only because it specifies the *properties* of independence without naming the bodies that guarantee them.
+
+---
+
+### ANNEX AD — Narrative Attack Surface
+
+**Christ-centered alignment.** §AD1's rapid-communication protocol (a 4-hour SLA with a fixed factual template — "what happened / what the system did / current access status / what to expect," jargon forbidden) enacts walking in the light and refusing to let deeds stay hidden (John 3:20–21; Luke 8:17) and the plainness of Matthew 5:37 — and it centers the *survival floor* explicitly, the vulnerable's access rather than the institution's reputation (Matt 25:35–40). §AD2's pre-committed failure doctrine — publishing "what will go wrong and why that is acceptable" *before* launch, with unpublished failures counted a "transparency violation" — is confession in advance rather than damage control after (Eph 5:11–13; Eph 4:25), the strongest clause in the annex. §AD3's one-page, 8th-grade, every-language rights document is "the poor have the gospel preached to them" applied to rights (Luke 4:18), guarded against marketing capture ("may not be edited for tone or brand without simultaneously updating substantive content"). §AD4's adversarial narrative simulation invites outsiders to build "the most damaging plausible false narrative" and publishes the report "in full, including what failed" — self-examination and openness to reproof (Matt 18:15–20).
+
+**Babel-risk warning.** A "communication infrastructure" with pre-authorized publication authority, a hostile-framing team, and reach-ratio metrics is structurally a propaganda apparatus — the same machinery whether it confesses or spins, and it largely grades its own truthfulness. The deepest seam: the apparatus has rich machinery for *rebutting others' falsehood* and almost none for *conceding that a critic was right*. §AD5 frames external claims as "mischaracterizations" with no symmetric path for "the criticism was accurate and we will repent." That asymmetry is the Babel seam — a structure built to be perpetually explained-as-correct (the temptation of those who manage how they are *seen*, Matt 6:1–6). And §AD4's "estimated reach ratio" optimization can quietly displace the truth-telling objective: a technically accurate response can still be selectively framed to win.
+
+**Human-dignity test.** Strongly passes. The rights document treats people as persons owed comprehensible rights in their own language; every crisis message headlines the human stake ("is the survival floor protected"), not system optics. Mild tension: §AD1's visibility threshold is keyed to population count or media coverage, so a single person harmed below the threshold generates no mandated communication (cf. Luke 15:4, the one).
+
+**Revision proposal.** (1) Should-fix: add a symmetric correction-and-concession path — when an external criticism proves accurate, the doctrine must require publishing a correction in the same channel and timeline as a failure disclosure; the apparatus must be able to say it was wrong (cross-cutting — see §S14-X2). (2) Should-fix: demote or qualify the §AD4 "reach ratio" so it can never become an optimization target above factual accuracy — accuracy is never traded for reach. (3) Monitor: the §AD3 >1%-language translation threshold excluding the smallest, most vulnerable language communities; (4) Monitor: the §AD1 visibility threshold missing harms to small numbers.
+
+**Fruit test.** (i) Less fear-driven cover-up; a public trained to expect honest failure reports; (ii) the apparatus publishes corrections when critics are right, not only rebuttals when they are wrong; (iii) accuracy never sacrificed to reach; (iv) the smallest language communities still understand their rights.
+
+**Epistemic categorization:**
+- *Clear biblical command:* tell the truth, do not hide deeds, let yes be yes, give truthful witness, be open to reproof (John 3:20–21; Luke 8:17; Matt 5:37; Eph 4:25; Prov 11:14).
+- *Theological inference:* that pre-committed, plain-language, multilingual disclosure is a faithful institutional embodiment of those commands.
+- *Prudential political judgment:* the 4-hour window; the population thresholds; the reach-ratio metric; the quarterly registry.
+- *Unresolved uncertainty:* whether a truth-telling apparatus at scale can durably resist becoming a perception-management one.
+
+**Executive theological verdict: 8.5 / 10.** Among the most Christ-consonant annexes — structurally biased toward confession over concealment; held back only by the absence of a symmetric "the critic was right, and we repent" path and a reach metric that could tempt spin.
+
+---
+
+### ANNEX AC — Governance Throughput, Measurement Lag, and Elite Formation
+
+**Christ-centered alignment.** §AC1.2's Minimum Operational Throughput Floor (the highest-priority decisions made each quarter "regardless of pending constitutional challenges") and §AC1.1's rule that no operational item may displace a constitutional one resist the deferral that withholds timely good — "say not… Go, and come again, and to morrow I will give" (Prov 3:27–28) — and the persistent widow's demand that justice not be endlessly put off (Luke 18:1–8). §AC1.5's emergency authority requires joint action, forbids self-extension, and may not touch the survival floor — a structural refusal of lording-over (Mark 10:42–45; Matt 23:6–11). §AC3 is the densest Christ-aligned material: sector ceilings, an epistemic-diversity floor requiring ≥30% from informal/care/non-institutional categories, and especially §AC3.6 — qualification-standard revision bodies must seat ≥40% of people who *would have been disqualified under the prior standard* — directly answering the lawyers who "have taken away the key of knowledge" (Luke 11:52). The §AC3.1 Legibility Gap Audit reaches toward the outcast contributor (Matt 25:40).
+
+**Babel-risk warning.** Two seams. First, §AC3's ceilings cap *observable* institutional co-service ("not… inferred social relationships") — a credentialed class sharing values, vocabulary, and tacit deference but not employer-type can satisfy every numeric ceiling while functioning as a closed guild: the tower rebuilt with diverse passports but one tongue (Gen 11). The annex slows the capture it cannot, by labels alone, prevent — and honestly admits as much. Second, triage above the survival floor (§AC1.4/§AC2.1 impact × urgency × reversibility) weights *no* preference for whose dignity is at stake; a diffuse harm to many poor people can score below a sharp, urgent, reversible institutional matter. The floor is protected absolutely; above it there is no explicit least-of-these preference (Luke 4:18).
+
+**Human-dignity test.** Mostly passes. The survival floor is non-reducible; informal/care/ecological contribution is treated as real worth; §AC3.6 insists the excluded judge the standards that excluded them — dignity restored to those prior systems made illegible. The reduction risk is at the margin: people appear as priority *scores* and category *approval rates*, and above-baseline access for a whole category can be cut by formula.
+
+**Revision proposal.** (1) Should-fix: add a least-of-these tiebreaker to §AC1.4/§AC2.1 — where scores are within a band, the proposal benefiting the more vulnerable or worse-served population (per §AC3.1 legibility data) ranks higher, making Luke 4:18 operative in triage rather than implicit (cross-cutting — see §S14-X3). (2) Should-fix: add an epistemic-homogeneity check to §AC3 that does not depend solely on institutional-origin labels — e.g. a periodic external red-team of audit-pool reasoning diversity — to address the "diverse passports, one tongue" gap (cross-cutting — see §S14-X1). (3) Monitor: the §AC3.7 30-day dashboard lag vs. capture-detection speed; (4) Monitor: PCRP false-trigger rate by region as a poverty-harm indicator.
+
+**Fruit test.** (i) Decisions made on time; supply shocks surfaced faster; (ii) the door of oversight held open for the informal and the outcast, who get to revise the standards that excluded them; (iii) triage that breaks ties toward the poor; (iv) an audit pool diverse in reasoning, not only in institutional label.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not lord over others, the greatest must serve; do not withhold timely good; do not shut the door of knowledge (Mark 10:42–45; Prov 3:27–28; Luke 11:46,52).
+- *Theological inference:* that percentage ceilings, cohort cooling, and epistemic-diversity floors are faithful expressions of servant-leadership and concern for the outcast.
+- *Prudential political judgment:* the 25%/35%/40% ceilings; the SLAs; the velocity-spike and legibility-gap thresholds.
+- *Unresolved uncertainty:* whether any numeric, label-based regime can stop a determined credentialed class from re-forming a closed guild.
+
+**Executive theological verdict: 8 / 10.** Structurally one of the most servant-shaped and anti-capture annexes in the set, strongest where it protects the survival floor and re-opens oversight to the excluded; it loses points because triage above the floor has no explicit preference for the poor and its anti-elite ceilings police institutional labels rather than the homogeneity that actually closes a guild.
+
+---
+
+### Session 14 Cross-Cutting Findings
+
+**§S14-X1 — Form without compulsion (should-fix).** Each annex builds a rigorous *form* and stops short of the *act* it implies: ANNEX_A tests for failure but does not force the fix (no blocking gate); ANNEX_AG defines auditor independence but names no body that certifies it; ANNEX_AC polices institutional labels but not the epistemic homogeneity that actually closes a guild. This is the whitewashed-tomb pattern — rigorous exterior, potentially hollow interior (Matt 23:27); the builder who counts the cost but builds the unsound tower anyway (Luke 14:28–30). The fix is to bind the form to the act: a blocking-gate forced-remediation in A, a named-and-constrained auditor-qualification authority in AG, and an epistemic-homogeneity check beyond labels in AC. Status: **should-fix open** (cluster-wide).
+
+**§S14-X2 — The missing confession (should-fix).** A system can be built to rebut others' falsehood and never able to confess its own fault: ANNEX_AD has rich machinery to counter "mischaracterizations" but no symmetric path for "the criticism was accurate and we repent"; ANNEX_A grades its own exam with no external authorship. Scripture's promise is to the one who *confesses and forsakes*, not the one who is merely never proven wrong (Prov 28:13; Matt 18; 1 John 1:8–9). The fix: a symmetric correction-and-concession path in AD (when a critic is right, publish a correction on the same channel and timeline as a failure disclosure) and external/rotating authorship of A's adversarial suite. Status: **should-fix open.**
+
+**§S14-X3 — Center the least, not the metric (should-fix).** Where a reach-ratio or a priority score becomes the optimization target, the metric can quietly displace the person: ANNEX_AD's reach ratio could tempt accuracy-traded-for-reach; ANNEX_AC's above-floor triage has no preference for the poor. The fix: accuracy is never traded for reach (AD), and a least-of-these tiebreaker governs triage (AC) so Luke 4:18 is operative, not implicit. Status: **should-fix open.**
+
+---
+
+### Session 14 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** It institutionalizes honest self-examination (A), insists its witnesses be genuinely independent rather than intellectual cousins (AG), biases its public voice toward confession-in-advance over concealment (AD), and holds the door of oversight open to the outcast while keeping governance timely (AC). These are the disciplines of a community that tests itself, tells the truth, and refuses to become a closed guild.
+
+**Where the cluster carries the most Babel-risk.** One pattern above all: the appearance of diligence without its substance (§S14-X1) — a test that does not force the fix, an independence that names no certifier, a diversity measured by label not mind — together with the missing confession (§S14-X2) and the metric that can displace the person (§S14-X3). None of these is a design betrayal; each is the precise seam where rigorous machinery could become a whitewashed tomb.
+
+**Net assessment.** No must-fix blockers; the cluster scores **7.5–8.5**, and every gap is a closeable should-fix. Christ-measured, these are the corpus's instruments of self-suspicion — and their remaining discipline is to make the form bind the act: a test that blocks scale-up until the fix is verified, an independence with a named guarantor, a public voice that can confess it was wrong, and a triage that breaks ties toward the poor. Civil self-examination is not the kingdom of God; it is the steward testing his own work in the light, and it is most faithful when it not only sees its fault but is bound to correct it.
+
+**Items requiring follow-up in a future Session 15:**
+1. Whether the §S14-X1 form-binding fixes are in (A blocking-gate forced remediation; AG named/constrained auditor-qualification authority; AC epistemic-homogeneity check).
+2. Whether the §S14-X2 confession path is in (AD symmetric correction-and-concession; A external/rotating red-team authorship).
+3. Whether the §S14-X3 least-first fixes are in (AD accuracy-never-traded-for-reach; AC least-of-these triage tiebreaker).
+4. The final unevaluated annexes (T, AO, AB, AS) and the AM completion, for the closing session.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–14)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1602,5 +1727,9 @@ This session turns to how the system measures reality honestly (M), how it keeps
 - `docs/annexes/ANNEX_AL.md` (Session 13 — oracle methodology-class independence)
 - `docs/annexes/ANNEX_AE.md` (Session 13 — compound interface tests, deadlock prevention)
 - `docs/annexes/ANNEX_U.md` (Session 13 — operational bypass closure)
+- `docs/annexes/ANNEX_A.md` (Session 14 — adversarial test suite)
+- `docs/annexes/ANNEX_AG.md` (Session 14 — formal acceptance process integrity)
+- `docs/annexes/ANNEX_AD.md` (Session 14 — narrative attack surface)
+- `docs/annexes/ANNEX_AC.md` (Session 14 — governance throughput, elite formation)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
