@@ -98,6 +98,14 @@ Access is logged. Log entries include: who accessed, when, and under what author
 
 The Restricted Register Annex is maintained in a private version-controlled repository with access controls. The version history is retained in full. The repository is accessible to the constitutional review body for audit purposes. No Restricted Annex content may be stored outside the designated repository.
 
+### Dual control at initial classification
+
+The decision to restrict content at the point of creation carries the same accountability weight as later reclassification, and is governed by the same multi-party principle. No register entry, and no portion of an entry, is classified as restricted on the authority of a single custodian.
+
+The initial classification of any content as Restricted requires two independent signatures: the Threat Register Owner and a second, independent party — a Constitutional Review Panel delegate or the rolling independent consistency auditor — who jointly confirm that the content meets the operational-sensitivity criteria in Part 2 ("What the Restricted Register Annex contains") and does not withhold material that belongs in the Public Register.
+
+The second signature is recorded alongside the entry with the date and the authorizing parties. This mirrors the multi-party rule governing downward reclassification (Part 4, Restricted → Public) and upward reclassification (Part 4, Public → Restricted): restriction is never the unilateral act of the custodian at any stage, including creation. An entry created with operationally sensitive detail but lacking the second signature is treated as a Public Register entry until the dual-control requirement is satisfied.
+
 ---
 
 ## Part 3 — Consistency requirements
@@ -126,6 +134,14 @@ The Threat Register Owner commissions an independent consistency audit annually.
 4. Publishes a consistency attestation — confirming that the Public Register accurately represents what the Restricted Annex contains, without reproducing restricted content.
 
 The consistency attestation is published in the public repository alongside the Public Register. Absence of an annual attestation is itself a T-011 (Narrative) and T-007 (Definition Drift) trigger.
+
+### Restriction-ratio trend reporting
+
+A rising proportion of register entries carrying restricted content is the earliest measurable signal of drift toward secrecy, and is monitored as such.
+
+The annual consistency attestation must report the proportion of register entries that carry at least one "[Restricted Annex — see AO]" omission marker, expressed against the total number of entries, together with the trend of this proportion across prior attestations. The attestation establishes and publishes a baseline restriction ratio in its first edition and carries that baseline forward.
+
+A sustained rise above the published baseline triggers an independent review of whether the restriction criteria in Part 2 are being applied honestly — that is, whether entries are being restricted because they genuinely contain operational calibration data or because restriction is being used to reduce public visibility. The review is conducted by a party independent of the Threat Register Owner and its findings are published with the attestation. A trend that cannot be justified against the Part 2 criteria is treated as a T-007 (Definition Drift) event.
 
 ---
 

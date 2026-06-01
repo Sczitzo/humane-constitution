@@ -35,7 +35,12 @@
 ### T5. Annual compound simulation requirement
 - At least one annual public simulation must combine failures across identity, scarcity, issuance, adjudication, civic decision systems, and boundary-membrane enforcement.
 - Simulation reports must publish what failed, what required manual heroics, what rules proved ambiguous, and what remediation deadlines were imposed.
-- A system that passes only single-threat tests but fails interface tests is not scale-ready.
+- A failed compound or interface test bars scale-up. Passing single-threat tests is never sufficient: a system that fails any compound or interface test is not scale-ready, and no pilot-to-production promotion, regional expansion, or capacity increase may proceed while a failed test remains open.
+- The acceptance authority, on the joint finding of the Federated Ombuds and the Independent Identity Auditor, declares a system not scale-ready. That declaration is binding on every body authorized to approve promotion or expansion, and it stands until remediation is verified by the same authorities.
+- Each failed interface test is bound to a mandatory remediation deadline recorded in the simulation report. If the deadline lapses without verified remediation, the affected subsystem is automatically held at its current scale, and any expansion enacted after the failure is rolled back to the last configuration that passed.
+- Lifting a scale-up bar requires re-running the failed test and the full compound suite, with verified remediation evidence published before any held or rolled-back expansion may resume.
+- The named scenario library — classes A through D in T1–T4, and the drift, breach, and defection simulations in T6 — is finite and treated as a floor, never a ceiling. Each annual stress-test cycle must introduce at least one novel, previously-untested compound or interface scenario, authored to probe a seam not covered by the existing library. The novel scenario is run under the same publication and remediation rules as the named classes, and is added to the library only after it has been exercised.
+- Passing the current suite may never be claimed as proof that the system is sound. The suite establishes only that the listed seams did not fail this cycle; unlisted seams remain untested by construction, and every report must state this limitation alongside its results.
 
 ---
 

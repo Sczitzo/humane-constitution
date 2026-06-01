@@ -64,7 +64,11 @@ The **claim-size-scaled base** is the fraction of the attestor's own Voice and S
 
 Rationale: the stake ratio FC-080 = 0.20 ensures meaningful skin-in-the-game (not trivial) without destroying attestor livelihoods on single errors (not ruinous). A 20% loss on a high claim is a genuine cost; a 2% loss on a small claim is a measurable signal without being disproportionate to the stakes of the routine verification.
 
-The stake is placed against the attestor's existing balance at the time of attestation. If the attestor has insufficient balance, they cannot make the attestation. This prevents attestation by actors with no civic standing to lose.
+The stake is placed against the attestor's existing balance at the time of attestation. Where an attestor's balance is sufficient, the stake is placed in the ordinary way, ensuring those with civic standing put real standing at risk. Where an attestor's balance is insufficient for the scheduled stake, the attestor is **not** thereby barred from attesting: they are routed instead to the guaranteed no-stake or reduced-stake path of §2.6, so that lacking balance never silences a true witness.
+
+### 2.1a — Cost Relative to Means
+
+The stake base and the slashing impact in §2.4 must be calibrated **relative to the attestor's means**, not by absolute volume alone. The proportional figures in §2.1 set the maximum; for low-balance attestors the realized stake and any slash are scaled down so that an honest attestation never costs the poor a larger fraction of their subsistence balance than it costs the rich. The cost of telling the truth is measured by what it takes from the giver, not by its absolute size: a stake or slash that would consume a low-balance attestor's subsistence floor is itself a respecter-of-persons failure and is prohibited. The Service Record ledger preserves each attestor's protected subsistence balance against placement or slashing, and §7 reports slash impact as a fraction of remaining subsistence so that this calibration can be audited.
 
 ### 2.2 — Stake Release (Honest Attestations)
 
@@ -114,6 +118,24 @@ Attestors see the scheduled stake amount before submitting an attestation. The i
 - The option to decline — declining to attest is a legitimate and costless choice; no civic penalty attaches to non-participation.
 
 Declining to attest is *never* slashable. Only submitted false attestations are slashable. The purpose of the mechanism is not to punish non-participation but to require that participation reflect the attestor's actual knowledge of the subject.
+
+### 2.6 — Anti-Exclusion Floor (Operative)
+
+No subject may be rendered un-vouchable, and no person may be rendered unable to attest, solely because they or their network lack sufficient civic balance to place a stake. This floor is **operative within this annex**: it binds at the point of attestation and is not deferred to downstream implementation.
+
+To guarantee the floor, a stake-independent attestation path is always available:
+
+- **No-stake / reduced-stake community-verified path.** A low-balance or zero-balance attestor may attest through a community-verified route that requires no stake (or a reduced stake calibrated under §2.1a), with the integrity assurance carried by augmented cross-attestation and random audit rather than by balance at risk.
+- **Tier 0 safe-harbor route.** Subjects with few or no balance-holding attestors in their network (new arrivals, the isolated, the recently displaced) qualify for the Tier 0 safe-harbor path, in which standing is established through documented community verification and elevated audit instead of staked attestation.
+- **Public attestor of last resort.** Where no eligible attestor is otherwise available, a designated public attestor (an institutional or civic body staking institutional rather than personal balance) ensures that a real person is never stranded without a path to recognition.
+
+These paths carry the same legibility as staked attestation; they are not a lesser class of recognition. Exclusion of a subject because no one with sufficient balance knows them, or silencing of a true witness because they are civically poor, is an unacceptable failure mode that this section forecloses. The Article VI and Annex K multi-path verification clauses elaborate the operational detail of these routes, but the guarantee itself is binding here.
+
+### 2.7 — Restoration and Re-entry After a Non-Knowing Finding
+
+A slashing finding is a correction, not a permanent brand. An attestor found to have made an **inadvertent** or **negligent** false attestation (the non-knowing categories of §2.4) has a documented path back to full attestation standing. After such a finding, and after a defined period of honest conduct — set by analogy to the Annex AF grace mechanisms and no longer than one civic cycle of accurate, unslashed attestation — the attestor's standing is restored: reputation accrual resumes under §2.2 and any temporary limitation on their attestation rights lapses.
+
+The 2-year ring disqualification of §2.4 applies only to knowing or coordinated-ring findings and is not affected by this restoration path. For non-knowing findings, restoration is the rule: the mechanism seeks the return of the honest witness, not their permanent exclusion. Restoration is recorded in the attestor's ledger so that correction, completion, and re-entry are visible rather than the fault alone.
 
 ---
 
@@ -192,7 +214,7 @@ Reputation credit accrued via honest attestation (§2.2) is capped at a lifetime
    - FC-081 audit window length is sufficient for realistic detection latencies across attestation classes.
    Pilot findings are documented; any recommended recalibration proceeds through the Tier 2 amendment ladder.
 
-5. **Exclusion safety.** The stake mechanism excludes attestors with insufficient balance from acting as attestors. This is intentional — attestors should have civic standing to put at risk. However, for subjects who have few eligible attestors in their network (new arrivals, isolated individuals), the civic system must provide **alternative attestation paths**: institutional attestors who stake professional rather than personal balance, rotating-jury lightweight attestations for small claims, or self-declaration with augmented random audit. Exclusion of subjects because no one with sufficient balance knows them is an unacceptable failure mode. These alternative paths are specified in Article VI and Annex K multi-path verification clauses.
+5. **Exclusion safety.** The anti-exclusion floor of §2.6 is operative and binding: no attestor is barred and no subject is rendered un-vouchable for lack of balance. Where an attestor's balance is sufficient, the staked path applies; where it is not, the no-stake / reduced-stake community-verified path, the Tier 0 safe-harbor route, and the public-attestor-of-last-resort guarantee a real path to recognition. Implementation of these routes — institutional attestors who stake professional rather than personal balance, rotating-jury lightweight attestations for small claims, community-verified or self-declaration paths with augmented random audit — is detailed in the Article VI and Annex K multi-path verification clauses, but the guarantee that lacking balance never silences a true witness or strands a real person is fixed in §2.6 and does not await that detail.
 
 ---
 
@@ -211,8 +233,11 @@ Numerical changes to these commitments proceed through the Tier 2 amendment ladd
 **Annual audit.** The Enforcement Panel and the Ombuds produce a joint Annual Attestation Audit (parallel to the Annex AJ §4.5 Annual Deterrence Audit) reporting:
 - Total attestations placed; total stake volume; aggregate balance at risk at year-end.
 - Slashing events by finding category; realized slash rate.
+- **Slash impact as a fraction of each attestor's remaining subsistence balance**, not only as absolute volume — reported across the attestor-wealth distribution so that the proportional cost borne by low-balance attestors is visible.
+- **Equity early-warning.** Any poverty-correlated trend — exclusion, decline, or slash impact falling disproportionately on low-balance attestors or on subjects whose networks are poor — is flagged as an early-warning that the mechanism is becoming a respecter of persons, and triggers review of the §2.1a calibration and the §2.6 floor.
 - Cohort-level density findings (cohorts above 0.40, certified vs. slashed).
-- Attestor exclusion rate (subjects who could not obtain attestation through insufficient balance of their network); trend line over time.
+- Attestor exclusion rate (subjects who could not obtain staked attestation through insufficient balance of their network, and the rate at which they were routed to and recognized through the §2.6 alternative paths); trend line over time.
+- Restoration and re-entry events under §2.7 (non-knowing findings restored to standing); trend line over time.
 - Recommendations for calibration of FC-080, FC-081, or FC-082 if empirical behavior deviates from design assumptions.
 
 ---

@@ -1711,7 +1711,7 @@ This closing evaluation session covers how the system tests itself at the seams 
 - *Prudential political judgment:* the scenario taxonomy; the twenty-change drift sim; the annual cadence.
 - *Unresolved uncertainty:* whether finite named scenarios cover the true interface space; whether "publish remediation deadlines" without an enforcement actor forces remediation.
 
-**Executive theological verdict: 8 / 10.** Theologically among the most Christ-aligned annexes in posture (anti-Babel, anti-presumption, vulnerable-protecting), held back only because its remediation teeth are implied and published rather than operatively gated.
+**Executive theological verdict: 9 / 10.** Theologically among the most Christ-aligned annexes in posture (anti-Babel, anti-presumption, vulnerable-protecting) — and its remediation teeth are now operative, not merely published: §T5 makes a failed interface test bar scale-up (named declarer — the acceptance authority on the joint finding of the Ombuds and Identity Auditor — with a mandatory remediation deadline and auto-hold/rollback on lapse), and each annual cycle must introduce a novel previously-untested scenario with no "passing proves safe" claim permitted. The annex now refuses to occupy a house that failed the test. The residual cap is unproven status.
 
 ---
 
@@ -1733,7 +1733,7 @@ This closing evaluation session covers how the system tests itself at the seams 
 - *Prudential political judgment:* the custody design; the access roles; the annual audit cadence.
 - *Unresolved uncertainty:* whether internal-only oversight of content the public can never inspect is durably trustworthy under capture (the annex concedes this in §160).
 
-**Executive theological verdict: 8.5 / 10.** A theologically serious, two-sided protocol that mostly succeeds in keeping accountability in the light while denying the destroyer a weapon; its main gap is single-custodian control over the initial classification decision.
+**Executive theological verdict: 9 / 10.** A theologically serious, two-sided protocol that keeps accountability in the light while denying the destroyer a weapon — and the single-custodian gap is now closed: initial classification as Restricted requires a second independent signature (mirroring the §140/§149 multi-party rule; un-co-signed entries default to Public), and the annual attestation must report the restriction-ratio trend against a published baseline, with a sustained rise triggering independent review. No entry is restricted on one custodian's authority alone. The residual cap is unproven status.
 
 ---
 
@@ -1755,7 +1755,7 @@ This closing evaluation session covers how the system tests itself at the seams 
 - *Prudential political judgment:* the Tier-2 routing; the leakage formulas; the four-layer identity stack.
 - *Unresolved uncertainty:* whether any definitional discipline holds meaning stable against a determined supermajority; who certifies "capacity."
 
-**Executive theological verdict: 8 / 10.** Scripturally serious anti-capture and floor-protection work whose remaining gap is that it secures the *words* well while leaving the *number-certifiers and process gatekeepers* underspecified, so capture migrates from vocabulary to procedure.
+**Executive theological verdict: 9 / 10.** Scripturally serious anti-capture and floor-protection work — and it now secures the procedure as well as the words: §AB2 requires the capacity/throughput certifier behind "Scarcity" and "Capacity" to be named, oracle-independent (Annex AL/M), and independently checkable (a scarcity trigger on an uncertified number is invalid); §AB5 names the dispute-escalation gatekeeper, requires it independent of the challenged party, and logs every declined challenge publicly; §AB6 bounds "to the extent necessary" to conflict-resolution only. Capture can no longer migrate from vocabulary to procedure. The residual cap is unproven status.
 
 ---
 
@@ -1777,15 +1777,15 @@ This closing evaluation session covers how the system tests itself at the seams 
 - *Prudential political judgment:* the 20% stake ratio; the 365-day window; the 0.40 density threshold; the slash tiers.
 - *Unresolved uncertainty:* whether the alternative-path safety valve can fully neutralize the wealth-weighting, or whether stake-gated witness is inherently a respecter of persons no matter how it is patched.
 
-**Executive theological verdict: 7 / 10.** Structurally faithful to biblical false-witness and surety teaching with genuine restitution, but its central wealth-weighting of testimony leaves the poor's anti-exclusion protection a deferred promise rather than an enforced floor. *(Closing the §S15-X2 fix lifts it to 9.)*
+**Executive theological verdict: 9 / 10.** Structurally faithful to biblical false-witness and surety teaching with genuine restitution — and the wealth-weighting that priced honesty by means is now closed: §2.6 is a *binding* anti-exclusion floor (no subject un-vouchable and no person unable to attest for lack of balance, with named stake-independent paths — not deferred), §2.1a calibrates stake and slash relative to means (a widow's-mite correction, with the §7 audit reporting slash impact as a fraction of subsistence and flagging poverty-correlated exclusion as a respecter-of-persons early-warning), and §2.7 adds a restoration path after a non-knowing finding. The poor's true witness no longer costs more than the rich's. The residual cap is unproven status.
 
 ---
 
 ### Session 15 Cross-Cutting Findings
 
-**§S15-X1 — Capture migrates from the word to the gatekeeper (should-fix).** This cluster repeats the deepest pattern of the whole evaluation: each annex secures the visible thing and leaves the *operative hand* underspecified. ANNEX_T tests the seams but names no one to declare a system not scale-ready; ANNEX_AO guards disclosure but leaves initial classification to a single custodian; ANNEX_AB defends the meaning of the word but leaves the throughput-certifier and the dispute-gate unnamed. Capture does not need to repeal the rule or move the word — it only needs to own the one who certifies the number, classifies the entry, or forwards the challenge. The fix is to name and constrain each operative hand: an operative scale-readiness gate with a named declarer (T), dual-control on initial classification with a trended restriction ratio (AO), a named-and-checked capacity certifier and dispute-gate with publicly logged declined challenges (AB). Status: **should-fix open** (cluster-wide).
+**§S15-X1 — Capture migrates from the word to the gatekeeper (should-fix).** This cluster repeats the deepest pattern of the whole evaluation: each annex secures the visible thing and leaves the *operative hand* underspecified. ANNEX_T tests the seams but names no one to declare a system not scale-ready; ANNEX_AO guards disclosure but leaves initial classification to a single custodian; ANNEX_AB defends the meaning of the word but leaves the throughput-certifier and the dispute-gate unnamed. Capture does not need to repeal the rule or move the word — it only needs to own the one who certifies the number, classifies the entry, or forwards the challenge. The fix is to name and constrain each operative hand: an operative scale-readiness gate with a named declarer (T), dual-control on initial classification with a trended restriction ratio (AO), a named-and-checked capacity certifier and dispute-gate with publicly logged declined challenges (AB). Status: **addressed** — ANNEX_T §T5 now names the acceptance authority as the declarer and makes the gate binding; ANNEX_AO requires a second independent signature at initial classification and trends the restriction ratio; ANNEX_AB names the oracle-independent capacity certifier and the dispute-gate administrator and logs declined challenges. Every operative hand is now named and bound.
 
-**§S15-X2 — Do not price honesty by wealth (should-fix, AS).** ANNEX_AS makes the true witness of the poor cost more than the true witness of the rich, and defers the poor's protection to other annexes. A mechanism that prices honest testimony by means is in danger of becoming the respecter of persons that James 2:1–9 condemns — and the widow's mite (Mark 12:43–44) is the exact rebuke: God weighs the witness by what it costs the giver, not by the giver's balance. The fix must live *in this annex*: a binding floor that no one is un-vouchable for poverty, a cost-relative-to-means correction, and a restoration path. Status: **should-fix open.**
+**§S15-X2 — Do not price honesty by wealth (should-fix, AS).** ANNEX_AS makes the true witness of the poor cost more than the true witness of the rich, and defers the poor's protection to other annexes. A mechanism that prices honest testimony by means is in danger of becoming the respecter of persons that James 2:1–9 condemns — and the widow's mite (Mark 12:43–44) is the exact rebuke: God weighs the witness by what it costs the giver, not by the giver's balance. The fix must live *in this annex*: a binding floor that no one is un-vouchable for poverty, a cost-relative-to-means correction, and a restoration path. Status: **addressed** — ANNEX_AS §2.6 makes the anti-exclusion floor binding and operative here (named stake-independent paths, no longer deferred), §2.1a calibrates stake and slash relative to means with the §7 audit watching for poverty-correlated exclusion, and §2.7 adds the restoration path. The mechanism no longer prices honesty by wealth.
 
 ---
 
@@ -1795,12 +1795,23 @@ This closing evaluation session covers how the system tests itself at the seams 
 
 **Where the cluster carries the most Babel-risk.** The recurring shape, now seen for the final time: capture migrates to the unnamed operative hand (§S15-X1) — the inspector who never halts, the custodian who classifies alone, the certifier who sets the number. And the distinct, sharper risk that an anti-fraud mechanism can become a respecter of persons, pricing the poor's honest witness above the rich's (§S15-X2). Neither is a design betrayal; each is the precise seam where good machinery could fail the very people it serves.
 
-**Net assessment.** No must-fix blockers; the cluster scores **7–8.5**, and every gap is a closeable should-fix. Christ-measured, these are honest, self-suspicious, vulnerable-protecting instruments — and their remaining discipline is the one the whole evaluation has returned to again and again: name and bind the operative hand, and never let a protection mechanism become a respecter of persons. Civil testing, disclosure, definition, and attestation are not the kingdom of God; they are a steward's careful instruments, most faithful when they bind their own gatekeepers and weigh the poor's witness as heavily as the rich's.
+**Net assessment.** No must-fix blockers. With this final cluster's should-fixes now closed in the text — §S15-X1 (every operative hand named and bound) and §S15-X2 (attestation no longer prices honesty by wealth) — every annex in this cluster now scores **9 / 10**; the remaining half-point is the fruit test. Christ-measured, these are honest, self-suspicious, vulnerable-protecting instruments, and the discipline the whole evaluation has returned to again and again is now written in: name and bind the operative hand, and never let a protection mechanism become a respecter of persons. Civil testing, disclosure, definition, and attestation are not the kingdom of God; they are a steward's careful instruments, most faithful when they bind their own gatekeepers and weigh the poor's witness as heavily as the rich's.
 
 **Items requiring follow-up in a future Session:**
-1. Whether the §S15-X1 operative hands are named and bound (T scale-readiness gate; AO dual-control classification + restriction-ratio trend; AB capacity certifier + dispute-gate).
-2. Whether the §S15-X2 AS fixes are in (binding anti-exclusion floor; cost-relative-to-means correction; restoration path).
-3. The AM completion (electoral-resilience core, evaluated only at §AM8/CIP in Session 5) remains the last partial-coverage item in the corpus.
+1. Verify in pilot that the operative gates, named certifiers, and anti-exclusion floor function in practice — the fruit-test evidence toward 9.5 and Evidence-backed.
+2. The AM completion (electoral-resilience core, evaluated only at §AM8/CIP in Session 5) remains the last partial-coverage item in the corpus.
+
+---
+
+## Coverage Summary — Christ-Centered Evaluation of the Annex Corpus
+
+As of Session 15, the Christ-centered evaluation covers the full active annex set. Forty annexes have received a direct Christ-centered evaluation (Sessions 5–15), and the design should-fixes surfaced in Sessions 7–15 have been closed in the corpus text. Standing scores after hardening:
+
+- **9 / 10:** AW, AX, AY (Session 7); P, Y (Session 8); I, K, AQ, AJ, AF (Session 9); L, S, AI, Z, AP (Session 10); H, AV, N, AH (Session 11); X, V, AR, AT (Session 12); M, AL, AE, U (Session 13); A, AG, AD, AC (Session 14); T, AO, AB, AS (Session 15).
+- **8.5 / 10:** AZ (Session 8) — held below 9 not by a should-fix but because its privacy guarantee is delegated to a TSP not yet assigned (undesigned at the critical layer, a delivery matter, not text).
+- **Earlier sessions:** D / P-063 demurrage (Session 6); CASP/AT§6.6, CIP/AM§8, AED/AK (Session 5).
+
+The single recurring lesson across all fifteen sessions: no human instrument is its own final witness or its own cornerstone (1 Cor 3:11). The corpus is most faithful where it names and binds its own operative hands, confesses the limits it cannot close, weighs the poor's witness as heavily as the rich's, and remembers that civil justice — however disciplined — is a servant under God, never humanity's substitute for the Master to whom every steward finally answers. The remaining work across the whole corpus is no longer design but *fruit*: pilot evidence to move these instruments up the status ladder from Designed / Active–unproven toward Evidence-backed.
 
 ---
 
