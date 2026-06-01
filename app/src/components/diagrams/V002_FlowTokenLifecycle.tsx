@@ -6,9 +6,9 @@ import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
 
 const NODES: DiagramNode[] = [
-  { id: 'issuance',    label: 'Issuance',     definition: 'Flow is issued by protocol-authorized bodies against verified productive commitment. Not printed arbitrarily — issuance requires a corresponding contribution record.', docLink: 'ANNEX_AB.md', accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
-  { id: 'circulation', label: 'Circulation',  definition: 'Flow moves through wages, contracts, commerce, and savings. Subject to demurrage on idle balances above the personal exemption floor.', docLink: 'ANNEX_AB.md', accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
-  { id: 'demurrage',   label: 'Demurrage',    definition: 'Idle balances above the exemption floor decay at the constitutional rate (λ = 2%/yr). Decay proceeds fund the public commons rail — not extracted as profit.', docLink: 'ANNEX_AR.md', accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
+  { id: 'issuance',    label: 'Issuance',     definition: 'Flow is issued by protocol-authorized bodies against verified productive commitment. Not printed arbitrarily — issuance requires a corresponding contribution record.', docLink: 'ANNEX_X.md', accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
+  { id: 'circulation', label: 'Circulation',  definition: 'Flow moves through wages, contracts, commerce, and savings; idle Flow counts toward net worth subject to Annex D demurrage above the participation floor.', docLink: 'ANNEX_X.md', accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
+  { id: 'demurrage',   label: 'Demurrage',    definition: 'Idle Flow counts toward net worth; accumulated wealth above the participation floor carries the progressive net-worth demurrage (Annex D). Proceeds fund the public commons rail — not extracted as profit.', docLink: 'ANNEX_D.md', accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
   { id: 'commons',     label: 'Commons Rail', definition: 'Demurrage proceeds enter the public commons rail — funding Essential Access delivery, oracle infrastructure, and Federated Ombuds operations.', docLink: 'ANNEX_X.md',  accent: THEME.ea.accent,    accentBg: THEME.ea.accentBg },
 ]
 
@@ -77,7 +77,7 @@ export function V002_FlowTokenLifecycle({ onInternalLink }: DiagramProps) {
 
         {/* Edge labels */}
         <text x={302} y={55} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace">Flow tokens enter economy</text>
-        <text x={538} y={132} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace" transform="rotate(90,538,132)">idle decay</text>
+        <text x={538} y={132} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace" transform="rotate(90,538,132)">net-worth carry</text>
         <text x={302} y={208} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace">proceeds to commons</text>
 
         {/* Animated particles — blue on P1, gold on P2, green on P3 */}
@@ -98,12 +98,12 @@ export function V002_FlowTokenLifecycle({ onInternalLink }: DiagramProps) {
         {/* Boxes */}
         {box('issuance',    'ISSUANCE',    'protocol-authorized', THEME.flow.accent,  THEME.flow.fill)}
         {box('circulation', 'CIRCULATION', 'wages · contracts',   THEME.flow.accent,  '#0d1a2e')}
-        {box('demurrage',   'DEMURRAGE',   'λ = 2%/yr · idle',   THEME.voice.accent, THEME.voice.fill)}
+        {box('demurrage',   'DEMURRAGE',   'net-worth basis · Annex D', THEME.voice.accent, THEME.voice.fill)}
         {box('commons',     'COMMONS RAIL','EA · oracle · ombuds', THEME.ea.accent,   THEME.ea.fill)}
 
         {/* Footer note */}
         <text x={330} y={240} textAnchor="middle" fontSize={8.5} fill={THEME.dim} fontFamily="monospace" letterSpacing="0.04em">
-          exemption floor shields household savings from demurrage
+          participation floor (18 mo regional median) and productive-use wealth are exempt
         </text>
       </svg>
     </DiagramShell>

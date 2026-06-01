@@ -27,7 +27,7 @@
 
 ## Purpose
 
-P-023 establishes that no entity receives a demurrage exemption and that long-horizon projects are financed through contract-commitment architecture: capital held in milestone escrow (demurrage applies), released on independently verified physical deliverables. The rules are structurally sound but they depend on four numerical parameters that the design cannot determine from first principles:
+P-023 establishes that no entity receives a demurrage exemption and that long-horizon projects are financed through contract-commitment architecture: capital held in milestone escrow (the progressive net-worth demurrage in Annex D applies to escrowed balances as a component of net worth), released on independently verified physical deliverables. The rules are structurally sound but they depend on four numerical parameters that the design cannot determine from first principles:
 
 - **High-value release thresholds** — where does single-verifier oversight end and multi-verifier oversight begin?
 - **Deployment window** — how long may commissioning authorities hold idle escrowed funds before accountability triggers?
@@ -50,7 +50,7 @@ This annex specifies five things:
 4. **Inspector pool governance** — pool size floors, rotation schedule, disqualification criteria
 5. **Publication commitment** — what is reported publicly, how often, and in what form
 
-Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples retain a round-number annual demurrage illustration of **5% per year** for comparability; before activation they must be recalculated against FC-050 or its amended successor.
+Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples use a round-number **5% effective annual carrying cost** purely as an illustrative figure for comparing parameter choices; the actual carrying cost on escrowed funds is the progressive net-worth demurrage in Annex D applied to the escrow balance as a component of net worth. This annex sets no demurrage rate of its own.
 
 ---
 
@@ -126,7 +126,7 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 ### 2.2 — Demurrage Interaction Worked Examples
 
-*These examples use a 5% annual demurrage rate. Founding coalition must recalibrate if the actual rate differs.*
+*These examples use a 5% effective annual carrying cost as an illustrative figure. The operative carrying cost is the Annex D progressive net-worth demurrage applied to the escrow balance; founding coalition must recalibrate the worked figures against the applicable Annex D effective rate for the relevant net-worth bracket.*
 
 **Essential Access-essential: 5M Flow housing fund, 90-day deployment window**
 
@@ -145,15 +145,15 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 | Day 180 | ~123,300 Flow | CRP review triggered. 2.5% of fund lost |
 | Day 365 | ~250,000 Flow | 5% of fund lost if review produces no contracting |
 
-**Demurrage rate sensitivity: same 5M Flow fund, 180-day window**
+**Carrying-cost sensitivity: same 5M Flow fund, 180-day window**
 
-| Annual demurrage rate | Flow lost by day 180 | Institutional signal strength |
+| Effective annual carrying cost | Flow lost by day 180 | Institutional signal strength |
 | :--- | :--- | :--- |
 | 2% | ~49,300 Flow | Weak — <1% of fund |
 | 5% | ~123,300 Flow | Moderate — 2.5% of fund |
 | 10% | ~246,600 Flow | Strong — 4.9% of fund |
 
-**Key finding:** If the Flow demurrage rate is below approximately 3%, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. If the founding coalition sets a low demurrage rate for Flow generally, the deployment windows must be shortened to compensate, or the protocol must specify a separate, higher demurrage rate for escrowed funds.
+**Key finding:** If the effective Annex D carrying cost reaching the escrow balance is below approximately 3%, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. Where the applicable Annex D effective rate on a commissioning authority's net-worth bracket is low, the deployment windows must be shortened to compensate. This annex does not create a separate carrying cost on escrowed funds; the single instrument remains the Annex D net-worth demurrage.
 
 ### 2.3 — What CRP Review Entails
 
@@ -187,7 +187,7 @@ CRP review outcomes are published publicly within **FC-170** (reserved; recommen
 
 ### 3.2 — Worked Examples
 
-*Three projects of different durations, 5% annual demurrage rate, using the recommended anchor cap of 365 days.*
+*Three projects of different durations, 5% illustrative effective annual carrying cost (the operative cost is the Annex D net-worth demurrage on the escrow balance), using the recommended anchor cap of 365 days.*
 
 **Project A: 2-year hospital construction, 8M Flow escrowed**
 
@@ -297,7 +297,7 @@ Publication of force majeure applications and outcomes converts the certificatio
 
 To complete this annex before deployment, the founding coalition must:
 
-1. **Determine the actual Flow demurrage rate** and recalibrate the deployment window examples in Section 2 accordingly. If the demurrage rate is below 3% per year, deployment windows must be shortened or a separate rate must be specified for escrowed funds to maintain adequate institutional signal strength.
+1. **Determine the applicable Annex D effective carrying cost** on escrowed balances for the relevant net-worth brackets and recalibrate the deployment window examples in Section 2 accordingly. If that effective cost reaching the escrow balance is below 3% per year, deployment windows must be shortened to maintain adequate institutional signal strength. No separate carrying cost on escrowed funds is created; the Annex D net-worth demurrage is the single instrument.
 
 2. **Bind FC-160 through FC-184** in Sections 1 through 4, using first-year pilot data where available. Where pilot data is not yet available, use the recommended anchors as starting positions. **Before any parameter is bound, it must be submitted to an adversarial parameter review panel convened under the same composition rules as AH3 (ANNEX_AH).** The panel must compare each parameter against at least two real-world analogues from comparable governance systems or existing escrow and capital-deployment frameworks. Parameters for which no analogue can be identified must be auto-flagged in the founding record with a published explanation of why no analogue exists and what the founding coalition used instead. Any parameter that the adversarial panel contests must carry a permanent public warning record in `/founding/commitments.md` — the warning does not block deployment, but it remains attached to the parameter through all subsequent reviews and cannot be removed without a Tier 2 amendment process.
    - High-value thresholds: 100k Flow / 1M Flow / 15% of project value

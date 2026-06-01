@@ -27,7 +27,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 - **Article IV (Survival):** Essential Access is unconditional; it cannot be sold, pledged, or withdrawn as punishment. Physical cash remains available. Pre-existing care networks (food pantries, mutual aid, religious outreach) are explicitly supported and not displaced.
 - **Article VI (Voice, Service Record & Public Decisions):** Voice is based on recent verified contribution *plus hardship-safe floor rules*. Protected Pause preserves continuity during verified hardship (disability, caregiving, age, crisis, illness, disaster). Recognized-contribution audit required every two years. Constitutional matters stay one-person-one-vote. No single contribution sector may dominate civic weighting.
 - **Article I (Invariants):** Survival is unconditional. Human worth is not measured. No coercion by Voice, Service Record, or Flow for basic rights.
-- **Article V (Markets, Commons & Public Finance):** Demurrage applies to large idle balances, not survival savings. Operating-float exemption exists. Physical cash remains available. Essential Access cannot be converted to money.
+- **Article V (Markets, Commons & Public Finance):** Demurrage applies to accumulated net worth above the participation floor, not to survival savings or ordinary household liquidity. Operating-float exemption exists. Physical cash remains available. Essential Access cannot be converted to money.
 
 ---
 
@@ -199,7 +199,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 - Pre-existing care networks are protected.
 
 **What is underspecified or at risk.**
-- Demurrage applies to Flow balances. Because the Kahananui family rarely uses Flow, they are unlikely to accumulate balances that trigger demurrage. But if a family member receives Flow from the system (a service payment, an infrastructure contract), and they hold it in an account while deciding how to use it, they could be hit by demurrage on a balance they are not actively "hoarding" — they are simply outside the financial rhythm the system assumes.
+- Demurrage applies to accumulated net worth above the participation floor, and idle Flow is part of that net worth. Because the Kahananui family rarely uses Flow, they are unlikely to accumulate wealth that triggers demurrage. But if a family member receives Flow from the system (a service payment, an infrastructure contract), and they hold it in an account while deciding how to use it, they could be hit by demurrage on wealth they are not actively "hoarding" — they are simply outside the financial rhythm the system assumes.
 - Their traditional governance does not produce a Service Record. Their elder council, their dispute resolution practices, their ecological stewardship — none of it is registered. They are constitutionally invisible as contributors despite carrying enormous community responsibility.
 - The biennial contribution audit is required to find this gap. But the audit is designed to find patterns; the Kahananui family may be too small a population to appear as a statistically significant exclusion.
 - The indigenous land status is not addressed in the constitution. Their ancestral land claim and the system's use-rights framework (Article V: "housing and land are governed as use-rights or leases") could conflict if the system does not explicitly recognize pre-existing indigenous tenure.
@@ -286,7 +286,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 **Who he is.** Victor is 52 years old. He is a successful entrepreneur. He has accumulated substantial Flow through his businesses over fifteen years. To minimize demurrage exposure, his legal team has structured his holdings into: five time-bound project escrows (infrastructure and real estate developments), two term-finance pools backing regional agricultural cooperatives, one catastrophe reserve for his main company, and a collection of Flow-denominated equity positions in worker-cooperative enterprises. On paper, none of his balances are "idle." In practice, the development timelines are indefinitely extensible, the cooperatives are shells, and the equity positions are structured to appreciate without requiring active management.
 
 **What the constitution guarantees.**
-- Demurrage applies to large idle balances above the operating-float exemption.
+- Demurrage applies to accumulated net worth above the participation floor and operating-float exemption.
 - Protected capital treatment (project escrows, term-finance pools, catastrophe reserves) exists but requires "preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular."
 - "Deadlines become circular" is the key phrase — the constitution anticipates this exact structure.
 - Anti-hoarding, anti-monopoly, and anti-rent-seeking rules apply to all Flow.

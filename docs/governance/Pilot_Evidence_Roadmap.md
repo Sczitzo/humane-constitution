@@ -225,7 +225,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 ## Phase 5 - Flow and demurrage simulation
 
-**Hypothesis:** Flow can support exchange while the idle-money fee funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
+**Hypothesis:** Flow can support exchange while the net-worth demurrage funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
 
 **External evidence basis:** The [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md) is the governing test package for this phase. IMF and peer-reviewed monetary-economics work establish that negative-yield money is a real design space; Federal Reserve research warns that negative-rate regimes can create welfare, investment, output, banking, and transmission distortions; OECD and FATF sources anchor procurement and legal-wrapper capture risks; complementary-currency evidence warns against treating local or emergency experiments as proof of constitutional-scale design.
 
@@ -247,7 +247,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Failure criteria:**
 
-- The idle-money fee burdens low-wealth users more than concentrated capital.
+- The net-worth demurrage burdens low-wealth users more than concentrated capital.
 - Actors create exemptions that become capture channels.
 - Productive project finance collapses or becomes elite-controlled.
 - Shadow credit recreates predatory dependency.
@@ -256,7 +256,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - Project escrow becomes a favored-sector parking channel despite the zero-exemption rule.
 - Users cannot explain the fee, the revenue route, or the difference between ordinary liquidity and idle concentration after public disclosure.
 
-**Scale rule:** the idle-money fee should remain a simulation and pilot parameter until the burden is transparent.
+**Scale rule:** the net-worth demurrage should remain a simulation and pilot parameter until the burden is transparent.
 
 ## Phase 6 - Public banking rails
 

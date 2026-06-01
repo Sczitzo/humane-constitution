@@ -80,7 +80,7 @@ Use these rules when editing threats, patches, annexes, and public claims:
 | Critical | Identity and recovery evidence plan | Protect survival without surveillance. | Add concrete false-exclusion, recovery-delay, data-minimization, and appeal failure criteria. |
 | Critical | Capacity measurement evidence plan | Keep promises tied to physical reality. | Test update latency, disagreement, physical sampling, standards concentration, and public confidence-band readability. |
 | High | Contribution and Service Record misuse review | Preserve incentives without social credit. | Add misuse scenarios involving employers, vendors, schools, housing providers, and civic bodies. |
-| High | Demurrage and anti-rent evidence track | Prevent wealth from reappearing as control while testing the costs of idle-money fees. | Test trusts, foundations, beneficial ownership chains, public procurement capture, demurrage burden, project escrow, and enterprise-control rights. |
+| High | Demurrage and anti-rent evidence track | Prevent wealth from reappearing as control while testing the costs of net-worth demurrage. | Test trusts, foundations, beneficial ownership chains, public procurement capture, demurrage burden, project escrow, and enterprise-control rights. |
 | High | Founding legitimacy dossier | Prevent coercive rollout. | Define founding coalition legitimacy, objection channels, consent thresholds, and exit rehearsal. |
 | High | Status-language cleanup | Prevent self-deception. | Align Threat Register, Patch Log, Hardening Queue, and Claims Register around designed/active/resolved distinctions. |
 | High | Threat resolution matrix maintenance | Keep every threat tied to a realistic control path. | For each threat, maintain the mechanism, corruption route, proof needed, and residual risk. |
@@ -107,4 +107,4 @@ After the next revision, a skeptical reader should be able to say:
 4. I know what evidence would strengthen or falsify each major claim.
 5. I can tell where to pressure the project next.
 
-For the core idle-money-fee claim, the immediate pressure point is now the [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), which defines the household, business, public-finance, procurement, legal-wrapper, and legitimacy tests required before stronger claims are allowed.
+For the core net-worth-demurrage claim, the immediate pressure point is now the [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md), which defines the household, business, public-finance, procurement, legal-wrapper, and legitimacy tests required before stronger claims are allowed.

@@ -19,7 +19,7 @@ Use short words where they work. Use short sentences. Say who does what. Explain
 | attestation | signed proof, witness statement, or proof |
 | supermajority | two-thirds vote, 4-of-5 vote, or large majority |
 | quorum | minimum number needed |
-| demurrage | idle-money fee |
+| demurrage | carrying cost on accumulated wealth (net-worth demurrage) |
 | non-coercion | no one is trapped or forced |
 | subsistence / survival floor | basic needs floor |
 | constitutional invariant | rule that cannot be quietly changed |

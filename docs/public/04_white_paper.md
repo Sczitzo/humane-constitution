@@ -123,7 +123,7 @@ Flow (ordinary money) is not evil. Markets are not abolished.
 
 But Flow (ordinary money) cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
 
-The system also uses an **idle-money fee** on large unused balances. The goal is to discourage hoarding and push money toward useful activity. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the fee falls on large idle balances rather than on people with modest savings.
+The system also applies a **progressive carrying cost on accumulated wealth** above a participation floor — a net-worth demurrage. The goal is to discourage hoarding and push wealth toward useful activity. Idle money is simply part of net worth, so there is no separate fee on unused balances; wealth above the floor carries the cost whether it sits idle or not. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the carrying cost falls on large accumulated wealth rather than on people with modest savings.
 
 ![Progressive Net-Worth Demurrage](/images/V-005.png)
 

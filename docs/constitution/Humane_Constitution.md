@@ -202,9 +202,9 @@ To prevent money from doing every job, the system uses five separated tools. Onl
 - **Form rule:** Flow operates primarily as a public digital currency secured by cryptographic methods, while physical cash or equivalent offline bearer instruments remain permanently available for privacy, resilience, and universal access.
 - **Issuance rule:** Flow is issued only against verified productive commitments through the Annex X channels - payroll, milestone-bound project escrow, essential-services procurement, public infrastructure windows, and tightly bounded continuity backstops. All issuance is provenance-tagged at audit level, approved under dual-key review (and enhanced review above threshold), and released with a published unwind path. Private banks, funds, and lenders may lend or intermediate existing Flow, but may not create new Flow, Flow-denominated deposit substitutes, or other currency-like purchasing power by debt expansion.
 - **Circulation rule:** Flow may transfer freely within lawful market activity, but remains subject to anti-hoarding, anti-monopoly, and anti-rent-seeking constraints.
-- **Idle-money rule:** Flow has a fee on large idle balances to discourage hoarding. It is not meant to punish ordinary saving or real project planning.
+- **Anti-hoarding rule:** Idle Flow is discouraged from becoming hoarded wealth not by a separate per-balance fee but by counting toward net worth, which carries the progressive carrying cost in Annex D above the participation floor. Ordinary saving and real project planning are protected by the floor and the investment-channel exemptions.
 - **Banking rule:** basic payments, custody, wage receipt, transfers, and cash access operate on public infrastructure funded through Article V public finance and commons revenue (PFCR); any licensed retail provider serving the public must offer the baseline public banking floor on the common rail.
-- **Investment channel:** protected capital treatment is not a blanket exemption. Time-bound project escrows, build accounts, term-finance pools, catastrophe reserves, and public infrastructure windows may hold Flow without ordinary idle decay only while funds remain preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
+- **Investment channel:** protected capital treatment is not a blanket exemption. Time-bound project escrows, build accounts, term-finance pools, catastrophe reserves, and public infrastructure windows may hold Flow without incurring the Annex D net-worth carrying cost only while funds remain preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
 
 ### 2) Essential Access - The Basic Needs Floor
 - **Purpose:** baseline essentials such as food, water, basic shelter/heat, basic transit, essential healthcare/medicines, crisis mental-health care, and explicit mental-health continuity.
@@ -370,7 +370,7 @@ Each part has a job. These are the handoffs and hard limits.
 - **Form rule:** Flow is mainly public digital money, with physical cash or offline equivalents kept available for privacy, resilience, and universal access.
 - **Issuance rule:** new Flow can be created only through approved channels such as payroll, project escrows, essential-service procurement, public infrastructure, and tightly bounded continuity backstops. Private banks and lenders may lend existing Flow, but they may not create new Flow through debt.
 - **Circulation rule:** Flow can move freely in lawful market activity, subject to anti-hoarding, anti-monopoly, and anti-rent-seeking rules.
-- **Idle-money rule:** the default idle-money fee is 0.5% per month on balances above a published operating-float exemption, reviewed inside a 0.25%-1.00% corridor.
+- **Anti-hoarding rule:** idle Flow counts toward net worth and carries the progressive net-worth carrying cost in Annex D for accumulated wealth above the participation floor. There is no separate per-month fee on Flow balances.
 - **Investment channel:** long-term project funds may receive protected treatment only while they are registered, separated, milestone-reviewed, and subject to reversion if the purpose drifts.
 - **Household finance rule:** compounding interest on household ordinary-life debt is prohibited. No household debt instrument may securitize the survival floor, rely on revolving traps, or recreate survival coercion through hidden fee chains.
 
@@ -472,7 +472,7 @@ This section names common ways the system could fail and the fixes designed to r
 - **Failure mode:** even if Essential Access expires, goods can be stockpiled to gain leverage in scarcity.
 - **Patches:** per-category purchase caps during declared scarcity; storage/carrying charges above baseline; shelf-life-aware rationing; resilient local redundancy and strategic reserves.
 
-### 15. Avoiding idle-money fees through asset hoarding
+### 15. Avoiding the net-worth carrying cost through asset hoarding
 - **Failure mode:** value shifts into assets such as land or commodities, recreating rent-seeking.
 - **Patches:** capacity-lease model for land/housing; progressive carrying costs on large idle holdings; anti-speculation rules; transparent registry for high-value assets; strong competition policy.
 
@@ -514,7 +514,7 @@ This section names common ways the system could fail and the fixes designed to r
 - **Continuity guarantees:** ensure uninterrupted access to essentials (Essential Access) during cutover.
 
 ### Phase 2: Outside Money And Trade
-- **Foreign inflow controls:** outside capital converts into Flow and faces the idle-money fee immediately, pushing it toward productive use. Detail is in [Annex AT §AT4](../annexes/ANNEX_AT.md).
+- **Foreign inflow controls:** outside capital converts into Flow and, as net worth above the participation floor, faces the Annex D carrying cost, pushing it toward productive use. Detail is in [Annex AT §AT4](../annexes/ANNEX_AT.md).
 - **Trade boundary:** exports of essentials are capped when needed to protect domestic Essential Access. Detail is in [Annex AT](../annexes/ANNEX_AT.md).
 - **Security posture:** defend infrastructure and records as critical public assets.
 
@@ -544,7 +544,7 @@ This section names common ways the system could fail and the fixes designed to r
 - **Shared Storehouse:** visualize as a clearly bounded emergency ration or reserve valve; temporary, category-specific, and never prestige-bearing.
 
 ### Option B snapshot
-- **Flow baseline (Option B):** demurrage of 0.5% per month on idle balances above the constitutional operating-float exemption; new Flow is created only against verified productive commitments through Annex X channels, with dual-key review, audit-level provenance tagging, independent milestone controls for protected windows, and staged unwind rules to prevent hidden stock creation.
+- **Flow baseline (Option B):** idle Flow is subject to the progressive net-worth carrying cost in Annex D for wealth above the participation floor, not a separate per-balance fee; new Flow is created only against verified productive commitments through Annex X channels, with dual-key review, audit-level provenance tagging, independent milestone controls for protected windows, and staged unwind rules to prevent hidden stock creation.
 - **Essential Access baseline (Option B):** daily micro-issuance with 72-hour rolling validity, anchored to the Constitutional Survival Minimum and the broader essential basket so survival continuity does not hinge on a single weekly redemption window.
 - **Voice and Service Record baseline (Option B):** Voice uses a short quarterly cycle with caps, no rollover, and diminishing-returns weighting; Service Record preserves bounded service eligibility with hardship-safe continuity. Neither may be purchased, sold, inherited, or used to gate survival.
 - **Shared Storehouse baseline (Option B):** activated only during verified scarcity; category-specific; non-transferable except narrow caregiver channels; and terminated automatically when scarcity mode ends.
@@ -564,7 +564,7 @@ This section names common ways the system could fail and the fixes designed to r
 - **Caregiver/dependent exception:** limited transfers only to verified dependents/care networks; hard caps per week; full audit trail; rapid reversal pathway for coercion cases.
 
 ### Flow - baseline settings
-- **Demurrage:** default 0.5% per month on idle balances above the constitutional operating-float exemption; households receive a safe harbor equal to 6 months of median regional consumption expenditure, and enterprises receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis; rate review occurs within a 0.25%-1.00% corridor using hoarding, liquidity, concentration, and investment-friction signals.
+- **Demurrage:** idle Flow is part of net worth and carries the single progressive net-worth carrying cost in Annex D, applied to accumulated wealth above the participation floor (S = 18 months of regional median consumption). There is no separate per-month fee on Flow balances. Households are protected by the participation floor; enterprises by the operating-reserve and small-operator safe harbors in Annex D §D5. Rate function, brackets, consolidation, and exemptions are governed by Annex D — the sole carrying-cost instrument on accumulated wealth (§D9).
 - **Issuance:** Flow is created only through Annex X channels - payroll, milestone-bound project escrows, essential-services procurement, public infrastructure windows, and tightly bounded continuity backstops. Every issuance request must disclose sponsor, amount, duration, linked productive obligation, release schedule, unwind path, and conflicts; no single obligation may be financed through more than one issuance channel.
 - **Transferability:** fully transferable; primary medium for market exchange.
 - **Escrows/partitions:** payroll escrow and dependent-support channels are partitioned to reduce collateral harm from enforcement actions; project escrows are time-bound and auditable.

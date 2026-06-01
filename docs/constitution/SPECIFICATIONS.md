@@ -33,29 +33,27 @@ The most important rule is separation: none of these instruments may be traded i
 
 ### 2.1 Definition
 
-Flow is the general-purpose market instrument. It is issued against verified productive commitments, circulates freely within the Flow lane, and is subject to demurrage (time-decay on idle balances) to discourage hoarding. Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
+Flow is the general-purpose market instrument. It is issued against verified productive commitments, circulates freely within the Flow lane, and as a component of net worth is subject to the progressive net-worth carrying cost in Annex D; there is no separate per-balance time-decay on Flow (Annex D §D9). Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
 
-Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. Idle Flow slowly loses value so holding large unused balances is less attractive than putting resources to work.
+Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. Holding large idle balances is unattractive because idle Flow counts toward net worth, which carries the Annex D demurrage above the participation floor, so putting resources to work is the better choice.
 
 ### 2.2 State Machine
 
 ![Flow Token Lifecycle](/images/V-002.png)
 
-### 2.3 Demurrage Function
+### 2.3 Demurrage (Net-Worth Carrying Cost)
 
-Demurrage is a time-decay and carrying charge applied to idle Flow balances. It is not assessed on survival access, ordinary labor, or basic household exchange. Charged Flow is split between retirement and Public Finance & Commons Revenue (PFCR) receipts under a published routing rule.
+Demurrage is the single progressive net-worth carrying cost defined in Annex D — the sole carrying-cost instrument on accumulated wealth (Annex D §D9). Idle Flow carries it only as one component of net worth, not through any separate per-balance fee.
 
-Plain meaning: the idle-money fee is aimed at hoarding, not at survival, wages, or normal household life.
+**Subject:** net worth above the participation floor `S = 18 months × regional median monthly consumption expenditure`. Net worth aggregates all holdings, including idle Flow; wealth actively deployed in productive use is exempt (Annex D §D6 / Term Finance Pools / investment channels).
 
-**Variables:** `B(t)` = Flow balance at time t; `r` = demurrage rate per period (FC-050 baseline; FC-051 review corridor); `t_idle` = time elapsed since last productive deployment; `θ` = idle threshold below which demurrage begins (FC-052 reserved).
+**Rate:** the progressive λ-bracket schedule in Annex D §D3, calibrated at Tier 3 — not a single per-balance rate. The carrying cost rises with net worth across the brackets rather than applying a flat charge to a balance.
 
-**Demurrage function:** If `t_idle < θ`, the balance is active and no decay applies: `B(t) = B(0)`. If `t_idle ≥ θ`, continuous exponential decay applies: `B(t) = B(0) × e^(−r × t_idle)`. Alternatively, discrete periodic application: `B(t+1) = B(t) × (1 − r)`.
+**Not assessed on:** survival access, ordinary labor, or basic household exchange. The participation floor protects ordinary households; the operating-reserve (90 days) and small-operator (12-month) safe harbors in Annex D §D5 protect enterprises.
 
-**Retirement:** When `B(t) < ε` (minimum balance threshold, FC-053 reserved), the balance is retired from circulation.
+**Revenue:** demurrage receipts are split between retirement and Public Finance & Commons Revenue (PFCR) per Annex D.
 
-**Charge routing:** Let `C(t) = B_before(t) − B_after(t)` and `α` = PFCR routing share (FC-054 reserved). Then `PFCR_receipt(t) = α × C(t)` and `Retired_Flow(t) = (1 − α) × C(t)`.
-
-`r` must be calibrated so that the deployment window produces a meaningful anti-hoarding signal without suppressing long-horizon productive investment. Annex AR Section 2 contains worked examples at r = 0.5%, 1.0%, 2.0% monthly. P-023 establishes that investment exemptions are prohibited; demurrage applies during escrow periods — the discipline is the point. `α` must be published, reviewable, and fiscally bounded under PFCR rules.
+Plain meaning: the carrying cost is aimed at large idle wealth, not at survival, wages, or normal household life. Idle Flow only matters because it counts toward net worth above the floor.
 
 ### 2.4 Issuance Constraints
 
@@ -237,11 +235,10 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 
 | Parameter | Current Value | Status | Authority to Change |
 |---|---|---|---|
-| Flow demurrage rate (r) | 0.5%/month (±0.25%/mo corridor) | Binding design commitment — rate provisional pending evidence calibration (Phase 5). See Claims_Evidence_Register.md FC-050 entry. FC-050 / FC-051 (founding/commitments.md) | Tier 2 (supermajority + adversarial panel) |
+| Net-worth demurrage | Subject: net worth above the participation floor (S = 18 months regional median consumption); rate: progressive λ brackets per Annex D §D3 | Binding design commitment — λ schedule calibrated at Tier 3 against evidence. The sole carrying-cost instrument on accumulated wealth (Annex D §D9). | Tier 1 to alter Annex D §D9; Tier 3 for λ calibration |
 
-> FC-050 sets the demurrage rate. FC-160–FC-184 govern the contract-commitment architecture through which that rate is implemented. Evidence from the Demurrage Evidence Test Package (see Hardening_Queue.md) may inform revisions to both the rate (FC-050, via standard Tier 3 FAP) and the commitment architecture (FC-160–FC-184).
+> Annex D governs the net-worth demurrage: the participation floor, the progressive λ-bracket schedule (§D3), the operating-reserve and small-operator safe harbors (§D5), and the productive-deployment exemptions (§D6). FC-160–FC-184 govern the contract-commitment architecture through which the carrying cost is implemented. Evidence from the Demurrage Evidence Test Package (see Hardening_Queue.md) may inform revisions to the λ calibration on a net-worth basis (via standard Tier 3 FAP) and to the commitment architecture (FC-160–FC-184).
 
-| Flow idle threshold (θ) | Resolved in founding/commitments.md | Resolved | Tier 2 |
 | Essential Access validity window | 72 hours | Specified | Tier 2 |
 | CSM basket composition | Annex Y (canonical) | FC-070, FC-071 (floor is Tier 1) | Tier 1 (downward only); Tier 2 (composition within basket) |
 | Voice fast-decay rate (r_dw) | 0.15/day | FC-062 | Tier 2 |

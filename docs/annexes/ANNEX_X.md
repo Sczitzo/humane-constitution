@@ -7,7 +7,7 @@
 > | **Who it protects** | Everyone harmed by money creation that inflates asset prices, rewards political allies, rescues failed speculation, or manufactures demand without linked productive capacity — and wage earners and essential providers who need error-correction to be staged, not sudden. |
 > | **Failure risk** | Fake payroll rings, circular invoice schemes, zombie rollovers, factional allocation, unwind shock, and offshore leakage — each a path by which the issuance system becomes a capture vehicle rather than a productive-economy instrument. |
 > | **Evidence status** | Designed |
-> | **Linked risks** | P-029; P-030; TR-09 smart-contract failure; Annex J (demurrage and investment channels); Annex D (progressive net-worth demurrage — sole demurrage instrument); red-team scenarios in §X7. |
+> | **Linked risks** | P-029; P-030; TR-09 smart-contract failure; Annex D (progressive net-worth demurrage — sole demurrage instrument); red-team scenarios in §X7. |
 
 > **Provenance:** Implements [P-029 — Public Finance & Commons Revenue] (§X8) and [P-030 — Protocol-Only Money Creation and Household Finance Boundaries] (§X1–X8) · Status: **ACTIVE**
 
@@ -56,7 +56,7 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 - **Households** receive a safe harbor equal to 18 months of median regional consumption expenditure.
 - **Enterprises** receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis.
 - **Any higher protected balance** requires project escrow, catastrophe reserve, lifecycle fund, or other protected-capital qualification under the published rules.
-- **Any asset or instrument** that functions as a non-decaying store of value above the household-safe-harbor threshold is subject to equivalence review for Flow-like carrying costs regardless of label, wrapper, or legal form.
+- **Any asset or instrument** that functions as a non-decaying store of value above the participation floor (the 18-month net-worth floor in Annex D) is subject to equivalence review under the progressive net-worth demurrage in Annex D regardless of label, wrapper, or legal form.
 - **Household thresholds**, privacy safe harbors, and minimization rules remain mandatory. Anti-evasion enforcement may not become a pretext for total asset surveillance.
 
 ### X6. Error correction, unwind discipline, and public logs

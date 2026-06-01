@@ -60,7 +60,7 @@ The system must not morally blackmail skilled workers into endless sacrifice. It
 
 Omar repairs appliances and wants to expand into a cooperative repair shop. He is ambitious, practical, and not trying to dominate anyone.
 
-In February he leases a small space. In April he hires an apprentice. In June cash flow is tight. In August he holds a larger balance for equipment purchases and worries about idle-money fees. In November the shop becomes viable.
+In February he leases a small space. In April he hires an apprentice. In June cash flow is tight. In August he holds a larger balance for equipment purchases; the small-operator reserve means ordinary working balances sit below the net-worth demurrage floor. In November the shop becomes viable.
 
 The system should make room for ambition, risk, tools, inventory, and working capital. It should distinguish useful building from disguised hoarding.
 

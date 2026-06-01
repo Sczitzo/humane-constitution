@@ -16,7 +16,7 @@ This is not an anti-business rule. It is an anti-hostage rule.
 
 The current honest claim is:
 
-> The project has a designed operating model for essential-sector conglomerates: lawful profit for verified production, hard limits on survival leverage, public procurement with beneficial-ownership review, strategic floors, export caps, Flow conversion, demurrage on idle balances, and fallback public/treaty capacity.
+> The project has a designed operating model for essential-sector conglomerates: lawful profit for verified production, hard limits on survival leverage, public procurement with beneficial-ownership review, strategic floors, export caps, Flow conversion, net-worth demurrage on accumulated wealth (Annex D), and fallback public/treaty capacity.
 
 The project should not yet claim:
 
@@ -176,7 +176,7 @@ Some conglomerates would leave, litigate, lobby, or retaliate because the Humane
 | Scarcity pricing on survival goods | Crisis margins can be higher than ordinary service margins. | Strategic floors, export caps, Shared Storehouse, procurement transparency. |
 | Political rule-shaping | Lobbying can protect pricing, subsidies, patents, rate bases, and market access. | Flow/Voice separation, capture dashboards, conflict disclosure, public challenge rights. |
 | Patent or bottleneck leverage | A single medicine, input, corridor, or grid asset can become a private veto. | Compulsory/public fallback capacity, beneficial-ownership review, natural-monopoly regulation. |
-| Idle capital accumulation | Hoarded Flow loses advantage under demurrage. | Project escrows protect real production, not dead accumulation. |
+| Idle capital accumulation | Hoarded wealth above the floor, including idle Flow, loses advantage under net-worth demurrage. | Project escrows protect real production, not dead accumulation. |
 | Legal-wrapper control | Shell firms, trusts, affiliates, and subcontractors can hide concentrated control. | FATF-style beneficial-owner tracing, subcontractor opacity metrics, procurement debarment. |
 | Foreign jurisdiction leverage | Non-compliant countries can host affiliates that pressure the protocol from outside. | Annex AT Flow conversion, capital concentration limits, reciprocity membrane, domestic strategic floors. |
 

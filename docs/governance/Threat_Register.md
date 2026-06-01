@@ -42,7 +42,7 @@ Read this table first if you do not work in law, policy, security, or systems de
 | T-020 / T-021 | Measurement sources look independent but share the same assumptions, standards, data, or AI supply chain. |
 | T-022 | A later hostile government keeps the words but hollows out the system. |
 | T-023 | A pilot works in calm conditions but fails when scaled into real stress. |
-| T-025 | Investment-channel rules become a way for powerful sectors to avoid the idle-money fee. |
+| T-025 | Investment-channel rules become a way for powerful sectors to avoid the net-worth demurrage. |
 | T-026 | A valid exit is blocked, delayed, or punished. |
 | T-027 | Decisions drift upward to larger bodies when local people could handle them. |
 

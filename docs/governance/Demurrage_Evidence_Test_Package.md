@@ -1,8 +1,8 @@
 # Demurrage Evidence and Test Package
 
-This package defines what must be true before the project can make strong claims about Flow demurrage.
+This package defines what must be true before the project can make strong claims about the progressive net-worth demurrage (ANNEX_D).
 
-Demurrage is core architecture, not a decorative monetary preference. In this project it is supposed to discourage idle accumulation, fund public rails, and keep Flow from becoming a durable store of domination. That makes it load-bearing. It must therefore be tested as a monetary instrument, a public-finance instrument, a procurement-risk surface, and a legitimacy problem.
+Demurrage is core architecture, not a decorative monetary preference. It is the sole carrying-cost instrument on accumulated wealth (ANNEX_D §D9): a progressive charge on net worth above the participation floor S, where S = 18 months × regional median monthly consumption. Idle Flow is one component of net worth, assessed inside that base — there is no separate per-balance fee. The instrument is supposed to discourage rentier accumulation, fund the Essential Access commons, and keep concentrated wealth from becoming a durable store of domination. That makes it load-bearing. It must therefore be tested as a monetary instrument, a public-finance instrument, a procurement-risk surface, and a legitimacy problem.
 
 Current status: **designed mechanism, needs evidence**.
 
@@ -12,15 +12,15 @@ Current status: **designed mechanism, needs evidence**.
 
 The project may currently claim:
 
-> Flow demurrage is a plausible anti-hoarding and public-rail funding mechanism with a designed zero-exemption architecture.
+> The progressive net-worth demurrage is a plausible anti-hoarding and commons-funding mechanism with a designed single-instrument, productive-use-exempt architecture.
 
 The project may not yet claim:
 
 - demurrage works at deployment scale;
 - demurrage is fair across household types;
-- demurrage will reliably burden concentrated capital more than ordinary liquidity;
-- demurrage will fund public rails without becoming a hidden tax;
-- contract-commitment escrow closes all investment-channel escape routes;
+- the progressive λ brackets will reliably burden concentrated net worth more than ordinary low-wealth households;
+- demurrage will fund the Essential Access commons without becoming a hidden tax;
+- investment-channel and productive-use exemptions close all escape routes;
 - legal wrappers, subsidiaries, trusts, foundations, or procurement relationships cannot route around it.
 
 Evidence-backed claims require the tests below plus a residual-risk update.
@@ -47,7 +47,7 @@ Assume every actor below behaves rationally under pressure and opportunistically
 
 | Actor | Likely route around demurrage | What the test must expose |
 |---|---|---|
-| High-wealth household | Split balances across relatives, trusts, foundations, foreign accounts, property rights, or art/commodity stores. | Whether demurrage shifts idle wealth into harder-to-govern assets. |
+| High-wealth household | Split net worth across relatives, trusts, foundations, foreign accounts, property rights, or art/commodity stores. | Whether consolidated beneficial-ownership assessment shifts concentrated wealth into harder-to-govern assets. |
 | Small business | Over-order inventory, prepay suppliers, hold receivables outside Flow, or use trade credit as a substitute store. | Whether ordinary working capital is punished more than true hoarding. |
 | Large contractor | Cycle project escrows, fragment subsidiaries, stretch milestones, inflate force-majeure claims, or lobby for infrastructure labels. | Whether zero exemption survives procurement pressure. |
 | Commissioning authority | Park funds in delayed procurement, rush low-quality contracts to avoid decay, or favor familiar vendors. | Whether demurrage improves deployment or degrades procurement quality. |
@@ -61,7 +61,7 @@ Assume every actor below behaves rationally under pressure and opportunistically
 
 ### 1. Household Burden Model
 
-**Question:** Does demurrage fall mainly on idle concentration, or does it punish ordinary liquidity?
+**Question:** Does demurrage fall mainly on concentrated net worth above the participation floor, or does it punish ordinary low-wealth households?
 
 **Minimum segmentation:**
 
@@ -76,20 +76,20 @@ Assume every actor below behaves rationally under pressure and opportunistically
 
 **Required outputs:**
 
-- monthly demurrage paid as share of disposable Flow;
-- liquid buffer retained after demurrage;
-- frequency of forced premature spending;
+- demurrage paid as share of assessed net worth above S;
+- net worth retained after demurrage;
+- frequency of forced premature asset sales;
 - use of alternative stores;
 - hardship correlation by group;
-- burden comparison between low-wealth liquidity and concentrated idle balances.
+- burden comparison between low-wealth households and concentrated net worth.
 
 **Failure criteria:**
 
-- lowest-wealth households pay a materially higher effective burden than concentrated capital;
-- users with volatile income reduce emergency buffers below a published minimum;
-- demurrage causes premature spending on lower-quality goods;
+- lowest-wealth households pay a materially higher effective burden than concentrated net worth;
+- households near the participation floor reduce essential net worth below a published minimum;
+- demurrage causes premature liquidation of productive or essential assets;
 - disabled, elderly, caregiving, displaced, or digitally fragile users face higher effective burden;
-- ordinary users describe the fee as unpredictable account confiscation rather than a visible civic carrying cost.
+- ordinary users describe the charge as unpredictable asset confiscation rather than a visible civic carrying cost on concentrated wealth.
 
 ### 2. Small-Business Working-Capital Model
 
@@ -113,7 +113,7 @@ Assume every actor below behaves rationally under pressure and opportunistically
 - price pass-through;
 - business failure risk;
 - growth of informal credit;
-- difference between operating float and idle accumulation.
+- difference between protected operating reserve (ANNEX_D §D5) and idle accumulation.
 
 **Failure criteria:**
 
@@ -219,8 +219,8 @@ Demurrage parameters should not be set from moral intuition. They should be cali
 
 | Parameter | What it controls | Evidence needed before binding |
 |---|---|---|
-| Base demurrage rate | Ordinary idle Flow carrying cost | Household burden, concentrated-capital burden, revenue sufficiency, avoidance response. |
-| Protected transaction float | Amount or timing of ordinary operational liquidity that should not trigger punitive effects | Household and small-business cash-flow model. |
+| Progressive λ brackets (Tier-3 calibrated) | Carrying cost on net worth above S, rising by tier (ANNEX_D §D3) | Household burden, concentrated-net-worth burden, revenue sufficiency, avoidance response. |
+| Participation floor S | 18 months × regional median consumption below which no net worth is charged | Household and small-business net-worth model. |
 | Escrow deployment window | How long public funds may sit before review | Procurement quality and delay model. |
 | Force-majeure freeze cap | Maximum pause available during verified external delay | Abuse simulation and project-finance stress test. |
 | High-value release threshold | When milestone releases need higher verification | Inspector capacity and fraud-loss model. |
@@ -230,7 +230,7 @@ Demurrage parameters should not be set from moral intuition. They should be cali
 **Calibration must satisfy all four constraints:**
 
 1. ordinary users can predict and understand the burden;
-2. concentrated idle balances face a stronger effective carrying cost than ordinary liquidity;
+2. concentrated net worth faces a stronger effective carrying cost than ordinary low-wealth households;
 3. long-horizon productive projects have a non-exemption financing path;
 4. enforcement does not require generalized financial surveillance.
 
@@ -266,7 +266,7 @@ Pass condition: the memo names enforceable detection points and admits routes th
 
 Output: voluntary, reversible Flow-simulation pilot using capped balances and no survival dependency.
 
-Pass condition: users understand the fee, burden does not concentrate on low-liquidity participants, and avoidance behavior is observable without invasive surveillance.
+Pass condition: users understand the charge, burden does not concentrate on low-wealth participants, and avoidance behavior is observable without invasive surveillance.
 
 ### Stage 5 - Public Legitimacy Review
 
@@ -278,29 +278,29 @@ Pass condition: readers can explain why demurrage exists, who pays, where funds 
 
 ## Household Burden Distribution Test
 
-**What is being tested:** Does the demurrage fee (FC-050: 0.5%/month on idle balances above exemption) fall proportionally — or disproportionately — on low-wealth users compared to concentrated capital?
+**What is being tested:** Does the progressive net-worth demurrage (ANNEX_D: progressive λ brackets on net worth above the participation floor S) fall proportionally — or disproportionately — on low-wealth households compared to concentrated net worth?
 
-**Why this matters:** A demurrage system that exempts large capital pools (through project escrows, investment vehicles, or classification arbitrage) while applying to small household balances functions as a regressive tax, not a wealth-circulation mechanism. This failure mode is not visible in aggregate revenue numbers.
+**Why this matters:** A demurrage system that shelters large concentrated holdings (through investment channels, productive-use classification, or beneficial-ownership arbitrage) while reaching ordinary households functions as a regressive tax, not a wealth-circulation mechanism. This failure mode is not visible in aggregate revenue numbers.
 
 **Measurement method:**
 
-- Divide the pilot population into 5 income quintiles by Flow balance held at end of each month.
-- For each quintile, measure: (a) average demurrage paid per person per month as a fraction of total Flow balance, and (b) average demurrage paid per person per month as a fraction of monthly Essential Access allocation.
-- Compute the ratio of the top-quintile rate to the bottom-quintile rate. This is the burden ratio.
+- Divide the pilot population into 5 wealth quintiles by assessed net worth held at end of each month.
+- For each quintile, measure: (a) average demurrage paid per person per month as a fraction of assessed net worth, and (b) average demurrage paid per person per month as a fraction of monthly Essential Access allocation.
+- Compute the ratio of the bottom-quintile rate to the top-quintile rate. This is the burden ratio.
 
-**Pass condition:** Burden ratio ≤ 1.0 — meaning the top quintile pays demurrage at least as high a fraction of their balance as the bottom quintile. If the bottom quintile holds smaller balances but qualifies for the idle-threshold exemption, that counts in their favor (lower rate), not against.
+**Pass condition:** Burden ratio ≤ 1.0 — meaning the top quintile pays demurrage at least as high a fraction of their net worth as the bottom quintile. If the bottom quintile holds net worth at or below the participation floor S, no demurrage accrues, which counts in their favor (lower rate), not against.
 
 **Failure criteria:**
 
-- Burden ratio > 1.5 (bottom quintile paying more than 1.5× the rate of the top quintile as a fraction of balance) triggers mandatory architecture review before any scale claim is made.
-- Any quintile paying demurrage that exceeds 10% of their monthly Essential Access allocation is an automatic failure — the fee has become a survival-floor clawback.
-- If project-escrow-exempt balances are held predominantly (>60%) by the top two quintiles, this is flagged as a classification-arbitrage risk requiring the T-025 demurrage sector-capture controls to be revalidated.
+- Burden ratio > 1.5 (bottom quintile paying more than 1.5× the rate of the top quintile as a fraction of net worth) triggers mandatory architecture review before any scale claim is made.
+- Any quintile paying demurrage that exceeds 10% of their monthly Essential Access allocation is an automatic failure — the charge has become a survival-floor clawback.
+- If investment-channel-sheltered net worth is held predominantly (>60%) by the top two quintiles in a way that erodes their effective progressive rate, this is flagged as a classification-arbitrage risk requiring the T-025 demurrage sector-capture controls to be revalidated.
 
 **Required reporting:** Results must be published by quintile (not in aggregate) in the Capture Dashboard before the demurrage system moves beyond pilot status. Aggregation that hides quintile-level burden is itself a failure criterion.
 
-**Interaction with FC-050 review corridor:** If the pilot burden ratio exceeds 1.2 (warning threshold) in the first year, the FC-051 review corridor (±0.25%/mo adjustment band) must be used to reduce the effective rate on lower-balance holders before scale-up. The specific mechanism (higher exemption threshold or lower rate for balances below a defined floor) is left to the calibration review, but a re-test must confirm burden ratio ≤ 1.0 before scale-up proceeds.
+**Interaction with the λ-bracket review corridor:** If the pilot burden ratio exceeds 1.2 (warning threshold) in the first year, the Tier-3 rate review process (ANNEX_D §D11.3) must be used to recalibrate the progressive λ brackets so that lower-wealth households bear less before scale-up. The specific mechanism (higher effective participation floor, lower T1 rate, or revised bracket boundaries) is left to the calibration review, subject to the structural constraints in ANNEX_D §D3.5, but a re-test must confirm burden ratio ≤ 1.0 before scale-up proceeds.
 
-**Universal savings floor test:** The household savings floor (Annex J §J2: 18 months of regional median consumption, equal for all persons regardless of income or wealth) must be verified to be functioning as designed. A separate test within the burden distribution pilot must confirm: (a) no enrolled person with total Flow holdings below the floor is paying any demurrage; (b) the published floor value is displayed clearly in every wallet interface; (c) users in the bottom two quintiles can correctly state their floor amount and how close they are to it, without assistance. If any person below the floor is paying demurrage, this is an automatic system failure requiring immediate correction before any other burden metric is assessed.
+**Participation floor test:** The participation floor (ANNEX_D §D2.1: S = 18 months of regional median consumption, equal for all persons regardless of income or wealth) must be verified to be functioning as designed. A separate test within the burden distribution pilot must confirm: (a) no enrolled person with assessed net worth at or below S is paying any demurrage; (b) the published floor value is displayed clearly in every wallet interface; (c) users in the bottom two quintiles can correctly state their floor amount and how close they are to it, without assistance. If any person at or below the floor is paying demurrage, this is an automatic system failure requiring immediate correction before any other burden metric is assessed.
 
 ---
 
@@ -312,7 +312,7 @@ The project should not move demurrage from **needs evidence** to **partly tested
 |---|---|
 | Household burden | Household type, average balance, volatility, fee paid, emergency buffer, hardship signal, alternative-store behavior. |
 | Business burden | Sector, payroll cycle, inventory cycle, operating float, fee paid, price pass-through, shadow-credit use. |
-| Concentrated capital | Holder type, idle balance, asset-shift strategy, effective burden, avoidance cost, enforcement signal. |
+| Concentrated net worth | Holder type, assessed net worth above S, asset-shift strategy, effective burden, avoidance cost, enforcement signal. |
 | Public finance | Revenue source, operating cost, enforcement cost, reserve cost, net public-rail support, regressivity indicator. |
 | Project escrow | Project type, escrow size, milestones, release timing, demurrage paid, delay cause, verification cost, abuse signal. |
 | Legal wrappers | Vehicle type, control signal, detection source, timing, enforcement route, residual gap. |
@@ -325,7 +325,7 @@ Demurrage may remain a core design feature only if the tests show that it is:
 
 - visible to users;
 - predictable in burden;
-- stronger against idle concentration than ordinary liquidity;
+- stronger against concentrated net worth than ordinary low-wealth households;
 - compatible with working capital and long-horizon projects;
 - resistant to sector exemptions;
 - traceable as public-rail finance;
@@ -338,5 +338,5 @@ If those conditions fail, the project must either recalibrate the rate and windo
 
 ## Residual Risk Statement
 
-Even if the tests pass, demurrage will remain politically and institutionally dangerous. It creates an administrative interest in defining what counts as idle, an enforcement interest in observing balances, and an avoidance incentive for wealthy actors. The correct goal is not to make demurrage harmless. The goal is to prove that its anti-hoarding benefits exceed its burden and capture risks under transparent, reviewable conditions.
+Even if the tests pass, demurrage will remain politically and institutionally dangerous. It creates an administrative interest in defining what counts as productive use, an enforcement interest in assessing net worth, and an avoidance incentive for wealthy actors. The correct goal is not to make demurrage harmless. The goal is to prove that its anti-hoarding benefits exceed its burden and capture risks under transparent, reviewable conditions.
 
