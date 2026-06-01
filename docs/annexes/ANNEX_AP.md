@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | T-018 (PCRP False-Trigger Exhaustion); T-019 (Demand-Context Flag Suppression); P-015; Annex AI (Federated Ombuds); Annex AS (attestation-at-risk) |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Harden the Public Coercion Response Protocol against two known attack vectors: exhausting its trigger cap with manufactured false alarms, and suppressing it with strategically timed enforcement flags. |
-> | **Who it protects** | People experiencing genuine public coercion whose protection is diluted or blocked because adversaries have gamed the PCRP trigger and demand-context mechanisms. |
-> | **Failure risk** | False-trigger exhaustion (T-018): adversary floods the PCRP cap with manufactured triggers, leaving no audit capacity when real coercion occurs. Demand-context suppression (T-019): a strategically timed enforcement action is used to block PCRP activation during a genuine coercion event. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | T-018 (PCRP False-Trigger Exhaustion); T-019 (Demand-Context Flag Suppression); P-015; Annex AI (Federated Ombuds); Annex AS (attestation-at-risk) |
-
 > **Provenance:** Implements [P-015 — PCRP Attack Surface Hardening] · Addresses T-018 and T-019 · Status: **ACTIVE**
 
 **Status:** ACTIVE | **Priority:** High | **Patch:** P-015
@@ -39,6 +30,8 @@ Where a PCRP false trigger is accompanied by **either** oracle manipulation evid
 
 *Cap-reset audit procedure: The Federated Ombuds (ANNEX_AI) is the responsible authority for cap-reset audits. Upon a credible written allegation of deliberate manipulation — submitted by any affected party, oracle node operator, or Duty Sub-Ombuds — the Federated Ombuds must open a formal cap-reset audit within 7 days and publish findings within 30 days of opening. The evidentiary standard is clear and convincing evidence that the cap activations were deliberately engineered rather than the result of genuine operational failure. During the audit period, the affected party's cap counter is frozen at its current count — neither advancing nor resetting — until the audit concludes. A finding of deliberate manipulation resets the cap to zero and publishes the full audit record. A finding of no manipulation leaves the cap count unchanged and closes the audit.*
 
+*Restorative remedy on a no-manipulation finding: Where an alarm was escalated to the enforcement track under AP1 as possibly manufactured but the cap-reset audit finds no manipulation, the escalation is not merely closed — it is unwound. The no-manipulation finding formally withdraws the escalated party's enforcement-track referral and corrects and expunges the escalation record, so that an honest alarm-raiser carries no residual mark of having been investigated. The Federated Ombuds publishes a correction of equal prominence to the original escalation notice and confirms the expungement in the audit record. The standard is restoration of the vindicated party, not mere acquittal: no honest cry for help leaves the person who raised it worse-positioned than before they spoke.*
+
 A **trigger-exhaustion alert** fires when 2 of 3 cap slots are consumed within a single quarter, prompting pre-emptive review by the Federated Ombuds before the third activation.
 
 Escalation under AP1 requires **two independent evidence types** (oracle manipulation evidence AND timing cluster), not a single officer judgment, to prevent reverse weaponization (a genuine false trigger attributed to manipulation in order to avoid the audit cap).
@@ -53,6 +46,8 @@ Ombuds co-certification during demand-context periods must include an explicit a
 
 If the Ombuds finds deliberate flag manufacture, the demand-context designation is lifted and PCRP activation proceeds at standard scope.
 
+The protocol publishes and tracks the base rate of "manufactured" findings against genuine-failure findings over time, across both the AP1 manipulation determinations and the AP2 manufactured-flag assessments. The anti-false-alarm machinery is itself watched: a rising "manufactured" rate is treated not as success but as an early warning that the tool meant to filter false alarms may be being turned against genuine cries. A sustained rise above the published baseline triggers a Federated Ombuds review of the manufactured-finding criteria and of the officers applying them, on the presumption that the burden is on the system to prove it is not silencing the genuinely harmed.
+
 ## AP3 — Cross-Register Timing Monitor
 
 Any enforcement action initiated **within 48 hours of sentinel indicator movement** is flagged by an automated cross-register timing monitor. The flag does **not** block the enforcement action; it elevates scrutiny on any resulting demand-context flag and triggers AP2 with a heightened evidentiary requirement.
@@ -65,6 +60,7 @@ While the AP2 manufactured-flag assessment is running:
 
 - The demand-context designation is **maintained** by default (do not pre-emptively lift).
 - PCRP can activate at **reduced scope** with single-source authorization (rather than waiting on the 4-hour determination).
+- Any reduced-scope single-source activation **names the single source on the Article VII dashboard at the moment of activation** — not only in the later 4-hour publication. Authorization that does not identify its source is not a valid single-source activation. Naming the source at activation deters manufactured single-source pretexts by placing the authorizing identity on the public record before the assessment concludes.
 - Any reduced-scope activation is fully published within the 4-hour window and converted to standard-scope or revoked at the end of the assessment.
 
 This default is conservative-toward-protection: a real harm condition does not wait for the assessment, but the broader public-coercion-risk machinery does.
@@ -90,7 +86,7 @@ This default is conservative-toward-protection: a real harm condition does not w
 
 ## Residual Risk
 
-Real-time distinction between genuine oracle failure and engineered false trigger remains unreliable; the AP1 escalation path applies retroactively. Low-level demand-context flag suppression using a genuinely valid enforcement action remains possible — accepted as operational leakage below the detection threshold.
+Real-time distinction between genuine oracle failure and engineered false trigger remains unreliable; the AP1 escalation path applies retroactively. Low-level demand-context flag suppression using a genuinely valid enforcement action remains possible — accepted as operational leakage below the detection threshold. So that this accepted residual does not silently grow, suspected sub-threshold suppressions are logged even when they are not actioned. The log is reviewed periodically by the Federated Ombuds for drift in volume or pattern; an accepted leakage that begins to accumulate is no longer an accepted leakage, and a rising log compels reassessment of the detection threshold itself.
 
 ## Compound Linkages
 

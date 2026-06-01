@@ -73,7 +73,13 @@ Each sub-Ombuds must be dispersed from every other sub-Ombuds along **at least f
 | **Infrastructure** | Distinct primary publication channel, distinct primary communication infrastructure, distinct primary record-storage custodian. |
 | **Personnel-recruitment** | No more than one sub-Ombuds may recruit primarily from any single academic, professional, or alumni network (per FC-032-style concentration limit applied institutionally). |
 
-The Ombuds Oversight Assembly (Section 5) certifies compliance annually and publishes the certification. Non-compliance on any dimension triggers a repair window of 180 days. Persistent non-compliance is treated as structural capture and activates the Section 5.3 Concentration Response.
+**Worldview and intellectual diversity.** Structural dispersal along the five dimensions above is necessary but not sufficient. Five sub-Ombuds may satisfy every structural-separation test while sharing a single worldview, professional formation, or interpretive school — a pluralist architecture housing a monoculture, which preserves the form of multiple counsellors while voiding the substance of safety in their multiplicity. The appointing classes of §1.2 must therefore be operated to produce genuinely diverse reasoning, not merely structurally separated offices. Concretely:
+
+- The appointing bodies, taken together, must draw from distinct intellectual and ethical traditions, not a single dominant school filtered through five separate institutions.
+- The Oversight Assembly's annual certification (Section 5.1) assesses substantive worldview diversity across the federation alongside the five structural dimensions, and reports where the seated sub-Ombuds have converged toward a common interpretive frame despite formal separation.
+- Diversity here is a means to sound judgment under uncertainty, not a quota: the test is whether the federation can surface genuine dissent on contested questions, not whether any demographic or institutional box is checked.
+
+The Ombuds Oversight Assembly (Section 5) certifies compliance annually and publishes the certification. Non-compliance on any structural dimension, or a certified failure of substantive worldview diversity, triggers a repair window of 180 days. Persistent non-compliance is treated as structural capture and activates the Section 5.3 Concentration Response.
 
 ### 1.3 Duty Rotation and Federation Plenum
 
@@ -276,6 +282,8 @@ When a demand-context flag is active and PCRP co-certification is requested, the
 
 **Burden of proof.** The burden is on the party seeking to maintain the demand-context flag to demonstrate the enforcement action was not manufactured. The Plenum's default, when evidence is inconclusive within the 24-hour window, is to lift the flag and allow PCRP to proceed — an asymmetric default favoring supply protection.
 
+**Repeat-beneficiary tracking.** The asymmetric inconclusive-default rightly protects supply when the evidence will not resolve within the window, but a genuinely manufactured action benefits from the same default. The mercy-extended-to-the-uncertain must not become a laundering channel for a repeat offender. The Plenum therefore publishes, on the public dashboard, a standing metric of every actor and enforcement body that has benefited from the inconclusive-default — each instance in which a flag was maintained, or PCRP proceeded, solely because evidence was inconclusive within the 24-hour window rather than on the merits. Repeated benefit by the same actor or body — applying the same standard as §4.1's repeated favorable determinations — triggers a §3.2 Plenum review (4 of 5) and heightened scrutiny of that party's subsequent assessments, including a rebuttable presumption that the inconclusive-default will not be extended again to the same party absent affirmative evidence of legitimate basis. The metric is published whether the repeat beneficiary is the enforcement initiator or the party maintaining the flag, so the default's protective asymmetry is preserved without becoming a shelter for the persistently guilty.
+
 **Authority basis.** This assessment is a mandatory Plenum function under §3.2 (protocol-level decisions). The 24-hour timeline and asymmetric default are pre-committed criteria that apply regardless of which sub-Ombuds holds Duty rotation at the time of the request.
 
 ---
@@ -309,6 +317,8 @@ The Oversight Assembly operates under a **5-of-7 supermajority** for all binding
 ### 5.3 Concentration Response
 
 If the Assembly certifies that the federation has lost structural dispersal along two or more §1.2 dimensions, or that two or more sub-Ombuds are operating under common capture signals (e.g., concordant anomalous voting, shared-counsel engagements, coordinated personnel transfers), the Assembly activates the **Concentration Response**:
+
+Ideological or epistemic monoculture is itself a concentration signal. Concordant reasoning across the sub-Ombuds that cannot be explained by the merits of the matters decided — for example, near-unanimous determinations on genuinely contested questions, the systematic absence of dissent where reasonable judgment would diverge, or shared blind spots evident across unrelated cases — is treated on the same footing as a structural-dispersal loss, whether or not any §1.2 dimension has formally failed. Where the Assembly certifies such monoculture, the §1.2 worldview-diversity repair window and, on persistence, this Concentration Response apply.
 
 1. Immediate public notice on Article VII dashboards.
 2. Suspension of Plenum authority on §3.2 matters pending remediation.
@@ -348,6 +358,7 @@ The Federated Ombuds publishes the following as a continuous public record, in c
 | Plenum institutional health report | Voting patterns, recusal frequency, staffing diversity | Annually | Oversight Assembly |
 | Concentration Response events | Full activation record with timeline and remediation status | At activation; monthly update through remediation | Oversight Assembly |
 | Duty rotation schedule | Forward-looking rotation for next 90 days | Rolling, updated weekly | Federation secretariat |
+| Inconclusive-default repeat-beneficiary metric (§4.12) | Per-actor and per-enforcement-body tally of inconclusive-default benefits, with heightened-scrutiny flags | Updated per determination; standing public record | Plenum |
 | Recusal events | Officer, matter class, acting officer | Within 24 hours | Affected sub-Ombuds |
 
 Publication of every vote, every dissent, and every dispersal-compliance finding is the mechanism that makes the federation institutionally legible. A Plenum that consistently produces lopsided votes with predictable dissents is visible; a federation that has drifted toward common capture is visible; an Assembly that is rubber-stamping dispersal compliance is visible.

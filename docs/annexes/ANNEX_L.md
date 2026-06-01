@@ -27,11 +27,14 @@
 - **Two seats:** ombuds/public-interest advocates selected from an independent advocacy pool by lot.
 - **Two seats:** civic auditors selected through sortition from a trained civic review pool; these members may not currently hold executive office or major enterprise control.
 - **Terms are staggered**, non-renewable back-to-back, and subject to strict recusal, wealth/conflict disclosure, and anti-lobbying rules.
+- **The integrity of every feeding pool is itself a constitutional question.** Rules for certifying, training, and qualifying the regional appellate, certified systems-reviewer, independent advocacy, and civic-review pools are governed under Strict review; no pool may be constituted, narrowed, or disqualified except by a published standard subject to that standard.
+- **The bodies and persons who certify, train, or qualify these pools are themselves subject to the same recusal, wealth/conflict-disclosure, and anti-lobbying regime as panel members.** Their certification, training, and qualification decisions are recorded, publicly auditable except for protected personal data, and appealable to the Regional Constitutional Chambers, with constitutional review where pool integrity bears on Tier 1 invariants or sortition fairness.
 
 ### L3. Capture resistance and self-protection
 - **Any single CRP member**, the Ombuds Office, one-third of a deliberative minority bloc, or a qualifying public petition may trigger temporary stay and full-chamber review for suspected misclassification or disguised convertibility.
+- **Trigger thresholds must be a real, accessible remedy, not a nominal gate.** The minority-bloc fraction and the qualifying-petition threshold are set low enough that an ordinary affected population can reach them, and are themselves reviewable for accessibility; where a threshold is shown to be unreachable in practice, it is reduced.
 - **Tier-sensitive determinations** require a supermajority of the full CRP plus a published opinion.
-- **Any CRP decision** weakening privacy, Essential Access continuity, or instrument separation automatically triggers external review by a rotating regional chamber panel.
+- **Any CRP decision** weakening privacy, Essential Access continuity, or instrument separation automatically triggers external review by a rotating regional chamber panel. **That panel is drawn from a pool disjoint from the CRP's feeding pools**, so the external check is genuinely independent; no person who sits in, certifies, or feeds the CRP's pools may serve on the reviewing panel for the same matter.
 - **CRP opinions, dissents**, conflicts, and evidence packets are public except for protected personal data.
 
 ### L4. Standards of review
@@ -64,5 +67,6 @@ Every materially adverse decision must be challengeable by a legible path. Autom
 
 - Burden of justification lies with the authority imposing deprivation, restriction, or adverse classification.
 - Severe consequences require notice, access to evidence, explanation of the rule invoked, and access to counsel or advocate support.
+- Counsel and advocate support extend to the commercial-court and technical-audit tracks, so that under-resourced parties receive qualified representation and independent expert assistance where expertise or cost asymmetry would otherwise undercut the burden-shift above.
 - Emergency relief windows should be measured in hours or days, not months, whenever survival access, identity continuity, or liberty interests are at stake.
 - Algorithmic systems must preserve the inputs, rules, and model / version state necessary for retrospective review.
