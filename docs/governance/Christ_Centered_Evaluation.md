@@ -894,7 +894,156 @@ Three findings span all three annexes; they are recorded once here and reference
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–8)
+## Session 9 Christ-Centered Evaluation — The Stranger and the Rationed
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_I — Residency, Migration, and Onboarding; ANNEX_K — Essential Basket Governance and Civic Participation Fairness; ANNEX_AQ — Shared Storehouse Oracle-Failure Fallback; ANNEX_AJ — Above-Ledger Bypass Worked Examples; ANNEX_AF — Grace Period Exploitation Clauses
+
+This session follows the survival floor outward — to the stranger who arrives (I), what counts as "basic" and whose unpaid labor is seen (K), how rationing holds when the measure fails (AQ), the refusal to let the floor be bought as a status currency (AJ), and the protection of genuine hardship from anti-fraud zeal (AF). Two findings recur across all five and are recorded once at the end.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX I — Residency, Migration, and Onboarding
+
+**Christ-centered alignment.** The annex binds care to *presence*, not status: §I2's survival floor — "No person physically present may be left without a minimum continuity floor… emergency food, potable water… stabilizing care, safe-shelter triage" — is a near-direct codification of Matthew 25:35 ("I was a stranger and ye took me in") and Leviticus 19:33–34 ("the stranger that dwelleth with you… thou shalt love him as thyself"; cf. Deut 10:18–19; Ex 22:21). §I2–I3 forbid detention or denial of stabilizing services for inability "to prove wealth, title, address, or documentary perfection." The Protected Entrant pathways for those facing "death, persecution, trafficking, family rupture" track the flight to Egypt (Matt 2:13–15). The anti-purchase rule — no status class "bought, sold, collateralized, or accelerated solely by Flow holdings"; "Sponsorship… does not create ownership over a person" — refuses to make belonging a purchasable asset (Gen 1:27; Matt 6:24), and §I9 protects the child whose caregiver "crosses a paperwork threshold" (Matt 18:6,10). §I10 bars ethnic, religious, and wealth tests (Acts 10:34; Jas 2:1–9).
+
+**Babel-risk warning.** The annex *names* its own abuse vectors, which is its strength, but enforcement lags the prohibition. §I5 forbids weaponizing capacity claims to exclude disfavored groups, yet a region can still tune *baseline definitions* (what counts as shelter or care bandwidth) to manufacture honest-looking scarcity — domination dressed as prudence. §I4.2/I6 forbid employer captivity and coercive housing tie-ins but specify no affirmative coercion-*detection*, leaving the power asymmetry in the gap between prohibition and monitoring. And the rights-ladder withholds binding Voice for roughly four quarters plus orientation (~18 months) — a population cared-for but civically unheard, the place where "love the sojourner as thyself" (Lev 19:34) is most strained against anti-stacking prudence (Mark 10:42–45).
+
+**Human-dignity test.** Largely passes. The Identity-Compromised Person class and "continuity-safe interim status" refuse to let a person vanish because records are "missing, conflicting, destroyed, or coerced" (imago Dei over data). §I8's privacy minimization and ban on publicizing children's data "for deterrence theater" resist reducing migrants to surveilled compliance objects. The residual concern is structural: a seven-class status system always risks hardening classification into caste, which §I10 forbids but cannot wholly prevent.
+
+**Revision proposal.** (1) Should-fix: §I5 — require federation-level certification of capacity-constraint declarations (not region-alone), or a floor definition of "baseline bandwidth," so honest scarcity cannot be gamed at the definition layer. (2) Should-fix: §I4.2/I6 — add affirmative, independent coercion-detection (sponsor/employer audits, confidential worker channel), since victim-initiated complaints are unreliable under coercion. (3) Monitor: whether the ~18-month voiceless interval correlates with a persistent under-heard underclass. (4) Should-fix: extend anti-publicity/anti-discrimination protection explicitly to status-*classification* data, closing the gap where a class hardens into stigma.
+
+**Fruit test.** (i) No death or expulsion for lack of documents; (ii) trafficking survivors and separated families reach Protected Entrant / reunification faster than the median; (iii) zero successful purchases or sponsor-ownership of status; (iv) false capacity declarations overturned on review; (v) no stable cared-for-but-voiceless caste emerges.
+
+**Epistemic categorization:**
+- *Clear biblical command:* care for and do not oppress the stranger; protect the refugee child; no ethnic/wealth partiality (Lev 19:33–34; Ex 22:21; Matt 25:35; Matt 2:13–15; Acts 10:34).
+- *Theological inference:* belonging must be non-purchasable — drawn from the priceless dignity of persons; Scripture gives no statute on the sale of membership.
+- *Prudential political judgment:* the specific staging (0–72h, day 90, day 180, four quarters); anti-stacking review windows; capacity-dashboard mechanics.
+- *Unresolved uncertainty:* whether a multi-class system with a long voiceless interval avoids functioning as a soft caste; whether "honest capacity limits" and "exclusion of the stranger" can be cleanly separated in practice.
+
+**Executive theological verdict: 8.5 / 10.** Among the most gospel-aligned annexes — care bound to presence, belonging unpurchasable, abuse vectors named. It loses ground only where capacity-gaming and the long voiceless interval leave domination structurally possible despite explicit prohibition.
+
+---
+
+### ANNEX K — Essential Basket Governance and Civic Participation Fairness
+
+**Christ-centered alignment.** §K1's rule that every basket change must carry a rights-impact note "naming who is most harmed if the category narrows," and that mental health, reproductive care, disability supports, and temperature safety "may not be silently omitted by administrative drift," directly answers Isaiah 10:1–2's woe against those who "decree unrighteous decrees… to turn aside the needy from judgment" — it makes the act of cutting the poor's bread *visible* rather than buried in procedure. §K3 admits caregiving, mutual aid, translation, and de-escalation as verifiable contribution and forbids disqualification "solely because their work occurs outside payroll systems" — the widow's mite counted as greatest (Mark 12:41–44; 1 Tim 5:18). Its sharpest dignity clause: the verification burden "scale[s] with claimed civic influence, not with human need" — a structural echo of Matthew 25:40, the least not made to prove themselves. §K4's Protected Pause and asymmetric decay (low balances decay slower) bias toward the poor (Luke 4:18; Matt 12:7).
+
+**Babel-risk warning.** The safeguards are almost entirely *procedural* — challenge windows, review cycles, published formulas. A captured administrator can satisfy every box while still starving the floor (a quarterly review that always concludes "no change needed"): procedure becomes the fig-leaf for the unrighteous decree it was meant to expose. And §K3's attestation/jury verification can become an in-group gate — the well-networked get attested; the truly isolated (Luke 14:21's outcast) still cannot summon witnesses. The fairness instrument can quietly reward social capital one layer down.
+
+**Human-dignity test.** Strong. "Burden scales with influence, not human need" is the clearest dignity-preserving clause in the cluster — it refuses to make the needy prove their worth. The residual risk is that the Voice/Service Record apparatus still quantifies civic worth, and incapacity/crisis reviews require an institution to adjudicate suffering; dignity then depends on how gently those reviews run.
+
+**Revision proposal.** (1) Should-fix: add an *outcome* floor to §K1/K2, not only a process floor — a measurable trigger (baseline access or quality for any protected group falling below a published threshold) that forces review whether or not an administrator initiates one. (2) Should-fix: add a §K3 fallback for the person with *no* attesting community — a low-burden self-declaration path that cannot be denied for lack of witnesses, so isolation is not itself a disqualifier (cross-cutting — see §S9-X2). (3) Monitor: incapacity/pause reviews for becoming a re-traumatizing gate; default to presumption of good faith during active crisis.
+
+**Fruit test.** (i) Cuts to the floor are publicly visible and contestable, never silent; (ii) the carer, the sick, the displaced retain civic standing at their lowest point; (iii) the unwitnessed isolated person still secures recognition; (iv) emergency basket adjustments do not normalize a lowered floor between reviews.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not turn aside the needy by unjust decree; mercy over sacrifice; honor the laborer's due; judge the least as the King (Isa 10:1–2; Matt 12:7; 1 Tim 5:18; Matt 25:40).
+- *Theological inference:* a civic floor preserving standing during hardship is the right institutional form of mercy; asymmetric decay the right bias toward the poor.
+- *Prudential political judgment:* pause windows, review cadence, reference bands, substitution ladders, verification mechanics.
+- *Unresolved uncertainty:* whether attestation/jury verification avoids recreating social-capital hierarchy; whether procedure alone restrains a captured administration.
+
+**Executive theological verdict: 8.5 / 10.** Among the most mercy-aligned annexes; its dignity instinct (burden scales with influence, not need) is excellent. It leans on process where it still needs an outcome floor and a fallback for the truly unwitnessed.
+
+---
+
+### ANNEX AQ — Shared Storehouse Oracle-Failure Fallback
+
+**Christ-centered alignment.** The architecture fails *toward feeding people*. §1's "no automatic lapse" and unconditional CSM continuation mean that when the measure breaks, the system does not cut people off — Joseph's storehouses staying open through the famine "that they may be fed" (Gen 41:53–57; 47), not locking the granary because the ledger jammed. §3.3's survival-floor unconditionality ("oracle failure cannot be allowed to become a deprivation vector") is the manna economy made structural — "he that gathered much had nothing over, and he that gathered little had no lack" (Ex 16:18; 2 Cor 8:14–15). §4.2's 14-day verification window refuses to trust a counterfeit restoration — "by their fruits ye shall know them" (Matt 7:15–20).
+
+**Babel-risk warning.** The annex honestly concedes (§5) that its operational layer cannot stop coordinated multi-point capture: a captured Regional Executive Body acting on manipulated physical indicators in the 48-hour window can steer rationing *above* the survival floor under the legitimacy of "designed protocol." Emergency authority does sunset (48h → 72h → 14-day cap), but there is no *aggregate* ceiling on cumulative time-in-fallback across rolling incidents (§4.3 gestures at this without closing it) — the unsunsetted seam. The survival floor is hard-secured; fair rationing in the contested band above it is only procedurally protected.
+
+**Human-dignity test.** Passes strongly. The whole annex exists *because* the measurement may be wrong and persons must still eat — people are not reduced to oracle readings. §2.3's named-human accountability (Annex AS stake) prevents hiding behind "the system said so." One gap: the affected-population representative appears only at the §3.1 panel (72h+), not in the 48-hour window where the first, possibly decisive, deprivation call is made — the burdened have a seat late, not early.
+
+**Revision proposal.** (1) Should-fix: add an *aggregate cumulative-fallback ceiling* across rolling incidents (e.g. total time-in-hold within a 12-month window triggers mandatory independent structural review). (2) Should-fix: give the affected-population voice a defined consultative role *inside* the 48-hour window, not only at the later panel. (3) Monitor: §2.2 non-oracle indicators are the manipulation surface — add monitoring for *correlated* indicator manipulation, not just drift.
+
+**Fruit test.** (i) No one loses access for a sensor outage — the granary stays open; (ii) an attacker must now compromise oracle + REB + panel + 14-day window simultaneously rather than silencing one measure; (iii) the survival floor holds regardless; (iv) no rolling chain of hold-states accumulates unreviewed.
+
+**Epistemic categorization:**
+- *Clear biblical command:* feed the hungry; do not withhold sustenance from those in your power to help (Matt 25:35–40; Prov 3:27).
+- *Theological inference:* the storehouse/manna motifs supporting "fail safe toward continuity of survival."
+- *Prudential political judgment:* the 48/72-hour windows; the 3-member panel; the 14-day value; BFT thresholds.
+- *Unresolved uncertainty:* whether non-oracle indicators resist coordinated capture; whether 14 days surfaces sustained manipulation (status: Active — unproven).
+
+**Executive theological verdict: 8.5 / 10.** Among the most Christ-consistent designs in intent — it fails safe toward feeding people and makes the floor untouchable by any authority. Its residual risk (indicator-laundered capture above the floor; rolling-incident accumulation) is honestly named rather than hidden.
+
+---
+
+### ANNEX AJ — Above-Ledger Bypass Worked Examples
+
+**Christ-centered alignment.** The governing rule — "the test is effect, not mechanism" — refuses to let survival or standing be bought regardless of disguise (Mark 7:9–13 against pretextual evasion). AJ-1.1/1.2 forbid turning the survival floor into a status track or letting Flow buy faster access to the same floor good — James 2:1–9 ("no respect of persons… ye have despised the poor") and Proverbs 22:2 ("rich and poor meet together; the LORD is the maker of them all"). AJ-3.1–3.3 forbid buying out of shared scarcity (premium rationing, Flow exit, anticipatory hoarding) — Proverbs 11:26 ("he that withholdeth corn, the people shall curse him") and Amos 8:5–6, against the equal-manna pattern (Ex 16:18). The graduated penalties (§4.2) punish exploitation of the most vulnerable (civic-position leverage, rationing exemption during shortage) hardest — the prophetic proportionality that exploiting the desperate is the gravest offense.
+
+**Babel-risk warning.** Two real risks. First, an annex of "worked examples" invites "anything not listed is permitted"; the effect-not-mechanism rule mitigates this *in principle* but lives or dies on whether adjudicators privilege the effect test over the example list. Second, and sharper: to stop the rich from buying the floor (a clear Jas 2 / Amos 8 imperative), the annex authorizes "vendor-level data collection, population-level outcome analysis" with detection thresholds held in a *Restricted Register* (P-021/AO). The remedy for one Babel temptation — wealth purchasing dominion over the means of life — is built from the materials of another: centralized, partly-secret legibility over the whole population. Scripture commands the end clearly; it does not bless this means, which the annex specifies more confidently than it constrains.
+
+**Human-dignity test.** Passes on its stated aim — it protects exactly the biblically prioritized (genuine recipients, the rationed, contributors without institutional backing) from the status-currency inversion. The dignity cost is on the enforcement side: §4.1 reduces persons to a measured "functional gain," and population-wide correlation monitoring treats whole communities as datasets. PII-stripping and the affected-party advocacy seat on the Enforcement Panel are genuine safeguards; the trade is defensible but not costless.
+
+**Revision proposal.** (1) Should-fix: add an explicit anti-enumeration clause ("these examples illustrate the effect test; absence does not imply permission"). (2) Should-fix: require that *what* is monitored be public even where *thresholds* are restricted, with a stated justification per restricted item — restoring the §Purpose "clear notice" the Restricted Register undercuts. (3) Monitor: the Annual Deterrence Audit should publish realised detection probability per pattern, not just aggregate. (4) Monitor: adjudication of AJ-1.3/3.2 so ordinary neighborly mutual aid (Acts 2:44–45) is never penalized as "brokerage."
+
+**Fruit test.** (i) The poor keep an un-stratified survival floor; (ii) shortages are genuinely shared, not bought out of; (iii) civic roles cannot be cashed out; (iv) the monitoring apparatus does not metastasize into opaque population surveillance — public on *what*, restricted only on calibrated thresholds.
+
+**Epistemic categorization:**
+- *Clear biblical command:* no partiality; do not make the means of life a status good; do not exploit the poor in their need (Jas 2:1–9; Lev 19:15; Amos 8:6; Prov 11:26).
+- *Theological inference:* an effect-based off-ledger prohibition is the faithful way to honor those commands in a tokenized economy.
+- *Prudential political judgment:* the instrument-separation design; the 5× multiplier; the 0.85 detection assumption; the penalty matrix.
+- *Unresolved uncertainty:* whether population-scale social-layer monitoring can enforce this without becoming a domination instrument; whether real detection probability approaches the assumed value.
+
+**Executive theological verdict: 8 / 10.** Biblically well-aimed and structurally serious about refusing to let survival or standing be bought; it loses ground because its enforcement apparatus (restricted thresholds, population-wide correlation monitoring) carries an under-constrained Babel risk.
+
+---
+
+### ANNEX AF — Grace Period Exploitation Clauses
+
+**Christ-centered alignment.** AF1's rule — "any qualifying hardship is approved under any review standard," with scrutiny escalating on *pattern of recurrence*, not *depth of need* — is a direct structural answer to Matthew 12:7 ("I desire mercy, not sacrifice"); the gleaning right (Lev 19:9–10) stays open even at maximum scrutiny. AF2's "category-switching does not constitute grounds for automatic denial absent other evidence of fraud" operationalizes the wheat-and-tares restraint (Matt 13:24–30 — do not uproot the wheat with the tares): flag, review, document — never auto-uproot. AF3 requires the reviewer to "assess whether an innocent explanation exists," and its auto-applied community-disaster safe harbor protects the cluster of genuinely co-afflicted poor — the group anti-fraud zeal most endangers (Luke 4:18–19). AF4's restorative slow-decay ("Service Record can be fully rebuilt") echoes Jubilee (Lev 25); AF5/AF7 place the accommodation burden on the strong, never the paused (Rom 15:1; Mark 10:43–45).
+
+**Babel-risk warning.** To protect the grace period *for* the vulnerable, the annex must *watch* the vulnerable: AF3's collusion-graph analytics map who-vouches-for-whom across the support networks of the poor. Even with safe harbors, standing surveillance of hardship-attestation networks can chill honest mutual aid (a Babel move — centralized legibility of the vulnerable, Gen 11:4). False-positive load is well-mitigated but not zero: tight-knit poor communities (extended families, single-employer towns, congregations) legitimately cluster, and the safe harbor fires only on *oracle-declared* emergencies — slow-burn shared hardship (a closing factory before any declaration) lands in elevated scrutiny. And recurring maximal scrutiny on permanent-condition users (AF1 third-renewal) binds heavy burdens on the already-burdened (Matt 23:4) even when approval is guaranteed.
+
+**Human-dignity test.** Mostly passes — "triggers review, not denial" recurs in AF1, AF2, AF3, AF5, and a human reviewer must document a judgment rather than a fraud-score deciding. The residual reduction is the standing graph representation and the perpetual re-attestation of permanent conditions: people with unchanging hardship are treated as recurring suspects by the clock, not by their conduct.
+
+**Revision proposal.** (1) Should-fix: AF1 — a permanent-condition exemption from escalating intensity; once an independent panel confirms a chronic/permanent condition, renewals drop to lightweight continuation rather than repeating the high-intensity gauntlet every four quarters. (2) Should-fix: AF3 — a non-emergency "slow-burn shared hardship" reviewer pathway, so co-afflicted poor without an oracle-declared emergency get the presumption the disaster safe harbor grants. (3) Should-fix: AF3 — a data-minimization / retention / access clause for the attestation graph (cross-cutting — see §S9-X1). (4) Monitor: publish false-positive rates (% of elevated-scrutiny reviews resolving as genuine) as a standing fruit metric.
+
+**Fruit test.** (i) The dominant verbs remain flag/review/document/accommodate, not deny/bar/expel; (ii) cost falls on sophisticated rotators, not the genuine 4-quarter user; (iii) permanent-condition users are not re-interrogated on a clock; (iv) honest mutual attestation in poor communities is not chilled by graph surveillance.
+
+**Epistemic categorization:**
+- *Clear biblical command:* mercy over sacrifice toward the genuinely poor; do not bind heavy burdens on the burdened; the strong bear with the weak (Matt 12:7; Matt 23:4; Rom 15:1).
+- *Theological inference:* the wheat-and-tares restraint as the governing principle for a fraud system — tolerate some exploitation rather than uproot genuine need.
+- *Prudential political judgment:* the specific thresholds (4+ people, 2-quarter windows, 20% decay, escalating SLAs).
+- *Unresolved uncertainty:* whether standing collusion-graph surveillance does net good or net harm to community trust; the real-world false-positive rate.
+
+**Executive theological verdict: 8 / 10.** Among the more mercy-conscious anti-fraud designs in the corpus; its "review not denial" discipline and auto-applied safe harbor genuinely protect the wheat. It loses ground for re-burdening permanent-condition users and for building standing surveillance over the social graph of the poor without minimization limits.
+
+---
+
+### Session 9 Cross-Cutting Findings
+
+**§S9-X1 — Watching the gleaners (should-fix).** Every annex in this cluster defends the vulnerable's floor by building legibility over the vulnerable themselves: §I5 capacity dashboards, §K3 attestation/jury review, AQ's non-oracle indicators, AJ's population-wide correlation monitoring, AF3's collusion graphs. Each is individually justified, but together they assemble a standing surveillance apparatus pointed precisely at the poor and their support networks — the remedy for one Babel temptation built from the materials of another (Gen 11:4). The cluster needs a shared discipline: explicit data-minimization, retention limits, and access controls on every dataset built about hardship and migration; *what* is monitored should be public even where calibrated *thresholds* are restricted; and no anti-abuse dataset may be repurposed beyond its stated review function. Status: **should-fix open** (cluster-wide).
+
+**§S9-X2 — The unwitnessed person (should-fix).** The truly isolated person keeps falling through every annex in this cluster: ANNEX_I's stranger with no community to vouch (and the ~18-month voiceless interval), §K3's claimant with no one to attest, AF3's co-afflicted poor with no oracle-declared emergency — and, carried forward, ANNEX_P's named exclusion of the person with neither documents nor a web-of-trust. The biblical sharpness is exact: the widow's mite was counted by God precisely when no human institution would have seen it (Mark 12:41–44), and the master sends to the highways and hedges for the one with no one (Luke 14:21–23). Across the cluster, recognition is routed through *relationship and witness* — which structurally reaches the connected first and the isolated last. The fix is a consistent low-burden self-declaration fallback, available in I, K, and AF, that isolation alone cannot defeat. Status: **should-fix open** (cluster-wide).
+
+---
+
+### Session 9 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** Each annex binds provision to need rather than to wealth or status: care to physical presence (I), recognition to contribution including the invisible kind (K), rationing to continuity-of-survival when the measure fails (AQ), the survival floor to a right that cannot be bought (AJ), and grace to genuine hardship without uprooting it for fear of fraud (AF). This is the Matthew-25 floor extended outward with real structural teeth — the stranger fed, the gleaner protected, the means of life kept off the market.
+
+**Where the cluster carries the most Babel-risk.** Two seams, both recorded above. The protections are built from surveillance of the very people they protect (§S9-X1), and recognition routed through witness structurally reaches the isolated last (§S9-X2). Neither is a design betrayal — every annex names its own risk honestly — but together they define the cluster's standing vigilance obligation. A secondary pattern: several annexes (AJ, AF, AQ) produce good fruit *if* enforcement is restrained, specifying the enforcement apparatus more confidently than they constrain it.
+
+**Net assessment.** No must-fix blockers; all five are pilot-ready in design, scoring 8–8.5. The cluster is among the corpus's clearest civil expressions of mercy toward the stranger and the poor — and, Christ-measured, it must remember that civil justice for the migrant and the rationed is not the kingdom of God but a humble instrument serving persons under God. The remaining work is to keep the instruments of mercy from being defended by instruments of suspicion that fall hardest on the unwitnessed.
+
+**Items requiring follow-up in a future Session 10:**
+1. Whether a cluster-wide data-minimization/retention/access standard (§S9-X1) has been adopted across I, K, AQ, AJ, AF.
+2. Whether a low-burden self-declaration fallback for the unwitnessed person (§S9-X2) has been added to I, K, and AF, and reconciled with ANNEX_P's isolated-person gap.
+3. Whether §I5 capacity declarations now require federation certification or a baseline-bandwidth floor.
+4. Whether §K1/K2 has gained an outcome floor (automatic trigger) beyond its procedural safeguards.
+5. Whether ANNEX_AQ has added an aggregate cumulative-fallback ceiling and an affected-population voice inside the 48-hour window.
+6. Whether ANNEX_AJ has added an explicit anti-enumeration clause and made the *scope* of monitoring public where thresholds remain restricted.
+7. Whether ANNEX_AF has added a permanent-condition exemption and a non-emergency shared-hardship safe harbor.
+8. The governance/oversight cluster (L, S, AI, Z, AP — "who watches the watchers") remains unevaluated and is the natural Session 10 scope.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–9)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -915,5 +1064,10 @@ Three findings span all three annexes; they are recorded once here and reference
 - `docs/annexes/ANNEX_P.md` (Session 8 — proof-of-personhood, identity red lines)
 - `docs/annexes/ANNEX_Y.md` (Session 8 — Constitutional Survival Minimum)
 - `docs/annexes/ANNEX_AZ.md` (Session 8 — Tier 0 pseudonymous token mechanism)
+- `docs/annexes/ANNEX_I.md` (Session 9 — residency, migration, onboarding)
+- `docs/annexes/ANNEX_K.md` (Session 9 — essential basket governance, civic fairness)
+- `docs/annexes/ANNEX_AQ.md` (Session 9 — Shared Storehouse oracle-failure fallback)
+- `docs/annexes/ANNEX_AJ.md` (Session 9 — above-ledger bypass)
+- `docs/annexes/ANNEX_AF.md` (Session 9 — grace-period exploitation)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
