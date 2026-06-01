@@ -1186,7 +1186,132 @@ This session turns to the system's restraint on its *own* power — the courts, 
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–10)
+## Session 11 Christ-Centered Evaluation — Foundations and Change-Control
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_H — Amendment Article and Constitutional Change Control; ANNEX_AV — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement; ANNEX_N — Transition, Genesis, and Deployability Preconditions; ANNEX_AH — Founding Bootstrap Resolution
+
+This session turns to how the rules change and how the system legitimately begins — the amendment ladder, the guard on the invariant core, the founding window, and the one-time bootstrap. The deepest teaching here is not a rule but a limit: *no human instrument can lay or seal its own foundation* — "other foundation can no man lay than that is laid, which is Jesus Christ" (1 Cor 3:11; Isa 28:16). The cluster is most faithful precisely where it confesses that limit rather than claiming to have closed it. One finding recurs across all four and is recorded at the end.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX H — Amendment Article and Constitutional Change Control
+
+**Christ-centered alignment.** §H1's anti-misclassification rule — "misclassification is itself grounds for invalidation," and "any disputed classification defaults upward until independent review confirms otherwise" — is the structural embodiment of "thou shalt not add thereto, nor diminish from it" (Deut 4:2; 12:32): it stops a rights-narrowing change from being relabeled a minor tweak, resisting the domination move of the powerful redefining categories (Mark 10:42–45; Isa 10:1). §H2.4/§H6/§H8 place rights, survival guarantees, personhood, and due-process minima beyond ordinary amendment and beyond emergency order, protecting the vulnerable from having their floor voted away (Matt 25:35–40; Luke 4:18–19). The single-subject rule with five published attachments (plain-language summary, privacy and invariant-impact statements) honors truth and transparency over concealed decrees (§H8 — no hiding rights-impacting rules in technical appendices; Isa 10:1). The burden on the proposer and broad standing — "the inability to show personal financial harm does not defeat standing"; guardians and the Ombuds may file for the impaired (§H3, §H5) — widens the gate for the weak to be heard (Prov 11:14). And corrigibility is built in: void-and-revert on defect, mandatory sunset review, automatic emergency expiry (§H5–§H7) — the framework stays open to correction rather than hardening into an idol (Matt 18:15–20).
+
+**Babel-risk warning.** Two tensions. The residual quiet-erosion leak is the §H1/§H2.2 Tier-3 channel: whether something is "a bounded dial already authorized elsewhere" depends on what was pre-authorized, so capture can migrate upstream to the original grant. And the opposite risk — over-rigidity: the §H2.4 refounding bar (80% referendum + four-fifths of regions, twice across two quarters) is wise for genuine invariants, but the invariants have *no* built-in review cadence, so a framework built to prevent an idol of capture risks becoming, at its core, an idol of permanence that even righteous correction (Prov 11:14; Matt 18) cannot reach. Deut 4:2 pulls toward fixity; the corrigibility teachings pull toward correctability; §H2.4 resolves heavily toward fixity.
+
+**Human-dignity test.** Passes. §H8's bright lines forbid any social score gating essentials, forbid merging the five instruments into one convertible balance, and forbid reducing due-process or standing "for the very people most exposed to system power." Persons are treated as rights-bearers to be protected, not as data.
+
+**Revision proposal.** (1) Should-fix: require any §H2.2 Tier-3 dial to cite and re-verify the *original* authorizing instrument's bound at filing, so capture cannot hide in a vague upstream grant. (2) Should-fix: define the "material divergence" threshold between the Voice result and the one-person-one-vote legitimacy check (§H2.2), so the safeguard is not purely discretionary. (3) Monitor→clause: add a periodic, non-binding "invariant conscience review" that can only *recommend* a refounding convention — so the invariant core remains answerable to correction without being made cheaply amendable. (4) Monitor: quantify the "supermajority judicial approval" for a third emergency renewal (§H6).
+
+**Fruit test.** (i) Every rule change forced into sunlight with published impact statements; (ii) the poor and the impaired hold real standing without a financial-harm hurdle; (iii) emergencies self-expire; (iv) the Tier-3 channel does not become the path of least resistance for quiet narrowing; (v) the invariants remain answerable to a conscience review even while protected from casual amendment.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not quietly add to or subtract from foundational law; do not decree unrighteous decrees that rob the weak; serve, do not dominate (Deut 4:2; 12:32; Isa 10:1; Mark 10:42–45).
+- *Theological inference:* tiered thresholds, broad standing, and cooling-off periods as the right institutional form of "do not diminish rights."
+- *Prudential political judgment:* the 60/80% thresholds; the 14/30/90/180-day windows; the 5% access-reduction trigger; the regional-split fractions.
+- *Unresolved uncertainty:* whether near-unamendable Tier-1 is faithful humility or a subtle entrenchment-idol; whether the "authorized elsewhere" Tier-3 boundary holds against a determined captor.
+
+**Executive theological verdict: 8.5 / 10.** A rigorous, dignity-protecting, genuinely corrigible change-control regime; its residual risks are the under-defined Tier-3 boundary and an entrenchment that is wise for rights yet worth watching lest it become an idol of permanence.
+
+---
+
+### ANNEX AV — Two-Key Architectural Precondition for Tier-1 Invariant Enforcement
+
+**Christ-centered alignment.** The architecture is a near-literal mechanization of the multiple-witness rule: any Tier-1-touching proposal must carry an independent adversarial attestation *before* the matter can even be established (§AV1) — "at the mouth of two or three witnesses shall the matter be established" (Deut 19:15; Matt 18:16; 2 Cor 13:1). §AV3 gives the second witness genuine independence (nominated by the oppose-coalition, funding/employment firewalls, term outlasting an electoral cycle) — the substance, not merely the form, of the witness rule. §AV2 makes the precondition unwaivable ("any waiver clause void on its face"), guarding the cornerstone that must not be privately removed (1 Cor 3:11; Isa 28:16). §AV4/§AV5 make the *conservative* failure (refuse to attest, proposal stalls) costless and fraud costly — honoring truth-telling over expedient assent (Matt 5:37). Most striking: §AV11 and the Residual Risk section openly name the compound-capture window and concede that simultaneous compromise of coalition, reviewer, and Plenum is "the system's acknowledged single point of catastrophic capture," repairable only by refounding or external civil-society pressure. That refusal to claim totality is the annex's strongest anti-Babel feature.
+
+**Babel-risk warning.** Two-key does not remove the single point of failure; it relocates and splits it — capture migrates to the key-issuance/seating layer (whoever controls the nominating body and the Ombuds counter-attestation, §AV7) and to physical coercion of the adversarial seat. The annex discloses this honestly. The one residual Babel temptation is *cryptographic mystique*: the danger that "cryptographic attestation" reads as objectivity when the trust actually rests on a human nominating chain — that drift would be the precise Babel failure of trusting the tower's masonry over the faithfulness of those who built it (Gen 11).
+
+**Human-dignity test.** Passes. The attestation is a determination about a proposal's effect on invariants, not a scoring of persons; §AV8 requires a public human rationale, and §AV10 judges a member by knowledge and good faith ("knew or should have known"), with due process before any defection finding — keeping a severe penalty from becoming a reputational stoning.
+
+**Revision proposal.** No structural should-fix — the annex's self-disclosure already does the honest work, and inventing a new control to "close" the residual would re-introduce the Babel claim of having closed every gap. (1) Monitor→clause: soften §AV6's "architecturally impossible" to "impossible at the signing layer; capture is displaced to the seating layer, addressed in §AV7/§AV11," so the text does not overstate. (2) Monitor→clause: add an explicit cross-reference that §AV3 independence is only as strong as the nominating body's independence. (3) Monitor: the key-issuance layer as the true new locus.
+
+**Fruit test.** (i) Conservative-failure-by-default means the system errs toward *not* admitting foundation-altering changes; (ii) refusing to attest is costless, so the mechanism never pressures a witness to lie; (iii) the published append-only key history keeps the fruit inspectable; (iv) the cryptographic envelope is never treated as the guarantee in place of the witness's integrity.
+
+**Epistemic categorization:**
+- *Clear biblical command:* grave matters require multiple independent witnesses; the foundation is not privately removed (Deut 19:15; Matt 18:16; 2 Cor 13:1; 1 Cor 3:11; Isa 28:16).
+- *Theological inference:* a cryptographic attestation plus an independent adversarial seat is a faithful institutional analogue of the witness rule — an analogy, not a command; a key is not a conscience.
+- *Prudential political judgment:* the 4-of-5 Plenum; the 90-day envelope expiry; the cooling-off and lookback periods.
+- *Unresolved uncertainty:* whether two-key reduces capture probability or mainly relocates it — which the annex itself admits.
+
+**Executive theological verdict: 8.5 / 10.** A rigorous, Scripture-consonant mechanization of the multiple-witness and guarded-cornerstone principles whose chief virtue is that it openly confesses the point of capture it cannot close rather than pretending to have closed it.
+
+---
+
+### ANNEX N — Transition, Genesis, and Deployability Preconditions
+
+**Christ-centered alignment.** §N4 ("not deployable merely because it is internally coherent… only when legitimacy, continuity capacity, and review capacity exist simultaneously") and §N1's precondition list directly enact "count the cost before you build the tower, lest you be unable to finish" (Luke 14:28–30). §15's design principle — "if the founding moment is captured, later safeguards inherit the capture" — is build-on-rock-not-sand applied to institutions (Matt 7:24–27). The §N2 sunset and §AA1 four-year eligibility firewall refuse to bequeath locked-in injustice to "children's children" (Prov 13:22; Deut 6:6–7). §N4's "not false full-rollout theater… silence on this point is itself a design failure" makes confession of provisional-ness a *duty* — anti-Pharisaic honesty over the appearance of righteousness (Isa 58; Matt 6). And §N2 deliberately strips the provisional bodies of Tier-1 authority during the window — power at the founding is diminished, not exalted (Mark 10:42–45).
+
+**Babel-risk warning.** Founding capture by incumbents is strongly addressed — §N3 names the actual predators (banks, landlord blocs, platforms, donor blocs) and bars any one from a majority. But three seams remain: (1) the rule blocks single-bloc majorities but not a *coordinated coalition* of incumbents acting together — a cartel of "no single" actors can still capture; (2) the §N2 sunset and readiness gate are asserted without a named enforcer or signer, so a provisional body that simply continues past sunset has no specified remedy (a safeguard on sand); (3) "cross-ideological legitimacy coalition" is under-specified — who certifies it is genuinely plural rather than a captured consensus dressed as pluralism (the Gen 11 "one language" wearing many costumes).
+
+**Human-dignity test.** Passes strongly. §N2's Days 0–30 debt standstill and continuity guarantees for food, shelter, care, transit, and crisis mental-health treat people as persons with bodily needs during transition, not ledger entries. §N1's "publishable essential-capacity baseline with known weaknesses rather than a false claim of omniscient measurement" refuses to reduce persons to perfect data, and its public-education requirement honors agency over compliance.
+
+**Revision proposal.** (1) Should-fix: add an anti-collusion clause to §N3 barring not only single-bloc majorities but *coordinated incumbent coalitions* from collectively controlling a provisional body, with a disclosure trigger for cross-bloc coordination. (2) Should-fix: name the remedy when a provisional body fails to sunset or re-authorize on time (automatic loss of authority; decisions void) — auto-expiry without an enforcer is sand. (3) Should-fix: name an independent, conflict-screened signer/quorum for the §N2 readiness-gate sign-off and red-team report. (4) Monitor: a verification test or external attestor for "cross-ideological"; the lot frame and who draws it.
+
+**Fruit test.** (i) Protected households during transition; (ii) founders who cannot entrench themselves; (iii) an inheritance free of locked-in injustice; (iv) public confession of un-readiness instead of launch theater; (v) the sunset and readiness gate backed by named enforcers, not just principles.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honesty about readiness vs. performance; refusal to lord power; stewardship that does not bequeath injustice (Isa 58; Mark 10:42–45; Prov 13:22; Deut 6).
+- *Theological inference:* reading Matt 7:24–27 and Luke 14:28–30 as warrant for deployment preconditions — faithful by analogy (the parables address discipleship, applied to rollout sequencing).
+- *Prudential political judgment:* the 90-day window; the 8-quarter sunset; the 4-year firewall; the staging dates.
+- *Unresolved uncertainty:* whether any founding process can durably resist coordinated incumbent capture; whether auto-expiry is enforceable without the institutions it precedes (the bootstrap paradox).
+
+**Executive theological verdict: 8.5 / 10.** Among the most Christ-consonant annexes in spirit — it counts the cost, builds on rock, protects the vulnerable in transition, and makes honesty about un-readiness a duty; it loses ground only because several safeguards (sunset, readiness gate, anti-collusion) are asserted without a named enforcer, leaving good intentions partly on sand.
+
+---
+
+### ANNEX AH — Founding Bootstrap Resolution
+
+**Christ-centered alignment.** AH defines a single-use founding instrument (P-014) that activates the acceptance process which cannot legitimately activate itself, then seals permanently (§AH1, §AH5). The instrument exists only to lay the foundation and then closes — the self-emptying, self-limiting servant who takes the lowest place rather than retaining standing power (Phil 2:7; Mark 10:42–45). Its "foundation laid once and not relaid" logic echoes the sure cornerstone (1 Cor 3:11; Isa 28:16) — as theological inference, since the one foundation is Christ, not a governance patch. The 60-day public-challenge window with a written response to every challenge (§AH2.4) and the published adversarial dissent regardless of vote (§AH3) honor answering the objector and the witness who speaks against the majority (Matt 18:15–16; Prov 11:14). The strongest clause is §AH5.1's Dignity-Only Continuity Mode: when governance fails, the survival floor for the poor and enrolled persons continues uninterrupted — an institutional crisis may not fall on the vulnerable (Matt 25:35–40; Luke 4:18–19). And §AH6 candidly concedes the post-activation audit cannot be fully external to the process it audits ("inherent circularity… the structural condition of any bootstrapping procedure") — the right Christ-measured posture: confessing the limit rather than claiming a resolved problem.
+
+**Babel-risk warning.** The central risk — the founding exception cited later as precedent for other bypasses — is named and forbidden (§AH1 four constraints; §AH5 non-precedent statement; §AH6 reaffirmation on compromise). But forbidding is not preventing: the constraints are Tier 2, so an H-2 amendment could in principle re-open the logic. The closure is strong but not metaphysically irreversible; it rests on the protocol's own amendment discipline holding. This is honest, not airtight — and the honesty is itself the anti-Babel posture (Babel is the pride that says "we have made it sure"; §AH6 refuses that).
+
+**Human-dignity test.** Passes, notably. The bootstrap is treated as a problem of legitimacy owed to persons (future generations, anyone whose rights depend on genuine vetting), not a compliance hurdle. §AH5.1 is the dignity anchor: persons are not reduced to casualties of a governance failure — the survival floor and identity auditor keep running through any crisis.
+
+**Revision proposal.** (1) Should-fix: §AH1/§AH5 lean on Tier 2 + H-2 amendment as the closure guarantee, but never bound the re-opening of P-014's *logic* — add a clause that an H-2 amendment may interpret or document P-014 but may not re-instantiate it as an activation pathway for any patch other than the historical record. (2) Should-fix: §AH5.1's refounding-petition thresholds are fixed absolute counts (500 / 1,000 verified persons) that a small early pilot could never reach, silently stranding the protocol in Continuity Mode — express as a floor *and* a proportion of enrolled persons, whichever is lower. (3) Monitor: the lot/petition pools must not be curated by the design team (verification-of-verifiers); (4) Monitor: confirm the §AH6 audit window and §AH5.1 Continuity trigger compose cleanly if compromise is found late.
+
+**Fruit test.** (i) A public, challengeable, dissent-bearing founding record; (ii) an emergency power that genuinely closes rather than persisting; (iii) the poor not abandoned mid-crisis (§AH5.1); (iv) humility made procedural — confessed limits rather than claimed mastery; (v) Continuity Mode reachable out of, via proportionate petition thresholds.
+
+**Epistemic categorization:**
+- *Clear biblical command:* protect the vulnerable / do not abandon the poor in crisis (Matt 25:35–40) — directly served by §AH5.1.
+- *Theological inference:* the "one foundation laid once and sealed" framing and the self-limiting-servant reading of permanent closure — sound inference, not command; the cornerstone is Christ, the patch only echoes the pattern.
+- *Prudential political judgment:* the panel size and 4/5 threshold; the 60/90/180-day windows; the petition counts.
+- *Unresolved uncertainty:* whether the closure holds against a future captured H-2 process, and whether the confessed audit circularity is tolerable in practice — which the annex leaves open and says so.
+
+**Executive theological verdict: 8.5 / 10.** A genuinely humble, self-limiting founding instrument that confesses its own circularity and protects the vulnerable through any failure; held back only by the H-2 re-opening seam and the absolute petition thresholds.
+
+---
+
+### Session 11 Cross-Cutting Findings
+
+**§S11-X1 — The unmechanized seam (should-fix).** Across this cluster, several of the strongest safeguards are stated as principles without a named enforcer or remedy: ANNEX_N's sunset and readiness gate (no enforcer, no named signer), ANNEX_H's "material divergence" trigger (undefined) and Tier-3 "authorized elsewhere" boundary (no re-verification of the original bound), and ANNEX_AH's permanent closure (procedurally re-openable via H-2). A safeguard without an enforcer is a house built on sand (Matt 7:26–27): it has the appearance of protection and the substance of trust. The fix is to name the enforcer/remedy for each — an actor and a consequence — so the rock is under the foundation, not only in the blueprint. Status: **should-fix open** (cluster-wide).
+
+**§S11-X2 — Coordinated-coalition capture (should-fix).** Each anti-capture rule guards against the *single* captured actor — single bloc (N), single reviewer (AV), single office (H) — but the determined adversary is a *coalition*: incumbents acting in concert (N), a captured nominating body seating a compliant "adversary" (AV), an upstream grant pre-authorizing a Tier-3 dial (H). This is the Genesis 11 pattern exactly — "the people is one, and they have all one language" — many actors functioning as one will. The fix is anti-collusion / cite-and-re-verify clauses that reach coordinated action, not only single-actor capture. Status: **should-fix open** (cluster-wide).
+
+**§S11-X3 — Confession over false closure (the cluster's deepest lesson; partly a should-fix, mostly a posture to preserve).** ANNEX_AV (Residual Risk, §AV11) and ANNEX_AH (§AH6 circularity) already do the most important thing in the cluster: they *confess the limit they cannot close* rather than claiming mastery. This is not a weakness to fix; it is the theologically correct posture — no human instrument can lay or seal its own foundation (1 Cor 3:11; Isa 28:16), and the pride that claims otherwise is Babel (Gen 11:4). The actionable should-fix is to bring the other two annexes to the same posture: ANNEX_H should add the non-binding "invariant conscience review" so its near-unamendable core stays answerable to correction without pretending it is divinely fixed, and ANNEX_N should keep its §N4 honesty-duty explicit. The non-actionable, and more important, part: preserve the confessional clauses exactly as written. Any future revision that deletes AV's Residual Risk or AH6's circularity admission in the name of "looking more solid" would be a theological regression — trading Christ-measured humility for the appearance of a self-sealing tower. Status: **partly addressed (AV, AH model it); should-fix for H/N to match; and a standing instruction not to weaken the confessional clauses.**
+
+---
+
+### Session 11 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** It counts the cost before building (N), refuses to lay rights-narrowing changes in the dark (H), requires multiple independent witnesses before the foundation is touched (AV), lays the founding stone once and then empties itself of power (AH), and — through it all — keeps the survival floor running for the poor even when governance itself fails (AH §AH5.1). Above all, the cluster's mature annexes *confess what they cannot secure*, which is the rarest and most Christ-measured virtue in the corpus.
+
+**Where the cluster carries the most Babel-risk.** Two structural seams (the unmechanized safeguard, §S11-X1; the coordinated coalition, §S11-X2) and one ever-present temptation: to mistake the cleverness of the mechanism for the security of the foundation — to trust the tower's masonry over the faithfulness of those who build and keep it (Gen 11). The annexes resist this best where they admit the mechanism's limit.
+
+**Net assessment.** No must-fix blockers; the cluster scores **8.5**, and its should-fixes are closeable. Its deepest lesson is theological, not procedural: a constitution can govern its own change with great discipline, but it cannot be its own cornerstone — and this corpus is most faithful exactly where it says so plainly. Civil change-control is not the kingdom of God; it is a humble, corrigible instrument that must keep confessing the foundation it did not lay and cannot seal, lest it become humanity's substitute for the One who did.
+
+**Items requiring follow-up in a future Session 12:**
+1. Whether the §S11-X1 enforcers/remedies have been named (N sunset and readiness-gate signer; H "material divergence" definition; AH closure bound against H-2 re-instantiation).
+2. Whether the §S11-X2 anti-collusion / cite-and-re-verify clauses reaching coordinated action have been added (N §N3; H §H2.2).
+3. Whether ANNEX_H has added the non-binding invariant conscience review (§S11-X3) — and whether the AV/AH confessional clauses remain intact (they must not be weakened).
+4. The remaining unevaluated economy/oracle/threat machinery (X, V, AR, AT, M, AL, AE, U, A, AG, AD, AC, T, AO, AB, AS) and the AT/AM completions, for future sessions as priority allows.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–11)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1217,5 +1342,9 @@ This session turns to the system's restraint on its *own* power — the courts, 
 - `docs/annexes/ANNEX_AI.md` (Session 10 — Federated Ombuds constitution)
 - `docs/annexes/ANNEX_Z.md` (Session 10 — Voice and Service Record)
 - `docs/annexes/ANNEX_AP.md` (Session 10 — PCRP attack-surface hardening)
+- `docs/annexes/ANNEX_H.md` (Session 11 — amendment article and change control)
+- `docs/annexes/ANNEX_AV.md` (Session 11 — two-key Tier-1 precondition)
+- `docs/annexes/ANNEX_N.md` (Session 11 — transition, genesis, deployability)
+- `docs/annexes/ANNEX_AH.md` (Session 11 — founding bootstrap resolution)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
