@@ -47,6 +47,11 @@ The existing audit independence rule ('must not be a member of the team that des
 
 The purpose of the adversarial member is to ensure that at least one auditor is professionally incentivized to find problems rather than confirm adequacy. This directly closes the intellectual-cousin exploit.
 
+**Auditor-qualification authority.** Verifying that an auditor meets these independence requirements — no institutional affiliation, domain diversity, and demonstrated adversarial professional background — is itself a power that can be captured. The Auditor Qualification Body certifies auditors against these requirements before they may be seated:
+- The Body is structurally independent of the design team and the sponsor of any patch for which it qualifies auditors. A member who has any institutional affiliation (under the AG3 4-year standard) with that design team or sponsor recuses from the qualification of auditors for that patch.
+- The Body is itself a sign-off-adjacent institutional cluster and is subject in full to the AG7 concentration and anti-cohort controls, including cohort cooling and the three-axis epistemic-diversity standard.
+- Each qualification decision is published with the evidence relied upon and the written reasons for finding the adversarial and domain-diverse criteria satisfied. Independence is established by verifiable record, not by assertion. A qualification decision lacking published reasons is void, and any auditor seated on it is unseated.
+
 ### AG4. Anti-Gaming Constitutional Upgrade (Tier 2 Reclassification)
 The FAP's anti-gaming rules — specifically the prohibition on waiving evidence requirements due to urgency ('urgency is a reason to accelerate the pilot, not to skip it') — are reclassified from Tier 3 operational document status to Tier 2 charter-level protection. Consequences:
 - The evidence waiver prohibition cannot be amended through the operational queue. Any change requires the H-2 amendment process: 90-day notice, two comment rounds, 2/3 Voice placement, and public ratification.
@@ -90,6 +95,11 @@ The four FAP sign-off authorities collectively constitute a new institutional cl
 | **Class E2 — Structural control failure** | Oracle quorum loss; Ombuds Plenum unable to convene; Enforcement Panel unable to act | 7 days from intake to disposition |
 | **Class E3 — High-severity governance gap** | Newly identified Critical threat with no current mitigation; Tier 1 inconsistency discovered | 30 days from intake to disposition |
 | **Class S — Standard** | All other patches | Existing FAP timelines apply |
+
+**Urgency-class assignment accountability:** The authority that assigns a patch's urgency class holds the same bypass power AG4 removes from the urgency argument, because class assignment governs the review window and, for Class E1, a reduced quorum. That power is constrained:
+- At intake, the assigned class is published together with a written rationale identifying the trigger condition relied upon and the classifier of record. An assignment published without rationale defaults to Class S until a rationale is filed.
+- The assignment is challengeable. Any sign-off authority, the concentration monitoring function, or an affected party may contest it; while a challenge is pending, the longer of the assigned and the contested review windows applies, and the survival floor bridge remains in force.
+- A sustained finding of mis-classification — assigning a higher urgency class than the trigger conditions support — counts toward the AG7 concentration-review trigger and bars the classifier of record from assigning the urgency class of similar patches for a 12-month cooling period.
 
 **Disposition options within time bound:**
 - **Accept** — patch enters PROPOSED or ACTIVE status per standard FAP rules

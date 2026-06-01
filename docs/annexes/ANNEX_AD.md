@@ -34,6 +34,8 @@ Before public launch, the system must publish a plain-language document titled '
 
 For each failure category, the document must explain the containment mechanism and the correction path. Commitment to public disclosure of each failure category is binding — operational failures in these categories that are not published within the RPCP timeline constitute a transparency violation. This doctrine converts future failures from surprise revelations into acknowledged expected events.
 
+The disclosure obligation is symmetric: it covers not only the system's own operational failures but also external criticisms that turn out to be correct. When an external criticism, challenge, or characterization is found on review to be accurate, the system must publish a correction in the same channel and on the same timeline as a pre-committed failure disclosure under this doctrine. The correction states plainly what the criticism got right and what the system got wrong; where the criticism identified a fault, the correction includes an acknowledgment of that fault and the remediation undertaken or planned. The system must be able to say plainly that it was wrong. Failure to publish a confirmed valid criticism within the RPCP timeline is itself a transparency violation, on exactly the same footing as an unpublished operational failure. No process for rebutting external mischaracterizations may exist without this matching path for conceding that a critic was right.
+
 ### AD3. Citizen-Facing Rights Layer (CFRL)
 A document separate from the White Paper and Humane Constitution must be published before launch. Maximum length: one page. Reading level: 8th grade or below. Translated into every language spoken by more than 1% of the affected population. Contains exactly four sections:
 - **What you are entitled to** — survival floor, appeal rights, privacy protections.
@@ -51,10 +53,14 @@ The annual simulation mandate (Annex T) is extended to include at least one adve
 - **The simulation measures:** response time vs. RPCP SLA; factual accuracy of the response; estimated reach ratio (response vs. hostile narrative); whether the response required violating the pre-committed failure communication doctrine.
 - **Simulation reports are published in full**, including what failed, what required improvisation, and what pre-built templates or authorities were missing.
 
+Factual accuracy and completeness always take precedence over reach. The estimated reach ratio is a diagnostic measure only: it describes how far an accurate response traveled relative to a hostile narrative, and it may never be optimized at the expense of accuracy. No response may be selectively framed, abridged, or timed to win reach at the cost of completeness, and reach is never an acceptance criterion for a response. A response that achieves wide reach by omitting, softening, or distorting the truth is a failed response, not a successful one.
+
 *A system that passes technical operational simulations but fails narrative simulations is not scale-ready. Simulation reports are public.*
 
 ### AD5. Hostile Frame Pre-emption Registry
 The system must maintain and publish a document titled 'Common Misunderstandings.' This document lists the top 10 most likely mischaracterizations of the system, with: (a) the accurate factual statement; (b) the specific Article VII data that supports it; (c) the section of the CFRL or White Paper where the clarification appears. Updated quarterly. When a mischaracterization in the registry appears in external media or public discourse, the registry provides the fastest pre-built path to an accurate counter, available to any journalist, researcher, or citizen. The registry is published under 'Common Misunderstandings,' not 'Anticipated Attacks,' to avoid amplifying hostile framings by naming them as threats.
+
+The registry is not a one-directional rebuttal tool. Each entry must be re-tested against current Article VII data at every quarterly update, and any entry whose underlying criticism proves accurate is removed from the registry and routed to the correction-and-concession path under AD2 rather than retained as a counter. An item may remain in the registry only for as long as the accurate factual statement actually holds. The registry may never be used to keep explaining as a misunderstanding something the system has found to be true.
 
 ### AD6. White Paper Sync Requirements (P-011 Activation)
 Before public launch, the White Paper must be updated to include:

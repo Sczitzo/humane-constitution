@@ -17,14 +17,17 @@ This annex operationalises the protocol's adversarial testing discipline by defi
 
 ### A1. Red-Team method (repeatable)
 
-- **Define invariants (non-negotiables):** no survival denial via Essential Access; no rights denial via Voice, Service Record, or Flow; coercion must be detectable and punishable without punishing innocents broadly; system must be patchable without elite permission.
+- **Define invariants (non-negotiables):** no survival denial via Essential Access; no rights denial via Voice, Service Record, or Flow; coercion must be detectable and punishable without punishing innocents broadly; system must be patchable without elite permission; detection tooling must remain privacy-bounded — anomaly detection, collusion-graph analytics, and all monitoring used by this suite are purpose-limited to the named threat, operate on minimised data, and are retention-bounded, so the test discipline never becomes a standing surveillance instrument.
 - **Score threats on four axes (1–5):** impact, likelihood, detectability, and reversibility (blast-radius control).
 - **Run tabletop simulations (human role-play)** before deploying automation; convert tabletop outcomes into automated test cases.
+- **Author scenarios from inside and outside:** the suite combines protocol-authored scenarios with externally-authored adversarial scenarios written by red-teamers independent of the design team, and red-team membership rotates on a defined cadence, so the system is never solely its own examiner.
 - **Patch using one of four levers:** reduce incentive, increase detection, increase abuse cost, or limit blast radius (caps/escrows/throttles).
 
 ---
 
 ### A2. Scenario suite (high-probability attacks)
+
+The scenarios below are non-exhaustive. They cover known, high-probability attacks; unknown-unknowns are expected, and novel attack patterns will emerge that no current scenario anticipates. The suite is therefore refreshed on a defined cadence — scenarios are added, retired, and rewritten as the threat landscape and the system itself evolve. Passing the current suite demonstrates resistance to the modelled attacks only; no party may claim that passing the present suite proves the system safe.
 
 #### Essential Access coercion and dependent exploitation
 
@@ -90,6 +93,7 @@ Fake identities claim Essential Access or unlawfully enter Voice and Service Rec
 - High-impact abuse above defined thresholds is detectable within a bounded time window (policy-defined), with documented response playbooks.
 - Enforcement actions are targeted and time-limited; dependent protections and escrow partitioning prevent collateral harm.
 - The protocol supports rapid patching: publicly logged vulnerabilities, mandatory post-mortems, and upgrade paths that cannot be blocked by entrenched beneficiaries.
+- **Forced-remediation blocking gate.** Any vulnerability scored above the defined impact threshold on the A1 four-axis scoring becomes a blocking gate. Pilot-to-production promotion and any scale-up are barred until the fix is implemented **and** re-tested as resolved — not merely until a post-mortem is filed or a remediation is planned. A documenting log, post-mortem, or planned upgrade path does not satisfy this gate. A known high-impact vulnerability that is documented but unfixed blocks deployment; the gate clears only when the suite re-runs the affected scenario and confirms the vulnerability no longer manifests.
 
 ### A4. Pilot test checklist
 
