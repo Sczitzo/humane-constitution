@@ -1682,7 +1682,129 @@ This session turns to how the system examines itself (A), vets its own changes b
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–14)
+## Session 15 Christ-Centered Evaluation — Threats, Disclosure, Integrity, and Attestation
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_T — Compound Failure Scenarios and Interface Stress Tests; ANNEX_AO — Register Disclosure Protocol; ANNEX_AB — Document Governance and Integration; ANNEX_AS — Attestation-at-Risk Stake Mechanism
+
+This closing evaluation session covers how the system tests itself at the seams (T), discloses its threats honestly without arming the destroyer (AO), holds the meaning of its own words stable against capture (AB), and gives weight to the act of vouching for another (AS). The governing teachings are counting the cost before building (Luke 14:28), wise-as-serpents-harmless-as-doves prudence held with walking-in-the-light honesty (Matt 10:16; Luke 8:17), not moving the boundary-stone that protects the vulnerable (Prov 23:10; Isa 5:20), and bearing true witness without becoming a respecter of persons (Deut 19:16–19; Jas 2:1–9). Two findings recur, and one annex carries a finding sharp enough to name on its own.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX T — Compound Failure Scenarios and Interface Stress Tests
+
+**Christ-centered alignment.** The whole annex enacts "count the cost… whether he have sufficient to finish" before building (Luke 14:28–30) and the house founded on rock that the storm tests and cannot shake (Matt 7:24–27): §T1–§T4 deliberately send the storm against the *seams* (scarcity + oracle fraud, identity pressure + housing shortage, civic capture during emergency, issuance abuse + membrane leakage), and §T5's "a system that passes only single-threat tests but fails interface tests is not scale-ready" is almost a direct structural echo. §T6's slow-drift simulation — twenty successive compliant Tier-3 changes to catch cumulative hollowing — is the prudent who "foreseeth the evil, and hideth himself" (Prov 27:12). And the discipline is bound to actual persons at the bottom: §T1 continues survival-floor protections while a shortage declaration is reviewed; §T4 unwind logic protects wage earners, essential providers, and innocent counterparties (Matt 25:35–40; Luke 4:18–19).
+
+**Babel-risk warning.** The sharpest residual is cataloging without fixing. §T1–§T4 are framed as "test whether…" — they generate *findings*, not guaranteed *remediation*; the only hard hook is §T5's *publication* of remediation deadlines, with no named actor, no halt authority, no consequence if a deadline lapses. The non-scale-ready principle is asserted as a sentence but never made an operative gate — the precise sin it was built to prevent: knowing the foundation is sand and building anyway because the inspection was performed (Luke 14:30). Secondary: the finite named scenario library can ossify into a checklist that breeds false confidence about the unlisted seams.
+
+**Human-dignity test.** Passes. Persons remain the unit of concern: §T2 tests that "provisional personhood protects real people without opening mass duplicate-account extraction" — holding dignity and anti-fraud integrity in tension rather than collapsing one into the other; §T4 names protected classes during correction.
+
+**Revision proposal.** (1) Should-fix: convert §T5's non-scale-ready principle from a declarative sentence into an operative gate — name who declares a system not scale-ready, and bind a failed interface test to a mandatory remediation deadline with an explicit hold/rollback consequence if it lapses (cross-cutting — see §S15-X1). (2) Should-fix: require each annual cycle to introduce at least one *novel, previously-untested* compound scenario, so the library cannot ossify. (3) Monitor: whether downstream patches actually supply the remediation teeth this annex implies; (4) Monitor: repeated reliance on "manual heroics" triggering structural fix rather than being logged year over year.
+
+**Fruit test.** (i) The annual simulation produces honest published failure reports; (ii) survival-floor continuity holds under compound stress; (iii) a failed interface test actually halts scale-up, not merely generates a report; (iv) novel scenarios keep the library from becoming a complacent checklist.
+
+**Epistemic categorization:**
+- *Clear biblical command:* count the cost before building; test the foundation against the flood (Luke 14:28–30; Matt 7:24–27).
+- *Theological inference:* that stressing *interfaces* specifically is the faithful application of "build on rock."
+- *Prudential political judgment:* the scenario taxonomy; the twenty-change drift sim; the annual cadence.
+- *Unresolved uncertainty:* whether finite named scenarios cover the true interface space; whether "publish remediation deadlines" without an enforcement actor forces remediation.
+
+**Executive theological verdict: 8 / 10.** Theologically among the most Christ-aligned annexes in posture (anti-Babel, anti-presumption, vulnerable-protecting), held back only because its remediation teeth are implied and published rather than operatively gated.
+
+---
+
+### ANNEX AO — Register Disclosure Protocol
+
+**Christ-centered alignment.** The annex holds a genuinely two-sided biblical tension with unusual care. On the walking-in-the-light side (John 3:20–21; Luke 8:17; Luke 12:2): the register's "existence, structure, and mitigations are fully public," and the anti-secrecy guards are the strongest clauses — visible omission markers ("[Restricted Annex — see AO]") with "silent omissions are not permitted" (§61); a Restricted entry not referenced in the Public Register is treated as "hidden threat tracking," and an "ADDRESSED but no mitigation" status as "status fraud" (§§115–116). This forecloses the exact cover-up the split could enable. On the prudence side (Matt 10:16, wise as serpents; Matt 7:6; Prov 22:3): the restricted set is class-bounded to calibration data "that provides no accountability value to the public but provides operational value to attackers" (§172) — withholding the exploit-precision, not the truth that the threat exists. And the secret is kept from the destroyer, not the watchmen: CRP standing access, Ombuds access, credentialed auditors, and an annual independent consistency audit with a *publicly published attestation* (§§90–95, 121–128).
+
+**Babel-risk warning.** Low-to-moderate, well-guarded. The residual: all enforcement runs through *internal* bodies, and the public verifies only an attestation, never the content (§160 — which the annex names honestly rather than hiding). The sharpest concrete gap is single-custodian control over the *initial* classification: downward reclassification requires the Owner plus an independent auditor jointly (§140), and upward adds CRP review (§149), but routine classification *at entry* has no second signature — one captured custodian could over-classify at creation, with only the annual audit catching it, a one-year blind window.
+
+**Human-dignity test.** Passes. The protocol treats the public as persons owed an account — §174 mandates a plain-language explanation of the bifurcation and why it serves the people the system protects. The restricted data is operational calibration, not anything about persons.
+
+**Revision proposal.** (1) Should-fix: add a second-signature (dual-control) requirement to the *initial* classification decision, mirroring §149's upward-reclassification rule, closing the over-classification blind window (cross-cutting — see §S15-X1). (2) Should-fix: cap or trend the *proportion* of entries carrying restriction markers — a rising restriction ratio is the earliest measurable signal of drift toward secrecy, and nothing currently trends it. (3) Monitor: auditor independence given that the Owner commissions the audit (§121); (4) Monitor: the §113 "public understatement is not a violation" rule not shading into misleading minimization.
+
+**Fruit test.** (i) A public that can name every threat and see every redaction; (ii) watchdogs who can read everything; (iii) attackers who gain no calibration manual; (iv) a restriction ratio that does not silently climb; (v) classification that requires more than one hand.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not bear false witness; do not call evil good — the public register must not overstate mitigations or falsely mark threats addressed (§§114–115).
+- *Theological inference:* that prudent withholding of exploit-precision is compatible with walking in the light *provided* the withholding is itself visible and overseen.
+- *Prudential political judgment:* the custody design; the access roles; the annual audit cadence.
+- *Unresolved uncertainty:* whether internal-only oversight of content the public can never inspect is durably trustworthy under capture (the annex concedes this in §160).
+
+**Executive theological verdict: 8.5 / 10.** A theologically serious, two-sided protocol that mostly succeeds in keeping accountability in the light while denying the destroyer a weapon; its main gap is single-custodian control over the initial classification decision.
+
+---
+
+### ANNEX AB — Document Governance and Integration
+
+**Christ-centered alignment.** §AB1's running-document discipline ("a controlled corpus rather than a chain of disconnected drafts," conflicts resolving upward to the Humane Constitution) maintains one stable, reconciled text against drift — yes meaning yes, truthful speech (Matt 5:37; Eph 4:25). Integration "without deleting predecessor content" plus the Threat/Patch lineage table is the Deut 4:2 / Rev 22:18–19 instinct — you may add and harden, but you do not silently erase the record. §AB2's shadow-convertibility containment keeps the survival floor Essential-Access-only so "Flow does not directly purchase the constitutional survival floor" (Luke 4:18–19; Matt 25:35–40), and its rule that enforcement *capacity must be restored* rather than thresholds *raised* refuses to relabel a funding failure as an acceptable leakage level (Isa 5:20 — not calling evil good). The heart is §AB5's semantic anti-capture: "capture often proceeds through semantics… rather than open repeal," so any change altering "real access, eligibility, burden, continuity" is substantive "regardless of whether it is labeled technical or clerical" — Proverbs 23:10 / 22:28 made operational, refusing to move the boundary-stone that protects the vulnerable by stealth.
+
+**Babel-risk warning.** The discipline stops *stealth* redefinition but relocates the attack surface to whoever controls the integration and amendment process. Most definitions route to Tier 2, so a faction holding a Tier 2 majority can lawfully redefine "Contribution," "Scarcity," or "Capacity" through the front door. "Scarcity" and "Capacity" are the soft underbelly: both rest on a "verifiable throughput/supply capacity" number, and whoever certifies that number sets the trigger for rationing the survival floor — a quantitative back-door to moving the boundary-stone without touching the word, and the throughput-certifier is not named or independently checked here. The §AB5 dispute-escalation "prima facie threshold" has an unspecified gatekeeper (a captured gatekeeper can decline to forward inconvenient challenges), and §AB6's "Annex AB governs to the extent necessary" hides an undefined, capturable "necessary" inside the very anti-drift clause.
+
+**Human-dignity test.** Strongly passes. Dignity is "not contingent on any performance, productivity metric, or identity credential"; identity uncertainty never severs the survival floor; the §AB3 invisible-work backstop (self-attestation with burden-of-disproof on the system) honors unpaid caregiving and mutual aid — persons as image-bearers, not legible output rows (Gen 1:26–27).
+
+**Revision proposal.** (1) Should-fix: name and independently check the capacity/throughput certifier for "Scarcity" and "Capacity" — a definition is only as stable as the party producing the number it depends on (cross-cutting — see §S15-X1). (2) Should-fix: specify who administers the prima-facie dispute-escalation gate and require that declined challenges be logged publicly, so the anti-capture process cannot be captured by silence. (3) Monitor: bound "to the extent necessary" in §AB6; (4) Monitor: whether the most floor-critical terms (Survival, Non-convertibility, survival floor) should require Tier 1 rather than Tier 2 to raise the cost of front-door capture closer to the cost of stealth capture.
+
+**Fruit test.** (i) Rights cannot be eroded by quiet relabeling; (ii) unpaid carers are seen; (iii) a funding shortfall cannot be laundered into a higher "acceptable leakage" number; (iv) the throughput-certifier and dispute-gate are named and accountable, so capture cannot migrate from vocabulary to procedure.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest, stable speech; do not call evil good or move the landmark protecting the vulnerable; do not silently tamper with the established word (Matt 5:37; Eph 4:25; Isa 5:20; Prov 23:10; Deut 4:2).
+- *Theological inference:* that a controlled corpus and locked definitions operationalize care for the poor and the integrity of testimony.
+- *Prudential political judgment:* the Tier-2 routing; the leakage formulas; the four-layer identity stack.
+- *Unresolved uncertainty:* whether any definitional discipline holds meaning stable against a determined supermajority; who certifies "capacity."
+
+**Executive theological verdict: 8 / 10.** Scripturally serious anti-capture and floor-protection work whose remaining gap is that it secures the *words* well while leaving the *number-certifiers and process gatekeepers* underspecified, so capture migrates from vocabulary to procedure.
+
+---
+
+### ANNEX AS — Attestation-at-Risk Stake Mechanism
+
+**Christ-centered alignment.** §2.1/§2.5's stake-at-risk-before-detection is the structural embodiment of "he that is surety for a stranger shall smart for it" (Prov 11:15; 6:1–5) — it makes the biblical weight of vouching real *before* harm rather than only after. §2.4's graduated slashing by culpability (inadvertent 25% / negligent 50% / knowing 100% plus referral) tracks the distinction between deception-while-deceived and willful false witness, the knowing tier a near-direct analogue to Deuteronomy 19:16–19 (the false witness bears the harm he intended), and §3's 30% restitution to the harmed party honors restorative justice (Luke 19:8, Zacchaeus). §2.5's costless, never-slashable declining protects against compelled false testimony — truthfulness without weaponizing silence. The §4 safe harbor for close-knit and indigenous communities refuses to read kinship density as guilt.
+
+**Babel-risk warning — and the sharpest finding of this session.** The mechanism is **wealth-weighted trust by construction**: §2.1's "if the attestor has insufficient balance, they cannot make the attestation" silences the civically poor as witnesses, and a subject whose entire network is poor cannot be vouched for. The rich attestor clears a 20% stake easily; the poor attestor risks subsistence to say the *same true thing* — so the true word of the poor costs more than the true word of the rich. This is an inversion of the widow's-mite logic, where God weighed the gift by what it *cost* the giver (Mark 12:43–44), and it risks recreating inside the trust graph the very assembly James 2:1–9 condemns — seating the rich, shaming the poor. The annex *sees* this (§6.5 "exclusion safety," §7 audit of "attestor exclusion rate") and routes around it via alternative paths and safe harbors — but those alternative paths are *deferred to Article VI / Annex K and not specified here*, so at this document's level the poor person's protection is a promissory note, not an enforced mechanism. The other seam: a slashed attestor has a 2-year ring disqualification but *no named repentance or re-entry path* (Matt 18; Luke 15 would want a documented road back).
+
+**Human-dignity test.** Mixed-to-positive. Dignity-preserving: pre-commit transparency treats the attestor as an informed moral agent; restitution treats the harmed as a person owed; the §4 safe harbor refuses to read kinship as guilt. Dignity-risking: the proportional stake quietly prices a person's *witness* by their *wealth*, and the §2.1 hard balance-gate can reduce an isolated newcomer to "un-vouchable" — the precise exclusion the system exists to cure.
+
+**Revision proposal.** (1) Should-fix: move the §6.5 anti-exclusion alternative paths from a deferred cross-reference into a *binding floor inside this annex* — no subject may be rendered un-vouchable solely by their network's poverty, as an operative clause, not an implementation note (cross-cutting — see §S15-X2). (2) Should-fix: add a cost-relative-to-means / widow's-mite correction — at minimum require the §7 audit to report slash impact as a fraction of *remaining subsistence balance*, not just absolute volume, and consider a means-adjusted stake base so a true statement does not cost the poor attestor proportionally more than the rich one. (3) Should-fix: add a restoration / re-entry clause for slashed attestors after a non-knowing finding (an analogue to the Annex AF grace mechanisms), so the mechanism corrects rather than permanently brands. (4) Monitor: whether the "attestor exclusion rate" correlates with poverty over time — the early-warning that James 2 has crept in.
+
+**Fruit test.** (i) Fewer costless favor-lies; real restitution to the harmed; (ii) the poor can still vouch and be vouched for — the anti-exclusion floor is enforced here, not deferred; (iii) a slashed-but-honest attestor has a road back; (iv) the exclusion rate does not climb with poverty.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not bear false witness; the willful false witness bears the harm he intended; restitution to the wronged; do not favor the rich over the poor in judgment (Ex 20:16; Deut 19:16–19; Luke 19:8; Lev 19:15; Jas 2:1–9).
+- *Theological inference:* that surety should carry felt cost *before* detection; that graduated culpability refines false-witness law; that a restoration path is owed (Matt 18; Luke 15).
+- *Prudential political judgment:* the 20% stake ratio; the 365-day window; the 0.40 density threshold; the slash tiers.
+- *Unresolved uncertainty:* whether the alternative-path safety valve can fully neutralize the wealth-weighting, or whether stake-gated witness is inherently a respecter of persons no matter how it is patched.
+
+**Executive theological verdict: 7 / 10.** Structurally faithful to biblical false-witness and surety teaching with genuine restitution, but its central wealth-weighting of testimony leaves the poor's anti-exclusion protection a deferred promise rather than an enforced floor. *(Closing the §S15-X2 fix lifts it to 9.)*
+
+---
+
+### Session 15 Cross-Cutting Findings
+
+**§S15-X1 — Capture migrates from the word to the gatekeeper (should-fix).** This cluster repeats the deepest pattern of the whole evaluation: each annex secures the visible thing and leaves the *operative hand* underspecified. ANNEX_T tests the seams but names no one to declare a system not scale-ready; ANNEX_AO guards disclosure but leaves initial classification to a single custodian; ANNEX_AB defends the meaning of the word but leaves the throughput-certifier and the dispute-gate unnamed. Capture does not need to repeal the rule or move the word — it only needs to own the one who certifies the number, classifies the entry, or forwards the challenge. The fix is to name and constrain each operative hand: an operative scale-readiness gate with a named declarer (T), dual-control on initial classification with a trended restriction ratio (AO), a named-and-checked capacity certifier and dispute-gate with publicly logged declined challenges (AB). Status: **should-fix open** (cluster-wide).
+
+**§S15-X2 — Do not price honesty by wealth (should-fix, AS).** ANNEX_AS makes the true witness of the poor cost more than the true witness of the rich, and defers the poor's protection to other annexes. A mechanism that prices honest testimony by means is in danger of becoming the respecter of persons that James 2:1–9 condemns — and the widow's mite (Mark 12:43–44) is the exact rebuke: God weighs the witness by what it costs the giver, not by the giver's balance. The fix must live *in this annex*: a binding floor that no one is un-vouchable for poverty, a cost-relative-to-means correction, and a restoration path. Status: **should-fix open.**
+
+---
+
+### Session 15 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** It counts the cost and tests the foundation against the storm (T), holds disclosure honestly in the light while refusing to arm the destroyer (AO), guards the meaning of its words and the boundary-stones of the vulnerable against stealth capture (AB), and makes vouching for another a weighty, accountable, restitution-bearing act (AS). These are the disciplines of a community that tests itself, tells the truth carefully, keeps its word stable, and takes the witness seriously.
+
+**Where the cluster carries the most Babel-risk.** The recurring shape, now seen for the final time: capture migrates to the unnamed operative hand (§S15-X1) — the inspector who never halts, the custodian who classifies alone, the certifier who sets the number. And the distinct, sharper risk that an anti-fraud mechanism can become a respecter of persons, pricing the poor's honest witness above the rich's (§S15-X2). Neither is a design betrayal; each is the precise seam where good machinery could fail the very people it serves.
+
+**Net assessment.** No must-fix blockers; the cluster scores **7–8.5**, and every gap is a closeable should-fix. Christ-measured, these are honest, self-suspicious, vulnerable-protecting instruments — and their remaining discipline is the one the whole evaluation has returned to again and again: name and bind the operative hand, and never let a protection mechanism become a respecter of persons. Civil testing, disclosure, definition, and attestation are not the kingdom of God; they are a steward's careful instruments, most faithful when they bind their own gatekeepers and weigh the poor's witness as heavily as the rich's.
+
+**Items requiring follow-up in a future Session:**
+1. Whether the §S15-X1 operative hands are named and bound (T scale-readiness gate; AO dual-control classification + restriction-ratio trend; AB capacity certifier + dispute-gate).
+2. Whether the §S15-X2 AS fixes are in (binding anti-exclusion floor; cost-relative-to-means correction; restoration path).
+3. The AM completion (electoral-resilience core, evaluated only at §AM8/CIP in Session 5) remains the last partial-coverage item in the corpus.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–15)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1729,5 +1851,9 @@ This session turns to how the system examines itself (A), vets its own changes b
 - `docs/annexes/ANNEX_AG.md` (Session 14 — formal acceptance process integrity)
 - `docs/annexes/ANNEX_AD.md` (Session 14 — narrative attack surface)
 - `docs/annexes/ANNEX_AC.md` (Session 14 — governance throughput, elite formation)
+- `docs/annexes/ANNEX_T.md` (Session 15 — compound failure scenarios)
+- `docs/annexes/ANNEX_AO.md` (Session 15 — register disclosure protocol)
+- `docs/annexes/ANNEX_AB.md` (Session 15 — document governance and integration)
+- `docs/annexes/ANNEX_AS.md` (Session 15 — attestation-at-risk stake)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
