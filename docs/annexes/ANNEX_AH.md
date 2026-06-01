@@ -22,6 +22,8 @@ P-014 is not a standing patch. It is a one-time founding instrument with a singl
 - Any invocation of P-014 logic for any purpose other than the historical record of P-013's activation requires H-2 amendment process before it takes effect.
 - P-014 closes permanently upon P-013's ACTIVE status. No re-opening, no emergency extension, no analogical application.
 
+The permanence of P-014's closure is itself bounded against procedural re-opening. An H-2 amendment may interpret, document, or annotate the historical P-014 record, but it may not re-instantiate P-014 — or any functional equivalent founding-bypass logic — as an activation pathway for any patch other than the historical P-013 activation. Re-instantiating the founding-bypass logic for any new purpose requires full H-3 refounding and may never be accomplished through H-2 amendment. This closes the seam by which a closure described as permanent could otherwise be reduced to a merely H-2-reversible convention.
+
 ### AH2. Stage 1 — Pre-Activation Disclosure (60 Days minimum, per P-020 amendment)
 
 Before any activation steps proceed, the following must be published and a 60-day minimum public challenge window must close:
@@ -88,9 +90,9 @@ Upon 4/5 panel sign-off following completed Stage 3:
 - Voice and Service Record issuance updates requiring P-013-governed recalibration.
 
 **Re-founding trigger:** If the protocol remains in Dignity-Only Continuity Mode for **180 consecutive days** without an active P-013 re-submission proceeding underway, a mandatory public re-founding petition window opens automatically. The petition window operates as follows:
-1. Any 500 or more verified enrolled persons may jointly submit a re-founding petition proposing a corrected P-013 activation procedure.
+1. A re-founding petition proposing a corrected P-013 activation procedure may be jointly submitted by the **submission threshold**: the lower of 500 verified enrolled persons or 5% of all currently enrolled verified persons.
 2. Petitions are published publicly within 7 days of receipt.
-3. A petition that receives attestation from 1,000 or more verified enrolled persons within 90 days advances to a reconvened founding panel under AH3 rules.
+3. A petition that receives attestation from the **advancement threshold** — the lower of 1,000 verified enrolled persons or 10% of all currently enrolled verified persons — within 90 days advances to a reconvened founding panel under AH3 rules.
 4. The highest-attested qualifying petition proceeds; if multiple petitions qualify, they are consolidated by the reconvened panel.
 5. If no petition qualifies within 90 days of the petition window opening, the window resets and reopens 90 days later, repeating until a qualifying petition succeeds.
 

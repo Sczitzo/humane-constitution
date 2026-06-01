@@ -39,6 +39,8 @@ The adversarial panel member is nominated by the oppose-coalition body (Annex AH
 - No employment, board, advisory, or contractor relationship with FAP-administering bodies during the term of seat.
 - Term length sufficient to outlast a single electoral cycle in the host jurisdiction.
 
+The independence of this attester is only as strong as the independence of the nominating body that seats it and the key-issuance/seating layer that certifies its key (AV7). The cryptographic attestation is not a source of objectivity; it merely proves that whoever holds the seated key made the determination. If the nominating chain is captured, a valid signature can still carry a captured judgment. The trust this annex places in attestation therefore rests on the human nominating chain, not on the cryptography, and must be read together with AV7 and AV11.
+
 ## AV4 — Defection Penalty
 
 - **Improper admission attestation** (attesting that a Tier-1-touching proposal is non-violating when it in fact violates an invariant): permanent removal from the panel, forfeiture of the seat to the oppose-coalition nominating body, and a public defection finding entered in the Article VII dashboard.
@@ -57,7 +59,7 @@ The reviewer's incentive is also corrected by AV2: there is no path by which a r
 
 ## AV6 — Beer VSM Fix
 
-S3* (adversarial panel attestation) is structurally independent of S3 (FAP reviewer). Collapsing S3* into S3 is architecturally impossible because the adversarial panel member holds a key the FAP reviewer does not control. The audit channel is not a delegation from operational control; it is an independent system with its own nominating body, term structure, and accountability path.
+S3* (adversarial panel attestation) is structurally independent of S3 (FAP reviewer). Collapsing S3* into S3 is impossible at the signing layer, because the adversarial panel member holds a key the FAP reviewer does not control. This does not eliminate capture; it displaces it to the seating and key-issuance layer — who nominates and seats the panel member, and who certifies their key — which is addressed, but not closed, in AV7 and AV11. The audit channel is not a delegation from operational control; it is an independent system with its own nominating body, term structure, and accountability path. Its independence is therefore bounded by the integrity of that nominating and key-issuance chain, not by the cryptography alone.
 
 ## AV7 — Key Registration and Rotation
 
