@@ -18,6 +18,7 @@
 - **All published capacity values** must declare their evidence class: directly observed, audited estimate, modeled forecast, or expert judgment.
 - **The stricter the policy consequence**, the stronger the evidence class required.
 - **No scarcity declaration** may rest on a single opaque model or a single institutional source.
+- **Any model that drives a scarcity consequence** — tightening Essential Access, declaring a shortage, or gating Shared Storehouse — must be auditable in method by the named challenge path: its inputs, assumptions, and method are open to independent technical review, regardless of how many models concur. Concurrence among opaque models is not corroboration; the agreement of two or more models whose methods cannot be independently examined does not satisfy this standard and does not license any scarcity consequence.
 
 ### M2. What counts as evidence
 - **Housing capacity** must distinguish raw units, habitable units, staffed units, affordable units, and placeable units. Counting roofline without placement feasibility is prohibited.
@@ -34,6 +35,7 @@ A scarcity trigger must specify verifying authority, evidence class, threshold c
 ### M4. Oracle failure defaults
 - **Uncertain data** may justify conservative expansion restraint, but not silent deprivation.
 - **In dispute**, the system defaults toward continuity of survival-floor obligations and slower tightening; if conservative issuance pushes any affected essential category below 85% of published baseline for more than 7 consecutive days, provisional narrow Shared Storehouse activates for that category unless an expedited review body issues a written block with alternative continuity measures.
+- **A written block against this default-to-continuity** does not take effect unless it is (a) published, (b) names the specific alternative continuity measures it relies on together with each measure's evidence class under §M1, and (c) is itself challengeable on an expedited timeline by the named challenge path of §M3. An unpublished, unsubstantiated, or improperly justified block has no effect, and the automatic default-to-continuity stands and remains active pending resolution of any challenge. The default-to-life may not be silently overridden by one body's written word.
 - **Repeated emergency scarcity** in the same category triggers mandatory root-cause review of production, logistics, staffing, and governance rather than normalized permanent emergency.
 - **Any oracle quorum** that repeatedly publishes materially false data enters supervised mode or is dissolved under the failure-state protocol.
 

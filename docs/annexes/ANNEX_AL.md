@@ -299,6 +299,14 @@ For oracle nodes using AI or ML components, concentration is assessed not only a
 
 The concentration count for AI infrastructure is **2 or more** nodes sharing any single AI upstream dependency. (Lower threshold than standards-body concentration because AI supply chain capture is harder to detect and more catastrophic in impact.)
 
+**Foundation-model lineage attestation.** Distinct-looking AI/ML oracle products increasingly share a single upstream foundation model. Two nodes can each disclose honestly under §4.2 and the AI Supply Chain Disclosure rule above while remaining deeply correlated through a hidden common base model — a dependency that is invisible until every node built on it fails in the same direction at once. Self-disclosure alone therefore does not establish independence for AI-based methodologies. Each AI/ML-based oracle node must disclose, and submit to verification, its full model lineage:
+
+- the upstream base or foundation model(s) it derives from, including fine-tuned, distilled, or quantized descendants of a common ancestor;
+- the provenance of its training and fine-tuning data, including any shared upstream corpora; and
+- its commercial AI API dependencies, including inference providers and hosted-model endpoints.
+
+This lineage disclosure must be confirmed by **independent technical attestation** — a verification by a party with no funding or governance relationship to the node operator or its model vendor — and may not rest solely on the operator's self-report. Two oracle nodes that share a common upstream foundation model belong to the **same methodology class** regardless of product branding, vendor identity, or differences in fine-tuning, and are counted together under the §4.2 concentration trigger. Where independent technical attestation cannot establish that two AI/ML nodes have genuinely distinct lineage, they are presumed to share a class until the attestation is provided.
+
 ---
 
 ## Section 5 — Annual Audit of Worked Examples
@@ -318,6 +326,12 @@ An independent review panel convenes annually to assess:
 **Terms:** **3 years**, staggered across 5 seats so that no more than 2 seats turn over in any single year. **No more than 2 consecutive terms** per individual.
 
 **Nomination process:** Open public nomination with confirmation by the Commons Review Process (CRP). **No prior affiliation with the RCS accreditation body within the prior 3 years** for any seat, and no current funding relationship between a nominee's home institution and any of the concentrated standards bodies the panel will review.
+
+**External meta-audit of the review panel.** The annual review panel and the RCS accreditation body together define and enforce what "independent" means; left alone, the definition-keeper has no witness above it, and both apply the independence standard recursively only to themselves. To place that final authority under scrutiny, an **external meta-audit** examines the review panel itself on a fixed cadence — at least **once every 2 years**, and additionally whenever the panel proposes adding a new canonical methodology class under Section 5.2.
+
+- **Composition.** The meta-audit is conducted by a rotating body drawn entirely from outside both the standing annual review panel and the RCS accreditation body, with no current or prior-3-year affiliation with either and no funding relationship with the standards bodies under review. Its members rotate each cycle so that no individual conducts consecutive meta-audits.
+- **Mandate.** The meta-audit tests whether the review panel's own composition, nomination history, and reasoning still satisfy the independence standard the panel enforces on oracle cohorts — including whether the panel has drifted toward a shared epistemological, institutional, or funding posture that would itself fail the Section 2 standard.
+- **Authority and publication.** The meta-audit may not rewrite Sections 1–4 or override the panel's substantive methodology findings, but it may find the panel out of conformance with its own standard and require remediation — recomposition of seats, re-running a nomination, or recusal — before the panel's findings for that cycle take effect. Its findings are published in full in the public accreditation record alongside the panel's own Section 5.3 outputs, and the Federated Ombuds is notified of any non-conformance finding. The one body that defines "independent" is thereby itself held to two-or-three-witness scrutiny.
 
 ### 5.2 — What the Audit May and May Not Change
 
