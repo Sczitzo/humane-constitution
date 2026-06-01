@@ -1042,7 +1042,155 @@ This session follows the survival floor outward — to the stranger who arrives 
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–9)
+## Session 10 Christ-Centered Evaluation — Who Watches the Watchers
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_L — Judicial Architecture and Constitutional Review Institutions; ANNEX_S — Constitutional Review Panel Anti-Capture and Failure Recovery; ANNEX_AI — Federated Ombuds Constitution; ANNEX_Z — Voice and Service Record Civic Architecture; ANNEX_AP — PCRP Attack Surface Hardening
+
+This session turns to the system's restraint on its *own* power — the courts, the review panel, the ombuds, the civic-standing instruments, and the coercion-response shield. The governing teaching is Mark 10:42–45: "ye know that they which are accounted to rule over the Gentiles exercise lordship over them… but so shall it not be among you: whosoever will be great among you, shall be your servant." Power held as service, not domination. Three findings recur across the cluster and are recorded once at the end — chief among them the oldest question in governance, which Scripture answers not with a perfect institution but with a higher Master.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX L — Judicial Architecture and Constitutional Review Institutions
+
+**Christ-centered alignment.** The three-tier structure (Local Review Offices → Regional Constitutional Chambers → Constitutional Review Panel) echoes Jethro's tiered bench — capable, God-fearing, bribe-hating judges arranged so ordinary matters stay local and only hard cases rise (Ex 18:21–22; Deut 16:18). §L2's civic-auditor seats barred to current executive or major-enterprise holders, the recusal and disclosure regime, and the anti-lobbying rules operationalize Leviticus 19:15 ("not respect the person of the poor, nor honour the person of the mighty"), Deuteronomy 1:17 ("ye shall not… be afraid of the face of man"), and Exodus 23:8 ("the gift blindeth the wise"). The §L4/§L6 burden rule — "the burden remains on the authority that seeks to narrow access, expand data exposure, or create new coercive discretion" — structurally tilts the scales toward the wronged (Isa 1:17). The §L6 emergency-relief windows "measured in hours or days, not months" and the survival-floor protection ("no remedy may solve an institutional error by cutting off survival-floor protections") answer the persistent widow who should not be worn down by delay before an unjust judge (Luke 18:1–8). §L6's insistence that automated decisions are "never self-justifying" and must yield "a human-readable explanation" refuses to reduce a person to a model output (Gen 1:26–27).
+
+**Babel-risk warning.** The annex's whole capture-resistance rests on the integrity of the sortition pools (§L2 — the "certified pools," "trained civic review pool," "qualified regional appellate pools"), yet it never says who certifies the pools, by what standard, or how that gatekeeper is itself reviewed. Whoever controls the pool gatekeeping controls the lot — the lever of capture has merely moved one step upstream, from the bench to whoever certifies who may sit on it. And the §L3 "automatic external review" assumes the rotating chamber is itself uncaptured; if the appellate pools feeding both the CRP and the review chamber draw from one compromised source, the "independent check" collapses into a single body wearing two robes — a unified review elite presenting itself as plural (the Gen 11 inversion).
+
+**Human-dignity test.** Passes. Human-readable explanations, preserved algorithmic inputs/rules/versions for retrospective review, damages for wrongful denial, and restored continuity all treat the wronged as bearers of dignity owed an account, not as error codes.
+
+**Revision proposal.** (1) Should-fix: route sortition-pool certification rules under Strict review and subject pool gatekeepers to the same recusal/disclosure regime as members — otherwise sortition is theater (cross-cutting — see §S10-X1). (2) Should-fix: require the §L3 external-review chamber to draw from a pool *disjoint* from the CRP's feeding pools, so the independent check is genuinely independent. (3) Monitor: the §L3 "qualifying public petition" and "one-third minority bloc" thresholds are unspecified — watch they are low enough to be a real remedy (Luke 18), not a gate. (4) Monitor: representation asymmetry for under-resourced parties in the commercial/technical-audit tracks.
+
+**Fruit test.** (i) Fast restoration of survival access; (ii) recorded human-readable explanations restraining arbitrary power; (iii) burden placed on the strong, not the weak; (iv) a lot-drawn bench resistant to the wealthy; (v) pool gatekeeping that is itself disclosed and reviewable rather than an unguarded chokepoint.
+
+**Epistemic categorization:**
+- *Clear biblical command:* impartial judgment without respect of persons; refuse bribes; accessible, non-wearying remedy; burden on the oppressor (Lev 19:15; Deut 1:16–17; Ex 23:8; Isa 1:17; Luke 18).
+- *Theological inference:* sortition + staggered terms + external rotation as a faithful modern embodiment of the Jethro bench.
+- *Prudential political judgment:* the 11 seats, the 4/3/2/2 allocation, the supermajority, the hours-not-months windows.
+- *Unresolved uncertainty:* whether the scheme resists capture in the field (status: Designed); whether pool gatekeeping holds; whether the external check is truly independent.
+
+**Executive theological verdict: 8 / 10.** Among the most Christ-consonant annexes in posture (impartiality, bribe-refusal, swift accessible remedy, burden on the powerful, human-readable accountability), held back by an unguarded sortition-pool gatekeeping layer and an external check whose independence is asserted but not structurally guaranteed.
+
+---
+
+### ANNEX S — Constitutional Review Panel Anti-Capture and Failure Recovery
+
+**Christ-centered alignment.** §S1's staggered sortition, conflict screening, term limits, and cooling-off-before-office resist the concentrated rule warned against in 1 Samuel 8 and the bribe-blinded judge of Exodus 23:8 — cooling-off directly targets "a gift blinds the wise." §S2's downgrade safeguards (supermajority required to reclassify Tier 1/2 down to Tier 3; auto-escalation on a split; published minority opinions; dissent extends the challenge window) are the watchman refusing to go silent (Ezek 33:6) and the structural refusal of shepherds who "feed themselves and not the flock" (Ezek 34:2–4). §S3's capture indicators (pro-incumbent outlier rulings, synchronized financial conflicts, dissent suppression) name the exact sins of corrupted shepherds and make them trigger conditions, with multiple independent trigger paths (Ombuds, supermajority, public petition, internal minority) reflecting "in the multitude of counsellors there is safety" (Prov 11:14). The §S4 recovery ladder (Freeze → Substitute → Reconstitution → Refounding) holds power as stewardship that can be removed when it ceases to serve (Mark 10:42–45). The annex's self-naming of the CRP as "a small, high-value capture target" is healthy humility (Prov 11:14; openness to correction).
+
+**Babel-risk warning.** The recovery ladder has an unguarded root: the annex does not specify *who confirms* that capture has occurred (§S4 Stage 3), nor who screens the Stage-2 substitute body against the same financial/incumbent capture §S3 describes. A captor who controls the capture-confirmation gate controls the whole ladder. And the Stage-3 "emergency anti-capture rules" are the classic vector by which emergency powers ossify into permanent altered governance — the very lordship Christ rebukes (Mark 10:42). A watcher that can declare itself recovered is still a watcher accountable only to itself.
+
+**Human-dignity test.** Passes. The capture indicators target institutional behavior (rulings, conflicts, dissent patterns), not persons reduced to compliance scores. One caution: monitoring panelists' "abnormal contact patterns" and "dissent suppression" must honor members' dignity rather than become a loyalty-surveillance tool.
+
+**Revision proposal.** (1) Should-fix: specify *who confirms* capture in §S4 (an evidentiary threshold and a confirming authority distinct from the captured panel) and who screens the substitute body's own conflicts (cross-cutting — see §S10-X1). (2) Should-fix: add a sunset/automatic-expiry clause to Stage-3 emergency reconstitution so it cannot become permanent. (3) Monitor: bound the "published recovery window" concretely and confirm the Annex H refounding back-stop genuinely catches a *failed* recovery rather than circularly depending on the CRP. (4) Monitor: a dignity clause governing how panelist contact/dissent monitoring is conducted.
+
+**Fruit test.** (i) Published dissent and auto-escalation rather than silent downgrade; (ii) a body that consents in advance to its own removal; (iii) a capture-confirmation gate that is itself specified and independent, so a captor cannot attack the recovery mechanism instead of the panel.
+
+**Epistemic categorization:**
+- *Clear biblical command:* reject bribes and corrupt judgment; do not stay silent when you see the sword coming; leaders serve, not dominate (Ex 23:8; Ezek 33:6; Mark 10:42–45).
+- *Theological inference:* term limits, sortition, and overlapping rotation as faithful means to incorruptibility.
+- *Prudential political judgment:* the supermajority thresholds; the four-stage ladder; the capture-indicator definitions.
+- *Unresolved uncertainty:* whether the ladder's own root (capture-confirmation authority, substitute-body integrity) can itself be captured.
+
+**Executive theological verdict: 8 / 10.** Theologically well-aligned and unusually humble about its own corruptibility; held back by an unguarded recovery root (who confirms capture, who guards the substitutes) that must be specified before it can be trusted as a final check.
+
+---
+
+### ANNEX AI — Federated Ombuds Constitution
+
+**Christ-centered alignment.** Replacing a single commissioner — the protocol's highest-value capture target — with five structurally independent sub-nodes under a 4-of-5 supermajority is the structural form of "in the multitude of counsellors there is safety" (Prov 11:14; 15:22; 24:6) and Jethro's distribution of judgment (Ex 18:21–26), and a refusal of the unchecked single ruler (1 Sam 8). The §4.12 burden placement — the party seeking to *maintain* a demand-context flag must prove the enforcement action was not manufactured, with an asymmetric default favoring supply protection — operationalizes Proverbs 31:8–9 and Isaiah 1:17: it tilts structurally toward those a captured enforcement body could starve via fabricated flags. The §3.3/§4.2 conservative default ("inaction favours the status quo of protection" — divided plenums cannot lift a flag, overturn a penalty, or certify a seat) encodes a mercy-default (Matt 25:35–40). De novo appeals, published dissents (§6), and the right of response (§2.4) make the watchman itself accountable (Ezek 33). The §5.4 honest confrontation of the overseer's *own* meta-capture — terminating the regress at publication plus lot-drawn citizen panels rather than pretending to close it — is exactly the right humble stopping point.
+
+**Babel-risk warning.** Distribution defends against *independent* node failures, not *common-mode* ones. The subtlest risk is ideological monoculture in the appointing classes (§1.2): five nodes can satisfy every structural-dispersal dimension and still think with one mind — pluralist architecture housing a monoculture, "one language, one speech" (Gen 11:1) wearing the costume of many voices. That voids the *substance* of Prov 11:14 while satisfying its letter. Secondary: the federation accretes very large authority (manufactured-flag, PCRP co-certification, oracle certification, enforcement appeals, attestation slashing), mitigated but not dissolved by the Oversight Assembly.
+
+**Human-dignity test.** Passes. The burden allocation, conservative defaults, public-challenge-with-response, and de novo appeals treat affected persons as parties owed a hearing. The lot-drawn citizen seats (§5.1, §4.10) deliberately inject ordinary personhood into an expert body. One tension: persons appear largely as populations/cohorts — appropriate at scale, but never to be mistaken for the individual care of Matthew 18:12–14.
+
+**Revision proposal.** (1) Should-fix: add an explicit worldview/intellectual-diversity test to §1.2 dispersal, and name ideological monoculture as a §5.3 concentration signal — otherwise five nodes can be structurally dispersed and epistemically captured (cross-cutting — see §S10-X2). (2) Should-fix: add a published tracking metric for repeat beneficiaries of the §4.12 inconclusive-default, so the mercy-default does not become a laundering channel for a genuinely guilty actor. (3) Monitor: the §2.1 genesis period running at the minimum BFT margin for up to 180 days; (4) Monitor: the §5.2 5-of-7 Assembly threshold being looser than the plenum's 80% on the body that can remove sub-Ombuds.
+
+**Fruit test.** (i) Every vote, dissent, recusal, and dispersal finding published (§6), so drift toward common capture becomes *visible* — the precondition for correction; (ii) conservative defaults consistently bending toward the harmed; (iii) genuine epistemic diversity among the nodes, not merely geographic separation.
+
+**Epistemic categorization:**
+- *Clear biblical command:* defend the cause of the poor/harmed against false enforcement; the watchman is accountable (Prov 31:8–9; Isa 1:17; Ezek 33).
+- *Theological inference:* distributed counsel reduces capture (Prov 11:14 as a design principle); asymmetric mercy-defaults reflect Matt 25 / Matt 18.
+- *Prudential political judgment:* five nodes; the 80%/71% thresholds; the 730-day terms; the trigger values.
+- *Unresolved uncertainty:* whether structural dispersal resists *ideological* common-mode capture; whether the Assembly's citizen mechanisms are robust or ornamental.
+
+**Executive theological verdict: 8.5 / 10.** A genuinely humble, corrigible, dignity-preserving redistribution of oversight authority that closely tracks the wisdom of many counsellors and the defense of the harmed; its one underdefended gap is epistemic, not structural, diversity among the five nodes.
+
+---
+
+### ANNEX Z — Voice and Service Record Civic Architecture
+
+**Christ-centered alignment.** Splitting civic participation into two non-fungible instruments — Voice (fast-decay agenda influence) and Service Record (slow-decay eligibility to serve) — so the two can never fuse into one accumulative status score is the structural anti-Babel move against the desire to "make us a name" (Gen 11:4) and against making oneself "a judge of evil thoughts" by sorting persons on one scale (Jas 2:1–9). §Z2's non-purchasability ("may never purchase goods, privileges, offices, immunity, or survival access") is anti-partiality and anti-simony (Jas 2:2–4; Acts 8:20). The anti-accumulation design (short half-life, no rollover, non-tradable, non-inheritable) keeps influence "kinetic rather than cumulative," refusing the stored status that the census-pride of 2 Samuel 24 and the standing-as-mark of Revelation 13:16–17 warn against. §Z3/§Z5's absolute rule that neither instrument may condition Essential Access, housing continuity, or personhood — survival reverting to one-person-one-vote — holds the person's basic dignity entirely off the scoring board (Gen 1:26–27). §Z4's category balance (the 40% cap; admission of care work, ecological stewardship, repair, teaching) resists exalting one legible professional class (1 Sam 16:7; Mark 10:42–45).
+
+**Babel-risk warning.** The separation is asserted *inside* the system but nothing forbids a third party — employer, lender, landlord, platform — from reading both balances and computing a de facto composite score externally. The constitution can keep the two ledgers separate internally while the market re-fuses them next door, rebuilding the very social-credit ranking the annex exists to forbid. Secondary: §Z2/§Z5's "advisory only" Voice over survival matters can, iterated, become effective control without ever formally deciding; and §Z6's seeding of Service Record from "already-verified service history" hands the gateway to whoever controls verification, which patronage can colonize in weak-verification regions.
+
+**Human-dignity test.** Passes the core test better than most score-based civic designs — Essential Access, housing, and personhood are explicitly walled off from both instruments, and conversion to wealth or hereditary standing is barred. Dignity is held as a floor, not earned. The residual reduction-to-a-number risk lives at the *boundary* (external composability), not inside the annex.
+
+**Revision proposal.** (1) Should-fix: add an explicit anti-composition clause — no person or institution may construct, publish, sell, or condition any benefit on a combined or derived score fusing Voice and Service Record (or either with external data) — or the internal separation is defeatable downstream (cross-cutting — see §S10-X3). (2) Should-fix: a non-discrimination clause barring employers, lenders, landlords, and insurers from requesting or conditioning on Voice/Service Record balances. (3) Monitor: audit that the "advisory" Voice channel has not become a reliable predictor of survival-basket outcomes; (4) Monitor: verification-layer integrity and minting equity across legible vs. informal contribution in high-poverty regions.
+
+**Fruit test.** (i) Dignity uncoupled from performance; plural contribution types honored; no purchased office; (ii) no emergent external social-credit score conditioning employment, credit, or housing on civic balances; (iii) the survival floor visibly reverting to one-person-one-vote regardless of any civic record.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not show partiality or rank persons by status; do not buy or sell standing; dignity as imago Dei is not earned (Jas 2:1–9; Acts 8; Gen 1:26–27).
+- *Theological inference:* separating influence-instruments meaningfully resists Babel-style consolidation; fast decay models a non-storing posture.
+- *Prudential political judgment:* the 40% cap; the half-life lengths; the dual-key thresholds; seeding from prior service history.
+- *Unresolved uncertainty:* whether external composability can be prevented in practice; whether "verified contribution" can be equitable for the informal poor.
+
+**Executive theological verdict: 8 / 10.** A genuinely dignity-protecting, anti-status-score design whose one serious gap is the absence of an anti-composition clause to stop the market from re-fusing the two ledgers it carefully keeps apart.
+
+---
+
+### ANNEX AP — PCRP Attack Surface Hardening
+
+**Christ-centered alignment.** Hardening the Public Coercion Response Protocol against trigger-cap exhaustion (T-018) and timed suppression (T-019) keeps the genuine cry audible. By refusing to let manipulation-flagged triggers consume the cap (§36) and firing a trigger-exhaustion alert at 2-of-3 slots (§42), the annex preserves real-alarm capacity so a true cry is not drowned out by manufactured noise — Exodus 22:22–23 ("if they cry at all unto me, I will surely hear their cry") and the persistent widow whose plea must finally be answered (Luke 18:1–8). The §66–70 conservative-toward-protection default — maintaining designation and letting PCRP activate at reduced scope rather than waiting on the clock, because "a real harm condition does not wait" — answers Isaiah 10:1–2 ("turn aside the needy from judgment") and Proverbs 31:8–9 ("open thy mouth for the dumb"). The §40 clear-and-convincing standard plus dual independent evidence types before any alarm is reclassified "manufactured" is genuine restraint against the domination temptation.
+
+**Babel-risk warning.** The same word "manufactured" is both shield and sword. The mechanism powerful enough to detect a false cry is powerful enough to manufacture the charge of "manufactured" against a real one — §37 makes the alarm-raiser the investigated, and §40 gives the *manipulator*-finding a consequence but offers the *vindicated* complainant no remedy or record correction. The §93 honest admission that low-level suppression "using a genuinely valid enforcement action remains possible — accepted as operational leakage" is precisely the Isaiah 10:1–2 case (a lawful instrument turning aside the needy) being tolerated below threshold. Secondary: §67's reduced-scope single-source activation is itself a coercion lever, bounded but real.
+
+**Human-dignity test.** Mostly passes — the protocol's tilt is toward the person in danger, not toward system tidiness, and a named Ombuds review plus published audit record keep a human in the loop. It edges toward dignity-by-counter ("triggers," "slots," "flags"); the human-in-the-loop review is what redeems it.
+
+**Revision proposal.** (1) Should-fix: add a restorative clause — when a cap-reset audit finds *no* manipulation, the escalated party's enforcement-track referral is formally withdrawn and the record corrected, so an honest alarm-raiser is not left bearing the mark of having been investigated (Matt 18 — restoration, not mere acquittal) (cross-cutting — see §S10-X3). (2) Should-fix: require any §67 reduced-scope activation to name the single source on the Article VII dashboard at activation, not only at the 4-hour publication. (3) Monitor: track the base rate of "manufactured" vs. genuine-failure findings — a rising "manufactured" rate is the early signal the tool is being turned against real cries. (4) Monitor: log suspected sub-threshold suppressions even when un-actioned, so the accepted §93 leakage does not silently grow.
+
+**Fruit test.** (i) Genuine cries stay audible under flooding; (ii) real responses fire before the bureaucratic clock; (iii) the wrongly-escalated complainant is restored, not left marked; (iv) "manufactured" does not become an authority's epithet for inconvenient complainants.
+
+**Epistemic categorization:**
+- *Clear biblical command:* the oppressed person's cry must be heard and not turned aside (Ex 22:22–23; Isa 10:1–2; Prov 31:8–9).
+- *Theological inference:* cap-exhaustion-by-flooding as a form of "turning aside the needy," warranting anti-attrition design.
+- *Prudential political judgment:* the 3-trigger cap; the 2-of-3 alert; the 4-hour timeline; the clear-and-convincing standard.
+- *Unresolved uncertainty:* whether real-time distinction between genuine oracle failure and engineered false trigger is achievable at all (§93 calls it "unreliable"); whether the accepted leakage stays small.
+
+**Executive theological verdict: 8 / 10.** Structurally faithful to the mandate that the oppressed cry be heard and not buried, with honest self-disclosure of its own attack surface; held back by giving the wrongly-escalated complainant no remedy and accepting lawful-instrument suppression as tolerated leakage.
+
+---
+
+### Session 10 Cross-Cutting Findings
+
+**§S10-X1 — The unguarded root (should-fix).** Every oversight body in this cluster rests its anti-capture on a gatekeeper the document does not itself constrain: ANNEX_L's sortition-pool certifiers, ANNEX_S's capture-confirmation authority and substitute-body screeners, and (more honestly handled) ANNEX_AI's Oversight Assembly. This is the oldest question in governance — *quis custodiet ipsos custodes* — and Scripture's answer is not a perfect institution but a higher Master (Mark 10:42–45): authority is never self-justifying, all the way up. The fix is twofold: (a) specify and constrain each gatekeeper — pool certification under Strict review with the same recusal/disclosure regime as members (L), a named capture-confirmation authority distinct from the captured body with screened substitutes and a Stage-3 sunset (S); and (b) where the regress cannot be closed, terminate it *honestly and humbly* at publication plus lot-drawn citizens, as ANNEX_AI §5.4 already does, rather than pretending a final human institution closes the loop. Status: **should-fix open** (close where closeable; end humbly where not).
+
+**§S10-X2 — Plural architecture, monoculture risk (should-fix).** Structural dispersal is not genuine diversity of counsel. ANNEX_AI's five nodes can satisfy every §1.2 structural-dispersal dimension and still share one worldview; ANNEX_L's and ANNEX_S's sortition pools can be demographically varied yet epistemically uniform. "In the multitude of counsellors there is safety" (Prov 11:14) means safety only if the counsellors genuinely differ; otherwise it is "one language, one speech" (Gen 11:1) wearing the costume of plurality — the precise Babel inversion. The fix is to add worldview/intellectual-diversity tests to the dispersal requirements and to name epistemic monoculture as a capture signal, so a body cannot be structurally plural and functionally single-minded. Status: **should-fix open** (cluster-wide).
+
+**§S10-X3 — Protecting the person at the boundary (should-fix).** Two annexes are strong inside their own machinery but leave the person exposed at its edge: ANNEX_Z keeps Voice and Service Record separate internally but does not forbid the *market* from re-fusing them into an external social-credit score; ANNEX_AP investigates the alarm-raiser but offers the vindicated complainant no restoration. The biblical standard reaches the boundary, not only the interior: Jesus' concern in James 2 is the *act of ranking persons* (which an external composite re-creates), and the restorative ethic of Matthew 18 is vindication-and-restoration, not mere acquittal. The fix: an anti-composition + non-discrimination clause in Z (no external fusion of the ledgers; no employer/lender/landlord/insurer conditioning on them), and a restorative clause in AP (the wrongly-escalated complainant's referral withdrawn and record corrected). Status: **should-fix open.**
+
+---
+
+### Session 10 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** Each annex holds power as service rather than possession: impartial judgment that does not fear the powerful (L), a review panel that consents in advance to its own removal (S), oversight distributed so no single office can be captured and made fully accountable through total publication (AI), civic standing that may never be bought or hoarded into a rank (Z), and a coercion-response shield biased so "a real harm condition does not wait" (AP). This is Mark 10:42–45 rendered as architecture — and, notably, the cluster is unusually *honest about its own corruptibility*, which is itself good fruit (Prov 11:14; openness to correction).
+
+**Where the cluster carries the most Babel-risk.** Two seams, both recorded above: the unguarded root of every watcher (§S10-X1), and the temptation to mistake structural plurality for genuine diversity of counsel (§S10-X2) — a body that looks like many voices but thinks with one mind. Both are, at bottom, the same warning: no human institution, however cleverly checked, is its own final guarantor; the regress ends not in a perfect custodian but in humility before God and the visible accountability of publication and the ordinary citizen.
+
+**Net assessment.** No must-fix blockers; the cluster scores **8–8.5**, the design should-fixes are closeable, and ANNEX_AI's frank termination of the watcher-regress at publication-plus-citizens is a model the others should follow. Christ-measured, this cluster restrains the system's own power with real discipline — but its deepest lesson is theological, not procedural: the question "who watches the watchers" has no in-system final answer, and the corpus is most faithful exactly where it stops pretending to provide one and instead makes power visible, removable, and humble. Civil oversight is not the kingdom of God; it is a servant under God, and it must never become humanity's substitute for the Master to whom every watcher finally answers.
+
+**Items requiring follow-up in a future Session 11:**
+1. Whether the §S10-X1 gatekeepers (L pool-certification, S capture-confirmation authority) have been specified and constrained, and the regress terminated honestly where it cannot be closed.
+2. Whether the §S10-X2 worldview/epistemic-diversity tests and monoculture-as-capture-signal have been added (AI §1.2/§5.3, and the L/S pools).
+3. Whether the §S10-X3 anti-composition + non-discrimination clause (Z) and restorative clause (AP) have been added.
+4. Whether the §L3 external-review chamber is drawn from a pool disjoint from the CRP's, and the §S4 Stage-3 emergency rules carry a sunset.
+5. The remaining unevaluated annexes (the foundations/change-control set — H, AV, N, AH; the economy/oracle/threat machinery — X, V, AR, AT, M, AL, AE, U, A, AG, AD, AC, T, AO, AB, AS, and the AT/AM completions) for future sessions, as priority allows.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–10)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1068,5 +1216,10 @@ This session follows the survival floor outward — to the stranger who arrives 
 - `docs/annexes/ANNEX_AQ.md` (Session 9 — Shared Storehouse oracle-failure fallback)
 - `docs/annexes/ANNEX_AJ.md` (Session 9 — above-ledger bypass)
 - `docs/annexes/ANNEX_AF.md` (Session 9 — grace-period exploitation)
+- `docs/annexes/ANNEX_L.md` (Session 10 — judicial architecture)
+- `docs/annexes/ANNEX_S.md` (Session 10 — CRP anti-capture and failure recovery)
+- `docs/annexes/ANNEX_AI.md` (Session 10 — Federated Ombuds constitution)
+- `docs/annexes/ANNEX_Z.md` (Session 10 — Voice and Service Record)
+- `docs/annexes/ANNEX_AP.md` (Session 10 — PCRP attack-surface hardening)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
