@@ -1312,7 +1312,132 @@ This session turns to how the rules change and how the system legitimately begin
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–11)
+## Session 12 Christ-Centered Evaluation — Economy and Stewardship
+
+**Date:** 2026-06-01
+**Scope:** ANNEX_X — Flow Issuance Architecture; ANNEX_V — Transition Mechanics, Conversion, and Legacy-System Treatment; ANNEX_AR — Contract-Commitment Architecture; ANNEX_AT — External Trade Architecture
+
+This session turns to how money is created (X), how households cross from the legacy system without being wiped out (V), how long-horizon promises to communities are actually kept (AR), and how the people's survival supply is defended at the border without becoming extractive in return (AT). The governing teachings are honest weights (Prov 11:1; Lev 19:35–36), the Jubilee against permanent debt-bondage (Lev 25; Deut 15; Neh 5), oath-keeping even to one's own hurt (Ps 15:4; Matt 5:37), and the storehouse that feeds the people through famine (Gen 41; Prov 11:26). One finding recurs across all four and is recorded at the end.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX X — Flow Issuance Architecture
+
+**Christ-centered alignment.** The whole annex keeps money honest by tethering its creation to real value: §X1/§X2 issue Flow "against verified productive commitments, not against discretionary stock politics or financial privilege," refusing to mint money to "reward political allies, inflate asset prices, rescue failed speculation." This is the operational form of honest weights and measures (Prov 11:1 — "a false balance is abomination to the LORD"; Lev 19:35–36; Prov 16:11) and the driving of the money-changers' exploitation out of the house (Matt 21:12–13). §X3's authorized channels bind money to delivered value (no full-upfront issuance; the continuity backstop time-expires and "may not become a standing subsidy class"). §X4's dual-key and third-signature controls — "no single ministry, central bank analogue, private bank, donor-backed vehicle, or political office may unilaterally create Flow" — are "safety in many counsellors" (Prov 11:14) and servant-not-lording authority (Mark 10:42–45). §X6 shields wage earners and essential providers from clawback absent direct fraud findings and stages unwind to prevent payroll shock — the laborer is worthy (Luke 10:7; Matt 25:35–40). The six §X7 red-team scenarios institutionalize the confession that the measure *will* be attacked, subordinating "elegant abstract monetary theory" to demonstrated honesty.
+
+**Babel-risk warning.** The architecture is itself an anti-capture instrument; the residual Babel-risk lives in the keystone it specifies only by analogy. §X4's "institutionally distinct independent reviewer" is the load-bearing control, but its anti-capture rules are merely "analogous to oracle and CRP protections" — a keystone by analogy is a weak keystone. And the fairness/concentration "published share" threshold defaults to undefined until `/founding/commitments.md` publishes, so factional-allocation review (§X7-4) has no operative value on day one (unlike the enhanced-threshold control, which fails safe). If the reviewer pool is itself captured over time, the dual-key becomes ceremonial.
+
+**Human-dignity test.** Passes well. Wage earners and essential providers are named protected classes (§X6); households get an 18-month safe harbor and mandatory privacy safe harbors (§X5); public workers receive the universal floor with "no privileged compensation channel" (§X8). Provenance-tagging tracks *issuance* (the point of power), not ordinary spending, which remains "user-fungible" — surveillance at the throne, not over the household.
+
+**Revision proposal.** (1) Should-fix: specify the §X4 reviewer-independence minimums *in force* (rotation period, cooling-off before/after sponsor relationships, prohibition on a single appointing authority staffing both sides) rather than by analogy. (2) Should-fix: set a conservative default channel-share cap that binds until `/founding/commitments.md` publishes, so factional-allocation review is enforceable on day one. (3) Monitor: circular-milestone detection (§X7-2) distinguishing genuine slow work from invoice-parking; (4) Monitor: the §X3 continuity-backstop "renewed once" not eroding into serial single-renewals across relabeled emergencies.
+
+**Fruit test.** (i) Money tied to real production, not rent; (ii) the powerful unable to mint quietly for themselves; (iii) the vulnerable protected from unwind shock and asset surveillance; (iv) correction staged with mercy; (v) the reviewer pool genuinely independent over time, not ceremonial.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest measures, against false balances; mercy toward the laborer, not punishing the innocent for others' fraud (Lev 19:35–36; Prov 11:1; Luke 10:7).
+- *Theological inference:* polycentric multi-signature control as the embodiment of "safety in many counsellors" and servant authority.
+- *Prudential political judgment:* the de minimis and enhanced thresholds; the five-channel taxonomy; the six red-team scenarios.
+- *Unresolved uncertainty:* whether reviewer independence is sustainable against determined capture over decades; whether circular-milestone fraud is reliably detectable.
+
+**Executive theological verdict: 8.5 / 10.** Among the most Christ-consonant annexes — it drives the money-changers out by design and keeps the measure honest; weakened by a keystone reviewer-independence control specified by analogy and a fairness threshold dormant until founding numbers publish.
+
+---
+
+### ANNEX V — Transition Mechanics, Conversion, and Legacy-System Treatment
+
+**Christ-centered alignment.** §V1 forbids conversion "by charisma, donor consensus, or opaque executive discretion" and converts "small protected household deposits and continuity-critical working balances first under the most stable published band," staging large speculative balances — honest-balance dealing (Prov 11:1) that shields the widow's whole living (Mark 12:42–44) from a manipulated rate, and publishes "losers as well as winners" at confession level. §V2 is the strongest Jubilee echo in the corpus: essentials-linked household debts "enter standstill first and restructure under survival-floor rules before enforcement resumes"; pensions, protected savings, and disability income get continuity before ordinary unsecured claims; speculative and extractive claims are made junior — inverting ordinary creditor seniority toward the poor debtor (Deut 15:1–2; Lev 25; Neh 5:1–13), with a ban on silent capture "through arbitration clauses, cross-default traps, or side agreements" (against Luke 20:47, devouring widows' houses). §V3 ring-fences payroll, deposit access, and essential-provider reimbursement first. §V5's phase gates auto-pause on "unexplained concentration spike… conflict-riddled conversion privilege" — Isaiah 5:8 ("woe unto them that join house to house") wired as an automatic brake.
+
+**Babel-risk warning.** The annex fights charismatic seizure by concentrating enormous *classificatory* power — who is "speculative," "extractive," "windfall," "mission-critical" — in a body whose only required virtue is *publishing* its decisions, not being just or independent. Definitional power is the new throne: those categories are undefined and discretionary, the exact seam where a captured authority reclassifies a favored creditor as mission-critical in plain sight. And there is no anti-stall default: a transition frozen mid-phase can starve household deposits as surely as a chaotic one. Transparency is not righteousness; the Jubilee did not trust a wise administrator to set the release — it removed the discretion by fixed command.
+
+**Human-dignity test.** Passes. Households, workers, pensioners, and the disabled appear as persons with protected livelihoods, not ledger lines; §V2 names disability-linked income and pensions explicitly; §V6 keeps Voice and Service Record non-transferable across the boundary. One caution: the language is system-fluent and assumes literate access to "published methodology" — the actual widow may never read the band that governs her two mites.
+
+**Revision proposal.** (1) Should-fix: require published, pre-committed *definitions and a public reclassification log* for "speculative," "extractive," "windfall," "mission-critical," and make any reclassification toward favorable treatment itself a §V5 stop-condition trigger — closing the main capture seam. (2) Should-fix: add a default protective path and maximum stall duration — if a phase cannot advance or be safely held within a named window, household deposits and pensions auto-convert under the most stable §V1 band rather than remaining frozen (preventing capture-by-paralysis). (3) Monitor: a plain-language household notice (the rate, what it means, the appeal path); (4) Monitor: independence/recusal for the body authoring the methodology, not only publication.
+
+**Fruit test.** (i) Ordinary deposits and pensions survive the changeover; (ii) crushing essentials-debt is paused and restructured, not enforced; (iii) speculators cannot use the crisis to seize; (iv) "speculative" vs. "mission-critical" is decided against published definitions, not discretion; (v) no household is frozen by capture-by-paralysis.
+
+**Epistemic categorization:**
+- *Clear biblical command:* honest weights; do not devour the poor's livelihood or the widow's house; release debtors and resist permanent debt-bondage (Prov 11:1; Mark 12; Luke 20:47; Deut 15; Lev 25; Neh 5).
+- *Theological inference:* a published conversion methodology and survival-floor restructuring hierarchy as the modern embodiment of Jubilee mercy.
+- *Prudential political judgment:* the banking sequence; capital controls; phase-gate metrics; the foreign-claims inventory order.
+- *Unresolved uncertainty:* whether any conversion authority can define "speculative" vs. "mission-critical" without capture; whether run-prevention protects households or traps them.
+
+**Executive theological verdict: 8.5 / 10.** Among the most genuinely poor-protective annexes in the corpus — its Jubilee-shaped debt hierarchy and anti-charisma conversion rules are strong; the real gaps are undefined discretionary categories and no anti-stall default.
+
+---
+
+### ANNEX AR — Contract-Commitment Architecture
+
+**Christ-centered alignment.** AR makes long-horizon delivery genuinely enforceable. The §1.2 anti-fragmentation floor closes the trick of slicing a deliverable into sub-threshold milestones to dodge triple verification — honest weights against gaming the measure (Prov 11:1) — and §1.3's worked example honestly shows the floor still leaks, truthful disclosure over self-flattering design. The §2.1/§2.2 deployment window plus continuing demurrage ("idle funds… represent people not housed or not treated," with the shortest 90-day window ranking Essential Access first) is delivery-vs-profession made operational (Jas 2:14–17; Isa 58:6–10). The §3.1 force-majeure hard cap ("beyond the cap, there is nothing to capture") is oath-keeping to one's own hurt (Ps 15:4); §3.3's qualifying-events fence refuses to let financing difficulty, cost overrun, or self-inflicted subcontractor delay masquerade as act-of-God (Matt 5:37). §4.2–4.3 inspector rotation, the one-milestone Major-tier limit, the 180-day cooling-off, and permanent disqualification for certifying without physical inspection guard the integrity of the one who measures (Luke 16:10–12). §5's publication commitment makes force-majeure rulings public record.
+
+**Babel-risk warning.** The annex honestly names parameter capture as its master-risk, and the adversarial parameter-review panel (with a permanent public warning on contested parameters, removable only by Tier-2 amendment) is a genuinely strong safeguard. But the loosest seam is real: the 365-day force-majeure anchor erases roughly half the demurrage on a 2-year project and all of it on a 1-year project (§3.2), and the duration-proportional cap (FC-174) is mandated only for Essential Access — left as a coalition "should consider" for standard infrastructure. The document itself calls the avoidable demurrage "enough to fund sustained panel influence." And a 12-inspector pilot pool permitting 3 from one sector is thin enough for local relational capture. The Babel-adjacent danger is believing well-tuned parameters can *manufacture* faithfulness rather than merely constrain unfaithfulness — a contractor of integrity needs no cap; one seeking to evade hunts the loosest anchor.
+
+**Human-dignity test.** Passes, notably — it repeatedly translates Flow numbers back into persons ("idle funds… represent people not housed or not treated") and demands (Founding Instruction 4) that abstract thresholds be re-grounded in the real local cost of "a standard housing unit or clinic" before they count as protection. Dignity is the end; the parameters are servants.
+
+**Revision proposal.** (1) Should-fix: make the duration-proportional force-majeure cap mandatory for *all* programme types (not only Essential Access), or set a lower absolute cap for long projects — the §3.2 365-day anchor is the single loosest seam. (2) Should-fix: tighten the pilot single-sector inspector cap (e.g. ≤2 of 12) so a 12-person pool retains genuine independence. (3) Monitor: real milestone-size distributions for clustering just under the §1.2 floor; (4) Monitor: the cross-annex dependency where a low Annex D effective rate silently neuters the demurrage signal (§2.2).
+
+**Fruit test.** (i) Promised housing and clinics actually delivered; (ii) idle public capital visibly costly; (iii) inspector–contractor coziness structurally interrupted and publicly auditable; (iv) the force-majeure anchor cannot be hunted as an evasion route; (v) the inspector pool deep enough to resist local capture.
+
+**Epistemic categorization:**
+- *Clear biblical command:* keep your oath even at personal cost; honest measures; let yes be yes; care for the housed/fed/healed (Ps 15:4; Prov 11:1; Matt 5:37; Isa 58).
+- *Theological inference:* bounded force-majeure caps, rotation, and named disclosure as faithful expressions of stewardship and honest weights.
+- *Prudential political judgment:* every specific number — the thresholds, the windows, the inspector counts, the sector cap.
+- *Unresolved uncertainty:* whether the floor and rotation defeat determined capture at pilot scale; whether the Annex D rate reaching escrow is high enough to bite.
+
+**Executive theological verdict: 8 / 10.** A theologically serious, self-critical enforcement architecture that operationalizes oath-keeping and honest measurement; held back by a discretionary force-majeure cap and a thin pilot inspector pool that should be tightened to mandatory before deployment.
+
+---
+
+### ANNEX AT — External Trade Architecture
+
+**Christ-centered alignment.** §AT1's strategic floors ("survival access must never depend on a counterparty's goodwill," with 180/365-day caloric and medicine floors) institutionalize Joseph managing the storehouse so the people are fed when trade fails (Gen 41:53–57; Prov 11:26 — "he that withholdeth corn, the people shall curse him"). §AT3.2's graduated scarcity export caps enact the household-first duty (1 Tim 5:8; Gal 6:10) without permanent hoarding — caps are time-bound and lift on recovery. §AT4's capital-conversion and demurrage rules refuse imported accumulation dynamics an escape hatch (Luke 12:16–21). The strongest clause is §AT5's reciprocity membrane: default-open, good-faith-until-proven, with an explicit *non-retaliation principle* and a *humanitarian exemption at all stages* — it honors right dealing with the stranger (Lev 19:33–34) and "do justly, love mercy" (Mic 6:8) by refusing to starve foreign populations for their government's sins. §AT6.5's CSM-medicine compulsory licensing ("no exclusivity claim may override the CSM floor") subordinates patent abstraction to human life (Matt 12:12).
+
+**Babel-risk warning.** The sharpest risk is a self-funding coercion loop: §AT5.3 routes Stage-2 tariff-equivalent revenue to the PFCR, creating a *domestic fiscal incentive to keep a counterparty classified Extractive* — a defensive membrane that funds its own coercion, the precise hinge of Romans 12:21 ("be not overcome of evil, but overcome evil with good"). The §AT7.5 membrane ratchet honestly names that domestic vested interests can push restrictions toward permanence; the 12-month window and re-ratification mitigate but do not neutralize the funding incentive. Second: the §AT3.2 export-cap table keys only to *domestic* scarcity and includes no visibility test for whether a cap will cause famine in a dependent foreign population — the household-first duty is real, but Leviticus 19:33–34 and the Good Samaritan press for at least a visibility check.
+
+**Human-dignity test.** Passes. Strategic floors and CSM-medicine licensing treat survival access as non-negotiable rather than a tradable throughput metric, subordinating property abstraction to human life. Minor erosion: foreign populations appear mostly as exemption carve-outs rather than parties with standing.
+
+**Revision proposal.** (1) Should-fix: sever the §AT5.3 self-funding loop — route membrane tariff-equivalent revenue to a neutral/escrowed humanitarian or de-escalation fund, so the protocol has no fiscal appetite to prolong an Extractive classification. (2) Should-fix: add a foreign-impact visibility clause to §AT3.2/§AT3.3 — before an essential export cap activates against an import-dependent counterparty population, the oracle network publishes the projected humanitarian effect and confirms the §AT5.5 humanitarian channel open (mercy made procedural). (3) Monitor: the §AT2.1/§AT4.4 thresholds remain Reserved until TSP calibration — watch they are not quietly relaxed under producer/importer lobbying; (4) Monitor: whether the Federated Ombuds referral path on TSP composition is actually exercised.
+
+**Fruit test.** (i) People fed through scarcity; (ii) supply chains resistant to coercion; (iii) the foreign poor explicitly shielded from collateral harm; (iv) patents subordinated to medicine access; (v) no domestic constituency profiting from sustained hostility.
+
+**Epistemic categorization:**
+- *Clear biblical command:* do not withhold survival bread from your own poor; deal rightly with the stranger; provide for your household (Prov 11:26; Lev 19:33–34; 1 Tim 5:8; Mic 6:8).
+- *Theological inference:* strategic floors, capital demurrage, and a non-retaliation membrane as faithful institutional storehouse-stewardship and neighbor-love.
+- *Prudential political judgment:* the specific floor durations; the scarcity-mode day thresholds; the three-stage escalation; the price corridor.
+- *Unresolved uncertainty:* whether a graduated coercive membrane stays genuinely defensive over decades, or whether the ratchet plus self-funding converts it into the extraction it was built to resist.
+
+**Executive theological verdict: 8.5 / 10.** A structurally serious, dignity-preserving storehouse-and-stranger architecture whose main unredeemed flaw is a membrane that can fund its own coercion.
+
+---
+
+### Session 12 Cross-Cutting Findings
+
+**§S12-X1 — Discretion is the new throne (should-fix).** Across this cluster the anti-capture rules are strong but they concentrate *classification and certification* power in bodies whose only required virtue is transparency: ANNEX_V's undefined "speculative / extractive / windfall / mission-critical"; ANNEX_X's reviewer-independence specified only "by analogy"; ANNEX_AR's discretionary 365-day force-majeure anchor. The Jubilee did not trust a wise administrator to set the release — it removed the discretion by fixed command (Lev 25; Deut 15). Transparency is not righteousness; a fully disclosed methodology can still devour the widow's house in plain sight (Luke 20:47). The fix is to replace discretion and analogy with binding, pre-committed rules — published definitions plus a reclassification log that itself trips a stop-condition (V), reviewer-independence minimums in force (X), and a mandatory duration-proportional force-majeure cap (AR). Status: **should-fix open** (cluster-wide).
+
+**§S12-X2 — Fail-safe defaults for dormancy and paralysis (should-fix).** Two annexes leave a protection inert when something stalls: ANNEX_V has no anti-stall default, so a frozen transition starves household deposits as surely as a chaotic one; ANNEX_X's fairness/concentration threshold lies dormant (undefined) until founding numbers publish, while its enhanced-threshold control fails safe. A safeguard that does nothing under delay or before calibration is a house on sand (Matt 7:26). The fix: a default protective path and maximum stall duration in V (deposits auto-convert under the most stable band rather than freezing), and a conservative default channel-share cap in X that binds until commitments publish. Status: **should-fix open.**
+
+**§S12-X3 — Do not fund your own coercion (should-fix).** ANNEX_AT routes the proceeds of its defensive membrane (§AT5.3 tariff-equivalents) back into its own treasury, creating a fiscal incentive to keep an enemy classified an enemy — overcome evil with good, not with a revenue stream (Rom 12:21). The fix: route such revenue to a neutral/escrowed humanitarian or de-escalation fund, and add a foreign-impact visibility test before essential export caps fall on an import-dependent foreign population (Lev 19:33–34; the Good Samaritan). Status: **should-fix open.**
+
+---
+
+### Session 12 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** It keeps money honest by tying its creation to real value (X), restructures crushing household debt under a Jubilee-shaped hierarchy that puts the poor debtor ahead of the speculative creditor (V), makes promises to communities genuinely enforceable so faith is not without works (AR), and defends the people's survival supply at the border while explicitly refusing to starve the foreign poor for their government's sins (AT). These are the prophets' economics — honest weights, the Jubilee, the storehouse, the kept oath — rendered as architecture.
+
+**Where the cluster carries the most Babel-risk.** One theme above all: the temptation to let *discretion, analogy, or transparency* stand in for binding limits and genuine independence (§S12-X1), with two corollaries — protections that go inert under stall or before calibration (§S12-X2), and a defensive instrument that funds its own coercion (§S12-X3). The annexes resist capture well at the level of stated intent; the residual risk is always at the seam where a human body must classify, certify, or set a number, and the rule trusts the parameter or the disclosure more than it should.
+
+**Net assessment.** No must-fix blockers; the cluster scores **8–8.5**, and its should-fixes are closeable. Christ-measured, these are among the corpus's most prophetic instruments — money, debt, delivery, and trade ordered toward the poor and the stranger rather than the strong. Their deepest discipline, still to be fully written in, is the Jubilee's: where a person must be trusted to classify or certify, bound that trust with a fixed rule and a fail-safe default, so the measure stays honest even when the one holding it is not. Civil economy is not the kingdom of God; it is a steward's instrument, and it is most faithful when it refuses to trust its own discretion.
+
+**Items requiring follow-up in a future Session 13:**
+1. Whether the §S12-X1 binding rules have replaced discretion/analogy (V definitions + reclassification-as-stop-trigger; X reviewer-independence minimums; AR mandatory duration-proportional cap).
+2. Whether the §S12-X2 fail-safe defaults have been added (V anti-stall deposit auto-conversion; X default channel-share cap binding pre-publication).
+3. Whether the §S12-X3 AT funding loop has been severed (neutral/escrow humanitarian fund) and the foreign-impact visibility test added before export caps.
+4. The remaining unevaluated machinery: oracle/measurement (M, AL), continuity/bypass (AE, U), and evidence/audit/threat (A, AG, AD, AC, T, AO, AB, AS), plus the AM completion, for future sessions.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–12)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1347,5 +1472,9 @@ This session turns to how the rules change and how the system legitimately begin
 - `docs/annexes/ANNEX_AV.md` (Session 11 — two-key Tier-1 precondition)
 - `docs/annexes/ANNEX_N.md` (Session 11 — transition, genesis, deployability)
 - `docs/annexes/ANNEX_AH.md` (Session 11 — founding bootstrap resolution)
+- `docs/annexes/ANNEX_X.md` (Session 12 — Flow issuance architecture)
+- `docs/annexes/ANNEX_V.md` (Session 12 — transition mechanics and conversion)
+- `docs/annexes/ANNEX_AR.md` (Session 12 — contract-commitment architecture)
+- `docs/annexes/ANNEX_AT.md` (Session 12 — external trade architecture)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
