@@ -788,7 +788,7 @@ The work remaining is operational. Whether the patch produces good fruit (Matt 7
 
 ## Files consulted (Session 5 Follow-up + Sessions 6–7)
 
-- `docs/governance/P-063_draft.md` (commit `dd779d0`, v14 — DRAFT, not corpus-registered)
+- `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
 - `docs/governance/Patch_Log.md` (P-035, P-036, P-040, P-050, P-051, P-054, P-016 inventory and entries)
 - `docs/governance/Federated_Ombuds_Constitution_Packet.md` (CRP composition; appointing-body workflow)

@@ -51,6 +51,42 @@ PLACEHOLDER_WARNING_EXEMPTIONS = {
     Path("founding/commitments.md"),
 }
 
+# Patch numbers that are intentionally not defined in Patch_Log.md.
+# RESERVED: never assigned — the sequence skips these numbers. Documented as
+# gap F-04 in docs/audits/01-corpus-inventory.md. References to them are
+# descriptions of a known gap, not broken cross-references.
+RESERVED_IDENTIFIERS = {"P-007", "P-010", "P-028"}
+
+# DRAFT: identifiers for patches that are deliberately draft-only and not yet
+# incorporated into Patch_Log.md. P-063 is the Productive-Use Extraction Limit
+# draft (draft-only / not corpus-registered by standing constraint).
+DRAFT_IDENTIFIERS = {"P-063"}
+
+# docs/governance/*.md files that are intentional draft / working artifacts —
+# not finished, reader-facing corpus documents — so they are deliberately not
+# registered in scripts/export_corpus.py (CORE_DOCS / section_for). These are
+# the P-063 draft family and the not-yet-adopted CRP/Ombuds working packets.
+GOVERNANCE_REGISTRATION_EXEMPTIONS = {
+    # P-063 draft family (draft-only, not corpus-registered)
+    "docs/governance/P-063_draft.md",
+    "docs/governance/P-063_v14_vignette_stress_test.md",
+    "docs/governance/P-063_v15_broader_review_brief.md",
+    "docs/governance/P-063_v15_executive_summary.md",
+    "docs/governance/P-063_v15_followup_draft.md",
+    "docs/governance/P-063_v15_glossary.md",
+    "docs/governance/P-063_v15_reviewer_response_form.md",
+    "docs/governance/P-063_v16_followup_draft.md",
+    # CRP / Federated Ombuds working packets (self-labeled NOT ADOPTED / draft / template)
+    "docs/governance/CRP_Bootstrap_Status_Packet.md",
+    "docs/governance/Federated_Ombuds_Constitution_Packet.md",
+    "docs/governance/OQ_CRP_1_Adopted_Interpretation.md",
+    "docs/governance/OQ_CRP_1_Provisional_CRP_Interpretation_Ruling.md",
+    "docs/governance/Provisional_CRP_Constitution_Packet.md",
+    "docs/governance/Provisional_CRP_Draw_and_Roster_Certification_Packet.md",
+    "docs/governance/Provisional_CRP_Human_Input_Form.md",
+    "docs/governance/Provisional_CRP_Owner_Decision_Record.md",
+}
+
 DEPRECATED_TERMS = (
     "Master Protocol",
     "master protocol",
@@ -321,6 +357,8 @@ def validate_identifier_references(
     for path in markdown_files:
         text = path.read_text(encoding="utf-8")
         for identifier in sorted(set(LOCAL_ID_RE.findall(text))):
+            if identifier in RESERVED_IDENTIFIERS or identifier in DRAFT_IDENTIFIERS:
+                continue
             prefix = identifier.split("-", 1)[0]
             if identifier not in definitions[prefix]:
                 result.error(f"{relative(path)} references undefined identifier {identifier}")
@@ -424,6 +462,8 @@ def validate_governance_registration(result: ValidationResult) -> None:
         result.warn("scripts/export_corpus.py: cannot parse section_for() — skipping section check")
 
     for path_str in sorted(on_disk):
+        if path_str in GOVERNANCE_REGISTRATION_EXEMPTIONS:
+            continue
         if path_str not in in_core:
             result.error(
                 f"{path_str}: not in CORE_DOCS in scripts/export_corpus.py "
