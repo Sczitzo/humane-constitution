@@ -1,0 +1,46 @@
+# ANNEX J — Anti-Dynasty, Stewardship, and Worker-Owned Enterprise Architecture
+
+> **At a glance**
+> | | |
+> |---|---|
+> | **Purpose** | Stops ownership of land, housing, and enterprise from hardening into inherited class position. Counts beneficial ownership through to natural persons or mission-locked bodies, prohibits perpetual extractive wrappers, reframes ownership as stewardship rather than a perpetual tribute right, and gives worker-owned and mission-locked firms structural preference. |
+> | **Who it protects** | Future generations owed freedom from inherited advantage hardening into class position; current workers, tenants, and small operators exposed to dynastic landlordism and passive extraction; legitimate family continuity, which is protected in modest form rather than abolished. |
+> | **Failure risk** | Wealth persists as control through trusts, family offices, foundations, shell chains, mission-lock capture, land-control rights, or business-control workarounds not blocked by existing rules — recreating a rentier aristocracy behind compliant paperwork. |
+> | **Evidence status** | Designed |
+> | **Linked risks** | P-031, P-032, P-033; rentier and dynastic accumulation; trust / shell / beneficial-ownership capture; mission-lock capture; sham-cooperative gaming. |
+
+This annex carries the ownership architecture that keeps Article V's anti-rent and anti-extraction logic from being defeated by legal form. Where the progressive net-worth demurrage in Annex D addresses the *carrying cost* of accumulated wealth, this annex addresses *control* — who ultimately owns, who succeeds to ownership, and on what terms capital may claim a return. It works alongside Annex D (net-worth demurrage), Annex X §X8 (public finance and commons revenue), Annex AR (contract-commitment architecture), and Annex V (housing and land use-rights).
+
+> **Provenance:** The ownership and anti-dynasty material consolidated here was drafted as Annex R and distributed in the 2026-04-25 review — the contribution-motivation clauses to Annex U, and the ownership architecture (§R1–§R2) here. Section numbering (§R1, §R2) is preserved so existing cross-references resolve without change.
+
+---
+
+## J·R1 — Beneficial Ownership, Anti-Dynasty Limits, and Worker-Owned Preference
+
+**R1.1 Beneficial ownership counts through.** Ownership of land, housing, enterprise equity, and other productive or rent-bearing assets is always attributed to the natural persons who ultimately benefit, or to mission-locked or community bodies governed under published stewardship rules. No trust, holding company, foundation, nominee, shell chain, or equivalent structure may obscure or interrupt that attribution. Beneficial-ownership transparency is a precondition of holding, not a disclosure made only on demand.
+
+**R1.2 No perpetual extractive succession.** Perpetual trusts, dynastic holding structures, absentee succession vehicles, and equivalent perpetual extractive wrappers may not preserve control of rent-bearing or enterprise assets across generations. Succession of such assets is subject to review against the anti-dynasty standard; structures whose economic effect is to perpetuate extractive control beyond a natural lifetime without active stewardship are prohibited.
+
+**R1.3 Family continuity is protected in modest form.** This annex does not abolish inheritance or punish ordinary family continuity. Homes, tools and instruments of a trade, provision for dependents, and mission-locked stewardship bodies pass under explicit continuity allowances. The prohibition targets dynastic landlordism, absentee succession structures, and perpetual extractive wrappers — not a family keeping its home, its tools, or a worker-governed enterprise.
+
+**R1.4 Worker-owned and mission-locked preference.** Worker-owned, cooperative, and mission-locked firms receive structural preference in PFCR-backed finance, public procurement, retained-earnings treatment, worker-buyout pathways, and founder-exit conversion rules (governed in detail by Article V, Annex X §X8, and Annex AR). Natural monopolies are moved to a separate regulated-utility track rather than left to private extractive ownership. Outside capital claims on preferred firms must be capped, redeemable, sunset, or otherwise bounded.
+
+**R1.5 Anti-gaming.** Preferential treatment under R1.4 is conditioned on governance-proof requirements, payout constraints, and beneficial-ownership transparency, so that a sham cooperative or a nominally mission-locked body controlled in substance by a private extractive owner does not qualify. Determinations are made against published criteria with documented appeal paths.
+
+---
+
+## J·R2 — Stewardship Ownership Standard and Passive-Extraction Limits
+
+**R2.1 Ownership as stewardship.** Ownership across land, housing, and enterprise is held as stewardship rather than as a perpetual tribute right. Capital may be rewarded for genuine risk and genuine productive contribution. It may not claim endless passive extraction from necessity or from labor once the contributed risk and value have been fairly returned.
+
+**R2.2 Bounded capital claims.** Capital claims on stewarded assets are bounded — through anti-rent use-right logic for land and housing, capped and redeemable outside-capital instruments for enterprise, and judicially reviewable limits on passive extraction. The boundary distinguishes a fair return on contribution from a perpetual rent extracted because one holds the title.
+
+**R2.3 Passive-extraction prohibition is reviewable.** Whether a given arrangement is productive stewardship or prohibited passive extraction is a reviewable question, not a self-certification. Determinations rest on published criteria, are subject to appeal, and require mission-lock documentation where stewardship status is claimed. Valuation disputes about what counts as productive stewardship are resolved through that review process, not by the asserted intent of the holder.
+
+**R2.4 Enforcement interfaces.** This standard is enforced through housing and commons use-right enforcement (Annex V), capital-instrument redesign and anti-monopoly enforcement (ACC), beneficial-ownership and succession review (R1), and the net-worth carrying cost on idle concentrated wealth (Annex D). No single mechanism is sufficient alone; the standard depends on their combination.
+
+---
+
+## J·R3 — Honest Limits
+
+This annex specifies a designed architecture; it is not yet evidence-backed. The decisive open work is legal and economic: trust-law analysis, a beneficial-ownership red-team, cooperative-ownership evidence, and property-use transition modeling capable of identifying any trust, shell, or beneficial-ownership structure that would preserve inter-generational extractive control outside these prohibitions (see Claims_Evidence_Register and Hardening_Queue). Until that work is done, no stronger public claim should be made than that the architecture is designed to close the anti-dynasty and passive-extraction gaps — not that it has been shown to close them.

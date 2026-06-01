@@ -27,7 +27,7 @@ Decimal codes (1.1, 2.3, etc.) below are **reader-facing display labels only**. 
 | How rules can change without being captured | Annexes H, AG, AH, AV |
 | Who counts, how people recover identity, and how migration works | Annexes I, P, AK |
 | How basic needs, scarcity, and survival continuity work | Annexes K, M, Q, U, Y, AQ |
-| How money, housing, land, business, and public funding work | Annexes D, V, X, AR, AT |
+| How money, housing, land, business, and public funding work | Annexes D, V, X, AR, AT, J |
 | How public voice, service, and review bodies avoid capture | Annexes L, S, Z, AC, AF, AI |
 | How public communication and evidence gates work | Annexes AD, AM, AN, AO, AP, AS |
 
@@ -81,6 +81,7 @@ Money creation, wealth carrying costs, investment containment, and trade boundar
 | 4.3 | [Annex V](./ANNEX_V.md) | transition mechanics, conversion, and legacy-system treatment |
 | 4.4 | [Annex AT](./ANNEX_AT.md) | external trade architecture: strategic floors, export caps, and the reciprocity membrane |
 | 4.5 | [Annex AR](./ANNEX_AR.md) | contract-commitment architecture: threshold values and governance parameters |
+| 4.6 | [Annex J](./ANNEX_J.md) | anti-dynasty ownership, stewardship standard, and worker-owned enterprise preference |
 
 ## Title 5 — Oracles, Measurement, and Supply Data
 

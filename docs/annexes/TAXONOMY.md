@@ -101,6 +101,7 @@ Money creation, wealth carrying costs, investment containment, and trade boundar
 | 4.3 | ANNEX_V | Transition Mechanics, Conversion, and Legacy-System Treatment |
 | 4.4 | ANNEX_AT | External Trade Architecture: Strategic Floors, Export Caps, and the Reciprocity Membrane |
 | 4.5 | ANNEX_AR | Contract-Commitment Architecture: Threshold Values and Governance Parameters |
+| 4.6 | ANNEX_J | Anti-Dynasty, Stewardship, and Worker-Owned Enterprise Architecture |
 
 *Reserved: 4.6–4.9*
 

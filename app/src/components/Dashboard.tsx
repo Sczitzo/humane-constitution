@@ -2269,7 +2269,7 @@ const READING_PATHS: ReadingPathDef[] = [
       { path: 'docs/annexes/ANNEX_Y.md', note: 'The Constitutional Survival Minimum — the unconditional floor. Pay attention to what cannot be withdrawn and under what circumstances the floor is defended.' },
       { path: 'docs/annexes/ANNEX_X.md', note: 'How Flow (the currency) is issued and how demurrage works. This is the monetary engine — notice how issuance is tied to real capacity rather than debt.' },
       { path: 'docs/annexes/ANNEX_Z.md', note: 'Voice and Service Record — the civic instruments. Watch for where each one\'s limits are drawn and how they are prevented from becoming social credit.' },
-      { path: 'docs/annexes/ANNEX_J.md', note: 'Monetary calibration and long-horizon capital discipline. The numerical constraints that prevent the system from inflating or deflating its way out of its commitments.' },
+      { path: 'docs/annexes/ANNEX_D.md', note: 'Progressive net-worth demurrage — the single carrying cost on accumulated wealth. The participation floor, progressive brackets, and productive-use exemptions that keep idle concentration in check without punishing small savers or patient productive capital.' },
       { path: 'docs/annexes/ANNEX_K.md', note: 'Essential basket governance — how the survival floor is measured in real goods. This is where the system has to answer the hard question: measured by whom, and how.' },
     ],
   },

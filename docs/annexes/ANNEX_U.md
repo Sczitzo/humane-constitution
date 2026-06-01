@@ -7,7 +7,7 @@
 > | **Who it protects** | Everyone who relies on the stated protections actually being unbypassable — founding promises that can be quietly circumvented offer false security, not real protection. |
 > | **Failure risk** | Exception systems become the new capture layer; each individually justified carve-out aggregates into a regime where the rules have more holes than substance; narrowing faces weaker friction than expansion. |
 > | **Evidence status** | Designed |
-> | **Linked risks** | P-022; P-024; Annex N §N3 (founding anti-capture); Annex J §J3 (investment channels); Annex M §M4 (oracle failure defaults); Annex K §K1 (basket contestation). |
+> | **Linked risks** | P-022; P-024; Annex N §N3 (founding anti-capture); Annex D §D6 (productive-use / investment-channel exemptions); Annex M §M4 (oracle failure defaults); Annex K §K1 (basket contestation). |
 
 > **Provenance:** Foundational constitutional annex · Closes operational bypass channels and supplies superseding clauses later extended by P-022 and P-024 · Status: **ACTIVE**
 
