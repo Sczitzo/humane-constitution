@@ -17,13 +17,16 @@
 
 ### V1. Conversion-rate methodology
 - Legacy-currency to Flow conversion may not be declared by charisma, donor consensus, or opaque executive discretion. It must use a published methodology referencing a basket of essentials, wage bands, production capacity, and continuity-risk assumptions.
+- The classifying categories that govern conversion and restructuring — including "speculative," "extractive," "windfall," and "mission-critical" — carry binding consequence and may not be left to discretion. Each category has a published, pre-committed definition with the criteria and tests by which a claim is assigned to it. These definitions are fixed before the conversion window opens and may not be altered while it is open.
 - Small protected household deposits and continuity-critical working balances convert first under the most stable published band. Large speculative balances may face staged conversion, holding periods, or review to reduce opportunistic arbitrage.
 - The conversion methodology must publish error bands, losers as well as winners, and the reasons any category receives preferential continuity treatment.
+- Every change of a claim's category is recorded in a public reclassification log naming the claim, its prior and new category, the stated reason, and the deciding authority. Any reclassification that moves a creditor toward more favorable treatment is a §V5 stop-condition trigger and may not take effect until it has passed independent review.
+- Every household receives a plain-language notice of the conversion rate applied to its balance, what that rate means for its savings in concrete terms, and the path by which it may appeal. The protection is not satisfied by publishing the methodology alone; it must reach the ordinary saver, not only the analyst able to read it.
 
 ### V2. Debt restructuring hierarchy
 - Essentials-linked household debts enter standstill first and restructure under survival-floor rules before enforcement resumes.
 - Mission-critical enterprise debts are triaged by continuity value, labor dependence, and supply importance rather than by creditor seniority alone.
-- Speculative claims, extractive fee chains, and claims dependent on obvious pre-transition windfalls are junior in restructuring order.
+- Speculative claims, extractive fee chains, and claims dependent on obvious pre-transition windfalls are junior in restructuring order. The assignment of any claim to "mission-critical," "speculative," "extractive," or "windfall" treatment follows the pre-committed §V1 definitions and is entered in the §V1 reclassification log; no claim may be moved into mission-critical or other favored standing by discretion or after the window opens without independent review.
 - Pensions, protected savings, and disability-linked income streams receive explicit continuity treatment before ordinary unsecured claims.
 - No creditor class may silently capture transition mechanics through arbitration clauses, cross-default traps, or side agreements excluded from the public restructuring framework.
 
@@ -32,6 +35,7 @@
 - Legacy private contracts remain temporarily recognizable, but enforceability, redenomination, and dispute handling shift to published rules once the relevant phase begins.
 - Banking conversion proceeds in sequence: payments continuity, protected deposits, public basic-banking utility, safe household bridge-finance functions, enterprise working-capital functions, then broader balance-sheet transformation.
 - Run-prevention tools - including temporary capital controls, withdrawal smoothing for large speculative accounts, and emergency liquidity backstops - must be published before announcement, not improvised after panic begins.
+- A frozen transition starves household deposits as surely as a chaotic one. Each phase therefore carries a named maximum stall duration. If a phase can neither advance nor be safely held within that window, protected household deposits and pensions automatically convert under the most stable §V1 published band rather than remaining frozen. Capture-by-paralysis must never be able to trap household savings.
 
 ### V4. Foreign claims and external obligations
 - Foreign obligations, treaty commitments, and cross-border claims must be inventoried before phase escalation. Uncounted obligations are not a rounding error; they are a transition threat.
@@ -41,6 +45,9 @@
 ### V5. Phase gates and transition stop rules
 - A phase may advance only if the prior phase has published continuity metrics, dispute resolution performance, exclusion rates, and asset-transfer audit results.
 - Any unexplained concentration spike, founding-side letter, conflict-riddled conversion privilege, or unresolved payments failure pauses phase advancement automatically.
+- A stall is not a safe resting state. Where a deciding body cannot advance a phase within its named §V3 maximum stall duration, the §V3 fail-safe default takes effect for protected household deposits and pensions; a stop condition may pause advancement but may not indefinitely freeze household savings.
+- A reclassification of any claim toward more favorable treatment, recorded in the §V1 log, pauses phase advancement and may not take effect until independent review confirms it against the pre-committed definitions.
+- The body authoring the conversion methodology must be independent of the interests it sorts. Its members may not hold interests conflicting with those of the largest creditors; such interests must be disclosed, and a member with a conflicting interest must recuse from decisions touching that interest. Publication alone does not satisfy this requirement.
 - Transition mechanics must name who decides, under what authority, with what appeal path, and under what sunset. Silence on these questions is itself a stop condition.
 
 ---

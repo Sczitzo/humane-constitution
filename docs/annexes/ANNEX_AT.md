@@ -117,11 +117,19 @@ When any of the following conditions exist, automatic export caps activate for t
 | Strategic floor breach | Exports suspended for breached category | Until floor is restored and verified |
 | Critical dependency concentration | Export cap review required; no automatic cap, but export permits require oracle sign-off | Until dependency is reduced below Critical |
 
-### AT3.3 — Treaty Obligations
+### AT3.3 — Foreign Humanitarian Impact Disclosure
+
+The household-first duty stands: domestic Essential Access is protected before outward flow, and a domestic scarcity trigger never waits on foreign conditions. But the duty of mercy toward the foreign poor is procedural and visible, not merely declared.
+
+Before an essential-category export cap activates against a counterparty whose population is import-dependent on that category, the Article III oracle network must publish the projected humanitarian effect of the cap on that population — including the categories affected, the dependent population's available alternative supply, and the projected time-to-shortage. Publication occurs through the Article VII transparency layer concurrently with cap activation and does not delay protection of the domestic floor.
+
+The §AT5.5 humanitarian channel must be confirmed open before such a cap takes full effect against a dependent population. Where the channel is not open, the cap proceeds only with a concurrent, published plan to open or restore it. A cap that would foreseeably cause famine or comparable survival harm in a dependent foreign population may not be set tighter than the household-first duty requires, and the surplus-export and treaty provisions of §AT3.2 and §AT3.4 are read to preserve verified humanitarian flows wherever domestic survival is not thereby endangered.
+
+### AT3.4 — Treaty Obligations
 
 Export caps may not unilaterally void treaty obligations without the consent of the treaty partner except in Emergency (L3) conditions or verified foreign-supply weaponization (§AT5.3). Treaty obligations for essential goods must include a force majeure clause covering domestic scarcity events and a reciprocal essential-access guarantee — any treaty lacking these clauses may not be renewed under the protocol.
 
-### AT3.4 — Cap Governance
+### AT3.5 — Cap Governance
 
 Export cap activation and deactivation is automated against the Article III scarcity indices. Deliberative override of an automated cap requires Article VI ratification under the standard proposal pipeline with a mandatory 14-day review window. No executive or administrative body may unilaterally suspend an activated export cap except to tighten it further.
 
@@ -173,7 +181,7 @@ When a counterparty is classified as Extractive, the membrane response escalates
 
 **Stage 1 — Defensive posture:** export caps for all essential categories apply regardless of domestic scarcity mode. Enhanced border conversion requirements apply to all capital inflows. Dependency diversification for all categories sourced from the Extractive counterparty is mandated within 180 days.
 
-**Stage 2 — Restricted access:** essential-category imports from the Extractive counterparty are subject to independent verification of origin, pricing, and supply-chain integrity before entry. Non-essential imports from the counterparty are subject to enhanced tariff-equivalent carrying charges that route to the PFCR.
+**Stage 2 — Restricted access:** essential-category imports from the Extractive counterparty are subject to independent verification of origin, pricing, and supply-chain integrity before entry. Non-essential imports from the counterparty are subject to enhanced tariff-equivalent carrying charges. These carrying charges do not route to the general PFCR or to any domestic operating treasury. They route instead to a neutral, escrowed humanitarian and de-escalation fund, ring-fenced from general revenue and governed under Article VII transparency, whose permitted uses are limited to humanitarian channel support (§AT5.5), diversification of the dependencies that the Extractive classification exposed, and verified de-escalation toward reclassification. The protocol must hold no fiscal appetite to prolong an Extractive classification: the system must not profit from sustained hostility, and no domestic budget line may come to depend on a counterparty remaining classified Extractive. Any residue in the fund on reclassification to Cooperative is directed to humanitarian use, never to general revenue.
 
 **Stage 3 — Suspension:** all import and export flows with the Extractive counterparty are suspended pending resolution. Existing contracts may be honored through verified third-party intermediaries only. Article VI must ratify Stage 3 with a two-thirds supermajority and a published resolution pathway.
 
@@ -292,7 +300,7 @@ Before any essential-sector procurement contract can be renewed or extended beyo
 | :--- | :--- |
 | **Article III — Physics & Reserves** | Strategic floor verification; import dependency measurement; supply-chain concentration audits |
 | **Article IV — Survival** | Export cap triggers linked to Essential Access scarcity mode thresholds; CSM floor protection is the priority condition |
-| **Article V — Markets, Commons & Public Finance** | Flow conversion rules; demurrage treatment of converted capital; investment channel for foreign-origin Flow; PFCR routing of membrane tariff equivalents |
+| **Article V — Markets, Commons & Public Finance** | Flow conversion rules; demurrage treatment of converted capital; investment channel for foreign-origin Flow; membrane tariff-equivalents are escrowed to a neutral humanitarian and de-escalation fund, ring-fenced from the general PFCR (§AT5.3) |
 | **Article VI — Voice, Service Record & Deliberation** | TSP composition and authority; membrane stage ratification; treaty ratification; floor amendment deliberation |
 | **Article VII — Transparency & Environmental Scanning** | Supply-chain concentration publication; counterparty classification register; quarterly trade-health reports; S4 scanning for emerging trade-architecture threats |
 | **Annex Y — CSM** | Strategic floor definitions for CSM-basket categories are Tier 1 adjacent; floor reductions require H-2 supermajority |

@@ -171,14 +171,21 @@ CRP review outcomes are published publicly within **FC-170** (reserved; recommen
 | :--- | :--- |
 | First **FC-171** (reserved; recommended anchor: 90 days) | Contractor self-certification with contemporaneous documentary evidence (permits, certified notices, supply chain disruption documentation) |
 | Above FC-171 up to **FC-172** (reserved; recommended anchor: 180 days total) | Independent third-party certification from a body with no financial relationship with the contractor or commissioning authority |
-| Above FC-172 up to **FC-173** (reserved; recommended anchor: 365 days total) | Independent assessment panel (P-017 oracle-independence standards); public notice published within 14 days of activation |
-| Beyond **FC-173** | **Not available.** Project enters mandatory restructuring review. A second force majeure claim after the cap is exhausted does not activate a freeze; it activates a separate restructuring pathway. |
+| Above FC-172 up to the binding cap | Independent assessment panel (P-017 oracle-independence standards); public notice published within 14 days of activation |
+| Beyond the binding cap | **Not available.** Project enters mandatory restructuring review. A second force majeure claim after the cap is exhausted does not activate a freeze; it activates a separate restructuring pathway. |
 
-**The hard cap is non-negotiable.** No extension of the cap is available without a Tier 2 (H-2) amendment. The purpose of the hard cap is to make the certification panel economically irrelevant above the cap — beyond the cap, there is nothing to capture.
+**The binding force-majeure cap for every project, of every programme type, is the lesser of two limits:**
+
+- the **absolute cap FC-173** (reserved; recommended anchor: 365 days total); and
+- the **duration-proportional cap FC-174** (reserved; recommended anchor: 25% of contracted project duration).
+
+Whichever limit is reached first ends freeze availability. The duration-proportional cap is mandatory for all programme types — standard infrastructure, large-scale or novel infrastructure, and Essential Access-essential delivery alike — and is not a discretionary consideration. Its purpose is to close the anchor-hunting seam: an absolute cap alone erases roughly half the demurrage on a two-year project and the entire demurrage on a one-year project, so on any project shorter than the absolute cap divided by the proportional fraction, the proportional cap binds and the absolute anchor cannot be used as an evasion route.
+
+**The hard cap is non-negotiable.** No extension of either limit is available without a Tier 2 (H-2) amendment. The purpose of the hard cap is to make the certification panel economically irrelevant above the cap — beyond the binding cap, there is nothing to capture.
 
 ### 3.2 — Worked Examples
 
-*Three projects of different durations, 5% illustrative effective annual carrying cost (the operative cost is the Annex D net-worth demurrage on the escrow balance), using the recommended anchor cap of 365 days.*
+*Three projects of different durations, 5% illustrative effective annual carrying cost (the operative cost is the Annex D net-worth demurrage on the escrow balance). The examples below trace the absolute anchor of 365 days in isolation to expose the anchor-hunting seam; under §3.1 the binding cap is the lesser of that anchor and the 25%-of-duration proportional cap, so the proportional limit governs every project short enough for the anchor to over-reach.*
 
 **Project A: 2-year hospital construction, 8M Flow escrowed**
 
@@ -189,7 +196,7 @@ CRP review outcomes are published publicly within **FC-170** (reserved; recommen
 | 180-day freeze (sustained disruption) | ~602,000 Flow | ~198,000 Flow | 24.8% |
 | 365-day freeze (cap exhausted) | ~402,000 Flow | ~398,000 Flow | **49.7%** — approximately half of total demurrage eliminated |
 
-At a 365-day cap on a 2-year project, a contractor can eliminate ~50% of total demurrage exposure. The question for the founding coalition: is 365 days too generous for a 2-year project? A tighter cap of 180 days limits avoidance to ~25%.
+The 365-day absolute anchor in isolation lets a contractor eliminate ~50% of total demurrage exposure on a two-year project. The duration-proportional cap (FC-174) closes this: 25% of a 2-year duration is 182 days, which binds ahead of the 365-day anchor and holds avoidance to ~25%. On this project the proportional cap is the operative limit.
 
 **Project B: 5-year power grid, 30M Flow escrowed**
 
@@ -200,7 +207,7 @@ At a 365-day cap on a 2-year project, a contractor can eliminate ~50% of total d
 | 365-day cap | ~1,479,000 Flow | 19.7% | **Significant** — enough to fund sustained panel influence |
 | 730-day cap | ~2,959,000 Flow | 39.4% | **High** — panel capture is economically rational |
 
-**Key finding for large projects:** The 365-day cap produces a meaningful savings opportunity (~1.5M Flow) on a large multi-year project. The founding coalition should consider whether the cap should scale inversely with project duration — shorter caps for longer projects — or whether the absolute cap should be lower (e.g., 180 days regardless of project length).
+**Key finding for large projects:** The 365-day absolute anchor in isolation produces a meaningful savings opportunity (~1.5M Flow) on a large multi-year project. Here the absolute cap is the binding limit, because 25% of a 5-year duration (~456 days) exceeds the 365-day anchor — for projects long enough that the proportional cap would over-reach, the absolute cap governs. The two limits operating together (lesser-of) hold large-project avoidance to the 365-day exposure rather than letting a longer proportional allowance compound it.
 
 **Project C: 1-year community housing (Essential Access-essential), 1M Flow escrowed**
 
@@ -210,7 +217,7 @@ At a 365-day cap on a 2-year project, a contractor can eliminate ~50% of total d
 | 180 days | ~24,700 Flow | 49.4% |
 | 365 days | ~50,000 Flow | 100% — entire demurrage eliminated on a 1-year project |
 
-**Key finding for short Essential Access-essential projects:** A 365-day cap on a 1-year project is effectively unlimited. For Essential Access-essential programmes, the cap should be set relative to total project duration through **FC-174** (reserved; recommended anchor: 25% of contracted project duration), regardless of the absolute day limit. This prevents the "1-year project, 365-day cap" outcome above.
+**Key finding for short projects of any type:** The 365-day absolute anchor on a 1-year project is effectively unlimited — it erases the entire demurrage. The duration-proportional cap **FC-174** (recommended anchor: 25% of contracted project duration) is the binding limit for every short project, not only Essential Access-essential ones: 25% of a 1-year duration is ~91 days, holding avoidance to ~25%. Because §3.1 binds the cap to the lesser of the absolute and proportional limits for all programme types, the "1-year project, 365-day cap" outcome cannot arise for standard infrastructure either.
 
 ### 3.3 — Qualifying Events
 
@@ -263,6 +270,7 @@ An inspector may be temporarily suspended (pending investigation) on credible al
 
 At the time of any inspector assignment:
 - No more than **FC-184** (reserved; recommended anchor: 25% of the active pool) may have prior employment or consulting relationships with any single sector (construction, utilities, healthcare infrastructure — assessed at the three-digit industry classification level).
+- **At pilot scale the single-sector limit is tighter in absolute terms.** In a pilot or single-municipality pool, no more than 2 inspectors from any single sector may sit in the active pool, regardless of the percentage in FC-184. A flat 25% allows 3 of a 12-inspector pool (FC-175) to share one sector, which leaves too little independent depth when the pool is small and relationships are dense; the absolute cap of 2 forces genuine cross-sector breadth before the proportional limit relaxes it at regional and national scale. Where the pilot pool floor is raised above 12, the single-sector limit is the lesser of 2 inspectors and the FC-184 percentage.
 - Pool diversity across professional background (engineering disciplines, quantity surveying, planning, environmental assessment) must be maintained at levels defined in the escrow agent's published pool composition report.
 
 ---
@@ -293,10 +301,10 @@ To complete this annex before deployment, the founding coalition must:
 2. **Bind FC-160 through FC-184** in Sections 1 through 4, using first-year pilot data where available. Where pilot data is not yet available, use the recommended anchors as starting positions. **Before any parameter is bound, it must be submitted to an adversarial parameter review panel convened under the same composition rules as AH3 (ANNEX_AH).** The panel must compare each parameter against at least two real-world analogues from comparable governance systems or existing escrow and capital-deployment frameworks. Parameters for which no analogue can be identified must be auto-flagged in the founding record with a published explanation of why no analogue exists and what the founding coalition used instead. Any parameter that the adversarial panel contests must carry a permanent public warning record in `/founding/commitments.md` — the warning does not block deployment, but it remains attached to the parameter through all subsequent reviews and cannot be removed without a Tier 2 amendment process.
    - High-value thresholds: 100k Flow / 1M Flow / 15% of project value
    - Deployment windows: 90 days (Essential Access-essential) / 180 days (standard) / 365 days (large-scale)
-   - Force majeure cap: 365 days absolute; capped at 25% of project duration for Essential Access-essential programmes
-   - Inspector pool: minimum 12 (pilot), 30 (regional), 75 per region (national); rotation per Section 4.2 anchors
+   - Force majeure cap: binding limit is the lesser of FC-173 (365 days absolute) and FC-174 (25% of contracted project duration), applied to all programme types
+   - Inspector pool: minimum 12 (pilot), 30 (regional), 75 per region (national); rotation per Section 4.2 anchors; single-sector limit per Section 4.4 (no more than 2 from any one sector at pilot scale, FC-184 percentage at regional and above)
 
-3. **Determine whether the force majeure cap should scale with project duration** for standard infrastructure (see Section 3.2, Project A and B). A fixed 365-day cap is more predictable; a proportional cap (e.g., 20% of contracted duration) better reflects actual project risk profiles. This choice must be made before deployment.
+3. **Bind both force-majeure limits, not one.** Under Section 3.1 the binding cap for every programme type is the lesser of the absolute cap (FC-173) and the duration-proportional cap (FC-174); the proportional cap is mandatory and is not a discretionary "fixed-versus-proportional" choice. The founding coalition must set the proportional fraction (recommended anchor: 25% of contracted duration) and the absolute day limit (recommended anchor: 365 days) so that no project duration leaves a usable evasion route through either limit (see Section 3.2, Projects A, B, and C). This calibration must be completed before deployment.
 
 4. **Specify the actual Flow amounts and thresholds** in relation to the real price level in the pilot context. The absolute thresholds in Section 1 are illustrative only. "100,000 Flow" is meaningless as a protection unless the founding coalition has established what a standard housing unit or clinic costs in Flow and verified that 100,000 Flow represents a significant but not exceptional milestone release.
 
