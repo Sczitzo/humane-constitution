@@ -38,6 +38,7 @@ Residency must be determined by layered evidence rather than any single wealth-l
 - **Acceptable evidence** may include proof-of-personhood, verified continuous presence, declared domicile, dependent or caregiver linkage, school enrollment, healthcare continuity, public-service assignment, work authorization, public-institution sponsorship, or equivalent evidence defined by Tier 2 rules.
 - **No wealth test, land test, or employer-control test** may be used as a prerequisite for basic onboarding.
 - **When evidence conflicts**, the interim default must be the least harmful status consistent with fraud controls and public safety.
+- **A person with no community, sponsor, or witnesses** to attest for them retains a low-burden self-declaration fallback. Wherever an attestation or witness path is available to establish presence, domicile intent, or continuity, a self-declared equivalent must be available alongside it. Lacking a web of trust is never itself a disqualifier from provisional status or from the survival floor, and isolation alone may not defeat a self-declaration. Such declarations remain subject to ordinary deduplication and fraud controls, but the absence of corroborating persons may not be treated as evidence against the declarant.
 - **Existing Core Residents** are presumed continuous unless substantial contradictory evidence exists and due process is provided before downgrade.
 
 ### I4. Onboarding phases and rights attachment
@@ -77,6 +78,7 @@ Onboarding must be staged. Rights attach in layers so the system remains humane 
 A humane system must also be capacity-honest. Regions may not promise settlement beyond verified capacity, but neither may they weaponize capacity claims to exclude disfavored people.
 - **Every region must publish** a privacy-preserving capacity dashboard covering baseline shelter, care, education, and placement bandwidth using the dashboard standards already defined elsewhere in the protocol.
 - **A region may declare** a temporary capacity constraint only through published criteria, evidence, and automatic review. False scarcity or discriminatory scarcity declarations are constitutional violations.
+- **What counts as shelter, care, education, and placement capacity** is fixed by a published baseline-bandwidth floor definition maintained at the federation level. A region may not narrow these definitions locally to manufacture honest-looking scarcity. A capacity-constraint declaration that would limit intake or services takes effect only when it is either certified at the federation level or measured against the published baseline-bandwidth floor; a region acting alone may not enact such a constraint on its own definitions.
 - **When a region is at capacity**, the federation must offer safe placement alternatives, travel continuity support, and family-unity handling. No person may be dumped into unsafe zones, punitive camps, or unsheltered transit as a substitute for placement.
 - **Existing Core Residents** may not be displaced from baseline shelter solely to make room for newcomers, except in a time-bounded emergency relocation process that preserves equal-or-better safety and due process.
 
@@ -85,6 +87,7 @@ A humane system must also be capacity-honest. Regions may not promise settlement
 - Provisional and Protected Entrants may access transitional housing queues according to published vulnerability and continuity criteria.
 - Core Residents may access the ordinary housing queue and use-rights allocation system on equal published terms.
 - No employer, sponsor, or private host may use housing control to coerce labor, identity transfer, document surrender, or political behavior.
+- Because a person under coercion cannot be relied upon to report it, prohibition alone is insufficient. Sponsors, employers, and private hosts who hold placement or housing power over entrants are subject to periodic independent audits of those arrangements, conducted by reviewers who are not the placement party and not the region certifying the placement. A confidential worker-initiated reporting channel must be available to every entrant, reachable without the knowledge or permission of the sponsor, employer, or host, with anti-retaliation protection and victim-protective remedies. Audits and channel reports are coercion-detection mechanisms and operate independently of whether any complaint has been filed.
 - Regional preference rules are allowed only within published bounds and may not become disguised exclusion tools against protected groups, new Core Residents, or transferred households.
 
 ### I7. Anti-fraud, anti-trafficking, and anti-stacking controls
@@ -98,6 +101,8 @@ A humane system must also be capacity-honest. Regions may not promise settlement
 - Emergency review must begin within 72 hours where shelter loss, family separation, medical interruption, or expulsion risk is involved.
 - Ordinary status appeals must be available within 14 days of filing, with a written determination within 30 days unless the claimant requests more time.
 - Residency and migration data may be used only for continuity, routing, anti-fraud, safety, and lawfully published planning purposes. Individual-level exposure on public dashboards is prohibited.
+- The capacity dashboards and any migrant or entrant datasets are governed by data minimization, retention limits, and access controls. Only data necessary for the stated purpose is collected; it is retained no longer than that purpose requires and then deleted or irreversibly aggregated; access is limited to authorized roles and every access is logged. Such data may never be repurposed for enforcement, expulsion, deterrence, or any use beyond the lawful purposes named in this annex.
+- Privacy, anti-publicity, and anti-discrimination protections cover not only a person's individual records but also their status-classification data — which status class they are in. Status-class membership may not be published, disclosed, or made discoverable at the individual level, and may not be used as a basis for differential treatment outside the lawful service-routing and due-process purposes defined in this annex, so that a status class cannot harden into a public mark or stigma.
 - Children and protected entrants receive heightened confidentiality, and their data may not be publicized for deterrence theater or political messaging.
 
 ### I9. Absence, exit, reentry, and continuity preservation

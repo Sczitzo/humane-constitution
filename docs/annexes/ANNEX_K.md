@@ -25,6 +25,7 @@ Terms such as basic healthcare, basic shelter, basic transit, or basic care are 
 
 ### K2. Basket governance process
 - **Routine cycle:** quarterly evidence review, annual consolidation, and mandatory judicial review for any narrowing that materially reduces baseline access or quality for a protected group or region.
+- **Outcome floor:** the basket carries a published, measurable floor for baseline access and quality for each protected group and region. Whenever observed access or quality falls below that floor, mandatory review is triggered automatically, regardless of whether any administrator, vendor, or official has initiated one. The trigger is keyed to measured outcomes, not to procedural compliance: satisfying every challenge window, notice requirement, and review cycle does not suspend the floor, and no administrator may certify the process complete while the floor is breached. Floor thresholds, the metrics behind them, and every breach and its remedy are published on the same cadence as the basket definitions themselves.
 - **Inputs:** lived-experience panels, provider evidence, care-worker evidence, disability and elder advocates, supply/capacity data, cost simulations, and rights-impact analysis.
 - **Decision classes:** clarification, substitution, expansion, narrowing, emergency temporary adjustment.
 - **Narrowing rule:** no narrowing takes effect without plain-language notice, worked examples, and publication of what continuity protections apply to people already relying on the prior basket.
@@ -35,7 +36,8 @@ A civic system that only rewards institutionally legible contribution will recre
 - **Multi-path verification:** institutional attestations are allowed but never the only path. Community attestations, rotating civic jury review, time-bounded self-declarations, and retrospective bundles are also admissible within published limits.
 - **Informal contribution classes** must include caregiving, neighborhood maintenance, mutual aid, translation, de-escalation, disability support, mentoring, and emergency response.
 - **No person may be disqualified** from Voice participation or Service Record earning solely because their work occurs outside payroll systems, formal nonprofits, or registered enterprises.
-- **Verification burden** must scale with claimed civic influence, not with human need. Small Voice or Service Record claims should be easier to verify than large accumulations or high-impact service credentials.
+- **No-attester fallback:** a low-burden self-declaration path remains open to anyone who has no community able or willing to attest for them. A claim may not be denied solely for lack of witnesses, and isolation is never itself a disqualifier. The self-declared baseline carries the lightest verification consistent with the floor protections, while later corroboration, if it appears, may raise a claim beyond that baseline.
+- **Verification burden** must scale with claimed civic influence, not with human need. Small Voice or Service Record claims should be easier to verify than large accumulations or high-impact service credentials. This scaling governs every path, including self-declaration: a small self-declared claim is verified lightly, and only large accumulations or high-impact credentials invite heavier scrutiny.
 
 ### K4. Protected pause, civic floor, and asymmetric decay
 - **Low Voice balances** decay more slowly than high Voice balances.
@@ -44,6 +46,14 @@ A civic system that only rewards institutionally legible contribution will recre
 - **During a Protected Pause Window**, previously earned Voice retains a civic floor sufficient to preserve petition standing, and previously earned Service Record retains enough continuity to preserve jury eligibility review, service-readiness review, and reentry continuity.
 - **Protected Pause** never creates new Voice or Service Record out of nothing; it preserves continuity and prevents cliff effects during hardship.
 - **High-balance holders** remain subject to stronger decay even during approved pause windows, except where incapacity review determines otherwise.
+- **Presumption of good faith in crisis:** incapacity review and any review that activates or extends a Protected Pause Window begin from a presumption of good faith and demand only the minimal evidence needed to confirm the hardship while a crisis is active. The review may not condition relief on exhaustive proof, repeated re-telling of the precipitating harm, or documentation the person cannot reasonably obtain mid-crisis. Fuller corroboration, where warranted, is deferred until the crisis has eased, so that the review preserves continuity rather than becoming a re-traumatizing gate.
+
+### K6. Data minimization for attestation and civic-recognition records
+Attestation data, contribution evidence, Protected Pause records, and all civic-recognition records are held under a data-minimization discipline. The verification and continuity protections above must not become a surveillance archive of people's hardships and informal lives.
+- **Collected only for purpose:** such data is gathered solely for the stated verification, continuity, or floor-monitoring purpose, and only to the extent that purpose requires. Self-declaration and no-attester paths in particular may not demand disclosures beyond what the claim itself needs.
+- **Retention limited:** records are kept no longer than necessary for that purpose and are deleted or irreversibly aggregated once it is served, save where a longer term is independently mandated and published.
+- **Access limited and logged:** access is restricted to those whose role requires it, and each access is logged and auditable.
+- **Never repurposed:** civic-recognition and attestation data may not be repurposed for enforcement, profiling, targeting, commercial use, or any end beyond the purpose for which it was collected.
 
 ---
 

@@ -923,7 +923,7 @@ This session follows the survival floor outward — to the stranger who arrives 
 - *Prudential political judgment:* the specific staging (0–72h, day 90, day 180, four quarters); anti-stacking review windows; capacity-dashboard mechanics.
 - *Unresolved uncertainty:* whether a multi-class system with a long voiceless interval avoids functioning as a soft caste; whether "honest capacity limits" and "exclusion of the stranger" can be cleanly separated in practice.
 
-**Executive theological verdict: 8.5 / 10.** Among the most gospel-aligned annexes — care bound to presence, belonging unpurchasable, abuse vectors named. It loses ground only where capacity-gaming and the long voiceless interval leave domination structurally possible despite explicit prohibition.
+**Executive theological verdict: 9 / 10.** Care bound to presence, belonging unpurchasable, abuse vectors named — and with the §I5 capacity-certification floor, the §I6 affirmative coercion-detection (independent sponsor/employer audits + confidential worker channel), the §I8 classification-data and data-minimization protections, and the §I3 self-declaration fallback for the unwitnessed now in the text, the structural openings for domination are closed. The residual cap is status (Active — unproven): the fruit test awaits pilot evidence.
 
 ---
 
@@ -945,7 +945,7 @@ This session follows the survival floor outward — to the stranger who arrives 
 - *Prudential political judgment:* pause windows, review cadence, reference bands, substitution ladders, verification mechanics.
 - *Unresolved uncertainty:* whether attestation/jury verification avoids recreating social-capital hierarchy; whether procedure alone restrains a captured administration.
 
-**Executive theological verdict: 8.5 / 10.** Among the most mercy-aligned annexes; its dignity instinct (burden scales with influence, not need) is excellent. It leans on process where it still needs an outcome floor and a fallback for the truly unwitnessed.
+**Executive theological verdict: 9 / 10.** Its dignity instinct (burden scales with influence, not need) is excellent, and the §K2 outcome-floor trigger, the §K3 no-attester self-declaration fallback, the §K4 crisis good-faith presumption, and the §K6 data-minimization clause now close the process-only and unwitnessed gaps. The residual cap is unproven status pending pilot.
 
 ---
 
@@ -967,7 +967,7 @@ This session follows the survival floor outward — to the stranger who arrives 
 - *Prudential political judgment:* the 48/72-hour windows; the 3-member panel; the 14-day value; BFT thresholds.
 - *Unresolved uncertainty:* whether non-oracle indicators resist coordinated capture; whether 14 days surfaces sustained manipulation (status: Active — unproven).
 
-**Executive theological verdict: 8.5 / 10.** Among the most Christ-consistent designs in intent — it fails safe toward feeding people and makes the floor untouchable by any authority. Its residual risk (indicator-laundered capture above the floor; rolling-incident accumulation) is honestly named rather than hidden.
+**Executive theological verdict: 9 / 10.** It fails safe toward feeding people and makes the floor untouchable by any authority; the §4.4 aggregate-fallback ceiling, the §2.2 affected-population voice inside the 48-hour window, and the §6 correlated-indicator monitoring now close the rolling-incident and late-representation seams. The residual cap is unproven status.
 
 ---
 
@@ -989,7 +989,7 @@ This session follows the survival floor outward — to the stranger who arrives 
 - *Prudential political judgment:* the instrument-separation design; the 5× multiplier; the 0.85 detection assumption; the penalty matrix.
 - *Unresolved uncertainty:* whether population-scale social-layer monitoring can enforce this without becoming a domination instrument; whether real detection probability approaches the assumed value.
 
-**Executive theological verdict: 8 / 10.** Biblically well-aimed and structurally serious about refusing to let survival or standing be bought; it loses ground because its enforcement apparatus (restricted thresholds, population-wide correlation monitoring) carries an under-constrained Babel risk.
+**Executive theological verdict: 9 / 10.** Biblically well-aimed and serious about refusing to let survival or standing be bought; the named anti-enumeration clause, the public-scope-of-monitoring requirement, and the purpose-limitation/retention clause now constrain the enforcement-surveillance Babel risk that previously held it down. The residual cap is unproven status and the irreducible tension of any population-level monitoring.
 
 ---
 
@@ -1011,15 +1011,15 @@ This session follows the survival floor outward — to the stranger who arrives 
 - *Prudential political judgment:* the specific thresholds (4+ people, 2-quarter windows, 20% decay, escalating SLAs).
 - *Unresolved uncertainty:* whether standing collusion-graph surveillance does net good or net harm to community trust; the real-world false-positive rate.
 
-**Executive theological verdict: 8 / 10.** Among the more mercy-conscious anti-fraud designs in the corpus; its "review not denial" discipline and auto-applied safe harbor genuinely protect the wheat. It loses ground for re-burdening permanent-condition users and for building standing surveillance over the social graph of the poor without minimization limits.
+**Executive theological verdict: 9 / 10.** Its "review not denial" discipline genuinely protects the wheat; the AF1 permanent-condition exemption, the AF3 slow-burn shared-hardship safe harbor and attestation-graph data-minimization, and the AF5 published false-positive metric now relieve the re-burdening and surveillance concerns. The residual cap is unproven status.
 
 ---
 
 ### Session 9 Cross-Cutting Findings
 
-**§S9-X1 — Watching the gleaners (should-fix).** Every annex in this cluster defends the vulnerable's floor by building legibility over the vulnerable themselves: §I5 capacity dashboards, §K3 attestation/jury review, AQ's non-oracle indicators, AJ's population-wide correlation monitoring, AF3's collusion graphs. Each is individually justified, but together they assemble a standing surveillance apparatus pointed precisely at the poor and their support networks — the remedy for one Babel temptation built from the materials of another (Gen 11:4). The cluster needs a shared discipline: explicit data-minimization, retention limits, and access controls on every dataset built about hardship and migration; *what* is monitored should be public even where calibrated *thresholds* are restricted; and no anti-abuse dataset may be repurposed beyond its stated review function. Status: **should-fix open** (cluster-wide).
+**§S9-X1 — Watching the gleaners (should-fix).** Every annex in this cluster defends the vulnerable's floor by building legibility over the vulnerable themselves: §I5 capacity dashboards, §K3 attestation/jury review, AQ's non-oracle indicators, AJ's population-wide correlation monitoring, AF3's collusion graphs. Each is individually justified, but together they assemble a standing surveillance apparatus pointed precisely at the poor and their support networks — the remedy for one Babel temptation built from the materials of another (Gen 11:4). The cluster needs a shared discipline: explicit data-minimization, retention limits, and access controls on every dataset built about hardship and migration; *what* is monitored should be public even where calibrated *thresholds* are restricted; and no anti-abuse dataset may be repurposed beyond its stated review function. Status: **addressed** — data-minimization, retention-limit, and access-control clauses now stand in ANNEX_I §I8, ANNEX_K §K6, ANNEX_AF §AF3, and ANNEX_AJ (purpose-limitation), with correlated-indicator monitoring in ANNEX_AQ §6; the public-scope-of-monitoring requirement (AJ) keeps *what* is watched public even where thresholds are restricted. Residual: verify in pilot that the limits hold in practice.
 
-**§S9-X2 — The unwitnessed person (should-fix).** The truly isolated person keeps falling through every annex in this cluster: ANNEX_I's stranger with no community to vouch (and the ~18-month voiceless interval), §K3's claimant with no one to attest, AF3's co-afflicted poor with no oracle-declared emergency — and, carried forward, ANNEX_P's named exclusion of the person with neither documents nor a web-of-trust. The biblical sharpness is exact: the widow's mite was counted by God precisely when no human institution would have seen it (Mark 12:41–44), and the master sends to the highways and hedges for the one with no one (Luke 14:21–23). Across the cluster, recognition is routed through *relationship and witness* — which structurally reaches the connected first and the isolated last. The fix is a consistent low-burden self-declaration fallback, available in I, K, and AF, that isolation alone cannot defeat. Status: **should-fix open** (cluster-wide).
+**§S9-X2 — The unwitnessed person (should-fix).** The truly isolated person keeps falling through every annex in this cluster: ANNEX_I's stranger with no community to vouch (and the ~18-month voiceless interval), §K3's claimant with no one to attest, AF3's co-afflicted poor with no oracle-declared emergency — and, carried forward, ANNEX_P's named exclusion of the person with neither documents nor a web-of-trust. The biblical sharpness is exact: the widow's mite was counted by God precisely when no human institution would have seen it (Mark 12:41–44), and the master sends to the highways and hedges for the one with no one (Luke 14:21–23). Across the cluster, recognition is routed through *relationship and witness* — which structurally reaches the connected first and the isolated last. The fix is a consistent low-burden self-declaration fallback, available in I, K, and AF, that isolation alone cannot defeat. Status: **addressed for I/K/AF** — self-declaration fallbacks now stand in ANNEX_I §I3 and ANNEX_K §K3, with the ANNEX_AF §AF3 non-emergency slow-burn safe harbor; isolation alone no longer disqualifies, and absence of corroborating persons may not count as evidence against the declarant. **Open remainder:** the parallel ANNEX_P isolated-person gap (neither documents nor web-of-trust) should still be reconciled into ANNEX_P in the Session 8 follow-up.
 
 ---
 
@@ -1029,17 +1029,15 @@ This session follows the survival floor outward — to the stranger who arrives 
 
 **Where the cluster carries the most Babel-risk.** Two seams, both recorded above. The protections are built from surveillance of the very people they protect (§S9-X1), and recognition routed through witness structurally reaches the isolated last (§S9-X2). Neither is a design betrayal — every annex names its own risk honestly — but together they define the cluster's standing vigilance obligation. A secondary pattern: several annexes (AJ, AF, AQ) produce good fruit *if* enforcement is restrained, specifying the enforcement apparatus more confidently than they constrain it.
 
-**Net assessment.** No must-fix blockers; all five are pilot-ready in design, scoring 8–8.5. The cluster is among the corpus's clearest civil expressions of mercy toward the stranger and the poor — and, Christ-measured, it must remember that civil justice for the migrant and the rationed is not the kingdom of God but a humble instrument serving persons under God. The remaining work is to keep the instruments of mercy from being defended by instruments of suspicion that fall hardest on the unwitnessed.
+**Net assessment.** No must-fix blockers; all five are pilot-ready in design. With the cluster's should-fixes now closed in the text — the two cross-cutting findings (§S9-X1 data-minimization, §S9-X2 the unwitnessed self-declaration fallback) and each annex's specific gaps — every annex in this cluster now scores **9 / 10**. The remaining half-point to 9.5 is not a design defect: it is the fruit test (Matt 7:16–20), which cannot be passed on text alone. These annexes carry "Active — unproven" / "Designed" status, and only pilot evidence can move them up the status ladder toward Evidence-backed. The cluster is among the corpus's clearest civil expressions of mercy toward the stranger and the poor — and, Christ-measured, it must remember that civil justice for the migrant and the rationed is not the kingdom of God but a humble instrument serving persons under God.
+
+**Resolution status (closed in the text this session):** the §S9-X1 data-minimization standard, the §S9-X2 self-declaration fallback, the §I5 capacity-certification floor, the §I6 coercion-detection mechanism, the §I8 classification-data protection, the §K2 outcome floor, the §K3 no-attester fallback, the §K4 crisis good-faith presumption, the §AQ4.4 aggregate-fallback ceiling, the §AQ2.2 early affected-population voice, the §AQ6 correlated-indicator monitoring, the §AJ anti-enumeration and public-scope-of-monitoring clauses, and the §AF1 permanent-condition exemption + §AF3 slow-burn safe harbor + §AF5 false-positive metric — all now stand as clauses. The cluster scores 9/10.
 
 **Items requiring follow-up in a future Session 10:**
-1. Whether a cluster-wide data-minimization/retention/access standard (§S9-X1) has been adopted across I, K, AQ, AJ, AF.
-2. Whether a low-burden self-declaration fallback for the unwitnessed person (§S9-X2) has been added to I, K, and AF, and reconciled with ANNEX_P's isolated-person gap.
-3. Whether §I5 capacity declarations now require federation certification or a baseline-bandwidth floor.
-4. Whether §K1/K2 has gained an outcome floor (automatic trigger) beyond its procedural safeguards.
-5. Whether ANNEX_AQ has added an aggregate cumulative-fallback ceiling and an affected-population voice inside the 48-hour window.
-6. Whether ANNEX_AJ has added an explicit anti-enumeration clause and made the *scope* of monitoring public where thresholds remain restricted.
-7. Whether ANNEX_AF has added a permanent-condition exemption and a non-emergency shared-hardship safe harbor.
-8. The governance/oversight cluster (L, S, AI, Z, AP — "who watches the watchers") remains unevaluated and is the natural Session 10 scope.
+1. Reconcile the §S9-X2 unwitnessed-person fallback into ANNEX_P (the parallel isolated-person gap — neither documents nor web-of-trust — closed in I/K/AF but still open in P; folds into the Session 8 P/Y/AZ follow-up).
+2. Verify in pilot that the new data-minimization limits, outcome-floor triggers, and self-declaration fallbacks hold in practice — the fruit-test evidence that would move this cluster from 9 toward 9.5 and up the status ladder toward Evidence-backed.
+3. Watch the residual monitor item: ANNEX_I's ~18-month voiceless interval (a soft-caste risk that no clause edit resolves).
+4. The governance/oversight cluster (L, S, AI, Z, AP — "who watches the watchers") remains unevaluated and is the natural Session 10 scope.
 
 ---
 

@@ -9,15 +9,6 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | T-024 (Shared Storehouse Oracle-Failure During Active Rationing); T-018 × T-024 compound; P-022; Annex Y (CSM survival floor); Annex AL (oracle accreditation); FC-100 |
 
-> **At a glance**
-> | | |
-> |---|---|
-> | **Purpose** | Define what the Shared Storehouse rationing system does when the oracle network fails during an active rationing period — establishing a designed protocol instead of an improvised one. |
-> | **Who it protects** | People dependent on Shared Storehouse rationing during a supply shortage; their access must not be cut off simply because the measurement system went offline. |
-> | **Failure risk** | Oracle failure during active rationing creates an operational void: either the system lapses (leaving people without access) or continues unchecked (overreach). Both defaults are exploitable. A coordinated attacker can silence the oracle to manipulate the outcome either way. |
-> | **Evidence status** | Active — unproven |
-> | **Linked risks** | T-024 (Shared Storehouse Oracle-Failure During Active Rationing); T-018 × T-024 compound; P-022; Annex Y (CSM survival floor); Annex AL (oracle accreditation); FC-100 |
-
 > **Provenance:** Implements [P-022 — Shared Storehouse Oracle-Failure Fallback Protocol] · Addresses T-024 · Status: **ACTIVE**
 
 **Status: ACTIVE — FC-100 bound; Proposal 6 close-out, 2026-04-18**
@@ -76,7 +67,18 @@ The REB may **not**:
 - Make decisions that affect CSM (Annex Y) issuance or the survival floor.
 - Override findings from the adversarial-seat oracle node (FC-033) where that node has documented a reason Conservative Hold should persist.
 
-### 2.2 — Non-Oracle Physical Indicators
+### 2.2 — Affected-Population Consultative Voice
+
+The first deprivation-relevant call is made inside this 48-hour window, not at the §3 panel. The burdened therefore hold a seat early, not only late. Before issuing a managed lapse or a reduced-level hold under §2.1, the REB convenes — within the first 24 hours of oracle failure — an **affected-population consultative voice** drawn from the consumer side of the Shared Storehouse-rationed categories, paralleling the affected-population representative seat at the §3.1 panel.
+
+This voice is **consultative, not blocking**: it does not hold a veto over REB action and does not displace REB first-responder authority. Its function is to ensure that the people most exposed to a wrongful lapse or reduction are heard before the decision is taken, and that their account of on-the-ground conditions enters the evidence base alongside the §2.3 non-oracle indicators. The REB:
+- Solicits and records the consultative voice's assessment of current access conditions before any §2.1 lapse or reduction decision.
+- Publishes that assessment, unedited, as part of the §2.4 decision record.
+- Where the REB's decision departs from the consultative voice's stated assessment, states in the published record why it did so. This reasoning is carried into the §4.3 Reconciliation Review.
+
+If oracle failure is detected and the consultative voice cannot be convened within 24 hours, the REB may continue Conservative Hold at its current level (which requires no §2.1 action) but may not order a managed lapse or reduced-level hold until the consultative voice has been heard or the matter has transferred to the §3 handoff.
+
+### 2.3 — Non-Oracle Physical Indicators
 
 REB decisions under this window rely on indicators collected outside the failed oracle system:
 - **Distribution fill rates** — from Essential Access-redemption records, aggregated at regional scale.
@@ -86,7 +88,7 @@ REB decisions under this window rely on indicators collected outside the failed 
 
 These indicators are **not oracle outputs**. They are an REB operational-authority instrument. They are not bound by the FC-030/031/032/033 cohort requirements and are *not* substitutable for oracle consensus during normal operation. They are only admissible as the basis for REB decisions under this annex's defined 48-hour window.
 
-### 2.3 — REB Decision Process and Publication
+### 2.4 — REB Decision Process and Publication
 
 REB decisions under this window:
 1. Must be made by a formally constituted REB quorum under the published REB governance rules.
@@ -158,9 +160,22 @@ At the end of each oracle-failure incident, within 7 days of the 14-day verifica
 - Timeline of the failure: detection, Conservative Hold entry, REB decisions, handoff to panel, restoration, verification window completion.
 - Comparison of REB and panel decisions made during failure against the (now verified) restored-oracle readings. Where provisional decisions differed from what the oracle would have indicated, the discrepancy is documented with root-cause analysis.
 - Assessment of whether any patterns suggest the oracle failure was engineered (T-018 × T-024 compound). If so, immediate referral to the Enforcement Panel (Annex AJ §4) with full evidence.
-- Recommendations for improving the non-oracle physical indicator methodology (§2.2) based on observed divergence or convergence with oracle readings.
+- Recommendations for improving the non-oracle physical indicator methodology (§2.3) based on observed divergence or convergence with oracle readings.
 
 Persistent REB-oracle divergence across multiple failure incidents triggers an **independent review of the non-oracle physical indicator methodology** itself — the methodology may require updating, or it may be under manipulation pressure from the same actors who targeted the oracle.
+
+### 4.4 — Aggregate Cumulative-Fallback Ceiling
+
+The per-incident sunsets (the 48-hour REB window, the 72-hour handoff, and the 14-day panel-continuation cap) bound any *single* oracle-failure incident. They do not, by themselves, bound the *cumulative* time the system spends outside ordinary oracle-bound operation across many separate incidents. A capture strategy can therefore stay within every per-incident limit while keeping the system in fallback for a large fraction of the year through a rolling series of short failures — the rolling-incident seam.
+
+To close that seam, the protocol tracks **aggregate time-in-fallback**: the total elapsed time the system spends in Conservative Hold plus governance-handoff (§1 through §3) plus the FC-100 verification window (§4.2), summed across all oracle-failure incidents within a rolling 12-month window.
+
+When aggregate time-in-fallback within any rolling 12-month window exceeds **45 days**, a **mandatory independent structural review** is triggered:
+- The review is convened within 14 days of the ceiling being crossed and is conducted by a body independent of the REB, the oracle-monitoring authority (Annex AL §3), and the arbitration panels that acted during the contributing incidents — by default the federated Ombuds (Annex AI, Proposal 8), drawing on the Tier 1 architectural-enforcement layer where structural remedy is indicated.
+- It examines the full set of contributing incidents for a common cause — repeated targeting of the same oracle nodes or indicators, a recurring benign fragility, or a pattern consistent with engineered failure (T-018 × T-024 compound) that no single incident's reconciliation review surfaced on its own.
+- It has standing to recommend structural remedies beyond the scope of any single incident: re-accreditation or replacement of fragile or suspect oracle nodes, revision of the §2.3 indicator methodology, or referral to the Enforcement Panel (Annex AJ §4) where the cross-incident pattern indicates deliberate engineering.
+
+The structural review does not suspend CSM (Annex Y), which continues unconditionally, and it does not itself relax any per-incident limit. The 45-day ceiling and the requirement to convene the review are P-004 protected (§6); the numeric value is calibrated through the §6 Annual Oracle Resilience Audit.
 
 ---
 
@@ -180,11 +195,11 @@ Ultimately, defense against sustained coordinated T-022 compound attacks is stru
 
 ## Section 6 — Governance
 
-**This annex is governed as P-004 protected specification.** Core design elements — Conservative Hold default, REB authority scope and limits, CSM unconditionality, FC-100 verification window — cannot be modified without Tier 2 amendment. The FC-100 value itself is Tier 1 (H-3) under `/founding/commitments.md`.
+**This annex is governed as P-004 protected specification.** Core design elements — Conservative Hold default, REB authority scope and limits, the §2.2 affected-population consultative voice, CSM unconditionality, FC-100 verification window, and the §4.4 aggregate cumulative-fallback ceiling and its structural-review trigger — cannot be modified without Tier 2 amendment. The FC-100 value itself is Tier 1 (H-3) under `/founding/commitments.md`.
 
 **Dependencies:**
 - REB formally constituted with defined authority for non-oracle physical indicator assessments under the published governance rules.
-- Non-oracle physical indicator methodology published and reviewed annually (§2.2).
+- Non-oracle physical indicator methodology published and reviewed annually (§2.3).
 - P-012 AE2.3 emergency deadlock protocol operative (prerequisite for §3 handoff).
 - Annex Y CSM ACTIVE (prerequisite for survival floor unconditionality).
 - Annex AL ACTIVE (prerequisite for restoration verification — FC-031, FC-032, FC-033 all apply at restoration).
@@ -195,7 +210,9 @@ Ultimately, defense against sustained coordinated T-022 compound attacks is stru
 - Reconciliation-review findings per incident.
 - Any deliberate-failure findings and enforcement referrals.
 - Trends in non-oracle physical indicator accuracy (measured against restored oracle data at each reconciliation).
-- Recommendations for methodology or FC-100 calibration.
+- **Correlated-indicator manipulation monitoring.** The §2.3 non-oracle indicators — vendor inventory reports, logistics indicators, distribution fill rates, community reports — are the manipulation surface for a captured REB precisely because they are not oracle outputs and are not bound by the FC-030/031/032/033 cohort requirements. The audit therefore does not test these indicators only for drift against the restored oracle. It also tests for **correlated movement across the indicator set** — vendor, logistics, and fill-rate signals shifting together in the same direction at the same time in a way inconsistent with independent physical sources. Such correlation, especially when it favors a single decision direction during an active failure, is the signature of coordinated indicator manipulation that drift-versus-oracle comparison alone would miss. Pairwise correlation among indicator sources is reported against an expected-independence baseline; correlation beyond the baseline during a failure window is flagged for the Reconciliation Review (§4.3) and, where it spans incidents, for the §4.4 structural review.
+- Aggregate time-in-fallback across the year against the §4.4 rolling 12-month ceiling, with any structural-review triggers and their findings.
+- Recommendations for methodology, FC-100, or §4.4 ceiling calibration.
 
 ---
 
