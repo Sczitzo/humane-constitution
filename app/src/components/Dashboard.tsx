@@ -1180,62 +1180,170 @@ function MarkdownDocument({
 }
 
 /* ============================================================
- * DocListPanel — Scholar left column: scrollable doc list for the section.
+ * DocListPanel — Scholar left column: 3-tab panel (Docs / Topics / Paths).
  * ============================================================ */
+
+// Compact path summaries for the sidebar — mirrors LandingPage PATHS array.
+const PANEL_PATHS: Array<{ id: string; title: string; time: string }> = [
+  { id: 'first-time',           title: 'First Read',          time: '20m' },
+  { id: 'skeptic',              title: 'Skeptic',             time: '25m' },
+  { id: 'implementer',          title: 'Implementer',         time: '35m' },
+  { id: 'economic-instruments', title: 'Economics',           time: '30m' },
+  { id: 'founding-order',       title: 'Founding Order',      time: '25m' },
+  { id: 'pilot-deployment',     title: 'Pilot Roadmap',       time: '30m' },
+  { id: 'identity-personhood',  title: 'Personhood',          time: '20m' },
+  { id: 'architectural-integrity', title: 'Architecture',     time: '25m' },
+  { id: 'governance-deep',      title: 'Governance',          time: '40m' },
+]
+
+type PanelTab = 'docs' | 'topics' | 'paths'
 
 function DocListPanel({
   docs,
+  allDocs,
   selectedId,
   onSelect,
   readDocIds,
+  onStartPath,
+  activePathId,
 }: {
   docs: CorpusDoc[]
+  allDocs: CorpusDoc[]
   selectedId: string | null
   onSelect: (doc: CorpusDoc) => void
   readDocIds: string[]
+  onStartPath: (pathId: string) => void
+  activePathId: string | null
 }) {
-  if (!docs.length) return null
+  const [tab, setTab] = useState<PanelTab>('docs')
+
+  // Unique topics sorted by doc count, computed once from the full corpus.
+  const allTopics = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const doc of allDocs) {
+      for (const t of getDocTopics(doc)) {
+        counts.set(t, (counts.get(t) ?? 0) + 1)
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag, count]) => ({ tag, count }))
+  }, [allDocs])
+
+  if (!docs.length && tab === 'docs') return null
+
+  const TABS: Array<{ id: PanelTab; label: string }> = [
+    { id: 'docs',   label: 'Docs'   },
+    { id: 'topics', label: 'Topics' },
+    { id: 'paths',  label: 'Paths'  },
+  ]
+
+  const itemStyle = (active: boolean, read = false): React.CSSProperties => ({
+    padding: '0.46rem 1rem',
+    border: 'none',
+    width: '100%',
+    textAlign: 'left',
+    cursor: 'pointer',
+    fontFamily: 'var(--font-serif)',
+    fontSize: '0.81em',
+    lineHeight: 1.45,
+    background: active ? 'rgba(159,108,49,0.09)' : 'transparent',
+    color: active ? 'var(--accent-deep)' : read ? 'var(--ink-soft)' : 'var(--ink)',
+    borderLeft: active ? '2px solid var(--accent)' : '2px solid transparent',
+    transition: 'all 0.1s',
+    display: 'block',
+  })
 
   return (
     <nav
-      aria-label="Documents in this section"
+      aria-label="Navigation panel"
       className="hidden xl:flex xl:flex-col"
       style={{ width: 212, flexShrink: 0, borderRight: '1px solid var(--line)' }}
     >
-      <p className="reader-outline-label" style={{ padding: '0.75rem 1rem 0.55rem', marginBottom: 0 }}>
-        {docs.length} document{docs.length !== 1 ? 's' : ''}
-      </p>
-      <div style={{ overflowY: 'auto', flex: 1, maxHeight: 'calc(100vh - 8rem)', scrollbarWidth: 'none' }}>
-        {docs.map((doc) => {
+      {/* ── Tab strip ── */}
+      <div style={{ display: 'flex', borderBottom: '1px solid var(--line)', padding: '0.5rem 0.75rem 0' }}>
+        {TABS.map(t => (
+          <button
+            key={t.id}
+            type="button"
+            aria-selected={tab === t.id}
+            role="tab"
+            onClick={() => setTab(t.id)}
+            style={{
+              flex: 1,
+              padding: '5px 2px 6px',
+              border: 'none',
+              background: 'transparent',
+              color: tab === t.id ? 'var(--accent-deep)' : 'var(--ink-faint)',
+              fontSize: '0.7em',
+              fontFamily: 'var(--font-mono)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              fontWeight: tab === t.id ? 700 : 400,
+              borderBottom: tab === t.id ? '2px solid var(--accent)' : '2px solid transparent',
+              transition: 'color 0.15s, border-color 0.15s',
+              marginBottom: -1,
+            }}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      {/* ── Content ── */}
+      <div style={{ overflowY: 'auto', flex: 1, maxHeight: 'calc(100vh - 9rem)', scrollbarWidth: 'none' }}>
+
+        {/* Docs tab — current section document list */}
+        {tab === 'docs' && docs.map((doc) => {
           const isSelected = doc.id === selectedId
           const isRead = readDocIds.includes(doc.id)
           return (
-            <button
-              key={doc.id}
-              type="button"
-              onClick={() => onSelect(doc)}
+            <button key={doc.id} type="button" onClick={() => onSelect(doc)}
               aria-current={isSelected ? 'page' : undefined}
-              className="block w-full text-left"
-              style={{
-                padding: '0.5rem 1rem',
-                border: 'none',
-                cursor: 'pointer',
-                fontFamily: 'var(--font-serif)',
-                fontSize: '0.82em',
-                lineHeight: 1.45,
-                background: isSelected ? 'rgba(159,108,49,0.09)' : 'transparent',
-                color: isSelected ? 'var(--accent-deep)' : isRead ? 'var(--ink-soft)' : 'var(--ink)',
-                borderLeft: isSelected ? '2px solid var(--accent)' : '2px solid transparent',
-                transition: 'all 0.1s',
-              }}
+              style={itemStyle(isSelected, isRead)}
             >
               <span className="line-clamp-2">{doc.title}</span>
               {isRead && !isSelected && (
-                <span style={{ fontSize: '0.72em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}> ✓</span>
+                <span style={{ fontSize: '0.72em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)' }}> ✓</span>
               )}
             </button>
           )
         })}
+
+        {/* Topics tab — all unique topic tags with doc counts */}
+        {tab === 'topics' && allTopics.map(({ tag, count }) => {
+          const first = allDocs.find(d => getDocTopics(d).includes(tag))
+          return (
+            <button key={tag} type="button"
+              onClick={() => { if (first) onSelect(first) }}
+              style={{
+                ...itemStyle(false),
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                fontFamily: 'var(--font-ui)',
+              }}
+            >
+              <span style={{ lineHeight: 1.35 }}>{tag}</span>
+              <span style={{ fontSize: '0.73em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', flexShrink: 0 }}>{count}</span>
+            </button>
+          )
+        })}
+
+        {/* Paths tab — 9 curated reading paths */}
+        {tab === 'paths' && PANEL_PATHS.map((p) => {
+          const isActive = activePathId === p.id
+          return (
+            <button key={p.id} type="button" onClick={() => onStartPath(p.id)}
+              style={{ ...itemStyle(isActive), fontFamily: 'var(--font-ui)', padding: '0.42rem 1rem' }}
+            >
+              <div>{p.title}</div>
+              <div style={{ fontSize: '0.76em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', marginTop: 1 }}>{p.time}</div>
+            </button>
+          )
+        })}
+
       </div>
     </nav>
   )
@@ -3347,6 +3455,16 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     handleSelectQuickDoc(doc)
   }
 
+  // Sidebar panel calls this with just a pathId — finds the best resume doc internally.
+  function handleStartPathById(pathId: string) {
+    const path = READING_PATHS.find(p => p.id === pathId)
+    if (!path || !corpus) return
+    const docs = path.steps.map(s => corpus.docs.find(d => d.path === s.path) ?? null)
+    const firstUnread = docs.find(d => d && !readDocIds.includes(d.id))
+    const resumeDoc = firstUnread ?? docs[0]
+    if (resumeDoc) handleStartPath(pathId, resumeDoc)
+  }
+
   function handleClearPath(nextView?: AppView) {
     window.localStorage.removeItem(ACTIVE_PATH_STORAGE_KEY)
     setActivePathId(null)
@@ -3532,9 +3650,12 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
           {!readingMode && (
             <DocListPanel
               docs={visibleDocs}
+              allDocs={allDocs}
               selectedId={selectedDoc?.id ?? null}
               onSelect={handleSelectQuickDoc}
               readDocIds={readDocIds}
+              onStartPath={handleStartPathById}
+              activePathId={activePathId}
             />
           )}
           <ReaderWorkspace
