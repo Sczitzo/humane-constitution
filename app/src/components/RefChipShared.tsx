@@ -273,6 +273,7 @@ const DOC_PHRASE_DEFS: Array<{ phrases: string[]; path: string }> = [
   // ── Constitution & founding order ─────────────────────────────────────────
   { phrases: ['Acceptance Protocol'], path: 'docs/constitution/Acceptance_Protocol.md' },
   { phrases: ['Humane Constitution'], path: 'docs/constitution/Humane_Constitution.md' },
+  { phrases: ['Founding Order'], path: 'founding/order/README.md' },
   { phrases: ['Annex Index'], path: 'docs/annexes/INDEX.md' },
 ]
 

@@ -247,8 +247,12 @@ const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1
  * Works for any prefix (T, P, FC, TR, PRD, INV).
  */
 function expandShorthandRefs(text: string): string {
+  // -1. Normalise underscore-separated annex refs used throughout corpus prose:
+  //     ANNEX_AW → Annex AW, ANNEX_AC1 → Annex AC1, etc.
+  let out = text.replace(/\bANNEX_([A-Z]{1,3}\d*)\b/g, 'Annex $1')
+
   // 0. Plural annexes: "Annexes M, AL, AQ" → "Annex M, Annex AL, Annex AQ"
-  let out = text.replace(
+  out = out.replace(
     /\bAnnexes\s+((?:[A-Z]{1,3}\d*(?:[,\s]+|(?=[^,\s])))+)/g,
     (_m, rest) => rest.split(/[,\s]+/).filter(Boolean).map((c: string) => `Annex ${c}`).join(', ')
   )
@@ -321,6 +325,7 @@ const DOC_PHRASE_DEFS: Array<{ phrases: string[]; path: string }> = [
   // ── Constitution & founding order ─────────────────────────────────────────
   { phrases: ['Acceptance Protocol'], path: 'docs/constitution/Acceptance_Protocol.md' },
   { phrases: ['Humane Constitution'], path: 'docs/constitution/Humane_Constitution.md' },
+  { phrases: ['Founding Order'], path: 'founding/order/README.md' },
   { phrases: ['Annex Index'], path: 'docs/annexes/INDEX.md' },
 ]
 
@@ -383,7 +388,14 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
     if (m.index > last) {
       result.push(...renderTextWithHighlights(expanded.slice(last, m.index), query, `${keyPrefix}-pre-${m.index}`))
     }
-    result.push(<RefChip key={`${keyPrefix}-chip-${m.index}`} refKey={m.key} display={m.raw} />)
+    // Section refs (§X.Y) that have no lookup entry should still render as a
+    // styled monospace span rather than unstyled plain text.
+    const sectionFallback = m.raw.startsWith('§') ? (
+      <code key={`${keyPrefix}-sect-${m.index}`} className="rounded-md bg-[rgba(60,54,46,0.08)] px-1.5 py-0.5 font-mono text-[0.88em] text-[var(--ink-strong)]">
+        {m.raw}
+      </code>
+    ) : undefined
+    result.push(<RefChip key={`${keyPrefix}-chip-${m.index}`} refKey={m.key} display={m.raw} fallback={sectionFallback} />)
     last = m.end
   }
   if (last < expanded.length) {
