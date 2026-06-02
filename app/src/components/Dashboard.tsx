@@ -1196,6 +1196,16 @@ const PANEL_PATHS: Array<{ id: string; title: string; time: string }> = [
   { id: 'governance-deep',      title: 'Governance',          time: '40m' },
 ]
 
+// Section options for the top picker — excludes topics/paths/settings
+// which are handled by the tab strip.
+const SECTION_OPTIONS: Array<{ id: AppView; label: string }> = [
+  { id: 'home',         label: 'Home' },
+  { id: 'constitution', label: 'Constitution' },
+  { id: 'annexes',      label: 'Annexes' },
+  { id: 'registries',   label: 'Threats & Patches' },
+  { id: 'validation',   label: 'Validation' },
+]
+
 type PanelTab = 'docs' | 'topics' | 'paths'
 
 function DocListPanel({
@@ -1206,6 +1216,8 @@ function DocListPanel({
   readDocIds,
   onStartPath,
   activePathId,
+  view,
+  onViewChange,
 }: {
   docs: CorpusDoc[]
   allDocs: CorpusDoc[]
@@ -1214,8 +1226,26 @@ function DocListPanel({
   readDocIds: string[]
   onStartPath: (pathId: string) => void
   activePathId: string | null
+  view: AppView
+  onViewChange: (v: AppView) => void
 }) {
   const [tab, setTab] = useState<PanelTab>('docs')
+  const [sectionOpen, setSectionOpen] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  // Close section dropdown on outside click
+  useEffect(() => {
+    if (!sectionOpen) return
+    function onPointer(e: PointerEvent) {
+      if (sectionRef.current && !sectionRef.current.contains(e.target as Node)) {
+        setSectionOpen(false)
+      }
+    }
+    document.addEventListener('pointerdown', onPointer)
+    return () => document.removeEventListener('pointerdown', onPointer)
+  }, [sectionOpen])
+
+  const sectionLabel = SECTION_OPTIONS.find(s => s.id === view)?.label ?? view
 
   // Unique topics sorted by doc count, computed once from the full corpus.
   const allTopics = useMemo(() => {
@@ -1260,6 +1290,69 @@ function DocListPanel({
       className="hidden xl:flex xl:flex-col"
       style={{ width: 212, flexShrink: 0, borderRight: '1px solid var(--line)' }}
     >
+      {/* ── Section picker ── */}
+      <div ref={sectionRef} style={{ position: 'relative', padding: '0.6rem 0.65rem 0.55rem', borderBottom: '1px solid var(--line)' }}>
+        <button
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded={sectionOpen}
+          onClick={() => setSectionOpen(o => !o)}
+          style={{
+            display: 'flex', width: '100%', alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0.28rem 0.6rem',
+            background: 'rgba(159,108,49,0.06)',
+            border: '1px solid var(--line-strong)',
+            borderRadius: 5, cursor: 'pointer',
+            fontFamily: 'var(--font-mono)', fontSize: '0.69em',
+            letterSpacing: '0.07em', textTransform: 'uppercase',
+            color: 'var(--ink-soft)', transition: 'border-color 0.15s',
+          }}
+        >
+          <span style={{ color: 'var(--ink-strong)', fontWeight: 600 }}>{sectionLabel}</span>
+          <svg aria-hidden="true" viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            <path d="M2 4l4 4 4-4" />
+          </svg>
+        </button>
+        {sectionOpen && (
+          <div
+            role="listbox"
+            aria-label="Select section"
+            style={{
+              position: 'absolute', top: 'calc(100% + 2px)',
+              left: '0.65rem', right: '0.65rem', zIndex: 60,
+              background: 'var(--paper-strong)',
+              border: '1px solid var(--line-strong)',
+              borderRadius: 7,
+              boxShadow: '0 8px 28px rgba(0,0,0,0.22)',
+              overflow: 'hidden',
+            }}
+          >
+            {SECTION_OPTIONS.map(s => (
+              <button
+                key={s.id}
+                role="option"
+                aria-selected={view === s.id}
+                type="button"
+                onClick={() => { onViewChange(s.id); setSectionOpen(false) }}
+                style={{
+                  display: 'block', width: '100%', textAlign: 'left',
+                  padding: '0.45rem 0.75rem', border: 'none',
+                  background: view === s.id ? 'rgba(159,108,49,0.1)' : 'transparent',
+                  color: view === s.id ? 'var(--accent-deep)' : 'var(--ink)',
+                  fontFamily: 'var(--font-ui)', fontSize: '0.83em',
+                  cursor: 'pointer', transition: 'background 0.1s',
+                  fontWeight: view === s.id ? 600 : 400,
+                  borderLeft: view === s.id ? '2px solid var(--accent)' : '2px solid transparent',
+                }}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
       {/* ── Tab strip ── */}
       <div style={{ display: 'flex', borderBottom: '1px solid var(--line)', padding: '0.5rem 0.75rem 0' }}>
         {TABS.map(t => (
@@ -3656,6 +3749,8 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
               readDocIds={readDocIds}
               onStartPath={handleStartPathById}
               activePathId={activePathId}
+              view={view}
+              onViewChange={onViewChange}
             />
           )}
           <ReaderWorkspace

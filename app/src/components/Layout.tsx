@@ -843,8 +843,10 @@ export function Layout({
           }}
         />
         <div className="mx-auto flex w-full max-w-[82rem] items-center gap-2 py-2 sm:gap-3">
-          {/* Hamburger — far left */}
-          <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
+          {/* Hamburger — mobile only; xl+ uses the left panel section picker */}
+          <div className="xl:hidden">
+            <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
+          </div>
 
           {/* Branding */}
           <button
