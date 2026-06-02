@@ -1150,7 +1150,7 @@ function DocListPanel({
                 border: 'none',
                 cursor: 'pointer',
                 fontFamily: 'var(--font-serif)',
-                fontSize: '0.78rem',
+                fontSize: '0.82em',
                 lineHeight: 1.45,
                 background: isSelected ? 'rgba(159,108,49,0.09)' : 'transparent',
                 color: isSelected ? 'var(--accent-deep)' : isRead ? 'var(--ink-soft)' : 'var(--ink)',
@@ -1160,7 +1160,7 @@ function DocListPanel({
             >
               <span className="line-clamp-2">{doc.title}</span>
               {isRead && !isSelected && (
-                <span style={{ fontSize: '0.68rem', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}> ✓</span>
+                <span style={{ fontSize: '0.72em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}> ✓</span>
               )}
             </button>
           )
@@ -3457,7 +3457,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
 
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
-        <div className={`xl:flex xl:items-start xl:gap-0${readingMode ? '' : ''}`}>
+        <div className="scholar-panels xl:flex xl:items-start xl:gap-0">
           {!readingMode && (
             <DocListPanel
               docs={visibleDocs}

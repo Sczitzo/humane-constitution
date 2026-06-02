@@ -23,7 +23,8 @@
   --sage: #6f7c67;
   --sage-deep: #53604d;
   --font-ui: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
-  --font-serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-serif: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
   --radius: 0.625rem;
   --reader-font-size: 16px;
@@ -182,7 +183,7 @@
 .reader-h3,
 .reader-h4 {
   color: var(--ink-strong);
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.012em;
   line-height: 1.2;
@@ -1172,6 +1173,11 @@
  * Scholar design — outline panel, responsive layout
  * ============================================================ */
 
+/* Three-panel Scholar layout: font size setting cascades to all three columns */
+.scholar-panels {
+  font-size: var(--panel-font-size, 16px);
+}
+
 .reader-outline {
   position: sticky;
   top: 4.5rem;
@@ -1186,7 +1192,7 @@
 .reader-outline-label {
   padding: 0 1rem 0.55rem;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.7em;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1204,7 +1210,7 @@
   background: transparent;
   padding: 0.28rem 1rem;
   font-family: var(--font-serif);
-  font-size: 0.76rem;
+  font-size: 0.8em;
   line-height: 1.45;
   color: var(--ink-soft);
   border-left: 2px solid transparent;
@@ -1225,8 +1231,8 @@
   background: rgba(196, 137, 64, 0.1);
 }
 .reader-outline-item[data-level='2'] { padding-left: 1.5rem; }
-.reader-outline-item[data-level='3'] { padding-left: 2.1rem; font-size: 0.73rem; }
-.reader-outline-item[data-level='4'] { padding-left: 2.6rem; font-size: 0.71rem; }
+.reader-outline-item[data-level='3'] { padding-left: 2.1rem; font-size: 0.76em; }
+.reader-outline-item[data-level='4'] { padding-left: 2.6rem; font-size: 0.74em; }
 
 /* Scholar layout responsive */
 @media (max-width: 767px) {

@@ -68,6 +68,8 @@ function readTheme(): ThemeOption {
 }
 function applyFontSize(size: FontSizeOption) {
   document.documentElement.style.setProperty('--reader-font-size', FONT_SIZE_VALUES[size])
+  // Also cascade to sidebar panels so the whole reading area scales together
+  document.documentElement.style.setProperty('--panel-font-size', FONT_SIZE_VALUES[size])
 }
 function applyColumnWidth(width: ColumnWidthOption) {
   document.documentElement.style.setProperty('--reader-column-width', COLUMN_WIDTH_VALUES[width])
