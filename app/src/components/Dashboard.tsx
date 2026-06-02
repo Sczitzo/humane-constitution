@@ -1109,6 +1109,68 @@ function MarkdownDocument({
 }
 
 /* ============================================================
+ * DocListPanel — Scholar left column: scrollable doc list for the section.
+ * ============================================================ */
+
+function DocListPanel({
+  docs,
+  selectedId,
+  onSelect,
+  readDocIds,
+}: {
+  docs: CorpusDoc[]
+  selectedId: string | null
+  onSelect: (doc: CorpusDoc) => void
+  readDocIds: string[]
+}) {
+  if (!docs.length) return null
+
+  return (
+    <nav
+      aria-label="Documents in this section"
+      className="hidden xl:flex xl:flex-col"
+      style={{ width: 212, flexShrink: 0, borderRight: '1px solid var(--line)' }}
+    >
+      <p className="reader-outline-label" style={{ padding: '0.75rem 1rem 0.55rem', marginBottom: 0 }}>
+        {docs.length} document{docs.length !== 1 ? 's' : ''}
+      </p>
+      <div style={{ overflowY: 'auto', flex: 1, maxHeight: 'calc(100vh - 8rem)', scrollbarWidth: 'none' }}>
+        {docs.map((doc) => {
+          const isSelected = doc.id === selectedId
+          const isRead = readDocIds.includes(doc.id)
+          return (
+            <button
+              key={doc.id}
+              type="button"
+              onClick={() => onSelect(doc)}
+              aria-current={isSelected ? 'page' : undefined}
+              className="block w-full text-left"
+              style={{
+                padding: '0.5rem 1rem',
+                border: 'none',
+                cursor: 'pointer',
+                fontFamily: 'var(--font-serif)',
+                fontSize: '0.78rem',
+                lineHeight: 1.45,
+                background: isSelected ? 'rgba(159,108,49,0.09)' : 'transparent',
+                color: isSelected ? 'var(--accent-deep)' : isRead ? 'var(--ink-soft)' : 'var(--ink)',
+                borderLeft: isSelected ? '2px solid var(--accent)' : '2px solid transparent',
+                transition: 'all 0.1s',
+              }}
+            >
+              <span className="line-clamp-2">{doc.title}</span>
+              {isRead && !isSelected && (
+                <span style={{ fontSize: '0.68rem', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}> ✓</span>
+              )}
+            </button>
+          )
+        })}
+      </div>
+    </nav>
+  )
+}
+
+/* ============================================================
  * ReaderOutline — sticky table of contents, highlights active heading.
  * ============================================================ */
 
@@ -3395,37 +3457,47 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
 
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
-        <ReaderWorkspace
-          docs={visibleDocs}
-          allDocs={allDocs}
-          selectedDoc={selectedDoc}
-          pinnedDocIds={pinnedDocIds}
-          recentIds={recentDocIds}
-          onSelectQuickDoc={handleSelectQuickDoc}
-          onTogglePinned={handleTogglePinned}
-          readDocIds={readDocIds}
-          onToggleRead={handleToggleRead}
-          readingMode={readingMode}
-          onToggleReadingMode={handleToggleReadingMode}
-          onOpenSource={handleOpenSource}
-          feedback={sourceFeedback}
-          emptyLabel="No documents match the current filter. Broaden the query or move to another shelf."
-          readerPaneRef={bindReaderPaneRef}
-          copiedHeadingSlug={copiedHeadingSlug}
-          onCopyHeadingLink={handleCopyHeadingLink}
-          searchQuery={documentQuery}
-          onSearchChange={setDocumentQuery}
-          searchInputRef={bindReaderSearchInputRef}
-          matchCount={documentMatchCount}
-          currentMatchIndex={activeMatchIndex}
-          onJumpToPreviousMatch={() => jumpSearchMatch(-1)}
-          onJumpToNextMatch={() => jumpSearchMatch(1)}
-          activePathId={activePathId}
-          allCorpusDocs={allDocs}
-          onMarkDocRead={handleMarkDocRead}
-          onSelectPathDoc={handleSelectQuickDoc}
-          onClearPath={handleClearPath}
-        />
+        <div className={`xl:flex xl:items-start xl:gap-0${readingMode ? '' : ''}`}>
+          {!readingMode && (
+            <DocListPanel
+              docs={visibleDocs}
+              selectedId={selectedDoc?.id ?? null}
+              onSelect={handleSelectQuickDoc}
+              readDocIds={readDocIds}
+            />
+          )}
+          <ReaderWorkspace
+            docs={visibleDocs}
+            allDocs={allDocs}
+            selectedDoc={selectedDoc}
+            pinnedDocIds={pinnedDocIds}
+            recentIds={recentDocIds}
+            onSelectQuickDoc={handleSelectQuickDoc}
+            onTogglePinned={handleTogglePinned}
+            readDocIds={readDocIds}
+            onToggleRead={handleToggleRead}
+            readingMode={readingMode}
+            onToggleReadingMode={handleToggleReadingMode}
+            onOpenSource={handleOpenSource}
+            feedback={sourceFeedback}
+            emptyLabel="No documents match the current filter. Broaden the query or move to another shelf."
+            readerPaneRef={bindReaderPaneRef}
+            copiedHeadingSlug={copiedHeadingSlug}
+            onCopyHeadingLink={handleCopyHeadingLink}
+            searchQuery={documentQuery}
+            onSearchChange={setDocumentQuery}
+            searchInputRef={bindReaderSearchInputRef}
+            matchCount={documentMatchCount}
+            currentMatchIndex={activeMatchIndex}
+            onJumpToPreviousMatch={() => jumpSearchMatch(-1)}
+            onJumpToNextMatch={() => jumpSearchMatch(1)}
+            activePathId={activePathId}
+            allCorpusDocs={allDocs}
+            onMarkDocRead={handleMarkDocRead}
+            onSelectPathDoc={handleSelectQuickDoc}
+            onClearPath={handleClearPath}
+          />
+        </div>
       )}
     </div>
 
