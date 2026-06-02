@@ -1890,11 +1890,124 @@ Christ-measured: these are serious, humane, self-suspicious founding documents, 
 
 ---
 
+## Session 21 Christ-Centered Evaluation — The Last Five (Pilot Gates, Threat Register, Anti-Dynasty)
+
+**Date:** 2026-06-01
+**Scope:** the five annexes a prior pass missed — ANNEX_AN (Pilot External Validity Gate), ANNEX_B (Threat Register), ANNEX_C (Threat Register Operations), ANNEX_Q (Minimum Viable Pilot Stack & Transition Doctrine), and ANNEX_J (Anti-Dynasty, Stewardship, Worker-Owned Architecture — created earlier this corpus cycle and evaluated here under an explicitly adversarial panelist, since it should not grade its own author kindly).
+
+This session completes the annex corpus and corrects a prior overclaim of completeness. One finding recurs across all five and is recorded at the end: **a gate the builder himself judges and may waive is no protection** — the standard must have a keeper independent of the one it restrains, and a definition the powerful cannot bend.
+
+*The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
+
+---
+
+### ANNEX AN — Pilot External Validity Gate (8 / 10 after hardening; 7.5 as written)
+
+**Christ-centered alignment.** Gating scale-up on observed performance under *real stress* — economic shock, compound supply disruption, organized political opposition, not favorable conditions — is the foundation tested against the storm before trust is extended (Matt 7:24–27), and the explicit Residual-Risk confession ("the gate buys quality… it cannot guarantee correctness") is honest cost-counting (Luke 14:28–30) and a refusal to bear false witness about readiness (Ex 20:16; Isa 58). The protected party is named as "populations who bear the cost of failure at scale" — the strong forbidden from laying untested burdens on the weak (Matt 23:4; Matt 25:35–40). AN3's full-record access for challengers honors the multitude of counsellors (Prov 11:14).
+
+**Babel-risk warning.** The gate is gameable by *soft stress*: AN1's stress conditions are unquantified ("significant" unemployment, "a formal political opposition campaign"), so a trivial dip or an astroturfed objection can tick the box; AN2's substitute-evidence path routes all quality control through AN3's human judgment with no floor; and AN3 silences the solution-less-but-correct warning ("this evidence is invalid and I have no fix" is logged but does not block). The deepest tension: by confessing the evidence base "will always be incomplete," the annex tells the truth *and* pre-authorizes scaling the vulnerable onto an admittedly-incomplete foundation — without ever establishing who has standing to accept that residual risk *on the weak's behalf*.
+
+**Human-dignity test.** Passes in orientation (persons as those who bear failure cost, not throughput), with the AN3-asymmetry caveat.
+
+**Revision proposal (closed in hardening).** (1) Quantify a floor for each stress condition and forbid system-originated or system-funded "opposition" (anti-astroturf). (2) Set a substitute-evidence quality floor independent of AN3 — at least one real-world analogue from a *non-favorable* jurisdiction, not simulation-only. (3) Let a substantiated invalidity challenge *pause* the vote pending an on-record adequacy finding, even without a proposed fix. (4) Name who may accept residual risk on behalf of the populations who bear it. Monitor: AN3 independence under Annex AV; AN4 novelty test against recycled scenarios.
+
+**Fruit test.** (i) Honest readiness claims; (ii) gaps surfaced before the weak bear them; (iii) no scaling onto the vulnerable on token stress + simulation; (iv) true warnings not auto-dismissed.
+
+**Epistemic categorization:** *Command* — no false witness about readiness; do not bind untested burdens on others (Ex 20:16; Matt 23:4; Matt 7:24–27). *Inference* — the challenge-window form. *Prudential* — the 30/60-day windows, the three stress categories. *Unresolved* — whether any pilot can produce externally-valid evidence at this scale, which the annex itself admits.
+
+---
+
+### ANNEX B — Threat Register (9 / 10 after hardening; 8 as written)
+
+**Christ-centered alignment.** The register is the watchman naming the danger before it lands (Ezek 33:1–6) and the prudent foreseeing evil rather than letting the simple pass on unwarned (Prov 22:3; 27:12). It centers "caregivers, dependents, and low-wealth residents most exposed to collapse of the survival floor" (Matt 25:35–40), turns the watchman's eye on the system's *own* officers (TR-08 verifier capture, TR-10 emergency-pause abuse — guarding the guards, Mark 10:42–45), and — remarkably — confesses its own characteristic sin in advance ("a register never updated becomes false assurance"), refusing to "say we have no sin" (2 Cor 13:5; 1 John 1:8). Status "Active — unproven" is anti-Babel honesty about a live attack surface.
+
+**Babel-risk warning.** The deepest risk is the one it names but cannot internally enforce: *naming substituting for closing.* The controls/tests columns are claims and plans, but a tidy scored table reads as accomplishment — the whitewashed wall whose plaster looks sound until the storm (Ezek 13:10–12). Concretely: no `Last reviewed` date (a frozen register is indistinguishable from a maintained one) and static scores with no trend (an escalating threat shows the same number as a suppressed one). It preaches against staleness but ships no mechanism that lets anyone tell whether it has *already* gone stale.
+
+**Human-dignity test.** Strong — scoring is by harm to persons, and TR-13's carve-outs (births/medical-emergency exemptions, needs-neutral accessibility review) protect the real human from being an anomaly-detection false positive.
+
+**Revision proposal (closed in hardening).** (1) Add `Last reviewed` and score-trend (↑/↓/→) columns (or a dated review log) so a stale register is visibly stale. (2) Relabel columns by epistemic status — "controls (designed)," "tests (planned vs. passed)" — and cross-reference each row's evidence status in the working `Threat_Register.md`, so listed controls cannot be misread as passed. Monitor: self-assessed Detectability drifting optimistic; single-owner overload (P8 on most rows — disperse the load, Ex 18:17–23).
+
+**Fruit test.** (i) The register is *worked* — drills run, scores move, owners answer; (ii) a reader can tell a maintained register from an ossified credential.
+
+**Epistemic categorization:** *Command* — warn the vulnerable of known danger; no false witness about safety (Ezek 33; 1 John 1:8). *Inference* — survival-floor populations as "the least of these." *Prudential* — the I×L×(6−D) formula and the 13 threats. *Unresolved* — whether the controls actually close the threats (unproven).
+
+---
+
+### ANNEX C — Threat Register Operations (9 / 10 after hardening; 8 as written)
+
+**Christ-centered alignment.** C-2's "owners may delegate implementation, but not accountability" is the faithful-steward standard — a named servant owes an account (Luke 16:10–12; Matt 24:45–51). The tiered cadence (Continuous→Annual, with "monitoring remains more frequent than the decision cycle") is "be diligent to know the state of thy flocks" (Prov 27:23–24) and the watchman who keeps watch *continually* (Ezek 33:6–7). C-5's "close only when root causes are addressed or risk is explicitly accepted" is works completing profession (Jas 2:14–17; Isa 58 as schema). C-6's narrow, time-limited, reversible emergency actions ("never global freeze without due process") restrain power even in crisis (Mark 10:42–45).
+
+**Babel-risk warning.** Process-as-theater — its own named risk — is under-defended at the *enforcement* layer: no consequence when a quarterly review is skipped, an evidence package goes stale-but-marked-current, or a Threat Owner chair sits empty; and C-7's scale gates have no no-silent-waiver clause. A cadence with no penalty becomes liturgy: the meeting happens, the box is checked, the substance rots (Matt 23:27–28). Process cannot save process — the doc has no clause that makes *faithfulness itself costly to fake*.
+
+**Human-dignity test.** Passes, with a caveat: persons appear as "owners/actors/false-positive rates," and there is no clause giving a person *flagged* by anomaly detection notice or recourse (dignity of the monitored, not just the monitoring).
+
+**Revision proposal (closed in hardening).** (1) Anti-theater enforcement: define the consequence when a cadence event is missed or an evidence package lapses — auto-escalation, degraded threat status, oversight notification. (2) Owner-vacancy rule: maximum time-to-reassign and a default escalation for an empty chair. (3) No-silent-waiver on C-7 gates: any exception requires a named approver, written justification, time limit, and audit-visible record (mirroring C-6). Monitor: recourse for the monitored person; periodic re-review of accepted-risk closures so they don't become a dumping ground.
+
+**Fruit test.** (i) Controls actually live and tested; (ii) a missed cadence has teeth; (iii) no gate silently waived under launch pressure.
+
+**Epistemic categorization:** *Command* — diligent, ongoing, accountable stewardship (Prov 27:23; Luke 16:10; Ezek 33). *Inference* — non-delegable named ownership as the steward/watchman applied. *Prudential* — the cadence tiers, MTTD/MTTR, the 7-day post-mortem. *Unresolved* — whether process density prevents theater or relocates it.
+
+---
+
+### ANNEX Q — Minimum Viable Pilot Stack & Transition Doctrine (9 / 10 after hardening; 8 as written)
+
+**Christ-centered alignment.** Q1's "full adoption only after legitimacy, continuity capacity, and review capacity are demonstrated… under stress" and the six-phase sequence are Luke 14:28–30 (count the cost, do not begin the tower you cannot finish) and Matt 7:24–27 (proven by the storm, not the blueprint) — Phase 6's scarcity *simulation before any real Shared Storehouse activation* is "drill before you build on the most dangerous terrain." Q3's refusal to market a pilot as scale-proof "if it depends on unrepeatable founder discretion, heroic volunteerism, or hidden subsidy," with mandatory disclosure of "what was still manually patched," is honest confession over performed righteousness (Isa 58; Matt 6) — the annex's strongest clause. Q4 names the worldly powers (banks, landlords, monopolies) honestly (Luke 14:31).
+
+**Babel-risk warning.** The annex *commands* the pause (Q3) but *ordains no priest to enforce it*: nothing names who declares the pause, who may override, or what stops a champion from declaring readiness anyway; and "demonstrated capacity" carries no published threshold, so it can be self-certified. A stop condition the rollout's own champions judge and waive is the house inspecting its own foundation in the middle of the storm (Jer 17:9 — the heart is deceitful; momentum blinds the powerful).
+
+**Human-dignity test.** Passes in intent, with a gap: pilot *subjects* (the people in the "one limited geography") have no named consent, exit, or grievance right within this annex — protected as a class, not enfranchised as agents.
+
+**Revision proposal (closed in hardening).** (1) Name the pause custodian — a body independent of the rollout's champions declares the pause; momentum, funding deadlines, and political opportunity are explicitly *non-grounds* for waiving a stop condition; a scale claim requires independent attestation against published thresholds. (2) Require each phase to publish, in advance, the falsifiable exit criteria that count as "demonstrated." (3) Dignity proviso: resistance-handling (esp. competitive displacement, legal override) may not transfer harm onto dependent workers/communities. (4) Add (or cross-reference) a pilot-subject grievance/exit right.
+
+**Fruit test.** (i) Gates that hold under momentum; (ii) public confession of what is still manually patched; (iii) the disclosure language protecting the vulnerable rather than laundering premature scale as diligence.
+
+**Epistemic categorization:** *Command* — honesty about readiness; protect the vulnerable from foreseeable harm (Isa 58; Luke 14:28–30; Matt 25:35–40). *Inference* — "test under stress before scale" from Matt 7 by analogy. *Prudential* — the six-phase ordering, which incumbents to name. *Unresolved* — whether any rollout body can resist its own momentum to enforce its stop conditions.
+
+---
+
+### ANNEX J — Anti-Dynasty, Stewardship, and Worker-Owned Architecture (9 / 10 after hardening; 7 as written — adversarially reviewed)
+
+**Christ-centered alignment.** §R1.2 (no perpetual extractive succession) and §R2.1 ("ownership… not a perpetual tribute right") are the strongest Jubilee echoes — Lev 25's bar on permanent alienation, Deut 15's release rhythm, Isa 5:8's "woe… that join house to house." §R2.1's limit on "endless passive extraction from necessity or from labor once the contributed risk and value have been fairly returned" tracks the withheld-wages cry (Jas 5:4); §R1.4's worker-owned preference reflects servant ordering (Mark 10:42–45). Crucially — and contrary to the anti-dynasty-zeal failure mode — §R1.3 explicitly protects "a family keeping its home, its tools," provision for dependents, and §R2.1 rewards "genuine risk and genuine productive contribution" (Prov 13:22; Matt 25:14–30). It does *not* tilt confiscatory on its face.
+
+**Babel-risk warning (the adversarial panel's earned catch on its own author's draft).** The central load-bearing line — "fairly returned" / "active stewardship" / "productive stewardship vs. prohibited passive extraction" (§R2.1, §R2.3, §R1.2) — is **undefined**, and §R2.3 relocates the confiscation/protection boundary into an unspecified review with unstated criteria, staffing, and independence standard. This is precisely the Session-12 "discretion is the new throne" pattern, and it cuts against the very Scripture invoked: the Jubilee was a *fixed, calendared, non-discretionary* release (the 50th year, every seventh) — designed so that no judge or creditor decided who got mercy. Annex J reaches for the Jubilee's anti-perpetuity goal through *case-by-case discretionary review*, substituting an adjudicating throne for the rule-bound automatic release that made the Jubilee a protection against the powerful rather than another lever for them. Secondary: §R1.1's total beneficial-ownership-through duty has no de minimis floor wired to §R1.3's carve-outs, risking surveillance-creep onto the small holder.
+
+**Human-dignity test.** Dignity-preserving in design (transparency as a precondition of holding, not on-demand exposure; persons as stewards not rent-sources), with the small-holder surveillance tail above.
+
+**Revision proposal (closed in hardening).** (1) **Highest-leverage:** define — or bind by cross-reference — the test for "fairly returned / active stewardship / passive extraction," and specify where the published criteria live, who sets them, the reviewer's independence/recusal standard, and a bounded burden of proof on the holder; move the line as far as possible from discretion toward a rule-bound (Jubilee-like) standard. (2) Add a de minimis / ordinary-household floor to §R1.1 wired to the §R1.3 carve-outs. Monitor: capture-by-preference (sham co-ops); keep the moral framing proportionate to the balanced rules.
+
+**Fruit test.** (i) Dispersed ownership, protected family homes, harder dynastic capture; (ii) the stewardship line decided by a published rule, not a tribunal's discretion; (iii) §R3's honesty about untested gaps preserved.
+
+**Epistemic categorization:** *Command* — resist perpetual alienation and debt-bondage; the withheld wage is condemned; the earth is the Lord's and ownership is stewardship (Lev 25; Deut 15; Jas 5:4; Ps 24:1). *Inference* — worker-preference and ownership-through as faithful applications. *Prudential* — the specific mechanisms. *Unresolved* — whether the prohibitions close the trust/shell gaps (§R3 admits this), and the "fairly returned" boundary itself.
+
+---
+
+### Session 21 Cross-Cutting Findings
+
+**§S21-X1 — Name the keeper; the gate the builder waives is no gate (should-fix).** Every annex in this cluster sets a standard and leaves no one to enforce it against the very party it restrains: ANNEX_Q commands the pause but names no custodian; ANNEX_AN's stress gate has undefined thresholds a champion can satisfy with soft stress; ANNEX_C specifies the cadence but not the consequence of breaking it; ANNEX_B warns against staleness but cannot detect its own. A stop condition that the rollout's own champions judge and waive is the house inspecting its own foundation mid-storm (Jer 17:9). The fix is uniform: an enforcer independent of the restrained party, a published falsifiable threshold, and a consequence for breach — Q's independent pause custodian, AN's quantified stress floors, C's anti-theater enforcement and no-silent-waiver, B's staleness-detection. Status: **should-fix open** (cluster-wide).
+
+**§S21-X2 — Define the dial; the discretionary line is a throne (should-fix).** Where a standard's operative term is left undefined, the boundary migrates into an unaccountable judgment: ANNEX_J's "fairly returned / passive extraction," ANNEX_AN's "significant stress," ANNEX_B's controls-that-read-as-passed. The Jubilee's whole genius was a *fixed* rule no powerful party could bend (Lev 25). The fix is to define the dial or bind it to a published rule — J's stewardship criteria + reviewer independence + de minimis floor, AN's quantified stress floor, B's epistemic-status column labels. Status: **should-fix open** (cluster-wide).
+
+---
+
+### Session 21 Net Assessment
+
+**Where the cluster is most consistent with the teachings of Jesus.** It counts the cost before building (Q, AN), keeps the watchman naming danger and guarding even the guards (B, C), and reaches for the Jubilee against dynastic capture while still protecting the family's home and the laborer's earned reward (J). These are the disciplines of a builder who tests his foundation, a watchman who does not sleep, and a steward who refuses both the rentier's perpetual tribute and the zealot's confiscation.
+
+**Where the cluster carries the most Babel-risk.** One shape, twice: the gate with no keeper (§S21-X1) and the dial left undefined (§S21-X2). Neither is a design betrayal; each is the precise seam where a genuine protection becomes a ritual the powerful can satisfy in form and bend in substance — the gate the builder waives, the line the tribunal decides.
+
+**Net assessment.** No must-fix blockers; the cluster scores **7–8** as written and **9** with the should-fixes closed. Christ-measured, these are honest, vulnerable-protecting instruments whose remaining discipline is the one the whole evaluation has returned to from the start: name and bind the operative hand, define the dial the powerful would bend, and remember that a standard is only a protection when its keeper is independent of the one it restrains. Civil pilot-gating, threat-watching, and anti-dynasty stewardship are not the kingdom of God; they are a steward's careful instruments, most faithful when they cannot be waived by the very builder they were made to restrain.
+
+**Items requiring follow-up in a future Session:**
+1. Verify in pilot that the new enforcers, quantified thresholds, and defined criteria function in practice — the fruit-test evidence toward 9.5 and Evidence-backed.
+2. A standing watch on ANNEX_J specifically: that the stewardship-vs-extraction line, once defined, is applied by a rule rather than drifting back into a tribunal's discretion.
+
+---
+
 ## Coverage Summary — Christ-Centered Evaluation of the Annex Corpus
 
-As of Session 16, the Christ-centered evaluation covers the full active annex set with no partial-coverage items remaining. Every active annex has received a direct Christ-centered evaluation (Sessions 5–16), and the design should-fixes surfaced in Sessions 7–16 have been closed in the corpus text. Standing scores after hardening:
+As of Session 21, the Christ-centered evaluation covers **every active annex (44 of 44)** — a prior summary claimed completeness at Session 16, but five annexes (AN, B, C, Q, J) had been missed; Session 21 closed that gap and this summary is corrected accordingly. Every active annex has received a direct Christ-centered evaluation (Sessions 5–21), and the design should-fixes surfaced in Sessions 7–21 have been closed in the corpus text. Standing scores after hardening:
 
-- **9 / 10:** AW, AX, AY (Session 7); P, Y (Session 8); I, K, AQ, AJ, AF (Session 9); L, S, AI, Z, AP (Session 10); H, AV, N, AH (Session 11); X, V, AR, AT (Session 12); M, AL, AE, U (Session 13); A, AG, AD, AC (Session 14); T, AO, AB, AS (Session 15); AM (Session 16, completing the §AM8/CIP coverage from Session 5).
+- **9 / 10:** AW, AX, AY (Session 7); P, Y (Session 8); I, K, AQ, AJ, AF (Session 9); L, S, AI, Z, AP (Session 10); H, AV, N, AH (Session 11); X, V, AR, AT (Session 12); M, AL, AE, U (Session 13); A, AG, AD, AC (Session 14); T, AO, AB, AS (Session 15); AM (Session 16, completing the §AM8/CIP coverage from Session 5); AN, B, C, Q, J (Session 21).
 - **8.5 / 10:** AZ (Session 8) — held below 9 not by a should-fix but because its privacy guarantee is delegated to a TSP not yet assigned (undesigned at the critical layer, a delivery matter, not text).
 - **Earlier sessions:** D / P-063 demurrage (Session 6); CASP/AT§6.6, AED/AK (Session 5).
 - **Constitution core (Sessions 17–20, three-pass expert panel):** Humane_Constitution.md (8/10), SPECIFICATIONS.md (8/10), Acceptance_Protocol.md (8/10), INVARIANTS.md (8.5/10, evaluate-and-recommend only). Should-fixes surfaced for the founders' decision; **the four protected `docs/constitution/` files have not been edited.**
@@ -1959,5 +2072,10 @@ The single recurring lesson across all twenty sessions: no human instrument is i
 - `docs/constitution/SPECIFICATIONS.md` (Session 18 — three-pass expert panel)
 - `docs/constitution/Acceptance_Protocol.md` (Session 19 — three-pass expert panel)
 - `docs/constitution/INVARIANTS.md` (Session 20 — three-pass expert panel, evaluate-and-recommend only)
+- `docs/annexes/ANNEX_AN.md` (Session 21 — pilot external validity gate)
+- `docs/annexes/ANNEX_B.md` (Session 21 — threat register)
+- `docs/annexes/ANNEX_C.md` (Session 21 — threat register operations)
+- `docs/annexes/ANNEX_Q.md` (Session 21 — minimum viable pilot stack & transition doctrine)
+- `docs/annexes/ANNEX_J.md` (Session 21 — anti-dynasty, stewardship, worker-owned architecture)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
