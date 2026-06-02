@@ -68,7 +68,7 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-004 | Incentive Collapse | **Critical** | 48 | Real contribution model that rewards output without recreating coercive hierarchy. |
 | T-018 | PCRP False-Trigger Exhaustion | High | 36 | Attestation-vector bounded by P-024; false-trigger-at-scale residual still on P-015. |
 | T-019 | Demand-Context Flag Suppression | High | 48 | P-015 / Annex AP defines a mitigation path; Annex AI gates and timing-monitor infrastructure still need activation. |
-| T-022 | Electoral Cycle Capture | **Critical** | 60 | P-018 / Annex AM defines the entrenchment and transition-continuity path; constitutional body and trigger infrastructure still need founding. |
+| T-022 | Electoral Cycle Capture | **Critical** | 60 | P-051 (Constitutional Integrity Panel, Annex AM §AM8) is the ACTIVE primary structural control; P-018 / Annex AM remains PROPOSED for the entrenchment and transition-continuity path. CIP staffing, funding, and trigger infrastructure still need founding before any evidence-backed claim. |
 | T-023 | Pilot External Validity Collapse | Med-High | 32 | P-019 / Annex AN defines the scale-up evidence gate; pilot evidence and challenge infrastructure still need execution. |
 | T-025 | Demurrage Sector-Capture via Investment Channel | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
 
@@ -96,34 +96,35 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ## Summary by Priority
 
-| Threat ID | Title | Severity | Status | Core Point | Score |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| T-001 | Shadow Convertibility | **Critical** | **Active — unproven** | Contain scalable Essential Access↔Flow arbitrage without authoritarian overreach. | 60 |
-| T-002 | Identity Exploits | **Critical** | **Active — unproven** | Treat identity as a permanent adversarial surface; preserve the survival floor. | 60 |
-| T-004 | Incentive Collapse | **Critical** | **Active — unproven** | Guarantee dignity while keeping contribution materially and psychologically real. | 48 |
-| T-005 | Governance Throughput Failure | High | **Active — unproven** | Prevent review layers from becoming bottlenecks that trigger bypass normalization. | 40 |
-| T-006 | Measurement Lag / Supply Shock | **Critical** | **Active — unproven** | Force graceful degradation when reality data is noisy, incomplete, or lagged. | 60 |
-| T-007 | Political Definition Drift | **Critical** | **Active — unproven** | Stop semantic capture through definitions, classifications, and technical relabeling. | 60 |
-| T-008 | Bureaucratic Elite Formation | High | **Active — unproven** | Prevent process insiders from becoming a durable managerial class. | 64 |
-| T-009 | Grace Exploitation Loop | Med-High | **Active — unproven** | Keep humane recovery paths from becoming durable exploit channels. | 48 |
-| T-010 | Narrative Attack Surface | **Critical** | **Active — unproven** | Make the system intelligible before hostile framing fixes public perception. | 80 |
-| T-011 | Narrative Attack Surface | **Critical** | **Active — unproven** | (See T-010/T-011 combined entry.) | 80 |
-| T-012 | PCRP Oracle Poisoning | **Critical** | **Active — unproven** | Prevent single-source oracle corruption from triggering false public emergency. | 60 |
-| T-013 | Throughput Starvation | High | **Active — unproven** | Prevent multi-crisis competition from starving guaranteed governance capacity. | 48 |
-| T-014 | Triple Deadlock | **Critical** | **Active — unproven** | Prevent simultaneous protective mechanisms from creating un-resolvable governance block. | 30 |
-| T-015 | Demand Oracle Poisoning | High | **Active — unproven** | Distinguish genuine supply shocks from demand-side distortions in oracle signals. | 48 |
-| T-016 | FAP Capture | **Critical** | **Active — unproven** | Prevent capture of the patch acceptance process itself. | 60 |
-| T-017 | Bootstrap Problem | **Critical** | **Active — unproven** | Resolve P-013 circular dependency without normalizing urgency bypass. | 45 |
-| T-018 | PCRP False-Trigger Exhaustion | High | **Active — unproven** | Prevent deliberate engineering of false triggers to exhaust the audit-cap and suppress real responses. Attestation-vector component addressed by P-024 (Annex AS, FC-080/081/082); false-trigger-at-scale residual remains with P-015. | 36 |
-| T-019 | Demand-Context Flag Suppression | High | **Active — unproven** | Prevent strategically timed enforcement actions from suppressing legitimate PCRP activation. | 48 |
-| T-020 | Epistemological Oracle Capture | **Critical** | **Active — unproven** | Prevent methodology-standard capture that biases oracle outputs without touching data directly. | 60 |
-| T-021 | Algorithmic Oracle Capture | **Critical** | **Active — unproven** | Prevent AI/algorithmic manipulation of measurement systems that satisfies formal independence while being systematically biased. | 60 |
-| T-022 | Electoral Cycle Capture | **Critical** | **Designed** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 |
-| T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 |
-| T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Mechanism specified in design by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18); no field evidence yet. | 60 |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 |
-| T-026 | Exit Denial | **Critical** | **Active — unproven** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Mechanism specified in design by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies; no field evidence yet. | 48 |
-| T-027 | Subsidiarity Violation | High | **Active — unproven** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Mechanism specified in design by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle; no field evidence yet. | 36 |
+| Threat ID | Title | Severity | Status | Core Point | Score | Owner | Last reviewed | Trend |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| T-001 | Shadow Convertibility | **Critical** | **Active — unproven** | Contain scalable Essential Access↔Flow arbitrage without authoritarian overreach. | 60 | P8 + Essential Access/Identity | 2026-05-01 *(placeholder)* | Steady |
+| T-002 | Identity Exploits | **Critical** | **Active — unproven** | Treat identity as a permanent adversarial surface; preserve the survival floor. | 60 | P3 (Identity) | 2026-05-01 *(placeholder)* | Rising |
+| T-004 | Incentive Collapse | **Critical** | **Active — unproven** | Guarantee dignity while keeping contribution materially and psychologically real. | 48 | P4 (Voice & Service Record) | 2026-05-01 *(placeholder)* | Steady |
+| T-005 | Governance Throughput Failure | High | **Active — unproven** | Prevent review layers from becoming bottlenecks that trigger bypass normalization. | 40 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Steady |
+| T-006 | Measurement Lag / Supply Shock | **Critical** | **Active — unproven** | Force graceful degradation when reality data is noisy, incomplete, or lagged. | 60 | P7 (Oracle) + P8 | 2026-05-01 *(placeholder)* | Rising |
+| T-007 | Political Definition Drift | **Critical** | **Active — unproven** | Stop semantic capture through definitions, classifications, and technical relabeling. | 60 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Rising |
+| T-008 | Bureaucratic Elite Formation | High | **Active — unproven** | Prevent process insiders from becoming a durable managerial class. | 64 | P8 + Oversight | 2026-05-01 *(placeholder)* | Rising |
+| T-009 | Grace Exploitation Loop | Med-High | **Active — unproven** | Keep humane recovery paths from becoming durable exploit channels. | 48 | P4 (Voice & Service Record) | 2026-05-01 *(placeholder)* | Steady |
+| T-010 | Narrative Attack Surface | **Critical** | **Active — unproven** | Make the system intelligible before hostile framing fixes public perception. | 80 | P8 + Communications | 2026-05-01 *(placeholder)* | Rising |
+| T-011 | Narrative Attack Surface | **Critical** | **Active — unproven** | (See T-010/T-011 combined entry.) | 80 | P8 + Communications | 2026-05-01 *(placeholder)* | Rising |
+| T-012 | PCRP Oracle Poisoning | **Critical** | **Active — unproven** | Prevent single-source oracle corruption from triggering false public emergency. | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-013 | Throughput Starvation | High | **Active — unproven** | Prevent multi-crisis competition from starving guaranteed governance capacity. | 48 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Steady |
+| T-014 | Triple Deadlock | **Critical** | **Active — unproven** | Prevent simultaneous protective mechanisms from creating un-resolvable governance block. | 30 | P8 + Judiciary | 2026-05-01 *(placeholder)* | Steady |
+| T-015 | Demand Oracle Poisoning | High | **Active — unproven** | Distinguish genuine supply shocks from demand-side distortions in oracle signals. | 48 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-016 | FAP Capture | **Critical** | **Active — unproven** | Prevent capture of the patch acceptance process itself. | 60 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Rising |
+| T-017 | Bootstrap Problem | **Critical** | **Active — unproven** | Resolve P-013 circular dependency without normalizing urgency bypass. | 45 | P8 + Founding Coalition | 2026-05-01 *(placeholder)* | Steady |
+| T-018 | PCRP False-Trigger Exhaustion | High | **Active — unproven** | Prevent deliberate engineering of false triggers to exhaust the audit-cap and suppress real responses. Attestation-vector component addressed by P-024 (Annex AS, FC-080/081/082); false-trigger-at-scale residual remains with P-015. | 36 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Steady |
+| T-019 | Demand-Context Flag Suppression | High | **Active — unproven** | Prevent strategically timed enforcement actions from suppressing legitimate PCRP activation. | 48 | P7 (Oracle) + Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
+| T-020 | Epistemological Oracle Capture | **Critical** | **Active — unproven** | Prevent methodology-standard capture that biases oracle outputs without touching data directly. | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-021 | Algorithmic Oracle Capture | **Critical** | **Active — unproven** | Prevent AI/algorithmic manipulation of measurement systems that satisfies formal independence while being systematically biased. | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-022 | Electoral Cycle Capture | **Critical** | **Active — unproven** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 | Constitutional Integrity Panel (CIP) | 2026-05-01 *(placeholder)* | Rising |
+| T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 | P8 + Oversight | 2026-05-01 *(placeholder)* | Steady |
+| T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Mechanism specified in design by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18); no field evidence yet. | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
+| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
+| T-026 | Exit Denial | **Critical** | **Active — unproven** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Mechanism specified in design by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies; no field evidence yet. | 48 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
+| T-027 | Subsidiarity Violation | High | **Active — unproven** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Mechanism specified in design by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle; no field evidence yet. | 36 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
+| T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from holding the Essential Access floor hostage to extract constitutional concessions. Primary structural control P-050 (CASP) ACTIVE; P-047/P-048 related. | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
 
 *Status definitions: **Proposed** = a response has been suggested but not yet formally incorporated. **Designed** = the mechanism is specified in the corpus but not yet active. **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence. **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution. **Evidence-backed** = sufficient external evidence to support the claim. **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented. No threat currently meets the Resolved threshold.*
 
@@ -138,6 +139,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** P8 + Essential Access/Identity
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** off-ledger trades, proxy redemption, household or broker-mediated exchanges, and service-for-redemption deals.
 - **Impact:** collapses the separation between survival access and market money, recreating leverage and inequality.
 - **Detection:** cluster anomalies, synchronized redemption patterns, broker signatures, and consumption deviation scoring.
@@ -155,6 +159,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** P3 (Identity)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** duplicate identities, account takeover, synthetic identities, proxy use, and recovery fraud.
 - **Impact:** drains Essential Access, corrupts Voice and Service Record legitimacy, and can exclude vulnerable people if controls become too harsh.
 - **Detection:** cross-signal deduplication, recovery anomaly review, impossible-use patterns, and staged assurance mismatches.
@@ -173,6 +180,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×3×(6-3)=48 (updated)
+- **Owner:** P4 (Voice & Service Record)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** universal Essential Access reduces desperation, but weak reward gradients can flatten initiative, excellence, and long-horizon effort.
 - **Impact:** slow stagnation, mediocre output equilibrium, and declining willingness to take on hard or high-skill work.
 - **Detection:** participation decline, lower high-skill throughput, concentration of difficult work into narrow groups, and weak innovation rates.
@@ -190,6 +200,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** High
 - **Status:** Active — unproven
 - **Risk Score:** 5×4×(6-4)=40
+- **Owner:** P8 (Oversight)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** layered review, challenge rights, audit loops, and safety gates create cumulative delay. Dual attack surface: slowdown attacks (proposal flooding, minority veto loops) and speedup attacks (emergency bypass normalization, deliberation theater).
 - **Impact:** essential decisions slow down, frustrations rise, emergency governance is normalized, anti-capture mechanisms are bypassed.
 - **Detection:** decision latency, review backlog, unresolved appeals, emergency path overuse, rising informal workaround rates, deliberation quality metrics.
@@ -206,6 +219,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** P7 (Oracle) + P8
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** mixed-cadence oracle architecture creates exploitable measurement speed hierarchy. Two failure modes: lag-induced over-issuance (Essential Access issued into depleting pool) and lag-induced false restriction (Shared Storehouse maintained after recovery). First-responder authority undefined for inter-cycle shocks.
 - **Impact:** over-issuance into real scarcity; prolonged unjustified restriction after recovery; black-market opportunity windows during cadence exploit gaps.
 - **Detection:** forecast-vs-actual variance, Essential Access redemption velocity spikes, cross-category co-movement signals, fill-rate tracking, cross-publisher divergence.
@@ -222,6 +238,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** P8 (Oversight)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** redefine 'essential,' 'capacity,' 'contribution,' 'scarcity,' or 'clarification' in ways that alter outcomes without overt repeal.
 - **Impact:** the architecture stays on paper while the survival floor shrinks or civic legitimacy skews.
 - **Detection:** semantic impact audits, worked examples, quality-floor changes, and cumulative narrowing triggers.
@@ -238,6 +257,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** High
 - **Status:** Active — unproven
 - **Risk Score:** 4×4×(6-2)=64
+- **Owner:** P8 + Oversight
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** three pipelines: (1) Verification Control Loop — Service Record → verifier eligibility → Service Record minting control; (2) Positional Entrenchment — low-Voice/high-Service Record actors hold enforcement and audit positions invisibly; (3) Expertise Pool Homogenization — 'demonstrated competence' requirements produce a professionally connected class. Proceeds entirely through legitimate behavior — no anomaly signals under current monitoring.
 - **Impact:** capture of verification, oversight, and constitutional interpretation infrastructure. Does not directly harm Essential Access floor but undermines every other safeguard over time.
 - **Detection:** Very low (D=2). Visible only in aggregate metrics over multi-year horizon. P-008 creates the first detection infrastructure: legibility gap audit, concentration dashboard, cohort overlap index.
@@ -255,6 +277,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Med-High
 - **Status:** Active — unproven
 - **Risk Score:** 4×3×(6-2)=48
+- **Owner:** P4 (Voice & Service Record)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** Four exploit classes: (1) Category Rotator — switches qualifying hardship category at each renewal to restart the clock; (2) Network Pause Ring — 8-person group rotates pause/contribution cycles, all maintaining high Service Record indefinitely; (3) Involuntary Unemployment Farmer — manufactured evidence of involuntary separation; (4) Civic Position Extender — uses pause to freeze Service Record above service eligibility threshold without ongoing contribution. T-009 is also the primary bypass route for P-008 cohort cooling controls.
 - **Impact:** Institutional position preservation without genuine contribution. Elite formation (T-008) persists even when P-008 controls are nominally active. Civic pool diversity requirements (P-008 AC3.3) are satisfied on paper while the same coordination class maintains eligibility through coordinated pause.
 - **Detection:** D=2 before P-009 (invisible — proceeds through legitimate channels). After P-009: cross-quarter history review, hardship attestation collusion graph (AF3), pool saturation monitoring (AF5), Service Record slow-decay trajectory analysis.
@@ -272,6 +297,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×4×(6-2)=80
+- **Owner:** P8 + Communications
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Note on risk score:** T-011 carries a D=2 (low detectability) score — narrative attacks are difficult to detect early and the damage (fixed hostile framing) is largely irreversible once established. The risk score of 80 is the highest in the register, reflecting the asymmetric nature of narrative risk: low cost to attack, high cost to defend, and time-bounded defense window.
 - **Mechanism:** hostile framing fixes public perception before the system can demonstrate real-world outcomes. Six vectors: social credit framing (Voice and Service Record mischaracterized), elite capture narrative (T-008 provides factual hook), complexity-as-illegitimacy (large constitutional corpus), failure amplification (any operational event), technocracy framing (expertise requirements), and 'untested' (true pre-launch).
 - **Impact:** legitimacy collapse prevents deployment or continuation even if the system is technically functioning correctly. Narrative failure is not recoverable through technical means — it requires sustained communication effort over months to years.
@@ -293,6 +321,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×3×(6-2)=60
+- **Owner:** P7 (Oracle)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** Oracle manipulation attack simultaneously corrupts the sentinel indicator and corroboration source. PCRP two-source requirement is satisfied by two channels carrying the same corrupted data. System activates false emergency, publishes RPCP, then must retract — producing a more damaging narrative event than an unmitigated false trigger.
 - **Impact:** False emergency declared publicly; RPCP retraction proves system can be made to announce fake emergencies; narrative damage exceeds operational harm.
 - **Detection:** Oracle manipulation detection (existing); PCRP oracle independence certification failure (new — AE2.1).
@@ -308,6 +339,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** High
 - **Status:** Active — unproven
 - **Risk Score:** 4×4×(6-3)=48
+- **Owner:** P8 (Oversight)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** Multiple simultaneous crises of different types compete for P-005 throughput floor. All 5 floor slots consumed by one crisis type; second simultaneous crisis receives no guaranteed governance capacity. Unlike T-005 (single-thread paralysis), T-013 is multi-thread competition for a shared minimum-guarantee resource.
 - **Impact:** Identity fraud response, enforcement decisions, or constitutional matters queue without guaranteed floor during compound emergencies — exactly when they are most needed.
 - **Detection:** Categorical floor monitoring — track slot consumption by category per quarter.
@@ -323,6 +357,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×2×(6-3)=30
+- **Owner:** P8 + Judiciary
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** Mandatory emergency decision simultaneously blocked by: (a) sequential emergency cap audit requirement (P-005); (b) CRP split defaulting to upward Tier 2 classification; (c) P-008 cohort cooling understaffing the audit body. No authorized actor has both authority and capacity to resolve within survivable timeframes. A designed attack could deliberately engineer all three conditions simultaneously.
 - **Impact:** Mandatory emergency decision cannot be made; survival floor at risk if Level 4 continuity provisions are not explicitly activated during deadlock.
 - **Detection:** Low (L=2) — requires simultaneous independent conditions. Deadlock auto-declaration (AE2.3) creates first detection mechanism.
@@ -338,6 +375,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** High
 - **Status:** Active — unproven
 - **Risk Score:** 4×3×(6-2)=48
+- **Owner:** P7 (Oracle)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** Essential Access redemption velocity oracle and other demand-sensitive measurement systems cannot distinguish genuine supply shocks from demand surges caused by: Flow enforcement unwinds; mass re-verification campaigns; coordinated spending by issuance-capture entities before unwind. Demand spikes trigger supply-shortage responses (PCRP, reserve release) that are wrong for the actual condition.
 - **Impact:** False PCRP activated during enforcement action; Essential Access issuance reduced during period when supply is actually adequate but demand is elevated. Double-deprivation risk: enforcement reduces Flow availability while false PCRP reduces Essential Access availability simultaneously.
 - **Detection:** Demand-context register (new — AE2.4); cross-reference velocity signal against active enforcement action registry.
@@ -353,6 +393,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×3×(6-2)=60
+- **Owner:** P8 (Oversight)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Note on threat class:** T-016 is a second-order threat — it targets the process that activates all other patches rather than the patches themselves. Capturing T-016 is equivalent to capturing the system's ability to evolve. A system whose acceptance process is captured cannot fix itself.
 - **Mechanism:** Five exploit classes operating on the FAP: (1) Evidence Farming — piloting in favorable regions that produce clean metrics by construction, not by proof. (2) Sign-Off Deadlocker — coordinated bloc holds positions across two sign-off authorities, orchestrates procedurally correct disagreement, produces indefinite paralysis. (3) Urgency Exploiter — creates genuine operational pressure to waive evidence requirements; precedent established once becomes normalized. (4) Audit Captor — auditors who satisfy the conflict-of-interest rule but share the designers' interpretive framework (intellectual-cousin exploit). (5) Stagnation Filer — files technically valid documentation of 'why pilot remains impossible' indefinitely without resolution.
 - **Impact:** No PROPOSED patches ever reach ACTIVE. The system is frozen at its current design state indefinitely. Or: patches reach ACTIVE through compromised evidence, producing controls that fail under adversarial conditions at scale. The FAP creates a new power locus — whoever controls the four sign-off authorities controls system evolution.
@@ -370,6 +413,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven
 - **Risk Score:** 5×3×(6-3)=45
+- **Owner:** P8 + Founding Coalition
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Note on threat class:** T-017 is a third-order threat: it does not attack the system directly (first order) or the patch acceptance process (second order, T-016). It attacks the ability to activate the patch that hardens the acceptance process. It is an existential threat to system evolution if unresolved — the entire PROPOSED patch stack is permanently frozen without it.
 - **Mechanism:** P-013 governs the Formal Acceptance Protocol — the acceptance process that would normally activate it. Using the unhardened process to activate P-013 (the hardening patch) is structurally incoherent: the evidence standard, audit independence requirements, and sign-off concentration controls that P-013 introduces are not operative during its own activation. This creates three specific exploits: (1) Procedural Objection Loop — any actor can correctly object that the prior acceptance process does not satisfy P-013's standards, blocking activation indefinitely with technically valid objections. (2) Exception-as-Precedent — a founding exception to activate P-013, if not explicitly sealed, becomes authority for urgency bypass of other patches. (3) Founding Capture Window — during the prior activation process, before P-013's controls are operative, the sign-off cluster can be populated with intellectual cousins.
 - **Impact:** Without resolution: all 10 PROPOSED patches remain frozen permanently. The system is locked at its current design state. With uncontrolled resolution: a founding exception normalizes urgency bypass, defeating P-013's core purpose before it takes effect.
@@ -391,6 +437,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Status:** Active — unproven — attestation-vector residual addressed by P-024 / Annex AS (FC-080/081/082, 2026-04-18 Proposal 9 close-out). False-trigger-at-scale remains with P-015.
 - **Severity:** High
 - **Risk Score:** 4×3×(6-3)=36
+- **Owner:** P7 (Oracle)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** P-006 introduces false-trigger tracking: 3 false PCRP activations within 4 quarters triggers a mandatory independent audit. A coordinated actor *deliberately engineers* 3 false triggers in rapid succession to (a) trigger an audit that consumes governance bandwidth, (b) drain the system's capacity to respond during a concurrent genuine crisis, or (c) exhaust the 3-trigger threshold so operators hesitate to activate PCRP during a real supply shock.
 - **Impact:** PCRP hesitation during a genuine supply shock; governance bandwidth drain; audit as a distraction weapon during compound crises.
 - **Detection:** D=3. Coordination-pattern flag on back-to-back PCRP activations within short windows detectable post-hoc.
@@ -407,6 +456,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** High
 - **Status:** Active — unproven (P-015 / Annex AP; criteria in Annex AI §4.12)
 - **Risk Score:** 4×3×(6-2)=48
+- **Owner:** P7 (Oracle) + Federated Ombuds
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Note:** Identified as residual risk in T-015 (P-012 AE2.4) but requires separate registration — distinct mechanism and control profile.
 - **Mechanism:** A coordinated actor *initiates a small, technically valid enforcement action* strategically timed to activate the demand-context flag, which then blocks PCRP Ombuds co-certification during a genuine supply shock. The enforcement action itself causes no significant harm; its purpose is flag activation to suppress emergency response.
 - **Impact:** PCRP blocked during a genuine supply shock. Potential double-deprivation: enforcement reduces Flow availability while false demand-context flag reduces Essential Access availability simultaneously.
@@ -428,6 +480,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven — P-017 ACTIVE + Annex AL ACTIVE + FC-030/FC-031/FC-032/FC-033 bound; methodology pilots and adversarial standards review still required before evidence-backed resolution.
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** P7 (Oracle)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** A well-resourced actor does not manipulate oracle outputs directly (addressed by T-012). Instead, they fund and shape the *methodological standards bodies* that define what counts as valid measurement for RCS accreditation. Three pipelines: (1) Standards Funding — sustained funding of the academic and technical bodies that define housing price indices, nutritional equivalence standards, and care-delivery measurement frameworks, gradually orienting methodology toward favorable outputs. (2) Peer Review Capture — dominating the journals and conference venues whose approval is required for methodological legitimacy. (3) Technical Vocabulary Absorption — introducing new technical terms through legitimate standards processes that encode favorable assumptions without appearing to change definitions. None of these require illegal action or direct oracle contact.
 - **Impact:** Oracle outputs are systematically biased while satisfying all formal independence requirements. The measurement layer reports what the captor wants while appearing to report physical reality. Every downstream system (Essential Access issuance, Shared Storehouse activation, RCS confidence bands) is corrupted. T-012 (oracle independence) and T-015 (demand-context) protections become ineffective because the manipulation precedes the data, not the channel.
 - **Detection:** D=2 (very low). Epistemic monoculture is invisible under current monitoring. Methodological homogeneity across formally independent oracle nodes is not currently tracked. The P-008 concentration dashboard (PROPOSED) tracks human diversity; it does not track *methodological* diversity.
@@ -444,6 +499,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven — P-017 ACTIVE + Annex AL §4.2 (AI supply-chain concentration threshold = 2) + FC-030/FC-031 bound; physical sampling pilots and AI supply-chain audit required before evidence-backed resolution.
 - **Risk Score:** 5×3×(6-2)=60
+- **Owner:** P7 (Oracle)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** The measurement layer is a concentration point for AI-driven manipulation at scale. A sophisticated actor who controls training data, model weights, or fine-tuning pipelines for any RCS measurement system can produce oracle outputs that satisfy formal independence requirements (different institutions, different hardware, different personnel) while being systematically biased through shared upstream AI infrastructure. Three specific attack surfaces: (1) Training Data Poisoning — gradual corruption of the historical datasets used to train forecasting models, producing models that systematically underestimate or overestimate specific categories. (2) Model Weight Manipulation — supply chain compromise of pre-trained model components used across multiple oracle nodes. (3) Shared API Exploitation — multiple "independent" oracle nodes that rely on a common commercial AI API introduce a shared dependency that is not visible in institutional independence audits.
 - **Impact:** Systematic measurement bias that passes oracle independence certification because the manipulation precedes the institutional layer. The oracle system reports false physical capacity with high internal consistency (making cross-publisher divergence detection fail). Shared Storehouse activations, Essential Access issuance, and PCRP triggers are all corrupted. This attack is increasingly realistic as measurement systems adopt ML pipelines.
 - **Detection:** D=2. Standard oracle independence checks do not examine upstream AI infrastructure. The attack is only detectable through cross-methodology comparison (T-020 mitigation) or direct audit of AI supply chains — neither of which is currently required.
@@ -455,15 +513,18 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-022 — Electoral Cycle Capture
 
-- **Patch:** [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · [ANNEX_AM.md](../annexes/ANNEX_AM.md) · Status: **PROPOSED**
+- **Patch:** [P-051 — Constitutional Integrity Panel (CIP)](../governance/Patch_Log.md) · [ANNEX_AM.md § AM8](../annexes/ANNEX_AM.md) · Status: **ACTIVE** (primary structural control); related: [P-018 — Electoral Cycle Resilience](../governance/Patch_Log.md) · [ANNEX_AM.md](../annexes/ANNEX_AM.md) · Status: **PROPOSED** (supplement)
 - **Layer:** Constitutional architecture / political durability
 - **Severity:** Critical
-- **Status:** Designed (P-018 / Annex AM PROPOSED)
+- **Status:** Active — unproven (P-051 / Annex AM §AM8 ACTIVE primary control; P-018 PROPOSED supplement; no field evidence yet)
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** Constitutional Integrity Panel (CIP)
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** The protocol assumes durable institutional commitment from the political coalitions that implement it. It does not model what happens when a hostile successor government — one that campaigned against the protocol — wins a democratic election and has both the political mandate and the institutional access to dismantle or hollow out the architecture. Four specific routes: (1) Direct Constitutional Repeal — the Tier 1 invariants are designed to resist this, but constitutional repeal via supermajority is legally possible. (2) Administrative Hollowing — the successor government does not formally repeal anything; it appoints adversarial actors to founding institutions, defunds oracle nodes, and stops publishing post-mortems until the system becomes non-functional without any formal change. (3) Jurisdictional Fragmentation — the successor government transfers authority to sub-jurisdictional entities that are not bound by the protocol. (4) Treaty Override — the successor government signs international agreements that require modifications to the non-convertibility architecture as a condition of participation, triggering Tier 3 changes that accumulate into Tier 2 impact (T-012 cumulative drift trigger, applied to treaty obligations). The amendment ladder (Tier 1/2/3) was calibrated for incremental drift, not organized political reversal.
 - **Impact:** The most complete failure mode. If a hostile successor government succeeds in dismantling the protocol through legal means, the system has no recovery path short of a new founding moment — with all the bootstrap problems that entails (T-017 recurrence). The people who depended on Essential Access floor guarantees face sudden withdrawal after having structured their lives around the system.
 - **Detection:** D=3. Electoral outcomes are public. The threat is visible in advance through normal political monitoring. The problem is not detection but *structural response*.
-- **Mitigation direction:** P-018 PROPOSED: (1) Entrenchment ladder — Tier 1 invariants require not just supermajority legislative amendment but concurrent ratification by an independent constitutional body (not appointable by the current governing coalition). (2) Essential Access floor minimum persistence — regardless of political change, a minimum Essential Access floor (70% of founding basket) is constitutionally self-executing: it does not require legislative appropriation and cannot be suspended by executive action. (3) Administrative hollowing triggers — if a founding institution is unfilled for >90 days, or if post-mortem publication lapses for >30 days, or if oracle accreditation count drops below a specified minimum, an automatic constitutional review is triggered that does not require the governing coalition's initiation. (4) Transition continuity protocol — when a new governing coalition takes office, a mandatory 180-day transition audit is required before any changes to Tier 2 or Tier 1 provisions. The audit is conducted by the constitutional body, not the incoming government. See Annex AM.
+- **Mitigation direction:** P-051 ACTIVE (primary): the Constitutional Integrity Panel (Annex AM §AM8) is a 7-member independent body with staggered terms, constitutionally fixed funding (0.01% of annual Flow issuance), multi-body appointment structure that prevents governing-coalition control, a 5-of-7 quorum requirement for Tier 1 ratification, and automatic review triggers on institutional vacancy or publication lapse — the structural answer to administrative hollowing and concurrent-ratification entrenchment. P-018 PROPOSED (supplement): (1) Entrenchment ladder — Tier 1 invariants require not just supermajority legislative amendment but concurrent ratification by an independent constitutional body (not appointable by the current governing coalition). (2) Essential Access floor minimum persistence — regardless of political change, a minimum Essential Access floor (70% of founding basket) is constitutionally self-executing: it does not require legislative appropriation and cannot be suspended by executive action. (3) Administrative hollowing triggers — if a founding institution is unfilled for >90 days, or if post-mortem publication lapses for >30 days, or if oracle accreditation count drops below a specified minimum, an automatic constitutional review is triggered that does not require the governing coalition's initiation. (4) Transition continuity protocol — when a new governing coalition takes office, a mandatory 180-day transition audit is required before any changes to Tier 2 or Tier 1 provisions. The audit is conducted by the constitutional body, not the incoming government. See Annex AM.
 - **Open problem:** A government with sufficient political will can repeal constitutional entrenchment. The designed defense buys time and raises the political cost; it cannot prevent determined repeal. The residual risk is that the protocol's durability depends on political culture as well as constitutional design.
 - **Compound linkages:** T-022 × T-011 (hostile electoral narrative is a T-011 attack that succeeds — T-022 is T-011 operating through democratic channels). T-022 × T-008 (elite formation inside founding institutions may accelerate administrative hollowing if the elite aligns with the successor government). T-022 × T-016 (a hostile government can capture the FAP by appointing aligned sign-off authorities). T-022 × T-017 (a successful T-022 attack requires a new founding moment — recursive bootstrap problem).
 
@@ -476,6 +537,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Med-High
 - **Status:** Active — unproven (P-019 / Annex AN)
 - **Risk Score:** 4×4×(6-4)=32
+- **Owner:** P8 + Oversight
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Note on impact:** The risk score understates the consequence of acting on false confidence. A scale-up decision based on a pilot that did not include crisis conditions is not a statistical error — it is a structural commitment that may be irreversible.
 - **Mechanism:** T-016 (FAP Capture) addresses evidence farming — deliberately piloting in favorable regions. T-023 is distinct: an *honest* pilot that succeeds, is genuinely representative, and produces valid evidence — but in a pre-crisis period. The evidence base does not include: (a) economic shock or recession; (b) compound supply disruption across multiple categories simultaneously; (c) an organized political opposition campaign against the system; (d) a hostile successor government transition; (e) a technology failure in an oracle or identity system at scale. When the system is deployed at scale and the first real compound crisis hits, the pilot evidence does not apply. This is the fundamental problem of external validity in social systems: controlled conditions do not generalize to adversarial conditions.
 - **Impact:** Scale-up proceeds based on Year 1 smooth-operation data. Year 3 encounters the first genuine compound crisis. The system's untested responses fail at scale in ways the pilot never revealed. The narrative attack (N-008: "too complex to work") is now supported by evidence.
@@ -499,6 +563,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** Critical
 - **Status:** Active — unproven — P-022 ACTIVE + Annex AQ ACTIVE + FC-100 `ORACLE_QUORUM_LOSS_RESTORATION_WINDOW` = 14 days (Proposal 6 close-out, 2026-04-18); no field evidence yet
 - **Risk Score:** 5×4×(6-3)=60
+- **Owner:** P7 (Oracle) + REB
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Mechanism:** The existing oracle architecture (T-006 / P-006) addresses measurement lag and measurement manipulation. It does not address the specific failure mode where Shared Storehouse rationing is already active and the oracle system then fails completely — going dark, losing quorum, or entering an unresolvable dispute. In that state: (a) the system has no authoritative measurement of whether the shortage is improving, stable, or worsening; (b) the conservative default (maintain access during disputes) conflicts with the Shared Storehouse architecture (rationing was activated because supply is genuinely constrained); (c) there is no designated decision-maker with defined authority to escalate, de-escalate, or hold Shared Storehouse without oracle confirmation; (d) the 90-day Shared Storehouse maximum has no mechanism to renew or lapse when the renewal justification cannot be verified.
 - **Impact:** Shared Storehouse rationing either continues without verification (potentially prolonging restriction after recovery) or lapses without verification (potentially removing rationing during ongoing shortage). Both outcomes are harmful; neither is currently governed. If oracle failure is deliberate (manufactured during active Shared Storehouse), the attacker can force either a false lapse or a false extension depending on which default the system applies.
 - **Detection:** D=4 — oracle failure is observable; the gap is the absence of a decision protocol, not a hidden event.
@@ -515,6 +582,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Severity:** High
 - **Status:** Active — unproven — P-023 (contract-commitment architecture, zero exemptions); no field evidence yet
 - **Risk Score:** 4×4×(6-3)=48
+- **Owner:** P2 (Housing/Flow) + P8
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** Demurrage (idle Flow decay) is designed to discourage passive hoarding and rentier accumulation. The threat: any investment-channel exemption from demurrage creates a classification that capital-intensive sectors (construction, infrastructure, heavy industry) can exploit. Firms apply for project-account status, escrow windows, or term-pool designation not to build productive capacity but to park Flow without decay. The exemption designed for productive planning becomes a hoarding instrument with a legitimating label. Four specific mechanisms: (1) *Project account cycling* — a firm maintains a continuous chain of overlapping project accounts, each nominally productive, such that no Flow balance ever becomes "idle." (2) *Escrow window abuse* — firms use escrow windows to hold balances during periods of market uncertainty, effectively suspending demurrage during adverse conditions. (3) *Infrastructure designation capture* — lobbying to broaden the definition of "infrastructure" to include asset classes economically closer to rent-extraction than productive construction. (4) *Subsidiary fragmentation* — a single economic actor fragments into multiple legal entities, each holding a project account, collectively holding far more demurrage-exempt Flow than any single entity would be permitted.
 - **Impact:** Demurrage fails to break passive accumulation among sophisticated actors while continuing to penalise unsophisticated savers (workers, small enterprises) who cannot access investment-channel exemptions. This recreates the wealth concentration the protocol was designed to prevent, through the mechanism designed to prevent it.
 - **Detection:** D=3 — investment channel utilisation is observable in aggregate; cycling and fragmentation patterns are detectable with cross-entity tracking.
@@ -550,40 +620,62 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - Compound threat linkages must be logged in both threat entries when identified.
 - Detectability scores must be reviewed quarterly — new monitoring infrastructure (e.g., P-008 concentration dashboard) may raise D scores and reduce risk scores.
 
+### Review Cadence, Staleness & Lapse Log
+
+This register carries the same review discipline its constitutional anchors require (Annex B; Annex C §C-4, §C-5). Every threat carries a named Owner, a Last-reviewed date, and a Trend indicator, and each is bound to a fixed review cadence.
+
+**Per-threat review cadence.** Each threat is reviewed on a quarterly cadence: its I/L/D scores are re-scored, its evidence package is checked against its validity date, and its Owner, Last-reviewed date, and Trend are refreshed. Continuous monitoring and monthly control-health review run more frequently than this decision cycle; a system-wide red-team exercise and constraint review run annually. The Trend indicator is recorded independently of the static score, because a threat may hold the same number while its residual risk rises, falls, or holds steady — an escalating threat (capture, narrative, oracle, Sybil-at-scale) must not present the same frozen figure as a contained one. Any contradiction between Trend and score is itself a finding and is reconciled at review.
+
+**Staleness rule — stale evidence counts as no evidence.** A threat whose Last-reviewed date has aged past its review cadence, or whose evidence package has lapsed its validity date without renewal, is **stale**. A stale threat reverts to a **degraded, unverified status**: its prior score and its controls lose standing until the review is completed and fresh evidence is filed. No threat may be reported as having passing controls while any of its cadence obligations are overdue. A register that silently freezes manufactures the false assurance this discipline exists to prevent, so staleness is treated as a reportable condition, not a quiet gap.
+
+**Lapse Log.** Missed reviews and lapsed evidence packages are recorded here in an audit-visible table, escalated to Independent Oversight, and cleared only when the review or evidence is refreshed. The log is part of the public record; an empty log is a claim that must itself be verifiable, not an assumption.
+
+| Date noted | Threat ID | Lapse type (missed review / lapsed evidence) | Owner at lapse | Degraded status applied | Escalated to | Resolved date |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| _none recorded_ | — | — | — | — | — | — |
+
+### Owner Vacancy and No-Silent-Waiver Rules
+
+These rules mirror Annex C §C-2 (roles and ownership) and §C-7 (readiness gates).
+
+**No accountability role sits empty.** When a threat's Owner role is vacated, it must be reassigned to a named successor within 10 business days. While the role is vacant, accountability defaults upward to Independent Oversight, which holds it as interim Owner and records the vacancy. If the role remains unfilled past the deadline, every threat under it reverts to a degraded, unverified status until a successor is named, and the lapse is escalated to oversight and recorded in the Lapse Log. The same time-to-reassign and default-escalation rule applies to any delegated control or test/monitoring ownership beneath the Threat Owner.
+
+**No silent waiver of a pilot or scale gate.** Any exception to a pilot or scale-readiness gate for a registered threat requires a named approver with authority to grant it, a written justification, an explicit expiry after which the exception lapses, and an audit-visible record of the waiver. An unrecorded or anonymous waiver is void, and any gate it purported to clear is treated as unmet. This keeps gate exceptions visible and time-bounded rather than allowing launch pressure to erode the readiness discipline silently.
+
 ---
 
 ## Complete Register Summary
 
-| ID | Title | Severity | Status | Patch | Score |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| T-001 | Shadow Convertibility | **Critical** | **Active — unproven** | P-001 | 60 |
-| T-002 | Identity Exploits | **Critical** | **Active — unproven** | P-003 | 60 |
-| T-004 | Incentive Collapse | **Critical** | **Active — unproven** | P-002 | 48 |
-| T-007 | Definition Drift | **Critical** | **Active — unproven** | P-004 | 60 |
-| T-005 | Governance Throughput | High | **Active — unproven** | P-005 | 40 |
-| T-006 | Measurement Lag | **Critical** | **Active — unproven** | P-006 | 60 |
-| T-008 | Bureaucratic Elite | High | **Active — unproven** | P-008 | 64 |
-| T-009 | Grace Exploitation | Med-High | **Active — unproven** | P-009 | 48 |
-| T-011 | Narrative Surface | **Critical** | **Active — unproven** | P-011 | 80 |
-| T-012 | PCRP Oracle Poisoning | **Critical** | **Active — unproven** | P-012 | 60 |
-| T-013 | Throughput Starvation | High | **Active — unproven** | P-012 | 48 |
-| T-014 | Triple Deadlock | **Critical** | **Active — unproven** | P-012 | 30 |
-| T-015 | Demand Oracle Poisoning | High | **Active — unproven** | P-012 | 48 |
-| T-016 | FAP Capture | **Critical** | **Active — unproven** | P-013 | 60 |
-| T-017 | Bootstrap Problem | **Critical** | **Active — unproven** | P-014 / P-020 | 45 |
-| T-018 | PCRP False-Trigger Exhaustion | High | **Active — unproven** | P-015 | 36 |
-| T-019 | Demand-Context Suppression | High | **Active — unproven** | P-015 | 48 |
-| T-020 | Epistemological Oracle Capture | **Critical** | **Active — unproven** | P-017 | 60 |
-| T-021 | Algorithmic Oracle Capture | **Critical** | **Active — unproven** | P-017 | 60 |
-| T-022 | Electoral Cycle Capture | **Critical** | **Designed** | P-018 | 60 |
-| T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | P-019 | 32 |
-| T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | P-022 | 60 |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | P-023 | 48 |
-| T-026 | Exit Denial | **Critical** | **Active — unproven** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 |
-| T-027 | Subsidiarity Violation | High | **Active — unproven** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 |
-| T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from using essential-sector control to coerce the protocol or enrolled persons. | 72 |
+| ID | Title | Severity | Status | Patch | Score | Owner | Last reviewed | Trend |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| T-001 | Shadow Convertibility | **Critical** | **Active — unproven** | P-001 | 60 | P8 + Essential Access/Identity | 2026-05-01 *(placeholder)* | Steady |
+| T-002 | Identity Exploits | **Critical** | **Active — unproven** | P-003 | 60 | P3 (Identity) | 2026-05-01 *(placeholder)* | Rising |
+| T-004 | Incentive Collapse | **Critical** | **Active — unproven** | P-002 | 48 | P4 (Voice & Service Record) | 2026-05-01 *(placeholder)* | Steady |
+| T-007 | Definition Drift | **Critical** | **Active — unproven** | P-004 | 60 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Rising |
+| T-005 | Governance Throughput | High | **Active — unproven** | P-005 | 40 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Steady |
+| T-006 | Measurement Lag | **Critical** | **Active — unproven** | P-006 | 60 | P7 (Oracle) + P8 | 2026-05-01 *(placeholder)* | Rising |
+| T-008 | Bureaucratic Elite | High | **Active — unproven** | P-008 | 64 | P8 + Oversight | 2026-05-01 *(placeholder)* | Rising |
+| T-009 | Grace Exploitation | Med-High | **Active — unproven** | P-009 | 48 | P4 (Voice & Service Record) | 2026-05-01 *(placeholder)* | Steady |
+| T-011 | Narrative Surface | **Critical** | **Active — unproven** | P-011 | 80 | P8 + Communications | 2026-05-01 *(placeholder)* | Rising |
+| T-012 | PCRP Oracle Poisoning | **Critical** | **Active — unproven** | P-012 | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-013 | Throughput Starvation | High | **Active — unproven** | P-012 | 48 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Steady |
+| T-014 | Triple Deadlock | **Critical** | **Active — unproven** | P-012 | 30 | P8 + Judiciary | 2026-05-01 *(placeholder)* | Steady |
+| T-015 | Demand Oracle Poisoning | High | **Active — unproven** | P-012 | 48 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-016 | FAP Capture | **Critical** | **Active — unproven** | P-013 | 60 | P8 (Oversight) | 2026-05-01 *(placeholder)* | Rising |
+| T-017 | Bootstrap Problem | **Critical** | **Active — unproven** | P-014 / P-020 | 45 | P8 + Founding Coalition | 2026-05-01 *(placeholder)* | Steady |
+| T-018 | PCRP False-Trigger Exhaustion | High | **Active — unproven** | P-015 | 36 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Steady |
+| T-019 | Demand-Context Suppression | High | **Active — unproven** | P-015 | 48 | P7 (Oracle) + Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
+| T-020 | Epistemological Oracle Capture | **Critical** | **Active — unproven** | P-017 | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-021 | Algorithmic Oracle Capture | **Critical** | **Active — unproven** | P-017 | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
+| T-022 | Electoral Cycle Capture | **Critical** | **Active — unproven** | P-051 (CIP, ACTIVE, primary) / P-018 (PROPOSED) | 60 | Constitutional Integrity Panel (CIP) | 2026-05-01 *(placeholder)* | Rising |
+| T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | P-019 | 32 | P8 + Oversight | 2026-05-01 *(placeholder)* | Steady |
+| T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | P-022 | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
+| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | P-023 | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
+| T-026 | Exit Denial | **Critical** | **Active — unproven** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
+| T-027 | Subsidiarity Violation | High | **Active — unproven** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
+| T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | P-050 (CASP, ACTIVE, primary); related P-047/P-048 | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 28 total IDs — 26 active, 2 retired (T-003, T-010). All active threats are at `Active — unproven` or `Designed` status. These counts are design-state counts, not evidence-backed resolution counts. T-022 is `Designed` because P-018 remains PROPOSED; all other active threats have ACTIVE patches and are `Active — unproven`. T-020 and T-021 still require measurement pilots and adversarial methodology review before any evidence-backed resolution claim. T-025 still needs parameter binding and legal/economic testing. T-026 and T-027 remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 28 total IDs — 26 active, 2 retired (T-003, T-010). All active threats are at `Active — unproven` status. These counts are design-state counts, not evidence-backed resolution counts. T-022's primary structural control P-051 (Constitutional Integrity Panel, ANNEX_AM §AM8) is ACTIVE, with P-018 remaining PROPOSED as a supplement; the threat is therefore `Active — unproven` rather than `Designed`. T-020 and T-021 still require measurement pilots and adversarial methodology review before any evidence-backed resolution claim. T-025 still needs parameter binding and legal/economic testing. T-026 and T-027 remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
 
 ---
 
@@ -603,9 +695,12 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Severity:** Critical
 - **Status:** Active — unproven (Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4; no field evidence yet)
 - **Risk Score:** 4×3×(6-2)=48
+- **Owner:** Federated Ombuds
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** A federation subset (captured CRP faction, captured enforcement body, or coordinated infrastructure operators) attempts to block, delay, or corrupt a valid exit event by: (a) refusing to publish the exit proposal on the federation record; (b) withholding Essential Access during the FC-121 730-day unwind, in violation of the unconditional Essential Access-continuity rule; (c) preemptively withdrawing federation infrastructure before day 730+90; (d) filing pretextual enforcement actions against exiting-unit representatives to suppress the exit vote; (e) manipulating the exit impact assessment beyond factual description; (f) refusing to update the drift chain with the exit row; (g) blocking re-apportionment of CRP seats held by delegates from the exiting unit.
 - **Impact:** Defeats the fundamental non-coercion guarantee. An exit right that cannot be exercised is a trapdoor with a false label. A federation that denies exit while retaining the appearance of offering it converts to soft occupation; every internal protection becomes contingent on the captors' willingness to honor it — the exact failure mode the Founding Order was designed to prevent.
-- **Detection:** Medium-high (D=2). Exit events are public drift-chain entries with Ombuds attestation; delay or refusal against a valid exit creates observable procedural-compliance gaps. Most attack surfaces (infrastructure withdrawal, Essential Access withholding) are measurable in real time.
+- **Detection:** Low / hard-to-detect (D=2). Blatant exit events are public drift-chain entries with Ombuds attestation, and the most overt attack surfaces (infrastructure withdrawal, Essential Access withholding) are measurable in real time — but the genuinely dangerous form is slow-motion exit denial, which proceeds through individually compliant conduct and is hard to detect, consistent with the D=2 score.
 - **Mitigation:** Founding Order `exit_protocol.md §Exit Denial — T-026` enumerates prohibited conduct. Annex AI §3.4 auto-convenes the Federated Ombuds Plenum on exit-denial complaints; Plenum finding under FC-091 (4-of-5) triggers Annex AJ §4 severity 3 (Institutional) penalties plus order of specific performance compelling the federation action. Unwind window auto-extends by the period of denial at federation cost (not exiting-unit cost).
 - **Residual risk:** Slow-motion exit denial — federation action that is individually within the rules but cumulatively obstructive (e.g., slow publication, narrowly compliant impact-assessment language that misleads without violating). Mitigated by the drift-chain audit trail and the 180-day deliberation window that gives time for procedural integrity claims to be raised and adjudicated before the vote.
 - **Compound linkages:** T-026 × T-008 (captured elite formation in federation-level bodies is the primary attack surface for exit denial; P-025 Federated Ombuds dispersal is the counter). T-026 × T-022 (hostile successor government attempting exit denial to prevent resource loss). T-026 × T-007 (definition drift around "valid exit vote" standards — bounded by P-004 + publication of FC-120 threshold in Tier 1 architecture).
@@ -619,6 +714,9 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Severity:** High
 - **Status:** Active — unproven (Founding Order `subsidiarity_rule.md` + Annex AI §3.2 challenge; Proportionality Principle; no field evidence yet)
 - **Risk Score:** 3×3×(6-2)=36
+- **Owner:** Federated Ombuds
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Steady
 - **Mechanism:** The federation (or a region acting above its scale competence) decides a matter that is properly resolvable at a smaller scale, imposing uniform rules where scale-appropriate differentiation is competent. Pathway vectors: (a) expanding the "federation-scale by construction" list without Tier 1 amendment; (b) using soft exceptions (cross-unit externality claims, measurement coordination claims) as a routine basis for federation preemption rather than last-resort; (c) declining to express federation rules as floors-plus-local-customization where floor-expression would suffice; (d) inconclusive subsidiarity challenge reviews resolving toward the larger scale despite the default-against-escalation rule; (e) slow erosion of the three-prong competence test through precedent accumulation.
 - **Impact:** The protocol drifts toward centralization without any single amendment being visibly centralizing. Ostrom's principle 2 (rules match local conditions) is violated by default. Units that would have handled matters competently are preempted, reducing local competence over time (principle-erosion feedback loop). The federation's default reach grows; every article that depends on local adaptation (Article III capacity measurement, Article V enterprise scaling, Article I enforcement) loses calibration to local context.
 - **Detection:** Medium (D=2). Requires cross-scale comparison over time — which smaller-scale decisions were preempted when they could have been competent? The Federated Ombuds §4.3 cohort concentration tracking extended to decision-scale concentration (§4.3 "concentration of decision venue at federation scale") provides the detection infrastructure.
@@ -628,10 +726,17 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 
 ### T-028 — Essential-Sector Refusal Leverage
 
+- **Patch:** [P-050 — Compliant Alternative Supplier Pre-Registration (CASP)](../governance/Patch_Log.md) · [ANNEX_AT.md § AT6.6](../annexes/ANNEX_AT.md) · Patch status: **ACTIVE** (primary structural control); related: [P-047 / P-048](../governance/Patch_Log.md) · [ANNEX_AT.md §AT2–AT6.5](../annexes/ANNEX_AT.md)
+- **Layer:** Essential-sector supply / survival-floor delivery / external dependency
+- **Severity:** Critical
+- **Status:** Active — unproven (P-050 / Annex AT §AT6.6 ACTIVE primary control; P-047/P-048 related; no field evidence yet)
+- **Risk Score:** 4×4×(6-2)=72
+- **Owner:** P1 (Essential Access) + P8
+- **Last reviewed:** 2026-05-01 *(placeholder)*
+- **Trend:** Rising
 - **Summary:** A conglomerate controlling essential-sector supply (food, energy, medicine, logistics, data infrastructure) refuses to participate in the protocol's Essential Access delivery unless granted exemptions, reduced obligations, or political concessions. The threat is not market exit — it is survival leverage: holding the CSM floor hostage to extract constitutional concessions.
 - **Mechanism:** The actor controls a chokepoint in a CSM-delivery chain. Refusal to supply (or credible threat thereof) produces emergency political pressure to grant carve-outs, waive concentration rules, or extend favorable contract terms. Each concession normalizes leverage as a negotiating tool.
 - **Detection:** D=2 — refusal events are observable (Essential Access delivery gaps), but distinguishing genuine operational difficulty from strategic leverage requires the supply-chain concentration metrics in the Capture Dashboard and the Essential_Sector_Refusal_Test_Package audit trail.
-- **Severity:** Critical. A successful leverage event undermines non-coercion at the survival floor — the protocol's most fundamental guarantee.
-- **Mitigation direction:** P-047/P-048 (ANNEX_AT §AT2–AT6.5). Primary mitigation: Compliant Alternative Supplier Pre-Registration (CASP — ANNEX_AT §AT6.6) with pre-committed automatic-activation contracts and annual capacity verification; activation is automatic on trigger, not discretionary. Fallback: public receiver authority, compulsory licensing triggers. Also: strategic reserve floors (FC-185–FC-201), multi-supplier mandates, and beneficial-ownership tracing through subcontractors.
+- **Mitigation direction:** P-050 ACTIVE (primary): Compliant Alternative Supplier Pre-Registration (CASP — ANNEX_AT §AT6.6) with pre-committed automatic-activation contracts and annual capacity verification; activation is automatic on trigger, not discretionary. Related P-047/P-048 (ANNEX_AT §AT2–AT6.5) supply: public receiver authority and compulsory licensing triggers as fallback, strategic reserve floors (FC-185–FC-201), multi-supplier mandates, and beneficial-ownership tracing through subcontractors.
 - **Residual risk:** Strategic reserves are provisional (FC-185–FC-193 reserved). CASP pre-committed contracts remove the need for political will in the primary mitigation path; political will is now required only for the fallback public receiver authority if CASP alternatives also fail or refuse. Oracle and measurement capture (ACL-009, ACL-012) could allow a conglomerate to influence supply-chain concentration metrics and avoid Watch/Critical classification. No pilot evidence yet.
 - **Compound linkages:** T-028 × T-007 (definitional capture of "essential sector" and "survival leverage" determines when AT6.5 triggers). T-028 × T-001 (refusal leverage exploits the same Essential Access delivery chain that shadow convertibility targets). T-028 × T-022 (a captured government may decline to invoke public receiver authority).
