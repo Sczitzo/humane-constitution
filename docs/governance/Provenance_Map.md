@@ -102,7 +102,7 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This threat describes legitimate verification and oversight roles hardening into a durable insider class.*
 
-- 🔩 **Patch:** [P-008 — Bureaucratic Elite Formation Hardening](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 🔩 **Patch:** [P-008 — Bureaucratic Elite Formation Hardening](../governance/Patch_Log.md) · Status: **PROPOSED** (superseded for operative authority by P-025, the Federated Ombuds constitution — P-025 is the live control for T-008)
 - 📄 **Constitutional text:** [ANNEX_AC.md § AC3](../annexes/ANNEX_AC.md) — *Annex AC adds legibility audits, diversity requirements, verifier independence, and cohort cooling controls.*
 
 ### T-009 — Grace Exploitation Loop
@@ -213,7 +213,7 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This patch extends T-002 by making identity fraud and exclusion tradeoffs explicit, measured, and governable.*
 
-- 🔩 **Patch:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 🔩 **Patch:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · Status: **PROPOSED** (remains proposed until the founding coalition confirms rate targets after first-year pilot evidence; FC-140 anchors are provisional)
 - 📄 **Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md) — *Annex AK requires a published doctrine for fraud tolerance, vulnerable-population exclusion limits, review triggers, and tradeoff rules.*
 
 ### P-021 — Register Disclosure Protocol

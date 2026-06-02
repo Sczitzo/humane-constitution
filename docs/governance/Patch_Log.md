@@ -28,14 +28,14 @@
 | P-004 | T-007 | **ACTIVE** | Critical | Stop semantic capture through definition governance and anti-laundering rules. |
 | P-005 | T-005 | **ACTIVE** | Critical | Governance throughput: tiered CRP queues, throughput floor, emergency re-declaration. |
 | P-006 | T-006 | **ACTIVE** | Critical | Measurement lag: sentinel mandate, PCRP first-responder authority, Shared Storehouse unwind symmetry. |
-| P-008 | T-008 | **ACTIVE** | High | Elite formation: legibility audit, diversity mandates, verification independence, cohort cooling. |
+| P-008 | T-008 | **PROPOSED** | High | Elite formation: legibility audit, diversity mandates, verification independence, cohort cooling. PROPOSED and superseded for operative authority by P-025 (Federated Ombuds constitution); P-025 is the live ACTIVE control for T-008. |
 | P-009 | T-009 | **ACTIVE** | Med-High | Grace exploitation: graduated renewal, cross-quarter history, collusion detection, Service Record slow-decay. |
 | P-011 | T-011 | **ACTIVE** | Critical | Narrative hardening: RPCP, pre-committed failure doctrine, CFRL, adversarial narrative simulation. |
 | P-012 | T-012–T-015 | **ACTIVE** | Critical | Interface hardening: oracle independence, categorical throughput floors, deadlock protocol, demand-context flag. |
 | P-013 | T-016 | **ACTIVE** | Critical | FAP integrity: representativeness standard, deadlock timeline, audit epistemic independence, anti-gaming Tier 2. |
 | P-014 | T-017 | **ACTIVE** | Critical | Bootstrap activation: one-time founding instrument for P-013 activation only. |
 | P-015 | T-018 / T-019 | **ACTIVE** | High | PCRP attack surface: false-trigger escalation path, exhaustion alert, manufactured flag assessment. |
-| P-016 | T-002 | **ACTIVE** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. |
+| P-016 | T-002 | **PROPOSED** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. Remains PROPOSED until the founding coalition confirms rate targets after first-year pilot evidence; FC-140 anchors are provisional. |
 | P-017 | T-020 / T-021 | **ACTIVE** | Critical | Oracle epistemological and algorithmic independence: methodology-class diversity, AI supply chain transparency, physical ground-truth requirement. Numerical floors (N≥5, ≥3 classes, ≤0.30 pairwise correlation, ≥1 adversarial seat) bound in `/founding/commitments.md` FC-030/FC-031/FC-032/FC-033. |
 | P-018 | T-022 | **PROPOSED** | Critical | Electoral cycle resilience: entrenchment ladder, Essential Access floor minimum persistence, administrative hollowing triggers, transition continuity protocol. |
 | P-019 | T-023 | **ACTIVE** | Med-High | Pilot external validity gate: stress-condition pilot requirement, red-team challenge window, crisis simulation mandate. |
@@ -63,7 +63,7 @@
 | P-042 | — | **ACTIVE** | High | Low-barrier community alert pathway with 30-day acknowledgment and 90-day review trigger (Article VII). |
 | P-043 | Multiple | ACTIVE | High | Logical-analysis corpus corrections — documentary, amendment architecture, definitions, placeholder fill |
 | P-044 | Multiple | ACTIVE | High | Threat-strengthening batch — T-001/T-002/T-004/T-005/T-007/T-018/T-019 mitigation gaps closed |
-| P-045 | T-001 / T-002 / T-004 / T-007 / IC-004 | **ACTIVE** | Critical | Threat resolution batch — threshold derivation, asymmetric exclusion review, contribution floor, protected-term seed list, dignity-only continuity mode |
+| P-045 | T-001 / T-002 / T-004 / T-007 / IC-004 | **ACTIVE** | Critical | Threat-mitigation batch — threshold derivation, asymmetric exclusion review, contribution floor, protected-term seed list, dignity-only continuity mode (threats remain Active — unproven; nothing marked Resolved) |
 | P-046 | Multiple | **ACTIVE** | Critical | Evidence and capture hardening — seven proof artifacts, drift audit, parameter calibration, abuse cases, evidence ladder, founding dossier, and capture dashboard |
 | P-047 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector conglomerate transition — profitable compliant path, refusal survivability tests, public fallback capacity, and numeric evidence anchors |
 | P-048 | T-025 / T-026 / T-027 / external dependency capture | **ACTIVE** | Critical | Essential-sector refusal test package — sector drills, FC-194 through FC-201 calibration rows, Annex AT receiver/licensing triggers, public explainer, and evidence-source expansion |
@@ -81,6 +81,18 @@
 | P-060 | ACL-005 / T-008 | **PROPOSED** | Critical | Founding Team Composition Standard: composition floor (FT-1 through FT-4); 9-seat keyholder allocation with distributed nomination (Seats 3–8 via civil-society organizations approved by adversarial panel member); founder sunset rules (FS-1 through FS-7); Perpetual Humility Review with Humility Declaration. |
 | P-061 | ACL-007 / Power-Wealth Convergence | **PROPOSED** | Critical | Founding Capital Framework: phase targets ($15–22M / $35–55M / $60–90M); 20%/30% funder concentration limits; Capital Steward independent fiduciary; constitutional primacy clause (non-negotiable in all funding agreements); government walk-away rule (4 trigger conditions); CLT land structure; wind-down reserve (6 months EA pre-funded). |
 | P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
+
+---
+
+## Reserved / Never-Assigned Patch IDs
+
+These IDs do not appear in the inventory above. They are recorded here so a reader can distinguish a deliberately skipped number from a lost or missing patch. Mirrors the "Retired and Reserved IDs" table in the Threat Register.
+
+| Patch ID | Status | Reason |
+| :--- | :--- | :--- |
+| P-007 | **RESERVED** | Reserved at numbering; never assigned a patch. The threat work that would have occupied this slot was absorbed into adjacent patches before formal sequencing. No design exists under this ID. |
+| P-010 | **RESERVED** | Reserved at numbering; never assigned a patch. No design exists under this ID. |
+| P-028 | **RESERVED** | Reserved at numbering; never assigned a patch. The economic-governance integration that would have followed P-027 was consolidated into the P-029 through P-033 batch. No standalone design exists under this ID. |
 
 ---
 
@@ -280,12 +292,13 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-008 | T-008 | **ACTIVE** | High | structural + measurement + institutional design |
+| P-008 | T-008 | **PROPOSED** | High | structural + measurement + institutional design |
 
 ### P-008 — Bureaucratic Elite Formation Hardening
 
 **Constitutional text:** [ANNEX_AC.md § AC3](../annexes/ANNEX_AC.md)
 
+- **Status basis:** **PROPOSED.** P-008 is designed but was not accepted as the operative authority for T-008. P-025 (Federated Ombuds constitution) supersedes it and is the live ACTIVE control — see SPECIFICATIONS.md §4.3, which records that P-008 is PROPOSED and P-025 is the operative ACTIVE authority for the 20% sector ceiling. The legibility-audit, diversity, verification-independence, and cohort-cooling designs below are retained as design reference; their operative enforcement runs through P-025.
 - **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **Change type:** structural + measurement + institutional design.
 - **Introduced design:** Legibility gap audit — quarterly Article VI reporting tracks verification approval rate, evidence burden, appeals rate, and abandonment rate by contribution category; 20-point disparity triggers independent process audit (not by incumbent verifier pool). Service Record sector ceiling specification mandate — max 25% per sector, max 35% per identifiable institutional-origin cluster in any Service Record-governed service pool; specified at founding as precondition under Annex N. Epistemic diversity requirement — three-axis standard (institutional origin ≤30%, contribution-type diversity ≥30% informal/care, geography ≥25% non-urban-dense) for all oversight bodies >5 members; pool design requirement. Verification independence rule — verifiers cannot review claims in own primary contribution category; applies to mid-range and above claims. Cooling-off cohort rule — cohort tracking by Ombuds Office; max 2 cohort members sharing review authority over same subject simultaneously. [Ambitious] Qualification standard governance — competence criteria added to P-004 protected terms registry; standard-setting body must include ≥40% from non-qualifying backgrounds. [Ambitious] Real-time concentration dashboard.
@@ -308,7 +321,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 - **Change type:** communication architecture + transparency + pre-commitment doctrine.
 - **Introduced design:** Rapid Public Communication Protocol (RPCP) — 4-hour structured template for any public-visibility operational event; covers what happened, system response, access status, next steps; does not replace 7-day post-mortem; pre-authorized publication authority required. Pre-committed failure communication doctrine — published pre-launch document acknowledging expected failures (PCRP false triggers, oracle disputes, Shared Storehouse activations, enforcement errors, measurement uncertainty) with containment mechanisms; converts failures from surprises to acknowledged expected events. Citizen-Facing Rights Layer (CFRL) — one page, 8th-grade level, pre-launch, translated; governed as P-004 protected specification. Adversarial Narrative Simulation — added to Annex T annual mandate; hostile framing team publishes simulated attack; system responds within 4 hours; report published. Hostile Frame Pre-emption Registry — top 10 mischaracterizations with accurate rebuttals and Article VII evidence; updated quarterly; published as 'Common Misunderstandings.' [Ambitious] Narrative Health Dashboard — public understanding accuracy surveys, hostile framing prevalence index, RPCP response time metric; Level 1 watch auto-trigger. [Ambitious] Pre-Launch Narrative Audit — independent adversarial audit by communications professionals; findings and mitigations published simultaneously.
 - **Clauses to integrate:** RPCP; Pre-Committed Failure Doctrine; CFRL (P-004 protected spec); Adversarial Narrative Simulation (Annex T extension); Hostile Frame Registry. See Annex AD.
-- **Dependencies:** P-008 ACTIVE is prerequisite for elite formation narrative rebuttal. Article VII infrastructure must support 4-hour publication SLA. White Paper sync required before launch (AD6). CFRL added to P-004 protected terms registry.
+- **Dependencies:** Operative elite-formation controls are prerequisite for elite formation narrative rebuttal — these run through P-025 (ACTIVE), the operative authority for T-008, since P-008 is PROPOSED. Article VII infrastructure must support 4-hour publication SLA. White Paper sync required before launch (AD6). CFRL added to P-004 protected terms registry.
 - **New risks introduced:** Pre-committed failure document weaponized to prime failure expectation — mitigated by simultaneous publication of containment mechanisms. CFRL creates false certainty — mitigated by 'Humane Constitution governs' disclaimer. ANS report as hostile playbook — mitigated by publishing after exercise completion. Hostile frame registry amplifies framings — mitigated by 'common misunderstandings' framing.
 - **Residual risk:** Narrative defense is bounded by actual system performance. No communication architecture survives sustained failure. Pre-launch framing window (18+ months before launch) cannot be closed by protocol — only by early CFRL and pre-commitment doctrine deployment.
 - **Compound linkages:** T-011 × T-008 (elite formation is factual hook for 'captured by professionals' narrative; P-008 concentration dashboard is the counter-narrative evidence base). T-011 × T-006 (PCRP false triggers are the highest-visibility predictable failure). T-011 × T-005 (governance paralysis generates narrative events).
@@ -422,13 +435,14 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-016 | T-002 | **ACTIVE** | Critical | constitutional commitment + quantified doctrine |
+| P-016 | T-002 | **PROPOSED** | Critical | constitutional commitment + quantified doctrine |
 
 ### P-016 — Identity Asymmetric Error Doctrine
 
 **Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md)
 
 - **Change type:** constitutional commitment + quantified doctrine.
+- **Status basis:** **PROPOSED.** The doctrine is designed but not yet accepted into the Humane Constitution. It remains PROPOSED until the founding coalition confirms the fraud/exclusion rate targets after first-year pilot evidence; the FC-140 anchors promoted by P-044 are provisional values, not evidence-backed thresholds.
 - **Addresses:** T-002 — calibrating fraud tolerance without making the system unusable for vulnerable populations. Extends P-003.
 - **Introduced design:** The founding coalition must publish and formally adopt an **Asymmetric Error Doctrine** (AED) as a Tier 2 founding commitment before deployment. The AED must specify:
   - (a) Maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record) — expressed as a percentage of enrolled population per quarter, with confidence interval.
@@ -673,36 +687,69 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
+This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-062. Reserved IDs (P-007, P-010, P-028) are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
 | T-001 | P-001 | **ACTIVE** | Annex AB |
-| T-002 | P-003 | **ACTIVE** | Annex AB |
 | T-004 | P-002 | **ACTIVE** | Annex AB |
+| T-002 | P-003 | **ACTIVE** | Annex AB |
 | T-007 | P-004 | **ACTIVE** | Annex AB |
 | T-005 | P-005 | **ACTIVE** | Annex AC1 |
 | T-006 | P-006 | **ACTIVE** | Annex AC2 |
-| T-008 | P-008 | **ACTIVE** | Annex AC3 |
+| T-008 | P-008 | **PROPOSED** | Annex AC3 (superseded for operative authority by P-025) |
 | T-009 | P-009 | **ACTIVE** | Annex AF |
 | T-011 | P-011 | **ACTIVE** | Annex AD |
 | T-012–T-015 | P-012 | **ACTIVE** | Annex AE |
 | T-016 | P-013 | **ACTIVE** | Annex AG |
 | T-017 | P-014 | **ACTIVE** | Annex AH |
 | T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
-| T-002 | P-016 | **ACTIVE** | Annex AK |
+| T-002 | P-016 | **PROPOSED** | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
 | T-022 | P-018 | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **ACTIVE** | Annex AN |
 | T-017 | P-020 | **ACTIVE** | Annex AH2 |
-| — | P-021 | **ACTIVE** | Annex AO |
+| structural — no threat row (register disclosure protocol) | P-021 | **ACTIVE** | Annex AO |
 | T-024 | P-022 | **ACTIVE** | Annex AQ · FC-100 |
 | T-025 | P-023 | **ACTIVE** | Annex AR |
 | T-009 / TR-07 / T-018 | P-024 | **ACTIVE** | Annex AS · FC-080/081/082 |
 | T-008 | P-025 | **ACTIVE** | Annex AI · FC-090/091/092 |
 | T-026 / T-027 | P-026 | **ACTIVE** | `founding/order/` · FC-120/121/122 |
 | T-005 / T-008 | P-027 | **ACTIVE** | `Humane_Constitution.md` · `docs/public/04_white_paper.md` |
+| T-016 (public-funding architecture) | P-029 | **ACTIVE** | Annex X §X8 |
+| PRD-004 | P-030 | **ACTIVE** | Annex X |
+| PRD-009 | P-031 | **ACTIVE** | Annex J §R1–R2 |
+| PRD-009 | P-032 | **ACTIVE** | Annex J |
+| PRD-008 | P-033 | **ACTIVE** | Annex J |
+| T-016 / INV-007 | P-034 | **ACTIVE** | Annex AV |
+| structural — no threat row (corrigibility/humility clause) | P-035 | **ACTIVE** | Preamble · §0A |
+| structural — no threat row (keyholder servanthood duty) | P-036 | **ACTIVE** | Article I |
+| structural — no threat row (identity-serves-person clause) | P-037 | **ACTIVE** | Article II |
+| T-006 | P-038 | **ACTIVE** | Article III |
+| structural — no threat row (mutual-aid/family/religious protection) | P-039 | **ACTIVE** | Article IV |
+| structural — no threat row (housing-cap pastoral revision) | P-040 | **ACTIVE** | Article V |
+| T-008 | P-041 | **ACTIVE** | Article VI |
+| structural — no threat row (community alert pathway) | P-042 | **ACTIVE** | Article VII |
+| T-001 / T-002 / T-004 / T-007 | P-043 | **ACTIVE** | ANNEX_AH · ANNEX_Y · INVARIANTS · SPECIFICATIONS |
+| T-001 / T-002 / T-004 / T-005 / T-007 / T-018 / T-019 | P-044 | **ACTIVE** | ANNEX_AI · ANNEX_AP · ANNEX_AB · ANNEX_AK · ANNEX_Y |
+| T-001 / T-002 / T-004 / T-007 / IC-004 | P-045 | **ACTIVE** | ANNEX_AB · ANNEX_AK · ANNEX_AH §AH5.1 |
+| T-001 / T-002 / T-007 / T-008 / T-016 (evidence + capture hardening) | P-046 | **ACTIVE** | evidence artifacts · capture dashboard |
+| T-025 / T-026 / T-027 (external dependency capture) | P-047 | **ACTIVE** | Annex AT |
+| T-025 / T-026 / T-027 (external dependency capture) | P-048 | **ACTIVE** | Annex AT · FC-194–FC-201 |
+| T-025 / T-026 / T-027 (cross-register evidence-gap bridge) | P-049 | **ACTIVE** | Hardening Queue · Open Problems · Pilot Roadmap · README |
 | T-028 | P-050 | **ACTIVE** | ANNEX_AT §AT6.6 |
 | T-022 | P-051 | **ACTIVE** | ANNEX_AM §AM8 |
 | T-019 | P-052 | **ACTIVE** | ANNEX_AI §4.12 |
+| Insider retaliation / reporter protection | P-053 | **ACTIVE** | ANNEX_AW · Article VII |
+| Identity disclosure as safety vector | P-054 | **ACTIVE** | ANNEX_AX · Article II |
+| Delivery gap between guarantee and operation | P-055 | **ACTIVE** | ANNEX_AY · Article IV |
+| T-002 / INV-001 | P-056 | **PROPOSED** | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
+| ACL-011 / ACL-010 | P-057 | **PROPOSED** | Pilot site selection criteria |
+| T-016 / constitutional void | P-058 | **PROPOSED** | Jurisdiction Interface Clause |
+| ACL-010 / T-027 | P-059 | **PROPOSED** | Vulnerable_Population_Consent_Protocol.md |
+| ACL-005 / T-008 | P-060 | **PROPOSED** | Founding Team Composition Standard |
+| ACL-007 / Power-Wealth Convergence | P-061 | **PROPOSED** | Founding Capital Framework |
+| ACL-011 / ACL-010 | P-062 | **PROPOSED** | Pilot Timeline Framework |
 
 ---
 
@@ -1022,13 +1069,13 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 - **CLAUDE.md** — Corrected "Provenance_Map.md is planned" → "serves as" (file already exists).
 - **Patch_Log.md P-005** — Advanced from PROPOSED to ACTIVE: ANNEX_AC1 design is complete; residual risks (sub-panel capture, throughput theater) are acknowledged and monitored.
 
-**New risks introduced:** None — gap closures and clarifications only.
+**New risks introduced:** This batch promoted statuses and bound provisional fraud-rate anchors, and that introduces residual risk. (1) Premature reliance — readers may treat the promoted statuses (e.g. P-005 advanced to ACTIVE) as field-tested rather than designed-and-monitored. (2) Provisional-anchor confusion — the FC-140 fraud-rate anchors (≤0.5% target, 1.0% upper bound) are provisional pre-launch values and may be mistaken for proven or evidence-backed thresholds. (3) Calibration drift — anchors set before pilot confirmation can drift or be quietly normalized as "the number" before any pilot evidence validates them. Mitigated by: the provisional labelling on every anchor, the pre-launch blocking gates, and the residual-risk note below.
 
 **Residual risk:** FC-140 through FC-150 remain provisional pending pilot data. P-016 remains PROPOSED until the founding coalition confirms rate targets after first-year pilot evidence.
 
 ---
 
-### P-045 — Threat Resolution Batch
+### P-045 — Threat-Mitigation Batch
 
 **Threats addressed:** T-001, T-002, T-004, T-007, IC-004  
 **Status:** ACTIVE | **Priority:** Critical  
