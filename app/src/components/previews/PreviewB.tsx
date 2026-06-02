@@ -17,7 +17,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { CorpusPayload, CorpusDoc } from '../../generated/corpus'
 import { parseMarkdown, type MarkdownBlock } from '../../lib/markdown'
-import { buildRefLookup } from '../RefChipShared'
 
 const MONO_READING = '"Courier New", "Lucida Console", monospace'
 const MONO_UI      = '"IBM Plex Mono", "Courier New", monospace'
@@ -49,13 +48,11 @@ function Inline({ text, footnotes, onAddFootnote }: {
       parts.push(<em key={key}>{tok.slice(1, -1)}</em>)
     } else {
       const n = onAddFootnote(tok, tok)
-      const existing = footnotes.find(f => f.key === tok)
       parts.push(
         <sup key={key} title={tok} style={{ fontSize: '0.68em', color: AMBER, fontFamily: MONO_UI, fontWeight: 700, cursor: 'default', verticalAlign: 'super' }}>
           [{n}]
         </sup>
       )
-      void existing // prevent unused warning
     }
     last = m.index + tok.length
   }
@@ -168,9 +165,6 @@ export function PreviewB({ corpus }: { corpus: CorpusPayload }) {
   const [scrollPct, setScrollPct] = useState(0)
   const readerRef = useRef<HTMLDivElement>(null)
   const cmdRef = useRef<HTMLInputElement>(null)
-  const refLookup = useMemo(() => buildRefLookup(corpus.docs), [corpus])
-  void refLookup
-
   const doc = useMemo(() => corpus.docs.find(d => d.id === selectedId) ?? corpus.docs[0], [corpus, selectedId])
   const blocks = useMemo(() => doc ? parseMarkdown(doc) : [], [doc])
 
