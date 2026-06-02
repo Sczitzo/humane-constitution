@@ -42,6 +42,8 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 **Implementation:** The two-tier access model (ANNEX_AK §AK8) operationalizes this invariant by separating non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments). Tier 0 access is open-access or pseudonymous; no real-world identity is ever a precondition for receiving a CSM allocation.
 
+**Anonymity for safety:** A person may freely and reversibly choose to remain unidentified for their own safety. That choice costs only civic Voice — never survival, never dignity, and never the ability to report harm or seek help through the Ombuds or safety-shielded path. Voice requires confirmed identity solely to resist Sybil capture (INV-004); it is the single instrument so gated. A person may confirm identity to gain Voice at any time, and return to anonymity if safety requires. Voicelessness chosen for safety is not a penalty, and it creates no class deprived of survival, dignity, or redress.
+
 ---
 
 ## INV-002 — Instrument Non-Convertibility
@@ -91,9 +93,11 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 **Mechanical boundary:** Essential Access issued ≤ verified physical capacity at time of issuance. The capacity figure must be confirmed by at least one Tier-3 (physical sampling) oracle node.
 
-**Plain grounding:** A system cannot feed, house, or treat people with promises on paper. It needs real capacity: food, shelter, healthcare, and transit that can actually be delivered. Essential Access must be tied to that real-world capacity, not to forecasts, loans, prices, or political confidence. At least one oracle must use direct physical checking so the numbers cannot drift away from reality. *(Philosophical grounding: Wolf, Economic Trilogy Part 1: Foundation, 2026)*
+**Plain grounding:** A system cannot feed, house, or treat people with promises on paper. It needs real capacity: food, shelter, healthcare, and transit that can actually be delivered. Essential Access must be tied to that real-world capacity, not to forecasts, loans, prices, or political confidence. At least one oracle must use direct physical checking so the numbers cannot drift away from reality. *(Cited descriptively, not as binding authority: Wolf, Economic Trilogy Part 1: Foundation, 2026 — one influence among the evidence base, subordinate to this document's own corrigibility.)*
 
 **Why this matters:** If Essential Access is issued without real capacity behind it, it becomes only a promise. The survival floor would look valid on paper while failing in real life.
+
+**Reconciliation with INV-001 under genuine scarcity.** INV-001 (survival ≥ CSM at all times) and INV-005 (issuance ≤ verified physical capacity) can appear to collide when real capacity falls below aggregate CSM need. They do not in fact contradict; together they forbid the two dishonest responses to famine. The system may not issue survival claims against capacity that does not exist (INV-005 holds — no fictional tokens), and it may not abandon any person to zero while real capacity exists (INV-001 holds — no one is cut off so that others are filled). When verified capacity is insufficient for the full floor, the available real capacity is distributed by equal share to need — the manna rule, "he that gathered much had nothing over, and he that gathered little had no lack" — a System Failure is declared honestly (ANNEX_Y §Y4) rather than concealed, and a named human bears accountability for the response (INV-011). What is forbidden absolutely is silence: the system may not represent the floor as met when it is not. This is a confessed hard case, not a solved one (see Open Question).
 
 **Attack vectors that target this invariant:** T-006 (measurement lag), T-012 (PCRP oracle poisoning), T-020/T-021 (epistemological/algorithmic oracle capture), T-024 (Shared Storehouse oracle failure)
 
@@ -146,7 +150,7 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), above-ledger bypass routes
 
-**Progressive net-worth demurrage:** Concentrated wealth holdings above the household savings floor (S) carry a progressive annual demurrage charge calibrated to approach the expected return on capital at the equilibrium ceiling (W\*). This is a public carrying cost on the *stock* of net worth — not a tax on income or labor — and is constitutional under Article V. The rate function, consolidated beneficial ownership rules, and corporate unassigned-balance demurrage are specified in [ANNEX_AZ](../annexes/ANNEX_AZ.md). Demurrage revenue routes to the Essential Access commons pool and public infrastructure. No credit offset is permitted; holdings through nominees, trusts, or shell structures are attributed to the ultimate beneficial owner.
+**Progressive net-worth demurrage:** Concentrated wealth holdings above the household savings floor (S) carry a progressive annual demurrage charge calibrated to approach the expected return on capital at the equilibrium ceiling (W\*). This is a public carrying cost on the *stock* of net worth — not a tax on income or labor — and is constitutional under Article V. The rate function, consolidated beneficial ownership rules, and corporate unassigned-balance demurrage are specified in [ANNEX_D](../annexes/ANNEX_D.md), the sole carrying-cost instrument on accumulated wealth. Demurrage revenue routes to the Essential Access commons pool and public infrastructure. No credit offset is permitted; holdings through nominees, trusts, or shell structures are attributed to the ultimate beneficial owner.
 
 ---
 
@@ -220,6 +224,8 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 
 **Why this matters:** [FC-YT1](../annexes/ANNEX_Y.md#y4-csm-failure-as-critical-incident) and [FC-YT2](../annexes/ANNEX_Y.md#y7-interaction-with-other-articles) are the tripwires that convert survival-floor failures into constitutional emergencies. Launching without them means the system can experience CSM failures with no automatic escalation path. People can fall through the floor and the governance architecture has no mechanism to respond.
 
+**Relationship to INV-001's "at all times."** This gate is what gives INV-001's "at all times" its operative force. Until FC-YT1 and FC-YT2 are bound and independently verified, the survival floor has no automatic escalation behind it, so the system may not extend survival-floor access to real persons and then claim a guarantee it cannot yet keep — until then, the honest statement is that the floor is *designed, not yet operative*. INV-LAUNCH-1 is a one-time activation condition, not a perpetual operating rule: it is satisfied permanently once cleared at genesis, after which INV-001 governs. It is placed in this core because the floor's promise must have force before any person relies on it.
+
 **Attack vectors that target this invariant:** Founding-coalition time pressure to launch before evidence is ready; informal tolerance of unconfirmed parameters during transition
 
 ---
@@ -243,3 +249,8 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 ## Open Question
 
 The invariants in this document are themselves subject to the bootstrap problem (T-017): their authority derives from the founding instrument (P-014), which was itself constituted by a founding coalition whose legitimacy cannot be fully grounded without circularity. This is documented as a known residual risk, not a resolved problem. See Acceptance_Protocol.md Section 2 and Threat_Register.md T-017.
+
+Two further hard cases are named here rather than concealed, in keeping with the same honesty — for a contradiction confessed is safer than a contradiction hidden:
+
+- **The scarcity collision (INV-001 vs INV-005).** In genuine famine the unconditional floor and the reality-anchoring cap point in opposite directions. The reconciliation under INV-005 (equal-share-to-need, honest System-Failure declaration, named accountability) is the system's answer for *how* an insufficiency is faced; it does not make the food exist, and it does not pretend to. This remains a confessed limit, not a solved problem.
+- **The activation dependency (INV-001 vs INV-LAUNCH-1).** INV-001 promises survival "at all times," yet that promise has no operative force until the FC-YT1/FC-YT2 tripwires are bound. INV-LAUNCH-1 exists precisely so the guarantee is never extended to real persons before it can be kept; until then the honest statement is that the floor is designed, not yet operative.
