@@ -232,18 +232,51 @@ export function RefChip({ refKey, display, fallback }: { refKey: string; display
 // ─── Static doc phrase definitions ────────────────────────────────────────────
 
 const DOC_PHRASE_DEFS: Array<{ phrases: string[]; path: string }> = [
+  // ── Core governance registers ─────────────────────────────────────────────
   { phrases: ['Claims Evidence Register', 'Claims and Evidence Register'], path: 'docs/governance/Claims_Evidence_Register.md' },
-  { phrases: ['Pilot Evidence Roadmap'], path: 'docs/governance/Pilot_Evidence_Roadmap.md' },
+  { phrases: ['Hardening Queue'], path: 'docs/governance/Hardening_Queue.md' },
+  { phrases: ['Patch Log'], path: 'docs/governance/Patch_Log.md' },
+  { phrases: ['Threat Register'], path: 'docs/governance/Threat_Register.md' },
   { phrases: ['Threat Resolution Matrix'], path: 'docs/governance/Threat_Resolution_Matrix.md' },
+  { phrases: ['Provenance Map'], path: 'docs/governance/Provenance_Map.md' },
+  { phrases: ['Pilot Evidence Roadmap'], path: 'docs/governance/Pilot_Evidence_Roadmap.md' },
   { phrases: ['Open Problems Docket', 'Open Problems Resolution Docket'], path: 'docs/governance/Open_Problems_Resolution_Docket.md' },
+  { phrases: ['Parameter Calibration Register'], path: 'docs/governance/Parameter_Calibration_Register.md' },
+  { phrases: ['External Evidence Register'], path: 'docs/governance/External_Evidence_Register.md' },
+  { phrases: ['Evidence Ladder'], path: 'docs/governance/Evidence_Ladder.md' },
+  { phrases: ['Architecture Source Map'], path: 'docs/governance/Architecture_Source_Map.md' },
+  { phrases: ['Collapse-State Crosswalk', 'Collapse State Crosswalk'], path: 'docs/governance/Collapse_State_Crosswalk.md' },
+  { phrases: ['Abuse Case Library'], path: 'docs/governance/Abuse_Case_Library.md' },
+  { phrases: ['Fairness Vignette Library'], path: 'docs/governance/Fairness_Vignette_Library.md' },
+  { phrases: ['Implementation Drift Audit Package', 'Implementation Drift Audit'], path: 'docs/governance/Implementation_Drift_Audit_Package.md' },
+  { phrases: ['Jurisdiction Interface Clause'], path: 'docs/governance/Jurisdiction_Interface_Clause.md' },
+  // ── Evidence test packages ────────────────────────────────────────────────
+  { phrases: ['Capacity Measurement Evidence Test Package', 'Capacity Measurement Evidence Test'], path: 'docs/governance/Capacity_Measurement_Evidence_Test_Package.md' },
+  { phrases: ['Identity and Recovery Evidence Test Package', 'Identity Recovery Evidence Test Package', 'Identity and Recovery Evidence Test'], path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md' },
+  { phrases: ['Essential-Sector Refusal Test Package', 'Essential Sector Refusal Test Package', 'Essential-Sector Refusal Test'], path: 'docs/governance/Essential_Sector_Refusal_Test_Package.md' },
+  { phrases: ['Demurrage Evidence and Test Package', 'Demurrage Evidence Test Package'], path: 'docs/governance/Demurrage_Evidence_Test_Package.md' },
+  { phrases: ['Service Record Misuse Evidence Test Package', 'Service Record Misuse Evidence Test'], path: 'docs/governance/Service_Record_Misuse_Evidence_Test_Package.md' },
+  { phrases: ['Capture Dashboard Specification'], path: 'docs/governance/Capture_Dashboard_Specification.md' },
+  { phrases: ['Vulnerable Population Consent Protocol', 'VPCP'], path: 'docs/governance/Vulnerable_Population_Consent_Protocol.md' },
+  // ── Founding & legitimacy dossiers ────────────────────────────────────────
+  { phrases: ['Founding Legitimacy Dossier'], path: 'docs/governance/Founding_Legitimacy_Dossier.md' },
+  { phrases: ['Conglomerate Transition Dossier'], path: 'docs/governance/Conglomerate_Transition_Dossier.md' },
+  { phrases: ['Founding Disclosure', 'Pre-Activation Disclosure', 'Founding Pre-Activation Disclosure'], path: 'docs/governance/Founding_Preactivation_Disclosure.md' },
+  { phrases: ['Founding Capital Framework'], path: 'docs/governance/Founding_Capital_Framework.md' },
+  { phrases: ['Founding Team Composition Standard'], path: 'docs/governance/Founding_Team_Composition_Standard.md' },
+  // ── Pilot & timeline ─────────────────────────────────────────────────────
+  { phrases: ['Pilot Site Selection Criteria'], path: 'docs/governance/Pilot_Site_Selection_Criteria.md' },
+  { phrases: ['Pilot Timeline Framework'], path: 'docs/governance/Pilot_Timeline_Framework.md' },
+  // ── Simulations ───────────────────────────────────────────────────────────
+  { phrases: ['Adversarial Narrative Simulation'], path: 'docs/simulations/Adversarial_Narrative_Simulation.md' },
+  { phrases: ['Annual Compound Simulation'], path: 'docs/simulations/Annual_Compound_Simulation.md' },
+  // ── Constitution & founding order ─────────────────────────────────────────
   { phrases: ['Acceptance Protocol'], path: 'docs/constitution/Acceptance_Protocol.md' },
   { phrases: ['Humane Constitution'], path: 'docs/constitution/Humane_Constitution.md' },
-  { phrases: ['Founding Disclosure', 'Pre-Activation Disclosure'], path: 'docs/governance/Founding_Preactivation_Disclosure.md' },
-  { phrases: ['Hardening Queue'], path: 'docs/governance/Hardening_Queue.md' },
-  { phrases: ['Provenance Map'], path: 'docs/governance/Provenance_Map.md' },
-  { phrases: ['Threat Register'], path: 'docs/governance/Threat_Register.md' },
+  { phrases: ['INVARIANTS', 'Constitutional Invariants'], path: 'docs/constitution/INVARIANTS.md' },
+  { phrases: ['SPECIFICATIONS', 'Formal System Specifications'], path: 'docs/constitution/SPECIFICATIONS.md' },
+  { phrases: ['Founding Order'], path: 'founding/order/README.md' },
   { phrases: ['Annex Index'], path: 'docs/annexes/INDEX.md' },
-  { phrases: ['Patch Log'], path: 'docs/governance/Patch_Log.md' },
 ]
 
 // ─── buildRefLookup ───────────────────────────────────────────────────────────

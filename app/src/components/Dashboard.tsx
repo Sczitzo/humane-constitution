@@ -235,7 +235,7 @@ function renderTextWithHighlights(text: string, query: string, keyPrefix: string
 }
 
 // Pattern that matches ref tokens we want to chip-ify in plain text
-const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1,3}\d*|ANNEX\s+[A-Z]{1,3}\d*|FC-\d+)\b/g
+const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1,3}\d*|ANNEX\s+[A-Z]{1,3}\d*|FC-\d+)|(§[A-Z]{0,3}\d+(?:\.\d+)*)/g
 
 /**
  * Expand shorthand multi-ref sequences before tokenising.
@@ -247,8 +247,12 @@ const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1
  * Works for any prefix (T, P, FC, TR, PRD, INV).
  */
 function expandShorthandRefs(text: string): string {
+  // -1. Normalise underscore-separated annex refs used throughout corpus prose:
+  //     ANNEX_AW → Annex AW, ANNEX_AC1 → Annex AC1, etc.
+  let out = text.replace(/\bANNEX_([A-Z]{1,3}\d*)\b/g, 'Annex $1')
+
   // 0. Plural annexes: "Annexes M, AL, AQ" → "Annex M, Annex AL, Annex AQ"
-  let out = text.replace(
+  out = out.replace(
     /\bAnnexes\s+((?:[A-Z]{1,3}\d*(?:[,\s]+|(?=[^,\s])))+)/g,
     (_m, rest) => rest.split(/[,\s]+/).filter(Boolean).map((c: string) => `Annex ${c}`).join(', ')
   )
@@ -280,18 +284,51 @@ function expandShorthandRefs(text: string): string {
 
 // Static doc phrase definitions for prose auto-linking
 const DOC_PHRASE_DEFS: Array<{ phrases: string[]; path: string }> = [
+  // ── Core governance registers ─────────────────────────────────────────────
   { phrases: ['Claims Evidence Register', 'Claims and Evidence Register'], path: 'docs/governance/Claims_Evidence_Register.md' },
-  { phrases: ['Pilot Evidence Roadmap'], path: 'docs/governance/Pilot_Evidence_Roadmap.md' },
+  { phrases: ['Hardening Queue'], path: 'docs/governance/Hardening_Queue.md' },
+  { phrases: ['Patch Log'], path: 'docs/governance/Patch_Log.md' },
+  { phrases: ['Threat Register'], path: 'docs/governance/Threat_Register.md' },
   { phrases: ['Threat Resolution Matrix'], path: 'docs/governance/Threat_Resolution_Matrix.md' },
+  { phrases: ['Provenance Map'], path: 'docs/governance/Provenance_Map.md' },
+  { phrases: ['Pilot Evidence Roadmap'], path: 'docs/governance/Pilot_Evidence_Roadmap.md' },
   { phrases: ['Open Problems Docket', 'Open Problems Resolution Docket'], path: 'docs/governance/Open_Problems_Resolution_Docket.md' },
+  { phrases: ['Parameter Calibration Register'], path: 'docs/governance/Parameter_Calibration_Register.md' },
+  { phrases: ['External Evidence Register'], path: 'docs/governance/External_Evidence_Register.md' },
+  { phrases: ['Evidence Ladder'], path: 'docs/governance/Evidence_Ladder.md' },
+  { phrases: ['Architecture Source Map'], path: 'docs/governance/Architecture_Source_Map.md' },
+  { phrases: ['Collapse-State Crosswalk', 'Collapse State Crosswalk'], path: 'docs/governance/Collapse_State_Crosswalk.md' },
+  { phrases: ['Abuse Case Library'], path: 'docs/governance/Abuse_Case_Library.md' },
+  { phrases: ['Fairness Vignette Library'], path: 'docs/governance/Fairness_Vignette_Library.md' },
+  { phrases: ['Implementation Drift Audit Package', 'Implementation Drift Audit'], path: 'docs/governance/Implementation_Drift_Audit_Package.md' },
+  { phrases: ['Jurisdiction Interface Clause'], path: 'docs/governance/Jurisdiction_Interface_Clause.md' },
+  // ── Evidence test packages (appear frequently in governing reference columns) ─
+  { phrases: ['Capacity Measurement Evidence Test Package', 'Capacity Measurement Evidence Test'], path: 'docs/governance/Capacity_Measurement_Evidence_Test_Package.md' },
+  { phrases: ['Identity and Recovery Evidence Test Package', 'Identity Recovery Evidence Test Package', 'Identity and Recovery Evidence Test'], path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md' },
+  { phrases: ['Essential-Sector Refusal Test Package', 'Essential Sector Refusal Test Package', 'Essential-Sector Refusal Test'], path: 'docs/governance/Essential_Sector_Refusal_Test_Package.md' },
+  { phrases: ['Demurrage Evidence and Test Package', 'Demurrage Evidence Test Package'], path: 'docs/governance/Demurrage_Evidence_Test_Package.md' },
+  { phrases: ['Service Record Misuse Evidence Test Package', 'Service Record Misuse Evidence Test'], path: 'docs/governance/Service_Record_Misuse_Evidence_Test_Package.md' },
+  { phrases: ['Capture Dashboard Specification'], path: 'docs/governance/Capture_Dashboard_Specification.md' },
+  { phrases: ['Vulnerable Population Consent Protocol', 'VPCP'], path: 'docs/governance/Vulnerable_Population_Consent_Protocol.md' },
+  // ── Founding & legitimacy dossiers ────────────────────────────────────────
+  { phrases: ['Founding Legitimacy Dossier'], path: 'docs/governance/Founding_Legitimacy_Dossier.md' },
+  { phrases: ['Conglomerate Transition Dossier'], path: 'docs/governance/Conglomerate_Transition_Dossier.md' },
+  { phrases: ['Founding Disclosure', 'Pre-Activation Disclosure', 'Founding Pre-Activation Disclosure'], path: 'docs/governance/Founding_Preactivation_Disclosure.md' },
+  { phrases: ['Founding Capital Framework'], path: 'docs/governance/Founding_Capital_Framework.md' },
+  { phrases: ['Founding Team Composition Standard'], path: 'docs/governance/Founding_Team_Composition_Standard.md' },
+  // ── Pilot & timeline ─────────────────────────────────────────────────────
+  { phrases: ['Pilot Site Selection Criteria'], path: 'docs/governance/Pilot_Site_Selection_Criteria.md' },
+  { phrases: ['Pilot Timeline Framework'], path: 'docs/governance/Pilot_Timeline_Framework.md' },
+  // ── Simulations ───────────────────────────────────────────────────────────
+  { phrases: ['Adversarial Narrative Simulation'], path: 'docs/simulations/Adversarial_Narrative_Simulation.md' },
+  { phrases: ['Annual Compound Simulation'], path: 'docs/simulations/Annual_Compound_Simulation.md' },
+  // ── Constitution & founding order ─────────────────────────────────────────
   { phrases: ['Acceptance Protocol'], path: 'docs/constitution/Acceptance_Protocol.md' },
   { phrases: ['Humane Constitution'], path: 'docs/constitution/Humane_Constitution.md' },
-  { phrases: ['Founding Disclosure', 'Pre-Activation Disclosure'], path: 'docs/governance/Founding_Preactivation_Disclosure.md' },
-  { phrases: ['Hardening Queue'], path: 'docs/governance/Hardening_Queue.md' },
-  { phrases: ['Provenance Map'], path: 'docs/governance/Provenance_Map.md' },
-  { phrases: ['Threat Register'], path: 'docs/governance/Threat_Register.md' },
+  { phrases: ['INVARIANTS', 'Constitutional Invariants'], path: 'docs/constitution/INVARIANTS.md' },
+  { phrases: ['SPECIFICATIONS', 'Formal System Specifications'], path: 'docs/constitution/SPECIFICATIONS.md' },
+  { phrases: ['Founding Order'], path: 'founding/order/README.md' },
   { phrases: ['Annex Index'], path: 'docs/annexes/INDEX.md' },
-  { phrases: ['Patch Log'], path: 'docs/governance/Patch_Log.md' },
 ]
 
 // phrase (lowercase) → target path, used to detect self-references
@@ -319,7 +356,7 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
   REF_TOKEN_PATTERN.lastIndex = 0
   let rm: RegExpExecArray | null = REF_TOKEN_PATTERN.exec(expanded)
   while (rm) {
-    const raw = rm[1]
+    const raw = (rm[1] ?? rm[2]) as string  // group 1: named refs, group 2: §section refs
     const key = raw.replace(/^ANNEX\s+/i, 'Annex ')
     allMatches.push({ index: rm.index, end: REF_TOKEN_PATTERN.lastIndex, raw, key })
     rm = REF_TOKEN_PATTERN.exec(expanded)
@@ -353,7 +390,14 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
     if (m.index > last) {
       result.push(...renderTextWithHighlights(expanded.slice(last, m.index), query, `${keyPrefix}-pre-${m.index}`))
     }
-    result.push(<RefChip key={`${keyPrefix}-chip-${m.index}`} refKey={m.key} display={m.raw} />)
+    // Section refs (§X.Y) that have no lookup entry should still render as a
+    // styled monospace span rather than unstyled plain text.
+    const sectionFallback = m.raw.startsWith('§') ? (
+      <code key={`${keyPrefix}-sect-${m.index}`} className="rounded-md bg-[rgba(60,54,46,0.08)] px-1.5 py-0.5 font-mono text-[0.88em] text-[var(--ink-strong)]">
+        {m.raw}
+      </code>
+    ) : undefined
+    result.push(<RefChip key={`${keyPrefix}-chip-${m.index}`} refKey={m.key} display={m.raw} fallback={sectionFallback} />)
     last = m.end
   }
   if (last < expanded.length) {
@@ -486,39 +530,66 @@ function parseTable(lines: string[]): { headers: string[]; rows: string[][] } | 
 
 type StatusMeta = { badgeClass: string; rowClass: string; label: string }
 // Headers that indicate a column carries status/level values eligible for badge rendering.
-const STATUS_HEADER_RE = /status|level|evidence|severity|priority|state|type|risk/i
+const STATUS_HEADER_RE = /status|level|evidence|severity|priority|state|type|risk|governing/i
 
 const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
-  { pattern: /^ACTIVE-UNPROVEN$/i,           meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
-  { pattern: /^ACTIVE$/i,                    meta: { badgeClass: 's-active',          rowClass: 'row-active',          label: 'ACTIVE' } },
-  { pattern: /^ADDRESSED\*?$/i,              meta: { badgeClass: 's-addressed',       rowClass: 'row-addressed',       label: 'ADDRESSED' } },
-  { pattern: /^RESOLVED$/i,                  meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'RESOLVED' } },
-  { pattern: /^EVIDENCE-BACKED$/i,           meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'EVIDENCE-BACKED' } },
-  { pattern: /^CLOSED$/i,                    meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'CLOSED' } },
-  { pattern: /^DESIGNED$/i,                  meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'DESIGNED' } },
-  { pattern: /^PROPOSED$/i,                  meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'PROPOSED' } },
-  { pattern: /^PARTIAL$/i,                   meta: { badgeClass: 's-partial',         rowClass: 'row-partial',         label: 'PARTIAL' } },
-  { pattern: /^OPEN$/i,                      meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'OPEN' } },
-  { pattern: /^ONGOING$/i,                   meta: { badgeClass: 's-ongoing',         rowClass: 'row-ongoing',         label: 'ONGOING' } },
-  { pattern: /^FOUNDING$/i,                  meta: { badgeClass: 's-founding',        rowClass: 'row-founding',        label: 'FOUNDING' } },
-  { pattern: /UNRESOLVED PREREQUISITE/i,     meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'UNRESOLVED PREREQUISITE' } },
-  { pattern: /NEEDS EVIDENCE/i,              meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'NEEDS EVIDENCE' } },
-  { pattern: /PARTLY TESTED/i,               meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'PARTLY TESTED' } },
-  { pattern: /MORAL COMMITMENT/i,            meta: { badgeClass: 's-moral',           rowClass: 'row-moral',           label: 'MORAL COMMITMENT' } },
-  { pattern: /ACTIVE-UNPROVEN CONTROL/i,     meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
-  { pattern: /DESIGNED MECHANISM|DESIGNED DIRECTION|DESIGNED CONTROL|DESIGNED$/i, meta: { badgeClass: 's-designed', rowClass: 'row-designed', label: 'DESIGNED' } },
-  { pattern: /^\*\*Critical\*\*$/i,    meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
+  // ── Core corpus vocabulary (CLAUDE.md canonical set) ───────────────────────
+  // Normalised input: em/en dashes already converted to hyphens by cleanStatusCell.
+  { pattern: /^Active-unproven$/i,           meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'Active — unproven' } },
+  { pattern: /^Active$/i,                    meta: { badgeClass: 's-active',          rowClass: 'row-active',          label: 'Active' } },
+  { pattern: /^Resolved$/i,                  meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'Resolved' } },
+  { pattern: /^Evidence-backed$/i,           meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'Evidence-backed' } },
+  { pattern: /^Designed$/i,                  meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /^Proposed$/i,                  meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'Proposed' } },
+  { pattern: /Partly tested/i,               meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'Partly tested' } },
+
+  // ── Extended status variants found across corpus ───────────────────────────
+  { pattern: /^Addressed\*?$/i,              meta: { badgeClass: 's-addressed',       rowClass: 'row-addressed',       label: 'Addressed' } },
+  { pattern: /^Closed$/i,                    meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'Closed' } },
+  { pattern: /^Partial$/i,                   meta: { badgeClass: 's-partial',         rowClass: 'row-partial',         label: 'Partial' } },
+  { pattern: /^Open$/i,                      meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'Open' } },
+  { pattern: /^Ongoing$/i,                   meta: { badgeClass: 's-ongoing',         rowClass: 'row-ongoing',         label: 'Ongoing' } },
+  { pattern: /^Founding$/i,                  meta: { badgeClass: 's-founding',        rowClass: 'row-founding',        label: 'Founding' } },
+  { pattern: /^Superseded$/i,                meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'Superseded' } },
+  { pattern: /^Retired$/i,                   meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'Retired' } },
+
+  // ── Claims Evidence Register / Hardening Queue compound statuses ───────────
+  { pattern: /Active-unproven control/i,     meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'Active — unproven' } },
+  { pattern: /Unresolved prerequisite/i,     meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'Unresolved prerequisite' } },
+  { pattern: /Needs evidence/i,              meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs evidence' } },
+  { pattern: /Needs simulation/i,            meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs simulation' } },
+  { pattern: /Needs proof/i,                 meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs proof' } },
+  { pattern: /Needs drills/i,                meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs drills' } },
+  { pattern: /Moral commitment/i,            meta: { badgeClass: 's-moral',           rowClass: 'row-moral',           label: 'Moral commitment' } },
+  { pattern: /Designed mechanism/i,          meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /Designed direction/i,          meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /Designed control/i,            meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /Not ready/i,                   meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'Not ready' } },
+  { pattern: /Working prototype/i,           meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'Working prototype' } },
+
+  // ── Issue types (governance docs) ─────────────────────────────────────────
+  { pattern: /^Defect$/i,                    meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'Defect' } },
+  { pattern: /^Structural gap$/i,            meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'Structural gap' } },
+  { pattern: /^Improvement$/i,               meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Improvement' } },
+  { pattern: /^Uncertain$/i,                 meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'Uncertain' } },
+
+  // ── Severity / priority levels ─────────────────────────────────────────────
   { pattern: /^Critical$/i,            meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
-  { pattern: /^\*\*Med-High\*\*$/i,    meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
   { pattern: /^Med-High$/i,            meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
-  { pattern: /^\*\*High\*\*$/i,        meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
   { pattern: /^High$/i,                meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
   { pattern: /^Medium$/i,              meta: { badgeClass: 's-medium',   rowClass: '',             label: 'Medium' } },
   { pattern: /^Low$/i,                 meta: { badgeClass: 's-low',      rowClass: '',             label: 'Low' } },
 ]
 
 function cleanStatusCell(cell: string): string {
-  return cell.replace(/\*\*/g, '').replace(/`/g, '').trim().replace(/\s+/g, ' ')
+  return cell
+    .replace(/\*\*/g, '')
+    .replace(/`/g, '')
+    .trim()
+    .replace(/\s+/g, ' ')
+    // Normalise em-dash (—) and en-dash (–) to hyphen so patterns above don't
+    // need separate em-dash variants. "Active — unproven" → "Active-unproven".
+    .replace(/\s*[—–]\s*/g, '-')
 }
 
 function matchStatus(cell: string): StatusMeta | null {
@@ -1108,6 +1179,308 @@ function MarkdownDocument({
   )
 }
 
+/* ============================================================
+ * DocListPanel — Scholar left column: section picker + 2-tab panel (Docs / Topics).
+ * Reading Paths moved to header dropdown in Layout.tsx.
+ * ============================================================ */
+
+// Section options for the top picker — excludes topics/paths/settings
+// which are handled by the tab strip.
+const SECTION_OPTIONS: Array<{ id: AppView; label: string }> = [
+  { id: 'home',         label: 'Home' },
+  { id: 'constitution', label: 'Constitution' },
+  { id: 'annexes',      label: 'Annexes' },
+  { id: 'registries',   label: 'Threats & Patches' },
+  { id: 'validation',   label: 'Validation' },
+]
+
+type PanelTab = 'docs' | 'topics'
+
+function DocListPanel({
+  docs,
+  allDocs,
+  selectedId,
+  onSelect,
+  readDocIds,
+  view,
+  onViewChange,
+}: {
+  docs: CorpusDoc[]
+  allDocs: CorpusDoc[]
+  selectedId: string | null
+  onSelect: (doc: CorpusDoc) => void
+  readDocIds: string[]
+  view: AppView
+  onViewChange: (v: AppView) => void
+}) {
+  const [tab, setTab] = useState<PanelTab>('docs')
+  const [sectionOpen, setSectionOpen] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  // Close section dropdown on outside click
+  useEffect(() => {
+    if (!sectionOpen) return
+    function onPointer(e: PointerEvent) {
+      if (sectionRef.current && !sectionRef.current.contains(e.target as Node)) {
+        setSectionOpen(false)
+      }
+    }
+    document.addEventListener('pointerdown', onPointer)
+    return () => document.removeEventListener('pointerdown', onPointer)
+  }, [sectionOpen])
+
+  const sectionLabel = SECTION_OPTIONS.find(s => s.id === view)?.label ?? view
+
+  // Unique topics sorted by doc count, computed once from the full corpus.
+  const allTopics = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const doc of allDocs) {
+      for (const t of getDocTopics(doc)) {
+        counts.set(t, (counts.get(t) ?? 0) + 1)
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag, count]) => ({ tag, count }))
+  }, [allDocs])
+
+  if (!docs.length && tab === 'docs') return null
+
+  const TABS: Array<{ id: PanelTab; label: string }> = [
+    { id: 'docs',   label: 'Docs'   },
+    { id: 'topics', label: 'Topics' },
+  ]
+
+  const itemStyle = (active: boolean, read = false): React.CSSProperties => ({
+    padding: '0.46rem 1rem',
+    border: 'none',
+    width: '100%',
+    textAlign: 'left',
+    cursor: 'pointer',
+    fontFamily: 'var(--font-serif)',
+    fontSize: '0.81em',
+    lineHeight: 1.45,
+    background: active ? 'rgba(159,108,49,0.09)' : 'transparent',
+    color: active ? 'var(--accent-deep)' : read ? 'var(--ink-soft)' : 'var(--ink)',
+    borderLeft: active ? '2px solid var(--accent)' : '2px solid transparent',
+    transition: 'all 0.1s',
+    display: 'block',
+  })
+
+  return (
+    <nav
+      aria-label="Navigation panel"
+      className="hidden xl:flex xl:flex-col"
+      style={{ width: 212, flexShrink: 0, borderRight: '1px solid var(--line)' }}
+    >
+      {/* ── Section picker ── */}
+      <div ref={sectionRef} style={{ position: 'relative', padding: '0.6rem 0.65rem 0.55rem', borderBottom: '1px solid var(--line)' }}>
+        <button
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded={sectionOpen}
+          onClick={() => setSectionOpen(o => !o)}
+          style={{
+            display: 'flex', width: '100%', alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0.28rem 0.6rem',
+            background: 'rgba(159,108,49,0.06)',
+            border: '1px solid var(--line-strong)',
+            borderRadius: 5, cursor: 'pointer',
+            fontFamily: 'var(--font-mono)', fontSize: '0.69em',
+            letterSpacing: '0.07em', textTransform: 'uppercase',
+            color: 'var(--ink-soft)', transition: 'border-color 0.15s',
+          }}
+        >
+          <span style={{ color: 'var(--ink-strong)', fontWeight: 600 }}>{sectionLabel}</span>
+          <svg aria-hidden="true" viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            <path d="M2 4l4 4 4-4" />
+          </svg>
+        </button>
+        {sectionOpen && (
+          <div
+            role="listbox"
+            aria-label="Select section"
+            style={{
+              position: 'absolute', top: 'calc(100% + 2px)',
+              left: '0.65rem', right: '0.65rem', zIndex: 60,
+              background: 'var(--paper-strong)',
+              border: '1px solid var(--line-strong)',
+              borderRadius: 7,
+              boxShadow: '0 8px 28px rgba(0,0,0,0.22)',
+              overflow: 'hidden',
+            }}
+          >
+            {SECTION_OPTIONS.map(s => (
+              <button
+                key={s.id}
+                role="option"
+                aria-selected={view === s.id}
+                type="button"
+                onClick={() => { onViewChange(s.id); setSectionOpen(false) }}
+                style={{
+                  display: 'block', width: '100%', textAlign: 'left',
+                  padding: '0.45rem 0.75rem', border: 'none',
+                  background: view === s.id ? 'rgba(159,108,49,0.1)' : 'transparent',
+                  color: view === s.id ? 'var(--accent-deep)' : 'var(--ink)',
+                  fontFamily: 'var(--font-ui)', fontSize: '0.83em',
+                  cursor: 'pointer', transition: 'background 0.1s',
+                  fontWeight: view === s.id ? 600 : 400,
+                  borderLeft: view === s.id ? '2px solid var(--accent)' : '2px solid transparent',
+                }}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* ── Tab strip ── */}
+      <div style={{ display: 'flex', borderBottom: '1px solid var(--line)', padding: '0.5rem 0.75rem 0' }}>
+        {TABS.map(t => (
+          <button
+            key={t.id}
+            type="button"
+            aria-selected={tab === t.id}
+            role="tab"
+            onClick={() => setTab(t.id)}
+            style={{
+              flex: 1,
+              padding: '5px 2px 6px',
+              border: 'none',
+              background: 'transparent',
+              color: tab === t.id ? 'var(--accent-deep)' : 'var(--ink-faint)',
+              fontSize: '0.7em',
+              fontFamily: 'var(--font-mono)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              fontWeight: tab === t.id ? 700 : 400,
+              borderBottom: tab === t.id ? '2px solid var(--accent)' : '2px solid transparent',
+              transition: 'color 0.15s, border-color 0.15s',
+              marginBottom: -1,
+            }}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      {/* ── Content ── */}
+      <div style={{ overflowY: 'auto', flex: 1, maxHeight: 'calc(100vh - 9rem)', scrollbarWidth: 'none' }}>
+
+        {/* Docs tab — current section document list */}
+        {tab === 'docs' && docs.map((doc) => {
+          const isSelected = doc.id === selectedId
+          const isRead = readDocIds.includes(doc.id)
+          return (
+            <button key={doc.id} type="button" onClick={() => onSelect(doc)}
+              aria-current={isSelected ? 'page' : undefined}
+              style={itemStyle(isSelected, isRead)}
+            >
+              <span className="line-clamp-2">{doc.title}</span>
+              {isRead && !isSelected && (
+                <span style={{ fontSize: '0.72em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)' }}> ✓</span>
+              )}
+            </button>
+          )
+        })}
+
+        {/* Topics tab — all unique topic tags with doc counts */}
+        {tab === 'topics' && allTopics.map(({ tag, count }) => {
+          const first = allDocs.find(d => getDocTopics(d).includes(tag))
+          return (
+            <button key={tag} type="button"
+              onClick={() => { if (first) onSelect(first) }}
+              style={{
+                ...itemStyle(false),
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                fontFamily: 'var(--font-ui)',
+              }}
+            >
+              <span style={{ lineHeight: 1.35 }}>{tag}</span>
+              <span style={{ fontSize: '0.73em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', flexShrink: 0 }}>{count}</span>
+            </button>
+          )
+        })}
+
+      </div>
+    </nav>
+  )
+}
+
+/* ============================================================
+ * ReaderOutline — sticky table of contents, highlights active heading.
+ * ============================================================ */
+
+function ReaderOutline({
+  doc,
+  readerRef,
+}: {
+  doc: CorpusDoc
+  readerRef: React.RefObject<HTMLDivElement | null>
+}) {
+  const [activeSlug, setActiveSlug] = useState('')
+
+  useEffect(() => {
+    const container = readerRef.current
+    if (!container || !doc.headings.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        if (visible.length) {
+          const el = visible[0].target as HTMLElement
+          // headingScrollId format: `${docId}--${slug}`
+          const parts = el.id.split('--')
+          const slug = parts.length > 1 ? parts.slice(1).join('--') : ''
+          if (slug) setActiveSlug(slug)
+        }
+      },
+      {
+        root: container,
+        rootMargin: '-8% 0px -65% 0px',
+        threshold: 0,
+      },
+    )
+
+    const headingEls = container.querySelectorAll<HTMLElement>(`[id^="${doc.id}--"]`)
+    headingEls.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [doc.id, readerRef])
+
+  if (doc.headings.length < 3) return null
+
+  return (
+    <nav aria-label="Document outline" className="reader-outline hidden xl:block" style={{ width: 196, flexShrink: 0 }}>
+      <p className="reader-outline-label">Contents</p>
+      {doc.headings.map((h) => (
+        <button
+          key={h.slug}
+          type="button"
+          data-active={activeSlug === h.slug ? 'true' : 'false'}
+          data-level={String(h.level)}
+          className="reader-outline-item"
+          title={h.text}
+          onClick={() => {
+            const el = document.getElementById(headingScrollId(doc, h.slug))
+            if (!el) return
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            setActiveSlug(h.slug)
+          }}
+        >
+          <span className="line-clamp-2">{h.text}</span>
+        </button>
+      ))}
+    </nav>
+  )
+}
+
 function ReaderPanel({
   doc,
   feedback,
@@ -1202,7 +1575,7 @@ function ReaderPanel({
         </div>
         <h2
           data-testid="reader-title"
-          className="mt-2 font-serif text-[1.7rem] leading-[1.15] text-ink-strong sm:mt-3 sm:text-[2.6rem] sm:leading-tight"
+          className="mt-2 font-serif text-[1.75rem] leading-[1.15] tracking-tight text-ink-strong sm:mt-3 sm:text-[2.4rem] sm:leading-snug"
         >
           {doc.title.replace(/^(INVARIANTS|SPECIFICATIONS)(?:\.md)?\s*[—–]\s*/, '')}
         </h2>
@@ -1636,13 +2009,22 @@ function ReaderWorkspace({
     )
   }
 
+  // Stable ref for ReaderOutline's IntersectionObserver root
+  const outlineReaderRef = useRef<HTMLDivElement | null>(null)
+
   return (
-    <div data-reading-mode={readingMode ? 'true' : 'false'} className="w-full">
+    <div
+      data-reading-mode={readingMode ? 'true' : 'false'}
+      className="w-full xl:flex xl:items-start xl:gap-0"
+    >
       <div
         key={`reader-pane-${selectedDoc.id}`}
-        ref={readerPaneRef}
+        ref={(node) => {
+          outlineReaderRef.current = node
+          readerPaneRef(node)
+        }}
         data-testid="reader-scroll-pane"
-        className="min-w-0"
+        className="min-w-0 flex-1"
       >
         <ReaderPanel
           doc={selectedDoc}
@@ -1674,6 +2056,9 @@ function ReaderWorkspace({
           onClearPath={onClearPath}
         />
       </div>
+      {!readingMode && (
+        <ReaderOutline doc={selectedDoc} readerRef={outlineReaderRef} />
+      )}
     </div>
   )
 }
@@ -3133,7 +3518,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     handleSelectQuickDoc(doc)
   }
 
-  function handleClearPath(nextView?: AppView) {
+function handleClearPath(nextView?: AppView) {
     window.localStorage.removeItem(ACTIVE_PATH_STORAGE_KEY)
     setActivePathId(null)
     if (nextView) {
@@ -3314,37 +3699,50 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
 
 
       {view !== 'home' && view !== 'topics' && view !== 'paths' && view !== 'settings' && (
-        <ReaderWorkspace
-          docs={visibleDocs}
-          allDocs={allDocs}
-          selectedDoc={selectedDoc}
-          pinnedDocIds={pinnedDocIds}
-          recentIds={recentDocIds}
-          onSelectQuickDoc={handleSelectQuickDoc}
-          onTogglePinned={handleTogglePinned}
-          readDocIds={readDocIds}
-          onToggleRead={handleToggleRead}
-          readingMode={readingMode}
-          onToggleReadingMode={handleToggleReadingMode}
-          onOpenSource={handleOpenSource}
-          feedback={sourceFeedback}
-          emptyLabel="No documents match the current filter. Broaden the query or move to another shelf."
-          readerPaneRef={bindReaderPaneRef}
-          copiedHeadingSlug={copiedHeadingSlug}
-          onCopyHeadingLink={handleCopyHeadingLink}
-          searchQuery={documentQuery}
-          onSearchChange={setDocumentQuery}
-          searchInputRef={bindReaderSearchInputRef}
-          matchCount={documentMatchCount}
-          currentMatchIndex={activeMatchIndex}
-          onJumpToPreviousMatch={() => jumpSearchMatch(-1)}
-          onJumpToNextMatch={() => jumpSearchMatch(1)}
-          activePathId={activePathId}
-          allCorpusDocs={allDocs}
-          onMarkDocRead={handleMarkDocRead}
-          onSelectPathDoc={handleSelectQuickDoc}
-          onClearPath={handleClearPath}
-        />
+        <div className="scholar-panels xl:flex xl:items-start xl:gap-0">
+          {!readingMode && (
+            <DocListPanel
+              docs={visibleDocs}
+              allDocs={allDocs}
+              selectedId={selectedDoc?.id ?? null}
+              onSelect={handleSelectQuickDoc}
+              readDocIds={readDocIds}
+              view={view}
+              onViewChange={onViewChange}
+            />
+          )}
+          <ReaderWorkspace
+            docs={visibleDocs}
+            allDocs={allDocs}
+            selectedDoc={selectedDoc}
+            pinnedDocIds={pinnedDocIds}
+            recentIds={recentDocIds}
+            onSelectQuickDoc={handleSelectQuickDoc}
+            onTogglePinned={handleTogglePinned}
+            readDocIds={readDocIds}
+            onToggleRead={handleToggleRead}
+            readingMode={readingMode}
+            onToggleReadingMode={handleToggleReadingMode}
+            onOpenSource={handleOpenSource}
+            feedback={sourceFeedback}
+            emptyLabel="No documents match the current filter. Broaden the query or move to another shelf."
+            readerPaneRef={bindReaderPaneRef}
+            copiedHeadingSlug={copiedHeadingSlug}
+            onCopyHeadingLink={handleCopyHeadingLink}
+            searchQuery={documentQuery}
+            onSearchChange={setDocumentQuery}
+            searchInputRef={bindReaderSearchInputRef}
+            matchCount={documentMatchCount}
+            currentMatchIndex={activeMatchIndex}
+            onJumpToPreviousMatch={() => jumpSearchMatch(-1)}
+            onJumpToNextMatch={() => jumpSearchMatch(1)}
+            activePathId={activePathId}
+            allCorpusDocs={allDocs}
+            onMarkDocRead={handleMarkDocRead}
+            onSelectPathDoc={handleSelectQuickDoc}
+            onClearPath={handleClearPath}
+          />
+        </div>
       )}
     </div>
 

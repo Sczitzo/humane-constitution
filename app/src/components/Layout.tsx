@@ -23,6 +23,7 @@ interface LayoutProps {
   shelfLabel: string
   onSelectDoc: (doc: CorpusDoc, headingSlug?: string) => void
   allDocs: CorpusDoc[]
+  onStartPath: (pathId: string) => void
 }
 
 type NavItem = { id: AppView; label: string }
@@ -32,10 +33,73 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'constitution', label: 'Constitution' },
   { id: 'annexes', label: 'Annexes' },
   { id: 'registries', label: 'Threats & Patches' },
-  { id: 'topics', label: 'Topics' },
-  { id: 'paths', label: 'Reading Paths' },
   { id: 'validation', label: 'Validation' },
 ]
+
+// ── Reading Paths dropdown ────────────────────────────────────────────────────
+
+const HEADER_PATHS = [
+  { id: 'first-time',              label: 'First Read',          time: '20m' },
+  { id: 'skeptic',                 label: 'Skeptic',             time: '25m' },
+  { id: 'implementer',             label: 'Implementer',         time: '35m' },
+  { id: 'economic-instruments',    label: 'Economics',           time: '30m' },
+  { id: 'founding-order',          label: 'Founding Order',      time: '25m' },
+  { id: 'pilot-deployment',        label: 'Pilot Roadmap',       time: '30m' },
+  { id: 'identity-personhood',     label: 'Personhood',          time: '20m' },
+  { id: 'architectural-integrity', label: 'Architecture',        time: '25m' },
+  { id: 'governance-deep',         label: 'Governance',          time: '40m' },
+]
+
+function PathsDropdown({ onStartPath }: { onStartPath: (pathId: string) => void }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    function onPointer(e: PointerEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('pointerdown', onPointer)
+    return () => document.removeEventListener('pointerdown', onPointer)
+  }, [open])
+
+  return (
+    <div ref={ref} className="relative hidden sm:block" data-no-drag>
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => setOpen(o => !o)}
+        className="focus-ring flex items-center gap-1 rounded px-2.5 py-1.5 text-[12px] font-medium transition whitespace-nowrap text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]"
+      >
+        Reading Paths
+        <svg aria-hidden="true" viewBox="0 0 10 10" width="8" height="8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+          <path d="M1.5 3.5l3 3 3-3" />
+        </svg>
+      </button>
+      {open && (
+        <div
+          role="listbox"
+          aria-label="Reading paths"
+          className="absolute right-0 top-full z-50 mt-1 w-52 overflow-hidden rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] shadow-2xl"
+        >
+          {HEADER_PATHS.map(p => (
+            <button
+              key={p.id}
+              role="option"
+              type="button"
+              onClick={() => { onStartPath(p.id); setOpen(false) }}
+              className="flex w-full items-center justify-between px-3.5 py-2 text-left text-[12px] transition hover:bg-[rgba(255,255,255,0.07)]"
+            >
+              <span className="text-[var(--forest-text)]">{p.label}</span>
+              <span className="font-mono text-[10px] text-[var(--forest-text-muted)]">{p.time}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 // ── appearance settings ───────────────────────────────────────────────────────
 
@@ -68,6 +132,8 @@ function readTheme(): ThemeOption {
 }
 function applyFontSize(size: FontSizeOption) {
   document.documentElement.style.setProperty('--reader-font-size', FONT_SIZE_VALUES[size])
+  // Also cascade to sidebar panels so the whole reading area scales together
+  document.documentElement.style.setProperty('--panel-font-size', FONT_SIZE_VALUES[size])
 }
 function applyColumnWidth(width: ColumnWidthOption) {
   document.documentElement.style.setProperty('--reader-column-width', COLUMN_WIDTH_VALUES[width])
@@ -771,6 +837,7 @@ export function Layout({
   shelfLabel,
   onSelectDoc,
   allDocs,
+  onStartPath,
 }: LayoutProps) {
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
   const [navQuery, setNavQuery] = useState('')
@@ -830,19 +897,23 @@ export function Layout({
         data-tauri-drag-region
         className="reader-header-safe sticky top-0 z-40 border-b border-[rgba(0,0,0,0.18)] bg-[var(--forest)] px-3 sm:px-6 lg:px-8"
       >
-        {/* Reading progress bar — sits flush at the very bottom of the header */}
+        {/* Scholar reading progress bar — fixed to very top of viewport */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-[rgba(0,0,0,0.15)]"
-        >
-          <div
-            className="h-full bg-[var(--accent)] transition-[width] duration-75 ease-linear"
-            style={{ width: `${readingProgress * 100}%` }}
-          />
-        </div>
+          className="pointer-events-none fixed inset-x-0 top-0 z-50 h-[2px]"
+          style={{
+            background: 'linear-gradient(to right, var(--accent), var(--accent-deep) 60%, var(--accent))',
+            transformOrigin: 'left center',
+            transform: `scaleX(${readingProgress})`,
+            transition: 'transform 0.12s linear',
+            opacity: readingProgress > 0.005 ? 1 : 0,
+          }}
+        />
         <div className="mx-auto flex w-full max-w-[82rem] items-center gap-2 py-2 sm:gap-3">
-          {/* Hamburger — far left */}
-          <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
+          {/* Hamburger — mobile only; xl+ uses the left panel section picker */}
+          <div className="xl:hidden">
+            <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
+          </div>
 
           {/* Branding */}
           <button
@@ -885,6 +956,7 @@ export function Layout({
 
           {/* Right controls */}
           <div className="hidden sm:flex shrink-0 items-center gap-1">
+            <PathsDropdown onStartPath={onStartPath} />
             <NavDropdown
               label="Recent"
               docs={recentDocs}

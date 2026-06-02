@@ -45,6 +45,7 @@ export function readColumnWidth(): ColumnWidthOption {
 
 export function applyFontSize(size: FontSizeOption) {
   document.documentElement.style.setProperty('--reader-font-size', FONT_SIZE_VALUES[size])
+  document.documentElement.style.setProperty('--panel-font-size', FONT_SIZE_VALUES[size])
 }
 
 export function applyColumnWidth(width: ColumnWidthOption) {

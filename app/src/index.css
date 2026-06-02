@@ -24,6 +24,7 @@
   --sage-deep: #53604d;
   --font-ui: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-serif: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
   --radius: 0.625rem;
   --reader-font-size: 16px;
@@ -31,14 +32,14 @@
 }
 
 [data-theme="dark"] {
-  --page-bg: #14110e;
-  --paper-strong: #1c1916;
-  --paper-warm: #201d19;
+  --page-bg: #111009;
+  --paper-strong: #1a1714;
+  --paper-warm: #1f1b17;
   --line: rgba(255, 248, 235, 0.1);
   --line-strong: rgba(255, 248, 235, 0.18);
   --chrome-line: rgba(255, 248, 235, 0.08);
-  --ink: #e8e0d3;
-  --ink-strong: #f5f0e8;
+  --ink: #e4ddd2;
+  --ink-strong: #f0ece4;
   --ink-soft: #9e978d;
   --ink-faint: #706a62;
   --forest: #1a1f1c;
@@ -162,7 +163,7 @@
   color: var(--ink);
   font-family: var(--font-serif);
   font-size: var(--reader-font-size, 1.05rem);
-  line-height: 1.72;
+  line-height: 1.78;
   letter-spacing: -0.003em;
   font-feature-settings: 'kern' 1, 'liga' 1;
 }
@@ -182,7 +183,7 @@
 .reader-h3,
 .reader-h4 {
   color: var(--ink-strong);
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.012em;
   line-height: 1.2;
@@ -1167,3 +1168,84 @@
   50% { opacity: 0.3; }
 }
 .chat-thinking { animation: chat-blink 1.2s ease-in-out infinite; }
+
+/* ============================================================
+ * Scholar design — outline panel, responsive layout
+ * ============================================================ */
+
+/* Three-panel Scholar layout: font size setting cascades to all three columns */
+.scholar-panels {
+  font-size: var(--panel-font-size, 16px);
+}
+
+.reader-outline {
+  position: sticky;
+  top: 4.5rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: none;
+  border-left: 1px solid var(--line);
+}
+.reader-outline::-webkit-scrollbar { display: none; }
+
+.reader-outline-label {
+  padding: 0 1rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.4rem;
+}
+
+.reader-outline-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0.28rem 1rem;
+  font-family: var(--font-serif);
+  font-size: 0.8em;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  border-left: 2px solid transparent;
+  transition: color 0.12s, border-color 0.12s, background 0.12s;
+}
+.reader-outline-item:hover {
+  color: var(--ink);
+  background: rgba(159, 108, 49, 0.05);
+}
+.reader-outline-item[data-active='true'] {
+  color: var(--accent-deep);
+  border-left-color: var(--accent);
+  background: rgba(159, 108, 49, 0.07);
+  font-weight: 500;
+}
+[data-theme="dark"] .reader-outline-item[data-active='true'] {
+  color: var(--accent-deep);
+  background: rgba(196, 137, 64, 0.1);
+}
+.reader-outline-item[data-level='2'] { padding-left: 1.5rem; }
+.reader-outline-item[data-level='3'] { padding-left: 2.1rem; font-size: 0.76em; }
+.reader-outline-item[data-level='4'] { padding-left: 2.6rem; font-size: 0.74em; }
+
+/* Scholar layout responsive */
+@media (max-width: 767px) {
+  .reader-prose { font-size: calc(var(--reader-font-size, 1rem) * 0.97); }
+  .reader-h1 { font-size: 1.75rem; }
+  .reader-h2 { font-size: 1.4rem; }
+  .reader-outline { display: none; }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .reader-outline { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-outline-item { transition: none; }
+}
