@@ -1108,6 +1108,75 @@ function MarkdownDocument({
   )
 }
 
+/* ============================================================
+ * ReaderOutline — sticky table of contents, highlights active heading.
+ * ============================================================ */
+
+function ReaderOutline({
+  doc,
+  readerRef,
+}: {
+  doc: CorpusDoc
+  readerRef: React.RefObject<HTMLDivElement | null>
+}) {
+  const [activeSlug, setActiveSlug] = useState('')
+
+  useEffect(() => {
+    const container = readerRef.current
+    if (!container || !doc.headings.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        if (visible.length) {
+          const el = visible[0].target as HTMLElement
+          // headingScrollId format: `${docId}--${slug}`
+          const parts = el.id.split('--')
+          const slug = parts.length > 1 ? parts.slice(1).join('--') : ''
+          if (slug) setActiveSlug(slug)
+        }
+      },
+      {
+        root: container,
+        rootMargin: '-8% 0px -65% 0px',
+        threshold: 0,
+      },
+    )
+
+    const headingEls = container.querySelectorAll<HTMLElement>(`[id^="${doc.id}--"]`)
+    headingEls.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [doc.id, readerRef])
+
+  if (doc.headings.length < 3) return null
+
+  return (
+    <nav aria-label="Document outline" className="reader-outline hidden xl:block" style={{ width: 196, flexShrink: 0 }}>
+      <p className="reader-outline-label">Contents</p>
+      {doc.headings.map((h) => (
+        <button
+          key={h.slug}
+          type="button"
+          data-active={activeSlug === h.slug ? 'true' : 'false'}
+          data-level={String(h.level)}
+          className="reader-outline-item"
+          title={h.text}
+          onClick={() => {
+            const el = document.getElementById(headingScrollId(doc, h.slug))
+            if (!el) return
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            setActiveSlug(h.slug)
+          }}
+        >
+          <span className="line-clamp-2">{h.text}</span>
+        </button>
+      ))}
+    </nav>
+  )
+}
+
 function ReaderPanel({
   doc,
   feedback,
@@ -1202,7 +1271,7 @@ function ReaderPanel({
         </div>
         <h2
           data-testid="reader-title"
-          className="mt-2 font-serif text-[1.7rem] leading-[1.15] text-ink-strong sm:mt-3 sm:text-[2.6rem] sm:leading-tight"
+          className="mt-2 font-serif text-[1.75rem] leading-[1.15] tracking-tight text-ink-strong sm:mt-3 sm:text-[2.4rem] sm:leading-snug"
         >
           {doc.title.replace(/^(INVARIANTS|SPECIFICATIONS)(?:\.md)?\s*[—–]\s*/, '')}
         </h2>
@@ -1636,13 +1705,22 @@ function ReaderWorkspace({
     )
   }
 
+  // Stable ref for ReaderOutline's IntersectionObserver root
+  const outlineReaderRef = useRef<HTMLDivElement | null>(null)
+
   return (
-    <div data-reading-mode={readingMode ? 'true' : 'false'} className="w-full">
+    <div
+      data-reading-mode={readingMode ? 'true' : 'false'}
+      className="w-full xl:flex xl:items-start xl:gap-0"
+    >
       <div
         key={`reader-pane-${selectedDoc.id}`}
-        ref={readerPaneRef}
+        ref={(node) => {
+          outlineReaderRef.current = node
+          readerPaneRef(node)
+        }}
         data-testid="reader-scroll-pane"
-        className="min-w-0"
+        className="min-w-0 flex-1"
       >
         <ReaderPanel
           doc={selectedDoc}
@@ -1674,6 +1752,9 @@ function ReaderWorkspace({
           onClearPath={onClearPath}
         />
       </div>
+      {!readingMode && (
+        <ReaderOutline doc={selectedDoc} readerRef={outlineReaderRef} />
+      )}
     </div>
   )
 }

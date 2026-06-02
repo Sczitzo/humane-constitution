@@ -830,16 +830,18 @@ export function Layout({
         data-tauri-drag-region
         className="reader-header-safe sticky top-0 z-40 border-b border-[rgba(0,0,0,0.18)] bg-[var(--forest)] px-3 sm:px-6 lg:px-8"
       >
-        {/* Reading progress bar — sits flush at the very bottom of the header */}
+        {/* Scholar reading progress bar — fixed to very top of viewport */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-[rgba(0,0,0,0.15)]"
-        >
-          <div
-            className="h-full bg-[var(--accent)] transition-[width] duration-75 ease-linear"
-            style={{ width: `${readingProgress * 100}%` }}
-          />
-        </div>
+          className="pointer-events-none fixed inset-x-0 top-0 z-50 h-[2px]"
+          style={{
+            background: 'linear-gradient(to right, var(--accent), var(--accent-deep) 60%, var(--accent))',
+            transformOrigin: 'left center',
+            transform: `scaleX(${readingProgress})`,
+            transition: 'transform 0.12s linear',
+            opacity: readingProgress > 0.005 ? 1 : 0,
+          }}
+        />
         <div className="mx-auto flex w-full max-w-[82rem] items-center gap-2 py-2 sm:gap-3">
           {/* Hamburger — far left */}
           <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
