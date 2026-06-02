@@ -32,8 +32,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'constitution', label: 'Constitution' },
   { id: 'annexes', label: 'Annexes' },
   { id: 'registries', label: 'Threats & Patches' },
-  { id: 'topics', label: 'Topics' },
-  { id: 'paths', label: 'Reading Paths' },
   { id: 'validation', label: 'Validation' },
 ]
 
