@@ -21,6 +21,8 @@ This annex defines how the Threat Register is maintained, tested, audited, and p
 ### C-2. Roles and ownership model
 Each Threat ID must have a named Owner accountable for controls and test evidence. Owners may delegate implementation, but not accountability.
 
+No accountability role may sit empty. A vacated Threat Owner role must be reassigned to a named successor within 10 business days. While the role is vacant, accountability defaults upward to Independent Oversight, which holds it as interim Threat Owner and records the vacancy. If the role remains unfilled past the deadline, every threat under it reverts to a degraded status (per C-4) until a successor is named, and the lapse is escalated to oversight and logged. The same time-to-reassign and default-escalation rule applies to Control Owner and Test/Monitoring Owner roles.
+
 | Role | Accountability | Required artifacts (minimum) |
 | :--- | :--- | :--- |
 | **Threat Owner** | Keeps entry current; ensures controls exist; ensures tests/monitoring pass; drives remediation. | Control spec; test plan; monitoring plan; quarterly review note; residual-risk statement. |
@@ -49,6 +51,10 @@ Quarterly cycles reduce governance noise while keeping the system responsive. Mo
 | **Quarterly** | Full Threat Register review; re-score I/L/D; verify evidence packages; Voice and Service Record decision cycle execution (bounded scope). | Quarterly register sign-off; updated scores; public summary (aggregated). |
 | **Annually** | System-wide red-team exercise; privacy/security audit; constitutional constraint review. | Annual red-team report; audit report; constraint reaffirmation. |
 
+**Breach of cadence is not advisory.** When a required cadence event is missed or its outputs are not produced by the scheduled date, the lapse triggers automatic escalation to Independent Oversight and is recorded in an audit-visible lapse log. Every threat that depended on the missed event reverts to a degraded, unverified status — its prior evidence is no longer treated as current — until the event is completed and fresh evidence is filed. A threat may not be reported as having passing controls while any of its cadence obligations are overdue. This makes compliance theater costly and visible rather than silent.
+
+**Recourse for the monitored person.** Continuous monitoring includes anomaly detection and fraud/coercion flags applied to identifiable people. Any person flagged by such monitoring receives notice of the flag in plain language and an accessible path to appeal it, including human review and correction of erroneous data. Adverse action that rests on a contested flag is paused or made reversible while the appeal is pending, except where a narrow, time-limited emergency action under C-6 is justified. The dignity of the monitored is protected alongside the integrity of the monitoring; see also Annex A §A3–A4.
+
 ### C-5. Evidence requirements (audit-ready)
 - **Control Specification:** what the control does, who it affects, and why it reduces risk.
 - **Abuse Case Mapping:** actor incentive, attack path, affected collapse state, false reassurance, and failure criterion.
@@ -56,6 +62,8 @@ Quarterly cycles reduce governance noise while keeping the system responsive. Mo
 - **Monitoring Evidence:** dashboards, alert thresholds, and mean-time-to-detect (MTTD) targets.
 - **Change Log:** what changed, when, who approved, and how rollback works.
 - **Incident Records:** for any triggered alert or exploit, include timeline, root cause, and patch verification.
+
+Each evidence package carries an explicit validity date. When a package lapses that date without being refreshed, the controls it backs are no longer treated as verified: the affected threat reverts to a degraded, unverified status, the lapse is escalated to oversight and recorded in the lapse log, and the package must be renewed before the threat may be reported as passing again. Stale evidence counts as no evidence.
 
 ### C-6. Change control and emergency patching
 All material changes to Essential Access basket, scarcity triggers, Flow demurrage, Voice scope, Service Record service eligibility rules, or identity/oracle mechanisms must use a controlled change process.
@@ -68,5 +76,7 @@ All material changes to Essential Access basket, scarcity triggers, Flow demurra
 ### C-7. Readiness gates (pilot and scale)
 - **Pilot gate:** top 10 risks have controls implemented and passing tests; emergency processes rehearsed; oracle quorum operational; identity recovery tested against the published evidence package.
 - **Scale gate:** demonstrated MTTD/MTTR targets; independent audit passed; coercion/fraud false-positive rates within tolerance; public transparency reports live.
+
+No gate may be silently waived under launch pressure. Any exception to a pilot or scale-readiness gate requires a named approver with authority to grant it, a written justification, an explicit time limit after which the exception expires, and an audit-visible record of the waiver — mirroring the emergency discipline in C-6. An unrecorded or anonymous waiver is void, and a gate it purported to clear is treated as unmet.
 
 ---

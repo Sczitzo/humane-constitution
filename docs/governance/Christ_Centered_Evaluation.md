@@ -1901,7 +1901,7 @@ This session completes the annex corpus and corrects a prior overclaim of comple
 
 ---
 
-### ANNEX AN — Pilot External Validity Gate (8 / 10 after hardening; 7.5 as written)
+### ANNEX AN — Pilot External Validity Gate (9 / 10 after hardening; 7.5 as written)
 
 **Christ-centered alignment.** Gating scale-up on observed performance under *real stress* — economic shock, compound supply disruption, organized political opposition, not favorable conditions — is the foundation tested against the storm before trust is extended (Matt 7:24–27), and the explicit Residual-Risk confession ("the gate buys quality… it cannot guarantee correctness") is honest cost-counting (Luke 14:28–30) and a refusal to bear false witness about readiness (Ex 20:16; Isa 58). The protected party is named as "populations who bear the cost of failure at scale" — the strong forbidden from laying untested burdens on the weak (Matt 23:4; Matt 25:35–40). AN3's full-record access for challengers honors the multitude of counsellors (Prov 11:14).
 
