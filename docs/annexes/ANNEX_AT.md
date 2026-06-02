@@ -337,4 +337,4 @@ The following parameter values are reserved pending pilot data and TSP calibrati
 
 ---
 
-*Annex AT drafted 2026-04-30. Status PROPOSED. Operative detail — TSP standing procedures, treaty template, and supply-chain measurement methodology — requires a follow-up specification pass before activation.*
+*Annex AT drafted 2026-04-30. Evidence status: Designed (see opening block). The architecture is incorporated; operative detail — TSP standing procedures, treaty template, and supply-chain measurement methodology — requires a follow-up specification pass before the trade controls are operationally active.*

@@ -29,7 +29,9 @@ Tier 1 invariants require not just a legislative supermajority but **concurrent 
 
 ## AM2 — Essential Access Floor Minimum (Administrative Hollowing Defense)
 
-A minimum Essential Access floor — defined at founding as **70% of the founding basket** — is constitutionally self-executing: it does not require legislative appropriation and cannot be suspended by executive action. The floor persists through any governing coalition transition unless repealed via the full Tier 1 amendment process. Operational consequence: the Essential Access issuance service must continue to dispense at or above the 70% floor regardless of the political will of the current government, drawing on reserves (Annex Y, FC-070) where current production is insufficient.
+A minimum Essential Access floor — defined at founding as **70% of the founding basket** — is constitutionally self-executing: it does not require legislative appropriation and cannot be suspended by executive action. The floor persists through any governing coalition transition unless repealed via the full Tier 1 amendment process. Operational consequence: the Essential Access issuance service must continue to dispense at or above the floor regardless of the political will of the current government, drawing on reserves (Annex Y, FC-070) where current production is insufficient.
+
+**Asymmetric adjustment.** The floor is a boundary stone that moves only in favor of those it protects. A simple legislative majority may **raise** the Essential Access floor above the founding 70%; no Tier 1 amendment is required to strengthen the protection. A floor previously raised by ordinary majority may likewise be **lowered toward — but never below — the founding 70%** by ordinary majority. Only a reduction **below the founding 70%** requires the full Tier 1 amendment process (including concurrent CIP ratification under AM8). Any ordinary-majority adjustment, in either direction, must be published in the Article VII dashboard with the prior floor value, the new floor value, and the vote count. No urgency claim or emergency may be used to lower the floor below 70% outside the Tier 1 process.
 
 ## AM3 — Administrative Hollowing Triggers
 
@@ -49,6 +51,8 @@ The review is initiated by the constitutional body (AM1) and is self-executing. 
 ## AM4 — Transition Continuity Protocol
 
 When a new governing coalition takes office, a mandatory **180-day transition audit** is required before any changes to Tier 2 or Tier 1 provisions. The audit is conducted by the constitutional body (AM1), not the incoming government. During the 180-day window, no Tier 2 or higher changes may be made except through emergency deadlock resolution (P-012, Annex AE §AE2.3).
+
+**Need-shaped relief safe harbor.** Nothing in the transition-audit window, nor any of its protections, may delay, suspend, or hold pending the audit any emergency relief, Essential Access continuity, or survival-floor activation owed to vulnerable persons. Need-shaped emergency relief proceeds during the transition window on its own timeline and is never conditioned on completion of the audit. The transition window restricts changes to the architecture; it never restricts the architecture's delivery of care to those who depend on it. This safe harbor stands alongside, and does not displace, the governance-deadlock emergency carve-out of the preceding paragraph.
 
 ## AM5 — Audit Scope and Extension
 

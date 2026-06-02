@@ -1803,19 +1803,44 @@ This closing evaluation session covers how the system tests itself at the seams 
 
 ---
 
-## Coverage Summary — Christ-Centered Evaluation of the Annex Corpus
+## Session 16 Christ-Centered Evaluation — ANNEX_AM Completion (Electoral Cycle Resilience)
 
-As of Session 15, the Christ-centered evaluation covers the full active annex set. Forty annexes have received a direct Christ-centered evaluation (Sessions 5–15), and the design should-fixes surfaced in Sessions 7–15 have been closed in the corpus text. Standing scores after hardening:
+**Date:** 2026-06-01
+**Scope:** ANNEX_AM — Electoral Cycle Resilience, the electoral-resilience *core* (§AM1–§AM7). The §AM8 Constitutional Integrity Panel (CIP) was already evaluated in Session 5; this session completes the corpus's last partial-coverage annex.
 
-- **9 / 10:** AW, AX, AY (Session 7); P, Y (Session 8); I, K, AQ, AJ, AF (Session 9); L, S, AI, Z, AP (Session 10); H, AV, N, AH (Session 11); X, V, AR, AT (Session 12); M, AL, AE, U (Session 13); A, AG, AD, AC (Session 14); T, AO, AB, AS (Session 15).
-- **8.5 / 10:** AZ (Session 8) — held below 9 not by a should-fix but because its privacy guarantee is delegated to a TSP not yet assigned (undesigned at the critical layer, a delivery matter, not text).
-- **Earlier sessions:** D / P-063 demurrage (Session 6); CASP/AT§6.6, CIP/AM§8, AED/AK (Session 5).
+**Christ-centered alignment.** §AM1's staggered terms exceeding the longest electoral cycle, nominations drawn from three structurally distinct bodies, and removal-for-cause at the Tier 1 threshold enact "remove not the ancient landmark" (Prov 22:28; 23:10) — the protections are placed beyond a single winning faction's power to reconstitute, resisting the "new king which knew not Joseph" who stripped the weak (Ex 1:8–14) and Rehoboam's choice of harshness over the people's relief (1 Kings 12:1–16). §AM2's self-executing Essential Access floor (70% of basket, "does not require legislative appropriation and cannot be suspended by executive action," drawn from reserves) is the strongest clause for the vulnerable: it renders to the poor what is theirs regardless of "the political will of the current government" — some things are not the electoral winner's to take (Matt 22:21; Isa 10:1–2 against decrees that rob the needy of judgment). §AM3's automatic hollowing triggers (unfilled seats at 90 days, lapsed post-mortems at 30, oracle/dashboard drops), the interim Ombuds-Plenum initiation authority, the permanent un-erasable "review lapsed" audit artifacts, and the "no urgency claim may waive" guards are truth-telling and accountability held across regimes (Matt 5–7). §AM4's 180-day transition audit conducted by the constitutional body "not the incoming government," and §AM6's bar on treaties as "a shortcut around the amendment protocol," hold institutions as servant-stewardship rather than spoils for the victor (Mark 10:42–45). §AM7's PII-stripping (k≥10, re-identification a registered offense) protects persons from exposure even while enforcing transparency.
 
-The single recurring lesson across all fifteen sessions: no human instrument is its own final witness or its own cornerstone (1 Cor 3:11). The corpus is most faithful where it names and binds its own operative hands, confesses the limits it cannot close, weighs the poor's witness as heavily as the rich's, and remembers that civil justice — however disciplined — is a servant under God, never humanity's substitute for the Master to whom every steward finally answers. The remaining work across the whole corpus is no longer design but *fruit*: pilot evidence to move these instruments up the status ladder from Designed / Active–unproven toward Evidence-backed.
+**Babel-risk warning.** The core is well-balanced against *both* failure modes — too-weak and counter-majoritarian-entrenchment — and honestly concedes the residual tilt toward too-weak (its Residual Risk: a supermajority "with sufficient political will… cannot prevent determined repeal"). The genuine pressure point is the opposite: §AM2's 70% floor sits at a fixed founding number with no path for a later democratic majority to *raise* it short of full Tier 1 process. A boundary stone that protects the weak is also, viewed from the other side, immune to being moved *outward* to protect them more — the annex has made it as hard to protect the poor *more* as to protect them *less*, binding a future majority's generosity to one founding cohort's definition of "enough" (the Babel impulse of a generation entrenching its own works, Gen 11, in tension with the rightful immovability of the poor's protection, Isa 10:1–2).
+
+**Human-dignity test.** Strong. §AM2 treats Essential Access as a floor owed to persons, not a discretionary budget line; §AM7 preserves dignity on both the access and the surveillance axes.
+
+**Revision proposal.** (1) Should-fix: §AM2 — add an *asymmetric* democratic adjustment path: a simple legislative majority may *raise* the Essential Access floor; only *lowering* it below the founding 70% requires full Tier 1. Asymmetric thresholds keep the boundary stone immovable against the weak's loss but movable in their favor, resolving the entrenchment tilt without weakening protection. (2) Should-fix: §AM4/§AM5 — add a *need-shaped* safe harbor so the 180-day transition window cannot block emergency relief to the vulnerable (the current carve-out is governance-deadlock-shaped, not need-shaped). (3) Monitor: §AM1 multi-cycle slow capture of two of the three nominating bodies across successive terms; (4) Monitor: the §AM3 interim Ombuds-Plenum authority ossifying if §AM8.7's CIP activation gate is indefinitely deferred.
+
+**Fruit test.** (i) Protections that survive a hostile change of government; (ii) a survival floor that pays out without the new coalition's appropriation; (iii) permanent audit artifacts that urgency cannot waive; (iv) a floor a future majority can lift in the poor's favor by ordinary vote; (v) emergency relief that the transition window never blocks.
+
+**Epistemic categorization:**
+- *Clear biblical command:* protect the vulnerable from a new regime's stripping of their provision; do not rob the needy of justice by decree (Isa 10:1–2; Ex 1; Prov 22:28).
+- *Theological inference:* institutions held as servant-stewardship across regimes rather than the winner's spoils (Mark 10:42–45 applied to constitutional design).
+- *Prudential political judgment:* the 70%; the 90/30/14-day triggers; the 180-day window; the 4-of-5 vote; the k≥10 threshold.
+- *Unresolved uncertainty:* whether fixed-number entrenchment of a benefit floor is faithful stewardship or a Babel-like binding of future generations' democratic conscience — the asymmetric-threshold revision is the best resolution, but it remains a judgment call.
+
+**Executive theological verdict: 9 / 10.** A theologically serious, vulnerable-protecting resilience core, honest about its own limits — and the entrenchment tilt is now resolved in the poor's favor: §AM2 adds the asymmetric upward path (a majority may raise the floor; only lowering it needs Tier 1) and §AM4/§AM5 add the need-shaped transition-relief safe harbor. The residual cap is unproven status.
 
 ---
 
-## Files consulted (Session 5 Follow-up + Sessions 6–15)
+## Coverage Summary — Christ-Centered Evaluation of the Annex Corpus
+
+As of Session 16, the Christ-centered evaluation covers the full active annex set with no partial-coverage items remaining. Every active annex has received a direct Christ-centered evaluation (Sessions 5–16), and the design should-fixes surfaced in Sessions 7–16 have been closed in the corpus text. Standing scores after hardening:
+
+- **9 / 10:** AW, AX, AY (Session 7); P, Y (Session 8); I, K, AQ, AJ, AF (Session 9); L, S, AI, Z, AP (Session 10); H, AV, N, AH (Session 11); X, V, AR, AT (Session 12); M, AL, AE, U (Session 13); A, AG, AD, AC (Session 14); T, AO, AB, AS (Session 15); AM (Session 16, completing the §AM8/CIP coverage from Session 5).
+- **8.5 / 10:** AZ (Session 8) — held below 9 not by a should-fix but because its privacy guarantee is delegated to a TSP not yet assigned (undesigned at the critical layer, a delivery matter, not text).
+- **Earlier sessions:** D / P-063 demurrage (Session 6); CASP/AT§6.6, AED/AK (Session 5).
+
+The single recurring lesson across all sixteen sessions: no human instrument is its own final witness or its own cornerstone (1 Cor 3:11). The corpus is most faithful where it names and binds its own operative hands, confesses the limits it cannot close, weighs the poor's witness as heavily as the rich's, and remembers that civil justice — however disciplined — is a servant under God, never humanity's substitute for the Master to whom every steward finally answers. The remaining work across the whole corpus is no longer design but *fruit*: pilot evidence to move these instruments up the status ladder from Designed / Active–unproven toward Evidence-backed.
+
+---
+
+## Files consulted (Session 5 Follow-up + Sessions 6–16)
 
 - `docs/governance/P-063_draft.md` (canonical draft; Sessions 6–7 evaluated v14 at commit `dd779d0`; current draft is v15 at commit `11292a9` — DRAFT, not corpus-registered)
 - `docs/governance/P-063_v15_followup_draft.md` (DRAFT, not corpus-registered)
@@ -1866,5 +1891,6 @@ The single recurring lesson across all fifteen sessions: no human instrument is 
 - `docs/annexes/ANNEX_AO.md` (Session 15 — register disclosure protocol)
 - `docs/annexes/ANNEX_AB.md` (Session 15 — document governance and integration)
 - `docs/annexes/ANNEX_AS.md` (Session 15 — attestation-at-risk stake)
+- `docs/annexes/ANNEX_AM.md` (Session 16 — electoral cycle resilience, completing §AM8/CIP from Session 5)
 
 **Not consulted (intentionally out of scope for this update):** the docs/audits/ structural-vulnerability and loophole audits beyond the post-remediation report; the docs/review/2026-05-01-full-review.md (predates much of the current corpus); `docs/constitution/SPECIFICATIONS.md` (flagged for separate Session 7 consideration); the Fairness_Vignette_Library.md (flagged for separate empirical-fruit-test session).
