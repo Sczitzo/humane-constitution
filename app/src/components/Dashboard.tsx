@@ -1180,21 +1180,9 @@ function MarkdownDocument({
 }
 
 /* ============================================================
- * DocListPanel — Scholar left column: 3-tab panel (Docs / Topics / Paths).
+ * DocListPanel — Scholar left column: section picker + 2-tab panel (Docs / Topics).
+ * Reading Paths moved to header dropdown in Layout.tsx.
  * ============================================================ */
-
-// Compact path summaries for the sidebar — mirrors LandingPage PATHS array.
-const PANEL_PATHS: Array<{ id: string; title: string; time: string }> = [
-  { id: 'first-time',           title: 'First Read',          time: '20m' },
-  { id: 'skeptic',              title: 'Skeptic',             time: '25m' },
-  { id: 'implementer',          title: 'Implementer',         time: '35m' },
-  { id: 'economic-instruments', title: 'Economics',           time: '30m' },
-  { id: 'founding-order',       title: 'Founding Order',      time: '25m' },
-  { id: 'pilot-deployment',     title: 'Pilot Roadmap',       time: '30m' },
-  { id: 'identity-personhood',  title: 'Personhood',          time: '20m' },
-  { id: 'architectural-integrity', title: 'Architecture',     time: '25m' },
-  { id: 'governance-deep',      title: 'Governance',          time: '40m' },
-]
 
 // Section options for the top picker — excludes topics/paths/settings
 // which are handled by the tab strip.
@@ -1206,7 +1194,7 @@ const SECTION_OPTIONS: Array<{ id: AppView; label: string }> = [
   { id: 'validation',   label: 'Validation' },
 ]
 
-type PanelTab = 'docs' | 'topics' | 'paths'
+type PanelTab = 'docs' | 'topics'
 
 function DocListPanel({
   docs,
@@ -1214,8 +1202,6 @@ function DocListPanel({
   selectedId,
   onSelect,
   readDocIds,
-  onStartPath,
-  activePathId,
   view,
   onViewChange,
 }: {
@@ -1224,8 +1210,6 @@ function DocListPanel({
   selectedId: string | null
   onSelect: (doc: CorpusDoc) => void
   readDocIds: string[]
-  onStartPath: (pathId: string) => void
-  activePathId: string | null
   view: AppView
   onViewChange: (v: AppView) => void
 }) {
@@ -1265,7 +1249,6 @@ function DocListPanel({
   const TABS: Array<{ id: PanelTab; label: string }> = [
     { id: 'docs',   label: 'Docs'   },
     { id: 'topics', label: 'Topics' },
-    { id: 'paths',  label: 'Paths'  },
   ]
 
   const itemStyle = (active: boolean, read = false): React.CSSProperties => ({
@@ -1420,19 +1403,6 @@ function DocListPanel({
             >
               <span style={{ lineHeight: 1.35 }}>{tag}</span>
               <span style={{ fontSize: '0.73em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', flexShrink: 0 }}>{count}</span>
-            </button>
-          )
-        })}
-
-        {/* Paths tab — 9 curated reading paths */}
-        {tab === 'paths' && PANEL_PATHS.map((p) => {
-          const isActive = activePathId === p.id
-          return (
-            <button key={p.id} type="button" onClick={() => onStartPath(p.id)}
-              style={{ ...itemStyle(isActive), fontFamily: 'var(--font-ui)', padding: '0.42rem 1rem' }}
-            >
-              <div>{p.title}</div>
-              <div style={{ fontSize: '0.76em', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', marginTop: 1 }}>{p.time}</div>
             </button>
           )
         })}
@@ -3548,17 +3518,7 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
     handleSelectQuickDoc(doc)
   }
 
-  // Sidebar panel calls this with just a pathId — finds the best resume doc internally.
-  function handleStartPathById(pathId: string) {
-    const path = READING_PATHS.find(p => p.id === pathId)
-    if (!path || !corpus) return
-    const docs = path.steps.map(s => corpus.docs.find(d => d.path === s.path) ?? null)
-    const firstUnread = docs.find(d => d && !readDocIds.includes(d.id))
-    const resumeDoc = firstUnread ?? docs[0]
-    if (resumeDoc) handleStartPath(pathId, resumeDoc)
-  }
-
-  function handleClearPath(nextView?: AppView) {
+function handleClearPath(nextView?: AppView) {
     window.localStorage.removeItem(ACTIVE_PATH_STORAGE_KEY)
     setActivePathId(null)
     if (nextView) {
@@ -3747,8 +3707,6 @@ export function Dashboard({ view, corpus, loadError, onViewChange, onProgressCha
               selectedId={selectedDoc?.id ?? null}
               onSelect={handleSelectQuickDoc}
               readDocIds={readDocIds}
-              onStartPath={handleStartPathById}
-              activePathId={activePathId}
               view={view}
               onViewChange={onViewChange}
             />

@@ -166,6 +166,10 @@ export default function App() {
         shelfLabel={shelfLabel}
         onSelectDoc={handleSelectNavDoc}
         allDocs={corpus?.docs ?? []}
+        onStartPath={(pathId) => {
+          window.localStorage.setItem(ACTIVE_PATH_STORAGE_KEY, pathId)
+          setPendingPathId(pathId)
+        }}
       >
         <Dashboard
           view={view}
