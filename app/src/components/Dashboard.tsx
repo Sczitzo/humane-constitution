@@ -235,7 +235,7 @@ function renderTextWithHighlights(text: string, query: string, keyPrefix: string
 }
 
 // Pattern that matches ref tokens we want to chip-ify in plain text
-const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1,3}\d*|ANNEX\s+[A-Z]{1,3}\d*|FC-\d+)\b/g
+const REF_TOKEN_PATTERN = /\b(PRD-\d+|P-\d+|TR-\d+|T-\d+|INV-\d+|Annex\s+[A-Z]{1,3}\d*|ANNEX\s+[A-Z]{1,3}\d*|FC-\d+)|(§[A-Z]{0,3}\d+(?:\.\d+)*)/g
 
 /**
  * Expand shorthand multi-ref sequences before tokenising.
@@ -319,7 +319,7 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
   REF_TOKEN_PATTERN.lastIndex = 0
   let rm: RegExpExecArray | null = REF_TOKEN_PATTERN.exec(expanded)
   while (rm) {
-    const raw = rm[1]
+    const raw = (rm[1] ?? rm[2]) as string  // group 1: named refs, group 2: §section refs
     const key = raw.replace(/^ANNEX\s+/i, 'Annex ')
     allMatches.push({ index: rm.index, end: REF_TOKEN_PATTERN.lastIndex, raw, key })
     rm = REF_TOKEN_PATTERN.exec(expanded)
@@ -486,39 +486,66 @@ function parseTable(lines: string[]): { headers: string[]; rows: string[][] } | 
 
 type StatusMeta = { badgeClass: string; rowClass: string; label: string }
 // Headers that indicate a column carries status/level values eligible for badge rendering.
-const STATUS_HEADER_RE = /status|level|evidence|severity|priority|state|type|risk/i
+const STATUS_HEADER_RE = /status|level|evidence|severity|priority|state|type|risk|governing/i
 
 const STATUS_MAP: Array<{ pattern: RegExp; meta: StatusMeta }> = [
-  { pattern: /^ACTIVE-UNPROVEN$/i,           meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
-  { pattern: /^ACTIVE$/i,                    meta: { badgeClass: 's-active',          rowClass: 'row-active',          label: 'ACTIVE' } },
-  { pattern: /^ADDRESSED\*?$/i,              meta: { badgeClass: 's-addressed',       rowClass: 'row-addressed',       label: 'ADDRESSED' } },
-  { pattern: /^RESOLVED$/i,                  meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'RESOLVED' } },
-  { pattern: /^EVIDENCE-BACKED$/i,           meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'EVIDENCE-BACKED' } },
-  { pattern: /^CLOSED$/i,                    meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'CLOSED' } },
-  { pattern: /^DESIGNED$/i,                  meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'DESIGNED' } },
-  { pattern: /^PROPOSED$/i,                  meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'PROPOSED' } },
-  { pattern: /^PARTIAL$/i,                   meta: { badgeClass: 's-partial',         rowClass: 'row-partial',         label: 'PARTIAL' } },
-  { pattern: /^OPEN$/i,                      meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'OPEN' } },
-  { pattern: /^ONGOING$/i,                   meta: { badgeClass: 's-ongoing',         rowClass: 'row-ongoing',         label: 'ONGOING' } },
-  { pattern: /^FOUNDING$/i,                  meta: { badgeClass: 's-founding',        rowClass: 'row-founding',        label: 'FOUNDING' } },
-  { pattern: /UNRESOLVED PREREQUISITE/i,     meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'UNRESOLVED PREREQUISITE' } },
-  { pattern: /NEEDS EVIDENCE/i,              meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'NEEDS EVIDENCE' } },
-  { pattern: /PARTLY TESTED/i,               meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'PARTLY TESTED' } },
-  { pattern: /MORAL COMMITMENT/i,            meta: { badgeClass: 's-moral',           rowClass: 'row-moral',           label: 'MORAL COMMITMENT' } },
-  { pattern: /ACTIVE-UNPROVEN CONTROL/i,     meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'ACTIVE-UNPROVEN' } },
-  { pattern: /DESIGNED MECHANISM|DESIGNED DIRECTION|DESIGNED CONTROL|DESIGNED$/i, meta: { badgeClass: 's-designed', rowClass: 'row-designed', label: 'DESIGNED' } },
-  { pattern: /^\*\*Critical\*\*$/i,    meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
+  // ── Core corpus vocabulary (CLAUDE.md canonical set) ───────────────────────
+  // Normalised input: em/en dashes already converted to hyphens by cleanStatusCell.
+  { pattern: /^Active-unproven$/i,           meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'Active — unproven' } },
+  { pattern: /^Active$/i,                    meta: { badgeClass: 's-active',          rowClass: 'row-active',          label: 'Active' } },
+  { pattern: /^Resolved$/i,                  meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'Resolved' } },
+  { pattern: /^Evidence-backed$/i,           meta: { badgeClass: 's-evidence-backed', rowClass: 'row-evidence-backed', label: 'Evidence-backed' } },
+  { pattern: /^Designed$/i,                  meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /^Proposed$/i,                  meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'Proposed' } },
+  { pattern: /Partly tested/i,               meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'Partly tested' } },
+
+  // ── Extended status variants found across corpus ───────────────────────────
+  { pattern: /^Addressed\*?$/i,              meta: { badgeClass: 's-addressed',       rowClass: 'row-addressed',       label: 'Addressed' } },
+  { pattern: /^Closed$/i,                    meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'Closed' } },
+  { pattern: /^Partial$/i,                   meta: { badgeClass: 's-partial',         rowClass: 'row-partial',         label: 'Partial' } },
+  { pattern: /^Open$/i,                      meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'Open' } },
+  { pattern: /^Ongoing$/i,                   meta: { badgeClass: 's-ongoing',         rowClass: 'row-ongoing',         label: 'Ongoing' } },
+  { pattern: /^Founding$/i,                  meta: { badgeClass: 's-founding',        rowClass: 'row-founding',        label: 'Founding' } },
+  { pattern: /^Superseded$/i,                meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'Superseded' } },
+  { pattern: /^Retired$/i,                   meta: { badgeClass: 's-closed',          rowClass: 'row-closed',          label: 'Retired' } },
+
+  // ── Claims Evidence Register / Hardening Queue compound statuses ───────────
+  { pattern: /Active-unproven control/i,     meta: { badgeClass: 's-active-unproven', rowClass: 'row-active-unproven', label: 'Active — unproven' } },
+  { pattern: /Unresolved prerequisite/i,     meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'Unresolved prerequisite' } },
+  { pattern: /Needs evidence/i,              meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs evidence' } },
+  { pattern: /Needs simulation/i,            meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs simulation' } },
+  { pattern: /Needs proof/i,                 meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs proof' } },
+  { pattern: /Needs drills/i,                meta: { badgeClass: 's-needs-evidence',  rowClass: 'row-needs-evidence',  label: 'Needs drills' } },
+  { pattern: /Moral commitment/i,            meta: { badgeClass: 's-moral',           rowClass: 'row-moral',           label: 'Moral commitment' } },
+  { pattern: /Designed mechanism/i,          meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /Designed direction/i,          meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /Designed control/i,            meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Designed' } },
+  { pattern: /Not ready/i,                   meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'Not ready' } },
+  { pattern: /Working prototype/i,           meta: { badgeClass: 's-partly-tested',   rowClass: 'row-partly-tested',   label: 'Working prototype' } },
+
+  // ── Issue types (governance docs) ─────────────────────────────────────────
+  { pattern: /^Defect$/i,                    meta: { badgeClass: 's-open',            rowClass: 'row-open',            label: 'Defect' } },
+  { pattern: /^Structural gap$/i,            meta: { badgeClass: 's-unresolved',      rowClass: 'row-unresolved',      label: 'Structural gap' } },
+  { pattern: /^Improvement$/i,               meta: { badgeClass: 's-designed',        rowClass: 'row-designed',        label: 'Improvement' } },
+  { pattern: /^Uncertain$/i,                 meta: { badgeClass: 's-proposed',        rowClass: 'row-proposed',        label: 'Uncertain' } },
+
+  // ── Severity / priority levels ─────────────────────────────────────────────
   { pattern: /^Critical$/i,            meta: { badgeClass: 's-critical', rowClass: 'row-open',     label: 'Critical' } },
-  { pattern: /^\*\*Med-High\*\*$/i,    meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
   { pattern: /^Med-High$/i,            meta: { badgeClass: 's-med-high', rowClass: 'row-partial',  label: 'Med-High' } },
-  { pattern: /^\*\*High\*\*$/i,        meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
   { pattern: /^High$/i,                meta: { badgeClass: 's-high',     rowClass: 'row-partial',  label: 'High' } },
   { pattern: /^Medium$/i,              meta: { badgeClass: 's-medium',   rowClass: '',             label: 'Medium' } },
   { pattern: /^Low$/i,                 meta: { badgeClass: 's-low',      rowClass: '',             label: 'Low' } },
 ]
 
 function cleanStatusCell(cell: string): string {
-  return cell.replace(/\*\*/g, '').replace(/`/g, '').trim().replace(/\s+/g, ' ')
+  return cell
+    .replace(/\*\*/g, '')
+    .replace(/`/g, '')
+    .trim()
+    .replace(/\s+/g, ' ')
+    // Normalise em-dash (—) and en-dash (–) to hyphen so patterns above don't
+    // need separate em-dash variants. "Active — unproven" → "Active-unproven".
+    .replace(/\s*[—–]\s*/g, '-')
 }
 
 function matchStatus(cell: string): StatusMeta | null {
