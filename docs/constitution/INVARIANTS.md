@@ -19,6 +19,7 @@ An invariant is a rule the system is never allowed to break. These are not norma
 In plain terms:
 
 - Everyone keeps enough Essential Access to survive.
+- A wrongful denial of survival access can be appealed to a person, and the floor is provided while the appeal is reviewed.
 - The five instruments cannot be traded into each other.
 - The system cannot score a person's worth.
 - Money cannot buy governing power.
@@ -27,6 +28,12 @@ In plain terms:
 - These rules cannot be weakened by ordinary votes or inside procedures.
 
 If a proposed change breaks one of these promises, the answer is no before the detailed review even starts.
+
+---
+
+## Foundational Premise
+
+Every person has inherent and equal worth that this system does not confer and cannot revoke — a worth the founders understand as belonging to each person as a bearer of the image of God, which they do not claim the authority to define, only the duty to protect. These invariants exist to serve persons; no rule or institution may be revered above the people it was made to protect.
 
 ---
 
@@ -111,6 +118,8 @@ If a proposed change breaks one of these promises, the answer is no before the d
 
 **Why this matters:** The same actor should not be able to check the numbers and benefit from changing them. That creates a strong temptation to bend definitions, hide failures, or build an insider class.
 
+**No class is its own final auditor.** Every body holding verification, override, or governing authority — including the oracle nodes (INV-005) and the keyholder set (INV-007) — is subject to audit by a party structurally independent of it. No apex may sit unaudited.
+
 **Attack vectors that target this invariant:** T-008, T-016
 
 ---
@@ -133,6 +142,8 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 - Tier 3 (operational parameters): amendable by standard FAP
 
 **Why this matters:** A rule that insiders can weaken is not truly protected. Tier 1 rules need a second independent check so one captured reviewer cannot open the door to changing the system's core promises.
+
+**Keyholder authority is custodial and removable.** The 7-of-9 keyholder set is a custodial trust, not a proprietary office. Keyholder identities are public; each carries a published conflict-of-interest disclosure; the set is subject to a fixed-schedule rotation and a defined recall mechanism administered by a body structurally external to the keyholders. No keyholder may hold the position secretly, indefinitely, or without an active path to removal. The rotation cadence and recall thresholds are calibrated below Tier 1; the *rule that the set must rotate and be recallable* is itself Tier 1.
 
 **Attack vectors that target this invariant:** T-007, T-016, T-022
 
@@ -161,6 +172,8 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 **Mechanical boundary:** No system process may apply a fee, carrying cost, or deduction to: (a) CSM-tier Essential Access allocations, (b) any Flow balance below the published household savings floor, or (c) any labor income transaction where the income source brings the recipient's balance to or below the floor.
 
 **Why this matters:** A fee on survival is a survival condition in disguise. Even a small carrying cost on the survival floor erodes the unconditional guarantee over time and converts Essential Access into a timed benefit rather than a floor.
+
+**The exemption boundary is structurally protected.** The boundary below which no fee, carrying cost, or demurrage may apply (the household savings floor, S) may never be lowered, redefined, or eroded so as to bring any carrying cost onto a household at or below the floor. The specific value of S is calibrated below Tier 1; the *rule that S may never be set or moved to defeat this invariant's protection of below-floor households* is itself Tier 1. A change to S that subjects a previously-protected household to demurrage is an INV-009 violation regardless of its administrative form.
 
 **Attack vectors that target this invariant:** T-007 (definition drift on "essential"), demurrage miscalibration against low-balance households
 
@@ -209,6 +222,7 @@ Any patch proposal submitted to FAP is evaluated against this document before te
 10. Would create an uncapped succession transfer mechanism above the household savings floor (violates INV-010)
 11. Would permit a constitutional decision to execute without named human attestation (violates INV-011)
 12. Would amend any Founding Order file (`founding/order/`) through a sub-Tier-1 process (violates INV-012)
+13. Would allow a survival-floor denial or reduction to stand without an accessible human appeal, or would withhold the survival floor during that appeal (violates INV-013)
 
 ...is rejected at intake without proceeding to technical review. The FAP reviewer documents the violation by invariant ID.
 
@@ -243,6 +257,18 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 **Attack vectors:** T-022 (electoral cycle capture targeting the exit mechanism); PRD-009 (dynasty formation securing permanent institutional control by eliminating exit as a check).
 
 **Violation detection:** Any patch that modifies a Founding Order file without a valid Tier 1 attestation envelope ([ANNEX_AV §AV8](../annexes/ANNEX_AV.md#av8--attestation-envelope-format)) is rejected at FAP intake as a Tier 1 violation under INV-007. Implementation drift that operationally narrows exit rights or consent thresholds without a valid Tier 1 amendment record is a drift-warning event per [ANNEX_AV §AV9](../annexes/ANNEX_AV.md#av9--intake-verification-procedure).
+
+---
+
+## INV-013 — Survival Access Has a Human Remedy
+
+**Statement:** Any denial, reduction, suspension, delay, or flag that withholds a person's Constitutional Survival Minimum — for any reason, including suspected fraud, identity-verification failure, non-duplication conflict, or capacity dispute — carries an accessible, timely, human-reviewed appeal; and survival access is provided *during* the appeal, not withheld pending it.
+
+**Mechanical boundary:** No survival-floor denial may stand on automated determination alone. Every withholding generates an appeal right that is (a) reachable without identity, documents, literacy, or fee; (b) decided by a named human within a published maximum window; and (c) resolved toward provision while pending — the person receives the floor during review, not after it. A denial issued with no open appeal path is void.
+
+**Why this matters:** An unconditional floor with no remedy is unconditional only until the machinery makes a mistake. False fraud-flags, failed scans, and mismatched records *will* occur; without a fast human appeal that provides first and verifies second, the error itself becomes the new condition on survival. The remedy is what makes "unconditional" true in operation, not only on paper.
+
+**Attack vectors that target this invariant:** T-007 (definition drift), implementation drift turning provisional flags into de facto denials, fraud-control overreach.
 
 ---
 
