@@ -316,3 +316,60 @@ The abuse was so plain that Athens never used ostracism again. The mechanism bui
 [^c5-7]: [UNVERIFIED — panel check] British abolition movement: Wilberforce and the Clapham Sect; twelve consecutive years of abolition bills; slave trade estimated at ~11% of British exports; ~50 years from the 1787 founding of the Society for Effecting the Abolition of the Slave Trade to the 1833 Slavery Abolition Act.
 
 [^c5-8]: [UNVERIFIED — panel check] Citizens United v. FEC (2010), 5–4 decision granting corporations political-spending speech rights; PAC spending rising from ~$750 million (2008 cycle) to over $4 billion (2020 cycle).
+
+## Chapter 6 — When money itself is the problem
+
+Money is a tool. Like any tool, the way it is built decides what it can and cannot do. Most people use money without ever asking who designed it or what that design rewards.
+
+That question matters more than it seems. When money is built to reward holding it rather than spending it, when it tends to pile up in fewer and fewer hands over time, when new money can only be created through debt, and when the people who run it also profit from those features, the tool stops being a neutral way to trade. It becomes the engine of the very problems people blame on bad luck or bad behavior.
+
+So the design of money is not just a technical matter for experts. It is a question about power and fairness, and the answer shapes ordinary lives.
+
+### Anchor case: The Wörgl experiment (Austria, 1932–33)
+
+Wörgl was a small Austrian town of about 4,500 people. During the worst of the Great Depression, roughly 30% of its people were out of work.[^c6-1] The mayor, Michael Unterguggenberger, was a Catholic who said plainly that he saw fixing this as a moral duty to his neighbors.
+
+His idea was simple. The town issued 5,000 "work certificates," each backed by an Austrian schilling kept in reserve at the local savings bank.[^c6-2] The certificates carried something called demurrage. Demurrage is a carrying cost: a small charge that makes money you sit on slowly lose value, which pushes you to spend it instead of hoard it. In Wörgl the rate was 1% a month. If you held a certificate without using it, it lost 1% of its value each month.[^c6-2] So people spent. The money moved.
+
+The results came fast. Within about thirteen months, unemployment in the town dropped by roughly 25%.[^c6-3] Wörgl repaved its streets, built a new bridge, improved drainage, put in street lights, and paid down back taxes. Word spread, and neighboring towns started copying it. Around 200 Austrian municipalities had begun or were planning their own versions.[^c6-4]
+
+Then, in September 1933, the Austrian central bank shut it down. It ruled the experiment an illegal infringement on its sole right to issue currency.[^c6-5] The mayor appealed all the way to the Austrian Supreme Court and lost. Within months, unemployment in Wörgl was back around 30%.
+
+The point to sit with: the experiment was not ended because it failed. It was ended because it worked, and its success threatened the monetary monopoly of the institution that stopped it.
+
+### Brief cases
+
+**WIR Bank (Switzerland, 1934–present)** — A complementary currency for business-to-business trade, founded during the Great Depression and still running after about ninety years.[^c6-6] Roughly 60,000 Swiss small and medium businesses use it.[^c6-6] Its use tends to rise during recessions, which steadies regional economies when the national economy slows. Academic studies have documented this stabilizing effect.[^c6-7] It survives because it runs alongside the national currency rather than trying to replace it.
+
+**The founding of the Federal Reserve (1913)** — This part is on the historical record, not rumor. In 1910, a small group of bankers met privately at Jekyll Island, Georgia, to draft a plan for a US central bank.[^c6-8] The resulting law passed on December 23, 1913, while many senators were away for the Christmas recess.[^c6-9] The system it created placed a central bank partly under the influence of the private banks it was meant to oversee. The tension between public control of money and private banking interest in that design has never been fully resolved.
+
+**The end of Bretton Woods (1971)** — From 1944 onward, the Bretton Woods system tied the dollar to gold: dollars could be redeemed for gold at $35 an ounce.[^c6-10] That limit acted as an outside brake on how much money the US government could create. In 1971, President Nixon ended that convertibility on his own.[^c6-11] It was the last time a structural external limit on currency creation operated at global scale. In the roughly fifty years since, US national debt grew from about $400 billion to over $33 trillion, the economy passed through repeated financial crises, and the financial sector grew from a supporting role into a dominant one.[^c6-12]
+
+**Mondragon cooperatives** — The cooperative ownership structure changes what money does inside an organization. Profit stays in the community. Capital cannot vote workers out. The way ownership is designed changes the behavior of the money that flows through it.
+
+**Berkshares (Massachusetts, 2006–present)** — A local currency used in the Berkshire region of Massachusetts, accepted by roughly 400 local businesses.[^c6-13] Small in scale, but it shows that a complementary currency can operate inside modern regulation without being shut down, as long as it is built to complement the national currency rather than replace it.
+
+> **What to watch for**
+> - Rising debt needed just to keep the same standard of living, and a widening gap between wage growth and asset price growth.
+> - Financial sector profits taking a growing share of all corporate profits.
+> - Currency experiments being shut down by regulators rather than failing on their own terms.
+
+> *Alternative currency experiments that survived long-term shared two features: they were embedded in a community with shared values, and they had an institutional framework that kept them accountable. The ones that were shut down were shut down by the systems they threatened — not because they failed.*
+
+**Where this project responds:** Flow — this project separates market money into its own walled instrument, so the way money is designed cannot quietly become the mechanism that concentrates power. The project's only carrying cost on accumulated wealth lives in ANNEX_D; there is no separate per-balance fee on ordinary money held in Flow.
+
+**Sources**
+
+[^c6-1]: [UNVERIFIED — panel check] Wörgl population ~4,500 and ~30% unemployment figures, from project spec "2026-06-02-useful-history-design.md" Chapter 6; commonly attributed to accounts of the Wörgl Freigeld experiment (Fisher, *Stamp Scrip*, 1933).
+[^c6-2]: [UNVERIFIED — panel check] 5,000 work certificates backed by schillings at the local savings bank, with 1% monthly demurrage, from project spec Chapter 6; consistent with standard histories of the Wörgl experiment.
+[^c6-3]: [UNVERIFIED — panel check] ~25% drop in unemployment within thirteen months, from project spec Chapter 6.
+[^c6-4]: [UNVERIFIED — panel check] ~200 Austrian municipalities beginning or planning similar programs, from project spec Chapter 6.
+[^c6-5]: [UNVERIFIED — panel check] Austrian National Bank shutdown in September 1933 on currency-monopoly grounds; Supreme Court appeal lost, from project spec Chapter 6.
+[^c6-6]: [UNVERIFIED — panel check] WIR Bank founded 1934, ~90 years operating, ~60,000 Swiss SMEs, from project spec Chapter 6.
+[^c6-7]: [UNVERIFIED — panel check] Counter-cyclical stabilizing effect documented in Studer (1998) and Stodder (2009), as cited in project spec Chapter 6.
+[^c6-8]: [UNVERIFIED — panel check] Jekyll Island meeting of bankers in 1910, from project spec Chapter 6; documented in standard histories of the Federal Reserve's founding.
+[^c6-9]: [UNVERIFIED — panel check] Federal Reserve Act passed December 23, 1913, during the Christmas recess, from project spec Chapter 6.
+[^c6-10]: [UNVERIFIED — panel check] Bretton Woods system (from 1944) with dollar–gold convertibility at $35/oz, from project spec Chapter 6.
+[^c6-11]: [UNVERIFIED — panel check] Nixon ended dollar–gold convertibility unilaterally in 1971, from project spec Chapter 6.
+[^c6-12]: [UNVERIFIED — panel check] US national debt growing from ~$400 billion to over $33 trillion, plus repeated financial crises and financial-sector growth, from project spec Chapter 6.
+[^c6-13]: [UNVERIFIED — panel check] Berkshares launched 2006 in the Berkshire region, ~400 local businesses; project spec Chapter 6 states ~400, while an earlier passage references "approximately 400 local businesses." Figure taken from project spec Chapter 6.
