@@ -148,3 +148,62 @@ The lesson is not that big companies are evil. It is that wealth, left without a
 [^c2-17]: [UNVERIFIED — panel check] Regulatory capture and the "revolving door" (FDA/pharma, EPA/industry, Treasury/Wall Street): e.g. work by the Project On Government Oversight (POGO); academic literature originating with George Stigler, "The Theory of Economic Regulation" (1971). Specific appointment records require verification.
 [^c2-18]: [UNVERIFIED — panel check] Iceland prosecuting 26 bankers with sentences of roughly 1 to 5.5 years after the 2008 crisis. Commonly cited figure; prosecution count and sentence range require verification against Icelandic court records.
 [^c2-19]: [UNVERIFIED — panel check] Iceland's relatively faster recovery versus Ireland, Greece, and Spain following different crisis responses (bank failure/prosecution vs. bailout): e.g. IMF post-crisis assessments of Iceland; comparative recovery data requires verification.
+
+## Chapter 3 — When advantage passes down unchanged
+
+You can be born already behind. Not because of anything you did. Because of what happened to people you never met, before you were born. The land was taken. The loan was refused. The door was shut. By the time you arrive, the head start and the hole are already set.
+
+This is the third trap. Each generation hands the next one its position. A family that owns land hands down land. A family that was kept off land hands down the lack of it. Wealth, contacts, and a clear path all stack up on one side. Their absence stacks up on the other. Neither side stops on its own.
+
+Over enough generations, this hardens into something that looks like caste — a fixed rank you are born into and cannot leave. No law has to name it. The outcome is the same. The people it holds down rarely point to one big wrong. They live a long string of small ones. From outside, each looks minor. From inside, they add up to a wall.
+
+### Anchor case: The English Enclosures (1500s–1800s)
+
+For centuries, English villages shared common land. People who owned no land could still graze animals, grow food, and gather wood there. It was not charity. It was a right, held in common, that let poor families feed themselves.
+
+Over about three hundred years, that shared land was fenced off and handed to private owners. Parliament passed a long series of acts to do it. Roughly 6.8 million acres of common land moved into private hands.[^c3-1] The people who lost their share did not lose it in one blow. They lost it slowly, legally, one act at a time.
+
+What was tried, and what failed, is the same thing: the law itself. Each enclosure was lawful. Each was orderly. There was no crime to point to. But the result was that families who had fed themselves for generations now owned nothing. They had to sell their labor to survive, because there was no longer any other way to eat.
+
+The cost did not land all at once either. It compounded. The wealth pulled from the enclosed land grew across many generations of owners. The poverty of those who lost their access grew right alongside it. Both kept growing. Descendants of those families still show up, on the wrong side, in British economic numbers today.[^c3-2]
+
+The lesson is not that fences are evil. It is narrower. Advantage and disadvantage both pass down quietly, through legal means, until the gap between two families looks like the natural order. It is not natural. It was built, slowly, on purpose.
+
+### Brief cases
+
+**Jim Crow property law (United States, 1865–1968).** The wealth gap between Black and white families in America is not only a leftover from slavery. It was built by specific, recorded rules after slavery ended. Redlining — government maps that marked Black neighborhoods as too risky for loans — locked families out of mortgages.[^c3-3] Restrictive covenants — clauses in property deeds that legally barred selling a home to Black buyers — were enforced by courts until 1948, and by custom long after.[^c3-4] The GI Bill, which built the white middle class after World War II, was handed out so that Black veterans were denied the home loans and college aid white veterans got.[^c3-5] And contract buying — where Black families were sold homes at two to three times the real price, with no equity until the last payment — drained money from people already shut out of normal loans.[^c3-6] Each mechanism is on the record. The combined gap they built is in Federal Reserve data now.
+
+**Caste systems (India, Japan, Europe).** The Dalit in India, the Burakumin in Japan, the Romani across Europe. Different lands, different centuries, different beliefs. The same outcome: the rank you are born into decides your life, no matter what you can do.[^c3-7] And when the formal caste law is finally struck down, the economic caste stays. It stays because wealth, contacts, and opportunity already pooled on one side generations ago. Removing the law does not move the pool.
+
+**Modern inheritance concentration.** The top 1 percent of Americans receive more in inheritance than the bottom half of Americans earn in an entire working life.[^c3-8] Inherited wealth now makes up a larger share of all wealth than at any point since before the New Deal. And the trend is speeding up. As the baby-boom generation dies, it is expected to pass down an estimated $70 trillion to its heirs.[^c3-9] The head start, in other words, is getting bigger, not smaller.
+
+**Jubilee laws (Leviticus 25).** One of the oldest recorded answers to this trap. Every fifty years, land returned to the family that first held it, debts were cancelled, and people who had sold themselves into service went free.[^c3-10] The reason given was blunt: the land was not truly owned by anyone, so no one could keep it forever. The point was that no head start and no hole could become permanent. Whether every generation actually carried it out is debated by historians. That it was written down, made law, and treated as binding is not.
+
+**Medieval guilds (Europe, roughly 1100–1700).** Guilds were trade associations built on a brotherhood model and a shared moral code. They pooled aid for members in trouble, set quality standards together, and used apprenticeship as a real ladder: a young worker could rise from apprentice to journeyman to master, and own a shop.[^c3-11] For several centuries that ladder worked. But guilds had their own trap. Over time they grew closed and protective, passing membership to sons and shutting outsiders out — becoming the very thing they had let people escape.
+
+**Seed patent monopolies (1980s–present).** Monsanto, now owned by Bayer, patented crop varieties built on plants that farmers had grown and saved for thousands of years.[^c3-12] Under those patents, a farmer can be legally barred from saving seed to plant next season — the most basic farming practice there is. Four companies now control roughly 60 percent of the world's seed supply.[^c3-13] A farmer in India who saves a patented seed can be sued. The law that made this possible was written in the 1980s. It is now woven through farming worldwide.
+
+> **What to watch for**
+> - Official numbers showing that children rarely end up better off than the family they were born into.
+> - The same family names turning up again and again among big landowners, big donors, and elected officials.
+> - Neighborhoods where poverty has stayed fixed in the same place for more than two generations.
+
+> *Advantage compounds quietly. The people it holds down rarely face one dramatic wrong — they face a long string of small exclusions, invisible from outside and overwhelming from inside.*
+
+**Where this project responds:** ANNEX_D and Flow. ANNEX_D holds the project's one carrying-cost rule, called demurrage — a slow cost on large accumulated wealth, so that hoarded fortunes lose value over time instead of compounding forever and hardening into caste. Flow is the market-money tool that carries this and other limits on how far wealth can pile up in one family across generations.
+
+**Sources**
+
+[^c3-1]: [UNVERIFIED — panel check] Roughly 6.8 million acres enclosed by Parliamentary acts (chiefly 18th–19th century, building on earlier enclosure from the 1500s): standard estimates, e.g. J. M. Neeson, *Commoners: Common Right, Enclosure and Social Change in England, 1700–1820* (Cambridge University Press, 1993); G. E. Mingay, *Parliamentary Enclosure in England* (Longman, 1997). Total acreage figure requires verification.
+[^c3-2]: [UNVERIFIED — panel check] Long-run persistence of wealth and disadvantage among descendants of the landless following enclosure: e.g. work on intergenerational wealth persistence in Britain (Gregory Clark, *The Son Also Rises*, Princeton University Press, 2014). Specific present-day attribution requires verification.
+[^c3-3]: [UNVERIFIED — panel check] Federal redlining via Home Owners' Loan Corporation / FHA maps designating Black neighborhoods as high-risk: Richard Rothstein, *The Color of Law* (Liveright, 2017).
+[^c3-4]: [UNVERIFIED — panel check] Racially restrictive covenants legally enforceable until *Shelley v. Kraemer* (1948), socially enforced afterward: Rothstein, *The Color of Law*.
+[^c3-5]: [UNVERIFIED — panel check] GI Bill benefits (home loans, college aid) administered so that Black veterans were largely excluded: Ira Katznelson, *When Affirmative Action Was White* (W. W. Norton, 2005); NAACP-documented denial rates require verification.
+[^c3-6]: [UNVERIFIED — panel check] Contract buying in Chicago and elsewhere, with Black buyers charged roughly 2–3× market value and building no equity: Ta-Nehisi Coates, "The Case for Reparations," *The Atlantic* (2014); Beryl Satter, *Family Properties* (Metropolitan Books, 2009).
+[^c3-7]: [UNVERIFIED — panel check] Persistence of caste-like outcomes for Dalit (India), Burakumin (Japan), and Romani (Europe) populations across centuries and after formal legal abolition: comparative caste literature; specific sources require verification.
+[^c3-8]: [UNVERIFIED — panel check] Top 1% receiving more in inheritance than the bottom 50% earn in a lifetime: attributed to OECD analysis of wealth and inheritance. Specific OECD report and figure require verification.
+[^c3-9]: [UNVERIFIED — panel check] Estimated ~$70 trillion in generational ("great wealth transfer") asset transfer from the baby-boom generation: commonly cited industry estimates (e.g. Cerulli Associates). Figure and timeframe require verification.
+[^c3-10]: Leviticus 25 (Jubilee: land returns every fiftieth year, debts cancelled, indentured servants freed; "the land must not be sold permanently, because the land is mine," Lev 25:23).
+[^c3-11]: [UNVERIFIED — panel check] Medieval European guilds organized around Christian-brotherhood mutual-aid frameworks, quality standards, and apprentice-to-master mobility, later becoming restrictive and hereditary: e.g. Sheilagh Ogilvie, *The European Guilds: An Economic Analysis* (Princeton University Press, 2019). Interpretation of mobility versus capture requires verification.
+[^c3-12]: [UNVERIFIED — panel check] Monsanto (now Bayer) patenting of crop varieties and legal prohibition on farmer seed-saving: e.g. *Bowman v. Monsanto Co.* (US Supreme Court, 2013); reporting on seed-saving litigation. Specifics require verification.
+[^c3-13]: [UNVERIFIED — panel check] Approximately four firms controlling ~60% of the global commercial seed supply following industry consolidation: e.g. IPES-Food, *Too Big to Feed* (2017); Philip H. Howard, *Concentration and Power in the Food System* (Bloomsbury, 2016). Exact share and firm count require verification.
