@@ -30,16 +30,18 @@ type NavItem = { id: AppView; label: string }
 
 // ── Reading Paths dropdown ────────────────────────────────────────────────────
 
+// `time` = estimated full-path reading time at ~200 wpm over each path's summed
+// document word counts. Keep in sync with PATHS in LandingPage.tsx.
 const HEADER_PATHS = [
-  { id: 'first-time',              label: 'First Read',          time: '20m' },
-  { id: 'skeptic',                 label: 'Skeptic',             time: '25m' },
-  { id: 'implementer',             label: 'Implementer',         time: '35m' },
-  { id: 'economic-instruments',    label: 'Economics',           time: '30m' },
-  { id: 'founding-order',          label: 'Founding Order',      time: '25m' },
-  { id: 'pilot-deployment',        label: 'Pilot Roadmap',       time: '30m' },
-  { id: 'identity-personhood',     label: 'Personhood',          time: '20m' },
-  { id: 'architectural-integrity', label: 'Architecture',        time: '25m' },
-  { id: 'governance-deep',         label: 'Governance',          time: '40m' },
+  { id: 'first-time',              label: 'First Read',          time: '2h' },
+  { id: 'skeptic',                 label: 'Skeptic',             time: '2h50m' },
+  { id: 'implementer',             label: 'Implementer',         time: '1h15m' },
+  { id: 'economic-instruments',    label: 'Economics',           time: '1h' },
+  { id: 'founding-order',          label: 'Founding Order',      time: '45m' },
+  { id: 'pilot-deployment',        label: 'Pilot Roadmap',       time: '55m' },
+  { id: 'identity-personhood',     label: 'Personhood',          time: '1h5m' },
+  { id: 'architectural-integrity', label: 'Architecture',        time: '50m' },
+  { id: 'governance-deep',         label: 'Governance',          time: '4h40m' },
 ]
 
 function PathsDropdown({ onStartPath }: { onStartPath: (pathId: string) => void }) {
