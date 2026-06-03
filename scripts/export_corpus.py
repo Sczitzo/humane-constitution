@@ -58,11 +58,13 @@ CORE_DOCS = (
     "docs/governance/Christ_Centered_Evaluation.md",
     "docs/governance/Jurisdiction_Interface_Clause.md",
     "docs/governance/Pilot_Site_Selection_Criteria.md",
+    "docs/public/00_start_here.md",
     "docs/public/01_overview.md",
     "docs/public/02_faq.md",
     "docs/public/03_readiness.md",
     "docs/public/04_white_paper.md",
     "docs/public/05_rights_layer.md",
+    "docs/public/05_life_and_rights.md",
     "docs/public/06_big_companies.md",
     "docs/public/07_life_under_the_system.md",
     "docs/public/08_useful_history.md",
@@ -303,10 +305,11 @@ def collect_stats(docs: list[dict[str, object]]) -> dict[str, object]:
 
 def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> None:
     featured_paths = [
-        "docs/public/01_overview.md",
+        "docs/public/00_start_here.md",
         "docs/public/08_useful_history.md",
-        "docs/public/07_life_under_the_system.md",
+        "docs/public/05_life_and_rights.md",
         "docs/public/05_rights_layer.md",
+        "docs/public/07_life_under_the_system.md",
         "docs/public/06_big_companies.md",
         "docs/public/02_faq.md",
         "docs/public/04_white_paper.md",

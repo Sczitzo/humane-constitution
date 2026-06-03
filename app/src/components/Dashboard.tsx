@@ -2284,6 +2284,12 @@ interface HomeCard {
 
 const HOME_CARDS: HomeCard[] = [
   {
+    path: 'docs/public/00_start_here.md',
+    label: 'Start Here',
+    description: 'The single entry point: the problem, the one testable claim, the honest caveats, and where to go next.',
+    tag: 'Start here',
+  },
+  {
     path: 'docs/public/01_overview.md',
     label: 'One-Page Overview',
     description: 'The core diagnosis: why survival, markets, and civic power must be separated.',
