@@ -37,6 +37,12 @@ async function openConstitutionView(page: Page): Promise<void> {
   await expect(page.getByTestId('nav-constitution')).toBeVisible()
   await page.getByTestId('nav-constitution').click()
   await expect(page.getByTestId('reader-title')).toBeVisible()
+  // Wait for the document to actually settle before keyboard-driven tests
+  // interact with it: a non-empty title and rendered prose. On slower CI
+  // runners the title/content lag the view switch, which used to race the
+  // assertions in the keyboard-shortcut tests.
+  await expect(page.getByTestId('reader-title')).toHaveText(/\S/)
+  await expect(page.locator('.reader-prose').first()).toBeVisible()
 }
 
 async function openAnnexesView(page: Page): Promise<void> {
@@ -190,6 +196,11 @@ test.describe('reader shell regression coverage', () => {
     await expect(page.getByTestId('reader-search-input')).toBeFocused()
 
     await page.keyboard.type('survival')
+    // Confirm the query registered, then wait for highlights to render before
+    // asserting the active hit — the hit count is computed in a rAF + effect
+    // chain that lags the keystrokes on slower runners.
+    await expect(page.getByTestId('reader-search-input')).toHaveValue('survival')
+    await expect(page.locator('mark[data-reader-search-hit="true"]').first()).toBeVisible()
     await expect(page.locator('mark[data-active-hit="true"]')).toHaveCount(1)
 
     await page.keyboard.press('Escape')
@@ -206,14 +217,19 @@ test.describe('reader shell regression coverage', () => {
     await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
-    const firstTitle = await page.getByTestId('reader-title').textContent()
+    const titleEl = page.getByTestId('reader-title')
+    const firstTitle = (await titleEl.textContent())!.trim()
+    expect(firstTitle).not.toBe('')
 
     await page.keyboard.press('j')
-    const secondTitle = await page.getByTestId('reader-title').textContent()
+    // Wait for the document to actually change before reading the new title,
+    // rather than racing the keypress's async navigation.
+    await expect(titleEl).not.toHaveText(firstTitle)
+    const secondTitle = (await titleEl.textContent())!.trim()
     expect(secondTitle).not.toBe(firstTitle)
 
     await page.keyboard.press('k')
-    await expect(page.getByTestId('reader-title')).toHaveText(firstTitle!)
+    await expect(titleEl).toHaveText(firstTitle)
 
     await page.keyboard.press(']')
     await expect(page.getByRole('heading', { name: 'Annex Corpus' })).toBeVisible()
