@@ -603,3 +603,36 @@ Here is the part that matters for this chapter. The people who made the decision
 [^c10-5]: [UNVERIFIED — panel check] Invitation Homes (backed by Blackstone) is reported to have acquired on the order of 80,000 single-family homes (company filings and financial press, 2010s).
 [^c10-6]: [UNVERIFIED — panel check] US national debt reported at approximately 33 trillion dollars (US Treasury, 2023); figure rises over time.
 [^c10-7]: [UNVERIFIED — panel check] The World Health Organization classifies antimicrobial/antibiotic resistance as one of the top global public health threats (WHO fact sheets).
+
+## What this project addresses — and what it does not yet
+
+The ten chapters describe one problem from ten angles. In each one, the same thing was missing: a floor beneath market failure, a wall between wealth and power, a way to reset old advantage, an honest method for rationing real scarcity, a civic voice that cannot be bought, a money system that moves more than it hoards, protection for what people are allowed to know, enforcement of rights that were already declared, and obligations that reach past the present.
+
+Each failure happened where a specific structure was absent. And every society that solved one of these problems solved it the same way: it built a structure and held it against the people who profited from its absence. When the solution was lost, it was lost the same way too — the structure was captured, worn down, or quietly defunded.
+
+This corpus describes those structures together, with walls between them so that no one of them becomes the next failure mode. It does not claim to have solved these problems. It claims only to have studied them, and to have written down what the study found.
+
+### What the five instruments are for
+
+**Essential Access** — The floor beneath market failure: food, shelter, medicine, and water as a survival guarantee, not a market outcome (Chapters 1, 9).
+**Flow** — The wall between wealth and power: a market money system with structural limits on concentration and a demurrage carrying cost on accumulated wealth (ANNEX_D), kept from buying survival, voice, or office (Chapters 2, 3, 6).
+**Voice** — The civic priority that cannot be purchased with wealth (Chapters 5, 8).
+**Service Record** — Rotating eligibility that stops the same people from holding public roles forever (Chapter 5).
+**Shared Storehouse** — Transparent, universal rationing when shortage has been verified (Chapter 4).
+
+### What this project does not yet address
+
+Naming a gap is not a failure. It is the condition for honest work. These are real, and they are open:
+
+- **Epistemic capture** — who controls what people are allowed to know (Chapter 8).
+- **Carceral economics** — the loop that runs from poverty to prison and back to poverty (Chapter 9).
+- **Algorithmic discrimination** — automated systems with no clear decision-maker to hold to account (Chapter 9).
+- **Obligations to future generations** — climate, accumulated debt, depleted commons (Chapter 10).
+- **Capture across borders** — debt conditions and privatization pressure that move between nations, not within one (Chapter 2).
+- **Youth mental health and loneliness** — damage to the social fabric that no governance instrument anywhere now answers (Chapter 9).
+
+The project tracks what is unproven and unsolved in two governance documents: the Hardening Queue, which lists the work still owed, and the Claims and Evidence Register, which records what the corpus asserts and what evidence stands behind it. Both are meant to be read as live, not finished.
+
+These problems are not unsolvable. They have been solved before — partly, in different places, at different times, by real people who built real structures and held them with real discipline. So the question is not whether it is possible. History already shows it is.
+
+The question is whether it is possible here, now, with the people and the conditions that actually exist. That is what this project is trying to answer.
