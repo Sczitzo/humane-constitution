@@ -64,6 +64,7 @@ CORE_DOCS = (
     "docs/public/05_rights_layer.md",
     "docs/public/06_big_companies.md",
     "docs/public/07_life_under_the_system.md",
+    "docs/public/08_useful_history.md",
     "docs/simulations/Adversarial_Narrative_Simulation.md",
     "docs/simulations/Annual_Compound_Simulation.md",
     "founding/commitments.md",
@@ -301,6 +302,7 @@ def collect_stats(docs: list[dict[str, object]]) -> dict[str, object]:
 def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> None:
     featured_paths = [
         "docs/public/01_overview.md",
+        "docs/public/08_useful_history.md",
         "docs/public/07_life_under_the_system.md",
         "docs/public/05_rights_layer.md",
         "docs/public/06_big_companies.md",
