@@ -58,7 +58,7 @@ async function openNavSearchResult(page: Page, query: string, resultName: string
 
 test.describe('reader shell regression coverage', () => {
   test('hamburger opens nav drawer with all sections', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await markLandingVisited(page)
     await page.goto('/')
 
@@ -69,7 +69,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('slash focuses nav document search', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     await page.keyboard.press('/')
@@ -77,7 +77,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('nav search result opens a cross-section document and clears the query', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     await openNavSearchResult(page, 'T-028', /Threat Register/)
@@ -88,7 +88,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('nav search Enter opens the active heading result', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     const input = page.locator('#nav-corpus-search')
@@ -101,7 +101,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('recent selection is not blocked by an active nav search query', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await page.addInitScript(() => {
       window.localStorage.setItem('humane-reader:recent-docs', JSON.stringify(['docs__governance__Threat_Register_md']))
     })
@@ -129,7 +129,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('global search persists cross-section selections', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     await page.keyboard.press('Control+k')
@@ -141,7 +141,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('recent dropdown shows previously viewed documents', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     await page.getByTestId('nav-recent').click()
@@ -151,7 +151,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('document search highlights matches and cycles through them', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     const searchInput = page.getByTestId('reader-search-input')
@@ -170,7 +170,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('reader content is scrollable', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     await page.evaluate(() => { window.scrollTo(0, 0) })
@@ -182,7 +182,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('keyboard shortcuts focus search and navigate search matches', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     // Ctrl+F focuses the reader search input
@@ -203,7 +203,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('keyboard shortcuts move documents and sections', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     const firstTitle = await page.getByTestId('reader-title').textContent()
@@ -219,11 +219,11 @@ test.describe('reader shell regression coverage', () => {
     await expect(page.getByRole('heading', { name: 'Annex Corpus' })).toBeVisible()
 
     await page.keyboard.press('[')
-    await expect(page.getByRole('heading', { name: 'Constitution & Founding Order' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Public & Governing Texts' })).toBeVisible()
   })
 
   test('copy heading link updates the hash and deep-links to the selected section', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     // Navigate directly to the Humane Constitution via deep-link hash so we know which doc is shown
     await page.goto('/#docs__constitution__Humane_Constitution_md--the-humane-constitution')
     await expect(page.getByTestId('reader-title')).toHaveText('The Humane Constitution')
@@ -247,7 +247,7 @@ test.describe('reader shell regression coverage', () => {
   })
 
   test('reading mode hides navigation chrome while keeping document search available', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.setViewportSize({ width: 1024, height: 900 })
     await openConstitutionView(page)
 
     const readerPane = page.getByTestId('reader-scroll-pane')
