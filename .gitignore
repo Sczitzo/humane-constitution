@@ -73,3 +73,7 @@ mockup/
 
 # Review-loop reports (generated; keep directory via reports/.gitkeep)
 reports/*.md
+
+# scratch / debug artifacts
+.playwright-mcp/
+mobile-*.png

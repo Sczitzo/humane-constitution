@@ -1,6 +1,6 @@
 # Task: Corpus Triage
 
-You are doing a read-only health check of the Twelve Pillar Protocol constitutional corpus. Do not modify any files.
+You are doing a read-only health check of the Humane Constitution constitutional corpus. Do not modify any files.
 
 ## Scope
 

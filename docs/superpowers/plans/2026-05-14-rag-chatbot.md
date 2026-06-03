@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a streaming RAG chatbot to the Twelve Pillar Protocol reader that answers questions about the governance docs using Gemini 2.5 Flash and Supabase pgvector.
+**Goal:** Add a streaming RAG chatbot to the Humane Constitution reader that answers questions about the governance docs using Gemini 2.5 Flash and Supabase pgvector.
 
 **Architecture:** Vercel Edge Function at `app/api/chat.ts` embeds the user query with Google `text-embedding-004` (768 dims), retrieves the top-5 matching chunks from a Supabase `documents` table via pgvector cosine similarity, then streams a grounded Gemini answer back using the Vercel AI SDK. A local `scripts/ingest-rag.ts` script chunks all 77 `.md` files in `docs/` and populates Supabase once (re-run after content changes).
 
@@ -400,7 +400,7 @@ export default async function handler(req: Request): Promise<Response> {
   // 3. Stream a grounded Gemini answer
   const result = streamText({
     model: google('gemini-2.5-flash'),
-    system: `You are a knowledgeable assistant for the Twelve Pillar Protocol — a governance framework for humane AI. Answer questions accurately and concisely using ONLY the context below. If the context does not contain enough information to answer, say so clearly rather than speculating.
+    system: `You are a knowledgeable assistant for the Humane Constitution — a governance framework for humane AI. Answer questions accurately and concisely using ONLY the context below. If the context does not contain enough information to answer, say so clearly rather than speculating.
 
 Retrieved context:
 ${context}`,
@@ -478,7 +478,7 @@ export function ChatPanel() {
       <div className="flex-1 overflow-y-auto space-y-4 mb-4 pr-1">
         {messages.length === 0 && (
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Ask a question about the Twelve Pillar Protocol governance documents.
+            Ask a question about the Humane Constitution governance documents.
           </p>
         )}
         {messages.map(m => (
@@ -617,7 +617,7 @@ Expected: ChatPanel renders with the placeholder text.
 
 - [ ] **Step 3: Ask a test question**
 
-Type: `What is the purpose of the Twelve Pillar Protocol?`
+Type: `What is the purpose of the Humane Constitution?`
 
 Expected:
 - "Thinking…" appears while streaming

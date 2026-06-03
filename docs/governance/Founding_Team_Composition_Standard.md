@@ -1,7 +1,7 @@
 # Founding Team Composition Standard
 
 **Status:** Active — Governance
-**Scope:** Applies to the founding team of any Twelve Pillar Protocol pilot town during pre-activation and the founder sunset period.
+**Scope:** Applies to the founding team of any Humane Constitution pilot town during pre-activation and the founder sunset period.
 
 This document defines who may serve on the founding team, what disqualifies them, how the constitutional keyholder council is structured, and how founding team authority ends. The pilot town is a small built-from-scratch community (target: 1–5,000 residents). That means the founding team has enormous informal power during construction and early operation — power that does not appear in any org chart and is not checked by any election. This document exists to constrain that power structurally, not just rhetorically.
 
