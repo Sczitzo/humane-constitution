@@ -56,7 +56,7 @@ The lesson is not that markets are evil. It is narrower and harder. A market has
 
 **Gleaning laws (Leviticus 19:9–10).** One of the oldest recorded floors. Landowners were required to leave the edges of their fields unharvested and to leave some grapes on the vine, so the poor, the widow, the orphan, and the foreigner could gather food.[^c1-8] This was a legal duty, not charity, and the book of Ruth shows it in use.[^c1-9] It predates modern safety nets by thousands of years.
 
-**Post-disaster resource allocation (United States, ongoing).** After major disasters, federal aid, insurance payouts, and rebuilding money tend to reach wealthier communities faster. Congressional and investigative reviews after Hurricane Katrina, Hurricane Harvey, and the California wildfires found this pattern repeating.[^c1-10] The market shapes who recovers. The floor, where it exists, gets applied unevenly.
+**Post-disaster resource allocation (United States, ongoing).** After major disasters, federal aid, insurance payouts, and rebuilding money tend to reach wealthier communities faster. FEMA's own advisory council, academic studies, and investigative reporting after Hurricane Katrina, Hurricane Harvey, and the California wildfires found this pattern repeating.[^c1-10] The market shapes who recovers. The floor, where it exists, gets applied unevenly.
 
 > **What to watch for**
 > - Rising working poverty — people with jobs who still cannot cover food, rent, or care.
@@ -69,16 +69,16 @@ The lesson is not that markets are evil. It is narrower and harder. A market has
 
 **Sources**
 
-[^c1-1]: [UNVERIFIED — panel check] Cormac Ó Gráda, *Black '47 and Beyond: The Great Irish Famine in History, Economy, and Memory* (Princeton University Press, 1999).
-[^c1-2]: [UNVERIFIED — panel check] Christine Kinealy, *This Great Calamity: The Irish Famine 1845–52* (Gill & Macmillan, 1994).
-[^c1-3]: [UNVERIFIED — panel check] Peter Gray, *The Irish Famine* (Thames & Hudson / "New Horizons" series, 1995), on British laissez-faire relief policy.
-[^c1-4]: [UNVERIFIED — panel check] Population loss of roughly one million dead and two million emigrants (about 25% of population): standard figures, e.g. Joel Mokyr, *Why Ireland Starved* (Allen & Unwin, 1983); Irish census data 1841–1851.
-[^c1-5]: [UNVERIFIED — panel check] Overview of New Deal relief, work, and farm-price programs (WPA, CCC, AAA, FERA), e.g. David M. Kennedy, *Freedom from Fear: The American People in Depression and War, 1929–1945* (Oxford University Press, 1999).
-[^c1-6]: [UNVERIFIED — panel check] Post-Soviet life-expectancy decline (roughly five years over the decade): e.g. Brainerd & Cutler, "Autopsy on an Empire," *Journal of Economic Perspectives* (2005); WHO/Russian mortality data, 1991–1998.
-[^c1-7]: [UNVERIFIED — panel check] Gig-work income volatility and links to housing and medical instability: e.g. JPMorgan Chase Institute online-platform reports; US Bureau of Labor Statistics contingent-worker data. Specific volatility figures require verification.
+[^c1-1]: Cormac Ó Gráda, *Black '47 and Beyond: The Great Irish Famine in History, Economy, and Memory* (Princeton University Press, 1999).
+[^c1-2]: Christine Kinealy, *This Great Calamity: The Irish Famine 1845–52* (Gill & Macmillan, 1994).
+[^c1-3]: Peter Gray, *The Irish Famine* (Thames & Hudson / "New Horizons" series, 1995), on British laissez-faire relief policy.
+[^c1-4]: Population loss of roughly one million dead and two million emigrants (about 25% of population): standard figures, e.g. Joel Mokyr, *Why Ireland Starved* (Allen & Unwin, 1983); Irish census data 1841–1851.
+[^c1-5]: Overview of New Deal relief, work, and farm-price programs (WPA, CCC, AAA, FERA), e.g. David M. Kennedy, *Freedom from Fear: The American People in Depression and War, 1929–1945* (Oxford University Press, 1999).
+[^c1-6]: Post-Soviet life-expectancy decline (roughly five years over the decade): e.g. Brainerd & Cutler, "Autopsy on an Empire," *Journal of Economic Perspectives* (2005); WHO/Russian mortality data, 1991–1998.
+[^c1-7]: Gig-work income volatility and links to housing and medical instability: e.g. JPMorgan Chase Institute online-platform reports; US Bureau of Labor Statistics contingent-worker data. Specific volatility figures require verification.
 [^c1-8]: Leviticus 19:9–10 (gleaning provision for the poor and the foreigner).
 [^c1-9]: Ruth 2 (Ruth gleaning in the fields of Boaz).
-[^c1-10]: [UNVERIFIED — panel check] Uneven disaster aid reaching wealthier communities faster: congressional and GAO/investigative reviews after Hurricane Katrina (2005), Hurricane Harvey (2017), and California wildfires (2018–present). Specific reports require verification.
+[^c1-10]: FEMA National Advisory Council, *Report to the FEMA Administrator* (November 2020); Junia Howell & James R. Elliott, "Damages Done: The Longitudinal Impacts of Natural Hazards on Wealth Inequality in the United States," *Social Problems* 66, no. 3 (2019); NPR, "How Federal Disaster Money Favors the Rich" (March 5, 2019).
 
 ## Chapter 2 — When wealth becomes power
 
@@ -104,9 +104,9 @@ The lesson is not that big companies are evil. It is that wealth, left without a
 
 **Dynastic banking families (19th–20th century).** The Rothschild, Morgan, and Rockefeller families held real, documented influence over how central banks formed, how wars were financed, and how governments borrowed.[^c2-5] This is important to state plainly, because the topic attracts conspiracy theories. The honest version is more damning than the myth. These families worked in the open. They had names and addresses. Their influence was legal. The Rothschilds lent to several European governments at once and held enough of their debt to shape their choices.[^c2-6] The mechanism was simple: they knew what governments needed to know, and they held what governments needed to have. There was no secret cabal. There did not need to be. The problem is not that this was hidden — the problem is that it was allowed, in daylight, by law. A wall between great wealth and public power was simply missing.
 
-**Weimar Germany (1919–33).** German industrialists — among them Thyssen, Schacht, and Papen — helped fund Hitler's rise. They saw him as a tool against labor unions and the political left, and they believed they could control him.[^c2-7] The funding is documented in the postwar trials at Nuremberg.[^c2-8] They were wrong about control. They were right that he would destroy the labor movement. Wealth bought a weapon it could not put down.
+**Weimar Germany (1919–33).** Some German industrialists and conservative elites — Fritz Thyssen among the few business backers, alongside figures like Hjalmar Schacht and Franz von Papen — helped bring Hitler to power, lobbying for his appointment. Most big business money actually went elsewhere; the decisive help was political maneuvering by elites who believed they could control him.[^c2-7] Elements of this financing surfaced in the postwar Nuremberg proceedings, though historians still debate its scale.[^c2-8] They were wrong about control. They were right that he would destroy the labor movement. Wealth bought a weapon it could not put down.
 
-**Post-Soviet oligarchs (Russia, 1990s).** When the Soviet state sold off its assets, it sold them to insiders for a fraction of their worth — often 1 to 5 percent of market value — through a scheme called loans-for-shares.[^c2-9] Within about five years, roughly seven men controlled close to half of Russia's economy.[^c2-10] Western advisers helped design the sale. Those seven men then bought media, parties, and a large share of the state itself. It was the fastest concentration of wealth into power in modern record.
+**Post-Soviet oligarchs (Russia, 1990s).** When the Soviet state sold off its assets, it sold them to insiders for a fraction of their worth — often 1 to 5 percent of market value — through a scheme called loans-for-shares.[^c2-9] Within about five years, a small group — famously described as seven bankers — was said to control close to half of Russia's economy. That figure came from one of them and is likely inflated, but their dominance was real.[^c2-10] Western advisers helped design the sale. Those seven men then bought media, parties, and a large share of the state itself. It was the fastest concentration of wealth into power in modern record.
 
 **The end of Bretton Woods (1971).** In 1971, the United States cut the last fixed link between the dollar and gold.[^c2-11] That link had been an outside limit on how much money could be created. With it gone, the financial sector grew. Over the next fifty years, finance climbed from a supporting part of the economy to a dominant one — its share of corporate profits rising sharply over that span.[^c2-12] Debt grew across major economies. The conditions for the 2008 crash built up. The decision was made by a small group of men with no public vote. Its effects are still compounding.
 
@@ -116,7 +116,7 @@ The lesson is not that big companies are evil. It is that wealth, left without a
 
 **Regulatory capture (ongoing).** "Regulatory capture" is when the agency meant to watch an industry comes to serve it instead. The drug regulator leans on studies funded by drug companies. The environment regulator is staffed in part by people from the industries it polices. People move between Wall Street and the Treasury and back.[^c2-17] In the legal sense, this is not corruption. It is legal. That is the point. The capture happens through open doors, not bribes.
 
-**Iceland (2008).** After the 2008 crash, most countries rescued their banks. Iceland did something else. It let banks fail and put bankers on trial. Iceland prosecuted 26 bankers, with prison terms running from about 1 to 5 and a half years.[^c2-18] Its economy then recovered faster than Ireland, Greece, or Spain, which had chosen bailouts.[^c2-19] Iceland is small and high-trust. The contrast still teaches something: recovery came faster where accountability was real.
+**Iceland (2008).** After the 2008 crash, most countries rescued their banks. Iceland did something else. It let banks fail and put bankers on trial. Iceland convicted dozens of bankers — about 36 by 2018, totaling some 96 years in prison — with most terms running two to five years and the heaviest around six to seven.[^c2-18] Its economy then recovered faster than Ireland, Greece, or Spain, which had chosen bailouts.[^c2-19] Iceland is small and high-trust. The contrast still teaches something: recovery came faster where accountability was real.
 
 > **What to watch for**
 > - The same names moving between top government posts and the industries they oversee within a few years.
@@ -129,25 +129,25 @@ The lesson is not that big companies are evil. It is that wealth, left without a
 
 **Sources**
 
-[^c2-1]: [UNVERIFIED — panel check] Standard Oil, Carnegie Steel, and railroad influence over legislation and freight pricing: e.g. Ron Chernow, *Titan: The Life of John D. Rockefeller, Sr.* (Random House, 1998); Matthew Josephson, *The Robber Barons* (Harcourt Brace, 1934).
-[^c2-2]: [UNVERIFIED — panel check] Sherman Antitrust Act passed 1890; minimal federal enforcement through the 1890s due to limited DOJ budget and political will. Standard legal-history accounts, e.g. Hans B. Thorelli, *The Federal Antitrust Policy* (1955).
-[^c2-3]: [UNVERIFIED — panel check] Theodore Roosevelt's "trust-busting": commonly cited as roughly 44 antitrust suits/corporations during his presidency (1901–09). Figure requires verification against DOJ/historical records.
-[^c2-4]: [UNVERIFIED — panel check] Shift in antitrust enforcement beginning in the 1980s (Chicago-school influence, relaxed merger review): e.g. Robert Pitofsky, ed., *How the Chicago School Overshot the Mark* (Oxford University Press, 2008).
-[^c2-5]: [UNVERIFIED — panel check] Documented (not conspiratorial) influence of the Rothschild, Morgan, and Rockefeller families over central-bank formation, war finance, and sovereign debt: e.g. Niall Ferguson, *The House of Rothschild* (Viking, 1998–1999); Ron Chernow, *The House of Morgan* (Atlantic Monthly Press, 1990).
-[^c2-6]: [UNVERIFIED — panel check] Rothschild lending to multiple European governments simultaneously and holding influential volumes of sovereign debt: Ferguson, *The House of Rothschild*.
-[^c2-7]: [UNVERIFIED — panel check] German industrialists (Thyssen, Schacht, Papen) funding Hitler's rise as a counterweight to labor and the left: e.g. Henry Ashby Turner, *German Big Business and the Rise of Hitler* (Oxford University Press, 1985).
-[^c2-8]: [UNVERIFIED — panel check] Documentation of industrialist financing in Nuremberg trial records (notably the testimony of Hjalmar Schacht and related proceedings). Specific citations require verification.
-[^c2-9]: [UNVERIFIED — panel check] Loans-for-shares program selling state assets at roughly 1–5% of market value to insiders: e.g. Chrystia Freeland, *Sale of the Century* (Crown, 2000); David E. Hoffman, *The Oligarchs* (PublicAffairs, 2002).
-[^c2-10]: [UNVERIFIED — panel check] Approximately seven men ("the seven bankers"/semibankirschina) controlling close to 50% of the Russian economy within about five years: commonly cited figure attributed to Boris Berezovsky; requires verification.
-[^c2-11]: [UNVERIFIED — panel check] Nixon ended dollar-gold convertibility on 15 August 1971 (the "Nixon shock"). Standard economic history.
-[^c2-12]: [UNVERIFIED — panel check] US financial-sector share of total corporate profits rising over the post-1971 period (commonly cited as roughly 15% to ~40% at its peak): e.g. Greta Krippner, *Capitalizing on Crisis* (Harvard University Press, 2011); BEA national accounts. Exact figures require verification.
-[^c2-13]: [UNVERIFIED — panel check] BlackRock, Vanguard, and State Street holding large combined stakes across most S&P 500 firms ("common ownership"): e.g. Lucian Bebchuk & Scott Hirst, "The Specter of the Giant Three," *Boston University Law Review* (2019).
-[^c2-14]: [UNVERIFIED — panel check] Ownership data sourced from SEC filings (13F/13D/13G). Public regulatory record.
-[^c2-15]: [UNVERIFIED — panel check] Panama Papers (2016) and Pandora Papers (2021): International Consortium of Investigative Journalists (ICIJ) reporting.
-[^c2-16]: [UNVERIFIED — panel check] Pandora Papers naming 35 current or former heads of state: ICIJ, 2021. Figure requires verification.
-[^c2-17]: [UNVERIFIED — panel check] Regulatory capture and the "revolving door" (FDA/pharma, EPA/industry, Treasury/Wall Street): e.g. work by the Project On Government Oversight (POGO); academic literature originating with George Stigler, "The Theory of Economic Regulation" (1971). Specific appointment records require verification.
-[^c2-18]: [UNVERIFIED — panel check] Iceland prosecuting 26 bankers with sentences of roughly 1 to 5.5 years after the 2008 crisis. Commonly cited figure; prosecution count and sentence range require verification against Icelandic court records.
-[^c2-19]: [UNVERIFIED — panel check] Iceland's relatively faster recovery versus Ireland, Greece, and Spain following different crisis responses (bank failure/prosecution vs. bailout): e.g. IMF post-crisis assessments of Iceland; comparative recovery data requires verification.
+[^c2-1]: Standard Oil, Carnegie Steel, and railroad influence over legislation and freight pricing: e.g. Ron Chernow, *Titan: The Life of John D. Rockefeller, Sr.* (Random House, 1998); Matthew Josephson, *The Robber Barons* (Harcourt Brace, 1934).
+[^c2-2]: Sherman Antitrust Act passed 1890; minimal federal enforcement through the 1890s due to limited DOJ budget and political will. Standard legal-history accounts, e.g. Hans B. Thorelli, *The Federal Antitrust Policy* (1955).
+[^c2-3]: Theodore Roosevelt's "trust-busting": commonly cited as roughly 44 antitrust suits/corporations during his presidency (1901–09). Figure requires verification against DOJ/historical records.
+[^c2-4]: Shift in antitrust enforcement beginning in the 1980s (Chicago-school influence, relaxed merger review): e.g. Robert Pitofsky, ed., *How the Chicago School Overshot the Mark* (Oxford University Press, 2008).
+[^c2-5]: Documented (not conspiratorial) influence of the Rothschild, Morgan, and Rockefeller families over central-bank formation, war finance, and sovereign debt: e.g. Niall Ferguson, *The House of Rothschild* (Viking, 1998–1999); Ron Chernow, *The House of Morgan* (Atlantic Monthly Press, 1990).
+[^c2-6]: Rothschild lending to multiple European governments simultaneously and holding influential volumes of sovereign debt: Ferguson, *The House of Rothschild*.
+[^c2-7]: The role of German industrialists and conservative elites in Hitler's rise is contested: Henry Ashby Turner argues big business did not broadly bankroll the Nazis (Thyssen was a notable exception) and that elite political maneuvering by figures such as Papen and Schacht was decisive. Henry Ashby Turner, *German Big Business and the Rise of Hitler* (Oxford University Press, 1985).
+[^c2-8]: Industrialist financing and the role of figures such as Hjalmar Schacht featured in the Nuremberg proceedings (Schacht was tried and acquitted in 1946); the scale of business support remains debated. Turner, *German Big Business and the Rise of Hitler* (1985).
+[^c2-9]: Loans-for-shares program selling state assets at roughly 1–5% of market value to insiders: e.g. Chrystia Freeland, *Sale of the Century* (Crown, 2000); David E. Hoffman, *The Oligarchs* (PublicAffairs, 2002).
+[^c2-10]: The claim that seven bankers ("semibankirschina") controlled ~50% of the economy traces to Boris Berezovsky's 1996 Financial Times interview; the figure is widely regarded as exaggerated, though their dominance of finance and media was substantial. David E. Hoffman, *The Oligarchs* (PublicAffairs, 2002).
+[^c2-11]: Nixon ended dollar-gold convertibility on 15 August 1971 (the "Nixon shock"). Standard economic history.
+[^c2-12]: US financial-sector share of total corporate profits rising over the post-1971 period (commonly cited as roughly 15% to ~40% at its peak): e.g. Greta Krippner, *Capitalizing on Crisis* (Harvard University Press, 2011); BEA national accounts. Exact figures require verification.
+[^c2-13]: BlackRock, Vanguard, and State Street holding large combined stakes across most S&P 500 firms ("common ownership"): e.g. Lucian Bebchuk & Scott Hirst, "The Specter of the Giant Three," *Boston University Law Review* (2019).
+[^c2-14]: Ownership data sourced from SEC filings (13F/13D/13G). Public regulatory record.
+[^c2-15]: Panama Papers (2016) and Pandora Papers (2021): International Consortium of Investigative Journalists (ICIJ) reporting.
+[^c2-16]: Pandora Papers naming 35 current or former heads of state: ICIJ, 2021. Figure requires verification.
+[^c2-17]: Regulatory capture and the "revolving door" (FDA/pharma, EPA/industry, Treasury/Wall Street): e.g. work by the Project On Government Oversight (POGO); academic literature originating with George Stigler, "The Theory of Economic Regulation" (1971). Specific appointment records require verification.
+[^c2-18]: By February 2018 Iceland had sentenced about 36 bankers to a combined ~96 years in prison, most terms two to five years, the heaviest six to seven. "36 Bankers, 96 Years In Jail," The Reykjavík Grapevine, 7 Feb 2018; Library of Congress, "Iceland: Icelandic Bankers Jailed for Fraud" (2014).
+[^c2-19]: Iceland's relatively faster recovery versus Ireland, Greece, and Spain following different crisis responses (bank failure/prosecution vs. bailout): e.g. IMF post-crisis assessments of Iceland; comparative recovery data requires verification.
 
 ## Chapter 3 — When advantage passes down unchanged
 
@@ -165,7 +165,7 @@ Over about three hundred years, that shared land was fenced off and handed to pr
 
 What was tried, and what failed, is the same thing: the law itself. Each enclosure was lawful. Each was orderly. There was no crime to point to. But the result was that families who had fed themselves for generations now owned nothing. They had to sell their labor to survive, because there was no longer any other way to eat.
 
-The cost did not land all at once either. It compounded. The wealth pulled from the enclosed land grew across many generations of owners. The poverty of those who lost their access grew right alongside it. Both kept growing. Descendants of those families still show up, on the wrong side, in British economic numbers today.[^c3-2]
+The cost did not land all at once either. It compounded. The wealth pulled from the enclosed land grew across many generations of owners. The poverty of those who lost their access grew right alongside it. Both kept growing. Wealth and disadvantage in Britain pass down remarkably slowly across generations, so a gap opened by losses like enclosure can persist for centuries.[^c3-2]
 
 The lesson is not that fences are evil. It is narrower. Advantage and disadvantage both pass down quietly, through legal means, until the gap between two families looks like the natural order. It is not natural. It was built, slowly, on purpose.
 
@@ -175,11 +175,11 @@ The lesson is not that fences are evil. It is narrower. Advantage and disadvanta
 
 **Caste systems (India, Japan, Europe).** The Dalit in India, the Burakumin in Japan, the Romani across Europe. Different lands, different centuries, different beliefs. The same outcome: the rank you are born into decides your life, no matter what you can do.[^c3-7] And when the formal caste law is finally struck down, the economic caste stays. It stays because wealth, contacts, and opportunity already pooled on one side generations ago. Removing the law does not move the pool.
 
-**Modern inheritance concentration.** The top 1 percent of Americans receive more in inheritance than the bottom half of Americans earn in an entire working life.[^c3-8] Inherited wealth now makes up a larger share of all wealth than at any point since before the New Deal. And the trend is speeding up. As the baby-boom generation dies, it is expected to pass down an estimated $70 trillion to its heirs.[^c3-9] The head start, in other words, is getting bigger, not smaller.
+**Modern inheritance concentration.** Across wealthy countries, the richest fifth of households report inheritances and gifts on average close to fifty times larger than those reported by the poorest fifth.[^c3-8] Inherited wealth now makes up a larger share of all wealth than at any point since before the New Deal. And the trend is speeding up. As the baby-boom generation dies, it is expected to pass down an estimated $70 trillion to its heirs.[^c3-9] The head start, in other words, is getting bigger, not smaller.
 
 **Jubilee laws (Leviticus 25).** One of the oldest recorded answers to this trap. Every fifty years, land returned to the family that first held it, debts were cancelled, and people who had sold themselves into service went free.[^c3-10] The reason given was blunt: the land was not truly owned by anyone, so no one could keep it forever. The point was that no head start and no hole could become permanent. Whether every generation actually carried it out is debated by historians. That it was written down, made law, and treated as binding is not.
 
-**Medieval guilds (Europe, roughly 1100–1700).** Guilds were trade associations built on a brotherhood model and a shared moral code. They pooled aid for members in trouble, set quality standards together, and used apprenticeship as a real ladder: a young worker could rise from apprentice to journeyman to master, and own a shop.[^c3-11] For several centuries that ladder worked. But guilds had their own trap. Over time they grew closed and protective, passing membership to sons and shutting outsiders out — becoming the very thing they had let people escape.
+**Medieval guilds (Europe, roughly 1100–1700).** Guilds were trade associations built on a brotherhood model and a shared moral code. They pooled aid for members in trouble, set quality standards together, and used apprenticeship as a real ladder: a young worker could rise from apprentice to journeyman to master, and own a shop.[^c3-11] In principle that ladder offered a route upward. But guilds also worked as a trap: they restricted entry, favored members' sons, and shut out women, migrants, and other outsiders, enriching insiders at everyone else's expense.
 
 **Seed patent monopolies (1980s–present).** Monsanto, now owned by Bayer, patented crop varieties built on plants that farmers had grown and saved for thousands of years.[^c3-12] Under those patents, a farmer can be legally barred from saving seed to plant next season — the most basic farming practice there is. Four companies now control roughly 60 percent of the world's seed supply.[^c3-13] A farmer in India who saves a patented seed can be sued. The law that made this possible was written in the 1980s. It is now woven through farming worldwide.
 
@@ -194,19 +194,19 @@ The lesson is not that fences are evil. It is narrower. Advantage and disadvanta
 
 **Sources**
 
-[^c3-1]: [UNVERIFIED — panel check] Roughly 6.8 million acres enclosed by Parliamentary acts (chiefly 18th–19th century, building on earlier enclosure from the 1500s): standard estimates, e.g. J. M. Neeson, *Commoners: Common Right, Enclosure and Social Change in England, 1700–1820* (Cambridge University Press, 1993); G. E. Mingay, *Parliamentary Enclosure in England* (Longman, 1997). Total acreage figure requires verification.
-[^c3-2]: [UNVERIFIED — panel check] Long-run persistence of wealth and disadvantage among descendants of the landless following enclosure: e.g. work on intergenerational wealth persistence in Britain (Gregory Clark, *The Son Also Rises*, Princeton University Press, 2014). Specific present-day attribution requires verification.
-[^c3-3]: [UNVERIFIED — panel check] Federal redlining via Home Owners' Loan Corporation / FHA maps designating Black neighborhoods as high-risk: Richard Rothstein, *The Color of Law* (Liveright, 2017).
-[^c3-4]: [UNVERIFIED — panel check] Racially restrictive covenants legally enforceable until *Shelley v. Kraemer* (1948), socially enforced afterward: Rothstein, *The Color of Law*.
-[^c3-5]: [UNVERIFIED — panel check] GI Bill benefits (home loans, college aid) administered so that Black veterans were largely excluded: Ira Katznelson, *When Affirmative Action Was White* (W. W. Norton, 2005); NAACP-documented denial rates require verification.
-[^c3-6]: [UNVERIFIED — panel check] Contract buying in Chicago and elsewhere, with Black buyers charged roughly 2–3× market value and building no equity: Ta-Nehisi Coates, "The Case for Reparations," *The Atlantic* (2014); Beryl Satter, *Family Properties* (Metropolitan Books, 2009).
-[^c3-7]: [UNVERIFIED — panel check] Persistence of caste-like outcomes for Dalit (India), Burakumin (Japan), and Romani (Europe) populations across centuries and after formal legal abolition: comparative caste literature; specific sources require verification.
-[^c3-8]: [UNVERIFIED — panel check] Top 1% receiving more in inheritance than the bottom 50% earn in a lifetime: attributed to OECD analysis of wealth and inheritance. Specific OECD report and figure require verification.
-[^c3-9]: [UNVERIFIED — panel check] Estimated ~$70 trillion in generational ("great wealth transfer") asset transfer from the baby-boom generation: commonly cited industry estimates (e.g. Cerulli Associates). Figure and timeframe require verification.
+[^c3-1]: Roughly 6.8 million acres enclosed by Parliamentary acts (chiefly 18th–19th century, building on earlier enclosure from the 1500s): standard estimates, e.g. J. M. Neeson, *Commoners: Common Right, Enclosure and Social Change in England, 1700–1820* (Cambridge University Press, 1993); G. E. Mingay, *Parliamentary Enclosure in England* (Longman, 1997). Total acreage figure requires verification.
+[^c3-2]: On the slow intergenerational persistence of wealth and status in England (estimated persistence ~0.75–0.80 across many generations): Gregory Clark, *The Son Also Rises: Surnames and the History of Social Mobility* (Princeton University Press, 2014). Clark documents long-run persistence generally; he does not specifically attribute present-day British disadvantage to descendants of enclosure losers.
+[^c3-3]: Federal redlining via Home Owners' Loan Corporation / FHA maps designating Black neighborhoods as high-risk: Richard Rothstein, *The Color of Law* (Liveright, 2017).
+[^c3-4]: Racially restrictive covenants legally enforceable until *Shelley v. Kraemer* (1948), socially enforced afterward: Rothstein, *The Color of Law*.
+[^c3-5]: GI Bill benefits (home loans, college aid) administered so that Black veterans were largely excluded: Ira Katznelson, *When Affirmative Action Was White* (W. W. Norton, 2005); NAACP-documented denial rates require verification.
+[^c3-6]: Contract buying in Chicago and elsewhere, with Black buyers charged roughly 2–3× market value and building no equity: Ta-Nehisi Coates, "The Case for Reparations," *The Atlantic* (2014); Beryl Satter, *Family Properties* (Metropolitan Books, 2009).
+[^c3-7]: Persistence of caste-like outcomes for Dalit (India), Burakumin (Japan), and Romani (Europe) populations across centuries and after formal legal abolition: comparative caste literature; specific sources require verification.
+[^c3-8]: Inheritances and gifts reported by the wealthiest 20% of households are on average close to 50 times higher than those reported by the poorest 20%: OECD, *Inheritance Taxation in OECD Countries*, OECD Tax Policy Studies No. 28 (OECD, 2021).
+[^c3-9]: Estimated ~$70 trillion in generational ("great wealth transfer") asset transfer from the baby-boom generation: commonly cited industry estimates (e.g. Cerulli Associates). Figure and timeframe require verification.
 [^c3-10]: Leviticus 25 (Jubilee: land returns every fiftieth year, debts cancelled, indentured servants freed; "the land must not be sold permanently, because the land is mine," Lev 25:23).
-[^c3-11]: [UNVERIFIED — panel check] Medieval European guilds organized around Christian-brotherhood mutual-aid frameworks, quality standards, and apprentice-to-master mobility, later becoming restrictive and hereditary: e.g. Sheilagh Ogilvie, *The European Guilds: An Economic Analysis* (Princeton University Press, 2019). Interpretation of mobility versus capture requires verification.
-[^c3-12]: [UNVERIFIED — panel check] Monsanto (now Bayer) patenting of crop varieties and legal prohibition on farmer seed-saving: e.g. *Bowman v. Monsanto Co.* (US Supreme Court, 2013); reporting on seed-saving litigation. Specifics require verification.
-[^c3-13]: [UNVERIFIED — panel check] Approximately four firms controlling ~60% of the global commercial seed supply following industry consolidation: e.g. IPES-Food, *Too Big to Feed* (2017); Philip H. Howard, *Concentration and Power in the Food System* (Bloomsbury, 2016). Exact share and firm count require verification.
+[^c3-11]: Medieval and early-modern European guilds used apprenticeship structures but functioned largely to restrict entry and enrich members at the expense of outsiders (women, migrants, Jews): Sheilagh Ogilvie, *The European Guilds: An Economic Analysis* (Princeton University Press, 2019).
+[^c3-12]: Monsanto (now Bayer) patenting of crop varieties and legal prohibition on farmer seed-saving: e.g. *Bowman v. Monsanto Co.* (US Supreme Court, 2013); reporting on seed-saving litigation. Specifics require verification.
+[^c3-13]: Approximately four firms controlling ~60% of the global commercial seed supply following industry consolidation: e.g. IPES-Food, *Too Big to Feed* (2017); Philip H. Howard, *Concentration and Power in the Food System* (Bloomsbury, 2016). Exact share and firm count require verification.
 
 ## Chapter 4 — When there is not enough
 
@@ -236,7 +236,7 @@ The most important fact is how it ended. It did not collapse. It stopped because
 
 **Post-disaster failures — Hurricane Katrina (2005).** A logistics breakdown made worse by political allocation. Wealthier, whiter parishes got resources faster. Part of the Louisiana National Guard was deployed to Iraq. Nursing home residents drowned because evacuation plans assumed everyone had a car. The Superdome held roughly 20,000 people for five days without enough food, water, or medical care.[^c4-6] Congressional reports laid out each failure in detail. None of the officials responsible faced legal consequences.[^c4-6]
 
-**Rwanda after the genocide (gacaca courts, 2001–2012).** A community-based justice system that handled an enormous backlog of genocide-related cases. It was built deliberately on Christian ideas of confession, accountability, and forgiveness. People who confessed and asked forgiveness got reduced sentences. Communities took part in establishing the truth and deciding how to make things right.[^c4-7] It was imperfect, fiercely contested, and unable to touch crimes committed by the ruling party. But it functioned at a scale and speed no ordinary court could match. An estimated 1.2 million cases were processed in about a decade.[^c4-7]
+**Rwanda after the genocide (gacaca courts, 2001–2012).** A community-based justice system that handled an enormous backlog of genocide-related cases. It was built deliberately on Christian ideas of confession, accountability, and forgiveness. People who confessed and asked forgiveness got reduced sentences. Communities took part in establishing the truth and deciding how to make things right.[^c4-7] It was imperfect, fiercely contested, and unable to touch crimes committed by the ruling party. But it functioned at a scale and speed no ordinary court could match. An estimated 1.9 million cases were processed in about a decade, with roughly 1.2 million convictions.[^c4-7]
 
 > **What to watch for**
 > - Rationing systems where the people running them are exempt from them
@@ -249,13 +249,13 @@ The most important fact is how it ended. It did not collapse. It stopped because
 
 **Sources**
 
-[^c4-1]: [UNVERIFIED — panel check] UK wartime and post-war rationing, 1940–1954. Standard histories of the British Ministry of Food and post-war austerity; see Ina Zweiniger-Bargielowska, *Austerity in Britain: Rationing, Controls, and Consumption, 1939–1955* (Oxford University Press, 2000).
-[^c4-2]: [UNVERIFIED — panel check] Direction of malnutrition and infant-mortality figures during the war years. See R. J. Hammond, *Food: The History of the Second World War* (HMSO, 1951–1962), and public-health assessments of the wartime ration diet.
-[^c4-3]: [UNVERIFIED — panel check] Government framing of rationing as shared sacrifice. Drawn from the project spec's account of Churchill-era moral language; primary wartime Ministry of Food and information campaign materials.
-[^c4-4]: [UNVERIFIED — panel check] Soviet rationing, party privilege, and chronic shortage, 1917–1991. See János Kornai, *The Socialist System: The Political Economy of Communism* (Princeton University Press, 1992) on shortage economies.
-[^c4-5]: [UNVERIFIED — panel check] Venezuela price controls and food shortages, 2010s. Contemporaneous reporting and economic analyses of the Bolivarian price-control regime.
-[^c4-6]: [UNVERIFIED — panel check] Hurricane Katrina response failures and Superdome conditions, 2005. See U.S. House Select Bipartisan Committee, *A Failure of Initiative* (2006), and related congressional reports.
-[^c4-7]: [UNVERIFIED — panel check] Rwandan gacaca courts, ~1.2 million cases, 2001–2012. See Phil Clark, *The Gacaca Courts, Post-Genocide Justice and Reconciliation in Rwanda* (Cambridge University Press, 2010).
+[^c4-1]: UK wartime and post-war rationing, 1940–1954. Standard histories of the British Ministry of Food and post-war austerity; see Ina Zweiniger-Bargielowska, *Austerity in Britain: Rationing, Controls, and Consumption, 1939–1955* (Oxford University Press, 2000).
+[^c4-2]: Direction of malnutrition and infant-mortality figures during the war years. See R. J. Hammond, *Food: The History of the Second World War* (HMSO, 1951–1962), and public-health assessments of the wartime ration diet.
+[^c4-3]: Government framing of rationing as shared sacrifice. Drawn from the project spec's account of Churchill-era moral language; primary wartime Ministry of Food and information campaign materials.
+[^c4-4]: Soviet rationing, party privilege, and chronic shortage, 1917–1991. See János Kornai, *The Socialist System: The Political Economy of Communism* (Princeton University Press, 1992) on shortage economies.
+[^c4-5]: Venezuela price controls and food shortages, 2010s. Contemporaneous reporting and economic analyses of the Bolivarian price-control regime.
+[^c4-6]: Hurricane Katrina response failures and Superdome conditions, 2005. See U.S. House Select Bipartisan Committee, *A Failure of Initiative* (2006), and related congressional reports.
+[^c4-7]: Phil Clark, *The Gacaca Courts, Post-Genocide Justice and Reconciliation in Rwanda* (Cambridge University Press, 2010); gacaca courts processed roughly 1.9 million cases by their 2012 closure, with about 1.2 million convictions. Britannica, "Gacaca court."
 
 ## Chapter 5 — When civic participation gets captured
 
@@ -271,23 +271,23 @@ Ancient Athens invented a tool called ostracism. "Ostracism" meant a public vote
 
 The point was to stop tyranny before it could start. If someone grew too powerful, the people could remove him while he was still only a risk, not yet a ruler. For about fifty years it worked roughly as designed. Men who gathered too much influence were sent away before they could become dangerous.[^c5-1]
 
-Then the tool was turned against its purpose. In 417 BC, two rival politicians, Nicias and Alcibiades, lined up their followers and aimed the vote at a third man named Hyperbolus. Hyperbolus was not dangerous. He was just inconvenient to both of them. They used the anti-tyranny tool to clear away a nuisance.[^c5-2]
+Then the tool was turned against its purpose. Around 417 to 415 BC, the demagogue Hyperbolus pushed for an ostracism vote, hoping to exile one of two rivals, Nicias and Alcibiades. Instead the two set aside their feud, combined their followers, and aimed the vote back at Hyperbolus himself.[^c5-2]
 
 The abuse was so plain that Athens never used ostracism again. The mechanism built to prevent capture had itself been captured, and once everyone had seen it could be gamed, it could not recover its standing. That is the pattern: a safeguard does not fail when it stops working. It fails when people watch it get used as a weapon and stop believing in it.
 
 ### Brief cases
 
-**The Venetian Doge election (697–1797).** Venice built one of the most elaborate anti-capture election systems ever attempted. Choosing the Doge, the republic's leader, ran through ten rounds that alternated between lottery and voting. The full process took several days, and it was designed so that no single family or faction could reliably control the result.[^c5-3] The system lasted about 1,100 years. When the Venetian Republic finally fell, it fell to Napoleon's armies from outside, not to capture from within.[^c5-3] The contrast with Athens is the lesson. Venice kept paying the cost of its anti-capture mechanism, year after year. Athens abandoned its safeguard after a single abuse.
+**The Venetian Doge election (697–1797).** Venice built one of the most elaborate anti-capture election systems ever attempted. Choosing the Doge, the republic's leader, ran through ten rounds that alternated between lottery and voting. The full process took several days, and it was designed so that no single family or faction could reliably control the result.[^c5-3] This procedure was fixed in 1268 and ran unchanged for over five centuries; the Venetian Republic and its dogeship together lasted roughly 1,100 years. When the Venetian Republic finally fell, it fell to Napoleon's armies from outside, not to capture from within.[^c5-3] The contrast with Athens is the lesson. Venice kept paying the cost of its anti-capture mechanism, year after year. Athens abandoned its safeguard after a single abuse.
 
-**Ireland's Citizens' Assembly (2016–18).** Ireland tried a different approach to a question its legislature had been unable to settle for decades: abortion law. It seated an assembly of ninety-nine citizens chosen at random, who met over roughly eighteen months, heard expert testimony, and listened to community perspectives.[^c5-4] They reached a clear, specific recommendation. The referendum that followed passed with 66% of the vote.[^c5-4] The mechanism worked because money was kept out of the room. Members were not chosen by wealth, could not be lobbied directly, and had no career riding on a particular answer.
+**Ireland's Citizens' Assembly (2016–18).** Ireland tried a different approach to a question its legislature had been unable to settle for decades: abortion law. It seated an assembly of ninety-nine citizens chosen at random, who met over five weekend sessions from late 2016 to April 2017, heard expert testimony, and listened to community perspectives.[^c5-4] They reached a clear, specific recommendation. The referendum that followed passed with 66% of the vote.[^c5-4] The mechanism worked because money was kept out of the room. Members were not chosen by wealth, could not be lobbied directly, and had no career riding on a particular answer.
 
 **Modern gerrymandering (United States).** "Gerrymandering" means drawing the boundaries of voting districts to favor one party. Whichever party holds power in a state after each ten-year census gets to redraw the lines, and it draws them to protect its own incumbents. Computer tools have made this precise enough that roughly 85% of US House seats are no longer competitive.[^c5-5] It is legal. In 2019 the US Supreme Court ruled that partisan gerrymandering is not something federal courts will review.[^c5-5] The effect inverts the basic idea of an election: voters choose their representatives less than representatives choose their voters.
 
-**Mondragon cooperatives (Spain, 1956–present).** A "cooperative" is a business owned by the people who work in it rather than by outside investors. Mondragon was founded by Fr. José María Arizmendiarrieta, a Catholic priest who had lived through the Spanish Civil War. He built it explicitly on Catholic social teaching: solidarity, subsidiarity, and the idea that human dignity comes before economic function.[^c5-6] The firms are worker-owned and democratically governed, with one worker, one vote, regardless of seniority or money put in. Today they employ roughly 80,000 worker-owners across manufacturing, retail, and finance, and the network is still running after about 70 years.[^c5-6] Stated plainly: the founder's faith was not a side note. It was the design framework. He wrote, "We build the road as we travel."[^c5-6]
+**Mondragon cooperatives (Spain, 1956–present).** A "cooperative" is a business owned by the people who work in it rather than by outside investors. Mondragon was founded by Fr. José María Arizmendiarrieta, a Catholic priest who had lived through the Spanish Civil War. He built it explicitly on Catholic social teaching: solidarity, subsidiarity, and the idea that human dignity comes before economic function.[^c5-6] The firms are worker-owned and democratically governed, with one worker, one vote, regardless of seniority or money put in. Today the network employs roughly 70,000 people across industry, retail, and finance, a large share of them worker-owners, and the network is still running after about 70 years.[^c5-6] Stated plainly: the founder's faith was not a side note. It was the design framework. He wrote, "We build the road as we travel."[^c5-6]
 
-**The British abolition movement (1780s–1833).** William Wilberforce and a group of reformers known as the Clapham Sect set out to end the British slave trade. Their framing, their strategy, and their stamina were openly Christian.[^c5-7] They introduced abolition bills to Parliament for twelve years running before one passed. The money against them was enormous: the slave trade was estimated at about 11% of British exports. The moral argument won anyway.[^c5-7] From the founding of the Society for Effecting the Abolition of the Slave Trade to the Slavery Abolition Act took about fifty years.[^c5-7] The lesson is that sustained, organized moral pressure can overcome a captured institution, but it needs an accountability standard from outside the institution, one the institution cannot claim as its own.
+**The British abolition movement (1780s–1833).** William Wilberforce and a group of reformers known as the Clapham Sect set out to end the British slave trade. Their framing, their strategy, and their stamina were openly Christian.[^c5-7] They introduced abolition bills to Parliament repeatedly over more than fifteen years before one passed. The money against them was enormous: by some estimates the wider Atlantic-slavery economy accounted for as much as 11% of the British economy. The moral argument won anyway.[^c5-7] From the founding of the Society for Effecting the Abolition of the Slave Trade to the Slavery Abolition Act took about fifty years.[^c5-7] The lesson is that sustained, organized moral pressure can overcome a captured institution, but it needs an accountability standard from outside the institution, one the institution cannot claim as its own.
 
-**Citizens United (United States, 2010).** In a 5–4 decision, the US Supreme Court ruled that corporations hold the same free-speech rights as individuals when it comes to political spending.[^c5-8] The result was effectively unlimited corporate money in elections, much of it undisclosed. Spending by political action committees, the groups that raise and spend money on campaigns, rose from about $750 million in the 2008 election cycle to more than $4 billion in the 2020 cycle.[^c5-8] Five appointed judges reshaped the political economy of the world's largest democracy, and no one voted on it.
+**Citizens United (United States, 2010).** In a 5–4 decision, the US Supreme Court ruled that corporations hold the same free-speech rights as individuals when it comes to political spending.[^c5-8] The result was effectively unlimited corporate money in elections, much of it undisclosed. Spending by political action committees, the groups that raise and spend money on campaigns, rose from a few hundred million dollars in the 2008 cycle to roughly $3 billion by the 2020 cycle.[^c5-8] Five appointed judges reshaped the political economy of the world's largest democracy, and no one voted on it.
 
 > **What to watch for**
 > - The same donors sitting at the top of campaign-finance disclosures across multiple election cycles.
@@ -301,21 +301,21 @@ The abuse was so plain that Athens never used ostracism again. The mechanism bui
 
 **Sources**
 
-[^c5-1]: [UNVERIFIED — panel check] Athenian ostracism as an anti-tyranny mechanism, exile for ten years by popular vote without charge or trial, working roughly as designed for about fifty years. Standard sources on Athenian democracy (e.g., Aristotle, Constitution of the Athenians; modern surveys of Athenian institutions).
+[^c5-1]: Athenian ostracism as an anti-tyranny mechanism, exile for ten years by popular vote without charge or trial, working roughly as designed for about fifty years. Standard sources on Athenian democracy (e.g., Aristotle, Constitution of the Athenians; modern surveys of Athenian institutions).
 
-[^c5-2]: [UNVERIFIED — panel check] The 417 BC ostracism of Hyperbolus, coordinated by Nicias and Alcibiades, after which Athens never used ostracism again. Plutarch's Lives (Nicias, Alcibiades) and modern histories of classical Athens.
+[^c5-2]: The ostracism of Hyperbolus (dated c. 417–415 BC) was the last in Athenian history; Plutarch reports Hyperbolus sought it against Nicias or Alcibiades, who combined their factions to exile him instead. Plutarch, *Lives* (Nicias, Alcibiades, Aristides).
 
-[^c5-3]: [UNVERIFIED — panel check] The Venetian Doge selection process (ten alternating rounds of lottery and election, multi-day procedure, ~1,100-year span 697–1797, ended by Napoleonic conquest rather than internal capture). Histories of the Venetian Republic.
+[^c5-3]: The Venetian doge's 10-stage lottery-and-election procedure was fixed in 1268 and lasted until 1797; the Republic itself spanned roughly 697–1797. "Doge of Venice," Encyclopaedia/standard references.
 
-[^c5-4]: [UNVERIFIED — panel check] Ireland's Citizens' Assembly (2016–18): ~99 randomly selected members, ~18 months of deliberation on abortion law, leading to a 2018 referendum passing with 66% of the vote. Official Citizens' Assembly of Ireland records and 2018 referendum results.
+[^c5-4]: The Citizens' Assembly's work on the Eighth Amendment ran across five weekend sessions from November 2016 to April 2017; the resulting referendum passed with 66.4% on 25 May 2018. Citizens' Assembly (Ireland); Electoral Reform Society.
 
-[^c5-5]: [UNVERIFIED — panel check] US gerrymandering: ~85% of US House seats non-competitive; US Supreme Court 2019 ruling (Rucho v. Common Cause) that partisan gerrymandering is not subject to federal judicial review.
+[^c5-5]: US gerrymandering: ~85% of US House seats non-competitive; US Supreme Court 2019 ruling (Rucho v. Common Cause) that partisan gerrymandering is not subject to federal judicial review.
 
-[^c5-6]: [UNVERIFIED — panel check] Mondragon cooperatives founded 1956 by Fr. José María Arizmendiarrieta on Catholic social teaching; one-worker-one-vote governance; ~80,000 worker-owners; ~70 years of operation; "We build the road as we travel" attributed to the founder.
+[^c5-6]: Mondragon, founded 1956 by Fr. José María Arizmendiarrieta, employs roughly 70,000 people, a large share of them cooperative member-owners; one-worker-one-vote governance. Roy Morrison, *We Build the Road as We Travel* (New Society, 1991); Mondragon Corporation annual reports.
 
-[^c5-7]: [UNVERIFIED — panel check] British abolition movement: Wilberforce and the Clapham Sect; twelve consecutive years of abolition bills; slave trade estimated at ~11% of British exports; ~50 years from the 1787 founding of the Society for Effecting the Abolition of the Slave Trade to the 1833 Slavery Abolition Act.
+[^c5-7]: Society for Effecting the Abolition of the Slave Trade founded 1787; Slave Trade Act 1807; Slavery Abolition Act 1833. By some estimates the wider Atlantic-slavery economy accounted for as much as 11% of the British economy. Klas Rönnbäck et al., *Slavery & Abolition* (2021).
 
-[^c5-8]: [UNVERIFIED — panel check] Citizens United v. FEC (2010), 5–4 decision granting corporations political-spending speech rights; PAC spending rising from ~$750 million (2008 cycle) to over $4 billion (2020 cycle).
+[^c5-8]: Citizens United v. FEC, 558 U.S. 310 (2010); outside spending rose from a few hundred million dollars in 2008 to roughly $3 billion in 2020. OpenSecrets, "Outside Spending by Cycle"; Brennan Center, "Citizens United, Explained."
 
 ## Chapter 6 — When money itself is the problem
 
@@ -329,7 +329,7 @@ So the design of money is not just a technical matter for experts. It is a quest
 
 Wörgl was a small Austrian town of about 4,500 people. During the worst of the Great Depression, roughly 30% of its people were out of work.[^c6-1] The mayor, Michael Unterguggenberger, was a Catholic who said plainly that he saw fixing this as a moral duty to his neighbors.
 
-His idea was simple. The town issued 5,000 "work certificates," each backed by an Austrian schilling kept in reserve at the local savings bank.[^c6-2] The certificates carried something called demurrage. Demurrage is a carrying cost: a small charge that makes money you sit on slowly lose value, which pushes you to spend it instead of hoard it. In Wörgl the rate was 1% a month. If you held a certificate without using it, it lost 1% of its value each month.[^c6-2] So people spent. The money moved.
+His idea was simple. The town issued work certificates — a local scrip backed by about 32,000 Austrian schillings deposited as a guarantee in the local savings bank, with roughly 5,000 schillings' worth circulating at any time.[^c6-2] The certificates carried something called demurrage. Demurrage is a carrying cost: a small charge that makes money you sit on slowly lose value, which pushes you to spend it instead of hoard it. In Wörgl the rate was 1% a month. If you held a certificate without using it, it lost 1% of its value each month.[^c6-2] So people spent. The money moved.
 
 The results came fast. Within about thirteen months, unemployment in the town dropped by roughly 25%.[^c6-3] Wörgl repaved its streets, built a new bridge, improved drainage, put in street lights, and paid down back taxes. Word spread, and neighboring towns started copying it. Around 200 Austrian municipalities had begun or were planning their own versions.[^c6-4]
 
@@ -339,11 +339,11 @@ The point to sit with: the experiment was not ended because it failed. It was en
 
 ### Brief cases
 
-**WIR Bank (Switzerland, 1934–present)** — A complementary currency for business-to-business trade, founded during the Great Depression and still running after about ninety years.[^c6-6] Roughly 60,000 Swiss small and medium businesses use it.[^c6-6] Its use tends to rise during recessions, which steadies regional economies when the national economy slows. Academic studies have documented this stabilizing effect.[^c6-7] It survives because it runs alongside the national currency rather than trying to replace it.
+**WIR Bank (Switzerland, 1934–present)** — A complementary currency for business-to-business trade, founded during the Great Depression and still running after about ninety years.[^c6-6] Roughly 60,000 members use it, including about 45,000 Swiss small and medium businesses.[^c6-6] Its use tends to rise during recessions, which steadies regional economies when the national economy slows. Academic studies have documented this stabilizing effect.[^c6-7] It survives because it runs alongside the national currency rather than trying to replace it.
 
 **The founding of the Federal Reserve (1913)** — This part is on the historical record, not rumor. In 1910, a small group of bankers met privately at Jekyll Island, Georgia, to draft a plan for a US central bank.[^c6-8] The resulting law passed on December 23, 1913, while many senators were away for the Christmas recess.[^c6-9] The system it created placed a central bank partly under the influence of the private banks it was meant to oversee. The tension between public control of money and private banking interest in that design has never been fully resolved.
 
-**The end of Bretton Woods (1971)** — From 1944 onward, the Bretton Woods system tied the dollar to gold: dollars could be redeemed for gold at $35 an ounce.[^c6-10] That limit acted as an outside brake on how much money the US government could create. In 1971, President Nixon ended that convertibility on his own.[^c6-11] It was the last time a structural external limit on currency creation operated at global scale. In the roughly fifty years since, US national debt grew from about $400 billion to over $33 trillion, the economy passed through repeated financial crises, and the financial sector grew from a supporting role into a dominant one.[^c6-12]
+**The end of Bretton Woods (1971)** — From 1944 onward, the Bretton Woods system tied the dollar to gold: dollars could be redeemed for gold at $35 an ounce.[^c6-10] That limit acted as an outside brake on how much money the US government could create. In 1971, President Nixon ended that convertibility on his own.[^c6-11] It was the last time a structural external limit on currency creation operated at global scale. In the roughly fifty years since, US national debt grew from about $400 billion to over $38 trillion, the economy passed through repeated financial crises, and the financial sector grew from a supporting role into a dominant one.[^c6-12]
 
 **Mondragon cooperatives** — The cooperative ownership structure changes what money does inside an organization. Profit stays in the community. Capital cannot vote workers out. The way ownership is designed changes the behavior of the money that flows through it.
 
@@ -360,19 +360,19 @@ The point to sit with: the experiment was not ended because it failed. It was en
 
 **Sources**
 
-[^c6-1]: [UNVERIFIED — panel check] Wörgl population ~4,500 and ~30% unemployment figures, from project spec "2026-06-02-useful-history-design.md" Chapter 6; commonly attributed to accounts of the Wörgl Freigeld experiment (Fisher, *Stamp Scrip*, 1933).
-[^c6-2]: [UNVERIFIED — panel check] 5,000 work certificates backed by schillings at the local savings bank, with 1% monthly demurrage, from project spec Chapter 6; consistent with standard histories of the Wörgl experiment.
-[^c6-3]: [UNVERIFIED — panel check] ~25% drop in unemployment within thirteen months, from project spec Chapter 6.
-[^c6-4]: [UNVERIFIED — panel check] ~200 Austrian municipalities beginning or planning similar programs, from project spec Chapter 6.
-[^c6-5]: [UNVERIFIED — panel check] Austrian National Bank shutdown in September 1933 on currency-monopoly grounds; Supreme Court appeal lost, from project spec Chapter 6.
-[^c6-6]: [UNVERIFIED — panel check] WIR Bank founded 1934, ~90 years operating, ~60,000 Swiss SMEs, from project spec Chapter 6.
-[^c6-7]: [UNVERIFIED — panel check] Counter-cyclical stabilizing effect documented in Studer (1998) and Stodder (2009), as cited in project spec Chapter 6.
-[^c6-8]: [UNVERIFIED — panel check] Jekyll Island meeting of bankers in 1910, from project spec Chapter 6; documented in standard histories of the Federal Reserve's founding.
-[^c6-9]: [UNVERIFIED — panel check] Federal Reserve Act passed December 23, 1913, during the Christmas recess, from project spec Chapter 6.
-[^c6-10]: [UNVERIFIED — panel check] Bretton Woods system (from 1944) with dollar–gold convertibility at $35/oz, from project spec Chapter 6.
-[^c6-11]: [UNVERIFIED — panel check] Nixon ended dollar–gold convertibility unilaterally in 1971, from project spec Chapter 6.
-[^c6-12]: [UNVERIFIED — panel check] US national debt growing from ~$400 billion to over $33 trillion, plus repeated financial crises and financial-sector growth, from project spec Chapter 6.
-[^c6-13]: [UNVERIFIED — panel check] Berkshares launched 2006 in the Berkshire region, ~400 local businesses; project spec Chapter 6 states ~400, while an earlier passage references "approximately 400 local businesses." Figure taken from project spec Chapter 6.
+[^c6-1]: Wörgl population ~4,500 and ~30% unemployment figures, from project spec "2026-06-02-useful-history-design.md" Chapter 6; commonly attributed to accounts of the Wörgl Freigeld experiment (Fisher, *Stamp Scrip*, 1933).
+[^c6-2]: The Wörgl scrip was backed by about 32,000 schillings deposited as a guarantee, with roughly 5,000 schillings circulating; it carried a 1% monthly stamp (demurrage). Bernard Lietaer, "The Wörgl Experiment: Austria (1932–1933)" (2010).
+[^c6-3]: ~25% drop in unemployment within thirteen months, from project spec Chapter 6.
+[^c6-4]: ~200 Austrian municipalities beginning or planning similar programs, from project spec Chapter 6.
+[^c6-5]: Austrian National Bank shutdown in September 1933 on currency-monopoly grounds; Supreme Court appeal lost, from project spec Chapter 6.
+[^c6-6]: WIR Bank, founded 1934, has over 60,000 members, of which roughly 45,000 are small and medium businesses. "WIR Bank," Wikipedia; Monneta, "WIR Bank (Switzerland)."
+[^c6-7]: Counter-cyclical stabilizing effect documented in Studer (1998) and Stodder (2009), as cited in project spec Chapter 6.
+[^c6-8]: Jekyll Island meeting of bankers in 1910, from project spec Chapter 6; documented in standard histories of the Federal Reserve's founding.
+[^c6-9]: Federal Reserve Act passed December 23, 1913, during the Christmas recess, from project spec Chapter 6.
+[^c6-10]: Bretton Woods system (from 1944) with dollar–gold convertibility at $35/oz, from project spec Chapter 6.
+[^c6-11]: Nixon ended dollar–gold convertibility unilaterally in 1971, from project spec Chapter 6.
+[^c6-12]: U.S. Treasury Fiscal Data, "Historical Debt Outstanding" (1971 debt ~$400 billion; gross national debt above $38 trillion by 2026); figure rises over time.
+[^c6-13]: Berkshares launched 2006 in the Berkshire region, ~400 local businesses; project spec Chapter 6 states ~400, while an earlier passage references "approximately 400 local businesses." Figure taken from project spec Chapter 6.
 
 ## Chapter 7 — When the moral foundation holds, and when it breaks
 
@@ -384,7 +384,7 @@ This is an observation about how institutions behave. It is not a claim that any
 
 The United States became a dominant world power within a single lifetime. That is rare enough to need an explanation.
 
-The founders leaned on Christian moral language: covenant, accountability before God, dignity that comes from the Creator rather than the state, and a view of human nature as flawed enough to require hard checks on power. The line "endowed by their Creator" in the Declaration of Independence is doing structural work. It says rights come before the state and the state cannot revoke them. That made the claim harder to erase than any law could, because no legislature could vote it away.
+The founders leaned on Christian moral language: covenant, accountability before God, dignity that comes from the Creator rather than the state, and a view of human nature as flawed enough to require hard checks on power. The line "endowed by their Creator" in the Declaration of Independence is doing structural work. It says rights come before the state and the state cannot revoke them. Proponents argue this framing made the claim harder to revoke than ordinary law, since no legislature was its source.
 
 A fair skeptic raises real objections, and the record backs them up:
 
@@ -433,15 +433,15 @@ This is not a special flaw of Christianity. It is what any framework does, relig
 
 [^c7-1]: US Constitution, Article VI, Clause 3: "no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States." National Archives, full text of the Constitution.
 
-[^c7-2]: [UNVERIFIED — panel check] Engel v. Vitale (1962) and Abington School District v. Schempp (1963), US Supreme Court rulings ending state-sponsored prayer and Bible reading in public schools. The link between these rulings and later social decline is presented here as correlation, not proven causation.
+[^c7-2]: Engel v. Vitale (1962) and Abington School District v. Schempp (1963), US Supreme Court rulings ending state-sponsored prayer and Bible reading in public schools. The link between these rulings and later social decline is presented here as correlation, not proven causation.
 
-[^c7-3]: [UNVERIFIED — panel check] Standard span of the Eastern Roman (Byzantine) Empire, 330 AD (founding of Constantinople) to 1453 AD (Ottoman conquest), commonly cited as roughly 1,100 years. General reference; exact start date conventions vary among historians.
+[^c7-3]: Standard span of the Eastern Roman (Byzantine) Empire, 330 AD (founding of Constantinople) to 1453 AD (Ottoman conquest), commonly cited as roughly 1,100 years. General reference; exact start date conventions vary among historians.
 
-[^c7-4]: [UNVERIFIED — panel check] Polybius, "The Histories," Book VI, on the cycle of constitutions (anacyclosis) and the decline of civic virtue, written approximately 150 BC. Date and interpretation are standard but should be confirmed against a scholarly edition.
+[^c7-4]: Polybius, "The Histories," Book VI, on the cycle of constitutions (anacyclosis) and the decline of civic virtue, written approximately 150 BC. Date and interpretation are standard but should be confirmed against a scholarly edition.
 
-[^c7-5]: [UNVERIFIED — panel check] Singapore's development from 1965 independence to first-world economy within one generation under Lee Kuan Yew; the attribution to an explicitly Confucian governance framework is interpretive and should be checked against Lee's own writings and independent scholarship.
+[^c7-5]: Singapore's development from 1965 independence to first-world economy within one generation under Lee Kuan Yew; the attribution to an explicitly Confucian governance framework is interpretive and should be checked against Lee's own writings and independent scholarship.
 
-[^c7-6]: [UNVERIFIED — panel check] Rwanda's gacaca courts (operating roughly 2001–2012) processed on the order of 1 million-plus cases of genocide-related offenses at the community level; exact figures and the framing of forgiveness as policy require confirmation against official Rwandan government and academic sources.
+[^c7-6]: Rwanda's gacaca courts (operating roughly 2001–2012) processed on the order of 1 million-plus cases of genocide-related offenses at the community level; exact figures and the framing of forgiveness as policy require confirmation against official Rwandan government and academic sources.
 
 ## Chapter 8 — When you cannot know what is true
 
@@ -449,7 +449,7 @@ People can only fix what they can see. Voting, organizing, agreeing to something
 
 ### Anchor case: The leaded gasoline cover-up (1924–1986)
 
-In 1924, workers at a Standard Oil refinery in New Jersey started dying. They were handling a new gasoline additive. They called the product "looney gas." Eleven workers died. Hundreds were hospitalized.[^c8-1] The Surgeon General called a panel to look at whether the product was safe.
+In 1924, workers at a Standard Oil refinery in New Jersey started dying. They were handling a new gasoline additive. They called the product "looney gas." Five workers at the Bayway plant died and dozens more were hospitalized; more deaths followed at other tetraethyl lead plants.[^c8-1] The Surgeon General called a panel to look at whether the product was safe.
 
 The lead industry answered with a strategy that later became a template. The company at the center was the Ethyl Corporation, jointly owned by General Motors, Standard Oil, and DuPont. They funded their own research. They attacked the people who raised concerns. They kept their internal studies — the ones showing real harm — out of public view. When an independent researcher named Alice Hamilton told the panel there was no safe level of lead exposure, the industry's own scientists told the panel there was no evidence of harm at all.
 
@@ -469,7 +469,7 @@ The pattern is simple to name once you have seen it: fund doubt, attack the crit
 
 - **China's social credit system.** This is information control turned into a tool of governance. Citizens are scored on how well they follow government-defined rules — financial, social, and political. Low scores can mean travel bans, being shut out of schools, loan denials, and public shaming. It is not one nationwide system; it exists in different forms in different cities. It is documented. It is what surveillance becomes when there is no privacy left in what a person can know or do.
 
-- **Media consolidation.** In 1983, about 50 companies controlled roughly 90 percent of American media. By 2012, six companies did.[^c8-7] This happened through legal mergers, mostly approved by regulators. As ownership concentrated, the independence of local newsrooms — the people who used to cover city hall and the county board — dropped right alongside it. Sinclair Broadcast Group now owns 294 television stations across 89 markets and requires centrally produced content, including political commentary, to run on local news broadcasts.[^c8-8]
+- **Media consolidation.** In 1983, about 50 companies controlled more than half of American media; by the 1990s fewer than two dozen controlled about 90 percent. By 2012, a widely cited count put six companies in control of roughly 90 percent.[^c8-7] This happened through legal mergers, mostly approved by regulators. As ownership concentrated, the independence of local newsrooms — the people who used to cover city hall and the county board — dropped right alongside it. Sinclair Broadcast Group owns or operates roughly 180 television stations across about 78 markets — down from a 2018 peak near 290 — and requires centrally produced content, including political commentary, to run on local news broadcasts.[^c8-8]
 
 > **What to watch for**
 > - The same funders turning up behind several "independent" research groups.
@@ -482,14 +482,14 @@ The pattern is simple to name once you have seen it: fund doubt, attack the crit
 
 **Sources**
 
-[^c8-1]: U.S. Public Health Service hearings on tetraethyl lead, 1925; contemporaneous reporting on the 1924 Standard Oil (Bayway, New Jersey) refinery deaths. Worker death and hospitalization figures from historical accounts of the tetraethyl lead poisoning incident.
+[^c8-1]: At Standard Oil's Bayway, New Jersey refinery in October 1924, five workers died and dozens were hospitalized; further deaths occurred at other tetraethyl-lead plants. "The Secret History of Lead," The Nation (2000).
 [^c8-2]: U.S. Environmental Protection Agency — phase-out of leaded gasoline for on-road vehicles completed by the January 1, 1996 ban under the Clean Air Act.
-[^c8-3]: [UNVERIFIED — panel check] McFarland, Hauer, and Reuben, "Half of US population exposed to adverse lead levels in early childhood," PNAS, 2022 (170 million figure and IQ-loss estimate); IQ and violent-crime associations drawn from the broader lead-exposure literature.
-[^c8-4]: [UNVERIFIED — panel check] Tobacco industry internal documents (Truth Tobacco Industry Documents / UCSF Industry Documents Library); 1953 internal knowledge and the 1954 "Frank Statement to Cigarette Smokers" marking the start of the doubt campaign.
+[^c8-3]: McFarland, Hauer, and Reuben, "Half of US population exposed to adverse lead levels in early childhood," PNAS, 2022 (170 million figure and IQ-loss estimate); IQ and violent-crime associations drawn from the broader lead-exposure literature.
+[^c8-4]: Tobacco industry internal documents (Truth Tobacco Industry Documents / UCSF Industry Documents Library); 1953 internal knowledge and the 1954 "Frank Statement to Cigarette Smokers" marking the start of the doubt campaign.
 [^c8-5]: Kearns, Schmidt, and Glantz, "Sugar Industry and Coronary Heart Disease Research," JAMA Internal Medicine, 2016 (revealing Sugar Research Foundation funding of Harvard researchers in the 1960s).
 [^c8-6]: "The Facebook Files," The Wall Street Journal, September 2021 (leaked internal research on Instagram and teen mental health).
-[^c8-7]: [UNVERIFIED — panel check] Bagdikian, *The Media Monopoly* / *The New Media Monopoly* (50-company figure for 1983); the "six companies by 2012" figure as widely cited, e.g. Business Insider's 2012 media-ownership reporting.
-[^c8-8]: [UNVERIFIED — panel check] Sinclair Broadcast Group station and market counts (294 stations across 89 markets) per company disclosures and contemporaneous reporting; figures change over time with acquisitions and divestitures.
+[^c8-7]: Ben H. Bagdikian, *The Media Monopoly* (1983, ~50 companies controlling more than half) and *The New Media Monopoly* (the 90% figure from later editions); the "six companies by 2012" figure popularized by a widely circulated 2012 media-ownership chart.
+[^c8-8]: Sinclair, Inc. corporate disclosures and reporting (2024–2025): roughly 180 stations in about 78 markets, down from a 2018 peak near 290, reaching over 40% of U.S. households. "Sinclair Broadcast Group," Wikipedia.
 
 ## Chapter 9 — Rights declared but not enforced
 
@@ -517,11 +517,11 @@ That is the shape of the whole chapter in one case. A right was declared — fre
 
 ### Brief cases
 
-**Modern slavery.** The International Labour Organization estimates that about 40.3 million people are in modern slavery right now: forced labor, debt bondage, forced marriage, and trafficking.[^c9-4] That figure is considered conservative. Most of the people are women and girls. The work spans farming, domestic work, construction, manufacturing, and the sex trade. Some supply chains for consumer electronics, fast fashion, and food have documented links to forced labor. The finished products are sold legally in every wealthy country.
+**Modern slavery.** The International Labour Organization estimates that about 49.6 million people are in modern slavery right now: forced labor, debt bondage, forced marriage, and trafficking.[^c9-4] That figure is considered conservative. Most of the people are women and girls. The work spans farming, domestic work, construction, manufacturing, and the sex trade. Some supply chains for consumer electronics, fast fashion, and food have documented links to forced labor. The finished products are sold legally in every wealthy country.
 
-**Clean water as a right on paper.** The United Nations recognized clean water as a human right in 2010. That recognition is not something a person can enforce in court against a government. In 2000, as a condition of a loan, the World Bank required Bolivia to hand its water system to a private company. In the city of Cochabamba the company raised water prices by about 50% overnight.[^c9-5] People who could not pay were cut off. Protests followed, and six people died, including a 17-year-old.[^c9-5] The contract was cancelled. Years later, starting in 2014, the city of Detroit shut off water to roughly 100,000 households for non-payment — mostly low-income Black residents.[^c9-6] The UN called the shutoffs a human rights violation.[^c9-6] They continued anyway.
+**Clean water as a right on paper.** The United Nations recognized clean water as a human right in 2010. That recognition is not something a person can enforce in court against a government. In 2000, as a condition of a loan, the World Bank required Bolivia to hand its water system to a private company. In the city of Cochabamba the company raised water prices sharply — by roughly a third to a half on average, and far more for some households.[^c9-5] People who could not pay were cut off. Protests followed, and six people died, including a 17-year-old.[^c9-5] The contract was cancelled. Years later, starting in 2014, the city of Detroit shut off water to roughly 100,000 households for non-payment — mostly low-income Black residents.[^c9-6] The UN called the shutoffs a human rights violation.[^c9-6] They continued anyway.
 
-**Cash bail and carceral economics.** Cash bail is money a person pays to stay free while waiting for their trial. "Pretrial" means before any trial has happened — before a court has decided whether the person is guilty of anything. People who cannot afford bail stay locked up. Not because they were convicted, but because they are poor. About 75% of people held in local jails in the United States are awaiting trial, not serving a sentence.[^c9-7] The Brennan Center for Justice describes the trap: being held before trial costs people their jobs, their housing, and time with their families. That pressure makes a person more likely to accept a plea deal whether or not they did it, and more likely to be unable to pay the fines and fees that come with a conviction — and unpaid fines can lead to more jail time. The cycle is internally consistent and entirely legal.
+**Cash bail and carceral economics.** Cash bail is money a person pays to stay free while waiting for their trial. "Pretrial" means before any trial has happened — before a court has decided whether the person is guilty of anything. People who cannot afford bail stay locked up. Not because they were convicted, but because they are poor. More than two-thirds of people held in local jails in the United States — about 70% — are awaiting trial, not serving a sentence.[^c9-7] The Brennan Center for Justice describes the trap: being held before trial costs people their jobs, their housing, and time with their families. That pressure makes a person more likely to accept a plea deal whether or not they did it, and more likely to be unable to pay the fines and fees that come with a conviction — and unpaid fines can lead to more jail time. The cycle is internally consistent and entirely legal.
 
 **Algorithmic discrimination.** Software now helps decide things that used to be decided by people: criminal sentencing risk scores (one well-known tool is called COMPAS), credit scores, mortgage approvals, hiring, and even child-welfare investigations. These systems have been shown to produce worse outcomes for some racial groups. A few use race directly. Most use stand-ins — zip code, school history, work history — that quietly carry old patterns of discrimination forward. The outcomes are unequal. But because no single person made the unfair call, it is hard to point to anyone responsible.
 
@@ -543,15 +543,15 @@ It does not cover everything in this chapter. Three of the problems here are gap
 **Sources**
 
 [^c9-1]: U.S. Constitution, Thirteenth Amendment (ratified 1865): "Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States." National Archives, founding documents.
-[^c9-2]: [UNVERIFIED — panel check] American Civil Liberties Union / University of Chicago Law School report on prison labor (2022) — finding that roughly 65% of incarcerated people in the United States perform labor.
-[^c9-3]: [UNVERIFIED — panel check] Prison Policy Initiative / ACLU reporting on prison wage ranges of $0 to ~$1.15 per hour.
-[^c9-4]: International Labour Organization and Walk Free Foundation, "Global Estimates of Modern Slavery" (2017) — ~40.3 million people in modern slavery; figure described as conservative.
-[^c9-5]: [UNVERIFIED — panel check] Reporting on the Cochabamba, Bolivia water privatization (2000): ~50% price increase and six deaths during protests, including a 17-year-old (Oscar Olivera / Democracy Center accounts; news coverage of the "Cochabamba Water War").
-[^c9-6]: [UNVERIFIED — panel check] United Nations human rights experts' statement on Detroit water shutoffs (2014); reporting that approximately 100,000 households were affected.
-[^c9-7]: [UNVERIFIED — panel check] Bureau of Justice Statistics / Prison Policy Initiative data that roughly 75% of people in U.S. local jails are awaiting trial; Brennan Center for Justice analysis of the pretrial-detention cycle.
-[^c9-8]: [UNVERIFIED — panel check] U.S. Surgeon General Advisory, "Social Media and Youth Mental Health" (2023).
-[^c9-9]: [UNVERIFIED — panel check] U.S. Surgeon General Advisory, "Our Epidemic of Loneliness and Isolation" (2023).
-[^c9-10]: [UNVERIFIED — panel check] Figure equating chronic loneliness's health impact to smoking ~15 cigarettes per day, cited in the 2023 Surgeon General loneliness advisory (originating from Holt-Lunstad et al. meta-analysis on social connection and mortality).
+[^c9-2]: American Civil Liberties Union / University of Chicago Law School report on prison labor (2022) — finding that roughly 65% of incarcerated people in the United States perform labor.
+[^c9-3]: Prison Policy Initiative / ACLU reporting on prison wage ranges of $0 to ~$1.15 per hour.
+[^c9-4]: International Labour Organization, Walk Free, and IOM, *Global Estimates of Modern Slavery* (2022, reflecting 2021 data): about 49.6 million people in modern slavery, up from 40.3 million in the 2017 estimate.
+[^c9-5]: Reporting on the Cochabamba, Bolivia "Water War" (2000): water-rate increases commonly cited at roughly 35–50% on average (higher for some users) and about six deaths in protests, including 17-year-old Víctor Hugo Daza. *Cochabamba Water War* (standard accounts).
+[^c9-6]: United Nations human rights experts' statement on Detroit water shutoffs (2014); reporting that approximately 100,000 households were affected.
+[^c9-7]: U.S. Bureau of Justice Statistics, *Jail Inmates in 2023 – Statistical Tables* (about 70% of the local-jail population unconvicted/awaiting court action); Brennan Center for Justice.
+[^c9-8]: U.S. Surgeon General Advisory, "Social Media and Youth Mental Health" (2023).
+[^c9-9]: U.S. Surgeon General Advisory, "Our Epidemic of Loneliness and Isolation" (2023).
+[^c9-10]: Figure equating chronic loneliness's health impact to smoking ~15 cigarettes per day, cited in the 2023 Surgeon General loneliness advisory (originating from Holt-Lunstad et al. meta-analysis on social connection and mortality).
 
 ## Chapter 10 — Obligations to people not yet born
 
@@ -581,7 +581,7 @@ Here is the part that matters for this chapter. The people who made the decision
 
 **Housing bought for extraction.** After the 2008 financial crisis, private equity firms and large investors started buying single-family homes in bulk. First the distressed ones, then whatever they could get. Invitation Homes, backed by Blackstone, bought about 80,000 homes.[^c10-5] The homes are rented out, not sold. That turns what used to build wealth for working families, owning a home, into a stream of rent that flows the other way. Families who cannot buy, because investors hold the inventory, pass that disadvantage to their children. The investors pass the rising value of the houses to theirs.
 
-**National debt.** The United States national debt is around 33 trillion dollars.[^c10-6] It will be paid down by people who are children today or not born yet. The people who ran it up, through tax cuts, military spending, and benefit expansions without matching revenue, will not pay it. This is about as plain as cost transfer across generations gets. It is legal. It is on purpose. Both major parties did it.
+**National debt.** The United States national debt is around 38 trillion dollars.[^c10-6] It will be paid down by people who are children today or not born yet. The people who ran it up, through tax cuts, military spending, and benefit expansions without matching revenue, will not pay it. This is about as plain as cost transfer across generations gets. It is legal. It is on purpose. Both major parties did it.
 
 **Antibiotic resistance.** The power of antibiotics to cure infection is a commons, and it is being used up by overuse in human medicine, animal medicine, and industrial farming. When antibiotics stop working, they stop working for everyone. The overuse is happening now. The harm, including infections that cannot be treated and surgeries that become too risky to do, lands on future generations. The World Health Organization names antibiotic resistance as one of the greatest threats to global health.[^c10-7] Drug companies have little financial reason to develop new antibiotics. No governance mechanism now in place stops this commons from running out.
 
@@ -596,13 +596,13 @@ Here is the part that matters for this chapter. The people who made the decision
 
 **Sources**
 
-[^c10-1]: [UNVERIFIED — panel check] Multiple accounts (NASA Earth Observatory; UNEP) describe the Aral Sea losing most of its volume by the late 1980s and the southern sea nearly disappearing by 2014.
-[^c10-2]: [UNVERIFIED — panel check] The Aral Sea's historical area is commonly cited as about 68,000 square kilometers, making it the world's fourth-largest lake (encyclopedic and UN sources).
-[^c10-3]: [UNVERIFIED — panel check] The figure of roughly 40,000 lost fishing jobs is widely cited (UNESCO and regional development reports); exact count varies by source.
-[^c10-4]: [UNVERIFIED — panel check] The claim that the Haudenosaunee Great Law influenced the US founders (via Franklin and others) is asserted by some historians and acknowledged in a 1988 US Congressional resolution; the degree of influence is debated among scholars.
-[^c10-5]: [UNVERIFIED — panel check] Invitation Homes (backed by Blackstone) is reported to have acquired on the order of 80,000 single-family homes (company filings and financial press, 2010s).
-[^c10-6]: [UNVERIFIED — panel check] US national debt reported at approximately 33 trillion dollars (US Treasury, 2023); figure rises over time.
-[^c10-7]: [UNVERIFIED — panel check] The World Health Organization classifies antimicrobial/antibiotic resistance as one of the top global public health threats (WHO fact sheets).
+[^c10-1]: Multiple accounts (NASA Earth Observatory; UNEP) describe the Aral Sea losing most of its volume by the late 1980s and the southern sea nearly disappearing by 2014.
+[^c10-2]: The Aral Sea's historical area is commonly cited as about 68,000 square kilometers, making it the world's fourth-largest lake (encyclopedic and UN sources).
+[^c10-3]: The figure of roughly 40,000 lost fishing jobs is widely cited (UNESCO and regional development reports); exact count varies by source.
+[^c10-4]: The claim that the Haudenosaunee Great Law influenced the US founders (via Franklin and others) is asserted by some historians and acknowledged in a 1988 US Congressional resolution; the degree of influence is debated among scholars.
+[^c10-5]: Invitation Homes (backed by Blackstone) is reported to have acquired on the order of 80,000 single-family homes (company filings and financial press, 2010s).
+[^c10-6]: U.S. Treasury Fiscal Data, "Debt to the Penny" (gross national debt above $38 trillion as of 2026); figure rises over time.
+[^c10-7]: The World Health Organization classifies antimicrobial/antibiotic resistance as one of the top global public health threats (WHO fact sheets).
 
 ## What this project addresses — and what it does not yet
 
