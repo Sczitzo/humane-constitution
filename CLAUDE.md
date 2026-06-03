@@ -131,7 +131,7 @@ Current order: First-Time → Skeptic → Economic → Founding → Identity →
   - `docs/annexes/ANNEX_D.md`
   - `scripts/export_corpus.py`
   - `app/src/generated/corpus.ts`, `app/public/generated/corpus.json` (regenerate, never hand-edit)
-- Vercel deployment root is `app/`, not the repo root. Deploy with `vercel --prod` from inside `app/`.
+- The Vercel project's **Root Directory** is set to `app` (in Vercel project settings). Deploy with `vercel --prod` from the **repo root** — the CLI resolves `app/` itself. Do NOT run it from inside `app/` (that resolves to `app/app` and fails with "path does not exist"). After a successful deploy, CDN propagation + browser cache mean the live site can take a couple minutes / a hard refresh to show changes.
 - For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review in `.claude/rules/constitution-review.md`.
 - Run relevant verification before marking any code or corpus task complete.
 
