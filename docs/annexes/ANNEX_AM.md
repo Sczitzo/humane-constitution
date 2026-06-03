@@ -9,7 +9,7 @@
 > | **Evidence status** | Designed |
 > | **Linked risks** | T-022 (Electoral Cycle Capture); P-018; Annex AI (Federated Ombuds); Annex AJ (enforcement ledger); Annex AL (oracle accreditation) |
 
-> **Provenance:** Implements [P-018 — Electoral Cycle Resilience] · Addresses T-022 · Status: **PROPOSED**
+> **Provenance:** Implements [P-018 — Electoral Cycle Resilience] · Addresses T-022 · Status: see Patch Log
 
 **Status:** PROPOSED | **Priority:** Critical | **Patch:** P-018
 **Threat addressed:** T-022 (Electoral Cycle Capture)

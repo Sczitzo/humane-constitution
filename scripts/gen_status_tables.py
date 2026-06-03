@@ -23,7 +23,13 @@ import glob, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 THREAT_REGISTER = os.path.join(ROOT, "docs/governance/Threat_Register.md")
-ANNEX_GLOB = os.path.join(ROOT, "docs/annexes/*.md")
+
+def target_files() -> list[str]:
+    """All annexes plus Patch_Log. Only rows whose FIRST cell is a threat id are
+    rewritten (the threat-keyed coverage tables); Patch_Log's patch-keyed summary
+    table — first cell P-NNN — is left untouched, since it is the patch authority."""
+    return sorted(glob.glob(os.path.join(ROOT, "docs/annexes/*.md"))) + \
+        [os.path.join(ROOT, "docs/governance/Patch_Log.md")]
 
 TID_RE = re.compile(r"\bT-\d{3}\b")
 PROPOSED_WORDS = {"proposed"}
@@ -125,7 +131,7 @@ def main() -> int:
         print("ERROR: could not parse Threat Register status table", file=sys.stderr)
         return 2
     drifts: list[str] = []
-    for path in sorted(glob.glob(ANNEX_GLOB)):
+    for path in target_files():
         drifts += process_file(path, threat_status, write)
     if not drifts:
         print(f"OK — annex linkage Status columns match the Threat Register "

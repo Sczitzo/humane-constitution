@@ -30,7 +30,8 @@ import glob, os, re, sys, collections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = [p for p in glob.glob(os.path.join(ROOT, "docs/**/*.md"), recursive=True)
-        if "/audits/" not in p and "/superpowers/" not in p and "/review/" not in p]
+        if "/audits/" not in p and "/superpowers/" not in p and "/review/" not in p
+        and not os.path.basename(p).startswith("P-063")]  # draft working docs explore both states
 
 PROPOSED = {"proposed"}
 ACTIVE = {"active", "active — unproven", "active-unproven", "active — unproven",
@@ -38,25 +39,12 @@ ACTIVE = {"active", "active — unproven", "active-unproven", "active — unprov
 # longest-first so multi-word terms match before "active"
 TERMS = sorted(PROPOSED | ACTIVE, key=len, reverse=True)
 ID_RE = re.compile(r"\b([PT]-\d{3})\b")
+P_RE = re.compile(r"\bP-\d{3}\b")  # a status almost always describes a PATCH (the mechanism)
 
-# Documented exemptions. Keep this list short and reasoned; revisit on changes.
-EXEMPT_IDS = {
-    # Draft-only family, deliberately not registered (CLAUDE.md DRAFT_IDENTIFIERS).
-    "P-063",
-    # Genuine sub-item case: a specific fraud-calibration decision is `Proposed`
-    # under threat T-002, whose overall control is `Active — unproven`. Per the
-    # Status Model edge-case rule, sub-items carry their own Axis-1 status. The
-    # line-level gate cannot separate them; the content is correct.
-    "T-002",
-    # Queued for a dedicated constitution pass: their conflicting labels live in
-    # docs/constitution/Acceptance_Protocol.md (protected) and are Axis-2
-    # (founding-ratification) context. Remove from this list once reconciled.
-    "P-013", "P-014",
-    # P-008 is `Proposed` everywhere it is actually labelled. Its lone "ACTIVE"
-    # hit is the prose phrase "not ACTIVE" inside P-014's Patch_Log entry, which
-    # references P-008 as a bootstrap candidate. Not a real conflict.
-    "P-008",
-}
+# No per-ID exemptions. Every threat and patch is in scope. False positives are
+# prevented by accurate detection (below), not by suppressing IDs. The only
+# scope limit is the draft-file skip in DOCS (P-063 working drafts).
+EXEMPT_IDS: set[str] = set()
 
 def bucket(term: str) -> str | None:
     t = term.lower()
@@ -66,28 +54,95 @@ def bucket(term: str) -> str | None:
         return "ACTIVE"
     return None
 
-def statuses_on_line(line: str) -> list[str]:
-    """Return status terms ASSERTED on the line.
+TABLE_RE = re.compile(r"^\s*\|")
+STATUSLINE_RE = re.compile(r"^\s*(?:[-*]\s*)?\**status\b", re.I)
 
-    A bare prose word ("active serving members", "resolved the issue") is not a
-    status assertion. A term counts only when it is emphasized or labelled:
-      - bold (**term**), backtick (`term`), or bracket ([term]); or
-      - the line carries a "Status" label; or
-      - it is the uppercase Patch_Log shorthand (ACTIVE / PROPOSED) as a word.
-    """
+def _status_spans(line: str):
+    """Yield (bucket, start, end, term, is_upper) for each status-term occurrence,
+    longest-first and non-overlapping, skipping negated ('not ACTIVE') and
+    possessive ("X's PROPOSED") occurrences that assert about something else."""
     low = line.lower()
-    has_status_label = "status" in low
-    out = []
-    for term in TERMS:
-        if term not in low:
-            continue
-        emphasized = (
-            f"**{term}**" in low or f"`{term}`" in low or f"[{term}]" in low
-        )
-        upper_shorthand = re.search(rf"\b{re.escape(term.upper())}\b", line) is not None \
-            and term in ("active", "proposed")
-        if emphasized or has_status_label or upper_shorthand:
-            out.append(term)
+    claimed = [False] * len(low)
+    for term in TERMS:  # longest-first so "active — unproven" wins over "active"
+        for m in re.finditer(re.escape(term), low):
+            s, e = m.start(), m.end()
+            if any(claimed[s:e]):
+                continue
+            prefix = low[:s]
+            if prefix.rstrip().endswith("not"):
+                continue
+            if prefix.endswith("'s ") or prefix.endswith("’s "):
+                continue
+            for i in range(s, e):
+                claimed[i] = True
+            yield bucket(term), s, e, term, (line[s:e] == term.upper())
+
+def line_attributions(line: str) -> dict[str, set]:
+    """Map id -> set of status buckets ASSERTED about that id on this line.
+
+    Three attribution contexts, chosen to bind a status to its real subject:
+      - table row  -> the id in the FIRST cell owns the row's status
+                      (so a "Parent threat" reference column is not mislabelled);
+      - Status: line -> the status applies to the id(s) on that declaration line;
+      - prose      -> a status counts only if emphasized (**bold**/`code`/[..]) or
+                      uppercase shorthand AND within 25 chars of an id.
+    Lines showing a progression ("->"/"→") are ignored as history.
+    """
+    if "->" in line or "→" in line:
+        return {}
+    ids = [(m.group(1), m.start()) for m in ID_RE.finditer(line)]
+    if not ids:
+        return {}
+    spans = list(_status_spans(line))
+    if not spans:
+        return {}
+    out: dict[str, set] = collections.defaultdict(set)
+
+    if TABLE_RE.match(line):
+        # A row's Status describes its SUBJECT = the id in the first cell
+        # (threat in a threat/linkage table, patch in the Patch_Log summary).
+        # A patch named in a later "Patch" reference column is not the subject.
+        cells = line.strip().strip("|").split("|")
+        first = ID_RE.search(cells[0]) if cells else None
+        if not first:
+            return {}
+        subj = first.group(1)
+        for b, *_ in spans:
+            out[subj].add(b)
+    elif STATUSLINE_RE.match(line):
+        # "Status:" line: the status is the patch's if a patch is named
+        # ("Implements P-016 ... Addresses T-002 ... Status: PROPOSED" is P-016's
+        # status, not T-002's); otherwise apply to the threat id(s) present.
+        pm = P_RE.search(line)
+        targets = [pm.group(0)] if pm else [idv for idv, _ in ids]
+        for b, *_ in spans:
+            for t in targets:
+                out[t].add(b)
+    else:  # prose
+        low = line.lower()
+        patch_ids = [(i, p) for i, p in ids if i.startswith("P-")]
+        for b, s, e, term, is_upper in spans:
+            emphasized = f"**{term}**" in low or f"`{term}`" in low or f"[{term}]" in low
+            if not (emphasized or (is_upper and term in ("active", "proposed"))):
+                continue
+            # Status describes the mechanism: bind to the nearest PATCH within
+            # range; only fall back to the nearest id (a threat) if no patch is near.
+            def nearest_within(cands):
+                best_id, best_d = None, 26
+                for idv, ipos in cands:
+                    d = min(abs(ipos - s), abs(ipos - e))
+                    if d < best_d:
+                        best_d, best_id = d, idv
+                return best_id
+            nearest = nearest_within(patch_ids) or nearest_within(ids)
+            if nearest is not None:
+                out[nearest].add(b)
+
+    # A single line giving an id BOTH states is a transition/description
+    # ("now ACTIVE, formerly PROPOSED") — not a contradiction.
+    for idv in list(out):
+        if out[idv] >= {"PROPOSED", "ACTIVE"}:
+            del out[idv]
     return out
 
 def main() -> int:
@@ -97,27 +152,11 @@ def main() -> int:
         rel = os.path.relpath(path, ROOT)
         with open(path, encoding="utf-8", errors="replace") as fh:
             for n, line in enumerate(fh, 1):
-                if "->" in line or "→" in line:
-                    continue  # progression/history line
-                ids = set(ID_RE.findall(line))
-                if not ids:
-                    continue
-                # Only the FIRST id on a line "owns" a status, to avoid a status
-                # meant for one id leaking onto co-listed ids on the same row.
-                if len(ids) > 1:
-                    # multi-id line (e.g. linkage table row) — skip status attribution
-                    continue
-                (the_id,) = tuple(ids)
-                if the_id in EXEMPT_IDS:
-                    continue
-                buckets_here = {bucket(t) for t in statuses_on_line(line)}
-                buckets_here.discard(None)
-                # A line asserting BOTH states is a transition/description
-                # ("now ACTIVE, formerly PROPOSED"), not a contradiction — skip it.
-                if buckets_here == {"PROPOSED", "ACTIVE"}:
-                    continue
-                for b in buckets_here:
-                    seen[the_id][b].add(f"{rel}:{n}")
+                for the_id, buckets in line_attributions(line).items():
+                    if the_id in EXEMPT_IDS:
+                        continue
+                    for b in buckets:
+                        seen[the_id][b].add(f"{rel}:{n}")
 
     conflicts = {i: v for i, v in seen.items() if "PROPOSED" in v and "ACTIVE" in v}
     if not conflicts:

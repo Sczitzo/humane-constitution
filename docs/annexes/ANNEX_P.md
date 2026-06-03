@@ -9,7 +9,7 @@
 > | **Evidence status** | Active — unproven |
 > | **Linked risks** | TR-11 Sybil attacks; TR-12 account takeover; P-003 proof-of-personhood; P-016 asymmetric identity errors; Annex AK. |
 
-> **Provenance:** Foundational constitutional annex · Governs proof-of-personhood and identity tradeoffs later extended by P-003 and P-016 · Status: **ACTIVE**
+> **Provenance:** Foundational constitutional annex · Governs proof-of-personhood and identity tradeoffs later extended by P-003 and P-016 · Status: see Patch Log
 
 - **Plain-language purpose:** Proof-of-personhood is load-bearing. The protocol treats identity as a bounded tradeoff problem, not a solved technical detail. This annex defines admissible solution classes, red lines, fallback defaults, and the selected constitutional stance for pilot and scale deployment.
 - **Who it protects:** Displaced, undocumented, digitally fragile, abused, trafficked, and disaster-affected people who need the survival floor and a fair path to full standing.

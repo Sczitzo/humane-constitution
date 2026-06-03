@@ -1,6 +1,6 @@
 # ANNEX AF — Grace Period Exploitation Clauses
 
-> **Provenance:** Implements [P-009 — Grace Exploitation Loop Hardening] · Addresses T-009 · Status: **PROPOSED**
+> **Provenance:** Implements [P-009 — Grace Exploitation Loop Hardening] · Addresses T-009 · Status: see Patch Log
 
 > **At a glance**
 > | | |
