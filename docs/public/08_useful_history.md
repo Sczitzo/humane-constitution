@@ -207,3 +207,52 @@ The lesson is not that fences are evil. It is narrower. Advantage and disadvanta
 [^c3-11]: [UNVERIFIED — panel check] Medieval European guilds organized around Christian-brotherhood mutual-aid frameworks, quality standards, and apprentice-to-master mobility, later becoming restrictive and hereditary: e.g. Sheilagh Ogilvie, *The European Guilds: An Economic Analysis* (Princeton University Press, 2019). Interpretation of mobility versus capture requires verification.
 [^c3-12]: [UNVERIFIED — panel check] Monsanto (now Bayer) patenting of crop varieties and legal prohibition on farmer seed-saving: e.g. *Bowman v. Monsanto Co.* (US Supreme Court, 2013); reporting on seed-saving litigation. Specifics require verification.
 [^c3-13]: [UNVERIFIED — panel check] Approximately four firms controlling ~60% of the global commercial seed supply following industry consolidation: e.g. IPES-Food, *Too Big to Feed* (2017); Philip H. Howard, *Concentration and Power in the Food System* (Bloomsbury, 2016). Exact share and firm count require verification.
+
+## Chapter 4 — When there is not enough
+
+Picture a mother in a city where the shelves are empty. She has money, but money buys nothing that is not there. Or she has too little money, and the little food that exists goes to people who can outbid her. Either way, her child does not eat.
+
+This is the problem of real scarcity. Not a shortage someone invented, but a hard physical limit: not enough food, fuel, or medicine to go around. When that happens, the market stops being fair. Markets give goods to whoever can pay the most, not to whoever needs them most. So under real scarcity, someone has to decide who gets what by a rule other than price.
+
+The question is never whether to ration. Under true scarcity, rationing happens one way or another. The real questions are simpler and harder: Who decides? How is the decision made? And are the people running the system living under the same limits as everyone else?
+
+### Anchor case: UK Rationing (1940–54)
+
+Britain rationed food, clothing, fuel, and consumer goods for fourteen years, through the Second World War and the lean years after it.[^c4-1] By most measures, it worked.
+
+The numbers are striking. Even though less food was available, malnutrition fell during the war years. Infant deaths dropped. Most people saw the system as fair.[^c4-2] That is rare. Rationing usually breeds resentment. This one did not.
+
+Why did it hold? Four reasons stand out. First, it was simple enough for ordinary people to understand. Second, it was universal. The rules applied to everyone, including the royal family. Third, it was enforced the same way for everyone. Fourth, the government framed it openly as shared sacrifice. Churchill's government leaned on plain moral language, much of it Christian in tone: everyone carries the burden together, those who hoard are stealing from their neighbors, service is a duty and not a deal.[^c4-3]
+
+It was not perfect. Black markets grew for luxury goods. The paperwork got heavier over time as more items were added to the list. And the whole thing rested on trust in government enforcement, a trust that fourteen years slowly wore thin.[^c4-1]
+
+The most important fact is how it ended. It did not collapse. It stopped because the scarcity stopped. That is the lesson worth keeping: a rationing system survives when it stays simple, applies to everyone, runs in the open, and feels morally legitimate. Strip any of those away and it starts to rot.
+
+### Brief cases
+
+**Soviet bread lines (1917–1991).** Rationing without legitimacy, run in the dark, with political favoritism built into the system from the start. Communist Party members shopped at stores ordinary citizens could not enter. Army officers ate better than the men they commanded.[^c4-4] The result was chronic shortage that had little to do with how much was actually produced. Because distribution was hidden and political, farmers had no reason to grow more than the quota and every reason to divert food to black markets, where it could fetch something real.[^c4-4]
+
+**Venezuela (2010s).** The government capped prices but did nothing to manage supply. Scarce goods were handed out through party-aligned networks. Farming stopped paying, so production fell. Grocery shelves went empty in a country sitting on enormous oil wealth.[^c4-5] This shortage was made by policy, not by any physical limit. The lesson is precise: price caps without support for production and without transparent distribution produce the look of rationing with none of its function.
+
+**Post-disaster failures — Hurricane Katrina (2005).** A logistics breakdown made worse by political allocation. Wealthier, whiter parishes got resources faster. Part of the Louisiana National Guard was deployed to Iraq. Nursing home residents drowned because evacuation plans assumed everyone had a car. The Superdome held roughly 20,000 people for five days without enough food, water, or medical care.[^c4-6] Congressional reports laid out each failure in detail. None of the officials responsible faced legal consequences.[^c4-6]
+
+**Rwanda after the genocide (gacaca courts, 2001–2012).** A community-based justice system that handled an enormous backlog of genocide-related cases. It was built deliberately on Christian ideas of confession, accountability, and forgiveness. People who confessed and asked forgiveness got reduced sentences. Communities took part in establishing the truth and deciding how to make things right.[^c4-7] It was imperfect, fiercely contested, and unable to touch crimes committed by the ruling party. But it functioned at a scale and speed no ordinary court could match. An estimated 1.2 million cases were processed in about a decade.[^c4-7]
+
+> **What to watch for**
+> - Rationing systems where the people running them are exempt from them
+> - Shortage announcements followed fast by black markets, and the same goods sitting on shelves in rich neighborhoods while poor ones go without
+> - Disaster response that arrives faster in higher-income areas
+
+> *Rationing systems succeed when they are simple, universal, transparent, and perceived as morally legitimate — and fail when they are opaque, politically captured, or exempt the powerful.*
+
+**Where this project responds:** Shared Storehouse — a temporary, verified-shortage rationing instrument that distributes scarce essentials by need rather than price, with the same rules for everyone.
+
+**Sources**
+
+[^c4-1]: [UNVERIFIED — panel check] UK wartime and post-war rationing, 1940–1954. Standard histories of the British Ministry of Food and post-war austerity; see Ina Zweiniger-Bargielowska, *Austerity in Britain: Rationing, Controls, and Consumption, 1939–1955* (Oxford University Press, 2000).
+[^c4-2]: [UNVERIFIED — panel check] Direction of malnutrition and infant-mortality figures during the war years. See R. J. Hammond, *Food: The History of the Second World War* (HMSO, 1951–1962), and public-health assessments of the wartime ration diet.
+[^c4-3]: [UNVERIFIED — panel check] Government framing of rationing as shared sacrifice. Drawn from the project spec's account of Churchill-era moral language; primary wartime Ministry of Food and information campaign materials.
+[^c4-4]: [UNVERIFIED — panel check] Soviet rationing, party privilege, and chronic shortage, 1917–1991. See János Kornai, *The Socialist System: The Political Economy of Communism* (Princeton University Press, 1992) on shortage economies.
+[^c4-5]: [UNVERIFIED — panel check] Venezuela price controls and food shortages, 2010s. Contemporaneous reporting and economic analyses of the Bolivarian price-control regime.
+[^c4-6]: [UNVERIFIED — panel check] Hurricane Katrina response failures and Superdome conditions, 2005. See U.S. House Select Bipartisan Committee, *A Failure of Initiative* (2006), and related congressional reports.
+[^c4-7]: [UNVERIFIED — panel check] Rwandan gacaca courts, ~1.2 million cases, 2001–2012. See Phil Clark, *The Gacaca Courts, Post-Genocide Justice and Reconciliation in Rwanda* (Cambridge University Press, 2010).
