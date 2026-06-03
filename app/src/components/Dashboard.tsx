@@ -2817,8 +2817,9 @@ const READING_PATHS: ReadingPathDef[] = [
   {
     id: 'skeptic',
     title: 'The Skeptic\'s Path',
-    description: 'For those who arrived with objections. Starts with what is unknown, then builds the case.',
+    description: 'For those who arrived with objections. Starts with the real-world track record, then what is unknown, then builds the case.',
     steps: [
+      { path: 'docs/public/08_useful_history.md', note: 'Start here. "Has this been tried before?" — the documented track record of these problems and past attempts to solve them, with the honest failures. Read this first to see what the design is actually responding to.' },
       { path: 'docs/governance/Evidence_Ladder.md', note: 'Understand the standard before evaluating claims.' },
       { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Grade each claim against the evidence standard.' },
       { path: 'docs/governance/Open_Problems_Resolution_Docket.md', note: 'See what the framework admits it hasn\'t solved.' },
