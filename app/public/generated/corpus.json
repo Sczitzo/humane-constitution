@@ -12,7 +12,7 @@
     "threatCount": 28,
     "patchCount": 62,
     "validatorStatus": "pass",
-    "buildStamp": "corpus-885a8fa762cd"
+    "buildStamp": "corpus-af459106f587"
   },
   "docs": [
     {
@@ -4129,6 +4129,70 @@
       ],
       "wordCount": 2782,
       "headingCount": 9
+    },
+    {
+      "id": "docs__governance__Status_Model_md",
+      "path": "docs/governance/Status_Model.md",
+      "section": "registry",
+      "title": "Status Model",
+      "status": "",
+      "statusBucket": "reference",
+      "summary": "Every threat (T-NNN), patch (P-NNN), and instrument carries two statuses at once. They are independent \u2014 neither can be reached by advancing the other. A thing can be fully incorporated and evidence-backed and still not be ratified. That is the normal state of this entire project today.",
+      "content": "# Status Model\n\n> **Status:** `Active \u2014 unproven` (Axis 1) \u00b7 `Pre-ratification` (Axis 2)\n> *(This document uses its own convention. It is the incorporated, in-use definition of status \u2014 and, like everything here, it has not been ratified at a founding.)*\n\n**Purpose.** The word *active* was quietly doing two jobs across the corpus \u2014 \"written into the design\" and \"accepted and in force.\" Those are different claims. Conflating them made documents look like they contradicted each other and let the project look like it claimed more than it had. This document separates the two, says which file is authoritative for each, gives one way to write a status anywhere, and is enforced by `scripts/check_status_consistency.py`.\n\n---\n\n## The two axes\n\nEvery threat (`T-NNN`), patch (`P-NNN`), and instrument carries **two** statuses at once. They are **independent** \u2014 neither can be reached by advancing the other. A thing can be fully incorporated and evidence-backed and still not be ratified. That is the normal state of this entire project today.\n\n### Axis 1 \u2014 Design & Evidence\n\n*How mature is this as a design, and how much real-world evidence backs it?* The existing six-term vocabulary \u2014 no synonyms:\n\n| Term | Meaning |\n|---|---|\n| `Proposed` | Suggested, not yet written into the corpus. |\n| `Designed` | Specified in the corpus, not yet the live design response. |\n| `Active \u2014 unproven` | Incorporated as the live design response; **no field evidence**. |\n| `Partly tested` | Some pilot/analogue evidence; not sufficient. |\n| `Evidence-backed` | Sufficient external evidence. |\n| `Resolved` | Evidence-backed controls **plus** documented residual risk. |\n\nThis axis advances (or regresses) as design and evidence change. The informal `Patch_Log` tokens `ACTIVE` and `PROPOSED` are **Axis-1 shorthand**: `ACTIVE` \u2261 `Active \u2014 unproven` unless a higher tier is explicitly stated; `PROPOSED` \u2261 `Proposed`.\n\n**Authority:** `Patch_Log.md` for a patch; `Threat_Register.md` for a threat; `Claims_Evidence_Register.md` for an evidence claim. Every other document **references** that status; it does not restate it in a form that can drift.\n\n### Axis 2 \u2014 Founding-ratification\n\n*Has this been accepted into force through the Formal Acceptance Protocol (FAP) at a legitimate founding?* Two values only:\n\n| Term | Meaning |\n|---|---|\n| `Pre-ratification` | The default. The FAP has not run; nothing is in force. |\n| `FAP-ratified` | Accepted into force through the FAP at a founding whose legitimacy is on record. |\n\n**Today every instrument, patch, and threat-control is `Pre-ratification`** \u2014 no founding has occurred (founding legitimacy is itself unresolved; see the Hardening Queue). Annex boilerplate such as *\"governs only as a PROPOSED patch until it reaches ACTIVE status through the Formal Acceptance Protocol\"* is an **Axis-2** statement and is read as ratification status, not design status.\n\n**Authority:** the founding record (Founding Order / Founding Legitimacy Dossier). Until it records a ratification, the answer is `Pre-ratification` for everything.\n\n---\n\n## The two axes are orthogonal\n\nThis is the point a careful reader will test, so it is stated flatly: **evidence does not produce ratification, and ratification does not produce evidence.** A patch can climb all the way to `Evidence-backed` on Axis 1 and still be `Pre-ratification` on Axis 2. A founding could (unwisely) ratify something that is only `Designed`. The axes move on different tracks for different reasons:\n\n- Axis 1 moves through **work and evidence** \u2014 specification, incorporation, pilots, external validation.\n- Axis 2 moves **only at a founding, only through the FAP**, and only once \u2014 it cannot be reached by accumulating Axis-1 evidence.\n\nCorollary, and the honesty-critical rule: `Resolved` (Axis 1) does **not** mean \"safe\" or \"in force.\" It means evidence-backed *with documented residual risk* \u2014 and, until founding, still `Pre-ratification`.\n\n---\n\n## How to write a status (the convention)\n\nAnywhere a status appears, write **both axes**, Axis 1 first:\n\n```\nStatus: <Axis-1 term> (Axis 1) \u00b7 <Axis-2 term> (Axis 2)\n```\n\nA document that is not the authority for a status should **link** to the authority rather than restate it, e.g. *\"Status: see Patch Log (P-021).\"* If it does state the value inline, it must match the authority \u2014 the gate enforces this.\n\n### Worked examples (illustrative; verify against the authority)\n\n| ID | Axis 1 (Design & Evidence) | Axis 2 (Ratification) | Reading |\n|---|---|---|---|\n| P-021 | `Active \u2014 unproven` | `Pre-ratification` | Incorporated as the live anti-rent design; no field evidence; not yet accepted at a founding. |\n| P-008 | `Proposed` | `Pre-ratification` | A suggested mitigation, not yet incorporated; the operative control for its threat is a different, incorporated patch. |\n| T-002 | `Active \u2014 unproven` (threat-control) | `Pre-ratification` | The identity-stack control is incorporated but unproven; a specific calibration sub-item may still be `Proposed` and is labelled separately. |\n\n---\n\n## Edge cases\n\n- **Tier-1 invariants** are not patches and do not carry an Axis-1 maturity; they carry Axis 2 like everything else (`Pre-ratification` until founding), plus their own amendment tier.\n- **Sub-items** (a specific calibration, sub-clause, or \"ambitious\" extension inside a patch) carry their own Axis-1 status and must be labelled separately from the parent \u2014 do not let a sub-item's `Proposed` and the parent's `Active \u2014 unproven` collide on one line.\n- **Reserved/never-assigned and draft IDs** (e.g. P-007/P-010/P-028 reserved; the P-063 draft family) are out of scope for the gate.\n\n---\n\n## Rules\n\n1. **One authority per axis.** Other documents reference it; they do not assert a conflicting value.\n2. **No ID may carry two different Axis-1 statuses** across the corpus. `scripts/check_status_consistency.py` fails the build if it does.\n3. **No `FAP-ratified` before founding.** Asserting ratification while the founding record shows none is a status violation (gate-enforced).\n4. **Shorthand is allowed but defined.** `ACTIVE`/`PROPOSED` are permitted only as the Axis-1 shorthand defined above.\n\n## Migration (in progress)\n\n1. Read each existing `PROPOSED`/`ACTIVE` label in context; tag it Axis-1 or Axis-2.\n2. Normalize Axis-1 labels to the six-term vocabulary; reconcile cross-file disagreements to the authoritative source.\n3. Relabel Axis-2 (\"until FAP\") language explicitly as ratification status.\n4. Extend `check_status_consistency.py` to flag any `FAP-ratified` assertion while founding is `Pre-ratification`.\n",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Status Model",
+          "slug": "status-model"
+        },
+        {
+          "level": 2,
+          "text": "The two axes",
+          "slug": "the-two-axes"
+        },
+        {
+          "level": 3,
+          "text": "Axis 1 \u2014 Design & Evidence",
+          "slug": "axis-1-design-evidence"
+        },
+        {
+          "level": 3,
+          "text": "Axis 2 \u2014 Founding-ratification",
+          "slug": "axis-2-founding-ratification"
+        },
+        {
+          "level": 2,
+          "text": "The two axes are orthogonal",
+          "slug": "the-two-axes-are-orthogonal"
+        },
+        {
+          "level": 2,
+          "text": "How to write a status (the convention)",
+          "slug": "how-to-write-a-status-the-convention"
+        },
+        {
+          "level": 3,
+          "text": "Worked examples (illustrative; verify against the authority)",
+          "slug": "worked-examples-illustrative-verify-against-the-authority"
+        },
+        {
+          "level": 2,
+          "text": "Edge cases",
+          "slug": "edge-cases"
+        },
+        {
+          "level": 2,
+          "text": "Rules",
+          "slug": "rules"
+        },
+        {
+          "level": 2,
+          "text": "Migration (in progress)",
+          "slug": "migration-in-progress"
+        }
+      ],
+      "wordCount": 981,
+      "headingCount": 10
     },
     {
       "id": "docs__governance__Fairness_Vignette_Library_md",
