@@ -442,3 +442,51 @@ This is not a special flaw of Christianity. It is what any framework does, relig
 [^c7-5]: [UNVERIFIED — panel check] Singapore's development from 1965 independence to first-world economy within one generation under Lee Kuan Yew; the attribution to an explicitly Confucian governance framework is interpretive and should be checked against Lee's own writings and independent scholarship.
 
 [^c7-6]: [UNVERIFIED — panel check] Rwanda's gacaca courts (operating roughly 2001–2012) processed on the order of 1 million-plus cases of genocide-related offenses at the community level; exact figures and the framing of forgiveness as policy require confirmation against official Rwandan government and academic sources.
+
+## Chapter 8 — When you cannot know what is true
+
+People can only fix what they can see. Voting, organizing, agreeing to something, refusing it — all of it depends on knowing what is actually happening to you. "Epistemic" is a word for this: being able to know what is true. When someone controls the information you get — who owns the news, who pays for the research, who builds the systems that decide what shows up on your screen — they control everything that depends on that information. People cannot vote against what they cannot perceive. They cannot organize against what they do not know is happening. So the control of information sits upstream of every other repair.
+
+### Anchor case: The leaded gasoline cover-up (1924–1986)
+
+In 1924, workers at a Standard Oil refinery in New Jersey started dying. They were handling a new gasoline additive. They called the product "looney gas." Eleven workers died. Hundreds were hospitalized.[^c8-1] The Surgeon General called a panel to look at whether the product was safe.
+
+The lead industry answered with a strategy that later became a template. The company at the center was the Ethyl Corporation, jointly owned by General Motors, Standard Oil, and DuPont. They funded their own research. They attacked the people who raised concerns. They kept their internal studies — the ones showing real harm — out of public view. When an independent researcher named Alice Hamilton told the panel there was no safe level of lead exposure, the industry's own scientists told the panel there was no evidence of harm at all.
+
+The internal documents that showed the industry already knew about lead's effects on the brain did not become public until lawsuits in the 1980s pried them loose. Leaded gasoline stayed legal in the United States until 1996.[^c8-2] It is still used in some aviation fuel today. An estimated 170 million Americans alive now have higher blood lead levels because of childhood exposure to leaded gas. Research published in 2022 estimates that leaded gasoline lowered the average American IQ by 2 to 5 points, and ties it to higher rates of violent crime in the decades when exposure was highest.[^c8-3]
+
+The pattern is simple to name once you have seen it: fund doubt, attack the critics, hide the internal evidence, keep the product legal. The same pattern showed up again and again. In several cases the same public relations firms ran it. In several cases the same scientists were paid to run it.
+
+### Brief cases
+
+- **Tobacco.** Internal documents released in lawsuits showed that tobacco executives knew cigarettes caused cancer as early as 1953 — the same year they started funding research designed to manufacture doubt about that exact link.[^c8-4] The doubt campaign ran for 44 years, from 1954 to 1998. An estimated 100 million people died of smoking-related illness worldwide in the 20th century.
+
+- **The sugar industry.** Internal documents revealed in 2016 by the researcher Cristin Kearns showed that the Sugar Research Foundation paid Harvard researchers in the 1960s to shift the blame for heart disease away from sugar and onto fat.[^c8-5] The advice that came out of that — eat low-fat, eat more carbohydrates — shaped US federal dietary guidance for decades. The rise in obesity and diabetes that followed is in the record. So is the chain from funded research, to policy, to what happened to people's health.
+
+- **Facebook and teen mental health.** Leaked internal documents showed that Facebook's own researchers had found links between Instagram use and anxiety, depression, body-image problems, and suicidal thoughts in teenage girls.[^c8-6] The research was not published. The product was not changed. The company told regulators it had no evidence of harm. The Wall Street Journal published the documents in September 2021. Hearings in Congress followed. The products are still running.
+
+- **Algorithmic radicalization.** YouTube's recommendation system was built to keep people watching. Former employees and outside researchers documented that it tended to push people toward more extreme content, because extreme content kept people watching. The system did not tell the difference between someone watching out of anger and someone watching out of interest. Researchers documented paths into far-right and anti-vaccine communities. After the problem became public, the system was adjusted. The adjustment was partial.
+
+- **China's social credit system.** This is information control turned into a tool of governance. Citizens are scored on how well they follow government-defined rules — financial, social, and political. Low scores can mean travel bans, being shut out of schools, loan denials, and public shaming. It is not one nationwide system; it exists in different forms in different cities. It is documented. It is what surveillance becomes when there is no privacy left in what a person can know or do.
+
+- **Media consolidation.** In 1983, about 50 companies controlled roughly 90 percent of American media. By 2012, six companies did.[^c8-7] This happened through legal mergers, mostly approved by regulators. As ownership concentrated, the independence of local newsrooms — the people who used to cover city hall and the county board — dropped right alongside it. Sinclair Broadcast Group now owns 294 television stations across 89 markets and requires centrally produced content, including political commentary, to run on local news broadcasts.[^c8-8]
+
+> **What to watch for**
+> - The same funders turning up behind several "independent" research groups.
+> - A gap between what internal documents show and what public statements claim.
+> - Local news coverage shrinking while national, partisan media grows.
+
+*People cannot correct what they cannot perceive. The control of information is upstream of every other failure mode — it is the failure mode that prevents correction of all the others.*
+
+**Where this project responds:** It does not yet. This is the honest part. The closest instrument is Voice — the bounded civic mechanism meant to keep public priority from being bought. But Voice does not touch who owns the media, who funds the research, or who designs the systems that decide what people see. Epistemic capture — the capture of a society's ability to know what is true — is a documented gap this project has not solved. It is tracked, by name, in the project's Hardening Queue, the governance document that lists the problems still open. Naming it there is the point: an unsolved problem that is written down can be worked on. One that is hidden cannot.
+
+**Sources**
+
+[^c8-1]: U.S. Public Health Service hearings on tetraethyl lead, 1925; contemporaneous reporting on the 1924 Standard Oil (Bayway, New Jersey) refinery deaths. Worker death and hospitalization figures from historical accounts of the tetraethyl lead poisoning incident.
+[^c8-2]: U.S. Environmental Protection Agency — phase-out of leaded gasoline for on-road vehicles completed by the January 1, 1996 ban under the Clean Air Act.
+[^c8-3]: [UNVERIFIED — panel check] McFarland, Hauer, and Reuben, "Half of US population exposed to adverse lead levels in early childhood," PNAS, 2022 (170 million figure and IQ-loss estimate); IQ and violent-crime associations drawn from the broader lead-exposure literature.
+[^c8-4]: [UNVERIFIED — panel check] Tobacco industry internal documents (Truth Tobacco Industry Documents / UCSF Industry Documents Library); 1953 internal knowledge and the 1954 "Frank Statement to Cigarette Smokers" marking the start of the doubt campaign.
+[^c8-5]: Kearns, Schmidt, and Glantz, "Sugar Industry and Coronary Heart Disease Research," JAMA Internal Medicine, 2016 (revealing Sugar Research Foundation funding of Harvard researchers in the 1960s).
+[^c8-6]: "The Facebook Files," The Wall Street Journal, September 2021 (leaked internal research on Instagram and teen mental health).
+[^c8-7]: [UNVERIFIED — panel check] Bagdikian, *The Media Monopoly* / *The New Media Monopoly* (50-company figure for 1983); the "six companies by 2012" figure as widely cited, e.g. Business Insider's 2012 media-ownership reporting.
+[^c8-8]: [UNVERIFIED — panel check] Sinclair Broadcast Group station and market counts (294 stations across 89 markets) per company disclosures and contemporaneous reporting; figures change over time with acquisitions and divestitures.
