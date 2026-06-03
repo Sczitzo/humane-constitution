@@ -152,7 +152,7 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-019 | P-052 | ACTIVE | AI §4.12 | S10 |
 | T-020 | P-017 | ACTIVE | AL | S8 |
 | T-021 | P-017 | ACTIVE | AL | S8 |
-| T-022 | P-018 | PROPOSED | AM | S8 |
+| T-022 | P-018 | ACTIVE | AM | S8 |
 | T-022 | P-051 | ACTIVE | AM §AM8 | S10 |
 | T-023 | P-019 | ACTIVE | AN | S8 |
 | T-024 | P-022 | ACTIVE | AQ | S8 |
@@ -166,8 +166,8 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | P-056 | Open-Access Survival Floor | ANNEX_AK §AK8 | T-002, INV-001 | PROPOSED |
 | — | P-057 | PROPOSED | Pilot_Site_Selection_Criteria | Founding |
 | — | P-058 | PROPOSED | Jurisdiction_Interface_Clause | Founding |
-| ACL-010 / T-027 | P-059 | PROPOSED | Vulnerable_Population_Consent_Protocol | Founding |
-| ACL-005 / T-008 | P-060 | PROPOSED | Founding_Team_Composition_Standard | Founding |
+| ACL-010 / T-027 | P-059 | ACTIVE | Vulnerable_Population_Consent_Protocol | Founding |
+| ACL-005 / T-008 | P-060 | ACTIVE | Founding_Team_Composition_Standard | Founding |
 | ACL-007 | P-061 | PROPOSED | Founding_Capital_Framework | Founding |
 | ACL-011 / ACL-010 | P-062 | PROPOSED | Pilot_Timeline_Framework | Founding |
 
