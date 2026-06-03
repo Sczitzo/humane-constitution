@@ -552,3 +552,54 @@ It does not cover everything in this chapter. Three of the problems here are gap
 [^c9-8]: [UNVERIFIED — panel check] U.S. Surgeon General Advisory, "Social Media and Youth Mental Health" (2023).
 [^c9-9]: [UNVERIFIED — panel check] U.S. Surgeon General Advisory, "Our Epidemic of Loneliness and Isolation" (2023).
 [^c9-10]: [UNVERIFIED — panel check] Figure equating chronic loneliness's health impact to smoking ~15 cigarettes per day, cited in the 2023 Surgeon General loneliness advisory (originating from Holt-Lunstad et al. meta-analysis on social connection and mortality).
+
+## Chapter 10 — Obligations to people not yet born
+
+Every legal system in history gives rights to people who are alive. The people who are not born yet get nothing. They cannot vote. They cannot sue. They have no seat at any table. This is not a mistake that someone forgot to fix. It is built into how these systems work.
+
+It matters most for decisions whose costs take decades or centuries to land. Things like wrecking a river system, piling up debt, using up a shared resource, or hollowing out a government. The person who makes the call is often dead before the bill comes due. The people who pay it had no say. There is no legal way to hold anyone to account, because the people who will be harmed do not exist yet.
+
+A note on one word used in this chapter. A "commons" is a shared resource that many people draw from and no single person owns. Clean air is a commons. A fishery is a commons. So is the ability of antibiotics to cure infection. A commons can be used up. When it is, it is gone for everyone, including everyone who comes after.
+
+### Anchor case: The Aral Sea (1960–present)
+
+In the 1950s and 1960s, Soviet planners decided to divert the two rivers that fed the Aral Sea. The water went to cotton fields in Uzbekistan and Kazakhstan instead. The planners in Moscow understood what this would do to the sea. Internal records show they accepted the tradeoff on purpose. They judged the cotton to be worth more than the sea.
+
+The sea began to die. By 1987 it had lost most of its volume. By the late 1990s it had broken into separate pieces. By 2014 the southern part was essentially gone.[^c10-1] What had been the world's fourth-largest lake, about 68,000 square kilometers of water, became a series of salty puddles ringed by salt desert.[^c10-2]
+
+The harm spread out from there. The fishing industry that had employed around 40,000 people collapsed.[^c10-3] With the sea gone, it no longer moderated the local climate, so summers got hotter and winters got colder. Salt and old pesticide residue on the dry seabed turned to dust, blew across farmland, and poisoned the soil for hundreds of kilometers. Infant mortality went up in nearby communities. Respiratory illness went up.
+
+Here is the part that matters for this chapter. The people who made the decision were dead before the worst of it arrived. No legal system held anyone responsible. No one paid compensation. The governments of Uzbekistan and Kazakhstan inherited a wrecked region they did not choose, made by people they could not reach.
+
+### Brief cases
+
+**Climate debt.** The carbon now driving up global temperatures was put into the air mostly by industrialized nations, starting in the 1700s and continuing today. The damage, including rising seas, harsher weather, and disrupted farming, falls hardest on nations that emitted the least. Future generations inherit an atmosphere that is measurably different from the one that existed before the industrial era. They had no vote. They have no legal claim. The people whose emissions caused the change are either dead or shielded from any bill.
+
+**The seven-generation principle.** The Great Law of the Haudenosaunee, also called the Iroquois Confederacy, asked leaders to weigh the effect of their decisions on seven generations ahead, roughly 175 years. Historians believe this thinking reached the people who founded the United States, partly through Benjamin Franklin.[^c10-4] It was not a poem. It was a rule for governing. Decisions about land and resources required leaders to think about people not yet born. It is the oldest written attempt to build a duty across time into how a society makes choices.
+
+**The Hawaiian ahupuaa.** Before Western contact, Hawaiian communities managed land in units called ahupuaa, each one running from the mountain ridge down to the ocean and covering a whole watershed. Each community had to keep its whole system healthy, including for the people who would live there later. This way of managing land sustained roughly 800,000 people across the islands for about 600 years without measurable damage to the land. Contact with Western trade and colonial systems took it apart within two generations.
+
+**Housing bought for extraction.** After the 2008 financial crisis, private equity firms and large investors started buying single-family homes in bulk. First the distressed ones, then whatever they could get. Invitation Homes, backed by Blackstone, bought about 80,000 homes.[^c10-5] The homes are rented out, not sold. That turns what used to build wealth for working families, owning a home, into a stream of rent that flows the other way. Families who cannot buy, because investors hold the inventory, pass that disadvantage to their children. The investors pass the rising value of the houses to theirs.
+
+**National debt.** The United States national debt is around 33 trillion dollars.[^c10-6] It will be paid down by people who are children today or not born yet. The people who ran it up, through tax cuts, military spending, and benefit expansions without matching revenue, will not pay it. This is about as plain as cost transfer across generations gets. It is legal. It is on purpose. Both major parties did it.
+
+**Antibiotic resistance.** The power of antibiotics to cure infection is a commons, and it is being used up by overuse in human medicine, animal medicine, and industrial farming. When antibiotics stop working, they stop working for everyone. The overuse is happening now. The harm, including infections that cannot be treated and surgeries that become too risky to do, lands on future generations. The World Health Organization names antibiotic resistance as one of the greatest threats to global health.[^c10-7] Drug companies have little financial reason to develop new antibiotics. No governance mechanism now in place stops this commons from running out.
+
+> **What to watch for**
+> - Decisions whose costs arrive after the decision-makers are gone and can no longer be held to account.
+> - Shared resources being used up faster than they can recover, or debt being run up that someone with no vote will have to repay.
+> - Governing bodies that have no formal way to speak for the people who will live here later.
+
+*Future generations inherit the consequences of present decisions without any vote, any legal standing, or any enforceable claim — and the systems that produced the harm are structured so that the people who benefited from it are gone before the bill arrives.*
+
+**Where this project responds:** This is a documented gap. No instrument in the current corpus creates accountability to future generations. The Shared Storehouse handles rationing during a verified shortage. The demurrage mechanism in ANNEX_D works on accumulated wealth. Neither one reaches across generations. The climate debt, the depleting antibiotic commons, and the national debt described above have no corpus response. The project tracks unsolved problems like this one in its governance document called the Hardening Queue, and this gap is named there. Naming it is not a failure. It is the condition for honest work on it.
+
+**Sources**
+
+[^c10-1]: [UNVERIFIED — panel check] Multiple accounts (NASA Earth Observatory; UNEP) describe the Aral Sea losing most of its volume by the late 1980s and the southern sea nearly disappearing by 2014.
+[^c10-2]: [UNVERIFIED — panel check] The Aral Sea's historical area is commonly cited as about 68,000 square kilometers, making it the world's fourth-largest lake (encyclopedic and UN sources).
+[^c10-3]: [UNVERIFIED — panel check] The figure of roughly 40,000 lost fishing jobs is widely cited (UNESCO and regional development reports); exact count varies by source.
+[^c10-4]: [UNVERIFIED — panel check] The claim that the Haudenosaunee Great Law influenced the US founders (via Franklin and others) is asserted by some historians and acknowledged in a 1988 US Congressional resolution; the degree of influence is debated among scholars.
+[^c10-5]: [UNVERIFIED — panel check] Invitation Homes (backed by Blackstone) is reported to have acquired on the order of 80,000 single-family homes (company filings and financial press, 2010s).
+[^c10-6]: [UNVERIFIED — panel check] US national debt reported at approximately 33 trillion dollars (US Treasury, 2023); figure rises over time.
+[^c10-7]: [UNVERIFIED — panel check] The World Health Organization classifies antimicrobial/antibiotic resistance as one of the top global public health threats (WHO fact sheets).
