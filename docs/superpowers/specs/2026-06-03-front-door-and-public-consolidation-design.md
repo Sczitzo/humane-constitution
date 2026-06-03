@@ -26,7 +26,8 @@ A three-lens critique (academic, funder, hostile reader) of the current public d
 - **Front door shape:** one document, shared spine + two tailored exits (researchers / funders-partners). Not two separate docs (avoids the drift we just eliminated in Phase 0).
 - **Funder exit:** stubbed to the Phase-2 pilot (the deep ask depends on the pilot existing; faking it now would be hollow).
 - **Anchor claim:** *"Survival, market power, and political power can be kept structurally non-convertible — and whether the walls actually hold is testable, not yet tested."*
-- **Attribution:** named solo author + AI-assistance owned as a feature (fast iteration + adversarial self-critique). Exact name/preferred public attribution is a fill-in to confirm before launch (do not guess).
+- **Attribution:** named solo author + AI-assistance owned as a feature (fast iteration + adversarial self-critique). **Author: Cameron Matthew** (confirmed).
+- **Redundant docs are retired, not stubbed.** `01_overview` and `03_readiness` are removed; `06`/`07` merge into Life & Rights. Every reference to a retired doc — in other docs, in `export_corpus.py`, and **inside the reader app** (reading paths, ref-chips, `resolveInternalDoc`, landing/header path arrays) — is repointed to the merged/front-door target in the same change. `validate_corpus.py` (0 errors) is the safety net for dangling links.
 
 ---
 
@@ -83,11 +84,11 @@ Any doc merge/retire is a multi-file change kept in one commit each:
 - Front door reads cleanly in the reader (renders, links resolve, no acronym on first screen).
 - A fresh skeptical re-read (panel or self) confirms the first screen passes the 15-second test.
 
-## Open questions (fill before/at writing-plans)
+## Resolved
 
-1. **Exact public attribution string** (name/handle + one-line bio) — confirm before launch; placeholder until then.
-2. **Renumbering:** keep `04`/`05`/`08` numbers (less churn) vs. renumber `00–04` cleanly. Default: keep existing numbers, add `00_start_here.md`, reuse `05_` for the merged Life & Rights.
-3. **Retire vs redirect stubs** for `01`/`07`: default = retire (remove from corpus) and repoint all references; validator guarantees nothing dangles. Stubs only if external inbound links matter (they don't yet — pre-launch).
+1. **Attribution:** Cameron Matthew, AI-assistance owned. (A one-line bio can be refined during drafting.)
+2. **Renumbering:** keep existing numbers; add `00_start_here.md`; reuse `05_` for the merged Life & Rights. Minimal churn.
+3. **Retire, don't stub:** `01_overview` and `03_readiness` removed; `06`/`07` merged. All references repointed (corpus + reader) in the same change; validator guarantees nothing dangles.
 
 ## Out of scope (later phases)
 
