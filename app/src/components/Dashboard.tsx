@@ -1654,7 +1654,7 @@ function ReaderOutline({
             setActiveSlug(h.slug)
           }}
         >
-          <span className="line-clamp-2">{h.text}</span>
+          <span>{h.text}</span>
         </button>
       ))}
     </nav>
