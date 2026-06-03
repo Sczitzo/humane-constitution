@@ -87,7 +87,7 @@ If the system makes a mistake, you must have:
 
 ### Constitutional Integrity Panel
 
-The system includes a Constitutional Integrity Panel (CIP) — an independent 7-member body with staggered terms and constitutionally fixed funding — whose ratification is required before any Tier 1 constitutional rule can be changed. This body cannot be appointed by the governing coalition and cannot be defunded without a Tier 1 amendment. It provides structural protection against a future government rewriting fundamental rights through normal legislative channels.
+Some rules are treated as so fundamental that an ordinary government should not be able to quietly rewrite them. The system protects those rules with a small watchdog body that is hard to capture: an independent 7-member panel whose members serve overlapping terms (so no single government appoints them all at once) and whose budget is locked in by the constitution (so it cannot be starved out). Changing any of the most fundamental rules requires this panel's sign-off first. The governing coalition cannot appoint it, and it cannot be defunded except by the same hard-to-pass process used for those fundamental rules. The formal name is the Constitutional Integrity Panel (CIP). Its purpose is structural: to stop a future government from rewriting fundamental rights through normal legislation.
 
 ### No permanent emergency rationing
 
@@ -104,7 +104,7 @@ It must be public, time-limited, and reviewable. It cannot become the normal sys
 | Emergency rationing was started | Publish the reason, time limit, and end process. |
 | Measurement data is disputed | Default toward keeping basic access while the dispute is reviewed. |
 
-When access disputes involve identity verification or eligibility determinations, the system applies the Asymmetric Error Doctrine: it is calibrated to err toward inclusion, with published quarterly exclusion rate limits for vulnerable populations. Any exclusion lasting more than 14 days without a formal determination is automatically reversed.
+When a dispute is about whether someone is who they say they are, or whether they qualify, the system is deliberately tilted toward keeping people in rather than shutting them out. The reasoning is that wrongly cutting off a real person from food or medicine is far worse than wrongly keeping a borderline case covered, so the rules are set to make the first kind of mistake the rare one (the formal name is the Asymmetric Error Doctrine). To keep that honest, the system publishes, every quarter, how often it is wrongly excluding vulnerable people, with hard caps on that rate. And any exclusion that drags on more than 14 days without a formal, documented decision is automatically reversed.
 
 Silence about a serious failure is itself a failure.
 
@@ -160,11 +160,9 @@ The key word is **verified**. The system rewards actual production, quality, del
 
 ### A profitable compliant path
 
-The system is meant to give companies a clear and profitable way to comply.
+The system is meant to give companies a clear and profitable way to comply. A company that produces essentials well should not have to choose between obeying the rules and surviving as a business: if it makes useful things, proves delivery, treats essential access as protected, and follows safety and anti-coercion rules, it can be paid.
 
-A company that produces essentials well should not have to choose between obeying the rules and surviving as a business. If it makes useful things, proves delivery, treats essential access as protected, and follows safety and anti-coercion rules, it can be paid.
-
-That matters because a system that only punishes companies invites evasion. A better system makes the lawful path practical:
+That matters because a system that only punishes companies invites evasion. A better system makes the lawful path the practical one:
 
 - produce what people need
 - document what was produced
@@ -172,7 +170,7 @@ That matters because a system that only punishes companies invites evasion. A be
 - keep ordinary profit from non-essential markets
 - resolve disputes through review instead of coercion
 
-The goal is not revenge against business. The goal is to make honest production more profitable than holding the public hostage.
+The goal is not revenge against business. It is to make honest production more profitable than holding the public hostage.
 
 ### Refusal and retaliation cannot break survival access
 
@@ -182,13 +180,13 @@ What it may not do is retaliate by cutting off survival access.
 
 If an essential producer refuses to cooperate or tries to punish the public, the system must protect the basic needs floor first. That can include emergency purchasing, substitute suppliers, temporary public operation, rationing during real shortage, or other lawful continuity measures.
 
-Before a company becomes the sole supplier of something essential, the system requires pre-registered backup suppliers with pre-committed procurement contracts. These contracts activate automatically — without a new government decision — if the primary supplier refuses to deliver for 14 consecutive days, exits the market, or is found to have crossed Watch-level concentration thresholds. This means the threat of a supplier walking away does not become leverage, because the system has already contracted around that threat before it materializes.
+Before a company is allowed to become the only supplier of something essential, the system lines up backups in advance: other suppliers are signed up ahead of time, with contracts already agreed and ready to go. Those standby contracts switch on by themselves — no new government decision needed — if the main supplier stops delivering for 14 days straight, walks away from the market, or grows large enough to trip a pre-set warning line on how much of the market one company controls (a "Watch-level" concentration threshold). The point is that a supplier threatening to walk away gains no leverage, because the replacement is already contracted before the threat is ever made.
 
 The important rule is simple:
 
 > A fight with a company must not become a fight over whether people eat, receive medicine, stay warm, or keep basic transport.
 
-### Foreign companies and countries
+### Foreign and domestic chokepoints
 
 Foreign companies can trade if they follow the essential-access rules that apply to the goods or services they provide.
 
@@ -203,21 +201,17 @@ This is especially important for energy, medicine, food, rare materials, shippin
 
 The same protection applies domestically. A company inside the system's borders that controls a critical chokepoint — whether energy, food, medicine, logistics, or data networks — must follow the same rules. It cannot use that control to force concessions or hold the survival floor hostage, no matter whether the company is foreign or domestic.
 
-If a company with that kind of leverage refuses to cooperate with the Essential Access system and people's survival is at genuine risk, the system can activate a temporary public receiver authority. This means the government can step in to run that specific function directly — fuel delivery, medicine distribution, power grids, or whatever is at stake — while a permanent replacement supplier or competitive solution is being found. This is designed to be rare, short-term, and narrowly focused on the function itself. It is an emergency brake, not a tool for permanent nationalization or punishment.
+If a company with that kind of leverage refuses to cooperate with the Essential Access system and people's survival is at genuine risk, the government can step in and temporarily run that specific function itself — fuel delivery, medicine distribution, power grids, or whatever is at stake — while a permanent replacement supplier or competitive solution is found (the formal name is a temporary public receiver authority, the same idea as a court appointing a caretaker to keep a vital service running). This is designed to be rare, short-term, and narrowly focused on the function itself. It is an emergency brake, not a tool for permanent nationalization or punishment.
 
 ### What this means in practice
 
-For a compliant company, the message is:
+The same principle reads three ways depending on who you are:
 
-> Make useful things, prove what you delivered, follow the rules, and you can profit.
+> **To a compliant company:** Make useful things, prove what you delivered, follow the rules, and you can profit.
 
-For a non-compliant company, the message is:
+> **To a non-compliant company:** You may argue, appeal, and compete, but you may not use people's survival needs as leverage.
 
-> You may argue, appeal, and compete, but you may not use people's survival needs as leverage.
-
-For the public, the promise is:
-
-> Big companies can exist here. Big companies can profit here. But no company gets to turn basic survival into a bargaining chip.
+> **To the public:** Big companies can exist and profit here. No company gets to turn basic survival into a bargaining chip.
 
 ## A year in the system: ordinary lives
 
