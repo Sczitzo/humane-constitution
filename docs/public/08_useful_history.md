@@ -79,3 +79,72 @@ The lesson is not that markets are evil. It is narrower and harder. A market has
 [^c1-8]: Leviticus 19:9–10 (gleaning provision for the poor and the foreigner).
 [^c1-9]: Ruth 2 (Ruth gleaning in the fields of Boaz).
 [^c1-10]: [UNVERIFIED — panel check] Uneven disaster aid reaching wealthier communities faster: congressional and GAO/investigative reviews after Hurricane Katrina (2005), Hurricane Harvey (2017), and California wildfires (2018–present). Specific reports require verification.
+
+## Chapter 2 — When wealth becomes power
+
+Money is supposed to buy goods. Past a certain size, it buys something else. It buys laws. It buys the people who write them. It buys the offices that enforce them, and the news that tells you whether they were enforced.
+
+This is the second trap. A pile of money large enough stops being just an economic thing. It becomes political power. And once wealth can buy power, the wealthy use that power to protect and grow their wealth. The bigger pile buys more power, which guards a bigger pile. The loop feeds itself.
+
+It does not need a conspiracy. It needs only an open door between money and government. When the wall between the two is missing, this happens on its own — and it has happened under kings, under republics, and under regimes that called themselves the opposite of both.
+
+### Anchor case: The Gilded Age (United States, 1870s–1910s)
+
+In the decades after the Civil War, a handful of American companies grew larger than the government meant to check them. Standard Oil controlled the oil. Carnegie Steel controlled the steel. The railroad companies controlled who could ship and at what price.
+
+They did not just win in the market. They reached into the government. They funded senators. They set freight rates that crushed smaller competitors. They blocked the laws meant to limit them for decades.[^c2-1]
+
+Congress passed a law against monopolies, the Sherman Antitrust Act, in 1890. "Antitrust" means a law meant to stop a few companies from controlling a whole market and choking off competition. The law existed. For about ten years, it went mostly unenforced. The Department of Justice had little money to prosecute and little political will behind it.[^c2-2] A law on paper is not a law in force.
+
+The break, when it came, came partly from a moral movement. Reformers — many of them church-led — argued that crushing workers and buyers was not just bad policy but wrong. That moral language gave the political fight a force that dry argument could not. President Theodore Roosevelt used the law to break up dozens of large companies.[^c2-3] The limits held for roughly forty years. Then, starting in the 1980s, they were taken apart again.[^c2-4]
+
+The lesson is not that big companies are evil. It is that wealth, left without a wall, flows toward power. When no one builds the wall, the door stays open.
+
+### Brief cases
+
+**Dynastic banking families (19th–20th century).** The Rothschild, Morgan, and Rockefeller families held real, documented influence over how central banks formed, how wars were financed, and how governments borrowed.[^c2-5] This is important to state plainly, because the topic attracts conspiracy theories. The honest version is more damning than the myth. These families worked in the open. They had names and addresses. Their influence was legal. The Rothschilds lent to several European governments at once and held enough of their debt to shape their choices.[^c2-6] The mechanism was simple: they knew what governments needed to know, and they held what governments needed to have. There was no secret cabal. There did not need to be. The problem is not that this was hidden — the problem is that it was allowed, in daylight, by law. A wall between great wealth and public power was simply missing.
+
+**Weimar Germany (1919–33).** German industrialists — among them Thyssen, Schacht, and Papen — helped fund Hitler's rise. They saw him as a tool against labor unions and the political left, and they believed they could control him.[^c2-7] The funding is documented in the postwar trials at Nuremberg.[^c2-8] They were wrong about control. They were right that he would destroy the labor movement. Wealth bought a weapon it could not put down.
+
+**Post-Soviet oligarchs (Russia, 1990s).** When the Soviet state sold off its assets, it sold them to insiders for a fraction of their worth — often 1 to 5 percent of market value — through a scheme called loans-for-shares.[^c2-9] Within about five years, roughly seven men controlled close to half of Russia's economy.[^c2-10] Western advisers helped design the sale. Those seven men then bought media, parties, and a large share of the state itself. It was the fastest concentration of wealth into power in modern record.
+
+**The end of Bretton Woods (1971).** In 1971, the United States cut the last fixed link between the dollar and gold.[^c2-11] That link had been an outside limit on how much money could be created. With it gone, the financial sector grew. Over the next fifty years, finance climbed from a supporting part of the economy to a dominant one — its share of corporate profits rising sharply over that span.[^c2-12] Debt grew across major economies. The conditions for the 2008 crash built up. The decision was made by a small group of men with no public vote. Its effects are still compounding.
+
+**Modern asset-manager concentration.** Three firms — BlackRock, Vanguard, and State Street — together hold large stakes in most of the 500 biggest US public companies at the same time.[^c2-13] They are often the largest shareholders in firms that compete with each other. This is not hidden. It comes from public filings with the Securities and Exchange Commission, the US market regulator.[^c2-14] What this concentration means for competition is studied and unsettled in law. It is not a theory. It is on the record.
+
+**The Panama and Pandora Papers (2016, 2021).** Two large leaks of financial documents named real people hiding wealth offshore — moving money into secret accounts in countries that ask few questions.[^c2-15] These were not rumors. They were published, sourced, cross-checked, and in some places prosecuted. The Pandora Papers named 35 current or former heads of state.[^c2-16] The system for hiding this money is legal, run by professionals, and operates in plain sight in places that live on the fees.
+
+**Regulatory capture (ongoing).** "Regulatory capture" is when the agency meant to watch an industry comes to serve it instead. The drug regulator leans on studies funded by drug companies. The environment regulator is staffed in part by people from the industries it polices. People move between Wall Street and the Treasury and back.[^c2-17] In the legal sense, this is not corruption. It is legal. That is the point. The capture happens through open doors, not bribes.
+
+**Iceland (2008).** After the 2008 crash, most countries rescued their banks. Iceland did something else. It let banks fail and put bankers on trial. Iceland prosecuted 26 bankers, with prison terms running from about 1 to 5 and a half years.[^c2-18] Its economy then recovered faster than Ireland, Greece, or Spain, which had chosen bailouts.[^c2-19] Iceland is small and high-trust. The contrast still teaches something: recovery came faster where accountability was real.
+
+> **What to watch for**
+> - The same names moving between top government posts and the industries they oversee within a few years.
+> - Campaign-finance records showing one industry's money flooding a small set of politicians.
+> - Regulators run by former executives of the businesses they regulate, while antitrust law sits unused.
+
+> *The turning of wealth into power is not a glitch. It is what concentrated wealth does when no wall stands in the way — and every society that stopped it had to build that wall on purpose and keep rebuilding it.*
+
+**Where this project responds:** Flow and Voice. Flow is the market-money instrument; it carries structural limits on how far wealth can concentrate, and a wall that stops money from buying public power. Voice is the civic instrument; it gives priority in public decisions that cannot be bought, so political weight does not simply follow the bank balance.
+
+**Sources**
+
+[^c2-1]: [UNVERIFIED — panel check] Standard Oil, Carnegie Steel, and railroad influence over legislation and freight pricing: e.g. Ron Chernow, *Titan: The Life of John D. Rockefeller, Sr.* (Random House, 1998); Matthew Josephson, *The Robber Barons* (Harcourt Brace, 1934).
+[^c2-2]: [UNVERIFIED — panel check] Sherman Antitrust Act passed 1890; minimal federal enforcement through the 1890s due to limited DOJ budget and political will. Standard legal-history accounts, e.g. Hans B. Thorelli, *The Federal Antitrust Policy* (1955).
+[^c2-3]: [UNVERIFIED — panel check] Theodore Roosevelt's "trust-busting": commonly cited as roughly 44 antitrust suits/corporations during his presidency (1901–09). Figure requires verification against DOJ/historical records.
+[^c2-4]: [UNVERIFIED — panel check] Shift in antitrust enforcement beginning in the 1980s (Chicago-school influence, relaxed merger review): e.g. Robert Pitofsky, ed., *How the Chicago School Overshot the Mark* (Oxford University Press, 2008).
+[^c2-5]: [UNVERIFIED — panel check] Documented (not conspiratorial) influence of the Rothschild, Morgan, and Rockefeller families over central-bank formation, war finance, and sovereign debt: e.g. Niall Ferguson, *The House of Rothschild* (Viking, 1998–1999); Ron Chernow, *The House of Morgan* (Atlantic Monthly Press, 1990).
+[^c2-6]: [UNVERIFIED — panel check] Rothschild lending to multiple European governments simultaneously and holding influential volumes of sovereign debt: Ferguson, *The House of Rothschild*.
+[^c2-7]: [UNVERIFIED — panel check] German industrialists (Thyssen, Schacht, Papen) funding Hitler's rise as a counterweight to labor and the left: e.g. Henry Ashby Turner, *German Big Business and the Rise of Hitler* (Oxford University Press, 1985).
+[^c2-8]: [UNVERIFIED — panel check] Documentation of industrialist financing in Nuremberg trial records (notably the testimony of Hjalmar Schacht and related proceedings). Specific citations require verification.
+[^c2-9]: [UNVERIFIED — panel check] Loans-for-shares program selling state assets at roughly 1–5% of market value to insiders: e.g. Chrystia Freeland, *Sale of the Century* (Crown, 2000); David E. Hoffman, *The Oligarchs* (PublicAffairs, 2002).
+[^c2-10]: [UNVERIFIED — panel check] Approximately seven men ("the seven bankers"/semibankirschina) controlling close to 50% of the Russian economy within about five years: commonly cited figure attributed to Boris Berezovsky; requires verification.
+[^c2-11]: [UNVERIFIED — panel check] Nixon ended dollar-gold convertibility on 15 August 1971 (the "Nixon shock"). Standard economic history.
+[^c2-12]: [UNVERIFIED — panel check] US financial-sector share of total corporate profits rising over the post-1971 period (commonly cited as roughly 15% to ~40% at its peak): e.g. Greta Krippner, *Capitalizing on Crisis* (Harvard University Press, 2011); BEA national accounts. Exact figures require verification.
+[^c2-13]: [UNVERIFIED — panel check] BlackRock, Vanguard, and State Street holding large combined stakes across most S&P 500 firms ("common ownership"): e.g. Lucian Bebchuk & Scott Hirst, "The Specter of the Giant Three," *Boston University Law Review* (2019).
+[^c2-14]: [UNVERIFIED — panel check] Ownership data sourced from SEC filings (13F/13D/13G). Public regulatory record.
+[^c2-15]: [UNVERIFIED — panel check] Panama Papers (2016) and Pandora Papers (2021): International Consortium of Investigative Journalists (ICIJ) reporting.
+[^c2-16]: [UNVERIFIED — panel check] Pandora Papers naming 35 current or former heads of state: ICIJ, 2021. Figure requires verification.
+[^c2-17]: [UNVERIFIED — panel check] Regulatory capture and the "revolving door" (FDA/pharma, EPA/industry, Treasury/Wall Street): e.g. work by the Project On Government Oversight (POGO); academic literature originating with George Stigler, "The Theory of Economic Regulation" (1971). Specific appointment records require verification.
+[^c2-18]: [UNVERIFIED — panel check] Iceland prosecuting 26 bankers with sentences of roughly 1 to 5.5 years after the 2008 crisis. Commonly cited figure; prosecution count and sentence range require verification against Icelandic court records.
+[^c2-19]: [UNVERIFIED — panel check] Iceland's relatively faster recovery versus Ireland, Greece, and Spain following different crisis responses (bank failure/prosecution vs. bailout): e.g. IMF post-crisis assessments of Iceland; comparative recovery data requires verification.
