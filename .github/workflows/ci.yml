@@ -23,6 +23,9 @@ jobs:
       - name: Validate constitutional corpus
         run: python3 scripts/validate_corpus.py
 
+      - name: Check status consistency (no ID both proposed and active)
+        run: python3 scripts/check_status_consistency.py
+
   simulation-tests:
     runs-on: ubuntu-latest
     steps:
