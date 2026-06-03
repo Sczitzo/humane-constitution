@@ -1,4 +1,4 @@
-# Twelve Pillar Protocol — Full Constitutional Review
+# Humane Constitution — Full Constitutional Review
 **Date:** 2026-05-01
 **Reviewer:** Constitutional analyst / technical writer
 **Scope:** All public-facing documents, governance documents, specifications, annexes, and evidence infrastructure listed in the review brief

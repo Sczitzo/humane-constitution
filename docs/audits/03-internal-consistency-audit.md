@@ -9,7 +9,7 @@
 
 ## Scope
 
-This audit evaluates internal consistency across the Twelve Pillar Protocol corpus: the Humane Constitution, its annexes, and governance documents. It does not evaluate evidence quality, policy soundness, or implementation feasibility. It looks only at whether the corpus documents agree with each other or contradict each other.
+This audit evaluates internal consistency across the Humane Constitution corpus: the Humane Constitution, its annexes, and governance documents. It does not evaluate evidence quality, policy soundness, or implementation feasibility. It looks only at whether the corpus documents agree with each other or contradict each other.
 
 Documents reviewed in depth:
 - `docs/constitution/Humane_Constitution.md`

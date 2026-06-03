@@ -14,7 +14,7 @@ BODY=$(cat <<'EOF'
     {
       "id": "msg-1",
       "role": "user",
-      "parts": [{ "type": "text", "text": "What is the Twelve Pillar Protocol?" }],
+      "parts": [{ "type": "text", "text": "What is the Humane Constitution?" }],
       "metadata": {}
     }
   ],
