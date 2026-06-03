@@ -124,13 +124,12 @@ Current order: First-Time → Skeptic → Economic → Founding → Identity →
 ## Critical rules
 
 - Run `npm run generate:corpus` after every markdown change under `docs/` or any corpus-registered markdown source.
-- Do not modify these **protected files** without explicit instruction (authoritative list in `review-tasks.json`):
-  - `docs/constitution/` (all — including `Humane_Constitution.md`, `Acceptance_Protocol.md`, `INVARIANTS.md`, `SPECIFICATIONS.md`)
-  - `docs/governance/Patch_Log.md`
-  - `docs/governance/P-063_draft.md` (P-063 stays draft-only and not corpus-registered)
-  - `docs/annexes/ANNEX_D.md`
-  - `scripts/export_corpus.py`
-  - `app/src/generated/corpus.ts`, `app/public/generated/corpus.json` (regenerate, never hand-edit)
+- **High-care files — always in scope, never skipped.** The constitution (`docs/constitution/`), `docs/governance/Patch_Log.md`, `docs/annexes/ANNEX_D.md`, `docs/governance/P-063_draft.md`, and `scripts/export_corpus.py` are the most consequential files in the repo. They are **always included in audits, reviews, and improvement** — do not skip them. They may be edited when an improvement or correction is warranted; edit them *deliberately*, with the required care for each:
+  - **Constitution** (`Humane_Constitution.md`, `Acceptance_Protocol.md`, `INVARIANTS.md`, `SPECIFICATIONS.md`): every change must apply the Christ-centered ethical review in `.claude/rules/constitution-review.md`.
+  - **Generated corpus** (`app/src/generated/corpus.ts`, `app/public/generated/corpus.json`): these are build artifacts — **regenerate with `npm run generate:corpus`, never hand-edit** (hand edits get overwritten).
+  - **`P-063_draft.md`**: stays draft-only and not corpus-registered (a registration decision, not an edit ban).
+  - **`Patch_Log.md` / `ANNEX_D.md` / `export_corpus.py`**: edit carefully and run validation/regeneration.
+  - The `protected_files` list in `review-tasks.json` is a write-guardrail for the **unattended `review-loop.sh` automation only**; it does not restrict interactive review or editing, and it never restricted reading/auditing.
 - **Deployment is automatic via Git — do not deploy from the CLI.** The live site is the Vercel project **`humane-constitution`** (Root Directory `app`), connected to this GitHub repo. Every push/merge to `main` auto-deploys to production (~45s build, reliably Ready). To ship: merge to `main`, then wait ~1–2 min — CDN propagation + browser cache mean a hard refresh may be needed to see changes. Do NOT run `vercel --prod`: there is no `.vercelignore`, so the CLI tries to upload the whole repo (~700 MB, hits the 100 MB file limit), and a second stale project (`twelve-pillar-protocol`) errors on every deploy. Check deploy status with `vercel ls humane-constitution`.
 - For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review in `.claude/rules/constitution-review.md`.
 - Run relevant verification before marking any code or corpus task complete.
