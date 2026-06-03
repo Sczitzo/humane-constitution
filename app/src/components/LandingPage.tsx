@@ -579,16 +579,18 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
   )
 }
 
+// `time` is an estimated full-path reading time at ~200 wpm over the sum of each
+// path's document word counts (dense material). Recompute if a path's steps change.
 const PATHS = [
-  { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~20 min', color: '#2f6a72' },
-  { id: 'skeptic', emoji: '🔍', title: 'Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~25 min', color: '#1a3a5c' },
-  { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~35 min', color: '#3a2348' },
-  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~30 min', color: '#5c4318' },
-  { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~25 min', color: '#1c3040' },
-  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Evidence Roadmap', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1f24' },
-  { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~20 min', color: '#1a3040' },
-  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~25 min', color: '#26224a' },
-  { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d33' },
+  { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~2 hr', color: '#2f6a72' },
+  { id: 'skeptic', emoji: '🔍', title: 'Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~2h 50m', color: '#1a3a5c' },
+  { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~1h 15m', color: '#3a2348' },
+  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~1 hr', color: '#5c4318' },
+  { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~45 min', color: '#1c3040' },
+  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Evidence Roadmap', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~55 min', color: '#3d1f24' },
+  { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~1h 5m', color: '#1a3040' },
+  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~50 min', color: '#26224a' },
+  { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~4h 40m', color: '#1a2d33' },
 ]
 
 
