@@ -28,14 +28,6 @@ interface LayoutProps {
 
 type NavItem = { id: AppView; label: string }
 
-const NAV_ITEMS: NavItem[] = [
-  { id: 'home', label: 'Home' },
-  { id: 'constitution', label: 'Constitution' },
-  { id: 'annexes', label: 'Annexes' },
-  { id: 'registries', label: 'Threats & Patches' },
-  { id: 'validation', label: 'Validation' },
-]
-
 // ── Reading Paths dropdown ────────────────────────────────────────────────────
 
 const HEADER_PATHS = [
@@ -310,72 +302,140 @@ function SettingsDropdown() {
 
 // ── HamburgerDrawer ───────────────────────────────────────────────────────────
 
+// Mobile sheet section list — includes Topics + Reading Paths (which on desktop
+// live in the left panel / header, but need a home on phones).
+const MOBILE_NAV_ITEMS: NavItem[] = [
+  { id: 'home', label: 'Home' },
+  { id: 'constitution', label: 'Constitution' },
+  { id: 'annexes', label: 'Annexes' },
+  { id: 'registries', label: 'Threats & Patches' },
+  { id: 'topics', label: 'Topics' },
+  { id: 'paths', label: 'Reading Paths' },
+  { id: 'validation', label: 'Validation' },
+]
+
+const FONT_ORDER: FontSizeOption[] = ['sm', 'md', 'lg', 'xl']
+
 function HamburgerDrawer({
   activeNav,
   onNavChange,
+  recentDocs,
+  shelfDocs,
+  shelfLabel,
+  onSelectDoc,
+  onStartPath,
 }: {
   activeNav: AppView
   onNavChange: (view: AppView) => void
+  recentDocs: CorpusDoc[]
+  shelfDocs: CorpusDoc[]
+  shelfLabel: string
+  onSelectDoc: (doc: CorpusDoc, headingSlug?: string) => void
+  onStartPath: (pathId: string) => void
 }) {
   const [open, setOpen] = useState(false)
-  const drawerRef = useRef<HTMLDivElement>(null)
+  const [fontSize, setFontSize] = useState<FontSizeOption>(readFontSize)
+  const [theme, setTheme] = useState<ThemeOption>(readTheme)
 
   useEffect(() => {
     if (!open) return
     function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setOpen(false) }
-    function onPointer(e: PointerEvent) {
-      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
-        setOpen(false)
-      }
-    }
     document.addEventListener('keydown', onKey)
-    document.addEventListener('pointerdown', onPointer)
+    // Lock background scroll while the sheet is open
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', onKey)
-      document.removeEventListener('pointerdown', onPointer)
+      document.body.style.overflow = prevOverflow
     }
   }, [open])
 
-  function handleSelect(id: AppView) {
+  function selectSection(id: AppView) {
     setOpen(false)
     onNavChange(id)
   }
+  function selectDoc(doc: CorpusDoc) {
+    setOpen(false)
+    onSelectDoc(doc)
+  }
+  function selectPath(pathId: string) {
+    setOpen(false)
+    onStartPath(pathId)
+  }
+  function changeFont(next: FontSizeOption) {
+    setFontSize(next)
+    applyFontSize(next)
+    try { window.localStorage.setItem(FONT_SIZE_KEY, next) } catch (_) { /* ignore */ }
+  }
+  function changeTheme(next: ThemeOption) {
+    setTheme(next)
+    applyTheme(next)
+    try { window.localStorage.setItem(THEME_KEY, next) } catch (_) { /* ignore */ }
+  }
+
+  const fontIdx = FONT_ORDER.indexOf(fontSize)
 
   return (
-    <div ref={drawerRef} className="relative shrink-0" data-no-drag>
+    <div className="shrink-0" data-no-drag>
       <button
         data-testid="nav-hamburger"
         type="button"
         aria-label="Open navigation menu"
         aria-expanded={open}
-        onClick={() => setOpen(o => !o)}
-        className="focus-ring flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition"
+        onClick={() => setOpen(true)}
+        className="focus-ring flex h-11 w-11 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] transition"
       >
         <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-          {open ? (
-            <path fillRule="evenodd" clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
-          ) : (
-            <path fillRule="evenodd" clipRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
-          )}
+          <path fillRule="evenodd" clipRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
         </svg>
       </button>
 
-      {open && (
-        <div
-          role="dialog"
-          aria-label="Navigation menu"
-          className="absolute left-0 top-full z-50 mt-2 w-56 rounded-lg border border-[rgba(255,255,255,0.12)] bg-[var(--forest)] py-1 shadow-2xl"
-        >
-          {NAV_ITEMS.map(item => (
+      {/* Scrim */}
+      <div
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+        className={`fixed inset-0 z-50 bg-black/45 transition-opacity duration-200 ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+      />
+
+      {/* Full-height slide-over sheet */}
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+        className={`fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-[360px] flex-col bg-[var(--forest)] shadow-2xl transition-transform duration-250 ease-out ${open ? 'translate-x-0' : '-translate-x-full'}`}
+        style={{
+          paddingTop: 'env(safe-area-inset-top)',
+          paddingBottom: 'env(safe-area-inset-bottom)',
+        }}
+      >
+        {/* Sheet header */}
+        <div className="flex items-center justify-between border-b border-[rgba(255,255,255,0.1)] px-5 py-3.5">
+          <span className="font-serif text-[15px] text-[var(--forest-text)]">Navigate</span>
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            onClick={() => setOpen(false)}
+            className="focus-ring flex h-10 w-10 items-center justify-center rounded text-[var(--forest-text-muted)] hover:text-[var(--forest-text)]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+              <path fillRule="evenodd" clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto overscroll-contain py-2">
+          {/* Sections */}
+          <p className="px-5 pb-1 pt-2 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--forest-text-muted)]">Sections</p>
+          {MOBILE_NAV_ITEMS.map(item => (
             <button
               key={item.id}
               data-testid={`nav-${item.id}`}
               type="button"
               aria-current={activeNav === item.id ? 'page' : undefined}
-              onClick={() => handleSelect(item.id)}
-              className={`focus-ring flex w-full items-center px-4 py-2.5 text-left text-[13px] font-medium transition ${
+              onClick={() => selectSection(item.id)}
+              className={`focus-ring flex min-h-[44px] w-full items-center px-5 text-left text-[14px] font-medium transition ${
                 activeNav === item.id
-                  ? 'text-[var(--accent)] bg-[rgba(159,108,49,0.1)]'
+                  ? 'text-[var(--accent)] bg-[rgba(159,108,49,0.12)]'
                   : 'text-[var(--forest-text-muted)] hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]'
               }`}
             >
@@ -385,8 +445,105 @@ function HamburgerDrawer({
               )}
             </button>
           ))}
+
+          {/* In this section */}
+          {shelfDocs.length > 0 && (
+            <>
+              <p className="mt-3 border-t border-[rgba(255,255,255,0.08)] px-5 pb-1 pt-4 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--forest-text-muted)]">
+                {shelfLabel || 'In this section'}
+              </p>
+              {shelfDocs.map(doc => (
+                <button
+                  key={doc.id}
+                  type="button"
+                  onClick={() => selectDoc(doc)}
+                  className="focus-ring flex min-h-[40px] w-full items-center px-5 py-1.5 text-left text-[13px] leading-snug text-[var(--forest-text-muted)] transition hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]"
+                >
+                  <span className="line-clamp-2">{doc.title}</span>
+                </button>
+              ))}
+            </>
+          )}
+
+          {/* Continue reading */}
+          {recentDocs.length > 0 && (
+            <>
+              <p className="mt-3 border-t border-[rgba(255,255,255,0.08)] px-5 pb-1 pt-4 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--forest-text-muted)]">Continue reading</p>
+              {recentDocs.slice(0, 5).map(doc => (
+                <button
+                  key={doc.id}
+                  type="button"
+                  onClick={() => selectDoc(doc)}
+                  className="focus-ring flex min-h-[40px] w-full items-center px-5 py-1.5 text-left text-[13px] leading-snug text-[var(--forest-text-muted)] transition hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]"
+                >
+                  <span className="line-clamp-2">{doc.title}</span>
+                </button>
+              ))}
+            </>
+          )}
+
+          {/* Reading paths */}
+          <p className="mt-3 border-t border-[rgba(255,255,255,0.08)] px-5 pb-1 pt-4 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--forest-text-muted)]">Reading paths</p>
+          {HEADER_PATHS.map(p => (
+            <button
+              key={p.id}
+              type="button"
+              onClick={() => selectPath(p.id)}
+              className="focus-ring flex min-h-[40px] w-full items-center justify-between px-5 py-1.5 text-left text-[13px] text-[var(--forest-text-muted)] transition hover:text-[var(--forest-text)] hover:bg-[rgba(255,255,255,0.05)]"
+            >
+              <span>{p.label}</span>
+              <span className="font-mono text-[10px] text-[var(--forest-text-muted)]">{p.time}</span>
+            </button>
+          ))}
+
+          {/* Text & theme */}
+          <p className="mt-3 border-t border-[rgba(255,255,255,0.08)] px-5 pb-2 pt-4 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--forest-text-muted)]">Text &amp; theme</p>
+          <div className="px-5 pb-2">
+            {/* Font size stepper */}
+            <div className="mb-2.5 flex items-center gap-2">
+              <button
+                type="button"
+                aria-label="Decrease text size"
+                disabled={fontIdx <= 0}
+                onClick={() => changeFont(FONT_ORDER[Math.max(0, fontIdx - 1)])}
+                className="focus-ring flex h-11 flex-1 items-center justify-center rounded-lg border border-[rgba(255,255,255,0.14)] text-[13px] text-[var(--forest-text)] transition hover:bg-[rgba(255,255,255,0.06)] disabled:opacity-35"
+              >
+                A<span className="text-[10px]">–</span>
+              </button>
+              <span className="min-w-[3.2rem] text-center font-mono text-[11px] uppercase tracking-wide text-[var(--forest-text-muted)]">
+                {fontSize}
+              </span>
+              <button
+                type="button"
+                aria-label="Increase text size"
+                disabled={fontIdx >= FONT_ORDER.length - 1}
+                onClick={() => changeFont(FONT_ORDER[Math.min(FONT_ORDER.length - 1, fontIdx + 1)])}
+                className="focus-ring flex h-11 flex-1 items-center justify-center rounded-lg border border-[rgba(255,255,255,0.14)] text-[17px] text-[var(--forest-text)] transition hover:bg-[rgba(255,255,255,0.06)] disabled:opacity-35"
+              >
+                A<span className="text-[12px]">+</span>
+              </button>
+            </div>
+            {/* Theme toggle */}
+            <div className="flex gap-1.5">
+              {(['light', 'system', 'dark'] as ThemeOption[]).map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => changeTheme(opt)}
+                  aria-pressed={theme === opt}
+                  className={`focus-ring h-11 flex-1 rounded-lg border text-[12px] capitalize transition ${
+                    theme === opt
+                      ? 'border-[var(--accent)] bg-[rgba(159,108,49,0.15)] text-[var(--accent)]'
+                      : 'border-[rgba(255,255,255,0.14)] text-[var(--forest-text-muted)] hover:bg-[rgba(255,255,255,0.06)]'
+                  }`}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -877,7 +1034,7 @@ export function Layout({
   }, [])
 
   return (
-    <div className="relative min-h-screen bg-paper text-ink">
+    <div className="relative min-h-[100dvh] bg-paper text-ink">
       <a href="#reader-main" className="skip-link">
         Skip to reader
       </a>
@@ -897,11 +1054,12 @@ export function Layout({
         data-tauri-drag-region
         className="reader-header-safe sticky top-0 z-40 border-b border-[rgba(0,0,0,0.18)] bg-[var(--forest)] px-3 sm:px-6 lg:px-8"
       >
-        {/* Scholar reading progress bar — fixed to very top of viewport */}
+        {/* Scholar reading progress bar — pinned below the safe-area inset so it clears the notch */}
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-x-0 top-0 z-50 h-[2px]"
+          className="pointer-events-none fixed inset-x-0 z-50 h-[2px]"
           style={{
+            top: 'env(safe-area-inset-top, 0px)',
             background: 'linear-gradient(to right, var(--accent), var(--accent-deep) 60%, var(--accent))',
             transformOrigin: 'left center',
             transform: `scaleX(${readingProgress})`,
@@ -912,7 +1070,15 @@ export function Layout({
         <div className="mx-auto flex w-full max-w-[82rem] items-center gap-2 py-2 sm:gap-3">
           {/* Hamburger — mobile only; xl+ uses the left panel section picker */}
           <div className="xl:hidden">
-            <HamburgerDrawer activeNav={activeNav} onNavChange={onNavChange} />
+            <HamburgerDrawer
+              activeNav={activeNav}
+              onNavChange={onNavChange}
+              recentDocs={recentDocs}
+              shelfDocs={shelfDocs}
+              shelfLabel={shelfLabel}
+              onSelectDoc={onSelectDoc}
+              onStartPath={onStartPath}
+            />
           </div>
 
           {/* Branding */}

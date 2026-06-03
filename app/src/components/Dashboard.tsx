@@ -1368,7 +1368,7 @@ function DocListPanel({
       </div>
 
       {/* ── Content ── */}
-      <div style={{ overflowY: 'auto', flex: 1, maxHeight: 'calc(100vh - 9rem)', scrollbarWidth: 'none' }}>
+      <div style={{ overflowY: 'auto', flex: 1, maxHeight: 'calc(100dvh - 9rem)', scrollbarWidth: 'none' }}>
 
         {/* Docs tab — current section document list */}
         {tab === 'docs' && docs.map((doc) => {
@@ -1567,7 +1567,7 @@ function ReaderPanel({
   return (
     <section id="reader-panel-start" data-testid="reader-panel" className="scroll-mt-16 space-y-6 sm:space-y-8">
       <header className="border-b border-line pb-5 sm:pb-6">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <div className="reader-doc-eyebrow flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
           <p className="text-[10px] uppercase tracking-[0.16em] text-ink-faint sm:text-[11px]">
             {SECTION_LABELS[doc.section]}
           </p>
@@ -1583,7 +1583,7 @@ function ReaderPanel({
           <p className="mt-3 max-w-[40rem] text-[14px] leading-[1.65] text-ink-soft sm:mt-4 sm:text-[15px] sm:leading-7">{doc.summary}</p>
         ) : null}
 
-        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-ink-faint sm:mt-4 sm:gap-x-4 sm:gap-y-2 sm:text-[12px]">
+        <div className="reader-doc-meta mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-ink-faint sm:mt-4 sm:gap-x-4 sm:gap-y-2 sm:text-[12px]">
           <span>{estimatedReadMinutes(doc.wordCount)} min read</span>
           <span aria-hidden="true">·</span>
           <span>{doc.headingCount} headings</span>
@@ -1610,7 +1610,7 @@ function ReaderPanel({
           />
           <ActionButton label="Open source" onClick={onOpenSource} />
 
-          <div className="mt-2 flex w-full items-center gap-2 sm:ml-auto sm:mt-0 sm:w-auto">
+          <div className="reader-find-controls mt-2 flex w-full items-center gap-2 sm:ml-auto sm:mt-0 sm:w-auto">
             <label htmlFor="reader-search" className="sr-only">
               Search this document
             </label>

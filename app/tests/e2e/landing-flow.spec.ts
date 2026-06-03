@@ -19,7 +19,7 @@ test.describe('landing flow', () => {
 
     await page.getByRole('button', { name: 'Start with Objections' }).click()
 
-    await expect(page.getByTestId('reader-title')).toHaveText('Public Readiness Guide')
+    await expect(page.getByTestId('reader-title')).toHaveText('Evidence Ladder')
     await expect(page.getByText("The Skeptic's Path", { exact: true }).first()).toBeVisible()
   })
 

@@ -11,12 +11,18 @@ export function ChatBubble({ corpus, onNavigateToDoc }: ChatBubbleProps) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="pointer-events-none fixed bottom-5 right-5 z-30 flex flex-col items-end gap-3">
+    <div
+      className="pointer-events-none fixed z-30 flex flex-col items-end gap-3"
+      style={{
+        right: 'calc(1.25rem + env(safe-area-inset-right))',
+        bottom: 'calc(1.25rem + env(safe-area-inset-bottom))',
+      }}
+    >
       {/* Panel — always mounted so chat history persists, visibility toggled via CSS */}
       <div
         className={[
-          'w-[380px] max-w-[calc(100vw-2.5rem)]',
-          'h-[540px] max-h-[calc(100vh-100px)]',
+          'w-[380px] max-w-[calc(100dvw-2.5rem)]',
+          'h-[540px] max-h-[calc(100dvh-100px-env(safe-area-inset-bottom))]',
           'rounded-2xl shadow-2xl border border-line overflow-hidden',
           'transition-all duration-200 origin-bottom-right',
           open
