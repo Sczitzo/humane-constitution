@@ -490,3 +490,65 @@ The pattern is simple to name once you have seen it: fund doubt, attack the crit
 [^c8-6]: "The Facebook Files," The Wall Street Journal, September 2021 (leaked internal research on Instagram and teen mental health).
 [^c8-7]: [UNVERIFIED — panel check] Bagdikian, *The Media Monopoly* / *The New Media Monopoly* (50-company figure for 1983); the "six companies by 2012" figure as widely cited, e.g. Business Insider's 2012 media-ownership reporting.
 [^c8-8]: [UNVERIFIED — panel check] Sinclair Broadcast Group station and market counts (294 stations across 89 markets) per company disclosures and contemporaneous reporting; figures change over time with acquisitions and divestitures.
+
+## Chapter 9 — Rights declared but not enforced
+
+A right that is declared is a promise. A right that is enforced is a fact. The two are not the same thing, and the gap between them is where the harm lives.
+
+In 1948 the world adopted a long list of rights for every person. It was a declaration. It named what people are owed. But naming a right does not, by itself, give a person a way to make a government honor it. A declared right says what should happen. An enforced right is what actually happens when someone is wronged and can do something about it.
+
+Here is the hard part. Many of the worst harms to people today are not crimes. They are legal. They happen inside wealthy democracies, not only in faraway authoritarian states. They happen in daylight, on the record, defended by officials. That is not a contradiction. It is what you get when a right is written down but never given teeth.
+
+This chapter looks at one anchor case in detail, then several shorter ones. The point is not to assign blame. It is to show a pattern: the law can say one thing and produce another, and the gap falls hardest on people who already had the least.
+
+### Anchor case: Convict leasing (United States, 1865–1940s)
+
+In 1865 the United States changed its Constitution to end slavery. The Thirteenth Amendment did that — but with one carve-out. It banned slavery and forced labor "except as a punishment for crime whereof the party shall have been duly convicted."[^c9-1] In plain terms: forced labor was now banned, unless the person had been convicted of a crime first.
+
+That exception became a door. Within months, Southern states passed new laws called vagrancy laws. A vagrancy law made it a crime to be without a job, or to be unable to prove you had a job, or to move from place to place without permission. On paper the laws applied to everyone. In practice they were aimed at formerly enslaved Black men. Arrests of Black men climbed fast.
+
+Once convicted, the men were leased out. The state rented their labor to coal mines, railroad companies, and plantations — sometimes the very plantations where they had been enslaved before. The companies paid a fee to the state. The state used that money to run its government. The men were not paid. They could not leave. Many were worked in conditions that killed them.
+
+None of this was secret. Newspapers reported it. Journalists investigated it. Politicians defended it. It was legal.
+
+Convict leasing faded in most states by the 1940s. It did not end because a court struck it down. It ended in large part because free white workers organized against it — they did not want to compete with unpaid convict labor. The Thirteenth Amendment exception is still in the Constitution today. About 65% of incarcerated people in the United States perform labor.[^c9-2] Their pay ranges from nothing to about $1.15 per hour.[^c9-3]
+
+That is the shape of the whole chapter in one case. A right was declared — freedom from forced labor. An exception was written in. The exception was used. And the result was legal the entire time.
+
+### Brief cases
+
+**Modern slavery.** The International Labour Organization estimates that about 40.3 million people are in modern slavery right now: forced labor, debt bondage, forced marriage, and trafficking.[^c9-4] That figure is considered conservative. Most of the people are women and girls. The work spans farming, domestic work, construction, manufacturing, and the sex trade. Some supply chains for consumer electronics, fast fashion, and food have documented links to forced labor. The finished products are sold legally in every wealthy country.
+
+**Clean water as a right on paper.** The United Nations recognized clean water as a human right in 2010. That recognition is not something a person can enforce in court against a government. In 2000, as a condition of a loan, the World Bank required Bolivia to hand its water system to a private company. In the city of Cochabamba the company raised water prices by about 50% overnight.[^c9-5] People who could not pay were cut off. Protests followed, and six people died, including a 17-year-old.[^c9-5] The contract was cancelled. Years later, starting in 2014, the city of Detroit shut off water to roughly 100,000 households for non-payment — mostly low-income Black residents.[^c9-6] The UN called the shutoffs a human rights violation.[^c9-6] They continued anyway.
+
+**Cash bail and carceral economics.** Cash bail is money a person pays to stay free while waiting for their trial. "Pretrial" means before any trial has happened — before a court has decided whether the person is guilty of anything. People who cannot afford bail stay locked up. Not because they were convicted, but because they are poor. About 75% of people held in local jails in the United States are awaiting trial, not serving a sentence.[^c9-7] The Brennan Center for Justice describes the trap: being held before trial costs people their jobs, their housing, and time with their families. That pressure makes a person more likely to accept a plea deal whether or not they did it, and more likely to be unable to pay the fines and fees that come with a conviction — and unpaid fines can lead to more jail time. The cycle is internally consistent and entirely legal.
+
+**Algorithmic discrimination.** Software now helps decide things that used to be decided by people: criminal sentencing risk scores (one well-known tool is called COMPAS), credit scores, mortgage approvals, hiring, and even child-welfare investigations. These systems have been shown to produce worse outcomes for some racial groups. A few use race directly. Most use stand-ins — zip code, school history, work history — that quietly carry old patterns of discrimination forward. The outcomes are unequal. But because no single person made the unfair call, it is hard to point to anyone responsible.
+
+**The youth mental-health crisis.** In 2023 the US Surgeon General issued an advisory naming social media a public-health concern for adolescents.[^c9-8] Research has documented links between heavy social media use and anxiety, depression, body-image problems, and self-harm, especially in teenage girls. Internal company research had documented harm before it was public. No major enforcement followed. The products kept running unchanged, and the harm kept building in a generation that never agreed to the experiment.
+
+**The loneliness epidemic.** Also in 2023, the Surgeon General issued a second advisory, this one naming social disconnection a public-health epidemic.[^c9-9] The research is blunt: chronic loneliness carries health effects compared to smoking about 15 cigarettes a day[^c9-10] — higher stress hormones, weaker immune response, and higher rates of heart disease and dementia. It hits young adults, roughly ages 18 to 25, the hardest. No legal system treats it as a rights violation. It is a side effect of the same conditions the earlier chapters describe: shrinking civic institutions, scattered work, and community slowly replaced by commerce.
+
+> **What to watch for**
+> - Legal systems you cannot actually use without money for a lawyer.
+> - Rights written into law but not enforced in practice for specific groups of people.
+> - The gap between what a law says and what it produces when applied to people without resources.
+
+*The distance between a declared right and an enforced one is the distance between a promise and a fact — and that distance falls most heavily on people who were already excluded from the room where the promise was made.*
+
+**Where this project responds:** Of the five instruments in this corpus, Essential Access is the one aimed at this chapter. It is meant to guarantee a survival floor — food, shelter, medicine, water — that cannot be bought away, traded off, or revoked. That covers the most basic version of "declared but not enforced": the right to stay alive.
+
+It does not cover everything in this chapter. Three of the problems here are gaps the corpus does not yet address. Carceral economics — the poverty trap built from cash bail, fines and fees, and the Thirteenth Amendment labor exception — has no instrument. Algorithmic discrimination — unequal outcomes from automated systems with no clear human decision-maker — has no instrument. And the epistemic rights of minors — what young people are owed when products are designed to affect their minds — has no instrument. These are documented, not hidden. They are tracked in the project's governance document called the Hardening Queue, which is the running list of known unsolved problems. Naming a gap is the condition for working on it honestly, not a sign the work is done.
+
+**Sources**
+
+[^c9-1]: U.S. Constitution, Thirteenth Amendment (ratified 1865): "Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States." National Archives, founding documents.
+[^c9-2]: [UNVERIFIED — panel check] American Civil Liberties Union / University of Chicago Law School report on prison labor (2022) — finding that roughly 65% of incarcerated people in the United States perform labor.
+[^c9-3]: [UNVERIFIED — panel check] Prison Policy Initiative / ACLU reporting on prison wage ranges of $0 to ~$1.15 per hour.
+[^c9-4]: International Labour Organization and Walk Free Foundation, "Global Estimates of Modern Slavery" (2017) — ~40.3 million people in modern slavery; figure described as conservative.
+[^c9-5]: [UNVERIFIED — panel check] Reporting on the Cochabamba, Bolivia water privatization (2000): ~50% price increase and six deaths during protests, including a 17-year-old (Oscar Olivera / Democracy Center accounts; news coverage of the "Cochabamba Water War").
+[^c9-6]: [UNVERIFIED — panel check] United Nations human rights experts' statement on Detroit water shutoffs (2014); reporting that approximately 100,000 households were affected.
+[^c9-7]: [UNVERIFIED — panel check] Bureau of Justice Statistics / Prison Policy Initiative data that roughly 75% of people in U.S. local jails are awaiting trial; Brennan Center for Justice analysis of the pretrial-detention cycle.
+[^c9-8]: [UNVERIFIED — panel check] U.S. Surgeon General Advisory, "Social Media and Youth Mental Health" (2023).
+[^c9-9]: [UNVERIFIED — panel check] U.S. Surgeon General Advisory, "Our Epidemic of Loneliness and Isolation" (2023).
+[^c9-10]: [UNVERIFIED — panel check] Figure equating chronic loneliness's health impact to smoking ~15 cigarettes per day, cited in the 2023 Surgeon General loneliness advisory (originating from Holt-Lunstad et al. meta-analysis on social connection and mortality).
