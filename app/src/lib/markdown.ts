@@ -50,6 +50,16 @@ export interface MarkdownTable {
   lines: string[]
 }
 
+export interface MarkdownFootnoteEntry {
+  id: string
+  text: string
+}
+
+export interface MarkdownFootnotes {
+  type: 'footnotes'
+  items: MarkdownFootnoteEntry[]
+}
+
 export type MarkdownBlock =
   | MarkdownHeading
   | MarkdownParagraph
@@ -60,6 +70,7 @@ export type MarkdownBlock =
   | MarkdownQuote
   | MarkdownRule
   | MarkdownTable
+  | MarkdownFootnotes
 
 // ── Block predicates ─────────────────────────────────────────────────────────
 
@@ -89,6 +100,18 @@ export function isTableLine(trimmed: string): boolean {
 
 export function isQuoteLine(trimmed: string): boolean {
   return trimmed.startsWith('>')
+}
+
+// A footnote definition line, e.g. "[^c1-1]: Author, Title (Publisher, 2020)."
+export function isFootnoteDefLine(trimmed: string): boolean {
+  return /^\[\^[^\]]+\]:\s/.test(trimmed)
+}
+
+// Parse a footnote definition line into { id, text }. Returns null if it isn't one.
+export function parseFootnoteDef(trimmed: string): MarkdownFootnoteEntry | null {
+  const match = trimmed.match(/^\[\^([^\]]+)\]:\s+(.*)$/)
+  if (!match) return null
+  return { id: match[1], text: match[2].trim() }
 }
 
 // ── Parser ───────────────────────────────────────────────────────────────────
@@ -200,6 +223,37 @@ export function parseMarkdown(doc: CorpusDoc): MarkdownBlock[] {
       continue
     }
 
+    if (isFootnoteDefLine(trimmed)) {
+      const items: MarkdownFootnoteEntry[] = []
+      while (index < lines.length) {
+        const current = lines[index].trim()
+        if (!current) {
+          // Allow blank lines between footnote definitions: only continue if the
+          // next non-blank line is also a footnote definition.
+          let look = index + 1
+          while (look < lines.length && !lines[look].trim()) {
+            look += 1
+          }
+          if (look < lines.length && isFootnoteDefLine(lines[look].trim())) {
+            index = look
+            continue
+          }
+          index += 1
+          break
+        }
+        if (!isFootnoteDefLine(current)) {
+          break
+        }
+        const entry = parseFootnoteDef(current)
+        if (entry) {
+          items.push(entry)
+        }
+        index += 1
+      }
+      blocks.push({ type: 'footnotes', items })
+      continue
+    }
+
     if (isOrderedListLine(trimmed) || isUnorderedListLine(trimmed)) {
       const ordered = isOrderedListLine(trimmed)
       const items: string[] = []
@@ -237,7 +291,8 @@ export function parseMarkdown(doc: CorpusDoc): MarkdownBlock[] {
         isTableLine(currentTrimmed) ||
         isQuoteLine(currentTrimmed) ||
         isOrderedListLine(currentTrimmed) ||
-        isUnorderedListLine(currentTrimmed)
+        isUnorderedListLine(currentTrimmed) ||
+        isFootnoteDefLine(currentTrimmed)
       ) {
         break
       }
