@@ -5,8 +5,8 @@ test.describe('landing flow', () => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/')
 
-    await expect(page.getByRole('button', { name: 'Browse Full Library' })).toBeVisible()
-    await page.getByRole('button', { name: 'Browse Full Library' }).click()
+    await expect(page.getByRole('button', { name: 'Browse the full library' })).toBeVisible()
+    await page.getByRole('button', { name: 'Browse the full library' }).click()
 
     await expect(page.getByTestId('reader-main')).toBeVisible()
     await page.reload()

@@ -318,7 +318,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
   }
 
   const hovered = hoveredIdx !== null ? branches[hoveredIdx] : null
-  const GOLD = '#c9a84c'
+  const GOLD = '#e2a85a'
 
   return (
     <div
@@ -352,8 +352,8 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
             <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
           </filter>
           <radialGradient id="panel-glow" cx="15%" cy="50%" r="65%">
-            <stop offset="0%"   stopColor="#c9a84c" stopOpacity="0.09" />
-            <stop offset="100%" stopColor="#c9a84c" stopOpacity="0" />
+            <stop offset="0%"   stopColor="#e2a85a" stopOpacity="0.09" />
+            <stop offset="100%" stopColor="#e2a85a" stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -442,7 +442,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
               />
               {/* Crystalline black diamond */}
               <polygon points={pts}
-                fill="#06050a"
+                fill="#0b121b"
                 stroke={GOLD}
                 strokeWidth={isHovered ? 1.5 : 1}
                 opacity={dimmed ? 0.15 : 1}
@@ -486,7 +486,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
               />
               {/* Dark fill */}
               <circle cx={ex} cy={ey} r={RING_R}
-                fill="#0c0a14"
+                fill="#16212d"
                 opacity={dimmed ? 0.4 : 1}
                 style={{ transition: 'opacity 0.25s' }}
               />
@@ -538,7 +538,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
                 fill={GOLD} opacity="0.55" filter="url(#tva-glow)" />
               {/* Bright core */}
               <circle cx={pos.x} cy={pos.y} r="2.5"
-                fill="#fff8e8" opacity="0.95" />
+                fill="#fdf3e2" opacity="0.95" />
             </g>
           )
         })()}
@@ -568,7 +568,7 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
               </div>
               <p className="lp-branch-card-desc">{hovered.path.desc}</p>
               <p style={{
-                fontSize: 10, color: 'rgba(201,168,76,0.55)', letterSpacing: '0.06em',
+                fontSize: 10, color: 'rgba(226, 168, 90,0.55)', letterSpacing: '0.06em',
                 marginTop: 8, fontFamily: "'IBM Plex Mono', monospace",
               }}>click to read</p>
             </div>
@@ -580,23 +580,22 @@ function pointOnBranchAt(b: BranchConfig, t: number): { x: number; y: number } {
 }
 
 const PATHS = [
-  { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~20 min', color: '#2d6a4f' },
+  { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~20 min', color: '#2f6a72' },
   { id: 'skeptic', emoji: '🔍', title: 'Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~25 min', color: '#1a3a5c' },
-  { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~35 min', color: '#4a1c40' },
-  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~30 min', color: '#5c3d00' },
+  { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~35 min', color: '#3a2348' },
+  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~30 min', color: '#5c4318' },
   { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~25 min', color: '#1c3040' },
-  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Evidence Roadmap', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1a1a' },
+  { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Evidence Roadmap', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~30 min', color: '#3d1f24' },
   { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~20 min', color: '#1a3040' },
-  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~25 min', color: '#2d1a4a' },
-  { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d1a' },
+  { id: 'architectural-integrity', emoji: '🏗️', title: 'Architecture', desc: 'Hash chains, amendment locks, implementation binding, and drift checks.', time: '~25 min', color: '#26224a' },
+  { id: 'governance-deep', emoji: '🗳️', title: 'Governance', desc: 'Full trail: threats, patches, resolutions, disclosures.', time: '~40 min', color: '#1a2d33' },
 ]
 
 
 
 const MARQUEE_ITEMS = [
-  'Open Source', 'CC BY 4.0', '90+ Documents', 'Public Audit Trail',
-  'Five Instruments', 'Constitutional Design', 'Anti-Rentier', 'Progressive by Design',
-  'Oracle-Verified', 'Amendment-Locked', 'Humane Constitution', 'Open Source',
+  'Open Source', 'CC BY 4.0', '100+ Documents', 'Public Audit Trail',
+  'Five Tools', 'Constitutional Design', 'Built to Resist Capture', 'Humane Constitution',
 ]
 
 const HEADLINE_WORDS = ['What', 'if', 'survival,', 'markets,', 'and', 'civic', 'power', 'stayed', 'separate', 'by', 'design?']
@@ -614,7 +613,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
   const [navVisible, setNavVisible] = useState(false)
   const [mouseX, setMouseX] = useState(0)
   const [mouseY, setMouseY] = useState(0)
-  const [openThreatIdx, setOpenThreatIdx] = useState<number | null>(null)
+  const [openThreatIdx, setOpenThreatIdx] = useState<number | null>(0)
   const [revealedThreatCards, setRevealedThreatCards] = useState<Set<number>>(new Set())
 
   const transitionRef = useRef<HTMLDivElement>(null)
@@ -711,7 +710,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-family: 'Inter', sans-serif;
           min-height: 100vh;
           overflow-x: clip;
-          background: #0a0906;
+          background: #0e1621;
           transition: opacity 0.6s ease, transform 0.6s ease;
         }
         .lp-exit { opacity: 0; transform: scale(0.98); pointer-events: none; }
@@ -726,9 +725,9 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           display: flex;
           align-items: center;
           gap: 6px;
-          background: rgba(12,11,9,0.72);
+          background: rgba(14, 22, 33,0.72);
           backdrop-filter: blur(20px) saturate(180%);
-          border: 1px solid rgba(245,240,232,0.1);
+          border: 1px solid rgba(221, 230, 240,0.1);
           border-radius: 999px;
           padding: 10px 20px;
           transition: opacity 0.4s cubic-bezier(0.16,1,0.3,1),
@@ -744,12 +743,12 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         .lp-nav-logo { opacity: 0.6; display: flex; align-items: center; }
         .lp-nav-sep {
           width: 1px; height: 14px;
-          background: rgba(245,240,232,0.15);
+          background: rgba(221, 230, 240,0.15);
           margin: 0 8px;
         }
         .lp-nav-btn {
-          background: #c9a84c;
-          color: #0c0b09;
+          background: #e2a85a;
+          color: #0b121b;
           border: none;
           padding: 7px 18px;
           border-radius: 999px;
@@ -758,10 +757,10 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           cursor: pointer;
           transition: background 0.15s, transform 0.15s;
         }
-        .lp-nav-btn:hover { background: #dbb85c; transform: scale(1.04); }
+        .lp-nav-btn:hover { background: #f0bd72; transform: scale(1.04); }
         .lp-nav-ghost {
           background: transparent;
-          color: rgba(245,240,232,0.55);
+          color: rgba(221, 230, 240,0.55);
           border: none;
           padding: 7px 14px;
           border-radius: 999px;
@@ -769,7 +768,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           cursor: pointer;
           transition: color 0.15s;
         }
-        .lp-nav-ghost:hover { color: rgba(245,240,232,0.9); }
+        .lp-nav-ghost:hover { color: rgba(221, 230, 240,0.9); }
 
         /* ─── Grain overlay ─── */
         .lp-grain {
@@ -800,17 +799,17 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         }
         .lp-hero-orb-1 {
           width: 600px; height: 600px;
-          background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(226, 168, 90,0.12) 0%, transparent 70%);
           top: -100px; left: -120px;
         }
         .lp-hero-orb-2 {
           width: 400px; height: 400px;
-          background: radial-gradient(circle, rgba(111,124,103,0.14) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(111, 181, 194,0.14) 0%, transparent 70%);
           bottom: 0; right: -80px;
         }
         .lp-hero-orb-3 {
           width: 300px; height: 300px;
-          background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(226, 168, 90,0.07) 0%, transparent 70%);
           top: 50%; right: 10%;
         }
         .lp-eyebrow {
@@ -818,7 +817,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-size: 11px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #c9a84c;
+          color: #e2a85a;
           margin-bottom: 22px;
           animation: lp-fade-up 0.8s ease 0.2s both;
         }
@@ -827,10 +826,10 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           max-width: min(760px, 100%);
           margin: 0 0 22px;
           padding: 8px 14px;
-          border: 1px solid rgba(201,168,76,0.35);
+          border: 1px solid rgba(226, 168, 90,0.35);
           border-radius: 999px;
-          background: rgba(12,11,9,0.52);
-          color: rgba(245,240,232,0.82);
+          background: rgba(14, 22, 33,0.52);
+          color: rgba(221, 230, 240,0.82);
           font-family: 'IBM Plex Mono', monospace;
           font-size: 11px;
           line-height: 1.45;
@@ -838,12 +837,14 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           animation: lp-fade-up 0.8s ease 0.3s both;
         }
         .lp-human-line {
-          margin: 0 0 18px;
-          color: rgba(245,240,232,0.9);
+          margin: 0 0 14px;
+          color: rgba(226, 168, 90, 0.92);
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(44px, 7.2vw, 104px);
-          line-height: 1.06;
-          font-weight: 600;
+          font-size: clamp(19px, 2.4vw, 28px);
+          font-style: italic;
+          line-height: 1.3;
+          font-weight: 500;
+          letter-spacing: 0.01em;
           animation: lp-fade-up 0.8s ease 0.38s both;
         }
         .lp-headline {
@@ -851,7 +852,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-size: clamp(44px, 7.2vw, 104px);
           font-weight: 600;
           line-height: 1.06;
-          color: #f5f0e8;
+          color: #eef4fb;
           max-width: 960px;
           margin: 0 0 40px;
           display: flex;
@@ -867,14 +868,14 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         }
         .lp-word-italic {
           font-style: italic;
-          color: #c9a84c;
+          color: #e2a85a;
           animation: lp-word-in 0.8s cubic-bezier(0.16,1,0.3,1) both,
                      lp-gold-glow 4s ease-in-out 2.5s infinite;
         }
         .lp-subhead {
           font-size: 18px;
           line-height: 1.72;
-          color: rgba(245,240,232,0.68);
+          color: rgba(221, 230, 240,0.68);
           max-width: 540px;
           margin: 0 0 34px;
           animation: lp-fade-up 0.9s ease 1.5s both;
@@ -885,8 +886,8 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           animation: lp-fade-up 0.9s ease 1.7s both;
         }
         .lp-btn-primary {
-          background: #c9a84c;
-          color: #0c0b09;
+          background: #e2a85a;
+          color: #0b121b;
           border: none;
           padding: 16px 36px;
           font-family: 'Inter', sans-serif;
@@ -897,14 +898,14 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
         }
         .lp-btn-primary:hover {
-          background: #dbb85c;
+          background: #f0bd72;
           transform: translateY(-2px);
-          box-shadow: 0 12px 32px rgba(201,168,76,0.4);
+          box-shadow: 0 12px 32px rgba(226, 168, 90,0.4);
         }
         .lp-btn-ghost {
           background: transparent;
-          color: rgba(245,240,232,0.76);
-          border: 1px solid rgba(245,240,232,0.18);
+          color: rgba(221, 230, 240,0.76);
+          border: 1px solid rgba(221, 230, 240,0.18);
           padding: 16px 36px;
           font-family: 'Inter', sans-serif;
           font-size: 15px; font-weight: 400;
@@ -913,10 +914,48 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           transition: border-color 0.2s, color 0.2s, transform 0.15s, background 0.2s;
         }
         .lp-btn-ghost:hover {
-          border-color: rgba(245,240,232,0.4);
-          color: rgba(245,240,232,0.95);
-          background: rgba(245,240,232,0.05);
+          border-color: rgba(221, 230, 240,0.4);
+          color: rgba(221, 230, 240,0.95);
+          background: rgba(221, 230, 240,0.05);
           transform: translateY(-2px);
+        }
+        /* Tertiary text button (demoted "Browse the full library") */
+        .lp-btn-text {
+          background: none;
+          border: none;
+          color: rgba(221, 230, 240,0.72);
+          font-family: 'Inter', sans-serif;
+          font-size: 15px; font-weight: 400;
+          padding: 16px 8px;
+          min-height: 44px;
+          cursor: pointer;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          text-decoration-color: rgba(226, 168, 90,0.5);
+          transition: color 0.2s;
+        }
+        .lp-btn-text:hover { color: rgba(221, 230, 240,0.95); }
+        /* Honesty framing line under the threats heading */
+        .lp-threats-note {
+          max-width: 640px;
+          margin: 18px auto 0;
+          color: rgba(221, 230, 240,0.62);
+          font-family: 'Inter', sans-serif;
+          font-size: 15px;
+          line-height: 1.6;
+        }
+        /* Accessibility: visible keyboard focus on all landing controls */
+        .lp-btn-primary:focus-visible,
+        .lp-btn-ghost:focus-visible,
+        .lp-btn-text:focus-visible,
+        .lp-nav-btn:focus-visible,
+        .lp-nav-ghost:focus-visible,
+        .lp-verify-links a:focus-visible,
+        .lp-verify-links button:focus-visible,
+        .lp-skip button:focus-visible {
+          outline: 2px solid #e2a85a;
+          outline-offset: 3px;
+          border-radius: 4px;
         }
         .lp-trust-block {
           position: relative;
@@ -924,9 +963,9 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           width: min(780px, 100%);
           margin-top: 28px;
           padding: 18px 20px;
-          border: 1px solid rgba(245,240,232,0.12);
+          border: 1px solid rgba(221, 230, 240,0.12);
           border-radius: 12px;
-          background: rgba(245,240,232,0.035);
+          background: rgba(221, 230, 240,0.035);
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 18px;
@@ -936,13 +975,13 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         .lp-trust-block strong {
           display: block;
           margin-bottom: 6px;
-          color: #f5f0e8;
+          color: #eef4fb;
           font-size: 12px;
           letter-spacing: 0.08em;
           text-transform: uppercase;
         }
         .lp-trust-block span {
-          color: rgba(245,240,232,0.66);
+          color: rgba(221, 230, 240,0.66);
           font-size: 13px;
           line-height: 1.55;
         }
@@ -954,7 +993,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           flex-wrap: wrap;
           justify-content: center;
           margin-top: 18px;
-          color: rgba(245,240,232,0.62);
+          color: rgba(221, 230, 240,0.62);
           font-size: 13px;
           animation: lp-fade-up 0.9s ease 1.95s both;
         }
@@ -963,15 +1002,18 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           color: inherit;
           background: none;
           border: none;
-          padding: 0;
+          padding: 10px 4px;
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
           cursor: pointer;
           text-decoration: underline;
-          text-decoration-color: rgba(201,168,76,0.45);
+          text-decoration-color: rgba(226, 168, 90,0.45);
           text-underline-offset: 4px;
         }
         .lp-verify-links a:hover,
         .lp-verify-links button:hover {
-          color: rgba(245,240,232,0.9);
+          color: rgba(221, 230, 240,0.9);
         }
         .lp-scroll-hint {
           position: absolute;
@@ -985,11 +1027,11 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-family: 'DM Mono', monospace;
           font-size: 10px; letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(245,240,232,0.25);
+          color: rgba(221, 230, 240,0.25);
         }
         .lp-scroll-arrow {
           width: 1px; height: 56px;
-          background: linear-gradient(to bottom, rgba(201,168,76,0.7), transparent);
+          background: linear-gradient(to bottom, rgba(226, 168, 90,0.7), transparent);
           animation: lp-arrow-pulse 2.2s ease-in-out infinite;
         }
 
@@ -1008,8 +1050,8 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         /* ─── Marquee ticker ─── */
         .lp-marquee-wrap {
           overflow: hidden;
-          border-top: 1px solid rgba(245,240,232,0.07);
-          border-bottom: 1px solid rgba(245,240,232,0.07);
+          border-top: 1px solid rgba(221, 230, 240,0.07);
+          border-bottom: 1px solid rgba(221, 230, 240,0.07);
           padding: 18px 0;
           mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
           -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -1026,14 +1068,14 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-family: 'DM Mono', monospace;
           font-size: 11px; letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: rgba(245,240,232,0.25);
+          color: rgba(221, 230, 240,0.25);
           white-space: nowrap;
           flex-shrink: 0;
         }
         .lp-marquee-dot {
           width: 3px; height: 3px;
           border-radius: 50%;
-          background: #c9a84c;
+          background: #e2a85a;
           opacity: 0.5;
           flex-shrink: 0;
         }
@@ -1052,24 +1094,24 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           margin-top: 56px;
         }
         @keyframes lp-pulse-border {
-          0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.9); border-color: #c9a84c; }
-          55%  { box-shadow: 0 0 0 10px rgba(201,168,76,0.2); }
-          100% { box-shadow: 0 0 0 18px rgba(201,168,76,0); border-color: rgba(201,168,76,0.45); }
+          0%   { box-shadow: 0 0 0 0 rgba(226, 168, 90,0.9); border-color: #e2a85a; }
+          55%  { box-shadow: 0 0 0 10px rgba(226, 168, 90,0.2); }
+          100% { box-shadow: 0 0 0 18px rgba(226, 168, 90,0); border-color: rgba(226, 168, 90,0.45); }
         }
         .lp-threat-card {
-          border: 1px solid rgba(245,240,232,0.09);
+          border: 1px solid rgba(221, 230, 240,0.09);
           border-radius: 12px;
           overflow: hidden;
-          background: rgba(245,240,232,0.02);
+          background: rgba(221, 230, 240,0.02);
           transition: background 0.2s;
         }
         .lp-threat-card:not(.lp-threat-open):hover {
           animation: lp-pulse-border 1.4s ease;
-          background: rgba(14,12,24,0.9);
+          background: rgba(11, 18, 27,0.9);
         }
         .lp-threat-card.lp-threat-open {
-          border-color: rgba(201,168,76,0.35);
-          background: rgba(201,168,76,0.04);
+          border-color: rgba(226, 168, 90,0.35);
+          background: rgba(226, 168, 90,0.04);
         }
         .lp-threat-heading {
           margin: 0;
@@ -1087,39 +1129,39 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           cursor: pointer;
         }
         .lp-threat-trigger:focus-visible {
-          outline: 2px solid rgba(201,168,76,0.7);
+          outline: 2px solid rgba(226, 168, 90,0.7);
           outline-offset: -4px;
         }
         .lp-threat-num {
           font-size: 11px;
           font-family: 'IBM Plex Mono', monospace;
-          color: rgba(201,168,76,0.45);
+          color: rgba(226, 168, 90,0.45);
           min-width: 24px;
           transition: color 0.2s;
         }
-        .lp-threat-card.lp-threat-open .lp-threat-num { color: #c9a84c; }
+        .lp-threat-card.lp-threat-open .lp-threat-num { color: #e2a85a; }
         .lp-threat-headline {
           font-size: 16px;
           font-weight: 500;
-          color: rgba(245,240,232,0.72);
+          color: rgba(221, 230, 240,0.72);
           flex: 1;
           transition: color 0.2s;
         }
-        .lp-threat-card.lp-threat-open .lp-threat-headline { color: #f5f0e8; }
+        .lp-threat-card.lp-threat-open .lp-threat-headline { color: #eef4fb; }
         .lp-threat-chevron {
           width: 20px; height: 20px;
           border-radius: 50%;
-          border: 1px solid rgba(255,255,255,0.14);
+          border: 1px solid rgba(221, 230, 240,0.14);
           display: flex; align-items: center; justify-content: center;
           font-size: 10px;
-          color: rgba(255,255,255,0.3);
+          color: rgba(221, 230, 240,0.3);
           transition: transform 0.25s, border-color 0.2s, color 0.2s;
           flex-shrink: 0;
         }
         .lp-threat-card.lp-threat-open .lp-threat-chevron {
           transform: rotate(180deg);
-          border-color: #c9a84c;
-          color: #c9a84c;
+          border-color: #e2a85a;
+          color: #e2a85a;
         }
         /* animated expand via grid */
         .lp-threat-body {
@@ -1139,7 +1181,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-weight: 600;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: rgba(201,168,76,0.6);
+          color: rgba(226, 168, 90,0.6);
           margin-bottom: 10px;
         }
         .lp-threat-body-content {
@@ -1153,13 +1195,13 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-weight: 600;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #c44;
+          color: #ec9a8f;
           margin-bottom: 10px;
         }
         .lp-threat-pill-dot { display: none; }
         .lp-threat-problem {
-          font-size: 14px;
-          color: rgba(245,240,232,0.55);
+          font-size: 15px;
+          color: rgba(221, 230, 240,0.72);
           line-height: 1.65;
           font-style: italic;
         }
@@ -1168,20 +1210,20 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-weight: 600;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #c9a84c;
+          color: #e2a85a;
           margin-bottom: 10px;
           display: block;
         }
         .lp-threat-arrow::before { display: none; }
         .lp-threat-response {
           font-size: 14.5px;
-          color: #f5f0e8;
+          color: #eef4fb;
           line-height: 1.65;
           font-weight: 400;
         }
         .lp-threat-annex {
           font-size: 10px;
-          color: rgba(201,168,76,0.4);
+          color: rgba(226, 168, 90,0.4);
           letter-spacing: 0.07em;
           font-family: 'IBM Plex Mono', monospace;
           margin-top: 12px;
@@ -1198,17 +1240,17 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-family: 'Cormorant Garamond', serif;
           font-size: clamp(38px, 5.5vw, 76px);
           font-weight: 600;
-          color: #f5f0e8;
+          color: #eef4fb;
           line-height: 1.08;
           margin: 24px 0 48px;
           max-width: 680px;
         }
-        .lp-section-head em { font-style: italic; color: #c9a84c; }
+        .lp-section-head em { font-style: italic; color: #e2a85a; }
         .lp-diagram-wrap {
           border-radius: 16px;
           overflow: hidden;
-          border: 1px solid rgba(245,240,232,0.08);
-          background: rgba(245,240,232,0.03);
+          border: 1px solid rgba(221, 230, 240,0.08);
+          background: rgba(221, 230, 240,0.03);
         }
         .lp-diagram-hint {
           margin-top: 16px;
@@ -1216,7 +1258,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-size: 10px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: rgba(245,240,232,0.48);
+          color: rgba(221, 230, 240,0.48);
           text-align: center;
         }
 
@@ -1232,7 +1274,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-family: 'IBM Plex Mono', monospace;
           font-size: 11px; letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #c9a84c;
+          color: #e2a85a;
           margin-bottom: 24px;
           padding: 0 48px;
         }
@@ -1241,13 +1283,13 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-size: clamp(38px, 5.5vw, 76px);
           font-weight: 600;
           padding: 0 48px;
-          color: #f5f0e8;
+          color: #eef4fb;
           line-height: 1.08;
           margin: 0 0 16px;
         }
         .lp-paths-sub {
           font-size: 15px;
-          color: rgba(245,240,232,0.58);
+          color: rgba(221, 230, 240,0.58);
           margin: 0 0 48px;
           line-height: 1.6;
           padding: 0 48px;
@@ -1265,22 +1307,22 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           flex-direction: column;
           gap: 9px;
           min-height: 136px;
-          border: 1px solid rgba(245,240,232,0.09);
+          border: 1px solid rgba(221, 230, 240,0.09);
           border-radius: 10px;
-          background: rgba(245,240,232,0.025);
-          color: #f5f0e8;
+          background: rgba(221, 230, 240,0.025);
+          color: #eef4fb;
           padding: 18px;
           text-align: left;
           cursor: pointer;
           transition: border-color 0.2s, background 0.2s, transform 0.15s;
         }
         .lp-path-button:hover {
-          border-color: rgba(201,168,76,0.35);
-          background: rgba(201,168,76,0.055);
+          border-color: rgba(226, 168, 90,0.35);
+          background: rgba(226, 168, 90,0.055);
           transform: translateY(-2px);
         }
         .lp-path-button:focus-visible {
-          outline: 2px solid rgba(201,168,76,0.7);
+          outline: 2px solid rgba(226, 168, 90,0.7);
           outline-offset: 3px;
         }
         .lp-path-button-top {
@@ -1294,7 +1336,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           font-weight: 700;
         }
         .lp-path-button-time {
-          color: rgba(201,168,76,0.62);
+          color: rgba(226, 168, 90,0.62);
           font-family: 'IBM Plex Mono', monospace;
           font-size: 10px;
           letter-spacing: 0.06em;
@@ -1302,7 +1344,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         }
         .lp-path-button-desc {
           margin: 0;
-          color: rgba(245,240,232,0.62);
+          color: rgba(221, 230, 240,0.62);
           font-size: 12.5px;
           line-height: 1.55;
         }
@@ -1312,7 +1354,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           position: relative;
           width: 100%;
           height: 560px;
-          background: #0a0906;
+          background: #0e1621;
           overflow: visible;
         }
         .lp-timeline-svg {
@@ -1326,13 +1368,13 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         .lp-branch-card {
           position: absolute;
           width: 272px;
-          background: rgba(22,17,10,0.97);
-          border: 1px solid rgba(201,168,76,0.25);
+          background: rgba(22, 33, 45,0.97);
+          border: 1px solid rgba(226, 168, 90,0.25);
           border-radius: 14px;
           overflow: hidden;
           box-shadow:
             0 24px 64px rgba(0,0,0,0.7),
-            0 0 0 1px rgba(201,168,76,0.08);
+            0 0 0 1px rgba(226, 168, 90,0.08);
           pointer-events: none;
           opacity: 0;
           transform: translateY(6px);
@@ -1345,7 +1387,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         }
         .lp-branch-card-bar {
           height: 3px;
-          background: #c9a84c;
+          background: #e2a85a;
         }
         .lp-branch-card-body { padding: 16px 18px 0; }
         .lp-branch-card-header {
@@ -1356,21 +1398,21 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         }
         .lp-branch-card-title {
           font-size: 17px; font-weight: 700;
-          color: #f5f0e8;
+          color: #eef4fb;
           display: flex; align-items: center; gap: 8px;
         }
         .lp-branch-card-time {
           font-family: 'IBM Plex Mono', monospace;
           font-size: 10px; letter-spacing: 0.06em;
-          color: rgba(201,168,76,0.6);
-          background: rgba(201,168,76,0.08);
+          color: rgba(226, 168, 90,0.6);
+          background: rgba(226, 168, 90,0.08);
           border-radius: 100px;
           padding: 3px 8px;
           white-space: nowrap;
         }
         .lp-branch-card-desc {
           font-size: 12.5px; line-height: 1.6;
-          color: rgba(245,240,232,0.5);
+          color: rgba(221, 230, 240,0.5);
           margin-bottom: 14px;
         }
         .lp-branch-card-cta {
@@ -1378,10 +1420,10 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           align-items: center;
           justify-content: space-between;
           padding: 11px 18px;
-          background: rgba(201,168,76,0.09);
+          background: rgba(226, 168, 90,0.09);
           font-size: 12px; font-weight: 600;
-          color: #c9a84c;
-          border-top: 1px solid rgba(201,168,76,0.1);
+          color: #e2a85a;
+          border-top: 1px solid rgba(226, 168, 90,0.1);
         }
 
         .lp-skip {
@@ -1390,12 +1432,12 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         .lp-skip button {
           background: none; border: none;
           font-size: 13px;
-          color: rgba(245,240,232,0.5);
+          color: rgba(221, 230, 240,0.5);
           cursor: pointer;
           letter-spacing: 0.02em;
           transition: color 0.2s;
         }
-        .lp-skip button:hover { color: rgba(245,240,232,0.72); }
+        .lp-skip button:hover { color: rgba(221, 230, 240,0.72); }
 
         /* ─── Reveal system ─── */
         .lp-reveal {
@@ -1432,7 +1474,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
         }
         @keyframes lp-gold-glow {
           0%, 100% { text-shadow: none; }
-          50%       { text-shadow: 0 0 36px rgba(201,168,76,0.5), 0 0 72px rgba(201,168,76,0.18); }
+          50%       { text-shadow: 0 0 36px rgba(226, 168, 90,0.5), 0 0 72px rgba(226, 168, 90,0.18); }
         }
         @keyframes lp-grain-drift {
           0%   { transform: translate(0,0); }
@@ -1476,7 +1518,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           .lp-threats-list { gap: 4px; margin-top: 40px; }
           .lp-threat-body-content { grid-template-columns: 1fr; gap: 16px; padding: 0 20px 24px 20px; }
           .lp-stat { padding: 28px 0; border-right: none;
-            border-bottom: 1px solid rgba(245,240,232,0.08); }
+            border-bottom: 1px solid rgba(221, 230, 240,0.08); }
           .lp-stat:nth-child(2) { padding: 28px 0; }
           .lp-stat:last-child { padding-left: 0; border-bottom: none; }
           .lp-stat-num { font-size: 72px; }
@@ -1532,7 +1574,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
 
       {/* Floating nav */}
       <nav className={`lp-nav${navVisible ? ' lp-nav-visible' : ''}`}>
-        <span className="lp-nav-logo" aria-hidden="true"><Logo size={20} color="rgba(245,240,232,0.5)" /></span>
+        <span className="lp-nav-logo" aria-hidden="true"><Logo size={20} color="rgba(221, 230, 240,0.5)" /></span>
         <span className="lp-nav-sep" aria-hidden="true" />
         <button className="lp-nav-ghost" onClick={scrollToPaths}>Reading Paths</button>
         <button className="lp-nav-btn" onClick={() => handleEnter()}>Browse Library</button>
@@ -1562,7 +1604,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           transform: `translateY(${heroParallax * -0.12}px)`,
           position: 'relative', zIndex: 1,
         }}>
-          <Logo size={110} color="#b8b4ae" gold="#c9a84c" />
+          <Logo size={110} color="#c3ccd6" gold="#e2a85a" />
         </div>
 
         <p className="lp-eyebrow" style={{ position: 'relative', zIndex: 1 }}>Open Constitutional Design</p>
@@ -1588,14 +1630,14 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
 
         <p className="lp-subhead" style={{ position: 'relative', zIndex: 1 }}>
           The Humane Constitution is an open-source design for a society where
-          basic needs, markets, and public power are separated so wealth cannot
-          quietly become control.
+          basic needs, money, and political power are kept apart — so being rich
+          can't quietly turn into power over other people.
         </p>
 
         <div className="lp-hero-cta" style={{ position: 'relative', zIndex: 1 }}>
           <button className="lp-btn-primary" onClick={() => handleEnter('first-time')}>Start First Read</button>
           <button className="lp-btn-ghost" onClick={() => handleEnter('skeptic')}>Start with Objections</button>
-          <button className="lp-btn-ghost" onClick={() => handleEnter()}>Browse Full Library</button>
+          <button className="lp-btn-text" onClick={() => handleEnter()}>Browse the full library</button>
         </div>
 
         <div className="lp-trust-block" aria-label="Project status boundaries">
@@ -1620,6 +1662,9 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           <button type="button" onClick={() => handleEnter('skeptic')}>
             Review evidence path
           </button>
+          <button type="button" onClick={() => handleEnter('skeptic')}>
+            Think this has been tried before? →
+          </button>
         </div>
 
         <div className="lp-scroll-hint" aria-hidden="true">
@@ -1642,53 +1687,56 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
 
       {/* ── THREAT → PATCH ── */}
       <div className="lp-threats-section">
-        <p className="lp-reveal lp-eyebrow" style={{ color: '#c9a84c' }}>Designed against failure</p>
+        <p className="lp-reveal lp-eyebrow" style={{ color: '#e2a85a' }}>Designed against failure</p>
         <h2 className="lp-section-head lp-reveal" style={{ fontSize: 'clamp(32px, 4vw, 58px)', marginBottom: 0 }}>
           Real problems.<br /><em>Constitutional responses.</em>
         </h2>
+        <p className="lp-threats-note lp-reveal">
+          Each answer below describes how the design is meant to work — a working draft, not a system that runs yet.
+        </p>
         <div className="lp-threats-list">
           {[
             {
               num: '01',
               headline: 'Rent that prices you out',
               problem: 'Your landlord raises rent 30% because the neighborhood got popular. You can\'t afford to stay and can\'t afford to move somewhere better.',
-              response: 'Housing is part of Essential Access — unconditional and non-convertible. No entity, public or private, may use shelter as financial leverage.',
+              response: 'Housing is part of the basic needs floor: you can\'t lose it, and you can\'t trade it away. No one — landlord or government — can use your home as a bargaining chip.',
               annex: 'INVARIANTS · INV-001',
             },
             {
               num: '02',
               headline: 'One bill wipes you out',
               problem: 'A single hospital visit — yours, or your kid\'s — erases years of savings and follows you as debt for decades.',
-              response: 'Healthcare sits beneath the market. It cannot be priced, gated, or revoked for inability to pay. The floor is constitutionally fixed, not budget-dependent.',
+              response: 'Healthcare sits below the market. It can\'t be priced, blocked, or taken away because you can\'t pay — a fixed rule, not something a budget can cut.',
               annex: 'INVARIANTS · INV-001',
             },
             {
               num: '03',
               headline: 'Your vote vs. their donation',
               problem: 'A corporation\'s annual lobbying budget exceeds your lifetime earnings. Elected officials return their calls first.',
-              response: 'Voice is a separate instrument that cannot be purchased. It cannot be accumulated without contribution and decays over time to prevent permanent influence.',
+              response: 'Voice is a separate tool for setting public priorities. You can\'t buy it, you can\'t stockpile it, and it fades over time — so no one holds power forever.',
               annex: 'ANNEX Z · §Z2',
             },
             {
               num: '04',
               headline: 'Born rich, stay rich',
               problem: 'Someone who inherited a portfolio at 25 has more security at 50 than someone who worked two jobs and raised a family.',
-              response: 'Wealth that isn\'t continuously earned through contribution decays toward a participation floor. Passive accumulation across generations carries a structural cost.',
-              annex: 'ANNEX AZ · §AZ3',
+              response: 'Wealth you don\'t keep earning slowly shrinks toward a baseline. Money that just piles up and passes down through families carries a holding cost.',
+              annex: 'ANNEX D · §D1',
             },
             {
               num: '05',
               headline: 'Lose your job, lose everything',
               problem: 'Employment is the only thread connecting you to healthcare, housing stability, and financial survival. Cut the thread and everything falls.',
-              response: 'Essential Access is decoupled from employment. Food, shelter, healthcare, and a basic income floor exist outside the labor market — not as charity, but as constitutional right.',
-              annex: 'ANNEX AC · §AC2',
+              response: 'The basic needs floor isn\'t tied to your job. Food, shelter, healthcare, and a basic income exist outside work — not as charity, but as a right.',
+              annex: 'INVARIANTS · INV-001',
             },
             {
               num: '06',
               headline: 'Emergency powers that never end',
               problem: 'A crisis justifies new government powers. The crisis passes. The powers don\'t.',
-              response: 'Emergency provisions carry mandatory unwind clauses. They cannot self-extend, cannot waive other protections, and require oracle-verified conditions to stay active.',
-              annex: 'ANNEX AC · §AC4',
+              response: 'Emergency powers have to switch off. They can\'t extend themselves, can\'t suspend other protections, and only stay in force while independent monitors confirm the emergency is real.',
+              annex: 'ANNEX AC · §AC1',
             },
           ].map((item, i) => {
             const isOpen = openThreatIdx === i
@@ -1728,7 +1776,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
                         <p className="lp-threat-problem">"{item.problem}"</p>
                       </div>
                       <div>
-                        <p className="lp-threat-body-label">Constitutional response</p>
+                        <p className="lp-threat-body-label">How the design answers this</p>
                         <p className="lp-threat-response">{item.response}</p>
                         <span className="lp-threat-annex">{item.annex}</span>
                       </div>
@@ -1743,15 +1791,15 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
 
       {/* ── INSTRUMENTS DIAGRAM ── */}
       <div className="lp-instruments-section">
-        <p className="lp-reveal lp-eyebrow" style={{ color: '#c9a84c' }}>The Design</p>
+        <p className="lp-reveal lp-eyebrow" style={{ color: '#e2a85a' }}>The Design</p>
         <h2 className="lp-section-head lp-reveal">
-          Five interlocking instruments.<br />
-          <em>One coherent system.</em>
+          Five tools that work together.<br />
+          <em>One system.</em>
         </h2>
         <div className="lp-reveal lp-diagram-wrap">
           <V001_FiveToolSeparation onInternalLink={() => {}} />
         </div>
-        <p className="lp-diagram-hint">Click any instrument to expand its definition</p>
+        <p className="lp-diagram-hint">Tap any tool to see what it does</p>
       </div>
 
       {/* ── TRANSITION + PATHS ── */}
@@ -1760,7 +1808,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
       <div className="lp-reveal lp-paths-section">
         <p className="lp-paths-eyebrow">Reading Paths</p>
         <h2 className="lp-paths-head">Choose your path.</h2>
-        <p className="lp-paths-sub">Nine entry points into the corpus. Preview a branch or choose a path to begin.</p>
+        <p className="lp-paths-sub">Nine ways in. Hover a branch to preview it, or pick a path to start reading.</p>
         <TimelinePanel paths={PATHS} onSelect={handleEnter} />
         <div className="lp-path-list" role="list" aria-label="Reading path choices">
           {PATHS.map((path) => (
