@@ -786,7 +786,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 0 48px;
+          padding: 88px 48px 56px;
           text-align: center;
           position: relative;
           overflow: hidden;
@@ -1016,9 +1016,7 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
           color: rgba(221, 230, 240,0.9);
         }
         .lp-scroll-hint {
-          position: absolute;
-          bottom: 36px; left: 50%;
-          transform: translateX(-50%);
+          margin-top: 44px;
           display: flex; flex-direction: column;
           align-items: center; gap: 8px;
           animation: lp-fade-up 0.8s ease 2.2s both;
