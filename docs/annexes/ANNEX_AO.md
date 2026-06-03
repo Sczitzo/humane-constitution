@@ -12,7 +12,7 @@
 > **Provenance:** Implements [P-021 — Register Disclosure Protocol] · Addresses threat-register operational security and T-007 consistency risk · Status: **PROPOSED**
 
 **Governing document for Threat Register bifurcation**
-**Status: PROPOSED (P-021)**
+**Status: Active — unproven (Axis 1, per Patch Log) · Pre-ratification (Axis 2) — P-021**
 
 ---
 
@@ -199,4 +199,4 @@ If other documents are identified as requiring bifurcation under this logic, a n
 
 ---
 
-*This document is Annex AO of the Humane Constitution. It governs only as a PROPOSED patch until P-021 reaches ACTIVE status through the Formal Acceptance Protocol.*
+*This document is Annex AO of the Humane Constitution. On Axis 2 (founding-ratification) it remains Pre-ratification until P-021 is FAP-ratified at a founding; its Axis-1 design status is per the Patch Log.*

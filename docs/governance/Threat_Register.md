@@ -225,7 +225,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Mechanism:** mixed-cadence oracle architecture creates exploitable measurement speed hierarchy. Two failure modes: lag-induced over-issuance (Essential Access issued into depleting pool) and lag-induced false restriction (Shared Storehouse maintained after recovery). First-responder authority undefined for inter-cycle shocks.
 - **Impact:** over-issuance into real scarcity; prolonged unjustified restriction after recovery; black-market opportunity windows during cadence exploit gaps.
 - **Detection:** forecast-vs-actual variance, Essential Access redemption velocity spikes, cross-category co-movement signals, fill-rate tracking, cross-publisher divergence.
-- **Mitigation direction:** P-006 PROPOSED: sentinel indicator mandate (max lag by volatility class); Pre-Confirmation Response Protocol (PCRP) defining first-responder authority; Shared Storehouse unwind symmetry / recovery fast-track; cadence-adjusted U8 bridge (48h high-volatility). [Ambitious] Essential Access redemption velocity as native sentinel; cross-category demand surge detector. See Patch Log P-006 and Annex AC2.
+- **Mitigation direction:** P-006 (status per Patch Log): sentinel indicator mandate (max lag by volatility class); Pre-Confirmation Response Protocol (PCRP) defining first-responder authority; Shared Storehouse unwind symmetry / recovery fast-track; cadence-adjusted U8 bridge (48h high-volatility). [Ambitious] Essential Access redemption velocity as native sentinel; cross-category demand surge detector. See Patch Log P-006 and Annex AC2.
 - **Open problem:** PCRP scope must be a protected term under P-004. Inter-cycle gap compressed not eliminated. False PCRP activation risk requires false-trigger tracking.
 - **Compound linkages:** T-006 × T-001 (cadence windows = black market windows); T-006 × T-005 (PCRP timing sync); T-006 × T-008 (PCRP REB authority = elite formation risk).
 
@@ -304,7 +304,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Mechanism:** hostile framing fixes public perception before the system can demonstrate real-world outcomes. Six vectors: social credit framing (Voice and Service Record mischaracterized), elite capture narrative (T-008 provides factual hook), complexity-as-illegitimacy (large constitutional corpus), failure amplification (any operational event), technocracy framing (expertise requirements), and 'untested' (true pre-launch).
 - **Impact:** legitimacy collapse prevents deployment or continuation even if the system is technically functioning correctly. Narrative failure is not recoverable through technical means — it requires sustained communication effort over months to years.
 - **Detection:** D=2 (very low pre-launch). Post-launch: media sentiment monitoring, public understanding accuracy surveys (P-011 narrative health dashboard), hostile framing prevalence index. Narrative attacks detectable only after established.
-- **Mitigation direction:** P-011 PROPOSED: RPCP (4-hour public communication SLA); pre-committed failure communication doctrine; Citizen-Facing Rights Layer; adversarial narrative simulation; hostile frame pre-emption registry; [ambitious] narrative health dashboard and pre-launch narrative audit. See Patch Log P-011 and Annex AD.
+- **Mitigation direction:** P-011 (status per Patch Log): RPCP (4-hour public communication SLA); pre-committed failure communication doctrine; Citizen-Facing Rights Layer; adversarial narrative simulation; hostile frame pre-emption registry; [ambitious] narrative health dashboard and pre-launch narrative audit. See Patch Log P-011 and Annex AD.
 - **Open problem:** Pre-launch framing window (18+ months before launch) cannot be closed by protocol — only by early deployment of CFRL and pre-commitment doctrine. Narrative defense is bounded by actual performance: no communication architecture survives sustained operational failure.
 - **Compound linkages:** T-011 × T-008 (elite formation provides factual basis for 'captured by professionals'; P-008 dashboard is the counter-narrative evidence base — P-008 is prerequisite for T-011 narrative defense). T-011 × T-006 (PCRP false triggers are predictable high-visibility events). T-011 × T-005 (governance paralysis generates narrative events).
 
@@ -451,7 +451,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-019 — Demand-Context Flag Suppression Attack
 
-- **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md) · Status: **PROPOSED**
+- **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
 - **Layer:** PCRP / enforcement / measurement
 - **Severity:** High
 - **Status:** Active — unproven (P-015 / Annex AP; criteria in Annex AI §4.12)
@@ -532,7 +532,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-023 — Pilot External Validity Collapse
 
-- **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · [ANNEX_AN.md](../annexes/ANNEX_AN.md) · Status: **PROPOSED**
+- **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · [ANNEX_AN.md](../annexes/ANNEX_AN.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
 - **Layer:** Evidence base / scale-up decision-making
 - **Severity:** Med-High
 - **Status:** Active — unproven (P-019 / Annex AN)
@@ -544,7 +544,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Mechanism:** T-016 (FAP Capture) addresses evidence farming — deliberately piloting in favorable regions. T-023 is distinct: an *honest* pilot that succeeds, is genuinely representative, and produces valid evidence — but in a pre-crisis period. The evidence base does not include: (a) economic shock or recession; (b) compound supply disruption across multiple categories simultaneously; (c) an organized political opposition campaign against the system; (d) a hostile successor government transition; (e) a technology failure in an oracle or identity system at scale. When the system is deployed at scale and the first real compound crisis hits, the pilot evidence does not apply. This is the fundamental problem of external validity in social systems: controlled conditions do not generalize to adversarial conditions.
 - **Impact:** Scale-up proceeds based on Year 1 smooth-operation data. Year 3 encounters the first genuine compound crisis. The system's untested responses fail at scale in ways the pilot never revealed. The narrative attack (N-008: "too complex to work") is now supported by evidence.
 - **Detection:** D=4 (relatively detectable — the absence of adversarial conditions in the pilot is visible in the evidence record). The problem is that the absence of adverse conditions looks like evidence of robustness, not evidence of an evidence gap.
-- **Mitigation direction:** P-019 PROPOSED: (1) Stress-condition pilot gate — scale-up approval requires the pilot evidence record to include at least one of each: an economic stress event, a compound supply disruption, and a formal political opposition campaign, or explicit documentation of why each condition could not be tested and a designated substitute evidence source. (2) Red-team challenge window — before any scale-up vote, a mandatory 30-day adversarial challenge window allows independent reviewers to contest the external validity of the evidence base. (3) Crisis simulation requirement — the Annual Compound Simulation (this document) must include at least one compound-crisis scenario not previously simulated before each scale-up gate. See Annex AN.
+- **Mitigation direction:** P-019 (status per Patch Log): (1) Stress-condition pilot gate — scale-up approval requires the pilot evidence record to include at least one of each: an economic stress event, a compound supply disruption, and a formal political opposition campaign, or explicit documentation of why each condition could not be tested and a designated substitute evidence source. (2) Red-team challenge window — before any scale-up vote, a mandatory 30-day adversarial challenge window allows independent reviewers to contest the external validity of the evidence base. (3) Crisis simulation requirement — the Annual Compound Simulation (this document) must include at least one compound-crisis scenario not previously simulated before each scale-up gate. See Annex AN.
 - **Open problem:** It is not possible to pilot a hostile successor government or a large-scale economic recession deliberately. Some external validity gaps cannot be filled; they can only be acknowledged and planned for explicitly.
 - **Compound linkages:** T-023 × T-016 (evidence farming produces favorable pilot data; T-023 is the honest-but-insufficient version of the same failure). T-023 × T-011 (scale-up failure after smooth pilot is a maximum-impact narrative attack). T-023 × T-022 (electoral cycle hostility is one of the hardest conditions to include in a controlled pilot).
 
@@ -577,7 +577,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-025 — Demurrage Sector-Capture via Investment Channel
 
-- **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **PROPOSED**
+- **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
 - **Layer:** Flow monetary architecture / demurrage / productive investment
 - **Severity:** High
 - **Status:** Active — unproven — P-023 (contract-commitment architecture, zero exemptions); no field evidence yet

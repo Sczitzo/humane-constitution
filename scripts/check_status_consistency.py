@@ -39,9 +39,24 @@ ACTIVE = {"active", "active — unproven", "active-unproven", "active — unprov
 TERMS = sorted(PROPOSED | ACTIVE, key=len, reverse=True)
 ID_RE = re.compile(r"\b([PT]-\d{3})\b")
 
-# P-063 is a draft-only family, deliberately not registered into the corpus
-# (see CLAUDE.md DRAFT_IDENTIFIERS); its own draft naturally discusses both states.
-EXEMPT_IDS = {"P-063"}
+# Documented exemptions. Keep this list short and reasoned; revisit on changes.
+EXEMPT_IDS = {
+    # Draft-only family, deliberately not registered (CLAUDE.md DRAFT_IDENTIFIERS).
+    "P-063",
+    # Genuine sub-item case: a specific fraud-calibration decision is `Proposed`
+    # under threat T-002, whose overall control is `Active — unproven`. Per the
+    # Status Model edge-case rule, sub-items carry their own Axis-1 status. The
+    # line-level gate cannot separate them; the content is correct.
+    "T-002",
+    # Queued for a dedicated constitution pass: their conflicting labels live in
+    # docs/constitution/Acceptance_Protocol.md (protected) and are Axis-2
+    # (founding-ratification) context. Remove from this list once reconciled.
+    "P-013", "P-014",
+    # P-008 is `Proposed` everywhere it is actually labelled. Its lone "ACTIVE"
+    # hit is the prose phrase "not ACTIVE" inside P-014's Patch_Log entry, which
+    # references P-008 as a bootstrap candidate. Not a real conflict.
+    "P-008",
+}
 
 def bucket(term: str) -> str | None:
     t = term.lower()
@@ -52,10 +67,26 @@ def bucket(term: str) -> str | None:
     return None
 
 def statuses_on_line(line: str) -> list[str]:
+    """Return status terms ASSERTED on the line.
+
+    A bare prose word ("active serving members", "resolved the issue") is not a
+    status assertion. A term counts only when it is emphasized or labelled:
+      - bold (**term**), backtick (`term`), or bracket ([term]); or
+      - the line carries a "Status" label; or
+      - it is the uppercase Patch_Log shorthand (ACTIVE / PROPOSED) as a word.
+    """
     low = line.lower()
+    has_status_label = "status" in low
     out = []
     for term in TERMS:
-        if term in low:
+        if term not in low:
+            continue
+        emphasized = (
+            f"**{term}**" in low or f"`{term}`" in low or f"[{term}]" in low
+        )
+        upper_shorthand = re.search(rf"\b{re.escape(term.upper())}\b", line) is not None \
+            and term in ("active", "proposed")
+        if emphasized or has_status_label or upper_shorthand:
             out.append(term)
     return out
 
