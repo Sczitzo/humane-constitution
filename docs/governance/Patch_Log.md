@@ -1172,7 +1172,7 @@ The external-trade and anti-rent architecture named supply-chain dependency, dem
 **Status:** ACTIVE | **Priority:** Critical
 **Date:** 2026-05-04
 
-**Constitutional text:** [ANNEX_AT.md § AT2.4 and AT6.5](../annexes/ANNEX_AT.md); [Parameter_Calibration_Register.md § Seed Register](./Parameter_Calibration_Register.md); [Essential_Sector_Refusal_Test_Package.md](./Essential_Sector_Refusal_Test_Package.md); [06_big_companies.md](../public/06_big_companies.md)
+**Constitutional text:** [ANNEX_AT.md § AT2.4 and AT6.5](../annexes/ANNEX_AT.md); [Parameter_Calibration_Register.md § Seed Register](./Parameter_Calibration_Register.md); [Essential_Sector_Refusal_Test_Package.md](./Essential_Sector_Refusal_Test_Package.md); [05_life_and_rights.md](../public/05_life_and_rights.md)
 
 **Problem diagnosed:**
 P-047 defined the essential-sector conglomerate transition doctrine, but the project still needed operational drills, parameter rows, tighter Annex AT triggers, public-facing explanation, and a broader evidence pass for medicine patents, shortages, grid bottlenecks, fossil transition risk, and utility regulation.

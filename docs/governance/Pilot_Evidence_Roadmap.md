@@ -124,7 +124,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Sample size:** Minimum 60 participants, stratified across: (a) education levels (no post-secondary / some post-secondary / university graduate), (b) political orientations (self-identified left / center / right), and (c) digital access levels (high / medium / low). No single stratum may constitute more than 40% of the sample.
 
-**Test design:** Each participant reads the public-facing documents (01_overview.md, 02_faq.md, 03_readiness.md, 05_rights_layer.md, 06_big_companies.md) with no coaching. They then answer 10 questions covering:
+**Test design:** Each participant reads the public-facing documents (00_start_here.md, 02_faq.md, 04_white_paper.md, 05_life_and_rights.md) with no coaching. They then answer 10 questions covering:
 
 - 3 questions distinguishing moral commitments from designed mechanisms ("is this a proven outcome or a design goal?")
 - 3 questions distinguishing DESIGNED status from EVIDENCE-BACKED status
