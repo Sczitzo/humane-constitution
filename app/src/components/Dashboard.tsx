@@ -462,12 +462,12 @@ function FootnoteRef({ id, keyPrefix }: { id: string; keyPrefix: string }) {
     }
   }
 
-  const cardBg     = isDark ? '#232018' : '#ffffff'
-  const cardBorder = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+  const cardBg     = isDark ? '#16212d' : '#ffffff'
+  const cardBorder = isDark ? 'rgba(220,230,240,0.14)' : 'rgba(0,0,0,0.1)'
   const cardShadow = isDark ? '0 4px 24px rgba(0,0,0,0.55)' : '0 4px 20px rgba(0,0,0,0.14)'
-  const cardLabel  = isDark ? '#a09680' : '#6b7280'
-  const cardBody   = isDark ? '#cfc7b8' : '#374151'
-  const cardHint   = isDark ? '#5a5246' : '#9ca3af'
+  const cardLabel  = isDark ? '#8595a4' : '#6b7280'
+  const cardBody   = isDark ? '#cdd7e2' : '#374151'
+  const cardHint   = isDark ? '#5d6b7a' : '#9ca3af'
 
   const card = pos && typeof document !== 'undefined'
     ? createPortal(
