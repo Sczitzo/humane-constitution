@@ -2,13 +2,14 @@
 
 **Trigger:** Any proposed change to a document in `docs/constitution/`.
 
-## Protected files
+## Files requiring this review
 
-Do not modify these without explicit user instruction:
+These files are always in scope for audit and improvement — never skip them. When you change one, the change **must** apply the Christ-centered ethical review below. This is a required process, not a barrier to editing:
 
 - `docs/constitution/Humane_Constitution.md`
 - `docs/constitution/Acceptance_Protocol.md`
 - `docs/constitution/INVARIANTS.md`
+- `docs/constitution/SPECIFICATIONS.md`
 
 ## Christ-centered ethical review
 
