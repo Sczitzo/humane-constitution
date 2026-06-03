@@ -30,7 +30,7 @@ No. Welfare is usually a program that can be changed, cut, or used as leverage.
 
 Essential Access is meant to be a right. It is the basic floor below which the system cannot push a person.
 
-Essential Access allocations expire every 72 hours — they are deliberately not saveable. This prevents them from being stockpiled, traded, or used as collateral. They are a daily needs floor, not a savings instrument.
+Essential Access allocations expire every 72 hours — they are deliberately not saveable. This prevents them from being stockpiled, traded, or used as collateral. They are a daily needs floor, not a savings instrument. (The specific numbers in this FAQ — the 72-hour window, the 7-member panel size, and similar figures — are illustrative design parameters chosen for the model, not measured results; they are subject to calibration. See the [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md).)
 
 ## 5. Is this communism or socialism?
 
