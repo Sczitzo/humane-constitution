@@ -145,7 +145,7 @@ export function RefChip({ refKey, display, fallback }: { refKey: string; display
     onNavigate(entry!.docId, entry!.slug)
   }
 
-  const tipBg     = isDark ? '#232018' : '#ffffff'
+  const tipBg     = isDark ? '#16212d' : '#ffffff'
   const tipBorder = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
   const tipShadow = isDark ? '0 4px 24px rgba(0,0,0,0.55)' : '0 4px 20px rgba(0,0,0,0.14)'
   const tipLabel  = isDark ? '#a09680' : '#6b7280'

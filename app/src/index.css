@@ -3,25 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --page-bg: #f3ede4;
-  --paper-strong: #fdf9f2;
-  --paper-warm: #f8f1e5;
-  --line: rgba(60, 54, 46, 0.13);
-  --line-strong: rgba(60, 54, 46, 0.22);
-  --chrome-line: rgba(60, 54, 46, 0.1);
-  --ink: #2a2722;
-  --ink-strong: #161a17;
-  --ink-soft: #5e584f;
-  --ink-faint: #7a7268;
-  --forest: #272d2a;
-  --forest-soft: #3d453f;
-  --forest-text: #f2ebdf;
-  --forest-text-muted: #b3aa9c;
-  --accent: #9f6c31;
-  --accent-soft: #e6cfac;
-  --accent-deep: #68461d;
-  --sage: #6f7c67;
-  --sage-deep: #53604d;
+  /* Dawn palette — calm blue-slate base + warm dawn-gold accent (hope + peace) */
+  --page-bg: #eaf1f8;
+  --paper-strong: #fbfdff;
+  --paper-warm: #f1f6fc;
+  --line: rgba(31, 42, 55, 0.12);
+  --line-strong: rgba(31, 42, 55, 0.20);
+  --chrome-line: rgba(31, 42, 55, 0.10);
+  --ink: #1f2a37;
+  --ink-strong: #111a24;
+  --ink-soft: #4c5866;
+  --ink-faint: #76828f;
+  --forest: #1c2a36;
+  --forest-soft: #2c3e4b;
+  --forest-text: #eaf1f8;
+  --forest-text-muted: #9fb1c0;
+  --accent: #c8893f;
+  --accent-soft: #efdcc1;
+  --accent-deep: #8a5a22;
+  --sage: #3f8493;
+  --sage-deep: #2f6f7e;
+  --heading: #2f6f7e;
   --font-ui: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-serif: 'Inter', 'Aptos', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
@@ -32,25 +34,27 @@
 }
 
 [data-theme="dark"] {
-  --page-bg: #111009;
-  --paper-strong: #1a1714;
-  --paper-warm: #1f1b17;
-  --line: rgba(255, 248, 235, 0.1);
-  --line-strong: rgba(255, 248, 235, 0.18);
-  --chrome-line: rgba(255, 248, 235, 0.08);
-  --ink: #e4ddd2;
-  --ink-strong: #f0ece4;
-  --ink-soft: #9e978d;
-  --ink-faint: #706a62;
-  --forest: #1a1f1c;
-  --forest-soft: #252b27;
-  --forest-text: #e8e0d3;
-  --forest-text-muted: #8a8278;
-  --accent: #c48940;
-  --accent-soft: #4a3318;
-  --accent-deep: #e0a85a;
-  --sage: #7a8e72;
-  --sage-deep: #6a7e62;
+  /* Dawn palette (dark) — deep navy-slate night + warm dawn-gold accent */
+  --page-bg: #0e1621;
+  --paper-strong: #16212d;
+  --paper-warm: #1a2734;
+  --line: rgba(220, 230, 240, 0.10);
+  --line-strong: rgba(220, 230, 240, 0.16);
+  --chrome-line: rgba(220, 230, 240, 0.08);
+  --ink: #dde6f0;
+  --ink-strong: #eef4fb;
+  --ink-soft: #9aa7b5;
+  --ink-faint: #6b7886;
+  --forest: #0b121b;
+  --forest-soft: #18242f;
+  --forest-text: #e6eef7;
+  --forest-text-muted: #8595a4;
+  --accent: #e2a85a;
+  --accent-soft: #43341d;
+  --accent-deep: #e8b468;
+  --sage: #6fb5c2;
+  --sage-deep: #5fa3b0;
+  --heading: #6fb5c2;
 }
 
 @layer base {
@@ -195,7 +199,7 @@
 .reader-h2,
 .reader-h3,
 .reader-h4 {
-  color: var(--ink-strong);
+  color: var(--heading);
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.012em;
@@ -206,6 +210,7 @@
   margin-top: 2.6rem;
   font-size: 2.2rem;
   letter-spacing: -0.02em;
+  color: var(--ink-strong);
 }
 
 .reader-h2 {
@@ -224,7 +229,7 @@
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   font-size: 1.06rem;
-  color: var(--ink-strong);
+  color: var(--heading);
   padding-left: 0.9rem;
   border-left: 3px solid var(--accent-soft);
 }
@@ -255,9 +260,13 @@
   margin-top: 2rem;
   margin-bottom: -0.4rem;
   font-size: 1.04em;
-  color: var(--ink-strong);
+  color: var(--heading);
   padding-left: 0.9rem;
   border-left: 3px solid var(--accent-soft);
+}
+
+.reader-prose p:has(> strong:only-child) strong {
+  color: var(--heading);
 }
 
 [data-theme="dark"] .reader-prose p:has(> strong:only-child) {
