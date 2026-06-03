@@ -373,3 +373,72 @@ The point to sit with: the experiment was not ended because it failed. It was en
 [^c6-11]: [UNVERIFIED — panel check] Nixon ended dollar–gold convertibility unilaterally in 1971, from project spec Chapter 6.
 [^c6-12]: [UNVERIFIED — panel check] US national debt growing from ~$400 billion to over $33 trillion, plus repeated financial crises and financial-sector growth, from project spec Chapter 6.
 [^c6-13]: [UNVERIFIED — panel check] Berkshares launched 2006 in the Berkshire region, ~400 local businesses; project spec Chapter 6 states ~400, while an earlier passage references "approximately 400 local businesses." Figure taken from project spec Chapter 6.
+
+## Chapter 7 — When the moral foundation holds, and when it breaks
+
+The first six chapters show the same failure modes repeating across different centuries, cultures, and systems of government. One thing tends to track with how long an institution stays healthy: whether its leaders are held to a moral standard that sits above their own interest and above their faction's interest. When that standard is strong and applied evenly, institutions tend to correct back toward service. When it weakens or gets captured, institutions drift into the failures described in Chapters 1 through 6.
+
+This is an observation about how institutions behave. It is not a claim that any religion is true, and it is not a claim that God endorses any system of government. The pattern shows up across civilizations that never met each other. That is what makes it worth noticing.
+
+### Anchor case: The American founding through the present
+
+The United States became a dominant world power within a single lifetime. That is rare enough to need an explanation.
+
+The founders leaned on Christian moral language: covenant, accountability before God, dignity that comes from the Creator rather than the state, and a view of human nature as flawed enough to require hard checks on power. The line "endowed by their Creator" in the Declaration of Independence is doing structural work. It says rights come before the state and the state cannot revoke them. That made the claim harder to erase than any law could, because no legislature could vote it away.
+
+A fair skeptic raises real objections, and the record backs them up:
+
+- Article VI of the Constitution bans any religious test for federal office.[^c7-1] The legal frame was deliberately non-sectarian.
+- Many founders were Deists, not orthodox Christians. Jefferson cut the miracles out of his own Bible.
+- The same Christian culture lived alongside chattel slavery, the removal and killing of indigenous peoples, and the legal subordination of women for nearly a century.
+
+These objections are correct. They do not break the pattern. They show how it works. The moral standard acted as a corrective force when it was applied to everyone, including the powerful. Abolition was led by Christians and argued from Scripture. Frederick Douglass's sharpest speeches were biblical attacks on what American Christianity refused to practice. A century later, the Civil Rights Movement was led by pastors, organized in churches, and framed as a Christian obligation. When the standard was held to its own terms, it produced correction.
+
+When the standard was applied selectively — exempting slaveholders, exempting landowners, exempting whoever held political favor — it did something worse than nothing. It gave injustice a clean conscience.
+
+So the pattern is not "Christianity produces good outcomes." It is narrower and more useful than that: moral accountability applied consistently produces corrective pressure. Applied selectively, it produces the worst result of all, which is injustice with a clear conscience.
+
+One marker is often cited here, and it needs care. Prayer was removed from US public schools in 1962 and 1963.[^c7-2] Over the six decades since, the country has seen rising distrust of institutions, family breakdown, an opioid crisis, deep political division, and a loneliness epidemic. It is tempting to draw a straight causal line. The honest framing is that this is a correlation, not a proven cause. The school-prayer rulings were more plausibly a marker of a shift already underway — a move from an assumed shared moral standard toward procedural pluralism — than the engine of it. The direction of the data is not really in dispute. The cause is, and anyone claiming certainty about the cause is overreaching.
+
+### Brief cases
+
+- **The Byzantine Empire (330–1453 AD)** ran for about 1,100 years, the longest-lived empire in Western history.[^c7-3] An Orthodox Christian moral frame held it together. Emperors were crowned in the Hagia Sophia, and their authority was understood as delegated from God and therefore conditional on how they used it. Corruption was real and Byzantine politics were famously tangled, but the frame gave a correction standard that purely secular systems lacked. The collapse came when outside military pressure met internal religious and political fracture, and the frame could no longer hold the pieces together. It did not fall from within while the frame was working.
+
+- **The fall of Rome** was forecast by Polybius around 150 BC, while Rome was still strong.[^c7-4] He described a cycle of decline and predicted Rome would follow it. He watched the ruling class trade civic virtue — service to the republic as a moral duty — for personal ambition and private wealth. He was right. The Republic fell roughly a century later. The Western Empire held on another five hundred years, but the virtue that built Rome was gone long before the armies stopped winning. Moral collapse ran ahead of institutional collapse by generations.
+
+- **Nordic social contracts** in Denmark, Sweden, and Norway built some of the most equal, high-trust societies of the 20th century. The base was Lutheran moral culture: community obligation, work as service, equality before God carried into equality before the law, leaders answerable to the community rather than to wealth. These societies now show strain as the shared frame that produced the underlying trust is no longer held by everyone in the population. The systems persist. The trust that once made them run on their own is harder to measure now.
+
+- **Singapore** under Lee Kuan Yew used a Confucian moral frame as a governance backbone: community over individual, duty before rights, leaders judged on outcomes.[^c7-5] It produced one of the fastest development jumps on record, from a poor port city to a first-world economy in a single generation. It now shows strain as later generations reject the frame's limits on individual expression without putting a replacement accountability standard in its place.
+
+- **Rwanda** after the 1994 genocide used the gacaca courts, where Christian forgiveness became an actual policy tool rather than a metaphor.[^c7-6] Perpetrators confessed specific acts. Victims chose whether to forgive. Communities helped decide truth and restoration. The process was painful and imperfect, and it could not touch crimes by the ruling party — those went to an international tribunal. But for community-level repair, it reached a scale and speed no ordinary court could have managed.
+
+### When the moral framework itself becomes the captured power
+
+The Inquisition, the Crusades, the prosperity gospel, and the institutional cover-up of clergy sexual abuse are not exceptions to set aside. They are the same failure mode as Chapters 1 through 6: an institution using moral language as cover for its own interest and power.
+
+The pattern holds cleanly. The Christian moral frame worked as a corrective when it stayed externally accountable — when prophets could confront kings, when congregations could remove pastors, when the institution was genuinely under the standard it claimed to carry. It turned destructive when the institution claiming to speak for the standard made itself exempt from it.
+
+This is not a special flaw of Christianity. It is what any framework does, religious or secular, once it captures the very accountability mechanism it was supposed to answer to. The Church during the Inquisition, the party controlling food in a planned economy, the regulator staffed by the industry it regulates — the shape of the failure is identical. The framework, whatever it is, has to be applied to itself. When it is not, it produces the worst version of the thing it claims to oppose.
+
+> **What to watch for**
+> - Leaders using moral language to exempt themselves from the standards they apply to everyone else.
+> - The body that is supposed to hold an institution accountable being controlled by that same institution.
+> - Civic language drained of civic obligation, and shared standards replaced by competing claims with no common reference point.
+
+*Durable societies across history share one feature that secular proceduralism has not managed to replicate: a moral framework that places leaders under accountability to something beyond their own interest — and applies that standard to the institution holding the framework, not only to its subjects.*
+
+**Where this project responds:** The Christ-Centered Evaluation is the project's standing moral-accountability layer, and it is deliberately turned on the project itself rather than only on others. The Voice instrument gives bounded civic priority a structured channel so moral concern can reach decision-makers without being captured. The Service Record instrument ties eligibility for public roles to a record of service rather than to wealth or faction, which is the mechanism Polybius watched Rome lose.
+
+**Sources**
+
+[^c7-1]: US Constitution, Article VI, Clause 3: "no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States." National Archives, full text of the Constitution.
+
+[^c7-2]: [UNVERIFIED — panel check] Engel v. Vitale (1962) and Abington School District v. Schempp (1963), US Supreme Court rulings ending state-sponsored prayer and Bible reading in public schools. The link between these rulings and later social decline is presented here as correlation, not proven causation.
+
+[^c7-3]: [UNVERIFIED — panel check] Standard span of the Eastern Roman (Byzantine) Empire, 330 AD (founding of Constantinople) to 1453 AD (Ottoman conquest), commonly cited as roughly 1,100 years. General reference; exact start date conventions vary among historians.
+
+[^c7-4]: [UNVERIFIED — panel check] Polybius, "The Histories," Book VI, on the cycle of constitutions (anacyclosis) and the decline of civic virtue, written approximately 150 BC. Date and interpretation are standard but should be confirmed against a scholarly edition.
+
+[^c7-5]: [UNVERIFIED — panel check] Singapore's development from 1965 independence to first-world economy within one generation under Lee Kuan Yew; the attribution to an explicitly Confucian governance framework is interpretive and should be checked against Lee's own writings and independent scholarship.
+
+[^c7-6]: [UNVERIFIED — panel check] Rwanda's gacaca courts (operating roughly 2001–2012) processed on the order of 1 million-plus cases of genocide-related offenses at the community level; exact figures and the framing of forgiveness as policy require confirmation against official Rwandan government and academic sources.
