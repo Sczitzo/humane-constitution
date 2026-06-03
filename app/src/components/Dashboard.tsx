@@ -1,4 +1,4 @@
-import { startTransition, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, startTransition, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { StatechartDiagram } from './StatechartDiagram'
 import { DiagramRegistry } from './diagrams/index'
@@ -406,9 +406,134 @@ function renderPlainWithRefChips(text: string, query: string, keyPrefix: string,
   return result
 }
 
+// ─── Footnote / citation system ─────────────────────────────────────────────
+// Maps a footnote id (e.g. "c1-1") to its display number and reference text.
+export interface FootnoteEntry {
+  num: number
+  text: string
+}
+export const FootnoteContext = createContext<{ map: Map<string, FootnoteEntry>; isDark: boolean }>({
+  map: new Map(),
+  isDark: false,
+})
+
+// Strip light markdown (emphasis, links) so a citation makes a clean search query.
+function plainCitation(text: string): string {
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+interface FootnotePos { x: number; y: number; align: 'left' | 'right' }
+
+// A superscript citation marker. Hover shows the reference; click opens a Google
+// search of that reference in a new tab for fact-checking.
+function FootnoteRef({ id, keyPrefix }: { id: string; keyPrefix: string }) {
+  const { map, isDark } = useContext(FootnoteContext)
+  const entry = map.get(id)
+  const btnRef = useRef<HTMLButtonElement>(null)
+  const [pos, setPos] = useState<FootnotePos | null>(null)
+
+  // Unknown id: render the raw marker text so nothing silently disappears.
+  if (!entry) return <>{`[^${id}]`}</>
+
+  const CARD_W = 280
+
+  function showCard() {
+    if (!btnRef.current) return
+    const r = btnRef.current.getBoundingClientRect()
+    const spaceRight = window.innerWidth - r.left
+    const align: 'left' | 'right' = spaceRight >= CARD_W + 8 ? 'left' : 'right'
+    setPos({ x: align === 'left' ? r.left : r.right, y: r.bottom + 6, align })
+  }
+  function hideCard() { setPos(null) }
+
+  function factCheck(e: React.MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
+    hideCard()
+    const query = plainCitation(entry!.text)
+    if (typeof window !== 'undefined') {
+      window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank', 'noopener,noreferrer')
+    }
+  }
+
+  const cardBg     = isDark ? '#232018' : '#ffffff'
+  const cardBorder = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
+  const cardShadow = isDark ? '0 4px 24px rgba(0,0,0,0.55)' : '0 4px 20px rgba(0,0,0,0.14)'
+  const cardLabel  = isDark ? '#a09680' : '#6b7280'
+  const cardBody   = isDark ? '#cfc7b8' : '#374151'
+  const cardHint   = isDark ? '#5a5246' : '#9ca3af'
+
+  const card = pos && typeof document !== 'undefined'
+    ? createPortal(
+        <div
+          role="tooltip"
+          style={{
+            position: 'fixed',
+            top: pos.y,
+            left: pos.align === 'left' ? pos.x : undefined,
+            right: pos.align === 'right' ? window.innerWidth - pos.x : undefined,
+            width: CARD_W,
+            zIndex: 99999,
+            background: cardBg,
+            border: `1px solid ${cardBorder}`,
+            borderRadius: 10,
+            boxShadow: cardShadow,
+          }}
+          className="pointer-events-none text-left"
+        >
+          <span style={{
+            position: 'absolute', top: -5,
+            left: pos.align === 'left' ? 16 : undefined,
+            right: pos.align === 'right' ? 16 : undefined,
+            width: 10, height: 10,
+            background: cardBg, border: `1px solid ${cardBorder}`,
+            borderRight: 'none', borderBottom: 'none',
+            transform: 'rotate(45deg)', borderRadius: 2,
+          }} />
+          <div style={{ padding: '10px 12px' }}>
+            <div style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: cardLabel }}>
+              Reference {entry.num}
+            </div>
+            <p style={{ marginTop: 6, fontSize: 12, lineHeight: 1.5, color: cardBody }}>
+              {entry.text}
+            </p>
+            <p style={{ marginTop: 8, fontSize: 10, color: cardHint }}>Click to fact-check on Google →</p>
+          </div>
+        </div>,
+        document.body,
+      )
+    : null
+
+  return (
+    <sup className="reader-footnote-ref">
+      <button
+        ref={btnRef}
+        type="button"
+        key={`${keyPrefix}-fn-${id}`}
+        onClick={factCheck}
+        onMouseEnter={showCard}
+        onMouseLeave={hideCard}
+        onFocus={showCard}
+        onBlur={hideCard}
+        aria-label={`Citation ${entry.num}: ${plainCitation(entry.text)}. Click to fact-check on Google.`}
+        className="cursor-pointer font-semibold text-[var(--accent-deep)] transition hover:opacity-70"
+      >
+        {entry.num}
+      </button>
+      {card}
+    </sup>
+  )
+}
+
 function renderInline(text: string, keyPrefix: string, query = '', noChips = false, onInternalLink?: (href: string) => void, currentDocPath?: string): React.ReactNode[] {
   const parts: React.ReactNode[] = []
-  const tokenPattern = /(`[^`]+`|!\[([^\]]*)\]\(([^)]+)\)|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g
+  const tokenPattern = /(`[^`]+`|!\[([^\]]*)\]\(([^)]+)\)|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*|\[\^([^\]]+)\])/g
   let lastIndex = 0
   let match: RegExpExecArray | null = tokenPattern.exec(text)
 
@@ -489,6 +614,10 @@ function renderInline(text: string, keyPrefix: string, query = '', noChips = fal
         <em key={`${keyPrefix}-em-${match.index}`} className="italic text-[var(--ink)]">
           {renderTextWithHighlights(match[7], query, `${keyPrefix}-em-inline-${match.index}`)}
         </em>,
+      )
+    } else if (match[8]) {
+      parts.push(
+        <FootnoteRef key={`${keyPrefix}-fnref-${match.index}`} id={match[8]} keyPrefix={`${keyPrefix}-${match.index}`} />,
       )
     }
 
@@ -932,6 +1061,24 @@ function MarkdownDocument({
   onSelectDoc: (doc: CorpusDoc) => void
 }) {
   const blocks = parseMarkdown(doc)
+  const { isDark: footnoteIsDark } = useContext(RefNavContext)
+  // Build a document-wide footnote map (id → display number + reference text),
+  // numbering in the order definitions appear.
+  const footnoteMap = useMemo(() => {
+    const map = new Map<string, FootnoteEntry>()
+    let n = 0
+    for (const block of blocks) {
+      if (block.type === 'footnotes') {
+        for (const item of block.items) {
+          if (!map.has(item.id)) {
+            n += 1
+            map.set(item.id, { num: n, text: item.text })
+          }
+        }
+      }
+    }
+    return map
+  }, [blocks])
   const handleInternalLink = (href: string) => {
     const hashIdx = href.indexOf('#')
     const pathPart = hashIdx >= 0 ? href.slice(0, hashIdx) : href
@@ -962,6 +1109,7 @@ function MarkdownDocument({
   const hiddenFirstHeading = normalizeComparable(doc.title)
 
   return (
+    <FootnoteContext.Provider value={{ map: footnoteMap, isDark: footnoteIsDark }}>
     <article className="reader-prose">
       {blocks.map((block, index) => {
         if (block.type === 'heading') {
@@ -1173,9 +1321,41 @@ function MarkdownDocument({
           )
         }
 
+        if (block.type === 'footnotes') {
+          return (
+            <ol key={`${doc.id}-footnotes-${index}`} className="reader-footnotes">
+              {block.items.map((item) => {
+                const entry = footnoteMap.get(item.id)
+                const num = entry?.num ?? '•'
+                return (
+                  <li key={`${doc.id}-footnote-${item.id}`} id={headingScrollId(doc, `fn-${item.id}`)} className="reader-footnote-item">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        typeof window !== 'undefined' &&
+                        window.open(
+                          `https://www.google.com/search?q=${encodeURIComponent(plainCitation(item.text))}`,
+                          '_blank',
+                          'noopener,noreferrer',
+                        )
+                      }
+                      title="Fact-check this source on Google"
+                      className="reader-footnote-num cursor-pointer font-mono text-[var(--accent-deep)] transition hover:opacity-70"
+                    >
+                      {num}.
+                    </button>{' '}
+                    <span>{renderInline(item.text, `${doc.id}-footnote-inline-${item.id}`, searchQuery, true, handleInternalLink, doc.path)}</span>
+                  </li>
+                )
+              })}
+            </ol>
+          )
+        }
+
         return <div key={`${doc.id}-rule-${index}`} className="my-10 h-px bg-[rgba(60,54,46,0.12)]" />
       })}
     </article>
+    </FootnoteContext.Provider>
   )
 }
 
