@@ -15,13 +15,17 @@ const viewports = [
   { name: 'tablet', width: 900, height: 1100 },
 ] as const
 
-const navIds: Array<'overview' | 'constitution' | 'annexes' | 'registries' | 'validation' | 'settings'> = [
-  'overview',
+// Section views, by their nav testid. These match MOBILE_NAV_ITEMS (the
+// hamburger drawer) so the tour can drive navigation on viewports below the
+// `xl` breakpoint, where the section picker lives inside the slide-over sheet.
+const navIds: Array<'home' | 'constitution' | 'annexes' | 'registries' | 'topics' | 'paths' | 'validation'> = [
+  'home',
   'constitution',
   'annexes',
   'registries',
+  'topics',
+  'paths',
   'validation',
-  'settings',
 ]
 
 for (const vp of viewports) {
@@ -37,9 +41,18 @@ for (const vp of viewports) {
       // Let the dot-matrix and corpus settle.
       await page.waitForTimeout(400)
 
+      const hamburger = page.getByTestId('nav-hamburger')
+
       for (const id of navIds) {
         const button = page.getByTestId(`nav-${id}`)
-        if (await button.isVisible()) {
+        if (await hamburger.isVisible()) {
+          // Below `xl`: the section buttons live in the slide-over sheet, which
+          // is translated off-screen until opened. Open it, then select — which
+          // navigates and closes the sheet again.
+          await hamburger.click()
+          await button.click()
+          await page.waitForTimeout(300)
+        } else if (await button.isVisible()) {
           await button.click()
           await page.waitForTimeout(250)
         }
