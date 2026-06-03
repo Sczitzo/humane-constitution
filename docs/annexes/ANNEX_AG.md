@@ -1,6 +1,6 @@
 # ANNEX AG — Formal Acceptance Process Integrity Clauses
 
-> **Provenance:** Implements [P-013 — Formal Acceptance Process Integrity] · Addresses T-016 · Status: **PROPOSED**
+> **Provenance:** Implements [P-013 — Formal Acceptance Process Integrity] · Addresses T-016 · Status: see Patch Log
 
 > **At a glance**
 > | | |

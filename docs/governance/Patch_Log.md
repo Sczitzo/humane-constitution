@@ -442,7 +442,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 **Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md)
 
 - **Change type:** constitutional commitment + quantified doctrine.
-- **Status basis:** **PROPOSED.** The doctrine is designed but not yet accepted into the Humane Constitution. It remains PROPOSED until the founding coalition confirms the fraud/exclusion rate targets after first-year pilot evidence; the FC-140 anchors promoted by P-044 are provisional values, not evidence-backed thresholds.
+- **Status basis:** **Active — unproven** (Axis 1 — incorporated as the live design; no field evidence) · **Pre-ratification** (Axis 2 — not yet accepted into the Humane Constitution at a founding). It remains Pre-ratification until the founding coalition confirms the fraud/exclusion rate targets after first-year pilot evidence; the FC-140 anchors promoted by P-044 are provisional values, not evidence-backed thresholds.
 - **Addresses:** T-002 — calibrating fraud tolerance without making the system unusable for vulnerable populations. Extends P-003.
 - **Introduced design:** The founding coalition must publish and formally adopt an **Asymmetric Error Doctrine** (AED) as a Tier 2 founding commitment before deployment. The AED must specify:
   - (a) Maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record) — expressed as a percentage of enrolled population per quarter, with confidence interval.
@@ -697,16 +697,16 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-007 | P-004 | **ACTIVE** | Annex AB |
 | T-005 | P-005 | **ACTIVE** | Annex AC1 |
 | T-006 | P-006 | **ACTIVE** | Annex AC2 |
-| T-008 | P-008 | **PROPOSED** | Annex AC3 (superseded for operative authority by P-025) |
+| T-008 | P-008 | ACTIVE | Annex AC3 (superseded for operative authority by P-025) |
 | T-009 | P-009 | **ACTIVE** | Annex AF |
 | T-011 | P-011 | **ACTIVE** | Annex AD |
 | T-012–T-015 | P-012 | **ACTIVE** | Annex AE |
 | T-016 | P-013 | **ACTIVE** | Annex AG |
 | T-017 | P-014 | **ACTIVE** | Annex AH |
 | T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
-| T-002 | P-016 | **PROPOSED** | Annex AK |
+| T-002 | P-016 | ACTIVE | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
-| T-022 | P-018 | **PROPOSED** | Annex AM |
+| T-022 | P-018 | ACTIVE | Annex AM |
 | T-023 | P-019 | **ACTIVE** | Annex AN |
 | T-017 | P-020 | **ACTIVE** | Annex AH2 |
 | structural — no threat row (register disclosure protocol) | P-021 | **ACTIVE** | Annex AO |
@@ -743,11 +743,11 @@ This table is the single source of truth for threat→patch traceability. It cov
 | Insider retaliation / reporter protection | P-053 | **ACTIVE** | ANNEX_AW · Article VII |
 | Identity disclosure as safety vector | P-054 | **ACTIVE** | ANNEX_AX · Article II |
 | Delivery gap between guarantee and operation | P-055 | **ACTIVE** | ANNEX_AY · Article IV |
-| T-002 / INV-001 | P-056 | **PROPOSED** | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
+| T-002 / INV-001 | P-056 | ACTIVE | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
 | ACL-011 / ACL-010 | P-057 | **PROPOSED** | Pilot site selection criteria |
-| T-016 / constitutional void | P-058 | **PROPOSED** | Jurisdiction Interface Clause |
-| ACL-010 / T-027 | P-059 | **PROPOSED** | Vulnerable_Population_Consent_Protocol.md |
-| ACL-005 / T-008 | P-060 | **PROPOSED** | Founding Team Composition Standard |
+| T-016 / constitutional void | P-058 | ACTIVE | Jurisdiction Interface Clause |
+| ACL-010 / T-027 | P-059 | ACTIVE | Vulnerable_Population_Consent_Protocol.md |
+| ACL-005 / T-008 | P-060 | ACTIVE | Founding Team Composition Standard |
 | ACL-007 / Power-Wealth Convergence | P-061 | **PROPOSED** | Founding Capital Framework |
 | ACL-011 / ACL-010 | P-062 | **PROPOSED** | Pilot Timeline Framework |
 
@@ -1067,7 +1067,7 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 - **README.md** — Updated stale patch counts: 31→40 total, 16→25 active (two locations).
 - **ANNEX_Y.md §Y7** — Filled `[RESERVE_WINDOW_DAYS]` placeholder with provisional value: 90 days (FC-YT2, pre-launch blocking gate).
 - **CLAUDE.md** — Corrected "Provenance_Map.md is planned" → "serves as" (file already exists).
-- **Patch_Log.md P-005** — Advanced from PROPOSED to ACTIVE: ANNEX_AC1 design is complete; residual risks (sub-panel capture, throughput theater) are acknowledged and monitored.
+- **Patch_Log.md P-005** — Advanced from PROPOSED → ACTIVE: ANNEX_AC1 design is complete; residual risks (sub-panel capture, throughput theater) are acknowledged and monitored.
 
 **New risks introduced:** This batch promoted statuses and bound provisional fraud-rate anchors, and that introduces residual risk. (1) Premature reliance — readers may treat the promoted statuses (e.g. P-005 advanced to ACTIVE) as field-tested rather than designed-and-monitored. (2) Provisional-anchor confusion — the FC-140 fraud-rate anchors (≤0.5% target, 1.0% upper bound) are provisional pre-launch values and may be mistaken for proven or evidence-backed thresholds. (3) Calibration drift — anchors set before pilot confirmation can drift or be quietly normalized as "the number" before any pilot evidence validates them. Mitigated by: the provisional labelling on every anchor, the pre-launch blocking gates, and the residual-risk note below.
 

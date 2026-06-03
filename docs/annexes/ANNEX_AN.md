@@ -9,7 +9,7 @@
 > | **Evidence status** | Designed |
 > | **Linked risks** | T-023 (Pilot External Validity Collapse); P-019; Annex AG (P-013 pilot representativeness); Annex T (annual simulation) |
 
-> **Provenance:** Implements [P-019 — Pilot External Validity Gate] · Addresses T-023 · Status: **PROPOSED**
+> **Provenance:** Implements [P-019 — Pilot External Validity Gate] · Addresses T-023 · Status: see Patch Log
 
 **Status:** Active — unproven (Axis 1, per Patch Log) · Pre-ratification (Axis 2) | **Priority:** Med-High | **Patch:** P-019
 **Threat addressed:** T-023 (Pilot External Validity Collapse)
