@@ -78,15 +78,15 @@ P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpo
 | T-002 | P-003 | ACTIVE | AB | S1 |
 | T-004 | P-002 | ACTIVE | AB | S1 |
 | T-007 | P-004 | ACTIVE | AB | S1 |
-| T-005 | P-005 | PROPOSED | AC1 | S2 |
-| T-006 | P-006 | PROPOSED | AC2 | S2 |
-| T-008 | P-008 | PROPOSED | AC3 | S2 |
-| T-011 | P-011 | PROPOSED | AD | S2 |
-| T-012 | P-012 | PROPOSED | AE2.1 | S3 |
-| T-013 | P-012 | PROPOSED | AE2.2 | S3 |
-| T-014 | P-012 | PROPOSED | AE2.3 | S3 |
-| T-015 | P-012 | PROPOSED | AE2.4 | S3 |
-| T-009 | P-009 | PROPOSED | AF | S4 |
+| T-005 | P-005 | ACTIVE | AC1 | S2 |
+| T-006 | P-006 | ACTIVE | AC2 | S2 |
+| T-008 | P-008 | ACTIVE | AC3 | S2 |
+| T-011 | P-011 | ACTIVE | AD | S2 |
+| T-012 | P-012 | ACTIVE | AE2.1 | S3 |
+| T-013 | P-012 | ACTIVE | AE2.2 | S3 |
+| T-014 | P-012 | ACTIVE | AE2.3 | S3 |
+| T-015 | P-012 | ACTIVE | AE2.4 | S3 |
+| T-009 | P-009 | ACTIVE | AF | S4 |
 
 *T-009 is addressed via P-009. All threats named through this annex have mitigation designs. Outstanding pre-launch items: White Paper sync, Technical Reference diagram update, and formal acceptance of Annexes AC–AF.*
 

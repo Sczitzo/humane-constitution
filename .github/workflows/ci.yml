@@ -26,6 +26,9 @@ jobs:
       - name: Check status consistency (no ID both proposed and active)
         run: python3 scripts/check_status_consistency.py
 
+      - name: Check linkage tables are generated from the Threat Register
+        run: python3 scripts/gen_status_tables.py
+
   simulation-tests:
     runs-on: ubuntu-latest
     steps:

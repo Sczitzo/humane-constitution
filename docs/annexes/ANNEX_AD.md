@@ -79,9 +79,9 @@ White Paper updates for P-011 activation are governed as Tier 3 operational chan
 | T-002 | P-003 | ACTIVE | AB |
 | T-004 | P-002 | ACTIVE | AB |
 | T-007 | P-004 | ACTIVE | AB |
-| T-005 | P-005 | PROPOSED | AC1 |
-| T-006 | P-006 | PROPOSED | AC2 |
-| T-008 | P-008 | PROPOSED | AC3 |
-| T-011 | P-011 | PROPOSED | AD |
+| T-005 | P-005 | ACTIVE | AC1 |
+| T-006 | P-006 | ACTIVE | AC2 |
+| T-008 | P-008 | ACTIVE | AC3 |
+| T-011 | P-011 | ACTIVE | AD |
 
 ---
