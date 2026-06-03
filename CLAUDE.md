@@ -131,7 +131,7 @@ Current order: First-Time → Skeptic → Economic → Founding → Identity →
   - `docs/annexes/ANNEX_D.md`
   - `scripts/export_corpus.py`
   - `app/src/generated/corpus.ts`, `app/public/generated/corpus.json` (regenerate, never hand-edit)
-- The Vercel project's **Root Directory** is set to `app` (in Vercel project settings). Deploy with `vercel --prod` from the **repo root** — the CLI resolves `app/` itself. Do NOT run it from inside `app/` (that resolves to `app/app` and fails with "path does not exist"). After a successful deploy, CDN propagation + browser cache mean the live site can take a couple minutes / a hard refresh to show changes.
+- **Deployment is automatic via Git — do not deploy from the CLI.** The live site is the Vercel project **`humane-constitution`** (Root Directory `app`), connected to this GitHub repo. Every push/merge to `main` auto-deploys to production (~45s build, reliably Ready). To ship: merge to `main`, then wait ~1–2 min — CDN propagation + browser cache mean a hard refresh may be needed to see changes. Do NOT run `vercel --prod`: there is no `.vercelignore`, so the CLI tries to upload the whole repo (~700 MB, hits the 100 MB file limit), and a second stale project (`twelve-pillar-protocol`) errors on every deploy. Check deploy status with `vercel ls humane-constitution`.
 - For any proposed change to `docs/constitution/`, apply the Christ-centered ethical review in `.claude/rules/constitution-review.md`.
 - Run relevant verification before marking any code or corpus task complete.
 
