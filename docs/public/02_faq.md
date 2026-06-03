@@ -30,7 +30,7 @@ No. Welfare is usually a program that can be changed, cut, or used as leverage.
 
 Essential Access is meant to be a right. It is the basic floor below which the system cannot push a person.
 
-Essential Access allocations expire every 72 hours — they are deliberately not saveable. This prevents them from being stockpiled, traded, or used as collateral. They are a daily needs floor, not a savings instrument.
+Essential Access allocations expire every 72 hours — they are deliberately not saveable. This prevents them from being stockpiled, traded, or used as collateral. They are a daily needs floor, not a savings instrument. (The specific numbers in this FAQ — the 72-hour window, the 7-member panel size, and similar figures — are illustrative design parameters chosen for the model, not measured results; they are subject to calibration. See the [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md).)
 
 ## 5. Is this communism or socialism?
 
@@ -144,13 +144,4 @@ These targets are Tier 2 founding commitments, meaning they require a formal pub
 
 ## 21. Where should I start?
 
-Start with:
-
-1. [One-Page Overview](./01_overview.md)
-2. [Life Under The System](./07_life_under_the_system.md)
-3. [Rights Layer](./05_rights_layer.md)
-4. [How Big Companies Work Here](./06_big_companies.md)
-5. [White Paper](./04_white_paper.md)
-6. [Public Readiness Guide](./03_readiness.md)
-7. [Claims & Evidence Register](../governance/Claims_Evidence_Register.md)
-8. [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md)
+Read **[Start Here](00_start_here.md)** — it gives the problem, the core claim, the honest caveats, and a map to the rest (white paper, life & rights, useful history, and the governance spine).

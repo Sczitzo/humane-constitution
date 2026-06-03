@@ -39,16 +39,14 @@ Do not use language that implies the system saves, sanctifies, morally completes
 
 Recommended first path:
 
-1. [One-Page Overview](../public/01_overview.md)
-2. [Life Under The System](../public/07_life_under_the_system.md)
-3. [Rights Layer](../public/05_rights_layer.md)
-4. [How Big Companies Work Here](../public/06_big_companies.md)
-5. [FAQ](../public/02_faq.md)
-6. [White Paper](../public/04_white_paper.md)
-7. [Public Readiness Guide](../public/03_readiness.md)
-8. [Fairness Vignette Library](./Fairness_Vignette_Library.md), starting with the one-year pressure stories
-9. [Claims and Evidence Register](./Claims_Evidence_Register.md)
-10. [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md)
+1. [Start Here](../public/00_start_here.md)
+2. [Life and Rights](../public/05_life_and_rights.md)
+3. [FAQ](../public/02_faq.md)
+4. [White Paper](../public/04_white_paper.md)
+5. [Useful History](../public/08_useful_history.md)
+6. [Fairness Vignette Library](./Fairness_Vignette_Library.md), starting with the one-year pressure stories
+7. [Claims and Evidence Register](./Claims_Evidence_Register.md)
+8. [Pilot Evidence Roadmap](./Pilot_Evidence_Roadmap.md)
 
 This path lets readers understand the human case before they meet the full governance machinery.
 
@@ -56,7 +54,7 @@ This path lets readers understand the human case before they meet the full gover
 
 | Target | Adjustment | Reason |
 |---|---|---|
-| `docs/public/03_readiness.md` | Replace the long front-door list with short paths: 5-minute start, lived fairness path, skeptic path, technical audit path. | The old list proved rigor but created fatigue before curiosity. |
+| `docs/public/00_start_here.md` | Replace the long front-door list with short paths: 5-minute start, lived fairness path, skeptic path, technical audit path. | The old list proved rigor but created fatigue before curiosity. |
 | `docs/public/04_white_paper.md` | Open with the human money problem, then status caveats. | Curiosity should come before defensive framing. |
 | `README.md` | Compress reader-app logistics and foreground the intellectual hook. | GitHub visitors need the purpose before install options. |
 | `docs/governance/Claims_Evidence_Register.md` | Use the same claim-integrity grammar across future rows and new docs. | Credibility depends on separating value, mechanism, risk, and evidence. |

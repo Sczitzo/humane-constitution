@@ -80,19 +80,16 @@ The goal is to be harder to fool — including harder to fool by this project's 
 
 Start with the human case before the technical machinery:
 
-1. [One-Page Overview](./docs/public/01_overview.md) for the shortest public introduction
-2. [Life Under The System](./docs/public/07_life_under_the_system.md) for one-year pressure stories about ordinary people
-3. [Rights Layer](./docs/public/05_rights_layer.md) for the plain-language rights summary
-4. [How Big Companies Work Here](./docs/public/06_big_companies.md) for how profit can remain without hostage power
-5. [FAQ](./docs/public/02_faq.md) for common objections in plain language
-6. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
-7. [Public Readiness Guide](./docs/public/03_readiness.md) for status, skeptic, and audit paths
+1. [Start Here](./docs/public/00_start_here.md) for the shortest public introduction, plus the status, skeptic, and audit paths
+2. [Life and Rights](./docs/public/05_life_and_rights.md) for the plain-language rights summary, one-year pressure stories, and how profit can remain without hostage power
+3. [FAQ](./docs/public/02_faq.md) for common objections in plain language
+4. [White Paper](./docs/public/04_white_paper.md) for the fuller public explanation
 
 ## If you're skeptical
 
-Start with the [Public Readiness Guide](./docs/public/03_readiness.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
+Start with [Start Here](./docs/public/00_start_here.md). It states what the project claims, what is only designed, what still needs evidence, and which objections deserve the most pressure.
 
-If the design feels too abstract, read [Life Under The System](./docs/public/07_life_under_the_system.md) first. The stories are not promises. They are concrete pressure cases for asking whether the rules would protect dignity under stress.
+If the design feels too abstract, read [Life and Rights](./docs/public/05_life_and_rights.md) first. The one-year pressure stories are not promises. They are concrete cases for asking whether the rules would protect dignity under stress.
 
 For deeper critique:
 
@@ -256,13 +253,10 @@ The constitution is built in five layers. Each layer depends on the one above it
 
 | Document | Purpose |
 |---|---|
-| [One-Page Overview](./docs/public/01_overview.md) | One-page introduction for first-time readers. |
-| [Life Under The System](./docs/public/07_life_under_the_system.md) | Concrete one-year pressure stories for ordinary life under the proposed system. |
-| [Rights Layer](./docs/public/05_rights_layer.md) | Plain-language summary of rights and protections. |
-| [How Big Companies Work Here](./docs/public/06_big_companies.md) | Plain-language explanation of profit, compliance, and anti-hostage rules for large firms. |
+| [Start Here](./docs/public/00_start_here.md) | One-page introduction for first-time readers, plus the skeptic reading path, claims audit, readiness dashboard, and evidence map. |
+| [Life and Rights](./docs/public/05_life_and_rights.md) | Plain-language summary of rights and protections, concrete one-year pressure stories, and how profit, compliance, and anti-hostage rules work for large firms. |
 | [FAQ](./docs/public/02_faq.md) | Public-facing answers to the most common objections and questions. |
 | [White Paper](./docs/public/04_white_paper.md) | Plain-language public explanation. |
-| [Public Readiness Guide](./docs/public/03_readiness.md) | Skeptic reading path, claims audit, readiness dashboard, and evidence map. |
 
 ### Audit and evidence docs
 
@@ -407,11 +401,11 @@ The system's commitment: every failure in these categories is published publicly
 
 Scale readiness requires:
 
-- [x] Public readiness guide — see [Public Readiness Guide](./docs/public/03_readiness.md)
+- [x] Public readiness guide — see [Start Here](./docs/public/00_start_here.md)
 - [x] Claims and evidence register — see [Claims & Evidence Register](./docs/governance/Claims_Evidence_Register.md)
 - [x] Pilot evidence roadmap — see [Pilot Evidence Roadmap](./docs/governance/Pilot_Evidence_Roadmap.md)
 - [ ] Formal acceptance of PROPOSED patches (pilot evidence required)
-- [x] CFRL one-page publication — see [Rights Layer](./docs/public/05_rights_layer.md)
+- [x] CFRL one-page publication — see [Life and Rights](./docs/public/05_life_and_rights.md)
 - [x] Adversarial narrative simulation — see [Adversarial Narrative Simulation](./docs/simulations/Adversarial_Narrative_Simulation.md)
 - [x] Annual compound simulation — see [Annual Compound Simulation](./docs/simulations/Annual_Compound_Simulation.md)
 - [ ] Essential-sector refusal drills — see [Essential-Sector Refusal Test Package](./docs/governance/Essential_Sector_Refusal_Test_Package.md)
@@ -421,11 +415,11 @@ The Formal Acceptance Protocol defines the pathway from design to operation.
 
 ## How to engage
 
-**If you want the shortest public intro:** read the One-Page Overview first.
+**If you want the shortest public intro:** read Start Here first.
 
-**If you want the human path first:** read Life Under The System, then the White Paper.
+**If you want the human path first:** read Life and Rights, then the White Paper.
 
-**If you want the public case first:** read the White Paper, then the Rights Layer and Public FAQ.
+**If you want the public case first:** read the White Paper, then Life and Rights and the Public FAQ.
 
 **If you want to stress-test the design:** read the Threat Register after the White Paper.
 

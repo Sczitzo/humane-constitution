@@ -2284,28 +2284,16 @@ interface HomeCard {
 
 const HOME_CARDS: HomeCard[] = [
   {
-    path: 'docs/public/01_overview.md',
-    label: 'One-Page Overview',
-    description: 'The core diagnosis: why survival, markets, and civic power must be separated.',
+    path: 'docs/public/00_start_here.md',
+    label: 'Start Here',
+    description: 'The single entry point: the problem, the one testable claim, the honest caveats, and where to go next.',
     tag: 'Start here',
   },
   {
-    path: 'docs/public/07_life_under_the_system.md',
-    label: 'Life Under The System',
-    description: 'Realistic one-year pressure stories about ordinary people under the proposed rules.',
+    path: 'docs/public/05_life_and_rights.md',
+    label: 'Life and Rights',
+    description: 'What the design protects, shown through a year of ordinary lives — and how firms operate under the rules.',
     tag: 'Human path',
-  },
-  {
-    path: 'docs/public/05_rights_layer.md',
-    label: 'Rights Layer',
-    description: 'Plain-language statement of what the design is meant to protect for ordinary people.',
-    tag: 'Public',
-  },
-  {
-    path: 'docs/public/06_big_companies.md',
-    label: 'Big Companies',
-    description: 'How profit can remain without allowing essential-sector hostage power.',
-    tag: 'Markets',
   },
   {
     path: 'docs/public/02_faq.md',
@@ -2320,10 +2308,10 @@ const HOME_CARDS: HomeCard[] = [
     tag: 'Public',
   },
   {
-    path: 'docs/public/03_readiness.md',
-    label: 'Readiness Guide',
-    description: 'What is only designed, what still needs evidence, and which objections have the most pressure.',
-    tag: 'Skeptics',
+    path: 'docs/public/08_useful_history.md',
+    label: 'Useful History',
+    description: 'The documented real-world track record these problems and proposed solutions respond to.',
+    tag: 'Evidence',
   },
   {
     path: 'docs/governance/Claims_Evidence_Register.md',
@@ -2804,14 +2792,11 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'First-Time Reader',
     description: 'The intended public on-ramp: human stakes first, then the plain case and readiness caveats.',
     steps: [
-      { path: 'docs/public/01_overview.md', note: 'Start here. One page that names the three problems and the five-instrument response — read this before anything else.' },
-      { path: 'docs/public/07_life_under_the_system.md', note: 'Watch how the system behaves under real pressure. These are one-year stories for ordinary people — a caregiver, a small business owner, a person in housing crisis.' },
+      { path: 'docs/public/00_start_here.md', note: 'Start here. The problem, the one testable claim, the honest caveats, and a map of the rest — read this before anything else.' },
+      { path: 'docs/public/05_life_and_rights.md', note: 'What the design is trying to protect, shown through a year of ordinary lives — and how large firms operate under the rules. This is what "working" looks like from a person\'s perspective.' },
       { path: 'docs/governance/Fairness_Vignette_Library.md', note: 'See how the principles play out in concrete human situations.' },
-      { path: 'docs/public/05_rights_layer.md', note: 'What the design is trying to protect in plain language. Read this to understand what "working" looks like from a person\'s perspective.' },
-      { path: 'docs/public/06_big_companies.md', note: 'The hardest political economy question: can large profitable firms coexist with this system? This is where to look for the honest answer.' },
       { path: 'docs/public/02_faq.md', note: 'Common objections answered directly. If you have a specific doubt, check here before going deeper.' },
       { path: 'docs/public/04_white_paper.md', note: 'The fuller public case — more detail on the design logic, the separation of instruments, and the transition approach.' },
-      { path: 'docs/public/03_readiness.md', note: 'End here. An honest account of what is only designed vs. what still needs pilots and outside evidence. The system is not ready to deploy — this explains exactly where it stands.' },
     ],
   },
   {
@@ -2831,7 +2816,7 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'Economic Instruments',
     description: 'The five-instrument model: Flow, Essential Access, Voice, Service Record, and the survival floor.',
     steps: [
-      { path: 'docs/public/01_overview.md', note: 'Start here. The one-page framing explains why five separate instruments are needed and what each one is supposed to prevent.' },
+      { path: 'docs/public/00_start_here.md', note: 'Start here. The framing explains why five separate instruments are needed and what each one is supposed to prevent.' },
       { path: 'docs/annexes/ANNEX_Y.md', note: 'The Constitutional Survival Minimum — the unconditional floor. Pay attention to what cannot be withdrawn and under what circumstances the floor is defended.' },
       { path: 'docs/annexes/ANNEX_X.md', note: 'How Flow (the currency) is issued and how demurrage works. This is the monetary engine — notice how issuance is tied to real capacity rather than debt.' },
       { path: 'docs/annexes/ANNEX_Z.md', note: 'Voice and Service Record — the civic instruments. Watch for where each one\'s limits are drawn and how they are prevented from becoming social credit.' },
@@ -2897,7 +2882,7 @@ const READING_PATHS: ReadingPathDef[] = [
     description: 'What it takes to stand up a compliant pilot: evidence requirements, transition mechanics, and conglomerate handling.',
     steps: [
       { path: 'docs/governance/Pilot_Evidence_Roadmap.md', note: 'Start here. The staged testing path — what must be demonstrated at each phase before the next is permitted. This is the gate the pilot must pass through.' },
-      { path: 'docs/public/03_readiness.md', note: 'An honest account of where the design stands today: what is written, what is only designed, and what still needs outside evidence. Know this before committing resources.' },
+      { path: 'docs/public/00_start_here.md', note: 'An honest account of where the design stands today: what is written, what is only designed, and what still needs outside evidence. Read the honesty layer before committing resources.' },
       { path: 'docs/annexes/ANNEX_N.md', note: 'Genesis and deployability preconditions. The specific conditions that must be met before activation — know the go/no-go gate before planning what to build.' },
       { path: 'docs/annexes/ANNEX_Q.md', note: 'The minimum viable pilot stack — the smallest compliant configuration and the transition doctrine for building up from a legacy system.' },
       { path: 'docs/annexes/ANNEX_V.md', note: 'Transition mechanics: how legacy money, debt, and ownership convert into the new system. The highest-risk operational phase is here.' },

@@ -10,33 +10,7 @@ title: White Paper
 
 ---
 
-## What this is about
-
-Imagine a person who loses their job.
-
-Not a dramatic fall — just an ordinary interruption. Hours cut, a contract not renewed, a business that couldn't hold on. Within weeks, food gets harder. Then rent. Then the calculus shifts: take whatever is offered, on whatever terms, because the alternative is worse. The person is not less capable, not less willing to contribute. They are just out of leverage, and the people with leverage know it.
-
-Now consider what happens when that same dynamic operates at political scale. When the people with enough money can also buy the legal help, the political access, the protection from consequences that people without money cannot. Not through visible corruption, but through structure — through the way one tool, money, ends up doing too many jobs at once.
-
-That is the problem this design addresses. Not poverty in the abstract. Not inequality as a moral category. A specific structural failure: **when one instrument controls survival, markets, and public power simultaneously, having more of it means power over other people's lives — not just more comfort.**
-
-The Humane Constitution is an attempt to break that link. It tries to keep three things — survival, markets, and civic voice — from collapsing into a single convertible currency where the richest person holds the most keys.
-
----
-
-## What we claim, what we haven't proven, and how it could fail
-
-This document makes a structural argument: that separating survival, market activity, and civic power into distinct, non-convertible instruments could prevent specific failure modes that have historically plagued human societies.
-
-Here is the honest version of what that means:
-
-**What the design claims:** If the five instruments described here — Flow, Essential Access, Voice, Service Record, and Shared Storehouse — are kept genuinely separate and non-convertible, a participating society would be structurally less vulnerable to three specific collapse states. Those states are described below.
-
-**What we haven't proven:** None of the major operational claims have been validated at scale. We have not run a pilot. We have not tested whether real delivery of Essential Access is feasible in the conditions we describe. We have not demonstrated that the walls between instruments can hold against sustained pressure from people with strong incentives to breach them.
-
-**How it could fail:** The most obvious failure modes are these — proxy markets (people create informal exchange to convert instruments the design intended to keep separate), measurement failure (the system promises what it cannot actually deliver because no one correctly assessed physical capacity), founding capture (the first institutions are staffed by the wrong people before the rules can protect against it), and emergency creep (temporary shortage powers become permanent without formal reversal). Each of these is named, tracked, and given mitigation design in the threat register. None of the mitigations have been stress-tested in the real world.
-
-The right response to this document is not faith. It is not dismissal either. It is **pressure: find the specific claim that you think is wrong and push on it.** See the [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) and [Readiness Guide](03_readiness.md) for the formal honest accounting of what exists and what doesn't.
+> **New here?** Read **[Start Here](00_start_here.md)** first — it gives the problem, the one testable claim, the honest caveats, and where this sits in prior work. This white paper is the deep argument; it assumes you've seen the framing.
 
 ---
 
@@ -70,7 +44,7 @@ The design is easiest to read through ordinary pressure, not abstractions. These
 
 **During a shortage:** A region faces a water, medicine, energy, or logistics shortage. The system should not pretend that high prices are neutral rationing. It should publish the evidence, protect basic access, limit emergency rules, and end those rules when the shortage ends.
 
-For longer one-year pressure stories, see [Life Under The System](07_life_under_the_system.md).
+For longer one-year pressure stories, see [Life and Rights](05_life_and_rights.md).
 
 ---
 
@@ -123,7 +97,7 @@ Flow (ordinary money) is not evil. Markets are not abolished.
 
 But Flow (ordinary money) cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
 
-The system also applies a **progressive carrying cost on accumulated wealth** above a participation floor — a net-worth demurrage. The goal is to discourage hoarding and push wealth toward useful activity. Idle money is simply part of net worth, so there is no separate fee on unused balances; wealth above the floor carries the cost whether it sits idle or not. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the carrying cost falls on large accumulated wealth rather than on people with modest savings.
+The system also applies a **progressive carrying cost on accumulated wealth** above a participation floor — a net-worth demurrage. The goal is to discourage hoarding and push wealth toward useful activity. Idle money is simply part of net worth, so there is no separate fee on unused balances; wealth above the floor carries the cost whether it sits idle or not. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the carrying cost falls on large accumulated wealth rather than on people with modest savings. (This ≤1.0 threshold — like the other specific figures in this paper, such as the 72-hour Essential Access window — is an illustrative design parameter chosen for the model, not a measured result, and is subject to calibration. See the [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md).)
 
 ![Progressive Net-Worth Demurrage](/images/V-005.png)
 
@@ -236,7 +210,7 @@ Known risks include:
 - expert bodies becoming closed clubs
 - public records hiding more than they reveal
 
-The primary mitigation for corporate refusal (T-028) is the **Competitive Assurance and Substitution Protocol (CASP)**: essential-sector suppliers are pre-registered with automatic-activation contracts, so backup capacity can be triggered without a gap if a dominant supplier exits or refuses. CASP is the first line of defense before public receiver authority or treaty capacity is invoked.
+The primary mitigation for corporate refusal (T-028) is the **Compliant Alternative Supplier Pre-Registration (CASP)**: essential-sector suppliers are pre-registered with automatic-activation contracts, so backup capacity can be triggered without a gap if a dominant supplier exits or refuses. CASP is the first line of defense before public receiver authority or treaty capacity is invoked.
 
 The project responds with:
 

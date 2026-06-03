@@ -210,7 +210,7 @@ The white paper (04_white_paper.md) opens with "A society where everyone has a b
 
 **Fix:** Add a prominent status box near the top of 04_white_paper.md, before the introduction:
 
-> **Status: Constitutional design and critique target — not a deployed or deployment-ready system. See the [Readiness Guide](../public/03_readiness.md) and [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) for the honest status of each claim.**
+> **Status: Constitutional design and critique target — not a deployed or deployment-ready system. See the [Start Here](../public/00_start_here.md) and [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) for the honest status of each claim.**
 
 This box should be visually distinct in the reader app (bordered, slightly muted background, or similar treatment).
 
