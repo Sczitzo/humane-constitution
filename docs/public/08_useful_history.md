@@ -256,3 +256,63 @@ The most important fact is how it ended. It did not collapse. It stopped because
 [^c4-5]: [UNVERIFIED — panel check] Venezuela price controls and food shortages, 2010s. Contemporaneous reporting and economic analyses of the Bolivarian price-control regime.
 [^c4-6]: [UNVERIFIED — panel check] Hurricane Katrina response failures and Superdome conditions, 2005. See U.S. House Select Bipartisan Committee, *A Failure of Initiative* (2006), and related congressional reports.
 [^c4-7]: [UNVERIFIED — panel check] Rwandan gacaca courts, ~1.2 million cases, 2001–2012. See Phil Clark, *The Gacaca Courts, Post-Genocide Justice and Reconciliation in Rwanda* (Cambridge University Press, 2010).
+
+## Chapter 5 — When civic participation gets captured
+
+People build systems to give themselves a say over shared decisions. Voting, courts, regulators, citizen assemblies, member-owned cooperatives. The promise is the same in each case: ordinary people get a voice, and that voice keeps power honest.
+
+The trouble is that any system built to give people a voice can be gamed by people with money, patience, and a way to work out of sight. The takeover is rarely loud. It is usually procedural — small, dull, legal-looking steps. Bit by bit, the mechanism that was meant to spread power ends up gathering it instead.
+
+This matters more than the other failure modes in this document, because civic participation is the repair mechanism. It is how a system catches and corrects its own mistakes. When the repair mechanism is captured, nothing else can fix what goes wrong. So the capture of voice is the failure that lets every other failure run unchecked.
+
+### Anchor case: Athenian ostracism
+
+Ancient Athens invented a tool called ostracism. "Ostracism" meant a public vote to exile one person for ten years. There was no charge to answer, no trial, no need to prove the person had done anything wrong. Citizens simply voted, and if enough names pointed at one man, he had to leave.[^c5-1]
+
+The point was to stop tyranny before it could start. If someone grew too powerful, the people could remove him while he was still only a risk, not yet a ruler. For about fifty years it worked roughly as designed. Men who gathered too much influence were sent away before they could become dangerous.[^c5-1]
+
+Then the tool was turned against its purpose. In 417 BC, two rival politicians, Nicias and Alcibiades, lined up their followers and aimed the vote at a third man named Hyperbolus. Hyperbolus was not dangerous. He was just inconvenient to both of them. They used the anti-tyranny tool to clear away a nuisance.[^c5-2]
+
+The abuse was so plain that Athens never used ostracism again. The mechanism built to prevent capture had itself been captured, and once everyone had seen it could be gamed, it could not recover its standing. That is the pattern: a safeguard does not fail when it stops working. It fails when people watch it get used as a weapon and stop believing in it.
+
+### Brief cases
+
+**The Venetian Doge election (697–1797).** Venice built one of the most elaborate anti-capture election systems ever attempted. Choosing the Doge, the republic's leader, ran through ten rounds that alternated between lottery and voting. The full process took several days, and it was designed so that no single family or faction could reliably control the result.[^c5-3] The system lasted about 1,100 years. When the Venetian Republic finally fell, it fell to Napoleon's armies from outside, not to capture from within.[^c5-3] The contrast with Athens is the lesson. Venice kept paying the cost of its anti-capture mechanism, year after year. Athens abandoned its safeguard after a single abuse.
+
+**Ireland's Citizens' Assembly (2016–18).** Ireland tried a different approach to a question its legislature had been unable to settle for decades: abortion law. It seated an assembly of ninety-nine citizens chosen at random, who met over roughly eighteen months, heard expert testimony, and listened to community perspectives.[^c5-4] They reached a clear, specific recommendation. The referendum that followed passed with 66% of the vote.[^c5-4] The mechanism worked because money was kept out of the room. Members were not chosen by wealth, could not be lobbied directly, and had no career riding on a particular answer.
+
+**Modern gerrymandering (United States).** "Gerrymandering" means drawing the boundaries of voting districts to favor one party. Whichever party holds power in a state after each ten-year census gets to redraw the lines, and it draws them to protect its own incumbents. Computer tools have made this precise enough that roughly 85% of US House seats are no longer competitive.[^c5-5] It is legal. In 2019 the US Supreme Court ruled that partisan gerrymandering is not something federal courts will review.[^c5-5] The effect inverts the basic idea of an election: voters choose their representatives less than representatives choose their voters.
+
+**Mondragon cooperatives (Spain, 1956–present).** A "cooperative" is a business owned by the people who work in it rather than by outside investors. Mondragon was founded by Fr. José María Arizmendiarrieta, a Catholic priest who had lived through the Spanish Civil War. He built it explicitly on Catholic social teaching: solidarity, subsidiarity, and the idea that human dignity comes before economic function.[^c5-6] The firms are worker-owned and democratically governed, with one worker, one vote, regardless of seniority or money put in. Today they employ roughly 80,000 worker-owners across manufacturing, retail, and finance, and the network is still running after about 70 years.[^c5-6] Stated plainly: the founder's faith was not a side note. It was the design framework. He wrote, "We build the road as we travel."[^c5-6]
+
+**The British abolition movement (1780s–1833).** William Wilberforce and a group of reformers known as the Clapham Sect set out to end the British slave trade. Their framing, their strategy, and their stamina were openly Christian.[^c5-7] They introduced abolition bills to Parliament for twelve years running before one passed. The money against them was enormous: the slave trade was estimated at about 11% of British exports. The moral argument won anyway.[^c5-7] From the founding of the Society for Effecting the Abolition of the Slave Trade to the Slavery Abolition Act took about fifty years.[^c5-7] The lesson is that sustained, organized moral pressure can overcome a captured institution, but it needs an accountability standard from outside the institution, one the institution cannot claim as its own.
+
+**Citizens United (United States, 2010).** In a 5–4 decision, the US Supreme Court ruled that corporations hold the same free-speech rights as individuals when it comes to political spending.[^c5-8] The result was effectively unlimited corporate money in elections, much of it undisclosed. Spending by political action committees, the groups that raise and spend money on campaigns, rose from about $750 million in the 2008 election cycle to more than $4 billion in the 2020 cycle.[^c5-8] Five appointed judges reshaped the political economy of the world's largest democracy, and no one voted on it.
+
+> **What to watch for**
+> - The same donors sitting at the top of campaign-finance disclosures across multiple election cycles.
+> - Voting districts shaped to protect incumbents rather than to match real communities.
+> - Civic bodies whose members are drawn from the same narrow social networks.
+> - Any mechanism built to check power being aimed instead at people who have none.
+
+> *Civic mechanisms do not stay neutral — they require active maintenance, transparency, and an external moral accountability that procedural rules alone cannot provide.*
+
+**Where this project responds:** Voice and Service Record. Voice gives people bounded civic priority that money cannot buy or accumulate, and Service Record rotates eligibility for public roles so the same networks cannot hold them indefinitely.
+
+**Sources**
+
+[^c5-1]: [UNVERIFIED — panel check] Athenian ostracism as an anti-tyranny mechanism, exile for ten years by popular vote without charge or trial, working roughly as designed for about fifty years. Standard sources on Athenian democracy (e.g., Aristotle, Constitution of the Athenians; modern surveys of Athenian institutions).
+
+[^c5-2]: [UNVERIFIED — panel check] The 417 BC ostracism of Hyperbolus, coordinated by Nicias and Alcibiades, after which Athens never used ostracism again. Plutarch's Lives (Nicias, Alcibiades) and modern histories of classical Athens.
+
+[^c5-3]: [UNVERIFIED — panel check] The Venetian Doge selection process (ten alternating rounds of lottery and election, multi-day procedure, ~1,100-year span 697–1797, ended by Napoleonic conquest rather than internal capture). Histories of the Venetian Republic.
+
+[^c5-4]: [UNVERIFIED — panel check] Ireland's Citizens' Assembly (2016–18): ~99 randomly selected members, ~18 months of deliberation on abortion law, leading to a 2018 referendum passing with 66% of the vote. Official Citizens' Assembly of Ireland records and 2018 referendum results.
+
+[^c5-5]: [UNVERIFIED — panel check] US gerrymandering: ~85% of US House seats non-competitive; US Supreme Court 2019 ruling (Rucho v. Common Cause) that partisan gerrymandering is not subject to federal judicial review.
+
+[^c5-6]: [UNVERIFIED — panel check] Mondragon cooperatives founded 1956 by Fr. José María Arizmendiarrieta on Catholic social teaching; one-worker-one-vote governance; ~80,000 worker-owners; ~70 years of operation; "We build the road as we travel" attributed to the founder.
+
+[^c5-7]: [UNVERIFIED — panel check] British abolition movement: Wilberforce and the Clapham Sect; twelve consecutive years of abolition bills; slave trade estimated at ~11% of British exports; ~50 years from the 1787 founding of the Society for Effecting the Abolition of the Slave Trade to the 1833 Slavery Abolition Act.
+
+[^c5-8]: [UNVERIFIED — panel check] Citizens United v. FEC (2010), 5–4 decision granting corporations political-spending speech rights; PAC spending rising from ~$750 million (2008 cycle) to over $4 billion (2020 cycle).
