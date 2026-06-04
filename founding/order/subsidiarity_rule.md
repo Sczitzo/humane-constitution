@@ -64,7 +64,7 @@ A matter is a concrete decision requiring a binding resolution:
 - **Adjudication:** resolving a dispute between parties. (e.g., first-tier mediation at neighborhood scale)
 - **Enforcement:** applying a penalty or remediation to a prior violation. (e.g., Annex AJ §4 regional enforcement)
 
-Administrative tasks that simply apply existing rules — disbursing Essential Access at the federation rate to eligible residents, running the idle-money fee on Flow balances — are **not** matters requiring subsidiarity analysis. Those are ordinary operations.
+Administrative tasks that simply apply existing rules — disbursing Essential Access at the federation rate to eligible residents, assessing the Annex D net-worth carrying cost on wealth above the participation floor — are **not** matters requiring subsidiarity analysis. Those are ordinary operations.
 
 ---
 
