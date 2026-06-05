@@ -2808,6 +2808,19 @@ const READING_PATHS: ReadingPathDef[] = [
     ],
   },
   {
+    id: 'media-builder',
+    title: 'Media Builder',
+    description: 'For turning the corpus into NotebookLM audio, short videos, interviews, and plain-language media without overclaiming.',
+    steps: [
+      { path: 'docs/public/11_notebooklm_media_source_packet.md', note: 'Start here. This packet gives NotebookLM the media guardrails, source stack, narrative arc, prompts, scripts, and skeptic questions.' },
+      { path: 'docs/public/00_start_here.md', note: 'Use this as the shortest thesis and caveat source.' },
+      { path: 'docs/public/10_real_world_examples.md', note: 'Use this for real-world examples, historical comparators, and what succeeded or failed.' },
+      { path: 'docs/public/09_pilot_proposal.md', note: 'Use this for what must be tested before stronger claims are made.' },
+      { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Use this to keep media honest about what is designed, unproven, or still missing.' },
+      { path: 'docs/governance/Christ_Centered_Evaluation.md', note: 'Use this for Christ-centered humility, dignity, Babel-risk warnings, and fruit tests.' },
+    ],
+  },
+  {
     id: 'skeptic',
     title: 'The Skeptic\'s Path',
     description: 'For those who arrived with objections. Starts with the real-world track record, then what is unknown, then builds the case.',

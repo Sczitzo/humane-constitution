@@ -12,7 +12,7 @@
     "threatCount": 28,
     "patchCount": 62,
     "validatorStatus": "pass",
-    "buildStamp": "corpus-9e7475fdba29"
+    "buildStamp": "corpus-2ed526f5507f"
   },
   "docs": [
     {
@@ -6700,6 +6700,125 @@
       "headingCount": 13
     },
     {
+      "id": "docs__public__11_notebooklm_media_source_packet_md",
+      "path": "docs/public/11_notebooklm_media_source_packet.md",
+      "section": "constitution",
+      "title": "NotebookLM Media Source Packet",
+      "status": "",
+      "statusBucket": "reference",
+      "summary": "A person should not lose food, shelter, medicine, or public standing because they lost a job, lost a document, angered an official, or failed to please a market. The Humane Constitution is a proposed design for keeping survival, market money, civic power, scarcity response, and public return in separate protected lanes.",
+      "content": "# NotebookLM Media Source Packet\n\n> **Purpose:** A clean source packet for creating high-value audio, video, interview, and social material from the Humane Constitution corpus.\n>\n> **Audience:** NotebookLM, podcast hosts, video editors, researchers, pastors, civic groups, funders, and skeptical non-experts.\n>\n> **Use:** Upload this file into NotebookLM with the source documents listed below. Then use the prompt bank in this file to generate audio overviews, scripts, outlines, debate prep, and short-form media.\n>\n> **Boundary:** This project is a public working draft. It is not active governance. It has not been pilot-tested. No media output should imply that the system is proven, deployed, divinely endorsed, or ready to govern people.\n\n---\n\n## The Core Story\n\nA person should not lose food, shelter, medicine, or public standing because they lost a job, lost a document, angered an official, or failed to please a market. The Humane Constitution is a proposed design for keeping survival, market money, civic power, scarcity response, and public return in separate protected lanes.\n\nThe central testable claim is simple:\n\n> Survival, market power, and political power can be kept structurally non-convertible - and whether the walls actually hold is testable, not yet tested.\n\nThat sentence should shape every media product. The project is not asking people to believe a promise. It is asking people to examine a design, test its claims, and try to break weak assumptions before anyone depends on it.\n\n## The Plain-Language Thesis\n\nMost societies let money do too many jobs. It buys groceries, rent, medicine, business tools, lawyers, influence, protection, and sometimes political access. When one tool does all of that, having more money becomes more than comfort. It becomes leverage over other people.\n\nThis project tries to separate those jobs:\n\n- **Life channel:** Essential Access and the Constitutional Survival Minimum protect the survival floor.\n- **Market channel:** Flow remains ordinary money for wages, prices, saving, contracts, and enterprise.\n- **Civic channel:** Voice and Service Record support bounded public influence and rotating public service without becoming social credit.\n- **Scarcity overlay:** Shared Storehouse handles temporary rationing when there is a real shortage.\n- **Public-return layer:** Commons Return and Universal Stake return shared or scarcity-created value without letting that stake buy office, survival priority, membership, legal standing, or public favor.\n\nThe design only works if the lanes stay separate.\n\n## Media Guardrails\n\nEvery media product should preserve these guardrails:\n\n1. **Do not say this is proven.** No field pilot has run.\n2. **Do not say this is deployed.** It is a public working draft and reader prototype.\n3. **Do not say this replaces God, virtue, church, family, or community.** The Christ-centered lens treats the corpus as human-made, corrigible, and subordinate to Christ's teachings.\n4. **Do not claim divine endorsement.** Christ-centered review is a humility and fruit test, not a claim that God endorses the project.\n5. **Do not call demurrage the active system.** Demurrage is retired as the wealth spine. It remains only a historical comparator and warning case.\n6. **Do not claim taxes are unnecessary.** Commons Return and Universal Stake may reduce some public-finance burdens only after costed evidence. Broad tax replacement is not established.\n7. **Do not sell the walls as perfect.** The honest claim is detection, cost, review triggers, and tolerated leakage thresholds - not a sealed vault.\n8. **Do not frame Service Record as human worth.** Service Record may support eligibility where the corpus allows it, but ordinary challenger routes, appeals, conscience protections, and non-priesthood rules must remain visible.\n9. **Do not hide the hardest problems.** Identity without surveillance, real capacity measurement, host-law legitimacy, capture, and scale are still unresolved or unproven.\n10. **Do not make media that flatters the project more than it tests it.** The tone should be neutral, plain, honest, and pressure-tested.\n\n## Best Source Stack to Upload\n\nUpload this file with these source documents when building a NotebookLM notebook:\n\n| Source | Why it matters |\n|---|---|\n| [Start Here](00_start_here.md) | The shortest public thesis, strongest caveats, and the central falsifiable claim. |\n| [Real-World Examples Guide](10_real_world_examples.md) | The plain guide to real problems, historical attempts, successes, failures, and project mappings. |\n| [Useful History](08_useful_history.md) | The longer background on survival dependency, wealth-power convergence, class lock-in, scarcity, civic capture, and parallel-money lessons. |\n| [FAQ](02_faq.md) | Direct answers to common objections in non-technical language. |\n| [White Paper](04_white_paper.md) | The fuller public case and the protected-lane explanation. |\n| [Life and Rights](05_life_and_rights.md) | Lived examples showing what the design tries to protect. |\n| [A Minimal Pilot Proposal](09_pilot_proposal.md) | The practical testing path, pilot hypotheses, failure triggers, and measurement plan. |\n| [Claims and Evidence Register](../governance/Claims_Evidence_Register.md) | The evidence status of claims, including what is designed, unproven, and unresolved. |\n| [Evidence Ladder](../governance/Evidence_Ladder.md) | The standard for moving a claim from assertion to tested evidence. |\n| [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md) | The staged route from design to evidence, including what must be tested before stronger claims are made. |\n| [Threat Register](../governance/Threat_Register.md) | The named failure modes and adversarial risks the system already admits. |\n| [Open Problems Resolution Docket](../governance/Open_Problems_Resolution_Docket.md) | The open problems and required evidence tracks that prevent premature confidence. |\n| [Fairness Vignette Library](../governance/Fairness_Vignette_Library.md) | Human scenarios that stress-test disability, documents, safety, religion, care, wealth routing, and local capture. |\n| [Commons Return and Universal Stake Evidence Test Package](../governance/Commons_Return_Universal_Stake_Evidence_Test_Package.md) | The fiscal, incidence, dignity, capture, and non-convertibility tests for the active public-return system. |\n| [Christ-Centered Evaluation](../governance/Christ_Centered_Evaluation.md) | The humility, dignity, Babel-risk, and fruit-test lens. |\n| [Annex D](../annexes/ANNEX_D.md) | The live Commons Return and Universal Stake architecture. |\n| [Annex Y](../annexes/ANNEX_Y.md) | The Constitutional Survival Minimum and survival-floor rules. |\n| [Annex Z](../annexes/ANNEX_Z.md) | Voice, Service Record, ordinary challenger routes, and civic safeguards. |\n| [Architecture Source Map](../governance/Architecture_Source_Map.md) | The map connecting ideas, sources, and design claims. |\n| [Hardening Queue](../governance/Hardening_Queue.md) | The open work that must be resolved before stronger claims can be made. |\n\nFor a smaller notebook, use only the first eight sources in the table. For a skeptic-heavy notebook, add the Threat Register, Open Problems Resolution Docket, Fairness Vignette Library, Claims and Evidence Register, and Commons Return and Universal Stake Evidence Test Package.\n\n## Visual Explainer Assets\n\nUse these images for short video, carousel, and narration structure:\n\n| Asset | Best use |\n|---|---|\n| `app/public/images/V-010.png` | Main visual for protected lanes and layers. |\n| `app/public/images/V-011.png` | Essential Access lifecycle and survival-floor delivery. |\n| `app/public/images/V-015.png` | Commons Return and Universal Stake visual framing. |\n| `app/public/images/V-003.png` | Non-convertibility walls and separation logic. |\n| `app/public/images/V-008.png` | Pilot/evidence sequence. |\n| `app/public/images/V-009.png` | Threat-patch chain and adversarial accountability. |\n\nMedia rule: use diagrams as explanations, not proof. The visuals show what the project proposes; they do not show that the system works.\n\n## The Narrative Arc\n\nUse this order for long-form audio or video:\n\n1. **Start with an ordinary person losing leverage.** A job loss turns into food pressure, rent pressure, medical pressure, and bargaining weakness.\n2. **Name the structural problem.** Money does too many jobs at once, so market success can become power over survival and public rules.\n3. **Explain protected lanes.** Survival, market exchange, civic influence, scarcity response, and public return are separated.\n4. **Explain what changed from demurrage.** The project moved away from net-worth demurrage because it risked surveillance, valuation fights, ordinary-household burden, and overclaiming. The active direction is Commons Return and Universal Stake.\n5. **Use history as pressure, not proof.** Jubilee, early church sharing, Worgl, Alaska, Singapore housing, rationing, commons governance, and regulatory capture all teach something, but none proves the design works.\n6. **State the pilot burden.** The project must test delivery, conversion leakage, scarcity declarations, Commons Return incidence, distribution, dignity, and capture before claiming readiness.\n7. **Steelman the skeptic.** The rich do not need to break walls if they can buy ladders. The media should ask how shells, contracts, favors, capture, and off-ledger markets would attack the system.\n8. **End with the fruit test.** Does the design make people less trapped, less coerced, less invisible, and more able to live with dignity?\n\n## High-Value Talking Points\n\nUse these as source-backed segments:\n\n1. **The project is not anti-market.** It preserves ordinary money, enterprise, wages, prices, and contracts while limiting what money may buy.\n2. **The survival floor is not cash.** Essential Access is meant to protect life needs without becoming debt, collateral, status, or a market commodity.\n3. **The public-return layer is not demurrage.** Commons Return targets shared or scarcity-created value; Universal Stake distributes the return through a protected member stake.\n4. **Service Record is not social credit.** It must not score human worth, buy rights, or become a priesthood of high-status contributors.\n5. **Scarcity is handled separately.** Shared Storehouse is for verified shortage only, and it must be temporary, challengeable, and equal under pressure.\n6. **Christ-centered does not mean theocratic.** The Christian lens is a test of humility, mercy, truth, dignity, accountability, and good fruit.\n7. **History is used honestly.** Past attempts supply warnings, comparators, and pressure tests, not proof.\n8. **The system is designed to be attacked.** The threat register, evidence ladder, pilot plan, and hardening queue exist so weak claims can be found.\n9. **The hardest technical problem is real capacity.** A survival floor depends on knowing what goods and services can actually be produced and delivered.\n10. **The hardest political problem is capture.** Wealth will try to become rule-power through legal, administrative, media, and institutional channels.\n11. **The hardest dignity problem is identity.** The system must prevent fraud without turning people into data profiles or excluding the vulnerable.\n12. **Fairness lives in edge cases.** The design must work for disabled, displaced, elderly, undocumented, digitally fragile, abused, religious, and locally unpopular people.\n13. **Failed pilots must not be rebranded.** A failed test is useful only if the failure is published and the mechanism is repaired or downgraded.\n14. **The honest next step is a pilot.** The first tests should find out what breaks before anyone depends on it.\n\n## Audio Overview Prompts\n\nPaste one of these into NotebookLM after uploading the source stack.\n\n1. Create a 12-minute audio overview for a skeptical but fair listener. Explain the Humane Constitution's central problem, protected lanes, evidence gaps, and why it is not claiming to be proven.\n2. Create a 15-minute two-host conversation. One host is curious and sympathetic; the other is skeptical. Make the skeptic ask hard questions about capture, black markets, identity, and pilot evidence.\n3. Create a plain-language explainer for someone with no policy background. Avoid jargon. Use everyday examples: job loss, rent pressure, medical need, political donations, and shortage panic.\n4. Create a Christ-centered but non-theocratic discussion. Explain how the project uses dignity, mercy, truthfulness, Babel-risk, and fruit tests without claiming divine endorsement.\n5. Create a historical-comparator episode. Cover Jubilee, early church sharing, Worgl, Alaska, Singapore housing, wartime rationing, commons governance, and regulatory capture. For each case, state what worked, what failed, and what the project learns.\n6. Create a funder-facing overview of the minimal pilot proposal. Focus on what each pilot tests, what failure looks like, and why failure would be useful.\n7. Create a debate episode titled \"Can money be stopped from buying survival and political power?\" Include the strongest case for and against the project.\n8. Create an episode focused only on Commons Return and Universal Stake. Explain why demurrage was retired and what tests CRUS must pass.\n9. Create a 10-minute \"what would make this fail?\" episode. Lead with failure modes: off-ledger conversion, fake scarcity, administrative exclusion, capture, identity surveillance, and public-finance overclaim.\n10. Create an episode titled \"Could this become social credit?\" Use Voice, Service Record, misuse risks, ordinary challenger routes, and appeal protections.\n11. Compare the design to welfare, UBI, socialism, social credit, and ordinary markets. Be precise about what it is and what it is not.\n12. Create a 7-minute \"start here\" overview that ends by telling listeners which three documents to read next: Start Here, Real-World Examples Guide, and A Minimal Pilot Proposal.\n\n## Short-Form Video Hooks\n\nUse these for 30-90 second clips:\n\n1. Money buys groceries, lawyers, lobbyists, and survival. Should one tool do all that?\n2. What if losing your job did not mean losing your food, medicine, or housing?\n3. The real problem is not money. It is money doing too many jobs.\n4. A society can have markets without letting markets decide who survives.\n5. This project used to consider demurrage. It rejected it as the main wealth tool.\n6. The hardest objection: rich people do not break walls. They buy ladders.\n7. A basic needs floor is not real if an identity mistake can cut you off.\n8. Rationing always happens in shortage: by price, privilege, panic, or public rule.\n9. The new public-return idea is simple: if value comes from shared sources, some return belongs to the public.\n10. The survival floor cannot become cash, debt, collateral, or status. That wall is the whole test.\n11. A fair shortage system has to be temporary, public, and equal - or it becomes favoritism.\n12. Service Record cannot become social credit. If it measures human worth, it has failed.\n13. History does not prove this project. History tells us what to test before trusting it.\n14. Christ-centered review is not a claim of divine endorsement. It is a humility test.\n15. The design is not ready for deployment. It is ready to be attacked.\n16. The pilot's job is not to prove the designer right. It is to find out what breaks.\n\n## Short Video Script Skeletons\n\n### Script 1 - \"Money Does Too Many Jobs\"\n\n**Hook:** Money buys food, rent, medicine, lawyers, and political access. That is the problem.\n\n**Body:** Markets can be useful. But when the same tool controls survival and public power, poverty becomes danger and wealth becomes leverage. The Humane Constitution tries to split those jobs into protected lanes: survival, market exchange, civic influence, scarcity response, and public return.\n\n**Close:** The claim is not \"this works.\" The claim is \"this is testable.\" The next step is pressure, pilots, and evidence.\n\n### Script 2 - \"Why Demurrage Was Retired\"\n\n**Hook:** This project used to explore demurrage. It moved away from it.\n\n**Body:** A net-worth decay system can sound elegant, but it creates hard problems: asset valuation, surveillance, ordinary-household burden, avoidance through shells, and the temptation to make one money rule solve everything. The active design is now Commons Return and Universal Stake.\n\n**Close:** The new question is not \"how do we decay wealth?\" It is \"how do we return shared value without punishing ordinary life?\"\n\n### Script 3 - \"The Pilot Has to Be Allowed to Fail\"\n\n**Hook:** A serious pilot is not a sales demo.\n\n**Body:** The pilot has to test the walls: can Essential Access stay continuous, can people cash it out, can scarcity be declared honestly, can Commons Return avoid capture, and can Universal Stake stay non-tradable?\n\n**Close:** If the system fails those tests, the answer is not spin. The answer is repair before anyone depends on it.\n\n## Skeptic Questions the Media Must Answer\n\n1. What stops the rich from routing around the walls through shells, contracts, favors, or influence?\n2. How can Essential Access avoid becoming a black market?\n3. Who decides what counts as a true shortage, and how can that decision be challenged?\n4. How does the project prevent identity verification from becoming surveillance?\n5. How can Commons Return avoid being passed through to renters, workers, or ordinary consumers?\n6. Why should Universal Stake avoid political patronage better than ordinary public benefits?\n7. What stops Service Record from becoming social credit?\n8. How does a Christ-centered lens avoid becoming coercive religious rule?\n9. What happens if the host legal system is corrupt or violent?\n10. Who watches the watchers: founders, auditors, Ombuds bodies, panels, and keyholders?\n11. How do displaced, undocumented, disabled, elderly, abused, or digitally fragile people avoid exclusion?\n12. What evidence would make the project downgrade or abandon a proposal?\n\n## Interview Questions\n\nUse these for a podcast, documentary, or long-form interview:\n\n1. What real-life situation made you think survival, market power, and political power need to be separated?\n2. What does the project protect that ordinary welfare programs do not?\n3. What did the demurrage debate teach you, and why did the project move to Commons Return and Universal Stake?\n4. Which historical example is most useful, and which is most dangerous to romanticize?\n5. What does \"Christ-centered but human-made\" mean in practice?\n6. What is the difference between protecting dignity and building a perfect society?\n7. What failure mode worries you most right now?\n8. What would a successful pilot prove, and what would it still not prove?\n9. What would make you abandon or substantially rewrite part of the design?\n10. What kind of skeptic do you most want reading the corpus?\n\n## Carousel or Slide Outline\n\nUse this for social posts, a simple deck, or a visual explainer:\n\n1. **The problem:** money does too many jobs.\n2. **The danger:** losing money can mean losing survival and public voice.\n3. **The design:** separate protected lanes.\n4. **Life channel:** survival floor, not cash.\n5. **Market channel:** ordinary money still works.\n6. **Civic channel:** Voice and Service Record cannot become social credit.\n7. **Scarcity overlay:** rationing only under real, temporary shortage.\n8. **Public-return layer:** shared value returns to the public through Universal Stake.\n9. **History:** real examples warn us what to test.\n10. **Honesty:** no pilot evidence yet.\n11. **Next step:** test the walls before deployment.\n12. **Fruit test:** are people less trapped and more dignified?\n\n## Phrases to Use\n\n- \"public working draft\"\n- \"testable, not yet tested\"\n- \"no pilot evidence yet\"\n- \"structure under pressure, not a promise\"\n- \"protected lanes and layers\"\n- \"survival, market money, civic power, scarcity response, and public return\"\n- \"comparator, not proof\"\n- \"history as warning, not proof\"\n- \"Christ-centered humility, not divine endorsement\"\n- \"Commons Return and Universal Stake\"\n- \"ordinary life must stay protected\"\n- \"a pilot should find what breaks\"\n- \"failed pilots do not get rebranded as success\"\n- \"ready for critique and deeper testing, not deployment\"\n- \"good fruit in practice\"\n\n## Phrases to Avoid\n\n- \"This system has solved poverty.\"\n- \"This system makes taxes unnecessary.\"\n- \"This is God's constitution.\"\n- \"Demurrage is the active wealth instrument.\"\n- \"The walls cannot be broken.\"\n- \"Service Record measures who deserves more.\"\n- \"Universal Stake is just UBI.\"\n- \"Essential Access is welfare.\"\n- \"The project is ready to govern.\"\n- \"History proves this will work.\"\n\n## Best First Media Package\n\nIf you only make one batch, make this:\n\n1. **12-minute audio overview:** \"Can money be stopped from buying survival and political power?\"\n2. **90-second video:** \"Money does too many jobs.\"\n3. **90-second video:** \"Why demurrage was retired.\"\n4. **60-second video:** \"The pilot has to be allowed to fail.\"\n5. **Carousel:** \"The protected lanes and layers.\"\n6. **Long-form interview outline:** use the interview questions above.\n7. **Skeptic FAQ clip set:** one clip each for black markets, capture, identity, scarcity, CRUS incidence, Service Record, and Christ-centered humility.\n\n## Final Instruction for NotebookLM\n\nWhen asking NotebookLM to generate media from this packet, include this instruction:\n\n> Treat the Humane Constitution as a serious but unproven public design. Keep the tone plain, neutral, and skeptical-friendly. Do not flatter the project. Preserve the caveats: no pilot evidence yet, no divine endorsement, no active demurrage system, no claim of tax replacement, and no claim that the walls are perfect. Explain what the project proposes, what history teaches, what remains unproven, and what pilots must test before anyone should trust it.\n",
+      "headings": [
+        {
+          "level": 1,
+          "text": "NotebookLM Media Source Packet",
+          "slug": "notebooklm-media-source-packet"
+        },
+        {
+          "level": 2,
+          "text": "The Core Story",
+          "slug": "the-core-story"
+        },
+        {
+          "level": 2,
+          "text": "The Plain-Language Thesis",
+          "slug": "the-plain-language-thesis"
+        },
+        {
+          "level": 2,
+          "text": "Media Guardrails",
+          "slug": "media-guardrails"
+        },
+        {
+          "level": 2,
+          "text": "Best Source Stack to Upload",
+          "slug": "best-source-stack-to-upload"
+        },
+        {
+          "level": 2,
+          "text": "Visual Explainer Assets",
+          "slug": "visual-explainer-assets"
+        },
+        {
+          "level": 2,
+          "text": "The Narrative Arc",
+          "slug": "the-narrative-arc"
+        },
+        {
+          "level": 2,
+          "text": "High-Value Talking Points",
+          "slug": "high-value-talking-points"
+        },
+        {
+          "level": 2,
+          "text": "Audio Overview Prompts",
+          "slug": "audio-overview-prompts"
+        },
+        {
+          "level": 2,
+          "text": "Short-Form Video Hooks",
+          "slug": "short-form-video-hooks"
+        },
+        {
+          "level": 2,
+          "text": "Short Video Script Skeletons",
+          "slug": "short-video-script-skeletons"
+        },
+        {
+          "level": 3,
+          "text": "Script 1 - \"Money Does Too Many Jobs\"",
+          "slug": "script-1-money-does-too-many-jobs"
+        },
+        {
+          "level": 3,
+          "text": "Script 2 - \"Why Demurrage Was Retired\"",
+          "slug": "script-2-why-demurrage-was-retired"
+        },
+        {
+          "level": 3,
+          "text": "Script 3 - \"The Pilot Has to Be Allowed to Fail\"",
+          "slug": "script-3-the-pilot-has-to-be-allowed-to-fail"
+        },
+        {
+          "level": 2,
+          "text": "Skeptic Questions the Media Must Answer",
+          "slug": "skeptic-questions-the-media-must-answer"
+        },
+        {
+          "level": 2,
+          "text": "Interview Questions",
+          "slug": "interview-questions"
+        },
+        {
+          "level": 2,
+          "text": "Carousel or Slide Outline",
+          "slug": "carousel-or-slide-outline"
+        },
+        {
+          "level": 2,
+          "text": "Phrases to Use",
+          "slug": "phrases-to-use"
+        },
+        {
+          "level": 2,
+          "text": "Phrases to Avoid",
+          "slug": "phrases-to-avoid"
+        },
+        {
+          "level": 2,
+          "text": "Best First Media Package",
+          "slug": "best-first-media-package"
+        },
+        {
+          "level": 2,
+          "text": "Final Instruction for NotebookLM",
+          "slug": "final-instruction-for-notebooklm"
+        }
+      ],
+      "wordCount": 3282,
+      "headingCount": 21
+    },
+    {
       "id": "docs__public__09_pilot_proposal_md",
       "path": "docs/public/09_pilot_proposal.md",
       "section": "constitution",
@@ -11549,6 +11668,7 @@
     "docs/public/00_start_here.md",
     "docs/public/08_useful_history.md",
     "docs/public/10_real_world_examples.md",
+    "docs/public/11_notebooklm_media_source_packet.md",
     "docs/public/05_life_and_rights.md",
     "docs/public/02_faq.md",
     "docs/public/04_white_paper.md",
