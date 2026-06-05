@@ -26,6 +26,7 @@ In plain terms:
 - Survival access can only be issued when real food, shelter, care, and transport capacity exists.
 - The people checking the system cannot also be the people who benefit from changing the numbers.
 - These rules cannot be weakened by ordinary votes or inside procedures.
+- This is a fiscal-civic layer, not a whole government: it does not run the police, the courts, or decide who belongs — but it binds whoever does, so force can never starve a person, punishment can never breach the floor, belonging can never be bought, and the people who hold force live inside the same walls as everyone else.
 
 If a proposed change breaks one of these promises, the answer is no before the detailed review even starts.
 
@@ -34,6 +35,16 @@ If a proposed change breaks one of these promises, the answer is no before the d
 ## Foundational Premise
 
 Every person has inherent and equal worth that this system does not confer and cannot revoke — a worth the founders understand as belonging to each person as a bearer of the image of God, which they do not claim the authority to define, only the duty to protect. These invariants exist to serve persons; no rule or institution may be revered above the people it was made to protect.
+
+---
+
+## Scope — What This Constitution Is, and Is Not
+
+The Humane Constitution is a fiscal-civic layer. It governs market money (Flow), the survival floor (Essential Access), accumulated wealth, scarcity rationing (Shared Storehouse), and civic priority and public-role eligibility (Voice, Service Record). It does **not** supply, and does not claim, the monopoly on legitimate force, a criminal or civil justice system, or the authority to define who is a member of the polity. It presupposes a host rule-of-law order to provide these, and it binds that order with the interface invariants (INV-014 through INV-019) below. Where a host order violates those invariants, this design does not claim legitimacy or operability within it.
+
+This boundary is scope-independent: it holds for a pilot inside an existing state and for a full society coexisting with a rule-of-law polity. The layer never itself becomes the sovereign that wields force. Declaring this is not a retreat from the design's ambition but its humility made structural — a framework that claimed the power to police and punish as well as to allocate would be exactly the concentration the walls exist to prevent.
+
+This Scope section is descriptive of the boundary; the interface invariants below carry its binding force. It elevates to a scale-independent constitutional statement what the Jurisdiction Interface Clause already concedes at pilot scale (that this design "does not establish a sovereign state, a court of law, or a law enforcement authority"), and it adds the interface invariants that clause lacks.
 
 ---
 
@@ -223,6 +234,12 @@ Any patch proposal submitted to FAP is evaluated against this document before te
 11. Would permit a constitutional decision to execute without named human attestation (violates INV-011)
 12. Would amend any Founding Order file (`founding/order/`) through a sub-Tier-1 process (violates INV-012)
 13. Would allow a survival-floor denial or reduction to stand without an accessible human appeal, or would withhold the survival floor during that appeal (violates INV-013)
+14. Would permit a coercive, policing, or justice authority to reduce Essential Access below the CSM floor as punishment, coercion, leverage, or control (violates INV-014)
+15. Would permit punishment to push a person below the survival floor, or confiscation below the participation floor (violates INV-015)
+16. Would create or sanction a market, inheritance, or proxy pathway in polity membership (violates INV-016)
+17. Would convert legitimate force into Flow, wealth, Voice, or survival advantage, or exempt a force-holding body from independent audit (violates INV-017)
+18. Would permit a host authority to withhold a survival-floor entitlement without a contemporaneous human appeal, or withhold the floor during that appeal (violates INV-018)
+19. Would gate, reduce, or condition the floor for a child or incapacitated person on guardian status, or leave them without a guardian of last resort (violates INV-019)
 
 ...is rejected at intake without proceeding to technical review. The FAP reviewer documents the violation by invariant ID.
 
@@ -269,6 +286,72 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 **Why this matters:** An unconditional floor with no remedy is unconditional only until the machinery makes a mistake. False fraud-flags, failed scans, and mismatched records *will* occur; without a fast human appeal that provides first and verifies second, the error itself becomes the new condition on survival. The remedy is what makes "unconditional" true in operation, not only on paper.
 
 **Attack vectors that target this invariant:** T-007 (definition drift), implementation drift turning provisional flags into de facto denials, fraud-control overreach.
+
+---
+
+## Interface Invariants — Binding the Host Order
+
+INV-014 through INV-019 are *interface invariants*. They do not govern the five instruments directly; they bind whatever host order supplies force, justice, and membership — the functions this layer deliberately does not constitute (see Scope). They are the contract the host must meet for the walls to mean anything. A host that breaches them voids this design's claim to legitimacy and operability within it. They are Tier 1 and carry the same protection and amendment threshold as INV-001 through INV-013.
+
+## INV-014 — Force May Never Gate Survival
+
+**Statement:** No coercive, policing, or justice authority — host or layer — may use deprivation of Essential Access (food, water, shelter, medicine) as a tool of punishment, coercion, leverage, or control. The Constitutional Survival Minimum reaches the imprisoned, the accused, the convicted, and the sanctioned without exception. Survival is never a lever.
+
+**Mechanical boundary:** Detention, sanction, conviction, accusation, or any exercise of legitimate force may not reduce a person's Essential Access below the CSM floor. The floor follows the person into custody and through punishment. No host process may condition restoration of the floor on compliance, confession, or cooperation.
+
+**Why this matters:** A justice system that can starve is a justice system that can compel anything. If the host may withhold survival as part of punishment, every wall this layer builds around survival is decorative — the coercive apparatus reopens the Survival-Trade Bind from outside the layer. The floor must reach precisely the people a system is most tempted to treat as exceptions.
+
+**Attack vectors that target this invariant:** Host-side punitive deprivation (carceral starvation, sanction-by-withholding); definition drift reclassifying punishment as a capacity dispute to evade INV-001; implementation drift treating custody as a survival-floor exemption.
+
+## INV-015 — Punishment May Suspend Liberty, Never Breach the Floor
+
+**Statement:** A host justice system may restrict liberty, movement, and Voice as punishment. It may never push a person below the survival floor, nor confiscate a person below the participation floor. There is no civil or criminal death by starvation or by destitution.
+
+**Mechanical boundary:** Permitted punitive measures: restriction of liberty and movement; suspension of Voice and civic standing. Prohibited as punishment: any reduction of Essential Access below CSM (INV-001, INV-014); any fine, forfeiture, restitution, or asset confiscation that brings the person below the household savings floor (S) as protected under INV-009. Confiscation above the floor is a host matter; confiscation through the floor is void.
+
+**Why this matters:** Liberty can be restored; a person starved or stripped to destitution as punishment is harmed in a way the system promises never to inflict. Distinguishing what punishment *may* take (liberty, Voice) from what it *may never* take (survival, the participation floor) keeps the floor unconditional even against legitimate judgment.
+
+**Attack vectors that target this invariant:** Punitive fines or restitution calibrated to breach the floor; forfeiture regimes that strip below-floor households; sanction structures that suspend liberty in name but starvation in effect.
+
+## INV-016 — Membership Is Non-Convertible
+
+**Statement:** The host order defines who belongs to the polity. Membership — and the Voice, survival floor, and any commons dividend that attach to it — may never be bought, sold, rented, pledged, or inherited as a tradable asset. Citizenship is not a market good.
+
+**Mechanical boundary:** No market, contract, proxy transaction, or system state may create a conversion pathway between Flow or wealth and membership standing, by analogy to and extension of INV-002 (instrument non-convertibility) and INV-004 (influence cannot be purchased). The host may grant, define, or revoke membership by its own lawful process; it may not operate or sanction a market in it. Membership obtained or transferred through a prohibited conversion confers no Voice, floor priority, or dividend within the layer.
+
+**Why this matters:** If belonging itself becomes purchasable, the wealthy buy the demos and every downstream non-convertibility wall fails at its root. The floor and Voice are attached to personhood-in-the-polity, not to a saleable title; a market in membership would convert the Power-Wealth Convergence the layer exists to prevent into a one-step purchase.
+
+**Attack vectors that target this invariant:** Citizenship-by-investment schemes routed through the host; inheritance of membership-as-asset; rental or proxy arrangements that lease civic standing for Flow.
+
+## INV-017 — The Holders of Force Are Inside the Walls, Not Above Them
+
+**Statement:** Whoever wields legitimate force is bound by the same non-convertibility as every other person and is subject to the same audit. Force may not be converted into Flow, wealth, Voice, or survival advantage — no extortion, no sale of protection, no purchase of immunity — and the coercive apparatus is subject to the "no apex sits unaudited" rule (INV-006).
+
+**Mechanical boundary:** No entity holding coercive or justice authority may (a) convert that authority into Flow, wealth, Voice, Service Record standing, or above-floor survival advantage, or accept any such conversion; or (b) sit unaudited. Every body holding force is auditable by a party structurally independent of it, on the same terms INV-006 imposes on verification, oracle, and keyholder authority. Immunity from audit is itself a prohibited conversion of force into standing.
+
+**Why this matters:** The capstone's gravest finding was that capturing the coercive apparatus makes every other wall decorative. This invariant places the holders of force *inside* the same non-convertibility and audit walls as everyone else, so legitimate force cannot become a private revenue or a private immunity. It is the structural form of authority-as-service rather than authority-as-lordship.
+
+**Attack vectors that target this invariant:** Protection rackets and shakedowns by force-holders; purchased immunity or selective enforcement; an unaudited security or carceral apex; force converted into civic or market advantage.
+
+## INV-018 — Due Process Before Any Withholding
+
+**Statement:** No instrument or authority — host or layer — may withhold a survival-floor entitlement without a contemporaneous, accessible, human-reviewed appeal path, and the floor is provided during that appeal, not withheld pending it. This extends INV-013 (survival access has a human remedy) across the layer's boundary to every host authority that can touch the floor.
+
+**Mechanical boundary:** Any host-side denial, reduction, suspension, delay, or flag that withholds a person's CSM — including for suspected crime, security designation, immigration status, or identity-verification failure — carries an appeal that is (a) reachable without identity, documents, literacy, or fee; (b) decided by a named human within a published maximum window; and (c) resolved toward provision while pending. A withholding issued with no open appeal path is void, regardless of which authority issued it.
+
+**Why this matters:** An unconditional floor with no remedy is unconditional only until the machinery — or a host authority — makes a mistake. Carrying INV-013's "provide first, verify second" guarantee across the interface keeps the host from doing through process what INV-014 forbids it to do by punishment.
+
+**Attack vectors that target this invariant:** Host authorities withholding the floor under security or fraud exceptions with no appeal; provisional flags hardening into de facto denials at the boundary; appeal paths that exist on paper but require identity, fee, or literacy.
+
+## INV-019 — Children and the Incapacitated Retain the Floor and a Guardian of Last Resort
+
+**Statement:** The survival floor reaches children and persons unable to act for themselves regardless of guardian status, custody, documentation, or identity. The host order must supply child protection and guardianship of last resort, but may never use guardianship, custody, or protective authority to gate, reduce, or condition the floor.
+
+**Mechanical boundary:** A child's or incapacitated person's CSM allocation is presence-triggered and is never contingent on a guardian's status, conduct, identity, or cooperation. Where no competent guardian exists or a guardian is the source of harm, the host must provide a guardian of last resort; the absence or failure of a guardian may not interrupt the floor. Protective or custodial authority over the person may not be exercised so as to withhold survival access.
+
+**Why this matters:** Children and the incapacitated are the people most easily made exceptions, because they cannot assert their own claim. Attaching the floor to their presence rather than to a guardian's standing, and requiring a guardian of last resort the host must fill, keeps the most vulnerable inside the unconditional guarantee rather than at the mercy of whoever holds custody.
+
+**Attack vectors that target this invariant:** Floor withheld for want of guardian documentation; custody disputes used to interrupt a child's survival access; protective authority weaponized to coerce a guardian by depriving a dependent.
 
 ---
 

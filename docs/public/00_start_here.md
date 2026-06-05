@@ -26,6 +26,8 @@ This is a written design for a society where money cannot quietly decide who eat
 
 The walls between those tools are the whole idea. Markets stay. Profit stays. Enterprise stays. What changes is that none of them can be turned into power over another person's survival or vote.
 
+This is also a fiscal-civic layer: it governs money, the survival floor, accumulated wealth, scarcity, and civic priority — not the police, the courts, or who counts as a member of the polity. It assumes a surrounding rule-of-law society provides those, and it binds that society with a short list of non-negotiable limits: force may never be used to starve a person, punishment may suspend liberty but never breach the survival floor, belonging may never be bought or sold, and the people who hold force live inside the same walls as everyone else. Where a host society breaks those limits, this design does not claim to work there.
+
 It is not a command economy — people still trade, price, contract, and build businesses freely. It is not a social-credit system — the civic tools cannot buy rights, safety, or basic needs, and are designed so they can never become a score that sorts human worth. It is not unlimited aid — the survival floor is bounded by what a society can actually produce. It is not a surveillance plan — the design asks for the least data it can and binds public limits on who may see it. And it is not a finished argument. It is a structure under pressure, meant to be read as a hypothesis you can attack, not a promise you are asked to accept.
 
 ## Where this sits in prior work, and what is actually new

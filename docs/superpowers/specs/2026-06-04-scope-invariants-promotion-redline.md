@@ -1,10 +1,10 @@
 # Scope Statement + Interface Invariants — ready-to-apply INVARIANTS.md redline
 
-**Status:** Proposed redline — NOT incorporated. Awaits explicit human approval + Tier-1 acceptance process. The constitution is unchanged.
+**Status:** Incorporated on branch `design/phase2-pilots-and-instrument-panels` after explicit human approval (`proceed`, 2026-06-04). This document remains the review record and source redline for the Tier-1 scope/interface amendment.
 
 **Source decision:** [Scope Boundary Doctrine](./2026-06-04-scope-boundary-doctrine.md) (Proposed). That doctrine chose framing 3: *declare the boundary AND bind the interface* — state plainly that the Humane Constitution is a fiscal-civic layer presupposing and constraining a host rule-of-law polity, and specify the non-negotiable invariants the host's force/justice/membership systems must satisfy or the layer's walls are void.
 
-**What this document is.** A copy-pasteable redline against `docs/constitution/INVARIANTS.md`, written in that file's exact house style, plus the front-door scope blurb, the FAP/Tier-1 handling note quoting the corpus's own bar, and the full Christ-centered ethical review required by `.claude/rules/constitution-review.md`. **It does not edit the constitution.** Applying it is a Tier-1 amendment requiring the process named in Part 3.
+**What this document is.** The review record and source redline against `docs/constitution/INVARIANTS.md`, written in that file's exact house style, plus the front-door scope blurb, the FAP/Tier-1 handling note quoting the corpus's own bar, and the full Christ-centered ethical review required by `.claude/rules/constitution-review.md`. Applying it is a Tier-1 amendment requiring the process named in Part 3.
 
 ---
 
