@@ -68,7 +68,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 | T-022 Electoral Cycle Capture | Static-Advantage Loop plus constitutional-durability control-plane failure. |
 | T-023 Pilot External Validity Collapse | Static-Advantage Loop when calm-condition evidence locks in false confidence. |
 | T-024 Shared Storehouse Oracle-Failure | Control-plane failure plus Survival-Trade Bind during rationing. |
-| T-025 Demurrage Sector-Capture | Power-Wealth Convergence; secondary Static-Advantage Loop through exemption definitions. |
+| T-025 Commons Return and Universal Stake Capture | Power-Wealth Convergence; secondary Static-Advantage Loop through source-base definitions, valuation, eligibility, routing, and distribution timing. |
 | T-026 Exit Denial | Survival-Trade Bind plus federation-coercion control-plane failure. |
 | T-027 Subsidiarity Violation | Static-Advantage Loop plus Power-Wealth Convergence through upward venue drift. |
 
@@ -265,14 +265,14 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Proof needed:** Capacity Measurement Evidence Test Package; oracle-blackout drill, physical-indicator review, 14-day restoration-window test, reconciliation post-mortem, and public explanation review.
 - **Residual risk:** emergency exceptions can normalize; reconciliation must be public, timely, and reputationally costly.
 
-### T-025 - Demurrage Sector-Capture via Investment Channel
+### T-025 - Commons Return and Universal Stake Capture
 
-- **Current control:** [P-023](./Patch_Log.md), [Annex AR](../annexes/ANNEX_AR.md)
-- **Resolution path:** keep zero demurrage exemptions, use contract-commitment architecture, release funds on verified physical deliverables, and protect all key terms from definition drift.
-- **Corruption route to assume:** firms use subsidiaries, project cycling, force-majeure claims, infrastructure labels, escrow windows, or procurement pressure to park Flow without decay.
-- **External evidence:** IMF and Economic Journal work establish demurrage/negative-yield money as a real monetary design space; Federal Reserve research warns negative-rate regimes can create distortions; OECD procurement and FATF beneficial ownership guidance anchor the capture routes through procurement and legal wrappers.
-- **Proof needed:** the [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md): household burden model, small-business working-capital model, public-rail revenue model, project-finance simulation, procurement integrity review, legal-wrapper red team, force-majeure panel capture audit, and nested subcontractor tracing test.
-- **Residual risk:** tight parameters can block real infrastructure while loose parameters recreate hoarding; parameter setting must be evidence-based.
+- **Current control:** Annex D Commons Return and Universal Stake rewrite; FC-202 through FC-210; [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md). [P-023](./Patch_Log.md) is superseded historical demurrage-control provenance, not the live control.
+- **Resolution path:** bind source bases, protected thresholds, assessment rates, eligibility, non-convertibility, anti-capture gates, public lockbox rules, appeal paths, and review cadence; test each against incidence, valuation hiding, routing capture, external-capital arbitrage, and legal-wrapper abuse.
+- **Corruption route to assume:** actors use subsidiaries, trusts, affiliated sales, appraisal discounts, shell cooperatives, concession lobbying, spectrum/license warehousing, foreign affiliates, eligibility manipulation, distribution timing, or fund-governance pressure to keep scarcity rents while appearing compliant.
+- **External evidence:** public-dividend, sovereign-wealth-fund, inheritance-tax, spectrum/concession, procurement-integrity, and beneficial-ownership sources anchor the design space and capture routes. Historical demurrage sources remain only as superseded comparator evidence.
+- **Proof needed:** the [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md): source-base incidence model, valuation-hiding red team, Universal Stake eligibility and non-convertibility tests, public-rail revenue model, project-finance simulation, procurement integrity review, legal-wrapper red team, routing-capture audit, external-capital arbitrage review, and nested subcontractor tracing test.
+- **Residual risk:** tight parameters can block real stewardship while loose parameters preserve elite scarcity rents; Universal Stake can become patronage if routing and eligibility are not publicly bounded and appealable.
 
 ### T-026 - Exit Denial
 

@@ -42,12 +42,12 @@
 | P-020 | T-017 | **ACTIVE** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
 | P-021 | — | **ACTIVE** | High | Register disclosure protocol: bifurcation into public and restricted versions; operational security for detection thresholds. |
 | P-022 | T-024 | **ACTIVE** | Critical | Shared Storehouse oracle-failure fallback: conservative hold, 48h REB first-responder window, 72h governance handoff, FC-100 14-day restoration verification, reconciliation review. Annex AQ ACTIVE. |
-| P-023 | T-025 | **ACTIVE** | High | Demurrage sector-capture: contract-commitment architecture, zero exemptions, demurrage-as-discipline, milestone escrow. |
+| P-023 | T-025 | **SUPERSEDED** | High | Historical demurrage-control patch; superseded by the Commons Return and Universal Stake rewrite and FC-202 through FC-210. |
 | P-024 | T-009 / TR-07 / T-018 | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
 | P-025 | T-008 | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | Founding Order — Subsidiarity, Consent & Exit: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with Essential Access continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/founding/order/` directory. |
 | P-027 | T-005 / T-008 | **ACTIVE** | Critical | Structural consolidation into one Founding Order and seven Articles of Constitutional Order. Rights and execution unified under Article I; Essential Access and delivery unified under Article IV; markets, housing, enterprise, and PFCR unified under Article V; Voice, Service Record, and deliberation unified under Article VI; transparency and environmental scanning unified under Article VII. |
-| P-029 | T-016 | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, demurrage routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
+| P-029 | T-016 | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, Commons Return routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
 | P-030 | PRD-004 | **ACTIVE** | Critical | Protocol-only money creation + household finance boundaries: no private Flow creation, no compounding household ordinary-life debt, no survival-floor securitization. |
 | P-031 | PRD-009 | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
 | P-032 | PRD-009 | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
@@ -110,10 +110,10 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 
 **Constitutional text:** [ANNEX_X.md § X8](../annexes/ANNEX_X.md)
 
-- **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding function. PFCR funds public operations through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production.
+- **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding function. PFCR funds public operations through Commons Return source receipts, commons and land-use charges, public concession returns, gateway fees, passive public-wealth-fund draws, and bounded public issuance tied to real public production. The former demurrage-routing component is superseded by the CRUS rewrite.
 - **Clauses integrated:** no taxes on survival access, ordinary labor, or basic household exchange; public banking rails funded as infrastructure; postal-bank/public-bank option; anti-hidden-debt rules; source-by-source public reporting.
-- **Dependencies:** demurrage routing rule, asset carrying cost enforcement, gateway registry, and budget transparency stack.
-- **New risks introduced:** fiscal dependence on poorly calibrated demurrage or gateway flows; naming disputes over what counts as a prohibited tax. Mitigated by judicial review trigger and source registry.
+- **Dependencies:** Commons Return source-base registry, assessment-rate calibration, protected-threshold rules, Universal Stake non-convertibility, gateway registry, and budget transparency stack.
+- **New risks introduced:** fiscal dependence on poorly calibrated Commons Return or gateway flows; routing capture; naming disputes over what counts as a prohibited tax. Mitigated by judicial review trigger, source registry, public accounting, and CRUS appeal path.
 
 ### P-030 — Protocol-Only Money Creation and Household Finance Boundaries
 
@@ -612,61 +612,18 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-023 | T-025 | **ACTIVE** | High | Flow monetary architecture / demurrage design |
+| P-023 | T-025 | **SUPERSEDED** | High | historical demurrage design superseded by CRUS |
 
 ### P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)
 
-- **Status:** ACTIVE
+- **Status:** SUPERSEDED — historical record only
 
 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md)
 
-- **Evidence package:** [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
-- **Threat addressed:** T-025 (Demurrage Sector-Capture via Investment Channel).
-- **Direction adopted:** Direction B — deployment-speed architecture. Investment-channel exemptions are removed entirely. Genuine long-horizon capital needs are served by contract-commitment architecture; demurrage pressure remains universal.
-- **Red-team pre-analysis:** Ten attack vectors identified and resolved before this patch was written. Vectors: (1) escrow control ambiguity, (2) milestone definition gaming, (3) "working capital" as new exemption label, (4) advance procurement rebranded as hoarding, (5) subcontractor chain gaming, (6) essential-sector carve-out pressure, (7) multi-jurisdiction pooling ambiguity, (8) force majeure as wedge for permanent exemptions, (9) sector definitional creep, (10) milestone oracle capture. All resolved in patch rules below.
-
-**P-023.1 — Zero Exemption Principle**
-No entity, sector, or project type receives an exemption from Flow demurrage. The investment-channel exemption architecture from the original P-002 design is deprecated. The concept of "investment-channel status" is removed. No project account, escrow window, or term pool designation may shield Flow from demurrage.
-
-**P-023.2 — Contract-Commitment Architecture**
-Long-horizon projects are financed through milestone escrow:
-- The commissioning authority deposits Flow into an independent escrow account at project initiation.
-- Demurrage applies to escrowed Flow at the standard rate. The commissioning authority bears the carrying cost, creating institutional incentive for timely contracting and completion.
-- Flow is released to the contractor only upon independently verified milestone completion.
-- The contractor holds only current working capital. Demurrage is the natural discipline — no ceiling rule is defined; the price signal is the mechanism.
-
-**P-023.3 — Independent Escrow Agent**
-Escrow accounts are administered by an independent escrow agent designated by the CRP. The contractor, any entity in the contractor's supply chain, and any entity with a financial interest in the project's outcome may not administer, co-administer, or materially influence the escrow account.
-
-**P-023.4 — Output Milestone Standard**
-Milestones eligible to trigger escrow releases must satisfy all of the following:
-- Physical deliverables only — no process milestones, no self-certified planning stages, no administrative completions.
-- Independently inspected and certified by a rotating inspector pool; the contractor does not select inspectors. Pool is administered by the escrow agent under P-017 oracle-independence standards.
-- Defined at contract signing and P-004-locked. No renegotiation of milestone definitions after contract execution.
-- High-value releases (above the threshold defined in Annex AR) require multiple independent verifiers and physical inspection with full audit trail.
-
-**P-023.5 — Procurement Clarification**
-Advance procurement of materials means actual purchase: Flow exits the contractor's hands at the transaction. Holding Flow "in reserve for future procurement" is hoarding and receives no protective treatment. Supply chain uncertainty is addressed through competitive procurement, staged purchasing, and futures commitments — not Flow balance reserves.
-
-**P-023.6 — Universal Scope**
-P-023 applies at every tier of the supply chain: prime contractors, subcontractors, sub-subcontractors, and all entities receiving Flow for project work are subject to the same architecture. There is no sector-specific carve-out. Eligibility for contract-commitment structure is determined by deliverable characteristics (verifiable physical milestones + commissioning authority), not sector identity.
-
-**P-023.7 — Mandatory Deployment Timeline (Commissioning Authorities)**
-Commissioning authorities must contract idle escrowed funds within the deployment window defined in Annex AR. Funds held beyond this window without active contracting trigger mandatory CRP review. Demurrage continues regardless. This is an accountability mechanism, not an exemption.
-
-**P-023.8 — Multi-Jurisdiction Lead Authority**
-For projects with multiple commissioning authorities pooling Flow, a lead authority must be designated at contract signing. The lead authority bears all demurrage on pooled escrow. Internal cost-sharing between participating authorities is a private arrangement; external accountability runs through the lead authority only.
-
-**P-023.9 — Force Majeure Escrow Freeze**
-Verified external delays may trigger a temporary escrow freeze:
-- Qualifying events: permitting delays attributable to regulatory bodies outside the project's control; certified supply chain disruptions (independent third-party certification required); declared natural disasters.
-- Process: contractor applies with documented evidence; an independent assessment panel certifies the external cause and its temporal scope. Panel composition and selection use P-017 oracle-independence standards.
-- Effect: demurrage on the affected escrow account is paused for the certified duration only.
-- Limits: freeze is time-limited to the verified external condition; total cumulative freeze time per project is capped at the period defined in Annex AR; freeze does not stack across overlapping events.
-- Gaming deterrent: misrepresentation in a freeze application is an audit trigger and grounds for contractor disqualification from future escrow eligibility.
-
-**P-023.10 — P-004 Protected Terms**
-The following terms are added to the P-004 protected vocabulary: *milestone*, *physical deliverable*, *commissioning authority*, *independent escrow agent*, *force majeure* (for protocol purposes), *lead authority*, *verified external delay*, *deployment window*. Definitions may not be modified without a Tier 2 (H-2) amendment.
+- **Evidence package:** Superseded. The active evidence package is [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md).
+- **Threat addressed historically:** T-025, then framed as investment-channel avoidance under the retired demurrage model.
+- **Supersession note:** The patch's old zero-exemption and carrying-cost logic depended on demurrage as the live wealth spine. The CRUS rewrite retires that premise. Contract-commitment, escrow, milestone, force-majeure, inspector, and publication concerns remain relevant only as procurement and routing-capture controls; they no longer make demurrage an active discipline, evidence gate, pilot mechanism, or funding route.
+- **Current live direction:** T-025 is now tested through source-base capture, valuation hiding, eligibility gaming, routing capture, external-capital arbitrage, incidence, and dignity risks under FC-202 through FC-210 and the CRUS evidence package.
 
 - **Risk introduced:** (1) Force majeure certification panel is a new oracle — capture target per T-020/T-021; mitigated by P-017 independence requirements. (2) Mandatory deployment timelines may pressure commissioning authorities to rush contracting rather than hold idle; mitigated by requiring contracts to pass standard procurement integrity checks before they satisfy the timeline. (3) Inspector pool is a new oracle; mitigated by rotating pool under P-017 standards and escrow-agent administration. (4) P-023.4 output-only milestone standard may be challenged as too rigid for novel infrastructure categories; mitigated by P-004 protection — any redefinition requires H-2 amendment, raising the cost of definitional drift.
 - **Annex:** AR (contract-commitment architecture specification — high-value release thresholds, deployment window periods, force majeure cumulative freeze cap, inspector pool governance, escrow agent designation process).
@@ -1145,7 +1102,7 @@ The project had strong mechanisms and evidence packages, but seven proof surface
 **Constitutional text:** [ANNEX_AT.md § AT6.5 and AT8](../annexes/ANNEX_AT.md); [Capture_Dashboard_Specification.md § Money, Procurement, And Legal Wrapper Capture](./Capture_Dashboard_Specification.md); [Conglomerate_Transition_Dossier.md](./Conglomerate_Transition_Dossier.md)
 
 **Problem diagnosed:**
-The external-trade and anti-rent architecture named supply-chain dependency, demurrage capture, and legal-wrapper risk, but it did not yet explain how incumbent oil, energy, medicine, logistics, and PBM-style medicine-access conglomerates would operate under the system. Without a sector-specific transition doctrine, the project risked relying on moral persuasion while firms with essential chokepoints could rationally leave, litigate, lobby, retaliate, or route control through foreign affiliates.
+The external-trade and anti-rent architecture named supply-chain dependency, Commons Return capture, and legal-wrapper risk, but it did not yet explain how incumbent oil, energy, medicine, logistics, and PBM-style medicine-access conglomerates would operate under the system. Without a sector-specific transition doctrine, the project risked relying on moral persuasion while firms with essential chokepoints could rationally leave, litigate, lobby, retaliate, or route control through foreign affiliates.
 
 **Introduced design:**
 

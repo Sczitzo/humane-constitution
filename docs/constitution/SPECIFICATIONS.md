@@ -33,27 +33,27 @@ The most important rule is separation: none of these instruments may be traded i
 
 ### 2.1 Definition
 
-Flow is the general-purpose market instrument. It is issued against verified productive commitments, circulates freely within the Flow lane, and as a component of net worth is subject to the progressive net-worth carrying cost in Annex D; there is no separate per-balance time-decay on Flow (Annex D §D9). Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
+Flow is the general-purpose market instrument. It is issued against verified productive commitments and circulates freely within the Flow lane. Flow does not decay merely because it is idle or committed. Concentrated advantage is addressed separately through Commons Return and Universal Stake in Annex D, anti-monopoly rules, succession limits, and public accounting of shared/scarcity-created value. Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
 
-Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. Holding large idle balances is unattractive because idle Flow counts toward net worth, which carries the Annex D demurrage above the participation floor, so putting resources to work is the better choice.
+Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. Flow itself is not the wealth-control tool; Annex D separately handles public return from shared or scarcity-created value.
 
 ### 2.2 State Machine
 
 ![Flow Token Lifecycle](/images/V-002.png)
 
-### 2.3 Demurrage (Net-Worth Carrying Cost)
+### 2.3 Commons Return and Universal Stake
 
-Demurrage is the single progressive net-worth carrying cost defined in Annex D — the sole carrying-cost instrument on accumulated wealth (Annex D §D9). Idle Flow carries it only as one component of net worth, not through any separate per-balance fee.
+Commons Return and Universal Stake are defined in Annex D. They replace the former progressive net-worth demurrage design as the live wealth/public-finance instrument.
 
-**Subject:** net worth above the participation floor `S = 18 months × regional median monthly consumption expenditure`. Net worth aggregates all holdings, including idle Flow; wealth actively deployed in productive use is exempt (Annex D §D6 / Term Finance Pools / investment channels).
+**Subject:** exclusive control over defined shared or scarcity-created value: land/location value, natural resources, spectrum/airspace, monopoly licenses, unavoidable platform/network rents, high-value public concessions, and large succession transfers.
 
-**Rate:** the progressive λ-bracket schedule in Annex D §D3, calibrated at Tier 3 — not a single per-balance rate. The carrying cost rises with net worth across the brackets rather than applying a flat charge to a balance.
+**Calibration:** source bases, assessment rates, protected thresholds, distribution cadence, eligibility rules, anti-capture gates, public lockbox reserve rules, appeal paths, and review cadence are founding commitments reserved before CRUS activation. Rates are calibrated by source base and evidence, not by a single net-worth decay formula.
 
-**Not assessed on:** survival access, ordinary labor, or basic household exchange. The participation floor protects ordinary households; the operating-reserve (90 days) and small-operator (12-month) safe harbors in Annex D §D5 protect enterprises.
+**Not assessed on:** survival access, ordinary labor, basic household exchange, ordinary working balances, ordinary household tools, protected homes below thresholds, protected community/tribal/church holdings, or Universal Stake distributions unless a protected form is used as an avoidance shell.
 
-**Revenue:** demurrage receipts are split between retirement and Public Finance & Commons Revenue (PFCR) per Annex D.
+**Distribution:** Universal Stake is universal, non-tradable, non-assignable, non-garnishable, and barred from buying Voice, office, survival priority, membership, legal standing, or public favor. Public lockbox and social wealth fund routing must be transparent, passive where required, appealable, and anti-patronage.
 
-Plain meaning: the carrying cost is aimed at large idle wealth, not at survival, wages, or normal household life. Idle Flow only matters because it counts toward net worth above the floor.
+Plain meaning: the public-return rule is aimed at shared/scarcity-created value, not survival, wages, ordinary savings, or normal household life.
 
 ### 2.4 Issuance Constraints
 
@@ -195,7 +195,7 @@ The non-convertibility constraint is the architectural core of the system. It is
 
 **Above-ledger bypass risk:** The non-convertibility constraint holds at the ledger layer. Off-ledger transactions (proxy redemption, service-for-Essential Access exchanges, informal barter at instrument boundaries) are not preventable by ledger enforcement alone.
 
-The ledger enforcement prevents in-system conversion: no ledger operation can transform Essential Access into Flow or Voice. However, ledger enforcement cannot prevent private arrangements external to the system — for example, a party that holds Essential Access could arrange services in exchange for Flow transfers made outside any official ledger entry. The practical enforcement layer for above-ledger bypass is non-technical: the 72-hour Essential Access expiry window makes stockpiling economically unattractive; demurrage costs make hoarding Flow for conversion purposes expensive; and the non-cash nature of Essential Access removes the most obvious arbitrage pathway. These are friction mechanisms, not absolute prohibitions. T-001 (shadow convertibility) remains the primary residual risk and is tracked in the Threat Register.
+The ledger enforcement prevents in-system conversion: no ledger operation can transform Essential Access into Flow or Voice. However, ledger enforcement cannot prevent private arrangements external to the system — for example, a party that holds Essential Access could arrange services in exchange for Flow transfers made outside any official ledger entry. The practical enforcement layer for above-ledger bypass is non-technical: the 72-hour Essential Access expiry window makes stockpiling economically unattractive; Commons Return and anti-monopoly controls reduce durable conversion infrastructure; Universal Stake is non-assignable; and the non-cash nature of Essential Access removes the most obvious arbitrage pathway. These are friction mechanisms, not absolute prohibitions. T-001 (shadow convertibility) remains the primary residual risk and is tracked in the Threat Register.
 
 P-001 addresses enforcement mechanisms above the ledger layer.
 
@@ -246,9 +246,9 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 
 | Parameter | Current Value | Status | Authority to Change |
 |---|---|---|---|
-| Net-worth demurrage | Subject: net worth above the participation floor (S = 18 months regional median consumption); rate: progressive λ brackets per Annex D §D3 | Binding design commitment — λ schedule calibrated at Tier 3 against evidence. The sole carrying-cost instrument on accumulated wealth (Annex D §D9). | Tier 1 to alter Annex D §D9; Tier 3 for λ calibration |
+| Commons Return and Universal Stake | Subject: defined shared/scarcity-created value bases; distribution: non-tradable Universal Stake; protected exclusions for ordinary life | Binding design commitment — source bases and non-convertibility are Tier 1; rates, thresholds, cadence, reserves, and review cadence bind before activation through FC-202 through FC-210. | Tier 1 to alter source bases, exclusions, or non-convertibility walls; Tier 2/Tier 3 for calibrated schedules within those boundaries |
 
-> Annex D governs the net-worth demurrage: the participation floor, the progressive λ-bracket schedule (§D3), the operating-reserve and small-operator safe harbors (§D5), and the productive-deployment exemptions (§D6). FC-160–FC-184 govern the contract-commitment architecture through which the carrying cost is implemented. Evidence from the Demurrage Evidence Test Package (see Hardening_Queue.md) may inform revisions to the λ calibration on a net-worth basis (via standard Tier 3 FAP) and to the commitment architecture (FC-160–FC-184).
+> Annex D governs Commons Return and Universal Stake: source bases, protected exclusions, assessment rules, public accounting, distribution rules, optional backstops, and pre-launch evidence gates. FC-202 through FC-210 govern source-base definition, assessment rates, protected thresholds, distribution cadence, eligibility, anti-capture gates, public lockbox reserves, appeal paths, and review cadence. Evidence from the Commons Return and Universal Stake Evidence Test Package informs any activation or recalibration.
 
 | Essential Access validity window | 72 hours | Specified | Tier 2 |
 | CSM basket composition | Annex Y (canonical) | FC-070, FC-071 (floor is Tier 1) | Tier 1 (downward only); Tier 2 (composition within basket) |

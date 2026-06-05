@@ -13,7 +13,7 @@ const transport = new DefaultChatTransport({ api: '/api/chat' })
 
 const SUGGESTED = [
   'What is the Humane Constitution?',
-  'How does demurrage work?',
+  'How do Commons Return and Universal Stake work?',
   'What is Voice and how is it earned?',
   'Explain the Acceptance Protocol',
   'What threats does P-020 address?',

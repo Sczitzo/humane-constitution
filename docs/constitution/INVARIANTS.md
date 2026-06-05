@@ -172,21 +172,21 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), above-ledger bypass routes
 
-**Progressive net-worth demurrage:** Concentrated wealth holdings above the household savings floor (S) carry a progressive annual demurrage charge calibrated to approach the expected return on capital at the equilibrium ceiling (W\*). This is a public carrying cost on the *stock* of net worth — not a tax on income or labor — and is constitutional under Article V. The rate function, consolidated beneficial ownership rules, and corporate unassigned-balance demurrage are specified in [ANNEX_D](../annexes/ANNEX_D.md), the sole carrying-cost instrument on accumulated wealth. Demurrage revenue routes to the Essential Access commons pool and public infrastructure. No credit offset is permitted; holdings through nominees, trusts, or shell structures are attributed to the ultimate beneficial owner.
+**Commons Return and Universal Stake:** Exclusive control of shared or scarcity-created value carries a public-return obligation under [ANNEX_D](../annexes/ANNEX_D.md). The active instrument is no longer progressive net-worth demurrage. Commons Return applies to defined bases such as land/location value, natural resources, spectrum or airspace, monopoly licenses, unavoidable platform/network rents, high-value public concessions, and large succession transfers. Universal Stake is the distribution side: a universal, non-tradable, non-assignable, non-garnishable member stake that cannot buy Voice, office, survival priority, membership, legal standing, or public favor. Ordinary labor, survival access, basic household exchange, ordinary working balances, ordinary household tools, protected homes, and protected community or religious holdings remain outside the base unless used as avoidance shells.
 
 ---
 
 ## INV-009 — No Fees on Survival
 
-**Statement:** Survival access, Essential Access transactions, and labor income below the household savings floor may not be taxed, charged, or subjected to any system fee — including demurrage — regardless of the instrument used to access them or the administrative form the charge takes.
+**Statement:** Survival access, Essential Access transactions, protected ordinary working balances, and ordinary labor income may not be taxed, charged, or subjected to any system fee regardless of the instrument used to access them or the administrative form the charge takes.
 
-**Mechanical boundary:** No system process may apply a fee, carrying cost, or deduction to: (a) CSM-tier Essential Access allocations, (b) any Flow balance below the published household savings floor, or (c) any labor income transaction where the income source brings the recipient's balance to or below the floor.
+**Mechanical boundary:** No system process may apply a fee, carrying cost, Commons Return assessment, or deduction to: (a) CSM-tier Essential Access allocations, (b) protected ordinary Flow balances below the published household-protection threshold, or (c) any labor income transaction where the income source is ordinary work rather than a defined Commons Return source base.
 
 **Why this matters:** A fee on survival is a survival condition in disguise. Even a small carrying cost on the survival floor erodes the unconditional guarantee over time and converts Essential Access into a timed benefit rather than a floor.
 
-**The exemption boundary is structurally protected.** The boundary below which no fee, carrying cost, or demurrage may apply (the household savings floor, S) may never be lowered, redefined, or eroded so as to bring any carrying cost onto a household at or below the floor. The specific value of S is calibrated below Tier 1; the *rule that S may never be set or moved to defeat this invariant's protection of below-floor households* is itself Tier 1. A change to S that subjects a previously-protected household to demurrage is an INV-009 violation regardless of its administrative form.
+**The protection boundary is structurally protected.** The boundary below which no fee, carrying cost, or Commons Return assessment may apply may never be lowered, redefined, or eroded so as to bring ordinary households, basic homes, working tools, protected associations, or below-threshold balances into the funding base. Specific threshold values are calibrated below Tier 1; the *rule that thresholds may never be set or moved to defeat this invariant's protection of ordinary life* is itself Tier 1. A change that subjects previously protected ordinary households to the assessment base is an INV-009 violation regardless of its administrative form.
 
-**Attack vectors that target this invariant:** T-007 (definition drift on "essential"), demurrage miscalibration against low-balance households
+**Attack vectors that target this invariant:** T-007 (definition drift on "essential"), Commons Return misclassification against ordinary households, Universal Stake eligibility gates that price dignity or survival
 
 ---
 
@@ -315,9 +315,9 @@ INV-014 through INV-019 are *interface invariants*. They do not govern the five 
 
 ## INV-016 — Membership Is Non-Convertible
 
-**Statement:** The host order defines who belongs to the polity. Membership — and the Voice, survival floor, and any commons dividend that attach to it — may never be bought, sold, rented, pledged, or inherited as a tradable asset. Citizenship is not a market good.
+**Statement:** The host order defines who belongs to the polity. Membership — and the Voice, survival floor, and any Universal Stake or commons distribution that attach to it — may never be bought, sold, rented, pledged, or inherited as a tradable asset. Citizenship is not a market good.
 
-**Mechanical boundary:** No market, contract, proxy transaction, or system state may create a conversion pathway between Flow or wealth and membership standing, by analogy to and extension of INV-002 (instrument non-convertibility) and INV-004 (influence cannot be purchased). The host may grant, define, or revoke membership by its own lawful process; it may not operate or sanction a market in it. Membership obtained or transferred through a prohibited conversion confers no Voice, floor priority, or dividend within the layer.
+**Mechanical boundary:** No market, contract, proxy transaction, or system state may create a conversion pathway between Flow or wealth and membership standing, by analogy to and extension of INV-002 (instrument non-convertibility) and INV-004 (influence cannot be purchased). The host may grant, define, or revoke membership by its own lawful process; it may not operate or sanction a market in it. Membership obtained or transferred through a prohibited conversion confers no Voice, floor priority, Universal Stake, or commons distribution within the layer.
 
 **Why this matters:** If belonging itself becomes purchasable, the wealthy buy the demos and every downstream non-convertibility wall fails at its root. The floor and Voice are attached to personhood-in-the-polity, not to a saleable title; a market in membership would convert the Power-Wealth Convergence the layer exists to prevent into a one-step purchase.
 

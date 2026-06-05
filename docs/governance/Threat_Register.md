@@ -42,7 +42,7 @@ Read this table first if you do not work in law, policy, security, or systems de
 | T-020 / T-021 | Measurement sources look independent but share the same assumptions, standards, data, or AI supply chain. |
 | T-022 | A later hostile government keeps the words but hollows out the system. |
 | T-023 | A pilot works in calm conditions but fails when scaled into real stress. |
-| T-025 | Investment-channel rules become a way for powerful sectors to avoid the net-worth demurrage. |
+| T-025 | Commons Return source-base, valuation, eligibility, or routing rules become a way for powerful actors to avoid public return or capture Universal Stake distribution. |
 | T-026 | A valid exit is blocked, delayed, or punished. |
 | T-027 | Decisions drift upward to larger bodies when local people could handle them. |
 
@@ -70,7 +70,7 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-019 | Demand-Context Flag Suppression | High | 48 | P-015 / Annex AP defines a mitigation path; Annex AI gates and timing-monitor infrastructure still need activation. |
 | T-022 | Electoral Cycle Capture | **Critical** | 60 | P-051 (Constitutional Integrity Panel, Annex AM §AM8) is the ACTIVE primary structural control; P-018 / Annex AM remains PROPOSED for the entrenchment and transition-continuity path. CIP staffing, funding, and trigger infrastructure still need founding before any evidence-backed claim. |
 | T-023 | Pilot External Validity Collapse | Med-High | 32 | P-019 / Annex AN defines the scale-up evidence gate; pilot evidence and challenge infrastructure still need execution. |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
+| T-025 | Commons Return and Universal Stake Capture | High | 48 | Annex D CRUS rewrite and FC-202 through FC-210 define the new evidence path; P-023 is superseded historical demurrage-control language. |
 
 ### Load-bearing sub-problems
 
@@ -121,7 +121,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-022 | Electoral Cycle Capture | **Critical** | **Active — unproven** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 | Constitutional Integrity Panel (CIP) | 2026-05-01 *(placeholder)* | Rising |
 | T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 | P8 + Oversight | 2026-05-01 *(placeholder)* | Steady |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Mechanism specified in design by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18); no field evidence yet. | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
+| T-025 | Commons Return and Universal Stake Capture | High | **Active — unproven** | Prevent source-base capture, valuation hiding, eligibility gaming, routing capture, and external-capital arbitrage from turning CRUS into elite avoidance or patronage. | 48 | P2 (Housing/Flow) + P8 | 2026-06-04 *(CRUS rewrite)* | Rising |
 | T-026 | Exit Denial | **Critical** | **Active — unproven** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Mechanism specified in design by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies; no field evidence yet. | 48 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-027 | Subsidiarity Violation | High | **Active — unproven** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Mechanism specified in design by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle; no field evidence yet. | 36 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from holding the Essential Access floor hostage to extract constitutional concessions. Primary structural control P-050 (CASP) ACTIVE; P-047/P-048 related. | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
@@ -552,7 +552,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ## T-024 through T-025 — Operational and Systemic Threats
 
-*T-024 is an operational void addressed in design by P-022. T-025 is addressed in design by P-023 (contract-commitment architecture).*
+*T-024 is an operational void addressed in design by P-022. T-025 is now governed by the Commons Return and Universal Stake evidence path; P-023 is retained only as superseded historical demurrage-control language.*
 
 ---
 
@@ -575,23 +575,23 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ---
 
-### T-025 — Demurrage Sector-Capture via Investment Channel
+### T-025 — Commons Return and Universal Stake Capture
 
-- **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
-- **Layer:** Flow monetary architecture / demurrage / productive investment
+- **Patch / control path:** Annex D Commons Return and Universal Stake rewrite; FC-202 through FC-210 calibration rows; [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md). [P-023](../governance/Patch_Log.md) is **SUPERSEDED** and retained only as historical demurrage-control provenance.
+- **Layer:** public finance / shared-value assessment / Universal Stake distribution / productive investment
 - **Severity:** High
-- **Status:** Active — unproven — P-023 (contract-commitment architecture, zero exemptions); no field evidence yet
+- **Status:** Active — unproven — CRUS is integrated as the live replacement path, but no field evidence exists yet
 - **Risk Score:** 4×4×(6-3)=48
 - **Owner:** P2 (Housing/Flow) + P8
-- **Last reviewed:** 2026-05-01 *(placeholder)*
-- **Trend:** Steady
-- **Mechanism:** Demurrage (idle Flow decay) is designed to discourage passive hoarding and rentier accumulation. The threat: any investment-channel exemption from demurrage creates a classification that capital-intensive sectors (construction, infrastructure, heavy industry) can exploit. Firms apply for project-account status, escrow windows, or term-pool designation not to build productive capacity but to park Flow without decay. The exemption designed for productive planning becomes a hoarding instrument with a legitimating label. Four specific mechanisms: (1) *Project account cycling* — a firm maintains a continuous chain of overlapping project accounts, each nominally productive, such that no Flow balance ever becomes "idle." (2) *Escrow window abuse* — firms use escrow windows to hold balances during periods of market uncertainty, effectively suspending demurrage during adverse conditions. (3) *Infrastructure designation capture* — lobbying to broaden the definition of "infrastructure" to include asset classes economically closer to rent-extraction than productive construction. (4) *Subsidiary fragmentation* — a single economic actor fragments into multiple legal entities, each holding a project account, collectively holding far more demurrage-exempt Flow than any single entity would be permitted.
-- **Impact:** Demurrage fails to break passive accumulation among sophisticated actors while continuing to penalise unsophisticated savers (workers, small enterprises) who cannot access investment-channel exemptions. This recreates the wealth concentration the protocol was designed to prevent, through the mechanism designed to prevent it.
-- **Detection:** D=3 — investment channel utilisation is observable in aggregate; cycling and fragmentation patterns are detectable with cross-entity tracking.
-- **Mitigation design (P-023):** Investment-channel exemptions are removed entirely. Long-horizon projects use contract-commitment architecture: commissioning authority holds capital in milestone escrow (demurrage applies to escrowed Flow, incentivizing timely contracting); releases trigger only on independently verified physical deliverables; contractor holds only current working capital; demurrage is the price-signal discipline throughout the supply chain. No sector-specific carve-outs. Force majeure escrow freeze available for verified external delays (independently certified, time-limited, capped). All key terms P-004-protected.
-- **Evidence package:** [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
-- **Residual risk:** (1) Force majeure certification panel is a new oracle (T-020/T-021 capture vector); mitigated by P-017 independence standards. (2) Deployment timeline pressure on commissioning authorities may incentivize rushed contracting; mitigated by procurement integrity check requirement. (3) Universal scope at deeply nested subcontractor levels is declared policy; enforcement requires cross-entity tracking — D=3 assumed, but may be harder in practice for complex project structures. (4) Novel infrastructure categories not anticipatable at founding may not fit the output-milestone standard; changes require H-2 amendment (P-004 protection).
-- **Compound linkages:** T-025 × T-001 mitigated by P-023 (no investment-channel exemptions means no above-ledger boundary manipulation through exemption classification). T-025 × T-007 mitigated by P-023.10 (P-004 protection on all P-023 key terms). T-025 × T-008 mitigated by P-023.6 (sector identity irrelevant to escrow eligibility — no classification to capture).
+- **Last reviewed:** 2026-06-04 *(CRUS rewrite)*
+- **Trend:** Rising
+- **Mechanism:** Commons Return is designed to capture public value from exclusive control of shared or scarcity-created assets, while Universal Stake distributes a universal non-convertible member stake. The threat: wealthy actors and political operators shift the source base, hide valuation, game eligibility, capture routing, or arbitrage external capital so the public return falls on ordinary households while high-control actors keep scarcity rents. Six specific mechanisms: (1) *Source-base narrowing* — lobbying to exclude land/location value, platform/network rents, concessions, spectrum, resources, or succession transfers. (2) *Valuation hiding* — appraisals, affiliated sales, debt loading, reserve understatement, IP transfers, and concession accounting reduce assessed value. (3) *Eligibility gaming* — duplicate claims, residency manipulation, guardianship misuse, or exclusion of vulnerable claimants. (4) *Routing capture* — Universal Stake timing, fund draws, reserve rules, or public messaging become political reward/punishment. (5) *External-capital arbitrage* — foreign affiliates or treaty structures hold source bases while shifting burden to residents. (6) *Non-convertibility breach* — Universal Stake is pledged, assigned, garnished, traded, or used to buy Voice, office, survival priority, membership, legal standing, or public favor.
+- **Impact:** CRUS fails to return shared value and instead becomes a hidden wealth tax on ordinary life, a patronage dividend, a surveillance eligibility gate, or a new wealth-to-power route. This recreates the concentration the protocol was designed to prevent through the instrument designed to restrain it.
+- **Detection:** D=3 — source-base accounting, valuation appeals, distribution ledgers, and eligibility outcomes are observable in aggregate, but shell structures and external affiliates can make real control harder to trace.
+- **Mitigation design:** FC-202 through FC-210 require source-base definition, assessment-rate calibration, protected thresholds, distribution cadence, eligibility rules, anti-capture gates, public lockbox reserve rules, appeal paths, and review cadence. The CRUS evidence package requires incidence, valuation-hiding, eligibility, non-convertibility, routing-capture, external-capital-arbitrage, and social wealth fund tests before stronger claims.
+- **Evidence package:** [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md)
+- **Residual risk:** (1) Valuation authorities become a new oracle (T-020/T-021 capture vector). (2) Protected thresholds can be captured upward for elites or downward against ordinary households. (3) Universal Stake eligibility can become exclusionary or surveillance-heavy. (4) Public lockbox governance can become patronage. (5) External capital may move faster than source-base enforcement. CRUS must therefore remain active-unproven until incidence, dignity, and anti-capture tests exist.
+- **Compound linkages:** T-025 × T-001 if Universal Stake or Commons Return credits become above-ledger collateral. T-025 × T-007 if source-base definitions drift. T-025 × T-008 if valuation, fund, or eligibility administrators become a professional capture class. T-025 × T-028 if essential-sector firms use concessions, patents, logistics, or foreign affiliates to preserve scarcity rents.
 
 ---
 
@@ -670,12 +670,12 @@ These rules mirror Annex C §C-2 (roles and ownership) and §C-7 (readiness gate
 | T-022 | Electoral Cycle Capture | **Critical** | **Active — unproven** | P-051 (CIP, ACTIVE, primary) / P-018 (PROPOSED) | 60 | Constitutional Integrity Panel (CIP) | 2026-05-01 *(placeholder)* | Rising |
 | T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | P-019 | 32 | P8 + Oversight | 2026-05-01 *(placeholder)* | Steady |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | P-022 | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | P-023 | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
+| T-025 | Commons Return and Universal Stake Capture | High | **Active — unproven** | Annex D CRUS rewrite / FC-202-210 / P-023 superseded | 48 | P2 (Housing/Flow) + P8 | 2026-06-04 *(CRUS rewrite)* | Rising |
 | T-026 | Exit Denial | **Critical** | **Active — unproven** | Founding Order `exit_protocol.md` + Annex AI §3.4 + Annex AJ §4 | 48 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-027 | Subsidiarity Violation | High | **Active — unproven** | Founding Order `subsidiarity_rule.md` + Annex AI §3.2 | 36 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | P-050 (CASP, ACTIVE, primary); related P-047/P-048 | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
 
-Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 28 total IDs — 26 active, 2 retired (T-003, T-010). All active threats are at `Active — unproven` status. These counts are design-state counts, not evidence-backed resolution counts. T-022's primary structural control P-051 (Constitutional Integrity Panel, ANNEX_AM §AM8) is ACTIVE, with P-018 remaining PROPOSED as a supplement; the threat is therefore `Active — unproven` rather than `Designed`. T-020 and T-021 still require measurement pilots and adversarial methodology review before any evidence-backed resolution claim. T-025 still needs parameter binding and legal/economic testing. T-026 and T-027 remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
+Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-008, T-016, T-019, T-020, T-021 (D=2). 28 total IDs — 26 active, 2 retired (T-003, T-010). All active threats are at `Active — unproven` status. These counts are design-state counts, not evidence-backed resolution counts. T-022's primary structural control P-051 (Constitutional Integrity Panel, ANNEX_AM §AM8) is ACTIVE, with P-018 remaining PROPOSED as a supplement; the threat is therefore `Active — unproven` rather than `Designed`. T-020 and T-021 still require measurement pilots and adversarial methodology review before any evidence-backed resolution claim. T-025 now requires CRUS parameter binding, incidence testing, valuation/legal-wrapper review, eligibility and non-convertibility testing, and external-capital arbitrage review. T-026 and T-027 remain dependent on founding legitimacy, exit rehearsal, and aggregate-drift monitoring.
 
 ---
 

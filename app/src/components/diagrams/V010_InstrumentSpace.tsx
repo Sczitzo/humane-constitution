@@ -6,7 +6,7 @@ import type { DiagramProps, DiagramNode } from './index'
 import { THEME } from './DiagramTheme'
 
 const NODES: DiagramNode[] = [
-  { id: 'market',    label: 'Market Lane — Flow',                   definition: 'Ordinary commerce: wages, contracts, savings, investment. Governed by market rules. Demurrage-subject. Cannot cross into survival or civic lanes.', docLink: 'ANNEX_AB.md',          accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
+  { id: 'market',    label: 'Market Lane — Flow',                   definition: 'Ordinary commerce: wages, contracts, savings, investment. Governed by Flow issuance, payment, and accounting rules. Cannot cross into survival or civic lanes.', docLink: 'ANNEX_AB.md',          accent: THEME.flow.accent,  accentBg: THEME.flow.accentBg },
   { id: 'survival',  label: 'Survival Lane — Essential Access',      definition: 'Unconditional floor. No market price. No means test. Delivered regardless of Flow balance or civic standing. Cannot be sold, traded, or withheld.', docLink: 'INVARIANTS.md#INV-001', accent: THEME.ea.accent,    accentBg: THEME.ea.accentBg },
   { id: 'civic',     label: 'Civic Lane — Voice & Service Record',   definition: 'Bounded civic influence and stewardship history. Cannot purchase goods or survival access. Cannot be converted to Flow.', docLink: 'ANNEX_Z.md',           accent: THEME.voice.accent, accentBg: THEME.voice.accentBg },
   { id: 'emergency', label: 'Emergency Overlay — Shared Storehouse', definition: 'Temporary rationing overlay. Activates only during verified scarcity. Overrides normal market lane for the affected category only. Mandatory unwind when scarcity resolves.', docLink: 'ANNEX_AC.md',          accent: THEME.ss.accent,    accentBg: THEME.ss.accentBg },

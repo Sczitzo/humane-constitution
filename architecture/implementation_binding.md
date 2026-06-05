@@ -31,6 +31,9 @@ Every operational component whose behavior depends on Tier 1 parameters must imp
 **Attestation Stake Engine**
 — Stake ratio (FC-080); audit window (FC-081); graph density threshold (FC-082)
 
+**Commons Return / Universal Stake Engine**
+— Source-base definitions (FC-202); assessment-rate schedule (FC-203); protected thresholds and exclusions (FC-204); Universal Stake cadence and eligibility (FC-205, FC-206); anti-capture gates (FC-207); public lockbox reserve rule (FC-208); appeal path (FC-209); review cadence (FC-210)
+
 **Ombuds Coordination Service**
 — Sub-count minimum (FC-090); supermajority threshold (FC-091); term length (FC-092)
 

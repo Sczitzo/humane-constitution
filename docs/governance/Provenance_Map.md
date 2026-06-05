@@ -198,12 +198,12 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 - 📄 **Constitutional text:** [ANNEX_AN.md](../annexes/ANNEX_AN.md) — *Annex AN requires stress-condition evidence, a red-team challenge window, and crisis simulation before scale-up.*
 ### Economic-system hardening
 
-### T-025 — Demurrage Sector-Capture via Investment Channel
+### T-025 — Commons Return and Universal Stake Capture
 
-> *This threat describes investment exemptions becoming a way for capital-intensive actors to park Flow without demurrage.*
+> *This threat describes source-base capture, valuation hiding, eligibility gaming, routing capture, external-capital arbitrage, and non-convertibility breaches becoming ways for powerful actors to keep shared/scarcity-created value or turn Universal Stake into patronage.*
 
-- 🔩 **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · Status: **ACTIVE**
-- 📄 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md) — *Annex AR governs the thresholds and parameters for milestone escrow, force-majeure freezes, inspector pools, and publication.*
+- 🔩 **Patch/control path:** [P-023 — Contract-Commitment Architecture](../governance/Patch_Log.md) · Status: **SUPERSEDED** for the retired demurrage model. Live control path is Annex D Commons Return and Universal Stake plus FC-202 through FC-210.
+- 📄 **Constitutional text:** [ANNEX_D.md](../annexes/ANNEX_D.md) and [ANNEX_AR.md](../annexes/ANNEX_AR.md) — *Annex D governs source bases, protected exclusions, Universal Stake, anti-capture gates, and appeal paths; Annex AR remains relevant for milestone escrow, force-majeure, inspector pools, and publication as procurement/routing-capture controls.*
 
 ---
 

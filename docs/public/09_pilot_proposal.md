@@ -28,7 +28,7 @@ The Humane Constitution separates three things that most societies leave merged:
 
 1. **Essential Access** — a survival floor. Food, shelter, medicine, and water that every person receives regardless of their market position. Cannot be sold, traded, or revoked.
 2. **Shared Storehouse** — rationing under real scarcity. When there genuinely is not enough of something essential, this system distributes it fairly instead of letting price decide who goes without.
-3. **Flow** — the market currency. Idle Flow is not charged a separate per-balance fee; instead it counts toward net worth, which above a participation floor carries a progressive demurrage (the Annex D carrying cost). That revenue funds the public rails Essential Access runs on, and ordinary daily spending is unaffected.
+3. **Flow** — the market currency. Ordinary spending, saving, wages, contracts, and business use happen here. Beside Flow, the design tests **Commons Return and Universal Stake**: public return from exclusive control of shared and scarcity-created value, distributed through a protected member stake.
 4. **Voice** — bounded civic priority. A limited, expiring claim each person holds to weigh in on public decisions. Cannot be bought or stockpiled. Expires if unused.
 5. **Service Record** — eligibility for public roles. A rotating system that tracks who has contributed to shared governance, and uses that to determine who is eligible for positions of public authority.
 
@@ -167,94 +167,104 @@ Success at this scale justifies the next gate under [Annex AN](../annexes/ANNEX_
 
 ---
 
-## Pilot B — Flow and net-worth demurrage (simulation pilot)
+## Pilot B — Commons Return and Universal Stake (simulation pilot)
 
-*A note on what this is not. The design's carrying cost is **not** a stamp on every banknote or a fee on liquid balances — that earlier "idle-money" model was removed from the corpus. The real instrument is a **progressive carrying cost on accumulated net worth above a participation floor**, with wealth in active productive use exempt, and the revenue routed to the Essential Access commons. Historical local-currency experiments (Wörgl, WIR, BerkShares) are cited in the design as supporting evidence, not as the model. Piloting a local currency would test the wrong thing. This pilot tests the thing that is actually hard.*
+*A note on what this is not. This is not a local-currency pilot, not a fee on unused balances, and not a tax on ordinary household savings. Wörgl, WIR, BerkShares, and Gesell remain useful history about money design. They do not test the current instrument. This pilot tests the hard thing: can a community collect public return from shared and scarcity-created value, then distribute a protected Universal Stake, without punishing ordinary life or turning the system into surveillance and favoritism?*
 
 > **Where this sits in the corpus**
-> - The carrying-cost instrument is [Annex D](../annexes/ANNEX_D.md) — the sole demurrage on accumulated wealth (participation floor ≈ 18 months of regional living costs; progressive tiers; productive capital exempt; revenue funds the commons).
-> - Flow issuance architecture is [Annex X](../annexes/ANNEX_X.md).
-> - The central failure mode — the "productive use" exemption becoming a shelter for idle capital — is threat [T-025](../governance/Provenance_Map.md) / patch [P-023](../governance/Patch_Log.md) (contract-commitment architecture, **zero exemptions**).
-> - This is **Phase 5 (Flow and demurrage simulation)** of the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md); the governing test package is the [Demurrage Evidence and Test Package](../governance/Demurrage_Evidence_Test_Package.md). The roadmap's own scale rule: this stays a **simulation** until the burden is demonstrably transparent and falls on concentrated wealth, not ordinary liquidity.
+> - The economic instrument is [Annex D](../annexes/ANNEX_D.md), now being rewritten around **Commons Return and Universal Stake**.
+> - Flow issuance architecture remains [Annex X](../annexes/ANNEX_X.md), but Flow balances are not the object of this pilot.
+> - This is the public-finance and distribution simulation for the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md). It stays a **simulation** until incidence, dignity, avoidance, distribution, and non-convertibility are transparent enough for independent review.
 
 ### What we're testing
 
-The design lives or dies on three empirical questions, none of which a local currency would answer:
+The design lives or dies on seven empirical questions:
 
-1. **Can consolidated net worth actually be measured?** The carrying cost applies to a participant's total beneficial ownership across all assets, trusts, and controlled entities. If that cannot be assessed without invasive surveillance or trivial concealment, the instrument does not work.
-2. **Does the idle-vs-productive line resist gaming?** Wealth in active productive use is exempt. That exemption is the obvious attack surface — park idle capital inside a nominal "investment channel" and escape the cost. P-023 closes this with a zero-exemption contract-commitment architecture. The pilot's core job is to *try to break that.*
-3. **Does the burden fall where the design claims?** The promise is that ordinary savers below the participation floor pay nothing, and the cost lands on concentrated, idle wealth. The pilot must show the incidence curve, not assert it.
+1. **Which source bases can be measured without overreach?** The candidate bases are land/location value, natural resources, spectrum/airspace, monopoly licenses, unavoidable platform or network rents, high-value public concessions, and large succession transfers.
+2. **Who actually bears the cost?** The pilot must show incidence after rents, prices, wages, contracts, and investment behavior adjust. A charge written on one party can land on someone else.
+3. **Can dignity survive administration?** Ordinary balances, tools, inventory, protected homes, and protected associations must stay protected without building a financial panopticon around every household.
+4. **Can avoidance be contained?** The red-team tries valuation hiding, shell entities, trust wrappers, under-reported concessions, external-capital arbitrage, migration threats, and fake protected associations.
+5. **Can eligibility and distribution rails work?** Universal Stake must reach every member through reliable rails, including people who are digitally fragile, displaced, elderly, undocumented in ordinary paperwork, or in dispute.
+6. **Does non-convertibility hold?** Universal Stake must stay non-tradable, non-assignable, and non-garnishable. It cannot buy Voice, office, survival priority, membership, legal standing, or public favor.
+7. **Does politics capture the dividend?** The pilot watches for targeted bonuses, exclusions, patronage, favored districts, "reward our supporters" rhetoric, and quiet manipulation of eligibility rules.
 
 ### The hypothesis
 
-> Across 60–150 voluntary households spanning a wide wealth range, net worth can be assessed accurately enough to compute a progressive carrying cost; the productive-use boundary can be classified consistently and resists avoidance attempts by a motivated red-team; and the resulting burden falls overwhelmingly on concentrated idle wealth while households below the participation floor bear effectively none — with the computed revenue sufficient to make a meaningful contribution to an Essential Access pool.
+> Across 60–150 voluntary households plus a mapped sample of local assets and concessions, Commons Return source bases can be assessed with bounded error and limited data; ordinary household life can stay protected; a motivated red-team cannot cheaply hide or relocate the base; and a Universal Stake can be distributed universally without becoming tradable, garnishable, politically targeted, or convertible into civic power.
 
 ### Smallest deployment
 
-**60–150 voluntary households, deliberately recruited across the full wealth spectrum** — including a small number of high-net-worth participants, without whom the progressive tiers and the exemption-gaming question cannot be tested at all. Recruiting the top of the curve is the hardest part of this pilot and should be treated as a gating risk, not an afterthought.
+**60–150 voluntary households plus a local asset/concession map**. The household group tests eligibility, dignity, distribution rails, and non-convertibility. The asset/concession map tests source bases: land/location value, public concessions, monopoly licenses, platform/network rents, natural-resource claims where present, and large succession-transfer scenarios modeled from anonymized estates.
 
-This is a **simulation pilot**: the carrying cost is *computed and reported*, not actually collected from participants' real assets. What is real is the measurement, the classification, the red-team, and the revenue *model*. One arm may pair with a **voluntarily funded** Essential Access pool (participants or a funder contribute the modeled revenue) so the "decay funds the floor" link in [Annex D §D1.2](../annexes/ANNEX_D.md) is demonstrated end-to-end rather than asserted.
+This is a **simulation pilot**: no compulsory collection occurs. What is real is the data collection, valuation process, red-team attack, distribution test, appeals process, and public comprehension review. One arm should pair with Pilot A's Essential Access and Shared Storehouse work: a funder or volunteer pool seeds a small Universal Stake distribution and a shared reserve, so the pilot tests the economic instrument alongside the survival floor and shortage mechanism instead of pretending they are unrelated.
 
-The pilot runs **12 months** and has three moving parts:
+The pilot runs **12 months** and has four moving parts:
 
-- **Assessment.** Each household's consolidated net worth is assessed against the Annex D participation floor (bootstrap S = $50,000 / ~18 months regional living cost) and sorted into the progressive tiers.
-- **Classification.** Each asset is classified active-productive (exempt) or idle-concentrated (decaying), under the P-023 zero-exemption rules.
-- **Red-team.** A paid adversarial team is given the rules and tasked with sheltering idle wealth as "productive" — subsidiary fragmentation, trust wrappers, project-escrow parking, beneficial-ownership obfuscation. Every route they find is a finding.
+- **Source-base assessment.** Each candidate base is valued with a published method and an independent audit: land/location value separate from buildings, resource claims, licenses, concessions, platform/network rents, and succession transfers.
+- **Protection screen.** Ordinary labor income, working balances, household tools, basic homes below protected thresholds, small-business operating reserves, and protected community, tribal, and church associations are excluded unless they are being used as avoidance shells.
+- **Distribution test.** A simulated or funded Universal Stake is issued through rails that cannot be sold, assigned, garnished, pledged as collateral, or exchanged for civic status.
+- **Red-team.** A paid adversarial team is given the rules and tasked with breaking them: hiding valuation, shifting ownership outside the jurisdiction, laundering value through protected associations, buying favor with the stake, manipulating eligibility, capturing appeals, or turning distribution into political patronage.
 
 ### Rough cost
 
 | Item | Estimate |
 |---|---|
-| Net-worth assessment + asset classification (60–150 households) | $60,000–$140,000 |
-| Adversarial red-team (exemption / shelter testing) | $50,000–$100,000 |
-| Simulation + incidence modeling (burden by wealth band) | $30,000–$60,000 |
-| Independent review, data collection, public comprehension survey | $40,000–$70,000 |
-| Optional funded Essential Access pool (demonstrate revenue→floor link) | $40,000–$120,000 |
-| **Total** | **$180,000–$490,000** |
+| Source-base mapping and valuation audit | $70,000–$160,000 |
+| Eligibility, distribution rails, and appeals prototype | $45,000–$110,000 |
+| Adversarial red-team (avoidance, capture, valuation, non-convertibility) | $60,000–$130,000 |
+| Incidence and external-capital mobility modeling | $40,000–$80,000 |
+| Independent review, data minimization audit, public comprehension survey | $45,000–$90,000 |
+| Optional funded Universal Stake / shared reserve arm | $40,000–$120,000 |
+| **Total** | **$260,000–$570,000** |
 
-*The optional funded pool is what turns an accounting exercise into a demonstration that the revenue can actually reach the floor. Worth it if a funder will seed it.*
+*The optional funded arm is what turns an accounting exercise into a real distribution test. It should stay small and voluntary until the rules survive review.*
 
 ### What we measure
 
 | Question | Metric | Target |
 |---|---|---|
-| Can net worth be measured? | Assessment completion rate; estimated error vs. independent audit | High completion; error within published bound |
-| Does the burden spare ordinary savers? | Effective carrying-cost rate for households **below** the floor | ≈ 0% |
-| Does it land on concentrated wealth? | Effective rate by wealth band (incidence curve) | Rises monotonically with idle concentration |
-| Does the exemption hold? | Idle wealth the red-team successfully reclassified as "productive" | Minimal; every route documented |
-| Does revenue reach the floor? | Modeled revenue vs. Essential Access pool need; share actually delivered (funded arm) | Meaningful contribution |
-| Is it understood? | % of participants who can correctly explain who pays and where revenue goes | Majority, after disclosure |
-| Does it push capital into the shadows? | Evidence of shadow-credit or off-book parking emerging in response | None at scale |
+| Can source bases be measured? | Assessment completion rate; valuation error vs. independent audit | High completion; error within published bound |
+| Who bears the cost? | Incidence by income, wealth, tenancy, business size, and protected status | Burden does not shift onto ordinary households |
+| Does dignity hold? | Data fields required per participant; appeals burden; false inclusion/exclusion rate | Minimal data; usable appeals; low error |
+| Do protections work? | Ordinary balances, tools, homes, reserves, and protected associations wrongly swept in | Rare; corrected quickly |
+| Does avoidance work? | Red-team value hidden, moved, under-valued, or sheltered | Minimal; every route documented |
+| Does external capital arbitrage work? | Modeled base erosion from migration, shell ownership, or capital flight | Bounded; triggers review if material |
+| Does distribution reach everyone? | Successful Universal Stake delivery; time-to-recovery for failed delivery | High delivery; recovery within published window |
+| Does non-convertibility hold? | Stake sold, assigned, garnished, pledged, or traded for civic/survival/legal advantage | Zero successful durable routes |
+| Does politics capture it? | Targeted exclusions, bonuses, district favoritism, patronage patterns | None detectable; all allegations reviewable |
+| Is it understood? | % of participants who can explain who pays, who receives, and what cannot be bought | Majority, after disclosure |
 
 ### What failure looks like
 
-Drawn directly from the Phase 5 failure criteria in the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md):
+- **Incidence inverts** — renters, workers, ordinary savers, small operators, or protected associations bear the practical burden while rent-holders escape.
+- **Dignity fails** — assessment requires broad personal surveillance, invasive household reporting, or unusable appeals.
+- **Valuation hiding wins** — the red-team can cheaply understate land/location value, concessions, licenses, network rents, or succession transfers.
+- **External-capital arbitrage wins** — ownership migrates on paper, local productive investment falls, or the base erodes faster than the public return can stabilize.
+- **Eligibility becomes political** — membership, exclusions, bonuses, or appeals are steered toward favored people, factions, districts, donors, or allies.
+- **Distribution rails fail** — digitally fragile or disputed members miss the stake, or recovery is slow enough to make universality false.
+- **Non-convertibility fails** — the stake becomes tradable, assignable, garnishable, collateralizable, or useful for buying Voice, office, survival priority, membership, legal standing, or public favor.
+- **Participants cannot explain the system** after full disclosure. If ordinary people cannot tell the difference between shared-value return and a tax on ordinary life, the political-economy claim fails regardless of the math.
 
-- **The incidence inverts** — households below or near the floor end up bearing a heavier effective burden than concentrated capital. This is the single most important failure to watch for; it would mean the instrument has quietly become a tax on ordinary life.
-- **The exemption becomes a capture channel** — the red-team reliably shelters idle wealth as "productive," and P-023's zero-exemption architecture does not actually hold.
-- **Net worth cannot be honestly assessed** without surveillance the design forbids, or is trivially concealable.
-- **Productive project finance collapses** in the model, or becomes something only large/elite actors can navigate.
-- **Shadow credit** re-emerges to recreate the predatory dependency the instrument was meant to remove.
-- **Participants cannot explain the fee** after full disclosure — if ordinary people can't tell the difference between their liquidity and idle concentration, the political-economy claim fails regardless of the math.
-
-The cautionary precedent here is not Wörgl (shut down by a central bank) but the **French wealth tax (ISF)**, where assessment difficulty and capital flight eroded the base. If this pilot reproduces that pattern at small scale, that is a finding the design must answer before any real collection is contemplated.
+The cautionary precedent here is not Wörgl being shut down by a central bank. It is the broader record of wealth and land-value taxes being undermined by assessment difficulty, capital flight, exemptions for friends, and public distrust. If the pilot reproduces those patterns at small scale, the design must answer them before any real collection is contemplated.
 
 ### What success looks like
 
-- A clean, monotonic incidence curve: ~0% below the floor, rising with idle concentration.
-- The red-team's shelter attempts mostly fail, and the ones that succeed are specific, named, and patchable.
-- Net worth assessed within a defensible error band without invasive surveillance.
-- In the funded arm, modeled revenue visibly contributes to a real Essential Access pool.
-- A majority of participants can explain, in their own words, who pays and why they don't.
+- A clear source-base map with bounded valuation error.
+- Incidence that stays away from ordinary households, working balances, tools, protected homes, and protected associations.
+- A red-team that finds some routes, but no cheap and general route around the system.
+- Universal Stake distribution that reaches members reliably, including edge cases.
+- No successful conversion of Universal Stake into Voice, office, survival priority, membership, legal standing, or public favor.
+- A public record clear enough that ordinary participants can explain who pays, who receives, and what is protected.
 
-Success justifies the roadmap's next step: a larger simulation with **real (not just recruited-volunteer) wealth distributions** and a live, externally adversarial exemption environment — still simulation-only until burden transparency is proven.
+Success justifies the roadmap's next step: a larger simulation with real administrative data, real asset distributions, and external adversaries — still simulation-only until incidence, dignity, avoidance, distribution, and non-convertibility are proven under pressure.
 
 ### Open questions this pilot does not resolve
 
-- Does assessment survive contact with sophisticated, *adversarial* wealth-holders and their advisors, rather than volunteers who agreed to be measured?
-- Can the carrying cost be **collected**, not just computed, without triggering capital flight at a scale that erodes the base?
-- Does the revenue actually fund the Essential Access floor (Pilot A) at population scale — the join between these two instruments is asserted in [Annex D §D1.2](../annexes/ANNEX_D.md) but only a combined large pilot can prove it.
-- What are the right tier rates? Annex D's founding calibration figures are explicitly *illustrative design parameters, not founding law* — calibrating them is a later, larger exercise.
+- Does source-base assessment survive contact with sophisticated wealth-holders and their advisors, rather than volunteers and modeled concessions?
+- Can Commons Return be collected at useful scale without capital flight, under-building, under-maintenance, or jurisdiction-shopping eroding the base?
+- What mix of proceeds should support Essential Access rails, Shared Storehouse reserves, Universal Stake, and any passive social wealth fund?
+- What are the right protected thresholds for homes, tools, reserves, associations, and succession transfers?
+- Can eligibility be universal without making membership itself buyable, inheritable, or politically manipulated?
 
 ---
 
@@ -430,7 +440,7 @@ Success justifies a larger pilot with higher-stakes roles and a genuinely advers
 These are four separate pilots, not one. They can run independently, in different communities, at different times. But they are designed to eventually connect:
 
 - **Essential Access + Shared Storehouse (Pilot A)** is the foundation. It answers: can we guarantee survival regardless of market position?
-- **Flow + net-worth demurrage (Pilot B)** funds that foundation at scale. The carrying cost on idle concentrated wealth is designed to flow to the Essential Access commons. Without that revenue link holding, the floor has no funding source — and without the floor, the demurrage is just a wealth tax with no destination.
+- **Commons Return + Universal Stake (Pilot B)** tests the proposed public-return and distribution lane. Commons Return may help fund Essential Access rails, Shared Storehouse reserves, Universal Stake, or a passive public wealth fund, but only if incidence, dignity, avoidance, distribution, and non-convertibility hold under pressure.
 - **Voice (Pilot C)** governs the foundation. Who decides how Essential Access is calibrated, what counts as a shortage, and how Shared Storehouse distributes? Without Voice, someone with power decides — and that power concentrates.
 - **Service Record (Pilot D)** determines who holds Voice-adjacent authority. Without rotation, the people who administer Essential Access and manage the Shared Storehouse tend to stay in place, and power concentrates again.
 
@@ -444,7 +454,7 @@ If all four pilots run and generate honest data, we would know:
 
 1. Whether a guaranteed survival floor can operate without collapsing under gaming or administrative failure
 2. Whether a rationing mechanism can distribute fairly under real scarcity without black markets forming
-3. Whether a progressive net-worth carrying cost can be measured and targeted at idle concentrated wealth — sparing ordinary savers — without its productive-use exemption becoming a shelter
+3. Whether Commons Return can be assessed on shared and scarcity-created value — sparing ordinary households, tools, homes, reserves, and protected associations — without avoidance, valuation hiding, external-capital arbitrage, or political capture
 4. Whether bounded, non-transferable civic priority changes who actually has influence in public decisions
 5. Whether rotating eligibility for governance roles produces more diverse leadership without degrading governance quality
 
@@ -456,7 +466,7 @@ We would not yet know whether the five instruments work *together*, whether they
 
 **We do not know if these pilots are legally possible in existing jurisdictions.** Some mechanisms — local currencies, alternative governance structures — require regulatory clearance that varies by location. Legal review is required before any pilot begins.
 
-**We do not know the right parameters.** The demurrage rate for Flow, the Voice cycle length, the Service Record contribution weights — all of these are design estimates. The pilots will calibrate them. The numbers in this document are starting points, not findings.
+**We do not know the right parameters.** Commons Return source bases and rates, protected thresholds, Universal Stake cadence, Voice cycle length, and Service Record contribution weights are all design estimates. The pilots will calibrate them. The numbers in this document are starting points, not findings.
 
 **We do not know who will run these pilots.** This proposal needs a partner — a community, an institution, or an organization willing to participate. Without a willing host, the pilots cannot happen.
 
@@ -468,7 +478,7 @@ We would not yet know whether the five instruments work *together*, whether they
 
 If you are a **researcher**, the open questions sections are the research agenda. Each one is a question the pilot cannot answer on its own.
 
-If you are a **funder**, the four pilot budgets total roughly **$710,000–$1,700,000** for an 18–24 month program (Pilot A $350k–860k; Pilot B $180k–490k; Pilot C $75k–145k; Pilot D $105k–205k). That is a small number for the question being asked. For comparison, the Finland UBI pilot (2017–2018) cost approximately €20 million. The single most important pilot, and the place to start, is **Pilot A** — it tests the survival floor and the non-convertibility wall that the entire design rests on.
+If you are a **funder**, the four pilot budgets total roughly **$790,000–$1,780,000** for an 18–24 month program (Pilot A $350k–860k; Pilot B $260k–570k; Pilot C $75k–145k; Pilot D $105k–205k). That is a small number for the question being asked. For comparison, the Finland UBI pilot (2017–2018) cost approximately €20 million. The single most important pilot, and the place to start, is **Pilot A** — it tests the survival floor and the non-convertibility wall that the entire design rests on.
 
 If you are a **community**, the smallest useful starting point is Pilot A — Essential Access + Shared Storehouse — because it tests the most fundamental claim: that a guaranteed survival floor is possible without collapsing under real conditions.
 

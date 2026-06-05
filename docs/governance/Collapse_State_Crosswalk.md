@@ -16,7 +16,7 @@ Not a new status system. Threat status still comes from the Threat Register, Cla
 |---|---|---|
 | Survival-Trade Bind | People must trade obedience, labor, rights, health, dignity, or market success to keep basic life access. | Essential Access, CSM floor, identity recovery, capacity measurement, non-convertibility, appeal rights. |
 | Power-Wealth Convergence | Resource success becomes authority over rules, enforcement, definitions, offices, or system design. | Flow/Voice separation, public money rails, anti-conversion, anti-rent controls, public records, capture review. |
-| Static-Advantage Loop | Early advantage, inheritance, office, data access, credentials, or procedure becomes permanent dominance. | Demurrage, decay, rotation, sector ceilings, anti-dynasty rules, subsidiarity, exit, founding legitimacy review. |
+| Static-Advantage Loop | Early advantage, inheritance, office, data access, credentials, or procedure becomes permanent dominance. | Commons Return, Universal Stake, succession controls, decay, rotation, sector ceilings, anti-dynasty rules, subsidiarity, exit, founding legitimacy review. |
 
 ## Control-Plane Failure
 
@@ -53,7 +53,7 @@ Examples: identity gates, oracle capture, FAP capture, drift-chain bypass, emerg
 | T-022 Electoral Cycle Capture | Static-Advantage Loop | Power-Wealth Convergence | Administrative hollowing and transition-of-power simulation. |
 | T-023 Pilot External Validity Collapse | Static-Advantage Loop | All three collapse states | Pilot Evidence Roadmap and Evidence Ladder gates. |
 | T-024 Shared Storehouse Oracle-Failure | Control-plane failure | Survival-Trade Bind | Oracle blackout during active rationing drill. |
-| T-025 Demurrage Sector-Capture | Power-Wealth Convergence | Static-Advantage Loop | Demurrage Evidence Package and legal-wrapper review. |
+| T-025 Commons Return and Universal Stake Capture | Power-Wealth Convergence | Static-Advantage Loop | Commons Return and Universal Stake Evidence Package, valuation-hiding red team, eligibility-gaming review, and legal-wrapper review. |
 | T-026 Exit Denial | Survival-Trade Bind | Control-plane federation coercion | Exit rehearsal and non-retaliation audit. |
 | T-027 Subsidiarity Violation | Static-Advantage Loop | Power-Wealth Convergence | Venue-drift dashboard and remand-case audit. |
 
@@ -74,7 +74,7 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 | ANNEX_C | Threat Register Operations | CPF | Converts the static threat table into a living operational control system with intake, ownership, evidence cadence, and scale-readiness gates. |
 | ANNEX_H | Amendment Article and Constitutional Change Control | PWC, SAL | Classifies every rule change by tier and friction level, preventing powerful actors from quietly rewriting rights via misclassification or emergency order. |
 | ANNEX_I | Residency, Migration, and Onboarding | CSB | Prevents membership from becoming a purchasable or coercible asset by guaranteeing a survival floor for all persons physically present regardless of status class. |
-| ANNEX_D | Progressive Net-Worth Demurrage | PWC, SAL | Sets the net-worth carrying cost, the participation floor, and productive-use exemptions so idle wealth concentration is penalized without punishing patient productive capital or small savers. |
+| ANNEX_D | Commons Return and Universal Stake | PWC, SAL | Defines public return from shared/scarcity-created value, protected exclusions for ordinary life and stewardship, and a Universal Stake that cannot be converted into civic power or survival priority. |
 | ANNEX_K | Essential Basket Governance and Civic Participation Fairness | CSB, SAL | Governs the recurring political fight over what "basic" means, preventing definitional narrowing from silently eroding the survival floor, and ensuring civic participation is not institutionally legibility-gated. |
 | ANNEX_L | Judicial Architecture and Constitutional Review Institutions | PWC, CPF | Constitutes multi-level review bodies so no single office can quietly reinterpret the constitution, and remedies are available for instrument-separation drift and rights deprivation. |
 | ANNEX_M | Oracle, Physical Reality, and Measurement Limits | CPF, CSB | Requires measurement to declare its evidence class and prohibits scarcity declarations from single opaque models, so supply-shortage coercion cannot rest on manufactured data. |
@@ -104,14 +104,14 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 | ANNEX_AO | Register Disclosure Protocol | CPF, PWC | Governs the public/restricted split of the Threat Register so bifurcation cannot become a secrecy mechanism hiding threats from public accountability. |
 | ANNEX_AP | PCRP Attack Surface Hardening | CSB, CPF | Protects the coercion-response trigger from both exhaustion (manufactured false alarms) and suppression (strategic enforcement flags timed to block activation during genuine coercion events). |
 | ANNEX_AQ | Shared Storehouse Oracle-Failure Fallback Protocol | CSB, CPF | Defines the designed protocol for rationing continuity when the oracle network fails, preventing both access lapse and unchecked overreach — both of which are exploit surfaces. |
-| ANNEX_AR | Contract-Commitment Architecture Parameters | PWC, SAL | Specifies thresholds, force-majeure caps, and inspector pool rules for infrastructure project escrows, so milestone fragmentation and inspector capture cannot recreate demurrage-exemption dynamics. |
+| ANNEX_AR | Contract-Commitment Architecture Parameters | PWC, SAL | Specifies thresholds, force-majeure caps, and inspector pool rules for infrastructure project escrows, so milestone fragmentation, routing capture, and inspector capture cannot recreate capital-parking dynamics. |
 | ANNEX_AS | Attestation-at-Risk Stake Mechanism | PWC, SAL | Requires attestors to put civic balance at risk when vouching for others, making costless false attestation economically irrational before detection rather than only punishable after. |
 | ANNEX_AT | External Trade Architecture | CSB, SAL | Defines strategic import floors, export caps during scarcity, and a reciprocity membrane so foreign supply-chain dependencies cannot be weaponized as survival-floor coercion. |
 | ANNEX_AV | Two-Key Architectural Precondition for Tier-1 Invariant Enforcement | PWC, CPF | Requires a cryptographic attestation from a structurally independent adversarial panel member before any Tier-1-touching proposal is admitted for review, eliminating the single-reviewer bypass. |
 | ANNEX_AW | Whistleblower Protection and Anti-Retaliation Protocol | CSB, PWC | Protects community alert reporters from retaliation by the administrators they reported on, preserving the coercion-detection pathways that depend on ordinary people being willing to name wrongdoing. |
 | ANNEX_AX | Confidential Enrollment and Safety-Identity Protocol | CSB | Provides a shielded identity enrollment path for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates a documented safety threat. |
 | ANNEX_AY | Delivery Sufficiency Standard and Register | CSB | Closes the gap between the constitutional guarantee of Essential Access and operational delivery by requiring a public register of populations without a working delivery path and mandating remediation. |
-| ANNEX_D | Progressive Net-Worth Demurrage Architecture | PWC, SAL | Defines steeply progressive holding costs on concentrated wealth so multi-generational passive hoarding is economically unsustainable while productive investment and ordinary saving remain viable. (ANNEX_AZ formerly contained this content; ANNEX_D is now the sole demurrage instrument.) |
+| ANNEX_D | Commons Return and Universal Stake Architecture | PWC, SAL | Defines source bases, protected exclusions, anti-capture gates, public lockbox rules, and a non-tradable Universal Stake so shared/scarcity-created value returns to members without buying Voice, office, survival priority, membership, legal standing, or public favor. |
 | ANNEX_AZ | Tier 0 Token Mechanism | CSB | Defines the constitutional constraints for the pseudonymous single-session token mechanism that protects Tier 0 survival-access recipients from identification and surveillance. |
 
 ---

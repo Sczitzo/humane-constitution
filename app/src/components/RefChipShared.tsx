@@ -254,7 +254,14 @@ const DOC_PHRASE_DEFS: Array<{ phrases: string[]; path: string }> = [
   { phrases: ['Capacity Measurement Evidence Test Package', 'Capacity Measurement Evidence Test'], path: 'docs/governance/Capacity_Measurement_Evidence_Test_Package.md' },
   { phrases: ['Identity and Recovery Evidence Test Package', 'Identity Recovery Evidence Test Package', 'Identity and Recovery Evidence Test'], path: 'docs/governance/Identity_Recovery_Evidence_Test_Package.md' },
   { phrases: ['Essential-Sector Refusal Test Package', 'Essential Sector Refusal Test Package', 'Essential-Sector Refusal Test'], path: 'docs/governance/Essential_Sector_Refusal_Test_Package.md' },
-  { phrases: ['Demurrage Evidence and Test Package', 'Demurrage Evidence Test Package'], path: 'docs/governance/Demurrage_Evidence_Test_Package.md' },
+  {
+    phrases: [
+	      'Commons Return and Universal Stake Evidence Package',
+	      'Commons Return and Universal Stake Evidence Test Package',
+	      'Commons Return Universal Stake Evidence Package',
+	    ],
+    path: 'docs/governance/Commons_Return_Universal_Stake_Evidence_Test_Package.md',
+  },
   { phrases: ['Service Record Misuse Evidence Test Package', 'Service Record Misuse Evidence Test'], path: 'docs/governance/Service_Record_Misuse_Evidence_Test_Package.md' },
   { phrases: ['Capture Dashboard Specification'], path: 'docs/governance/Capture_Dashboard_Specification.md' },
   { phrases: ['Vulnerable Population Consent Protocol', 'VPCP'], path: 'docs/governance/Vulnerable_Population_Consent_Protocol.md' },

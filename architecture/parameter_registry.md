@@ -9,7 +9,7 @@
 
 ## Why an Architectural Layer
 
-The Tier 1 invariants stated at Humane Constitution §0 — survival is unconditional, CSM floor, human worth not measured, separation of concerns, influence cannot be purchased, reality anchoring, due process — are textual. Text is amendable. The H-3 Refounding Convention requirement states who may amend and under what process, but the day-to-day operation of the protocol is in running systems: the Essential Access issuance service, the Voice decay scheduler, the demurrage calculator, the oracle quorum checker, the Scarcity Protocol activator, the identity ledger, and the Service Record tabulator.
+The Tier 1 invariants stated at Humane Constitution §0 — survival is unconditional, CSM floor, human worth not measured, separation of concerns, influence cannot be purchased, reality anchoring, due process — are textual. Text is amendable. The H-3 Refounding Convention requirement states who may amend and under what process, but the day-to-day operation of the protocol is in running systems: the Essential Access issuance service, the Voice decay scheduler, the Commons Return and Universal Stake assessment/distribution engine, the oracle quorum checker, the Scarcity Protocol activator, the identity ledger, and the Service Record tabulator.
 
 **If the Tier 1 invariants are enforced only in text, they are protected only to the extent that the implementors agree to read the text.** An implementor who does not read the text — or who reads it and is instructed by a captured governance body to deploy a parameter change that implicitly narrows an invariant — has no architectural obstacle. The H-3 process protects against explicit repeal; it does not protect against silent drift at the implementation layer.
 

@@ -3,9 +3,10 @@ The Humane Constitution — Agent-Based Simulation Outline
 =======================================================
 
 Framework: Mesa (pip install mesa)
-Purpose:   Model the interaction between Essential Access and Flow
-           across a population of agents under varying demurrage rates,
-           oracle accuracy levels, and adversarial actor configurations.
+Purpose:   Model the interaction between Essential Access, Flow, Commons
+           Return, and Universal Stake across a population of agents under
+           varying assessment, oracle accuracy, and adversarial actor
+           configurations.
 
 This file is a structural scaffold. Bound constitutional values resolve through
 `/founding/commitments.md`; reserved FC identifiers must still be calibrated from
@@ -24,7 +25,7 @@ Dependencies:
 Reference documents:
     docs/SPECIFICATIONS.md   — formal state machine definitions
     docs/INVARIANTS.md       — constraints that simulation must never violate
-    docs/annexes/ANNEX_AR.md — demurrage parameter worked examples
+    docs/annexes/ANNEX_D.md  — Commons Return and Universal Stake framework
     Threat_Register.md       — adversarial scenarios to simulate
 """
 
@@ -41,10 +42,12 @@ from mesa.datacollection import DataCollector
 # NOTE: values below are simulation defaults. Bound constitutional values resolve
 # through `/founding/commitments.md`; reserved FC identifiers remain provisional.
 CONFIG = {
-    # Flow demurrage parameters (SPECIFICATIONS.md Section 2.3)
-    "demurrage_rate_monthly": 0.01,        # 1.0% monthly; range 0.005–0.02
-    "idle_threshold_days": 30,             # days before demurrage begins
-    "min_flow_balance": 0.01,               # retirement threshold (epsilon)
+    # Commons Return and Universal Stake parameters (Annex D)
+    "commons_return_rate": 0.05,            # simulation-only assessment rate
+    "commons_return_protected_threshold": 1000.0,
+    "universal_stake_daily": 0.25,          # simulation-only daily stake credit
+    "social_wealth_fund_share": 0.50,       # share routed to passive public fund
+    "optional_net_worth_backstop_enabled": False,
 
     # Essential Access parameters (SPECIFICATIONS.md Section 3)
     "csm_daily_units": 1.0,               # Constitutional Survival Minimum per day
@@ -87,7 +90,6 @@ class FlowState:
     IDLE = "IDLE"
     COMMITTED = "COMMITTED"
     SETTLED = "SETTLED"
-    DECAYED = "DECAYED"
     RETIRED = "RETIRED"
 
 class EssentialAccessState:
@@ -114,6 +116,72 @@ class ServiceRecordState:
     COOLING = "COOLING"
     SUSPENDED = "SUSPENDED"
     SLOW_DECAY = "SLOW_DECAY"
+
+
+COMMONS_RETURN_SOURCE_BASES = {
+    "LAND_LOCATION_VALUE",
+    "NATURAL_RESOURCE_RENT",
+    "SPECTRUM_LICENSE",
+    "MONOPOLY_LICENSE",
+    "NETWORK_RENT",
+    "PUBLIC_CONCESSION",
+    "SUCCESSION_TRANSFER",
+}
+
+PROTECTED_ORDINARY_ASSET_BASES = {
+    "ORDINARY_LABOR_INCOME",
+    "SURVIVAL_ACCESS",
+    "BASIC_HOUSEHOLD_EXCHANGE",
+    "ORDINARY_WORKING_BALANCE",
+    "ORDINARY_TOOLS",
+    "PROTECTED_HOME",
+    "PROTECTED_ASSOCIATION_HOLDING",
+}
+
+
+def calculate_commons_return_due(
+    source_base: str,
+    assessed_value: float,
+    config: dict = CONFIG,
+) -> float:
+    """
+    Return the simulated Commons Return due for an exclusive commons-derived base.
+
+    Ordinary labor, survival access, basic household exchange, protected working
+    balances, ordinary tools, and protected homes are excluded by construction.
+    This is a simulation primitive, not a bound legal formula.
+    """
+    if source_base in PROTECTED_ORDINARY_ASSET_BASES:
+        return 0.0
+    if source_base not in COMMONS_RETURN_SOURCE_BASES:
+        return 0.0
+
+    protected_threshold = config["commons_return_protected_threshold"]
+    assessable_value = max(0.0, assessed_value - protected_threshold)
+    return assessable_value * config["commons_return_rate"]
+
+
+def universal_stake_transfer_allowed(action: str) -> bool:
+    """
+    Universal Stake is a member distribution, not a tradable asset.
+
+    It cannot be sold, assigned, pledged, garnished, inherited, or converted into
+    Voice, office, membership, survival priority, legal standing, or public favor.
+    """
+    prohibited_actions = {
+        "SELL",
+        "ASSIGN",
+        "PLEDGE",
+        "GARNISH",
+        "INHERIT",
+        "BUY_VOICE",
+        "BUY_OFFICE",
+        "BUY_MEMBERSHIP",
+        "BUY_SURVIVAL_PRIORITY",
+        "BUY_LEGAL_STANDING",
+        "BUY_PUBLIC_FAVOR",
+    }
+    return action not in prohibited_actions
 
 
 # =============================================================================
@@ -293,6 +361,10 @@ class CitizenAgent(Agent):
         self.lc_redeemed_today = False
         self.voice_balance = 0.0
         self.service_record_balance = 0.0
+        self.universal_stake_balance = 0.0
+        self.commons_return_due = 0.0
+        self.commons_return_paid = 0.0
+        self.exclusive_commons_value = 0.0
 
         # State tracking
         self.flow_state = FlowState.ACTIVE
@@ -300,17 +372,18 @@ class CitizenAgent(Agent):
         self.voice_state = VoiceState.INACTIVE
         self.service_record_state = ServiceRecordState.INACTIVE
 
-        # Idle tracking for demurrage
-        self.days_idle = 0
+        # Commons Return tracking
+        self.commons_return_source_base = "ORDINARY_WORKING_BALANCE"
         self.last_productive_action = 0
 
-        # Adversarial: flag for shadow convertibility attempts
+        # Adversarial: flags for shadow convertibility and stake-market attempts
         self.shadow_conversion_attempts = 0
+        self.stake_assignment_attempts = 0
 
     def step(self):
         self._receive_lc_allocation()
         self._redeem_lc()
-        self._apply_flow_demurrage()
+        self._apply_commons_return_and_universal_stake()
         self._participate_in_market()
         self._update_civic_record()
         self._decay_dw()
@@ -334,45 +407,49 @@ class CitizenAgent(Agent):
             self.lc_redeemed_today = True
             self.essential_access_state = EssentialAccessState.REDEEMED
 
-    def _apply_flow_demurrage(self):
+    def _apply_commons_return_and_universal_stake(self):
         """
-        SPECIFICATIONS.md Section 2.3: exponential decay on idle Flow.
-        B(t) = B(0) × e^(−r × t_idle) when t_idle ≥ θ
+        Annex D simulation primitive: assess exclusive commons-derived value and
+        credit a non-transferable Universal Stake.
 
-        P-023 (COMMITTED state discipline):
-        Flow in COMMITTED (milestone escrow) state also accrues idle time.
-        "Discipline is the point" — demurrage continues during escrow.
-        This was previously a bug: COMMITTED did not increment days_idle,
-        meaning escrow was a demurrage-exempt state in contradiction to P-023.
-        Fixed: COMMITTED now treated identically to IDLE for demurrage accrual.
-        See the prior adversarial simulation notes for the specification/implementation
-        divergence this corrects.
+        Flow balances do not decay merely because they are idle or committed.
+        The assessment base is the source of exclusive commons return, not
+        ordinary labor income, basic exchange, or protected working balances.
         """
-        if self.flow_state in (FlowState.IDLE, FlowState.COMMITTED):  # P-023: COMMITTED accrues demurrage
-            self.days_idle += 1
-        elif self.flow_state == FlowState.ACTIVE:
-            self.days_idle = 0
+        self.universal_stake_balance += self.model.config["universal_stake_daily"]
 
-        if self.days_idle >= CONFIG["idle_threshold_days"]:
-            r = CONFIG["demurrage_rate_monthly"] / 30  # convert to daily
-            self.flow_balance *= np.exp(-r)
-            # COMMITTED state remains COMMITTED after decay application;
-            # the escrow is still active, but the balance has decayed.
-            if self.flow_state != FlowState.COMMITTED:
-                self.flow_state = FlowState.DECAYED
+        due = calculate_commons_return_due(
+            self.commons_return_source_base,
+            self.exclusive_commons_value,
+            self.model.config,
+        )
+        self.commons_return_due = due
+        if due <= 0:
+            return
 
-            if self.flow_balance < CONFIG["min_flow_balance"]:
-                self.flow_balance = 0.0
-                self.flow_state = FlowState.RETIRED
+        paid = min(due, self.flow_balance)
+        self.flow_balance -= paid
+        self.commons_return_paid += paid
+
+        fund_share = self.model.config["social_wealth_fund_share"]
+        self.model.social_wealth_fund_balance += paid * fund_share
+        self.model.universal_stake_pool += paid * (1 - fund_share)
+        self.model.commons_return_ledger.append({
+            "step": self.model.schedule.steps,
+            "agent": self.unique_id,
+            "source_base": self.commons_return_source_base,
+            "assessed_value": self.exclusive_commons_value,
+            "due": due,
+            "paid": paid,
+        })
 
     def _participate_in_market(self):
         """
         Simplified market participation. Productive agents keep Flow in ACTIVE state.
-        Idle agents accumulate demurrage pressure.
+        Idle Flow is not a tax base by itself under the CRUS replacement.
         """
         if np.random.random() < 0.7:  # 70% daily participation rate (simulation seed)
             self.flow_state = FlowState.ACTIVE
-            self.days_idle = 0
             self.last_productive_action = self.model.schedule.steps
         else:
             self.flow_state = FlowState.IDLE
@@ -404,7 +481,8 @@ class AdversarialAgent(CitizenAgent):
     Adversarial behaviors modeled:
       - Shadow convertibility attempts (T-001): proxy redemption, off-ledger trades
       - Bureaucratic elite formation (T-008): sector position accumulation
-      - Demurrage sector-capture (T-025): milestone escrow gaming
+      - Commons Return / Universal Stake capture (T-025): valuation hiding,
+        shell routing, and stake-market attempts
 
     The ledger layer rejects cross-instrument conversions (INV-002).
     This agent models the above-ledger bypass risk.
@@ -412,7 +490,7 @@ class AdversarialAgent(CitizenAgent):
 
     def __init__(self, unique_id: int, model: "ProtocolModel", sector: str):
         super().__init__(unique_id, model, sector)
-        self.adversarial_type = np.random.choice(["SHADOW", "ELITE", "ESCROW"])
+        self.adversarial_type = np.random.choice(["SHADOW", "ELITE", "CRUS_CAPTURE"])
         self.bypass_successes = 0
         self.bypass_attempts = 0
 
@@ -457,23 +535,36 @@ class AdversarialAgent(CitizenAgent):
         """
         self.service_record_balance += 2.0  # accelerated accumulation attempt
 
-    def _attempt_escrow_gaming(self):
+    def _attempt_crus_capture(self):
         """
-        T-025: Milestone escrow gaming (P-023 targets this).
-        Contract-commitment architecture: demurrage applies during escrow.
-        Zero exemptions: no sector-based escape from demurrage.
+        T-025 replacement: attempt to turn Universal Stake into a market
+        instrument or hide Commons Return source value in a shell.
         """
-        # Attempt to simulate "investment exemption" that P-023 explicitly prohibits
-        # In P-023 architecture, this attempt fails — demurrage continues in escrow
-        pass  # P-023: zero exemptions; demurrage continues regardless
+        self.stake_assignment_attempts += 1
+        if not universal_stake_transfer_allowed("ASSIGN"):
+            self.model.enforcement_log.append({
+                "step": self.model.schedule.steps,
+                "agent": self.unique_id,
+                "type": "UNIVERSAL_STAKE_ASSIGNMENT",
+                "outcome": "BLOCKED",
+            })
+
+        self.commons_return_source_base = "NETWORK_RENT"
+        self.exclusive_commons_value += 500.0
+        self.model.capture_risk_log.append({
+            "step": self.model.schedule.steps,
+            "agent": self.unique_id,
+            "type": "VALUATION_HIDING_ATTEMPT",
+            "source_base": self.commons_return_source_base,
+        })
 
     def _attempt_adversarial_action(self):
         if self.adversarial_type == "SHADOW":
             self._attempt_shadow_conversion()
         elif self.adversarial_type == "ELITE":
             self._attempt_elite_formation()
-        elif self.adversarial_type == "ESCROW":
-            self._attempt_escrow_gaming()
+        elif self.adversarial_type == "CRUS_CAPTURE":
+            self._attempt_crus_capture()
 
 
 # =============================================================================
@@ -486,7 +577,7 @@ class ProtocolModel(Model):
 
     Simulates N agents over T steps, tracking:
       - Essential Access redemption rates (survival floor access)
-      - Flow circulation and demurrage retirement rates
+      - Flow circulation and Commons Return assessment flows
       - Adversarial bypass success/detection rates
       - Oracle failure events and fallback activations
       - Service Record sector ceiling violations
@@ -506,6 +597,10 @@ class ProtocolModel(Model):
         self.enforcement_log = []
         self.bypass_success_log = []
         self.oracle_failure_log = []
+        self.commons_return_ledger = []
+        self.capture_risk_log = []
+        self.social_wealth_fund_balance = 0.0
+        self.universal_stake_pool = 0.0
 
         # True physical capacity (ground truth, unknown to agents)
         self.true_physical_capacity = 1000.0  # arbitrary simulation units
@@ -529,18 +624,22 @@ class ProtocolModel(Model):
             model_reporters={
                 "Total_Flow_Circulation": self._total_flow,
                 "EssentialAccess_Redemption_Rate": self._essential_access_redemption_rate,
-                "Flow_Retired_This_Step": self._flow_retired,
+                "CommonsReturn_Paid": self._commons_return_paid,
+                "UniversalStake_Pool": lambda m: m.universal_stake_pool,
+                "SocialWealthFund_Balance": lambda m: m.social_wealth_fund_balance,
                 "Oracle_Failures": lambda m: len(m.oracle.failure_log),
                 "Bypass_Successes": lambda m: len(m.bypass_success_log),
                 "Bypass_Detections": lambda m: len(m.enforcement_log),
+                "Capture_Risk_Attempts": lambda m: len(m.capture_risk_log),
                 "CSM_Violations": self._csm_violations,  # must always be 0
             },
             agent_reporters={
                 "Flow_Balance": "flow_balance",
                 "Flow_State": "flow_state",
+                "UniversalStake_Balance": "universal_stake_balance",
+                "CommonsReturn_Paid": "commons_return_paid",
                 "ServiceRecord_Balance": "service_record_balance",
                 "Voice_Balance": "voice_balance",
-                "Days_Idle": "days_idle",
             }
         )
 
@@ -614,11 +713,8 @@ class ProtocolModel(Model):
         )
         return redeemed / total if total > 0 else 0.0
 
-    def _flow_retired(self):
-        return sum(
-            1 for a in self.schedule.agents
-            if a.flow_state == FlowState.RETIRED
-        )
+    def _commons_return_paid(self):
+        return sum(a.commons_return_paid for a in self.schedule.agents)
 
     def _csm_violations(self):
         """
@@ -643,8 +739,12 @@ def _format_results(scenario_name: str, results) -> dict:
         "scenario": scenario_name,
         "final_flow_circulation": results["Total_Flow_Circulation"].iloc[-1],
         "avg_essential_access_redemption_rate": results["EssentialAccess_Redemption_Rate"].mean(),
+        "commons_return_paid": results["CommonsReturn_Paid"].iloc[-1],
+        "universal_stake_pool": results["UniversalStake_Pool"].iloc[-1],
+        "social_wealth_fund_balance": results["SocialWealthFund_Balance"].iloc[-1],
         "oracle_failures": results["Oracle_Failures"].iloc[-1],
         "bypass_successes": results["Bypass_Successes"].iloc[-1],
+        "capture_risk_attempts": results["Capture_Risk_Attempts"].iloc[-1],
         "csm_violations": results["CSM_Violations"].sum(),
     }
 
@@ -668,16 +768,16 @@ def run_oracle_stress(n_steps: int = 365) -> dict:
     return _format_results("ORACLE_STRESS", results)
 
 
-def run_high_demurrage(n_steps: int = 365) -> dict:
+def run_high_commons_return(n_steps: int = 365) -> dict:
     """
-    Parameter sweep: high demurrage rate.
-    Tests Annex AR deployment window sensitivity at r = 2.0% monthly.
+    Parameter sweep: higher Commons Return assessment pressure.
+    Tests source-base incidence, fund routing, and avoidance pressure.
     """
-    high_demurrage_config = CONFIG.copy()
-    high_demurrage_config["demurrage_rate_monthly"] = 0.02
-    model = ProtocolModel(high_demurrage_config, adversarial_intensity=0.01)
+    high_commons_return_config = CONFIG.copy()
+    high_commons_return_config["commons_return_rate"] = 0.10
+    model = ProtocolModel(high_commons_return_config, adversarial_intensity=0.01)
     results = model.run(n_steps)
-    return _format_results("HIGH_DEMURRAGE", results)
+    return _format_results("HIGH_COMMONS_RETURN", results)
 
 
 def run_adversarial_stress(n_steps: int = 365) -> dict:
@@ -706,7 +806,7 @@ if __name__ == "__main__":
     scenarios = [
         run_baseline,
         run_oracle_stress,
-        run_high_demurrage,
+        run_high_commons_return,
         run_adversarial_stress,
     ]
 
@@ -716,8 +816,12 @@ if __name__ == "__main__":
         print(f"  Scenario:              {results['scenario']}")
         print(f"  Final Flow Circulation:  {results['final_flow_circulation']:.2f}")
         print(f"  Avg Essential Access Redemption:     {results['avg_essential_access_redemption_rate']:.3f}")
+        print(f"  Commons Return Paid:    {results['commons_return_paid']:.2f}")
+        print(f"  Universal Stake Pool:   {results['universal_stake_pool']:.2f}")
+        print(f"  Social Wealth Fund:     {results['social_wealth_fund_balance']:.2f}")
         print(f"  Oracle Failures:       {results['oracle_failures']}")
         print(f"  Bypass Successes:      {results['bypass_successes']}")
+        print(f"  Capture Risk Attempts: {results['capture_risk_attempts']}")
         print(f"  CSM Violations:        {results['csm_violations']}  ← must be 0")
 
     print("\nSimulation complete.")

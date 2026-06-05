@@ -19,7 +19,7 @@ Use short words where they work. Use short sentences. Say who does what. Explain
 | attestation | signed proof, witness statement, or proof |
 | supermajority | two-thirds vote, 4-of-5 vote, or large majority |
 | quorum | minimum number needed |
-| demurrage | carrying cost on accumulated wealth (net-worth demurrage) |
+| Commons Return | public return owed when someone controls land value, a scarce public concession, monopoly rent, extraction right, or other value created by the commons |
 | non-coercion | no one is trapped or forced |
 | subsistence / survival floor | basic needs floor |
 | constitutional invariant | rule that cannot be quietly changed |
@@ -73,4 +73,3 @@ Before merging a document, check:
 - Does each rule say who acts, what they do, and what happens next?
 - Are there sentences that only sound important because they are abstract?
 - Can a person tell how the rule affects food, housing, money, care, voice, or exit?
-

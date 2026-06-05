@@ -205,12 +205,13 @@ The following compounding failure modes were monitored but did not materialise. 
 
 **Purpose:** Test whether the Essential Access floor remains deliverable when high-skill productive capacity exits the jurisdiction, and whether the incentive architecture produces meaningful containment. Addresses T-004 (Incentive Collapse) and the red-team finding that sector-specific productivity collapse and brain drain are undermodelled.
 
-**Starting conditions:** Year 3 of operation. System is functioning as designed. The pilot jurisdiction is adjacent to a comparable jurisdiction that does not operate the protocol and offers full property ownership, uncapped Flow accumulation, and no demurrage. A sustained media narrative in the non-protocol jurisdiction characterizes the protocol as restricting economic potential.
+**Starting conditions:** Year 3 of operation. System is functioning as designed. The pilot jurisdiction is adjacent to a comparable jurisdiction that does not operate the protocol and offers full property ownership, uncapped Flow accumulation, no Commons Return assessment, and no Universal Stake distribution. A sustained media narrative in the non-protocol jurisdiction characterizes the protocol as restricting economic potential and using a "stealth wealth tax" to fund a political dividend.
 
 **Stress parameters:**
 - 5% of the top-quartile productive capacity exits the jurisdiction per year for 3 consecutive years (cumulative: approximately 14% reduction in top-quartile labor supply).
 - Exits are concentrated in housing construction (already supply-constrained), healthcare delivery, and specialized food production.
 - Flow market wages for remaining high-skill labor rise in response, increasing pressure on firms to relocate rather than pay.
+- Owners of mobile licenses, platform rights, and holding-company interests test whether they can move paper control outside the jurisdiction while keeping local rents.
 
 **Year 1 of stress (Year 3 of operation):**
 
@@ -218,7 +219,7 @@ Essential Access basket deliverability check: Is housing supply adequate with 5%
 
 *Simulation finding:* Housing Essential Access delivery falls to 93.2% success rate (below the 95% target). The shortfall is in construction completion rate, not in distribution logistics. The RCS flags it as a supply-side capacity event; conservative defaults maintain access for existing enrollees while new enrollment intake slows. An Shared Storehouse-adjacent review is triggered for housing. No formal Shared Storehouse activation yet — shortage is projected, not confirmed.
 
-*Governance response:* CRP deliberates on whether the housing shortfall constitutes a structural threat requiring a root-cause review. Contested: some members argue the protocol's demurrage rules are contributing to the construction investment shortage (T-004 feedback loop). A root-cause working group is convened. This consumes governance bandwidth — 2 of the 5 quarterly CRP floor slots occupied.
+*Governance response:* CRP deliberates on whether the housing shortfall constitutes a structural threat requiring a root-cause review. Contested: some members argue that Commons Return valuation rules are chilling long-horizon housing investment; others argue that under-assessed land rents are the real bottleneck. A root-cause working group is convened. This consumes governance bandwidth — 2 of the 5 quarterly CRP floor slots occupied.
 
 **Year 2 of stress (Year 4 of operation):**
 
@@ -236,7 +237,7 @@ Cumulative 14% top-quartile exit. Confidence interval on housing capacity has wi
 
 *Failure mode exposed:* The system's conservative default (maintain access during oracle disputes) is now being maintained for an extended oracle dispute in a category with genuine supply constraint. The conservative default is simultaneously correct (protecting access) and unsustainable (issuing access entitlements into a constrained supply pool).
 
-*Critical finding:* The incentive architecture (P-002) assumes the contribution reward gradient is sufficient to retain high-skill labor. The simulation reveals that the gradient is insufficient when the adjacent jurisdiction offers uncapped upside. The gap between "meaningful opportunity and recognition" (P-002 language) and "uncapped accumulation" is larger than the original incentive model assumed.
+*Critical finding:* The incentive architecture (P-002) assumes the contribution reward gradient is sufficient to retain high-skill labor. The simulation reveals that the gradient is insufficient when the adjacent jurisdiction offers uncapped upside and easier sheltering of scarcity-created rents. The gap between "meaningful opportunity and recognition" (P-002 language) and "uncapped accumulation plus rent sheltering" is larger than the original incentive model assumed.
 
 **Findings and recommendations:**
 
@@ -244,7 +245,7 @@ Cumulative 14% top-quartile exit. Confidence interval on housing capacity has wi
 
 2. **The conservative default for oracle disputes is not calibrated for sustained supply constraint.** When a category is both genuinely supply-constrained and in an oracle dispute, the current design has no mechanism to reconcile access maintenance with physical delivery limits. P-006 must add a "sustained constraint conservative bridge" — a protocol for when conservative defaults cannot be maintained indefinitely. Logged as open problem for next patch cycle.
 
-3. **Demurrage calibration requires sector-specific review.** Housing construction requires long-horizon investment. The current demurrage rules may be penalizing patient productive planning in exactly the sectors most critical for Essential Access basket delivery. The patch log's investment channel provisions (P-002) must be tested against construction-sector capital requirements before scale-up.
+3. **Commons Return calibration requires sector-specific review.** Housing construction requires long-horizon investment and clear treatment of land value versus building value. A poorly drawn Commons Return base may penalize patient productive planning, while a weak base may let land/location rents escape and worsen the shortage. Pilot B must test construction-sector capital requirements, land valuation, under-maintenance incentives, and external-capital arbitrage before scale-up.
 
 4. **The 5%-per-year threshold is not a cliff.** Below approximately 8% cumulative exit of top-quartile capacity, the system degrades but maintains above-threshold performance. The failure is gradual, which is both reassuring (time to respond) and dangerous (hard to detect before it is severe — D=3 for talent drain under current monitoring).
 
@@ -299,7 +300,7 @@ This is not a design failure of the Voice and Service Record system's rules. It 
 
 ## Updated Key Findings (incorporating Session 8 scenarios)
 
-7. **The incentive architecture has a jurisdiction-relative failure mode not captured by internal incentive psychology.** P-002's contribution model must be calibrated against the exit options available in comparable jurisdictions. A talent mobility index is required as an Article VII metric before scale-up.
+7. **The incentive architecture has a jurisdiction-relative failure mode not captured by internal incentive psychology.** P-002's contribution model must be calibrated against the exit options available in comparable jurisdictions. A talent mobility index and Commons Return base-mobility indicator are required as Article VII metrics before scale-up.
 
 8. **The conservative default for oracle disputes is not calibrated for sustained supply constraint.** A "sustained constraint conservative bridge" protocol is required in P-006 for categories that are simultaneously genuinely supply-constrained and in oracle dispute.
 

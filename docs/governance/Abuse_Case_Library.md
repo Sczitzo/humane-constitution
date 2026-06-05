@@ -87,7 +87,7 @@ Each abuse case should name:
 - **Actor incentive:** extract public finance through legal wrappers.
 - **Attack path:** subcontractor chains, family entities, mission-lock theater, escrow rollover, beneficial-owner opacity.
 - **Collapse state:** Power-Wealth Convergence.
-- **Current controls:** Annex AR, beneficial-ownership rules, demurrage package.
+- **Current controls:** Annex AR, beneficial-ownership rules, Commons Return and Universal Stake Evidence Test Package.
 - **Missing test:** nested subcontractor beneficial-ownership red team.
 - **Failure criterion:** connected actors control repeated awards while appearing dispersed.
 - **False reassurance:** "The prime contractor is compliant."
@@ -156,7 +156,7 @@ Each abuse case should name:
 
 ### ACL-014 — Oracle Data Poisoning
 
-- **Actor incentive:** shift essential-category capacity measurements to trigger or suppress Essential Access issuance, activate or block Shared Storehouse, or affect demurrage rates tied to scarcity indicators — without requiring full oracle-methodology capture (ACL-012).
+- **Actor incentive:** shift essential-category capacity measurements to trigger or suppress Essential Access issuance, activate or block Shared Storehouse, or affect Commons Return assessment or reserve rules tied to scarcity indicators — without requiring full oracle-methodology capture (ACL-012).
 - **Attack path:** tamper with physical sensors feeding oracle nodes (e.g., spoofed warehouse inventory data, manipulated cold-chain readings, fraudulent physical-sampling reports); inject adversarial inputs into the data pipeline between sensing infrastructure and oracle processing; submit falsified delivery receipts or capacity certifications that pass internal consistency checks but misrepresent ground truth; coordinate submission timing so adversarial inputs are dominant during the oracle deliberation window.
 - **Collapse state:** Survival-Trade Bind (if issuance is suppressed below CSM floor during real scarcity), False-Security Bind (if issuance continues above real capacity, creating a paper floor with no physical delivery).
 - **Current controls:** INV-005 (Reality Anchoring — requires at least one Tier-3 physical sampling oracle node); Annex AL oracle independence standards; FC-032 (pairwise correlation max 0.30) detects shared error but not adversarial injection specifically designed to maintain apparent diversity.
@@ -175,6 +175,18 @@ Each abuse case should name:
 - **Missing test:** adversarial token-infrastructure audit: can a compromised node operator reconstruct session linkage? Can aggregate patterns be used to fingerprint individuals? Does subpoena of token records yield individually identifying information?
 - **Failure criterion:** a motivated actor with node access or legal process can identify one or more Tier 0 session users with probability above chance.
 - **False reassurance:** "The tokens are pseudonymous."
+
+---
+
+### ACL-016 — Commons Return and Universal Stake Capture
+
+- **Actor incentive:** preserve scarcity rents while appearing compliant, or convert Universal Stake into patronage, collateral, political favor, or eligibility leverage.
+- **Attack path:** understate land/location value; route natural-resource, spectrum, platform, or concession rents through affiliates; use trusts and family offices to split succession transfers; lobby for protected-threshold expansions; time Universal Stake distributions around political events; coerce households to assign, pledge, or trade their stake despite formal non-assignability.
+- **Collapse state:** Power-Wealth Convergence and Static-Advantage Loop; Survival-Trade Bind if eligibility or stake access becomes coercive.
+- **Current controls:** Annex D CRUS rewrite, FC-202 through FC-210 calibration rows, Commons Return and Universal Stake Evidence Test Package, beneficial-ownership review, appeal rights, and public accounting.
+- **Missing test:** source-base incidence model, valuation-hiding red team, Universal Stake non-convertibility test, routing-capture audit, external-capital arbitrage review, and vulnerable-claimant eligibility drill.
+- **Failure criterion:** high-control actors reduce effective assessment through legal complexity while ordinary households or protected associations bear incidence; or Universal Stake can be sold, assigned, pledged, garnished, or used to buy Voice, office, survival priority, membership, legal standing, or public favor.
+- **False reassurance:** "Everyone receives the stake, so the distribution cannot be captured."
 
 ---
 

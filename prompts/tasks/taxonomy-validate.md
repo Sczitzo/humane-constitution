@@ -18,9 +18,9 @@ List every `docs/annexes/ANNEX_*.md` file. Verify each appears exactly once in T
 
 Count the annexes per Title group in TAXONOMY.md. Verify the count table at the bottom of TAXONOMY.md matches. Flag any discrepancy.
 
-### 4. ANNEX_D sole-instrument note
+### 4. ANNEX_D instrument note
 
-Verify that ANNEX_D (decimal 4.1) is marked as the sole demurrage instrument in TAXONOMY.md. Flag if absent.
+Verify that ANNEX_D (decimal 4.1) is marked as the Commons Return and Universal Stake instrument in TAXONOMY.md. Flag any active claim that it is the sole demurrage instrument.
 
 ### 5. No corpus-registration artifacts
 
@@ -45,7 +45,7 @@ For each annex listed in the Cross-reference notes section of TAXONOMY.md, verif
 [discrepancies, or "Counts match"]
 
 ### ANNEX_D instrument note
-[PRESENT / MISSING]
+[CRUS PRESENT / STALE DEMURRAGE / MISSING]
 
 ### Corpus-registration artifacts
 [P/T/FC identifiers found, or "None"]

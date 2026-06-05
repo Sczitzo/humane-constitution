@@ -40,7 +40,7 @@ The design is easiest to read through ordinary pressure, not abstractions. These
 
 **During unpaid care:** A parent, spouse, adult child, or neighbor does care work that is hard to price. The system should not treat that person as less civic, less useful, or less worthy because the work is unpaid, interrupted, or invisible to a market.
 
-**During a long build:** A builder, farmer, clinic, or repair cooperative needs money for work that takes years. The system should discourage idle hoarding without choking real long-term work. That difference needs clear funding paths, milestone checks, and testing against fake projects used to hide unused wealth.
+**During a long build:** A builder, farmer, clinic, or repair cooperative needs money for work that takes years. The system should protect ordinary working balances, tools, inventory, homes, and legitimate long-term work, while still charging a public return when someone controls scarce value created by the commons. That difference needs clear thresholds, appeal rights, and testing against fake projects used to hide rent extraction.
 
 **During a shortage:** A region faces a water, medicine, energy, or logistics shortage. The system should not pretend that high prices are neutral rationing. It should publish the evidence, protect basic access, limit emergency rules, and end those rules when the shortage ends.
 
@@ -56,7 +56,7 @@ The project is not mainly a redistribution model. It is a channel-separation mod
 |---|---|---|
 | **Survival-Trade Bind** | People have to trade dignity, obedience, rights, labor, health, or life-sustaining access just to survive. | Keep Essential Access and the Constitutional Survival Minimum outside ordinary market bargaining. |
 | **Power-Wealth Convergence** | Resource success becomes authority over rules, enforcement, measurement, or public design. | Keep Flow, Voice, Service Record, enforcement, and public measurement from becoming mutually convertible. |
-| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use demurrage, decay, rotation, anti-rent controls, exit rights, and bottleneck audits to keep advantage contestable. |
+| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use Commons Return, Universal Stake, succession controls, rotation, anti-rent controls, exit rights, and bottleneck audits to keep advantage contestable. |
 
 The strongest version of the rule is:
 
@@ -97,9 +97,23 @@ Flow (ordinary money) is not evil. Markets are not abolished.
 
 But Flow (ordinary money) cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
 
-The system also applies a **progressive carrying cost on accumulated wealth** above a participation floor — a net-worth demurrage. The goal is to discourage hoarding and push wealth toward useful activity. Idle money is simply part of net worth, so there is no separate fee on unused balances; wealth above the floor carries the cost whether it sits idle or not. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the carrying cost falls on large accumulated wealth rather than on people with modest savings. (This ≤1.0 threshold — like the other specific figures in this paper, such as the 72-hour Essential Access window — is an illustrative design parameter chosen for the model, not a measured result, and is subject to calibration. See the [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md).)
+The system also uses **Commons Return and Universal Stake**.
 
-![Progressive Net-Worth Demurrage](/images/V-005.png)
+Commons Return means this: when someone gets exclusive control over value that was created by nature, location, public law, public infrastructure, monopoly privilege, network effects, or very large inheritance, part of that value returns to the public. The target is not ordinary labor income, small savings, basic household exchange, working tools, ordinary business reserves, or protected homes and associations. The target is scarce shared value turned into private leverage.
+
+Universal Stake is the distribution side. Every member receives a universal stake, dividend, or endowment. It is non-tradable, non-assignable, and non-garnishable. It cannot buy Voice, office, survival priority, membership, legal standing, or public favor.
+
+This rule needs careful testing before any scale-up. The evidence gate is not a single "burden" number. It must test:
+
+- **incidence:** who actually pays after prices, rents, wages, and avoidance adjust
+- **dignity:** whether ordinary households can comply without a financial panopticon
+- **avoidance:** whether wealth hides behind shells, trusts, under-valuation, migration, or fake productive use
+- **distribution:** whether the stake reaches everyone through reliable rails
+- **non-convertibility:** whether the stake stays separate from Voice, office, survival priority, membership, legal standing, and public favor
+
+The numbers in this paper, such as the 72-hour Essential Access window, are illustrative design parameters chosen for the model, not measured results. They are subject to calibration. See the [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md).
+
+![Commons Return and Universal Stake](/images/V-015.png)
 
 ## Essential Access: The Basic Needs Floor
 

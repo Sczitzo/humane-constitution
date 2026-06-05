@@ -126,4 +126,4 @@ When an annex is next revised, its first screen should answer:
 | **Evidence status** | Is this designed, active-unproven, partly tested, or evidence-backed? |
 | **Linked risks** | Which threats, patches, claims, or hardening items does it connect to? |
 
-This standard should be applied gradually, beginning with the highest-risk annexes: identity, capacity measurement, Essential Access continuity, Voice and Service Record, demurrage, Shared Storehouse, founding legitimacy, implementation drift, and essential-sector refusal.
+This standard should be applied gradually, beginning with the highest-risk annexes: identity, capacity measurement, Essential Access continuity, Voice and Service Record, Commons Return and Universal Stake, Shared Storehouse, founding legitimacy, implementation drift, and essential-sector refusal.

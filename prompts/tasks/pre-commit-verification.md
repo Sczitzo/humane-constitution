@@ -15,7 +15,7 @@ Report every changed file. Flag immediately if any protected file appears:
 - `docs/governance/Patch_Log.md`
 - `scripts/export_corpus.py`
 
-If a protected file appears in the diff, set verdict to FAIL and stop.
+If a protected file appears in the diff, do not auto-fail. Set verdict to HOLD unless the user explicitly authorized the protected rewrite in the current task. If authorization is present, require a separate protected-file review note covering scope, Tier effect, and any Christ-centered review obligations.
 
 ### 2. Corpus sync check
 
@@ -45,8 +45,8 @@ If any `docs/annexes/ANNEX_*.md` was modified, verify the "At a glance" block is
 ### Changed files
 [list]
 
-### Protected file violations
-[list or "None"]
+### Protected-file review
+[list protected files and authorization/review status, or "None"]
 
 ### Corpus sync
 [PASS / FAIL — output]

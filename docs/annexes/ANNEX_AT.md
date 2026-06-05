@@ -19,13 +19,13 @@
 
 ## AT0 — Problem Diagnosed
 
-The Humane Constitution's transition outline (Phase 2) covers external trade in two sentences: essential-capacity exports are capped to protect domestic Essential Access guarantees, and foreign capital converts to Flow subject to demurrage. This is structurally correct but architecturally incomplete. The gap creates four specific failure modes:
+The Humane Constitution's transition outline (Phase 2) covers external trade in two sentences: essential-capacity exports are capped to protect domestic Essential Access guarantees, and foreign capital converts to Flow subject to public-return and anti-arbitrage review. This is structurally correct but architecturally incomplete. The gap creates four specific failure modes:
 
 **AT0.1 — Dependency capture.** If domestic production of any Essential Access category falls below survival-critical levels and the deficit is filled by a single foreign supplier or supply chain, that supplier acquires effective coercive leverage over the protocol's survival floor. The non-convertibility firewall works internally; it provides no protection against an external party who controls physical supply.
 
 **AT0.2 — Export-induced domestic shortage.** Without explicit export caps, market prices for domestically produced essentials will draw inventory outward during global scarcity events, precisely when domestic buffers need to be largest. The Article III reserve architecture buffers this but cannot absorb an indefinite export drain.
 
-**AT0.3 — Capital-inflow arbitrage.** External capital denominated in legacy currency enters the Flow system as productive investment. Without a mandatory conversion and demurrage treatment, external capital can effectively create hoarding-resistant purchasing power by cycling in and out — importing accumulation dynamics the internal architecture was designed to prevent.
+**AT0.3 — Capital-inflow arbitrage.** External capital denominated in legacy currency enters the Flow system as productive investment. Without mandatory conversion, Commons Return source-base review, beneficial-ownership tracing, and anti-arbitrage treatment, external capital can cycle in and out of the protocol while importing accumulation dynamics the internal architecture was designed to prevent.
 
 **AT0.4 — Reciprocity void.** The protocol has no defined response to a counterparty that practices extraction: suppressing wages in traded goods sectors to undercut domestic production, blocking protocol-compliant imports in retaliation for non-monetary governance structures, or weaponizing supply-chain dependencies during political disputes. Without a defined reciprocity mechanism, the protocol's open posture becomes a one-way vulnerability.
 
@@ -141,13 +141,13 @@ Export cap activation and deactivation is automated against the Article III scar
 
 All foreign capital entering the protocol's economic territory converts to Flow at a published reference exchange rate at the point of entry. No foreign-currency-denominated assets, instruments, or accounts may circulate within the domestic economy as purchasing power.
 
-### AT4.2 — Demurrage Treatment on Converted Capital
+### AT4.2 — Commons Return and Anti-Arbitrage Treatment on Converted Capital
 
-Converted foreign capital is subject to standard Flow demurrage rules (Article V §Flow idle-value rule) from the moment of conversion. There is no grace period, exemption, or reduced demurrage rate for foreign-origin capital. The purpose of this rule is to prevent the protocol's internal economy from becoming a destination for external capital seeking to escape demurrage regimes elsewhere — a dynamic that would recreate accumulation pressure from the outside even if internal accumulation is contained.
+Converted foreign capital is subject to standard Flow issuance, transfer, and provenance rules from the moment of conversion. When converted capital seeks or controls land value, housing scarcity, public concessions, extraction rights, monopoly positions, network rents, strategic infrastructure, or succession structures, it enters Annex D Commons Return source-base review regardless of foreign-origin label, wrapper, or affiliate route. There is no grace period, exemption, or reduced public-return obligation for foreign-origin control claims. The purpose of this rule is to prevent the protocol's internal economy from becoming a destination for external capital seeking to warehouse value in source bases that ordinary residents could not control without public-return review.
 
 ### AT4.3 — Investment Channel
 
-Foreign-origin Flow that is committed to a registered productive investment project within 30 days of conversion enters the standard Article V investment channel and receives the standard protected-capital treatment for the duration of the project. The conversion clock stops when funds enter a registered, ring-fenced project escrow. Funds that do not enter a registered project within 30 days are subject to full idle demurrage retroactive to the conversion date.
+Foreign-origin Flow that is committed to a registered productive investment project within 30 days of conversion enters the standard Article V investment channel and receives the standard protected-capital treatment for the duration of the project. The conversion record remains visible for beneficial-ownership and source-base review. Funds that do not enter a registered, ring-fenced project escrow within 30 days trigger enhanced anti-arbitrage review, quarantine where needed, and reclassification or reversion if the declared productive purpose cannot be verified. Project registration does not exempt land, concession, monopoly, extraction, or other Commons Return source bases created or controlled by the project.
 
 ### AT4.4 — Inflow Concentration Limits
 
@@ -155,7 +155,7 @@ No single foreign source may contribute more than 15% of total domestic Flow iss
 
 ### AT4.5 — Outflow Rules
 
-Flow may exit the domestic economy through legitimate trade settlement and treaty-governed payments. Flow export for the purpose of circumventing demurrage — converting to foreign currency to hold idle value — is treated as demurrage avoidance and subject to carrying charges. The Article VII transparency layer publishes aggregate inflow and outflow patterns quarterly.
+Flow may exit the domestic economy through legitimate trade settlement and treaty-governed payments. Flow export for the purpose of circumventing Commons Return, beneficial-ownership review, source-base attribution, or productive-use accounting is treated as anti-arbitrage avoidance and subject to quarantine, reclassification, unwind, or public-return assessment under Annex D and Article V. The Article VII transparency layer publishes aggregate inflow and outflow patterns quarterly.
 
 ---
 
@@ -228,7 +228,7 @@ Trade treaties are negotiated by the TSP in consultation with affected Article V
 
 ### AT6.5 — Essential-Sector Conglomerate Operating Rule
 
-Essential-sector conglomerates — including oil, gas, grid, medicine, logistics, PBM-style medicine-access intermediaries, and critical infrastructure firms — may operate inside the protocol economy only as producers, maintainers, distributors, researchers, or regulated utility stewards. They may earn Flow for verified production, reliability, transition work, innovation, and public-interest delivery. They may not convert control over fuel, grids, medicines, patents, logistics, data, capital, standards bodies, or foreign affiliates into survival leverage, rule authority, enforcement privilege, or exemption from demurrage and beneficial-ownership review.
+Essential-sector conglomerates — including oil, gas, grid, medicine, logistics, PBM-style medicine-access intermediaries, and critical infrastructure firms — may operate inside the protocol economy only as producers, maintainers, distributors, researchers, or regulated utility stewards. They may earn Flow for verified production, reliability, transition work, innovation, and public-interest delivery. They may not convert control over fuel, grids, medicines, patents, logistics, data, capital, standards bodies, or foreign affiliates into survival leverage, rule authority, enforcement privilege, or exemption from Commons Return, source-base, and beneficial-ownership review.
 
 A **survival-leverage actor** is any public, private, domestic, foreign, or affiliate-routed entity whose refusal, delay, pricing condition, patent assertion, formulary decision, logistics control, standards intervention, data denial, financing condition, or litigation posture can materially impair an Essential Access category, CSM-designated medicine, strategic floor, or Article IV survival guarantee. Survival-leverage status is functional, not formal: ownership form, domicile, contractor tier, or market label cannot remove it.
 
@@ -282,9 +282,9 @@ Before any essential-sector procurement contract can be renewed or extended beyo
 
 ### AT7.4 — Capital Inflow Laundering
 
-**Failure mode:** foreign capital enters the Flow system through a chain of domestic entities to avoid the 30-day conversion clock and beneficial ownership disclosure requirements, achieving effective demurrage-free accumulation inside the protocol.
+**Failure mode:** foreign capital enters the Flow system through a chain of domestic entities to avoid the 30-day conversion record, beneficial ownership disclosure requirements, and Commons Return source-base review, achieving effective public-return-free accumulation inside the protocol.
 
-**Patches:** beneficial ownership tracing applies to the full corporate structure of any entity receiving converted foreign capital. Flow received by a domestic entity from a foreign-origin source within 12 months of the original conversion is subject to retroactive demurrage if the investment channel requirements were not met at the time of conversion. The Article VII transparency layer publishes aggregate beneficial-ownership concentration data quarterly.
+**Patches:** beneficial ownership tracing applies to the full corporate structure of any entity receiving converted foreign capital. Flow received by a domestic entity from a foreign-origin source within 12 months of the original conversion is subject to anti-arbitrage review, source-base attribution, quarantine, reclassification, or unwind if the investment-channel requirements were not met at the time of conversion. No domestic affiliate may erase the Commons Return treatment of land, concessions, monopoly rents, extraction rights, or other source bases controlled by foreign-origin capital. The Article VII transparency layer publishes aggregate beneficial-ownership concentration data quarterly.
 
 ### AT7.5 — Membrane Ratchet
 
@@ -300,7 +300,7 @@ Before any essential-sector procurement contract can be renewed or extended beyo
 | :--- | :--- |
 | **Article III — Physics & Reserves** | Strategic floor verification; import dependency measurement; supply-chain concentration audits |
 | **Article IV — Survival** | Export cap triggers linked to Essential Access scarcity mode thresholds; CSM floor protection is the priority condition |
-| **Article V — Markets, Commons & Public Finance** | Flow conversion rules; demurrage treatment of converted capital; investment channel for foreign-origin Flow; membrane tariff-equivalents are escrowed to a neutral humanitarian and de-escalation fund, ring-fenced from the general PFCR (§AT5.3) |
+| **Article V — Markets, Commons & Public Finance** | Flow conversion rules; Commons Return and anti-arbitrage treatment of converted capital; investment channel for foreign-origin Flow; membrane tariff-equivalents are escrowed to a neutral humanitarian and de-escalation fund, ring-fenced from the general PFCR (§AT5.3) |
 | **Article VI — Voice, Service Record & Deliberation** | TSP composition and authority; membrane stage ratification; treaty ratification; floor amendment deliberation |
 | **Article VII — Transparency & Environmental Scanning** | Supply-chain concentration publication; counterparty classification register; quarterly trade-health reports; S4 scanning for emerging trade-architecture threats |
 | **Annex Y — CSM** | Strategic floor definitions for CSM-basket categories are Tier 1 adjacent; floor reductions require H-2 supermajority |
@@ -323,7 +323,7 @@ The following parameter values are reserved pending pilot data and TSP calibrati
 | FC-188 | Single-supplier Watch threshold (% of category consumption) | Reserved — draft: 25% | Bound by TSP before activation |
 | FC-189 | Single-supplier Critical threshold (% of category consumption) | Reserved — draft: 60% | Bound by TSP before activation |
 | FC-190 | Foreign capital inflow concentration limit (% of annual Flow issuance) | Reserved — draft: 15% | Bound by TSP + Article V review before activation |
-| FC-191 | Foreign capital conversion window (days before demurrage activates) | Reserved — draft: 30 days | Bound by TSP + Article V review before activation |
+| FC-191 | Foreign capital conversion window (days before enhanced anti-arbitrage review activates) | Reserved — draft: 30 days | Bound by TSP + Article V review before activation |
 | FC-192 | Extractive reclassification observation window (months) | Reserved — draft: 12 months | Bound by TSP before activation |
 | FC-193 | Stage 3 suspension ratification threshold (Article VI supermajority) | Reserved — draft: two-thirds | Bound by Article VI before activation |
 | FC-194 | Essential fuel reserve minimum (days by region and season) | Reserved — draft: 60-90 days | Bound before essential-sector activation |

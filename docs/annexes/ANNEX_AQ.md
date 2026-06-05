@@ -39,7 +39,7 @@ When the oracle system loses quorum (fewer than the N=5 BFT-tolerant minimum per
 - **No escalation.** Shared Storehouse rationing level remains where it was at the moment of quorum loss. The rate, scope, and category breadth are frozen.
 - **No expansion.** Shared Storehouse cannot be applied to new categories under Conservative Hold. Expansion requires restored oracle quorum.
 - **No automatic lapse.** Shared Storehouse does not lapse merely because the oracle went silent. Lapse during Conservative Hold requires explicit REB or governance-handoff decision.
-- **No demurrage adjustment.** Demurrage rates tied to oracle-measured scarcity indicators (where applicable) freeze at their Conservative Hold entry values.
+- **No Commons Return / Universal Stake adjustment.** Commons Return source-base rates, protected thresholds, and Universal Stake cadence freeze at their Conservative Hold entry values. Conservative Hold may not use oracle silence as a reason to expand scarcity-linked charges or change stake distribution rules.
 - **CSM (Annex Y) continues unconditionally.** The survival floor — per-person daily minimums for calories, water, shelter, and essential medicines under Annex Y — does not depend on oracle availability. CSM issuance remains active through oracle failure and through all subsequent authority transfers.
 
 Conservative Hold is the **designed default**, not a failure state — it is explicitly the correct system response to oracle silence during Shared Storehouse. Detection-side alarms fire; operational-side behavior holds.
