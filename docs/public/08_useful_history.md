@@ -8,6 +8,8 @@
 > | **How to read it** | Start anywhere. Each chapter stands alone. It is long on purpose. |
 > | **What it claims** | These problems are real and recurring. This project does not claim to have solved them — only to have studied them carefully. |
 
+For the shorter newcomer version, see [Real-World Examples](10_real_world_examples.md).
+
 ## Introduction
 
 This document walks through problems that have broken societies before. Each one is real. Each one has happened more than once, in places that never met. The record is there to read.
@@ -335,7 +337,7 @@ The results came fast. Within about thirteen months, unemployment in the town dr
 
 Then, in September 1933, the Austrian central bank shut it down. It ruled the experiment an illegal infringement on its sole right to issue currency.[^c6-5] The mayor appealed all the way to the Austrian Supreme Court and lost. Within months, unemployment in Wörgl was back around 30%.
 
-The point to sit with: the experiment was not ended because it failed. It was ended because it worked, and its success threatened the monetary monopoly of the institution that stopped it. For this project, Wörgl is historical evidence that money rules shape behavior. It is not the active model.
+The point to sit with: the experiment was not ended by local collapse. The strongest reading is that it had enough success to threaten the monetary monopoly of the institution that stopped it. For this project, Wörgl is historical evidence that money rules shape behavior. It is not the active model, not the public-finance spine, and not a proposed fee on ordinary household savings.
 
 ### Brief cases
 
@@ -536,7 +538,7 @@ That is the shape of the whole chapter in one case. A right was declared — fre
 
 *The distance between a declared right and an enforced one is the distance between a promise and a fact — and that distance falls most heavily on people who were already excluded from the room where the promise was made.*
 
-**Where this project responds:** Of the five instruments in this corpus, Essential Access is the one aimed at this chapter. It is meant to guarantee a survival floor — food, shelter, medicine, water — that cannot be bought away, traded off, or revoked. That covers the most basic version of "declared but not enforced": the right to stay alive.
+**Where this project responds:** Essential Access is the protected lane aimed at this chapter. It is meant to guarantee a survival floor — food, shelter, medicine, water — that cannot be bought away, traded off, or revoked. That covers the most basic version of "declared but not enforced": the right to stay alive.
 
 It does not cover everything in this chapter. Three of the problems here are gaps the corpus does not yet address. Carceral economics — the poverty trap built from cash bail, fines and fees, and the Thirteenth Amendment labor exception — has no instrument. Algorithmic discrimination — unequal outcomes from automated systems with no clear human decision-maker — has no instrument. And the epistemic rights of minors — what young people are owed when products are designed to affect their minds — has no instrument. These are documented, not hidden. They are tracked in the project's governance document called the Hardening Queue, which is the running list of known unsolved problems. Naming a gap is the condition for working on it honestly, not a sign the work is done.
 
@@ -612,12 +614,13 @@ Each failure happened where a specific structure was absent. And every society t
 
 This corpus describes those structures together, with walls between them so that no one of them becomes the next failure mode. It does not claim to have solved these problems. It claims only to have studied them, and to have written down what the study found.
 
-### What the five instruments are for
+### What the protected lanes are for
 
 **Essential Access** — The floor beneath market failure: food, shelter, medicine, and water as a survival guarantee, not a market outcome (Chapters 1, 9).
-**Flow** — The wall between market money and public power: ordinary money kept from buying survival, voice, or office. Commons Return and Universal Stake sit beside Flow as the public-return mechanism for shared and scarcity-created value (Chapters 2, 3, 6).
+**Flow** — The wall between market money and public power: ordinary money kept from buying survival, voice, or office (Chapters 2, 3, 6).
+**Commons Return and Universal Stake** — Public return from shared and scarcity-created value, distributed as a protected member stake that cannot buy office, Voice, membership, or survival priority (Chapters 2, 3, 6, 10).
 **Voice** — The civic priority that cannot be purchased with wealth (Chapters 5, 8).
-**Service Record** — Rotating eligibility that stops the same people from holding public roles forever (Chapter 5).
+**Service Record** — Eligibility support and rotation pressure that help stop the same people from holding public roles forever, while preserving challenger routes where required (Chapter 5).
 **Shared Storehouse** — Transparent, universal rationing when shortage has been verified (Chapter 4).
 
 ### What this project does not yet address

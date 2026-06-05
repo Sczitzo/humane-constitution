@@ -1,7 +1,7 @@
 # SPECIFICATIONS.md — Formal System Specifications
 
 **Document type:** Technical specification  
-**Scope:** Five-instrument model (Flow, Essential Access, Voice, Service Record, and Shared Storehouse) — state machine definition, transition rules, decay functions, and public-money constraints
+**Scope:** Protected lane architecture - Flow, Essential Access/CSM, Voice, Service Record, Shared Storehouse, and Commons Return/Universal Stake - state machine definition, transition rules, decay functions, and public-money constraints
 **Format:** Systems design / formal state machine  
 **Status:** Specification-grade (bound values resolve through `/founding/commitments.md`; unresolved activation gates use reserved FC identifiers until they are bound)
 
@@ -9,7 +9,7 @@
 
 ## 1. System Overview
 
-The Humane Constitution operates four primary instruments and one emergency instrument. Each instrument is a bounded state machine with defined issuance conditions, transition rules, decay functions, and termination states. The lanes are non-convertible by design; the non-convertibility constraint is enforced at the ledger layer, not at the application layer. Flow may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
+The Humane Constitution operates five protected lanes or layers: the life channel (Essential Access and CSM), the market channel (Flow), the civic channel (Voice and Service Record), the emergency scarcity overlay (Shared Storehouse), and the public-return layer (Commons Return and Universal Stake). Each operative instrument is a bounded state machine with defined issuance conditions, transition rules, decay functions where applicable, and termination states. The lanes are non-convertible by design; sanctioned non-convertibility is enforced at the ledger and governance layers, not merely at the application layer. Flow may exist as public digital balances and as physical/offline bearer instruments inside the same monetary lane.
 
 ## Plain-Language Guide
 
@@ -22,10 +22,11 @@ The simple version:
 - **Voice** is short-lived civic influence. It cannot be saved forever.
 - **Service Record** is a record of service and eligibility. It is not a human-worth score.
 - **Shared Storehouse** is only for scarcity emergencies.
+- **Commons Return and Universal Stake** return shared or scarcity-created value to the public and distribute a protected member stake.
 
-The most important rule is separation: none of these instruments may be traded into another one.
+The most important rule is separation: no lane may buy, sell, pledge, or officially convert into another lane.
 
-![Instrument Space — Four Primary Lanes + Emergency Overlay](/images/V-010.png)
+![Protected Lanes and Layers](/images/V-010.png)
 
 ---
 
@@ -100,7 +101,7 @@ Plain meaning: Essential Access is a daily claim to basic needs. It cannot be so
 
 **Expiry behavior:** Expired Essential Access is destroyed, not rolled over. No accumulation is possible — this is by design. Accumulation would reintroduce asset-like properties and create a secondary market attack surface.
 
-**Non-transferability enforcement:** Essential Access is bound to identity at issuance. No transfer, delegation, proxy redemption, or assignment is valid. Exception: constitutionally authorised caregiver and dependent mechanisms — including household pooling (up to 20% per adult per week), delegated spend authority, and the Essential Access transfer exception channel for dependents (up to 10% of dependent's weekly entitlement) — are valid transfers. Because a transferable slice of a non-transferable survival entitlement is the channel through which a household abuser or trafficker could capture a dependent's bread, this carve-out is proactively guarded against coercion: every transfer requires dependent-side confirmation (the dependent's own consent at the point of transfer, not the caregiver's assertion of it), transfer patterns are continuously screened for anomalies, and flagged patterns trigger review with the dependent's direct access preserved while the flag is resolved. These mechanisms are capped, identity-bound, auditable, and reversible upon evidence of coercion. The proactive confirmation and anomaly-flagging requirements operate before evidence of coercion is presented, not only after. All other transfers remain prohibited. Redemption requires biometric or equivalent identity confirmation at delivery point (Tier 2 assurance minimum; see P-003), subject to the identity-failure fallback below.
+**Non-transferability enforcement:** Tier 1 continuity allocations are bound to a personhood or protected pseudonymous continuity path at issuance. No transfer, delegation, proxy redemption, or assignment is valid. Tier 0 CSM access remains open at the point of need through the pseudonymous token mechanism in ANNEX_AK §AK8 and ANNEX_AZ. Exception: constitutionally authorised caregiver and dependent mechanisms — including household pooling (up to 20% per adult per week), delegated spend authority, and the Essential Access transfer exception channel for dependents (up to 10% of dependent's weekly entitlement) — are valid transfers. Because a transferable slice of a non-transferable survival entitlement is the channel through which a household abuser or trafficker could capture a dependent's bread, this carve-out is proactively guarded against coercion: every transfer requires dependent-side confirmation (the dependent's own consent at the point of transfer, not the caregiver's assertion of it), transfer patterns are continuously screened for anomalies, and flagged patterns trigger review with the dependent's direct access preserved while the flag is resolved. These mechanisms are capped, identity-bound, auditable, and reversible upon evidence of coercion. The proactive confirmation and anomaly-flagging requirements operate before evidence of coercion is presented, not only after. All other transfers remain prohibited. Redemption may request biometric or equivalent confirmation for Tier 1 continuity allocation, subject to the identity-failure fallback below; it may not refuse the CSM floor to a person physically present at the point of need.
 
 **Identity-failure fallback at redemption:** When biometric or equivalent confirmation fails — whether because a person is undocumented, displaced, biometrically illegible, or has chosen pseudonymous enrollment — redemption escalates to human review rather than terminating. The default outcome of that review is provision, not denial: a person standing at a delivery point in need of the survival basket receives it, and the confirmation failure is recorded for later reconciliation rather than used as grounds for refusal. No person may be excluded from the Constitutional Survival Minimum for lack of identity, documents, or biometric legibility. Survival access is identity-free at the point of need; the identity requirement attaches to civic Voice (anti-Sybil), never to the bread.
 
@@ -118,7 +119,7 @@ The "may never be reduced" guarantee is a guarantee of delivery capacity — act
 
 ### 3.5 Issuance Conditions
 
-Essential Access issuance is automatic and unconditional for all confirmed identity holders. The issuance trigger is the daily system cycle. Issuance amount: `CSM ≤ allocation ≤ enhanced allocation`, per the enhanced-allocation rule bound through FC-056.
+Essential Access issuance at the CSM floor is automatic and unconditional for every person physically present. Tier 1 continuity holders receive the daily system-cycle issuance; Tier 0 users receive the CSM floor through the open-access token and continuity fallback described in ANNEX_AK §AK8. Issuance amount: `CSM ≤ allocation ≤ enhanced allocation`, per the enhanced-allocation rule bound through FC-056.
 
 Issuance is **not** conditional on contribution record, civic standing, employment status, prior redemption behavior, or any behavioral criterion.
 
@@ -133,9 +134,9 @@ Issuance is **not** conditional on contribution record, civic standing, employme
 This section defines the two civic instruments:
 
 - **Voice:** Fast-decaying agenda-setting influence. Used in deliberative processes. Cannot accumulate indefinitely.
-- **Service Record:** Service history and eligibility record. Slow-decay. Gates access to civic roles and service tiers. Does not represent worth (INV-003).
+- **Service Record:** Service history and eligibility-supporting record. Slow-decay. Supports access to civic roles and service tiers without becoming the sole gate where ordinary challenger, lived-experience, sortition, or appeal access is required. Does not represent worth (INV-003).
 
-Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Service Record shows service history for role eligibility, but it must never become a ranking of people.
+Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Service Record shows service history for role eligibility, but it must never become a ranking of people or a civic priesthood.
 
 ### 4.2 Voice State Machine
 
@@ -151,7 +152,7 @@ Plain meaning: Voice helps people shape civic agendas, but it fades quickly. Ser
 
 ![Service Record — Civic Eligibility Lifecycle](/images/V-013.png)
 
-Plain meaning: Service Record records service history and gates eligibility for civic roles. It is not a worth-ranking and must never become one. Its cooling and decay touch role eligibility only — they reach a person's place in the civic-service queue, never their standing as a person and never their access to survival.
+Plain meaning: Service Record records service history and supports eligibility for civic roles. It is not a worth-ranking and must never become one. Its cooling and decay touch role eligibility only — they reach a person's place in the civic-service queue, never their standing as a person and never their access to survival. Where a role needs ordinary-resident, lived-experience, sortition, adversarial, or appeal access, Service Record may inform eligibility but may not monopolize it.
 
 **Decay function (SLOW_DECAY):** `SR(t) = SR(0) × (1 − r_cr)^t` — P-009 sets grace-period rate at 20% of normal (FC-063 reserved).
 
@@ -191,7 +192,7 @@ The non-convertibility constraint is the architectural core of the system. It is
 4. Any cross-instrument collateralization
 5. Any derivative instrument whose value tracks another instrument
 
-**Ledger enforcement mechanism:** Each instrument operates on a separate ledger namespace. Cross-namespace transactions are structurally impossible at the ledger layer, though above-ledger bypass remains a residual risk (T-001) — they are made structurally impossible inside the system, not merely prohibited, while arrangements outside any ledger entry stay beyond what ledger enforcement can reach. Detailed namespace isolation and ledger implementation belong in the architecture docs; the constitutional requirement is structural impossibility of cross-namespace conversion at the ledger layer, paired with honest acknowledgement of the above-ledger residual.
+**Ledger enforcement mechanism:** Each instrument operates on a separate ledger namespace, and public-return distributions operate under separate lockbox and distribution rules. Cross-namespace transactions are structurally impossible at the ledger layer, though above-ledger bypass remains a residual risk (T-001) — they are made structurally impossible inside the system, not merely prohibited, while arrangements outside any ledger entry stay beyond what ledger enforcement can reach. Detailed namespace isolation and ledger implementation belong in the architecture docs; the constitutional requirement is structural impossibility of sanctioned cross-namespace conversion at the ledger layer, paired with honest acknowledgement of the above-ledger residual.
 
 **Above-ledger bypass risk:** The non-convertibility constraint holds at the ledger layer. Off-ledger transactions (proxy redemption, service-for-Essential Access exchanges, informal barter at instrument boundaries) are not preventable by ledger enforcement alone.
 

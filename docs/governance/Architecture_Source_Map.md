@@ -13,7 +13,7 @@ The project is organized around preventing three structural collapse states.
 | Collapse state | First-principles failure | Project response | Main evidence burden |
 |---|---|---|---|
 | **Survival-Trade Bind** | A person must succeed in markets, employment, credit, or exchange to stay alive, safe, housed, treated, or civically legible. | Essential Access, Constitutional Survival Minimum, identity-continuity rules, non-convertibility, and capacity measurement. | Identity recovery, Essential Access delivery, shadow-convertibility testing, real-capacity measurement, appeal continuity, and scarcity drills. |
-| **Power-Wealth Convergence** | Accumulated wealth becomes formal or practical authority over rules, enforcement, public measurement, civic access, or institutional design. | Flow / Voice / Service Record separation, anti-conversion rules, public records, beneficial-control review, anti-rent controls, and independent oversight. | Proxy-market tests, institutional-capture review, public-banking simulation, anti-corruption audit, legal-wrapper review, and FAP capture testing. |
+| **Power-Wealth Convergence** | Accumulated wealth becomes formal or practical authority over rules, enforcement, public measurement, civic access, or institutional design. | Flow / Voice / Service Record separation, Commons Return and Universal Stake, anti-conversion rules, public records, beneficial-control review, anti-rent controls, and independent oversight. | Proxy-market tests, institutional-capture review, public-banking simulation, anti-corruption audit, legal-wrapper review, public-return incidence testing, and FAP capture testing. |
 | **Static-Advantage Loop** | Early-entry advantage, inheritance, expertise, procedural control, or gatekeeping hardens into permanent class position. | Commons Return, Universal Stake, decay where appropriate, rotation, anti-dynasty rules, new-participant access, subsidiarity review, exit protections, and bottleneck audits. | Service Record misuse testing, source-base incidence testing, concentration dashboards, legal-wrapper review, founding-legitimacy tests, and governance red-team exercises. |
 
 These collapse states are a diagnostic lens, not a status label. A mechanism can be written, proposed, active, or evidence-backed only under the status language in the [Claims and Evidence Register](./Claims_Evidence_Register.md).
@@ -33,6 +33,7 @@ The project does not use one universal instrument that can buy everything.
 | Public participation and correction | Voice | A purchased vote, transferable influence asset, status market, or wealth-weighted rule channel. |
 | Contribution recognition | Service Record | A total human-worth score, employability rank, caste marker, or permanent civic aristocracy. |
 | Scarcity response | Shared Storehouse | Ordinary trade inventory, permanent emergency administration, or discretionary rationing power. |
+| Public return from shared or scarcity-created value | Commons Return / Universal Stake | A loyalty payment, office-buying route, membership price, survival-priority market, or patronage fund. |
 
 The core safety rule is:
 
@@ -94,7 +95,8 @@ Use these questions when reviewing any threat, patch, annex, pilot, or public cl
 5. Are real capacity, delivery, and appeal outcomes measured physically enough to catch paper compliance?
 6. Does emergency authority automatically sunset, and can the public understand the sunset evidence?
 7. Can new participants enter without being permanently subordinate to early entrants?
-8. What evidence would falsify the claim that this mechanism resists the collapse state it targets?
+8. Does Commons Return fall on the scarcity-created return base, or is the burden passed through to ordinary workers, renters, households, churches, tribes, or small stewards?
+9. What evidence would falsify the claim that this mechanism resists the collapse state it targets?
 
 ---
 

@@ -20,7 +20,7 @@ In plain terms:
 
 - Everyone keeps enough Essential Access to survive.
 - A wrongful denial of survival access can be appealed to a person, and the floor is provided while the appeal is reviewed.
-- The five instruments cannot be traded into each other.
+- The protected lanes and layers cannot be traded into each other.
 - The system cannot score a person's worth.
 - Money cannot buy governing power.
 - Survival access can only be issued when real food, shelter, care, and transport capacity exists.
@@ -66,14 +66,16 @@ This Scope section is descriptive of the boundary; the interface invariants belo
 
 ## INV-002 — Instrument Non-Convertibility
 
-**Statement:** The five instruments — Flow, Essential Access, Voice, Service Record, and Shared Storehouse — cannot be directly or indirectly converted into one another. No market mechanism, contractual arrangement, proxy transaction, or system state may create a conversion pathway between instruments.
+**Statement:** The protected lanes and layers - Flow, Essential Access/CSM, Voice, Service Record, Shared Storehouse, and Commons Return/Universal Stake - may not be converted, pledged, collateralized, or officially recognized as consideration for one another. No ledger operation, public-benefit rule, contract-enforcement path, governance process, or system state may create a sanctioned conversion pathway between them. Residual off-ledger conversion attempts must be made difficult, visible, penalizable, and testable; the invariant does not pretend private arrangements outside the ledger can be made impossible by assertion.
 
 **Mechanical boundary:**
 - Essential Access → Flow conversion: prohibited
 - Flow → Essential Access conversion: prohibited (Essential Access is issued by the system, not purchased)
 - Voice and Service Record → Flow, Essential Access, or Shared Storehouse conversion: prohibited
 - Shared Storehouse → Flow or Essential Access conversion: prohibited
+- Commons Return or Universal Stake → Voice, office, membership, legal standing, survival priority, or public favor conversion: prohibited
 - Cross-instrument collateralization: prohibited
+- Official recognition of private proxy conversion: prohibited
 
 **Why this matters:** If survival access can be bought, sold, pledged, or traded for other instruments, people with money can gain power over people's basic needs. Essential Access avoids this by staying outside the price system. Even one narrow workaround would reopen the problem.
 
@@ -83,9 +85,9 @@ This Scope section is descriptive of the boundary; the interface invariants belo
 
 ## INV-003 — Human Worth Is Not Measured
 
-**Statement:** No instrument, record, score, or system output may represent a quantitative assessment of a person's inherent worth, social value, or moral standing. The Service Record records service history and eligibility; it does not score personhood.
+**Statement:** No instrument, record, score, or system output may represent a quantitative assessment of a person's inherent worth, social value, or moral standing. The Service Record records service history and may support eligibility; it does not score personhood.
 
-**Mechanical boundary:** Service Record is a eligibility-gating record, not a ranking. No total score, percentile, or comparative metric may be derived from Service Record and applied to Essential Access access or survival floor eligibility.
+**Mechanical boundary:** Service Record is an eligibility-supporting record, not a ranking. It may not be the sole path into any role, review, or remedy for which ordinary-resident, lived-experience, sortition, adversarial, or appeal access is constitutionally required. No total score, percentile, or comparative metric may be derived from Service Record and applied to Essential Access access or survival floor eligibility.
 
 **Why this matters:** A human-worth score becomes a threat. People can be pushed around by the fear of losing status, access, or eligibility. The Service Record may show service history, but it must never become a score for human value.
 
@@ -291,7 +293,7 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 
 ## Interface Invariants — Binding the Host Order
 
-INV-014 through INV-019 are *interface invariants*. They do not govern the five instruments directly; they bind whatever host order supplies force, justice, and membership — the functions this layer deliberately does not constitute (see Scope). They are the contract the host must meet for the walls to mean anything. A host that breaches them voids this design's claim to legitimacy and operability within it. They are Tier 1 and carry the same protection and amendment threshold as INV-001 through INV-013.
+INV-014 through INV-019 are *interface invariants*. They do not govern the protected fiscal-civic lanes directly; they bind whatever host order supplies force, justice, and membership — the functions this layer deliberately does not constitute (see Scope). They are the contract the host must meet for the walls to mean anything. A host that breaches them voids this design's claim to legitimacy and operability within it. They are Tier 1 and carry the same protection and amendment threshold as INV-001 through INV-013.
 
 ## INV-014 — Force May Never Gate Survival
 

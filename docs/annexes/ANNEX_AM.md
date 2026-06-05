@@ -85,6 +85,10 @@ The CIP consists of **7 members** subject to the following constraints:
 - At least 2 members must be appointed by bodies structurally independent of the current governing coalition — eligible appointing bodies include: prior-cycle ombudspersons, accredited academic constitutional law bodies, or civil society appointment processes ratified by the Federated Ombuds Plenum.
 - Appointments are **staggered**: no more than 2 seats may turn over in any single calendar year.
 
+**Non-priesthood and lived-experience floor.** Constitutional integrity may not become the private craft of lawyers, academics, donors, former officials, or professional governance staff. Across the seven seats, at least two CIP members must have direct lived experience of Essential Access dependency, housing instability, disability, migration precarity, justice-system contact, labor precarity, or caregiving burden within the prior 10 years. At least one of those two must be appointed through a civil-society or community process rather than a government branch. Lack of professional credentials may not disqualify a nominee who satisfies conflict, confidentiality, and service-capacity requirements.
+
+The CIP must publish a plain-language qualification rule for every seat. The rule may require the ability to deliberate, receive evidence, protect confidential records, and disclose conflicts. It may not require institutional sponsorship, Service Record standing above the published minimum, donor backing, academic appointment, legal licensure, or prior government office unless a specific seat's function legally requires it under host law.
+
 ### AM8.2 — Term
 
 Members serve **5-year non-renewable terms**. Staggering is maintained by the founding order, which must schedule initial terms of 3, 4, and 5 years across the first cohort to ensure continuity.
@@ -122,6 +126,22 @@ A self-initiated review must be published in the Article VII dashboard at the mo
 ### AM8.7 — Activation Gate
 
 The CIP cannot be constituted until the **Founding Order's first post-activation audit is complete** (per P-014 §5). Until that gate is cleared, Tier 1 amendments are suspended. The audit completion date and CIP constitution date must both be recorded in the Article VII dashboard as founding-event entries.
+
+### AM8.8 — Ordinary Challenge, Conscience, and Bad-Fruit Pause
+
+Before any CIP ratification decision, the CIP must open an ordinary challenger window with the following minimum protections:
+
+- Any resident, low-wealth participant, newcomer, caregiver, dissenter, opposition-community representative, or person directly affected by the proposed Tier 1 change may file a challenge without institutional sponsorship.
+- The challenger receives the same non-private evidence packet, response deadline, publication status, and appeal route as institutional commenters.
+- The CIP must provide plain-language summaries, language access, offline filing, disability accommodation, and fee-free submission.
+- A challenge may not be dismissed for lack of legal vocabulary if it identifies a concrete rule, decision, harm, missing evidence, or factual error.
+- Material challenges receive written responses before ratification. Rejected challenges must state the evidence relied upon and the available appeal route.
+
+Every Tier 1 ratification package must pass a simplicity and non-priesthood test before vote. A stratified ordinary-reader sample must be able to identify what the proposal changes, who benefits, who bears risk, how dissent is recorded, how appeal works, and whether the change affects Essential Access, host-law rights, or conscience protections. Failure of the test delays ratification until the package is rewritten and re-tested.
+
+Rights of conscience are protected during all CIP and transition proceedings. No person may be required to affirm a theological, moral, political, or constitutional claim as a condition of Essential Access, housing continuity, legal standing, challenge access, or ordinary civic participation. Public dissent, religious teaching, moral objection, refusal to endorse founding claims, and appeal to external lawful authority may not reduce Voice, Service Record continuity, or service eligibility.
+
+The CIP must pause or refuse ratification when the fruits are bad. Bad-fruit triggers include: credible evidence that a pilot or charter is operating unlawfully under host law; coercive consent; retaliation against objectors; repeated inability to exit without penalty; survival access used as leverage; ordinary challenger routes failing in practice; external audit finding professional or donor monopoly over review bodies; or a pattern of harm to poor residents, newcomers, disabled residents, caregivers, or dissenters. A bad-fruit pause is published within 48 hours, remains active until the defect is independently reviewed, and may require narrowing, suspension, or orderly shutdown of the affected pilot function.
 
 ---
 

@@ -28,6 +28,18 @@ Service Record is the slower-moving civic service record that tracks whether a p
 - **Service Record decays more slowly than Voice** and may preserve a hardship-safe continuity floor during approved pause windows.
 - **Service Record may not be traded**, inherited, pooled by institution, or proxied through enterprises or associations.
 
+### Z3.1. Non-priesthood rule and challenger routes
+Service Record may show readiness for a role; it may not become a priesthood, caste, expert monopoly, or proof of superior worth. A person with a stronger Service Record is not more civically human than a newcomer, dissenter, poor resident, undocumented person, caregiver, disabled person, or resident whose service is difficult to document.
+
+Every Service Record-governed role pool must publish at least one challenger route alongside the ordinary eligibility route:
+
+- **Ordinary-resident challenger route:** a resident without the ordinary Service Record threshold may file a challenge, serve as a lay reviewer, join a temporary review panel, or publish a minority report when the matter affects their neighborhood, household class, work category, or survival access.
+- **Lived-experience route:** where a matter concerns poverty, disability, migration, housing instability, Essential Access dependency, caregiving, or enforcement contact, direct lived experience counts as relevant stewardship knowledge and may not be displaced by professional credentials alone.
+- **Newcomer route:** residents inside their first 24 months of participation receive a provisional path into observation, comment, and limited-scope service roles so that late entry does not create a permanent civic underclass.
+- **Dissent route:** protected dissenters may challenge role-pool composition, Service Record rules, or eligibility denials without losing Voice, Service Record continuity, Essential Access, housing standing, or appeal access.
+
+Where a role requires technical competence, confidential access, or legal qualification, the challenger route may be limited to supervised review, a public challenge brief, observer status, or an appeal trigger. The limitation must be written, role-specific, and appealable; expertise may protect a function from incompetence, but it may not protect a class from correction.
+
 ### Z4. Anti-composition and non-discrimination
 The separation of Voice and Service Record holds outside the system as well as inside it. No person or institution may construct, publish, sell, broker, or condition any benefit on a combined or derived score that fuses Voice and Service Record with each other, or that fuses either instrument with external data, for the purpose of ranking persons. Constructing or trafficking such a composite reconstitutes the single human ranking this annex exists to forbid, and is a prohibited act regardless of mechanism, vendor, or pretext.
 
@@ -38,6 +50,19 @@ To reduce the risk that one legible professional class captures the civic instru
 - **Care work, ecological stewardship, civic operations, teaching, repair, safety, and enterprise stewardship** must all remain admissible but none may become the sole gateway to civic standing.
 - **Where local verification conditions are weak, high-poverty, or conflict-saturated**, claimants must have access to cross-regional rotating review panels so civic eligibility is not trapped inside local patronage systems.
 
+### Z5.1. Simplicity and ordinary challenger parity test
+Each annual Article VII concentration review must include a Service Record non-priesthood test. The review asks:
+
+- Can an ordinary resident explain, without professional help, how a person becomes eligible for each Service Record-governed role?
+- Can a low-wealth resident, newcomer, caregiver, disabled resident, or person without institutional sponsors realistically satisfy or challenge the eligibility rule without paying for credentials, lawyers, consultants, or patronage?
+- Are challenger filings, minority reports, and eligibility appeals answered on the same timeline as filings from institutions or experts?
+- Do role pools include ordinary residents and lived-experience members in proportions sufficient to prevent professional, donor, academic, technical, religious, or governance insiders from becoming a standing majority across multiple cycles?
+- Are denials published with plain-language reasons, a correction path, and an appeal route to an independent body not controlling the role pool?
+
+Failure on any two questions in the same annual review triggers a moratorium on expanding Service Record-governed roles until the defect is corrected. Repeated failure across two consecutive annual reviews requires external audit and a public remediation plan. If the defect concerns survival-adjacent decisions, the affected Service Record rule is suspended during remediation and one-person-one-vote or ordinary-resident challenger procedures govern.
+
+Ordinary challenger parity means that a challenger receives the same non-private record, response deadline, publication status, and appeal access as an institutional challenger. Poverty, lack of credentials, low Service Record, newcomer status, religious or moral dissent, or unfamiliarity with protocol vocabulary may not be used to dismiss a challenge that identifies a concrete rule, decision, harm, or factual error.
+
 ### Z6. Dual-key legitimacy for survival-adjacent decisions
 Any recommendation produced through Voice that materially affects the essential basket, housing baseline rules, Essential Access redemption continuity, or residency dignity floor is advisory only until it also clears the legitimacy safeguards already established elsewhere in this Protocol. The civic instruments may inform stewardship tradeoffs; they may not, by themselves, decide who bears survival risk. This annex therefore reaffirms that one-person-one-vote legitimacy remains primary for constitutional questions and any decision that would narrow or condition the survival floor.
 
@@ -45,5 +70,7 @@ The advisory-only status of Voice on survival-adjacent matters is audited period
 
 ### Z7. Implementation rule
 Implementation may seed Service Record balances from already-verified service history while minting Voice prospectively under the quarterly rules. No existing civic balance may be converted into ordinary wealth, survival privileges, or hereditary standing.
+
+Pilot implementation must include a shutdown trigger for civic-standing harm. If Service Record rules are shown by external audit to exclude ordinary residents, poor participants, newcomers, caregivers, or dissenters from meaningful challenge routes; to predict survival-adjacent outcomes in fact; or to create a stable professional or donor-backed majority in review bodies, the affected Service Record rule pauses immediately. It may resume only after a published correction, appeal-route test, and ordinary-reader comprehension test show that the rule serves the community rather than the gatekeepers.
 
 ---

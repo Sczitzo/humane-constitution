@@ -245,7 +245,9 @@ The AED is Tier 2 once adopted. The decision rule in Section 4 (including the pr
 
 ### AK8.1 — Tier 0: Open-Access Survival Floor
 
-Any person may receive Essential Access at the Constitutional Survival Minimum (CSM) without providing or confirming real-world identity.
+Any person may receive Essential Access at the Constitutional Survival Minimum (CSM) without providing or confirming real-world identity. Tier 0 is an open CSM bridge, not a lesser survival class.
+
+When a CSM need cannot be met safely in a single session - for example continuing medicine, protected shelter, crisis care, or family/dependent continuity - the system must provide a privacy-preserving continuity path that does not require full civic identity. Continuity tokens may remember the need, appointment, and non-duplication state; they may not become Voice, Flow, Service Record, immigration enforcement, political scoring, or a general-purpose identity dossier.
 
 **Non-duplication mechanism:** A Tier 0 allocation is keyed to a single-session pseudonymous token generated at point of access. The token is non-transferable, expires after use, and cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom.
 
@@ -257,7 +259,7 @@ The token mechanism must be designed so that token-issuance infrastructure canno
 - Continuity across sessions (prior allocations are not retrievable without Tier 1 enrollment)
 - Above-CSM allocations
 - Access to Voice, Service Record, or Flow accounts
-- Enrollment in scheduled care, housing, or transit planning systems
+- Above-CSM scheduling priority or planning privileges, except where continuity is required to deliver the CSM itself
 
 ### AK8.2 — Tier 1: Identity-Gated Services
 
@@ -277,7 +279,7 @@ Community-level anomaly findings are published in plain language on the public d
 
 The anomaly threshold (FC-T0-01) is a Tier 3 operational parameter registered in the Parameter Calibration Register. The Federated Ombuds may adjust it by standard FAP process, provided the revised threshold is not lower than 2% or higher than 15% of CSM capacity in the relevant category.
 
-Community review of an aggregate anomaly finding is convened by the relevant Regional Essential Board within 30 days of Ombuds publication. The REB may recommend: (a) capacity reclassification, (b) token-mechanism audit, or (c) Tier 0 category suspension pending investigation (requires Ombuds concurrence). Category suspension is a PCRP-equivalent event and subject to the same unwind requirements under ANNEX_AQ.
+Community review of an aggregate anomaly finding is convened by the relevant Regional Essential Board within 30 days of Ombuds publication. The REB may recommend: (a) capacity reclassification, (b) token-mechanism audit, or (c) suspension of a compromised Tier 0 token mechanism for the affected category pending investigation (requires Ombuds concurrence). A token-mechanism suspension may never suspend CSM delivery; it must be paired with an alternate open-access delivery path before it takes effect. Token-mechanism suspension is a PCRP-equivalent event and subject to the same unwind requirements under ANNEX_AQ.
 
 ### AK8.4 — Relationship to INV-001
 

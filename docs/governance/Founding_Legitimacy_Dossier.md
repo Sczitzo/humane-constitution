@@ -25,6 +25,20 @@ The project should not yet claim:
 
 ---
 
+## Christ-Centered Founding Posture
+
+This dossier is a human legitimacy instrument, not a claim of divine endorsement. It must be read as a discipline of humility: founders are servants under judgment, not architects who can make their own authority righteous by writing a better procedure.
+
+The Christ-centered posture for founding is:
+
+- **Humility:** the founding coalition must name what it does not know, what it has not tested, and where its own interests may bend judgment.
+- **Service:** founding authority is custodial and temporary; it exists to protect persons, especially those who would bear the cost of failure.
+- **Dignity:** no person is reduced to consent data, Service Record status, eligibility score, poverty category, or pilot input.
+- **Anti-Babel warning:** a lawful charter can still become coercive if it gathers people into one compulsory administrative tower, suppresses dissent, or treats technical completeness as moral completion.
+- **Fruit test:** the founding claim is not vindicated by clean documents. It is tested by whether ordinary residents, poor participants, newcomers, vulnerable persons, and dissenters can understand, object, appeal, exit, and continue receiving humane care without punishment.
+
+---
+
 ## Required Founding Artifacts
 
 | Artifact | What it must show | Failure signal |
@@ -39,6 +53,7 @@ The project should not yet claim:
 | Dignity-floor plan | What unconditional minimum support reaches non-consenting communities and how it avoids pressure to join. | Humanitarian support becomes leverage for accession. |
 | Founder sunset | When founding authority ends and ordinary governance replaces it. | Founders keep exceptional power after activation. |
 | Independent review | Outside civil-society, legal, community, disability, labor, faith, and technical review. | Reviewers are selected for friendliness or dependence. |
+| Host-law and conscience review | Pilot or charter remains lawful, voluntary, non-sovereign, and protective of religious, moral, political, and civic dissent. | The charter claims authority host law does not allow, or residents must waive legal rights or conscience to receive care. |
 | Vulnerable-population consent evidence | VPCP-008 prerequisites met; ICA staffed and independent; exit support fund pre-capitalized; VPCP-scope pre-enrollment obligations checklist complete for each enrolling resident. | Recruitment targeting homeless/unemployed/justice-exiting populations begins before ICA is operational or exit support is funded. |
 
 ---
@@ -175,6 +190,32 @@ The Founding Composition Auditor is responsible for certifying that all seven di
 
 ---
 
+### Precondition 6 — Host-Law, Conscience, and Non-Coercion Compatibility
+
+**Definition**
+
+Before any pilot, charter, or founding declaration activates in a jurisdiction, the founding coalition must produce a host-law and conscience compatibility review. The review must be specific to the jurisdiction, not a generic legal assurance.
+
+The review must certify all of the following:
+
+- **Non-sovereign posture:** the pilot does not claim to be a state, court, police authority, immigration authority, tax authority, child-protection authority, or substitute for any external legal system.
+- **No rights waiver:** enrollment, Essential Access, housing continuity, Tier 0 services, arbitration, Service Record, Voice, or appeal access may not require waiver of external legal rights, access to courts, legal-aid consultation, public-benefit eligibility, labor rights, disability rights, privacy rights, or constitutional rights.
+- **Specific compliance map:** the founding coalition has mapped applicable federal, state, county, municipal, tribal, labor, tax, housing, health, privacy, disability, environmental, immigration, child-protection, and public-benefit rules, and has identified any rules that require licensed counsel, permits, reporting, or external agency coordination before activation.
+- **Rights of conscience:** no person is required to affirm a theological, moral, political, or constitutional claim as a condition of survival support, residency, appeal access, or ordinary civic participation. Religious teaching, moral objection, public dissent, refusal to endorse the project, and appeal to lawful external authority remain protected.
+- **Ordinary challenger parity:** ordinary residents, poor participants, newcomers, vulnerable residents, and dissenters may challenge the review without institutional sponsorship, legal vocabulary, fees, or internet access. A challenger who identifies a concrete legal conflict, coercion risk, conscience burden, or missing compliance item receives a written response before activation may proceed.
+- **External audit:** the review is signed by standing local counsel and separately assessed by an independent legal or civil-society reviewer not appointed solely by the founding coalition. Conflicts of both reviewers are published.
+- **Shutdown triggers:** if the review identifies unresolved illegality, coercive consent, retaliation for external-law complaints, inability to provide the pre-enrollment grace window, inability to exit without penalty, or survival support being used as leverage for accession, activation pauses. If the defect cannot be corrected without violating host law or dignity-floor commitments, the affected pilot function must be narrowed or shut down with an Essential Access continuity bridge.
+
+**What failure looks like**
+
+This precondition fails if: the review is generic rather than jurisdiction-specific; the founding coalition self-certifies legal compatibility; residents must waive court access or legal rights; dissenters face civic penalty; external legal-aid consultation is discouraged; host-law conflicts are treated as public-relations risks rather than stop conditions; or ordinary challengers cannot get a written response before activation.
+
+**Who audits this**
+
+Standing local counsel certifies the host-law map, but counsel does not decide founding legitimacy. An independent civil-society or legal reviewer nominated through the adversarial review process audits the review for non-coercion, conscience protection, and ordinary challenger access. Either reviewer may issue a stop finding. A stop finding blocks activation until the defect is corrected or the scope is narrowed and re-reviewed.
+
+---
+
 ### Precondition Summary Table
 
 | Precondition | Minimum standard | Failure criterion | Auditor |
@@ -184,8 +225,9 @@ The Founding Composition Auditor is responsible for certifying that all seven di
 | 3. Consent thresholds | 60% affirmative among active participants; 25% participation of all eligible; no coerced consent; 14-day cooling period | Silence counted as consent; participation below 25%; coercion complaints not investigated; cooling period waived | Independent observers; post-event independent survey |
 | 4. Exit rehearsal | Full sequence demonstrated; Essential Access uninterrupted; no prohibited costs; report published 30 days pre-declaration | Rehearsal not conducted; report suppressed or edited; Essential Access gap; exit costs imposed | Independent civil-society reviewers |
 | 5. Pre-activation disclosure | All seven items public for full 60-day objection window | Any item missing, vague, or inaccessible; disclosure period shorter than objection window | Founding Composition Auditor |
+| 6. Host-law and conscience compatibility | Jurisdiction-specific legal map; no rights waiver; conscience protected; ordinary challenger route; shutdown triggers | Generic or self-certified legality; coerced rights waiver; dissent penalized; unresolved host-law conflict | Standing local counsel plus independent adversarial legal/civil-society reviewer |
 
-**All five preconditions must be certified as met before a founding declaration is valid. Partial compliance does not permit partial activation.**
+**All six preconditions must be certified as met before a founding declaration is valid. Partial compliance does not permit partial activation.**
 
 ---
 
@@ -200,6 +242,8 @@ The Founding Composition Auditor is responsible for certifying that all seven di
 | Opposition stigmatization | Critics are treated as enemies of dignity. | Protected dissent record and response duty. |
 | Elite coalition capture | Philanthropic, technical, legal, religious, political, or corporate elites dominate founding. | Founder composition and funding-dependence audit. |
 | Emergency founding | Crisis urgency compresses deliberation. | Minimum notice and no-emergency-entrenchment rule. |
+| Host-law evasion | The charter uses internal governance to bypass external legal rights, courts, labor rules, disability protections, or public-law obligations. | Jurisdiction-specific legal map, independent legal review, external appeal route, and shutdown trigger. |
+| Conscience penalty | Dissenters, religious minorities, moral objectors, or political opponents lose standing for refusing to endorse the project. | Rights-of-conscience review, anti-retaliation audit, and ordinary challenger parity. |
 
 ---
 
@@ -259,7 +303,7 @@ Failure criterion: founders retain emergency, interpretive, keyholder, or appoin
 
 ## Dossier Artifact Status Register
 
-The table below is the authoritative row-level tracking mechanism for founding readiness. All other status language in this document defers to it. **No founding-legitimacy claim stronger than DESIGNED may be made until all eight rows reach PRODUCED.**
+The table below is the authoritative row-level tracking mechanism for founding readiness. All other status language in this document defers to it. **No founding-legitimacy claim stronger than DESIGNED may be made until every pre-activation row capable of production before activation reaches PRODUCED; the post-activation audit is reserved for Gate B.**
 
 | Artifact | Required by | Status | What counts as complete |
 |---|---|---|---|
@@ -270,8 +314,9 @@ The table below is the authoritative row-level tracking mechanism for founding r
 | Exit rehearsal — demonstration that exit is practically available, not just formally permitted | T-026 / FC-121 | **DESIGNED** | At least one documented simulation of a unit exit, including Essential Access continuity during unwind and re-entry procedure |
 | Founder sunset — mechanism by which founding members lose exceptional authority | Annex AH | **DESIGNED** | Specific date or condition on which founding-instrument authority expires, locked in Tier 1 and published before activation |
 | Independent civil-society review — assessment by parties structurally opposed to the founding coalition's interests | P-020 / Annex AH | **UNRESOLVED PREREQUISITE** | Written assessment by at least two civil-society bodies nominated by the adversarial panel member, published before activation |
-| Post-activation audit — independent review within 90 days of founding | P-014 §5 | **DESIGNED** | Audit conducted by reviewers not appointed by the coalition; findings published; any discrepancies between intended and actual activation addressed in writing |
+| Host-law and conscience compatibility review — jurisdiction-specific lawful, voluntary, rights-preserving activation record | Jurisdiction Interface Clause / Precondition 6 | **DESIGNED** | Standing local counsel legal map; independent adversarial reviewer assessment; no-rights-waiver and conscience-protection certification; ordinary challenger responses; shutdown triggers published |
 | Vulnerable-population consent evidence — ICA staffed, exit fund pre-capitalized, VPCP-008 prerequisites documented | VPCP-008 / Founding Team Composition Standard | **OPEN** | ICA selection complete (not appointed by founding team); exit support fund balance confirmed; VPCP-scope pre-enrollment checklist published and independently reviewed |
+| Post-activation audit — independent review within 90 days of founding | P-014 §5 | **DESIGNED** | Audit conducted by reviewers not appointed by the coalition; findings published; any discrepancies between intended and actual activation addressed in writing |
 
 **Status key:**
 - **PRODUCED** — artifact exists as a published, independently verifiable document
@@ -280,10 +325,10 @@ The table below is the authoritative row-level tracking mechanism for founding r
 - **BLOCKED** — production is waiting on another artifact being completed first
 
 **Advancement rules (two-gate structure):**
-- **Gate A — Authorization to activate:** Artifacts 1–7 must reach PRODUCED status. The post-activation audit (artifact 8) cannot exist before activation, so it is not a precondition for activation itself.
-- **Gate B — Full post-activation legitimacy claim:** All eight artifacts must reach PRODUCED status. No stronger founding-legitimacy public claim may be made until Gate B clears.
+- **Gate A — Authorization to activate:** Every pre-activation artifact in the register must reach PRODUCED status. The post-activation audit cannot exist before activation, so it is not a precondition for activation itself.
+- **Gate B — Full post-activation legitimacy claim:** All register artifacts, including the post-activation audit, must reach PRODUCED status. No stronger founding-legitimacy public claim may be made until Gate B clears.
 
-The two UNRESOLVED PREREQUISITE items (consent evidence and civil-society review) must be resolved before any pilot that depends on founding authority can begin — they are prerequisites for Gate A, not just Gate B.
+The two UNRESOLVED PREREQUISITE items (consent evidence and civil-society review) must be resolved before any pilot that depends on founding authority can begin — they are prerequisites for Gate A, not just Gate B. The OPEN vulnerable-population consent item must also reach PRODUCED before any pilot recruits or enrolls VPCP-scope residents.
 
 ---
 
@@ -304,23 +349,25 @@ These answers cannot come from the founding coalition alone. They require a publ
 
 1. **Conflict register** (requires: list of founding members; no other dependency)
 2. **Scope declaration** (requires: conflict register, so disclosed interests are visible in the scope claim)
-3. **Objection record** (requires: scope declaration published, 60-day public window open)
-4. **Independent civil-society review** (requires: scope declaration, objection record; reviewers read both before assessing)
-5. **Consent evidence** (requires: opt-out paths defined in Step 1; consultation documented)
-6. **Exit rehearsal** (requires: FC-121 unwind protocol designed; Essential Access continuity plan confirmed)
-7. **Founder sunset** (requires: scope declaration, so sunset condition is calibrated to the scope claimed)
-8. **Post-activation audit** (requires: all others PRODUCED; conducted within 90 days of activation)
+3. **Host-law and conscience compatibility review** (requires: scope declaration and identified jurisdiction; informs public notice and consent documents)
+4. **Vulnerable-population consent evidence** (requires: identified VPCP scope, ICA selection, exit support fund capitalization, and pre-enrollment checklist)
+5. **Objection record** (requires: scope declaration and host-law review published, 60-day public window open)
+6. **Independent civil-society review** (requires: scope declaration, host-law review, objection record; reviewers read all before assessing)
+7. **Consent evidence** (requires: opt-out paths defined in Step 1; consultation documented)
+8. **Exit rehearsal** (requires: FC-121 unwind protocol designed; Essential Access continuity plan confirmed)
+9. **Founder sunset** (requires: scope declaration, so sunset condition is calibrated to the scope claimed)
+10. **Post-activation audit** (requires: all others PRODUCED; conducted within 90 days of activation)
 
 ### Gate
 
-No pilot phase may begin until Steps 1–2 are complete for all artifacts upstream of that phase (see Pilot Evidence Roadmap Phase 0 founding cascade gate).
+No pilot phase may begin until every Gate A artifact upstream of that phase is PRODUCED (see Pilot Evidence Roadmap Phase 0 founding cascade gate).
 
 ### Estimated minimum calendar
 
 - Step 1 public consultation: ≥60 days (per P-020 disclosure window)
-- Steps 2–7: can overlap after Step 1 completes; estimated 90–180 days for a serious founding coalition with adequate resources
-- Step 8: 90 days post-activation
-- Total minimum: ~9–12 months from Step 1 initiation to Step 8 completion
+- Steps 2–9: can overlap after Step 1 completes; estimated 90–180 days for a serious founding coalition with adequate resources
+- Step 10: 90 days post-activation
+- Total minimum: ~9–12 months from Step 1 initiation to Step 10 completion
 
 ---
 
@@ -341,6 +388,7 @@ The table below tracks the fuller set of founding artifacts defined in the Requi
 | Exit rehearsal | **DESIGNED** | Exit protocol exists ([exit_protocol.md](../../founding/order/exit_protocol.md)). No rehearsal with real or simulated exit has been conducted. |
 | Dignity-floor plan | **DESIGNED** | Non-coercion rules and Essential Access protections exist in the constitutional text. Cross-boundary non-coercion review has not been conducted. |
 | Founder sunset | **DESIGNED** | Sunset and handoff rules exist in the Founding Order. No founding event has begun the clock. |
+| Host-law and conscience review | **DESIGNED** | Jurisdiction-specific legal and conscience-compatibility review is now required. No review has been produced for a real pilot jurisdiction. |
 | Independent review | **NOT YET PRODUCED** | Requires review by outside civil-society, legal, community, disability, labor, faith, and technical parties independent of the founding team. |
 
 **What the current design-stage corpus may honestly claim:**
@@ -358,6 +406,7 @@ The project may strengthen its founding-legitimacy claim only after producing:
 - consent event record;
 - exit rehearsal results;
 - dignity-floor non-coercion review;
+- host-law and rights-of-conscience review;
 - founder sunset and handoff plan;
 - independent review report;
 - residual-risk update.

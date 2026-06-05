@@ -1,4 +1,4 @@
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 import pytest
 
@@ -19,6 +19,7 @@ def _mock_model(config: dict | None = None):
     model.commons_return_ledger = []
     model.capture_risk_log = []
     model.enforcement_log = []
+    model.bypass_success_log = []
     model.social_wealth_fund_balance = 0.0
     model.universal_stake_pool = 0.0
     return model
@@ -114,3 +115,20 @@ def test_capture_attempt_blocks_stake_assignment_and_logs_valuation_hiding():
     assert model.enforcement_log[0]["type"] == "UNIVERSAL_STAKE_ASSIGNMENT"
     assert model.enforcement_log[0]["outcome"] == "BLOCKED"
     assert model.capture_risk_log[0]["type"] == "VALUATION_HIDING_ATTEMPT"
+
+
+def test_shadow_conversion_detection_probability_blocks_bypass():
+    model = _mock_model()
+    agent = AdversarialAgent(4, model, "PRODUCTION")
+    agent.flow_balance = 0.0
+
+    with patch("numpy.random.random", return_value=0.50):
+        result = agent._attempt_shadow_conversion()
+
+    assert result is False
+    assert agent.bypass_attempts == 1
+    assert agent.bypass_successes == 0
+    assert agent.flow_balance == 0.0
+    assert model.enforcement_log[0]["type"] == "SHADOW_CONVERSION"
+    assert model.enforcement_log[0]["outcome"] == "DETECTED"
+    assert model.bypass_success_log == []

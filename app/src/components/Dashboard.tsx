@@ -2800,6 +2800,7 @@ const READING_PATHS: ReadingPathDef[] = [
     description: 'The intended public on-ramp: human stakes first, then the plain case and readiness caveats.',
     steps: [
       { path: 'docs/public/00_start_here.md', note: 'Start here. The problem, the one testable claim, the honest caveats, and a map of the rest — read this before anything else.' },
+      { path: 'docs/public/10_real_world_examples.md', note: 'Real problems and real attempts: what worked, what failed, and which project mechanism learns from each case.' },
       { path: 'docs/public/05_life_and_rights.md', note: 'What the design is trying to protect, shown through a year of ordinary lives — and how large firms operate under the rules. This is what "working" looks like from a person\'s perspective.' },
       { path: 'docs/governance/Fairness_Vignette_Library.md', note: 'See how the principles play out in concrete human situations.' },
       { path: 'docs/public/02_faq.md', note: 'Common objections answered directly. If you have a specific doubt, check here before going deeper.' },
@@ -2811,7 +2812,8 @@ const READING_PATHS: ReadingPathDef[] = [
     title: 'The Skeptic\'s Path',
     description: 'For those who arrived with objections. Starts with the real-world track record, then what is unknown, then builds the case.',
     steps: [
-      { path: 'docs/public/08_useful_history.md', note: 'Start here. "Has this been tried before?" — the documented track record of these problems and past attempts to solve them, with the honest failures. Read this first to see what the design is actually responding to.' },
+      { path: 'docs/public/10_real_world_examples.md', note: 'Start here. A plain, skeptic-safe guide to real-world comparators: what succeeded, what failed, and how the project maps each lesson.' },
+      { path: 'docs/public/08_useful_history.md', note: '"Has this been tried before?" — the longer documented track record of these problems and past attempts to solve them, with the honest failures.' },
       { path: 'docs/governance/Evidence_Ladder.md', note: 'Understand the standard before evaluating claims.' },
       { path: 'docs/governance/Claims_Evidence_Register.md', note: 'Grade each claim against the evidence standard.' },
       { path: 'docs/governance/Open_Problems_Resolution_Docket.md', note: 'See what the framework admits it hasn\'t solved.' },
@@ -2821,9 +2823,9 @@ const READING_PATHS: ReadingPathDef[] = [
   {
     id: 'economic-instruments',
     title: 'Economic Instruments',
-    description: 'The five-instrument model: Flow, Essential Access, Voice, Service Record, and the survival floor.',
+    description: 'The protected lanes model: life access, market exchange, civic power, scarcity response, and public return.',
     steps: [
-      { path: 'docs/public/00_start_here.md', note: 'Start here. The framing explains why five separate instruments are needed and what each one is supposed to prevent.' },
+      { path: 'docs/public/00_start_here.md', note: 'Start here. The framing explains why separate protected lanes are needed and what each one is supposed to prevent.' },
       { path: 'docs/annexes/ANNEX_Y.md', note: 'The Constitutional Survival Minimum — the unconditional floor. Pay attention to what cannot be withdrawn and under what circumstances the floor is defended.' },
       { path: 'docs/annexes/ANNEX_X.md', note: 'How Flow (the currency) is issued, circulated, and checked by public payment rules. This is the monetary engine — notice how issuance is tied to real capacity and contribution rather than debt or routine balance decay.' },
       { path: 'docs/annexes/ANNEX_Z.md', note: 'Voice and Service Record — the civic instruments. Watch for where each one\'s limits are drawn and how they are prevented from becoming social credit.' },

@@ -5,10 +5,12 @@
 ---
 
 > **What this document is**
-> A concrete proposal for testing the five instruments of the Humane Constitution at the smallest useful scale. It is written for funders, researchers, and communities who want to know what "testing this" would actually look like — not in theory, but in practice.
+> A concrete proposal for testing the protected lanes and layers of the Humane Constitution at the smallest useful scale. It is written for funders, researchers, and communities who want to know what "testing this" would actually look like — not in theory, but in practice.
 >
 > **What this document is not**
 > A guarantee, a budget, or a finished plan. It is the first honest sketch of what a real pilot requires.
+
+For the plain history-and-comparator guide behind these pilots, see [Real-World Examples](10_real_world_examples.md).
 
 ---
 
@@ -22,17 +24,18 @@ A pilot has one job: **find out what we got wrong before anyone depends on it.**
 
 ---
 
-## The five instruments, briefly
+## The protected lanes, briefly
 
-The Humane Constitution separates three things that most societies leave merged: survival, market participation, and political power. It uses five instruments to keep them separate:
+The Humane Constitution separates things most societies leave merged: survival, market participation, public return, emergency rationing, and political power. It uses protected lanes and layers to keep them separate:
 
 1. **Essential Access** — a survival floor. Food, shelter, medicine, and water that every person receives regardless of their market position. Cannot be sold, traded, or revoked.
 2. **Shared Storehouse** — rationing under real scarcity. When there genuinely is not enough of something essential, this system distributes it fairly instead of letting price decide who goes without.
-3. **Flow** — the market currency. Ordinary spending, saving, wages, contracts, and business use happen here. Beside Flow, the design tests **Commons Return and Universal Stake**: public return from exclusive control of shared and scarcity-created value, distributed through a protected member stake.
-4. **Voice** — bounded civic priority. A limited, expiring claim each person holds to weigh in on public decisions. Cannot be bought or stockpiled. Expires if unused.
-5. **Service Record** — eligibility for public roles. A rotating system that tracks who has contributed to shared governance, and uses that to determine who is eligible for positions of public authority.
+3. **Flow** — the market currency. Ordinary spending, saving, wages, contracts, and business use happen here.
+4. **Commons Return and Universal Stake** — public return from exclusive control of shared and scarcity-created value, distributed through a protected member stake.
+5. **Voice** — bounded civic priority. A limited, expiring claim each person holds to weigh in on public decisions. Cannot be bought or stockpiled. Expires if unused.
+6. **Service Record** — eligibility support for public roles. A rotating system that tracks service to shared governance, while preserving ordinary challenger and appeal routes where the corpus requires them.
 
-The walls between these instruments — the fact that you cannot convert Essential Access into Flow, or buy Voice with Flow — are the core claim. The pilot tests whether those walls hold in practice.
+The walls between these lanes — the fact that you cannot convert Essential Access into Flow, buy Voice with Flow, or turn Universal Stake into office or survival priority — are the core claim. The pilot tests whether those walls hold in practice.
 
 ---
 
@@ -169,7 +172,7 @@ Success at this scale justifies the next gate under [Annex AN](../annexes/ANNEX_
 
 ## Pilot B — Commons Return and Universal Stake (simulation pilot)
 
-*A note on what this is not. This is not a local-currency pilot, not a fee on unused balances, and not a tax on ordinary household savings. Wörgl, WIR, BerkShares, and Gesell remain useful history about money design. They do not test the current instrument. This pilot tests the hard thing: can a community collect public return from shared and scarcity-created value, then distribute a protected Universal Stake, without punishing ordinary life or turning the system into surveillance and favoritism?*
+*A note on what this is not. This is not a local-currency pilot, not a fee on unused balances, and not a tax on ordinary household savings. Wörgl, WIR, BerkShares, and Gesell remain useful history about money design; Alaska-style public dividends and public wealth funds are closer comparators for the distribution side, but still not proof. None of them test the current instrument. This pilot tests the hard thing: can a community collect public return from shared and scarcity-created value, then distribute a protected Universal Stake, without punishing ordinary life or turning the system into surveillance and favoritism?*
 
 > **Where this sits in the corpus**
 > - The economic instrument is [Annex D](../annexes/ANNEX_D.md), now being rewritten around **Commons Return and Universal Stake**.
@@ -354,26 +357,26 @@ Success justifies a larger pilot where Voice governs higher-stakes, contested de
 
 ## Pilot D — Service Record (rotating public roles)
 
-*Service Record is the hardest instrument to pilot and the one most likely to be misread. Unlike Voice, it is **allowed** to accumulate — it tracks who has contributed, and that record gates eligibility to serve. That is also its danger: an accumulating contribution record is one weak firewall away from becoming a social-credit hierarchy. The testable feature is whether rotating eligibility based on contribution can broaden who holds authority **without** the record leaking into market advantage, survival preference, or civic voice.*
+*Service Record is the hardest instrument to pilot and the one most likely to be misread. Unlike Voice, it is **allowed** to accumulate — it tracks who has contributed, and that record supports eligibility to serve. That is also its danger: an accumulating contribution record is one weak firewall away from becoming a social-credit hierarchy. The testable feature is whether rotating eligibility based on contribution can broaden who holds authority **without** the record monopolizing access, crowding out ordinary challenger routes, or leaking into market advantage, survival preference, or civic voice.*
 
 > **Where this sits in the corpus**
-> - Service Record is defined alongside Voice in [Annex Z](../annexes/ANNEX_Z.md) — and the central rule is the **firewall between them**: a contribution record may gate eligibility to serve, but it may never convert into agenda-setting Voice, market advantage, or survival-adjacent preference.
+> - Service Record is defined alongside Voice in [Annex Z](../annexes/ANNEX_Z.md) — and the central rule is the **firewall between them**: a contribution record may support eligibility to serve, but it may never convert into agenda-setting Voice, market advantage, survival-adjacent preference, or a closed civic priesthood.
 > - The prohibited convertibility patterns — including **employer-sponsored contribution accumulation** and **side queues** — are enumerated in [Annex AJ](../annexes/ANNEX_AJ.md) (threat T-001 / patch P-001, shadow convertibility).
 > - The two attacks the pilot must red-team are **elite-formation bypass** (T-008 / P-008) and **contribution fraud / attestation rings** (T-009 / P-009). Their defenses are attestation staking ([Annex AS](../annexes/ANNEX_AS.md)) and grace-exploitation closure ([Annex AF](../annexes/ANNEX_AF.md)).
 
 ### What we're testing
 
-1. **Does contribution-gated eligibility broaden the pool?** The payoff claim — that eligibility built on *showing up and contributing* surfaces a more diverse set of people for authority than self-nomination, election, or appointment, which reward wealth, free time, and willingness to campaign.
+1. **Does contribution-supported eligibility broaden the pool?** The payoff claim — that eligibility informed by *showing up and contributing* surfaces a more diverse set of people for authority than self-nomination, election, or appointment alone, which reward wealth, free time, and willingness to campaign.
 2. **Does the firewall hold?** Per [Annex Z](../annexes/ANNEX_Z.md) and [Annex AJ](../annexes/ANNEX_AJ.md), a high Service Record must buy you *nothing* except eligibility to serve — not a better spot in any queue, not market preference, not extra Voice. This is the wall the pilot exists to stress.
 3. **Does it resist capture?** The named attacks are concrete: an employer farming contribution credit for its people, an attestation ring vouching for each other's fake contributions, a clique cycling fake-hardship pauses to preserve eligibility without contributing. The pilot pays a red-team to run all three.
 
 ### The hypothesis
 
-> In a community with real rotating governance roles, over 24 months, contribution-gated eligibility — with peer attestation backed by stake — will produce a measurably more diverse pool of role-holders than the prior selection method, with no decline in governance quality; and the Service Record will not become convertible: a motivated red-team's attempts to turn a high record into market advantage, queue preference, extra Voice, or captured eligibility (via employer farming, attestation rings, or fake-hardship pauses) will mostly fail and be detectable.
+> In a community with real rotating governance roles, over 24 months, contribution-supported eligibility — with peer attestation backed by stake and ordinary challenger routes preserved — will produce a measurably more diverse pool of role-holders than the prior selection method, with no decline in governance quality; and the Service Record will not become convertible: a motivated red-team's attempts to turn a high record into market advantage, queue preference, extra Voice, or captured eligibility (via employer farming, attestation rings, or fake-hardship pauses) will mostly fail and be detectable.
 
 ### Smallest deployment
 
-**A nonprofit board, a cooperative, a homeowners' association, or a small municipal committee** with 3–7 rotating roles and 50–200 eligible members. Over 24 months, eligibility for each role is gated by a Service Record — a transparent log of contributions to shared governance (meeting attendance, completed tasks, dispute-resolution participation).
+**A nonprofit board, a cooperative, a homeowners' association, or a small municipal committee** with 3–7 rotating roles and 50–200 eligible members. Over 24 months, eligibility for each role is supported by a Service Record — a transparent log of contributions to shared governance (meeting attendance, completed tasks, dispute-resolution participation) — while at least one ordinary challenger, lived-experience, sortition, or appeal route remains open where the role requires it.
 
 This is explicitly **not** about selecting the most qualified person. It is about ensuring the *eligible pool* is not pre-filtered by wealth, connection, or willingness to campaign. The community retains normal selection within the eligible pool.
 
@@ -428,7 +431,7 @@ Success justifies a larger pilot with higher-stakes roles and a genuinely advers
 
 ### Open questions this pilot does not resolve
 
-- Does contribution-gated eligibility scale to **high-stakes roles** (judges, regulators) without producing governance failure or new capture incentives?
+- Does contribution-supported eligibility scale to **high-stakes roles** (judges, regulators) without producing governance failure or new capture incentives?
 - Does the firewall survive when the reward for breaching it is large — a powerful employer or faction with real resources, not a volunteer red-team?
 - How is the Service Record verified at population scale? A small ledger works here; the infrastructure for a city does not yet exist.
 - **Note on a design constraint, not an open question:** whether contributing should *also* generate Voice priority is *not* open — [Annex Z](../annexes/ANNEX_Z.md) forbids it by design. The pilot tests whether that separation **holds in practice**, not whether to relax it.
@@ -444,7 +447,7 @@ These are four separate pilots, not one. They can run independently, in differen
 - **Voice (Pilot C)** governs the foundation. Who decides how Essential Access is calibrated, what counts as a shortage, and how Shared Storehouse distributes? Without Voice, someone with power decides — and that power concentrates.
 - **Service Record (Pilot D)** determines who holds Voice-adjacent authority. Without rotation, the people who administer Essential Access and manage the Shared Storehouse tend to stay in place, and power concentrates again.
 
-The walls between the instruments are only testable when the instruments exist alongside each other. The integrated test — all five instruments in one community — is the large-scale pilot that these four smaller pilots are designed to make possible.
+The walls between the lanes are only testable when the lanes exist alongside each other. The integrated test — life access, market exchange, public return, scarcity response, Voice, and Service Record in one community — is the large-scale pilot that these four smaller pilots are designed to make possible.
 
 ---
 
@@ -458,7 +461,7 @@ If all four pilots run and generate honest data, we would know:
 4. Whether bounded, non-transferable civic priority changes who actually has influence in public decisions
 5. Whether rotating eligibility for governance roles produces more diverse leadership without degrading governance quality
 
-We would not yet know whether the five instruments work *together*, whether they scale beyond a few hundred people, or whether they survive sustained, organized attacks. Those questions require the large-scale pilot that is not described here.
+We would not yet know whether the protected lanes work *together*, whether they scale beyond a few hundred people, or whether they survive sustained, organized attacks. Those questions require the large-scale pilot that is not described here.
 
 ---
 

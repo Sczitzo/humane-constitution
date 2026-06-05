@@ -64,6 +64,7 @@ CORE_DOCS = (
     "docs/public/04_white_paper.md",
     "docs/public/05_life_and_rights.md",
     "docs/public/08_useful_history.md",
+    "docs/public/10_real_world_examples.md",
     "docs/public/09_pilot_proposal.md",
     "docs/simulations/Adversarial_Narrative_Simulation.md",
     "docs/simulations/Annual_Compound_Simulation.md",
@@ -163,6 +164,8 @@ def section_for(relative_path: str) -> str:
         return "founding_order"
     if relative_path.startswith("docs/annexes/"):
         return "annex"
+    if relative_path.startswith("docs/public/"):
+        return "constitution"
     if relative_path in {
         "docs/governance/Threat_Register.md",
         "docs/governance/Patch_Log.md",
@@ -305,6 +308,7 @@ def write_output(docs: list[dict[str, object]], stats: dict[str, object]) -> Non
     featured_paths = [
         "docs/public/00_start_here.md",
         "docs/public/08_useful_history.md",
+        "docs/public/10_real_world_examples.md",
         "docs/public/05_life_and_rights.md",
         "docs/public/02_faq.md",
         "docs/public/04_white_paper.md",

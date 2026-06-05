@@ -19,7 +19,7 @@
 
 ## Y0. Purpose and Scope
 
-The Constitutional Survival Minimum (CSM) is the hard lower bound on life-access guaranteed to every personhood-verified resident. The broader Essential Access essential basket (`Humane_Constitution.md` §VIII) may vary in response to capacity, policy, and period-specific choices. The CSM does not. It is the floor below which Essential Access cannot be narrowed by any ordinary process, governance actor, emergency order, or technical update.
+The Constitutional Survival Minimum (CSM) is the hard lower bound on life-access guaranteed to every person physically present. The broader Essential Access essential basket (`Humane_Constitution.md` §VIII) may vary in response to capacity, policy, and period-specific choices. The CSM does not. It is the floor below which Essential Access cannot be narrowed by any ordinary process, governance actor, emergency order, identity delay, or technical update.
 
 The CSM is not a generous definition of a good life. It is the narrow, defensible minimum below which survival and dignity are structurally threatened. It is set deliberately at the threshold of physical viability plus a dignity margin — not at desirable comfort.
 
@@ -124,7 +124,7 @@ All substitutions are published in real time through Article VII transparency in
 
 ## Y4. CSM Failure as Critical Incident
 
-Any observed failure to deliver the §Y1 minimums to any personhood-verified resident is a Critical Incident.
+Any observed failure to deliver the §Y1 minimums to any person physically present is a Critical Incident.
 
 Plain meaning: even one confirmed failure matters. It must be disclosed, investigated, repaired, and checked for a wider pattern.
 

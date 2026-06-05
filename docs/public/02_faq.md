@@ -14,15 +14,15 @@ When money controls all of that, being poor becomes dangerous. Being rich become
 
 This project tries to separate those powers.
 
-## 3. What are the five tools?
+## 3. What are the protected lanes and layers?
 
-- **Flow:** ordinary money for markets
-- **Essential Access:** the basic needs floor
-- **Voice:** a limited way to help set public priorities
-- **Service Record:** proof of useful public service
-- **Shared Storehouse:** temporary rationing during a real shortage
+- **Life channel:** Essential Access and the Constitutional Survival Minimum, meaning the basic needs floor
+- **Market channel:** Flow, meaning ordinary money for markets, wages, saving, and contracts
+- **Civic channel:** Voice and Service Record, meaning bounded public influence and service history
+- **Scarcity overlay:** Shared Storehouse, meaning temporary rationing during a real shortage
+- **Public-return layer:** Commons Return and Universal Stake, meaning public return from exclusive control of shared or scarcity-created value
 
-The design only works if these tools stay separate.
+The design only works if these lanes stay separate. None of them may buy survival priority, public power, office, membership, legal standing, or human worth.
 
 ## 4. Is Essential Access just welfare?
 
@@ -80,31 +80,39 @@ Flow (ordinary money) is public money on shared rails. Basic banking is treated 
 
 Predatory debt is limited. Productive finance still needs to exist, but through clear and reviewable channels.
 
-## 13. How is privacy protected?
+## 13. Is this Wörgl, stamp money, or demurrage?
+
+No.
+
+Wörgl and demurrage are useful history because they show that money rules change behavior. They are not the selected public-finance system.
+
+The active direction is Commons Return and Universal Stake: public return from shared and scarcity-created value, distributed through a protected stake that cannot buy Voice, office, survival priority, membership, legal standing, or public favor.
+
+## 14. How is privacy protected?
 
 The system must use the least data needed. It must avoid general monitoring.
 
 This is still one of the hardest open problems. The project needs a proven identity system before any large rollout would be credible.
 
-## 14. How would transition happen?
+## 15. How would transition happen?
 
 Slowly, through pilots and proof.
 
 Identity recovery, essential delivery, shortage rules, appeal paths, and business finance all need testing before scale-up. A forced rollout would be reckless.
 
-## 15. Does it depend on people being morally perfect?
+## 16. Does it depend on people being morally perfect?
 
 No. It assumes greed, fear, manipulation, and power-seeking will happen.
 
 That is why the design focuses on boundaries, review, and failure plans.
 
-## 16. Is it ready to deploy now?
+## 17. Is it ready to deploy now?
 
 No.
 
 It is a design and critique target. It still needs pilot evidence, a non-coercive identity system, reliable capacity measurement, and a legitimate founding group.
 
-## 17. Why should an ordinary person care?
+## 18. Why should an ordinary person care?
 
 Because the basic question is direct:
 
@@ -112,7 +120,7 @@ Should losing money mean losing food, medicine, shelter, safety, or dignity?
 
 If the answer is no, this design is worth testing seriously.
 
-## 18. What stops one company from holding essential goods hostage?
+## 19. What stops one company from holding essential goods hostage?
 
 Two layers.
 
@@ -122,7 +130,7 @@ Second, strategic reserves cover the gap between the backup supplier activating 
 
 A company can still negotiate, sue, or exit a market. It cannot use people's survival needs as the negotiating chip.
 
-## 19. What stops a future government from dismantling the system?
+## 20. What stops a future government from dismantling the system?
 
 Several interlocking protections.
 
@@ -134,7 +142,7 @@ If founding institutions go unfilled for more than 90 days or key publication de
 
 No single mechanism is guaranteed. The point is that dismantling requires defeating several independent barriers, not just one.
 
-## 20. How does the identity system avoid excluding vulnerable people?
+## 21. How does the identity system avoid excluding vulnerable people?
 
 The system is designed around an Asymmetric Error Doctrine: it is explicitly calibrated to err on the side of inclusion rather than fraud prevention when the two conflict.
 
@@ -142,6 +150,6 @@ Specific quarterly targets are published — for example, exclusion of displaced
 
 These targets are Tier 2 founding commitments, meaning they require a formal public amendment to loosen — they cannot be quietly adjusted by administrators.
 
-## 21. Where should I start?
+## 22. Where should I start?
 
-Read **[Start Here](00_start_here.md)** — it gives the problem, the core claim, the honest caveats, and a map to the rest (white paper, life & rights, useful history, and the governance spine).
+Read **[Start Here](00_start_here.md)** — it gives the problem, the core claim, the honest caveats, and a map to the rest. Then read **[Real-World Examples](10_real_world_examples.md)** if you want the quick history-and-lessons version before the longer useful history tour.

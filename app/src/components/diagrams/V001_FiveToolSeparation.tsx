@@ -256,7 +256,7 @@ export function V001_FiveToolSeparation({ onInternalLink }: DiagramProps) {
           textAnchor="middle" fontSize={8.5} fill={THEME.ea.accent} fontFamily="monospace" letterSpacing="0.04em"
           initial={{ opacity: 0 }} animate={{ opacity: 0.65 }} transition={{ delay: 0.85 }}
         >
-          CONSTITUTIONAL SURVIVAL MINIMUM — floor beneath all five instruments
+          CONSTITUTIONAL SURVIVAL MINIMUM — floor beneath every protected lane
         </motion.text>
       </svg>
     </DiagramShell>

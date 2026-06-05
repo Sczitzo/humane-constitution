@@ -308,6 +308,10 @@ The **Ombuds Oversight Assembly** is constituted with the following authority:
 - 1 nominated by an independent practitioner register (judges, retired officials, published public-interest litigators) with no prior protocol-administration employment.
 - 1 lot-drawn from citizens (personhood-holders at protocol scale) who have passed a published qualification review.
 
+**Non-priesthood floor.** Across the seven seats, at least two members must be persons with direct lived experience of Essential Access dependency, housing instability, disability, migration precarity, justice-system contact, labor precarity, or caregiving burden within the prior 10 years. Lived experience may satisfy this floor through any nomination source above. Professional credentials may not substitute for the floor, and lack of professional credentials may not disqualify a nominee who otherwise satisfies conflict, confidentiality, and service-capacity rules.
+
+The lot-drawn citizen qualification review is a gate against conflicts and incapacity, not an expertise examination. It may test availability, confidentiality commitments, conflict status, and basic ability to read or receive the record with accommodations. It may not require a degree, prior governance service, Service Record standing above the published minimum, professional references, donor sponsorship, or institutional endorsement.
+
 Terms are **3 years, staggered, non-renewable**. No more than 2 members may turn over in any single year. No member may hold simultaneous roles in the CRP, any sub-Ombuds, any Enforcement Panel, or any founding coalition.
 
 ### 5.2 Assembly Decision Rule
@@ -338,6 +342,18 @@ The Oversight Assembly is small enough to face its own capture risk. Defences:
 
 The Oversight Assembly does not hold authority over the sub-Ombuds' §4 operational functions — it audits the federation's structural health, not its casework.
 
+### 5.5 Ordinary Challenger, Conscience, and Appeal Route
+
+Any resident may file an Ombuds challenger complaint alleging structural capture, Service Record priesthood, elite review monopoly, retaliation for dissent, loss of access to challenge routes, or failure to publish reasons. The route is available to poor residents, newcomers, residents without institutional sponsors, anonymous complainants where safety requires anonymity, and dissenters whose objection is theological, moral, political, or civic in character.
+
+The receiving sub-Ombuds or Assembly intake officer must convert a good-faith complaint into a reviewable claim if the filer identifies a concrete rule, decision, harm, missing record, or factual error. The complaint may not be rejected for lack of legal, technical, or protocol vocabulary. Intake must support offline filing, language access, disability accommodation, and fee-free submission.
+
+Good-faith dissent is protected. Filing, supporting, teaching, publishing, or refusing to endorse a governance claim on grounds of conscience may not reduce Voice, Service Record continuity, Essential Access, housing standing, appeal access, or eligibility for ordinary service roles. Knowingly false and malicious filings remain subject to ordinary process, but the burden is on the authority alleging bad faith.
+
+If a challenger complaint alleges capture or misconduct by the Assembly itself, it is routed to the alternates registry panel under §5.4. If it alleges capture by a sub-Ombuds, the non-accused sub-Ombuds receive notice and one non-accused sub-node must publish an intake determination within 14 days. Rejection requires written reasons and appeal to the alternates registry; acceptance triggers either a §5.3 Concentration Response review or a narrower published remediation order.
+
+Bad-fruit triggers require escalation. If the annual record shows repeated ordinary-challenger dismissals without merits reasoning, a pattern of retaliation complaints, no meaningful dissent in contested matters, or role pools dominated by the same professional, donor, academic, technical, or religious institutional network across cycles, the Assembly must open a Concentration Response review. If the defect touches survival-adjacent access or host-law compliance, the affected Ombuds mandate or role-pool gate pauses while external review proceeds.
+
 ---
 
 ## 6. Publication Commitment
@@ -360,6 +376,7 @@ The Federated Ombuds publishes the following as a continuous public record, in c
 | Duty rotation schedule | Forward-looking rotation for next 90 days | Rolling, updated weekly | Federation secretariat |
 | Inconclusive-default repeat-beneficiary metric (§4.12) | Per-actor and per-enforcement-body tally of inconclusive-default benefits, with heightened-scrutiny flags | Updated per determination; standing public record | Plenum |
 | Recusal events | Officer, matter class, acting officer | Within 24 hours | Affected sub-Ombuds |
+| Ordinary challenger docket (§5.5) | Filings, intake decision, response timeline, outcome, appeal status, retaliation flags, with privacy protection | Monthly aggregate; individual determinations within 14 days where publishable | Oversight Assembly / receiving sub-Ombuds |
 
 Publication of every vote, every dissent, and every dispersal-compliance finding is the mechanism that makes the federation institutionally legible. A Plenum that consistently produces lopsided votes with predictable dissents is visible; a federation that has drifted toward common capture is visible; an Assembly that is rubber-stamping dispersal compliance is visible.
 

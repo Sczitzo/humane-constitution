@@ -915,7 +915,7 @@ Constitutional statement that Article IV is a floor not a monopoly; explicit dut
 
 **Problem diagnosed:**
 (1) The phrase "regardless of household composition decisions" treated a resource constraint as though it were a judgment about family structure. Large families, multigenerational households, and care-intensive arrangements may find the cap hostile if applied without a pastoral presumption of accommodation.
-(2) Article V's closing paragraph presented the five-instrument architecture with confidence that the design prevents exploitation. This exceeds what human institutions can reliably deliver.
+(2) Article V's closing paragraph presented the protected-lane architecture with confidence that the design prevents exploitation. This exceeds what human institutions can reliably deliver.
 
 **Introduced design:**
 (1) Housing cap language revised: "fiscal guarantee" framing retained; pastoral review with strong presumption of accommodation added; "mercy before procedure" standard stated.

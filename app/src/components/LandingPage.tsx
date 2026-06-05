@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import { Logo } from './Logo'
-import { V001_FiveToolSeparation } from './diagrams/V001_FiveToolSeparation'
+import { V010_InstrumentSpace } from './diagrams/V010_InstrumentSpace'
 
 // ─── TVA-style branching timeline ─────────────────────────────────────────────
 
@@ -585,7 +585,7 @@ const PATHS = [
   { id: 'first-time', emoji: '🌱', title: 'First Read', desc: 'New to the project? Start with ordinary lives, rights, and the plain case.', time: '~2 hr', color: '#2f6a72' },
   { id: 'skeptic', emoji: '🔍', title: 'Skeptic', desc: 'Challenge the framework. Examine failure modes, patches, and evidence.', time: '~2h 50m', color: '#1a3a5c' },
   { id: 'implementer', emoji: '📐', title: 'Implementer', desc: 'Specifications, acceptance criteria, deployment requirements.', time: '~1h 15m', color: '#3a2348' },
-  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Flow, Essential Access, Voice, Service Record, and shortage rules.', time: '~1 hr', color: '#5c4318' },
+  { id: 'economic-instruments', emoji: '💰', title: 'Economics', desc: 'Life access, market exchange, civic power, scarcity response, and public return.', time: '~1 hr', color: '#5c4318' },
   { id: 'founding-order', emoji: '🏛️', title: 'Founding Order', desc: 'Governance structures and institutions that underpin the system.', time: '~45 min', color: '#1c3040' },
   { id: 'pilot-deployment', emoji: '🚀', title: 'Pilot Evidence Roadmap', desc: 'Readiness assessment, pilot gates, and evidence roadmap.', time: '~55 min', color: '#3d1f24' },
   { id: 'identity-personhood', emoji: '🪪', title: 'Personhood', desc: 'Personhood rights, identity recovery, and moral status.', time: '~1h 5m', color: '#1a3040' },
@@ -597,7 +597,7 @@ const PATHS = [
 
 const MARQUEE_ITEMS = [
   'Open Source', 'CC BY 4.0', '100+ Documents', 'Public Audit Trail',
-  'Five Tools', 'Constitutional Design', 'Built to Resist Capture', 'Humane Constitution',
+  'Protected Lanes', 'Constitutional Design', 'Built to Resist Capture', 'Humane Constitution',
 ]
 
 const HEADLINE_WORDS = ['What', 'if', 'survival,', 'markets,', 'and', 'civic', 'power', 'stayed', 'separate', 'by', 'design?']
@@ -1793,13 +1793,13 @@ export function LandingPage({ onEnter, returningVisitor: _returningVisitor = fal
       <div className="lp-instruments-section">
         <p className="lp-reveal lp-eyebrow" style={{ color: '#e2a85a' }}>The Design</p>
         <h2 className="lp-section-head lp-reveal">
-          Five tools that work together.<br />
+          Protected lanes that work together.<br />
           <em>One system.</em>
         </h2>
         <div className="lp-reveal lp-diagram-wrap">
-          <V001_FiveToolSeparation onInternalLink={() => {}} />
+          <V010_InstrumentSpace onInternalLink={() => {}} />
         </div>
-        <p className="lp-diagram-hint">Tap any tool to see what it does</p>
+        <p className="lp-diagram-hint">Tap any lane to see what it does</p>
       </div>
 
       {/* ── TRANSITION + PATHS ── */}

@@ -1203,7 +1203,7 @@ This session turns to how the rules change and how the system legitimately begin
 
 **Babel-risk warning.** Two tensions. The residual quiet-erosion leak is the §H1/§H2.2 Tier-3 channel: whether something is "a bounded dial already authorized elsewhere" depends on what was pre-authorized, so capture can migrate upstream to the original grant. And the opposite risk — over-rigidity: the §H2.4 refounding bar (80% referendum + four-fifths of regions, twice across two quarters) is wise for genuine invariants, but the invariants have *no* built-in review cadence, so a framework built to prevent an idol of capture risks becoming, at its core, an idol of permanence that even righteous correction (Prov 11:14; Matt 18) cannot reach. Deut 4:2 pulls toward fixity; the corrigibility teachings pull toward correctability; §H2.4 resolves heavily toward fixity.
 
-**Human-dignity test.** Passes. §H8's bright lines forbid any social score gating essentials, forbid merging the five instruments into one convertible balance, and forbid reducing due-process or standing "for the very people most exposed to system power." Persons are treated as rights-bearers to be protected, not as data.
+**Human-dignity test.** Passes. §H8's bright lines forbid any social score gating essentials, forbid merging the protected lanes into one convertible balance, and forbid reducing due-process or standing "for the very people most exposed to system power." Persons are treated as rights-bearers to be protected, not as data.
 
 **Revision proposal.** (1) Should-fix: require any §H2.2 Tier-3 dial to cite and re-verify the *original* authorizing instrument's bound at filing, so capture cannot hide in a vague upstream grant. (2) Should-fix: define the "material divergence" threshold between the Voice result and the one-person-one-vote legitimacy check (§H2.2), so the safeguard is not purely discretionary. (3) Monitor→clause: add a periodic, non-binding "invariant conscience review" that can only *recommend* a refounding convention — so the invariant core remains answerable to correction without being made cheaply amendable. (4) Monitor: quantify the "supermajority judicial approval" for a third emergency renewal (§H6).
 
@@ -2029,6 +2029,26 @@ This addendum does not rewrite the earlier demurrage or P-063 sessions. Those se
 **Revision proposal.** Treat FC-052/053/054 as tombstones. Bind the new CRUS parameters before activation: source base, assessment rate, protected thresholds, distribution cadence, eligibility, anti-capture gates, fund reserve rules, appeal path, and review cadence. Require the Commons Return and Universal Stake Evidence Test Package before stronger claims.
 
 **Fruit test.** The test is not whether CRUS sounds more elegant than demurrage. The test is whether, in pilot evidence, ordinary people are protected, powerful holders cannot hide value through complexity, distribution is not patronage, appeal is real, and the stake cannot be converted into rule over another person.
+
+---
+
+## Session 23 Addendum — Governance Safeguards Slice
+
+This addendum evaluates the governance safeguards added to Annex Z, Annex AG, Annex AI, Annex AM, the Founding Legitimacy Dossier, and the Jurisdiction Interface Clause. It is a human evaluation only. These safeguards do not claim divine endorsement; they ask whether the civil instrument is becoming more humble, more service-shaped, and more corrigible under the teachings of Christ.
+
+**Christ-centered alignment.** The strongest improvement is the non-priesthood rule: Service Record, professional expertise, audit status, and constitutional-panel service are named as tools of service rather than proof of superior worth. This aligns with Mark 10:42–45: rulers of the nations lord power over others, but among Christ's people greatness is servanthood. The ordinary challenger routes also fit the Gospel pattern of hearing those outside the respectable center — the poor, the sick, the stranger, the dissenter, and the person not already credentialed by the institution.
+
+The host-law and conscience safeguards are also important. They keep the pilot from treating a charter as sovereignty, from using care as leverage for accession, or from requiring residents to endorse the project before receiving help. That posture is closer to mercy than control: provision offered without compelled allegiance.
+
+**Babel-risk warning.** The risk is not closed. A system can write "non-priesthood" while still becoming a priesthood in practice if the records, hearings, dashboards, and appeals are too complex for ordinary people to use. Expertise will always try to reconsolidate around the places where records are controlled and reasons are written. The new safeguards help because they create challenger parity and bad-fruit pauses, but the Babel temptation remains: technical completeness can masquerade as moral completion.
+
+**Human dignity test.** The additions pass in design because they protect the person who is hard for the system to classify: the newcomer, the poor resident, the caregiver, the disabled person, the person with no institutional sponsor, the religious or moral dissenter, and the participant whose contribution is real but not easily documented. Dignity is better protected when these persons can challenge the gate itself, not merely ask to be admitted through it.
+
+**Revision proposal.** Treat these safeguards as pre-pilot tests, not as achieved legitimacy. Before any stronger claim, run the simplicity/non-priesthood test, ordinary challenger parity test, rights-of-conscience review, host-law audit, appeal-route drill, and bad-fruit shutdown drill with ordinary residents and published failures. A safeguard that cannot be used without expert help is not yet a safeguard for the poor.
+
+**Fruit test.** Good fruit would look like: ordinary challenger briefs answered on time and sometimes sustained; Service Record-governed pools containing lived-experience members and newcomers; dissenters reporting no civic penalty; external legal reviewers able to issue stop findings that actually stop functions; residents able to explain appeal routes without a lawyer; and pilots narrowed or shut down when legality, consent, or dignity fails. Bad fruit would look like perfect documents, no sustained challenges, no dissent, no shutdowns, and the same credentialed people always deciding who may challenge them.
+
+**Epistemic categorization:** *Clear biblical command* — rulers must serve rather than lord over others; the poor and vulnerable must not be burdened by the strong; truth must be spoken plainly. *Theological inference* — civic review bodies should include ordinary and lived-experience challengers because civil institutions cannot see the whole truth from inside expertise. *Prudential political judgment* — the specific thresholds, time windows, and audit routes. *Unresolved uncertainty* — whether these routes will remain usable once real institutions, lawyers, funders, and professional reviewers start defending their own authority.
 
 ---
 

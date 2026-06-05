@@ -1,21 +1,25 @@
-# Demurrage Evidence and Test Package
+# Demurrage Evidence and Test Package (Retired Comparator)
 
-This package defines what must be true before the project can make strong claims about the progressive net-worth demurrage (ANNEX_D).
+**Status:** Retired historical comparator. This package is no longer an activation gate for Annex D, Flow, public finance, Essential Access, or any pilot. The live wealth/public-return design is [Commons Return and Universal Stake](../annexes/ANNEX_D.md), and its governing tests are in the [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md).
 
-Demurrage is core architecture, not a decorative monetary preference. It is the sole carrying-cost instrument on accumulated wealth (ANNEX_D §D9): a progressive charge on net worth above the participation floor S, where S = 18 months × regional median monthly consumption. Idle Flow is one component of net worth, assessed inside that base — there is no separate per-balance fee. The instrument is supposed to discourage rentier accumulation, fund the Essential Access commons, and keep concentrated wealth from becoming a durable store of domination. That makes it load-bearing. It must therefore be tested as a monetary instrument, a public-finance instrument, a procurement-risk surface, and a legitimacy problem.
+This document is preserved because the old demurrage design exposed useful risks: valuation surveillance, ordinary-household burden, productive-use loopholes, legal-wrapper avoidance, administrative capture, procurement distortion, and public-finance overclaim. Those risks remain useful as warnings for CRUS. They do not authorize active progressive net-worth demurrage, idle Flow decay, demurrage revenue routing, or any claim that demurrage funds the life-access floor.
 
-Current status: **designed mechanism, needs evidence**.
+Current status: **superseded design evidence**.
 
 ---
 
 ## Honest Claim Boundary
 
-The project may currently claim:
+When reading this file, replace any active-sounding demurrage claim below with this narrow historical claim:
 
-> The progressive net-worth demurrage is a plausible anti-hoarding and commons-funding mechanism with a designed single-instrument, productive-use-exempt architecture.
+> The retired progressive net-worth demurrage design was a serious but rejected design candidate whose failure modes help test the replacement CRUS architecture.
 
-The project may not yet claim:
+The project may not claim:
 
+- demurrage is the active wealth spine;
+- demurrage funds Essential Access;
+- idle Flow routinely decays;
+- net-worth demurrage is a current pilot mechanism;
 - demurrage works at deployment scale;
 - demurrage is fair across household types;
 - the progressive λ brackets will reliably burden concentrated net worth more than ordinary low-wealth households;
@@ -211,23 +215,23 @@ Assume every actor below behaves rationally under pressure and opportunistically
 
 ---
 
-## Calibration Rules
+## Historical Calibration Questions
 
-Demurrage parameters should not be set from moral intuition. They should be calibrated from burden, avoidance, and public-finance data.
+If the retired demurrage design is ever used as a historical comparator, its parameters should not be set from moral intuition. They should be evaluated from burden, avoidance, and public-finance data.
 
-**Minimum parameter set:**
+**Minimum comparator parameter set:**
 
 | Parameter | What it controls | Evidence needed before binding |
 |---|---|---|
-| Progressive λ brackets (Tier-3 calibrated) | Carrying cost on net worth above S, rising by tier (ANNEX_D §D3) | Household burden, concentrated-net-worth burden, revenue sufficiency, avoidance response. |
-| Participation floor S | 18 months × regional median consumption below which no net worth is charged | Household and small-business net-worth model. |
+| Historical progressive-bracket assumption | Carrying cost on net worth above a protected participation floor, rising by tier | Household burden, concentrated-net-worth burden, revenue sufficiency, avoidance response. |
+| Protected participation floor assumption | Ordinary-use wealth below which no net worth is charged in the comparator | Household and small-business net-worth model. |
 | Escrow deployment window | How long public funds may sit before review | Procurement quality and delay model. |
 | Force-majeure freeze cap | Maximum pause available during verified external delay | Abuse simulation and project-finance stress test. |
 | High-value release threshold | When milestone releases need higher verification | Inspector capacity and fraud-loss model. |
 | Inspector pool size | Independence and throughput of milestone review | Capture, delay, and conflict-of-interest model. |
-| Revenue routing rule | Public-rail funding allocation | Public-finance model and anti-incentive review. |
+| Historical revenue-routing assumption | Claimed public-rail funding allocation in the retired design | Public-finance model and anti-incentive review. |
 
-**Calibration must satisfy all four constraints:**
+**Comparator calibration must satisfy all four constraints:**
 
 1. ordinary users can predict and understand the burden;
 2. concentrated net worth faces a stronger effective carrying cost than ordinary low-wealth households;
@@ -276,13 +280,13 @@ Pass condition: readers can explain why demurrage exists, who pays, where funds 
 
 ---
 
-## Household Burden Distribution Test
+## Retired Household Burden Distribution Test
 
-**What is being tested:** Does the progressive net-worth demurrage (ANNEX_D: progressive λ brackets on net worth above the participation floor S) fall proportionally — or disproportionately — on low-wealth households compared to concentrated net worth?
+**What this historical test asked:** Would a progressive net-worth demurrage design fall proportionally — or disproportionately — on low-wealth households compared to concentrated net worth?
 
-**Why this matters:** A demurrage system that shelters large concentrated holdings (through investment channels, productive-use classification, or beneficial-ownership arbitrage) while reaching ordinary households functions as a regressive tax, not a wealth-circulation mechanism. This failure mode is not visible in aggregate revenue numbers.
+**Why this still matters:** A demurrage system that shelters large concentrated holdings (through investment channels, productive-use classification, or beneficial-ownership arbitrage) while reaching ordinary households functions as a regressive tax, not a wealth-circulation mechanism. This failure mode remains useful as a warning for Commons Return, because aggregate revenue numbers can hide who actually carries the burden.
 
-**Measurement method:**
+**Historical measurement method, if the retired design is ever used as a comparator:**
 
 - Divide the pilot population into 5 wealth quintiles by assessed net worth held at end of each month.
 - For each quintile, measure: (a) average demurrage paid per person per month as a fraction of assessed net worth, and (b) average demurrage paid per person per month as a fraction of monthly Essential Access allocation.
@@ -294,19 +298,19 @@ Pass condition: readers can explain why demurrage exists, who pays, where funds 
 
 - Burden ratio > 1.5 (bottom quintile paying more than 1.5× the rate of the top quintile as a fraction of net worth) triggers mandatory architecture review before any scale claim is made.
 - Any quintile paying demurrage that exceeds 10% of their monthly Essential Access allocation is an automatic failure — the charge has become a survival-floor clawback.
-- If investment-channel-sheltered net worth is held predominantly (>60%) by the top two quintiles in a way that erodes their effective progressive rate, this is flagged as a classification-arbitrage risk requiring the T-025 demurrage sector-capture controls to be revalidated.
+- If investment-channel-sheltered net worth is held predominantly (>60%) by the top two quintiles in a way that erodes their effective progressive rate, this is flagged as a classification-arbitrage risk and treated as evidence against reviving the old architecture.
 
-**Required reporting:** Results must be published by quintile (not in aggregate) in the Capture Dashboard before the demurrage system moves beyond pilot status. Aggregation that hides quintile-level burden is itself a failure criterion.
+**Required reporting:** Results must be published by quintile (not in aggregate) before any demurrage comparator is cited as supportive evidence. Aggregation that hides quintile-level burden is itself a failure criterion.
 
-**Interaction with the λ-bracket review corridor:** If the pilot burden ratio exceeds 1.2 (warning threshold) in the first year, the Tier-3 rate review process (ANNEX_D §D11.3) must be used to recalibrate the progressive λ brackets so that lower-wealth households bear less before scale-up. The specific mechanism (higher effective participation floor, lower T1 rate, or revised bracket boundaries) is left to the calibration review, subject to the structural constraints in ANNEX_D §D3.5, but a re-test must confirm burden ratio ≤ 1.0 before scale-up proceeds.
+**Comparator interpretation:** If the pilot burden ratio exceeds 1.2 (warning threshold), the result counts against the retired demurrage architecture and against any future proposal that recreates it under a new name. It does not trigger active rate recalibration, because demurrage is not the live Annex D public-finance instrument.
 
-**Participation floor test:** The participation floor (ANNEX_D §D2.1: S = 18 months of regional median consumption, equal for all persons regardless of income or wealth) must be verified to be functioning as designed. A separate test within the burden distribution pilot must confirm: (a) no enrolled person with assessed net worth at or below S is paying any demurrage; (b) the published floor value is displayed clearly in every wallet interface; (c) users in the bottom two quintiles can correctly state their floor amount and how close they are to it, without assistance. If any person at or below the floor is paying demurrage, this is an automatic system failure requiring immediate correction before any other burden metric is assessed.
+**Participation floor test:** Any comparator replay must verify that no enrolled person at or below the protected ordinary-use floor pays any demurrage, that the floor value is displayed clearly, and that users in the bottom two quintiles can explain the protection without assistance. If any person at or below the floor pays demurrage, this is an automatic failure of the comparator.
 
 ---
 
-## Minimum Evidence Tables
+## Minimum Historical Evidence Tables
 
-The project should not move demurrage from **needs evidence** to **partly tested** until these tables exist.
+The project should not cite demurrage as a supportive comparator until these tables exist.
 
 | Table | Required columns |
 |---|---|
@@ -319,9 +323,9 @@ The project should not move demurrage from **needs evidence** to **partly tested
 
 ---
 
-## Decision Rule
+## Comparator Decision Rule
 
-Demurrage may remain a core design feature only if the tests show that it is:
+Demurrage may be reconsidered only as a narrow, non-load-bearing, pilot-gated comparator or backstop if tests show that it is:
 
 - visible to users;
 - predictable in burden;
@@ -332,11 +336,10 @@ Demurrage may remain a core design feature only if the tests show that it is:
 - enforceable without generalized surveillance;
 - politically explainable without pretending it is painless.
 
-If those conditions fail, the project must either recalibrate the rate and windows, redesign revenue routing, add stronger ordinary-liquidity protections, or explicitly downgrade the claim from "core architecture" to "unproven design candidate."
+If those conditions fail, the project must keep the claim downgraded from "core architecture" to "rejected design candidate with useful failure modes."
 
 ---
 
 ## Residual Risk Statement
 
-Even if the tests pass, demurrage will remain politically and institutionally dangerous. It creates an administrative interest in defining what counts as productive use, an enforcement interest in assessing net worth, and an avoidance incentive for wealthy actors. The correct goal is not to make demurrage harmless. The goal is to prove that its anti-hoarding benefits exceed its burden and capture risks under transparent, reviewable conditions.
-
+Even if future comparator tests pass, demurrage will remain politically and institutionally dangerous. It creates an administrative interest in defining what counts as productive use, an enforcement interest in assessing net worth, and an avoidance incentive for wealthy actors. The correct use of this package is not to make demurrage look harmless. It is to preserve the failure modes that Commons Return and Universal Stake must not repeat.

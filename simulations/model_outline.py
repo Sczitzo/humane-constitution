@@ -348,7 +348,7 @@ class CitizenAgent(Agent):
     Key invariants enforced here:
       - Essential Access never drops below CSM (INV-001)
       - No cross-instrument conversion (INV-002)
-      - Service Record is eligibility-gating only, not a worth score (INV-003)
+      - Service Record supports eligibility only; it is not a worth score (INV-003)
     """
 
     def __init__(self, unique_id: int, model: "ProtocolModel", sector: str):
@@ -505,9 +505,9 @@ class AdversarialAgent(CitizenAgent):
         Returns True if bypass succeeds (detection failed).
         """
         self.bypass_attempts += 1
-        # Detection probability scales with enforcement intensity.
+        # Uniform draws below detection_prob are detected and blocked.
         detection_prob = 0.85  # P-001 enforcement effectiveness assumption
-        if np.random.random() > detection_prob:
+        if np.random.random() < detection_prob:
             # Bypass detected — action blocked, flagged
             self.model.enforcement_log.append({
                 "step": self.model.schedule.steps,

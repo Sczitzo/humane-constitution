@@ -12,6 +12,8 @@ title: White Paper
 
 > **New here?** Read **[Start Here](00_start_here.md)** first — it gives the problem, the one testable claim, the honest caveats, and where this sits in prior work. This white paper is the deep argument; it assumes you've seen the framing.
 
+> **Want examples first?** Read **[Real-World Examples](10_real_world_examples.md)** for the short guide to Jubilee, early church care, Wörgl, Alaska, Singapore-style housing, rationing, co-ops, commons governance, and regulatory capture.
+
 ---
 
 ## The problem in full
@@ -66,19 +68,19 @@ That claim is a design hypothesis, not proof. The [Architecture Source Map](../g
 
 ## The Basic Design
 
-The system separates five tools.
+The system separates five protected lanes and layers.
 
-| Tool | What it does | What it cannot do |
+| Lane or layer | What it does | What it cannot do |
 |---|---|---|
-| **Flow** | ordinary money for markets, wages, prices, contracts, saving, and business | buy basic needs rights or public power |
-| **Essential Access** | provides the basic needs floor | become cash, debt, status, or collateral |
-| **Voice** | helps set public priorities in limited ways | buy goods, rights, housing, or immunity |
-| **Service Record** | records useful public service for rotating service roles | become rank, inherited status, or moral worth |
-| **Shared Storehouse** | handles temporary rationing during real shortage | become permanent or become a second market |
+| **Life channel** | provides Essential Access and the Constitutional Survival Minimum | become cash, debt, status, collateral, or leverage |
+| **Market channel** | uses Flow for markets, wages, prices, contracts, saving, and business | buy survival priority, public power, office, or legal standing |
+| **Civic channel** | uses Voice and Service Record for bounded public influence and rotating service eligibility | become rank, inherited status, moral worth, or a social-credit market |
+| **Scarcity overlay** | uses the Shared Storehouse for temporary rationing during real shortage | become permanent or become a second market |
+| **Public-return layer** | uses Commons Return and Universal Stake to return shared or scarcity-created value without patronage | become tradable, garnishable, politically targeted, or convertible into civic power |
 
-The design only works if these tools stay separate.
+The design only works if these lanes stay separate.
 
-![Five-Tool Separation Architecture](/images/V-001.png)
+![Protected Lanes and Layers](/images/V-010.png)
 
 ## Flow: Ordinary Money With Limits
 
@@ -287,6 +289,7 @@ This is a rule design for limiting how money converts into power over other peop
 
 What the design does NOT do:
 - It does not abolish private ownership, profit, or markets. Flow (ordinary money) functions in markets.
+- It does not use Wörgl-style demurrage, stamp scrip, or a fee on ordinary household savings as the active public-finance spine. Those remain historical comparators. The active direction is Commons Return and Universal Stake.
 - It does not promise equal outcomes. It designs a floor below which no outcome should be allowed to fall.
 - It does not prevent people from failing, making bad decisions, or suffering consequences.
 - It limits what those consequences can include: they cannot include losing food, water, shelter, basic healthcare, or basic transit.
@@ -306,6 +309,8 @@ If that separation cannot hold, the design has to be judged by that failure, not
 | Term | Plain Meaning |
 |---|---|
 | **Flow** | ordinary money |
+| **Commons Return** | public return from exclusive control of shared or scarcity-created value |
+| **Universal Stake** | protected member stake distributed from public return |
 | **Essential Access** | the basic needs floor |
 | **Voice** | limited public priority-setting |
 | **Service Record** | proof of useful public service |

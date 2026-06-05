@@ -111,6 +111,8 @@ The target is not work. A person may earn wages, run a small shop, save ordinary
 
 **D6.5** Administrative costs must be capped by published rule and audited. The instrument fails if its administration becomes a self-protecting bureaucracy that consumes the return it claims to recover.
 
+**D6.6** Commons Return receipts may narrow or replace a named ordinary-life tax only after a costed evidence package shows net receipts, pass-through, downturn resilience, administrative cost, avoidance leakage, reserve needs, and fallback paths. This annex does not itself prove tax replacement.
+
 ## D7 — Universal Stake
 
 **D7.1** Every member receives Universal Stake under a universal rule. Eligibility rules may verify membership and prevent duplicate claims, but may not become a loyalty test, wealth test, ideology test, religious test, work test, or patronage screen.
@@ -205,6 +207,8 @@ The following may be adjusted through ordinary calibration review, provided they
 **D11.6 Anti-capture test.** Evidence must show that officials cannot steer the return, manipulate eligibility, suppress appeals, conceal exemptions, or convert the stake into political reward.
 
 **D11.7 Fruit test.** Review must ask what the instrument produces in practice: more dignity or less, more independence or more dependency, more honesty or more hiding, more accountable stewardship or more bureaucratic control. Bad fruit requires correction.
+
+**D11.8 Fiscal and downturn test.** Evidence must show that any claimed public-finance or tax-narrowing role survives administrative cost, appeals, reserves, pass-through pricing, avoidance, capital flight, and ordinary downturns without reviving demurrage, taxing survival access, taxing basic household exchange, or quietly shifting the burden onto ordinary labor.
 
 ## D12 — Reader Rule
 

@@ -13,7 +13,7 @@
 
 **Purpose.** This annex strengthens the Formal Acceptance Protocol (FAP) against the exploit surfaces identified in T-016 (P-013). It amends the FAP directly and adds constitutional protections to its anti-gaming rules. Where this annex conflicts with the FAP document, this annex governs. Status: PROPOSED.
 
-**Sections:** AG1 Pilot Representativeness · AG2 Deadlock Resolution · AG3 Audit Epistemic Independence · AG4 Anti-Gaming Upgrade · AG5 Stagnation Documentation · AG6 Bootstrap Protocol · AG7 Concentration Controls · AG-LATENCY Emergency Time Bounds · AG8 Linkage Table
+**Sections:** AG1 Pilot Representativeness · AG2 Deadlock Resolution · AG3 Audit Epistemic Independence · AG3.1 Ordinary Challenger Parity · AG4 Anti-Gaming Upgrade · AG5 Stagnation Documentation · AG6 Bootstrap Protocol · AG7 Concentration Controls · AG-LATENCY Emergency Time Bounds · AG8 Linkage Table
 
 ### AG1. Pilot Representativeness Standard (FAP Amendment)
 Pilot region designation requires a published representativeness assessment before the pilot begins. The assessment must document four dimensions against the national median:
@@ -26,6 +26,8 @@ Pilot region designation requires a published representativeness assessment befo
 | **Infrastructure capacity** | Patch-specific minimum operational requirements | Must be documented and verifiable; gaps are stop conditions |
 
 If the pilot region is flagged as favorable on more than one dimension, a second stress-tested pilot region must be designated from below-median regions before evidence is considered complete. Evidence from a single favorable region produces PILOT status only — not ACTIVE. Evidence from two regions (one favorable, one stress-tested) is required for ACTIVE status. Representativeness assessment criteria are protected terms under P-004.
+
+Representativeness may not be satisfied only at the aggregate level. Each pilot assessment must publish disaggregated evidence for the most exposed subgroups affected by the patch, including low-wealth residents, disabled residents, newcomers, residents dependent on Essential Access, caregivers, and dissenting or opposition communities where relevant. A pilot that performs well at the median but fails a named exposed subgroup is not representative for ACTIVE status until the subgroup failure is corrected or a second stress-tested pilot demonstrates that the failure was local rather than structural.
 
 ### AG2. Sign-Off Deadlock Resolution Timeline (FAP Amendment)
 
@@ -51,6 +53,21 @@ The purpose of the adversarial member is to ensure that at least one auditor is 
 - The Body is structurally independent of the design team and the sponsor of any patch for which it qualifies auditors. A member who has any institutional affiliation (under the AG3 4-year standard) with that design team or sponsor recuses from the qualification of auditors for that patch.
 - The Body is itself a sign-off-adjacent institutional cluster and is subject in full to the AG7 concentration and anti-cohort controls, including cohort cooling and the three-axis epistemic-diversity standard.
 - Each qualification decision is published with the evidence relied upon and the written reasons for finding the adversarial and domain-diverse criteria satisfied. Independence is established by verifiable record, not by assertion. A qualification decision lacking published reasons is void, and any auditor seated on it is unseated.
+
+### AG3.1. Ordinary Challenger Parity and Non-Priesthood Review
+Formal expertise is evidence of competence, not a priestly credential. No FAP audit, reviewer qualification, or ACTIVE-status decision may treat professional formation, academic status, prior governance service, or Service Record standing as the only valid source of challenge knowledge.
+
+For any patch that affects Voice, Service Record, role eligibility, survival-adjacent access, founding legitimacy, enforcement discretion, or review-body composition, the FAP record must include an ordinary challenger window:
+
+- Any affected resident, low-wealth participant, newcomer, caregiver, dissenter, opposition-community representative, or person with direct lived experience of the affected system may file a challenger brief without needing institutional sponsorship.
+- The challenger receives the same non-private evidence packet, response deadline, publication status, and appeal route as a professional auditor or institutional reviewer.
+- The FAP secretariat must provide plain-language instructions, language access, offline filing, and fee-free submission. A challenge may not be dismissed because it lacks technical vocabulary if it identifies a concrete rule, decision, harm, missing evidence, or factual error.
+- A material challenger brief must receive a written response before PROPOSED may advance to ACTIVE. If the response rejects the challenge, it must state the evidence relied upon and the appeal route.
+- Where confidentiality or security limits evidence access, the limiting body must publish the restriction, the reason, and a substitute disclosure sufficient for the challenger to understand the issue being decided.
+
+Critical patches and all Service Record-gating patches must include at least one lay or lived-experience reviewer on the audit team, in addition to the professional and adversarial auditors required by AG3. Lack of credentials may not disqualify this reviewer; conflict of interest, confidentiality capacity, and inability to perform the defined role may disqualify, with written reasons and appeal.
+
+The FAP concentration dashboard must annually compare professional-auditor challenges and ordinary-challenger briefs by filing rate, response time, sustain rate, publication quality, and appeal success. A pattern in which ordinary challengers are procedurally slower, less answered, or categorically less sustained without written merits reasons is an AG7 concentration signal and triggers external procedural audit.
 
 ### AG4. Anti-Gaming Constitutional Upgrade (Tier 2 Reclassification)
 The FAP's anti-gaming rules — specifically the prohibition on waiving evidence requirements due to urgency ('urgency is a reason to accelerate the pilot, not to skip it') — are reclassified from Tier 3 operational document status to Tier 2 charter-level protection. Consequences:

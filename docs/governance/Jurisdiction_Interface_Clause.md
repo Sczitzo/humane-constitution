@@ -66,7 +66,7 @@ The following matters are expressly governed by external law and resolved throug
 - Tier 0 residents may access essential services for 7 days before the arbitration clause is presented, so the agreement is not signed under survival duress
 - The agreement expressly states the resident's right to access external courts notwithstanding the clause
 
-**3.3** RAC decisions are enforceable by reputational consequence within the governance instruments (Voice weight, Service Record notation) but carry no external legal enforcement power unless both parties agree to bind themselves under applicable state arbitration law.
+**3.3** RAC decisions are enforceable by reputational consequence within the governance instruments (Voice weight, Service Record notation) but carry no external legal enforcement power unless both parties agree to bind themselves under applicable state arbitration law. No RAC consequence may reduce Essential Access, housing continuity, access to external courts, legal-aid access, rights of conscience, or the right to challenge pilot governance. Reputational consequence may not be used to punish a resident for asserting any right protected by Sections 2, 6, 8, or 9.
 
 **3.4** Any resident may withdraw from RAC jurisdiction at any time and seek external court relief. This right cannot be waived by enrollment agreement.
 
@@ -111,6 +111,41 @@ The following matters are expressly governed by external law and resolved throug
 Persons employed in the construction of the pilot site who live on-site for more than 30 consecutive days are not enrolled residents unless they have also signed a Window 2 pre-enrollment commitment. The founding team ensures their living conditions meet the CSM floor as a matter of ethical practice, even before the protocol's CSM architecture is operational.
 
 ---
+
+## Section 8 — Rights of Conscience and Dissent
+
+**8.1** The pilot may not require any person to affirm the Humane Constitution, any theological claim, any moral theory, any political claim, or any founding-legitimacy claim as a condition of Tier 0 services, enrollment, Essential Access, housing continuity, dispute resolution, legal standing, Voice, Service Record continuity, or ordinary civic participation.
+
+**8.2** Religious teaching, moral objection, public dissent, refusal to endorse the project, appeal to lawful external authority, and criticism of pilot governance are protected activities. No pilot governance instrument may retaliate against these activities through exclusion, degraded service, adverse Service Record notation, Voice penalty, housing disadvantage, employment consequence, or delayed appeal.
+
+**8.3** A resident may raise a conscience objection to any internal process that would require participation in speech, ceremony, association, data disclosure, or dispute procedure contrary to their sincere religious, moral, or political commitments. The pilot must offer a lawful alternative route where one can be provided without defeating the rights of others or violating external law. Denial of an alternative route must be written, reasoned, and appealable.
+
+**8.4** Rights of conscience do not create immunity from external law, criminal accountability, child-protection duties, public-health duties, or ordinary obligations voluntarily undertaken under valid law. They protect persons from compelled endorsement and retaliatory governance, not from lawful responsibility.
+
+---
+
+## Section 9 — External Audit, Appeals, and Shutdown Triggers
+
+**9.1** Before activation, and annually thereafter, the pilot must obtain a jurisdiction-specific host-law compatibility review from standing legal counsel and an independent legal or civil-society reviewer not controlled by the founding team. The review assesses external-law compliance, rights-waiver risk, conscience protection, arbitration practice, labor classification, tax treatment, privacy, disability access, child protection, environmental and public-health compliance, immigration non-interference, and access to courts.
+
+**9.2** A material host-law conflict suspends the conflicting internal rule immediately. The pilot may narrow, revise, or pause the affected function; it may not ask residents, staff, contractors, or service providers to violate external law while the conflict is unresolved.
+
+**9.3** Any resident may appeal an internal governance action through: (a) RAC reconsideration where appropriate; (b) the Federated Ombuds or applicable internal appeal body; (c) external legal aid; and (d) a court or agency of competent external jurisdiction. These routes are cumulative. Internal appeal exhaustion is not required before seeking external legal relief unless valid external law requires it.
+
+**9.4** The pilot must publish a plain-language appeal map showing where each type of dispute goes, which route is optional, which route is external, what deadlines apply, and how to obtain legal aid. The map must be available offline, in the resident's primary language, and before any arbitration clause is presented.
+
+**9.5** The following are shutdown or narrowing triggers:
+
+- a court or agency order requiring suspension of a pilot function;
+- standing counsel or the independent reviewer issues an unresolved stop finding;
+- Tier 0 grace-window services cannot be delivered without enrollment, waiver, or survival duress;
+- residents are required in practice to waive external legal rights, legal-aid access, or conscience protections;
+- credible retaliation occurs against residents who contact external authorities or dissent from pilot governance;
+- exit cannot be completed without punitive cost, data hostage-taking, or Essential Access interruption;
+- Service Record, Voice, arbitration status, or internal reputation becomes a practical gate to legal rights or survival support;
+- repeated audit findings show the same host-law or rights-of-conscience defect without correction.
+
+**9.6** A shutdown or narrowing trigger requires a published continuity plan within 7 days. The plan must protect Essential Access, medication continuity, shelter continuity, legal-aid referral, data return or deletion, and safe exit. The plan may not use resident dependency as leverage to preserve the pilot function that triggered review.
 
 ## Residual Gaps (Acknowledged)
 
