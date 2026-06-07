@@ -184,6 +184,122 @@ def universal_stake_transfer_allowed(action: str) -> bool:
     return action not in prohibited_actions
 
 
+CRUS_GATE_THRESHOLDS = {
+    "pass_through_watch": 0.10,
+    "pass_through_block": 0.25,
+    "avoidance_watch": 0.05,
+    "avoidance_block": 0.10,
+    "admin_cost_watch": 0.10,
+    "admin_cost_block": 0.20,
+    "downturn_watch": 0.20,
+}
+
+
+def evaluate_crus_simulation_case(case: dict, config: dict = CONFIG) -> dict:
+    """
+    Deterministic CRUS gate evaluator for the CRUS Simulation Protocol.
+
+    This is not a full macroeconomic model. It converts one scenario row into
+    pass/watch/block outputs for the first gates the corpus requires: incidence,
+    pass-through, avoidance, administrative cost, downturn resilience, and
+    direct or bundled Universal Stake convertibility.
+    """
+    gross_receipts = max(0.0, float(case.get("gross_receipts", 0.0)))
+    assessed_value = max(0.0, float(case.get("assessed_value", 0.0)))
+    avoided_value = max(0.0, float(case.get("avoided_value", 0.0)))
+    detection_probability = min(1.0, max(0.0, float(case.get("detection_probability", 0.0))))
+    penalty_multiplier = max(0.0, float(case.get("penalty_multiplier", config.get("penalty_base_multiplier", 5.0))))
+    avoidance_cost = max(0.0, float(case.get("avoidance_cost", 0.0)))
+
+    total_costs = sum(
+        max(0.0, float(case.get(key, 0.0)))
+        for key in (
+            "administrative_cost",
+            "enforcement_cost",
+            "valuation_cost",
+            "audit_cost",
+            "appeal_cost",
+            "claimant_support_cost",
+        )
+    )
+
+    pass_through_rate = max(0.0, float(case.get("pass_through_rate", 0.0)))
+    downturn_receipt_drop = max(0.0, float(case.get("downturn_receipt_drop", 0.0)))
+    concentrated_burden = max(0.0, float(case.get("concentrated_source_holder_burden", 0.0)))
+    ordinary_burden = max(0.0, float(case.get("ordinary_life_burden", 0.0)))
+    protected_class_burden = max(0.0, float(case.get("protected_class_burden", 0.0)))
+
+    avoided_due = calculate_commons_return_due(
+        case.get("source_base", "LAND_LOCATION_VALUE"),
+        avoided_value,
+        config,
+    )
+    expected_avoidance_profit = (
+        (1 - detection_probability) * avoided_due
+        - detection_probability * penalty_multiplier * avoided_due
+        - avoidance_cost
+    )
+    assessed_value_erosion_rate = avoided_value / assessed_value if assessed_value > 0 else 0.0
+    admin_cost_share = total_costs / gross_receipts if gross_receipts > 0 else 0.0
+
+    warnings: list[str] = []
+    blocks: list[str] = []
+
+    if ordinary_burden > concentrated_burden:
+        warnings.append("ORDINARY_INCIDENCE_WATCH")
+    if protected_class_burden > 0 and not case.get("protected_class_is_avoidance_shell", False):
+        blocks.append("PROTECTED_CLASS_INCIDENCE_BLOCK")
+
+    if pass_through_rate > CRUS_GATE_THRESHOLDS["pass_through_block"] or case.get("dignity_floor_breached", False):
+        blocks.append("PASS_THROUGH_BLOCK")
+    elif pass_through_rate > CRUS_GATE_THRESHOLDS["pass_through_watch"]:
+        warnings.append("PASS_THROUGH_WATCH")
+
+    if assessed_value_erosion_rate > CRUS_GATE_THRESHOLDS["avoidance_block"] or expected_avoidance_profit > 0:
+        blocks.append("AVOIDANCE_BLOCK")
+    elif assessed_value_erosion_rate > CRUS_GATE_THRESHOLDS["avoidance_watch"]:
+        warnings.append("AVOIDANCE_WATCH")
+
+    if admin_cost_share > CRUS_GATE_THRESHOLDS["admin_cost_block"] or case.get("appeal_abandonment_block", False):
+        blocks.append("ADMIN_COST_BLOCK")
+    elif admin_cost_share > CRUS_GATE_THRESHOLDS["admin_cost_watch"]:
+        warnings.append("ADMIN_COST_WATCH")
+
+    if case.get("prohibited_downturn_fallback", False):
+        blocks.append("DOWNTURN_FALLBACK_BLOCK")
+    elif downturn_receipt_drop > CRUS_GATE_THRESHOLDS["downturn_watch"] and not case.get("reserve_and_unwind_plan", False):
+        warnings.append("DOWNTURN_WATCH")
+
+    attempted_transfers = case.get("universal_stake_transfer_attempts", [])
+    if any(not universal_stake_transfer_allowed(action) for action in attempted_transfers):
+        warnings.append("NON_CONVERTIBILITY_ATTEMPT_WATCH")
+    if case.get("successful_universal_stake_conversion", False):
+        blocks.append("NON_CONVERTIBILITY_BLOCK")
+    if case.get("repeatable_bundled_exchange", False):
+        blocks.append("COMPOUND_CONVERTIBILITY_BLOCK")
+
+    result = "block" if blocks else "watch" if warnings else "pass"
+    return {
+        "scenario_id": case.get("scenario_id", "CRUS-SIM-UNSPECIFIED"),
+        "result": result,
+        "warnings": warnings,
+        "blocks": sorted(set(blocks)),
+        "metrics": {
+            "gross_receipts": gross_receipts,
+            "net_receipts": gross_receipts - total_costs,
+            "admin_cost_share": admin_cost_share,
+            "pass_through_rate": pass_through_rate,
+            "assessed_value_erosion_rate": assessed_value_erosion_rate,
+            "expected_avoidance_profit": expected_avoidance_profit,
+            "downturn_receipt_drop": downturn_receipt_drop,
+            "ordinary_life_burden": ordinary_burden,
+            "concentrated_source_holder_burden": concentrated_burden,
+            "protected_class_burden": protected_class_burden,
+        },
+        "plain_language_failure": case.get("plain_language_failure", ""),
+    }
+
+
 # =============================================================================
 # ORACLE SUBSYSTEM
 # =============================================================================

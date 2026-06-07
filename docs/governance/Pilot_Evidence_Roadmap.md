@@ -227,7 +227,21 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Hypothesis:** Flow can support exchange while Commons Return funds common rails and a Universal Stake returns shared/scarcity-created value without becoming a hidden tax on ordinary life, a patronage dividend, or an eligibility-surveillance system.
 
-**External evidence basis:** The [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md) is the governing test package for this phase. Public-dividend, sovereign-wealth-fund, inheritance-tax, spectrum/concession, procurement-integrity, and beneficial-ownership sources establish relevant design patterns and capture risks. Historical demurrage/negative-rate sources are retained only as superseded comparator evidence, not as the live mechanism.
+**External evidence basis:** The [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md) is the governing test package for this phase, and the [CRUS Simulation Protocol](./CRUS_Simulation_Protocol.md) is the minimum runnable scenario standard. Public-dividend, sovereign-wealth-fund, inheritance-tax, spectrum/concession, procurement-integrity, and beneficial-ownership sources establish relevant design patterns and capture risks. Historical demurrage/negative-rate sources are retained only as superseded comparator evidence, not as the live mechanism.
+
+**Minimum sequence before any real-money test:**
+
+| Step | Test packet | Must publish before moving on |
+|---|---|---|
+| 5.1 | Source-base map | CRUS-SIM-01 and CRUS-SIM-04 tables for each candidate source base, including protected exclusions and valuation uncertainty. |
+| 5.2 | Incidence and pass-through | CRUS-SIM-02 and CRUS-SIM-03 tables by renters, homeowners below threshold, workers, consumers, small operators, protected associations, and concentrated source holders. |
+| 5.3 | Avoidance and capital mobility | CRUS-SIM-05 red-team results showing base erosion, expected avoidance profit, detection probability, penalty impact, appeal outcomes, and under-maintenance/offshoring behavior. |
+| 5.4 | Eligibility and dignity | CRUS-SIM-06 distribution and recovery results by vulnerable group, including false exclusion, recovery delay, staff discretion, data exposure, coercion, and abandonment. |
+| 5.5 | Direct and compound non-convertibility | CRUS-SIM-07 and CRUS-SIM-08 results for direct sale/assignment/pledge/garnishment plus bundled exchanges involving Essential Access, Voice, Service Record, identity recovery, housing, employment, lending, platform access, or debt relief. |
+| 5.6 | Routing, costs, downturn, and adequacy | CRUS-SIM-09 through CRUS-SIM-13, including administrative cost, capture concentration, downturn receipts, reserve draw, lawful residual funding path, and named-obligation adequacy. |
+| 5.7 | Public comprehension | CRUS-SIM-14 results showing whether ordinary readers can explain who pays, who receives, what is protected, and what Universal Stake cannot buy. |
+
+If any step produces a blocking result, Phase 5 stops at simulation. A watch result requires narrower claim language and a retest plan before any real-money pilot design.
 
 **Measure:**
 

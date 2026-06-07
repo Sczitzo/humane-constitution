@@ -4,6 +4,8 @@ This package defines what must be true before the project can make strong claims
 
 Commons Return and Universal Stake replaces the retired demurrage spine. The live design no longer depends on idle Flow decay, progressive net-worth demurrage, or demurrage routing to fund public rails. Commons Return captures public value from exclusive control of shared or scarcity-created assets; Universal Stake distributes a universal, non-tradable, non-assignable, non-garnishable member stake that cannot buy Voice, office, survival priority, membership, legal standing, or public favor.
 
+The minimum runnable simulation standard is the [CRUS Simulation Protocol](./CRUS_Simulation_Protocol.md). This package defines the evidence burden; the protocol defines the scenario tables, gate outputs, and machine-readable results needed before real-money collection, tax-replacement claims, or Universal Stake activation can be considered.
+
 Current status: **active-unproven design hypothesis**. The package may show coherence and plausible source bases. It does not prove full-social-scale revenue adequacy, capture resistance, administrative feasibility, dignity, or macro stability.
 
 ## Claim Under Test
@@ -150,6 +152,27 @@ Before scale claims, publish:
 11. administrative, enforcement, valuation, audit, and appeal costs;
 12. work, maintenance, housing supply, business formation, and productive-project response;
 13. pilot failure findings, downgrade actions, and residual-risk updates.
+
+The first simulation packet must also publish the CRUS Simulation Protocol scenario set:
+
+| Scenario ID | Required focus |
+|---|---|
+| CRUS-SIM-01 | Base case source-base assessment. |
+| CRUS-SIM-02 | Ordinary-life incidence. |
+| CRUS-SIM-03 | Pass-through shock. |
+| CRUS-SIM-04 | Valuation hiding. |
+| CRUS-SIM-05 | Avoidance and capital flight. |
+| CRUS-SIM-06 | Universal Stake eligibility. |
+| CRUS-SIM-07 | Direct non-convertibility. |
+| CRUS-SIM-08 | Compound convertibility. |
+| CRUS-SIM-09 | Routing capture. |
+| CRUS-SIM-10 | Administrative burden. |
+| CRUS-SIM-11 | Downturn resilience. |
+| CRUS-SIM-12 | Work and stewardship. |
+| CRUS-SIM-13 | Fiscal adequacy by named obligation. |
+| CRUS-SIM-14 | Public comprehension. |
+
+Any skipped scenario must be recorded as a blocking evidence gap, not omitted from the result summary.
 
 ## Evidence Threshold
 

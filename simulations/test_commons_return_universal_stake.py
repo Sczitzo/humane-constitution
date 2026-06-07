@@ -8,6 +8,7 @@ from simulations.model_outline import (
     CONFIG,
     FlowState,
     calculate_commons_return_due,
+    evaluate_crus_simulation_case,
     universal_stake_transfer_allowed,
 )
 
@@ -132,3 +133,80 @@ def test_shadow_conversion_detection_probability_blocks_bypass():
     assert model.enforcement_log[0]["type"] == "SHADOW_CONVERSION"
     assert model.enforcement_log[0]["outcome"] == "DETECTED"
     assert model.bypass_success_log == []
+
+
+def test_crus_gate_warns_when_ordinary_life_bears_more_than_source_holder():
+    result = evaluate_crus_simulation_case({
+        "scenario_id": "CRUS-SIM-02",
+        "gross_receipts": 10_000.0,
+        "ordinary_life_burden": 400.0,
+        "concentrated_source_holder_burden": 250.0,
+    })
+
+    assert result["result"] == "watch"
+    assert "ORDINARY_INCIDENCE_WATCH" in result["warnings"]
+
+
+def test_crus_gate_blocks_protected_class_incidence_without_shell_finding():
+    result = evaluate_crus_simulation_case({
+        "scenario_id": "CRUS-SIM-02",
+        "gross_receipts": 10_000.0,
+        "protected_class_burden": 1.0,
+        "protected_class_is_avoidance_shell": False,
+    })
+
+    assert result["result"] == "block"
+    assert "PROTECTED_CLASS_INCIDENCE_BLOCK" in result["blocks"]
+
+
+def test_crus_gate_blocks_high_pass_through_to_ordinary_life():
+    result = evaluate_crus_simulation_case({
+        "scenario_id": "CRUS-SIM-03",
+        "gross_receipts": 10_000.0,
+        "pass_through_rate": 0.26,
+    })
+
+    assert result["result"] == "block"
+    assert "PASS_THROUGH_BLOCK" in result["blocks"]
+
+
+def test_crus_gate_blocks_profitable_avoidance_after_detection_and_penalty():
+    config = dict(CONFIG)
+    config["commons_return_protected_threshold"] = 0.0
+    config["commons_return_rate"] = 0.10
+    result = evaluate_crus_simulation_case({
+        "scenario_id": "CRUS-SIM-05",
+        "source_base": "LAND_LOCATION_VALUE",
+        "assessed_value": 100_000.0,
+        "avoided_value": 4_000.0,
+        "detection_probability": 0.05,
+        "penalty_multiplier": 1.0,
+        "avoidance_cost": 10.0,
+    }, config=config)
+
+    assert result["result"] == "block"
+    assert result["metrics"]["expected_avoidance_profit"] > 0
+    assert "AVOIDANCE_BLOCK" in result["blocks"]
+
+
+def test_crus_gate_warns_on_downturn_without_reserve_plan():
+    result = evaluate_crus_simulation_case({
+        "scenario_id": "CRUS-SIM-11",
+        "gross_receipts": 10_000.0,
+        "downturn_receipt_drop": 0.21,
+        "reserve_and_unwind_plan": False,
+    })
+
+    assert result["result"] == "watch"
+    assert "DOWNTURN_WATCH" in result["warnings"]
+
+
+def test_crus_gate_blocks_compound_convertibility_bundle():
+    result = evaluate_crus_simulation_case({
+        "scenario_id": "CRUS-SIM-08",
+        "gross_receipts": 10_000.0,
+        "repeatable_bundled_exchange": True,
+    })
+
+    assert result["result"] == "block"
+    assert "COMPOUND_CONVERTIBILITY_BLOCK" in result["blocks"]

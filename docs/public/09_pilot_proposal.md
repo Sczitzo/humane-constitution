@@ -177,7 +177,7 @@ Success at this scale justifies the next gate under [Annex AN](../annexes/ANNEX_
 > **Where this sits in the corpus**
 > - The economic instrument is [Annex D](../annexes/ANNEX_D.md), now being rewritten around **Commons Return and Universal Stake**.
 > - Flow issuance architecture remains [Annex X](../annexes/ANNEX_X.md), but Flow balances are not the object of this pilot.
-> - This is the public-finance and distribution simulation for the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md). It stays a **simulation** until incidence, dignity, avoidance, distribution, and non-convertibility are transparent enough for independent review.
+> - This is the public-finance and distribution simulation for the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md), using the [CRUS Simulation Protocol](../governance/CRUS_Simulation_Protocol.md). It stays a **simulation** until incidence, dignity, avoidance, distribution, and non-convertibility are transparent enough for independent review.
 
 ### What we're testing
 
@@ -199,7 +199,7 @@ The design lives or dies on seven empirical questions:
 
 **60–150 voluntary households plus a local asset/concession map**. The household group tests eligibility, dignity, distribution rails, and non-convertibility. The asset/concession map tests source bases: land/location value, public concessions, monopoly licenses, platform/network rents, natural-resource claims where present, and large succession-transfer scenarios modeled from anonymized estates.
 
-This is a **simulation pilot**: no compulsory collection occurs. What is real is the data collection, valuation process, red-team attack, distribution test, appeals process, and public comprehension review. One arm should pair with Pilot A's Essential Access and Shared Storehouse work: a funder or volunteer pool seeds a small Universal Stake distribution and a shared reserve, so the pilot tests the economic instrument alongside the survival floor and shortage mechanism instead of pretending they are unrelated.
+This is a **simulation pilot**: no compulsory collection occurs. What is real is the data collection, valuation process, red-team attack, distribution test, appeals process, and public comprehension review. One arm may pair with Pilot A's Essential Access and Shared Storehouse work through a voluntary, grant-funded practice distribution and shared reserve. That arm must be clearly labeled as practice rails, not public revenue and not evidence that CRUS can fund the floor.
 
 The pilot runs **12 months** and has four moving parts:
 
@@ -207,6 +207,18 @@ The pilot runs **12 months** and has four moving parts:
 - **Protection screen.** Ordinary labor income, working balances, household tools, basic homes below protected thresholds, small-business operating reserves, and protected community, tribal, and church associations are excluded unless they are being used as avoidance shells.
 - **Distribution test.** A simulated or funded Universal Stake is issued through rails that cannot be sold, assigned, garnished, pledged as collateral, or exchanged for civic status.
 - **Red-team.** A paid adversarial team is given the rules and tasked with breaking them: hiding valuation, shifting ownership outside the jurisdiction, laundering value through protected associations, buying favor with the stake, manipulating eligibility, capturing appeals, or turning distribution into political patronage.
+
+Before any optional funded practice distribution, the pilot must publish the CRUS Simulation Protocol scenario table:
+
+| Stage | Required scenarios | Stop condition |
+|---|---|---|
+| Source-base map | CRUS-SIM-01, CRUS-SIM-04 | Ordinary homes, tools, working balances, protected associations, or labor income are swept into the base without an avoidance-shell finding. |
+| Incidence and pass-through | CRUS-SIM-02, CRUS-SIM-03 | Renters, workers, consumers, small operators, or protected groups bear the practical burden while concentrated source holders avoid it. |
+| Avoidance and capital flight | CRUS-SIM-05 | Avoidance remains profitable after detection, penalties, and appeal outcomes, or assessed value erodes beyond the blocking threshold. |
+| Eligibility and dignity | CRUS-SIM-06 | Vulnerable members are excluded, exposed, delayed, coerced, or humiliated beyond published thresholds. |
+| Non-convertibility | CRUS-SIM-07, CRUS-SIM-08 | Universal Stake becomes directly or practically tradable through sale, pledge, garnishment, debt relief, housing, employment, platform access, identity recovery, Voice, Service Record, or public favor. |
+| Routing and adequacy | CRUS-SIM-09 through CRUS-SIM-13 | Administrators can steer rewards or punishments; costs consume the return; downturns force prohibited fallback funding; or a named public obligation is unsupported by net receipts. |
+| Public comprehension | CRUS-SIM-14 | Participants cannot explain who pays, who receives, what is protected, or what the stake cannot buy. |
 
 ### Rough cost
 
