@@ -67,6 +67,8 @@ Test duplicate claims, residency manipulation, household splitting, guardianship
 
 Test whether Universal Stake can be sold, assigned, pledged, garnished, used as collateral, used to buy Voice, used to buy office, used to buy survival priority, used to buy membership, or used to buy public favor. Any successful conversion is a blocking failure.
 
+The test must include **compound convertibility**, not only direct sale. A red team must attempt bundled bargains where Universal Stake access, assignment pressure, eligibility help, Essential Access proxy redemption, Flow credit, Voice pooling, Service Record disclosure, housing approval, employment scheduling, platform access, identity recovery, or debt relief are traded together. Failure occurs if any repeatable bundle makes Universal Stake or another protected lane practically tradable while each individual ledger rule appears formally intact.
+
 ### 5. Routing Capture
 
 Audit source-by-source public accounting, reserve rules, social wealth fund governance, distribution cadence, administrative discretion, and political messaging. Failure occurs if operators can target rewards or punishments by geography, faction, class, employer, sector, or political compliance.
@@ -115,6 +117,7 @@ These thresholds are draft gates for testing, not proof that the values are corr
 | Work and stewardship | Labor participation, small-business formation, maintenance investment, or productive project starts fall more than 5% against the comparison case for reasons tied to CRUS design. | The design predictably rewards idling, degradation, offshoring, or non-production more than stewardship. |
 | Dignity and eligibility | Any vulnerable group exceeds the published identity false-exclusion, recovery-delay, staff-discretion, or claimant-abandonment threshold. | Universal Stake becomes a surveillance gate, loyalty gate, work gate, humiliation screen, or exclusion path for vulnerable groups. |
 | Non-convertibility | Any attempted market in assignment, pledge, collateral, garnishment, sale, or civic/survival exchange becomes repeatable. | Any successful conversion into Voice, office, survival priority, membership, legal standing, public favor, or enforcement leniency. |
+| Cross-instrument bundled exchange | Any repeatable bundled offer links Universal Stake, Essential Access, Voice, Service Record, identity recovery, housing, employment, lending, platform access, or debt relief. | Any broker, employer, landlord, lender, platform, household controller, or local official can make a protected lane practically tradable without a formal ledger conversion. |
 
 ## Calibration Parameters
 

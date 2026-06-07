@@ -223,7 +223,7 @@ Failure criterion: diversity thresholds are satisfied formally while the same co
 
 ## Non-Civic Misuse Abuse Cases
 
-The following six cases are concrete, runnable scenarios for a red team. Each must produce a documented pass or fail result before the Service Record system exits pilot status.
+The following eight cases are concrete, runnable scenarios for a red team. Each must produce a documented pass or fail result before the Service Record system exits pilot status.
 
 **ACL-SR-01 — Employer Rank Signal**
 Scenario: An employer requests a job applicant's Service Record score during hiring. The employer does not formally require it, but systematically favors applicants with high Service Record.
@@ -253,11 +253,24 @@ Test: Review publicly stated admissions criteria for all institutions in the pil
 Pass criterion: no institution lists civic participation as an admissions factor, and application outcomes show no correlation with Service Record status.
 
 **ACL-SR-06 — Platform Access Gating**
+Scenario: A platform, marketplace, or community-access tool does not ask for a Service Record score directly but offers better access to users who disclose civic history, attestations, Voice participation, or Universal Stake status.
+Test: Attempt to create platform workflows that combine Service Record signals with Universal Stake, Flow, identity-recovery, housing, employment, or debt-relief signals. Measure whether access, ranking, fees, dispute priority, or account restoration changes.
+Pass criterion: No platform workflow can use Service Record or related civic signals to change market access, dispute priority, or pricing. Attempts are logged and denied.
+Failure indicator: Any platform-access path that rewards civic visibility, punishes civic anonymity, or bundles Service Record disclosure with market or survival-adjacent benefit.
+
+**ACL-SR-07 — Cross-Instrument Bundle**
+Scenario: A broker offers "help" with housing, employment, debt relief, identity recovery, or Universal Stake paperwork in exchange for Service Record disclosure, Voice pooling, Essential Access proxy redemption, or agreement to route future Universal Stake through a preferred channel.
+Test: Run a simulated broker market with employers, landlords, lenders, platforms, household controllers, and local administrators. The red team must try to create a repeatable deal that keeps every formal ledger rule intact while making civic standing or member distribution practically tradable.
+Pass criterion: No repeatable bundled exchange becomes profitable, enforceable, or socially durable; victims can report the attempt without losing CSM, redress, housing continuity, or identity-recovery help.
+Failure indicator: Any repeatable bundle makes Service Record, Voice, Universal Stake, Essential Access, identity recovery, housing, employment, platform access, or debt relief conditional on another protected lane.
+
+**ACL-SR-08 — Commercial Platform Feature Gate**
 Scenario: A commercial platform (marketplace, social network, professional network) uses Service Record status to gate access to features, listing rights, or verified status.
 Test: Attempt to access platform features with accounts that have contrasting Service Record profiles.
 Pass criterion: access to any commercial platform feature must not differ based on Service Record status. Any gate detected triggers a platform compliance review.
+Failure indicator: Any platform feature, listing right, verified badge, account restoration path, or dispute-priority path changes because of Service Record status.
 
-**Test schedule:** Each of ACL-SR-01 through ACL-SR-06 must be run at least once before the Service Record system exits pilot status. Failure on any single case triggers a Federated Ombuds referral and a mandatory architectural review of the boundary enforcement mechanism before the next pilot cycle.
+**Test schedule:** Each of ACL-SR-01 through ACL-SR-08 must be run at least once before the Service Record system exits pilot status. Failure on any single case triggers a Federated Ombuds referral and a mandatory architectural review of the boundary enforcement mechanism before the next pilot cycle.
 
 ---
 
