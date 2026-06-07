@@ -115,13 +115,13 @@ The target is not work. A person may earn wages, run a small shop, save ordinary
 
 ## D7 — Universal Stake
 
-**D7.1** Every member receives Universal Stake under a universal rule. Eligibility rules may verify membership and prevent duplicate claims, but may not become a loyalty test, wealth test, ideology test, religious test, work test, or patronage screen.
+**D7.1** Every member receives Universal Stake under a universal member rule. "Universal" here means universal among persons with lawful membership or the host-recognized equivalent; it does not narrow the CSM floor owed to every physically present person under INV-001. Eligibility rules may verify membership and prevent duplicate claims, but may not become a loyalty test, wealth test, ideology test, religious test, work test, or patronage screen.
 
 **D7.2** Universal Stake is non-tradable, non-assignable, non-garnishable, and non-transferable before receipt. It may not be pledged, sold, securitized, collateralized, attached by creditors, redirected by contract, or captured by guardians, employers, landlords, platforms, parties, agencies, or family controllers.
 
 **D7.3** Universal Stake cannot buy Voice, office, survival priority, membership, legal standing, public favor, public service eligibility, court access, identity status, migration priority, enforcement leniency, or exemption from ordinary law.
 
-**D7.4** Universal Stake cannot be converted into civic power. A person who receives more market value from the stake does not receive more Voice. A person who refuses, loses, spends, saves, or has not yet received a distribution does not lose membership, rights, legal standing, or survival access.
+**D7.4** Universal Stake cannot be converted into civic power. A person who receives more market value from the stake does not receive more Voice. A person who refuses, loses, spends, saves, or has not yet received a distribution does not lose membership, rights, redress standing, or survival access. A person who is physically present but not yet membership-verified remains CSM-eligible while membership or identity questions are resolved.
 
 **D7.5** Distribution may be periodic, endowed, account-based, or hybrid, but the distribution form must preserve non-convertibility and dignity. Any custodial mechanism for children, protected adults, or safety-identity cases must prevent capture by controllers while preserving the member's beneficial claim.
 

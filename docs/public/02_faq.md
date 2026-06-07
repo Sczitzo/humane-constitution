@@ -24,6 +24,8 @@ This project tries to separate those powers.
 
 The design only works if these lanes stay separate. None of them may buy survival priority, public power, office, membership, legal standing, or human worth.
 
+The lanes do not all attach to the same status. The survival floor follows physical presence: a person in need gets the Constitutional Survival Minimum even if identity is uncertain. Voice, Service Record, full Flow accounts, enterprise participation, and Universal Stake require stronger continuity, identity, or membership checks because they can be duplicated, traded, or used to affect public power. Those checks may never block food, shelter, emergency help, harm reporting, or redress.
+
 ## 4. Is Essential Access just welfare?
 
 No. Welfare is usually a program that can be changed, cut, or used as leverage.

@@ -260,10 +260,13 @@ The token mechanism must be designed so that token-issuance infrastructure canno
 - Above-CSM allocations
 - Access to Voice, Service Record, or Flow accounts
 - Above-CSM scheduling priority or planning privileges, except where continuity is required to deliver the CSM itself
+- Membership-attached Universal Stake or commons distributions, except for any emergency bridge explicitly created to prevent survival loss
+
+**What Tier 0 must preserve:** Tier 0 still preserves personhood dignity, emergency help, harm reporting, Ombuds access, safety-shielded redress, and CSM delivery. Lack of Tier 1 identity may not be converted into voicelessness before harm, exclusion from complaint channels, or loss of standing to challenge abuse.
 
 ### AK8.2 — Tier 1: Identity-Gated Services
 
-Above-floor services, civic instruments (Voice, Service Record), and Flow accounts require confirmed identity under the enrollment process defined in §AK1–AK3 and ANNEX_P.
+Above-floor services, civic instruments (Voice, Service Record), persistent Flow accounts, enterprise participation, and membership-attached distributions require confirmed identity or membership under the enrollment process defined in §AK1–AK3, ANNEX_P, and the host-membership rules recognized by INV-016.
 
 Tier 1 enrollment is voluntary. No person may be coerced into Tier 1 enrollment by conditioning CSM-tier access on it.
 
@@ -283,4 +286,4 @@ Community review of an aggregate anomaly finding is convened by the relevant Reg
 
 ### AK8.4 — Relationship to INV-001
 
-This section implements, rather than amends, INV-001's existing protection: "Confirmation of identity is required to access civic instruments (Voice, Service Record, and deliberative standing) but is never a precondition for survival access." The two-tier model operationalizes that distinction.
+This section implements, rather than amends, INV-001's protection that real-world identity is never a precondition for survival access, harm reporting, emergency help, Ombuds access, or safety-shielded redress. The two-tier model operationalizes the distinction between open CSM access and persistent above-floor services that require continuity, anti-duplication, or membership verification.

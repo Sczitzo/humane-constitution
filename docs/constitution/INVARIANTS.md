@@ -58,9 +58,11 @@ This Scope section is descriptive of the boundary; the interface invariants belo
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), T-007 (definition drift on "essential"), T-018 (PCRP false-trigger exhaustion), T-022 (electoral cycle capture)
 
-**Implementation:** The two-tier access model (ANNEX_AK §AK8) operationalizes this invariant by separating non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments). Tier 0 access is open-access or pseudonymous; no real-world identity is ever a precondition for receiving a CSM allocation.
+**Implementation:** The two-tier access model (ANNEX_AK §AK8) operationalizes this invariant by separating point-of-need survival access from continuity services. Tier 0 access is open-access or pseudonymous; no real-world identity is ever a precondition for receiving a CSM allocation, reporting harm, seeking Ombuds help, or preserving emergency redress. Confirmed identity may be required only for persistent above-floor services that need continuity or non-duplication, such as full Flow accounts, enterprise participation, Voice, Service Record, and other civic instruments.
 
-**Anonymity for safety:** A person may freely and reversibly choose to remain unidentified for their own safety. That choice costs only civic Voice — never survival, never dignity, and never the ability to report harm or seek help through the Ombuds or safety-shielded path. Voice requires confirmed identity solely to resist Sybil capture (INV-004); it is the single instrument so gated. A person may confirm identity to gain Voice at any time, and return to anonymity if safety requires. Voicelessness chosen for safety is not a penalty, and it creates no class deprived of survival, dignity, or redress.
+**Standing boundary:** Physical presence establishes the CSM floor. Personhood establishes dignity, harm-reporting, emergency help, and redress standing. Confirmed identity establishes persistent account continuity and anti-duplication for above-floor services. Membership, as defined by the host order under INV-016, establishes membership-attached civic or commons distributions. These are distinct statuses; failure or uncertainty in one may not be used to erase the lower-status protections.
+
+**Anonymity for safety:** A person may freely and reversibly choose to remain unidentified for their own safety. That choice may limit persistent Flow account access, enterprise participation, Voice, Service Record, and other identity-dependent above-floor services until a safety-preserving continuity path is available. It never costs survival, dignity, emergency help, harm reporting, or redress. Voice requires confirmed identity solely to resist Sybil capture (INV-004). A person may confirm identity to gain Voice at any time, and return to anonymity if safety requires. Voicelessness chosen for safety is not a penalty, and it creates no class deprived of survival, dignity, or redress.
 
 ---
 
@@ -317,11 +319,11 @@ INV-014 through INV-019 are *interface invariants*. They do not govern the prote
 
 ## INV-016 — Membership Is Non-Convertible
 
-**Statement:** The host order defines who belongs to the polity. Membership — and the Voice, survival floor, and any Universal Stake or commons distribution that attach to it — may never be bought, sold, rented, pledged, or inherited as a tradable asset. Citizenship is not a market good.
+**Statement:** The host order defines who belongs to the polity. Membership — and the Voice, Universal Stake, or commons distribution that attach to it — may never be bought, sold, rented, pledged, or inherited as a tradable asset. Citizenship is not a market good. The Constitutional Survival Minimum is broader than membership: it reaches every physically present person under INV-001, while membership-attached distributions reach members under the host order.
 
 **Mechanical boundary:** No market, contract, proxy transaction, or system state may create a conversion pathway between Flow or wealth and membership standing, by analogy to and extension of INV-002 (instrument non-convertibility) and INV-004 (influence cannot be purchased). The host may grant, define, or revoke membership by its own lawful process; it may not operate or sanction a market in it. Membership obtained or transferred through a prohibited conversion confers no Voice, floor priority, Universal Stake, or commons distribution within the layer.
 
-**Why this matters:** If belonging itself becomes purchasable, the wealthy buy the demos and every downstream non-convertibility wall fails at its root. The floor and Voice are attached to personhood-in-the-polity, not to a saleable title; a market in membership would convert the Power-Wealth Convergence the layer exists to prevent into a one-step purchase.
+**Why this matters:** If belonging itself becomes purchasable, the wealthy buy the demos and every downstream non-convertibility wall fails at its root. Voice and member distributions are attached to lawful membership, not to a saleable title; the CSM floor is attached to physical presence and may not be narrowed by membership dispute. A market in membership would convert the Power-Wealth Convergence the layer exists to prevent into a one-step purchase.
 
 **Attack vectors that target this invariant:** Citizenship-by-investment schemes routed through the host; inheritance of membership-as-asset; rental or proxy arrangements that lease civic standing for Flow.
 
