@@ -24,7 +24,7 @@ A consent event for a unit at scale *S* requires:
 
 | Element | Requirement |
 | :--- | :--- |
-| **Scale-appropriate supermajority** | 2/3 of resident-personhood of unit *S* affirmative (matching the FC-120 exit threshold — asymmetric thresholds would create a capture pathway) |
+| **Scale-appropriate supermajority** | 2/3 of eligible adult residents or directly governed adults in unit *S* affirmative (matching the FC-120 exit threshold — asymmetric thresholds would create a capture pathway) |
 | **Published call** | Advance public notice of the consent event, published at least 90 days in advance, with the full text of what is being consented to |
 | **Deliberation period** | At least 60 days between notice and vote, for public discussion and challenge |
 | **Recorded vote** | Roll-call or equivalent verifiable record of each personhood's affirmative, negative, or abstention, with the personhood's own certification of their participation |
@@ -32,7 +32,9 @@ A consent event for a unit at scale *S* requires:
 
 The roll-call-equivalent is designed to prevent manufactured majorities through stuffed rolls or counted-abstentions. The personhood-certification requirement (each person's own signature of participation) ensures that the published count reflects actual participation.
 
-**Minimum participation floor.** For the consent event to bind, at least **2/3 of eligible resident-personhood must have either affirmed, opposed, or actively abstained**. A consent event in which fewer than 2/3 of eligible persons participated is deemed inconclusive and must be re-run after a remediation period (to address participation barriers).
+**Eligible participants.** For founding, activation, accession, and withdrawal consent, eligible participants include every adult resident or directly governed adult who would be subject to the unit's operational scope. Eligibility may not be restricted by property ownership, income, institutional affiliation, prior Service Record, professional credential, finalized digital identity, or completed personhood registration. Adults with unresolved identity, documentation, disability-access, displacement, safety-sealed, undocumented, or digital-fragility status receive a provisional protected consent path. That path must preserve privacy, may not expose a person to immigration or law-enforcement risk beyond valid external law, and may not be reused for unrelated surveillance or eligibility screening.
+
+**Minimum participation floor.** For the consent event to bind, at least **2/3 of eligible adult residents or directly governed adults must have either affirmed, opposed, or actively abstained**. A consent event in which fewer than 2/3 of eligible persons participated is deemed inconclusive and must be re-run after a remediation period (to address participation barriers).
 
 Plain meaning: a unit cannot join through a quiet, low-turnout vote. At least 2/3 of eligible people must take part somehow: yes, no, or active abstention.
 
@@ -44,9 +46,9 @@ Plain meaning: a unit cannot join through a quiet, low-turnout vote. At least 2/
 | :--- | :--- | :--- |
 | **Individual / Personhood** | The individual for themselves | Individual protocol-participation act; published to individual's civic record. Individual consent is a pre-condition for Article II identity registration. |
 | **Household** | Each personhood in the household, individually | No household-level vote; the household is a unit of residence, not of political authority. |
-| **Neighborhood** | 2/3 of eligible resident-personhood in the neighborhood | Published neighborhood roll; 90-day notice; 60-day deliberation; published vote. |
-| **Locality** | 2/3 of eligible resident-personhood in the locality | As neighborhood, at larger scale. Locality consent typically requires component neighborhoods to have consented. |
-| **Region** | 2/3 of eligible resident-personhood in the region, plus majority of component localities consenting | Regional consent is a two-layer requirement: personhood majority + locality-unit majority. |
+| **Neighborhood** | 2/3 of eligible adult residents or directly governed adults in the neighborhood | Published neighborhood roll; 90-day notice; 60-day deliberation; published vote. |
+| **Locality** | 2/3 of eligible adult residents or directly governed adults in the locality | As neighborhood, at larger scale. Locality consent typically requires component neighborhoods to have consented. |
+| **Region** | 2/3 of eligible adult residents or directly governed adults in the region, plus majority of component localities consenting | Regional consent is a two-layer requirement: adult-person majority + locality-unit majority. |
 | **Federation** | The founding coalition under H-3 authority (bootstrap-only); subsequent federation-scope changes require Tier 1 amendment | Federation-scale consent is a founding event, not a recurring act. Changes to federation scope (accession, exit, boundary) use the Tier 1 amendment protocol. |
 
 ---

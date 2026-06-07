@@ -80,6 +80,22 @@ It is not a surveillance mandate. It is a public accountability specification. D
 | Binary hash publication | Detect supply-chain opacity. | Operators do not publish deployed hashes. |
 | Non-compliant implementation exceptions | Detect normalization of bypass. | Exceptions repeat or become permanent. |
 
+### 7. Governance Usability And Ordinary Challenger Parity
+
+| Metric | Purpose | Failure signal |
+|---|---|---|
+| Ordinary challenger filing share | Shows whether ordinary residents, poor participants, newcomers, disabled residents, caregivers, dissenters, undocumented residents, digitally fragile residents, offline filers, and noncredentialed people can find the route. | Filings mostly come from institutions, experts, donors, repeat insiders, Service Record-heavy actors, or founding affiliates. |
+| Response-time parity | Compares ordinary challengers with institutional or expert challengers. | Ordinary filings are slower, routed less clearly, or denied without written merits reasons. |
+| Sustain / correction parity | Shows whether ordinary challenges can win or partly win. | Ordinary challenges almost never change outcomes while institutional challenges do. |
+| Abandonment rate | Counts process burden as failure. | Poor, disabled, newcomer, caregiver, dissenting, undocumented, digitally fragile, offline, or noncredentialed filers drop out before decision. |
+| Expert-help dependency | Tests usability without a procedural priesthood. | Most successful ordinary filings require lawyers, consultants, insiders, protocol specialists, institutional sponsors, or donor-backed help. |
+| Wrong-route correction | Tests whether the institution owns routing burden. | Filers lose deadlines, standing, or protection because they filed through the wrong office in good faith. |
+| Interim protection timing | Tests whether appeal delay becomes punishment. | Survival access, housing standing, legal-aid access, Voice continuity, Service Record continuity, or appeal access is degraded before review. |
+| Remedy delivery | Tests whether winning means restoration. | Wins do not lead to record correction, restored access, public correction where appropriate, or reversal of adverse flags. |
+| Retaliation and stigma follow-up | Detects punishment for filing, dissent, or conscience objection. | Respondents with record power can downgrade, delay, isolate, stigmatize, or create adverse records before review. |
+| Repeat-insider concentration | Detects procedural class formation. | Same actors, offices, professional networks, religious/political institutions, donor groups, founding affiliates, or governance insiders dominate filings, review seats, wins, or appeal cycles. |
+| Plain-language reason quality | Tests whether denials are usable. | Denials lack reasons, correction path, appeal route, accessible language, or accommodations. |
+
 ---
 
 ## Required Public Outputs
@@ -144,6 +160,12 @@ A dashboard without published thresholds is decorative. The failure-signal colum
 | Identity & Access Gatekeeping | False exclusion rate by vulnerable group | False-exclusion rate for a tracked group exceeds 2× the overall population rate | 3× or greater disparity persisting across 2 consecutive measurement periods |
 | Identity & Access Gatekeeping | Abandonment rate | >15% of initiated recovery proceedings abandoned before decision | >25% abandonment rate or systematic abandonment in a specific office or region |
 | Implementation Drift | Operator pinned-reference age | Any operator lag exceeds the published compliance window | 10%+ of operators exceed the compliance window or any operator exceeds 2× the window |
+| Governance Usability & Ordinary Challenger Parity | Ordinary challenger filing share | <25% of filings from ordinary/non-institutional challengers after outreach, or any tracked vulnerable group has no filings despite known exposure | Filings dominated by institutions, experts, donors, repeat insiders, Service Record-heavy actors, or founding affiliates for 2+ cycles |
+| Governance Usability & Ordinary Challenger Parity | Response-time parity | Ordinary challenger median response time exceeds institutional challenger median by >25% | Ordinary challenger response time exceeds institutional median by >50% or denials lack merits reasons in >20% of cases |
+| Governance Usability & Ordinary Challenger Parity | Sustain / correction parity | Ordinary challenger win or partial-win rate is less than half the institutional challenger rate without explanation | Ordinary challenger win or partial-win rate is near zero across 2+ cycles while institutional challenges succeed |
+| Governance Usability & Ordinary Challenger Parity | Abandonment rate | >15% of ordinary challenger filings abandon before decision | >25% abandonment, or any tracked vulnerable group exceeds 2x the overall abandonment rate |
+| Governance Usability & Ordinary Challenger Parity | Expert-help dependency | >25% of successful ordinary filings require lawyers, consultants, insiders, institutional sponsors, or protocol specialists | >50% dependency, or successful filings from vulnerable groups almost always require expert or insider help |
+| Governance Usability & Ordinary Challenger Parity | Repeat-insider concentration | Same actor, office, institution, or network appears in >25% of review seats, filings, wins, or appeal cycles | Same actor, office, institution, or network appears in >40% or dominates 2+ related metrics |
 
 **How thresholds are used:** Crossing a Watch threshold requires the dashboard office to flag the domain in the quarterly report with a written explanation. Crossing an Active-capture-signal threshold requires: (a) a published finding within 14 days, (b) automatic referral to the Federated Ombuds for review, and (c) notation in the Evidence Ladder Claims and Evidence Register.
 

@@ -206,6 +206,12 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 - delivery reliability
 - appeal speed
+- appeal completion, win, and partial-win rate
+- abandonment by step and by vulnerable group
+- expert-help or insider-sponsor dependence
+- language, disability, offline, safety-sealed, and low-literacy accommodation success
+- interim-relief timing while an appeal is pending
+- post-win restoration, including record correction and missed-benefit delivery where lawful
 - missed-delivery rate
 - substitution quality
 - local vendor concentration
@@ -220,6 +226,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - Participants experience the system as punitive or humiliating.
 - Substitutions degrade below the published floor.
 - The system can keep formal eligibility intact while practical access fails.
+- Ordinary residents can file but cannot complete appeal routes, need expert sponsors to win, abandon at materially higher rates, or receive no restoration after a successful appeal.
 
 **Scale rule:** Essential Access cannot be called viable until delivery and appeal systems both work under stress.
 
@@ -422,6 +429,7 @@ If any step produces a blocking result, Phase 5 stops at simulation. A watch res
 - exit rehearsal
 - claim-level upgrade/downgrade correctness
 - capture dashboard baseline
+- governance usability and ordinary-challenger parity dashboard outputs
 
 **Failure criteria:**
 
@@ -430,6 +438,7 @@ If any step produces a blocking result, Phase 5 stops at simulation. A watch res
 - a founding coalition claims legitimacy without a public dossier;
 - public claims move up the Evidence Ladder without the required proof;
 - dashboards publish personal ranking signals or are gamed while appearing healthy.
+- ordinary challengers cannot file, complete, win, partly win, or obtain restoration without lawyers, protocol specialists, insiders, or institutional sponsors.
 
 **Bridge rule:** Phase 10 cannot pass with only technical integrity. The implementation drift tests, founding artifact-status register, claim-status review, and capture dashboard baseline must all be current together. A clean hash, clean build, or complete document checklist does not prove legitimate activation.
 

@@ -17,6 +17,8 @@ This protocol applies to any prospective resident who, at the time of first cont
 - Aging out of foster care (age 18–25)
 - In active addiction recovery (including participation in treatment programs, medication-assisted treatment, or peer recovery support)
 - Receiving means-tested public benefits as primary income support (SNAP, SSI, SSDI, TANF, Medicaid, Section 8/HCV, or state equivalents)
+- Living with a disability, cognitive access need, serious chronic illness, communication barrier, or dependency on assistive technology that makes consent, exit, appeal, or ordinary participation harder without accommodation
+- Digitally fragile, documentation-poor, safety-sealed, displaced, undocumented in ordinary paperwork, or otherwise unable to rely on standard identity and communication channels without privacy or exclusion risk
 
 Where a prospective resident meets multiple categories, the most protective provision applicable to each relevant category governs. The founding team may not argue that one category cancels out another.
 

@@ -354,6 +354,10 @@ If a challenger complaint alleges capture or misconduct by the Assembly itself, 
 
 Bad-fruit triggers require escalation. If the annual record shows repeated ordinary-challenger dismissals without merits reasoning, a pattern of retaliation complaints, no meaningful dissent in contested matters, or role pools dominated by the same professional, donor, academic, technical, or religious institutional network across cycles, the Assembly must open a Concentration Response review. If the defect touches survival-adjacent access or host-law compliance, the affected Ombuds mandate or role-pool gate pauses while external review proceeds.
 
+**Ordinary remedy minimum.** The receiving sub-Ombuds or Assembly intake officer owns routing burden. A filer may state facts in ordinary language; the office converts those facts into the best available reviewable claim, identifies the correct route, issues a case number, and explains the next step. A good-faith filing through the wrong route tolls the deadline from the first submission. Survival-adjacent complaints receive same-day triage and temporary continuation of food, medicine, shelter, legal-aid access, housing standing, Voice continuity, Service Record continuity, and appeal access unless an independent reviewer authorizes a narrow temporary limit. If the respondent controls the complainant's records, the office must consider an immediate protective hold on adverse record changes. A win or partial win must include restoration: correction of records, public correction where appropriate, reversal of adverse flags, delivery of missed benefits where lawful, and written notice of remaining appeal routes.
+
+If both lived-experience members of the Oversight Assembly dissent on ordinary-access, survival-adjacent, non-priesthood, conscience, or vulnerable-person grounds, the Assembly must publish a specific response to that dissent and open external review before final action becomes durable. The dissent does not create an automatic veto. It does create a bad-fruit warning that procedure may be outrunning mercy.
+
 ---
 
 ## 6. Publication Commitment
@@ -376,7 +380,7 @@ The Federated Ombuds publishes the following as a continuous public record, in c
 | Duty rotation schedule | Forward-looking rotation for next 90 days | Rolling, updated weekly | Federation secretariat |
 | Inconclusive-default repeat-beneficiary metric (§4.12) | Per-actor and per-enforcement-body tally of inconclusive-default benefits, with heightened-scrutiny flags | Updated per determination; standing public record | Plenum |
 | Recusal events | Officer, matter class, acting officer | Within 24 hours | Affected sub-Ombuds |
-| Ordinary challenger docket (§5.5) | Filings, intake decision, response timeline, outcome, appeal status, retaliation flags, with privacy protection | Monthly aggregate; individual determinations within 14 days where publishable | Oversight Assembly / receiving sub-Ombuds |
+| Ordinary challenger docket (§5.5) | Filings, filer cohort, helper type, filing mode, intake acceptance, wrong-route corrections, interim protection, merits decision, remedy granted, partial remedy, denial reason, dropout point, expert-help dependency, days to interim relief, days to final decision, restoration completed, appeal status, retaliation flags, repeat-insider concentration, with privacy protection | Monthly aggregate; individual determinations within 14 days where publishable | Oversight Assembly / receiving sub-Ombuds |
 
 Publication of every vote, every dissent, and every dispersal-compliance finding is the mechanism that makes the federation institutionally legible. A Plenum that consistently produces lopsided votes with predictable dissents is visible; a federation that has drifted toward common capture is visible; an Assembly that is rubber-stamping dispersal compliance is visible.
 

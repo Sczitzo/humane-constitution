@@ -117,6 +117,8 @@ The objection record, including the full log and all responses, must be reviewed
 
 Activation in any jurisdiction requires affirmative consent meeting all of the following standards:
 
+**Governing standard.** Where this dossier and older Founding Order consent language appear to diverge, apply the stricter rule on threshold and the more inclusive rule on who may participate until the documents are formally harmonized. The Founding Order's 2/3 affirmative and 2/3 participation rules remain the higher threshold. This dossier's inclusion rule governs the eligible pool: every adult resident or directly governed adult affected by activation must have a safe path to participate, including people without finalized identity/personhood status.
+
 - **What counts as consent:** consent must be active, not passive. Silence, non-response, failure to object, or absence from a meeting does not constitute consent. Affirmative consent means a recorded act — vote, signature, community resolution, or equivalent — by an eligible participant expressing support for activation.
 - **Eligible participants:** all adult residents of the jurisdiction who would be subject to the governance framework are eligible to participate. Eligibility cannot be restricted by property ownership, income, prior participation in the founding process, or institutional affiliation.
 - **Minimum threshold:** at least 60% of eligible participants who actively participate in the consent process must affirmatively consent. Additionally, total active participation must reach at least 25% of all eligible participants in the jurisdiction. A consent event with less than 25% participation is not a valid consent event regardless of the affirmative rate among participants.
@@ -316,6 +318,7 @@ The table below is the authoritative row-level tracking mechanism for founding r
 | Independent civil-society review — assessment by parties structurally opposed to the founding coalition's interests | P-020 / Annex AH | **UNRESOLVED PREREQUISITE** | Written assessment by at least two civil-society bodies nominated by the adversarial panel member, published before activation |
 | Host-law and conscience compatibility review — jurisdiction-specific lawful, voluntary, rights-preserving activation record | Jurisdiction Interface Clause / Precondition 6 | **DESIGNED** | Standing local counsel legal map; independent adversarial reviewer assessment; no-rights-waiver and conscience-protection certification; ordinary challenger responses; shutdown triggers published |
 | Vulnerable-population consent evidence — ICA staffed, exit fund pre-capitalized, VPCP-008 prerequisites documented | VPCP-008 / Founding Team Composition Standard | **OPEN** | ICA selection complete (not appointed by founding team); exit support fund balance confirmed; VPCP-scope pre-enrollment checklist published and independently reviewed |
+| Ordinary-challenger usability record — evidence that ordinary people can object, appeal, obtain correction, and be restored without expert sponsorship | Capture Dashboard Specification / Jurisdiction Interface Clause §9 / Annex AI §5.5 / Annex Z §Z5.1 / Annex AM §AM8.8 | **DESIGNED** | Published appeal-route map and dashboard showing who files, who receives interim protection, who wins or partly wins, who drops out, who needs expert help, whether denials give usable reasons, whether remedies are delivered, and whether repeat insiders dominate filings, review seats, wins, or appeal cycles |
 | Post-activation audit — independent review within 90 days of founding | P-014 §5 | **DESIGNED** | Audit conducted by reviewers not appointed by the coalition; findings published; any discrepancies between intended and actual activation addressed in writing |
 
 **Status key:**
@@ -356,7 +359,8 @@ These answers cannot come from the founding coalition alone. They require a publ
 7. **Consent evidence** (requires: opt-out paths defined in Step 1; consultation documented)
 8. **Exit rehearsal** (requires: FC-121 unwind protocol designed; Essential Access continuity plan confirmed)
 9. **Founder sunset** (requires: scope declaration, so sunset condition is calibrated to the scope claimed)
-10. **Post-activation audit** (requires: all others PRODUCED; conducted within 90 days of activation)
+10. **Ordinary-challenger usability record** (requires: objection record, host-law review, and appeal-route map; validates that ordinary, poor, disabled, newcomer, digitally fragile, undocumented, caregiver, dissenting, offline, and noncredentialed participants can use challenge paths without expert sponsors)
+11. **Post-activation audit** (requires: all others PRODUCED; conducted within 90 days of activation)
 
 ### Gate
 

@@ -134,6 +134,10 @@ Persons employed in the construction of the pilot site who live on-site for more
 
 **9.4** The pilot must publish a plain-language appeal map showing where each type of dispute goes, which route is optional, which route is external, what deadlines apply, and how to obtain legal aid. The map must be available offline, in the resident's primary language, and before any arbitration clause is presented.
 
+**9.4.1** The appeal map is a measured instrument, not only a notice. Appeal-map outcomes feed the [Capture Dashboard Specification](./Capture_Dashboard_Specification.md) governance-usability and ordinary-challenger-parity metrics. The public record must show, with privacy protection, filing mode, filer cohort, intake acceptance, wrong-route correction, interim protection, expert-help dependency, dropout point, merits outcome, partial remedy, denial reason, days to interim relief, days to final decision, restoration after a win, retaliation allegations, and repeat-insider concentration.
+
+**9.4.2** A resident may file through the wrong door without losing rights. The receiving body must route the filing to the proper body, toll deadlines from the first good-faith submission, issue a case number, and explain the next step in plain language. Survival-adjacent cases receive same-day triage. No adverse Service Record, Voice, housing, Essential Access, legal-aid, or appeal-status consequence may be imposed while a good-faith appeal is pending unless an independent reviewer authorizes a narrowly tailored temporary measure.
+
 **9.5** The following are shutdown or narrowing triggers:
 
 - a court or agency order requiring suspension of a pilot function;
@@ -152,6 +156,8 @@ Persons employed in the construction of the pilot site who live on-site for more
 **Flow currency tax treatment:** IRS guidance on alternative currencies used in a community context is unsettled. The annual tax counsel communication (Section 2.9) addresses this on an ongoing basis. The pilot may also need to register as a money services business or obtain state money transmitter licensing depending on Flow implementation — this requires specific legal review before pilot launch.
 
 **Immigration:** Section 2.8 disclaims authority over immigration status but does not specify what the pilot governance will do if federal immigration enforcement arrives at the site. This requires a separate operational policy — not constitutional language — developed with legal counsel before activation.
+
+**Immigration-contact consent relevance:** Before any consent event or VPCP-scope recruitment, the operational policy must be available in plain language. A resident cannot give meaningful consent if they do not know how the pilot will handle immigration enforcement contact, data requests, access to legal aid, family separation risk, safety-sealed identity, and non-retaliation for refusing to disclose immigration-related information beyond valid external law.
 
 **Exit with dignity for Tier 0 residents:** If a Tier 0 resident's enrollment is terminated, the pilot actively assists connection to external services (housing, SNAP, etc.) before exit. This obligation exists in the Vulnerable Population Consent Protocol and the Pilot Timeline Framework.
 
