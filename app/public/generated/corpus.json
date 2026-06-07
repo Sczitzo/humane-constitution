@@ -12,7 +12,7 @@
     "threatCount": 28,
     "patchCount": 62,
     "validatorStatus": "pass",
-    "buildStamp": "corpus-2ed526f5507f"
+    "buildStamp": "corpus-fdf7ed545209"
   },
   "docs": [
     {
@@ -5909,6 +5909,140 @@
       ],
       "wordCount": 1163,
       "headingCount": 7
+    },
+    {
+      "id": "docs__governance__Full_System_Panel_Review_md",
+      "path": "docs/governance/Full_System_Panel_Review.md",
+      "section": "registry",
+      "title": "Full-System Panel Review",
+      "status": "Status: Design review \u2014 incorporated as a correction queue, not evidence of deployment readiness.",
+      "statusBucket": "reference",
+      "summary": "Bottom line: The rewrite is directionally stronger. Demurrage is no longer the live wealth spine. Commons Return and Universal Stake are a better fit for dignity, mercy, anti-domination, and ordinary-household protection. But the system is not ready for an integrated or town-scale pilot. The next work is a correction packet plus bounded evidence tests: public comprehension, identity/recovery, capacity measurement, CRUS simulation, then limited additive delivery tests.",
+      "content": "# Full-System Panel Review\n\n**Status:** Design review \u2014 incorporated as a correction queue, not evidence of deployment readiness.\n\n**Date:** 2026-06-06\n\n**Purpose:** This review tests the revised protected-lanes architecture after the demurrage-to-CRUS rewrite. It asks whether Flow, Essential Access, the Constitutional Survival Minimum, Voice, Service Record, Shared Storehouse, Commons Return, Universal Stake, identity, founding legitimacy, and Christ-centered review still form one coherent system under pressure.\n\n**Bottom line:** The rewrite is directionally stronger. Demurrage is no longer the live wealth spine. Commons Return and Universal Stake are a better fit for dignity, mercy, anti-domination, and ordinary-household protection. But the system is not ready for an integrated or town-scale pilot. The next work is a correction packet plus bounded evidence tests: public comprehension, identity/recovery, capacity measurement, CRUS simulation, then limited additive delivery tests.\n\n---\n\n## Panel Roles\n\nFour independent review lanes were used:\n\n| Lane | Question |\n|---|---|\n| System cohesion | Do the revised instruments still fit together without contradiction? |\n| Adversarial failure modes | How would hostile actors chain the lanes, legal wrappers, identity friction, and institutional delay? |\n| Christ-centered human dignity | Does the design protect mercy, conscience, ordinary people, and the vulnerable without forming a new priesthood? |\n| Pilot evidence and testability | What can actually be tested next without pretending the system is ready for deployment? |\n\nThe reviewers were instructed not to defend the corpus. Their job was to find seams.\n\n---\n\n## Strongest Improvements\n\n1. **CRUS is now the live public-return spine.** Annex D, SPECIFICATIONS, public FAQ, white paper, pilot proposal, and real-world examples now demote demurrage to a retired historical comparator.\n\n2. **The lane model is clearer.** The corpus now speaks in terms of protected lanes and layers: life access, market exchange, civic influence, scarcity response, and public return.\n\n3. **The Service Record posture is stronger.** Recent language makes clearer that Service Record is eligibility support, not human worth, social rank, priesthood, or civic caste.\n\n4. **Scarcity is treated more honestly.** The Shared Storehouse is a temporary scarcity overlay, not a promise that material scarcity disappears.\n\n5. **The public voice is more honest.** The revised public docs say the project is designed and unproven, not ready for rollout.\n\n6. **Christ-centered safeguards improved.** Non-priesthood language, conscience protections, host-law review, bad-fruit pause language, and founding legitimacy caveats better preserve the rule that the project is human-made and corrigible.\n\n---\n\n## Central Finding\n\nThe biggest current risk is no longer demurrage. It is the **boundary between personhood, membership, identity, Flow access, redress standing, civic standing, and Universal Stake eligibility**.\n\nThe system rightly says the Constitutional Survival Minimum follows physical presence. It also says Universal Stake is distributed to members. It says anonymity cannot cost dignity or redress. But some documents still blur the practical consequences of uncertain identity for Flow accounts, enterprise participation, legal standing, and civic participation.\n\nThis is the next P0 correction because it touches the moral center: no person should lose mercy, redress, or survival protection because the system cannot classify them cleanly.\n\n---\n\n## P0 Findings\n\n### P0-1: Identity and Standing Boundary Is Unstable\n\n**Problem:** Some documents imply confirmed identity gates only Voice. Others say identity uncertainty can reduce Flow access, enterprise participation, or legal standing. The corpus needs a controlling distinction between:\n\n- physical presence and CSM access;\n- personhood and redress standing;\n- Flow account access;\n- enterprise participation;\n- civic standing;\n- membership;\n- Universal Stake eligibility.\n\n**Why it matters:** If the identity boundary is unclear, staff discretion becomes the real constitution. The poor, undocumented, displaced, disabled, elderly, abused, digitally fragile, or never-enrolled person bears the risk first.\n\n**Patch next:** `docs/constitution/INVARIANTS.md`, `docs/constitution/SPECIFICATIONS.md`, `docs/annexes/ANNEX_Y.md`, `docs/annexes/ANNEX_AK.md`, `docs/public/02_faq.md`.\n\n### P0-2: Cross-Instrument Convertibility Needs a Combined Red Team\n\n**Problem:** Current controls are mostly lane-specific. A hostile actor will chain lanes: housing, employment, debt, identity help, Service Record disclosure, Universal Stake assignment attempts, platform access, and informal favors.\n\n**Falsifying result:** Any repeatable off-ledger exchange appears where survival, civic standing, identity recovery, Universal Stake, or market advantage become bundled.\n\n**Patch next:** `docs/governance/Threat_Register.md`, `docs/governance/Threat_Resolution_Matrix.md`, `docs/governance/Commons_Return_Universal_Stake_Evidence_Test_Package.md`, `docs/governance/Service_Record_Misuse_Evidence_Test_Package.md`, `docs/governance/Hardening_Queue.md`.\n\n### P0-3: CRUS Classification Power Can Become Surveillance or Patronage\n\n**Problem:** CRUS avoids the worst demurrage problems, but it creates administrative power over source-base classification, valuation, eligibility, avoidance shells, routing, appeals, and enforcement.\n\n**Christ-centered concern:** A public-return system can still become domination if ordinary households, churches, tribal/community holdings, caregivers, dissenters, or small stewards become administrative objects.\n\n**Falsifying result:** CRUS burdens ordinary households, renters, small stewards, protected associations, or vulnerable claimants more heavily than concentrated control of shared or scarcity-created value.\n\n**Patch next:** `docs/governance/Commons_Return_Universal_Stake_Evidence_Test_Package.md`, `docs/governance/Parameter_Calibration_Register.md`, `docs/governance/Claims_Evidence_Register.md`, `docs/constitution/SPECIFICATIONS.md`.\n\n### P0-4: Universal Stake Needs Cleaner Public Boundary Language\n\n**Problem:** Universal Stake is universal among legitimate members, while CSM is owed to every physically present person. Public language can make \"universal\" sound like the same population for both.\n\n**Patch next:** `docs/annexes/ANNEX_D.md`, `docs/public/02_faq.md`, `docs/public/04_white_paper.md`, `docs/public/09_pilot_proposal.md`.\n\n### P0-5: Essential-Sector Refusal Can Hide Behind Compliance\n\n**Problem:** An essential-sector actor may not openly refuse. It may delay, litigate, withhold data, claim force majeure, manipulate formularies, control fallback affiliates, starve replacement capacity, or poach workforce.\n\n**Falsifying result:** The CSM survives only because the incumbent supplier cooperates.\n\n**Patch next:** `docs/governance/Essential_Sector_Refusal_Test_Package.md`, `docs/governance/Conglomerate_Transition_Dossier.md`, `docs/governance/Threat_Register.md`, `docs/governance/Hardening_Queue.md`.\n\n### P0-6: Successor-Government Hollowing Needs an 18-Month Simulation\n\n**Problem:** The corpus has technical drift controls, but a lawful hostile successor can hollow the system by budget starvation, vacancy, procurement delay, appointment lapse, and standards capture without formally repealing rights.\n\n**Falsifying result:** Rights remain textually intact while remedies become unreachable.\n\n**Patch next:** `docs/governance/Implementation_Drift_Audit_Package.md`, `docs/governance/Threat_Register.md`, `docs/governance/Threat_Resolution_Matrix.md`, `docs/governance/Open_Problems_Resolution_Docket.md`.\n\n---\n\n## P1 Findings\n\n1. **Shared Storehouse needs one public controlling sentence.** Scarcity rationing modifies delivery for scarce categories; it does not authorize lowering the CSM except as an honest System Failure.\n\n2. **Service Record can still harden class position.** Formal diversity can pass while professional, credentialed, donor-backed, or insider networks dominate challenges and service roles.\n\n3. **Appeal routes may be too heavy for ordinary people.** If the poor need expert help to use the appeals system, the protection belongs to the institution, not the vulnerable person.\n\n4. **Semantic bureaucracy remains under-specified.** Protected terms can be frozen when flexibility is needed or loosened when capture needs a route.\n\n5. **Founding legitimacy is underlinked in public framing.** Public readers need earlier notice that the founding process has not earned legitimacy yet.\n\n6. **Ombuds and bad-fruit tests need resident-facing usability measures.** Institutional independence is not enough if ordinary residents cannot use the route.\n\n---\n\n## P2 Findings\n\n1. Some P-063 side documents still contain stale demurrage glossary language. If retained, they need tombstone headers that say they are historical and superseded by Annex D.\n\n2. Architecture Source Map still has lines that can be read as pending demurrage calibration rather than retired demurrage history.\n\n3. Public docs should say more plainly that CRUS could become surveillance or patronage if evidence gates fail.\n\n---\n\n## Pilot Sequence Recommended by the Panel\n\nThe panel rejects an immediate integrated or town-scale pilot. The next evidence should proceed in this order:\n\n| Order | Test | Why first |\n|---|---|---|\n| 1 | Public comprehension test | Ordinary readers must understand \"designed, not proven,\" protected lanes, and what the project does not claim. |\n| 2 | Identity/recovery tabletop and small voluntary drill | No live access pilot should depend on an identity stack that excludes vulnerable people. |\n| 3 | Capacity measurement dry run | Essential Access and Shared Storehouse need credible measurement before delivery claims. |\n| 4 | CRUS simulation packet | Source-base incidence, valuation, pass-through, avoidance, eligibility, distribution, downturn, and admin-cost risks must be modeled before real-money tests. |\n| 5 | Essential Access additive pilot | Begin with food/basic medicine only, no survival dependency, and a wall-leak red team. |\n| 6 | Service Record / Voice misuse red team | Test whether civic records become rank, employability, housing preference, or market signal. |\n| 7 | Essential-sector refusal tabletop | Model largest-supplier refusal and fallback capacity before claiming the CSM survives sector pressure. |\n\n---\n\n## Simulation Gaps Before Field Pilots\n\nThe current simulation layer should add:\n\n- CRUS incidence across renters, workers, landlords, source holders, small businesses, protected associations, and vulnerable claimants;\n- pass-through dynamics instead of only direct assessment;\n- valuation-hiding strategies with detection probability, appeal delay, and enforcement cost;\n- Universal Stake duplicate/exclusion/coercion simulation tied to identity thresholds;\n- distribution-rail failures such as missed payments, cadence manipulation, and appeal backlog;\n- political routing/capture models for exemptions, arrears, fund draws, geography, and faction timing;\n- downturn scenarios with at least a 20% net-receipt shock, appeal surge, and source-base erosion;\n- black-market/proxy conversion across Essential Access, Universal Stake, Voice, and Service Record;\n- essential-sector reserve drawdown with days-to-zero, days-to-alternative, and gap-window reporting.\n\n---\n\n## Fruit-Test Questions\n\nThese should become review or pilot criteria:\n\n- Can poor residents, newcomers, disabled residents, caregivers, dissenters, and undocumented people explain and use appeal routes without expert help?\n- Do ordinary challengers win sometimes, or are challenges answered politely and denied?\n- Does Universal Stake reach people without humiliating proof, unsafe identity exposure, garnishment, assignment, or patronage?\n- Do CRUS assessments avoid ordinary labor, homes, tools, churches, tribal/community holdings, and small household balances in practice?\n- Does Service Record predict office access, social standing, housing, employment, or survival-adjacent outcomes?\n- Are dissenters measurably free from Voice penalties, Service Record harm, delayed service, or informal exclusion?\n- When a bad-fruit trigger fires, does the system actually pause or narrow itself?\n- Are residents less trapped after the pilot, or did the project rename dependency as care?\n\n---\n\n## Correction Packet\n\n### Packet 1 \u2014 Identity, Standing, and Membership Boundary\n\n**Goal:** Create one controlling doctrine for physical presence, personhood, redress standing, Flow access, civic standing, membership, and Universal Stake eligibility.\n\n**Files:** `INVARIANTS.md`, `SPECIFICATIONS.md`, `ANNEX_Y.md`, `ANNEX_AK.md`, `ANNEX_D.md`, public FAQ.\n\n**Success condition:** A reader can tell exactly what a physically present but unverified person receives, what they cannot yet access, what they can appeal, and what must never be interrupted.\n\n### Packet 2 \u2014 Cross-Instrument Convertibility Red Team\n\n**Goal:** Test compound exchange, not isolated lane leakage.\n\n**Files:** Threat Register, Threat Resolution Matrix, CRUS Evidence Package, Service Record Misuse Evidence Package, Hardening Queue.\n\n**Success condition:** The corpus names bundled attack cases across housing, employment, debt, identity recovery, Universal Stake, Essential Access, Voice, and Service Record.\n\n### Packet 3 \u2014 CRUS Simulation Protocol\n\n**Goal:** Make CRUS evidence runnable before real-money pilots.\n\n**Files:** CRUS Evidence Package, Parameter Calibration Register, Claims Evidence Register, Pilot Evidence Roadmap, simulations.\n\n**Success condition:** CRUS has falsifiable tables for incidence, valuation, pass-through, avoidance, eligibility, admin cost, capture, downturn, and dignity.\n\n### Packet 4 \u2014 Founding, Appeal, and Non-Priesthood Usability\n\n**Goal:** Make governance usable by ordinary people, not only insiders.\n\n**Files:** Founding Legitimacy Dossier, Jurisdiction Interface Clause, ANNEX_Z, ANNEX_AI, ANNEX_AM, public FAQ.\n\n**Success condition:** The corpus measures who files challenges, who wins, who drops out, who needs expert help, and whether insiders dominate repeated cycles.\n\n### Packet 5 \u2014 Essential-Sector and Successor-Government Stress\n\n**Goal:** Test refusal hidden as delay and hollowing hidden as lawful administration.\n\n**Files:** Essential-Sector Refusal Test Package, Conglomerate Transition Dossier, Implementation Drift Audit Package, Threat Register, Hardening Queue.\n\n**Success condition:** A drill can show whether the CSM holds without incumbent cooperation and whether rights remain reachable under a hostile successor.\n\n### Packet 6 \u2014 Stale-Demurrage Tombstones\n\n**Goal:** Prevent draft/provenance files from confusing the active architecture.\n\n**Files:** P-063 glossary and draft packets, Architecture Source Map.\n\n**Success condition:** Every remaining demurrage reference is clearly historical, retired, or comparator-only.\n\n---\n\n## Decision\n\nProceed with correction Packet 1 first. The identity/personhood/membership boundary is the load-bearing seam. It affects mercy, survival access, redress, Flow access, civic participation, Universal Stake, and public comprehension. If that seam stays blurred, later pilot results will be hard to interpret and easier to misuse.\n",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Full-System Panel Review",
+          "slug": "full-system-panel-review"
+        },
+        {
+          "level": 2,
+          "text": "Panel Roles",
+          "slug": "panel-roles"
+        },
+        {
+          "level": 2,
+          "text": "Strongest Improvements",
+          "slug": "strongest-improvements"
+        },
+        {
+          "level": 2,
+          "text": "Central Finding",
+          "slug": "central-finding"
+        },
+        {
+          "level": 2,
+          "text": "P0 Findings",
+          "slug": "p0-findings"
+        },
+        {
+          "level": 3,
+          "text": "P0-1: Identity and Standing Boundary Is Unstable",
+          "slug": "p0-1-identity-and-standing-boundary-is-unstable"
+        },
+        {
+          "level": 3,
+          "text": "P0-2: Cross-Instrument Convertibility Needs a Combined Red Team",
+          "slug": "p0-2-cross-instrument-convertibility-needs-a-combined-red-team"
+        },
+        {
+          "level": 3,
+          "text": "P0-3: CRUS Classification Power Can Become Surveillance or Patronage",
+          "slug": "p0-3-crus-classification-power-can-become-surveillance-or-patronage"
+        },
+        {
+          "level": 3,
+          "text": "P0-4: Universal Stake Needs Cleaner Public Boundary Language",
+          "slug": "p0-4-universal-stake-needs-cleaner-public-boundary-language"
+        },
+        {
+          "level": 3,
+          "text": "P0-5: Essential-Sector Refusal Can Hide Behind Compliance",
+          "slug": "p0-5-essential-sector-refusal-can-hide-behind-compliance"
+        },
+        {
+          "level": 3,
+          "text": "P0-6: Successor-Government Hollowing Needs an 18-Month Simulation",
+          "slug": "p0-6-successor-government-hollowing-needs-an-18-month-simulation"
+        },
+        {
+          "level": 2,
+          "text": "P1 Findings",
+          "slug": "p1-findings"
+        },
+        {
+          "level": 2,
+          "text": "P2 Findings",
+          "slug": "p2-findings"
+        },
+        {
+          "level": 2,
+          "text": "Pilot Sequence Recommended by the Panel",
+          "slug": "pilot-sequence-recommended-by-the-panel"
+        },
+        {
+          "level": 2,
+          "text": "Simulation Gaps Before Field Pilots",
+          "slug": "simulation-gaps-before-field-pilots"
+        },
+        {
+          "level": 2,
+          "text": "Fruit-Test Questions",
+          "slug": "fruit-test-questions"
+        },
+        {
+          "level": 2,
+          "text": "Correction Packet",
+          "slug": "correction-packet"
+        },
+        {
+          "level": 3,
+          "text": "Packet 1 \u2014 Identity, Standing, and Membership Boundary",
+          "slug": "packet-1-identity-standing-and-membership-boundary"
+        },
+        {
+          "level": 3,
+          "text": "Packet 2 \u2014 Cross-Instrument Convertibility Red Team",
+          "slug": "packet-2-cross-instrument-convertibility-red-team"
+        },
+        {
+          "level": 3,
+          "text": "Packet 3 \u2014 CRUS Simulation Protocol",
+          "slug": "packet-3-crus-simulation-protocol"
+        },
+        {
+          "level": 3,
+          "text": "Packet 4 \u2014 Founding, Appeal, and Non-Priesthood Usability",
+          "slug": "packet-4-founding-appeal-and-non-priesthood-usability"
+        },
+        {
+          "level": 3,
+          "text": "Packet 5 \u2014 Essential-Sector and Successor-Government Stress",
+          "slug": "packet-5-essential-sector-and-successor-government-stress"
+        },
+        {
+          "level": 3,
+          "text": "Packet 6 \u2014 Stale-Demurrage Tombstones",
+          "slug": "packet-6-stale-demurrage-tombstones"
+        },
+        {
+          "level": 2,
+          "text": "Decision",
+          "slug": "decision"
+        }
+      ],
+      "wordCount": 2005,
+      "headingCount": 24
     },
     {
       "id": "docs__public__00_start_here_md",
