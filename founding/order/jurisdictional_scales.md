@@ -95,7 +95,7 @@ If all three are met, the matter is handled at scale *S*. If any fails, the matt
 | Neighborhood well usage rotation | Neighborhood | Competence: shared infrastructure; Locality: within walk-shed; Non-preemption: households cannot coordinate usage |
 | Locality Shared Storehouse stricter than federation baseline | Locality | Competence: local supply understanding; Locality: residents only; Non-preemption: neighborhoods would each need to adopt individually — locality is the efficient scale |
 | Regional oracle cohort siting | Region | Competence: regional measurement infrastructure; Locality: ensures N=5 cohort diversity per FC-030; Non-preemption: localities cannot individually run oracle cohorts |
-| Flow demurrage rate adjustment | Federation | Competence: requires currency-level calibration; Locality: affects entire Flow zone; Non-preemption: no smaller scale can set non-convertibility parameters |
+| Commons Return / Universal Stake formula adjustment | Federation | Competence: requires fiscal, currency, and source-base calibration; Locality: affects entire Flow zone; Non-preemption: no smaller scale can set non-convertibility or public-return parameters |
 | Tier 1 amendment (CSM floor, exit threshold) | Federation (H-3 authority) | Non-preemption: H-3 refounding authority is definitionally federation-scale |
 
 ---

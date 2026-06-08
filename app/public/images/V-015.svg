@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Commons Return and Universal Stake</title>
+  <desc id="desc">Diagram showing commons source bases routed through assessment safeguards into a public lockbox, then to Essential Access, public rails, restoration, reserves, and Universal Stake.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f4ec}
+      .ink{fill:#182026}
+      .muted{fill:#51606b}
+      .line{stroke:#374653;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#9aa6a8;stroke-width:2;fill:none;stroke-linecap:round}
+      .source{fill:#d7ece5;stroke:#2f7866;stroke-width:3}
+      .guard{fill:#fff7d6;stroke:#9b7a1d;stroke-width:3}
+      .lockbox{fill:#dbe7f6;stroke:#315f91;stroke-width:4}
+      .stake{fill:#f1dce8;stroke:#8b4f71;stroke-width:3}
+      .backstop{fill:#ece8dd;stroke:#7a6a4b;stroke-width:2;stroke-dasharray:8 8}
+      .title{font:700 44px Inter, Arial, sans-serif;letter-spacing:0}
+      .h{font:700 25px Inter, Arial, sans-serif;letter-spacing:0}
+      .b{font:500 21px Inter, Arial, sans-serif;letter-spacing:0}
+      .s{font:500 17px Inter, Arial, sans-serif;letter-spacing:0}
+      .tiny{font:500 15px Inter, Arial, sans-serif;letter-spacing:0}
+    </style>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#374653"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1600" height="980"/>
+  <text x="80" y="82" class="title ink">Commons Return and Universal Stake</text>
+  <text x="82" y="124" class="b muted">public-created value funds shared duties before any protected civic inheritance is distributed</text>
+
+  <rect x="70" y="180" width="360" height="500" rx="10" class="source"/>
+  <text x="100" y="228" class="h ink">commons source bases</text>
+  <text x="100" y="274" class="b ink">land / location value</text>
+  <text x="100" y="318" class="b ink">natural resources</text>
+  <text x="100" y="362" class="b ink">spectrum and scarce licenses</text>
+  <text x="100" y="406" class="b ink">public infrastructure uplift</text>
+  <text x="100" y="450" class="b ink">network and platform rents</text>
+  <text x="100" y="494" class="b ink">large succession transfers</text>
+  <text x="100" y="538" class="b ink">external-capital commons use</text>
+  <line x1="100" y1="588" x2="400" y2="588" class="thin"/>
+  <text x="100" y="623" class="s muted">not a blanket charge on net worth</text>
+  <text x="100" y="650" class="s muted">not a tax on survival access</text>
+
+  <rect x="540" y="180" width="360" height="500" rx="10" class="guard"/>
+  <text x="570" y="228" class="h ink">assessment safeguards</text>
+  <text x="570" y="274" class="b ink">source-specific basis</text>
+  <text x="570" y="318" class="b ink">protected ordinary use</text>
+  <text x="570" y="362" class="b ink">appeal and hardship route</text>
+  <text x="570" y="406" class="b ink">privacy limits</text>
+  <text x="570" y="450" class="b ink">beneficial-control review</text>
+  <text x="570" y="494" class="b ink">incidence and dignity test</text>
+  <line x1="570" y1="544" x2="870" y2="544" class="thin"/>
+  <text x="570" y="579" class="s muted">home, tools, caregiving, modest</text>
+  <text x="570" y="606" class="s muted">savings, and small operators protected</text>
+
+  <rect x="1010" y="180" width="420" height="500" rx="12" class="lockbox"/>
+  <text x="1040" y="228" class="h ink">public commons lockbox</text>
+  <text x="1040" y="274" class="b ink">1. Essential Access</text>
+  <text x="1040" y="318" class="b ink">2. public payment rails</text>
+  <text x="1040" y="362" class="b ink">3. infrastructure and repair</text>
+  <text x="1040" y="406" class="b ink">4. resilience reserves</text>
+  <text x="1040" y="450" class="b ink">5. productive-asset restoration</text>
+  <text x="1040" y="494" class="b ink">6. Universal Stake</text>
+  <line x1="1040" y1="544" x2="1400" y2="544" class="thin"/>
+  <text x="1040" y="579" class="s muted">scale blocked until costed model,</text>
+  <text x="1040" y="606" class="s muted">debasement tolerance, and who-pays</text>
+  <text x="1040" y="633" class="s muted">disclosure are published</text>
+
+  <path d="M430 430 H540" class="line" marker-end="url(#arrow)"/>
+  <path d="M900 430 H1010" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="270" y="760" width="310" height="105" rx="10" class="stake"/>
+  <text x="300" y="800" class="h ink">Universal Stake</text>
+  <text x="300" y="833" class="s muted">protected civic inheritance;</text>
+  <text x="300" y="858" class="s muted">not office, Voice, rank, or survival priority</text>
+
+  <rect x="660" y="740" width="310" height="145" rx="10" class="backstop"/>
+  <text x="690" y="780" class="h ink">dormant backstops</text>
+  <text x="690" y="813" class="s muted">no routine demurrage by default</text>
+  <text x="690" y="838" class="s muted">pilot-gated only:</text>
+  <text x="690" y="863" class="s muted">narrow self-assessment, low-rate</text>
+  <text x="690" y="888" class="s muted">net-worth backstop, emergency circuit breaker</text>
+
+  <rect x="1050" y="760" width="310" height="105" rx="10" fill="#ffffff" stroke="#53616b" stroke-width="3"/>
+  <text x="1080" y="800" class="h ink">remaining taxes?</text>
+  <text x="1080" y="833" class="s muted">not assumed gone;</text>
+  <text x="1080" y="858" class="s muted">must be named, costed, and dignity-screened</text>
+
+  <path d="M1220 680 C1160 725 1080 735 970 790" class="line" marker-end="url(#arrow)"/>
+  <path d="M1220 680 C1040 720 760 720 580 795" class="line" marker-end="url(#arrow)"/>
+  <path d="M1220 680 C1000 740 760 750 815 740" class="thin"/>
+
+  <text x="84" y="934" class="tiny muted">P-066 / T-029: fiscal sustainability and currency-debasement risk remains active-unproven until tested.</text>
+</svg>

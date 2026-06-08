@@ -97,9 +97,11 @@ Flow (ordinary money) is not evil. Markets are not abolished.
 
 But Flow (ordinary money) cannot buy everything. It cannot buy another person's basic needs floor. It cannot buy public power. It cannot buy rights.
 
-The system also applies a **progressive carrying cost on accumulated wealth** above a participation floor — a net-worth demurrage. The goal is to discourage hoarding and push wealth toward useful activity. Idle money is simply part of net worth, so there is no separate fee on unused balances; wealth above the floor carries the cost whether it sits idle or not. That rule needs careful testing so it does not punish ordinary people or real long-term projects. A demurrage burden distribution test is now a required evidence gate before any scale-up: the burden ratio across income quintiles must be ≤1.0, confirming the carrying cost falls on large accumulated wealth rather than on people with modest savings. (This ≤1.0 threshold — like the other specific figures in this paper, such as the 72-hour Essential Access window — is an illustrative design parameter chosen for the model, not a measured result, and is subject to calibration. See the [Parameter Calibration Register](../governance/Parameter_Calibration_Register.md).)
+The system now uses **Commons Return and Universal Stake** as its active public-finance and anti-rent spine. Instead of routine decay on personal balances or a blanket net-worth carrying cost, Commons Return starts with value no person created alone: land and location value, natural resources, spectrum and scarce licenses, public-infrastructure uplift, network and platform rents, large succession transfers, and external-capital use of protected commons. Universal Stake is the protected civic inheritance that may be distributed only after Essential Access, resilience reserves, restoration duties, public rails, and governance operations are funded.
 
-![Progressive Net-Worth Demurrage](/images/V-005.png)
+This is not proven fiscal adequacy. Before scale-up, the project must publish a costed model showing who pays, what taxes or fees remain, whether Flow issuance creates inflation or debasement, and whether ordinary households, homes, tools, caregivers, small operators, or vulnerable people are protected from downward burden shift. See [Annex D](../annexes/ANNEX_D.md) and the [Commons Return and Universal Stake Evidence Test Package](../governance/Commons_Return_Universal_Stake_Evidence_Test_Package.md).
+
+![Commons Return and Universal Stake](/images/V-015.svg)
 
 ## Essential Access: The Basic Needs Floor
 

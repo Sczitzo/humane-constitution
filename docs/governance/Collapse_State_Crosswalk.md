@@ -53,7 +53,7 @@ Examples: identity gates, oracle capture, FAP capture, drift-chain bypass, emerg
 | T-022 Electoral Cycle Capture | Static-Advantage Loop | Power-Wealth Convergence | Administrative hollowing and transition-of-power simulation. |
 | T-023 Pilot External Validity Collapse | Static-Advantage Loop | All three collapse states | Pilot Evidence Roadmap and Evidence Ladder gates. |
 | T-024 Shared Storehouse Oracle-Failure | Control-plane failure | Survival-Trade Bind | Oracle blackout during active rationing drill. |
-| T-025 Demurrage Sector-Capture | Power-Wealth Convergence | Static-Advantage Loop | Demurrage Evidence Package and legal-wrapper review. |
+| T-025 Investment and Capital-Deployment Shelter Capture | Power-Wealth Convergence | Static-Advantage Loop | Commons Return evidence package, project-finance simulation, procurement red team, and legal-wrapper review. |
 | T-026 Exit Denial | Survival-Trade Bind | Control-plane federation coercion | Exit rehearsal and non-retaliation audit. |
 | T-027 Subsidiarity Violation | Static-Advantage Loop | Power-Wealth Convergence | Venue-drift dashboard and remand-case audit. |
 
@@ -74,7 +74,7 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 | ANNEX_C | Threat Register Operations | CPF | Converts the static threat table into a living operational control system with intake, ownership, evidence cadence, and scale-readiness gates. |
 | ANNEX_H | Amendment Article and Constitutional Change Control | PWC, SAL | Classifies every rule change by tier and friction level, preventing powerful actors from quietly rewriting rights via misclassification or emergency order. |
 | ANNEX_I | Residency, Migration, and Onboarding | CSB | Prevents membership from becoming a purchasable or coercible asset by guaranteeing a survival floor for all persons physically present regardless of status class. |
-| ANNEX_D | Progressive Net-Worth Demurrage | PWC, SAL | Sets the net-worth carrying cost, the participation floor, and productive-use exemptions so idle wealth concentration is penalized without punishing patient productive capital or small savers. |
+| ANNEX_D | Commons Return and Universal Stake | PWC, SAL | Defines public return from shared value, scarcity rents, public-created uplift, and large succession transfers; protects ordinary use; and requires fiscal adequacy testing before scale claims. |
 | ANNEX_K | Essential Basket Governance and Civic Participation Fairness | CSB, SAL | Governs the recurring political fight over what "basic" means, preventing definitional narrowing from silently eroding the survival floor, and ensuring civic participation is not institutionally legibility-gated. |
 | ANNEX_L | Judicial Architecture and Constitutional Review Institutions | PWC, CPF | Constitutes multi-level review bodies so no single office can quietly reinterpret the constitution, and remedies are available for instrument-separation drift and rights deprivation. |
 | ANNEX_M | Oracle, Physical Reality, and Measurement Limits | CPF, CSB | Requires measurement to declare its evidence class and prohibits scarcity declarations from single opaque models, so supply-shortage coercion cannot rest on manufactured data. |
@@ -111,7 +111,7 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 | ANNEX_AW | Whistleblower Protection and Anti-Retaliation Protocol | CSB, PWC | Protects community alert reporters from retaliation by the administrators they reported on, preserving the coercion-detection pathways that depend on ordinary people being willing to name wrongdoing. |
 | ANNEX_AX | Confidential Enrollment and Safety-Identity Protocol | CSB | Provides a shielded identity enrollment path for domestic violence survivors, trafficking victims, and others for whom standard identity disclosure creates a documented safety threat. |
 | ANNEX_AY | Delivery Sufficiency Standard and Register | CSB | Closes the gap between the constitutional guarantee of Essential Access and operational delivery by requiring a public register of populations without a working delivery path and mandating remediation. |
-| ANNEX_D | Progressive Net-Worth Demurrage Architecture | PWC, SAL | Defines steeply progressive holding costs on concentrated wealth so multi-generational passive hoarding is economically unsustainable while productive investment and ordinary saving remain viable. (ANNEX_AZ formerly contained this content; ANNEX_D is now the sole demurrage instrument.) |
+| ANNEX_D | Commons Return and Universal Stake | PWC, SAL | Defines public return from shared value, scarcity rents, public-created uplift, and large succession transfers; protects ordinary use; and requires fiscal adequacy testing before scale claims. |
 | ANNEX_AZ | Tier 0 Token Mechanism | CSB | Defines the constitutional constraints for the pseudonymous single-session token mechanism that protects Tier 0 survival-access recipients from identification and surveillance. |
 
 ---

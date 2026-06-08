@@ -33,27 +33,27 @@ The most important rule is separation: none of these instruments may be traded i
 
 ### 2.1 Definition
 
-Flow is the general-purpose market instrument. It is issued against verified productive commitments, circulates freely within the Flow lane, and as a component of net worth is subject to the progressive net-worth carrying cost in Annex D; there is no separate per-balance time-decay on Flow (Annex D §D9). Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
+Flow is the general-purpose market instrument. It is issued against verified productive commitments, circulates freely within the Flow lane, and remains separate from Essential Access, Voice, Service Record, and Shared Storehouse. Flow is protocol-issued public money: private institutions may intermediate existing Flow, but may not create new Flow or currency-like Flow substitutes by debt expansion. Flow is primarily digital, with physical cash or equivalent offline bearer instruments maintained for resilience, privacy, and universal access.
 
-Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. Holding large idle balances is unattractive because idle Flow counts toward net worth, which carries the Annex D demurrage above the participation floor, so putting resources to work is the better choice.
+Plain meaning: Flow is the money lane. It can move through markets, but private lenders cannot create new Flow-like money by lending it into existence. The anti-hoarding and public-finance spine is no longer routine balance decay or net-worth demurrage; it is Commons Return and Universal Stake under Annex D, aimed at value that comes from common inheritance, scarcity, legal privilege, public infrastructure, and protected commons.
 
 ### 2.2 State Machine
 
 ![Flow Token Lifecycle](/images/V-002.png)
 
-### 2.3 Demurrage (Net-Worth Carrying Cost)
+### 2.3 Commons Return and Universal Stake
 
-Demurrage is the single progressive net-worth carrying cost defined in Annex D — the sole carrying-cost instrument on accumulated wealth (Annex D §D9). Idle Flow carries it only as one component of net worth, not through any separate per-balance fee.
+Commons Return is the public-return architecture defined in Annex D. It is not a routine decay rule on Flow balances, not an income cap, and not a continuous carrying cost on ordinary personal net worth.
 
-**Subject:** net worth above the participation floor `S = 18 months × regional median monthly consumption expenditure`. Net worth aggregates all holdings, including idle Flow; wealth actively deployed in productive use is exempt (Annex D §D6 / Term Finance Pools / investment channels).
+**Source bases:** Commons Return may apply only to named source bases: land/location value, natural resources, spectrum and scarce licenses, public-infrastructure uplift, network/platform rents, large succession transfers, and external-capital use of protected commons.
 
-**Rate:** the progressive λ-bracket schedule in Annex D §D3, calibrated at Tier 3 — not a single per-balance rate. The carrying cost rises with net worth across the brackets rather than applying a flat charge to a balance.
+**Protected ordinary use:** survival access, ordinary labor income, basic household exchange, modest homes, ordinary tools, ordinary savings, and genuine productive enterprise are protected from being treated as routine revenue bases.
 
-**Not assessed on:** survival access, ordinary labor, or basic household exchange. The participation floor protects ordinary households; the operating-reserve (90 days) and small-operator (12-month) safe harbors in Annex D §D5 protect enterprises.
+**Universal Stake:** after Essential Access, reserves, restoration duties, public payment rails, and governance operations are funded, a published share of Commons Return may flow to a protected civic inheritance. Universal Stake may not buy Voice, Service Record, office, identity priority, Essential Access priority, or review-body eligibility.
 
-**Revenue:** demurrage receipts are split between retirement and Public Finance & Commons Revenue (PFCR) per Annex D.
+**Fiscal gate:** no scale claim may say taxes are unnecessary, inflation risk is solved, or Essential Access is sustainably funded until T-029/P-066 evidence shows a costed fiscal adequacy model, source-base receipts, incidence review, downside scenarios, and remaining-tax disclosure.
 
-Plain meaning: the carrying cost is aimed at large idle wealth, not at survival, wages, or normal household life. Idle Flow only matters because it counts toward net worth above the floor.
+Plain meaning: the system does not make everyone's money slowly disappear. It asks who is receiving value from land, resources, licenses, public investment, inherited privilege, or protected commons, then tests whether that public return can fund the floor without quietly taxing the poor, inflating the currency, or hiding the real bill.
 
 ### 2.4 Issuance Constraints
 
@@ -246,9 +246,9 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 
 | Parameter | Current Value | Status | Authority to Change |
 |---|---|---|---|
-| Net-worth demurrage | Subject: net worth above the participation floor (S = 18 months regional median consumption); rate: progressive λ brackets per Annex D §D3 | Binding design commitment — λ schedule calibrated at Tier 3 against evidence. The sole carrying-cost instrument on accumulated wealth (Annex D §D9). | Tier 1 to alter Annex D §D9; Tier 3 for λ calibration |
+| Commons Return and Universal Stake | Source bases: land/location value, natural resources, scarce licenses, public-infrastructure uplift, network/platform rents, large succession transfers, and external-capital commons use; protected ordinary use and Universal Stake governed by Annex D | Active-unproven design commitment — fiscal adequacy, incidence, remaining-tax disclosure, and debasement tolerance must be tested before scale claims. Routine demurrage is superseded except as dormant, pilot-gated backstop. | Tier 2 to alter source-base gates and lockbox routing; applicable FAP tier for any dormant backstop activation |
 
-> Annex D governs the net-worth demurrage: the participation floor, the progressive λ-bracket schedule (§D3), the operating-reserve and small-operator safe harbors (§D5), and the productive-deployment exemptions (§D6). FC-160–FC-184 govern the contract-commitment architecture through which the carrying cost is implemented. Evidence from the Demurrage Evidence Test Package (see Hardening_Queue.md) may inform revisions to the λ calibration on a net-worth basis (via standard Tier 3 FAP) and to the commitment architecture (FC-160–FC-184).
+> Annex D governs Commons Return and Universal Stake: source bases, protected ordinary use, Universal Stake, Public Commons Lockbox routing, assessment safeguards, dormant backstops, and the T-029 fiscal adequacy gate. FC-160–FC-184 govern the contract-commitment architecture through which long-horizon capital deployment is reviewed. Evidence from the Commons Return and Universal Stake Evidence Test Package (see Hardening_Queue.md) may inform source-base calibration, lockbox routing, remaining-tax disclosure, debasement tolerance, and contract-commitment parameters.
 
 | Essential Access validity window | 72 hours | Specified | Tier 2 |
 | CSM basket composition | Annex Y (canonical) | FC-070, FC-071 (floor is Tier 1) | Tier 1 (downward only); Tier 2 (composition within basket) |

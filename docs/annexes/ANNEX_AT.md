@@ -143,7 +143,7 @@ All foreign capital entering the protocol's economic territory converts to Flow 
 
 ### AT4.2 — Demurrage Treatment on Converted Capital
 
-Converted foreign capital is subject to standard Flow demurrage rules (Article V §Flow idle-value rule) from the moment of conversion. There is no grace period, exemption, or reduced demurrage rate for foreign-origin capital. The purpose of this rule is to prevent the protocol's internal economy from becoming a destination for external capital seeking to escape demurrage regimes elsewhere — a dynamic that would recreate accumulation pressure from the outside even if internal accumulation is contained.
+Converted foreign capital is subject to the same Commons Return, beneficial-control, source-base, and external-capital membrane rules as domestic capital from the moment of conversion. There is no grace period, exemption, or reduced public-return obligation for foreign-origin capital. The purpose of this rule is to prevent the protocol's internal economy from becoming a destination for external capital seeking to escape public-return or anti-rent obligations elsewhere — a dynamic that would recreate accumulation pressure from the outside even if internal accumulation is contained.
 
 ### AT4.3 — Investment Channel
 

@@ -190,7 +190,7 @@ The lesson is not that fences are evil. It is narrower. Advantage and disadvanta
 
 > *Advantage compounds quietly. The people it holds down rarely face one dramatic wrong — they face a long string of small exclusions, invisible from outside and overwhelming from inside.*
 
-**Where this project responds:** ANNEX_D and Flow. ANNEX_D holds the project's one carrying-cost rule, called demurrage — a slow cost on large accumulated wealth, so that hoarded fortunes lose value over time instead of compounding forever and hardening into caste. Flow is the market-money tool that carries this and other limits on how far wealth can pile up in one family across generations.
+**Where this project responds:** ANNEX_D and Flow. ANNEX_D now holds Commons Return and Universal Stake — the project's active answer to shared value, scarcity rents, large succession transfers, and public-created wealth. Flow is the market-money tool, but the current design no longer relies on routine demurrage or ordinary balance decay as the main wealth-control spine.
 
 **Sources**
 
@@ -356,7 +356,7 @@ The point to sit with: the experiment was not ended because it failed. It was en
 
 > *Alternative currency experiments that survived long-term shared two features: they were embedded in a community with shared values, and they had an institutional framework that kept them accountable. The ones that were shut down were shut down by the systems they threatened — not because they failed.*
 
-**Where this project responds:** Flow — this project separates market money into its own walled instrument, so the way money is designed cannot quietly become the mechanism that concentrates power. The project's only carrying cost on accumulated wealth lives in ANNEX_D; there is no separate per-balance fee on ordinary money held in Flow.
+**Where this project responds:** Flow and ANNEX_D — this project separates market money into its own walled instrument, so the way money is designed cannot quietly become the mechanism that concentrates power. The active public-return answer now lives in ANNEX_D: Commons Return and Universal Stake. There is no routine per-balance fee on ordinary money held in Flow.
 
 **Sources**
 
@@ -592,7 +592,7 @@ Here is the part that matters for this chapter. The people who made the decision
 
 *Future generations inherit the consequences of present decisions without any vote, any legal standing, or any enforceable claim — and the systems that produced the harm are structured so that the people who benefited from it are gone before the bill arrives.*
 
-**Where this project responds:** This is a documented gap. No instrument in the current corpus creates accountability to future generations. The Shared Storehouse handles rationing during a verified shortage. The demurrage mechanism in ANNEX_D works on accumulated wealth. Neither one reaches across generations. The climate debt, the depleting antibiotic commons, and the national debt described above have no corpus response. The project tracks unsolved problems like this one in its governance document called the Hardening Queue, and this gap is named there. Naming it is not a failure. It is the condition for honest work on it.
+**Where this project responds:** This is still a documented gap. The Shared Storehouse handles rationing during a verified shortage. Commons Return in ANNEX_D can address some inherited-resource and public-created value, but it is not yet a full future-generations accountability instrument. The climate debt, the depleting antibiotic commons, and the national debt described above need a stronger intergenerational duty track. The project tracks unsolved problems like this one in its governance document called the Hardening Queue. Naming it is not a failure. It is the condition for honest work on it.
 
 **Sources**
 
@@ -615,7 +615,9 @@ This corpus describes those structures together, with walls between them so that
 ### What the five instruments are for
 
 **Essential Access** — The floor beneath market failure: food, shelter, medicine, and water as a survival guarantee, not a market outcome (Chapters 1, 9).
-**Flow** — The wall between wealth and power: a market money system with structural limits on concentration and a demurrage carrying cost on accumulated wealth (ANNEX_D), kept from buying survival, voice, or office (Chapters 2, 3, 6).
+**Flow** — The wall between market money and public power: a market money system kept from buying survival, voice, or office (Chapters 2, 3, 6).
+
+**Commons Return and Universal Stake** — The active public-return system in ANNEX_D: shared value, scarcity rents, public-created uplift, and large succession transfers are routed through a lockbox and tested before any claim that the floor is fiscally sustainable.
 **Voice** — The civic priority that cannot be purchased with wealth (Chapters 5, 8).
 **Service Record** — Rotating eligibility that stops the same people from holding public roles forever (Chapter 5).
 **Shared Storehouse** — Transparent, universal rationing when shortage has been verified (Chapter 4).

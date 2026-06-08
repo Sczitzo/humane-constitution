@@ -7,7 +7,7 @@
 > | **Who it protects** | Everyone harmed by money creation that inflates asset prices, rewards political allies, rescues failed speculation, or manufactures demand without linked productive capacity — and wage earners and essential providers who need error-correction to be staged, not sudden. |
 > | **Failure risk** | Fake payroll rings, circular invoice schemes, zombie rollovers, factional allocation, unwind shock, and offshore leakage — each a path by which the issuance system becomes a capture vehicle rather than a productive-economy instrument. |
 > | **Evidence status** | Designed |
-> | **Linked risks** | P-029; P-030; TR-09 smart-contract failure; Annex D (progressive net-worth demurrage — sole demurrage instrument); red-team scenarios in §X7. |
+> | **Linked risks** | P-029; P-030; P-066; T-029; TR-09 smart-contract failure; Annex D (Commons Return and Universal Stake); red-team scenarios in §X7. |
 
 > **Provenance:** Implements [P-029 — Public Finance & Commons Revenue] (§X8) and [P-030 — Protocol-Only Money Creation and Household Finance Boundaries] (§X1–X8) · Status: **ACTIVE**
 
@@ -56,7 +56,7 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 - **Households** receive a safe harbor equal to 18 months of median regional consumption expenditure.
 - **Enterprises** receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis.
 - **Any higher protected balance** requires project escrow, catastrophe reserve, lifecycle fund, or other protected-capital qualification under the published rules.
-- **Any asset or instrument** that functions as a non-decaying store of value above the participation floor (the 18-month net-worth floor in Annex D) is subject to equivalence review under the progressive net-worth demurrage in Annex D regardless of label, wrapper, or legal form.
+- **Any asset or instrument** that functions as hidden control over a Commons Return source base is subject to equivalence review under Annex D regardless of label, wrapper, or legal form.
 - **Household thresholds**, privacy safe harbors, and minimization rules remain mandatory. Anti-evasion enforcement may not become a pretext for total asset surveillance.
 
 ### X6. Error correction, unwind discipline, and public logs
@@ -102,7 +102,7 @@ Public institutions must be funded in a way that is transparent, capacity-aware,
 
 | Rule area | Default constitutional rule | Anti-capture control |
 | :--- | :--- | :--- |
-| **Revenue sources** | PFCR receipts may draw from demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production. | Every source must publish methodology, exemptions, and aggregate receipts; hidden levies are void. |
+| **Revenue sources** | PFCR receipts may draw from Commons Return source bases, land and resource charges, scarce-license returns, public-infrastructure uplift, gateway fees, and bounded public issuance tied to real public production. | Every source must publish methodology, exemptions, aggregate receipts, and remaining-tax disclosure; hidden levies are void. |
 | **Prohibited tax base** | Survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources. | Any measure that functionally backfills PFCR through those bases triggers mandatory judicial review. |
 | **Operating budgets** | Public institutions receive Flow appropriations tied to published service plans, staffing assumptions, capacity evidence, and a declared PFCR source mix. | Quarterly variance reporting, source-by-source disclosure, and public change logs. |
 | **Recurring obligations** | Any recurring program expansion must identify a stable PFCR path and capacity plan before approval. | No unfunded permanent commitments and no quiet migration to prohibited taxes. |
@@ -129,4 +129,4 @@ Intellectual property is a modern rent-seeking vector and shall not remain outsi
 
 *Annex Y — Constitutional Survival Minimum and Essential Access Continuity Architecture is maintained as a separate controlling document. See [ANNEX_Y.md](./ANNEX_Y.md). Where any language in this file conflicts with Annex Y, Annex Y governs.*
 
-*Annex D — Progressive Net-Worth Demurrage Architecture is the controlling specification for the progressive wealth carrying-cost instrument referenced throughout this annex. See [ANNEX_D.md](./ANNEX_D.md). The rate function, consolidation methodology, corporate balance demurrage, and exemptions in Annex D govern over any summary language here. (Annex AZ formerly contained this content; it has been superseded by Annex D. Annex AZ now governs the Tier 0 token mechanism only.)*
+*Annex D — Commons Return and Universal Stake is the controlling specification for the public-return and fiscal-sustainability architecture referenced throughout this annex. See [ANNEX_D.md](./ANNEX_D.md). Source bases, protected ordinary use, Universal Stake, lockbox rules, dormant backstops, and fiscal adequacy gates in Annex D govern over any summary language here. Older progressive-demurrage language is superseded unless explicitly marked historical or dormant.*

@@ -60,7 +60,9 @@ It is not a surveillance mandate. It is a public accountability specification. D
 |---|---|---|
 | Beneficial-ownership concentration | Detect shell and trust control. | Natural-person control clusters behind many entities. |
 | Project escrow rollover rate | Detect pseudo-permanent exemption. | Escrows repeatedly extend without delivery. |
-| Demurrage burden by wealth band | Detect hidden ordinary-life tax. | Ordinary households pay more relative burden than idle concentrated holdings. |
+| Commons Return incidence by class | Detect hidden ordinary-life tax. | Ordinary households, caregivers, small operators, renters, residents with modest homes, or vulnerable groups pay more relative burden than scarcity privilege, public-created value, or concentrated control. |
+| Universal Stake timing and formula changes | Detect political dividend capture. | Distribution cadence, formula changes, or reserve drawdowns cluster around election cycles or incumbent messaging. |
+| Public Commons Lockbox sufficiency | Detect fiscal hollowing. | Essential Access, resilience reserves, restoration duties, or payment rails are underfunded while distributions, prestige projects, or administrative growth continue. |
 | Procurement award concentration | Detect favored vendors. | Awards cluster among connected entities. |
 | Subcontractor opacity | Detect control hidden below prime contractors. | Beneficial owners unresolved below second tier. |
 | Essential-sector refusal exposure | Detect survival leverage by oil, energy, medicine, logistics, or medicine-access intermediaries. | Largest-supplier exit can break a CSM category before reserve or fallback capacity is ready. |

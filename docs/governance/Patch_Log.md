@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-065**
+**Running change ledger aligned to the Humane Constitution · Current through P-066**
 
 ---
 
@@ -42,7 +42,7 @@
 | P-020 | T-017 | **ACTIVE** | Critical | Founding window extension: 60-day pre-activation disclosure, oppose-coalition adversarial member nomination. |
 | P-021 | — | **ACTIVE** | High | Register disclosure protocol: bifurcation into public and restricted versions; operational security for detection thresholds. |
 | P-022 | T-024 | **ACTIVE** | Critical | Shared Storehouse oracle-failure fallback: conservative hold, 48h REB first-responder window, 72h governance handoff, FC-100 14-day restoration verification, reconciliation review. Annex AQ ACTIVE. |
-| P-023 | T-025 | **ACTIVE** | High | Demurrage sector-capture: contract-commitment architecture, zero exemptions, demurrage-as-discipline, milestone escrow. |
+| P-023 | T-025 | **ACTIVE** | High | Capital-deployment shelter capture: contract-commitment architecture, milestone escrow, verified physical deliverables, and no protected-capital label without deployment. |
 | P-024 | T-009 / TR-07 / T-018 | **ACTIVE** | Critical | Attestation-at-risk stake mechanism: FC-080 stake ratio, FC-081 audit window, FC-082 graph density threshold, slashed-stake redistribution, graph-density safe harbor for legitimate close-knit communities. Annex AS. |
 | P-025 | T-008 | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | Founding Order — Subsidiarity, Consent & Exit: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with Essential Access continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/founding/order/` directory. |
@@ -83,6 +83,7 @@
 | P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
 | P-064 | T-028 | **ACTIVE** | Critical | Compliance-Masked Refusal Hardening: treats lawful-looking obstruction as refusal when formal compliance hides CSM delivery degradation, patient-continuity failure, data/control-system lockout, PBM access friction, standards delay, affiliate fallback capture, workforce poaching, legal delay, or concession pressure. |
 | P-065 | T-022 | **ACTIVE** | Critical | CIP Vacancy-Starvation Hardening: appointment deadlines, fallback nomination, void mass appointments, below-quorum self-repair limits, publication-channel fallback, missed Ombuds-report suspension, conduct-only hollowing triggers, servant-authority and relief-first limits. |
+| P-066 | T-029 | **ACTIVE** | Critical | Commons Return and Universal Stake Fiscal Sustainability Gate: replaces routine progressive net-worth demurrage as active wealth spine, registers fiscal/debasement risk, requires costed public-finance model, source-base revenue testing, remaining-tax disclosure, incidence review, lockbox sufficiency, and scale-blocking fiscal adequacy gate. |
 
 ---
 
@@ -615,28 +616,28 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 
 | Patch ID | Related Threat | Status | Priority | Change Type |
 | :--- | :--- | :--- | :--- | :--- |
-| P-023 | T-025 | **ACTIVE** | High | Flow monetary architecture / demurrage design |
+| P-023 | T-025 | **ACTIVE** | High | Contract-commitment architecture / protected-capital shelter control |
 
-### P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)
+### P-023 — Contract-Commitment Architecture (Protected-Capital Shelter Control)
 
 - **Status:** ACTIVE
 
 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md)
 
-- **Evidence package:** [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
-- **Threat addressed:** T-025 (Demurrage Sector-Capture via Investment Channel).
-- **Direction adopted:** Direction B — deployment-speed architecture. Investment-channel exemptions are removed entirely. Genuine long-horizon capital needs are served by contract-commitment architecture; demurrage pressure remains universal.
+- **Evidence package:** [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md), plus Annex AR project-finance simulation and procurement red team.
+- **Threat addressed:** T-025 (Investment and Capital-Deployment Shelter Capture).
+- **Direction adopted:** Direction B — deployment-speed architecture. Investment-channel exemptions are removed entirely. Genuine long-horizon capital needs are served by contract-commitment architecture; protected-capital status requires real deployment, public accounting, and source-base review where Commons Return is implicated.
 - **Red-team pre-analysis:** Ten attack vectors identified and resolved before this patch was written. Vectors: (1) escrow control ambiguity, (2) milestone definition gaming, (3) "working capital" as new exemption label, (4) advance procurement rebranded as hoarding, (5) subcontractor chain gaming, (6) essential-sector carve-out pressure, (7) multi-jurisdiction pooling ambiguity, (8) force majeure as wedge for permanent exemptions, (9) sector definitional creep, (10) milestone oracle capture. All resolved in patch rules below.
 
-**P-023.1 — Zero Exemption Principle**
-No entity, sector, or project type receives an exemption from Flow demurrage. The investment-channel exemption architecture from the original P-002 design is deprecated. The concept of "investment-channel status" is removed. No project account, escrow window, or term pool designation may shield Flow from demurrage.
+**P-023.1 — Zero Shelter Principle**
+No entity, sector, or project type receives protected-capital shelter by label. The investment-channel exemption architecture from the original P-002 design is deprecated. The concept of "investment-channel status" is removed. No project account, escrow window, term pool, infrastructure label, or public-benefit designation may shield idle control from deployment review or Annex D source-base review.
 
 **P-023.2 — Contract-Commitment Architecture**
 Long-horizon projects are financed through milestone escrow:
 - The commissioning authority deposits Flow into an independent escrow account at project initiation.
-- Demurrage applies to escrowed Flow at the standard rate. The commissioning authority bears the carrying cost, creating institutional incentive for timely contracting and completion.
+- Deployment-window review, public reporting, and Annex D source-base review apply to escrowed Flow. The commissioning authority bears accountability for delay, creating institutional incentive for timely contracting and completion.
 - Flow is released to the contractor only upon independently verified milestone completion.
-- The contractor holds only current working capital. Demurrage is the natural discipline — no ceiling rule is defined; the price signal is the mechanism.
+- The contractor holds only current working capital. Protected-capital shelter is unavailable without verified physical deployment.
 
 **P-023.3 — Independent Escrow Agent**
 Escrow accounts are administered by an independent escrow agent designated by the CRP. The contractor, any entity in the contractor's supply chain, and any entity with a financial interest in the project's outcome may not administer, co-administer, or materially influence the escrow account.
@@ -649,22 +650,22 @@ Milestones eligible to trigger escrow releases must satisfy all of the following
 - High-value releases (above the threshold defined in Annex AR) require multiple independent verifiers and physical inspection with full audit trail.
 
 **P-023.5 — Procurement Clarification**
-Advance procurement of materials means actual purchase: Flow exits the contractor's hands at the transaction. Holding Flow "in reserve for future procurement" is hoarding and receives no protective treatment. Supply chain uncertainty is addressed through competitive procurement, staged purchasing, and futures commitments — not Flow balance reserves.
+Advance procurement of materials means actual purchase: Flow exits the contractor's hands at the transaction. Holding Flow "in reserve for future procurement" without a bound deliverable is protected-capital sheltering and receives no protective treatment. Supply chain uncertainty is addressed through competitive procurement, staged purchasing, and futures commitments — not indefinite balance reserves.
 
 **P-023.6 — Universal Scope**
 P-023 applies at every tier of the supply chain: prime contractors, subcontractors, sub-subcontractors, and all entities receiving Flow for project work are subject to the same architecture. There is no sector-specific carve-out. Eligibility for contract-commitment structure is determined by deliverable characteristics (verifiable physical milestones + commissioning authority), not sector identity.
 
 **P-023.7 — Mandatory Deployment Timeline (Commissioning Authorities)**
-Commissioning authorities must contract idle escrowed funds within the deployment window defined in Annex AR. Funds held beyond this window without active contracting trigger mandatory CRP review. Demurrage continues regardless. This is an accountability mechanism, not an exemption.
+Commissioning authorities must contract idle escrowed funds within the deployment window defined in Annex AR. Funds held beyond this window without active contracting trigger mandatory CRP review. Review and publication continue regardless of whether any dormant backstop has been activated. This is an accountability mechanism, not an exemption.
 
 **P-023.8 — Multi-Jurisdiction Lead Authority**
-For projects with multiple commissioning authorities pooling Flow, a lead authority must be designated at contract signing. The lead authority bears all demurrage on pooled escrow. Internal cost-sharing between participating authorities is a private arrangement; external accountability runs through the lead authority only.
+For projects with multiple commissioning authorities pooling Flow, a lead authority must be designated at contract signing. The lead authority bears accountability for pooled escrow delay, publication, and review. Internal cost-sharing between participating authorities is a private arrangement; external accountability runs through the lead authority only.
 
 **P-023.9 — Force Majeure Escrow Freeze**
-Verified external delays may trigger a temporary escrow freeze:
+Verified external delays may trigger a temporary freeze of deployment-delay consequences:
 - Qualifying events: permitting delays attributable to regulatory bodies outside the project's control; certified supply chain disruptions (independent third-party certification required); declared natural disasters.
 - Process: contractor applies with documented evidence; an independent assessment panel certifies the external cause and its temporal scope. Panel composition and selection use P-017 oracle-independence standards.
-- Effect: demurrage on the affected escrow account is paused for the certified duration only.
+- Effect: deployment-delay consequences on the affected escrow account are paused for the certified duration only.
 - Limits: freeze is time-limited to the verified external condition; total cumulative freeze time per project is capped at the period defined in Annex AR; freeze does not stack across overlapping events.
 - Gaming deterrent: misrepresentation in a freeze application is an audit trigger and grounds for contractor disqualification from future escrow eligibility.
 
@@ -690,7 +691,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-065. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-066. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -755,6 +756,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | ACL-011 / ACL-010 | P-062 | **PROPOSED** | Pilot Timeline Framework |
 | T-028 | P-064 | **ACTIVE** | Essential-Sector Refusal Test Package · Capture Dashboard Specification · Threat Resolution Matrix · Pilot Evidence Roadmap |
 | T-022 | P-065 | **ACTIVE** | ANNEX_AM §AM3/§AM8.5–AM8.7 · amendment_protocol.md §3 · Capture Dashboard Specification · Pilot Evidence Roadmap |
+| T-029 | P-066 | **ACTIVE** | ANNEX_D · Commons Return and Universal Stake Evidence Test Package · Threat Register · Claims and Evidence Register |
 
 ---
 
@@ -1448,3 +1450,20 @@ The active CIP design made hostile successor hollowing visible but still had a l
 - **Servant-authority limits:** CIP authority is custodial, corrigible, conduct-based, and subject to ordinary challenge. CIP funding is subordinate to immediate Essential Access relief; no review, vacancy, dispute, or funding issue may delay survival-floor activation.
 - **New risks introduced:** Fallback nomination could become a guardian-class formation path if repeated repairs are dominated by the same civil-society or expert networks. Mitigated by public shortlists, multi-source nomination, Article VII publication, non-renewable terms, ordinary challenge rights, and Capture Dashboard monitoring.
 - **Residual risk:** This patch blocks one hollowing route; it cannot prevent lawful democratic repeal or broad institutional culture collapse. The design can make hollowing visible, slow, and contestable; it cannot make human guardians incorruptible.
+
+---
+
+### P-066 — Commons Return and Universal Stake Fiscal Sustainability Gate
+
+**Threat addressed:** T-029
+**Status:** ACTIVE | **Priority:** Critical
+
+The previous active economic spine still treated progressive net-worth demurrage as the primary anti-hoarding and commons-funding mechanism. That left two skipped problems: the active annex did not match the accepted Commons Return and Universal Stake direction, and the corpus had no registered threat for the fiscal question beneath every scale claim — what funds the floor, at what inflation cost, and who actually bears the burden?
+
+- **Introduced design:** Annex D is rebuilt around Commons Return and Universal Stake. Routine progressive net-worth demurrage, idle-money decay, and continuous personal-balance carrying cost are superseded as active policy. Commons Return applies only to named source bases: land/location value, natural resources, scarce licenses, public-infrastructure uplift, network/platform rents, large succession transfers, and external-capital use of protected commons.
+- **Universal Stake:** A protected civic inheritance may distribute a share of Commons Return after Essential Access, resilience reserves, restoration duties, payment rails, and governance operations are funded. It may not buy Voice, Service Record, office, identity priority, Essential Access priority, or review-body eligibility.
+- **Fiscal gate:** T-029 blocks scale claims unless a costed fiscal adequacy model exists. The model must cover Essential Access cost, delivery cost, source-base receipts, Universal Stake formula, administrative cost, inflation/debasement tolerance, transition cost, downside scenarios, burden incidence, and any remaining taxes, fees, or charges.
+- **Honest tax posture:** The patch does not claim taxes are unnecessary. It says Commons Return should narrow the preferred public burden toward public-created and scarcity-created value, while any residual taxes must be named, costed, dignity-screened, and barred from survival access, ordinary labor, basic household exchange, and modest household reserves unless explicitly justified through the fiscal gate.
+- **Evidence integration:** Creates the Commons Return and Universal Stake Evidence Test Package; updates Threat Register, Threat Resolution Matrix, Hardening Queue, Claims and Evidence Register, Open Problems Resolution Docket, Pilot Evidence Roadmap, Capture Dashboard Specification, Annex Directory, Annex Taxonomy, reader prompts, and corpus registration.
+- **New risks introduced:** Commons Return can become valuation bureaucracy, surveillance, political dividend timing, hidden wealth tax, asset-holder avoidance, or downward burden shift. Mitigated only by source-specific bases, protected ordinary use, appeal rights, privacy limits, lockbox accounting, incidence testing, and public "who pays" disclosure.
+- **Residual risk:** Commons Return may still be insufficient or volatile. Some taxes or fees may remain necessary during transition or at scale. The control is not proof of fiscal adequacy; it is a scale-blocking discipline until proof exists.

@@ -7,7 +7,7 @@ This file is a **reader-facing design artifact**. It is not operative constituti
 - Legacy annex IDs (A, B, C … AZ) remain the authoritative file identifiers.
 - Decimal codes are display labels for reader navigation only.
 - No file renaming is performed by this artifact.
-- ANNEX_D is and remains the sole demurrage instrument.
+- ANNEX_D now governs Commons Return and Universal Stake. Older demurrage language is superseded unless explicitly marked historical or dormant.
 - Draft patches that are not corpus-registered are not implied as adopted by this document.
 
 ---
@@ -92,11 +92,11 @@ Independent review institutions, complaint pathways, and civic accountability ar
 
 ### Title 4 — Economy and Stewardship
 
-Money creation, wealth carrying costs, investment containment, and trade boundaries.
+Money creation, public return, investment containment, and trade boundaries.
 
 | Decimal | Legacy ID | Title |
 |---|---|---|
-| 4.1 | ANNEX_D | Progressive Net-Worth Demurrage *(sole demurrage instrument)* |
+| 4.1 | ANNEX_D | Commons Return and Universal Stake |
 | 4.2 | ANNEX_X | Flow Issuance Architecture |
 | 4.3 | ANNEX_V | Transition Mechanics, Conversion, and Legacy-System Treatment |
 | 4.4 | ANNEX_AT | External Trade Architecture: Strategic Floors, Export Caps, and the Reciprocity Membrane |

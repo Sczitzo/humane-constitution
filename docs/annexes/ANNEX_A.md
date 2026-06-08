@@ -43,7 +43,7 @@ Actors hoard food or medicine and resell via barter or black markets during scar
 - **Primary patches:** scarcity-mode caps; strategic reserves; shelf-life-aware rationing; carrying costs for large idle inventories; supplier-side enforcement.
 - **Tests:** scarcity simulation with agent-based demand spikes; audit effectiveness; reserve deployment timing.
 
-#### Flow demurrage evasion via non-decaying assets
+#### Commons Return evasion via hidden source-base control
 
 Actors shift Flow into land, housing, or commodities to avoid decay and extract rents.
 

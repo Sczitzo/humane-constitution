@@ -32,7 +32,7 @@ Every pilot needs:
 | 2 | Identity and recovery | Can people recover access without surveillance, exclusion, or fraud collapse? | False exclusion remains below published threshold. |
 | 3 | Essential capacity measurement | Can essentials be measured accurately enough to support issuance and scarcity decisions? | Measurement error remains within published bounds. |
 | 4 | Essential Access delivery | Can baseline essentials be delivered without discretionary gatekeeping? | Delivery, appeals, and continuity meet minimum service targets. |
-| 5 | Flow and demurrage simulation | Can Flow decay fund public rails without burdening ordinary users or creating exemptions? | No hidden tax burden or sector-capture route dominates. |
+| 5 | Commons Return, Universal Stake, and Flow simulation | Can public return and Flow issuance fund the floor and public rails without inflation, hidden debt, ordinary-life burden, or political dividend capture? | Fiscal adequacy model, source-base revenue model, incidence review, remaining-tax disclosure, and lockbox sufficiency pass before any scale claim. |
 | 6 | Public banking rails | Can basic banking be provided as infrastructure without predatory fees or credit traps? | Service cost and access targets are sustainable. |
 | 7 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
 | 8 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
@@ -48,7 +48,7 @@ Every pilot needs:
 | Identity without surveillance or exclusion | Phase 2 | Phase 4 appeals; Phase 9 governance capture |
 | Real-capacity measurement | Phase 3 | Phase 4 delivery; Phase 9 oracle capture |
 | Contribution without coercive hierarchy | Phase 1 comprehension; Phase 9 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
-| Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 demurrage; Phase 9 elite proxy markets |
+| Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 Commons Return and Universal Stake; Phase 9 elite proxy markets |
 | Essential-sector conglomerate refusal | Phase 8 | Essential-Sector Refusal Test Package; Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
 | Founding legitimacy and consent | Phase 10 | Founding Legitimacy Dossier artifact-status register; consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 9 | Authority tracing; review-body deadlock tests |
@@ -59,8 +59,8 @@ Every pilot needs:
 | Collapse state | Primary pilot tracks | Secondary checks |
 |---|---|---|
 | Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 9 proxy-market and emergency-power tests |
-| Power-Wealth Convergence | Phase 5 Flow and demurrage; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 conglomerate transition; Phase 9 governance red-team | Public procurement integrity, beneficial-ownership review, FAP capture testing, and sector concentration dashboards |
-| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 9 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, demurrage burden by class, founding legitimacy, and subsidiarity drift |
+| Power-Wealth Convergence | Phase 5 Commons Return, Universal Stake, and Flow; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 conglomerate transition; Phase 9 governance red-team | Public procurement integrity, beneficial-ownership review, fiscal/debasement modeling, FAP capture testing, and sector concentration dashboards |
+| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 9 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, Commons Return burden by class, founding legitimacy, and subsidiarity drift |
 | Control-plane failure | Phase 9 governance red-team; Phase 10 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
 
 ## Phase 0 — Founding Cascade Gate
@@ -77,7 +77,7 @@ Every pilot needs:
 | Consent evidence | Phase 2 (identity pilot), Phase 3 (Essential Access delivery pilot) — pilot participants must have a genuine non-coercive opt-out path |
 | Exit rehearsal | Phase 3 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
 | Founder sunset | Phase 4 (Service Record pilot) — civic participation pilot must not run under indefinite founding-exception authority |
-| Independent civil-society review | Phase 5 (Flow/demurrage simulation) — monetary architecture requires external legitimacy review before real-money simulation |
+| Independent civil-society review | Phase 5 (Commons Return, Universal Stake, and Flow simulation) — monetary and fiscal architecture requires external legitimacy review before real-money simulation |
 | Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–9 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 10 and all scale-up promotions require a confirmed post-activation audit finding. |
 
 **Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) recurrence event and must be logged as such in the Threat Register.
@@ -223,40 +223,44 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Scale rule:** Essential Access cannot be called viable until delivery and appeal systems both work under stress.
 
-## Phase 5 - Flow and demurrage simulation
+## Phase 5 - Commons Return, Universal Stake, and Flow simulation
 
-**Hypothesis:** Flow can support exchange while the net-worth demurrage funds common rails and discourages hoarding without becoming a hidden tax on ordinary life.
+**Hypothesis:** Flow can support exchange while Commons Return and Universal Stake fund shared public duties without inflation, hidden debt, ordinary-life burden, or political dividend capture.
 
-**External evidence basis:** The [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md) is the governing test package for this phase. IMF and peer-reviewed monetary-economics work establish that negative-yield money is a real design space; Federal Reserve research warns that negative-rate regimes can create welfare, investment, output, banking, and transmission distortions; OECD and FATF sources anchor procurement and legal-wrapper capture risks; complementary-currency evidence warns against treating local or emergency experiments as proof of constitutional-scale design.
+**External evidence basis:** The [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md) is the governing test package for this phase. Public-finance history, resource-revenue volatility, land-value and resource-rent evidence, sovereign-wealth-fund governance, procurement integrity, and beneficial-ownership guidance are treated as cautionary anchors, not proof that this design works.
 
 **Measure:**
 
-- ordinary-user holding burden
-- concentrated-capital holding burden
+- Essential Access cost by region and category
+- Commons Return receipts by source base
+- Flow issuance and inflation/debasement sensitivity
+- Universal Stake formula and timing
+- ordinary-household burden incidence
+- scarcity-privilege and concentrated-control burden incidence
 - transaction volume
 - savings behavior
-- investment-channel leakage
-- public-rail operating revenue
-- exemption pressure by sector
+- source-base avoidance
+- public-rail operating cost and lockbox sufficiency
+- exemption or carveout pressure by sector
 - shadow-credit growth outside chartered rails
-- household liquidity burden by income and volatility
-- small-business working-capital pressure by sector
+- remaining-tax necessity and prohibited-base screening
+- household, caregiver, elder, disability, rural, and small-operator burden by income and volatility
 - project-escrow behavior under delay, force majeure, and procurement pressure
-- beneficial-ownership and subsidiary-fragmentation routes
-- public comprehension of who pays, where revenue goes, and what protections ordinary liquidity receives
+- beneficial-ownership, platform spin-off, license-fragmentation, and succession-transfer routes
+- public comprehension of who pays, where revenue goes, what taxes remain, and what protections ordinary life receives
 
 **Failure criteria:**
 
-- The net-worth demurrage burdens low-wealth users more than concentrated capital.
+- Commons Return burdens ordinary households more than scarcity privilege, public-created value, or concentrated control.
 - Actors create exemptions that become capture channels.
 - Productive project finance collapses or becomes elite-controlled.
 - Shadow credit recreates predatory dependency.
-- Public-rail funding quietly migrates into fees on ordinary labor, survival access, or household exchange.
-- Demurrage becomes politically or practically equivalent to a hidden tax on ordinary liquidity.
+- Public-rail funding quietly migrates into fees or taxes on ordinary labor, survival access, modest savings, or household exchange.
+- Universal Stake becomes politically or practically equivalent to an incumbent-timed dividend.
 - Project escrow becomes a favored-sector parking channel despite the zero-exemption rule.
-- Users cannot explain the fee, the revenue route, or the difference between ordinary liquidity and idle concentration after public disclosure.
+- Users cannot explain the source bases, revenue route, remaining taxes, lockbox order, or protected ordinary-use rules after public disclosure.
 
-**Scale rule:** the net-worth demurrage should remain a simulation and pilot parameter until the burden is transparent.
+**Scale rule:** Commons Return, Universal Stake, and Flow fiscal claims remain simulation-only until fiscal adequacy, burden incidence, debasement tolerance, and remaining-tax disclosure are public and independently reviewed.
 
 ## Phase 6 - Public banking rails
 
@@ -314,7 +318,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md)
 - [Capture Dashboard Specification](./Capture_Dashboard_Specification.md)
 - [Parameter Calibration Register](./Parameter_Calibration_Register.md)
-- [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md)
+- [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md)
 
 **Measure:**
 

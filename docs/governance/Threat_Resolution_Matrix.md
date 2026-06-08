@@ -71,6 +71,8 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 | T-025 Demurrage Sector-Capture | Power-Wealth Convergence; secondary Static-Advantage Loop through exemption definitions. |
 | T-026 Exit Denial | Survival-Trade Bind plus federation-coercion control-plane failure. |
 | T-027 Subsidiarity Violation | Static-Advantage Loop plus Power-Wealth Convergence through upward venue drift. |
+| T-028 Essential-Sector Refusal Leverage | Survival-Trade Bind plus Power-Wealth Convergence through private survival chokepoints. |
+| T-029 Fiscal Sustainability and Currency Debasement | Survival-Trade Bind plus control-plane failure; public promises become coercive or inflationary when not costed against real resources. |
 
 ---
 
@@ -265,13 +267,13 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Proof needed:** Capacity Measurement Evidence Test Package; oracle-blackout drill, physical-indicator review, 14-day restoration-window test, reconciliation post-mortem, and public explanation review.
 - **Residual risk:** emergency exceptions can normalize; reconciliation must be public, timely, and reputationally costly.
 
-### T-025 - Demurrage Sector-Capture via Investment Channel
+### T-025 - Investment and Capital-Deployment Shelter Capture
 
 - **Current control:** [P-023](./Patch_Log.md), [Annex AR](../annexes/ANNEX_AR.md)
-- **Resolution path:** keep zero demurrage exemptions, use contract-commitment architecture, release funds on verified physical deliverables, and protect all key terms from definition drift.
-- **Corruption route to assume:** firms use subsidiaries, project cycling, force-majeure claims, infrastructure labels, escrow windows, or procurement pressure to park Flow without decay.
-- **External evidence:** IMF and Economic Journal work establish demurrage/negative-yield money as a real monetary design space; Federal Reserve research warns negative-rate regimes can create distortions; OECD procurement and FATF beneficial ownership guidance anchor the capture routes through procurement and legal wrappers.
-- **Proof needed:** the [Demurrage Evidence and Test Package](./Demurrage_Evidence_Test_Package.md): household burden model, small-business working-capital model, public-rail revenue model, project-finance simulation, procurement integrity review, legal-wrapper red team, force-majeure panel capture audit, and nested subcontractor tracing test.
+- **Resolution path:** use contract-commitment architecture, release funds on verified physical deliverables, and protect capital-deployment terms from definition drift now that routine demurrage is no longer the active wealth spine.
+- **Corruption route to assume:** firms use subsidiaries, project cycling, force-majeure claims, infrastructure labels, escrow windows, procurement pressure, or protected-capital labels to park Flow or public-return source rights without real deployment.
+- **External evidence:** OECD procurement and FATF beneficial ownership guidance anchor capture routes through procurement and legal wrappers. Historical demurrage evidence is retained only as superseded design context, not as the active instrument.
+- **Proof needed:** project-finance simulation, procurement integrity review, legal-wrapper red team, force-majeure panel capture audit, nested subcontractor tracing test, and source-base avoidance tests in the [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md).
 - **Residual risk:** tight parameters can block real infrastructure while loose parameters recreate hoarding; parameter setting must be evidence-based.
 
 ### T-026 - Exit Denial
@@ -299,6 +301,16 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Proof needed:** CASP activation drill, chokepoint coverage audit, gap-window calculation review, alternative-supplier readiness test, and compliance-masked refusal red team using the [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md), [Capture Dashboard Specification](./Capture_Dashboard_Specification.md), dashboard telemetry, procurement logs, bidder-independence review, delay windows, and affected-population impact.
 - **Residual risk:** pre-registration contracts can degrade if not tested; activation speed under real refusal conditions remains unproven until drilled. The hardest residual is lawful-looking obstruction that never announces itself as refusal but still makes survival delivery depend on incumbent data, staff, software, affiliates, standards bodies, PBMs, lenders, insurers, or subcontractors.
 - **Resolution update:** CASP (ANNEX_AT §AT6.6, P-050 ACTIVE) establishes pre-committed automatic-activation contracts as primary mitigation. Public receiver authority demoted to fallback. Drill scope operationalized with 9 chokepoints and gap-window calculation requirement.
+
+### T-029 - Fiscal Sustainability and Currency Debasement
+
+- **Current control:** [P-066](./Patch_Log.md), [Annex D](../annexes/ANNEX_D.md), [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md)
+- **Resolution path:** require a costed fiscal model before scale claims; route public value through Commons Return, Universal Stake, and a Public Commons Lockbox; name any residual taxes instead of pretending they disappear; and block scale if the floor depends on inflation, hidden debt, prohibited tax bases, or downward burden shift.
+- **Corruption route to assume:** officials overestimate Commons Return receipts, use Flow issuance to hide deficits, time Universal Stake distributions for politics, defer maintenance, issue off-ledger obligations, or shift costs onto ordinary labor, basic household exchange, modest savings, or survival access under new labels.
+- **External evidence:** public-finance history, sovereign-debt crises, inflation episodes, resource-revenue volatility, and land-value / resource-rent literature all warn that revenue design can fail through optimism, volatility, capture, or burden shift. The project must cite concrete analogues in the fiscal sustainability dossier before scale.
+- **Proof needed:** fiscal adequacy model, incidence and dignity review, source-base valuation red team, legal-wrapper avoidance review, Universal Stake capture simulation, Essential Access lockbox sufficiency test, privacy audit, external-capital arbitrage test, remaining-tax necessity review, and public comprehension test.
+- **Residual risk:** Commons Return may be morally better targeted than routine demurrage but still insufficient or volatile. Some taxes or fees may remain necessary. The control is not a claim that taxation disappears; it is a discipline that public burdens must be named, costed, dignity-screened, and prevented from migrating onto survival or ordinary household life.
+- **Resolution update:** P-066 registers fiscal sustainability as T-029 and makes the costed model a scale-blocking gate rather than a later implementation detail.
 
 ---
 

@@ -9,9 +9,9 @@
 > | **Evidence status** | Designed |
 > | **Linked risks** | INV-001 (survival access not conditioned on identity); INV-LAUNCH-1 (pre-launch blocking gate); ANNEX_AK §AK8 (two-tier access model); ANNEX_AX (safety-shielded enrollment) |
 
-> **Scope note.** This annex previously contained a progressive net-worth demurrage architecture (§AZ1–AZ3). That content was superseded by [ANNEX_D](./ANNEX_D.md), which is now the sole demurrage instrument. This annex now exists only for the Tier 0 token mechanism constitutional framework (§AZ1 below). No demurrage content is present or intended here.
+> **Scope note.** This annex previously contained a progressive net-worth demurrage architecture (§AZ1–AZ3). That content was superseded, and [ANNEX_D](./ANNEX_D.md) now governs Commons Return and Universal Stake. This annex now exists only for the Tier 0 token mechanism constitutional framework (§AZ1 below). No demurrage content is present or intended here.
 
-> **Provenance.** §AZ2.1 was originally drafted in the P0-A adversarial audit remediation batch (2026-05-15) to resolve the pre-operational gate in INV-LAUNCH-1. The demurrage sections (former §AZ1–AZ3) were deleted in a subsequent commit when ANNEX_D was designated the sole demurrage instrument; §AZ2.1 was not demurrage content and was restored here to keep the INV-LAUNCH-1 gate intact.
+> **Provenance.** §AZ2.1 was originally drafted in the P0-A adversarial audit remediation batch (2026-05-15) to resolve the pre-operational gate in INV-LAUNCH-1. The demurrage sections (former §AZ1–AZ3) were deleted in a subsequent commit; §AZ2.1 was not demurrage content and was restored here to keep the INV-LAUNCH-1 gate intact.
 
 ---
 

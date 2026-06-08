@@ -66,7 +66,7 @@ Quarterly cycles reduce governance noise while keeping the system responsive. Mo
 Each evidence package carries an explicit validity date. When a package lapses that date without being refreshed, the controls it backs are no longer treated as verified: the affected threat reverts to a degraded, unverified status, the lapse is escalated to oversight and recorded in the lapse log, and the package must be renewed before the threat may be reported as passing again. Stale evidence counts as no evidence.
 
 ### C-6. Change control and emergency patching
-All material changes to Essential Access basket, scarcity triggers, Flow demurrage, Voice scope, Service Record service eligibility rules, or identity/oracle mechanisms must use a controlled change process.
+All material changes to Essential Access basket, scarcity triggers, Commons Return and Universal Stake, Flow issuance, Voice scope, Service Record service eligibility rules, or identity/oracle mechanisms must use a controlled change process.
 1. **Change Proposal (CP)** created with: intent, affected invariants, threat impact, migration plan, and rollback plan.
 2. **Two-layer review:** (1) technical/security review, then (2) oversight review for rights/survival impacts.
 3. **Staged rollout with kill-switch:** deploy to a pilot region/segment; expand only after evidence passes.

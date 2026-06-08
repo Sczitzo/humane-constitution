@@ -15,7 +15,7 @@ Plain meaning: start with the [Humane Constitution](../constitution/Humane_Const
 
 ## Taxonomy note
 
-Decimal codes (1.1, 2.3, etc.) below are **reader-facing display labels only**. They organize navigation and do not change constitutional meaning. Legacy annex IDs (A, B, C … AZ) remain the authoritative file identifiers. No filename migration is authorized. ANNEX_D is the sole demurrage instrument. Full schema: [TAXONOMY.md](./TAXONOMY.md).
+Decimal codes (1.1, 2.3, etc.) below are **reader-facing display labels only**. They organize navigation and do not change constitutional meaning. Legacy annex IDs (A, B, C … AZ) remain the authoritative file identifiers. No filename migration is authorized. ANNEX_D now governs Commons Return and Universal Stake; older demurrage language is superseded unless clearly marked historical or dormant. Full schema: [TAXONOMY.md](./TAXONOMY.md).
 
 ---
 
@@ -72,11 +72,11 @@ Independent review institutions, complaint pathways, and civic accountability ar
 
 ## Title 4 — Economy and Stewardship
 
-Money creation, wealth carrying costs, investment containment, and trade boundaries.
+Money creation, public return, investment containment, and trade boundaries.
 
 | Decimal | Annex | Description |
 |:---|:---|:---|
-| 4.1 | [Annex D](./ANNEX_D.md) | progressive net-worth demurrage — the sole carrying-cost instrument on accumulated wealth |
+| 4.1 | [Annex D](./ANNEX_D.md) | Commons Return and Universal Stake — public return from shared value, scarcity rents, succession transfers, and protected civic inheritance |
 | 4.2 | [Annex X](./ANNEX_X.md) | Flow issuance architecture |
 | 4.3 | [Annex V](./ANNEX_V.md) | transition mechanics, conversion, and legacy-system treatment |
 | 4.4 | [Annex AT](./ANNEX_AT.md) | external trade architecture: strategic floors, export caps, and the reciprocity membrane |

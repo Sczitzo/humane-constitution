@@ -161,6 +161,7 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-026 | P-026 | ACTIVE | founding/order/ | S9 |
 | T-027 | P-026 | ACTIVE | founding/order/ | S9 |
 | T-028 | P-050 | ACTIVE | AT §AT6.6 | S10 |
+| T-029 | P-066 | ACTIVE | D; Commons_Return_Universal_Stake_Evidence_Test_Package | S11 |
 | — | P-053 | ACTIVE | AW | S10 |
 | — | P-054 | ACTIVE | AX | S10 |
 | — | P-055 | ACTIVE | AY | S10 |
@@ -172,4 +173,4 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | ACL-007 | P-061 | PROPOSED | Founding_Capital_Framework | Founding |
 | ACL-011 / ACL-010 | P-062 | PROPOSED | Pilot_Timeline_Framework | Founding |
 
-*P-014 marks its unique status as a one-time founding instrument. 28 total threats. P-018 remains the PROPOSED electoral-resilience supplement. P-051 is the ACTIVE primary CIP control for T-022. P-065 is the ACTIVE CIP anti-hollowing hardening pass. P-056 remains the PROPOSED open-access survival floor, and P-057 through P-062 remain pilot-town founding-framework proposals unless separately promoted. P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. Bootstrap problem resolved. Acceptance sequence unblocked.*
+*P-014 marks its unique status as a one-time founding instrument. 29 total threats. P-018 remains the PROPOSED electoral-resilience supplement. P-051 is the ACTIVE primary CIP control for T-022. P-065 is the ACTIVE CIP anti-hollowing hardening pass. P-066 registers the fiscal sustainability / debasement threat and replaces routine demurrage with Commons Return and Universal Stake as the active Annex D doctrine. P-056 remains the PROPOSED open-access survival floor, and P-057 through P-062 remain pilot-town founding-framework proposals unless separately promoted. P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. Bootstrap problem resolved. Acceptance sequence unblocked.*

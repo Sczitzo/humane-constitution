@@ -18,7 +18,7 @@
 
 ## Purpose
 
-P-023 establishes that no entity receives a demurrage exemption and that long-horizon projects are financed through contract-commitment architecture: capital held in milestone escrow (the progressive net-worth demurrage in Annex D applies to escrowed balances as a component of net worth), released on independently verified physical deliverables. The rules are structurally sound but they depend on four numerical parameters that the design cannot determine from first principles:
+P-023 establishes that no entity receives a protected-capital shelter merely by labeling funds as investment, infrastructure, or long-horizon planning. Long-horizon projects are financed through contract-commitment architecture: capital held in milestone escrow, released on independently verified physical deliverables, and reviewed for source-base avoidance under Annex D where public-created value, scarcity privilege, or external-capital commons use is implicated. The rules are structurally sound but they depend on four numerical parameters that the design cannot determine from first principles:
 
 - **High-value release thresholds** — where does single-verifier oversight end and multi-verifier oversight begin?
 - **Deployment window** — how long may commissioning authorities hold idle escrowed funds before accountability triggers?
@@ -41,7 +41,7 @@ This annex specifies five things:
 4. **Inspector pool governance** — pool size floors, rotation schedule, disqualification criteria
 5. **Publication commitment** — what is reported publicly, how often, and in what form
 
-Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples use a round-number **5% effective annual carrying cost** purely as an illustrative figure for comparing parameter choices; the actual carrying cost on escrowed funds is the progressive net-worth demurrage in Annex D applied to the escrow balance as a component of net worth. This annex sets no demurrage rate of its own.
+Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples use a round-number **5% annual accountability cost** purely as an illustrative signal for comparing parameter choices; the operative controls are the deployment window, review trigger, public accounting, and Annex D source-base review. This annex sets no demurrage rate of its own.
 
 ---
 
@@ -105,7 +105,7 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 ## Section 2 — Deployment Window
 
-*The deployment window is the period within which a commissioning authority must contract idle escrowed funds. Funds held in escrow beyond the window without active contracting trigger mandatory CRP review. Demurrage continues regardless.*
+*The deployment window is the period within which a commissioning authority must contract idle escrowed funds. Funds held in escrow beyond the window without active contracting trigger mandatory CRP review. Review continues regardless of whether any dormant backstop has been activated.*
 
 ### 2.1 — Window by Programme Type
 
@@ -115,13 +115,13 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 | **Standard infrastructure** (transport, utilities, civic facilities) | FC-164 (reserved; recommended anchor: 180 days) | Complex procurement cycles require more time. 180 days balances contracting quality against idle-fund accountability. |
 | **Large-scale or novel infrastructure** (projects above FC-165 (reserved; recommended anchor: 50M Flow) contracted value, or first-of-type projects with no established procurement pathway) | FC-166 (reserved; recommended anchor: 365 days) | Procurement complexity is genuine at this scale. The longer window is compensated by stricter oversight: CRP review at 180 days (not just at end of window) and mandatory procurement progress reporting at 90-day intervals. |
 
-### 2.2 — Demurrage Interaction Worked Examples
+### 2.2 — Deployment-Delay Signal Worked Examples
 
-*These examples use a 5% effective annual carrying cost as an illustrative figure. The operative carrying cost is the Annex D progressive net-worth demurrage applied to the escrow balance; founding coalition must recalibrate the worked figures against the applicable Annex D effective rate for the relevant net-worth bracket.*
+*These examples use a 5% annual accountability signal as an illustrative figure. The operative controls are review deadlines, public reporting, source-base review, and any separately approved dormant backstop. The examples show why delay must create visible institutional pressure even without routine demurrage.*
 
 **Essential Access-essential: 5M Flow housing fund, 90-day deployment window**
 
-| Day reached without active contracting | Flow lost to demurrage | Annualised rate signal |
+| Day reached without active contracting | Illustrative accountability cost | Annualised signal |
 | :--- | :--- | :--- |
 | Day 30 | ~20,500 Flow | Finance directors will notice by first monthly report |
 | Day 60 | ~41,100 Flow | Sufficient to trigger internal programme review in most institutional budgets |
@@ -130,7 +130,7 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 **Standard infrastructure: 5M Flow fund, 180-day window**
 
-| Day reached without active contracting | Flow lost to demurrage | Signal |
+| Day reached without active contracting | Illustrative accountability cost | Signal |
 | :--- | :--- | :--- |
 | Day 90 | ~61,600 Flow | Internal signal; no CRP review yet |
 | Day 180 | ~123,300 Flow | CRP review triggered. 2.5% of fund lost |
@@ -138,13 +138,13 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 **Carrying-cost sensitivity: same 5M Flow fund, 180-day window**
 
-| Effective annual carrying cost | Flow lost by day 180 | Institutional signal strength |
+| Effective annual signal | Illustrative cost by day 180 | Institutional signal strength |
 | :--- | :--- | :--- |
 | 2% | ~49,300 Flow | Weak — <1% of fund |
 | 5% | ~123,300 Flow | Moderate — 2.5% of fund |
 | 10% | ~246,600 Flow | Strong — 4.9% of fund |
 
-**Key finding:** If the effective Annex D carrying cost reaching the escrow balance is below approximately 3%, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. Where the applicable Annex D effective rate on a commissioning authority's net-worth bracket is low, the deployment windows must be shortened to compensate. This annex does not create a separate carrying cost on escrowed funds; the single instrument remains the Annex D net-worth demurrage.
+**Key finding:** If the visible cost of delay is below approximately 3% per year, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. Where no dormant backstop applies, deployment windows, public reporting, and CRP escalation must carry the full discipline. This annex does not create a separate carrying cost on escrowed funds.
 
 ### 2.3 — What CRP Review Entails
 
@@ -163,7 +163,7 @@ CRP review outcomes are published publicly within **FC-170** (reserved; recommen
 
 ## Section 3 — Force Majeure Freeze Cap
 
-*A force majeure freeze pauses demurrage on an affected escrow account for the duration of a verified external delay. The cap is the maximum cumulative freeze time available per project across its entire contracted life.*
+*A force majeure freeze pauses the deployment-delay consequence on an affected escrow account for the duration of a verified external delay. The cap is the maximum cumulative freeze time available per project across its entire contracted life.*
 
 ### 3.1 — Cap and Verification Tiers
 
@@ -185,22 +185,22 @@ Whichever limit is reached first ends freeze availability. The duration-proporti
 
 ### 3.2 — Worked Examples
 
-*Three projects of different durations, 5% illustrative effective annual carrying cost (the operative cost is the Annex D net-worth demurrage on the escrow balance). The examples below trace the absolute anchor of 365 days in isolation to expose the anchor-hunting seam; under §3.1 the binding cap is the lesser of that anchor and the 25%-of-duration proportional cap, so the proportional limit governs every project short enough for the anchor to over-reach.*
+*Three projects of different durations, 5% illustrative annual accountability signal. The examples below trace the absolute anchor of 365 days in isolation to expose the anchor-hunting seam; under §3.1 the binding cap is the lesser of that anchor and the 25%-of-duration proportional cap, so the proportional limit governs every project short enough for the anchor to over-reach.*
 
 **Project A: 2-year hospital construction, 8M Flow escrowed**
 
-| Scenario | Total demurrage paid | Demurrage avoided (frozen) | Freeze as % of total exposure |
+| Scenario | Total delay signal applied | Signal avoided (frozen) | Freeze as % of total exposure |
 | :--- | :--- | :--- | :--- |
 | No force majeure events | ~800,000 Flow | 0 | 0% |
 | 90-day freeze (single disruption) | ~701,000 Flow | ~99,000 Flow | 12.4% |
 | 180-day freeze (sustained disruption) | ~602,000 Flow | ~198,000 Flow | 24.8% |
 | 365-day freeze (cap exhausted) | ~402,000 Flow | ~398,000 Flow | **49.7%** — approximately half of total demurrage eliminated |
 
-The 365-day absolute anchor in isolation lets a contractor eliminate ~50% of total demurrage exposure on a two-year project. The duration-proportional cap (FC-174) closes this: 25% of a 2-year duration is 182 days, which binds ahead of the 365-day anchor and holds avoidance to ~25%. On this project the proportional cap is the operative limit.
+The 365-day absolute anchor in isolation lets a contractor eliminate ~50% of total delay exposure on a two-year project. The duration-proportional cap (FC-174) closes this: 25% of a 2-year duration is 182 days, which binds ahead of the 365-day anchor and holds avoidance to ~25%. On this project the proportional cap is the operative limit.
 
 **Project B: 5-year power grid, 30M Flow escrowed**
 
-| Cap length | Max demurrage avoided | As % of total exposure (5yr, 5%) | Economic value of capturing the certification panel |
+| Cap length | Max signal avoided | As % of total exposure (5yr, 5%) | Economic value of capturing the certification panel |
 | :--- | :--- | :--- | :--- |
 | 90-day cap | ~369,000 Flow | 4.9% | Low — not worth the effort |
 | 180-day cap | ~739,000 Flow | 9.8% | Borderline |
@@ -211,13 +211,13 @@ The 365-day absolute anchor in isolation lets a contractor eliminate ~50% of tot
 
 **Project C: 1-year community housing (Essential Access-essential), 1M Flow escrowed**
 
-| Cap length | Max demurrage avoided | As % of total exposure (1yr, 5%) |
+| Cap length | Max signal avoided | As % of total exposure (1yr, 5%) |
 | :--- | :--- | :--- |
 | 90 days | ~12,300 Flow | 24.7% |
 | 180 days | ~24,700 Flow | 49.4% |
 | 365 days | ~50,000 Flow | 100% — entire demurrage eliminated on a 1-year project |
 
-**Key finding for short projects of any type:** The 365-day absolute anchor on a 1-year project is effectively unlimited — it erases the entire demurrage. The duration-proportional cap **FC-174** (recommended anchor: 25% of contracted project duration) is the binding limit for every short project, not only Essential Access-essential ones: 25% of a 1-year duration is ~91 days, holding avoidance to ~25%. Because §3.1 binds the cap to the lesser of the absolute and proportional limits for all programme types, the "1-year project, 365-day cap" outcome cannot arise for standard infrastructure either.
+**Key finding for short projects of any type:** The 365-day absolute anchor on a 1-year project is effectively unlimited — it erases the entire delay signal. The duration-proportional cap **FC-174** (recommended anchor: 25% of contracted project duration) is the binding limit for every short project, not only Essential Access-essential ones: 25% of a 1-year duration is ~91 days, holding avoidance to ~25%. Because §3.1 binds the cap to the lesser of the absolute and proportional limits for all programme types, the "1-year project, 365-day cap" outcome cannot arise for standard infrastructure either.
 
 ### 3.3 — Qualifying Events
 
@@ -296,7 +296,7 @@ Publication of force majeure applications and outcomes converts the certificatio
 
 To complete this annex before deployment, the founding coalition must:
 
-1. **Determine the applicable Annex D effective carrying cost** on escrowed balances for the relevant net-worth brackets and recalibrate the deployment window examples in Section 2 accordingly. If that effective cost reaching the escrow balance is below 3% per year, deployment windows must be shortened to maintain adequate institutional signal strength. No separate carrying cost on escrowed funds is created; the Annex D net-worth demurrage is the single instrument.
+1. **Determine the effective deployment-delay discipline** for escrowed balances and recalibrate the deployment window examples in Section 2 accordingly. If the visible signal reaching the commissioning authority is below 3% per year, deployment windows must be shortened or public escalation strengthened to maintain adequate institutional urgency. No separate carrying cost on escrowed funds is created by this annex.
 
 2. **Bind FC-160 through FC-184** in Sections 1 through 4, using first-year pilot data where available. Where pilot data is not yet available, use the recommended anchors as starting positions. **Before any parameter is bound, it must be submitted to an adversarial parameter review panel convened under the same composition rules as AH3 (ANNEX_AH).** The panel must compare each parameter against at least two real-world analogues from comparable governance systems or existing escrow and capital-deployment frameworks. Parameters for which no analogue can be identified must be auto-flagged in the founding record with a published explanation of why no analogue exists and what the founding coalition used instead. Any parameter that the adversarial panel contests must carry a permanent public warning record in `/founding/commitments.md` — the warning does not block deployment, but it remains attached to the parameter through all subsequent reviews and cannot be removed without a Tier 2 amendment process.
    - High-value thresholds: 100k Flow / 1M Flow / 15% of project value
