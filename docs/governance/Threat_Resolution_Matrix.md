@@ -240,13 +240,13 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 
 ### T-022 - Electoral Cycle Capture
 
-- **Current control:** [P-018](./Patch_Log.md), [Annex AM](../annexes/ANNEX_AM.md)
-- **Resolution path:** entrench survival-floor persistence, transition continuity, hostile-administration triggers, and independent constitutional-body authority.
-- **Corruption route to assume:** a successor government keeps constitutional language while starving staff, delaying appointments, rewriting administrative standards, or capturing enforcement.
+- **Current control:** [P-051](./Patch_Log.md) primary CIP control + [P-065](./Patch_Log.md) AM8 anti-hollowing hardening; [P-018](./Patch_Log.md) remains the proposed electoral-resilience supplement. See [Annex AM](../annexes/ANNEX_AM.md).
+- **Resolution path:** entrench survival-floor persistence, transition continuity, conduct-based hostile-administration triggers, independent constitutional-body authority, vacancy self-repair, publication fallback, and no-waiver effectiveness rules.
+- **Corruption route to assume:** a successor government keeps constitutional language while starving staff, delaying appointments, batching loyalist appointments, suppressing dashboard publication, withholding Ombuds integrity reports, rewriting administrative standards, or capturing enforcement.
 - **External evidence:** OECD public integrity indicators anchor the gap between formal rules and implementation capacity, especially when institutions are under political pressure.
-- **Proof needed:** transition-of-power simulation, administrative hollowing trigger test, budget-starvation scenario, and independent-body legitimacy review.
-- **Residual risk:** no constitutional design can fully prevent determined democratic repeal or authoritarian seizure; the project can only make hollowing visible and contested.
-- **Resolution update:** CIP specification in Annex AM §AM8 (P-051 ACTIVE): 7 members, staggered terms, constitutionally fixed funding, automatic hollowing triggers. Constitutional body and trigger infrastructure now defined.
+- **Proof needed:** transition-of-power simulation, administrative hollowing trigger test, budget-starvation scenario, independent-body legitimacy review, vacancy-as-waiver test, below-quorum continuity test, appointment-batching test, dashboard-publication-lapse test, and Ombuds-integrity-report-unavailable test.
+- **Residual risk:** no constitutional design can fully prevent determined democratic repeal or authoritarian seizure; the project can only make hollowing visible and contested. CIP repair authority can itself become guardian-class power if not kept conduct-based, published, challengeable, and subordinate to immediate Essential Access relief.
+- **Resolution update:** CIP specification in Annex AM §AM8 (P-051 ACTIVE): 7 members, staggered terms, constitutionally fixed funding, automatic hollowing triggers. P-065 adds vacancy deadlines, fallback nomination, void mass appointments, below-quorum self-repair limits, publication fallback, integrity-report suspension, servant-authority limits, and relief-first rules.
 
 ### T-023 - Pilot External Validity Collapse
 

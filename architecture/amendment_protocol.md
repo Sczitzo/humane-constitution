@@ -140,6 +140,8 @@ During the 180-day window:
 - Public comment is collected and archived on the amendment log.
 - Holders may revoke their signatures at any time before the timelock expires. A signature revocation that drops the count below 7 aborts the amendment.
 
+If the Federated Ombuds does not publish the Tier 1 Amendment Integrity Report within 60 days, the amendment is procedurally suspended and may not become effective until either the report is published or a fallback integrity review is completed by the Ombuds Oversight Assembly. Failure to publish the report is itself recorded as an AM3 administrative-hollowing trigger and a permanent amendment-log defect. Silence by the Ombuds is never treated as consent.
+
 ### 3.2 — Why 180 Days
 
 180 days is six calendar months. The derivation (preserved in `/founding/commitments.md` FC-111):
@@ -157,6 +159,8 @@ At the end of the 180-day window:
 - The prior version is archived (not deleted) in the drift chain.
 
 If signatures have dropped below threshold, a process defect is found, or the amendment has been withdrawn, the amendment does not take effect. The drift chain records the failed attempt in a public audit archive, but it does not advance the head.
+
+For avoidance of doubt, a missing Ombuds Integrity Report, missing fallback integrity review, missing CIP ratification artifact, or unresolved AM3 vacancy trigger affecting the CIP is a procedural deficiency. The amendment does not take effect while any such deficiency remains unresolved.
 
 ### 3.4 — Concurrent CIP Ratification Required
 

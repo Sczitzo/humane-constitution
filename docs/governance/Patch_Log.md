@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-064**
+**Running change ledger aligned to the Humane Constitution · Current through P-065**
 
 ---
 
@@ -82,6 +82,7 @@
 | P-061 | ACL-007 / Power-Wealth Convergence | **PROPOSED** | Critical | Founding Capital Framework: phase targets ($15–22M / $35–55M / $60–90M); 20%/30% funder concentration limits; Capital Steward independent fiduciary; constitutional primacy clause (non-negotiable in all funding agreements); government walk-away rule (4 trigger conditions); CLT land structure; wind-down reserve (6 months EA pre-funded). |
 | P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
 | P-064 | T-028 | **ACTIVE** | Critical | Compliance-Masked Refusal Hardening: treats lawful-looking obstruction as refusal when formal compliance hides CSM delivery degradation, patient-continuity failure, data/control-system lockout, PBM access friction, standards delay, affiliate fallback capture, workforce poaching, legal delay, or concession pressure. |
+| P-065 | T-022 | **ACTIVE** | Critical | CIP Vacancy-Starvation Hardening: appointment deadlines, fallback nomination, void mass appointments, below-quorum self-repair limits, publication-channel fallback, missed Ombuds-report suspension, conduct-only hollowing triggers, servant-authority and relief-first limits. |
 
 ---
 
@@ -689,7 +690,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-064. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-065. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -708,7 +709,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
 | T-002 | P-016 | ACTIVE | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
-| T-022 | P-018 | ACTIVE | Annex AM |
+| P-018 | T-022 supplement | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **ACTIVE** | Annex AN |
 | T-017 | P-020 | **ACTIVE** | Annex AH2 |
 | structural — no threat row (register disclosure protocol) | P-021 | **ACTIVE** | Annex AO |
@@ -753,6 +754,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | ACL-007 / Power-Wealth Convergence | P-061 | **PROPOSED** | Founding Capital Framework |
 | ACL-011 / ACL-010 | P-062 | **PROPOSED** | Pilot Timeline Framework |
 | T-028 | P-064 | **ACTIVE** | Essential-Sector Refusal Test Package · Capture Dashboard Specification · Threat Resolution Matrix · Pilot Evidence Roadmap |
+| T-022 | P-065 | **ACTIVE** | ANNEX_AM §AM3/§AM8.5–AM8.7 · amendment_protocol.md §3 · Capture Dashboard Specification · Pilot Evidence Roadmap |
 
 ---
 
@@ -1429,3 +1431,20 @@ The essential-sector refusal package already tested open exit, medicine/PBM refu
 - **Evidence integration:** Updates T-028 in the Threat Register and Threat Resolution Matrix, Phase 8 of the Pilot Evidence Roadmap, the Claims and Evidence Register, Hardening Queue, Conglomerate Transition Dossier, and Annex AT CASP independence language.
 - **New risks introduced:** The metric can over-classify genuine operational difficulty as strategic refusal. Mitigated by independent clearance for legitimate delay, two-source confirmation for degradation periods under Annex AT, and affected-population evidence rather than inference from paperwork alone.
 - **Residual risk:** Sophisticated incumbents can distribute obstruction below individual thresholds, especially through informal standards influence, contractor labor markets, insurer/lender pressure, and patient-level administrative friction. The control improves detectability; it does not create physical capacity, independent staff, data escrow, or medicine supply by itself.
+
+---
+
+### P-065 — CIP Vacancy-Starvation Hardening
+
+**Threat addressed:** T-022
+**Status:** ACTIVE | **Priority:** Critical
+
+The active CIP design made hostile successor hollowing visible but still had a load-bearing failure mode: a successor government could let CIP seats expire, keep the panel below quorum, delay dashboard publication, and then argue that absent ratification could not block later action. This patch makes vacancy itself self-repairing and makes silence a defect, not consent.
+
+- **Introduced design:** CIP vacancies must be published within 7 days. Ordinary appointing sources must transmit a qualified nominee within 30 days; fallback nomination activates at 45 days through the Federated Ombuds Plenum from a public, multi-source shortlist. The fallback path is a repair duty, not a policy-alignment power.
+- **Staggering enforcement:** Appointments that violate the no-more-than-2-seats-per-year rule are void unless tied to death, incapacity, or removal for cause. Void appointments do not count toward quorum, ratification, or review authority.
+- **Below-quorum rule:** Vacancy does not waive concurrent ratification. A below-quorum CIP may publish records, request fallback nomination, preserve evidence, accept objections, and issue interim risk notices, but may not ratify amendments, close AM3 reviews, waive deadlines, approve funding changes, or appoint itself.
+- **Publication and report fallback:** Dashboard failure routes trigger publication through the public amendment log and independent Ombuds channels. A missing Ombuds Tier 1 integrity report procedurally suspends the amendment until the report or fallback review is complete.
+- **Servant-authority limits:** CIP authority is custodial, corrigible, conduct-based, and subject to ordinary challenge. CIP funding is subordinate to immediate Essential Access relief; no review, vacancy, dispute, or funding issue may delay survival-floor activation.
+- **New risks introduced:** Fallback nomination could become a guardian-class formation path if repeated repairs are dominated by the same civil-society or expert networks. Mitigated by public shortlists, multi-source nomination, Article VII publication, non-renewable terms, ordinary challenge rights, and Capture Dashboard monitoring.
+- **Residual risk:** This patch blocks one hollowing route; it cannot prevent lawful democratic repeal or broad institutional culture collapse. The design can make hollowing visible, slow, and contestable; it cannot make human guardians incorruptible.

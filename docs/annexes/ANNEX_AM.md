@@ -9,9 +9,9 @@
 > | **Evidence status** | Designed |
 > | **Linked risks** | T-022 (Electoral Cycle Capture); P-018; Annex AI (Federated Ombuds); Annex AJ (enforcement ledger); Annex AL (oracle accreditation) |
 
-> **Provenance:** Implements [P-018 — Electoral Cycle Resilience] · Addresses T-022 · Status: see Patch Log
+> **Provenance:** Defines the T-022 mitigation path. P-018 remains the PROPOSED electoral-resilience supplement; P-051 (AM8) is the ACTIVE primary CIP control; P-065 (AM3/AM8.5–AM8.7) is ACTIVE anti-hollowing hardening. Status: see Patch Log.
 
-**Status:** PROPOSED | **Priority:** Critical | **Patch:** P-018
+**Status:** P-018 PROPOSED supplement; P-051/P-065 ACTIVE controls | **Priority:** Critical | **Patch:** P-018 / P-051 / P-065
 **Threat addressed:** T-022 (Electoral Cycle Capture)
 **Authority:** Tier 1 for AM1, AM2, AM3, AM6 (entrenchment, Essential Access floor minimum, hollowing triggers, treaty override). Tier 2 for AM4, AM5 (transition continuity, audit scope).
 
@@ -48,6 +48,8 @@ The review is initiated by the constitutional body (AM1) and is self-executing. 
 
 **Review timeline and inaction consequence.** An AM3 constitutional review must be initiated within **14 days** of the trigger condition being detected. If review is not initiated within 14 days, the trigger is entered as a "review lapsed - initiation overdue" record in the Article VII dashboard; this is a permanent audit artifact and is not removed by subsequent initiation. The initiating actor must publish a written explanation of the delay in the Article VII dashboard within **7 days** of the lapsed-review entry. Once initiated, written findings must be published in the Article VII dashboard within **60 days** of initiation. If findings are not published within 60 days, a "review lapsed - findings overdue" record is entered in the dashboard and the 7-day written explanation requirement applies again. A trigger is not formally closed until written findings are published; the underlying trigger condition having been independently corrected does not close the trigger record. All active unresolved AM3 triggers -- whether at the initiation-overdue or findings-overdue stage -- must be reported in every subsequent Article VI quarterly compliance report until findings are published and the trigger is formally closed. Disputed triggers: any person may file a written dispute of a triggering finding within **14 days** of its dashboard publication; disputes are reviewed by the Federated Ombuds within **30 days** of filing; the trigger remains active and deadlines continue to run during dispute review. No urgency claim or emergency may waive the 14-day initiation deadline, the 60-day findings deadline, the lapsed-review publication requirements, or the dispute review period.
 
+**Publication-channel failure.** If Article VII dashboard publication is itself the trigger condition, failure of the dashboard may not prevent trigger publication. The initiating actor must publish the trigger record through the public amendment log and at least two independent Ombuds publication channels within 24 hours. The dashboard must later backfill the record with the original trigger date; late backfill does not erase the lapse, reset the trigger clock, or cure the underlying failure.
+
 ## AM4 — Transition Continuity Protocol
 
 When a new governing coalition takes office, a mandatory **180-day transition audit** is required before any changes to Tier 2 or Tier 1 provisions. The audit is conducted by the constitutional body (AM1), not the incoming government. During the 180-day window, no Tier 2 or higher changes may be made except through emergency deadlock resolution (P-012, Annex AE §AE2.3).
@@ -77,6 +79,12 @@ The standard is reviewed annually by the Federated Ombuds and updated when reide
 
 The independent constitutional body named in AM1 is hereby specified as the **Constitutional Integrity Panel (CIP)**.
 
+The CIP exercises servant authority only. Its power is custodial, not proprietary, and exists solely to preserve Essential Access, constitutional remedy, truthful publication, and independent review from administrative hollowing. The CIP may not use its authority to entrench a founding group, protect its own institutional status, suppress lawful democratic reform, or delay review of its own conduct. No act of the CIP carries divine endorsement; all CIP decisions are human, corrigible, published with reasons, and subject to ordinary challenge.
+
+AM3 and AM8 triggers are conduct-based, not viewpoint-based. A governing coalition may not be treated as hostile because of party, ideology, religion, criticism of this Constitution, or lawful advocacy for amendment. Hostility is constitutionally relevant only when evidenced by objective acts that starve oversight, leave protected seats vacant, suppress publication, degrade oracle independence, delay Essential Access, or bypass amendment/remedy procedures.
+
+Any person may file a hollowing, delay, conflict, or self-dealing challenge against the CIP, Ombuds Plenum, or any appointing body. Filing must be possible through plain-language, low-burden channels, including non-digital channels. A challenge may not be rejected for lack of legal form if it identifies the alleged institutional failure and requested remedy. If no written response is published within 14 days, the lapse is automatically entered in the Article VII dashboard and referred to the fallback review body.
+
 ### AM8.1 — Composition
 
 The CIP consists of **7 members** subject to the following constraints:
@@ -85,6 +93,10 @@ The CIP consists of **7 members** subject to the following constraints:
 - At least 2 members must be appointed by bodies structurally independent of the current governing coalition — eligible appointing bodies include: prior-cycle ombudspersons, accredited academic constitutional law bodies, or civil society appointment processes ratified by the Federated Ombuds Plenum.
 - Appointments are **staggered**: no more than 2 seats may turn over in any single calendar year.
 
+**Appointment duty and fallback nomination.** A CIP vacancy must be published in the Article VII dashboard within 7 days, with the appointing source, vacancy date, deadline, and public nomination route. The ordinary appointing source must transmit a qualified nominee within 30 days. If no qualified nominee is transmitted within 45 days, fallback nomination authority transfers for that seat only to the Federated Ombuds Plenum acting by 4-of-5 vote from a public shortlist submitted by at least three structurally independent civil-society, legal-aid, faith-community, labor, disability-rights, indigenous, rural, or constitutional-law bodies. The fallback nominee must still satisfy AM8.1 composition limits, AM8.2 term limits, and AM8.4 removal protections. The fallback path is a repair duty, not a power to reconstitute the CIP for policy alignment.
+
+**Staggering enforcement.** Any appointment that would cause more than 2 CIP seats to turn over in a single calendar year is void unless the excess turnover results from death, incapacity, or removal for cause under AM8.4 and the Article VII dashboard publishes the exception basis. A void appointment does not count toward quorum, ratification, or review authority. Attempted mass appointment, delayed batch appointment, or appointment outside the published route is itself an AM3 administrative hollowing trigger.
+
 ### AM8.2 — Term
 
 Members serve **5-year non-renewable terms**. Staggering is maintained by the founding order, which must schedule initial terms of 3, 4, and 5 years across the first cohort to ensure continuity.
@@ -92,6 +104,8 @@ Members serve **5-year non-renewable terms**. Staggering is maintained by the fo
 ### AM8.3 — Funding Independence
 
 The CIP budget is constitutionally fixed at **0.01% of annual Flow issuance** and is disbursed directly from the Essential Access reserve without legislative appropriation. The current governing coalition may not reduce, redirect, or freeze CIP funding except through a Tier 1 amendment ratified by the CIP itself (which requires a replacement funding structure to be established before the reduction takes effect).
+
+CIP funding may never reduce, delay, ration, or condition Essential Access, emergency relief, or survival-floor activation owed to any person. If reserve capacity is insufficient to fund both immediate Essential Access obligations and CIP operations, immediate Essential Access relief is paid first, and the CIP funding shortfall is published as an administrative-hollowing trigger.
 
 **Oracle-independence requirement:** The annual Flow issuance figure used to calculate the CIP budget must be drawn from the independent oracle measurement network (Annex AL) rather than from the issuance authority's own published accounts. If the independent oracle measurement produces a materially different figure from the issuance authority's accounts (defined as a divergence exceeding 2% of total annual issuance), both figures are published and the higher figure governs for CIP budget purposes until the discrepancy is resolved. This prevents under-reporting of issuance as a mechanism for budget suppression without requiring a formal Tier 1 amendment.
 
@@ -107,6 +121,8 @@ Before the vote, each voting Plenum member must disclose any conflict of interes
 
 **5 of 7 members** constitute a quorum for any ratification decision on Tier 1 amendments. Ratification requires an affirmative vote of at least 5 members. Abstentions do not count toward the affirmative threshold.
 
+If vacancies reduce the CIP below quorum, Tier 1 amendments remain suspended; vacancy cannot be used as a waiver of concurrent ratification. A below-quorum CIP retains only limited self-repair authority: publishing vacancy facts, requesting fallback nomination, preserving records, accepting public objections, and issuing non-binding interim risk notices. It may not ratify amendments, close AM3 reviews, waive deadlines, approve funding changes, or appoint its own members.
+
 ### AM8.6 — Trigger Conditions
 
 CIP ratification is required **concurrently** with any Tier 1 amendment; no Tier 1 amendment is effective without it.
@@ -116,12 +132,21 @@ The CIP may also initiate a constitutionality review on its own motion when any 
 - (a) Any founding institution seat is unfilled for more than **90 days** (consistent with AM3).
 - (b) Post-mortem publication (Article VII) lapses for more than **30 days** (consistent with AM3).
 - (c) Oracle accreditation count drops below the FC-030 minimum of **5 nodes**.
+- (d) Any CIP vacancy remains without a transmitted qualified nominee for more than **45 days**.
+- (e) Any appointing source attempts to batch appointments, violate AM8.1 composition limits, violate AM8.1 staggering limits, or bypass the published nomination route.
+- (f) Any Tier 1 amendment, funding change, or transition-audit action is advanced on the claim that CIP vacancy, nonconstitution, or below-quorum status removes the concurrent-ratification requirement.
 
 A self-initiated review must be published in the Article VII dashboard at the moment of initiation and completed within 60 days unless the Federated Ombuds authorizes an extension (per AM5 extension authority).
+
+If the CIP cannot initiate because it is below quorum, the AM3 interim-initiation pathway applies: the Federated Ombuds Plenum initiates the review for the sole purpose of preserving the trigger, publishing the record, and ordering the appointment-repair path. The Plenum does not acquire CIP ratification authority.
 
 ### AM8.7 — Activation Gate
 
 The CIP cannot be constituted until the **Founding Order's first post-activation audit is complete** (per P-014 §5). Until that gate is cleared, Tier 1 amendments are suspended. The audit completion date and CIP constitution date must both be recorded in the Article VII dashboard as founding-event entries.
+
+**Integrity report fallback.** If a Tier 1 timelock, transition audit, or AM3 review requires a Federated Ombuds integrity report and the Ombuds cannot issue it within the published deadline because it is unconstituted, below quorum, under unresolved capture signal, or blocked by appointment delay, the report is marked "integrity report unavailable" in the Article VII dashboard. The underlying Tier 1 or transition action may not proceed on that basis. The unavailability record triggers an AM3 review, an Ombuds vacancy/capture repair docket under Annex AI, and a public explanation within 7 days. Silence by the Ombuds is never treated as consent.
+
+No AM3 review, AM4 transition audit, CIP ratification process, dispute period, vacancy, dashboard lapse, integrity-report lapse, or funding dispute may operate as a condition precedent to Essential Access continuity, emergency relief, or survival-floor activation. Relief owed to vulnerable persons proceeds first; review follows without delaying care.
 
 ---
 
@@ -137,11 +162,12 @@ The CIP cannot be constituted until the **Founding Order's first post-activation
 - The self-executing Essential Access floor (AM2) requires continuous oracle measurement; oracle degradation itself triggers AM3 review.
 - The 180-day transition window (AM4) may stall genuine reforms; AM5 audit scope and Ombuds extension authority mitigate.
 - AM7's k-anonymity threshold of 10 is a starting parameter; small communities may require larger k or aggregation-only publication.
+- Fallback nomination authority can become a guardian-class formation path if the same civil-society or expert bodies dominate repeated repairs. Mitigated by public shortlists, three-source minimum, Article VII publication, AM8.1 composition limits, AM8.2 non-renewable terms, AM8.4 removal protections, and Capture Dashboard monitoring of repeat-origin concentration.
 
 ## Residual Risk
 
-A government with sufficient political will and supermajority can repeal constitutional entrenchment through valid amendment. The designed defense buys time and raises political cost; it cannot prevent determined repeal. Ultimate residual: protocol durability depends on political culture. No design substitutes for a culture that values the commitments.
+A government with sufficient political will and supermajority can repeal constitutional entrenchment through valid amendment. The designed defense buys time and raises political cost; it cannot prevent determined repeal. Vacancy repair makes hollowing harder to hide; it does not make any human guardian body incorruptible. Ultimate residual: protocol durability depends on political culture. No design substitutes for a culture that values the commitments.
 
 ---
 
-*This annex closes T-022 (Electoral Cycle Capture). Its operative provisions integrate with Annex AI (Federated Ombuds) §3.4 automatic Plenum convocation, Annex AJ §enforcement-ledger publication (via AM7), and the architectural enforcement layer in `/architecture/`.*
+*This annex defines the current T-022 (Electoral Cycle Capture) mitigation path. The threat remains Active — unproven. Its operative provisions integrate with Annex AI (Federated Ombuds) §3.4 automatic Plenum convocation, Annex AJ §enforcement-ledger publication (via AM7), and the architectural enforcement layer in `/architecture/`.*

@@ -39,6 +39,11 @@ It is not a surveillance mandate. It is a public accountability specification. D
 | Funding dependence | Detect financial leverage over auditors. | One funder or budget authority can pressure multiple nodes. |
 | Dissent publication rate | Detect suppressed disagreement. | Complex cases show no dissent or dissent lacks substance. |
 | Reversal and correction rate | Detect rubber-stamp review. | Appeals almost never change outcomes. |
+| CIP vacancy age | Detect appointment starvation of the constitutional integrity body. | CIP seats remain vacant long enough to impair quorum, review, or ratification. |
+| Qualified-nominee transmission delay | Detect appointing bodies slow-walking successor selection. | A vacancy lacks a transmitted qualified nominee after the AM8 deadline. |
+| CIP appointment-source concentration and batching | Detect mass reconstitution by one coalition or network. | Appointments cluster by source, occur in delayed batches, or violate staggering limits. |
+| CIP below-quorum duration | Detect self-paralysis of the ratification and hollowing-review body. | CIP remains below 5-of-7 quorum while Tier 1, transition, or AM3 actions are pending. |
+| Integrity-report-unavailable records | Detect silence by Ombuds or fallback reviewers during Tier 1 or transition windows. | Required integrity reports are missing, late, or unavailable because review bodies are unconstituted, below quorum, captured, or delayed. |
 
 ### 3. Definition And Standards Capture
 
@@ -139,6 +144,10 @@ A dashboard without published thresholds is decorative. The failure-signal colum
 | Ombuds & Review-Body Independence | Voting-pattern unanimity on contested cases | >80% unanimity rate over 12 consecutive months | >95% unanimity rate over 6 consecutive months |
 | Ombuds & Review-Body Independence | Staffing overlap (shared institutional origin) | >40% of sub-Ombuds nodes share a common employer, funder, or professional school cohort | >60% share common institutional origin |
 | Ombuds & Review-Body Independence | Reversal and correction rate | <5% of appeals change outcomes across 100+ cases | <2% reversal rate across 100+ cases |
+| Ombuds & Review-Body Independence | CIP vacancy age | Any CIP vacancy remains unpublished for >7 days or without a nomination timeline for >14 days | Any vacancy lacks a transmitted qualified nominee for >45 days, or CIP falls below quorum |
+| Ombuds & Review-Body Independence | CIP appointment-source concentration and batching | 2 CIP seats from the same source or network in one calendar year, or any delayed-batch pattern | More than 2 seats turn over in one calendar year without AM8 exception, any void appointment attempt, or appointment-source capture finding |
+| Ombuds & Review-Body Independence | CIP below-quorum duration | CIP below 5-of-7 for any period while Tier 1, transition, or AM3 action is pending | CIP below quorum for >14 days after a pending action or any claim that vacancy waives concurrent ratification |
+| Ombuds & Review-Body Independence | Integrity-report-unavailable records | Any required Tier 1, transition, or AM3 integrity report is unavailable or late | Missing report persists past fallback-review deadline, or a Tier 1/transition action advances without the report or fallback review |
 | Money, Procurement & Legal Wrapper | Procurement award concentration | >30% of essential-category spend to a single vendor or controlled group (aligned with FC-198) | >40% concentration or mandatory remediation threshold breached for 2 consecutive review periods |
 | Money, Procurement & Legal Wrapper | Beneficial-ownership concentration | Any natural person controls >5% of regional essential throughput across all entities | >10% concentration or sustained breach above 5% for 2+ review periods |
 | Money, Procurement & Legal Wrapper | Project escrow rollover rate | >20% of active escrows renew without milestone delivery for 2+ consecutive terms | >35% rollover rate or any escrow renews more than 3 times without delivery |

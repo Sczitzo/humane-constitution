@@ -353,7 +353,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - emergency-power abuse
 - bribed reviewers
 - captured public banking operators
-- hostile successor government
+- hostile successor government: transition-of-power, budget-starvation, appointment-block, below-quorum, vacancy-waiver, appointment-batching, dashboard-publication-lapse, and Ombuds-integrity-report-unavailable simulations
 - elite proxy markets
 - definition drift
 - public-narrative attacks

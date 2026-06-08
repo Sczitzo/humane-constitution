@@ -152,8 +152,9 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-019 | P-052 | ACTIVE | AI §4.12 | S10 |
 | T-020 | P-017 | ACTIVE | AL | S8 |
 | T-021 | P-017 | ACTIVE | AL | S8 |
-| T-022 | P-018 | ACTIVE | AM | S8 |
+| P-018 | T-022 supplement | PROPOSED | AM | S8 |
 | T-022 | P-051 | ACTIVE | AM §AM8 | S10 |
+| T-022 | P-065 | ACTIVE | AM §AM8.5–AM8.7 | S11 |
 | T-023 | P-019 | ACTIVE | AN | S8 |
 | T-024 | P-022 | ACTIVE | AQ | S8 |
 | T-025 | P-023 | ACTIVE | AR | S8 |
@@ -171,4 +172,4 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | ACL-007 | P-061 | PROPOSED | Founding_Capital_Framework | Founding |
 | ACL-011 / ACL-010 | P-062 | PROPOSED | Pilot_Timeline_Framework | Founding |
 
-*P-014 marks its unique status as a one-time founding instrument. 28 total threats. 27 ACTIVE patches. 8 PROPOSED patches (P-018 electoral staggering, awaiting pilot; P-056 open-access survival floor; P-057 through P-062 pilot town founding framework). 1 FOUNDING instrument (P-014). P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. P-056 operationalizes INV-001 two-tier access model. P-057–P-062 establish operational framework for first real-persons pilot town. Bootstrap problem resolved. Acceptance sequence unblocked.*
+*P-014 marks its unique status as a one-time founding instrument. 28 total threats. P-018 remains the PROPOSED electoral-resilience supplement. P-051 is the ACTIVE primary CIP control for T-022. P-065 is the ACTIVE CIP anti-hollowing hardening pass. P-056 remains the PROPOSED open-access survival floor, and P-057 through P-062 remain pilot-town founding-framework proposals unless separately promoted. P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. Bootstrap problem resolved. Acceptance sequence unblocked.*
