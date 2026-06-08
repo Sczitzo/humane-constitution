@@ -20,7 +20,7 @@ This project tries to separate those powers.
 - **Essential Access:** the basic needs floor
 - **Voice:** a limited way to help set public priorities
 - **Service Record:** proof of useful public service
-- **Shared Storehouse:** temporary rationing during a real shortage
+- **Shared Storehouse:** temporary rationing during a verified shortage, with a bounded fallback if measurement fails during active rationing
 
 The design only works if these tools stay separate.
 
@@ -52,7 +52,7 @@ The main rule is that wealth cannot buy the basic needs floor or formal public p
 
 ## 8. What happens during a real shortage?
 
-The system can use **Shared Storehouse**: temporary rationing during a verified shortage.
+The system can use **Shared Storehouse**: temporary rationing during a verified shortage, plus a bounded oracle-failure fallback only while active rationing is already underway.
 
 The point is to handle shortage openly, with public rules, instead of letting price spikes decide who gets through.
 
@@ -116,9 +116,9 @@ If the answer is no, this design is worth testing seriously.
 
 Two layers.
 
-First, before any contract with an essential supplier is renewed, the system must have pre-registered backup suppliers with pre-committed contracts — these activate automatically if the primary supplier refuses or fails to deliver for 14 consecutive days. No political decision required.
+First, before any contract with an essential supplier is renewed, the system must have pre-registered backup suppliers with pre-committed contracts. These activate automatically if the primary supplier refuses or fails to deliver for 14 consecutive days. No new political decision is required.
 
-Second, strategic reserves cover the gap between the backup supplier activating and reaching full capacity.
+Second, strategic reserves and fallback capacity are supposed to cover the gap between backup activation and full delivery. That claim still has to be proven by refusal drills, reserve tests, and vulnerable-cohort continuity checks.
 
 A company can still negotiate, sue, or exit a market. It cannot use people's survival needs as the negotiating chip.
 

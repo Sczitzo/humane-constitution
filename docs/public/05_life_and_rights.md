@@ -91,7 +91,7 @@ Some rules are treated as so fundamental that an ordinary government should not 
 
 ### No permanent emergency rationing
 
-During a real shortage, the system may use **Shared Storehouse**, which means temporary rationing.
+During a real shortage, the system may use **Shared Storehouse**, which means temporary rationing. If the measurement system fails while rationing is already active, only a bounded oracle-failure fallback may be used while reconciliation is underway.
 
 It must be public, time-limited, and reviewable. It cannot become the normal system.
 
@@ -180,7 +180,7 @@ What it may not do is retaliate by cutting off survival access.
 
 If an essential producer refuses to cooperate or tries to punish the public, the system must protect the basic needs floor first. That can include emergency purchasing, substitute suppliers, temporary public operation, rationing during real shortage, or other lawful continuity measures.
 
-Before a company is allowed to become the only supplier of something essential, the system lines up backups in advance: other suppliers are signed up ahead of time, with contracts already agreed and ready to go. Those standby contracts switch on by themselves — no new government decision needed — if the main supplier stops delivering for 14 days straight, walks away from the market, or grows large enough to trip a pre-set warning line on how much of the market one company controls (a "Watch-level" concentration threshold). The point is that a supplier threatening to walk away gains no leverage, because the replacement is already contracted before the threat is ever made.
+Before a company is allowed to become the only supplier of something essential, the system lines up backups in advance: other suppliers are signed up ahead of time, with contracts already agreed and ready to go. Those standby contracts switch on by themselves — no new government decision needed — if the main supplier stops delivering for 14 days straight, walks away from the market, or grows large enough to trip a pre-set warning line on how much of the market one company controls (a "Watch-level" concentration threshold). The point is to reduce a supplier's hostage leverage before the threat is made. The project still has to prove, through drills, that the backup is independent, fast enough, and physically capable of protecting vulnerable groups.
 
 The important rule is simple:
 

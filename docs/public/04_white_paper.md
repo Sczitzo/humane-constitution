@@ -56,7 +56,7 @@ The project is not mainly a redistribution model. It is a channel-separation mod
 |---|---|---|
 | **Survival-Trade Bind** | People have to trade dignity, obedience, rights, labor, health, or life-sustaining access just to survive. | Keep Essential Access and the Constitutional Survival Minimum outside ordinary market bargaining. |
 | **Power-Wealth Convergence** | Resource success becomes authority over rules, enforcement, measurement, or public design. | Keep Flow, Voice, Service Record, enforcement, and public measurement from becoming mutually convertible. |
-| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use demurrage, decay, rotation, anti-rent controls, exit rights, and bottleneck audits to keep advantage contestable. |
+| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use Commons Return, Universal Stake, anti-rent controls, rotation, decay of civic eligibility, exit rights, and bottleneck audits to keep advantage contestable. |
 
 The strongest version of the rule is:
 
@@ -74,7 +74,7 @@ The system separates five tools.
 | **Essential Access** | provides the basic needs floor | become cash, debt, status, or collateral |
 | **Voice** | helps set public priorities in limited ways | buy goods, rights, housing, or immunity |
 | **Service Record** | records useful public service for rotating service roles | become rank, inherited status, or moral worth |
-| **Shared Storehouse** | handles temporary rationing during real shortage | become permanent or become a second market |
+| **Shared Storehouse** | handles temporary rationing during verified shortage, plus bounded fallback if measurement fails during active rationing | become permanent, become a second market, or operate outside scarcity |
 
 The design only works if these tools stay separate.
 
@@ -212,7 +212,7 @@ Known risks include:
 - expert bodies becoming closed clubs
 - public records hiding more than they reveal
 
-The primary mitigation for corporate refusal (T-028) is the **Compliant Alternative Supplier Pre-Registration (CASP)**: essential-sector suppliers are pre-registered with automatic-activation contracts, so backup capacity can be triggered without a gap if a dominant supplier exits or refuses. CASP is the first line of defense before public receiver authority or treaty capacity is invoked.
+The primary mitigation for corporate refusal (T-028) is the **Compliant Alternative Supplier Pre-Registration (CASP)**: essential-sector backup suppliers are pre-registered with automatic-activation contracts, so a fallback path can begin without requiring a new political decision if a dominant supplier exits or refuses. CASP is the first line of defense before public receiver authority or treaty capacity is invoked, but its capacity and gap-window claims still require refusal drills.
 
 The project responds with:
 
@@ -297,7 +297,7 @@ If that separation cannot hold, the design has to be judged by that failure, not
 | **Essential Access** | the basic needs floor |
 | **Voice** | limited public priority-setting |
 | **Service Record** | proof of useful public service |
-| **Shared Storehouse** | temporary rationing during real shortage |
+| **Shared Storehouse** | temporary rationing during verified shortage, with bounded fallback if measurement fails during active rationing |
 | **RCS** | the system that measures what society can actually provide |
 | **Tier 1** | a rule that cannot be quietly changed |
 | **Ombuds** | an independent reviewer people can go to when the system may be abusing power |

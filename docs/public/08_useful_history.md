@@ -65,7 +65,7 @@ The lesson is not that markets are evil. It is narrower and harder. A market has
 
 > *Every society that removed the floor between market failure and death eventually faced mass suffering, political instability, or both — usually in that order.*
 
-**Where this project responds:** Essential Access — it sets a survival floor of food, shelter, medicine, and water that cannot be bought away, traded off, or revoked, so losing your place in the market does not mean losing your life.
+**Where this project responds:** Essential Access — it designs a survival floor of food, shelter, medicine, and water that cannot be bought away, traded off, or revoked. Whether that floor works in practice still depends on real capacity, delivery, measurement, appeals, and no-credential access tests.
 
 **Sources**
 
@@ -125,7 +125,7 @@ The lesson is not that big companies are evil. It is that wealth, left without a
 
 > *The turning of wealth into power is not a glitch. It is what concentrated wealth does when no wall stands in the way — and every society that stopped it had to build that wall on purpose and keep rebuilding it.*
 
-**Where this project responds:** Flow and Voice. Flow is the market-money instrument; it carries structural limits on how far wealth can concentrate, and a wall that stops money from buying public power. Voice is the civic instrument; it gives priority in public decisions that cannot be bought, so political weight does not simply follow the bank balance.
+**Where this project responds:** Flow, Commons Return, Universal Stake, anti-rent controls, and Voice. Flow is the market-money instrument; it is walled off from survival access and formal public power. Commons Return, Universal Stake, and anti-rent controls carry the main burden of limiting wealth concentration. Voice is the civic instrument; it gives priority in public decisions that cannot be bought, so political weight does not simply follow the bank balance.
 
 **Sources**
 
@@ -245,7 +245,7 @@ The most important fact is how it ended. It did not collapse. It stopped because
 
 > *Rationing systems succeed when they are simple, universal, transparent, and perceived as morally legitimate — and fail when they are opaque, politically captured, or exempt the powerful.*
 
-**Where this project responds:** Shared Storehouse — a temporary, verified-shortage rationing instrument that distributes scarce essentials by need rather than price, with the same rules for everyone.
+**Where this project responds:** Shared Storehouse — a temporary, verified-shortage rationing instrument that distributes scarce essentials by need rather than price, with the same rules for everyone. During active rationing, it also defines a bounded oracle-failure fallback with reconciliation, so measurement failure does not quietly become permanent emergency rule.
 
 **Sources**
 
@@ -536,7 +536,7 @@ That is the shape of the whole chapter in one case. A right was declared — fre
 
 *The distance between a declared right and an enforced one is the distance between a promise and a fact — and that distance falls most heavily on people who were already excluded from the room where the promise was made.*
 
-**Where this project responds:** Of the five instruments in this corpus, Essential Access is the one aimed at this chapter. It is meant to guarantee a survival floor — food, shelter, medicine, water — that cannot be bought away, traded off, or revoked. That covers the most basic version of "declared but not enforced": the right to stay alive.
+**Where this project responds:** Of the five instruments in this corpus, Essential Access is the one aimed at this chapter. It is meant to create a survival floor — food, shelter, medicine, water — that cannot be bought away, traded off, or revoked. That covers the most basic version of "declared but not enforced": the right to stay alive. The corpus does not yet have proof that delivery, appeals, capacity measurement, and last-resort access work for everyone.
 
 It does not cover everything in this chapter. Three of the problems here are gaps the corpus does not yet address. Carceral economics — the poverty trap built from cash bail, fines and fees, and the Thirteenth Amendment labor exception — has no instrument. Algorithmic discrimination — unequal outcomes from automated systems with no clear human decision-maker — has no instrument. And the epistemic rights of minors — what young people are owed when products are designed to affect their minds — has no instrument. These are documented, not hidden. They are tracked in the project's governance document called the Hardening Queue, which is the running list of known unsolved problems. Naming a gap is the condition for working on it honestly, not a sign the work is done.
 
@@ -614,13 +614,13 @@ This corpus describes those structures together, with walls between them so that
 
 ### What the five instruments are for
 
-**Essential Access** — The floor beneath market failure: food, shelter, medicine, and water as a survival guarantee, not a market outcome (Chapters 1, 9).
+**Essential Access** — The floor beneath market failure: food, shelter, medicine, and water as a designed survival floor, not a market outcome. It still needs delivery, capacity, appeals, and no-credential access evidence (Chapters 1, 9).
 **Flow** — The wall between market money and public power: a market money system kept from buying survival, voice, or office (Chapters 2, 3, 6).
 
 **Commons Return and Universal Stake** — The active public-return system in ANNEX_D: shared value, scarcity rents, public-created uplift, and large succession transfers are routed through a lockbox and tested before any claim that the floor is fiscally sustainable.
 **Voice** — The civic priority that cannot be purchased with wealth (Chapters 5, 8).
 **Service Record** — Rotating eligibility that stops the same people from holding public roles forever (Chapter 5).
-**Shared Storehouse** — Transparent, universal rationing when shortage has been verified (Chapter 4).
+**Shared Storehouse** — Transparent, universal rationing when shortage has been verified, with bounded fallback if measurement fails during active rationing (Chapter 4).
 
 ### What this project does not yet address
 

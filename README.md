@@ -292,11 +292,11 @@ The constitution is built in five layers. Each layer depends on the one above it
 | Document | Purpose |
 |---|---|
 | [Constitutional Invariants](./docs/constitution/INVARIANTS.md) | Seven constitutional invariants (INV-001 through INV-007). Tier 1 protected. Any patch that violates these is rejected at intake. |
-| [Formal Specifications](./docs/constitution/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Demurrage function, issuance constraints, oracle consensus rules, and parameter tables. |
+| [Formal Specifications](./docs/constitution/SPECIFICATIONS.md) | Formal state machine definitions for Flow, Essential Access, Voice, Service Record, and Shared Storehouse. Issuance constraints, oracle consensus rules, parameter tables, and any dormant backstop mechanisms are treated as design material, not active wealth policy. |
 | [Adversarial Narrative Simulation](./docs/simulations/Adversarial_Narrative_Simulation.md) | 10 simulated narrative attacks with structural responses and residual risks. |
 | [Annual Compound Simulation](./docs/simulations/Annual_Compound_Simulation.md) | Month-by-month operational year stress-test across the constitutional architecture. |
 | [Founding Pre-Activation Disclosure](./docs/governance/Founding_Preactivation_Disclosure.md) | Founding instrument pre-activation disclosure. |
-| [Simulation Model Outline](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, high demurrage, adversarial density. |
+| [Simulation Model Outline](./simulations/model_outline.py) | Agent-based simulation scaffold (Mesa framework). Models Essential Access and Flow interactions across citizen and adversarial agents. Four scenario runners: baseline, oracle stress, concentration/backstop stress, adversarial density. |
 
 ### Annexes (`docs/annexes/`)
 
@@ -366,12 +366,12 @@ The system has been adversarially stress-tested:
 | T-005 Governance Throughput, T-006 Measurement Lag, T-008 Bureaucratic Elite Formation, T-011 Narrative Surface | Dual-queue CRP, PCRP first-responder authority, diversity controls, failure doctrine |
 | T-012–T-015 (Interface threats) | Compound tests revealed triple-deadlock risk; oracle independence requirement; demand-context flag |
 | T-009 Grace Exploitation Loop | Graduated renewal intensity; Service Record slow-decay; hardship attestation collusion detection |
-| T-016 Formal Acceptance Process Capture | Evidence farming, sign-off deadlock, urgency exploit, audit capture all patched |
-| T-017 Bootstrap Problem | One-time founding instrument (P-014) resolves P-013 circular dependency; founding window extended to 60 days |
-| T-018–T-019 PCRP Attack Surface | False-trigger exhaustion and demand-context suppression attacks registered and patched (P-015) |
+| T-016 Formal Acceptance Process Capture | Evidence farming, sign-off deadlock, urgency exploit, and audit capture have mitigation paths in the design |
+| T-017 Bootstrap Problem | One-time founding instrument (P-014) specifies a path through the P-013 circular dependency; founding window extended to 60 days |
+| T-018–T-019 PCRP Attack Surface | False-trigger exhaustion and demand-context suppression attacks registered with mitigation paths (P-015) |
 | T-020–T-021 Oracle Independence | Epistemological and algorithmic oracle capture registered; methodology-class diversity and AI supply-chain transparency required (P-017) |
 | T-022 Electoral Cycle Capture | Hostile successor government routes identified; entrenchment ladder, Essential Access floor persistence, transition protocol designed (P-018) |
-| T-023–T-025 Pilot validity, Shared Storehouse oracle failure, demurrage capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), demurrage sector-capture control designed through contract-commitment architecture and zero exemptions (P-023) |
+| T-023–T-025 Pilot validity, Shared Storehouse oracle failure, capital-deployment shelter capture | External validity gate (P-019), Shared Storehouse oracle-failure fallback (P-022), and contract-commitment architecture for capital deployment (P-023) |
 
 **Current status is tracked in the Patch Log inventory.** The Threat Register currently has no fully open threat with no mitigation path, but many controls still need pilot evidence, activation, and outside review.
 

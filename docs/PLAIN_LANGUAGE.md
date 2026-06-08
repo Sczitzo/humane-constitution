@@ -19,8 +19,8 @@ Use short words where they work. Use short sentences. Say who does what. Explain
 | attestation | signed proof, witness statement, or proof |
 | supermajority | two-thirds vote, 4-of-5 vote, or large majority |
 | quorum | minimum number needed |
-| Commons Return | public return from shared value, scarcity rents, public-created uplift, monopoly privilege, resource use, and large succession transfers |
-| Universal Stake | protected civic inheritance distributed from Commons Return after survival-floor, resilience, and restoration duties are funded |
+| Commons Return | money returned from value no one person created alone, like natural resources, monopoly privilege, public infrastructure uplift, and very large inheritances |
+| Universal Stake | a protected public share paid only after basic needs, resilience reserves, and repair duties are funded |
 | demurrage | superseded routine carrying-cost model; may appear only as historical discussion or a dormant, pilot-gated backstop |
 | non-coercion | no one is trapped or forced |
 | subsistence / survival floor | basic needs floor |
