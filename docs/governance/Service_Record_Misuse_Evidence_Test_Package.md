@@ -4,6 +4,8 @@ This package defines the evidence required before the project can claim that Voi
 
 It is a test package, not a patch. Annex Z, Annex AJ, Annex AF, Annex AS, P-002, P-008, P-009, P-024, P-025, and P-041 contain the current mechanisms. This document says how those mechanisms must be pressure-tested against real institutional incentives.
 
+**Status:** Designed mechanism, needs evidence. This package cannot prove that Service Record is safe by document review alone. It must be run against live or realistic institutional actors before any stronger public claim.
+
 ---
 
 ## Honest Claim Boundary
@@ -16,12 +18,13 @@ The project should not yet claim that:
 
 - Service Record cannot become a social-credit signal in practice;
 - employers, landlords, schools, lenders, vendors, or platforms will ignore civic standing;
+- outside institutions cannot infer Service Record indirectly through references, activity history, civic-role eligibility, or "optional" disclosure;
 - contribution verification will include invisible, care, spiritual, mutual-aid, and informal work fairly;
 - attestation staking will deter collusion without excluding isolated people;
 - decay and sector ceilings will prevent every professional class from entrenching itself;
 - public users will reliably understand the difference between service eligibility and human worth.
 
-The control is only credible if non-civic misuse is detectable, sanctionable, appealable, and rare enough that Service Record does not become a general status currency.
+The control is only credible if non-civic misuse is detectable, sanctionable, appealable, and rare enough that Service Record does not become a general status currency. The test is effect-based: a rule fails if actors can sort people by civic standing in practice, even when no one uses the words "Service Record."
 
 ---
 
@@ -49,9 +52,11 @@ Assume actors will try to turn Service Record into a portable advantage even if 
 | Housing and vendor preference | Give better queues, better service, lower deposits, or better units to people with high civic standing. | Turns Service Record into market status and survival-adjacent preference. |
 | School and credential preference | Use Service Record as admissions, scholarship, placement, or credentialing evidence outside civic roles. | Makes youth and late entrants compete for civic rank before they can participate equally. |
 | Platform reputation import | Use Service Record as trust, moderation, visibility, matching, or reputation signal. | Converts a bounded civic record into cross-context reputation infrastructure. |
+| Data-broker or proxy inference | Infer civic standing from public roles, schedules, references, volunteer history, transaction timing, complaint history, or leaked screenshots. | Defeats non-exportability without needing direct ledger access. |
 | Professional guild capture | Define "verified contribution" around legible professional work and exclude care, mutual aid, pastoral, informal, and local service. | Creates a credentialed civic class while appearing meritocratic. |
 | Attestation market | Sell attestations, trade reciprocal attestations, or form dense mutual-attestation rings. | Mints Service Record without real contribution and excludes isolated people. |
 | Hardship freeze abuse | Use Protected Pause or slow-decay rules to preserve eligibility without current contribution. | Lets incumbents keep civic roles through formal compassion rules. |
+| Civic insider preference | Give committee seats, informal influence, speaking priority, or future appointment consideration to people with high civic standing. | Turns a role-eligibility record into a professional civic class. |
 | Surveillance pressure | Increase monitoring because proof is easier when every action is tracked. | Turns contribution recognition into workplace, household, or civic surveillance. |
 | Public comprehension failure | Readers interpret Service Record as a score of human worth. | The system becomes socially punitive even if formal rules remain narrow. |
 
@@ -65,6 +70,8 @@ The test package treats these as claims that must be falsifiable.
 |---|---|
 | Purpose limitation | Can Service Record be used only for formal civic service eligibility in practice? |
 | Non-civic non-use | Do employers, landlords, vendors, schools, platforms, lenders, and insurers avoid using Service Record directly or indirectly? |
+| No compelled disclosure | Can a person refuse to disclose civic standing without penalty, suspicion, lost opportunity, or worse terms? |
+| Proxy-inference resistance | Can third parties infer civic standing from visible roles, credentials, references, schedules, or leaked artifacts? |
 | No total human score | Can the interface prevent totalizing displays, rankings, percentiles, badges, leaderboards, and comparative labels? |
 | Adverse-impact review | Do contribution rules produce unequal approval, abandonment, appeal, and burden rates across class, disability, caregiving, migration, geography, age, and language? |
 | Invisible-work inclusion | Are care work, mutual aid, spiritual community leadership, household management, informal health work, and neighborhood stewardship actually recognized? |
@@ -88,10 +95,11 @@ Minimum output:
 - retention period;
 - exportability;
 - whether the record can be screenshotted, verified, or demanded by a third party;
+- whether the field can be inferred from public civic-role eligibility, roster membership, credential labels, references, or timing patterns;
 - default visibility;
 - appeal and correction route.
 
-Failure criterion: any non-civic actor can obtain a reliable Service Record signal without an explicit civic purpose and audit trail.
+Failure criterion: any non-civic actor can obtain, demand, infer, or purchase a reliable Service Record signal without an explicit civic purpose and audit trail.
 
 ### Stage 1 — Interface And Language Red Team
 
@@ -120,8 +128,10 @@ Required attacks:
 - insurance or lending risk proxy;
 - volunteer-role filtering that becomes a future employment filter;
 - "optional" disclosure demanded by powerful institutions.
+- data-broker inference from public role history, platform traces, references, or leaked screenshots;
+- AI resume or applicant-screening models using civic activity as a hidden feature.
 
-Failure criterion: any non-civic actor can gain measurable advantage by demanding, inferring, purchasing, or scraping Service Record.
+Failure criterion: any non-civic actor can gain measurable advantage by demanding, inferring, purchasing, scraping, or rewarding disclosure of Service Record.
 
 ### Stage 3 — Contribution Category Equity Test
 
@@ -195,8 +205,10 @@ Minimum controls:
 
 - non-civic use prohibition;
 - anti-retaliation rule for refusal to disclose;
+- anti-preference rule for "voluntary" disclosure, so powerful institutions cannot reward people for waiving the boundary;
 - audit sampling for employment, housing, education, vendor, lending, insurance, and platform decisions;
 - penalties for demanding or inferring civic standing;
+- burden-shift rule: when a covered institution receives or infers civic data, it must prove that the later decision did not use that signal;
 - public complaint channel;
 - protected anonymous reporting for workers and applicants.
 
@@ -223,7 +235,7 @@ Failure criterion: diversity thresholds are satisfied formally while the same co
 
 ## Non-Civic Misuse Abuse Cases
 
-The following six cases are concrete, runnable scenarios for a red team. Each must produce a documented pass or fail result before the Service Record system exits pilot status.
+The following cases are concrete, runnable scenarios for a red team. Each must produce a documented pass or fail result before the Service Record system exits pilot status.
 
 **ACL-SR-01 — Employer Rank Signal**
 Scenario: An employer requests a job applicant's Service Record score during hiring. The employer does not formally require it, but systematically favors applicants with high Service Record.
@@ -257,7 +269,17 @@ Scenario: A commercial platform (marketplace, social network, professional netwo
 Test: Attempt to access platform features with accounts that have contrasting Service Record profiles.
 Pass criterion: access to any commercial platform feature must not differ based on Service Record status. Any gate detected triggers a platform compliance review.
 
-**Test schedule:** Each of ACL-SR-01 through ACL-SR-06 must be run at least once before the Service Record system exits pilot status. Failure on any single case triggers a Federated Ombuds referral and a mandatory architectural review of the boundary enforcement mechanism before the next pilot cycle.
+**ACL-SR-07 — Data Broker / Proxy Inference**
+Scenario: A third party builds a civic-standing proxy without direct ledger access by combining public rosters, volunteer schedules, civic-role eligibility notices, references, screenshots, transaction timing, and platform traces.
+Test: Give a red team only public or plausibly leaked artifacts and ask it to predict high/low Service Record status. Compare predictions against the protected ground truth.
+Pass criterion: predictive accuracy does not materially exceed chance after ordinary demographic and location controls. Any reliable proxy triggers redesign of visibility, roster publication, credential labels, and leakage controls.
+
+**ACL-SR-08 — Civic Insider Preference**
+Scenario: Civic bodies informally prefer people with high Service Record for speaking time, committee influence, advisory invitations, staff attention, or future appointment paths.
+Test: Run simulated civic meetings and appointment screens with identical candidates whose only difference is visible or inferred civic standing. Measure speaking allocation, recommendation rate, staff responsiveness, and appointment outcomes.
+Pass criterion: no measurable preference appears after role-relevant eligibility is controlled. Any preference pattern triggers a civic-pool concentration review and interface-language correction.
+
+**Test schedule:** Each of ACL-SR-01 through ACL-SR-08 must be run at least once before the Service Record system exits pilot status. Failure on any single case triggers a Federated Ombuds referral and a mandatory architectural review of the boundary enforcement mechanism before the next pilot cycle.
 
 ---
 
@@ -268,6 +290,7 @@ The project may strengthen its claim only after producing:
 - a Service Record data inventory;
 - ordinary-reader comprehension results;
 - non-civic misuse red-team results;
+- compelled-disclosure and proxy-inference results;
 - contribution-category equity metrics;
 - attestation/collusion pilot results;
 - hardship-pause abuse test results;
@@ -281,13 +304,14 @@ The project may strengthen its claim only after producing:
 
 Service Record should remain a designed mechanism, not an evidence-backed control, unless all of the following are true:
 
-1. Non-civic actors cannot lawfully or practically use Service Record as a selection signal.
+1. Non-civic actors cannot lawfully or practically use, demand, infer, purchase, scrape, or reward disclosure of Service Record as a selection signal.
 2. Users understand Service Record as role eligibility, not personal rank.
 3. Care, informal, spiritual, mutual-aid, and low-documentation contributions are recognized without higher abandonment.
 4. Attestation staking deters false claims without excluding isolated people.
 5. Hardship continuity does not become a civic position-preservation device.
-6. Civic pools show real diversity rather than threshold-compliant insider concentration.
-7. Appeals are fast enough to prevent non-civic harm from an erroneous record.
+6. Civic bodies do not convert eligibility into informal insider preference.
+7. Civic pools show real diversity rather than threshold-compliant insider concentration.
+8. Appeals are fast enough to prevent non-civic harm from an erroneous record.
 
 If any condition fails, public language must stay at: **designed mechanism, needs evidence**.
 

@@ -71,7 +71,7 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-001 | Shadow Convertibility | **Critical** | 60 | Above-ledger residual: scale-arbitrage containment without authoritarian overreach. |
 | T-002 | Identity Exploits | **Critical** | 60 | Non-coercive identity stack remains the largest unresolved precondition. |
 | T-007 | Political Definition Drift | **Critical** | 60 | Semantic capture defenses depend on a registry that is not yet enforced in production. |
-| T-004 | Incentive Collapse | **Critical** | 48 | Real contribution model that rewards output without recreating coercive hierarchy. |
+| T-004 | Incentive Collapse | **Critical** | 48 | Real contribution model that rewards output without recreating coercive hierarchy, social-credit ranking, or proxy employability scoring. |
 | T-018 | PCRP False-Trigger Exhaustion | High | 36 | Attestation-vector bounded by P-024; false-trigger-at-scale residual still on P-015. |
 | T-019 | Demand-Context Flag Suppression | High | 48 | P-015 / Annex AP defines a mitigation path; Annex AI gates and timing-monitor infrastructure still need activation. |
 | T-022 | Electoral Cycle Capture | **Critical** | 60 | P-051 (Constitutional Integrity Panel, Annex AM §AM8) is the ACTIVE primary structural control; P-065 is ACTIVE anti-hollowing hardening; P-018 / Annex AM remains PROPOSED for the broader entrenchment and transition-continuity path. CIP staffing, funding, trigger infrastructure, vacancy repair, and transition simulations still need evidence before any evidence-backed claim. |
@@ -199,11 +199,11 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Owner:** P4 (Voice & Service Record)
 - **Last reviewed:** 2026-05-01 *(placeholder)*
 - **Trend:** Steady
-- **Mechanism:** universal Essential Access reduces desperation, but weak reward gradients can flatten initiative, excellence, and long-horizon effort.
-- **Impact:** slow stagnation, mediocre output equilibrium, and declining willingness to take on hard or high-skill work.
-- **Detection:** participation decline, lower high-skill throughput, concentration of difficult work into narrow groups, and weak innovation rates.
-- **Mitigation direction:** nonlinear reward curves, multi-channel rewards (Flow, civic standing, status/recognition), opportunity access, and anti-gaming scoring. → P-002 ACTIVE.
-- **Open problem:** define a real contribution model that rewards output without recreating coercive hierarchy or burnout pressure.
+- **Mechanism:** universal Essential Access reduces desperation, but weak reward gradients can flatten initiative, excellence, and long-horizon effort; if the correction overreaches, Service Record can become rank, employability, pricing, civic-insider preference, or social-credit proxy.
+- **Impact:** slow stagnation, mediocre output equilibrium, declining willingness to take on hard or high-skill work, or coercive pressure to perform visible contribution for non-civic advantage.
+- **Detection:** participation decline, lower high-skill throughput, concentration of difficult work into narrow groups, weak innovation rates, non-civic requests for Service Record, proxy-inference success, and ordinary-reader confusion between civic eligibility and human worth.
+- **Mitigation direction:** nonlinear reward curves, multi-channel rewards (Flow, opportunity, role-specific recognition), contribution-category equity, anti-gaming scoring, non-civic misuse enforcement, and proxy-inference controls. → P-002 ACTIVE.
+- **Open problem:** define a real contribution model that rewards output without recreating coercive hierarchy, social credit, proxy employability, or burnout pressure.
 - **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **P-045 addition:** P-045 adds an enumerated contribution floor of six founding categories (primary caregiving, elder care, mutual aid, spiritual community leadership, unpaid household management, informal health work) with burden reversal — self-attestation accepted unless affirmatively disproved. Extension via Tier 2; removal requires Tier 1 + published impact assessment.
 
@@ -302,7 +302,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Mitigation direction:** P-009 (status per Patch Log): graduated renewal intensity (AF1); cross-quarter history review (AF2); hardship attestation collusion detection (AF3); Service Record slow-decay at 20% of normal (AF4); service pool pause-saturation monitoring (AF5); [ambitious] capability development pathway (AF6); [ambitious] T-009 × P-008 explicit closure (AF7). See Annex AF.
 - **Evidence package:** [Service Record Misuse Evidence Test Package](./Service_Record_Misuse_Evidence_Test_Package.md)
 - **Residual risk:** Involuntary unemployment category remains the most exploitable qualifying condition. Contains but does not eliminate low-level grace exploitation (1-2 quarter use by actors who don't genuinely need it) — accepted as system leakage, cost of frictionless access for genuine hardship.
-- **Compound linkages:** T-009 × T-008 (primary bypass for P-008 — AF7 closes it). T-009 × T-011 (graduated renewal must be communicated via P-011 CFRL or becomes 'system punishes sick people' narrative attack).
+- **Compound linkages:** T-009 × T-008 (primary bypass for P-008 — AF7 addresses it at design level; evidence remains pending). T-009 × T-011 (graduated renewal must be communicated via P-011 CFRL or becomes 'system punishes sick people' narrative attack).
 
 ---
 
@@ -615,10 +615,10 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 *The capture triad is now a quadruplet:*
 
-| Threat | Route | Patch | Closes |
+| Threat | Route | Patch | Design effect |
 | :--- | :--- | :--- | :--- |
 | T-008 | Elite formation captures institutions | P-008 | P-008 |
-| T-009 | Grace exploitation bypasses T-008 controls | P-009 | P-009 (+ AF7 closes T-008 bypass) |
+| T-009 | Grace exploitation bypasses T-008 controls | P-009 | P-009 (+ AF7 specifies the T-008 bypass control; evidence remains pending) |
 | T-016 | Acceptance process capture prevents patches from reaching ACTIVE | P-013 | P-013 |
 | T-017 | Bootstrap paradox prevents P-013 from activating | P-014 | Unblocks the entire sequence |
 

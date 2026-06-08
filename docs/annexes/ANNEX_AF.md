@@ -5,13 +5,13 @@
 > **At a glance**
 > | | |
 > |---|---|
-> | **Purpose** | Closes the grace period exploitation loop: adds graduated renewal intensity, cross-quarter pause history review, collusion detection in hardship attestation networks, and slow Service Record decay during extended pauses. |
+> | **Purpose** | Addresses the grace period exploitation loop at design level: adds graduated renewal intensity, cross-quarter pause history review, collusion detection in hardship attestation networks, and slow Service Record decay during extended pauses. |
 > | **Who it protects** | Genuine long-term hardship users who need the Protected Pause Window without penalty; the contribution and civic pools from coordinated exploitation that rotates fake hardship claims to preserve elite governance eligibility. |
 > | **Failure risk** | A coordinated network uses mutual attestation and category-switching to maintain permanent pause status, preserving Service Record and civic eligibility indefinitely without genuine contribution; grace mechanisms created for the vulnerable are captured by sophisticated actors. |
-> | **Evidence status** | Designed |
+> | **Evidence status** | Active — unproven |
 > | **Linked risks** | T-009 / P-009 (grace exploitation loop); T-008 / P-008 (elite formation bypass); Annex K4 (Protected Pause Window); AC3.5 (cooling-off cohort rule) |
 
-**Purpose.** This annex introduces operative clauses for P-009 (T-009 Grace Exploitation Loop). It amends Annex K4 (Protected Pause), extends P-002 collusion analytics to hardship attestation, and closes the T-009 × T-008 bypass route. Status: PROPOSED.
+**Purpose.** This annex introduces operative clauses for P-009 (T-009 Grace Exploitation Loop). It amends Annex K4 (Protected Pause), extends P-002 collusion analytics to hardship attestation, and addresses the T-009 × T-008 bypass route at design level. Status: ACTIVE in the Patch Log; evidence remains Active — unproven until the Service Record Misuse Evidence Test Package is run.
 
 ### AF1. Graduated Renewal Intensity (Annex K4 Amendment)
 The Protected Pause Window renewal review must apply graduated evidence standards based on cumulative pause history. Initial activation and each renewal are governed by the following standards:
@@ -65,7 +65,7 @@ Published quarterly in the Article VII concentration dashboard (extending AC3.7)
 ### AF6. Capability Development Pathway During Pause [Ambitious]
 During a Protected Pause Window, a person may earn up to 15% of their normal quarterly Service Record through verified pause-appropriate stewardship. Qualifying activities: peer support for other hardship-affected persons; verified self-directed learning with completion evidence; community care activities that do not require the person's primary capacity. 'Pause-appropriate stewardship' is a protected term under P-004. The 15% cap is absolute; the pathway cannot be used to accumulate Service Record beyond the person's pre-pause baseline.
 
-### AF7. T-009 × P-008 Explicit Closure [Ambitious]
+### AF7. T-009 × P-008 Explicit Bypass Control [Ambitious]
 P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpose of the cohort concurrent maximum (2 members of the same co-service cohort sharing review authority simultaneously), a person is considered effectively serving if their Service Record is maintained above the service eligibility threshold through Protected Pause rather than ongoing contribution. Paused cohort members count toward the 2-member concurrent maximum. When a paused cohort member's count causes the maximum to be exceeded, the active serving members must accommodate — not the paused person. The paused person is never required to exit pause due to this rule.
 
 ---
@@ -80,7 +80,7 @@ P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpo
 | T-007 | P-004 | ACTIVE | AB | S1 |
 | T-005 | P-005 | ACTIVE | AC1 | S2 |
 | T-006 | P-006 | ACTIVE | AC2 | S2 |
-| T-008 | P-008 | ACTIVE | AC3 | S2 |
+| T-008 | P-008 | see Patch Log | AC3; operative authority superseded by P-025 | S2 |
 | T-011 | P-011 | ACTIVE | AD | S2 |
 | T-012 | P-012 | ACTIVE | AE2.1 | S3 |
 | T-013 | P-012 | ACTIVE | AE2.2 | S3 |
@@ -88,6 +88,6 @@ P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpo
 | T-015 | P-012 | ACTIVE | AE2.4 | S3 |
 | T-009 | P-009 | ACTIVE | AF | S4 |
 
-*T-009 is addressed via P-009. All threats named through this annex have mitigation designs. Outstanding pre-launch items: White Paper sync, Technical Reference diagram update, and formal acceptance of Annexes AC–AF.*
+*T-009 is addressed at design level via P-009. All threats named through this annex have mitigation designs, not evidence-backed closure. Outstanding pre-launch items include Service Record misuse testing, hardship attestation red-team review, public comprehension review, and residual-risk update before any stronger claim.*
 
 ---
