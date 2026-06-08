@@ -169,7 +169,8 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-002 — Identity Exploits
 
-- **Patch:** [P-003 — Identity System Hardening](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md); related: [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · [ANNEX_AK.md](../annexes/ANNEX_AK.md) · Patch status: **ACTIVE**
+- **Active patch:** [P-003 — Identity System Hardening](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md)
+- **Pre-ratification design:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · [ANNEX_AK.md](../annexes/ANNEX_AK.md) remains **PROPOSED** until founding adoption and pilot-calibrated rate confirmation.
 - **Layer:** Identity / access / civic activation
 - **Severity:** Critical
 - **Status:** Active — unproven
@@ -181,9 +182,9 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Impact:** drains Essential Access, corrupts Voice and Service Record legitimacy, and can exclude vulnerable people if controls become too harsh.
 - **Detection:** cross-signal deduplication, recovery anomaly review, impossible-use patterns, and staged assurance mismatches.
 - **Mitigation direction:** four-tier identity assurance model, multi-evidence thresholding, no single universal credential, recovery safety ladder, survival-floor continuity during disputes. → P-003 ACTIVE.
-- **Open problem:** calibrate fraud tolerance without making the system unusable for displaced, undocumented, or digitally fragile people.
+- **Open problem:** prove that the published fraud/exclusion calibration works without making the system unusable for displaced, undocumented, digitally fragile, recovery/crisis, or other vulnerable people.
 - **Evidence package:** [Identity and Recovery Evidence Test Package](./Identity_Recovery_Evidence_Test_Package.md)
-- **Asymmetric Error Doctrine required (see P-016):** The current mitigation does not specify quantified targets. Before deployment, the founding coalition must publish and formally adopt an Asymmetric Error Doctrine that specifies: (a) maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record); (b) maximum acceptable exclusion rate for vulnerable populations (displaced, undocumented, digitally fragile) per tier; (c) the review trigger when either rate is exceeded; (d) the decision rule when the two error types trade off. Without explicit numbers, calibration is permanently subject to political pressure. The Asymmetric Error Doctrine is a Tier 2 founding commitment. → See P-016 (Annex AK).
+- **Asymmetric Error Doctrine required (see P-016):** Annex AK now publishes bound starting values for FC-140 through FC-145 and proposed/reserved values for FC-146 through FC-150, but those values are not evidence-backed. Before scale-up, the founding coalition must formally adopt the doctrine, complete the Identity and Recovery Evidence Test Package, bind the remaining FC values, and document whether the pilot rates satisfy the published gates. Without that evidence, calibration remains subject to political pressure even when numbers are written down.
 - **P-045 addition:** P-045 §7 adds the Asymmetric Default Rule: system bears burden of proof for exclusion decisions; 14-day independent review required before any Essential Access exclusion is final; exclusions without timely determination automatically reversed. P-045 §8 adds the Independent Identity Auditor: mandatory quarterly public reports on fraud/exclusion rates per tier and vulnerable category; absence of data for 2 consecutive quarters triggers Federated Ombuds referral; IIA appointment/removal requires Tier 2 amendment.
 
 ---

@@ -387,13 +387,13 @@ Add: *"CIP members must include at least one person who has personally experienc
 
 **Christ-Centered Alignment**
 
-The AED calibrates the system's error posture: when uncertain, err toward inclusion, not exclusion. FC-140 through FC-145 bind specific false-exclusion thresholds (e.g., ≤2% false exclusion of correctly identified participants for general population, ≤3% for elderly, ≤5% for displaced/refugee, ≤3% for disability). The logic is explicit: the cost of wrongly excluding someone from Essential Access is greater than the cost of wrongly including someone. This is directly consistent with the parable of the lost sheep (Luke 15:4–7) — the shepherd leaves the 99 to find the 1. A system calibrated toward inclusion over exclusion reflects this logic institutionally.
+The AED calibrates the system's error posture: when uncertain, err toward inclusion, not exclusion. FC-140 through FC-142 bind fraud bands by instrument tier; FC-143 through FC-145 bind vulnerable-category exclusion bands for displaced, undocumented, and digitally fragile persons; FC-146 through FC-150 remain pre-launch commitments. The logic is explicit: the cost of wrongly excluding someone from Essential Access is greater than the cost of wrongly including someone, while fraud that consumes physical survival supply still requires public limits. This is directly consistent with the parable of the lost sheep (Luke 15:4–7) — the shepherd leaves the 99 to find the 1. A system calibrated toward inclusion over exclusion reflects this logic institutionally.
 
 The 14-day automatic reversal rule — any exclusion lasting more than 14 days without formal determination is automatically reversed — applies the same logic mechanically. It refuses to let procedural inertia function as de facto exclusion. This is consistent with the Sermon on the Mount's expectation that even institutional systems should not allow the "least of these" to slip through administrative cracks.
 
 **Babel-Risk Warning**
 
-The AED is expressed as numerical targets. Numbers invite gaming. A system that achieves a 2.1% false-exclusion rate (just above the FC-140 trigger) will face institutional pressure to define the measurement method in a way that produces 1.9%. This is not a criticism of the targets — they are necessary — but a recognition that numerical compliance is not the same as genuine protection. The Babel-risk for AED is bureaucratic self-certification: the system reports it is meeting the targets because the targets are defined in ways that make them reportable.
+The AED is expressed as numerical targets. Numbers invite gaming. A system that sits just above a fraud or exclusion trigger will face institutional pressure to define the measurement method in a way that appears compliant. This is not a criticism of the targets — they are necessary — but a recognition that numerical compliance is not the same as genuine protection. The Babel-risk for AED is bureaucratic self-certification: the system reports it is meeting the targets because the targets are defined in ways that make them reportable.
 
 **Human Dignity Test**
 

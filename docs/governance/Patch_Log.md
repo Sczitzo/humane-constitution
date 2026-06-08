@@ -35,7 +35,7 @@
 | P-013 | T-016 | **ACTIVE** | Critical | FAP integrity: representativeness standard, deadlock timeline, audit epistemic independence, anti-gaming Tier 2. |
 | P-014 | T-017 | **ACTIVE** | Critical | Bootstrap activation: one-time founding instrument for P-013 activation only. |
 | P-015 | T-018 / T-019 | **ACTIVE** | High | PCRP attack surface: false-trigger escalation path, exhaustion alert, manufactured flag assessment. |
-| P-016 | T-002 | **PROPOSED** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. Remains PROPOSED until the founding coalition confirms rate targets after first-year pilot evidence; FC-140 anchors are provisional. |
+| P-016 | T-002 | **PROPOSED** | Critical | Identity asymmetric error doctrine: quantified fraud/exclusion rate targets, Tier 2 founding commitment. Remains PROPOSED / pre-ratification until founding adoption and pilot-calibrated rate confirmation; FC-140 through FC-145 have bound starting values, while FC-146 through FC-150 remain pre-launch commitments. |
 | P-017 | T-020 / T-021 | **ACTIVE** | Critical | Oracle epistemological and algorithmic independence: methodology-class diversity, AI supply chain transparency, physical ground-truth requirement. Numerical floors (N≥5, ≥3 classes, ≤0.30 pairwise correlation, ≥1 adversarial seat) bound in `/founding/commitments.md` FC-030/FC-031/FC-032/FC-033. |
 | P-018 | T-022 | **PROPOSED** | Critical | Electoral cycle resilience: entrenchment ladder, Essential Access floor minimum persistence, administrative hollowing triggers, transition continuity protocol. |
 | P-019 | T-023 | **ACTIVE** | Med-High | Pilot external validity gate: stress-condition pilot requirement, red-team challenge window, crisis simulation mandate. |
@@ -450,7 +450,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
 **Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md)
 
 - **Change type:** constitutional commitment + quantified doctrine.
-- **Status basis:** **Active — unproven** (Axis 1 — incorporated as the live design; no field evidence) · **Pre-ratification** (Axis 2 — not yet accepted into the Humane Constitution at a founding). It remains Pre-ratification until the founding coalition confirms the fraud/exclusion rate targets after first-year pilot evidence; the FC-140 anchors promoted by P-044 are provisional values, not evidence-backed thresholds.
+- **Status basis:** **PROPOSED / pre-ratification** for deploy-state; **designed, needs evidence** for maturity. Annex AK is incorporated as the live design candidate, but P-016 is not evidence-backed and not ratified into a founding until the founding coalition adopts the doctrine, confirms pilot-calibrated rates, and binds remaining FC values.
 - **Addresses:** T-002 — calibrating fraud tolerance without making the system unusable for vulnerable populations. Extends P-003.
 - **Introduced design:** The founding coalition must publish and formally adopt an **Asymmetric Error Doctrine** (AED) as a Tier 2 founding commitment before deployment. The AED must specify:
   - (a) Maximum acceptable fraud rate per instrument tier (Essential Access, Voice, Service Record) — expressed as a percentage of enrolled population per quarter, with confidence interval.
@@ -459,7 +459,7 @@ The prior INV-007 enforcement relied on a single FAP reviewer checking patch pro
   - (d) The decision rule when the two error types trade off: when reducing fraud exclusion would increase vulnerable-population exclusion by more than a specified ratio, the exclusion reduction takes priority unless the fraud rate exceeds a specified ceiling.
   - (e) Annual recalibration review by an independent panel with at least one member from a vulnerable-population advocacy organization.
 - **Clauses to integrate:** AK1–AK5. Annex B (identity architecture) extended. AED added to P-004 protected terms registry. Founding preconditions checklist extended (Annex N).
-- **Dependencies:** Identity system operational data required for calibration (cannot be specified without pilot evidence). AED is therefore a Tier 2 *design commitment* at founding — specific numbers are filled in after first-year pilot data, before scale-up gate. The commitment to publish and honor the doctrine is the founding obligation; the specific numbers are an evidence gate.
+- **Dependencies:** Identity system operational data required for calibration. AED is therefore a Tier 2 design commitment at founding: FC-140 through FC-145 have bound starting values, FC-146 through FC-150 remain pre-launch commitments, and all values must be tested before scale-up. The commitment to publish and honor the doctrine is the founding obligation; passing the evidence gates is the scale-up obligation.
 - **New risks introduced:** Quantified targets create goodhart's-law gaming — operators optimize to the metric rather than the underlying goal. Mitigated by: AED specifies both rates and requires independent measurement (not self-reported). Published targets also create narrative attack surface ("the system allows X% fraud"). Mitigated by: pre-committed publication converts this from a vulnerability into a transparency demonstration consistent with P-011.
 - **Residual risk:** Some exclusion is structurally unavoidable with any identity system. The AED does not solve this; it makes the trade-off explicit and governable rather than implicit and subject to political manipulation.
 - **Compound linkages:** T-002 × T-011 (AED publication is a narrative attack surface — simultaneously the correct response). T-002 × T-008 (vulnerable population exclusion rates must be tracked independently from the same bodies that operate the identity system — Ombuds Office or equivalent).
@@ -712,7 +712,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-016 | P-013 | **ACTIVE** | Annex AG |
 | T-017 | P-014 | **ACTIVE** | Annex AH |
 | T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
-| T-002 | P-016 | ACTIVE | Annex AK |
+| T-002 | P-016 | pre-ratification design | Annex AK |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
 | P-018 | T-022 supplement | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **ACTIVE** | Annex AN |
@@ -1074,15 +1074,15 @@ Systematic logical analysis identified 18 issues across the corpus: 4 critical (
 - **ANNEX_AB.md §AB2** — Added FC-010 calibration methodology requirement: Article VII annual audit must publish the empirical/modelling basis for leakage thresholds, revision triggers, and methodology changes. Thresholds not documented in a published audit are not valid enforcement baselines. (T-001)
 - **ANNEX_AB.md §AB3** — Added invisible-work backstop: P-041 biennial recognized-contribution audit named as enforcement backstop for §AB3; findings requiring correction must be incorporated within 180 days; deficient contribution scores suspended from Voice/Service Record inputs until corrected. (T-004)
 - **ANNEX_AB.md §AB5** — Added registry administration clause: Federated Ombuds as custodian; no unilateral definition authority; Tier 2 amendment pathway; annual public review window; prima facie disputes forwarded to CRP. (T-007)
-- **ANNEX_AK.md** — Promoted FC-140 recommended anchors to provisional values: Essential Access fraud rate target ≤0.5% (FC-140), upper bound 1.0% — both provisional pending pilot confirmation, pre-launch blocking gates. (T-002 / P-016)
+- **ANNEX_AK.md** — Promoted the AED commitment architecture and later superseded FC-140 anchors. Current FC-140 values are target ≤2%, upper bound ≤5%, trigger ≥3% per quarter; see `/founding/commitments.md` and the Parameter Calibration Register. (T-002 / P-016)
 - **README.md** — Updated stale patch counts: 31→40 total, 16→25 active (two locations).
 - **ANNEX_Y.md §Y7** — Filled `[RESERVE_WINDOW_DAYS]` placeholder with provisional value: 90 days (FC-YT2, pre-launch blocking gate).
 - **CLAUDE.md** — Corrected "Provenance_Map.md is planned" → "serves as" (file already exists).
 - **Patch_Log.md P-005** — Advanced from PROPOSED → ACTIVE: ANNEX_AC1 design is complete; residual risks (sub-panel capture, throughput theater) are acknowledged and monitored.
 
-**New risks introduced:** This batch promoted statuses and bound provisional fraud-rate anchors, and that introduces residual risk. (1) Premature reliance — readers may treat the promoted statuses (e.g. P-005 advanced to ACTIVE) as field-tested rather than designed-and-monitored. (2) Provisional-anchor confusion — the FC-140 fraud-rate anchors (≤0.5% target, 1.0% upper bound) are provisional pre-launch values and may be mistaken for proven or evidence-backed thresholds. (3) Calibration drift — anchors set before pilot confirmation can drift or be quietly normalized as "the number" before any pilot evidence validates them. Mitigated by: the provisional labelling on every anchor, the pre-launch blocking gates, and the residual-risk note below.
+**New risks introduced:** This batch promoted statuses and bound provisional fraud-rate anchors, and that introduces residual risk. (1) Premature reliance — readers may treat the promoted statuses (e.g. P-005 advanced to ACTIVE) as field-tested rather than designed-and-monitored. (2) Parameter confusion — later FC-140 values supersede this batch's older anchor language and may still be mistaken for proven or evidence-backed thresholds. (3) Calibration drift — anchors set before pilot confirmation can drift or be quietly normalized as "the number" before any pilot evidence validates them. Mitigated by: the parameter register, pre-launch blocking gates, and the residual-risk note below.
 
-**Residual risk:** FC-140 through FC-150 remain provisional pending pilot data. P-016 remains PROPOSED until the founding coalition confirms rate targets after first-year pilot evidence.
+**Residual risk:** FC-140 through FC-145 have bound starting values, while FC-146 through FC-150 remain pre-launch commitments pending pilot data and founding adoption. P-016 remains PROPOSED / pre-ratification until the founding coalition confirms rate targets after first-year pilot evidence.
 
 ---
 

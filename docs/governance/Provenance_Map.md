@@ -220,7 +220,7 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 > *This patch extends T-002 by making identity fraud and exclusion tradeoffs explicit, measured, and governable.*
 
-- 🔩 **Patch:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · Status: **PROPOSED** (remains proposed until the founding coalition confirms rate targets after first-year pilot evidence; FC-140 anchors are provisional)
+- 🔩 **Patch:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · Status: **PROPOSED** (remains proposed until founding adoption and pilot-calibrated rate confirmation; FC-140 through FC-145 have bound starting values, while FC-146 through FC-150 remain pre-launch commitments)
 - 📄 **Constitutional text:** [ANNEX_AK.md](../annexes/ANNEX_AK.md) — *Annex AK requires a published doctrine for fraud tolerance, vulnerable-population exclusion limits, review triggers, and tradeoff rules.*
 
 ### P-021 — Register Disclosure Protocol

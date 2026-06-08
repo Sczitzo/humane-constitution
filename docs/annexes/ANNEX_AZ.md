@@ -11,17 +11,17 @@
 
 > **Scope note.** This annex previously contained a progressive net-worth demurrage architecture (§AZ1–AZ3). That content was superseded, and [ANNEX_D](./ANNEX_D.md) now governs Commons Return and Universal Stake. This annex now exists only for the Tier 0 token mechanism constitutional framework (§AZ1 below). No demurrage content is present or intended here.
 
-> **Provenance.** §AZ2.1 was originally drafted in the P0-A adversarial audit remediation batch (2026-05-15) to resolve the pre-operational gate in INV-LAUNCH-1. The demurrage sections (former §AZ1–AZ3) were deleted in a subsequent commit; §AZ2.1 was not demurrage content and was restored here to keep the INV-LAUNCH-1 gate intact.
+> **Provenance.** The Tier 0 token framework was originally drafted in the P0-A adversarial audit remediation batch (2026-05-15) to resolve the pre-operational gate in INV-LAUNCH-1. The demurrage sections (former §AZ1–AZ3) were deleted in a subsequent commit; the Tier 0 token framework was not demurrage content and was restored here as §AZ1 to keep the INV-LAUNCH-1 gate intact.
 
 ---
 
 ## AZ1 — Tier 0 Token Mechanism (Constitutional Framework)
 
-A Tier 0 token is an access authorization artifact issued to persons who have received provisional personhood confirmation under Article II. It is not identity, not currency, not reputation, and not transferable governance power.
+A Tier 0 token is an access authorization artifact for pseudonymous single-session CSM allocation. It is not identity, not currency, not reputation, and not transferable governance power.
 
-**Issuance conditions.** A Tier 0 token is issued upon: (1) provisional personhood confirmation; and (2) minimal eligibility attestation sufficient for Tier 0 access, as defined by the Technical Specifications Package (TSP) designated for this mechanism. Full identity verification is not required at Tier 0. The issuance process must not require disclosure of real-world identity.
+**Issuance conditions.** A Tier 0 token is issued when the access node has enough session-level assurance to prevent obvious duplicate same-session allocation without requiring real-world identity disclosure. Provisional personhood confirmation may satisfy that assurance, but it is not a precondition for emergency survival access. Full identity verification is not required at Tier 0. The issuance process must not require disclosure of real-world identity.
 
-**Survival-floor precedence.** The Tier 0 token governs pseudonymous CSM allocation for persons who have received provisional personhood confirmation; it is never a precondition of the survival floor. A person who is physically present but not yet even provisionally confirmed must not fall into a gap. The physically-present emergency survival path of [ANNEX_P](./ANNEX_P.md) §P4 (Survival-Floor Personhood), which requires no token and no identity confirmation, and the full Constitutional Survival Minimum of [ANNEX_Y](./ANNEX_Y.md), which attaches to physical presence, are available without and prior to any Tier 0 token issuance. Survival access never waits on token issuance or on provisional personhood confirmation. No node may withhold, delay, or condition the survival floor on the existence, validity, or issuance of a Tier 0 token.
+**Survival-floor precedence.** The Tier 0 token is an accounting and anti-duplication tool for pseudonymous CSM allocation; it is never a precondition of the survival floor. A person who is physically present but not yet even provisionally confirmed must not fall into a gap. The physically-present emergency survival path of [ANNEX_P](./ANNEX_P.md) §P4 (Survival-Floor Personhood), which requires no token and no identity confirmation, and the full Constitutional Survival Minimum of [ANNEX_Y](./ANNEX_Y.md), which attaches to physical presence, are available without and prior to any Tier 0 token issuance. Survival access never waits on token issuance or on provisional personhood confirmation. No node may withhold, delay, or condition the survival floor on the existence, validity, or issuance of a Tier 0 token.
 
 **Scope.** A Tier 0 token authorizes CSM basket allocation only. It does not authorize civic participation, governance voting, office eligibility, ownership, currency conversion, reputation attribution, or any upgrade of identity status.
 

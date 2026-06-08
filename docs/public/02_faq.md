@@ -138,9 +138,9 @@ No single mechanism is guaranteed. The point is that dismantling requires defeat
 
 The system is designed around an Asymmetric Error Doctrine: it is explicitly calibrated to err on the side of inclusion rather than fraud prevention when the two conflict.
 
-Specific quarterly targets are published — for example, exclusion of displaced persons must stay below 6%, and exclusion of undocumented persons below 8%. Any Essential Access exclusion that goes more than 14 days without a formal determination is automatically reversed.
+Specific quarterly targets are published — for example, the current Annex AK pilot gates set upper bounds of 6% for displaced persons and 8% for undocumented or digitally fragile persons, while the evidence package also uses a stricter 0.5% full-population false-exclusion warning threshold for scale-up. Any Essential Access exclusion that goes more than 14 days without a formal determination is automatically reversed.
 
-These targets are Tier 2 founding commitments, meaning they require a formal public amendment to loosen — they cannot be quietly adjusted by administrators.
+These are designed commitments, not proof. They require pilot evidence, public reporting, and formal adoption before the project can claim the identity system works in practice.
 
 ## 21. Where should I start?
 

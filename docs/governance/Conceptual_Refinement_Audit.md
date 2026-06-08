@@ -36,7 +36,7 @@ The strongest version of the thesis is not "separate the instruments and trust t
 
 | Rank | Concept | Why it is load-bearing | Current posture | What refinement must do |
 |---|---|---|---|---|
-| 1 | Identity without surveillance or exclusion | Essential Access and civic integrity both depend on knowing continuity of personhood. | Designed direction, unresolved evidence problem. | Define pilot failure thresholds for false exclusion, recovery delay, data exposure, and staff discretion. |
+| 1 | Identity without surveillance or exclusion | Essential Access and civic integrity both depend on knowing continuity of personhood. | Active-unproven design, unresolved evidence problem. | Run the existing identity evidence gates: false exclusion, recovery delay, data exposure, staff discretion, coercion, abandonment, no-token access, and vulnerable-population failure. |
 | 2 | Real-capacity measurement | Essential Access and Shared Storehouse fail if numbers drift from physical reality. | Strong architecture, little field evidence. | Test oracle latency, disagreement, standards capture, confidence bands, and physical sampling cost. |
 | 3 | Contribution without coercive hierarchy | Markets and dignity need real contribution, but Service Record can become rank. | Designed controls, still culturally fragile. | Prove that incentives reward work without becoming a worth score or insider credential. |
 | 4 | Anti-rent enforcement against legal wrappers | The economic theory fails if dynastic control persists through trusts, shells, foundations, or control rights. | Designed direction, legal implementation gap. | Run jurisdiction-specific trust, beneficial ownership, land, and enterprise-control review. |
@@ -77,7 +77,7 @@ Use these rules when editing threats, patches, annexes, and public claims:
 
 | Priority | Work item | Macro target | Micro target |
 |---|---|---|---|
-| Critical | Identity and recovery evidence plan | Protect survival without surveillance. | Add concrete false-exclusion, recovery-delay, data-minimization, and appeal failure criteria. |
+| Critical | Identity and recovery evidence plan | Protect survival without surveillance. | Reconcile pilot evidence against Annex AK and the Identity and Recovery Evidence Test Package; block stronger claims if thresholds are exceeded or residual risk is not updated. |
 | Critical | Capacity measurement evidence plan | Keep promises tied to physical reality. | Test update latency, disagreement, physical sampling, standards concentration, and public confidence-band readability. |
 | High | Contribution and Service Record misuse review | Preserve incentives without social credit. | Add misuse scenarios involving employers, vendors, schools, housing providers, and civic bodies. |
 | High | Commons Return and anti-rent evidence track | Prevent wealth from reappearing as control while testing the fiscal, dignity, and incidence costs of Commons Return and Universal Stake. | Test trusts, foundations, beneficial ownership chains, public procurement capture, source-base valuation, lockbox sufficiency, project escrow, and enterprise-control rights. |

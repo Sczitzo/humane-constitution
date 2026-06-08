@@ -243,7 +243,7 @@ Assume every identity mechanism will be attacked from both sides: by people seek
 
 **Required tests:**
 
-- bind FC-140 through FC-150 from pilot evidence;
+- test FC-140 through FC-145, bind FC-146 through FC-150, and revise any value that pilot evidence shows is too loose or too tight;
 - publish fraud and exclusion rates with confidence intervals;
 - audit abandonment and denied access separately;
 - simulate a fraud panic;
@@ -323,7 +323,7 @@ Pass condition: sensitive recovery and service-use data cannot be casually linke
 
 ### Stage 5 - Annex AK Calibration Hearing
 
-Output: public calibration package proposing FC-140 through FC-150, with confidence intervals, dissenting views, and plain-language explanation.
+Output: public calibration package confirming or revising FC-140 through FC-145, binding FC-146 through FC-150, and publishing confidence intervals, dissenting views, and plain-language explanation.
 
 Pass condition: the public can see the trade-off, vulnerable groups can challenge it, and scale-up is blocked if the numbers remain reserved.
 
@@ -370,11 +370,22 @@ This section defines specific numeric thresholds that constitute failure. These 
 
 Auditors should treat any threshold left as "TBD" at scale-up as a governance failure in itself.
 
+### Relationship to Annex AK
+
+Annex AK defines the founding Asymmetric Error Doctrine bands. FC-143 through FC-145 are bound vulnerable-category pilot gates; FC-146 through FC-150 remain pre-launch commitments that must be bound before scale-up. The thresholds below do not silently replace Annex AK. They define stricter operational failure conditions for the Identity and Recovery Evidence Test Package.
+
+Where the values differ, read them this way:
+
+- Annex AK FC bands are the public constitutional calibration bands for founding adoption and pilot governance.
+- The T-1 false-exclusion ceiling below is a scale-up ambition and warning threshold for the full Essential Access population, including abandonment.
+- Any interruption of the Constitutional Survival Minimum during an identity dispute is a Category A constitutional failure even if Annex AK's quarterly percentage bands are otherwise satisfied.
+- If the pilot passes Annex AK but breaches a stricter evidence-package threshold, the claim may not advance beyond "active-unproven" without a residual-risk update explaining the divergence.
+
 ---
 
 ### T-1: False Exclusion Ceiling
 
-**Threshold:** Fewer than 0.5% of Essential Access attempts denied per quarter due to identity verification failure, across the full eligible population including abandonment.
+**Threshold:** Fewer than 0.5% of Essential Access attempts denied per quarter due to identity verification failure, across the full eligible population including abandonment. This is a scale-up ambition and evidence-package warning threshold, not a replacement for Annex AK's vulnerable-category founding bands.
 
 **Rationale:** Essential Access is the Constitutional Survival Minimum. A system that correctly identifies 99.5% of users still excludes thousands at population scale. The 0.5% ceiling is not lenient — it is chosen because lower thresholds are not achievable with current best-practice ID systems in low-documentation contexts (see: UNHCR registration data, World Bank ID4D exclusion audits). Anything above 0.5% at scale implies structural exclusion, not edge-case error. The ceiling applies to the full denominator including people who abandoned the enrollment or recovery process, not only people who completed it.
 
@@ -527,4 +538,3 @@ If the survival floor is interrupted during recovery (i.e., Essential Access fal
 ---
 
 Even if the tests pass, identity will remain a permanent danger surface. A humane identity system must fight fraud and protect access at the same time, and those goals will always conflict under stress. The correct goal is not perfect identity. The goal is a bounded, appealable, privacy-preserving system that makes fraud costly while making exclusion visible, reversible, and unable to interrupt the survival floor.
-

@@ -52,7 +52,7 @@ The AED specifies six things:
 5. **Annual recalibration process** — how the targets are reviewed and by whom
 6. **Publication commitment** — what is published, how often, and in what form
 
-Each is specified below as a commitment slot. The AED as a commitment architecture is Tier 2 at founding; the activation variables are tracked explicitly as reserved commitments **FC-140 through FC-150** in `/founding/commitments.md` until first-year pilot data is sufficient to bind them before the first scale-up decision.
+Each is specified below as a commitment slot. The AED as a commitment architecture is Tier 2 at founding. **FC-140 through FC-145** now have bound starting values in `/founding/commitments.md`; **FC-146 through FC-150** remain pre-launch commitments that must be bound before first scale-up.
 
 ---
 
@@ -83,8 +83,8 @@ Each is specified below as a commitment slot. The AED as a commitment architectu
 | **Displaced persons (internal migration, emergency relocation)** | FC-143 — **≤3%** (bound; tighter than UNHCR <5% target; displaced persons have no alternative access route) | FC-143 upper bound — **≤6%** (bound) | FC-143 trigger — **≥4% in any quarter** (bound) |
 | **Undocumented persons (no state-recognised documentation)** | FC-144 — **≤5%** (bound; documentation barriers produce structurally higher baseline) | FC-144 upper bound — **≤8%** (bound) | FC-144 trigger — **≥6% in any quarter** (bound) |
 | **Digitally fragile persons (no smartphone, limited literacy, disability)** | FC-145 — **≤5%** (bound; structural access barriers produce higher baseline; tracked separately to prevent aggregate masking) | FC-145 upper bound — **≤8%** (bound; hard ceiling requires mandatory architecture review) | FC-145 trigger — **≥6% in any quarter** (bound) |
-| **Recovery/crisis situations (domestic violence, trafficking, incapacity)** | FC-146 target — **≤4%** (conservative anchor; crisis situations involve identity disruption that structurally increases exclusion risk; bind with pilot data before scale-up gate) | FC-146 upper bound — **≤7%** (conservative anchor) | FC-146 trigger — **≥5% in any quarter** (conservative anchor) |
-| **Overall population (all enrolled persons)** | FC-147 target — **≤2%** (conservative anchor; aggregate rate masks vulnerable-category concentration; bind with pilot data before scale-up gate) | FC-147 upper bound — **≤4%** (conservative anchor) | FC-147 trigger — **≥3% in any quarter** (conservative anchor) |
+| **Recovery/crisis situations (domestic violence, trafficking, incapacity)** | FC-146 — **RESERVED**; proposed target ≤4% pending pilot calibration | FC-146 upper bound — **RESERVED**; proposed upper bound ≤7% | FC-146 trigger — **RESERVED**; proposed trigger ≥5% in any quarter |
+| **Overall population (all enrolled persons)** | FC-147 — **RESERVED**; proposed target ≤2% pending pilot calibration | FC-147 upper bound — **RESERVED**; proposed upper bound ≤4% | FC-147 trigger — **RESERVED**; proposed trigger ≥3% in any quarter |
 
 **Plain rationale for separate tracking:** Exclusion rates for vulnerable categories are tracked separately from the overall population because averages can hide concentrated harm. A 1% overall exclusion rate spread evenly is different from a 1% overall exclusion rate concentrated entirely among undocumented persons.
 
@@ -116,11 +116,11 @@ This is the most consequential section. It specifies what happens when the ident
 
 **Default rule:** When a calibration decision will push one rate above its target to bring the other below its target, the decision rule is:
 
-> **Exclusion reduction takes priority over fraud reduction when: the exclusion rate for any vulnerable category would exceed FC-148 (reserved exclusion-priority multiplier; recommended anchor: twice the exclusion target) AND the fraud rate is below FC-149 (reserved fraud-priority bound).**
+> **Exclusion reduction takes priority over fraud reduction when: the exclusion rate for any vulnerable category would exceed FC-148 (reserved exclusion-priority multiplier; proposed value: 1.5x the exclusion target) AND the fraud rate is below FC-149 (reserved fraud-priority bound; proposed value: 5%, aligned to FC-140 upper bound).**
 
 > **Fraud reduction takes priority over exclusion reduction when: the fraud rate exceeds FC-149 (reserved fraud-priority bound) AND the exclusion rate for all vulnerable categories is below the corresponding Section 2 upper-tolerance commitments (FC-143 through FC-147).**
 
-> **When both rates simultaneously exceed their upper tolerance bounds, an independent review panel convenes within 14 days to make a binding recommendation. The founding coalition's pre-committed default preference is FC-150 (reserved; exclusion-first or fraud-first). Until FC-150 is formally bound in `/founding/commitments.md`, the operative interim default is: exclusion reduction takes priority. This interim default is explicitly superseded when FC-150 is bound. A simultaneous breach that occurs before FC-150 is bound must be resolved under this interim default and the resolution documented as a founding precedent.**
+> **When both rates simultaneously exceed their upper tolerance bounds, an independent review panel convenes within 14 days to make a binding recommendation. The founding coalition's pre-committed default preference is FC-150 (reserved; proposed value: exclusion-first). Until FC-150 is formally bound in `/founding/commitments.md`, the operative interim default is: exclusion reduction takes priority. This interim default is explicitly superseded when FC-150 is bound. A simultaneous breach that occurs before FC-150 is bound must be resolved under this interim default and the resolution documented as a founding precedent.**
 
 **Rationale for the asymmetry:** The protocol's foundational commitment is that survival is unconditional. An identity system that excludes genuinely vulnerable people from the survival floor is a more fundamental violation of the protocol's purpose than one that permits a higher rate of fraud. However, Essential Access fraud directly consumes physical supply that is needed by genuine recipients — so fraud above the upper tolerance bound is not a minor concern. The founding coalition's pre-committed preference encodes the relative weight placed on these two failure modes.
 
@@ -178,7 +178,7 @@ The identity system faces a structural trade-off: any threshold stringent enough
 
 **Scope:** This rule applies to all exclusion decisions at the Essential Access tier. It does not apply to temporary restrictions at the Voice or Service Record tier, which are governed by their own review procedures. It does not prevent the system from requiring additional verification — it prevents final exclusion without independent, time-bounded review.
 
-**Interaction with numeric targets:** The asymmetric default rule operates independently of whether FC-143 through FC-147 exclusion rate targets have been formally bound. The procedural floor is a constitutional right, not a calibration preference. Binding numeric targets supplements but does not replace this rule.
+**Interaction with numeric targets:** The asymmetric default rule operates independently of whether every FC-143 through FC-147 exclusion rate target has been formally bound. The procedural floor is a constitutional right, not a calibration preference. Binding numeric targets supplements but does not replace this rule.
 
 ---
 
@@ -209,7 +209,7 @@ Before the identity system can advance from DESIGNED to evidence-backed status, 
 - Displaced persons: measured quarterly exclusion rate ≤ FC-143 upper bound (6%) in the pilot population.
 - Undocumented persons: measured quarterly exclusion rate ≤ FC-144 upper bound (8%) in the pilot population.
 - Digitally fragile persons: measured quarterly exclusion rate ≤ FC-145 upper bound (8%) in the pilot population.
-- Overall population: measured quarterly exclusion rate ≤ FC-147 upper bound (to be bound before first scale-up gate).
+- Overall population: measured quarterly exclusion rate ≤ FC-147 upper bound after FC-147 is bound before first scale-up gate; before binding, use the proposed ≤4% upper bound as a pilot warning threshold and the stricter Identity and Recovery Evidence Test Package T-1 threshold as a scale-up warning.
 
 **Gate 2 — Recovery path functional:** At least 95% of persons who initiated a recovery request received a determination within 14 days in the pilot period. Determinations must be independently audited, not self-reported.
 
@@ -237,7 +237,7 @@ The AED is Tier 2 once adopted. The decision rule in Section 4 (including the pr
 
 ---
 
-*This document is Annex AK of the Humane Constitution. The commitment architecture is operative as a PROPOSED standard. FC-140 through FC-145 have been bound with evidence-grounded values before the first scale-up gate (see `/founding/commitments.md`). FC-146 through FC-150 remain reserved pending pilot data and are pre-launch blocking gates.*
+*This document is Annex AK of the Humane Constitution. The commitment architecture is operative as a PROPOSED standard. FC-140 through FC-145 have bound starting values (see `/founding/commitments.md`). FC-146 through FC-150 remain reserved pending pilot data and are pre-launch blocking gates.*
 
 ---
 
@@ -249,7 +249,9 @@ Any person may receive Essential Access at the Constitutional Survival Minimum (
 
 **Non-duplication mechanism:** A Tier 0 allocation is keyed to a single-session pseudonymous token generated at point of access. The token is non-transferable, expires after use, and cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom.
 
-The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. The constitutional framework for the Tier 0 token mechanism is defined in ANNEX_AZ §AZ2.1; technical implementation is delegated to the TSP designated for Tier 0 identity and access, as specified there. This mechanism is a pre-operational prerequisite under INV-LAUNCH-1.
+The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. The constitutional framework for the Tier 0 token mechanism is defined in ANNEX_AZ §AZ1; technical implementation is delegated to the TSP designated for Tier 0 identity and access, as specified there. This mechanism is a pre-operational prerequisite under INV-LAUNCH-1.
+
+**No-token survival path:** The Tier 0 token helps account for pseudonymous single-session allocation. It is not the right itself. If a person is physically present and needs the CSM floor before a token can be issued, ANNEX_P §P4 and ANNEX_Y control: the survival floor is delivered first, then any token or reconciliation artifact is handled after the immediate need is met.
 
 **Fraud model:** Deliberate double-claiming at the CSM tier is physically constrained (one body, one place, one time) and socially normed. The system trusts that there is enough for everyone. Citizens bear a collective duty to keep the commons honest: double-dipping is a civic wrong not because the system cannot afford it at the margin, but because it degrades the social trust that makes the open floor possible. Detection is aggregate: if per-capita consumption systematically exceeds physical capacity, the oracle flags a population-level anomaly for community review — not for individual surveillance.
 
