@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-068**
+**Running change ledger aligned to the Humane Constitution · Current through P-069**
 
 ---
 
@@ -86,6 +86,7 @@
 | P-066 | T-029 | **ACTIVE** | Critical | Commons Return and Universal Stake Fiscal Sustainability Gate: replaces routine progressive net-worth demurrage as active wealth spine, registers fiscal/debasement risk, requires costed public-finance model, source-base revenue testing, remaining-tax disclosure, incidence review, lockbox sufficiency, and scale-blocking fiscal adequacy gate. |
 | P-067 | T-030 | **ACTIVE** | Critical | Cyber Resilience and Availability Gate: registers ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status failure as a distinct threat to survival-floor delivery. |
 | P-068 | T-031 | **ACTIVE** | Critical | Last-Resort Unenrolled Access Gate: registers the risk that a person who cannot enroll, hold a wallet, or use digital credentials still cannot reach the survival floor; requires no-credential, trusted-intermediary, analog-reconciliation, abuse/diversion, and dignity-interview tests before universality claims. |
+| P-069 | T-032 | **ACTIVE** | Critical | Monitoring Repurposing Gate: registers the risk that protective monitoring becomes surveillance or coercive control; requires purpose register, purpose-creep red team, linkability test, office-separation drill, individual-flag appeal drill, retention audit, and coercive-use scenario. |
 
 ---
 
@@ -1499,3 +1500,18 @@ The corpus already names the principle: identity is never a condition of surviva
 - **Continuity standard:** The path must work without a phone, app, QR code, card, stable address, biometric, persistent account, future enrollment promise, or identity-disclosing intermediary. Abandonment counts as exclusion.
 - **New risks introduced:** An analog last-resort route can be exploited by organized brokers, captured by intermediaries, gamed by providers, or converted into a shadow registry through reconciliation records. The evidence package requires aggregate controls and privacy review precisely because individual surveillance would defeat the point.
 - **Residual risk:** This patch does not prove the floor is reachable. It makes the proof requirement explicit and blocks universality claims until no-credential and trusted-intermediary routes pass under dignity review.
+
+---
+
+### P-069 — Monitoring Repurposing Gate
+
+**Threat addressed:** T-032
+**Status:** ACTIVE | **Priority:** Critical
+
+The corpus already limits several monitoring surfaces: Annex C gives monitored persons notice and appeal, Annex H requires privacy/surveillance notes for amendments, Annex AK restricts Tier 0 monitoring to aggregate anomaly, Annex AY requires privacy-preserving delivery monitoring, and the Capture Dashboard bans ranking ordinary persons. The gap was cross-cutting: the same data required to enforce protection can be repurposed into the coercive surveillance layer the project opposes.
+
+- **Introduced design:** T-032 registers monitoring repurposing as a distinct critical threat. The Monitoring Repurposing Evidence Test Package requires a Monitoring Purpose Register, purpose-creep red team, linkability/re-identification test, office-separation drill, individual-flag appeal drill, data-minimization and retention audit, and coercive-use scenario.
+- **Claim discipline:** No document should claim enforcement monitoring is bounded, non-surveillant, or safe from repurposing until every monitoring stream has a named purpose, minimum-data rule, access role, retention rule, independent reviewer, appeal path, and explicit secondary-use prohibition.
+- **Continuity standard:** Enforcement may monitor power, institutions, route performance, provider continuity, aggregate anomalies, and control-plane health. It may not silently create a general-purpose behavioral graph, location map, risk list, identity dossier, or ranking system for ordinary persons.
+- **New risks introduced:** Tight monitoring limits can reduce fraud detection or delay enforcement; strong auditability can conflict with deletion; aggregation can hide individual harm; raw records can still be pressured by lawful authorities or captured insiders. These are residual risks and must be measured honestly.
+- **Residual risk:** This patch does not prove monitoring is safe. It makes monitoring itself a test subject and blocks anti-surveillance claims until purpose limitation, linkability resistance, office separation, appealability, retention, and coercive-use tests pass.

@@ -48,6 +48,7 @@ Every pilot needs:
 |---|---|---|
 | Identity without surveillance or exclusion | Phase 2 | Phase 3 last-resort access; Phase 5 appeals; Phase 10 governance capture |
 | Floor of last resort for the unenrolled | Phase 3 | Phase 5 delivery; Phase 11 implementation drift; Annex AY Delivery Sufficiency Register |
+| Enforcement-observation paradox | Phase 10 governance red-team | Monitoring Repurposing Evidence Test Package; Capture Dashboard Specification; Annex C purpose-limitation recourse |
 | Real-capacity measurement | Phase 4 | Phase 5 delivery; Phase 10 oracle capture |
 | Contribution without coercive hierarchy | Phase 1 comprehension; Phase 10 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
 | Anti-rent enforcement against legal wrappers | Phase 8 | Phase 6 Commons Return and Universal Stake; Phase 10 elite proxy markets |
@@ -366,6 +367,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - founding-coalition capture
 - review-body self-protection
 - subsidiarity drift
+- monitoring repurposing: purpose-creep, linkability, office self-certification, individual-flag punishment, excessive retention, and coercive secondary use
 
 **Measure:**
 
@@ -376,6 +378,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - residual risk after mitigation
 - whether ordinary people can understand what happened
 - whether the reviewing institution creates a new capture target
+- whether monitoring streams remain purpose-bound, minimized, appealable, independently reviewed, and retention-limited
 
 **Failure criteria:**
 
@@ -385,6 +388,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - Emergency powers normalize.
 - The patch process becomes performative.
 - A proposed patch is treated as proof before adversarial testing or activation.
+- Monitoring data collected for protection can be reused to surveil, rank, punish, exclude, pressure, identify, or threaten people.
 
 ## Phase 10 - Implementation drift and founding legitimacy
 

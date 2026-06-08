@@ -55,6 +55,8 @@ Quarterly cycles reduce governance noise while keeping the system responsive. Mo
 
 **Recourse for the monitored person.** Continuous monitoring includes anomaly detection and fraud/coercion flags applied to identifiable people. Any person flagged by such monitoring receives notice of the flag in plain language and an accessible path to appeal it, including human review and correction of erroneous data. Adverse action that rests on a contested flag is paused or made reversible while the appeal is pending, except where a narrow, time-limited emergency action under C-6 is justified. The dignity of the monitored is protected alongside the integrity of the monitoring; see also Annex A §A3–A4.
 
+**Purpose limitation and secondary-use challenge.** Monitoring data may be used only for the control purpose named in the Monitoring Purpose Register required by [P-069](../governance/Patch_Log.md). Any secondary use, cross-dashboard join, raw-data access expansion, retention extension, or individual-level linkage requires published review before use. A monitored person, affected cohort, trusted intermediary, or Federated Ombuds reviewer may challenge a monitoring stream on purpose-creep, re-identification, excessive retention, inadequate appeal, or operator self-certification grounds. A challenged secondary use is paused unless an independently published emergency finding states why delay would create immediate CSM harm.
+
 ### C-5. Evidence requirements (audit-ready)
 - **Control Specification:** what the control does, who it affects, and why it reduces risk.
 - **Abuse Case Mapping:** actor incentive, attack path, affected collapse state, false reassurance, and failure criterion.

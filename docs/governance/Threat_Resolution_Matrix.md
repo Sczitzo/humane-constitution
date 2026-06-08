@@ -26,7 +26,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 
 | Order | Workstream | Threats | Why this order |
 |---|---|---|---|
-| 1 | Identity and measurement truth | T-002, T-006, T-012, T-015, T-018, T-019, T-020, T-021, T-024, T-031 | If identity, last-resort access, or capacity measurement fails, the rest of the system can be gamed while appearing compliant. |
+| 1 | Identity, monitoring, and measurement truth | T-002, T-006, T-012, T-015, T-018, T-019, T-020, T-021, T-024, T-031, T-032 | If identity, last-resort access, monitoring, or capacity measurement fails, the rest of the system can be gamed while appearing compliant. |
 | 2 | Economic boundary integrity | T-001, T-004, T-007, T-025 | If civic instruments become money, status, rent, or legal wrappers, the core separation collapses. |
 | 3 | Institutional anti-capture | T-005, T-008, T-009, T-013, T-014, T-016, T-017 | If the repair machinery captures itself, the system cannot adapt honestly. |
 | 4 | Legitimacy, narrative, transition, and scale | T-010/T-011, T-022, T-023, T-026, T-027 | If consent, explanation, pilot validity, exit, or subsidiarity fails, the constitution becomes coercive in practice. |
@@ -75,6 +75,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 | T-029 Fiscal Sustainability and Currency Debasement | Survival-Trade Bind plus control-plane failure; public promises become coercive or inflationary when not costed against real resources. |
 | T-030 Cyber Resilience and Availability Failure | Control-plane failure plus Survival-Trade Bind when digital rails, keys, providers, or networks make the floor unreachable. |
 | T-031 Last-Resort Unenrolled Access Failure | Survival-Trade Bind plus identity/delivery control-plane failure when the floor is reachable only by the already-legible. |
+| T-032 Monitoring Repurposing and Enforcement-Observation Failure | Control-plane failure plus Power-Wealth Convergence and Survival-Trade Bind when protective monitoring becomes surveillance or coercive control. |
 
 ---
 
@@ -334,6 +335,17 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Abuse cases:** ACL-016 — Last-Resort Floor Paper Compliance; related ACL-015 — Tier 0 Token De-Anonymization.
 - **Residual risk:** the last-resort floor must tolerate some low-level leakage to avoid excluding the person in front of it. Aggregate controls may miss organized abuse; stronger individual controls can become surveillance. The system may not claim practical universality until this gate passes.
 - **Resolution update:** P-068 makes the last-resort unenrolled case a distinct evidence gate instead of burying it under T-002 identity recovery or T-030 outage continuity.
+
+### T-032 - Monitoring Repurposing and Enforcement-Observation Failure
+
+- **Current control:** [P-069](./Patch_Log.md), [Monitoring Repurposing Evidence Test Package](./Monitoring_Repurposing_Evidence_Test_Package.md), [Annex C](../annexes/ANNEX_C.md), [Capture Dashboard Specification](./Capture_Dashboard_Specification.md), [Annex AK](../annexes/ANNEX_AK.md), and [Annex AY](../annexes/ANNEX_AY.md)
+- **Resolution path:** treat every monitoring stream as a power-bearing instrument. Each stream needs a named purpose, minimum-data design, aggregation-first rule, access-role boundary, independent reviewer, appeal path, retention limit, and explicit secondary-use prohibition.
+- **Corruption route to assume:** offices collect data for protection, then reuse it for convenience, enforcement expansion, immigration or policing cooperation, provider leverage, worker/renter screening, local retaliation, dashboard self-protection, or successor-government control. Small cells, metadata, time/location traces, and cross-dashboard joins make people identifiable despite formal aggregation.
+- **External evidence:** OECD public-integrity and implementation-gap sources, NIST identity/privacy guidance, and the corpus's own Capture Dashboard and Annex C controls all warn that formal rules do not prove monitoring practice.
+- **Proof needed:** Monitoring Repurposing Evidence Test Package; Monitoring Purpose Register, purpose-creep red team, linkability/re-identification test, office-separation drill, individual-flag appeal drill, data-minimization and retention audit, and coercive-use scenario.
+- **Abuse cases:** ACL-017 — Monitoring Repurposing; related ACL-009 — Dashboard Gaming and ACL-015 — Tier 0 Token De-Anonymization.
+- **Residual risk:** monitoring creates power even when purpose-bound. Under-monitoring can miss organized harm; over-monitoring can chill access and build coercive infrastructure. The system may not claim monitoring is non-surveillant until repurposing resistance has evidence.
+- **Resolution update:** P-069 registers the enforcement-observation paradox as T-032 so it is no longer only a scattered privacy concern inside identity, dashboards, Annex C, or non-convertibility enforcement.
 
 ---
 

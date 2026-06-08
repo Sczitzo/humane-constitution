@@ -93,6 +93,16 @@ It is not a surveillance mandate. It is a public accountability specification. D
 | Offline redemption continuity | Detect digital-only survival access. | No-network or no-device users cannot obtain the CSM floor during an outage drill. |
 | Provider-settlement continuity | Detect provider refusal pressure during rail failure. | Providers stop delivery or demand concessions because ordinary settlement rails are unavailable. |
 
+### 7. Monitoring Purpose Limitation
+
+| Metric | Purpose | Failure signal |
+|---|---|---|
+| Monitoring Purpose Register coverage | Detect ungoverned data streams. | Any monitoring stream lacks a named purpose, owner, retention rule, access role, independent reviewer, or appeal path. |
+| Secondary-use attempt rate | Detect purpose creep. | Data collected for one control is requested, queried, joined, or used for another purpose without explicit review. |
+| Linkability exposure | Detect re-identification through aggregation, metadata, or joins. | A person, household, access route, provider, whistleblower, or protected cohort can be identified from dashboard or raw monitoring data. |
+| Individual-flag appeal performance | Detect monitoring flags becoming punishment without recourse. | A person affected by an individual-level flag lacks notice, human review, reversibility, or correction. |
+| Operator self-certification exposure | Detect offices grading their own monitoring performance. | The same office operates a service, controls raw monitoring data, and publishes the performance claim without independent verification. |
+
 ---
 
 ## Required Public Outputs
@@ -168,6 +178,11 @@ A dashboard without published thresholds is decorative. The failure-signal colum
 | Implementation Drift | Emergency key-rotation time | Suspected-compromised key cannot be revoked, replaced, and independently reauthorized inside the published recovery window | One compromised key can deny valid access, approve false access, suppress public status, or block recovery without independent detection |
 | Implementation Drift | Offline redemption continuity | Any no-network/no-device redemption drill produces a material access delay for digitally fragile users | No-network or no-device users cannot obtain the CSM floor during the outage window |
 | Implementation Drift | Provider-settlement continuity | Any drill shows providers lack emergency settlement or reimbursement path during rail outage | Providers stop CSM delivery, demand concessions, or ration access because settlement rails are unavailable |
+| Monitoring Purpose Limitation | Monitoring Purpose Register coverage | Any active monitoring stream lacks a complete register row before use | Any personal-linkable monitoring stream lacks a named purpose, retention rule, access role, independent reviewer, or appeal path |
+| Monitoring Purpose Limitation | Secondary-use attempt rate | Any unreviewed request, query, join, or use outside the registered purpose | Repeated unreviewed secondary-use attempts, any approved use without published review, or any use by enforcement, employer, landlord, immigration, policing, funder, or provider actors outside the registered purpose |
+| Monitoring Purpose Limitation | Linkability exposure | Any test identifies a person, household, route, provider, whistleblower, or protected cohort from supposedly aggregate or anonymized data | Any vulnerable cohort, Tier 0 route, whistleblower, or last-resort access user can be identified or tracked across sessions |
+| Monitoring Purpose Limitation | Individual-flag appeal performance | Any individual-level flag lacks notice, plain-language reason, human review path, or correction route | Any adverse action proceeds without notice and appeal, or appeal abandonment exceeds 15% because the path is inaccessible |
+| Monitoring Purpose Limitation | Operator self-certification exposure | Operating office controls raw data and publishes its own clean result without independent verification | Any operator suppresses, relabels, delays, or grades its own adverse monitoring result without independent review |
 
 **How thresholds are used:** Crossing a Watch threshold requires the dashboard office to flag the domain in the quarterly report with a written explanation. Crossing an Active-capture-signal threshold requires: (a) a published finding within 14 days, (b) automatic referral to the Federated Ombuds for review, and (c) notation in the Evidence Ladder Claims and Evidence Register.
 

@@ -164,6 +164,7 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-029 | P-066 | ACTIVE | D; Commons_Return_Universal_Stake_Evidence_Test_Package | S11 |
 | T-030 | P-067 | ACTIVE | Cyber_Resilience_Availability_Evidence_Test_Package | S11 |
 | T-031 | P-068 | ACTIVE | Last_Resort_Unenrolled_Access_Evidence_Test_Package | S11 |
+| T-032 | P-069 | ACTIVE | Monitoring_Repurposing_Evidence_Test_Package | S11 |
 | — | P-053 | ACTIVE | AW | S10 |
 | — | P-054 | ACTIVE | AX | S10 |
 | — | P-055 | ACTIVE | AY | S10 |

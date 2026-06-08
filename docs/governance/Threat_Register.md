@@ -1,6 +1,6 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Current through T-031**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-032**
 
 ---
 
@@ -49,6 +49,7 @@ Read this table first if you do not work in law, policy, security, or systems de
 | T-029 | The survival floor and public rails are promised without a proven way to fund them without inflation, hidden debt, or burden shift. |
 | T-030 | A hostile cyber event, key compromise, outage, or software dependency makes the survival floor unreachable. |
 | T-031 | A person who can never enroll, hold a wallet, or keep a digital credential still cannot reach the survival floor. |
+| T-032 | Monitoring required to protect the system is reused to surveil, rank, punish, or coerce people. |
 
 ---
 
@@ -77,6 +78,7 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-025 | Investment and Capital-Deployment Shelter Capture | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | 72 | P-067 defines the test path, but ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status drills have not run. |
 | T-031 | Last-Resort Unenrolled Access Failure | **Critical** | 72 | P-068 defines the test path, but no no-credential, trusted-intermediary, analog-reconciliation, or dignity-interview pilot has proven the floor reaches people outside identity and digital infrastructure. |
+| T-032 | Monitoring Repurposing and Enforcement-Observation Failure | **Critical** | 72 | P-069 defines the test path, but no purpose-creep, linkability, office-separation, individual-flag appeal, retention, or coercive-use drill has proven monitoring cannot become surveillance. |
 
 ### Load-bearing sub-problems
 
@@ -134,6 +136,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-029 | Fiscal Sustainability and Currency Debasement | **Critical** | **Active — unproven** | Prevent the survival floor, Universal Stake, public rails, and governance operations from depending on inflation, hidden debt, prohibited tax bases, or uncosted Commons Return assumptions. | 72 | P5 (Public Finance / Flow) + P8 | 2026-06-08 | Rising |
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | **Active — unproven** | Prevent ransomware, key compromise, regional outage, provider dependency, or supply-chain compromise from interrupting survival-floor access. | 72 | P6 (Implementation / Security) + P1 (Essential Access) | 2026-06-08 | Rising |
 | T-031 | Last-Resort Unenrolled Access Failure | **Critical** | **Active — unproven** | Prevent the survival floor from becoming reachable only by people who can enroll, hold a wallet, use digital credentials, or navigate ordinary administration. | 72 | P1 (Essential Access) + P3 (Identity) + Federated Ombuds | 2026-06-08 | Rising |
+| T-032 | Monitoring Repurposing and Enforcement-Observation Failure | **Critical** | **Active — unproven** | Prevent protective monitoring from becoming a general-purpose surveillance, ranking, punishment, or coercion layer. | 72 | P8 (Oversight) + P3 (Identity) + Capture Dashboard operator | 2026-06-08 | Rising |
 
 *Status definitions: **Proposed** = a response has been suggested but not yet formally incorporated. **Designed** = the mechanism is specified in the corpus but not yet active. **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence. **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution. **Evidence-backed** = sufficient external evidence to support the claim. **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented. No threat currently meets the Resolved threshold.*
 
@@ -804,3 +807,21 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Mitigation direction:** P-068 ACTIVE: the Last-Resort Unenrolled Access Evidence Test Package requires access-point mapping, no-credential intake drills, trusted-intermediary drills, analog reconciliation privacy tests, abuse/diversion drills, and dignity interviews before any claim that Essential Access is universal in practice.
 - **Residual risk:** An open floor can be abused; a tightly verified floor can exclude. Aggregate anomaly controls may miss organized brokers, while stronger controls can become surveillance. Trusted intermediaries can be captured. Analog records can become a shadow registry. No field evidence yet proves the last-resort path works without identity coercion.
 - **Compound linkages:** T-031 × T-002 (identity hardening can still exclude people who never enroll). T-031 × T-030 (offline fallback can fail for people outside normal rails). T-031 × T-028 (providers may refuse no-account or no-settlement access). T-031 × T-007 (definitions of "access" can drift from reachable help into paperwork availability). T-031 × T-022 (hostile successors may preserve formal Tier 0 text while starving physical routes).
+
+### T-032 — Monitoring Repurposing and Enforcement-Observation Failure
+
+- **Patch:** [P-069 — Monitoring Repurposing Gate](../governance/Patch_Log.md) · [Monitoring Repurposing Evidence Test Package](./Monitoring_Repurposing_Evidence_Test_Package.md) · Patch status: **ACTIVE**
+- **Layer:** Enforcement monitoring / privacy boundary / capture dashboard / identity and delivery controls
+- **Severity:** Critical
+- **Status:** Active — unproven
+- **Risk Score:** 4×4×(6-2)=72
+- **Owner:** P8 (Oversight) + P3 (Identity) + Capture Dashboard operator
+- **Last reviewed:** 2026-06-08
+- **Trend:** Rising
+- **Summary:** The system needs monitoring to enforce non-convertibility, fraud limits, delivery sufficiency, capacity truth, provider continuity, cyber availability, and capture detection. The same monitoring can become the surveillance layer the system opposes if data collected for protection is reused to locate, rank, punish, exclude, pressure, or coerce people.
+- **Mechanism:** Redemption, identity, Tier 0, Service Record, delivery, provider, oracle, dashboard, cyber, or enforcement data is collected for a narrow purpose and later joined, retained, subpoenaed, sold, leaked, relabeled, or repurposed. Small cells, time/location patterns, repeated routes, provider metadata, device identifiers, exception logs, and individual flags make people or vulnerable cohorts identifiable. Operating offices grade their own monitoring performance or suppress adverse signals.
+- **Impact:** Survival access becomes conditional on being watched. People avoid help to avoid exposure. Employers, landlords, officials, providers, or hostile governments gain a practical ranking and control tool. Public dashboards become a source of false legitimacy while coercive data infrastructure grows underneath.
+- **Detection:** D=2 — dashboards can appear privacy-preserving while raw data, joins, exceptions, and access roles create hidden surveillance capacity. Detection requires a Monitoring Purpose Register, purpose-creep red team, linkability/re-identification test, office-separation drill, individual-flag appeal drill, retention audit, and coercive-use scenario.
+- **Mitigation direction:** P-069 ACTIVE: the Monitoring Repurposing Evidence Test Package requires every monitoring stream to have a named purpose, minimum-data rule, retention rule, access role, independent reviewer, appeal path, and explicit reuse prohibition before claims that enforcement monitoring is bounded and non-surveillant.
+- **Residual risk:** Monitoring always creates power. Aggregation can hide harms; individual flags can punish the innocent; deletion can conflict with auditability; raw records can be pressured by lawful authorities or captured insiders. This patch is a gate, not proof.
+- **Compound linkages:** T-032 × T-001 (non-convertibility enforcement can become household surveillance). T-032 × T-002 (identity fraud controls can become identity surveillance). T-032 × T-031 (last-resort access records can become a shadow registry). T-032 × T-008 (monitoring offices can become an expert class). T-032 × T-022 (hostile successors can preserve formal privacy language while repurposing raw data).
