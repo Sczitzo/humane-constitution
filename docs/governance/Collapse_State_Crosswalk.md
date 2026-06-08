@@ -16,7 +16,7 @@ Not a new status system. Threat status still comes from the Threat Register, Cla
 |---|---|---|
 | Survival-Trade Bind | People must trade obedience, labor, rights, health, dignity, or market success to keep basic life access. | Essential Access, CSM floor, identity recovery, capacity measurement, non-convertibility, appeal rights. |
 | Power-Wealth Convergence | Resource success becomes authority over rules, enforcement, definitions, offices, or system design. | Flow/Voice separation, public money rails, anti-conversion, anti-rent controls, public records, capture review. |
-| Static-Advantage Loop | Early advantage, inheritance, office, data access, credentials, or procedure becomes permanent dominance. | Demurrage, decay, rotation, sector ceilings, anti-dynasty rules, subsidiarity, exit, founding legitimacy review. |
+| Static-Advantage Loop | Early advantage, inheritance, office, data access, credentials, or procedure becomes permanent dominance. | Commons Return, bounded capital claims, decay where appropriate, rotation, sector ceilings, anti-dynasty rules, subsidiarity, exit, founding legitimacy review. |
 
 ## Control-Plane Failure
 
@@ -56,6 +56,9 @@ Examples: identity gates, oracle capture, FAP capture, drift-chain bypass, emerg
 | T-025 Investment and Capital-Deployment Shelter Capture | Power-Wealth Convergence | Static-Advantage Loop | Commons Return evidence package, project-finance simulation, procurement red team, and legal-wrapper review. |
 | T-026 Exit Denial | Survival-Trade Bind | Control-plane federation coercion | Exit rehearsal and non-retaliation audit. |
 | T-027 Subsidiarity Violation | Static-Advantage Loop | Power-Wealth Convergence | Venue-drift dashboard and remand-case audit. |
+| T-028 Essential-Sector Refusal Leverage | Survival-Trade Bind | Power-Wealth Convergence | Essential-sector refusal drill, CASP activation test, compliance-masked refusal red team. |
+| T-029 Fiscal Sustainability and Currency Debasement | Power-Wealth Convergence | Survival-Trade Bind | Commons Return evidence package, fiscal adequacy model, incidence review, source-base valuation red team. |
+| T-030 Cyber Resilience and Availability Failure | Control-plane failure | Survival-Trade Bind | Cyber Resilience and Availability Evidence Test Package. |
 
 ---
 
@@ -104,7 +107,7 @@ Abbreviations: **CSB** = Survival-Trade Bind · **PWC** = Power-Wealth Convergen
 | ANNEX_AO | Register Disclosure Protocol | CPF, PWC | Governs the public/restricted split of the Threat Register so bifurcation cannot become a secrecy mechanism hiding threats from public accountability. |
 | ANNEX_AP | PCRP Attack Surface Hardening | CSB, CPF | Protects the coercion-response trigger from both exhaustion (manufactured false alarms) and suppression (strategic enforcement flags timed to block activation during genuine coercion events). |
 | ANNEX_AQ | Shared Storehouse Oracle-Failure Fallback Protocol | CSB, CPF | Defines the designed protocol for rationing continuity when the oracle network fails, preventing both access lapse and unchecked overreach — both of which are exploit surfaces. |
-| ANNEX_AR | Contract-Commitment Architecture Parameters | PWC, SAL | Specifies thresholds, force-majeure caps, and inspector pool rules for infrastructure project escrows, so milestone fragmentation and inspector capture cannot recreate demurrage-exemption dynamics. |
+| ANNEX_AR | Contract-Commitment Architecture Parameters | PWC, SAL | Specifies thresholds, force-majeure caps, and inspector pool rules for infrastructure project escrows, so milestone fragmentation and inspector capture cannot recreate protected-capital shelter dynamics. |
 | ANNEX_AS | Attestation-at-Risk Stake Mechanism | PWC, SAL | Requires attestors to put civic balance at risk when vouching for others, making costless false attestation economically irrational before detection rather than only punishable after. |
 | ANNEX_AT | External Trade Architecture | CSB, SAL | Defines strategic import floors, export caps during scarcity, and a reciprocity membrane so foreign supply-chain dependencies cannot be weaponized as survival-floor coercion. |
 | ANNEX_AV | Two-Key Architectural Precondition for Tier-1 Invariant Enforcement | PWC, CPF | Requires a cryptographic attestation from a structurally independent adversarial panel member before any Tier-1-touching proposal is admitted for review, eliminating the single-reviewer bypass. |

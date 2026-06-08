@@ -419,6 +419,47 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Bridge rule:** Phase 10 cannot pass with only technical integrity. The implementation drift tests, founding artifact-status register, claim-status review, and capture dashboard baseline must all be current together. A clean hash, clean build, or complete document checklist does not prove legitimate activation.
 
+## Phase 11 - Cyber availability and offline continuity
+
+**Hypothesis:** Essential Access can remain reachable when ordinary digital rails, keys, providers, or networks fail.
+
+**Required packages:**
+
+- [Cyber Resilience and Availability Evidence Test Package](./Cyber_Resilience_Availability_Evidence_Test_Package.md)
+- [Implementation Drift Audit Package](./Implementation_Drift_Audit_Package.md)
+- [Capture Dashboard Specification](./Capture_Dashboard_Specification.md)
+
+**Attack classes:**
+
+- ransomware against redemption, eligibility, provider settlement, or delivery dispatch
+- compromised operator, issuance, provider, or amendment-adjacent key
+- regional network outage or cloud/provider dependency loss
+- no-network / no-device redemption
+- supply-chain implant that preserves dashboard appearance while degrading recovery
+- public-status publication failure during incident response
+
+**Measure:**
+
+- CSM delivery continuity by category
+- recovery time objective and actual recovery time
+- provider-settlement continuity
+- vulnerable-cohort continuity
+- offline reconciliation error rate
+- emergency key-revocation and rotation time
+- public-status publication latency
+- data exposure and privacy harm
+
+**Failure criteria:**
+
+- any CSM category pauses beyond the published continuity tolerance;
+- a compromised key can deny valid access, approve false access, suppress incident status, or block recovery without independent detection;
+- aggregate service recovers while a vulnerable cohort, rural area, provider class, or digitally fragile group remains cut off;
+- no-network users cannot redeem the floor during the outage window;
+- manual settlement causes provider refusal or hidden concession pressure;
+- offline fallback becomes a permanent personal-surveillance file.
+
+**Bridge rule:** Phase 11 cannot be marked partly tested by tabletop review alone. At least one ransomware drill, one key-compromise drill, one no-network redemption drill, and one regional failover drill must produce public evidence packets with vulnerable-cohort outcomes.
+
 ## Minimum evidence before scale-up
 
 Before any serious scale-up claim, the project needs:
@@ -427,13 +468,14 @@ Before any serious scale-up claim, the project needs:
 - identity recovery pilot results
 - capacity measurement error reports
 - Essential Access delivery and appeal results
-- Flow/demurrage burden simulations
+- Flow, Commons Return, Universal Stake, and public-rail burden simulations
 - public banking cost model
 - anti-rent legal review
 - independent red-team report
 - essential-sector conglomerate refusal drill
 - founding legitimacy and exit rehearsal report
 - implementation drift audit results
+- cyber availability and offline continuity drill results
 - parameter calibration register review
 - capture dashboard baseline
 

@@ -1,6 +1,6 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Current through T-029**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-030**
 
 ---
 
@@ -45,6 +45,9 @@ Read this table first if you do not work in law, policy, security, or systems de
 | T-025 | Protected-capital and investment-channel rules become a way for powerful sectors to shelter idle control without real deployment. |
 | T-026 | A valid exit is blocked, delayed, or punished. |
 | T-027 | Decisions drift upward to larger bodies when local people could handle them. |
+| T-028 | Essential-sector suppliers use food, energy, medicine, logistics, data, or grid control to demand concessions. |
+| T-029 | The survival floor and public rails are promised without a proven way to fund them without inflation, hidden debt, or burden shift. |
+| T-030 | A hostile cyber event, key compromise, outage, or software dependency makes the survival floor unreachable. |
 
 ---
 
@@ -70,7 +73,8 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-019 | Demand-Context Flag Suppression | High | 48 | P-015 / Annex AP defines a mitigation path; Annex AI gates and timing-monitor infrastructure still need activation. |
 | T-022 | Electoral Cycle Capture | **Critical** | 60 | P-051 (Constitutional Integrity Panel, Annex AM §AM8) is the ACTIVE primary structural control; P-065 is ACTIVE anti-hollowing hardening; P-018 / Annex AM remains PROPOSED for the broader entrenchment and transition-continuity path. CIP staffing, funding, trigger infrastructure, vacancy repair, and transition simulations still need evidence before any evidence-backed claim. |
 | T-023 | Pilot External Validity Collapse | Med-High | 32 | P-019 / Annex AN defines the scale-up evidence gate; pilot evidence and challenge infrastructure still need execution. |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
+| T-025 | Investment and Capital-Deployment Shelter Capture | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
+| T-030 | Cyber Resilience and Availability Failure | **Critical** | 72 | P-067 defines the test path, but ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status drills have not run. |
 
 ### Load-bearing sub-problems
 
@@ -121,11 +125,12 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-022 | Electoral Cycle Capture | **Critical** | **Active — unproven** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 | Constitutional Integrity Panel (CIP) | 2026-05-01 *(placeholder)* | Rising |
 | T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 | P8 + Oversight | 2026-05-01 *(placeholder)* | Steady |
 | T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Mechanism specified in design by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18); no field evidence yet. | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
-| T-025 | Demurrage Sector-Capture via Investment Channel | High | **Active — unproven** | Prevent Flow investment-channel exemptions from becoming milking instruments for construction and capital-intensive sectors. | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
+| T-025 | Investment and Capital-Deployment Shelter Capture | High | **Active — unproven** | Prevent protected-capital labels from becoming milking instruments for construction and capital-intensive sectors. | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
 | T-026 | Exit Denial | **Critical** | **Active — unproven** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Mechanism specified in design by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies; no field evidence yet. | 48 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-027 | Subsidiarity Violation | High | **Active — unproven** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Mechanism specified in design by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle; no field evidence yet. | 36 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from holding the Essential Access floor hostage, including through compliance-masked degradation. Primary structural control P-050 (CASP) ACTIVE; P-047/P-048 related. | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
 | T-029 | Fiscal Sustainability and Currency Debasement | **Critical** | **Active — unproven** | Prevent the survival floor, Universal Stake, public rails, and governance operations from depending on inflation, hidden debt, prohibited tax bases, or uncosted Commons Return assumptions. | 72 | P5 (Public Finance / Flow) + P8 | 2026-06-08 | Rising |
+| T-030 | Cyber Resilience and Availability Failure | **Critical** | **Active — unproven** | Prevent ransomware, key compromise, regional outage, provider dependency, or supply-chain compromise from interrupting survival-floor access. | 72 | P6 (Implementation / Security) + P1 (Essential Access) | 2026-06-08 | Rising |
 
 *Status definitions: **Proposed** = a response has been suggested but not yet formally incorporated. **Designed** = the mechanism is specified in the corpus but not yet active. **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence. **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution. **Evidence-backed** = sufficient external evidence to support the claim. **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented. No threat currently meets the Resolved threshold.*
 
@@ -578,7 +583,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-025 — Investment and Capital-Deployment Shelter Capture
 
-- **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
+- **Patch:** [P-023 — Contract-Commitment Architecture (Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
 - **Layer:** Flow monetary architecture / protected capital / productive investment
 - **Severity:** High
 - **Status:** Active — unproven — P-023 (contract-commitment architecture, zero exemptions); no field evidence yet
@@ -587,7 +592,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 - **Last reviewed:** 2026-05-01 *(placeholder)*
 - **Trend:** Steady
 - **Mechanism:** The former demurrage-exemption framing is superseded, but the capture route remains: any protected-capital, project-account, escrow, term-pool, infrastructure, or public-benefit label can become a classification that capital-intensive sectors exploit. Firms apply for protected status not to build productive capacity but to park Flow, control source bases, or avoid Commons Return review. Four specific mechanisms: (1) *Project account cycling* — a firm maintains a continuous chain of overlapping project accounts, each nominally productive. (2) *Escrow window abuse* — firms use escrow windows to hold balances during periods of market uncertainty. (3) *Infrastructure designation capture* — lobbying to broaden "infrastructure" to include rent-extraction assets. (4) *Subsidiary fragmentation* — a single economic actor fragments into multiple legal entities, each holding a protected project status.
-- **Impact:** Demurrage fails to break passive accumulation among sophisticated actors while continuing to penalise unsophisticated savers (workers, small enterprises) who cannot access investment-channel exemptions. This recreates the wealth concentration the protocol was designed to prevent, through the mechanism designed to prevent it.
+- **Impact:** Protected-capital treatment shelters passive accumulation among sophisticated actors while ordinary households, workers, and small enterprises cannot access equivalent relief. This recreates the wealth concentration the protocol was designed to prevent, through the mechanism designed to preserve productive investment.
 - **Detection:** D=3 — investment channel utilisation is observable in aggregate; cycling and fragmentation patterns are detectable with cross-entity tracking.
 - **Mitigation design (P-023 / P-066):** Investment-channel exemptions are removed as a shelter category. Long-horizon projects use contract-commitment architecture: commissioning authority holds capital in milestone escrow; releases trigger only on independently verified physical deliverables; contractor holds only current working capital; source-base and beneficial-control review follows Annex D where Commons Return is implicated. No sector-specific carve-outs. Force majeure freeze available for verified external delays only when independently certified, time-limited, and capped. All key terms P-004-protected.
 - **Evidence package:** [Commons Return and Universal Stake Evidence Test Package](./Commons_Return_Universal_Stake_Evidence_Test_Package.md) plus Annex AR project-finance simulation and procurement red team.
@@ -760,3 +765,21 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Mitigation direction:** P-066 ACTIVE: Annex D now replaces routine progressive net-worth demurrage with Commons Return and Universal Stake, defines protected ordinary use, names eligible source bases, creates a Public Commons Lockbox, requires a fiscal adequacy gate, and states that taxes are not declared unnecessary unless a costed model proves it. The Commons Return and Universal Stake Evidence Test Package is the required test path.
 - **Residual risk:** Commons Return may still be insufficient, volatile, hard to assess, or politically captured. Valuation and beneficial-control review can become surveillance or bureaucracy. Residual taxes or fees may remain necessary; the honest control is to name them, cost them, screen them against prohibited bases, and block scale claims until the burden is public.
 - **Compound linkages:** T-029 × T-006 (bad capacity measurement corrupts cost models). T-029 × T-016 (patch process may accept optimistic fiscal evidence). T-029 × T-022 (successor governments may hollow the fiscal model while preserving promises). T-029 × T-028 (essential-sector refusal can create sudden cost spikes). T-029 × T-001 (shadow conversion can distort demand and revenue assumptions).
+
+### T-030 — Cyber Resilience and Availability Failure
+
+- **Patch:** [P-067 — Cyber Resilience and Availability Gate](../governance/Patch_Log.md) · [Cyber Resilience and Availability Evidence Test Package](./Cyber_Resilience_Availability_Evidence_Test_Package.md) · Patch status: **ACTIVE**
+- **Layer:** Control-plane availability / Essential Access delivery / public rails
+- **Severity:** Critical
+- **Status:** Active — unproven
+- **Risk Score:** 4×4×(6-2)=72
+- **Owner:** P6 (Implementation / Security) + P1 (Essential Access)
+- **Last reviewed:** 2026-06-08
+- **Trend:** Rising
+- **Summary:** A ransomware event, breached key, supply-chain implant, regional outage, cloud/provider dependency, DDoS, or payment-rail failure interrupts the survival floor. The constitutional text may remain correct while people cannot redeem food, medicine, shelter, transit, or urgent care.
+- **Mechanism:** An attacker or infrastructure failure disables eligibility, redemption, provider settlement, public status publication, delivery dispatch, identity verification, or cash/offline conversion. A compromised key issues false approvals, denies valid access, suppresses dashboard warnings, or blocks recovery. A supply-chain implant preserves apparent compliance while weakening recovery, offline fallback, or vulnerable-cohort delivery. A provider or cloud dependency fails at the same time as local network access, making last-known-valid state unusable.
+- **Impact:** The survival floor becomes technically unreachable; providers refuse service because settlement is unavailable; vulnerable users are excluded behind aggregate uptime claims; emergency actors trade privacy, concessions, or hidden debt to restore service; public confidence collapses because a guaranteed floor fails like an ordinary website.
+- **Detection:** D=2 — ordinary uptime dashboards can show recovery while specific cohorts, regions, providers, or categories remain cut off. Detection requires CSM-category continuity metrics, vulnerable-cohort reporting, key-compromise logs, offline reconciliation error rates, provider-settlement continuity, and public incident disclosure.
+- **Mitigation direction:** P-067 ACTIVE: the Cyber Resilience and Availability Evidence Test Package requires a critical-service inventory, ransomware continuity drill, key-compromise and emergency-rotation drill, offline/analog continuity drill, regional failover drill, and supply-chain/dashboard integrity drill. Implementation Drift Audit Package remains the tamper-evidence home; T-030 is the availability and recovery home.
+- **Residual risk:** Offline fallback can become fraud-prone or privacy-invasive. Emergency key rotation can concentrate authority. Manual provider settlement can create hidden bailout pressure. No field evidence yet proves recovery time, offline access, key custody under breach, or supply-chain resilience.
+- **Compound linkages:** T-030 × T-002 (identity outage or credential loss can exclude vulnerable persons). T-030 × T-006 (capacity dashboards may fail during the same shock they need to measure). T-030 × T-024 (Shared Storehouse oracle failure plus rail outage can break rationing continuity). T-030 × T-028 (essential-sector actors can exploit outage dependency). T-030 × T-022 (successor government can underfund resilience while preserving formal promises).

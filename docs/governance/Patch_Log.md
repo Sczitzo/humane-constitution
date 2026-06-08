@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-066**
+**Running change ledger aligned to the Humane Constitution · Current through P-067**
 
 ---
 
@@ -47,7 +47,7 @@
 | P-025 | T-008 | **ACTIVE** | Critical | Federated Ombuds constitution: 5 sub-Ombuds (FC-090), 4-of-5 Plenum supermajority (FC-091), 730-day staggered terms (FC-092), Oversight Assembly (7 members, 5-of-7), structural-dispersal criteria, Concentration Response. Annex AI rewritten. Supersedes single-commissioner draft. |
 | P-026 | T-026 / T-027 | **ACTIVE** | Critical | Founding Order — Subsidiarity, Consent & Exit: smallest-scale default with three-prong competence test; affirmative consent events at 2/3 supermajority (FC-120); 730-day graceful exit unwind (FC-121) with Essential Access continuity preserved; five-scale hierarchy (FC-122: household/neighborhood ≤500/locality ≤5,000/region ≤500,000/federation); re-entry symmetric, no penalty. `/founding/order/` directory. |
 | P-027 | T-005 / T-008 | **ACTIVE** | Critical | Structural consolidation into one Founding Order and seven Articles of Constitutional Order. Rights and execution unified under Article I; Essential Access and delivery unified under Article IV; markets, housing, enterprise, and PFCR unified under Article V; Voice, Service Record, and deliberation unified under Article VI; transparency and environmental scanning unified under Article VII. |
-| P-029 | T-016 | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, demurrage routing, public banking rails as infrastructure, and anti-hidden-debt discipline. |
+| P-029 | T-016 | **ACTIVE** | Critical | Public Finance & Commons Revenue (PFCR): structural non-tax public funding, Commons Return source-base receipts, public banking rails as infrastructure, and anti-hidden-debt discipline. |
 | P-030 | PRD-004 | **ACTIVE** | Critical | Protocol-only money creation + household finance boundaries: no private Flow creation, no compounding household ordinary-life debt, no survival-floor securitization. |
 | P-031 | PRD-009 | **ACTIVE** | Critical | Anti-dynasty ownership: count-through beneficial ownership, trust prohibition for extractive continuity, succession limited to continuity and stewardship. |
 | P-032 | PRD-009 | **ACTIVE** | High | Stewardship ownership rule: land, housing, and enterprise rights may not become perpetual passive extraction claims. |
@@ -84,6 +84,7 @@
 | P-064 | T-028 | **ACTIVE** | Critical | Compliance-Masked Refusal Hardening: treats lawful-looking obstruction as refusal when formal compliance hides CSM delivery degradation, patient-continuity failure, data/control-system lockout, PBM access friction, standards delay, affiliate fallback capture, workforce poaching, legal delay, or concession pressure. |
 | P-065 | T-022 | **ACTIVE** | Critical | CIP Vacancy-Starvation Hardening: appointment deadlines, fallback nomination, void mass appointments, below-quorum self-repair limits, publication-channel fallback, missed Ombuds-report suspension, conduct-only hollowing triggers, servant-authority and relief-first limits. |
 | P-066 | T-029 | **ACTIVE** | Critical | Commons Return and Universal Stake Fiscal Sustainability Gate: replaces routine progressive net-worth demurrage as active wealth spine, registers fiscal/debasement risk, requires costed public-finance model, source-base revenue testing, remaining-tax disclosure, incidence review, lockbox sufficiency, and scale-blocking fiscal adequacy gate. |
+| P-067 | T-030 | **ACTIVE** | Critical | Cyber Resilience and Availability Gate: registers ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status failure as a distinct threat to survival-floor delivery. |
 
 ---
 
@@ -114,10 +115,10 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 
 **Constitutional text:** [ANNEX_X.md § X8](../annexes/ANNEX_X.md)
 
-- **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding function. PFCR funds public operations through demurrage routing, commons and land-use charges, asset carrying costs, gateway fees, and bounded public issuance tied to real public production.
+- **Introduced design:** replaces the former catch-all resilience funding model with a dedicated public-funding function. PFCR funds public operations through Commons Return source-base receipts, commons and land-use charges, scarce-license and gateway fees, and bounded public issuance tied to real public production.
 - **Clauses integrated:** no taxes on survival access, ordinary labor, or basic household exchange; public banking rails funded as infrastructure; postal-bank/public-bank option; anti-hidden-debt rules; source-by-source public reporting.
-- **Dependencies:** demurrage routing rule, asset carrying cost enforcement, gateway registry, and budget transparency stack.
-- **New risks introduced:** fiscal dependence on poorly calibrated demurrage or gateway flows; naming disputes over what counts as a prohibited tax. Mitigated by judicial review trigger and source registry.
+- **Dependencies:** Commons Return source-base methodology, asset-equivalence review, gateway registry, and budget transparency stack.
+- **New risks introduced:** fiscal dependence on poorly calibrated Commons Return, source-base valuation, or gateway flows; naming disputes over what counts as a prohibited tax. Mitigated by judicial review trigger, source registry, and P-066 fiscal adequacy gate.
 
 ### P-030 — Protocol-Only Money Creation and Household Finance Boundaries
 
@@ -1467,3 +1468,18 @@ The previous active economic spine still treated progressive net-worth demurrage
 - **Evidence integration:** Creates the Commons Return and Universal Stake Evidence Test Package; updates Threat Register, Threat Resolution Matrix, Hardening Queue, Claims and Evidence Register, Open Problems Resolution Docket, Pilot Evidence Roadmap, Capture Dashboard Specification, Annex Directory, Annex Taxonomy, reader prompts, and corpus registration.
 - **New risks introduced:** Commons Return can become valuation bureaucracy, surveillance, political dividend timing, hidden wealth tax, asset-holder avoidance, or downward burden shift. Mitigated only by source-specific bases, protected ordinary use, appeal rights, privacy limits, lockbox accounting, incidence testing, and public "who pays" disclosure.
 - **Residual risk:** Commons Return may still be insufficient or volatile. Some taxes or fees may remain necessary during transition or at scale. The control is not proof of fiscal adequacy; it is a scale-blocking discipline until proof exists.
+
+---
+
+### P-067 — Cyber Resilience and Availability Gate
+
+**Threat addressed:** T-030
+**Status:** ACTIVE | **Priority:** Critical
+
+The corpus already had controls for implementation drift, tamper evidence, oracle failure, and delivery sufficiency. Those controls did not answer a different question: what happens when ransomware, breached keys, regional network outage, cloud/provider failure, supply-chain compromise, or payment-rail failure makes the survival floor unreachable?
+
+- **Introduced design:** T-030 registers external cyber availability as a distinct threat. The Cyber Resilience and Availability Evidence Test Package requires a critical-service inventory, ransomware continuity drill, key-compromise and emergency-rotation drill, offline/analog continuity drill, regional failover drill, and supply-chain/dashboard integrity drill.
+- **Continuity standard:** Essential Access must remain deliverable through last-known-valid state, manual/offline provider paths, emergency settlement, and public status channels inside the published tolerance. Aggregate restoration is not enough if vulnerable cohorts, rural users, digitally fragile persons, or critical providers remain cut off.
+- **Claim discipline:** Implementation Drift Audit Package remains the evidence home for unauthorized drift and tamper evidence. The cyber package is the evidence home for whether people can still receive food, water, shelter, medicine, transit, and urgent care when digital systems, keys, providers, or networks fail.
+- **New risks introduced:** Offline fallback can become fraud-prone or privacy-invasive; emergency key rotation can concentrate authority; manual provider settlement can become a hidden bailout or coercive choke point. These are residual risks and must be measured in the evidence packet.
+- **Residual risk:** This patch registers the risk and defines the test path. It does not prove cyber resilience, key custody, recovery time, offline continuity, or supply-chain safety.

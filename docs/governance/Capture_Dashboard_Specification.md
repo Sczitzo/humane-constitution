@@ -87,6 +87,10 @@ It is not a surveillance mandate. It is a public accountability specification. D
 | Operator pinned-reference age | Detect stale operators. | Operators lag beyond the compliance window. |
 | Binary hash publication | Detect supply-chain opacity. | Operators do not publish deployed hashes. |
 | Non-compliant implementation exceptions | Detect normalization of bypass. | Exceptions repeat or become permanent. |
+| CSM-critical service availability | Detect survival-floor outage hidden behind aggregate uptime. | Any CSM category, vulnerable cohort, region, provider class, or offline access path remains unavailable beyond the published continuity tolerance. |
+| Emergency key-rotation time | Detect key-compromise recovery weakness. | A compromised or suspected-compromised key cannot be revoked, replaced, and independently reauthorized inside the published recovery window. |
+| Offline redemption continuity | Detect digital-only survival access. | No-network or no-device users cannot obtain the CSM floor during an outage drill. |
+| Provider-settlement continuity | Detect provider refusal pressure during rail failure. | Providers stop delivery or demand concessions because ordinary settlement rails are unavailable. |
 
 ---
 
@@ -158,6 +162,10 @@ A dashboard without published thresholds is decorative. The failure-signal colum
 | Identity & Access Gatekeeping | False exclusion rate by vulnerable group | False-exclusion rate for a tracked group exceeds 2× the overall population rate | 3× or greater disparity persisting across 2 consecutive measurement periods |
 | Identity & Access Gatekeeping | Abandonment rate | >15% of initiated recovery proceedings abandoned before decision | >25% abandonment rate or systematic abandonment in a specific office or region |
 | Implementation Drift | Operator pinned-reference age | Any operator lag exceeds the published compliance window | 10%+ of operators exceed the compliance window or any operator exceeds 2× the window |
+| Implementation Drift | CSM-critical service availability | Any CSM-critical service, region, provider class, or offline access path misses the published continuity tolerance in a drill or incident | Any CSM category is unavailable beyond tolerance, or any vulnerable cohort remains cut off while aggregate uptime appears restored |
+| Implementation Drift | Emergency key-rotation time | Suspected-compromised key cannot be revoked, replaced, and independently reauthorized inside the published recovery window | One compromised key can deny valid access, approve false access, suppress public status, or block recovery without independent detection |
+| Implementation Drift | Offline redemption continuity | Any no-network/no-device redemption drill produces a material access delay for digitally fragile users | No-network or no-device users cannot obtain the CSM floor during the outage window |
+| Implementation Drift | Provider-settlement continuity | Any drill shows providers lack emergency settlement or reimbursement path during rail outage | Providers stop CSM delivery, demand concessions, or ration access because settlement rails are unavailable |
 
 **How thresholds are used:** Crossing a Watch threshold requires the dashboard office to flag the domain in the quarterly report with a written explanation. Crossing an Active-capture-signal threshold requires: (a) a published finding within 14 days, (b) automatic referral to the Federated Ombuds for review, and (c) notation in the Evidence Ladder Claims and Evidence Register.
 

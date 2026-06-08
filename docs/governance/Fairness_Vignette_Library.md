@@ -155,7 +155,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 **What is underspecified or at risk.**
 - Nothing requires Father Emmanuel to register his service. But without registration, he has no Service Record. If Service Record becomes a prerequisite for civic roles he might be called to (community ethics panels, mediation boards, emergency oversight), his entire lifetime of service is constitutionally invisible.
 - The biennial audit must catch this, but audits correct systemic gaps — they do not create Service Record entries retroactively.
-- His diocese stipend is Flow income, subject to normal rules. As long as it is below the demurrage threshold, no problem. But if the diocese receives significant Flow through the public banking system, demurrage routing could affect the diocese's ability to maintain the food pantry.
+- His diocese stipend is Flow income, subject to normal rules. Ordinary labor, modest savings, and basic household exchange are protected from Commons Return. If the diocese controls land, scarce licenses, public-infrastructure uplift, or other source bases, the question is whether assessment rules protect the food pantry's ministry rather than turning public-return administration into a burden on care.
 
 **The Christ-centered question.** Question 2: *Does this serve people rather than exalt the system?* (Mark 10:42–45). Father Emmanuel's entire life is service. A system that does not see him as a contributor because his service does not flow through the system's recognition channels has confused the record with the reality.
 

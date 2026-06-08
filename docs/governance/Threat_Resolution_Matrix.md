@@ -68,11 +68,12 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 | T-022 Electoral Cycle Capture | Static-Advantage Loop plus constitutional-durability control-plane failure. |
 | T-023 Pilot External Validity Collapse | Static-Advantage Loop when calm-condition evidence locks in false confidence. |
 | T-024 Shared Storehouse Oracle-Failure | Control-plane failure plus Survival-Trade Bind during rationing. |
-| T-025 Demurrage Sector-Capture | Power-Wealth Convergence; secondary Static-Advantage Loop through exemption definitions. |
+| T-025 Investment and Capital-Deployment Shelter Capture | Power-Wealth Convergence; secondary Static-Advantage Loop through protected-capital definitions. |
 | T-026 Exit Denial | Survival-Trade Bind plus federation-coercion control-plane failure. |
 | T-027 Subsidiarity Violation | Static-Advantage Loop plus Power-Wealth Convergence through upward venue drift. |
 | T-028 Essential-Sector Refusal Leverage | Survival-Trade Bind plus Power-Wealth Convergence through private survival chokepoints. |
 | T-029 Fiscal Sustainability and Currency Debasement | Survival-Trade Bind plus control-plane failure; public promises become coercive or inflationary when not costed against real resources. |
+| T-030 Cyber Resilience and Availability Failure | Control-plane failure plus Survival-Trade Bind when digital rails, keys, providers, or networks make the floor unreachable. |
 
 ---
 
@@ -311,6 +312,16 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Proof needed:** fiscal adequacy model, incidence and dignity review, source-base valuation red team, legal-wrapper avoidance review, Universal Stake capture simulation, Essential Access lockbox sufficiency test, privacy audit, external-capital arbitrage test, remaining-tax necessity review, and public comprehension test.
 - **Residual risk:** Commons Return may be morally better targeted than routine demurrage but still insufficient or volatile. Some taxes or fees may remain necessary. The control is not a claim that taxation disappears; it is a discipline that public burdens must be named, costed, dignity-screened, and prevented from migrating onto survival or ordinary household life.
 - **Resolution update:** P-066 registers fiscal sustainability as T-029 and makes the costed model a scale-blocking gate rather than a later implementation detail.
+
+### T-030 - Cyber Resilience and Availability Failure
+
+- **Current control:** [P-067](./Patch_Log.md), [Cyber Resilience and Availability Evidence Test Package](./Cyber_Resilience_Availability_Evidence_Test_Package.md), [Implementation Drift Audit Package](./Implementation_Drift_Audit_Package.md) for tamper-adjacent controls.
+- **Resolution path:** distinguish tamper evidence from availability; inventory every CSM-critical service; require ransomware, key-compromise, regional-failover, offline/analog continuity, and supply-chain/dashboard integrity drills before any scale-ready survival-rail claim.
+- **Corruption route to assume:** attackers, insiders, vendors, or hostile states disable redemption, settlement, identity, public status publication, delivery dispatch, or offline conversion; compromised keys approve false state, deny valid access, or block recovery; supply-chain implants preserve dashboard compliance while degrading actual delivery.
+- **External evidence:** NIST Cybersecurity Framework 2.0, NIST SP 800-34 contingency planning, NIST SP 800-57 key-management guidance, and CISA ransomware guidance all show that cyber recovery, key custody, offline backup, and incident response must be designed and tested rather than assumed.
+- **Proof needed:** critical-service inventory, ransomware continuity drill, emergency key-revocation and rotation test, no-network redemption test, regional failover drill, provider-settlement continuity test, vulnerable-cohort continuity report, public-status publication fallback, and supply-chain implant red team.
+- **Residual risk:** offline fallback may create fraud or privacy exposure; emergency key rotation may concentrate authority; manual settlement may create bailout pressure. P-067 is a test gate, not proof of resilience.
+- **Resolution update:** P-067 registers cyber availability as T-030 so it is no longer hidden under oracle failure, drift/tamper, or identity recovery.
 
 ---
 

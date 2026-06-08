@@ -198,11 +198,11 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 - 📄 **Constitutional text:** [ANNEX_AN.md](../annexes/ANNEX_AN.md) — *Annex AN requires stress-condition evidence, a red-team challenge window, and crisis simulation before scale-up.*
 ### Economic-system hardening
 
-### T-025 — Demurrage Sector-Capture via Investment Channel
+### T-025 — Investment and Capital-Deployment Shelter Capture
 
-> *This threat describes investment exemptions becoming a way for capital-intensive actors to park Flow without demurrage.*
+> *This threat describes protected-capital labels becoming a way for capital-intensive actors to park Flow, control source bases, or avoid Commons Return review without real deployment.*
 
-- 🔩 **Patch:** [P-023 — Contract-Commitment Architecture (Demurrage, Zero Exemptions)](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 🔩 **Patch:** [P-023 — Contract-Commitment Architecture (Zero Exemptions)](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [ANNEX_AR.md](../annexes/ANNEX_AR.md) — *Annex AR governs the thresholds and parameters for milestone escrow, force-majeure freezes, inspector pools, and publication.*
 
 ---
