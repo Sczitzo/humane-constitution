@@ -31,6 +31,8 @@ The project should not claim:
 - that affiliates, PBMs, standards bodies, or logistics intermediaries are harmless because they do not manufacture the final good;
 - that a sector is secure when compliant bidders exist only on paper.
 
+Formal compliance is not enough. A sector can fail while the incumbent keeps signing forms, answering emails, and performing narrow contract duties. The test therefore treats **compliance-masked refusal** as refusal when lawful-looking behavior practically blocks CSM delivery, fallback activation, or patient access.
+
 ---
 
 ## Drill Scope Specification
@@ -47,6 +49,7 @@ Required drill coverage — each sector must be tested at the specific chokepoin
 
 - **CSM-designated medicine supply:** Each CSM-designated medicine must be individually tested. If the largest single supplier exits, the system must demonstrate 365-day stockpile coverage. The drill must name the specific medicine classes, not the sector in aggregate.
 - **PBM concentration:** If three PBMs process more than 80% of prescriptions in the jurisdiction, the drill must simulate the largest PBM exiting and document how prescriptions are rerouted.
+- **Complete access paths:** CASP medicine capacity requires at least two complete access paths, not merely two suppliers: manufacturer or API source, distributor, pharmacy or specialty pharmacy, claims/formulary data, cold chain, prescribing interface, appeal route, and patient-support contact path.
 
 ### Logistics sector chokepoints
 
@@ -73,6 +76,8 @@ A sector is classified as drill-secure only when all three conditions hold:
 - Gap window is zero or negative for all chokepoints in that sector.
 - At least two CASP-registered alternatives exist with pre-committed contracts.
 - The drill was conducted under adversarial observation: an independent party attempted to identify drill preparation in advance.
+
+The drill must also include a cold-start variant in which the fallback operator receives no friendly advance preparation from the incumbent. A fallback path that depends on incumbent goodwill, undocumented staff cooperation, proprietary software access, or emergency concessions is not drill-secure.
 
 ---
 
@@ -118,6 +123,18 @@ A sector is classified as drill-secure only when all three conditions hold:
 
 **Fail condition:** Access depends on the refusing actor, a single opaque affiliate chain, a non-reviewable formulary decision, or a stockpile that cannot cover forecast demand and replacement lead time.
 
+**Hidden compliance variants:** The drill must test refusal that appears as ordinary administration:
+
+- prior authorization pending past the clinical clock for emergency, urgent-continuation, chronic-maintenance, or new-start cases;
+- step therapy, non-preferred tiering, documentation loops, refill quantity limits, reauthorization churn, or formulary exclusions that create soft denial while nominal coverage remains;
+- affiliated specialty-only routing that delays independent fills or raises the share of PBM-owned dispensing during the refusal window;
+- claims, eligibility, formulary, prior-authorization status, prescription-transfer, refill-history, prescriber-contact, cold-chain inventory, or adverse-event-hold data that cannot be exported in time for a fallback path;
+- REMS, patent, exclusivity, API, settlement, or litigation posture that delays fallback activation before a visible shortage appears.
+
+**Patient continuity floor:** A medicine category does not pass merely because pills exist in inventory. It passes only when the right patient can receive the clinically appropriate medicine on time without PBM, patent, formulary, data, or affiliate control becoming a private veto. Existing patients on life-sustaining, pregnancy-related, disability-stabilizing, pediatric, oncology, transplant, HIV, diabetes, seizure, psychiatric-stabilizing, or rare-disease therapies may not be forced into interruption or substitution while a dispute or review is pending unless an independent clinician certifies equivalence for that patient class.
+
+**Medicine metrics:** The evidence packet must report median and p95 time-to-fill by acuity and region, missed-dose rate, prior-authorization clock breach rate, independent formulary-override success, affiliated-routing share, API/export readiness, substitution harm signals, litigation-delay days, and continuity by vulnerable cohort. No aggregate pass is allowed if disabled, rural, elderly, pediatric, undocumented, safety-shielded, or high-complexity patients fail separately.
+
 ---
 
 ## Drill 3 - Largest Grid/Logistics Operator Delay
@@ -139,6 +156,10 @@ A sector is classified as drill-secure only when all three conditions hold:
 **Pass condition:** A 90-day delay by the largest operator does not break CSM delivery, and the system can shift dispatch, repair, transport, or warehousing to independent, public, cooperative, treaty, or compliant private capacity within the published maximum delay.
 
 **Fail condition:** Formal compliance masks practical refusal, delay is not counted as a failure, or the public must accept concessions because no substitute operator can take over critical functions.
+
+**Hidden compliance variants:** The drill must test partial compliance patterns: one corridor restored while low-value regions wait, transformer or spare-part paperwork completed but not released, emergency delivery accepted but deprioritized, safety-standard objections that block substitutes, data migration delays, workforce attrition or poaching, affiliate fallback substitution, and selective regional degradation.
+
+**Transfer-control metrics:** The evidence packet must report time-to-transfer-control for dispatch, routing, warehouse, outage, grid, fleet, inventory, and credentialing functions; emergency operational data delivery within 24 hours; full operating package delivery within 30 days; named workforce coverage for at least 90 days without incumbent-controlled payroll, staffing firms, licenses, or training systems; and regional floor variance. Any injunction, standards objection, permit challenge, or appeal that blocks CSM continuity beyond 14 days counts as refusal unless independently cleared.
 
 ---
 
@@ -176,6 +197,8 @@ No essential category passes unless fallback capacity is identified, contactable
 | Data and control systems | Access to routing, dispatch, inventory, formulary, grid, and procurement data needed to operate fallback capacity without vendor lock-in. |
 
 Fallback capacity that depends on the same beneficial owners, lenders, PBMs, standards bodies, software vendors, or foreign chokepoints as the refusing actor must be treated as correlated capacity, not independent capacity.
+
+Independence review must include lenders, insurers, software vendors, staffing agencies, labor brokers, standards memberships, emergency subcontractors, PBMs, critical input suppliers, and affiliate-controlled data systems. A fallback path that shares any critical dependency with the primary supplier must be scored as correlated until an independent reviewer finds the dependency non-controlling.
 
 ---
 
@@ -226,7 +249,10 @@ An essential category passes only if all conditions below are met:
 - Beneficial-owner trace completeness covers prime contractors, subcontractors, affiliates, trusts, foreign entities, lenders, and critical software/data vendors.
 - Lobbying and capture exposure disclosure is complete enough for public challenge.
 - Delay, litigation, standards-body obstruction, PBM formulary action, and affiliate routing are counted as refusal paths, not administrative noise.
+- Compliance-masked refusal exposure stays below the [Capture Dashboard Specification](./Capture_Dashboard_Specification.md) watch threshold, or the sector is downgraded until remediation is complete.
 - Emergency measures have a published unwind rule.
+
+Compliance-masked refusal includes slow confirmations, narrow contract performance, "pending" substitutions, reserve-access paperwork, standards-body delay, PBM formulary action, affiliated routing, selective regional degradation, workforce poaching, data withholding, and litigation timed to exhaust fallback windows. A delay is refusal when it causes missed CSM service-level baselines, blocks transfer to fallback operators, prevents reserve or CASP activation within the published deadline, requires a waiver or secrecy concession, or forces a favorable contract extension to maintain continuity.
 
 A conditional pass is allowed only when the CSM floor holds but one non-critical evidence element is incomplete. Conditional passes expire after 180 days unless the missing evidence is supplied.
 
@@ -250,6 +276,8 @@ Required packet:
 - procurement terms, cost-plus or performance-margin formula, and escrow treatment;
 - legal authority memo for reserve release, public receiver authority, compulsory licensing, treaty activation, or emergency procurement;
 - telemetry and operational logs showing delivery continuity, delay, substitution, and outage or shortage events;
+- compliance-masked refusal log, including pending approvals, paperwork delay, data export status, standards objections, legal stays, affiliate routing, workforce movements, PBM actions, and concession requests;
+- patient transition packet for medicine drills: who was switched, who was not, who missed doses, who needed appeal help, who abandoned care, and which protected groups saw delays;
 - affected-population analysis, including vulnerable groups and regional disparities;
 - public communications, appeals, and complaint logs;
 - independent reviewer findings, dissent, and unresolved questions;

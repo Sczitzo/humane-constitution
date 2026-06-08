@@ -197,8 +197,11 @@ Before scale-up, the project should require these tests for each essential secto
 | **Lobbying/capture exposure test** | Any firm receiving essential-sector public contracts must disclose lobbying, trade association dues, foundation grants, revolving-door hires, and standards-body funding connected to the regulated category. | Rule-shaping is a predictable profit defense. |
 | **Beneficial-owner trace test** | Prime contractor, subcontractors, affiliates, trusts, and foreign entities are traceable to natural-person or state control before major awards. | Prevents shell-chain capture. |
 | **Exit cost test** | The public cost of replacing the firm is calculated in advance: months to replacement, reserve drawdown, capital cost, staff gap, legal delay, and affected population. | Makes corporate threat power visible before the threat happens. |
+| **Replacement control test** | Fallback operators can assume the relevant function without incumbent-controlled operational data, software, credentials, staff pipeline, standards approval, spare parts, PBM routing, lenders, insurers, affiliates, or emergency subcontractors. | Prevents formal capacity from depending on the same actor that is being replaced. |
 
 If these tests fail, the public claim must be downgraded. The system may still trade with the firm, but it may not claim that the relevant survival category is secure.
+
+The [Essential-Sector Refusal Test Package](./Essential_Sector_Refusal_Test_Package.md) treats compliance-masked degradation as refusal when formal compliance hides delay, data withholding, standards obstruction, PBM access friction, affiliate routing, workforce poaching, legal delay, or concession pressure.
 
 ---
 
@@ -263,6 +266,7 @@ The hardest unresolved risks are:
 - whether fossil transition contracts become disguised bailouts;
 - whether foreign counterparties retaliate faster than domestic capacity can adjust;
 - whether capture dashboards detect influence before it hardens into law.
+- whether compliance-masked degradation can preserve a clean contract record while actual CSM delivery, medicine access, fallback transfer, or vulnerable-population continuity fails.
 - **Measurement and oracle capture:** A conglomerate could influence the standards bodies, oracle cohort selection, or supply-chain concentration measurement methodology used by the Capture Dashboard to avoid Watch or Critical classification under AT6.2. This is a refusal-adjacent attack surface: the leverage threat does not require overt refusal if the concentration metrics can be suppressed. Cross-reference: ACL-009 (Dashboard Gaming), ACL-012 (Oracle Standards Club).
 
 No document can make those risks disappear. The proper standard is stricter: the project must know, in advance, how many days people can keep eating, heating, traveling, communicating, and receiving medicine if the largest incumbent says no.

@@ -327,6 +327,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - lobbying, trade-association, foundation, standards-body, and revolving-door exposure
 - procurement margin adequacy without monopoly rent
 - foreign counterparty retaliation response under Annex AT
+- compliance-masked refusal incidents by category, including data/control-system export delay, standards-body obstruction, PBM access friction, affiliate fallback correlation, workforce poaching, selective regional degradation, legal delay, and concession pressure
 
 **Failure criteria:**
 
@@ -334,10 +335,11 @@ The following additional gate conditions apply to any pilot that involves real-p
 - no public, cooperative, treaty, or independent private fallback exists for a CSM category;
 - procurement attracts only one controlled bidder while the system claims a market exists;
 - medicine access depends on a PBM-style intermediary or patent holder that can deny survival treatment for leverage;
+- formal compliance hides delivery delay, fallback non-activation, medicine denial, patient-continuity failure, data withholding, workforce capture, affiliate fallback dependency, or concession pressure;
 - fossil transition contracts become disguised bailouts without measured capacity, remediation, or resilience output;
 - foreign affiliates can bypass strategic floors, Flow conversion, or dependency thresholds.
 
-**Bridge rule:** Phase 8 cannot be marked partly tested until the Essential-Sector Refusal Test Package leaves a public evidence packet for at least one fuel/energy category, one CSM-designated medicine category, and one grid/logistics category. A paper reserve, dormant legal authority, or bidder that shares beneficial owners with the refusing actor does not count as fallback capacity.
+**Bridge rule:** Phase 8 cannot be marked partly tested until the Essential-Sector Refusal Test Package leaves a public evidence packet for at least one fuel/energy category, one CSM-designated medicine category, and one grid/logistics category, and the Capture Dashboard threshold table reports compliance-masked refusal exposure for the same drills. A paper reserve, dormant legal authority, or bidder that shares beneficial owners, data systems, critical software, standards approval, PBM control, lenders, insurers, workforce pipeline, or emergency subcontractors with the refusing actor does not count as fallback capacity.
 
 ## Phase 9 - Governance red-team
 

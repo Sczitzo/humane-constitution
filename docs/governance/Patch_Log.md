@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-062**
+**Running change ledger aligned to the Humane Constitution · Current through P-064**
 
 ---
 
@@ -81,6 +81,7 @@
 | P-060 | ACL-005 / T-008 | **PROPOSED** | Critical | Founding Team Composition Standard: composition floor (FT-1 through FT-4); 9-seat keyholder allocation with distributed nomination (Seats 3–8 via civil-society organizations approved by adversarial panel member); founder sunset rules (FS-1 through FS-7); Perpetual Humility Review with Humility Declaration. |
 | P-061 | ACL-007 / Power-Wealth Convergence | **PROPOSED** | Critical | Founding Capital Framework: phase targets ($15–22M / $35–55M / $60–90M); 20%/30% funder concentration limits; Capital Steward independent fiduciary; constitutional primacy clause (non-negotiable in all funding agreements); government walk-away rule (4 trigger conditions); CLT land structure; wind-down reserve (6 months EA pre-funded). |
 | P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
+| P-064 | T-028 | **ACTIVE** | Critical | Compliance-Masked Refusal Hardening: treats lawful-looking obstruction as refusal when formal compliance hides CSM delivery degradation, patient-continuity failure, data/control-system lockout, PBM access friction, standards delay, affiliate fallback capture, workforce poaching, legal delay, or concession pressure. |
 
 ---
 
@@ -93,6 +94,7 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 | P-007 | **RESERVED** | Reserved at numbering; never assigned a patch. The threat work that would have occupied this slot was absorbed into adjacent patches before formal sequencing. No design exists under this ID. |
 | P-010 | **RESERVED** | Reserved at numbering; never assigned a patch. No design exists under this ID. |
 | P-028 | **RESERVED** | Reserved at numbering; never assigned a patch. The economic-governance integration that would have followed P-027 was consolidated into the P-029 through P-033 batch. No standalone design exists under this ID. |
+| P-063 | **DRAFT-ONLY** | Reserved for the P-063 v15 review packet. It is explicitly not corpus-registered, not adopted into Annex D, and not part of the active Patch Log inventory. |
 
 ---
 
@@ -687,7 +689,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-062. Reserved IDs (P-007, P-010, P-028) are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-064. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -750,6 +752,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | ACL-005 / T-008 | P-060 | ACTIVE | Founding Team Composition Standard |
 | ACL-007 / Power-Wealth Convergence | P-061 | **PROPOSED** | Founding Capital Framework |
 | ACL-011 / ACL-010 | P-062 | **PROPOSED** | Pilot Timeline Framework |
+| T-028 | P-064 | **ACTIVE** | Essential-Sector Refusal Test Package · Capture Dashboard Specification · Threat Resolution Matrix · Pilot Evidence Roadmap |
 
 ---
 
@@ -1308,7 +1311,7 @@ Multiple vignettes in the Fairness Vignette Library showed that the constitution
 
 ### P-050 — Compliant Alternative Supplier Pre-Registration (CASP)
 
-**Threat addressed:** T-028  
+**Threat addressed:** T-028
 **Status:** ACTIVE | **Priority:** Critical | **Annex:** ANNEX_AT §AT6.6
 
 - **Introduced design:** Mandatory pre-registration of backup suppliers with automatic-activation contracts before any essential-sector procurement renewal. Procurement authorities must calculate and publish the gap-window — the period between a primary supplier exit and backup supplier operational readiness — before each renewal cycle. Any drill classified as drill-secure requires adversarial observation by at least one party outside the procurement authority's organizational chain.
@@ -1409,3 +1412,20 @@ Multiple vignettes in the Fairness Vignette Library showed that the constitution
 **Creates:** [docs/governance/Pilot_Timeline_Framework.md](./Pilot_Timeline_Framework.md)
 
 **Summary:** Five-track parallel timeline with critical-path gates; three recruitment windows; phased occupancy sequence; failure contingency requiring Resident Transition Protocol before Cohort 1. Track A (governance/legal), Track B (infrastructure), Track C (capital), Track D (community/consent), Track E (technology) must all clear defined gates before enrollment opens.
+
+---
+
+### P-064 — Compliance-Masked Refusal Hardening
+
+**Threat addressed:** T-028
+**Status:** ACTIVE | **Priority:** Critical
+
+The essential-sector refusal package already tested open exit, medicine/PBM refusal, and grid/logistics delay. The remaining P0 gap was subtler: an incumbent can stay formally compliant while degrading actual delivery through slow paperwork, data withholding, PBM access friction, standards-body delay, affiliate fallback capture, workforce poaching, selective regional degradation, litigation, or concession pressure.
+
+- **Introduced design:** Adds compliance-masked refusal as a named refusal lane in the Essential-Sector Refusal Test Package. Formal compliance is no defense when CSM delivery, CASP activation, fallback control transfer, patient continuity, vulnerable-cohort continuity, or reserve activation fails in practice.
+- **Medicine hardening:** Requires complete access paths, not merely alternate suppliers: manufacturer/API, distributor, pharmacy/specialty pharmacy, claims/formulary data, cold chain, prescribing interface, appeal route, and patient-support path. Adds patient-continuity floor and medicine metrics for time-to-fill, missed doses, PA clock breaches, formulary overrides, affiliated routing, substitution harm, and vulnerable-cohort continuity.
+- **Grid/logistics hardening:** Adds hidden compliance variants for partial restoration, standards objections, data migration delay, workforce poaching, affiliate substitution, and regional degradation. Adds transfer-control metrics for dispatch, routing, warehouse, outage, grid, fleet, inventory, credentialing, emergency data access, full operating package access, and workforce independence.
+- **Dashboard integration:** Adds compliance-masked refusal exposure to the Capture Dashboard and threshold anchors. Watch and active-capture-signal thresholds now cover data/control-system export delay, standards obstruction, PBM access friction, affiliate fallback correlation, workforce poaching, legal delay beyond 14 days, concession requests, vulnerable-cohort failure, CASP blockage, and fallback control-transfer failure.
+- **Evidence integration:** Updates T-028 in the Threat Register and Threat Resolution Matrix, Phase 8 of the Pilot Evidence Roadmap, the Claims and Evidence Register, Hardening Queue, Conglomerate Transition Dossier, and Annex AT CASP independence language.
+- **New risks introduced:** The metric can over-classify genuine operational difficulty as strategic refusal. Mitigated by independent clearance for legitimate delay, two-source confirmation for degradation periods under Annex AT, and affected-population evidence rather than inference from paperwork alone.
+- **Residual risk:** Sophisticated incumbents can distribute obstruction below individual thresholds, especially through informal standards influence, contractor labor markets, insurer/lender pressure, and patient-level administrative friction. The control improves detectability; it does not create physical capacity, independent staff, data escrow, or medicine supply by itself.
