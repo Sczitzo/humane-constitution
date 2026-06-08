@@ -113,6 +113,8 @@ One panel member must have a documented professional history of arguing against 
 
 **Conflict attestation process:** All attestations will be verified by [EXTERNAL VERIFICATION BODY], not self-reported. Verification results will be published before sign-off begins.
 
+**P-070 reviewer-evidence alignment:** If this preactivation process is later used as source evidence for the Founding Legitimacy Dossier, the nominating body, adversarial-member rationale, external verification body, conflict records, and challenge-window record must also satisfy the [Founding Consent and Civil-Society Review Evidence Test Package](./Founding_Consent_Civil_Society_Review_Evidence_Test_Package.md). A body may be independent enough to nominate the P-014 adversarial member but still fail the Level 7 civil-society reviewer qualification standard if it has financial dependence, governance overlap, weak affected-community accountability, or no capacity to dissent from the founding coalition.
+
 > **Note to challengers:** If you have evidence of undisclosed conflicts for any proposed panel member, or believe the adversarial member designation does not meet the independence standard, this challenge window is the correct venue. File via the [P-014 Challenge template](https://github.com/Sczitzo/humane-constitution/issues/new?template=p014-challenge.md). All challenges receive written responses.
 
 ---

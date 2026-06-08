@@ -38,7 +38,7 @@ Every pilot needs:
 | 8 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
 | 9 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
 | 10 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
-| 11 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure? | Drift, founding, and claim-status failures are visible before activation or scale-up. |
+| 11 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, consent evidence gate, civil-society review gate, and claim-status gates work under hostile pressure? | Drift, founding, consent, reviewer-independence, and claim-status failures are visible before activation or scale-up. |
 
 ![Pilot Phase Sequence](/images/V-008.png)
 
@@ -53,7 +53,7 @@ Every pilot needs:
 | Contribution without coercive hierarchy | Phase 1 comprehension; Phase 10 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
 | Anti-rent enforcement against legal wrappers | Phase 8 | Phase 6 Commons Return and Universal Stake; Phase 10 elite proxy markets |
 | Essential-sector conglomerate refusal | Phase 9 | Essential-Sector Refusal Test Package; Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
-| Founding legitimacy and consent | Phase 11 | Founding Legitimacy Dossier artifact-status register; consent rehearsal; exit rehearsal; public objection process |
+| Founding legitimacy and consent | Phase 11 | Founding Legitimacy Dossier artifact-status register; Founding Consent and Civil-Society Review Evidence Test Package; consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 10 | Authority tracing; review-body deadlock tests |
 | Implementation drift and parameter calibration | Phase 11 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
 
@@ -77,13 +77,13 @@ Every pilot needs:
 | Scope declaration | Phase 1 (public comprehension testing) — comprehension test participants must know what the system claims authority to do |
 | Conflict register | Phase 1 (public comprehension testing) — published to participants as context |
 | Objection record | Phase 2 (identity pilot) — no enrollment in identity pilot before the 60-day objection window closes |
-| Consent evidence | Phase 2 (identity pilot), Phase 3 (last-resort access pilot), Phase 5 (Essential Access delivery pilot) — pilot participants must have a genuine non-coercive opt-out path |
+| Consent evidence | Phase 2 (identity pilot), Phase 3 (last-resort access pilot), Phase 5 (Essential Access delivery pilot) — pilot participants must have a genuine non-coercive opt-out path, and any binding unit consent must meet the Founding Order 2/3 participation and 2/3 affirmative eligible-resident threshold |
 | Exit rehearsal | Phase 5 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
 | Founder sunset | Service Record pilot — civic participation pilot must not run under indefinite founding-exception authority |
-| Independent civil-society review | Phase 6 (Commons Return, Universal Stake, and Flow simulation) — monetary and fiscal architecture requires external legitimacy review before real-money simulation |
+| Independent civil-society review | Phase 6 (Commons Return, Universal Stake, and Flow simulation) — monetary and fiscal architecture requires qualified external legitimacy review before real-money simulation |
 | Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–10 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 11 and all scale-up promotions require a confirmed post-activation audit finding. |
 
-**Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) recurrence event and must be logged as such in the Threat Register.
+**Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) and T-033 (founding prerequisite definition failure) recurrence event and must be logged as such in the Threat Register.
 
 **Pilot town founding cascade (additional gates for real-persons occupancy):**
 

@@ -78,6 +78,13 @@ A threat is the failure mode: the way the system can be captured, gamed, stalled
 
 - 🔩 **Patch:** [P-026 — Founding Order: Subsidiarity, Consent & Exit](../governance/Patch_Log.md) · Status: **ACTIVE**
 - 📄 **Constitutional text:** [Founding Order](../../founding/order/README.md) — *The Founding Order locks the scale hierarchy, competence test, and default against escalation.*
+
+### T-033 — Founding Consent Evidence and Civil-Society Review Definition Failure
+
+> *This threat describes founders using vague consent evidence or friendly outside review to claim legitimacy before the founding process can meaningfully fail.*
+
+- 🔩 **Patch:** [P-070 — Founding Legitimacy Prerequisite Definition Gate](../governance/Patch_Log.md) · Status: **ACTIVE**
+- 📄 **Governance evidence gate:** [Founding Consent and Civil-Society Review Evidence Test Package](./Founding_Consent_Civil_Society_Review_Evidence_Test_Package.md) — *The package reconciles the consent threshold conflict, defines admissible consent evidence, defines qualified civil-society review, and blocks Gate A until these prerequisites are produced.*
 ---
 
 ## Active patches — Sessions 2 through 9

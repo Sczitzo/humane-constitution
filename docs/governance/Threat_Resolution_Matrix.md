@@ -29,7 +29,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 | 1 | Identity, monitoring, and measurement truth | T-002, T-006, T-012, T-015, T-018, T-019, T-020, T-021, T-024, T-031, T-032 | If identity, last-resort access, monitoring, or capacity measurement fails, the rest of the system can be gamed while appearing compliant. |
 | 2 | Economic boundary integrity | T-001, T-004, T-007, T-025 | If civic instruments become money, status, rent, or legal wrappers, the core separation collapses. |
 | 3 | Institutional anti-capture | T-005, T-008, T-009, T-013, T-014, T-016, T-017 | If the repair machinery captures itself, the system cannot adapt honestly. |
-| 4 | Legitimacy, narrative, transition, and scale | T-010/T-011, T-022, T-023, T-026, T-027 | If consent, explanation, pilot validity, exit, or subsidiarity fails, the constitution becomes coercive in practice. |
+| 4 | Legitimacy, narrative, transition, and scale | T-010/T-011, T-022, T-023, T-026, T-027, T-033 | If consent, explanation, pilot validity, exit, subsidiarity, or independent review fails, the constitution becomes coercive in practice. |
 
 ---
 
@@ -76,6 +76,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 | T-030 Cyber Resilience and Availability Failure | Control-plane failure plus Survival-Trade Bind when digital rails, keys, providers, or networks make the floor unreachable. |
 | T-031 Last-Resort Unenrolled Access Failure | Survival-Trade Bind plus identity/delivery control-plane failure when the floor is reachable only by the already-legible. |
 | T-032 Monitoring Repurposing and Enforcement-Observation Failure | Control-plane failure plus Power-Wealth Convergence and Survival-Trade Bind when protective monitoring becomes surveillance or coercive control. |
+| T-033 Founding Consent Evidence and Civil-Society Review Definition Failure | Control-plane founding failure plus Static-Advantage Loop when vague consent or friendly review locks in founding authority. |
 
 ---
 
@@ -346,6 +347,17 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Abuse cases:** ACL-017 — Monitoring Repurposing; related ACL-009 — Dashboard Gaming and ACL-015 — Tier 0 Token De-Anonymization.
 - **Residual risk:** monitoring creates power even when purpose-bound. Under-monitoring can miss organized harm; over-monitoring can chill access and build coercive infrastructure. The system may not claim monitoring is non-surveillant until repurposing resistance has evidence.
 - **Resolution update:** P-069 registers the enforcement-observation paradox as T-032 so it is no longer only a scattered privacy concern inside identity, dashboards, Annex C, or non-convertibility enforcement.
+
+### T-033 - Founding Consent Evidence and Civil-Society Review Definition Failure
+
+- **Current control:** [P-070](./Patch_Log.md), [Founding Consent and Civil-Society Review Evidence Test Package](./Founding_Consent_Civil_Society_Review_Evidence_Test_Package.md), [Founding Legitimacy Dossier](./Founding_Legitimacy_Dossier.md), [Founding Order](../../founding/order/README.md), [Vulnerable Population Consent Protocol](./Vulnerable_Population_Consent_Protocol.md), and [Founding Team Composition Standard](./Founding_Team_Composition_Standard.md)
+- **Resolution path:** define consent evidence and civil-society reviewer qualification before any Gate A claim. Binding unit consent must follow the Founding Order's 2/3 participation and 2/3 affirmative eligible-resident threshold; reviewer independence must be shown through financial, governance, affected-community, dissent-capacity, conflict-disclosure, and public-challenge records.
+- **Corruption route to assume:** founders substitute public consultation, silence, aid acceptance, or friendly review for consent; funders and vendors steer reviewer selection; prestige organizations with no affected-community accountability certify the process; dissenting reviewer findings are summarized away.
+- **External evidence:** Ostrom commons evidence anchors the importance of local consent and community-governance legitimacy; OECD public-integrity sources anchor the risk that formal rules and institutional trust fail without conflict controls, transparency, and independent review.
+- **Proof needed:** Founding Consent and Civil-Society Review Evidence Test Package; threshold certification, opt-out proof, aid-nonconditioning proof, pressure survey, coercion complaint log, exit-cost report, reviewer qualification register, public challenge log, and separate independent reviewer findings.
+- **Abuse cases:** ACL-018 — Founding Prerequisite Definition Capture; related ACL-010 — Founding consent theater and ACL-005 — Keyholder social capture.
+- **Residual risk:** no founding record can remove the bootstrap problem. The control prevents vague consent and friendly review from being counted as proof; it does not prove that all affected people felt free, understood the project, or trusted the right reviewers.
+- **Resolution update:** P-070 makes the two Founding Legitimacy Dossier unresolved-prerequisite rows testable instead of leaving "consent evidence" and "civil society" as undefined terms.
 
 ---
 

@@ -24,9 +24,9 @@ The tracks are:
 
 Track A governs the constitutional foundation of the pilot. Every major downstream gate depends on it. Rushing Track A to meet a construction schedule is not acceptable — the founding legitimacy claim is either real or it is not.
 
-**A0 — Initiation (Month 0):** Step 1 public consultation begins. The Founding Legitimacy Dossier prerequisite resolution process opens. A 60-day public window opens for comment on the two unresolved prerequisites: the definitions of "non-coercive consent" and "civil society" as applied to the pilot context.
+**A0 — Initiation (Month 0):** Step 1 public consultation begins. The Founding Legitimacy Dossier prerequisite resolution process opens under the [Founding Consent and Civil-Society Review Evidence Test Package](./Founding_Consent_Civil_Society_Review_Evidence_Test_Package.md). A 60-day public window opens for comment on the two prerequisite definitions: the admissible evidence for "non-coercive consent" and the qualification standard for "independent civil society" as applied to the pilot context. This 60-day window is a prerequisite-definition window, not the binding consent event; any binding unit consent must still satisfy the Founding Order's 90-day notice, 60-day deliberation, 2/3 participation, and 2/3 affirmative eligible-resident consent rule.
 
-**A1 — Prerequisites Resolved (Month 2):** The 60-day window closes. Definitions of "non-coercive consent" and "civil society" are finalized via public consultation and recorded in the Dossier. Production of the seven pre-activation artifacts may now begin:
+**A1 — Prerequisites Resolved (Month 2):** The 60-day window closes. Definitions of "non-coercive consent evidence" and "independent civil-society review" are finalized via public consultation, recorded in the Dossier, and checked against P-070. Production of the seven pre-activation artifacts may now begin only if the prerequisite-definition gate produces: consent evidence artifact requirements, reviewer qualification standard, reviewer selection process, public challenge route, and threshold reconciliation with the Founding Order.
 1. Conflict register
 2. Scope declaration
 3. Objection record

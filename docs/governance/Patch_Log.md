@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-069**
+**Running change ledger aligned to the Humane Constitution · Current through P-070**
 
 ---
 
@@ -77,8 +77,8 @@
 | P-056 | T-002 / INV-001 | **PROPOSED** | Critical | Open-Access Survival Floor (Two-Tier Identity Model): separates non-duplication (required for CSM) from identity verification (required only for above-floor services and civic instruments). Defines Tier 0 (open-access/pseudonymous survival floor) and Tier 1 (identity-gated services). Establishes civic accountability norm: the system trusts citizens because there is enough for everyone. Aggregate anomaly detection replaces individual surveillance at the survival tier. Token mechanism specification delegated to ANNEX_AZ §AZ2 as a pre-operational prerequisite. ANNEX_AK §AK8. |
 | P-057 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Site Selection Criteria: required, disqualifying, and preferred characteristics for pilot town site selection; Phase 1 capital reference ranges ($15–22M); site selection process with adversarial panel member approval requirement. |
 | P-058 | T-016 / constitutional void | **PROPOSED** | High | Jurisdiction Interface Clause: three-layer jurisdiction interface (RAC mediation → external courts → federal floor); matters governed by external law enumerated; pre-enrollment 7-day grace window; retaliation prohibition; filing assistance obligation. |
-| P-059 | ACL-010 / T-027 | **PROPOSED** | Critical | Vulnerable Population Consent Protocol (VPCP): ICA structure (civil-society nominated, 50% peer specialists, adverse-finding authority); VPCP-001 through VPCP-008 rules; 30-day cooling-off; teach-back verification as founding team obligation; non-waivable exit rights (60-day housing, 90-day healthcare, no clawback); pre-recruitment prerequisites gate. |
-| P-060 | ACL-005 / T-008 | **PROPOSED** | Critical | Founding Team Composition Standard: composition floor (FT-1 through FT-4); 9-seat keyholder allocation with distributed nomination (Seats 3–8 via civil-society organizations approved by adversarial panel member); founder sunset rules (FS-1 through FS-7); Perpetual Humility Review with Humility Declaration. |
+| P-059 | ACL-010 / dignity-floor leverage | **PROPOSED** | Critical | Vulnerable Population Consent Protocol (VPCP): ICA structure (civil-society nominated, 50% peer specialists, adverse-finding authority); VPCP-001 through VPCP-008 rules; 30-day cooling-off; teach-back verification as founding team obligation; non-waivable exit rights (60-day housing, 90-day healthcare, no clawback); pre-recruitment prerequisites gate. |
+| P-060 | ACL-005 / founding keyholder capture | **PROPOSED** | Critical | Founding Team Composition Standard: composition floor (FT-1 through FT-4); 9-seat keyholder allocation with distributed nomination (Seats 3–8 via civil-society organizations approved by adversarial panel member); founder sunset rules (FS-1 through FS-7); Perpetual Humility Review with Humility Declaration. |
 | P-061 | ACL-007 / Power-Wealth Convergence | **PROPOSED** | Critical | Founding Capital Framework: phase targets ($15–22M / $35–55M / $60–90M); 20%/30% funder concentration limits; Capital Steward independent fiduciary; constitutional primacy clause (non-negotiable in all funding agreements); government walk-away rule (4 trigger conditions); CLT land structure; wind-down reserve (6 months EA pre-funded). |
 | P-062 | ACL-011 / ACL-010 | **PROPOSED** | High | Pilot Timeline Framework: five-track parallel structure (Founding Legitimacy, Site Acquisition, Design/Permitting, Construction, Recruitment); three enrollment windows with hard prerequisites; critical-path gates (A2 at Month 8, D2 at Month 26–30, INV-LAUNCH-1 clearance); failure contingency requiring Resident Transition Protocol before Cohort 1 occupancy. |
 | P-064 | T-028 | **ACTIVE** | Critical | Compliance-Masked Refusal Hardening: treats lawful-looking obstruction as refusal when formal compliance hides CSM delivery degradation, patient-continuity failure, data/control-system lockout, PBM access friction, standards delay, affiliate fallback capture, workforce poaching, legal delay, or concession pressure. |
@@ -87,6 +87,7 @@
 | P-067 | T-030 | **ACTIVE** | Critical | Cyber Resilience and Availability Gate: registers ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status failure as a distinct threat to survival-floor delivery. |
 | P-068 | T-031 | **ACTIVE** | Critical | Last-Resort Unenrolled Access Gate: registers the risk that a person who cannot enroll, hold a wallet, or use digital credentials still cannot reach the survival floor; requires no-credential, trusted-intermediary, analog-reconciliation, abuse/diversion, and dignity-interview tests before universality claims. |
 | P-069 | T-032 | **ACTIVE** | Critical | Monitoring Repurposing Gate: registers the risk that protective monitoring becomes surveillance or coercive control; requires purpose register, purpose-creep red team, linkability test, office-separation drill, individual-flag appeal drill, retention audit, and coercive-use scenario. |
+| P-070 | T-033 | **ACTIVE** | Critical | Founding Legitimacy Prerequisite Definition Gate: reconciles consent thresholds, defines admissible non-coercive consent evidence, defines independent civil-society reviewer qualification, and blocks Gate A until consent and review are independently evidenced. |
 
 ---
 
@@ -753,8 +754,8 @@ This table is the single source of truth for threat→patch traceability. It cov
 | INV-001 support (identity-related; active identity controls remain P-003/P-016) | P-056 | PROPOSED | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
 | ACL-011 / ACL-010 | P-057 | **PROPOSED** | Pilot site selection criteria |
 | T-016 / constitutional void | P-058 | ACTIVE | Jurisdiction Interface Clause |
-| ACL-010 / T-027 | P-059 | ACTIVE | Vulnerable_Population_Consent_Protocol.md |
-| ACL-005 / T-008 | P-060 | ACTIVE | Founding Team Composition Standard |
+| ACL-010 / dignity-floor leverage | P-059 | **PROPOSED** | Vulnerable_Population_Consent_Protocol.md |
+| ACL-005 / founding keyholder capture | P-060 | **PROPOSED** | Founding Team Composition Standard |
 | ACL-007 / Power-Wealth Convergence | P-061 | **PROPOSED** | Founding Capital Framework |
 | ACL-011 / ACL-010 | P-062 | **PROPOSED** | Pilot Timeline Framework |
 | T-028 | P-064 | **ACTIVE** | Essential-Sector Refusal Test Package · Capture Dashboard Specification · Threat Resolution Matrix · Pilot Evidence Roadmap |
@@ -1515,3 +1516,19 @@ The corpus already limits several monitoring surfaces: Annex C gives monitored p
 - **Continuity standard:** Enforcement may monitor power, institutions, route performance, provider continuity, aggregate anomalies, and control-plane health. It may not silently create a general-purpose behavioral graph, location map, risk list, identity dossier, or ranking system for ordinary persons.
 - **New risks introduced:** Tight monitoring limits can reduce fraud detection or delay enforcement; strong auditability can conflict with deletion; aggregation can hide individual harm; raw records can still be pressured by lawful authorities or captured insiders. These are residual risks and must be measured honestly.
 - **Residual risk:** This patch does not prove monitoring is safe. It makes monitoring itself a test subject and blocks anti-surveillance claims until purpose limitation, linkability resistance, office separation, appealability, retention, and coercive-use tests pass.
+
+---
+
+### P-070 — Founding Legitimacy Prerequisite Definition Gate
+
+**Threat addressed:** T-033
+**Status:** ACTIVE | **Priority:** Critical
+
+The corpus already names the founding legitimacy problem through T-017, T-022, T-026, T-027, the Founding Order, Annex AH, the Founding Legitimacy Dossier, the Vulnerable Population Consent Protocol, the Founding Team Composition Standard, and the Pilot Timeline Framework. The gap was not absence of concern. The gap was definition: the two Founding Legitimacy Dossier prerequisites, "consent evidence" and "independent civil-society review," could not be produced without a public standard for what counted.
+
+- **Introduced design:** Creates the Founding Consent and Civil-Society Review Evidence Test Package. The package reconciles the Dossier's lower consultation threshold with the Founding Order's binding consent act: for activation authority, 2/3 eligible resident-personhood participation and 2/3 eligible resident-personhood affirmative consent govern, with 90-day notice, 60-day deliberation, roll-call-equivalent record, and drift-chain logging.
+- **Consent evidence standard:** Requires consent model, notice record, deliberation record, participation record, threshold certification, opt-out proof, aid-nonconditioning proof, pressure survey, coercion complaint log, and exit-cost report before the Dossier consent-evidence row can reach PRODUCED.
+- **Civil-society review standard:** Requires at least three qualified reviewer categories from an adversarial-panel shortlist after public challenge. Reviewers must pass financial, governance, affected-community accountability, dissent-capacity, conflict-disclosure, and plain-language-publication tests.
+- **Claim discipline:** Gate A does not clear if founders substitute low-turnout consultation, silence, humanitarian-aid acceptance, friendly expert review, funder-adjacent review, or unpublished reviewer findings for consent and independence evidence.
+- **New risks introduced:** A stricter review gate can be used to delay legitimate founding indefinitely or empower a civil-society gatekeeper class. Mitigations are public shortlists, public challenge records, separate reviewer findings, dissent preservation, affected-community accountability, and explicit Gate A failure reasons.
+- **Residual risk:** No evidence packet can prove perfect founding legitimacy. P-070 makes consent and reviewer independence falsifiable before activation; it does not eliminate the bootstrap problem, informal pressure, class capture, or the need for post-activation audit.

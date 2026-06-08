@@ -103,6 +103,17 @@ It is not a surveillance mandate. It is a public accountability specification. D
 | Individual-flag appeal performance | Detect monitoring flags becoming punishment without recourse. | A person affected by an individual-level flag lacks notice, human review, reversibility, or correction. |
 | Operator self-certification exposure | Detect offices grading their own monitoring performance. | The same office operates a service, controls raw monitoring data, and publishes the performance claim without independent verification. |
 
+### 8. Founding Legitimacy Gate
+
+| Metric | Purpose | Failure signal |
+|---|---|---|
+| Consent threshold certification status | Detect substitution of consultation for binding consent. | Gate A advances without Founding Order 2/3 participation and 2/3 affirmative eligible-resident certification where binding unit consent is required. |
+| Consent evidence packet completeness | Detect vague consent claims. | Consent model, notice record, deliberation record, participation record, opt-out proof, aid-nonconditioning proof, pressure survey, coercion complaint log, or exit-cost report is missing. |
+| Reviewer qualification coverage | Detect friendly or dependent civil-society review. | Reviewers lack three qualified categories, affected-community accountability, conflict disclosure, or dissent-capacity record. |
+| Reviewer challenge-window completion | Detect review selection without public contestability. | Reviewers are appointed without adversarial-panel shortlist, conflict publication, or public challenge log. |
+| Adverse founding finding status | Detect unresolved reviewer or coercion findings. | Gate A advances while adverse findings, coercion complaints, or reviewer-independence challenges remain unresolved. |
+| Dissent preservation | Detect consensus laundering. | Reviewer findings are merged, summarized, edited, or published without separate dissenting findings. |
+
 ---
 
 ## Required Public Outputs

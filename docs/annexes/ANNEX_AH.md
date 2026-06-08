@@ -165,15 +165,16 @@ The bootstrap resolution clears the path for the full acceptance sequence. Immed
 | T-030 | P-067 | ACTIVE | Cyber_Resilience_Availability_Evidence_Test_Package | S11 |
 | T-031 | P-068 | ACTIVE | Last_Resort_Unenrolled_Access_Evidence_Test_Package | S11 |
 | T-032 | P-069 | ACTIVE | Monitoring_Repurposing_Evidence_Test_Package | S11 |
+| T-033 | P-070 | ACTIVE | AH; Founding_Consent_Civil_Society_Review_Evidence_Test_Package | S11 |
 | — | P-053 | ACTIVE | AW | S10 |
 | — | P-054 | ACTIVE | AX | S10 |
 | — | P-055 | ACTIVE | AY | S10 |
 | P-056 | Open-Access Survival Floor | ANNEX_AK §AK8 | T-002, INV-001 | PROPOSED |
 | — | P-057 | PROPOSED | Pilot_Site_Selection_Criteria | Founding |
 | — | P-058 | PROPOSED | Jurisdiction_Interface_Clause | Founding |
-| ACL-010 / T-027 | P-059 | ACTIVE | Vulnerable_Population_Consent_Protocol | Founding |
-| ACL-005 / T-008 | P-060 | ACTIVE | Founding_Team_Composition_Standard | Founding |
+| ACL-010 / dignity-floor leverage | P-059 | PROPOSED | Vulnerable_Population_Consent_Protocol | Founding |
+| ACL-005 / founding keyholder capture | P-060 | PROPOSED | Founding_Team_Composition_Standard | Founding |
 | ACL-007 | P-061 | PROPOSED | Founding_Capital_Framework | Founding |
 | ACL-011 / ACL-010 | P-062 | PROPOSED | Pilot_Timeline_Framework | Founding |
 
-*P-014 marks its unique status as a one-time founding instrument. 30 total threats. P-018 remains the PROPOSED electoral-resilience supplement. P-051 is the ACTIVE primary CIP control for T-022. P-065 is the ACTIVE CIP anti-hollowing hardening pass. P-066 registers the fiscal sustainability / debasement threat and replaces routine demurrage with Commons Return and Universal Stake as the active Annex D doctrine. P-067 registers cyber resilience and availability as a distinct survival-floor threat; it is a test gate, not proof of resilience. P-056 remains the PROPOSED open-access survival floor, and P-057 through P-062 remain pilot-town founding-framework proposals unless separately promoted. P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. Bootstrap problem resolved. Acceptance sequence unblocked.*
+*P-014 marks its unique status as a one-time founding instrument. 33 total threats. P-018 remains the PROPOSED electoral-resilience supplement. P-051 is the ACTIVE primary CIP control for T-022. P-065 is the ACTIVE CIP anti-hollowing hardening pass. P-066 registers the fiscal sustainability / debasement threat and replaces routine demurrage with Commons Return and Universal Stake as the active Annex D doctrine. P-067 registers cyber resilience and availability as a distinct survival-floor threat; it is a test gate, not proof of resilience. P-070 registers the founding consent and civil-society review prerequisite-definition gate; it is a test gate, not proof of legitimacy. P-056 remains the PROPOSED open-access survival floor, and P-057 through P-062 remain pilot-town founding-framework proposals unless separately promoted. P-050/051/052 added in S10 as primary controls for T-028, T-022, and T-019 respectively. P-053/054/055 added in S10 as whistleblower protection, confidential enrollment, and delivery sufficiency standards. Bootstrap problem resolved. Acceptance sequence unblocked.*

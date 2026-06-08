@@ -1,6 +1,6 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Current through T-032**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-033**
 
 ---
 
@@ -50,6 +50,7 @@ Read this table first if you do not work in law, policy, security, or systems de
 | T-030 | A hostile cyber event, key compromise, outage, or software dependency makes the survival floor unreachable. |
 | T-031 | A person who can never enroll, hold a wallet, or keep a digital credential still cannot reach the survival floor. |
 | T-032 | Monitoring required to protect the system is reused to surveil, rank, punish, or coerce people. |
+| T-033 | Founders use vague consent or friendly reviewers to claim legitimacy before real evidence exists. |
 
 ---
 
@@ -79,6 +80,7 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | 72 | P-067 defines the test path, but ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status drills have not run. |
 | T-031 | Last-Resort Unenrolled Access Failure | **Critical** | 72 | P-068 defines the test path, but no no-credential, trusted-intermediary, analog-reconciliation, or dignity-interview pilot has proven the floor reaches people outside identity and digital infrastructure. |
 | T-032 | Monitoring Repurposing and Enforcement-Observation Failure | **Critical** | 72 | P-069 defines the test path, but no purpose-creep, linkability, office-separation, individual-flag appeal, retention, or coercive-use drill has proven monitoring cannot become surveillance. |
+| T-033 | Founding Consent Evidence and Civil-Society Review Definition Failure | **Critical** | 72 | P-070 defines the prerequisite-definition gate, but no consent evidence packet, threshold certification, reviewer qualification register, reviewer challenge log, or independent findings exist. |
 
 ### Load-bearing sub-problems
 
@@ -90,7 +92,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | Contribution model definition | T-004 | **Designed** | Contribution must remain real without recreating coercive hierarchy, burnout pressure, or a worth score. |
 | Semantic bureaucracy risk | T-007 | **Active — unproven** | Definition protection can itself become capture, freezing, or expert-class gatekeeping. |
 | Subsidiarity aggregate drift | T-027 | **Active — unproven** | Individual escalations can look reasonable while cumulative governance drifts upward. |
-| Founding legitimacy | T-017/T-022/T-026 | **Proposed** | A non-coercive constitution cannot be legitimated by a coercive or self-interested founding process. |
+| Founding legitimacy | T-017/T-022/T-026/T-033 | **Proposed** | A non-coercive constitution cannot be legitimated by vague consent evidence, friendly reviewers, or a self-interested founding process. |
 | Institutional self-protection | T-005/T-008/T-016 | **Active — unproven** | Review bodies can become a class that protects its own authority rather than the people. |
 
 ### Maintenance rules for this dashboard
@@ -137,6 +139,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | **Active — unproven** | Prevent ransomware, key compromise, regional outage, provider dependency, or supply-chain compromise from interrupting survival-floor access. | 72 | P6 (Implementation / Security) + P1 (Essential Access) | 2026-06-08 | Rising |
 | T-031 | Last-Resort Unenrolled Access Failure | **Critical** | **Active — unproven** | Prevent the survival floor from becoming reachable only by people who can enroll, hold a wallet, use digital credentials, or navigate ordinary administration. | 72 | P1 (Essential Access) + P3 (Identity) + Federated Ombuds | 2026-06-08 | Rising |
 | T-032 | Monitoring Repurposing and Enforcement-Observation Failure | **Critical** | **Active — unproven** | Prevent protective monitoring from becoming a general-purpose surveillance, ranking, punishment, or coercion layer. | 72 | P8 (Oversight) + P3 (Identity) + Capture Dashboard operator | 2026-06-08 | Rising |
+| T-033 | Founding Consent Evidence and Civil-Society Review Definition Failure | **Critical** | **Active — unproven** | Prevent the founding process from claiming legitimacy through vague consent standards, lower-threshold consultation, or friendly civil-society review. | 72 | Founding Coalition + adversarial panel member + civil-society reviewers | 2026-06-08 | Rising |
 
 *Status definitions: **Proposed** = a response has been suggested but not yet formally incorporated. **Designed** = the mechanism is specified in the corpus but not yet active. **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence. **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution. **Evidence-backed** = sufficient external evidence to support the claim. **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented. No threat currently meets the Resolved threshold.*
 
@@ -825,3 +828,21 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Mitigation direction:** P-069 ACTIVE: the Monitoring Repurposing Evidence Test Package requires every monitoring stream to have a named purpose, minimum-data rule, retention rule, access role, independent reviewer, appeal path, and explicit reuse prohibition before claims that enforcement monitoring is bounded and non-surveillant.
 - **Residual risk:** Monitoring always creates power. Aggregation can hide harms; individual flags can punish the innocent; deletion can conflict with auditability; raw records can be pressured by lawful authorities or captured insiders. This patch is a gate, not proof.
 - **Compound linkages:** T-032 × T-001 (non-convertibility enforcement can become household surveillance). T-032 × T-002 (identity fraud controls can become identity surveillance). T-032 × T-031 (last-resort access records can become a shadow registry). T-032 × T-008 (monitoring offices can become an expert class). T-032 × T-022 (hostile successors can preserve formal privacy language while repurposing raw data).
+
+### T-033 — Founding Consent Evidence and Civil-Society Review Definition Failure
+
+- **Patch:** [P-070 — Founding Legitimacy Prerequisite Definition Gate](../governance/Patch_Log.md) · [Founding Consent and Civil-Society Review Evidence Test Package](./Founding_Consent_Civil_Society_Review_Evidence_Test_Package.md) · Patch status: **ACTIVE**
+- **Layer:** Founding legitimacy / consent evidence / independent review
+- **Severity:** Critical
+- **Status:** Active — unproven
+- **Risk Score:** 4×4×(6-2)=72
+- **Owner:** Founding Coalition + adversarial panel member + civil-society reviewers
+- **Last reviewed:** 2026-06-08
+- **Trend:** Rising
+- **Summary:** The corpus already names founding consent, objection, exit, vulnerable-population consent, and civil-society review. The remaining failure is definitional: founders can claim consent from low participation, treat non-binding consultation as activation authority, or select outside reviewers who are friendly, dependent, prestigious but unaccountable, or unable to block the founding claim.
+- **Mechanism:** The founding team uses vague phrases such as community support, public consultation, no objections, or independent review without publishing a consent evidence packet. A lower consultation threshold is substituted for the Founding Order's binding 2/3 participation and 2/3 affirmative resident-personhood rule. Reviewers are selected through funder networks, vendor ties, prestige organizations, or founder-adjacent advisors; dissenting findings are merged, summarized, delayed, or treated as non-binding.
+- **Impact:** The founding process becomes legitimacy theater. A technically elegant constitution can be imposed by actors who benefit from activation, and affected people may lose practical refusal, abstention, or exit while the public record says consent was obtained.
+- **Detection:** D=2 — public documents and meeting attendance can look legitimate while consent evidence and reviewer independence remain weak. Detection requires threshold certification, opt-out and exit-cost proof, aid-nonconditioning proof, pressure survey, coercion complaint log, reviewer qualification register, public challenge log, and independent findings.
+- **Mitigation direction:** P-070 ACTIVE: the Founding Consent and Civil-Society Review Evidence Test Package reconciles the consent threshold conflict, defines admissible consent evidence, defines civil-society reviewer qualification, and blocks Gate A if consent or review cannot be independently evidenced.
+- **Residual risk:** No founding process can prove perfect legitimacy. People can consent under hard circumstances, civil-society bodies can share class interests without formal conflicts, and reviewers can miss informal pressure. P-070 makes these risks visible and falsifiable; it does not remove the bootstrap problem.
+- **Compound linkages:** T-033 × T-017 (bootstrap legitimacy can be asserted before evidence exists). T-033 × T-022 (future hostile actors can exploit a weak founding record). T-033 × T-026 (exit can be formally available but materially costly). T-033 × T-027 (central actors can claim local consent while real local competence was bypassed). T-033 × T-008 (reviewer networks can become a civil-society expert class).

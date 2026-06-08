@@ -65,6 +65,8 @@ Nominating organizations may not be selected by the founding team alone. Each se
 
 Each nominating organization must confirm in writing that it has no financial relationship with the pilot or its funders — no grants received, no contracts pending, no gifts accepted, no board membership overlap. This confirmation is public.
 
+For Seats 3–8, "civil society" uses the independence logic in the [Founding Consent and Civil-Society Review Evidence Test Package](./Founding_Consent_Civil_Society_Review_Evidence_Test_Package.md): no financial or governance dependence on founders, funders, vendors, or pilot administration; disclosed conflicts; affected-community accountability where applicable; and a record showing capacity to dissent. This does not mean every keyholder nominating body must be a Level 7 founding reviewer. It means the founding team may not use weaker "outside organization" language to route keyholder nominations through friendly or dependent bodies.
+
 If a nominating organization cannot be identified for any seat within 60 days of Gate A, that seat defaults to a resident election using the same 90-day residency requirement as Seats 1–2. This default is not a failure mode — it is a safety valve. A pilot with strong resident participation may prefer resident elections over external nominations. What is not acceptable is a vacant seat.
 
 ---

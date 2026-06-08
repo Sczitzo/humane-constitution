@@ -60,7 +60,7 @@ A claim must move down when:
 | Service Record safety | Level 7 independent audit after non-civic misuse red team. |
 | Demurrage/public-rail funding | Level 6 simulation plus Level 7 fiscal/legal review before scale claims. |
 | Anti-rent/legal-wrapper control | Level 7 legal red-team review. |
-| Founding legitimacy | Level 7 independent civil-society review and exit rehearsal. |
+| Founding legitimacy | Level 7 independent civil-society review, Founding Consent and Civil-Society Review Evidence Test Package, and exit rehearsal. |
 | Implementation drift control | Level 7 implementation audit and startup-refusal drill. |
 
 ---

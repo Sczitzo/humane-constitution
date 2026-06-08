@@ -202,6 +202,18 @@ Each abuse case should name:
 
 ---
 
+### ACL-018 — Founding Prerequisite Definition Capture
+
+- **Actor incentive:** founders, funders, vendors, friendly institutions, or political allies want to claim activation legitimacy before consent evidence and independent review can meaningfully fail the process.
+- **Attack path:** treat public meetings, low-turnout consultation, silence, aid acceptance, or general enthusiasm as consent; substitute the Dossier's lower non-binding consultation threshold for the Founding Order's 2/3 binding consent rule; select "independent" reviewers from funder, vendor, prestige, or founder-adjacent networks; merge dissenting reviewer findings into a friendly consensus summary.
+- **Collapse state:** Control-plane founding failure, Static-Advantage Loop, and Power-Wealth Convergence.
+- **Current controls:** T-017/T-022/T-026/T-027 founding controls; Founding Legitimacy Dossier; Founding Order consent and exit protocols; P-070 Founding Consent and Civil-Society Review Evidence Test Package.
+- **Missing test:** threshold certification, opt-out and exit-cost proof, aid-nonconditioning proof, pressure survey, coercion complaint log, reviewer qualification register, reviewer challenge log, and separate independent findings.
+- **Failure criterion:** Gate A clears without produced consent evidence under the Founding Order threshold, or civil-society review is conducted by reviewers who are financially, institutionally, socially, or reputationally dependent on the founding coalition.
+- **False reassurance:** "The community was consulted and outside groups reviewed it."
+
+---
+
 ## Service Record / Civic Tools Misuse
 
 ### ACL-SR-01 — Employer Rank Signal
