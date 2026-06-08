@@ -30,14 +30,15 @@ Every pilot needs:
 |---|---|---|---|
 | 1 | Public understanding | Can ordinary skeptical readers understand the core separation without expert help? | Public docs are clear enough to support critique. |
 | 2 | Identity and recovery | Can people recover access without surveillance, exclusion, or fraud collapse? | False exclusion remains below published threshold. |
-| 3 | Essential capacity measurement | Can essentials be measured accurately enough to support issuance and scarcity decisions? | Measurement error remains within published bounds. |
-| 4 | Essential Access delivery | Can baseline essentials be delivered without discretionary gatekeeping? | Delivery, appeals, and continuity meet minimum service targets. |
-| 5 | Commons Return, Universal Stake, and Flow simulation | Can public return and Flow issuance fund the floor and public rails without inflation, hidden debt, ordinary-life burden, or political dividend capture? | Fiscal adequacy model, source-base revenue model, incidence review, remaining-tax disclosure, and lockbox sufficiency pass before any scale claim. |
-| 6 | Public banking rails | Can basic banking be provided as infrastructure without predatory fees or credit traps? | Service cost and access targets are sustainable. |
-| 7 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
-| 8 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
-| 9 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
-| 10 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure? | Drift, founding, and claim-status failures are visible before activation or scale-up. |
+| 3 | Last-resort unenrolled access | Can someone who cannot enroll, hold a wallet, or use digital credentials still receive the survival floor? | No-credential, trusted-intermediary, analog reconciliation, abuse/diversion, and dignity-review tests pass. |
+| 4 | Essential capacity measurement | Can essentials be measured accurately enough to support issuance and scarcity decisions? | Measurement error remains within published bounds. |
+| 5 | Essential Access delivery | Can baseline essentials be delivered without discretionary gatekeeping? | Delivery, appeals, and continuity meet minimum service targets. |
+| 6 | Commons Return, Universal Stake, and Flow simulation | Can public return and Flow issuance fund the floor and public rails without inflation, hidden debt, ordinary-life burden, or political dividend capture? | Fiscal adequacy model, source-base revenue model, incidence review, remaining-tax disclosure, and lockbox sufficiency pass before any scale claim. |
+| 7 | Public banking rails | Can basic banking be provided as infrastructure without predatory fees or credit traps? | Service cost and access targets are sustainable. |
+| 8 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
+| 9 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
+| 10 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
+| 11 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, and claim-status gates work under hostile pressure? | Drift, founding, and claim-status failures are visible before activation or scale-up. |
 
 ![Pilot Phase Sequence](/images/V-008.png)
 
@@ -45,23 +46,24 @@ Every pilot needs:
 
 | Macro risk | Primary pilot track | Secondary checks |
 |---|---|---|
-| Identity without surveillance or exclusion | Phase 2 | Phase 4 appeals; Phase 9 governance capture |
-| Real-capacity measurement | Phase 3 | Phase 4 delivery; Phase 9 oracle capture |
-| Contribution without coercive hierarchy | Phase 1 comprehension; Phase 9 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
-| Anti-rent enforcement against legal wrappers | Phase 7 | Phase 5 Commons Return and Universal Stake; Phase 9 elite proxy markets |
-| Essential-sector conglomerate refusal | Phase 8 | Essential-Sector Refusal Test Package; Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
-| Founding legitimacy and consent | Phase 10 | Founding Legitimacy Dossier artifact-status register; consent rehearsal; exit rehearsal; public objection process |
-| Bureaucratic complexity and institutional self-protection | Phase 1; Phase 9 | Authority tracing; review-body deadlock tests |
-| Implementation drift and parameter calibration | Phase 10 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
+| Identity without surveillance or exclusion | Phase 2 | Phase 3 last-resort access; Phase 5 appeals; Phase 10 governance capture |
+| Floor of last resort for the unenrolled | Phase 3 | Phase 5 delivery; Phase 11 implementation drift; Annex AY Delivery Sufficiency Register |
+| Real-capacity measurement | Phase 4 | Phase 5 delivery; Phase 10 oracle capture |
+| Contribution without coercive hierarchy | Phase 1 comprehension; Phase 10 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
+| Anti-rent enforcement against legal wrappers | Phase 8 | Phase 6 Commons Return and Universal Stake; Phase 10 elite proxy markets |
+| Essential-sector conglomerate refusal | Phase 9 | Essential-Sector Refusal Test Package; Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
+| Founding legitimacy and consent | Phase 11 | Founding Legitimacy Dossier artifact-status register; consent rehearsal; exit rehearsal; public objection process |
+| Bureaucratic complexity and institutional self-protection | Phase 1; Phase 10 | Authority tracing; review-body deadlock tests |
+| Implementation drift and parameter calibration | Phase 11 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
 
 ## Collapse-state-to-pilot crosswalk
 
 | Collapse state | Primary pilot tracks | Secondary checks |
 |---|---|---|
-| Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 capacity measurement; Phase 4 Essential Access delivery | Phase 5 shadow-credit growth; Phase 9 proxy-market and emergency-power tests |
-| Power-Wealth Convergence | Phase 5 Commons Return, Universal Stake, and Flow; Phase 6 public banking rails; Phase 7 anti-rent and ownership review; Phase 8 conglomerate transition; Phase 9 governance red-team | Public procurement integrity, beneficial-ownership review, fiscal/debasement modeling, FAP capture testing, and sector concentration dashboards |
-| Static-Advantage Loop | Phase 1 public understanding; Phase 7 anti-rent and ownership review; Phase 9 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, Commons Return burden by class, founding legitimacy, and subsidiarity drift |
-| Control-plane failure | Phase 9 governance red-team; Phase 10 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
+| Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 last-resort unenrolled access; Phase 4 capacity measurement; Phase 5 Essential Access delivery | Phase 6 shadow-credit growth; Phase 10 proxy-market and emergency-power tests |
+| Power-Wealth Convergence | Phase 6 Commons Return, Universal Stake, and Flow; Phase 7 public banking rails; Phase 8 anti-rent and ownership review; Phase 9 conglomerate transition; Phase 10 governance red-team | Public procurement integrity, beneficial-ownership review, fiscal/debasement modeling, FAP capture testing, and sector concentration dashboards |
+| Static-Advantage Loop | Phase 1 public understanding; Phase 8 anti-rent and ownership review; Phase 10 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, Commons Return burden by class, founding legitimacy, and subsidiarity drift |
+| Control-plane failure | Phase 10 governance red-team; Phase 11 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
 
 ## Phase 0 — Founding Cascade Gate
 
@@ -74,11 +76,11 @@ Every pilot needs:
 | Scope declaration | Phase 1 (public comprehension testing) — comprehension test participants must know what the system claims authority to do |
 | Conflict register | Phase 1 (public comprehension testing) — published to participants as context |
 | Objection record | Phase 2 (identity pilot) — no enrollment in identity pilot before the 60-day objection window closes |
-| Consent evidence | Phase 2 (identity pilot), Phase 3 (Essential Access delivery pilot) — pilot participants must have a genuine non-coercive opt-out path |
-| Exit rehearsal | Phase 3 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
-| Founder sunset | Phase 4 (Service Record pilot) — civic participation pilot must not run under indefinite founding-exception authority |
-| Independent civil-society review | Phase 5 (Commons Return, Universal Stake, and Flow simulation) — monetary and fiscal architecture requires external legitimacy review before real-money simulation |
-| Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–9 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 10 and all scale-up promotions require a confirmed post-activation audit finding. |
+| Consent evidence | Phase 2 (identity pilot), Phase 3 (last-resort access pilot), Phase 5 (Essential Access delivery pilot) — pilot participants must have a genuine non-coercive opt-out path |
+| Exit rehearsal | Phase 5 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
+| Founder sunset | Service Record pilot — civic participation pilot must not run under indefinite founding-exception authority |
+| Independent civil-society review | Phase 6 (Commons Return, Universal Stake, and Flow simulation) — monetary and fiscal architecture requires external legitimacy review before real-money simulation |
+| Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–10 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 11 and all scale-up promotions require a confirmed post-activation audit finding. |
 
 **Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) recurrence event and must be logged as such in the Threat Register.
 

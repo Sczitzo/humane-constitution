@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-067**
+**Running change ledger aligned to the Humane Constitution · Current through P-068**
 
 ---
 
@@ -85,6 +85,7 @@
 | P-065 | T-022 | **ACTIVE** | Critical | CIP Vacancy-Starvation Hardening: appointment deadlines, fallback nomination, void mass appointments, below-quorum self-repair limits, publication-channel fallback, missed Ombuds-report suspension, conduct-only hollowing triggers, servant-authority and relief-first limits. |
 | P-066 | T-029 | **ACTIVE** | Critical | Commons Return and Universal Stake Fiscal Sustainability Gate: replaces routine progressive net-worth demurrage as active wealth spine, registers fiscal/debasement risk, requires costed public-finance model, source-base revenue testing, remaining-tax disclosure, incidence review, lockbox sufficiency, and scale-blocking fiscal adequacy gate. |
 | P-067 | T-030 | **ACTIVE** | Critical | Cyber Resilience and Availability Gate: registers ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status failure as a distinct threat to survival-floor delivery. |
+| P-068 | T-031 | **ACTIVE** | Critical | Last-Resort Unenrolled Access Gate: registers the risk that a person who cannot enroll, hold a wallet, or use digital credentials still cannot reach the survival floor; requires no-credential, trusted-intermediary, analog-reconciliation, abuse/diversion, and dignity-interview tests before universality claims. |
 
 ---
 
@@ -748,7 +749,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | Insider retaliation / reporter protection | P-053 | **ACTIVE** | ANNEX_AW · Article VII |
 | Identity disclosure as safety vector | P-054 | **ACTIVE** | ANNEX_AX · Article II |
 | Delivery gap between guarantee and operation | P-055 | **ACTIVE** | ANNEX_AY · Article IV |
-| T-002 / INV-001 | P-056 | ACTIVE | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
+| INV-001 support (identity-related; active identity controls remain P-003/P-016) | P-056 | PROPOSED | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
 | ACL-011 / ACL-010 | P-057 | **PROPOSED** | Pilot site selection criteria |
 | T-016 / constitutional void | P-058 | ACTIVE | Jurisdiction Interface Clause |
 | ACL-010 / T-027 | P-059 | ACTIVE | Vulnerable_Population_Consent_Protocol.md |
@@ -1483,3 +1484,18 @@ The corpus already had controls for implementation drift, tamper evidence, oracl
 - **Claim discipline:** Implementation Drift Audit Package remains the evidence home for unauthorized drift and tamper evidence. The cyber package is the evidence home for whether people can still receive food, water, shelter, medicine, transit, and urgent care when digital systems, keys, providers, or networks fail.
 - **New risks introduced:** Offline fallback can become fraud-prone or privacy-invasive; emergency key rotation can concentrate authority; manual provider settlement can become a hidden bailout or coercive choke point. These are residual risks and must be measured in the evidence packet.
 - **Residual risk:** This patch registers the risk and defines the test path. It does not prove cyber resilience, key custody, recovery time, offline continuity, or supply-chain safety.
+
+---
+
+### P-068 — Last-Resort Unenrolled Access Gate
+
+**Threat addressed:** T-031
+**Status:** ACTIVE | **Priority:** Critical
+
+The corpus already names the principle: identity is never a condition of survival access. It also contains the pieces: P-054 safety-shielded emergency access, P-055 delivery sufficiency, P-056 Tier 0 design, Annex AK §AK8, and Annex AZ's pseudonymous token constraints. The missed question is narrower and more concrete: can a person who never enrolls, never holds a credential, never keeps a wallet, and cannot safely become legible still receive the floor?
+
+- **Introduced design:** T-031 registers last-resort unenrolled access as a distinct critical threat rather than hiding it inside ordinary identity recovery. The Last-Resort Unenrolled Access Evidence Test Package requires access-point mapping, no-credential intake drills, trusted-intermediary drills, analog reconciliation privacy tests, abuse/diversion drills, and dignity interviews.
+- **Claim discipline:** P-056 remains the designed Tier 0 architecture. P-068 is the active evidence gate. No document should claim practical universality of Essential Access until this gate has evidence that the last-resort path works for people outside identity and digital infrastructure.
+- **Continuity standard:** The path must work without a phone, app, QR code, card, stable address, biometric, persistent account, future enrollment promise, or identity-disclosing intermediary. Abandonment counts as exclusion.
+- **New risks introduced:** An analog last-resort route can be exploited by organized brokers, captured by intermediaries, gamed by providers, or converted into a shadow registry through reconciliation records. The evidence package requires aggregate controls and privacy review precisely because individual surveillance would defeat the point.
+- **Residual risk:** This patch does not prove the floor is reachable. It makes the proof requirement explicit and blocks universality claims until no-credential and trusted-intermediary routes pass under dignity review.

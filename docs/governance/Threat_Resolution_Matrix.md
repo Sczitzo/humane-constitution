@@ -26,7 +26,7 @@ Until those tests are met, the honest status is **designed**, **active-unproven*
 
 | Order | Workstream | Threats | Why this order |
 |---|---|---|---|
-| 1 | Identity and measurement truth | T-002, T-006, T-012, T-015, T-018, T-019, T-020, T-021, T-024 | If identity or capacity measurement fails, the rest of the system can be gamed while appearing compliant. |
+| 1 | Identity and measurement truth | T-002, T-006, T-012, T-015, T-018, T-019, T-020, T-021, T-024, T-031 | If identity, last-resort access, or capacity measurement fails, the rest of the system can be gamed while appearing compliant. |
 | 2 | Economic boundary integrity | T-001, T-004, T-007, T-025 | If civic instruments become money, status, rent, or legal wrappers, the core separation collapses. |
 | 3 | Institutional anti-capture | T-005, T-008, T-009, T-013, T-014, T-016, T-017 | If the repair machinery captures itself, the system cannot adapt honestly. |
 | 4 | Legitimacy, narrative, transition, and scale | T-010/T-011, T-022, T-023, T-026, T-027 | If consent, explanation, pilot validity, exit, or subsidiarity fails, the constitution becomes coercive in practice. |
@@ -74,6 +74,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 | T-028 Essential-Sector Refusal Leverage | Survival-Trade Bind plus Power-Wealth Convergence through private survival chokepoints. |
 | T-029 Fiscal Sustainability and Currency Debasement | Survival-Trade Bind plus control-plane failure; public promises become coercive or inflationary when not costed against real resources. |
 | T-030 Cyber Resilience and Availability Failure | Control-plane failure plus Survival-Trade Bind when digital rails, keys, providers, or networks make the floor unreachable. |
+| T-031 Last-Resort Unenrolled Access Failure | Survival-Trade Bind plus identity/delivery control-plane failure when the floor is reachable only by the already-legible. |
 
 ---
 
@@ -322,6 +323,17 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Proof needed:** critical-service inventory, ransomware continuity drill, emergency key-revocation and rotation test, no-network redemption test, regional failover drill, provider-settlement continuity test, vulnerable-cohort continuity report, public-status publication fallback, and supply-chain implant red team.
 - **Residual risk:** offline fallback may create fraud or privacy exposure; emergency key rotation may concentrate authority; manual settlement may create bailout pressure. P-067 is a test gate, not proof of resilience.
 - **Resolution update:** P-067 registers cyber availability as T-030 so it is no longer hidden under oracle failure, drift/tamper, or identity recovery.
+
+### T-031 - Last-Resort Unenrolled Access Failure
+
+- **Current control:** [P-068](./Patch_Log.md), [Last-Resort Unenrolled Access Evidence Test Package](./Last_Resort_Unenrolled_Access_Evidence_Test_Package.md), [Annex AK](../annexes/ANNEX_AK.md) §AK8, [Annex AZ](../annexes/ANNEX_AZ.md), and [Annex AY](../annexes/ANNEX_AY.md)
+- **Resolution path:** distinguish ordinary identity recovery from a true last-resort floor. A person who cannot enroll, hold a wallet, use digital credentials, disclose identity, or navigate ordinary administration must still have a documented route to the CSM through no-credential intake, trusted intermediaries, physical access points, mobile delivery, or other analog paths.
+- **Corruption route to assume:** staff and providers will demand identity for convenience; intermediaries may expose or favor recipients; brokers may exploit open access; reconciliation records may become a shadow registry; officials may count a written policy as access even when the person cannot reach it.
+- **External evidence:** NIST SP 800-63-4, World Bank ID4D, UNHCR registration guidance, and Sphere standards anchor the reality that identity, service access, and humanitarian minimums fail when practical barriers are ignored.
+- **Proof needed:** Last-Resort Unenrolled Access Evidence Test Package; no-credential intake drill, trusted-intermediary drill, analog reconciliation privacy audit, abuse/diversion drill, provider-settlement continuity check, abandonment accounting, and dignity interviews.
+- **Abuse cases:** ACL-016 — Last-Resort Floor Paper Compliance; related ACL-015 — Tier 0 Token De-Anonymization.
+- **Residual risk:** the last-resort floor must tolerate some low-level leakage to avoid excluding the person in front of it. Aggregate controls may miss organized abuse; stronger individual controls can become surveillance. The system may not claim practical universality until this gate passes.
+- **Resolution update:** P-068 makes the last-resort unenrolled case a distinct evidence gate instead of burying it under T-002 identity recovery or T-030 outage continuity.
 
 ---
 

@@ -59,6 +59,7 @@ Examples: identity gates, oracle capture, FAP capture, drift-chain bypass, emerg
 | T-028 Essential-Sector Refusal Leverage | Survival-Trade Bind | Power-Wealth Convergence | Essential-sector refusal drill, CASP activation test, compliance-masked refusal red team. |
 | T-029 Fiscal Sustainability and Currency Debasement | Power-Wealth Convergence | Survival-Trade Bind | Commons Return evidence package, fiscal adequacy model, incidence review, source-base valuation red team. |
 | T-030 Cyber Resilience and Availability Failure | Control-plane failure | Survival-Trade Bind | Cyber Resilience and Availability Evidence Test Package. |
+| T-031 Last-Resort Unenrolled Access Failure | Survival-Trade Bind | Identity/delivery control-plane failure | Last-Resort Unenrolled Access Evidence Test Package. |
 
 ---
 

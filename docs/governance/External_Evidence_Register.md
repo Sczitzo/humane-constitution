@@ -92,6 +92,7 @@ The project still needs stronger outside evidence for:
 - essential-sector conglomerate refusal, litigation, lobbying, and retaliation scenarios, especially drill results using the Essential-Sector Refusal Test Package rather than only external analogies,
 - cyber availability and offline continuity under ransomware, breached keys, regional outage, provider settlement failure, and supply-chain compromise,
 - identity recovery for undocumented, displaced, disabled, elderly, and digitally fragile people,
+- last-resort no-credential survival access for people who cannot enroll, hold a wallet, keep a digital credential, safely disclose identity, or use ordinary digital interfaces,
 - transition legitimacy and consent thresholds, including real public notice, deliberation, consent-event, exit-rehearsal, and independent-review artifacts,
 - practical anti-centralization audits for subsidiarity drift.
 

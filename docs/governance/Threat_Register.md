@@ -1,6 +1,6 @@
 # Threat Register
 
-**Running adversarial control layer aligned to the Humane Constitution · Current through T-030**
+**Running adversarial control layer aligned to the Humane Constitution · Current through T-031**
 
 ---
 
@@ -48,6 +48,7 @@ Read this table first if you do not work in law, policy, security, or systems de
 | T-028 | Essential-sector suppliers use food, energy, medicine, logistics, data, or grid control to demand concessions. |
 | T-029 | The survival floor and public rails are promised without a proven way to fund them without inflation, hidden debt, or burden shift. |
 | T-030 | A hostile cyber event, key compromise, outage, or software dependency makes the survival floor unreachable. |
+| T-031 | A person who can never enroll, hold a wallet, or keep a digital credential still cannot reach the survival floor. |
 
 ---
 
@@ -75,6 +76,7 @@ The single working list of unsolved threats. Read this first before scanning the
 | T-023 | Pilot External Validity Collapse | Med-High | 32 | P-019 / Annex AN defines the scale-up evidence gate; pilot evidence and challenge infrastructure still need execution. |
 | T-025 | Investment and Capital-Deployment Shelter Capture | High | 48 | P-023 / Annex AR defines the zero-exemption contract-commitment architecture; founding parameters and inspector pool still need activation. |
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | 72 | P-067 defines the test path, but ransomware, key-compromise, regional-outage, offline-continuity, supply-chain, and public-status drills have not run. |
+| T-031 | Last-Resort Unenrolled Access Failure | **Critical** | 72 | P-068 defines the test path, but no no-credential, trusted-intermediary, analog-reconciliation, or dignity-interview pilot has proven the floor reaches people outside identity and digital infrastructure. |
 
 ### Load-bearing sub-problems
 
@@ -131,6 +133,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from holding the Essential Access floor hostage, including through compliance-masked degradation. Primary structural control P-050 (CASP) ACTIVE; P-047/P-048 related. | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
 | T-029 | Fiscal Sustainability and Currency Debasement | **Critical** | **Active — unproven** | Prevent the survival floor, Universal Stake, public rails, and governance operations from depending on inflation, hidden debt, prohibited tax bases, or uncosted Commons Return assumptions. | 72 | P5 (Public Finance / Flow) + P8 | 2026-06-08 | Rising |
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | **Active — unproven** | Prevent ransomware, key compromise, regional outage, provider dependency, or supply-chain compromise from interrupting survival-floor access. | 72 | P6 (Implementation / Security) + P1 (Essential Access) | 2026-06-08 | Rising |
+| T-031 | Last-Resort Unenrolled Access Failure | **Critical** | **Active — unproven** | Prevent the survival floor from becoming reachable only by people who can enroll, hold a wallet, use digital credentials, or navigate ordinary administration. | 72 | P1 (Essential Access) + P3 (Identity) + Federated Ombuds | 2026-06-08 | Rising |
 
 *Status definitions: **Proposed** = a response has been suggested but not yet formally incorporated. **Designed** = the mechanism is specified in the corpus but not yet active. **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence. **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution. **Evidence-backed** = sufficient external evidence to support the claim. **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented. No threat currently meets the Resolved threshold.*
 
@@ -783,3 +786,21 @@ Highest risk score: T-011 (Narrative Surface, score 80). Hardest to detect: T-00
 - **Mitigation direction:** P-067 ACTIVE: the Cyber Resilience and Availability Evidence Test Package requires a critical-service inventory, ransomware continuity drill, key-compromise and emergency-rotation drill, offline/analog continuity drill, regional failover drill, and supply-chain/dashboard integrity drill. Implementation Drift Audit Package remains the tamper-evidence home; T-030 is the availability and recovery home.
 - **Residual risk:** Offline fallback can become fraud-prone or privacy-invasive. Emergency key rotation can concentrate authority. Manual provider settlement can create hidden bailout pressure. No field evidence yet proves recovery time, offline access, key custody under breach, or supply-chain resilience.
 - **Compound linkages:** T-030 × T-002 (identity outage or credential loss can exclude vulnerable persons). T-030 × T-006 (capacity dashboards may fail during the same shock they need to measure). T-030 × T-024 (Shared Storehouse oracle failure plus rail outage can break rationing continuity). T-030 × T-028 (essential-sector actors can exploit outage dependency). T-030 × T-022 (successor government can underfund resilience while preserving formal promises).
+
+### T-031 — Last-Resort Unenrolled Access Failure
+
+- **Patch:** [P-068 — Last-Resort Unenrolled Access Gate](../governance/Patch_Log.md) · [Last-Resort Unenrolled Access Evidence Test Package](./Last_Resort_Unenrolled_Access_Evidence_Test_Package.md) · Patch status: **ACTIVE**
+- **Layer:** Essential Access delivery / identity boundary / analog floor
+- **Severity:** Critical
+- **Status:** Active — unproven
+- **Risk Score:** 4×4×(6-2)=72
+- **Owner:** P1 (Essential Access) + P3 (Identity) + Federated Ombuds
+- **Last reviewed:** 2026-06-08
+- **Trend:** Rising
+- **Summary:** The constitution promises that identity is never a precondition for survival access, and the corpus specifies Tier 0, emergency access, delivery sufficiency, and pseudonymous tokens. The remaining failure is practical: a person who cannot enroll, cannot hold a credential or wallet, cannot safely disclose identity, cannot use digital interfaces, or cannot navigate ordinary administration may still have no working route to food, water, shelter, medicine, urgent care, transit, or emergency stabilization.
+- **Mechanism:** Staff require a phone, card, app, QR code, stable address, biometric, document, persistent token, future enrollment, or advocate-mediated proof as the practical condition of access. Physical access points are too far away, closed, language-inaccessible, disability-inaccessible, or unknown. Trusted intermediaries expose recipient identity or are selected by the protocol rather than trusted by the community. Analog reconciliation becomes a shadow registry. Fraud fear pushes the survival tier back into individual surveillance.
+- **Impact:** The floor becomes formally unconditional but operationally conditional. The people most likely to need the floor — undocumented, displaced, disabled, elderly, digitally fragile, trafficked, abused, homeless, incarcerated-transition, crisis, rural, or conscience-refusing persons — become least able to reach it. Public claims of universality become false.
+- **Detection:** D=2 — ordinary enrollment, recovery, delivery, or uptime metrics can look healthy while the never-enrolled are invisible. Detection requires no-credential access drills, trusted-intermediary route tests, analog reconciliation audits, abandonment counting, dignity interviews, and Delivery Sufficiency Register rows for Tier 0 access points.
+- **Mitigation direction:** P-068 ACTIVE: the Last-Resort Unenrolled Access Evidence Test Package requires access-point mapping, no-credential intake drills, trusted-intermediary drills, analog reconciliation privacy tests, abuse/diversion drills, and dignity interviews before any claim that Essential Access is universal in practice.
+- **Residual risk:** An open floor can be abused; a tightly verified floor can exclude. Aggregate anomaly controls may miss organized brokers, while stronger controls can become surveillance. Trusted intermediaries can be captured. Analog records can become a shadow registry. No field evidence yet proves the last-resort path works without identity coercion.
+- **Compound linkages:** T-031 × T-002 (identity hardening can still exclude people who never enroll). T-031 × T-030 (offline fallback can fail for people outside normal rails). T-031 × T-028 (providers may refuse no-account or no-settlement access). T-031 × T-007 (definitions of "access" can drift from reachable help into paperwork availability). T-031 × T-022 (hostile successors may preserve formal Tier 0 text while starving physical routes).

@@ -178,6 +178,18 @@ Each abuse case should name:
 
 ---
 
+### ACL-016 — Last-Resort Floor Paper Compliance
+
+- **Actor incentive:** administrators, providers, or intermediaries want the public benefit of an unconditional survival-floor claim without the cost, risk, mess, or accountability of serving people outside normal identity and digital rails.
+- **Attack path:** publish a Tier 0 or delivery-sufficiency policy but require a phone, app, QR code, account, card, stable address, biometric, future enrollment promise, or identity-disclosing intermediary in practice; count written availability as access; omit abandonment; route no-credential people to offices that are closed, distant, language-inaccessible, disability-inaccessible, or unknown to the community.
+- **Collapse state:** Survival-Trade Bind plus identity/delivery control-plane failure.
+- **Current controls:** T-031, P-068, Annex AK §AK8, Annex AZ, Annex AY, Last-Resort Unenrolled Access Evidence Test Package.
+- **Missing test:** no-credential access drill, trusted-intermediary route test, analog reconciliation privacy audit, abuse/diversion drill, abandonment accounting, and dignity interviews.
+- **Failure criterion:** any person outside identity and digital infrastructure cannot obtain the CSM floor, or the route works only by hidden identity disclosure, persistent tracking, staff discretion, or future enrollment pressure.
+- **False reassurance:** "The policy says no identity is required."
+
+---
+
 ## Service Record / Civic Tools Misuse
 
 ### ACL-SR-01 — Employer Rank Signal
