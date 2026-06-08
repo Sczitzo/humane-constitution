@@ -39,6 +39,7 @@ Every pilot needs:
 | 9 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
 | 10 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
 | 11 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, consent evidence gate, civil-society review gate, and claim-status gates work under hostile pressure? | Drift, founding, consent, reviewer-independence, and claim-status failures are visible before activation or scale-up. |
+| 12 | Cyber availability and offline continuity | Can Essential Access remain reachable during ransomware, key compromise, regional outage, provider-settlement failure, or no-network/no-device conditions? | Survival-floor access continues within published tolerances during cyber and offline-continuity drills. |
 
 ![Pilot Phase Sequence](/images/V-008.png)
 
@@ -47,7 +48,7 @@ Every pilot needs:
 | Macro risk | Primary pilot track | Secondary checks |
 |---|---|---|
 | Identity without surveillance or exclusion | Phase 2 | Phase 3 last-resort access; Phase 5 appeals; Phase 10 governance capture |
-| Floor of last resort for the unenrolled | Phase 3 | Phase 5 delivery; Phase 11 implementation drift; Annex AY Delivery Sufficiency Register |
+| Floor of last resort for the unenrolled | Phase 3 | Phase 5 delivery; Phase 11 implementation drift; Phase 12 offline continuity; Annex AY Delivery Sufficiency Register |
 | Enforcement-observation paradox | Phase 10 governance red-team | Monitoring Repurposing Evidence Test Package; Capture Dashboard Specification; Annex C purpose-limitation recourse |
 | Real-capacity measurement | Phase 4 | Phase 5 delivery; Phase 10 oracle capture |
 | Contribution without coercive hierarchy | Phase 1 comprehension; Phase 10 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
@@ -56,6 +57,7 @@ Every pilot needs:
 | Founding legitimacy and consent | Phase 11 | Founding Legitimacy Dossier artifact-status register; Founding Consent and Civil-Society Review Evidence Test Package; consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 10 | Authority tracing; review-body deadlock tests |
 | Implementation drift and parameter calibration | Phase 11 | Implementation Drift Audit Package; Parameter Calibration Register; Capture Dashboard Specification |
+| Cyber availability and offline continuity | Phase 12 | Cyber Resilience and Availability Evidence Test Package; T-030; Implementation Drift Audit Package; Capture Dashboard Specification |
 
 ## Collapse-state-to-pilot crosswalk
 
@@ -64,7 +66,7 @@ Every pilot needs:
 | Survival-Trade Bind | Phase 2 identity and recovery; Phase 3 last-resort unenrolled access; Phase 4 capacity measurement; Phase 5 Essential Access delivery | Phase 6 shadow-credit growth; Phase 10 proxy-market and emergency-power tests |
 | Power-Wealth Convergence | Phase 6 Commons Return, Universal Stake, and Flow; Phase 7 public banking rails; Phase 8 anti-rent and ownership review; Phase 9 conglomerate transition; Phase 10 governance red-team | Public procurement integrity, beneficial-ownership review, fiscal/debasement modeling, FAP capture testing, and sector concentration dashboards |
 | Static-Advantage Loop | Phase 1 public understanding; Phase 8 anti-rent and ownership review; Phase 10 governance red-team | Service Record Misuse Evidence Test Package, premium-access drift, Commons Return burden by class, founding legitimacy, and subsidiarity drift |
-| Control-plane failure | Phase 10 governance red-team; Phase 11 implementation drift and founding legitimacy | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier |
+| Control-plane failure | Phase 10 governance red-team; Phase 11 implementation drift and founding legitimacy; Phase 12 cyber availability and offline continuity | Evidence Ladder, Abuse Case Library, Capture Dashboard Specification, Implementation Drift Audit Package, Founding Legitimacy Dossier, Cyber Resilience and Availability Evidence Test Package |
 
 ## Phase 0 — Founding Cascade Gate
 
@@ -81,7 +83,7 @@ Every pilot needs:
 | Exit rehearsal | Phase 5 (Essential Access delivery pilot) — Essential Access pilot must demonstrate exit is available before people depend on the floor |
 | Founder sunset | Service Record pilot — civic participation pilot must not run under indefinite founding-exception authority |
 | Independent civil-society review | Phase 6 (Commons Return, Universal Stake, and Flow simulation) — monetary and fiscal architecture requires qualified external legitimacy review before real-money simulation |
-| Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–10 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 11 and all scale-up promotions require a confirmed post-activation audit finding. |
+| Post-activation audit | Scale-up decisions only — the post-activation audit (conducted within 90 days after P-013 goes ACTIVE) gates all scale-up decisions but does not gate pilot phase initiation. Pilot phases 1–10 may begin if their upstream founding artifact conditions show PRODUCED status. Phase 11, Phase 12, and all scale-up promotions require a confirmed post-activation audit finding. |
 
 **Cascade rule:** A pilot phase may not begin unless all of its upstream founding gate conditions show PRODUCED status. Beginning a pilot phase before its founding gate conditions are met is itself a T-017 (Bootstrap Problem) and T-033 (founding prerequisite definition failure) recurrence event and must be logged as such in the Threat Register.
 
@@ -177,7 +179,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Scale rule:** No Essential Access pilot should depend on a live identity stack until this phase is independently reviewed.
 
-## Phase 3 - Essential capacity measurement
+## Phase 4 - Essential capacity measurement
 
 **Hypothesis:** A local or regional pilot can measure food, water, shelter, care, medicines, transit, and energy capacity accurately enough to inform issuance and shortage decisions.
 
@@ -187,7 +189,9 @@ The following additional gate conditions apply to any pilot that involves real-p
 - update latency
 - oracle disagreement rate
 - standards-body concentration
+- directional bias across formally independent nodes
 - direct physical sampling coverage
+- small-population uncertainty and pooled/regional oracle support for Cohort 1 if population is below 500
 - confidence-band clarity for public readers
 - cost of maintaining independent methodology classes
 
@@ -195,13 +199,15 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 - Measurements are too slow for live scarcity decisions.
 - Oracle nodes are formally separate but methodologically correlated.
+- Oracle nodes stay below pairwise-correlation limits while producing same-direction overstatement or understatement.
 - Confidence bands are hidden or too technical for public accountability.
 - Operators can shop for favorable measurements.
 - Direct physical sampling is too costly or thin to anchor the categories it claims to verify.
+- A small pilot population is treated as if it proves large-scale oracle independence.
 
 **Scale rule:** Shared Storehouse and Essential Access issuance cannot become operationally credible until capacity measurement is credible.
 
-## Phase 4 - Essential Access delivery
+## Phase 5 - Essential Access delivery
 
 **Hypothesis:** A protected essentials basket can be delivered without becoming discretionary welfare, patronage, or surveillance.
 
@@ -226,7 +232,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Scale rule:** Essential Access cannot be called viable until delivery and appeal systems both work under stress.
 
-## Phase 5 - Commons Return, Universal Stake, and Flow simulation
+## Phase 6 - Commons Return, Universal Stake, and Flow simulation
 
 **Hypothesis:** Flow can support exchange while Commons Return and Universal Stake fund shared public duties without inflation, hidden debt, ordinary-life burden, or political dividend capture.
 
@@ -265,7 +271,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 
 **Scale rule:** Commons Return, Universal Stake, and Flow fiscal claims remain simulation-only until fiscal adequacy, burden incidence, debasement tolerance, and remaining-tax disclosure are public and independently reviewed.
 
-## Phase 6 - Public banking rails
+## Phase 7 - Public banking rails
 
 **Hypothesis:** Basic banking can be provided as public infrastructure while private or cooperative providers compete on service quality, not predatory extraction.
 
@@ -289,7 +295,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - Offline failure creates exclusion during outages.
 - Public banking becomes formally universal but practically second-class for low-wealth users.
 
-## Phase 7 - Anti-rent and ownership review
+## Phase 8 - Anti-rent and ownership review
 
 **Hypothesis:** Dynastic extraction through trusts, beneficial ownership, land control, property control, or business control can be constrained without destroying productive stewardship.
 
@@ -311,7 +317,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - Anti-rent rules punish small stewards while missing large actors.
 - Mission-lock or stewardship language becomes a wrapper for private dynastic control.
 
-## Phase 8 - Essential-sector conglomerate transition
+## Phase 9 - Essential-sector conglomerate transition
 
 **Hypothesis:** Essential-sector conglomerates can keep doing business under protocol rules if paid for verified production, reliability, and transition work, but cannot retain survival leverage.
 
@@ -346,9 +352,9 @@ The following additional gate conditions apply to any pilot that involves real-p
 - fossil transition contracts become disguised bailouts without measured capacity, remediation, or resilience output;
 - foreign affiliates can bypass strategic floors, Flow conversion, or dependency thresholds.
 
-**Bridge rule:** Phase 8 cannot be marked partly tested until the Essential-Sector Refusal Test Package leaves a public evidence packet for at least one fuel/energy category, one CSM-designated medicine category, and one grid/logistics category, and the Capture Dashboard threshold table reports compliance-masked refusal exposure for the same drills. A paper reserve, dormant legal authority, or bidder that shares beneficial owners, data systems, critical software, standards approval, PBM control, lenders, insurers, workforce pipeline, or emergency subcontractors with the refusing actor does not count as fallback capacity.
+**Bridge rule:** Phase 9 cannot be marked partly tested until the Essential-Sector Refusal Test Package leaves a public evidence packet for at least one fuel/energy category, one CSM-designated medicine category, and one grid/logistics category, and the Capture Dashboard threshold table reports compliance-masked refusal exposure for the same drills. A paper reserve, dormant legal authority, or bidder that shares beneficial owners, data systems, critical software, standards approval, PBM control, lenders, insurers, workforce pipeline, or emergency subcontractors with the refusing actor does not count as fallback capacity.
 
-## Phase 9 - Governance red-team
+## Phase 10 - Governance red-team
 
 **Hypothesis:** The constitutional architecture can expose and respond to capture attempts before they silently alter the system.
 
@@ -390,7 +396,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - A proposed patch is treated as proof before adversarial testing or activation.
 - Monitoring data collected for protection can be reused to surveil, rank, punish, exclude, pressure, identify, or threaten people.
 
-## Phase 10 - Implementation drift and founding legitimacy
+## Phase 11 - Implementation drift and founding legitimacy
 
 **Hypothesis:** The project can distinguish technical compliance from legitimate, evidence-backed operation.
 
@@ -423,9 +429,9 @@ The following additional gate conditions apply to any pilot that involves real-p
 - public claims move up the Evidence Ladder without the required proof;
 - dashboards publish personal ranking signals or are gamed while appearing healthy.
 
-**Bridge rule:** Phase 10 cannot pass with only technical integrity. The implementation drift tests, founding artifact-status register, claim-status review, and capture dashboard baseline must all be current together. A clean hash, clean build, or complete document checklist does not prove legitimate activation.
+**Bridge rule:** Phase 11 cannot pass with only technical integrity. The implementation drift tests, founding artifact-status register, claim-status review, and capture dashboard baseline must all be current together. A clean hash, clean build, or complete document checklist does not prove legitimate activation.
 
-## Phase 11 - Cyber availability and offline continuity
+## Phase 12 - Cyber availability and offline continuity
 
 **Hypothesis:** Essential Access can remain reachable when ordinary digital rails, keys, providers, or networks fail.
 
@@ -464,7 +470,7 @@ The following additional gate conditions apply to any pilot that involves real-p
 - manual settlement causes provider refusal or hidden concession pressure;
 - offline fallback becomes a permanent personal-surveillance file.
 
-**Bridge rule:** Phase 11 cannot be marked partly tested by tabletop review alone. At least one ransomware drill, one key-compromise drill, one no-network redemption drill, and one regional failover drill must produce public evidence packets with vulnerable-cohort outcomes.
+**Bridge rule:** Phase 12 cannot be marked partly tested by tabletop review alone. At least one ransomware drill, one key-compromise drill, one no-network redemption drill, and one regional failover drill must produce public evidence packets with vulnerable-cohort outcomes.
 
 ## Minimum evidence before scale-up
 

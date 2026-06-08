@@ -35,7 +35,7 @@ These are not ideology. They are failure modes. The question this project tries 
 
 The Humane Constitution is a public working draft of constitutional design. It proposes separating three things that most societies allow to merge: basic survival needs, market exchange, and public power. The claim is that when all three depend on the same instrument — money — wealth becomes power over other people's safety, and that power compounds quietly until it's structural.
 
-The design uses five distinct tools with explicit walls between them: ordinary money for markets and wages; a separate floor for basic needs that cannot be bought, sold, or conditioned on compliance; a bounded voice mechanism for civic priorities; a service record for rotating public roles; and a temporary rationing instrument for verified shortages only. The walls between these tools are the system. Without the walls, it's just another arrangement of familiar pieces.
+The design uses five distinct tools with explicit walls between them: ordinary money for markets and wages; a separate floor for basic needs that cannot be bought, sold, or conditioned on compliance; a bounded voice mechanism for civic priorities; a service record for rotating public roles; and a temporary rationing instrument for verified shortages, including bounded oracle-failure fallback during active rationing. The walls between these tools are the system. Without the walls, it's just another arrangement of familiar pieces.
 
 This is not a finished solution. There is no pilot evidence yet. The founding coalition does not exist. The identity and recovery system is designed but unproven. This is an honest design attempt with named failure modes, public evidence gaps, and a stated sequence for what must be tested before any scale-up claim would be credible.
 
@@ -45,7 +45,7 @@ This is not a finished solution. There is no pilot evidence yet. The founding co
 
 A manifesto tells you what should be true. This project tries to say what it cannot yet prove.
 
-The Claims & Evidence Register lists every load-bearing assertion with its current evidence status — designed, plausible, or demonstrated. The Pilot Evidence Roadmap names what must be tested before scale-up gates open. The Threat Register names known attack paths, including capture routes and retaliation scenarios. The Abuse Case Library documents bad-actor patterns used to pressure-test patches before they're accepted. The Hardening Queue is public — including what was found in red-team sessions and what remains open.
+The Claims & Evidence Register lists every load-bearing assertion with its current evidence status — moral commitment, designed mechanism, active-unproven control, partly tested, needs evidence, unresolved prerequisite, or evidence-backed. The Pilot Evidence Roadmap names what must be tested before scale-up gates open. The Threat Register names known attack paths, including capture routes and retaliation scenarios. The Abuse Case Library documents bad-actor patterns used to pressure-test patches before they're accepted. The Hardening Queue is public — including what was found in red-team sessions and what remains open.
 
 The design also pre-commits to its failure modes before they occur: oracle disputes will happen; PCRP false triggers will happen; enforcement errors will happen. The commitment is that every failure in those categories is published publicly with a timeline and a correction path. Silence is the violation, not the failure.
 
@@ -210,13 +210,13 @@ It does this with five tools:
 | **Essential Access** | Survival floor and baseline essentials: food, water, shelter, healthcare, essential medicines, and basic transit | Become cash, collateral, or a status marker |
 | **Voice** | Bounded agenda-setting and budget prioritization | Buy rights, goods, or survival access |
 | **Service Record** | Eligibility for rotating public-service roles and stewardship history | Measure human worth or accumulate permanent rank |
-| **Shared Storehouse** | Emergency rationing during verified shortage | Become permanent or a hidden market |
+| **Shared Storehouse** | Emergency rationing during verified shortage, plus bounded fallback if the oracle fails while rationing is active | Become permanent or a hidden market |
 
 The walls between these tools are the system.
 
 Those walls are meant to prevent three collapse states: survival becoming dependent on trade, wealth becoming public power, and temporary advantage becoming permanent dominance. See the [Architecture Source Map](./docs/governance/Architecture_Source_Map.md) for the source-backed version of that framing.
 
-Essential Access protects the survival floor. Voice shapes bounded civic priorities. Service Record governs readiness for rotating public roles. Shared Storehouse appears only during verified shortage.
+Essential Access protects the survival floor. Voice shapes bounded civic priorities. Service Record governs readiness for rotating public roles. Shared Storehouse appears only during verified shortage or a bounded oracle-failure fallback while rationing is already active.
 
 Flow is public money rather than privately created bank money. It is primarily digital, secured with cryptographic methods, and paired with physical cash or equivalent offline instruments for resilience and privacy.
 

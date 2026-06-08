@@ -6,7 +6,7 @@
 > | **Purpose** | Defines what counts as evidence for capacity measurement, how scarcity declarations must be justified, and what the system must do by default when oracle data is uncertain, disputed, or fraudulent — so measurement failure defaults toward continuity rather than silent deprivation. |
 > | **Who it protects** | Everyone whose Essential Access, housing, or survival continuity depends on honest, challengeable capacity data — especially during scarcity events when measurement failure most endangers vulnerable people. |
 > | **Failure risk** | Confident measurement error; single-source oracle manipulation; "verified disruption" claims used to tighten access without adequate evidence; emergency scarcity becoming normalized rather than prompting root-cause remediation. |
-> | **Evidence status** | Designed |
+> | **Evidence status** | Active — unproven |
 > | **Linked risks** | TR-03 oracle manipulation; P-006, P-017, P-022; Annex U §U4; Annex AQ oracle-failure fallback; Annex AL measurement independence. |
 
 > **Provenance:** Foundational constitutional annex · Governs oracle evidence, physical-reality measurement, and measurement-failure defaults later hardened by P-006, P-017, and P-022 · Status: **ACTIVE**

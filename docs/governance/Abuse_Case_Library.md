@@ -138,8 +138,8 @@ Each abuse case should name:
 - **Attack path:** shared datasets, common models, same standards bodies, same funders, same professional culture.
 - **Collapse state:** Power-Wealth Convergence.
 - **Current controls:** Annex AL, FC-030 through FC-033.
-- **Missing test:** methodology-class independence audit.
-- **Failure criterion:** formal independence masks shared error.
+- **Missing test:** methodology-class independence audit plus directional-bias review.
+- **Failure criterion:** formal independence masks shared error, or multiple nodes pass pairwise-correlation checks while consistently over- or under-reporting in the same direction.
 - **False reassurance:** "There are multiple sources."
 
 ### ACL-013 - Essential-Sector Refusal Leverage
@@ -159,9 +159,9 @@ Each abuse case should name:
 - **Actor incentive:** shift essential-category capacity measurements to trigger or suppress Essential Access issuance, activate or block Shared Storehouse, or affect demurrage rates tied to scarcity indicators — without requiring full oracle-methodology capture (ACL-012).
 - **Attack path:** tamper with physical sensors feeding oracle nodes (e.g., spoofed warehouse inventory data, manipulated cold-chain readings, fraudulent physical-sampling reports); inject adversarial inputs into the data pipeline between sensing infrastructure and oracle processing; submit falsified delivery receipts or capacity certifications that pass internal consistency checks but misrepresent ground truth; coordinate submission timing so adversarial inputs are dominant during the oracle deliberation window.
 - **Collapse state:** Survival-Trade Bind (if issuance is suppressed below CSM floor during real scarcity), False-Security Bind (if issuance continues above real capacity, creating a paper floor with no physical delivery).
-- **Current controls:** INV-005 (Reality Anchoring — requires at least one Tier-3 physical sampling oracle node); Annex AL oracle independence standards; FC-032 (pairwise correlation max 0.30) detects shared error but not adversarial injection specifically designed to maintain apparent diversity.
+- **Current controls:** INV-005 (Reality Anchoring — requires at least one Tier-3 physical sampling oracle node); Annex AL oracle independence standards; FC-032 (pairwise correlation max 0.30) plus directional-bias review detect shared error and same-direction drift, but do not by themselves prove inspector chain-of-custody integrity.
 - **Missing control:** No abuse case or hardening item specifically addresses adversarial data injection as distinct from methodological capture. INV-005's Tier-3 physical sampling requirement provides partial protection — a direct physical-sampling node is harder to poison remotely — but physical sampling itself can be corrupted through compromised inspectors or falsified chain-of-custody documentation.
-- **Missing test:** adversarial data-injection simulation against Phase 3 pilot oracle infrastructure; test should include: (a) spoofed sensor network for one essential category; (b) falsified physical-sampling report from an inspector with legitimate credentials; (c) coordinated submission timing attack during an active Shared Storehouse period. Failure criterion: poisoned data shifts the oracle's capacity reading by more than the FC-001/002/003 measurement error bounds without being detected within one deliberation cycle.
+- **Missing test:** adversarial data-injection simulation against Phase 4 pilot oracle infrastructure; test should include: (a) spoofed sensor network for one essential category; (b) falsified physical-sampling report from an inspector with legitimate credentials; (c) coordinated submission timing attack during an active Shared Storehouse period. Failure criterion: poisoned data shifts the oracle's capacity reading by more than the FC-001/002/003 measurement error bounds without being detected within one deliberation cycle.
 - **Promotion path to Threat Register:** if the Phase 3 simulation shows a realistic attack path with plausible actors and undetected impact exceeding the measurement error bounds, promote to the Threat Register as a new T-entry (next available ID) and commission a patch targeting inspector chain-of-custody controls and adversarial-input detection at the oracle intake layer.
 
 ---

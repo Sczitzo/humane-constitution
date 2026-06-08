@@ -11,8 +11,8 @@
 
 > **Provenance:** Implements [P-017 — Oracle Epistemological and Algorithmic Independence] · Addresses T-020 and T-021 · Status: **ACTIVE**
 
-**Pre-launch blocking gate — required before P-017 is operative · Governed as P-004 protected specification**
-**Status: ACTIVE — founding commitments resolved (FC-030, FC-031, FC-032, FC-033, FC-090, FC-091)**
+**Pre-launch blocking gate — required before P-017 can support operational activation or stronger evidence claims · Governed as P-004 protected specification**
+**Status: ACTIVE as incorporated design; Active — unproven as evidence status — founding commitments resolved (FC-030, FC-031, FC-032, FC-033, FC-090, FC-091)**
 **Numerical values derive from `/founding/commitments.md`. Changes to commitments require Tier 1 (H-3) amendment per Proposal 1.**
 
 ---
@@ -232,8 +232,9 @@ For each oracle node pair within the cohort:
 
 1. Compute Pearson correlation on historical category readings over the longest available overlapping period, with a minimum of 4 consecutive quarters.
 2. Use the error series (each node's reading minus the ensemble median, or minus an independent ground-truth sample if available) rather than raw readings, to capture correlation in measurement error rather than correlation in the underlying phenomenon.
-3. If historical data is unavailable (new cohort or new node), run a parallel observation period of at least 1 full quarter in which all nodes are active and producing readings before granting activation authority. Activation is suspended during this period.
-4. Document the full correlation matrix — all pairwise coefficients — in the accreditation record. The matrix must be recomputed at each quarterly audit.
+3. Compute directional-bias alignment for the same period: for each node, classify each material error as overstatement, understatement, or neutral against the ensemble median or independent ground-truth sample. A material error is one that exceeds the published confidence band or changes an activation/watch/scarcity decision.
+4. If historical data is unavailable (new cohort or new node), run a parallel observation period of at least 1 full quarter in which all nodes are active and producing readings before granting activation authority. Activation is suspended during this period.
+5. Document the full correlation matrix and directional-bias table in the accreditation record. The matrix and bias table must be recomputed at each quarterly audit.
 
 ### Failure Criterion
 
@@ -244,6 +245,21 @@ Any node pair with Pearson correlation > FC-032 (0.30) must be treated as a sing
 - Resolution options: (a) replace one node in the pair with a genuinely independent node; (b) demonstrate in two consecutive quarterly measurements that the correlation has fallen below 0.30.
 
 Pairs above threshold but not yet resolved must remain flagged in the public accreditation record.
+
+### Directional-Bias Failure Criterion
+
+FC-032 detects co-movement in error. It does not by itself detect nodes that remain statistically uncorrelated while all tending to overstate or understate capacity in the same direction. Directional bias is therefore a separate accreditation failure.
+
+A cohort fails directional-bias review if, in any category and measurement period:
+
+- three or more nodes overstate capacity beyond the published confidence band in the same direction;
+- three or more nodes understate capacity beyond the published confidence band in the same direction;
+- two or more nodes repeatedly produce same-direction material error across two consecutive quarters; or
+- the adversarial oracle seat documents a plausible shared incentive, vendor dependency, standards dependency, or data-pipeline dependency that explains same-direction bias even when Pearson correlation remains ≤ FC-032.
+
+**Effect of failure:** Same-direction biased nodes are treated as structurally dependent for the affected category until the bias is explained and corrected. If dependency treatment drops effective N below FC-030, Shared Storehouse activation authority is suspended for that category. If overstatement bias would permit issuance above verified physical capacity, the lower physical-sampling or conservative estimate governs immediately.
+
+**Adversarial-seat duty:** Before any Shared Storehouse activation vote, the adversarial oracle seat must certify that it reviewed both the pairwise correlation matrix and the directional-bias table. A vote without this certification is procedurally invalid.
 
 ### Suspension Declaration
 
@@ -265,7 +281,7 @@ When effective N drops below FC-030 (5) under the Failure Criterion above, the f
 
 ### Adversarial Seat Role
 
-The adversarial oracle seat (FC-033) must receive the full correlation matrix before each Shared Storehouse activation vote. The adversarial seat may veto activation if the matrix shows any pair above threshold, even if no other governance process has flagged the pair.
+The adversarial oracle seat (FC-033) must receive the full correlation matrix and directional-bias table before each Shared Storehouse activation vote. The adversarial seat may veto activation if the matrix shows any pair above threshold, if the directional-bias table shows a same-direction failure, or if the seat documents a plausible same-direction bias pathway not captured by the numeric tests.
 
 A veto under this section triggers a mandatory 14-day architecture review conducted by a panel independent of the RCS accreditation body. The review panel must assess: (a) whether the correlation reflects structural dependency or coincidental co-movement, (b) what architectural change would resolve the dependency, and (c) whether activation can proceed with reduced effective N pending resolution. The panel's findings are published in the public accreditation record. The adversarial seat may not be overridden on correlation grounds without the architecture review completing and documenting a specific remediation plan.
 
@@ -364,7 +380,7 @@ The divergence report is the most operationally significant output. It surfaces 
 | Annex AP §AP2 (PCRP co-certification) | Annex AP §AP2 references Annex AL for the epistemological independence standard that oracles must meet before PCRP co-certification proceeds; AL defines what "independent" means in that context |
 | Annex AR (Contract-Commitment Architecture) | P-023.4 inspector pool uses "P-017 oracle-independence standards" — those standards for epistemological independence are defined here |
 | T-007 (Definition Drift) | The P-004 protection on Sections 1 and 2, combined with the explicit scope boundary on the annual audit (Section 5.2), is the primary control against T-007 targeting this definition |
-| T-020 / T-021 | The open problems in both threats are directly resolved by this annex |
+| T-020 / T-021 | This annex supplies the active control path for both threats; the threats remain Active — unproven until methodology pilots, directional-bias review, adversarial-seat testing, and physical-sampling evidence pass. |
 
 ---
 
@@ -384,6 +400,8 @@ To complete this annex before deployment, the founding coalition must:
 
 6. **Publish the initial methodology-class registry** — the actual classification of each accredited oracle node by class, with the error independence assessment and standards-provenance documentation — before any Shared Storehouse activation occurs. This registry is the public accountability record for the epistemological independence mandate.
 
+7. **Publish the small-population oracle plan** before Cohort 1 enrollment if the pilot population is below 500 persons. The plan must state whether FC-030/FC-031/FC-032/FC-033 can be satisfied at pilot scale, which measurements must be supplied by regional or pooled oracle infrastructure, and which claims remain blocked because the local cohort is too small to validate independence.
+
 ---
 
-*This document is Annex AL of the Humane Constitution. The definition architecture is operative as an ACTIVE constitutional standard. The remaining implementation gate is publication of the initial methodology-class registry before any Shared Storehouse activation that depends on methodology-class-diverse oracle coverage.*
+*This document is Annex AL of the Humane Constitution. The definition architecture is operative as an ACTIVE constitutional standard. The remaining implementation gates are publication of the initial methodology-class registry before any Shared Storehouse activation that depends on methodology-class-diverse oracle coverage, directional-bias review before activation votes, and a small-population oracle plan before Cohort 1 enrollment if the pilot population is below 500 persons.*

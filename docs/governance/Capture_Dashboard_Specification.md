@@ -51,6 +51,7 @@ It is not a surveillance mandate. It is a public accountability specification. D
 |---|---|---|
 | Protected-term change attempts | Detect semantic pressure. | Repeated narrowing of survival, contribution, scarcity, or capacity. |
 | Standards-body overlap | Detect methodological monoculture. | Same experts define measurement across formally independent bodies. |
+| Oracle directional bias | Detect formally independent nodes drifting in the same direction. | Multiple oracle nodes overstate or understate capacity for the same category while pairwise correlation appears acceptable. |
 | Worked-example impact | Detect quiet outcome changes. | Examples change practical access while words stay constant. |
 | Ambiguity default usage | Detect strategic ambiguity. | Ambiguity frequently benefits the same office, sector, or class. |
 

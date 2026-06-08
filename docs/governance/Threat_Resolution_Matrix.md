@@ -231,14 +231,14 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Current control:** [P-017](./Patch_Log.md), [Annex AL](../annexes/ANNEX_AL.md)
 - **Resolution path:** require independent methodology classes, standards-diversity review, direct physical sampling, and visible uncertainty rather than relying on formal vendor independence.
 - **Corruption route to assume:** measurement actors share standards, funders, professional assumptions, datasets, and model architecture while passing independence checks.
-- **Proof needed:** Capacity Measurement Evidence Test Package; methodology-class audit, standards-body capture review, direct-sampling pilot, and confidence-band comprehension test.
+- **Proof needed:** Capacity Measurement Evidence Test Package; methodology-class audit, standards-body capture review, direct-sampling pilot, directional-bias review, small-population oracle plan where applicable, and confidence-band comprehension test.
 - **Residual risk:** independence is partly social and epistemic, not just organizational; recurring review is permanent.
 - **Status note:** ADDRESSED* — methodology pilots and adversarial standards review still required.
 
 ### T-021 - Algorithmic Oracle Capture
 
 - **Current control:** [P-017](./Patch_Log.md), [Annex AL](../annexes/ANNEX_AL.md)
-- **Resolution path:** inspect AI supply chains, training data dependencies, model-update governance, and algorithmic correlation across oracle systems.
+- **Resolution path:** inspect AI supply chains, training data dependencies, model-update governance, pairwise correlation, and same-direction bias across oracle systems.
 - **Corruption route to assume:** vendors deploy shared models, hidden data pipelines, biased optimization targets, or contract incentives that satisfy formal independence while producing correlated error.
 - **Proof needed:** Capacity Measurement Evidence Test Package; AI supply-chain audit, model-correlation test, vendor conflict review, and manual fallback drill.
 - **Residual risk:** algorithmic systems can drift silently; the system needs recurring model review and non-AI physical anchors.

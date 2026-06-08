@@ -52,6 +52,7 @@ Assume capacity numbers will be attacked because they move survival access, rati
 | Commercial supplier | Inflates reported available capacity to retain supply contracts, avoid Shared Storehouse activation, and prevent investigation of logistics failures | Whether physical sampling and delivery-outcome data can contradict administrative self-reporting |
 | Measurement body insider | Biases methodology toward category definitions that favor incumbents, lower measured obligations, or obscure access failure behind acceptable-looking aggregates | Whether methodology-class audits and standards-body concentration reviews detect capture before it affects decisions |
 | Oracle council captor | Builds institutional alignment across a majority of oracle seats through shared funders, professional culture, or AI supply-chain dependency — making formal independence nominal | Whether pairwise error-correlation tests catch shared blind spots and whether adversarial seats produce genuine dissent |
+| Directional-bias cartel | Keeps pairwise correlations low while several nodes consistently overstate or understate capacity in the same direction | Whether the test checks direction of error, not only correlation strength |
 | Adversarial simulation designer | Selects test scenarios that avoid the edge cases most likely to expose measurement failure — logistics breakdowns, rapid supply shocks, uneven geographic access | Whether test design is reviewed by parties with no stake in a passing result |
 | Oracle vendor | Shares AI models, data feeds, or calibration training across multiple oracle nodes, creating correlated errors that defeat diversity requirements without violating formal rules | Whether supply-chain audits and independent physical sampling can detect correlated drift before it affects live decisions |
 
@@ -181,6 +182,38 @@ Assume capacity numbers will be attacked because they move survival access, rati
 - minority report is not visible on the public dashboard;
 - override mechanism works but the override is not logged or explained publicly.
 
+### 4.9 Directional Bias Test
+
+**What is being tested:** Can formally independent oracle nodes produce errors in the same direction while staying below the FC-032 pairwise-correlation ceiling?
+
+**Method:** For each essential category in the pilot, compare each oracle node's readings against the ensemble median and against any independent physical-sampling result. Classify each material error as overstatement, understatement, or neutral. Test whether three or more nodes repeatedly overstate or understate capacity in the same direction, even if their pairwise Pearson correlations remain ≤0.30.
+
+**Pass condition:** Directional error is measured and published. Any same-direction pattern receives a written explanation, adversarial-seat review, and corrective action before the affected category can support Shared Storehouse activation or scale-up claims.
+
+**Failure criteria:**
+
+- three or more nodes materially overstate capacity in the same category and period;
+- three or more nodes materially understate capacity in the same category and period;
+- same-direction material error recurs across two consecutive quarters without corrective action;
+- the adversarial seat cannot access source data needed to test directional bias;
+- public reporting publishes pairwise correlation but omits direction-of-error analysis.
+
+### 4.10 Small-Population Oracle Calibration
+
+**What is being tested:** Can Cohort 1 or any pilot population below 500 persons satisfy reality-anchoring requirements without pretending a small local group can support a full independent oracle ecosystem by itself?
+
+**Method:** Before enrollment, publish a small-population oracle plan for populations below 500 persons. The plan must state which capacity measurements are local, which are regional or pooled, how the FC-030 five-node requirement is met, how FC-031 methodology-class diversity is met, how FC-032 and directional-bias tests will be computed despite low sample size, and which claims remain blocked until larger-population evidence exists.
+
+**Pass condition:** The plan shows that physical sampling, methodology diversity, and adversarial-seat review are meaningful at pilot scale, or explicitly downgrades the claim and blocks Shared Storehouse/issuance credibility claims that require larger samples.
+
+**Failure criteria:**
+
+- the pilot treats a population under 500 as if it can validate FC-030/FC-032 locally without pooled or regional infrastructure;
+- physical sampling is too small to produce usable confidence bands;
+- the plan uses administrative self-reporting as a substitute for Tier-3 physical sampling;
+- the public dashboard reports precise capacity figures without disclosing small-sample uncertainty;
+- scale-up claims rely on Cohort 1 capacity results without naming the external-validity limit.
+
 ---
 
 ## 5. Test Criteria
@@ -285,6 +318,16 @@ This section defines the standing operational thresholds that govern whether the
 
 ---
 
+### TC-6 — Directional Bias Control
+
+**Criterion:** Every quarterly oracle audit must publish direction-of-error analysis for each category and node, alongside the FC-032 pairwise correlation matrix.
+
+**Failure definition:** Directional-bias failure occurs when three or more nodes materially overstate or understate capacity in the same direction for the same category and period, or when two or more nodes repeat the same-direction material error for two consecutive quarters.
+
+**Breach response:** Same-direction biased nodes are treated as structurally dependent for the affected category. If effective N falls below FC-030 after dependency treatment, the affected category loses Shared Storehouse activation authority until the bias is explained and corrected. During unresolved overstatement bias, issuance and threshold decisions use the lower physical-sampling or conservative estimate.
+
+---
+
 ## 6. Failure Criteria Summary
 
 | Test | Failure criterion |
@@ -297,11 +340,14 @@ This section defines the standing operational thresholds that govern whether the
 | 4.6 Dashboard Comprehension Test | Fewer than 75% of ordinary readers correctly identify current supply level and confidence band |
 | 4.7 Synthetic Shock Simulation | Incorrect activation threshold, or failure to de-escalate within 14-day mandatory sunset window |
 | 4.8 Adversarial Oracle Seat Test | Adversarial seat cannot register dissent, trigger a challenge, or publish a minority report in practice |
+| 4.9 Directional Bias Test | Multiple nodes produce same-direction material error while pairwise correlation appears acceptable |
+| 4.10 Small-Population Oracle Calibration | Pilot population below 500 lacks a published plan for pooled/regional oracle support, small-sample uncertainty, and blocked claims |
 | TC-1 Oracle Latency Threshold | Material capacity change not reflected in a published update within 30 days |
 | TC-2 Disagreement Resolution Protocol | Formal review not initiated within 5 business days of a detected 5% divergence between sources |
 | TC-3 Physical Sampling Requirement | Fewer than 20% of basket categories physically sampled in a calendar quarter; or any watch/scarcity category receives zero sampling |
 | TC-4 Standards Concentration Risk | Any single entity controls more than 33% of essential basket measurement for any single category without an approved exception |
 | TC-5 Public Confidence-Band Readability | Any publication omits a required element, or presents bounds in a format that implies error rather than uncertainty |
+| TC-6 Directional Bias Control | Direction-of-error analysis is omitted, or same-direction material error is not treated as structural dependency |
 
 ---
 
@@ -333,17 +379,25 @@ Run fifth. Requires that the Conservative Hold protocol is documented and that a
 
 Run sixth, concurrent with or immediately after the oracle failure drill. Requires an operational adversarial seat. Update [Hardening\_Queue.md](./Hardening_Queue.md) with any procedural barrier findings.
 
-**Priority 7 — Synthetic Shock Simulation (Test 4.7)**
+**Priority 7 — Directional Bias Test (Test 4.9)**
 
-Run seventh. Requires category definitions, oracle architecture, and threshold parameters to be in place.
+Run seventh, before synthetic shock activation tests. A cohort that can pass pairwise correlation while drifting in the same direction is not trustworthy enough to run scarcity activation tests.
 
-**Priority 8 — Dashboard Comprehension Test (Test 4.6)**
+**Priority 8 — Small-Population Oracle Calibration (Test 4.10)**
+
+Run before any Cohort 1 enrollment if the pilot population is below 500 persons. This test may run earlier if the pilot design fixes the population size during site planning.
+
+**Priority 9 — Synthetic Shock Simulation (Test 4.7)**
+
+Run ninth. Requires category definitions, oracle architecture, and threshold parameters to be in place.
+
+**Priority 10 — Dashboard Comprehension Test (Test 4.6)**
 
 Run last. Requires a near-final dashboard implementation. Comprehension test results should feed directly into dashboard revisions before any public launch.
 
 ---
 
-## 7. See Also
+## 8. See Also
 
 - [Claims and Evidence Register](./Claims_Evidence_Register.md) — status taxonomy and evidence tracking for all capacity measurement claims
 - [External Evidence Register](./External_Evidence_Register.md) — source review and evidence classes supporting capacity measurement design
@@ -353,6 +407,6 @@ Run last. Requires a near-final dashboard implementation. Comprehension test res
 - [Hardening Queue](./Hardening_Queue.md) — items pending constitutional hardening that depend on measurement evidence
 - [ANNEX\_AL.md](../annexes/ANNEX_AL.md) — capacity measurement annex: methodology-class requirements, oracle architecture, and evidence class rules
 - [Threat Register — T-006](./Threat_Register.md) — Measurement Lag / Supply Shock
-- [Threat Register — T-020](./Threat_Register.md) — Measurement Source Corruption
-- [Threat Register — T-021](./Threat_Register.md) — Measurement Independence Collapse
-- [Threat Register — T-024](./Threat_Register.md) — Shared Storehouse Capture via false oracle signals
+- [Threat Register — T-020](./Threat_Register.md) — Epistemological Oracle Capture
+- [Threat Register — T-021](./Threat_Register.md) — Algorithmic Oracle Capture
+- [Threat Register — T-024](./Threat_Register.md) — Shared Storehouse Oracle-Failure During Active Rationing

@@ -34,7 +34,7 @@ This annex operationalizes that response and binds the restoration-window durati
 
 ## Section 1 — Conservative Hold (Default State)
 
-When the oracle system loses quorum (fewer than the N=5 BFT-tolerant minimum per Annex AL §3.4, or fewer than the Shared Storehouse-supermajority-achievable 4 of 5), or enters an unresolvable consensus dispute that persists beyond the ordinary deliberation window, **Shared Storehouse enters Conservative Hold**:
+When the oracle system loses full accredited quorum (fewer than the N=5 BFT-tolerant minimum per Annex AL §3.4), or enters an unresolvable consensus dispute that persists beyond the ordinary deliberation window, **Shared Storehouse enters Conservative Hold**:
 
 - **No escalation.** Shared Storehouse rationing level remains where it was at the moment of quorum loss. The rate, scope, and category breadth are frozen.
 - **No expansion.** Shared Storehouse cannot be applied to new categories under Conservative Hold. Expansion requires restored oracle quorum.
@@ -44,7 +44,7 @@ When the oracle system loses quorum (fewer than the N=5 BFT-tolerant minimum per
 
 Conservative Hold is the **designed default**, not a failure state — it is explicitly the correct system response to oracle silence during Shared Storehouse. Detection-side alarms fire; operational-side behavior holds.
 
-**Quorum-loss sensing mechanism:** Conservative Hold cannot activate without a defined detection path. The oracle monitoring system must: (a) poll each accredited oracle node on a published cadence (maximum 15-minute intervals during active Shared Storehouse); (b) detect quorum loss — defined as fewer than 5 responsive nodes or an unresolvable consensus dispute persisting beyond one full deliberation cycle — within one polling cadence after the event; (c) automatically set system state to `CONSERVATIVE_HOLD` within the same cycle; and (d) fire the Article VII dashboard indicator and notify the REB within 15 minutes of state change. Quorum loss from **clean failure** (node goes offline and stops responding) and from **degraded-output failure** (node continues responding but with outputs inconsistent with the rest of the quorum by more than the FC-032 correlation threshold) are both treated as quorum-loss events. A degraded-output node is flagged for accreditation review while Conservative Hold is active; it does not count toward quorum. The body responsible for the oracle monitoring system (named in ANNEX_AL §3) holds formal authority to declare Conservative Hold; the system generates the declaration automatically when polling confirms quorum loss, and the named authority publishes confirmation within one hour.
+**Quorum-loss sensing mechanism:** Conservative Hold cannot activate without a defined detection path. The oracle monitoring system must: (a) poll each accredited oracle node on a published cadence (maximum 15-minute intervals during active Shared Storehouse); (b) detect quorum loss — defined as fewer than 5 responsive accredited nodes or an unresolvable consensus dispute persisting beyond one full deliberation cycle — within one polling cadence after the event; (c) automatically set system state to `CONSERVATIVE_HOLD` within the same cycle; and (d) fire the Article VII dashboard indicator and notify the REB within 15 minutes of state change. Quorum loss from **clean failure** (node goes offline and stops responding) and from **degraded-output failure** (node continues responding but with outputs inconsistent with the rest of the quorum by more than the FC-032 correlation threshold or the Annex AL directional-bias threshold) are both treated as quorum-loss events. A degraded-output node is flagged for accreditation review while Conservative Hold is active; it does not count toward quorum. The body responsible for the oracle monitoring system (named in ANNEX_AL §3) holds formal authority to declare Conservative Hold; the system generates the declaration automatically when polling confirms quorum loss, and the named authority publishes confirmation within one hour.
 
 The Article VII public dashboard displays a prominent **Shared Storehouse-Active-With-Oracle-Failure** indicator in real time, so oracle failure during active Shared Storehouse is publicly visible — the existence of Conservative Hold cannot be hidden by the bodies operating it.
 
@@ -134,10 +134,11 @@ The survival floor bridge established in P-012 AE2.3 is **explicitly uncondition
 
 ### 4.1 — Restoration Defined
 
-Oracle restoration occurs when:
-- The cohort re-achieves quorum at ≥ 4 of 5 nodes operational (Shared Storehouse-supermajority-achievable floor).
+Oracle restoration begins when:
+- The cohort re-achieves full accredited quorum at ≥5 responsive nodes, with at least 4 of 5 able to support Shared Storehouse-supermajority decisions during the verification window.
 - Methodology-class coverage (FC-031 ≥ 3 classes) is re-verified.
 - Pairwise error correlation (FC-032 ≤ 0.30) is re-verified against any new node substituted during the failure period.
+- Directional-bias review under Annex AL shows no same-direction material error requiring dependency treatment.
 - Adversarial-seat participation (FC-033) is confirmed.
 
 ### 4.2 — FC-100 Verification Window
@@ -156,7 +157,12 @@ The 14-day value is derived directly from Founding Commitment FC-100 in `/foundi
 
 ### 4.3 — Reconciliation Review
 
-At the end of each oracle-failure incident, within 7 days of the 14-day verification window's close, a **Reconciliation Review** is published:
+Each oracle-failure incident produces two reconciliation artifacts:
+
+1. **Preliminary reconciliation notice:** within 24 hours of oracle restoration beginning, the oracle-monitoring authority publishes a short notice naming the restored nodes, unresolved discrepancies, affected categories, and whether any provisional REB or panel decision appears inconsistent with restored readings.
+2. **Final Reconciliation Review:** within 7 days of the 14-day verification window's close, a final review is published.
+
+The final review includes:
 - Timeline of the failure: detection, Conservative Hold entry, REB decisions, handoff to panel, restoration, verification window completion.
 - Comparison of REB and panel decisions made during failure against the (now verified) restored-oracle readings. Where provisional decisions differed from what the oracle would have indicated, the discrepancy is documented with root-cause analysis.
 - Assessment of whether any patterns suggest the oracle failure was engineered (T-018 × T-024 compound). If so, immediate referral to the Enforcement Panel (Annex AJ §4) with full evidence.
@@ -216,4 +222,4 @@ Ultimately, defense against sustained coordinated T-022 compound attacks is stru
 
 ---
 
-*This document is Annex AQ of the Humane Constitution. Operative as an ACTIVE specification as of Proposal 6 close-out (2026-04-18). Closes T-024.*
+*This document is Annex AQ of the Humane Constitution. Operative as an ACTIVE specification as of Proposal 6 close-out (2026-04-18). T-024 remains Active — unproven until oracle-failure fallback drills produce field evidence and residual risk is updated.*

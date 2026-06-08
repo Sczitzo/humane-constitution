@@ -592,7 +592,7 @@ Here is the part that matters for this chapter. The people who made the decision
 
 *Future generations inherit the consequences of present decisions without any vote, any legal standing, or any enforceable claim — and the systems that produced the harm are structured so that the people who benefited from it are gone before the bill arrives.*
 
-**Where this project responds:** This is still a documented gap. The Shared Storehouse handles rationing during a verified shortage. Commons Return in ANNEX_D can address some inherited-resource and public-created value, but it is not yet a full future-generations accountability instrument. The climate debt, the depleting antibiotic commons, and the national debt described above need a stronger intergenerational duty track. The project tracks unsolved problems like this one in its governance document called the Hardening Queue. Naming it is not a failure. It is the condition for honest work on it.
+**Where this project responds:** This is still a documented gap. The Shared Storehouse handles rationing during a verified shortage, with bounded oracle-failure fallback if measurement fails while rationing is already active. Commons Return in ANNEX_D can address some inherited-resource and public-created value, but it is not yet a full future-generations accountability instrument. The climate debt, the depleting antibiotic commons, and the national debt described above need a stronger intergenerational duty track. The project tracks unsolved problems like this one in its governance document called the Hardening Queue. Naming it is not a failure. It is the condition for honest work on it.
 
 **Sources**
 

@@ -151,7 +151,7 @@ Sometimes there is not enough of something essential.
 
 A drought, supply shock, war, pandemic, or infrastructure failure can create real scarcity. In those moments, panic prices often decide who gets through.
 
-Shared Storehouse is the system's answer. It is temporary rationing during a verified shortage.
+Shared Storehouse is the system's answer. It is temporary rationing during a verified shortage, with a bounded fallback if the oracle fails while rationing is already active.
 
 It must be:
 
