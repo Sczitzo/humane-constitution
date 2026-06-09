@@ -56,7 +56,7 @@ The project is not mainly a redistribution model. It is a channel-separation mod
 |---|---|---|
 | **Survival-Trade Bind** | People have to trade dignity, obedience, rights, labor, health, or life-sustaining access just to survive. | Keep Essential Access and the Constitutional Survival Minimum outside ordinary market bargaining. |
 | **Power-Wealth Convergence** | Resource success becomes authority over rules, enforcement, measurement, or public design. | Keep Flow, Voice, Service Record, enforcement, and public measurement from becoming mutually convertible. |
-| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use Commons Return, Universal Stake, anti-rent controls, rotation, decay of civic eligibility, exit rights, and bottleneck audits to keep advantage contestable. |
+| **Static-Advantage Loop** | Early-entry advantage, inheritance, institutional control, or gatekeeping hardens into permanent dominance. | Use Commons Return, Universal Stake, anti-rent controls, rotation, decay of civic eligibility, exit rights, and bottleneck audits as designed tools to keep advantage contestable. |
 
 The strongest version of the rule is:
 

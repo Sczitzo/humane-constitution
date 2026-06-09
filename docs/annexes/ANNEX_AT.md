@@ -147,7 +147,7 @@ Converted foreign capital is subject to the same Commons Return, beneficial-cont
 
 ### AT4.3 — Investment Channel
 
-Foreign-origin Flow that is committed to a registered productive investment project within 30 days of conversion enters the standard Article V investment channel and receives the standard protected-capital treatment for the duration of the project. The conversion clock stops when funds enter a registered, ring-fenced project escrow. Funds that do not enter a registered project within 30 days are subject to stale-purpose review, Commons Return/source-base review, beneficial-control review, and external-capital membrane treatment retroactive to the conversion date.
+Foreign-origin Flow that is committed to a registered productive investment project within 30 days of conversion enters neutral suspense, not spendable protected status. The conversion clock stops only when funds enter a registered, ring-fenced project escrow after project approval, beneficial-control review, Annex D source-base review, and Annex AR contract-commitment controls are satisfied. Funds that do not enter an approved project within 30 days are subject to stale-purpose review, Commons Return/source-base review, beneficial-control review, and external-capital membrane treatment retroactive to the conversion date.
 
 ### AT4.4 — Inflow Concentration Limits
 

@@ -289,7 +289,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 
 **What the constitution guarantees.**
 - Routine demurrage is superseded. Commons Return, source-base review, stale-purpose quarantine, beneficial-control review, and procurement controls apply where Victor's structures preserve public-created value, scarcity privilege, or concentrated control.
-- Protected capital treatment (project escrows, term-finance pools, catastrophe reserves) exists only when preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
+- Contract-commitment treatment (project escrows, term-finance pools, catastrophe reserves) exists only when preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
 - "Deadlines become circular" is the key phrase — the constitution anticipates this exact structure.
 - Anti-hoarding, anti-monopoly, and anti-rent-seeking rules apply to all Flow.
 - High-value asset registries must be transparent.

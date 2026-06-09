@@ -125,7 +125,7 @@ The lesson is not that big companies are evil. It is that wealth, left without a
 
 > *The turning of wealth into power is not a glitch. It is what concentrated wealth does when no wall stands in the way — and every society that stopped it had to build that wall on purpose and keep rebuilding it.*
 
-**Where this project responds:** Flow, Commons Return, Universal Stake, anti-rent controls, and Voice. Flow is the market-money instrument; it is walled off from survival access and formal public power. Commons Return, Universal Stake, and anti-rent controls carry the main burden of limiting wealth concentration. Voice is the civic instrument; it gives priority in public decisions that cannot be bought, so political weight does not simply follow the bank balance.
+**Where this project responds:** Flow, Commons Return, Universal Stake, anti-rent controls, and Voice. Flow is the market-money instrument; it is walled off from survival access and formal public power. Commons Return, Universal Stake, and anti-rent controls are intended to carry the main burden of limiting wealth concentration, but that remains evidence-gated until the fiscal, incidence, legal-wrapper, and public-comprehension tests pass. Voice is the civic instrument; it gives priority in public decisions that cannot be bought, so political weight does not simply follow the bank balance.
 
 **Sources**
 

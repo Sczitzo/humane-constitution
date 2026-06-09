@@ -68,6 +68,8 @@ Commons Return may be assessed only on named source bases. No unnamed revenue ba
 
 Commons Return must distinguish extractive control from ordinary life.
 
+**Ordinary household guarantee.** Until the evidence package has passed, protected ordinary use is a design promise, not a proven funding system. The system may not shift the proof burden onto ordinary households by treating uncertainty itself as evidence of evasion.
+
 Protected ordinary use includes:
 
 - primary residence continuity, including modest family continuity in a home;
@@ -76,6 +78,7 @@ Protected ordinary use includes:
 - caregiver, disability, elder, family, mutual-aid, and faith-community support that is not a disguised commercial rent;
 - small-operator working capital needed for payroll, inventory, repair, seasonal volatility, and business continuity;
 - retirement, disability, and hardship reserves below published dignity thresholds.
+- customary, indigenous, subsistence, religious, and traditional stewardship use, unless there is evidence of rent extraction, hidden beneficial control, or artificial fragmentation of a source base.
 
 **D3.1 Burden of proof.** The system bears the burden of proving that a source base is public-return eligible. Ambiguity near ordinary household use resolves toward protection unless there is evidence of structured evasion, rent extraction, or concentrated control.
 
@@ -134,6 +137,10 @@ Assessment must be narrow, explainable, contestable, and purpose-limited.
 **D6.3 Appeal right.** Every assessment must include a plain-language basis, evidence source, appeal path, hardship route, and non-displacement protection where applicable.
 
 **D6.4 Independent review.** Valuation methods, source-base definitions, and exemption decisions require recurring review by independent methodology classes under Annex AL-style independence rules.
+
+**D6.5 Investigation escalation.** Source-base review must proceed by escalation: public and aggregate records first; entity-level records second; personal or household-linkable records only after an independent written finding of source-base relevance, proportionality, and no less-intrusive alternative. Record compulsion, dataset joining, or privacy-piercing review without that finding is void.
+
+**D6.6 Plain notice and right to helper.** Every assessment or quarantine notice must be written in plain language, orally explainable, translated where needed, available offline, and paired with a named human reviewer. Elderly, disabled, low-literacy, rural, undocumented, safety-shielded, caregiver, and digitally fragile persons have a right to a trusted helper or community navigator without losing appeal rights.
 
 ---
 

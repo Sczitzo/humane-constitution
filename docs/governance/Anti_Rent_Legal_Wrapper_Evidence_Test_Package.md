@@ -166,6 +166,25 @@ The project may strengthen its anti-rent claim only after producing:
 
 ---
 
+## Required Artifacts and Gates
+
+The tests above are not satisfied by narrative assurance. Each review must produce concrete artifacts that a skeptical outside reviewer can inspect.
+
+| Artifact | Required contents | Pass gate |
+|---|---|---|
+| **Jurisdiction matrix** | Launch jurisdiction, relevant trust/foundation/family-office/nominee law, beneficial-owner threshold, discovery power, privacy limit, appeal route, remedy, cross-border recognition, and residual gap. | Every launch jurisdiction either supports inspection/remedy or records a launch-blocking residual risk. |
+| **Beneficial-control disclosure and warranty** | Natural-person controllers, trust protectors, powers of appointment, side letters, related-party debt, family-office coordination, donor-advised control, management rights, IP/license control, data/software control, and informal veto rights. | Any omission, refusal, or unverifiable warranty blocks capital draw, procurement award, mission-lock approval, or stewardship preference. |
+| **Sample transaction packet** | Worked legal files for at least: trust-owned housing, foundation-controlled enterprise, franchised worker cooperative, long ground lease, PBM-style control, foreign affiliate capital loop, and family-office split ownership. | Reviewers can trace control, benefit, veto power, succession, and remedy for every packet. |
+| **Audit-access standard** | Who may request records, what evidence threshold is required, what privacy limits apply, what appeal exists, and what records are sealed after review. | No reviewer may compel personal or household-linkable data without documented relevance, proportionality, and independent approval. |
+| **Remedy map** | Unwind, escrow hold, disqualification, recapture, public-return assessment, receiver authority, procurement stop, and residual-risk publication. | Every failed test has a named remedy or a published launch-blocking gap. |
+| **Ordinary-stewardship burden review** | Family home, tools, small cooperative, active local business succession, rural/indigenous stewardship, faith-community stewardship, and dependent-care cases. | Enforcement burden falls first on structured extraction, not ordinary continuity or vulnerable households. |
+
+**Artifact owner:** The founding coalition must assign a legally qualified review lead and an independent ordinary-stewardship reviewer before any test can pass. The legal reviewer cannot be selected or paid by the entity being reviewed. The ordinary-stewardship reviewer must have authority to mark a control as overbroad even if the legal analysis finds it technically enforceable.
+
+**Side-letter certification:** Before any capital draw, procurement award, mission-lock approval, stewardship preference, or project escrow approval, the applicant must certify that no side letter, protector power, informal veto, related-party debt, family-office coordination, or external management right alters the disclosed control map. A false certification triggers disqualification, escrow hold, and residual-risk review.
+
+---
+
 ## Decision Rule
 
 Anti-rent and anti-dynasty rules remain **Designed mechanism, needs evidence** unless:

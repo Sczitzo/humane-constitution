@@ -21,9 +21,10 @@ Flow issuance exists to meet real productive demand: payroll settlement, milesto
 ### X2. Flow-based issuance rule and provenance
 New Flow may be issued only against verified productive commitments rather than as a prior discretionary stock. The protocol treats money as a flow linked to work, provisioning, maintenance, and build-out, not as a sovereign hoard.
 - **Every issuance request** must publish or internally register, subject to privacy minimization: channel, sponsor, beneficial-control map, amount, duration, linked productive obligation, release schedule, prior unused protected balance, unwind path, reviewer signatures, and error-correction route.
-- **All newly issued Flow** carries provenance tags at the audit layer. Flow remains user-fungible for ordinary market activity, but issuance source, channel, sponsor, and unwind status must remain visible to authorized oversight, post-mortem, and anti-capture review.
+- **Monitoring-purpose gate:** no issuance provenance, beneficial-control map, stale-balance signal, or unwind-status record may operate until its exact fields, purpose, access roles, retention period, appeal path, and independent reviewer are registered in the Monitoring Purpose Register. Unregistered monitoring is void.
+- **All newly issued Flow** carries provenance tags at the audit layer. Flow remains user-fungible for ordinary market activity, but issuance source, channel, sponsor, and unwind status must remain visible only to purpose-bound oversight, post-mortem, and anti-capture review roles named in the Monitoring Purpose Register.
 - **No obligation** may be financed through more than one issuance channel at the same time. Duplicate financing of the same payroll run, invoice chain, milestone package, or emergency continuity need is prohibited.
-- **Unused, stale, or materially misdirected issuance** enters quarantine review. Flow created for a declared purpose may not drift indefinitely into idle accumulation without reclassification, reversion, or formal protected-capital qualification.
+- **Unused, stale, or materially misdirected issuance** enters quarantine review. Flow created for a declared purpose may not drift indefinitely into idle accumulation without reclassification, reversion, or formal contract-commitment review.
 
 ### X3. Authorized issuance channels
 
@@ -55,12 +56,13 @@ No single ministry, central bank analogue, private bank, donor-backed vehicle, o
 The constitutional operating-float exemption supersedes prior generic publication language.
 - **Households** receive a safe harbor equal to 18 months of median regional consumption expenditure.
 - **Enterprises** receive the greater of 3 months average payroll or 3 months average direct operating costs measured on a rolling 12-month basis.
-- **Any higher protected balance** requires project escrow, catastrophe reserve, lifecycle fund, or other protected-capital qualification under the published rules.
+- **Any higher protected balance** requires project escrow, catastrophe reserve, lifecycle fund, or other published protected-balance review. These channels do not create a shelter from Commons Return/source-base, stale-purpose, or beneficial-control review.
 - **Any asset or instrument** that functions as hidden control over a Commons Return source base is subject to equivalence review under Annex D regardless of label, wrapper, or legal form.
 - **Household thresholds**, privacy safe harbors, and minimization rules remain mandatory. Anti-evasion enforcement may not become a pretext for total asset surveillance.
 
 ### X6. Error correction, unwind discipline, and public logs
 - **All issuance channels** must publish aggregate issuance logs, category totals, concentration indicators, stale-balance rates, unwind performance, and exception use on the public dashboard with privacy-preserving aggregation.
+- **Quarantine due process:** quarantine requires written notice, named channel rule, evidence basis, maximum review clock, human appeal, and a least-harm interim status. Unresolved suspicion may not freeze ordinary household access, payroll recipients, essential providers, or protected ordinary use.
 - **Mis-issued Flow** may be quarantined, reclassified, or unwound only through published procedures that minimize collateral harm to payroll recipients, essential providers, and innocent counterparties. No ordinary clawback may target wage earners or essential-service recipients absent fraud findings tied to them directly.
 - **Unwind must be staged** when needed to prevent payroll shock, provider insolvency, or sudden continuity collapse. Emergency correction that causes more harm than the original error is itself a design failure.
 - **Repeated issuance error** in the same channel triggers automatic audit, temporary channel throttling, and mandatory public post-mortem before ordinary operation resumes.
@@ -102,7 +104,7 @@ Public institutions must be funded in a way that is transparent, capacity-aware,
 
 | Rule area | Default constitutional rule | Anti-capture control |
 | :--- | :--- | :--- |
-| **Revenue sources** | PFCR receipts may draw from Commons Return source bases, land and resource charges, scarce-license returns, public-infrastructure uplift, gateway fees, and bounded public issuance tied to real public production. | Every source must publish methodology, exemptions, aggregate receipts, and remaining-tax disclosure; hidden levies are void. |
+| **Revenue sources** | PFCR receipts may draw from Commons Return source bases, land and resource charges, scarce-license returns, public-infrastructure uplift, gateway fees, and bounded public issuance tied to real public production. | Every source must publish methodology, exemptions, aggregate receipts, and remaining-tax disclosure; hidden levies are void. Gateway fees may not become disguised household transaction taxes or survival-access charges. |
 | **Prohibited tax base** | Survival access, ordinary labor, and basic household exchange may not be taxed as routine revenue sources. | Any measure that functionally backfills PFCR through those bases triggers mandatory judicial review. |
 | **Operating budgets** | Public institutions receive Flow appropriations tied to published service plans, staffing assumptions, capacity evidence, and a declared PFCR source mix. | Quarterly variance reporting, source-by-source disclosure, and public change logs. |
 | **Recurring obligations** | Any recurring program expansion must identify a stable PFCR path and capacity plan before approval. | No unfunded permanent commitments and no quiet migration to prohibited taxes. |
@@ -129,4 +131,4 @@ Intellectual property is a modern rent-seeking vector and shall not remain outsi
 
 *Annex Y — Constitutional Survival Minimum and Essential Access Continuity Architecture is maintained as a separate controlling document. See [ANNEX_Y.md](./ANNEX_Y.md). Where any language in this file conflicts with Annex Y, Annex Y governs.*
 
-*Annex D — Commons Return and Universal Stake is the controlling specification for the public-return and fiscal-sustainability architecture referenced throughout this annex. See [ANNEX_D.md](./ANNEX_D.md). Source bases, protected ordinary use, Universal Stake, lockbox rules, dormant backstops, and fiscal adequacy gates in Annex D govern over any summary language here. Older progressive-demurrage language is superseded unless explicitly marked historical or dormant.*
+*Annex D — Commons Return and Universal Stake is the controlling specification for the public-return and fiscal-sustainability architecture referenced throughout this annex. See [ANNEX_D.md](./ANNEX_D.md). Source bases, protected ordinary use, Universal Stake, lockbox rules, dormant backstops, and fiscal adequacy gates in Annex D govern over any summary language here. Older progressive-demurrage language is superseded unless explicitly marked historical or dormant. Any dormant backstop is non-operative unless revived by explicit patch, fiscal/dignity evidence, public review, and the applicable amendment process.*

@@ -4,7 +4,7 @@
 > | | |
 > |---|---|
 > | **Purpose** | Specify the numerical thresholds, deployment windows, force majeure caps, and inspector pool rules that make the contract-commitment architecture for long-horizon infrastructure projects enforceable in practice. |
-> | **Who it protects** | Communities depending on infrastructure delivery (housing, healthcare, utilities); taxpayers whose capital is escrowed for projects; the public whose accountability depends on verifiable milestone completion. |
+> | **Who it protects** | Communities depending on infrastructure delivery (housing, healthcare, utilities); the public whose capital is escrowed for projects; everyone whose accountability depends on verifiable milestone completion. |
 > | **Failure risk** | Parameter capture: loose thresholds recreate the investment exemption problem P-023 was designed to close — contractors fragment milestones, over-invoke force majeure, or influence an under-sized inspector pool to avoid genuine verification. |
 > | **Evidence status** | Designed |
 > | **Linked risks** | T-025; P-023; Annex AK (identity AED — parallel parameter-commitment pattern); Annex AJ (above-ledger bypass); Annex AL (P-017 oracle-independence standards); FC-160 through FC-184 |
@@ -41,7 +41,7 @@ This annex specifies five things:
 4. **Inspector pool governance** — pool size floors, rotation schedule, disqualification criteria
 5. **Publication commitment** — what is reported publicly, how often, and in what form
 
-Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples use a round-number **5% annual accountability cost** purely as an illustrative signal for comparing parameter choices; the operative controls are the deployment window, review trigger, public accounting, and Annex D source-base review. This annex sets no demurrage rate of its own.
+Each section is a parameter block. The founding coalition must bind the reserved commitments **FC-160 through FC-184** before deployment. Worked examples are provided to show how different values affect real outcomes. The worked examples use a round-number **5% annual budget-equivalent oversight signal** purely as a non-deductive illustration for comparing parameter choices; the operative controls are the deployment window, review trigger, public accounting, and Annex D source-base review. This annex sets no demurrage rate or Flow deduction of its own.
 
 ---
 
@@ -117,34 +117,34 @@ Result: At these thresholds, most milestones on a 10M project receive single ver
 
 ### 2.2 — Deployment-Delay Signal Worked Examples
 
-*These examples use a 5% annual accountability signal as an illustrative figure. The operative controls are review deadlines, public reporting, source-base review, and any separately approved dormant backstop. The examples show why delay must create visible institutional pressure even without routine demurrage.*
+*These examples use a 5% annual budget-equivalent oversight signal as an illustrative figure. The operative controls are review deadlines, public reporting, source-base review, and any separately approved dormant backstop. No Flow is deducted by these examples. Any dormant backstop is non-operative unless revived by explicit patch, fiscal/dignity evidence, public review, and the applicable amendment process.*
 
 **Essential Access-essential: 5M Flow housing fund, 90-day deployment window**
 
-| Day reached without active contracting | Illustrative accountability cost | Annualised signal |
+| Day reached without active contracting | Illustrative oversight signal | Annualised signal |
 | :--- | :--- | :--- |
 | Day 30 | ~20,500 Flow | Finance directors will notice by first monthly report |
 | Day 60 | ~41,100 Flow | Sufficient to trigger internal programme review in most institutional budgets |
-| Day 90 | ~61,600 Flow | CRP review triggered. 1.2% of fund lost — a visible institutional cost |
-| Day 180 (if no review outcome) | ~123,300 Flow | 2.5% of fund lost — strong internal pressure to contract |
+| Day 90 | ~61,600 Flow | CRP review triggered. 1.2% budget-equivalent signal — visible institutional pressure |
+| Day 180 (if no review outcome) | ~123,300 Flow | 2.5% budget-equivalent signal — strong internal pressure to contract |
 
 **Standard infrastructure: 5M Flow fund, 180-day window**
 
-| Day reached without active contracting | Illustrative accountability cost | Signal |
+| Day reached without active contracting | Illustrative oversight signal | Signal |
 | :--- | :--- | :--- |
 | Day 90 | ~61,600 Flow | Internal signal; no CRP review yet |
-| Day 180 | ~123,300 Flow | CRP review triggered. 2.5% of fund lost |
-| Day 365 | ~250,000 Flow | 5% of fund lost if review produces no contracting |
+| Day 180 | ~123,300 Flow | CRP review triggered. 2.5% budget-equivalent signal |
+| Day 365 | ~250,000 Flow | 5% budget-equivalent signal if review produces no contracting |
 
-**Carrying-cost sensitivity: same 5M Flow fund, 180-day window**
+**Oversight-signal sensitivity: same 5M Flow fund, 180-day window**
 
-| Effective annual signal | Illustrative cost by day 180 | Institutional signal strength |
+| Effective annual signal | Illustrative oversight signal by day 180 | Institutional signal strength |
 | :--- | :--- | :--- |
 | 2% | ~49,300 Flow | Weak — <1% of fund |
 | 5% | ~123,300 Flow | Moderate — 2.5% of fund |
 | 10% | ~246,600 Flow | Strong — 4.9% of fund |
 
-**Key finding:** If the visible cost of delay is below approximately 3% per year, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. Where no dormant backstop applies, deployment windows, public reporting, and CRP escalation must carry the full discipline. This annex does not create a separate carrying cost on escrowed funds.
+**Key finding:** If the visible oversight signal from delay is below approximately 3% per year, the 180-day window produces a signal too weak to create institutional urgency in most government budget contexts. Where no dormant backstop applies, deployment windows, public reporting, and CRP escalation must carry the full discipline. This annex does not create a separate carrying cost on escrowed funds.
 
 ### 2.3 — What CRP Review Entails
 
