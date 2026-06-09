@@ -78,6 +78,7 @@ This claim remains **Active — unproven** until every test below has evidence, 
 **Required scenarios:**
 
 - trusts and family offices;
+- trust protectors, powers of appointment, and side letters;
 - foundations and donor-advised vehicles;
 - nominee ownership;
 - related-party debt;
@@ -87,6 +88,9 @@ This claim remains **Active — unproven** until every test below has evidence, 
 - license fragmentation;
 - land-control contracts without title;
 - succession transfer by staged control rather than inheritance.
+- enterprise-control proxies such as preferred equity, board appointment rights, IP/license control, supplier dependency, software/data control, or management-service agreements.
+
+**Required jurisdiction matrix:** For every launch jurisdiction, publish a matrix covering trust law, foundation and donor-advised vehicle law, family-office structures, nominee-owner rules, beneficial-ownership disclosure thresholds, discovery powers, privacy/appeal safeguards, remedies, cross-border enforcement, staged succession, and side-letter enforceability. This test is cross-governed by the [Anti-Rent Legal Wrapper Evidence Test Package](./Anti_Rent_Legal_Wrapper_Evidence_Test_Package.md).
 
 **Failure result:** A concentrated actor can retain durable control over a Commons Return source base while shifting the burden to ordinary users or avoiding the return through form.
 

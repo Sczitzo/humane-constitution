@@ -190,7 +190,7 @@ The lesson is not that fences are evil. It is narrower. Advantage and disadvanta
 
 > *Advantage compounds quietly. The people it holds down rarely face one dramatic wrong — they face a long string of small exclusions, invisible from outside and overwhelming from inside.*
 
-**Where this project responds:** ANNEX_D and Flow. ANNEX_D now holds Commons Return and Universal Stake — the project's active answer to shared value, scarcity rents, large succession transfers, and public-created wealth. Flow is the market-money tool, but the current design no longer relies on routine demurrage or ordinary balance decay as the main wealth-control spine.
+**Where this project responds:** ANNEX_D and Flow. ANNEX_D now holds Commons Return and Universal Stake — the project's intended answer to shared value, scarcity rents, large succession transfers, and public-created wealth. Flow is the market-money tool, but the current design no longer relies on routine demurrage or ordinary balance decay as the main wealth-control spine. This remains a design claim until the fiscal model, incidence test, legal-wrapper review, and public comprehension tests pass.
 
 **Sources**
 

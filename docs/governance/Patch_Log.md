@@ -1160,7 +1160,7 @@ The project had strong mechanisms and evidence packages, but seven proof surface
 **Constitutional text:** [ANNEX_AT.md § AT6.5 and AT8](../annexes/ANNEX_AT.md); [Capture_Dashboard_Specification.md § Money, Procurement, And Legal Wrapper Capture](./Capture_Dashboard_Specification.md); [Conglomerate_Transition_Dossier.md](./Conglomerate_Transition_Dossier.md)
 
 **Problem diagnosed:**
-The external-trade and anti-rent architecture named supply-chain dependency, demurrage capture, and legal-wrapper risk, but it did not yet explain how incumbent oil, energy, medicine, logistics, and PBM-style medicine-access conglomerates would operate under the system. Without a sector-specific transition doctrine, the project risked relying on moral persuasion while firms with essential chokepoints could rationally leave, litigate, lobby, retaliate, or route control through foreign affiliates.
+The external-trade and anti-rent architecture named supply-chain dependency, public-return/source-base capture, and legal-wrapper risk, but it did not yet explain how incumbent oil, energy, medicine, logistics, and PBM-style medicine-access conglomerates would operate under the system. Without a sector-specific transition doctrine, the project risked relying on moral persuasion while firms with essential chokepoints could rationally leave, litigate, lobby, retaliate, or route control through foreign affiliates.
 
 **Introduced design:**
 

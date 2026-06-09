@@ -38,7 +38,7 @@
 - Cooperative Retained Earnings Pools require mission lock, member-governance proof, payout constraints, and evidence that retained balances support resilience, tooling, payroll continuity, or member-approved expansion rather than passive accumulation.
 - Infrastructure Lifecycle Funds require asset registers, maintenance schedules, replacement assumptions, and public dashboarding tied to the underlying system.
 - Protected funds may not hop categories casually. Re-designation across protected capital classes requires review, public reasons, and anti-evasion screening.
-- If milestones are vague, circular, self-scored, or repeatedly deferred without justified cause, or materially disconnected from declared purpose, protected treatment ends and the balance reverts to ordinary demurrage plus review for evasion.
+- If milestones are vague, circular, self-scored, or repeatedly deferred without justified cause, or materially disconnected from declared purpose, protected treatment ends and the balance enters stale-purpose review, Commons Return/source-base review where implicated, and evasion screening.
 
 ### U4. Oracle evidence weighting, independence, and sub-5 fallback
 - Oracle publishers must declare evidence class for each data stream: directly observed, administratively reported, mixed, modeled, or estimated. Confidence intervals and known blind spots must be published alongside point estimates.

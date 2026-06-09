@@ -87,7 +87,7 @@ Each abuse case should name:
 - **Actor incentive:** extract public finance through legal wrappers.
 - **Attack path:** subcontractor chains, family entities, mission-lock theater, escrow rollover, beneficial-owner opacity.
 - **Collapse state:** Power-Wealth Convergence.
-- **Current controls:** Annex AR, beneficial-ownership rules, demurrage package.
+- **Current controls:** Annex D Commons Return source-base review, Annex J beneficial-control rules, Annex AR contract-commitment architecture, and procurement disclosure controls.
 - **Missing test:** nested subcontractor beneficial-ownership red team.
 - **Failure criterion:** connected actors control repeated awards while appearing dispersed.
 - **False reassurance:** "The prime contractor is compliant."
@@ -156,7 +156,7 @@ Each abuse case should name:
 
 ### ACL-014 — Oracle Data Poisoning
 
-- **Actor incentive:** shift essential-category capacity measurements to trigger or suppress Essential Access issuance, activate or block Shared Storehouse, or affect demurrage rates tied to scarcity indicators — without requiring full oracle-methodology capture (ACL-012).
+- **Actor incentive:** shift essential-category capacity measurements to trigger or suppress Essential Access issuance, activate or block Shared Storehouse, or affect Commons Return/source-base decisions tied to scarcity indicators — without requiring full oracle-methodology capture (ACL-012).
 - **Attack path:** tamper with physical sensors feeding oracle nodes (e.g., spoofed warehouse inventory data, manipulated cold-chain readings, fraudulent physical-sampling reports); inject adversarial inputs into the data pipeline between sensing infrastructure and oracle processing; submit falsified delivery receipts or capacity certifications that pass internal consistency checks but misrepresent ground truth; coordinate submission timing so adversarial inputs are dominant during the oracle deliberation window.
 - **Collapse state:** Survival-Trade Bind (if issuance is suppressed below CSM floor during real scarcity), False-Security Bind (if issuance continues above real capacity, creating a paper floor with no physical delivery).
 - **Current controls:** INV-005 (Reality Anchoring — requires at least one Tier-3 physical sampling oracle node); Annex AL oracle independence standards; FC-032 (pairwise correlation max 0.30) plus directional-bias review detect shared error and same-direction drift, but do not by themselves prove inspector chain-of-custody integrity.

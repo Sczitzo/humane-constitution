@@ -35,7 +35,7 @@ Every pilot needs:
 | 5 | Essential Access delivery | Can baseline essentials be delivered without discretionary gatekeeping? | Delivery, appeals, and continuity meet minimum service targets. |
 | 6 | Commons Return, Universal Stake, and Flow simulation | Can public return and Flow issuance fund the floor and public rails without inflation, hidden debt, ordinary-life burden, or political dividend capture? | Fiscal adequacy model, source-base revenue model, incidence review, remaining-tax disclosure, and lockbox sufficiency pass before any scale claim. |
 | 7 | Public banking rails | Can basic banking be provided as infrastructure without predatory fees or credit traps? | Service cost and access targets are sustainable. |
-| 8 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, and business control be bounded without destroying stewardship? | Elite workaround routes are legally and operationally closed. |
+| 8 | Anti-rent and ownership review | Can trusts, beneficial ownership, land control, enterprise-control proxies, procurement/subcontractor capture, and business control be bounded without destroying stewardship? | The Anti-Rent Legal Wrapper Evidence Test Package passes; elite workaround routes are legally and operationally closed or residual risks are downgraded in the Claims and Evidence Register. |
 | 9 | Essential-sector conglomerate transition | Can oil, energy, medicine, logistics, and PBM-style intermediaries keep doing business without survival leverage? | Largest-supplier refusal does not break the CSM floor. |
 | 10 | Governance red-team | Can hostile actors capture institutions, definitions, or emergency powers? | Attack paths are visible, challengeable, and patched before scale. |
 | 11 | Implementation drift and founding legitimacy | Do the hard locks, deployment attestations, founding dossier, consent evidence gate, civil-society review gate, and claim-status gates work under hostile pressure? | Drift, founding, consent, reviewer-independence, and claim-status failures are visible before activation or scale-up. |
@@ -52,7 +52,7 @@ Every pilot needs:
 | Enforcement-observation paradox | Phase 10 governance red-team | Monitoring Repurposing Evidence Test Package; Capture Dashboard Specification; Annex C purpose-limitation recourse |
 | Real-capacity measurement | Phase 4 | Phase 5 delivery; Phase 10 oracle capture |
 | Contribution without coercive hierarchy | Phase 1 comprehension; Phase 10 governance red-team | Service Record Misuse Evidence Test Package; employer/vendor/school/housing/platform misuse testing; contribution-category equity audit; attestation abuse scenarios |
-| Anti-rent enforcement against legal wrappers | Phase 8 | Phase 6 Commons Return and Universal Stake; Phase 10 elite proxy markets |
+| Anti-rent enforcement against legal wrappers | Phase 8 | Anti-Rent Legal Wrapper Evidence Test Package; Phase 6 Commons Return and Universal Stake; Phase 10 elite proxy markets |
 | Essential-sector conglomerate refusal | Phase 9 | Essential-Sector Refusal Test Package; Conglomerate Transition Dossier; Annex AT; Capture Dashboard Specification |
 | Founding legitimacy and consent | Phase 11 | Founding Legitimacy Dossier artifact-status register; Founding Consent and Civil-Society Review Evidence Test Package; consent rehearsal; exit rehearsal; public objection process |
 | Bureaucratic complexity and institutional self-protection | Phase 1; Phase 10 | Authority tracing; review-body deadlock tests |

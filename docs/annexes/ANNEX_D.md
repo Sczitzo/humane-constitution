@@ -93,6 +93,8 @@ Universal Stake is the people's protected share of Commons Return. It is a civic
 
 **D4.2 Non-convertibility limits.** Universal Stake may not buy Voice, Service Record standing, public office, identity priority, Essential Access priority, or review-body eligibility. It is an economic instrument only.
 
+**D4.2a Anti-assignment and private-capture limit.** Universal Stake may not be pledged, garnished, wage-offset, collateralized, lender-captured, employer-captured, landlord-captured, pre-sold, assigned to a third party, or treated as rent, credit underwriting, employment compensation, or compliance reward. Any contract that attempts to capture a person's Universal Stake in advance is void as against this annex. The purpose is to keep the public share from becoming private leverage over future need.
+
 **D4.3 Eligibility floor.** Universal Stake must not exclude people through digital fragility, documentation barriers, disability, safety-shielded enrollment, migration status disputes, or lack of conventional banking. Where identity is unresolved, the system must provide a bounded custodial or analog path that protects against duplicate capture without denying the person.
 
 **D4.4 Political capture limit.** Universal Stake may not become an election-cycle dividend controlled by incumbents. Formula, reserve rule, distribution cadence, and suspension criteria must be pre-published and governed by evidence gates rather than discretionary political timing.

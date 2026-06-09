@@ -6,6 +6,8 @@
 
 **Governing sentence from the Christ-Centered Evaluation:** *The Humane Constitution must serve humanity under God; it must never become humanity's substitute for God.*
 
+**Supersession note:** Older vignettes treated routine demurrage as the main anti-hoarding instrument. That model is superseded by Annex D's Commons Return and Universal Stake architecture. Read remaining financial-risk examples through the current controls: protected ordinary use, stale-purpose review, source-base review, functional-control tests, and legal-wrapper red teams.
+
 ---
 
 ## How to Read a Vignette
@@ -27,7 +29,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 - **Article IV (Survival):** Essential Access is unconditional; it cannot be sold, pledged, or withdrawn as punishment. Physical cash remains available. Pre-existing care networks (food pantries, mutual aid, religious outreach) are explicitly supported and not displaced.
 - **Article VI (Voice, Service Record & Public Decisions):** Voice is based on recent verified contribution *plus hardship-safe floor rules*. Protected Pause preserves continuity during verified hardship (disability, caregiving, age, crisis, illness, disaster). Recognized-contribution audit required every two years. Constitutional matters stay one-person-one-vote. No single contribution sector may dominate civic weighting.
 - **Article I (Invariants):** Survival is unconditional. Human worth is not measured. No coercion by Voice, Service Record, or Flow for basic rights.
-- **Article V (Markets, Commons & Public Finance):** Demurrage applies to accumulated net worth above the participation floor, not to survival savings or ordinary household liquidity. Operating-float exemption exists. Physical cash remains available. Essential Access cannot be converted to money.
+- **Article V (Markets, Commons & Public Finance):** Flow does not carry routine balance decay or progressive net-worth demurrage by default. Annex D governs Commons Return and Universal Stake, protects ordinary household liquidity, and tests public-created value, scarcity privilege, legal monopoly, large succession, and protected-commons extraction. Physical cash remains available. Essential Access cannot be converted to money.
 
 ---
 
@@ -174,7 +176,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 - The biennial audit must test whether caregiving "that sustains community but resists easy measurement" is being included.
 - "The patient work of raising children" is specifically named in the audit mandate as a contribution that "must not be systematically excluded."
 - Protected Pause covers her age as a factor that "can change expectations."
-- Her pension is Flow income; as long as it is below the operating-float exemption, demurrage does not apply.
+- Her pension is ordinary household continuity. It should be protected under Annex D's ordinary-use rule unless a separate source-base review shows public-created value, scarcity privilege, or concentrated-control extraction.
 
 **What is underspecified or at risk.**
 - Caregiving "can count when verified." What does verification mean for Rosa? She has no employer to confirm her service, no organization to attest to it. She cares for her own grandchildren, not for a registered care institution. The verification pathway for informal family caregiving is not specified.
@@ -199,7 +201,7 @@ A **strong** verdict means the constitution clearly covers this person and the d
 - Pre-existing care networks are protected.
 
 **What is underspecified or at risk.**
-- Demurrage applies to accumulated net worth above the participation floor, and idle Flow is part of that net worth. Because the Kahananui family rarely uses Flow, they are unlikely to accumulate wealth that triggers demurrage. But if a family member receives Flow from the system (a service payment, an infrastructure contract), and they hold it in an account while deciding how to use it, they could be hit by demurrage on wealth they are not actively "hoarding" — they are simply outside the financial rhythm the system assumes.
+- Routine demurrage no longer applies to accumulated net worth or idle personal Flow by default. The live risk is different: if a family member receives Flow from a service payment, infrastructure contract, land-use arrangement, or public-created source base, reviewers could misread ordinary deliberation or indigenous stewardship as stale-purpose holding, project sheltering, or source-base avoidance. The protection must be clear enough that choosing a slower communal financial rhythm is not treated as evasion.
 - Their traditional governance does not produce a Service Record. Their elder council, their dispute resolution practices, their ecological stewardship — none of it is registered. They are constitutionally invisible as contributors despite carrying enormous community responsibility.
 - The biennial contribution audit is required to find this gap. But the audit is designed to find patterns; the Kahananui family may be too small a population to appear as a statistically significant exclusion.
 - The indigenous land status is not addressed in the constitution. Their ancestral land claim and the system's use-rights framework (Article V: "housing and land are governed as use-rights or leases") could conflict if the system does not explicitly recognize pre-existing indigenous tenure.
@@ -283,11 +285,11 @@ A **strong** verdict means the constitution clearly covers this person and the d
 
 ### Vignette 12 — Victor
 
-**Who he is.** Victor is 52 years old. He is a successful entrepreneur. He has accumulated substantial Flow through his businesses over fifteen years. To minimize demurrage exposure, his legal team has structured his holdings into: five time-bound project escrows (infrastructure and real estate developments), two term-finance pools backing regional agricultural cooperatives, one catastrophe reserve for his main company, and a collection of Flow-denominated equity positions in worker-cooperative enterprises. On paper, none of his balances are "idle." In practice, the development timelines are indefinitely extensible, the cooperatives are shells, and the equity positions are structured to appreciate without requiring active management.
+**Who he is.** Victor is 52 years old. He is a successful entrepreneur. He has accumulated substantial Flow and control rights through his businesses over fifteen years. To avoid source-base review and stale-purpose scrutiny, his legal team has structured his holdings into: five time-bound project escrows (infrastructure and real estate developments), two term-finance pools backing regional agricultural cooperatives, one catastrophe reserve for his main company, and a collection of Flow-denominated equity positions in worker-cooperative enterprises. On paper, none of his balances are idle and none of his structures look extractive. In practice, the development timelines are indefinitely extensible, the cooperatives are shells, and the equity positions are structured to appreciate without requiring active management.
 
 **What the constitution guarantees.**
-- Demurrage applies to accumulated net worth above the participation floor and operating-float exemption.
-- Protected capital treatment (project escrows, term-finance pools, catastrophe reserves) exists but requires "preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular."
+- Routine demurrage is superseded. Commons Return, source-base review, stale-purpose quarantine, beneficial-control review, and procurement controls apply where Victor's structures preserve public-created value, scarcity privilege, or concentrated control.
+- Protected capital treatment (project escrows, term-finance pools, catastrophe reserves) exists only when preregistered, ring-fenced, milestone-reviewed by independent auditors, and subject to reversion if purpose drifts or deadlines become circular.
 - "Deadlines become circular" is the key phrase — the constitution anticipates this exact structure.
 - Anti-hoarding, anti-monopoly, and anti-rent-seeking rules apply to all Flow.
 - High-value asset registries must be transparent.
@@ -394,7 +396,7 @@ Each story asks: what does the system protect, what does it still make people ca
 **Where fairness strains.**
 - Organized minorities may dominate Voice if the majority is mostly passive.
 - Devon may resent non-workers if public culture implies his work is morally optional but still depends on people like him.
-- If demurrage is confusing, he may experience it as a penalty for ordinary prudence.
+- If protected ordinary use, Commons Return, or stale-purpose rules are confusing, he may experience the system as a penalty for ordinary prudence.
 
 **Fairness question.** Does the system work when most people are neither heroic nor hostile, just occupied with daily life?
 
@@ -469,7 +471,7 @@ Each story asks: what does the system protect, what does it still make people ca
 
 **Who they are.** Omar is 39. He repairs appliances and wants to expand into a cooperative repair shop. He is ambitious, practical, and not trying to dominate anyone. He wants more Flow because expansion requires tools, rent, inventory, and risk.
 
-**The year.** In February he leases a small space. In April he hires one apprentice. In June cash flow is tight. In August he holds a larger balance for equipment purchases and worries about demurrage. In November the shop becomes viable.
+**The year.** In February he leases a small space. In April he hires one apprentice. In June cash flow is tight. In August he holds a larger balance for equipment purchases and worries that it will be mistaken for stale-purpose holding or project sheltering. In November the shop becomes viable.
 
 **What the system should do.**
 - Permit real accumulation for operating float, investment, and expansion.
@@ -817,7 +819,7 @@ Priya's case shows that the system's own tools can be turned against reporters a
 
 ### 5. The wealth-routing gap requires independent audit oversight
 
-Victor's case shows that the protected-capital channels are necessary but insufficient. Without genuinely independent audit appointment — where auditors are not chosen by the entity they audit — the demurrage system's core anti-hoarding purpose can be circumvented by legal structuring. This is a solvable problem, but only if the implementation takes it seriously.
+Victor's case shows that the protected-capital channels are necessary but insufficient. Without genuinely independent audit appointment — where auditors are not chosen by the entity they audit — the Commons Return, stale-purpose, and beneficial-control architecture can be circumvented by legal structuring. This is a solvable problem, but only if the implementation takes it seriously.
 
 ---
 

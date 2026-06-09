@@ -45,7 +45,7 @@ Actors hoard food or medicine and resell via barter or black markets during scar
 
 #### Commons Return evasion via hidden source-base control
 
-Actors shift Flow into land, housing, or commodities to avoid decay and extract rents.
+Actors shift Flow into land, housing, commodities, or legal wrappers to avoid Commons Return/source-base review and extract rents.
 
 - **Primary patches:** housing/land use-rights/leases; anti-vacancy carrying costs; transparent high-value asset registry; competition policy.
 - **Tests:** portfolio-shifting simulations; vacancy/rent extraction detection; enforcement proportionality review.
@@ -98,7 +98,7 @@ Fake identities claim Essential Access or unlawfully enter Voice and Service Rec
 ### A4. Pilot test checklist
 
 - **Essential Access:** verify scarcity-mode activation and per-category caps; test caregiver transfers; measure coercion-flag precision/recall.
-- **Flow:** validate demurrage computation; test escrow partitioning; simulate anti-vacancy carrying costs; verify enforcement does not break payroll.
+- **Flow:** validate source-base review, stale-purpose quarantine, and escrow partitioning; simulate anti-vacancy carrying costs; verify enforcement does not break payroll.
 - **Civic layer:** confirm Voice half-life, category balancing, and cap behavior; verify Service Record service thresholds; test collusion detection and audit sampling power.
 - **Oracles:** test quorum publishing; inject adversarial data; rehearse dispute throttling and rollback; validate audit independence.
 - **Governance:** run agenda-setting simulations for diversity and capture resistance; test rotation and conflict-of-interest enforcement.

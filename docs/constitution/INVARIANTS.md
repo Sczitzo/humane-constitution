@@ -167,15 +167,15 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 ## INV-009 — No Fees on Survival
 
-**Statement:** Survival access, Essential Access transactions, and labor income below the household savings floor may not be taxed, charged, or subjected to any system fee — including demurrage — regardless of the instrument used to access them or the administrative form the charge takes.
+**Statement:** Survival access, Essential Access transactions, and labor income below the household savings floor may not be taxed, charged, or subjected to any system fee — including any revived dormant demurrage backstop, carrying cost, or equivalent deduction — regardless of the instrument used to access them or the administrative form the charge takes.
 
 **Mechanical boundary:** No system process may apply a fee, carrying cost, or deduction to: (a) CSM-tier Essential Access allocations, (b) any Flow balance below the published household savings floor, or (c) any labor income transaction where the income source brings the recipient's balance to or below the floor.
 
 **Why this matters:** A fee on survival is a survival condition in disguise. Even a small carrying cost on the survival floor erodes the unconditional guarantee over time and converts Essential Access into a timed benefit rather than a floor.
 
-**The exemption boundary is structurally protected.** The boundary below which no fee, carrying cost, or demurrage may apply (the household savings floor, S) may never be lowered, redefined, or eroded so as to bring any carrying cost onto a household at or below the floor. The specific value of S is calibrated below Tier 1; the *rule that S may never be set or moved to defeat this invariant's protection of below-floor households* is itself Tier 1. A change to S that subjects a previously-protected household to demurrage is an INV-009 violation regardless of its administrative form.
+**The exemption boundary is structurally protected.** The boundary below which no fee, carrying cost, revived dormant demurrage backstop, or equivalent deduction may apply (the household savings floor, S) may never be lowered, redefined, or eroded so as to bring any carrying cost onto a household at or below the floor. The specific value of S is calibrated below Tier 1; the *rule that S may never be set or moved to defeat this invariant's protection of below-floor households* is itself Tier 1. A change to S that subjects a previously-protected household to any such charge is an INV-009 violation regardless of its administrative form.
 
-**Attack vectors that target this invariant:** T-007 (definition drift on "essential"), demurrage miscalibration against low-balance households
+**Attack vectors that target this invariant:** T-007 (definition drift on "essential"), dormant-backstop or fee miscalibration against low-balance households
 
 ---
 

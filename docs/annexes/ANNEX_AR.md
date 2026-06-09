@@ -36,7 +36,7 @@ The founding coalition must fill in these parameters before deployment. This ann
 This annex specifies five things:
 
 1. **High-value release thresholds** — tiered verification requirements by milestone release size and project-value share
-2. **Deployment windows** — how long commissioning authorities may hold idle escrowed funds by program type, with demurrage-interaction worked examples
+2. **Deployment windows** — how long commissioning authorities may hold idle escrowed funds by program type, with deployment-delay accountability examples
 3. **Force majeure freeze cap** — maximum cumulative freeze time per project lifetime, with escalating verification tiers
 4. **Inspector pool governance** — pool size floors, rotation schedule, disqualification criteria
 5. **Publication commitment** — what is reported publicly, how often, and in what form
@@ -179,7 +179,7 @@ CRP review outcomes are published publicly within **FC-170** (reserved; recommen
 - the **absolute cap FC-173** (reserved; recommended anchor: 365 days total); and
 - the **duration-proportional cap FC-174** (reserved; recommended anchor: 25% of contracted project duration).
 
-Whichever limit is reached first ends freeze availability. The duration-proportional cap is mandatory for all programme types — standard infrastructure, large-scale or novel infrastructure, and Essential Access-essential delivery alike — and is not a discretionary consideration. Its purpose is to close the anchor-hunting seam: an absolute cap alone erases roughly half the demurrage on a two-year project and the entire demurrage on a one-year project, so on any project shorter than the absolute cap divided by the proportional fraction, the proportional cap binds and the absolute anchor cannot be used as an evasion route.
+Whichever limit is reached first ends freeze availability. The duration-proportional cap is mandatory for all programme types — standard infrastructure, large-scale or novel infrastructure, and Essential Access-essential delivery alike — and is not a discretionary consideration. Its purpose is to close the anchor-hunting seam: an absolute cap alone erases roughly half the deployment-delay accountability signal on a two-year project and the entire signal on a one-year project, so on any project shorter than the absolute cap divided by the proportional fraction, the proportional cap binds and the absolute anchor cannot be used as an evasion route.
 
 **The hard cap is non-negotiable.** No extension of either limit is available without a Tier 2 (H-2) amendment. The purpose of the hard cap is to make the certification panel economically irrelevant above the cap — beyond the binding cap, there is nothing to capture.
 
@@ -194,7 +194,7 @@ Whichever limit is reached first ends freeze availability. The duration-proporti
 | No force majeure events | ~800,000 Flow | 0 | 0% |
 | 90-day freeze (single disruption) | ~701,000 Flow | ~99,000 Flow | 12.4% |
 | 180-day freeze (sustained disruption) | ~602,000 Flow | ~198,000 Flow | 24.8% |
-| 365-day freeze (cap exhausted) | ~402,000 Flow | ~398,000 Flow | **49.7%** — approximately half of total demurrage eliminated |
+| 365-day freeze (cap exhausted) | ~402,000 Flow | ~398,000 Flow | **49.7%** — approximately half of total deployment-delay signal eliminated |
 
 The 365-day absolute anchor in isolation lets a contractor eliminate ~50% of total delay exposure on a two-year project. The duration-proportional cap (FC-174) closes this: 25% of a 2-year duration is 182 days, which binds ahead of the 365-day anchor and holds avoidance to ~25%. On this project the proportional cap is the operative limit.
 
@@ -215,7 +215,7 @@ The 365-day absolute anchor in isolation lets a contractor eliminate ~50% of tot
 | :--- | :--- | :--- |
 | 90 days | ~12,300 Flow | 24.7% |
 | 180 days | ~24,700 Flow | 49.4% |
-| 365 days | ~50,000 Flow | 100% — entire demurrage eliminated on a 1-year project |
+| 365 days | ~50,000 Flow | 100% — entire deployment-delay signal eliminated on a 1-year project |
 
 **Key finding for short projects of any type:** The 365-day absolute anchor on a 1-year project is effectively unlimited — it erases the entire delay signal. The duration-proportional cap **FC-174** (recommended anchor: 25% of contracted project duration) is the binding limit for every short project, not only Essential Access-essential ones: 25% of a 1-year duration is ~91 days, holding avoidance to ~25%. Because §3.1 binds the cap to the lesser of the absolute and proportional limits for all programme types, the "1-year project, 365-day cap" outcome cannot arise for standard infrastructure either.
 
@@ -324,4 +324,4 @@ To complete this annex before deployment, the founding coalition must:
 
 ---
 
-*This document is Annex AR of the Humane Constitution. The commitment architecture is operative as a PROPOSED standard. The specific numerical parameters are an evidence gate: committed at founding as design architecture, calibrated with specific numbers after first-year pilot data, and locked as Tier 2 before the first scale-up gate. The recommended anchor values in this annex are defensible starting positions, not pre-committed values — the founding coalition must explicitly accept, modify, or replace each one.*
+*This document is Annex AR of the Humane Constitution. The commitment architecture is ACTIVE as an incorporated design for P-023; the specific numerical parameters remain an evidence and calibration gate. They must be committed at founding as design architecture, calibrated with specific numbers after first-year pilot data, and locked as Tier 2 before the first scale-up gate. The recommended anchor values in this annex are defensible starting positions, not pre-committed values — the founding coalition must explicitly accept, modify, or replace each one.*

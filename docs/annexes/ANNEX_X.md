@@ -88,8 +88,8 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 - **Required controls:** staged unwind, protected retirement classes, temporary continuity buffers, and public correction sequencing.
 
 **Red-team scenario 6 - Offshore leakage and non-Flow parking:**
-- Test whether newly issued Flow is rapidly converted into foreign stores, art, collectibles, or durable stockpiles to escape demurrage.
-- **Required controls:** membrane flags, asset-equivalence review, protected-float limits, and enhanced audit when issuance exits productive use too quickly.
+- Test whether newly issued Flow is rapidly converted into foreign stores, art, collectibles, or durable stockpiles to avoid stale-purpose review, protected-float limits, source-base review, or Commons Return equivalence review.
+- **Required controls:** membrane flags, asset-equivalence review, protected-float limits, Commons Return equivalence review, and enhanced audit when issuance exits productive use too quickly.
 - *A system that cannot pass these issuance red-team tests is not scale-ready, regardless of how elegant its abstract monetary theory appears.*
 
 ---
