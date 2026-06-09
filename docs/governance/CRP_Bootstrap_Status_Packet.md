@@ -249,7 +249,7 @@ TEMPLATE -- NOT ADOPTED
 
 | ID | Question | Source | Status |
 |---|---|---|---|
-| OQ-CRP-1 | Does ANNEX_AI Section 2.1 "CRP" include the provisional CRP defined in ANNEX_N? | ANNEX_AI.md Section 2.1; ANNEX_N.md | RESOLVED -- Option A adopted. See docs/governance/OQ_CRP_1_Adopted_Interpretation.md |
+| OQ-CRP-1 | Does ANNEX_AI Section 2.1 "CRP" include the provisional CRP defined in ANNEX_N? | ANNEX_AI.md Section 2.1; ANNEX_N.md | RESOLVED -- Option D interpretation adopted; Option B provisional CRP path selected. Execution conditions remain unsatisfied. See docs/governance/OQ_CRP_1_Adopted_Interpretation.md |
 | OQ-CRP-2 | Who administers the initial mixed-lot draw for the provisional CRP? | ANNEX_N.md | Not specified in source; founding team presumed |
 | OQ-CRP-3 | What are the eligibility pool definitions for the full ANNEX_L sortition? | ANNEX_L.md Section L2 | Not published in accessible corpus |
 | OQ-CRP-4 | Where is the founding interpretation record published before the Article VII dashboard is operational? | None found | Gap; provisional location needed |
@@ -259,4 +259,4 @@ TEMPLATE -- NOT ADOPTED
 
 ---
 
-*This packet resolves OQ-1 from Federated_Ombuds_Constitution_Packet.md. Finding: CRP status is Unknown -- no source record confirms constitution. The provisional CRP mechanism (ANNEX_N, ANNEX_U2) is the most available bootstrap path, but requires an owner interpretation ruling before use. No constitutional source text was modified. No generated files were modified.*
+*This packet resolved the OQ-1 interpretive question only. CRP constitution, draw, challenge window, observer attestation, and confirmations remain incomplete. The provisional CRP mechanism (ANNEX_N, ANNEX_U2) is the selected bootstrap path only within the adopted interpretation's limits. No constitutional source text was modified.*

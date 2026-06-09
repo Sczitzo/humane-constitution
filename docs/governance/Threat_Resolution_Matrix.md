@@ -224,7 +224,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **External evidence:** OECD public integrity sources anchor the risk that formally valid processes can still be manipulated without monitoring, conflict controls, and enforcement.
 - **Proof needed:** timing-monitor false-positive test, Ombuds four-hour decision drill, enforcement-manufacture red team, and appeal review.
 - **Residual risk:** intent is hard to prove under time pressure; precommitted criteria matter more than confidence after the fact.
-- **Resolution update:** Deliberate-manufacture criteria now specified in Annex AI §4.12 (P-052 ACTIVE). 24-hour Plenum window; asymmetric default favors PCRP. Open problem closed.
+- **Resolution update:** Deliberate-manufacture criteria now specified in Annex AI §4.12 (P-052 ACTIVE). 24-hour Plenum window; asymmetric default favors PCRP. Design closure achieved; evidence closure remains pending until timing-monitor, red-team, and appeal drills run.
 
 ### T-020 - Epistemological Oracle Capture
 
@@ -233,7 +233,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Corruption route to assume:** measurement actors share standards, funders, professional assumptions, datasets, and model architecture while passing independence checks.
 - **Proof needed:** Capacity Measurement Evidence Test Package; methodology-class audit, standards-body capture review, direct-sampling pilot, directional-bias review, small-population oracle plan where applicable, and confidence-band comprehension test.
 - **Residual risk:** independence is partly social and epistemic, not just organizational; recurring review is permanent.
-- **Status note:** ADDRESSED* — methodology pilots and adversarial standards review still required.
+- **Status note:** Design closure achieved; evidence closure pending — methodology pilots and adversarial standards review still required.
 
 ### T-021 - Algorithmic Oracle Capture
 
@@ -242,7 +242,7 @@ The [Architecture Source Map](./Architecture_Source_Map.md) groups threats by th
 - **Corruption route to assume:** vendors deploy shared models, hidden data pipelines, biased optimization targets, or contract incentives that satisfy formal independence while producing correlated error.
 - **Proof needed:** Capacity Measurement Evidence Test Package; AI supply-chain audit, model-correlation test, vendor conflict review, and manual fallback drill.
 - **Residual risk:** algorithmic systems can drift silently; the system needs recurring model review and non-AI physical anchors.
-- **Status note:** ADDRESSED* — methodology pilots and adversarial standards review still required.
+- **Status note:** Design closure achieved; evidence closure pending — methodology pilots, AI supply-chain audit, and adversarial standards review still required.
 
 ### T-022 - Electoral Cycle Capture
 

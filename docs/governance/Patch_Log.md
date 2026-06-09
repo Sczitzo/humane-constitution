@@ -695,7 +695,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the inventory through P-066. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-070. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -753,7 +753,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | Delivery gap between guarantee and operation | P-055 | **ACTIVE** | ANNEX_AY · Article IV |
 | INV-001 support (identity-related; active identity controls remain P-003/P-016) | P-056 | PROPOSED | ANNEX_AK §AK8 · ANNEX_AZ §AZ2 |
 | ACL-011 / ACL-010 | P-057 | **PROPOSED** | Pilot site selection criteria |
-| T-016 / constitutional void | P-058 | ACTIVE | Jurisdiction Interface Clause |
+| constitutional void support — no standalone threat row | P-058 | PROPOSED | Jurisdiction Interface Clause |
 | ACL-010 / dignity-floor leverage | P-059 | **PROPOSED** | Vulnerable_Population_Consent_Protocol.md |
 | ACL-005 / founding keyholder capture | P-060 | **PROPOSED** | Founding Team Composition Standard |
 | ACL-007 / Power-Wealth Convergence | P-061 | **PROPOSED** | Founding Capital Framework |
@@ -761,6 +761,10 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-028 | P-064 | **ACTIVE** | Essential-Sector Refusal Test Package · Capture Dashboard Specification · Threat Resolution Matrix · Pilot Evidence Roadmap |
 | T-022 | P-065 | **ACTIVE** | ANNEX_AM §AM3/§AM8.5–AM8.7 · amendment_protocol.md §3 · Capture Dashboard Specification · Pilot Evidence Roadmap |
 | T-029 | P-066 | **ACTIVE** | ANNEX_D · Commons Return and Universal Stake Evidence Test Package · Threat Register · Claims and Evidence Register |
+| T-030 | P-067 | **ACTIVE** | Cyber Resilience and Availability Evidence Test Package · Threat Register · Pilot Evidence Roadmap |
+| T-031 | P-068 | **ACTIVE** | Last-Resort Unenrolled Access Evidence Test Package · ANNEX_AZ · ANNEX_AY |
+| T-032 | P-069 | **ACTIVE** | Monitoring Repurposing Evidence Test Package · Annex C · Capture Dashboard Specification |
+| T-033 | P-070 | **ACTIVE** | Founding Consent and Civil-Society Review Evidence Test Package · Founding Legitimacy Dossier |
 
 ---
 

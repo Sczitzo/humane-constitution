@@ -75,9 +75,9 @@ Track B may begin preparatory work immediately, but no binding site commitment m
 
 **D2 — First Residential Units Complete (Month 26–30):** Minimum viable residential capacity for Cohort 1: 100–150 units, habitable and inspected. Healthcare facility at minimum viable operation (primary care, emergency stabilization, mental health first response). This gate unlocks E Window 3 (enrollment). It is the second critical-path gate.
 
-**D3 — Full Buildout Phase 1 Complete (Month 36–42):** 300–500 units; full shared facilities operational; agricultural and production zones operational and producing. The earned income economy begins at this phase.
+**D3 — Buildout Stage 1 Complete (Month 36–42):** 300–500 units; full shared facilities operational; agricultural and production zones operational and producing. The earned income economy begins at this stage.
 
-**D4 — Scale Capacity (Month 48–60):** Capacity for 1,000+ residents across all facility types. Shared Storehouse fully operational. Emergency rationing systems tested and calibrated. Governance structures at full operational load.
+**D4 — Scale Capacity (Month 48–60):** Capacity for 1,000+ residents across all facility types. Shared Storehouse and emergency-rationing systems reach their target state only after the capacity, cyber/offline, and emergency-rationing evidence packets pass. Governance structures operate at full load only after the relevant launch gates clear.
 
 ---
 
@@ -156,7 +156,7 @@ The ICA is responsible for verifying and documenting items 1–4 before any comm
 
 **Cohort 2 (D3 gate, Month 36–42):** 300–500 residents. Full population mix. Agricultural and production zones operational and producing. The earned income economy begins. Governance transitions from founding-team mode toward constitutional governance as resident numbers allow.
 
-**Cohort 3+ (D4 gate, Month 48–60):** Scale to 1,000+ residents. Shared Storehouse and emergency rationing systems fully operational and tested. Governance structures at full constitutional operation. Founder sunset (A3) has completed.
+**Cohort 3+ (D4 gate, Month 48–60):** Scale to 1,000+ residents. Shared Storehouse and emergency-rationing systems may be declared complete only after capacity, cyber/offline, and rationing evidence packets pass. Governance structures target full constitutional operation. Founder sunset (A3) has completed.
 
 ---
 

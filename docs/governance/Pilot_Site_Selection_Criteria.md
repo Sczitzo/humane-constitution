@@ -56,7 +56,7 @@ A site is disqualified if any of the following are true:
 
 **3.3** State regulatory environment permitting intentional community governance, alternative dispute resolution, and special district formation. States with high fit: Texas (minimal zoning outside incorporated cities, strong CLT law), New Mexico (strong alternative community precedent, low land cost), Tennessee (low regulatory burden, four seasons, agricultural tradition).
 
-**3.4** Proximity to a university or research institution capable of independent audit and pilot evaluation — required for Phase 3 external validity gate.
+**3.4** Proximity to a university or research institution capable of independent audit and pilot evaluation — required for the P-019 external-validity gate and Pilot Evidence Roadmap scale-up review.
 
 **3.5** Low composite natural disaster risk (flood, wildfire, tornado, hurricane).
 

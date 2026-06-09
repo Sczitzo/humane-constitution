@@ -446,7 +446,7 @@ Add: *"The founding artifact register must include a 'dissent record': a documen
 The Round 2–3 additions — CASP, CIP, AED, founding cascade — represent genuine improvements on the Babel-risk profile of the Constitution, with two caveats:
 
 **Improvements:**
-- CASP closes the Matthew 25 gap: the survival guarantee can now survive corporate refusal without requiring a new government decision
+- CASP addresses the Matthew 25 gap at design level: survival-floor continuity has a pre-committed fallback path, but refusal drills and vulnerable-cohort tests remain necessary before any stronger claim
 - CIP directly addresses the most acute Babel-risk from the original evaluation (keyholder concentration)
 - AED's inclusion-first posture is the right institutional expression of the lost-sheep parable
 - The founding cascade gate applies Lukan tower-building wisdom to system rollout

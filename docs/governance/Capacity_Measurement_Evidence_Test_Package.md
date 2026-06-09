@@ -4,7 +4,7 @@ This package defines what must be true before the project can make strong claims
 
 Capacity measurement is the mechanism by which the system determines whether essential categories — food, water, shelter, healthcare, transit, energy, communications — are available in sufficient supply to sustain Essential Access promises, trigger Shared Storehouse activation, and govern scarcity-mode escalation. Bad measurement can harm people even when every institution is acting in good faith.
 
-Current status: **active-unproven control, needs evidence**.
+Current status: **Active — unproven** (evidence axis) · **Pre-ratification** (adoption axis). The mechanism is designed and incorporated, but still needs field evidence before stronger capacity claims.
 
 ---
 
