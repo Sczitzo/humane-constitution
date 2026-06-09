@@ -235,6 +235,12 @@ The system must know that each person is one person. It must also protect people
 
 This is not solved at scale.
 
+### Monitoring without repurposing
+
+The system needs enough monitoring to detect refusal, fraud, delivery failure, and capture. It must not let that monitoring become a general-purpose surveillance or coercion layer.
+
+The designed guardrails are the Monitoring Purpose Register, data-lane limits, raw-access rules, retention clocks, appeal paths, cleared-flag protections, and lawful-pressure tests in the [Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md). These are design requirements, not proof that monitoring is safe in practice.
+
 ### Measuring real capacity
 
 The system cannot promise food, shelter, water, care, or medicine without knowing what is actually available.
@@ -259,6 +265,7 @@ Before any large rollout, the project needs evidence that:
 
 - Essential Access can be delivered in real places
 - identity recovery works without surveillance or exclusion
+- monitoring cannot be repurposed into surveillance, ranking, coercion, or hidden enforcement
 - capacity measurement is reliable enough
 - appeals are fast and usable
 - shortage rules work under stress

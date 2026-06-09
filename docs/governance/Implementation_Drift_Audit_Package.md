@@ -49,6 +49,7 @@ The design is credible only if independent reviewers can reproduce the hashes, v
 | Supply-chain compromise | Distribute binaries that report compliant hashes while running different logic. | Tests reproducible builds, signature separation, and operator verification. |
 | Emergency override pressure | Ask operators to skip checks during crisis. | Tests whether "temporary" exceptions become a drift route. |
 | Timelock normalization | Pass a hostile lawful amendment and wait out the public response window. | Tests whether exit, public challenge, and Ombuds reports are meaningful. |
+| Monitoring-method drift | Quietly change monitoring fields, access roles, retention, dashboard methods, suppression rules, vendor processors, or raw-log handling while leaving the public claim unchanged. | Tests whether administrative monitoring power can expand without a formal patch, register update, or public challenge path. |
 
 ---
 
@@ -59,6 +60,8 @@ The design is credible only if independent reviewers can reproduce the hashes, v
 List every file, parameter, article section, annex section, generated artifact, and runtime component that should be covered by the drift layer.
 
 Failure criterion: any Tier 1 rule affects operation but is absent from the covered set or cannot be traced to a protected commitment.
+
+Monitoring coverage must include the Monitoring Purpose Register, dashboard method files, raw-access standards, retention schedules, suppression rules, cleared-flag rules, vendor processing terms, and any code or procedure that controls person-linkable monitoring data.
 
 ### Stage 1 - Reproducible Hash Test
 
@@ -77,6 +80,8 @@ Failure criterion: a changed prior row can be accepted without visible chain bre
 Serve different drift-chain heads on different publication channels and verify that bound components refuse affected operations.
 
 Failure criterion: a component accepts one channel silently or operates through channel divergence without alert.
+
+For monitoring surfaces, the test also serves divergent Monitoring Purpose Register rows, retention clocks, suppression rules, or dashboard methods. A monitoring component fails if it accepts a broader purpose, longer retention period, more permissive raw-access role, or weaker suppression rule without a visible drift event.
 
 ### Stage 4 - Startup Refusal Test
 
@@ -134,6 +139,7 @@ The project may strengthen its claim only after producing:
 - keyholder custody and conflict audit;
 - timelock response drill;
 - supply-chain bypass review;
+- monitoring-method drift drill covering register changes, retention changes, access-role changes, dashboard suppression changes, vendor additions, and raw-log handling;
 - residual-risk update in the Claims and Evidence Register.
 
 ---

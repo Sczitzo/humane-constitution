@@ -193,10 +193,10 @@ Each abuse case should name:
 ### ACL-017 — Monitoring Repurposing
 
 - **Actor incentive:** officials, operators, providers, employers, landlords, law-enforcement bodies, funders, or hostile successors want to use protective monitoring for control, punishment, ranking, exclusion, or leverage.
-- **Attack path:** reuse redemption, delivery, identity, Tier 0, Service Record, provider, dashboard, oracle, cyber, or enforcement data for a purpose outside the one that justified collection; join small datasets across dashboards; infer identity from time, location, route, provider, device, or repeated-pattern metadata; treat monitoring flags as proof rather than suspicion.
+- **Attack path:** reuse redemption, delivery, identity, Tier 0, Service Record, provider, dashboard, oracle, cyber, Commons Return assessment, Flow issuance, drift, or enforcement data for a purpose outside the one that justified collection; join small datasets across dashboards; infer identity from time, location, route, provider, device, or repeated-pattern metadata; expand fields, retention, access roles, vendors, or methods without review; treat monitoring flags as proof rather than suspicion.
 - **Collapse state:** Power-Wealth Convergence, Survival-Trade Bind, and control-plane failure.
-- **Current controls:** Annex C recourse for monitored persons; Annex H privacy/surveillance note; Capture Dashboard abuse controls; Annex AK aggregate Tier 0 monitoring limits; Annex AY privacy-preserving delivery monitoring; T-032/P-069 Monitoring Repurposing Evidence Test Package.
-- **Missing test:** purpose-creep red team, linkability/re-identification test, office-separation drill, individual-flag appeal drill, data-minimization and retention audit, and coercive-use scenario.
+- **Current controls:** Annex C recourse for monitored persons; Annex H privacy/surveillance note; Capture Dashboard abuse controls; Annex AK aggregate Tier 0 monitoring limits; Annex AY privacy-preserving delivery monitoring; T-032/P-069 Monitoring Administrative Safety Packet and Monitoring Repurposing Evidence Test Package.
+- **Missing test:** Monitoring Purpose Register, lane-assignment table, raw-access log standard, purpose-creep red team, administrative-expansion drill, lawful-pressure scenario, linkability/re-identification test, office-separation drill, individual-flag appeal drill, data-minimization and retention audit, cleared-flag reuse test, and coercive-use scenario.
 - **Failure criterion:** monitoring data collected for protection can be reused to locate, rank, punish, exclude, pressure, identify, or threaten a person or protected cohort.
 - **False reassurance:** "The data is only used for safety."
 

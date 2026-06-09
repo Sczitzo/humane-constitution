@@ -77,6 +77,8 @@ No one may threaten your food, shelter, medicine, or basic transit to make you o
 
 The system must use the least data needed. Identity and transaction records are not for general monitoring.
 
+Any monitoring stream must have a named purpose, minimum-data rule, retention clock, appeal path, and independent reviewer before it operates. The detailed design is in the [Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md). It is a guardrail to test, not proof that monitoring is already safe.
+
 ### No permanent silent error
 
 If the system makes a mistake, you must have:
@@ -325,7 +327,7 @@ Anika is a single parent with two teenagers. A neighbor reports her for selling 
 
 In April her account is flagged. In May a local official tells her the review will take weeks. In June the accusation is cleared, but she has already missed work, lost trust, and felt publicly shamed.
 
-The system needs abuse detection. It also needs fast restoration, privacy, and public correction when accusations are false.
+The system needs abuse detection. It also needs fast restoration, privacy, public correction when accusations are false, and a rule that cleared flags cannot become hidden suspicion. The individual-flag appeal drill in the [Monitoring Repurposing Evidence Test Package](../governance/Monitoring_Repurposing_Evidence_Test_Package.md) is the test this story is meant to pressure.
 
 **Fairness test:** Can the system investigate abuse without making accusation itself a punishment?
 

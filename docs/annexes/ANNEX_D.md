@@ -132,6 +132,8 @@ Assessment must be narrow, explainable, contestable, and purpose-limited.
 
 **D6.1 Minimum necessary data.** Assessors may collect only the data needed to determine the named source base, protected ordinary use, and beneficial control. Data collected for Commons Return may not be reused for policing, immigration enforcement, employment screening, credit scoring, marketing, political targeting, or social ranking.
 
+Commons Return assessment data is a monitoring stream for purposes of [P-069](../governance/Patch_Log.md) and the [Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md). Before any assessment stream operates, the Monitoring Purpose Register must name its source base, fields, lane, raw-access rule, retention clock, independent reviewer, join limits, forbidden uses, and appeal path.
+
 **D6.2 Public formulas, private details.** Public dashboards show aggregate receipts and burden distribution. Individual household and business details remain protected unless disclosure is required for a specific adjudicated enforcement action.
 
 **D6.3 Appeal right.** Every assessment must include a plain-language basis, evidence source, appeal path, hardship route, and non-displacement protection where applicable.

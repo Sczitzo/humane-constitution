@@ -84,7 +84,7 @@ Predatory debt is limited. Productive finance still needs to exist, but through 
 
 The system must use the least data needed. It must avoid general monitoring.
 
-This is still one of the hardest open problems. The project needs a proven identity system before any large rollout would be credible.
+This is still one of the hardest open problems. The project needs a proven identity system and a proven monitoring-safety system before any large rollout would be credible. The designed guardrails are in the [Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md) and [Monitoring Repurposing Evidence Test Package](../governance/Monitoring_Repurposing_Evidence_Test_Package.md), but they have not passed real-world tests.
 
 ## 14. How would transition happen?
 

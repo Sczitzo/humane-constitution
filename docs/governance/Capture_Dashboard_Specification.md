@@ -4,6 +4,8 @@ This specification defines the public indicators needed to see elite formation, 
 
 It is not a surveillance mandate. It is a public accountability specification. Dashboards must use aggregation, small-cell suppression, delay, and privacy-preserving methods consistent with Article VII.
 
+All dashboard streams are governed by the [Monitoring Administrative Safety Packet](./Monitoring_Administrative_Safety_Packet.md). A dashboard metric that depends on monitoring data must cite a Monitoring Purpose Register row before publication and must follow the packet's data-lane, raw-access, retention, cleared-flag, and forbidden-use rules.
+
 ---
 
 ## Dashboard Principles
@@ -136,6 +138,8 @@ Dashboards can become tools of capture. Therefore:
 - dashboards may not rank ordinary persons;
 - delayed publication is allowed where live data would help adversaries;
 - raw data access requires independent authorization;
+- raw access, lane escalation, retention, joins, and cleared-flag reuse are governed by the Monitoring Administrative Safety Packet;
+- every metric using monitoring data must cite a Monitoring Purpose Register row with owner, purpose, lane, retention, reviewer, and appeal path where individual flags are possible;
 - methodology changes must be logged and challengeable;
 - failure to publish is itself a reportable Article VII failure.
 

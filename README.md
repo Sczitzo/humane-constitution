@@ -226,12 +226,12 @@ The current main text uses **one Founding Order** and **seven articles**.
 
 - **Founding Order — Local Choice, Consent & Exit** — who joins, how decisions stay local when possible, and how a place can leave.
 - **Article I — Rights & Rules** — the rules that cannot be quietly changed.
-- **Article II — Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, and dependent protection without surveillance scoring.
+- **Article II — Personhood, Identity & Continuity** — One-person continuity, recovery, guardianship, and dependent protection designed to avoid surveillance scoring.
 - **Article III — Real Capacity & Reserves** — how the system measures food, water, energy, shelter, care, medicine, and reserves.
 - **Article IV — Survival** — how Essential Access becomes real access to basics.
 - **Article V — Markets, Commons & Public Finance** — Flow, housing, land, business, public banking, and public funding.
 - **Article VI — Voice, Service Record & Public Decisions** — how people help set priorities without creating social credit.
-- **Article VII — Public Records & Warning Systems** — dashboards, audits, and early warnings.
+- **Article VII — Public Records & Warning Systems** — dashboards, audits, early warnings, and monitoring limits.
 
 ## Architecture flow
 
@@ -382,7 +382,7 @@ The system has been adversarially stress-tested:
 | A hidden social credit system | Voice and Service Record cannot buy rights, goods, immunity, or survival access. Human worth is never measured. |
 | A command economy | Flow still runs markets, prices, contracts, business, and innovation. The system limits power, not all trade. |
 | A welfare bureaucracy | Essential Access is grounded in measured physical capacity, clear basket rules, and reviewable scarcity procedures. |
-| A surveillance state | Identity and dashboards use minimum necessary data, aggregation thresholds, and selective disclosure. |
+| A surveillance state | Identity, dashboards, and monitoring streams are designed around minimum necessary data, aggregation thresholds, selective disclosure, and the [Monitoring Administrative Safety Packet](./docs/governance/Monitoring_Administrative_Safety_Packet.md). This is a design gate, not field proof. |
 | A rentier loophole | Land and housing are use-rights with anti-vacancy rules, not speculative ownership. |
 
 ## What will go wrong (pre-committed)

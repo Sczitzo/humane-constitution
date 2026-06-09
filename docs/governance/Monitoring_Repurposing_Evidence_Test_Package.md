@@ -6,6 +6,8 @@
 **Primary abuse case:** ACL-017 — Monitoring Repurposing  
 **Primary question:** Can the system enforce non-convertibility, fraud control, delivery sufficiency, capacity measurement, and capture detection without turning the required monitoring into a general-purpose surveillance or coercion layer?
 
+**Administrative companion:** [Monitoring Administrative Safety Packet](./Monitoring_Administrative_Safety_Packet.md). This package tests whether monitoring can resist repurposing; the administrative packet defines the pre-operation gates, register fields, data lanes, raw-access limits, flag lifecycle, emergency limits, vendor controls, and public-comprehension artifacts that must exist before a monitoring stream operates.
+
 ---
 
 ## Plain-Language Purpose
@@ -53,6 +55,8 @@ If a monitoring tool cannot satisfy these conditions, the tool must be redesigne
 ## Required Monitoring Inventory
 
 Before any pilot or deployment claims monitoring is safe, the project must publish a Monitoring Purpose Register.
+
+The register is governed by the [Monitoring Administrative Safety Packet](./Monitoring_Administrative_Safety_Packet.md). A stream that lacks the packet's pre-operation gate, lane assignment, raw-access rule, retention clock, appeal path, independent reviewer, and forbidden-use list is not merely incomplete; it is non-operative.
 
 For each monitoring stream:
 
@@ -140,6 +144,29 @@ Reviewers simulate a hostile successor government, captured office, abusive offi
 
 The test fails if the actor can obtain, infer, or pressure access to data that lets them punish, rank, locate, identify, exclude, or threaten protected persons.
 
+### 7. Administrative Expansion Drill
+
+Reviewers simulate an administrator trying to expand a stream without calling it a new use.
+
+The drill tests whether the administrator can:
+
+- add a field without necessity review;
+- extend retention without public record;
+- move a stream into a higher data lane without written finding;
+- preserve cleared flags as hidden suspicion;
+- join datasets across dashboards;
+- change a dashboard method while keeping the public metric name;
+- add a vendor, contractor, model, or data warehouse without the required contract terms;
+- relabel the same stream under a broader purpose.
+
+The test fails if any expansion can operate before the Monitoring Purpose Register row is amended, independently reviewed, and published at the appropriate level of detail.
+
+### 8. Lawful-Pressure Scenario
+
+Reviewers simulate a subpoena, immigration request, policing request, national-security request, funder demand, provider demand, civil-litigation request, insurer request, employer request, landlord request, school request, or vendor demand for raw monitoring data.
+
+The test fails if pressure can obtain person-linkable or cohort-linkable data outside the registered purpose, without independent review, without notice where notice is safe and legally possible, or without a public residual-risk record.
+
 ---
 
 ## Required Metrics
@@ -156,6 +183,8 @@ The test fails if the actor can obtain, infer, or pressure access to data that l
 | Individual-flag appeals | notice time, review time, reversal rate, abandonment rate |
 | Office-separation failures | cases where operator and reporter are not meaningfully independent |
 | Coercive-use exposure | whether hostile actors can use monitoring data for punishment, ranking, location, exclusion, or pressure |
+| Administrative expansion attempts | field additions, retention extensions, lane escalations, joins, method changes, vendor additions, and purpose relabeling blocked or approved |
+| Lawful-pressure exposure | whether legal, funder, provider, employer, landlord, school, insurer, policing, immigration, or vendor pressure can obtain raw or linkable data outside purpose |
 
 ---
 
@@ -170,6 +199,8 @@ The monitoring design fails if any of the following occurs:
 - an individual-level flag produces adverse action without notice and appeal;
 - monitoring records are kept longer than needed or joined across domains without a published legal basis;
 - a hostile or captured actor can use monitoring data to locate, punish, rank, exclude, threaten, or pressure a person or community;
+- an administrator can expand fields, retention, access roles, data lanes, dashboard methods, vendors, joins, or purposes without triggering independent review;
+- lawful or contractual pressure can obtain raw, person-linkable, route-linkable, whistleblower-linkable, or vulnerable-cohort data outside the registered purpose;
 - public claims say monitoring is safe without a passed purpose-creep, linkability, office-separation, appeal, retention, and coercive-use test.
 
 ---
@@ -185,6 +216,8 @@ Before the corpus may claim that enforcement monitoring is bounded and non-surve
 5. the office-separation drill must prove operating offices cannot mark themselves clean;
 6. the individual-flag appeal drill must pass notice, review, reversibility, and correction tests;
 7. the coercive-use scenario must fail to produce usable punishment, ranking, location, exclusion, or pressure data.
+8. the administrative expansion drill must prove changes to fields, retention, lanes, joins, methods, vendors, and purposes cannot operate quietly;
+9. the lawful-pressure scenario must prove external pressure cannot obtain raw or linkable data outside the registered purpose without review and public residual-risk handling.
 
 Until then, the honest claim is:
 
