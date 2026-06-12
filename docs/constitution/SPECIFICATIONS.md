@@ -217,7 +217,7 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 - N ≥ 5 independent oracle nodes (FC-030 `ORACLE_N_MIN`)
 - At least 3 distinct methodology classes represented (FC-031 `METHODOLOGY_CLASS_MIN`): at least one node using institutional statistical modeling; at least one using community-based participatory research (CBPR); at least one using independent physical sampling (Tier 3, ground-truth)
 - Pairwise error-series correlation ≤ 0.30 Pearson (FC-032 `ORACLE_PAIRWISE_CORRELATION_MAX`)
-- At least 1 designated adversarial / red-team seat AND ≥20% of total oracle nodes must be adversarial (both conditions FC-033 `ORACLE_ADVERSARIAL_SEATS_MIN`; Tier 1). Any expansion of the oracle council must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment.
+- At least 1 designated adversarial / red-team seat AND ≥20% of total oracle nodes must be adversarial (both conditions FC-033 `ORACLE_ADVERSARIAL_SEATS_MIN`; Tier 1). Any expansion of the oracle cohort must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment.
 
 *Rationale: BFT theorem `n ≥ 3f + 1`; `f = 1` gives `n ≥ 4`; `N_MIN = 5` provides one-node margin above the BFT floor so single-node loss does not drop the cohort below tolerance.*
 
@@ -263,7 +263,7 @@ Plain meaning: oracles are the system's reality checkers. They confirm whether r
 | Minimum methodology classes | 3 | FC-031 | Tier 1 |
 | Independent physical sampling (Tier-3 ground-truth) | At least one node required, as one of the 3 methodology classes | FC-031 | Tier 1 |
 | Max pairwise oracle error correlation | 0.30 (Pearson) | FC-032 | Tier 1 |
-| Adversarial oracle seats per cohort | ≥1 adversarial node AND ≥20% of total oracle nodes must be adversarial (both conditions Tier 1). Any expansion of the oracle council must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment. | FC-033 | Tier 1 |
+| Adversarial oracle seats per cohort | ≥1 adversarial node AND ≥20% of total oracle nodes must be adversarial (both conditions Tier 1). Any expansion of the oracle cohort must maintain the ≥20% adversarial proportion. Reducing the adversarial proportion below 20% is equivalent to a Tier 1 amendment. | FC-033 | Tier 1 |
 | Oracle quorum-loss restoration window | 14 days | FC-100 | Tier 1 |
 | Attestation stake ratio | 0.20 of attestor balance | FC-080 | Tier 2 |
 | Reserve window (CSM×pop×days) | 45 days | FC-070 | Tier 1 |

@@ -39,7 +39,7 @@ An automatic constitutional review is triggered, without requiring the governing
 
 - A founding institution seat is unfilled for more than **90 days**.
 - Post-mortem publication (Article VII) lapses for more than **30 days**.
-- Oracle accreditation count drops below the methodology-class minimum (Annex AL §3.1).
+- Oracle accreditation count drops below the methodology-class minimum (Annex AL §3.4).
 - Article VII dashboard publication is delayed by more than **14 days** beyond its stated cadence.
 
 The review is initiated by the constitutional body (AM1) and is self-executing. It is published in the Article VII dashboard at the moment of trigger.
