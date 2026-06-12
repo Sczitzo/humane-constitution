@@ -47,9 +47,9 @@ The bolded clause (land beneath a primary residence) and the final sentence were
 
 **The problem (unchanged).** The §D4.1/§D5 funding-priority ordering lives in annex prose; INV-001 protects the *person's* floor but not the *system's* funding sequence, so a popular Stake could be paid while floor provision is thinned, deferred, or backfilled by debt.
 
-**Redline — new Tier-1 invariant (placeholder number; reconcile at intake).** *(A separate pending packet reserves INV-014–019 for scope/interface invariants; assign a placeholder and reconcile numbering at FAP intake — the content, not the number, is the proposal.)*
+**Redline — new Tier-1 invariant INV-014.** *(Numbering reconciled with the scope/interface redline and decision index: floor-precedes-distribution is INV-014; interface invariants shift to INV-015–INV-020.)*
 
-> ## INV-0XX — The Floor Precedes Distribution
+> ## INV-014 — The Floor Precedes Distribution
 >
 > **Statement:** Essential Access provision and the resilience reserves that protect it are funded before any Universal Stake distribution. A Universal Stake distribution **may not be authorized** while the floor or its reserves are underfunded, and may never be funded by reducing, deferring, or deficit-financing the floor. An authorization made in violation is void; **the authorizing officials bear INV-011 accountability. Universal Stake already issued in good faith to recipients is not clawed back** (consistent with the anti-assignment and anti-garnishment protections of ANNEX_D §D4.2a).
 >
@@ -78,7 +78,7 @@ The three panel patches are incorporated: ex-ante **blocking** (not unenforceabl
 
 - **Fix A residual:** edits INV-008 (Tier-1) — 7-of-9 keyholders + 180-day timelock; `modifies_tier1` two-key adversarial attestation (ANNEX_AV); Christ-centered review required. Reconcile wording with INV-010 succession exemptions.
 - **Fix B:** ANNEX_D §D2a + §D9 amendment — Tier-2 founding commitment (confirm with Acceptance_Protocol owner); new patch P-071 + Test 3 extension + **blocking pilot gate** before any binding activation.
-- **Fix C:** new Tier-1 invariant (placeholder number) — same Tier-1 bar as Fix A; Christ-centered review required; numbering reconciled at intake.
+- **Fix C:** new Tier-1 invariant INV-014 — same Tier-1 bar as Fix A; Christ-centered review required; numbering already reconciled with the scope/interface redline and decision index.
 
 ## Panel gate verdict (after revision)
 
