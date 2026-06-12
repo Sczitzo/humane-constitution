@@ -6,13 +6,7 @@
 
 How could the system fail, be gamed, or be captured? Each threat names a failure path, the harm it could cause, and the current mitigation status.
 
-**Status key.** 
-- **Proposed** = a response has been suggested but not yet formally incorporated.
-- **Designed** = the mechanism is specified in the corpus but not yet active.
-- **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence.
-- **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution.
-- **Evidence-backed** = sufficient external evidence to support the claim.
-- **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented.
+**Status key.** The six-term status vocabulary and the two-axis model are defined once in the [Claims and Evidence Register](./Claims_Evidence_Register.md) (Status methodology). This register is the authority for each threat's Axis-1 status; it does not redefine the vocabulary.
 
 **Status discipline.** This register tracks design posture, not deployment proof. `Active — unproven` means a control is integrated into the document set; it does not mean the control has been proven in field conditions. `Resolved` should be used only after defined tests, pilots, or audits produce evidence and the residual risk is updated.
 
@@ -97,7 +91,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### Maintenance rules for this dashboard
 
-- Move a threat off the dashboard only when its remaining work is tracked in the Hardening Queue as `Active — unproven` or `Evidence-backed`, with a named test or audit path.
+- Move a threat off the dashboard only when its remaining work is tracked in the Hardening Queue with a named test or audit path (status per this register and the Claims and Evidence Register).
 - Threats with partial mitigations should also have an entry in the Open Problems Resolution Docket before they are removed from this dashboard.
 - When a threat is fully `Resolved` (evidence-backed, residual risk documented), strike it through here in one update cycle, then remove on the next.
 - Newly added threats go on this dashboard at creation, not at resolution.
@@ -130,18 +124,18 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 | T-021 | Algorithmic Oracle Capture | **Critical** | **Active — unproven** | Prevent AI/algorithmic manipulation of measurement systems that satisfies formal independence while being systematically biased. | 60 | P7 (Oracle) | 2026-05-01 *(placeholder)* | Rising |
 | T-022 | Electoral Cycle Capture | **Critical** | **Active — unproven** | Prevent a hostile successor government from repealing or hollowing out the constitutional architecture. | 60 | Constitutional Integrity Panel (CIP) | 2026-05-01 *(placeholder)* | Rising |
 | T-023 | Pilot External Validity Collapse | Med-High | **Active — unproven** | Prevent scale-up based on pilot evidence that does not include adversarial or crisis conditions. | 32 | P8 + Oversight | 2026-05-01 *(placeholder)* | Steady |
-| T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Mechanism specified in design by P-022 ACTIVE + Annex AQ ACTIVE + FC-100 (Proposal 6, 2026-04-18); no field evidence yet. | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
+| T-024 | Shared Storehouse Oracle-Failure During Active Rationing | **Critical** | **Active — unproven** | Define system behaviour when the oracle goes dark while Shared Storehouse is already active. Mechanism specified in design by P-022 / Annex AQ (per Patch Log) + FC-100 (Proposal 6, 2026-04-18); no field evidence yet. | 60 | P7 (Oracle) + REB | 2026-05-01 *(placeholder)* | Rising |
 | T-025 | Investment and Capital-Deployment Shelter Capture | High | **Active — unproven** | Prevent protected-capital labels from becoming milking instruments for construction and capital-intensive sectors. | 48 | P2 (Housing/Flow) + P8 | 2026-05-01 *(placeholder)* | Steady |
 | T-026 | Exit Denial | **Critical** | **Active — unproven** | Prevent federation actors from blocking or delaying a valid unit exit (FC-120/FC-121). Mechanism specified in design by the Founding Order exit protocol + Annex AI §3.4 automatic Plenum convocation + Annex AJ §4 severity 3 remedies; no field evidence yet. | 48 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
 | T-027 | Subsidiarity Violation | High | **Active — unproven** | Prevent federation action at a scale larger than the smallest-competent scale under the Founding Order subsidiarity rule. Mechanism specified in design by Founding Order subsidiarity rule + Federated Ombuds §3.2 challenge process + Proportionality Principle; no field evidence yet. | 36 | Federated Ombuds | 2026-05-01 *(placeholder)* | Steady |
-| T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from holding the Essential Access floor hostage, including through compliance-masked degradation. Primary structural control P-050 (CASP) ACTIVE; P-047/P-048 related. | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
+| T-028 | Essential-Sector Refusal Leverage | **Critical** | **Active — unproven** | Prevent survival-leverage conglomerates from holding the Essential Access floor hostage, including through compliance-masked degradation. Primary structural control P-050 (CASP, per Patch Log); P-047/P-048 related. | 72 | P1 (Essential Access) + P8 | 2026-05-01 *(placeholder)* | Rising |
 | T-029 | Fiscal Sustainability and Currency Debasement | **Critical** | **Active — unproven** | Prevent the survival floor, Universal Stake, public rails, and governance operations from depending on inflation, hidden debt, prohibited tax bases, or uncosted Commons Return assumptions. | 72 | P5 (Public Finance / Flow) + P8 | 2026-06-08 | Rising |
 | T-030 | Cyber Resilience and Availability Failure | **Critical** | **Active — unproven** | Prevent ransomware, key compromise, regional outage, provider dependency, or supply-chain compromise from interrupting survival-floor access. | 72 | P6 (Implementation / Security) + P1 (Essential Access) | 2026-06-08 | Rising |
 | T-031 | Last-Resort Unenrolled Access Failure | **Critical** | **Active — unproven** | Prevent the survival floor from becoming reachable only by people who can enroll, hold a wallet, use digital credentials, or navigate ordinary administration. | 72 | P1 (Essential Access) + P3 (Identity) + Federated Ombuds | 2026-06-08 | Rising |
 | T-032 | Monitoring Repurposing and Enforcement-Observation Failure | **Critical** | **Active — unproven** | Prevent protective monitoring from becoming a general-purpose surveillance, ranking, punishment, or coercion layer. | 72 | P8 (Oversight) + P3 (Identity) + Capture Dashboard operator | 2026-06-08 | Rising |
 | T-033 | Founding Consent Evidence and Civil-Society Review Definition Failure | **Critical** | **Active — unproven** | Prevent the founding process from claiming legitimacy through vague consent standards, lower-threshold consultation, or friendly civil-society review. | 72 | Founding Coalition + adversarial panel member + civil-society reviewers | 2026-06-08 | Rising |
 
-*Status definitions: **Proposed** = a response has been suggested but not yet formally incorporated. **Designed** = the mechanism is specified in the corpus but not yet active. **Active — unproven** = the mechanism is incorporated and referenced, but has no field evidence. **Partly tested** = some evidence exists from pilots or analogues, but not sufficient for resolution. **Evidence-backed** = sufficient external evidence to support the claim. **Resolved** = the threat has been addressed with evidence-backed controls AND residual risk is documented. No threat currently meets the Resolved threshold.*
+*Status vocabulary and the two-axis model are defined once in the [Claims and Evidence Register](./Claims_Evidence_Register.md) (Status methodology). No threat currently meets the Resolved threshold.*
 
 ---
 
@@ -170,7 +164,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 ### T-002 — Identity Exploits
 
 - **Active patch:** [P-003 — Identity System Hardening](../governance/Patch_Log.md) · [ANNEX_AB.md](../annexes/ANNEX_AB.md)
-- **Pre-ratification design:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · [ANNEX_AK.md](../annexes/ANNEX_AK.md) remains **PROPOSED** until founding adoption and pilot-calibrated rate confirmation.
+- **Pre-ratification design:** [P-016 — Identity Asymmetric Error Doctrine](../governance/Patch_Log.md) · [ANNEX_AK.md](../annexes/ANNEX_AK.md) remains **Pre-ratification** (Axis 2) until founding adoption and pilot-calibrated rate confirmation; Axis-1 patch status per the Patch Log.
 - **Layer:** Identity / access / civic activation
 - **Severity:** Critical
 - **Status:** Active — unproven
@@ -467,7 +461,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-019 — Demand-Context Flag Suppression Attack
 
-- **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
+- **Patch:** [P-015 — PCRP Attack Surface Hardening](../governance/Patch_Log.md) · [ANNEX_AP.md](../annexes/ANNEX_AP.md) · Status: per [Patch Log](./Patch_Log.md) (Axis 1) · **Pre-ratification** (Axis 2)
 - **Layer:** PCRP / enforcement / measurement
 - **Severity:** High
 - **Status:** Active — unproven (P-015 / Annex AP; criteria in Annex AI §4.12)
@@ -548,7 +542,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-023 — Pilot External Validity Collapse
 
-- **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · [ANNEX_AN.md](../annexes/ANNEX_AN.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
+- **Patch:** [P-019 — Pilot External Validity Gate](../governance/Patch_Log.md) · [ANNEX_AN.md](../annexes/ANNEX_AN.md) · Status: per [Patch Log](./Patch_Log.md) (Axis 1) · **Pre-ratification** (Axis 2)
 - **Layer:** Evidence base / scale-up decision-making
 - **Severity:** Med-High
 - **Status:** Active — unproven (P-019 / Annex AN)
@@ -593,7 +587,7 @@ These appear inside detailed entries below as "Open problem:" or residual-risk l
 
 ### T-025 — Investment and Capital-Deployment Shelter Capture
 
-- **Patch:** [P-023 — Contract-Commitment Architecture (Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: **Active — unproven** (Axis 1, per Patch Log) · **Pre-ratification** (Axis 2)
+- **Patch:** [P-023 — Contract-Commitment Architecture (Zero Exemptions)](../governance/Patch_Log.md) · [ANNEX_AR.md](../annexes/ANNEX_AR.md) · Status: per [Patch Log](./Patch_Log.md) (Axis 1) · **Pre-ratification** (Axis 2)
 - **Layer:** Flow monetary architecture / protected capital / productive investment
 - **Severity:** High
 - **Status:** Active — unproven — P-023 (contract-commitment architecture, zero exemptions); no field evidence yet
