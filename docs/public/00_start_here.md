@@ -30,6 +30,28 @@ It is not a command economy — people still trade, price, contract, and build b
 
 And it is not a complete government. It does not run the police, the courts, or decide who belongs to the country. It sits inside a normal rule-of-law society and adds these protections on top — and it refuses to lend its legitimacy to any power that uses hunger, homelessness, or the cutting-off of medicine as a weapon, and says so out loud when it happens.
 
+## The five walls — what each one protects for you
+
+In most places, money does three jobs at once: it buys things, it keeps you alive, and it decides who has power. When one thing does all three, the people with the most money end up controlling everything — including whether you eat. This design refuses to let that happen by building walls between those jobs:
+
+1. **You keep what you earn.** Your everyday money is yours to spend; no one can secretly shrink it or quietly take it back.
+2. **You can never be priced out of staying alive.** Food, water, shelter, and care are yours by right — no matter what's in your bank account. If the usual providers fail, a public one steps in.
+3. **No family can lock in power forever.** Value no one made — land and location windfalls, resource rents, monopoly privileges — and very large inheritances pay a public return, and that return pays everyone a regular share and gives every young person a starting stake. Ordinary earnings, homes, tools, and savings are left alone.
+4. **Your voice can't be bought.** Some choices go to randomly picked citizens, like jury duty; the big ones, everyone votes on equally. Nobody can buy or hoard a louder say.
+5. **Public roles are earned, not bought.** You qualify for public office by contributing, then you're picked by lottery — not by money or who you know.
+
+And if there's ever a real, proven shortage, essentials get shared out by need, by a fixed rule that's set ahead of time — never by who can pay the most.
+
+**What you are owed. What can never be taken.**
+
+- Your food, water, shelter, and care are a **right**, not a reward.
+- **No one can buy your vote** or your voice — yours or anyone else's.
+- **You cannot be priced out of survival**, no matter how poor you are.
+- Punishment can take your freedom. **It can never take your food, water, or shelter.** Survival is never used as a weapon.
+- Every young person gets a **fair starting stake**, so where you begin doesn't decide where you can go.
+
+Why it all hangs together, in one sentence: keep buying, surviving, deciding, and serving in **separate boxes**, so power over one can never be used to capture the others. None of this is proven yet — these are the design's promises, and the rest of this document is honest about what it would take to earn them.
+
 ## Where this sits in prior work, and what is actually new
 
 None of the individual ideas here are new, and the design says so. The intellectual lineage is explicit:

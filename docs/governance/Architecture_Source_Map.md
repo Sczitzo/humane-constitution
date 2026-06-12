@@ -124,4 +124,4 @@ Added by P-052. Closes T-019 open problem.
 
 ## Founding Commitments Status
 
-FC-140 through FC-145 (AED fraud/exclusion bands) now bound. FC-052, FC-053, FC-054, FC-056, FC-072, FC-148 through FC-150 now have proposed values pending founding deliberation.
+FC-140 through FC-145 (AED fraud/exclusion bands) now bound. FC-053, FC-056, FC-072, FC-148 through FC-150 have proposed values pending founding deliberation. FC-050 through FC-052 and FC-054 (the former routine-demurrage parameters) are superseded — dormant §D9 backstop only; the active wealth-spine calibration is FC-202 through FC-210 (Commons Return and Universal Stake).
