@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-070**
+**Running change ledger aligned to the Humane Constitution · Current through P-072 (P-071 reserved)**
 
 ---
 
@@ -88,6 +88,7 @@
 | P-068 | T-031 | **ACTIVE** | Critical | Last-Resort Unenrolled Access Gate: registers the risk that a person who cannot enroll, hold a wallet, or use digital credentials still cannot reach the survival floor; requires no-credential, trusted-intermediary, analog-reconciliation, abuse/diversion, and dignity-interview tests before universality claims. |
 | P-069 | T-032 | **ACTIVE** | Critical | Monitoring Repurposing Gate: registers the risk that protective monitoring becomes surveillance or coercive control; requires purpose register, purpose-creep red team, linkability test, office-separation drill, individual-flag appeal drill, retention audit, and coercive-use scenario. |
 | P-070 | T-033 | **ACTIVE** | Critical | Founding Legitimacy Prerequisite Definition Gate: reconciles consent thresholds, defines admissible non-coercive consent evidence, defines independent civil-society reviewer qualification, and blocks Gate A until consent and review are independently evidenced. |
+| P-072 | T-025 | **PROPOSED** | High | Productive Status Register: one canonical "productive" determination shared by Flow issuance (ANNEX_X) and the Commons Return exemption (ANNEX_D §D3), with settle-forward escrow closing the temporal double-dip. Remains PROPOSED / pilot-gated until its evidence test passes; binds nothing until then. |
 
 ---
 
@@ -101,6 +102,7 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 | P-010 | **RESERVED** | Reserved at numbering; never assigned a patch. No design exists under this ID. |
 | P-028 | **RESERVED** | Reserved at numbering; never assigned a patch. The economic-governance integration that would have followed P-027 was consolidated into the P-029 through P-033 batch. No standalone design exists under this ID. |
 | P-063 | **DRAFT-ONLY** | Reserved for the P-063 v15 review packet. It is explicitly not corpus-registered, not adopted into Annex D, and not part of the active Patch Log inventory. |
+| P-071 | **RESERVED** | Reserved for the Harberger/COST shadow-assessment proposal (`docs/superpowers/specs/2026-06-09-commons-return-should-fixes-redline.md`), which is held as a proposal and not incorporated. The number is reserved so cross-references in the pending-proposal redlines stay stable; no design is incorporated under this ID. |
 
 ---
 
@@ -695,7 +697,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-070. Reserved IDs (P-007, P-010, P-028) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-072. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -765,6 +767,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-031 | P-068 | **ACTIVE** | Last-Resort Unenrolled Access Evidence Test Package · ANNEX_AZ · ANNEX_AY |
 | T-032 | P-069 | **ACTIVE** | Monitoring Repurposing Evidence Test Package · Annex C · Capture Dashboard Specification |
 | T-033 | P-070 | **ACTIVE** | Founding Consent and Civil-Society Review Evidence Test Package · Founding Legitimacy Dossier |
+| P-072 | T-025 supplement | **PROPOSED** | Productive Status Register (operative T-025 control remains P-023 ACTIVE) |
 
 ---
 
@@ -1536,3 +1539,19 @@ The corpus already names the founding legitimacy problem through T-017, T-022, T
 - **Claim discipline:** Gate A does not clear if founders substitute low-turnout consultation, silence, humanitarian-aid acceptance, friendly expert review, funder-adjacent review, or unpublished reviewer findings for consent and independence evidence.
 - **New risks introduced:** A stricter review gate can be used to delay legitimate founding indefinitely or empower a civil-society gatekeeper class. Mitigations are public shortlists, public challenge records, separate reviewer findings, dissent preservation, affected-community accountability, and explicit Gate A failure reasons.
 - **Residual risk:** No evidence packet can prove perfect founding legitimacy. P-070 makes consent and reviewer independence falsifiable before activation; it does not eliminate the bootstrap problem, informal pressure, class capture, or the need for post-activation audit.
+
+---
+
+### P-072 — Productive Status Register
+
+**Threat addressed:** T-025
+**Status:** PROPOSED | **Priority:** High
+
+The word "productive" unlocks two benefits on two separate tests: Flow issuance against verified productive commitments (ANNEX_X) and the Commons Return exemption for productive working assets (ANNEX_D §D3, on ANNEX_J's published Article V stewardship standard). P-023 closed the protected-capital shelter inside the contract-commitment architecture; the residual T-025 variant is *cross-instrument and temporal* — the same activity classified "productive" by the looser test claims both benefits, and because Flow mints at commitment start while the exemption is assessed at settlement, an honest determination at T0 can be exited before any reversal clears.
+
+- **Introduced design:** The [Productive Status Register](Productive_Status_Register.md) — one canonical productive-status determination per commitment/asset against the single published standard, with three structurally separate roles (standard-author, register-adjudicator, benefit issuer; INV-006 incl. the economic-parameter-setting extension); a **settle-forward escrow** under which the §D3 exemption vests only after the Flow-side commitment is verified to have stayed in productive use through a full settlement period (non-vesting replaces reversal, wages stay protected by no-clawback); a payroll/escrow fast-path so issuance is never blocked on adjudication; an appeal-bound, independently audited determiner; and the rule that status classifies the activity, never the person (INV-003; §D6 minimum-necessary data).
+- **Claim discipline:** No document may claim the productive double-dip is closed until the register's evidence test passes (double-dip closure in adversarial simulation; no issuance starvation; determiner non-capture; no person-scoring drift). The instrument is `Designed` and pilot-gated; it binds nothing until then.
+- **New risks introduced:** A single register is a new capture target (bounded by the three-way role split, appeal, audit, and the INV-006 recusal extension); escrowed exemptions add settlement-period accounting complexity; the fast-path's provisional status could be farmed below the de-minimis threshold (the escrow still withholds the exemption, so the farm nets nothing).
+- **Residual risk:** Settle-forward closes the modeled timing attack; it does not prove the published stewardship standard itself cannot be captured (that remains ANNEX_J / Article V territory under T-025), and no pilot evidence exists for adjudication throughput at scale.
+
+**Panel-revised before incorporation** (adversarial, Christ-centered, corpus-fit; source: `docs/superpowers/specs/2026-06-09-productive-register-recusal-redline.md`). The companion Fix 2 of that redline — the INV-006 economic-parameter-setting recusal extension — is already constitutional (applied with Session 23).
