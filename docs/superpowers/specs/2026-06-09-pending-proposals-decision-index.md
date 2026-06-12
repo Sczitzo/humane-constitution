@@ -56,13 +56,15 @@ The evaluation rubric, the five instrument-panel decisions, the capstone system 
 - **`09_pilot_proposal.md` references net-worth demurrage** — stale against Commons Return; re-ground before promotion.
 - **Branch is 15 behind main** — cherry-pick the still-novel docs onto fresh `main`; do not merge.
 
-## 8. Not yet drafted — remaining capstone fixes (partial on main)
+## 8. Remaining capstone fixes — now drafted (substrate-hardening residuals redline, panel-revised)
 
-| Fix | Current state | Gap |
+Grounding found main's June-7 hardening already closed most of two of these three. Drafted in `2026-06-09-substrate-hardening-residuals-redline.md`:
+
+| Fix | Status after grounding | Residual drafted |
 |---|---|---|
-| Oracle over-reporting tripwire | Heterogeneous channels + reserves exist (ANNEX_AL/AT) | The directional-bias accreditation test + oracle-independent reserve drawdown are not bound |
-| Founding re-ratification tripwire | Consent gate T-033/P-070 exists | No automatic external-audit trigger to force re-founding on a captured keyholder set |
-| Identity recovery | T-031 + recovery test package exist | No bound k-of-n social-attestation quorum / offline roster |
+| Oracle over-reporting | ~90% done — ANNEX_AL Directional-Bias Failure Criterion + over-reporting tripwire already bound | INV-005 → ≥2 independent physical samplers (subordinated to INV-001 in thin-capacity regions); bound reserve drawdown. Tier-1 + Tier-2 |
+| Founding re-ratification | ~85% done — ANNEX_AH §AH5.1 people-triggered re-founding exists; circularity honestly acknowledged | A *constrained* external-attestation trigger (lowers the petition threshold, two-attestor + staked + contestable + anti-churn — not a unilateral coup tool). Tier-1 |
+| Identity recovery | The genuine open work — only a test package exists | A bound safety-shielded k-of-n recovery protocol (survival decoupled incl. above-floor survival-critical sub-tier; dominated-graph + isolated-person paths; compartmentalized roster), P-073, gated on the test package. Tier-2 |
 
 ---
 
