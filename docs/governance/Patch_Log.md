@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-074 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-075 (P-071 reserved)**
 
 ---
 
@@ -91,6 +91,7 @@
 | P-072 | T-025 | **PROPOSED** | High | Productive Status Register: one canonical "productive" determination shared by Flow issuance (ANNEX_X) and the Commons Return exemption (ANNEX_D §D3), with settle-forward escrow closing the temporal double-dip. Remains PROPOSED / pilot-gated until its evidence test passes; binds nothing until then. |
 | P-073 | structural — no threat row | **ACTIVE** | High | Framework-first intake (anti-accretion rule): FAP intake gate requiring any new mechanism to extend the most general existing instrument for its protective function or carry a published justification; published return record with adversarial-panel escalation; simplicity presumption bounded by independence count and protected-person path equivalence. Amends Acceptance_Protocol.md. |
 | P-074 | structural — no threat row | **ACTIVE** | High | Appeal Spine consolidation: ANNEX_L §L7 becomes the single canonical appeal procedure (one filing rule, floor + status-quo-ante continue during appeal, one ladder with the Ombuds Plenum kept separate for independence); seven scattered appeal procedures become spine pointers (with ANNEX_I's duplicate clocks and ANNEX_AI §4.8's duplicate window deleted); the ANNEX_AW §AW3.3 orphan appeal window (RRE-011) is a named follow-up, not yet absorbed. First P-073-mandated consolidation of an entire mechanism family. |
+| P-075 | structural — no threat row | **ACTIVE** | High | Evidence-test framework + data stewardship standard: Evidence Ladder gains the canonical Test Package Template (drift rule; four package follow-ups named); the Monitoring Administrative Safety Packet gains the master Minimization and Purpose-Limitation Doctrine, a quote-sourced per-domain calibration table (open gaps marked honestly), a cross-domain linkage rule generalizing ANNEX_D §D6.5, and a drift rule; the Monitoring Repurposing ETP's duplicated six-condition baseline becomes a pointer. |
 
 ---
 
@@ -699,7 +700,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-074. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-075. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -772,6 +773,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | P-072 | T-025 supplement | **PROPOSED** | Productive Status Register (operative T-025 control remains P-023 ACTIVE) |
 | structural — no threat row (anti-accretion intake gate) | P-073 | **ACTIVE** | Acceptance_Protocol.md Framework-First Intake |
 | structural — no threat row (appeal spine) | P-074 | **ACTIVE** | ANNEX_L §L7 |
+| structural — no threat row (evidence framework + data stewardship) | P-075 | **ACTIVE** | Evidence_Ladder.md Test Package Template · Monitoring Administrative Safety Packet |
 
 ---
 
@@ -1576,7 +1578,7 @@ A full-corpus simplification audit (2026-06-12, three independent single-role re
 
 **Panel process:** four independent single-role reviewers (adversarial systems designer, Christ-centered, corpus-fit, minimalist) reviewed the applied diff in parallel; all four returned APPROVE WITH FIXES and every required fix was incorporated (return-record discipline, anti-laundering tier rule, independence-count bound, protected-person clause, corrigibility clause, functional test replacing a closed family list, P-073 provenance). Christ-centered review recorded as Session 25 in `Christ_Centered_Evaluation.md`.
 
-**Consolidation program landings (running record):** 2026-06-12 — the status spine landed (first program step under this gate): `Status_Model.md` deleted, its vocabulary and edge rules absorbed into the Claims and Evidence Register's Status methodology section (now the canonical status spine); the Hardening Queue stripped of duplicated status tracking (worklist only, references owners); Threat Register restated patch-statuses converted to pointers. Net ~−95 lines; vocabulary-definition sites reduced from five to one. Evidence Ladder deliberately retained standalone (it defines evidence *levels*, a different axis, and its level numbers are cited by app code and seven documents). Named follow-ups: Patch Log single-row mini-tables (same-file restatement, checker-covered) and a single convention for Threat Register per-entry Status lines. 2026-06-12 — the appeal spine landed (P-074, ANNEX_L §L7): seven appeal procedures → one spine + a domain intake table (the ANNEX_AW §AW3.3 orphan appeal window, RRE-011, is a named follow-up); FC-209's reserved appeal path closed by binding it to the spine.
+**Consolidation program landings (running record):** 2026-06-12 — the status spine landed (first program step under this gate): `Status_Model.md` deleted, its vocabulary and edge rules absorbed into the Claims and Evidence Register's Status methodology section (now the canonical status spine); the Hardening Queue stripped of duplicated status tracking (worklist only, references owners); Threat Register restated patch-statuses converted to pointers. Net ~−95 lines; vocabulary-definition sites reduced from five to one. Evidence Ladder deliberately retained standalone (it defines evidence *levels*, a different axis, and its level numbers are cited by app code and seven documents). Named follow-ups: Patch Log single-row mini-tables (same-file restatement, checker-covered) and a single convention for Threat Register per-entry Status lines. 2026-06-12 — the appeal spine landed (P-074, ANNEX_L §L7): seven appeal procedures → one spine + a domain intake table (the ANNEX_AW §AW3.3 orphan appeal window, RRE-011, is a named follow-up); FC-209's reserved appeal path closed by binding it to the spine. 2026-06-12 — the evidence framework and data stewardship standard landed (P-075): one test-package template in the Evidence Ladder (ten packages surveyed; four structural follow-ups named), one minimization doctrine + calibration table + linkage rule in the Monitoring Administrative Safety Packet; one restatement site deleted (the ETP baseline) and six domain clauses retained with pointers; the ANNEX_AJ P-004-protected clause recorded unmodified.
 
 
 ---
@@ -1594,3 +1596,19 @@ The same simplification audit that produced P-073 counted at least eight separat
 - **Residual risk:** The body names in L7.5 are designed institutions with no pilot evidence behind any of them; the 72-hour, 14-day, and 30-day clocks are design estimates, not measured capabilities. Whether one door genuinely lowers the filing barrier for the least-resourced appellant is unproven until drilled.
 
 **Numbering note:** the held Voice/Service-Record redline provisionally cited P-074 for its civic-misuse proposal; per that redline's own renumbering caveat, it takes the next free number at intake.
+
+---
+
+### P-075 — Evidence-Test Framework and Data Stewardship Standard
+
+**Threat addressed:** structural — no threat row (restated evidence-test structure and data-stewardship rules drifting apart across documents)
+**Status:** ACTIVE | **Priority:** High
+
+The consolidation program's survey of the corpus's ten evidence test packages and its data-handling clauses found the same structural rules restated in slightly different words across many documents — a drift surface where a future edit to one restatement silently diverges from the others. This patch is the third P-073-mandated consolidation: one canonical skeleton for evidence test packages, and one master minimization and purpose-limitation standard for data about persons.
+
+- **Introduced design:** The Evidence Ladder gains the canonical Test Package Template (P-075): six required structural elements (claim under test, abuse model, required tests with pre-stated failure criteria, adverse-finding protocol, affected-documents update order, residual risk) plus a drift rule under which the template governs over any package restatement, a non-conforming package gates nothing, and new structural patterns require framework-first justification under the Acceptance Protocol's anti-accretion rule (P-073). The Monitoring Administrative Safety Packet gains the master Minimization and Purpose-Limitation Doctrine — carrying the six-condition baseline formerly stated in the Monitoring Repurposing Evidence Test Package (conditions verbatim, with two declared strengthenings: scope broadened from monitoring to any collection of data about persons, and conditions 5–6 bound to the appeal spine and the ANNEX_AM §AM7 stripping standard), which now tests the doctrine rather than restating it — plus a quote-sourced per-domain calibration table (seven domains; open gaps marked honestly as "unspecified — gap"), a cross-domain linkage rule generalizing the ANNEX_D §D6.5 independent-finding standard, and a drift rule under which stricter domain text always governs. One restatement site was deleted (the ETP baseline); the six domain clauses (ANNEX_AJ, ANNEX_AF §AF3, ANNEX_AK §AK8.1, ANNEX_D §D6.1, ANNEX_C, and the Capture Dashboard Specification) were retained as domain substance and gained pointers; ANNEX_K §K6 and ANNEX_I §I8's generic restatements now defer to the doctrine; the ANNEX_AJ P-004-protected purpose-limitation clause is recorded in the calibration table unmodified.
+- **Claim discipline:** This consolidates restatements; it proves nothing about practice — the doctrine's fruit is unproven until tested and the four named calibration gaps remain gaps.
+- **New risks introduced:** A single doctrine is a single drafting-error blast radius (bounded by the stricter-text-governs rule); the calibration table could be misread as licensing the gaps it names (bounded by "gap is not permission").
+- **Residual risk:** The unspecified stripping/retention rules in four domains are now visible but still unspecified. Named calibration gaps: G-1 ANNEX_AJ bypass-detection fixed retention period unspecified (owner: ANNEX_AJ); G-2 ANNEX_AF attestation-graph retention-schedule length and stripping point unspecified (owner: ANNEX_AF §AF3); G-3 ANNEX_D Commons Return stripping point and retention unspecified (owner: ANNEX_D §D6); G-4 flag-expiry period unspecified (owner: this packet's flag lifecycle + ANNEX_C). Named follow-ups F-1–F-7: prose status normalization in the Anti_Rent, Identity_Recovery, and Service_Record packages (F-1); an affected-documents section for the Capacity_Measurement package (F-2); an abuse model and affected-documents section for the Commons_Return package (F-3); a standalone residual-risk statement for the Cyber_Resilience package (F-4); unify the four drift rules into one doctrine in the P-073 gate — a constitution change, separate reviewed patch (F-5); checker coverage for the calibration table's quoted text (F-6); ANNEX_A §A20 cites the doctrine instead of restating it (F-7).
+
+**Numbering note:** the held Voice/Service-Record redline takes the next free patch number above P-075 at intake.

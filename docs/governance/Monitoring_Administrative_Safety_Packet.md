@@ -107,6 +107,51 @@ Lane escalation requires a written finding that lower lanes cannot answer the co
 
 ---
 
+## Minimization And Purpose-Limitation Doctrine (P-075)
+
+This is the corpus's one master statement of data minimization and purpose limitation. Domain texts keep domain substance; this doctrine states the rule. It carries the six-condition baseline formerly stated in the [Monitoring Repurposing Evidence Test Package](./Monitoring_Repurposing_Evidence_Test_Package.md) — conditions verbatim, with two declared strengthenings: scope broadened from monitoring to any collection of data about persons, and conditions 5–6 bound to the appeal spine and the ANNEX_AM §AM7 stripping standard. That package now tests this doctrine rather than restating it.
+
+Any collection of data about persons, households, providers, or support networks under this corpus is permitted only when all six conditions hold:
+
+1. **Purpose-bound:** the data is collected for a named control and cannot be reused for another purpose without explicit review — published before reuse, by a reviewer independent of the operating office (for cross-domain joins, the Cross-Domain Linkage Rule below; otherwise [ANNEX_C](../annexes/ANNEX_C.md)'s secondary-use challenge standard).
+2. **Minimum necessary:** the monitoring uses the least personal, least durable, least linkable data that can do the job.
+3. **Aggregation-first:** population, route, office, provider, and category metrics are preferred over individual tracking.
+4. **Office-separated:** the body that operates a service may not be the sole body that interprets its monitoring performance.
+5. **Appealable:** any person affected by an individual-level flag receives notice, plain-language reasons, and a path to human review ([ANNEX_C](../annexes/ANNEX_C.md); appeal spine, [ANNEX_L §L7](../annexes/ANNEX_L.md)).
+6. **Deletion-bound:** raw monitoring data expires or is transformed into non-identifying aggregate records on a published schedule. Where publication is involved, PII stripping follows the [ANNEX_AM §AM7](../annexes/ANNEX_AM.md) standard.
+
+A tool that cannot satisfy these conditions must be redesigned, narrowed, or explicitly recorded as a residual risk before it is used.
+
+---
+
+## Per-Domain Calibration Table (P-075)
+
+This table records each domain's actual current rule from live text. Where a domain is stricter than the doctrine, the stricter rule governs — calibration never averages a protection down. "Unspecified — gap" is an honest gap, not permission. A domain operating inside a gap cell is governed by the doctrine's defaults until the gap is closed: no published retention schedule means no collection of identifiable data, and unnamed reuse is forbidden. A gap cell may be cited only as a reason to close the gap, never as authority to act within it.
+
+| Domain | Data | PII-stripping point | Retention | Access role | Purpose boundary |
+|---|---|---|---|---|---|
+| Monitoring streams generally (this packet) | Per-stream register field list | Set per register row; no global point — unspecified — gap pending register | "Deletion, aggregation, or unlinking schedule" per row; "No retention clock means no collection" | Per data lane (Lanes 0–4) and register row | Named control purpose; forbidden-use list; unnamed reuse forbidden by default |
+| Bypass detection ([ANNEX_AJ](../annexes/ANNEX_AJ.md), P-004 protected) | Vendor-level and population-level bypass-pattern data | "PII-stripped at the earliest point consistent with detection (per Annex AM)" | "Retained only for the bounded period necessary to establish patterns and adjudicate findings and is then deleted"; fixed period unspecified — gap | Enforcement Panel and mandated detection staff (ANNEX_AJ) | Bypass-detection and AJ §4 enforcement only; "never repurposed for general population surveillance, civic scoring, eligibility determination, commercial use" (P-004-protected clause, quoted unmodified) |
+| Hardship attestation graph ([ANNEX_AF §AF3](../annexes/ANNEX_AF.md)) | Support-network attestation graph | Inherently identifying in use; access narrowed to "only the subgraph relevant to the case under review"; stripping point unspecified — gap | "Purged on a fixed retention schedule once a review and its appeal window have closed"; safe-harbor and innocent-explanation cases "purged at closure"; schedule length unspecified — gap | Reviewing bodies in active review only; access logged (ANNEX_AF §AF3) | Exploitation review only; no export, sale, or sharing (ANNEX_AF §AF3) |
+| Tier-0 identity ([ANNEX_AK §AK8.1](../annexes/ANNEX_AK.md)) | Single-session pseudonymous token; allocation count | By construction: "No persistent identifier is created"; node records consumption "not by whom" | None beyond session; "infrastructure cannot reconstruct session linkage after the session closes" | Issuing node; Federated Ombuds aggregate-only after 30+ days of anomaly (ANNEX_AK §AK8.1) | Tier-0 allocation accounting; individual-level investigation prohibited (ANNEX_AK §AK8.1) |
+| Commons Return assessment ([ANNEX_D §D6](../annexes/ANNEX_D.md)) | "Only the data needed to determine the named source base, protected ordinary use, and beneficial control" | Unspecified — gap | Unspecified — gap | Assessors; household-linkable escalation only via D6.5 independent finding | Named source-base determination; forbidden-reuse list (ANNEX_D §D6.1) |
+| Monitored-person flags ([ANNEX_C](../annexes/ANNEX_C.md) + flag lifecycle above) | Anomaly, fraud, and coercion flags on identifiable people | Unspecified — gap | "Unresolved or cleared flags expire and cannot be reused"; expiry period unspecified — gap | Named human reviewer; Federated Ombuds escalation | Register-named control purpose; secondary use requires published review (ANNEX_C) |
+| Capture Dashboard ([Capture Dashboard Specification](./Capture_Dashboard_Specification.md)) | Aggregate capture metrics from register-cited streams only | Before publication: "aggregation, small-cell suppression, delay, and privacy-preserving methods" | Per the cited register row | Dashboard office with no hidden raw-data access (this packet's dashboard rules); dashboard method auditor | Public accountability metrics only; every metric cites a register row before publication (Capture Dashboard Specification) |
+
+---
+
+## Cross-Domain Linkage Rule (P-075)
+
+Joining two domains' data is never an operational decision. Before use, a join requires: (1) both domains' register rows (or domain-equivalent governing clauses) permit the join — silence forbids; (2) a written finding by an independent reviewer outside both operating offices that no less-intrusive method answers the named purpose (the [ANNEX_D §D6.5](../annexes/ANNEX_D.md) standard, generalized); (3) publication of the finding before use, challengeable under [ANNEX_C](../annexes/ANNEX_C.md)'s secondary-use challenge, with the challenged join paused unless an emergency finding — published by a reviewer independent of both operating offices — states why delay would create immediate CSM harm. An emergency finding expires after 30 days unless renewed by the same standard, and the underlying challenge is resolved on its merits regardless of the emergency; if the challenge succeeds, the join's products fall under the inadmissibility rule from that point. A join executed without these is void and its products are inadmissible in any adverse action. Inadmissibility attaches to the join's products, not to the underlying facts: evidence independently obtained through an authorized process is unaffected, and executing an unauthorized join is itself a sanctionable act that confers no immunity on anyone.
+
+---
+
+## Drift Rule (P-075)
+
+Domains cite this standard; domain text keeps only domain-specific substance — its data, its thresholds, its reviewer, its purpose boundary. Where a domain restatement diverges from this doctrine, the stricter text governs and the divergence is recorded as drift. Patch-protected domain clauses (notably ANNEX_AJ's P-004-protected purpose-limitation clause) are recorded in the calibration table unmodified and may not be relaxed from here.
+
+---
+
 ## Raw-Access Rule
 
 Raw data is the most dangerous monitoring form. It may be accessed only when all conditions are met:
