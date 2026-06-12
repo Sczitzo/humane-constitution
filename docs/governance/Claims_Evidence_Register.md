@@ -2,7 +2,30 @@
 
 It separates moral commitments, designed mechanisms, active-but-unproven controls, and evidence-backed results. The goal is to prevent overclaiming. A reader should be able to tell the difference between what the project values, what it has specified, what it has stress-tested on paper, and what has been proven in the world.
 
-## Status language
+## Status methodology
+
+This register is the canonical public source of truth for claim status. Every threat (`T-NNN`), patch (`P-NNN`), instrument, and claim carries **two independent statuses**:
+
+**Axis 1 — Design & Evidence** (*how mature is the design; how much real-world evidence backs it*). The corpus-standard six-term vocabulary — no synonyms:
+
+| Term | Meaning |
+|---|---|
+| `Proposed` | Suggested, not yet written into the corpus. |
+| `Designed` | Specified in the corpus, not yet the live design response. |
+| `Active — unproven` | Incorporated as the live design response; **no field evidence**. |
+| `Partly tested` | Some pilot/analogue evidence; not sufficient. |
+| `Evidence-backed` | Sufficient external evidence. |
+| `Resolved` | Evidence-backed controls **plus** documented residual risk. |
+
+The shorthand tokens `ACTIVE` and `PROPOSED` (Patch Log, linkage tables) are Axis-1 shorthand: `ACTIVE` ≡ `Active — unproven` unless a higher tier is explicitly stated; `PROPOSED` ≡ `Proposed`.
+
+**Axis 2 — Founding-ratification** (*has this been accepted into force through the FAP at a legitimate founding*). Two values only: `Pre-ratification` (the default — no founding has occurred) and `FAP-ratified`. The axes are orthogonal: evidence does not produce ratification, and ratification does not produce evidence. `Resolved` does not mean "in force."
+
+Three edge rules carry over from the prior status model: (1) **no document may assert `FAP-ratified` for any ID while the founding record shows no ratification** — the consistency gate does not yet flag this, so it is enforced by review until the gate is extended; (2) a higher Axis-1 tier than `Active — unproven` may be stated for an `ACTIVE` token only with a citation to the evidence row in this register that supports it; (3) Tier-1 invariants carry no Axis-1 maturity — only Axis 2 and their amendment tier; and a sub-item's status is labelled on its own line, never mixed onto its parent's, because the consistency gate treats same-line mixed states as history rather than contradiction.
+
+**One authority per axis, per ID.** `Patch_Log.md` is the authority for a patch's Axis-1 status; `Threat_Register.md` for a threat's; this register for an evidence claim's; the founding record for Axis 2. Every other document **links** to the authority — it does not restate a status in a form that can drift. `scripts/check_status_consistency.py` fails the build if any ID is asserted as both proposed and active, and `scripts/gen_status_tables.py` derives all annex and Patch Log linkage Status cells from the Threat Register.
+
+The claim rows below use this register's extended claim taxonomy:
 
 | Status | Meaning |
 |---|---|
@@ -15,8 +38,6 @@ It separates moral commitments, designed mechanisms, active-but-unproven control
 | **Evidence-backed** | A defined test or pilot has been passed and the residual risk has been updated. |
 
 No major operational claim in this project is currently **Evidence-backed** at deployment scale.
-
-> This register's status taxonomy is the canonical reference for all governance documents in this project. Documents using different status labels — for example, Hardening_Queue.md's DESIGNED, ACTIVE-UNPROVEN, and ONGOING — should be interpreted against the definitions in this register. The mapping is: DESIGNED → "Designed mechanism, needs evidence"; ACTIVE-UNPROVEN → "Active-unproven control"; ONGOING → context-dependent, see register entry.
 
 ---
 
