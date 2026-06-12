@@ -28,6 +28,8 @@ The walls between those tools are the whole idea. Markets stay. Profit stays. En
 
 It is not a command economy — people still trade, price, contract, and build businesses freely. It is not a social-credit system — the civic tools cannot buy rights, safety, or basic needs, and are designed so they can never become a score that sorts human worth. It is not unlimited aid — the survival floor is bounded by what a society can actually produce. It is not a surveillance plan — the design asks for the least data it can and binds public limits on who may see it through the [Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md) and [Monitoring Repurposing Evidence Test Package](../governance/Monitoring_Repurposing_Evidence_Test_Package.md). That protection is designed, not proven. And it is not a finished argument. It is a structure under pressure, meant to be read as a hypothesis you can attack, not a promise you are asked to accept.
 
+And it is not a complete government. It does not run the police, the courts, or decide who belongs to the country. It sits inside a normal rule-of-law society and adds these protections on top — and it refuses to lend its legitimacy to any power that uses hunger, homelessness, or the cutting-off of medicine as a weapon, and says so out loud when it happens.
+
 ## Where this sits in prior work, and what is actually new
 
 None of the individual ideas here are new, and the design says so. The intellectual lineage is explicit:
