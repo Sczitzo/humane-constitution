@@ -51,7 +51,7 @@ Assume capacity numbers will be attacked because they move survival access, rati
 | Political actor | Suppresses shortage signals before elections or during politically sensitive periods to avoid emergency activation and the accountability that follows | Whether independence requirements and mandatory publication duties survive direct political pressure |
 | Commercial supplier | Inflates reported available capacity to retain supply contracts, avoid Shared Storehouse activation, and prevent investigation of logistics failures | Whether physical sampling and delivery-outcome data can contradict administrative self-reporting |
 | Measurement body insider | Biases methodology toward category definitions that favor incumbents, lower measured obligations, or obscure access failure behind acceptable-looking aggregates | Whether methodology-class audits and standards-body concentration reviews detect capture before it affects decisions |
-| Oracle council captor | Builds institutional alignment across a majority of oracle seats through shared funders, professional culture, or AI supply-chain dependency — making formal independence nominal | Whether pairwise error-correlation tests catch shared blind spots and whether adversarial seats produce genuine dissent |
+| Oracle cohort captor | Builds institutional alignment across a majority of oracle seats through shared funders, professional culture, or AI supply-chain dependency — making formal independence nominal | Whether pairwise error-correlation tests catch shared blind spots and whether adversarial seats produce genuine dissent |
 | Directional-bias cartel | Keeps pairwise correlations low while several nodes consistently overstate or understate capacity in the same direction | Whether the test checks direction of error, not only correlation strength |
 | Adversarial simulation designer | Selects test scenarios that avoid the edge cases most likely to expose measurement failure — logistics breakdowns, rapid supply shocks, uneven geographic access | Whether test design is reviewed by parties with no stake in a passing result |
 | Oracle vendor | Shares AI models, data feeds, or calibration training across multiple oracle nodes, creating correlated errors that defeat diversity requirements without violating formal rules | Whether supply-chain audits and independent physical sampling can detect correlated drift before it affects live decisions |
@@ -234,7 +234,7 @@ This section defines the standing operational thresholds that govern whether the
 
 **Evidence basis:** Proposed precautionary — no field analogue for a ledger-linked capacity oracle system. The 30-day figure is drawn from analogy to IPC and IEA update cycles, not from operational experience with this architecture.
 
-**Breach response:** If a material change is not reflected in a published update within 30 days: (1) the oracle council must publish a written explanation of the delay within 5 business days of the breach being identified; (2) the conservative prior (most recently published figure, or a downward-adjusted estimate if shortage direction is known) governs issuance and threshold decisions until the update is published; (3) three consecutive latency breaches in any 12-month period trigger a mandatory governance review of oracle resourcing, measurement methodology, and update obligations.
+**Breach response:** If a material change is not reflected in a published update within 30 days: (1) the oracle cohort must publish a written explanation of the delay within 5 business days of the breach being identified; (2) the conservative prior (most recently published figure, or a downward-adjusted estimate if shortage direction is known) governs issuance and threshold decisions until the update is published; (3) three consecutive latency breaches in any 12-month period trigger a mandatory governance review of oracle resourcing, measurement methodology, and update obligations.
 
 ---
 
@@ -244,15 +244,15 @@ This section defines the standing operational thresholds that govern whether the
 
 **Trigger threshold:** A **5% divergence** between any two oracle node outputs for the same category, period, and geographic unit initiates the review process. The 5% threshold is proposed precautionary — no field analogue. It is chosen to be tight enough to catch systematic drift before it propagates into issuance decisions, while being loose enough to accommodate legitimate methodological variation between sources.
 
-**Who adjudicates:** The oracle council (as defined in ANNEX_AL.md), including the adversarial oracle seat. The adversarial seat may not be excluded from disagreement review. If the oracle council cannot reach resolution within 10 business days, the matter escalates to the independent Measurement Oversight Body (or equivalent governance body defined in the constitutional architecture).
+**Who adjudicates:** The oracle cohort for the affected category (as defined in ANNEX_AL §3.4), including the adversarial oracle seat. The adversarial seat may not be excluded from disagreement review. If the oracle cohort cannot reach resolution within 10 business days, the matter escalates to an independent methodology-review panel constituted under ANNEX_AL §4.1 (composition per P-017 oracle-independence standards, independent of the RCS accreditation body). The panel must be constituted within 14 days of escalation and publish its written finding within 30 business days of constitution; the conservative estimate continues to govern until the finding publishes, and any constitution delay beyond 14 days is logged as a process breach in the public disagreement register.
 
 **Fallback while review is underway:** The **conservative estimate** applies. For categories where lower capacity is harmful (food, water, energy), the lower of the two divergent values governs issuance and threshold decisions during review. For categories where over-reporting triggers premature rationing (shelter count), the lower value likewise applies, because false scarcity is preferable to false abundance during unresolved disagreement. The fallback value and its basis must be published on the public dashboard for the duration of the review, explicitly labeled as "under disagreement review."
 
-**Review outputs:** The oracle council must publish: the two divergent source values, the resolution method used, the agreed figure (or the continued conservative prior if resolution fails), and whether the disagreement exposed a methodological defect requiring protocol revision.
+**Review outputs:** The oracle cohort must publish: the two divergent source values, the resolution method used, the agreed figure (or the continued conservative prior if resolution fails), and whether the disagreement exposed a methodological defect requiring protocol revision.
 
 **Evidence basis:** The 5% threshold is proposed precautionary. The IPC classification process uses structured expert consensus to resolve inter-analyst disagreement, but does not specify a numeric divergence trigger. The conservative-estimate fallback is consistent with the Conservative Hold principle already present in the oracle failure architecture.
 
-**Breach response:** Failure to initiate a formal review within 5 business days of a detected 5% divergence constitutes a process breach. The conservative estimate continues to apply and the breach is logged in the public disagreement register. Repeated failures to initiate review trigger an audit of the oracle council's operating procedures.
+**Breach response:** Failure to initiate a formal review within 5 business days of a detected 5% divergence constitutes a process breach. The conservative estimate continues to apply and the breach is logged in the public disagreement register. Repeated failures to initiate review trigger an audit of the oracle cohort's operating procedures.
 
 ---
 
@@ -270,7 +270,7 @@ This section defines the standing operational thresholds that govern whether the
 
 **Evidence basis:** Proposed precautionary. The 20% figure has no field precedent for this architecture. It should be refined based on actual cost and logistical findings from the Physical Sampling Pilot (Test 4.3).
 
-**Breach response:** (1) Immediate publication of the sampling gap and affected categories on the public dashboard; (2) conservative priors apply to all under-sampled categories that are in watch or scarcity status; (3) oracle council must publish a corrective plan within 15 business days; (4) three consecutive quarterly sampling failures trigger a mandatory external audit of the oracle council's physical verification capacity.
+**Breach response:** (1) Immediate publication of the sampling gap and affected categories on the public dashboard; (2) conservative priors apply to all under-sampled categories that are in watch or scarcity status; (3) oracle cohort must publish a corrective plan within 15 business days; (4) three consecutive quarterly sampling failures trigger a mandatory external audit of the oracle cohort's physical verification capacity.
 
 ---
 
@@ -280,7 +280,7 @@ This section defines the standing operational thresholds that govern whether the
 
 **Definition of control:** An entity controls a measurement dimension if its data, methodology, or AI model is the primary input used by the oracle to produce a published capacity figure for that category. Control is assessed at the oracle-input level, not at the public-facing output level. Shared funding is a yellow flag, not a bright-line trigger, but must be documented.
 
-**Audit mechanism:** The oracle council must publish an annual **Measurement Concentration Report** that maps, for each essential basket category: the entities providing primary data, primary methodology, and AI model supply; their estimated share of oracle input; and any financial or institutional connections between them. The adversarial oracle seat has the right to commission an independent audit of the Measurement Concentration Report at any time.
+**Audit mechanism:** The oracle cohort must publish an annual **Measurement Concentration Report** that maps, for each essential basket category: the entities providing primary data, primary methodology, and AI model supply; their estimated share of oracle input; and any financial or institutional connections between them. The adversarial oracle seat has the right to commission an independent audit of the Measurement Concentration Report at any time.
 
 **Rationale:** Standards bodies and AI model vendors can concentrate influence across formally independent oracle nodes without violating diversity requirements (see Abuse Model §3, "Oracle vendor" row). A 33% ceiling per category prevents any single entity from controlling more than one-third of any category's measurement without triggering a review. This does not guarantee independence, but it creates a surface against which concentration can be measured.
 
@@ -288,7 +288,7 @@ This section defines the standing operational thresholds that govern whether the
 
 **Evidence basis:** Proposed precautionary. No analogous concentration threshold exists in the IPC, WHO SARA, or IEA frameworks reviewed in Section 2.
 
-**Breach response:** If any entity exceeds 33% concentration in any category: (1) the breach is published in the Measurement Concentration Report with the affected category and entity named; (2) the oracle council must submit a de-concentration plan within 60 days; (3) issuance and threshold decisions for the affected category shift to conservative priors until concentration falls below 33% or the governance body approves a documented exception with time-limited justification; (4) the exception cannot be renewed more than twice without a constitutional review.
+**Breach response:** If any entity exceeds 33% concentration in any category: (1) the breach is published in the Measurement Concentration Report with the affected category and entity named; (2) the oracle cohort must submit a de-concentration plan within 60 days; (3) issuance and threshold decisions for the affected category shift to conservative priors until concentration falls below 33% or the governance body approves a documented exception with time-limited justification; (4) the exception cannot be renewed more than twice without a constitutional review.
 
 ---
 

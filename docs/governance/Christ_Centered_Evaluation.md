@@ -2093,6 +2093,24 @@ This session completes the annex corpus and corrects a prior overclaim of comple
 
 ---
 
+## Session 26 Christ-Centered Evaluation — Institution Merger Audit (P-076, Terminology Unification in SPECIFICATIONS)
+
+**What this session reviews.** P-076's two-word terminology change in `docs/constitution/SPECIFICATIONS.md` — "oracle council" becomes "oracle cohort" in two places, aligning the constitution's machine-room wording with FC-033's own unit — reviewed alongside the annex-level phantom resolutions landed in the same patch (the dangling Conservative Hold authority pointer in ANNEX_AQ bound to the existing RCS accreditation body; the nonexistent "Measurement Oversight Body" replaced by the real ANNEX_AL §4.1 methodology-review panel).
+
+**Christ-centered alignment.** Calling things by their true name (Matt 5:37 — let your yes be yes). A constitution that uses two names for one body multiplies confusion for the reader who must trust it; the change serves legibility, not power.
+
+**Babel-risk warning.** None added — no authority moves. The deeper finding is the patch's two REJECTED mergers: merging the register-adjudicator with contribution verification would have concentrated adjudication across three instruments, and the other candidate body does not exist. Refusing a tidy tower in favor of honest walls is itself the anti-Babel posture.
+
+**Human dignity test.** Neutral-to-positive — no person's path changes; the phantom escalation body becoming a real panel gives the measurement-dispute appellant a body that actually exists.
+
+**Revision proposal.** None; the panel-rejected mergers are recorded with reasons in P-076.
+
+**Fruit test.** Expected good fruit: a reader meets one name per body, and the honest rejection record teaches future consolidators that count-reduction is not the goal — protection is. Bad fruit to watch for: the ANNEX_AB capacity-certifier placeholder quietly rotting instead of being substantively designated (it is a named follow-up in P-076's residual risk).
+
+**Net assessment.** Terminology hygiene executed with the full ceremony because it touches the constitution's text. Scores n/a (no new mechanism) — the discipline, not the diff, is the point.
+
+---
+
 ## Coverage Summary — Christ-Centered Evaluation of the Annex Corpus
 
 As of Session 21, the Christ-centered evaluation covers **every active annex (44 of 44)** — a prior summary claimed completeness at Session 16, but five annexes (AN, B, C, Q, J) had been missed; Session 21 closed that gap and this summary is corrected accordingly. Every active annex has received a direct Christ-centered evaluation (Sessions 5–21), and the design should-fixes surfaced in Sessions 7–21 have been closed in the corpus text. Standing scores after hardening:
