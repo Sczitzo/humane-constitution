@@ -106,7 +106,7 @@ A false-claim finding by the Ombuds (Annex AI) or the Enforcement Panel (Annex A
 | False attestation, knowing (attestor knew claim was false or recklessly indifferent) | 100% of placed stake slashed; attestor referred to Enforcement Panel under Annex AJ §4.2 at AJ-2.2 severity (1.5×) for the functional gain created by the false attestation |
 | Attestation ring or coordinated false attestation | 100% of placed stake slashed for all ring members; Annex AJ §4.2 AJ-2.2 + AJ-2.3 escalation; 2-year attestation disqualification; Service Record deduction per matrix |
 
-**Slashed stake distribution** (§3).
+**Slashed stake distribution** (§3). Slashing findings are appealable per the appeal spine ([ANNEX_L §L7](./ANNEX_L.md)); final adjudication lies with the Ombuds Plenum per Annex AI §4.9, with stake escrowed until finality.
 
 ### 2.5 — Pre-commit Transparency
 

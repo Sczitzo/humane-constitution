@@ -62,7 +62,7 @@ The constitutional operating-float exemption supersedes prior generic publicatio
 
 ### X6. Error correction, unwind discipline, and public logs
 - **All issuance channels** must publish aggregate issuance logs, category totals, concentration indicators, stale-balance rates, unwind performance, and exception use on the public dashboard with privacy-preserving aggregation.
-- **Quarantine due process:** quarantine requires written notice, named channel rule, evidence basis, maximum review clock, human appeal, and a least-harm interim status. Unresolved suspicion may not freeze ordinary household access, payroll recipients, essential providers, or protected ordinary use.
+- **Quarantine due process:** quarantine requires written notice, named channel rule, evidence basis, maximum review clock, human appeal per the appeal spine ([ANNEX_L §L7](./ANNEX_L.md)), and a least-harm interim status. Unresolved suspicion may not freeze ordinary household access, payroll recipients, essential providers, or protected ordinary use.
 - **Mis-issued Flow** may be quarantined, reclassified, or unwound only through published procedures that minimize collateral harm to payroll recipients, essential providers, and innocent counterparties. No ordinary clawback may target wage earners or essential-service recipients absent fraud findings tied to them directly.
 - **Unwind must be staged** when needed to prevent payroll shock, provider insolvency, or sudden continuity collapse. Emergency correction that causes more harm than the original error is itself a design failure.
 - **Repeated issuance error** in the same channel triggers automatic audit, temporary channel throttling, and mandatory public post-mortem before ordinary operation resumes.

@@ -60,7 +60,7 @@
 - Housing use-right renewal may be conditioned only on the closed list already stated in the main text: sustained vacancy beyond published threshold, physical damage beyond normal wear, verified illegal activity tied to the premises, and clearly defined health/safety violations after remediation opportunity.
 - No renewal decision may rely on aesthetics, lifestyle, political activity, lawful association, family structure, visitor profile, disability proxy, or any factor functioning as a substitute for protected characteristics.
 - Renewal denials must identify the exact closed-list basis, the evidence relied upon, the remediation path if one exists, and the appeal timeline.
-- Housing continuity remains in place during appeal except where a published and reviewable imminent-serious-harm standard is met.
+- Housing continuity remains in place during appeal except where a published and reviewable imminent-serious-harm standard is met, per the appeal spine ([ANNEX_L §L7](./ANNEX_L.md)).
 
 ### U7. Civic-layer repair, scaled verification, and hardship-safe continuity
 - The verification burden must scale with claimed influence. Small stewardship claims may use lightweight community attestation; mid-range claims require structured evidence bundles; high-impact Voice allocations or near-cap Service Record-based service claims face intensive review and elevated audit probability.

@@ -3,7 +3,7 @@
 > **At a glance**
 > | | |
 > |---|---|
-> | **Purpose** | Constitutes the three-tier review architecture (Local Review Offices, Regional Constitutional Chambers, Constitutional Review Panel), defines CRP composition via sortition, sets standards of review for each tier, specifies the remedy ladder, and maps dispute classes to forum and appeal path. |
+> | **Purpose** | Constitutes the three-tier review architecture (Local Review Offices, Regional Constitutional Chambers, Constitutional Review Panel), defines CRP composition via sortition, sets standards of review for each tier, specifies the remedy ladder, and maps dispute classes to forum and appeal path; §L7 is the canonical appeal spine for every appeal context in the corpus. |
 > | **Who it protects** | Anyone who suffers an adverse decision — loss of Essential Access, identity denial, oracle dispute, emergency-power overreach — and needs a legible, fast-acting path to challenge it. |
 > | **Failure risk** | Without a constituted review body, the CRP remains implicit and therefore capturable; no single office can quietly reinterpret the constitution, but multiple offices in concert can if there is no independent check. |
 > | **Evidence status** | Designed |
@@ -70,3 +70,57 @@ Every materially adverse decision must be challengeable by a legible path. Autom
 - Counsel and advocate support extend to the commercial-court and technical-audit tracks, so that under-resourced parties receive qualified representation and independent expert assistance where expertise or cost asymmetry would otherwise undercut the burden-shift above.
 - Emergency relief windows should be measured in hours or days, not months, whenever survival access, identity continuity, or liberty interests are at stake.
 - Algorithmic systems must preserve the inputs, rules, and model / version state necessary for retrospective review.
+
+---
+
+## L7 — The Appeal Spine (P-074 consolidation)
+
+> **Provenance:** Consolidated under the Framework-First Intake rule (P-073, Acceptance_Protocol). ANNEX_L is the most general existing appeal instrument; this section makes it the single canonical spine. Domain annexes keep their first-instance bodies and substantive standards; they no longer carry their own filing rules, windows, or escalation procedure. Status: `Designed`. Domain documents name their first-instance body and substantive standard and cite this section for everything procedural; a domain document restating its own filing rule, window, or escalation path is in drift — the spine governs. New appeal contexts are added as a row in L7.5, never as new machinery (P-073). Changes to the spine's clocks, the imminent-serious-harm standard, or the deletion of an intake row receive Strict review (L4).
+
+### L7.1 One filing rule
+
+Any materially adverse determination under this corpus — a denial, reduction, suspension, flag, quarantine, classification, penalty, or refusal to act — is appealable by the person or body it burdens. One trigger: receipt (or constructive receipt) of the adverse decision with its written reasons. One window: **30 days** from that notice, extended automatically where notice was defective, inaccessible, or never reached the person. Filing is reachable without identity documents, literacy, fee, or counsel (INV-013); a trusted helper or community navigator may file without the appellant losing any right.
+
+### L7.2 What continues during appeal
+
+- **The survival floor always continues.** Any withholding of the Constitutional Survival Minimum — system-originated or host-instructed — is resolved toward provision while the appeal is pending (INV-013, INV-019). A withholding with no open appeal path is void.
+- **For everything else, the status quo ante continues:** the standing, access, housing continuity, issuance, or classification the person held before the adverse decision remains in force during appeal, except where a published, reviewable imminent-serious-harm standard is met (the ANNEX_U §U6 standard, generalized). Until the generalized imminent-serious-harm standard is published — authored and amended under the ANNEX_U §U5 threshold-setting discipline, and its publication a pre-launch gate — each domain's existing published interim measure (e.g., the ANNEX_X §X6 least-harm interim status) continues to operate during appeal; status quo ante does not vacate it. Invocation of the imminent-serious-harm exception is itself immediately appealable on the emergency clock (L7.4), with the burden on the invoking body, and it may never be invoked against the survival floor.
+- **Penalties and stakes:** license and access sanctions pause during appeal; monetary gain-recoupment proceeds during appeal **into escrow** per ANNEX_AJ §4.4 — refunded with accrued return if the appeal succeeds — so appeal never becomes a window to dissipate gains; slashed-stake distribution does not execute until finality, the stake remaining escrowed (ANNEX_AI §4.9). Stake under a false-claim finding is escrowed, not slashed, until final determination (ANNEX_AI §4.9).
+
+### L7.3 The ladder
+
+1. **First instance — domain specialist body** (table in L7.5). The specialist applies its own published substantive standard; the spine governs only procedure and escalation.
+2. **Second instance — Regional Constitutional Chamber** (L1), on the record, with emergency relief authority.
+3. **Final instance — split by question:**
+   - **Constitutional questions** (Tier boundaries, invariant violation, instrument separation, rights deprivation): the **CRP** (L1–L4 standards of review).
+   - **Enforcement and Ombuds-administered administrative questions** (Enforcement Panel penalties, attestation false-claim findings, manufactured-flag determinations): the **Ombuds Plenum** under FC-091 (ANNEX_AI §3.2, §4.8–4.9). These do not merge into the CRP ladder: folding them in would reduce the independence count bearing on enforcement outcomes (P-073's simplicity-presumption limit; INV-006). Residual cross-links are acknowledged honestly: the Enforcement Panel seats members from the Ombuds roster (ANNEX_AJ §4.4) and sub-Ombuds Commissioners are confirmed by the CRP (ANNEX_AI §2.1) — the split raises the independence count, it does not perfect it. A constitutional challenge to the Ombuds' own conduct runs up the CRP ladder, so neither final instance sits unaudited.
+
+   A single appeal raising both kinds of question is heard by its domain ladder, and the constitutional question is certified to the CRP; the appellant is never required to diagnose the split to file (one door, L7.1).
+
+### L7.4 Timing
+
+| Class | Clock |
+| :--- | :--- |
+| **Emergency** (shelter loss, floor interruption, family separation, medical interruption, expulsion, identity lockout) | Review begins within **72 hours**; interim relief decided in the same window. |
+| **Time-critical operational** (demand-context flags, PCRP co-certification, supply-shock action) | The Duty body acts immediately; full post-hoc review within **30 days** (ANNEX_AI §3.1 urgency split, preserved). |
+| **Ordinary** | Appeal acknowledged and docketed within **14 days** of filing; written first-instance determination within **30 days** unless the appellant requests more time. |
+| **Escalation** | Each higher instance runs on the same 14/30 clocks from receipt of the escalated record. |
+
+A blown clock never costs the appellant: relief pending review continues until the late decision actually issues. On final affirmance of a monetary assessment, penalty, or quarantine, amounts and restrictions relieved during a blown-clock period are reinstated retroactively (escrow-settled), so delay relief is never a prize for the merits-loser. This reinstatement never applies to the survival floor (INV-013).
+
+### L7.5 Domain intake table
+
+The L6 dispute-class table is the first-instance map for Essential Access, identity/personhood, Voice/Service Record, and emergency-powers appeals; the rows below add the contexts L6 does not name.
+
+| Appeal context | First instance | Escalates to chamber when | Final instance |
+| :--- | :--- | :--- | :--- |
+| Civic standing / residency status (ANNEX_I §I8) | Status review per §I8 | Adverse determination upheld | CRP |
+| Productive-status / stewardship determination (Productive Status Register; ANNEX_J §R2.3) | ANNEX_J independent stewardship reviewer (per §R2.3) | Determination upheld; INV-006 separation question | CRP |
+| Commons Return / CRUS assessment (FC-209) | Commons Return assessment review (per ANNEX_D §D6) | Assessed holder or excluded claimant unsatisfied; hardship route denied | CRP |
+| Monitoring flag / Flow quarantine (ANNEX_C, ANNEX_X §X6) | Named human reviewer in the Monitoring Purpose Register entry | Flag maintained past review clock | CRP |
+| Housing use-right renewal denial (ANNEX_U §U6) | Housing stewardship review (per ANNEX_U §U6) | Denial upheld | CRP |
+| Enforcement Panel penalty (ANNEX_AJ §4) | Enforcement Panel determination record | — (no chamber tier) | **Ombuds Plenum**, FC-091 (ANNEX_AI §4.8) |
+| Attestation false-claim / stake slashing (ANNEX_AS §2.4) | Originating investigator record | — (no chamber tier) | **Ombuds Plenum**, FC-091 (ANNEX_AI §4.9) |
+
+A context not listed here defaults to the nearest L6 dispute class; absence from this table is never a reason to refuse a filing. A filing made at any first-instance body, the Ombuds, or the floor-access point is a valid filing; the receiving body routes it to the correct first instance without loss of the filing date. Intake routing — including class assignment and any nearest-dispute-class default — is recorded with reasons, is itself challengeable on the spine, and a misrouting never consumes the appellant's window or clocks. Survival-floor cases are emergency-class automatically; other emergency-class intake may verify the published predicate, and a post-finding manufactured-emergency determination is sanctionable without ever conditioning the floor.
+

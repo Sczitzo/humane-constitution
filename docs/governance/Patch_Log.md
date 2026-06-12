@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-073 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-074 (P-071 reserved)**
 
 ---
 
@@ -90,6 +90,7 @@
 | P-070 | T-033 | **ACTIVE** | Critical | Founding Legitimacy Prerequisite Definition Gate: reconciles consent thresholds, defines admissible non-coercive consent evidence, defines independent civil-society reviewer qualification, and blocks Gate A until consent and review are independently evidenced. |
 | P-072 | T-025 | **PROPOSED** | High | Productive Status Register: one canonical "productive" determination shared by Flow issuance (ANNEX_X) and the Commons Return exemption (ANNEX_D §D3), with settle-forward escrow closing the temporal double-dip. Remains PROPOSED / pilot-gated until its evidence test passes; binds nothing until then. |
 | P-073 | structural — no threat row | **ACTIVE** | High | Framework-first intake (anti-accretion rule): FAP intake gate requiring any new mechanism to extend the most general existing instrument for its protective function or carry a published justification; published return record with adversarial-panel escalation; simplicity presumption bounded by independence count and protected-person path equivalence. Amends Acceptance_Protocol.md. |
+| P-074 | structural — no threat row | **ACTIVE** | High | Appeal Spine consolidation: ANNEX_L §L7 becomes the single canonical appeal procedure (one filing rule, floor + status-quo-ante continue during appeal, one ladder with the Ombuds Plenum kept separate for independence); seven scattered appeal procedures become spine pointers (with ANNEX_I's duplicate clocks and ANNEX_AI §4.8's duplicate window deleted); the ANNEX_AW §AW3.3 orphan appeal window (RRE-011) is a named follow-up, not yet absorbed. First P-073-mandated consolidation of an entire mechanism family. |
 
 ---
 
@@ -698,7 +699,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-073. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-074. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -770,6 +771,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-033 | P-070 | **ACTIVE** | Founding Consent and Civil-Society Review Evidence Test Package · Founding Legitimacy Dossier |
 | P-072 | T-025 supplement | **PROPOSED** | Productive Status Register (operative T-025 control remains P-023 ACTIVE) |
 | structural — no threat row (anti-accretion intake gate) | P-073 | **ACTIVE** | Acceptance_Protocol.md Framework-First Intake |
+| structural — no threat row (appeal spine) | P-074 | **ACTIVE** | ANNEX_L §L7 |
 
 ---
 
@@ -1574,4 +1576,21 @@ A full-corpus simplification audit (2026-06-12, three independent single-role re
 
 **Panel process:** four independent single-role reviewers (adversarial systems designer, Christ-centered, corpus-fit, minimalist) reviewed the applied diff in parallel; all four returned APPROVE WITH FIXES and every required fix was incorporated (return-record discipline, anti-laundering tier rule, independence-count bound, protected-person clause, corrigibility clause, functional test replacing a closed family list, P-073 provenance). Christ-centered review recorded as Session 25 in `Christ_Centered_Evaluation.md`.
 
-**Consolidation program landings (running record):** 2026-06-12 — the status spine landed (first program step under this gate): `Status_Model.md` deleted, its vocabulary and edge rules absorbed into the Claims and Evidence Register's Status methodology section (now the canonical status spine); the Hardening Queue stripped of duplicated status tracking (worklist only, references owners); Threat Register restated patch-statuses converted to pointers. Net ~−95 lines; vocabulary-definition sites reduced from five to one. Evidence Ladder deliberately retained standalone (it defines evidence *levels*, a different axis, and its level numbers are cited by app code and seven documents). Named follow-ups: Patch Log single-row mini-tables (same-file restatement, checker-covered) and a single convention for Threat Register per-entry Status lines.
+**Consolidation program landings (running record):** 2026-06-12 — the status spine landed (first program step under this gate): `Status_Model.md` deleted, its vocabulary and edge rules absorbed into the Claims and Evidence Register's Status methodology section (now the canonical status spine); the Hardening Queue stripped of duplicated status tracking (worklist only, references owners); Threat Register restated patch-statuses converted to pointers. Net ~−95 lines; vocabulary-definition sites reduced from five to one. Evidence Ladder deliberately retained standalone (it defines evidence *levels*, a different axis, and its level numbers are cited by app code and seven documents). Named follow-ups: Patch Log single-row mini-tables (same-file restatement, checker-covered) and a single convention for Threat Register per-entry Status lines. 2026-06-12 — the appeal spine landed (P-074, ANNEX_L §L7): seven appeal procedures → one spine + a domain intake table (the ANNEX_AW §AW3.3 orphan appeal window, RRE-011, is a named follow-up); FC-209's reserved appeal path closed by binding it to the spine.
+
+
+---
+
+### P-074 — Appeal Spine Consolidation (ANNEX_L §L7)
+
+**Threat addressed:** structural — no threat row (appeal-path fragmentation as a systemic failure mode)
+**Status:** ACTIVE | **Priority:** High
+
+The same simplification audit that produced P-073 counted at least eight separate appeal machineries across the corpus — each with its own filing rule, window, ladder, and clock. Fragmented appeal procedure is itself an exclusion mechanism: the person most likely to need an appeal is the person least equipped to discover which of eight procedures applies to them. This patch is the first P-073-mandated consolidation of an entire mechanism family.
+
+- **Introduced design:** ANNEX_L §L7, the canonical appeal spine: one filing rule and 30-day window (L7.1); the survival floor and the status quo ante continue during appeal, with penalties and stakes paused or escrowed until finality (L7.2); a single three-instance ladder with the Ombuds Plenum deliberately kept as a separate final instance for enforcement and attestation questions (L7.3); one timing table (L7.4); a domain intake table replacing scattered procedure (L7.5); and a drift rule in the §L7 provenance note making the spine govern over any domain restatement. Pointer rewrites in ANNEX_J, ANNEX_I, ANNEX_X, ANNEX_D, ANNEX_U, ANNEX_AJ, ANNEX_AS, the Productive Status Register, the Identity Recovery Evidence Test Package, and the Parameter Calibration Register (FC-209 bound to the spine) replace local appeal machinery with first-instance intake plus a spine citation: seven scattered appeal procedures become spine pointers (with ANNEX_I §I8's duplicate clocks and ANNEX_AI §4.8's duplicate filing window deleted in favor of the spine); the ANNEX_AW §AW3.3 orphan appeal window (RRE-011) is a named follow-up, not yet absorbed.
+- **Claim discipline:** No claim that appeals are accessible, timely, or capture-resistant in practice until the appeal-path drills (including the FC-209 both-directions drill) actually run. The spine is `Designed`; consolidation reduces procedure count, not uncertainty.
+- **New risks introduced:** A single procedural spine is a single point of procedural capture — whoever controls the spine's clocks and intake controls every appeal (bounded by the Plenum/CRP split in L7.3 and the spine-discipline drift rule in the §L7 provenance note, which makes deviation visible rather than silent). The status-quo-ante rule (L7.2) could be exploited to freeze adverse-but-correct decisions in place during appeal (bounded by the published, reviewable imminent-serious-harm carve-out generalized from ANNEX_U §U6). The generalized imminent-serious-harm standard is itself unpublished — until it is authored under the ANNEX_U §U5 threshold-setting discipline and published (a pre-launch gate), each domain's existing published interim measure governs during appeal, so there is no absolute status quo ante.
+- **Residual risk:** The body names in L7.5 are designed institutions with no pilot evidence behind any of them; the 72-hour, 14-day, and 30-day clocks are design estimates, not measured capabilities. Whether one door genuinely lowers the filing barrier for the least-resourced appellant is unproven until drilled.
+
+**Numbering note:** the held Voice/Service-Record redline provisionally cited P-074 for its civic-misuse proposal; per that redline's own renumbering caveat, it takes the next free number at intake.
