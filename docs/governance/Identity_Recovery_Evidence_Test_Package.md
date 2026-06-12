@@ -479,6 +479,8 @@ If the survival floor is interrupted during recovery (i.e., Essential Access fal
 - at least one person with lived experience of identity exclusion, displacement, or documentation barriers;
 - access to the full appeal record including staff notes and reason codes.
 
+Appeal structure: identity-recovery appeals run on the appeal spine (ANNEX_L §L7) — first instance the administrative identity tribunal, escalation to the Regional Constitutional Chamber, constitutional review by the CRP. The T-4 ceilings above are the pass/fail evidence gates on that spine, not a separate procedure.
+
 **Evidence basis:** Human-review requirement — adapted from EU AI Act Article 14 (human oversight for high-risk AI decisions). Delay ceiling — precautionary, no direct analogue. Independent reviewer requirement — adapted from ombudsman and tribunal independence standards (UK Administrative Court practice direction).
 
 **Breach escalation:** Exceeding any appeal failure ceiling:

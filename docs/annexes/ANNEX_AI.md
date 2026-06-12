@@ -241,7 +241,7 @@ One sub-Ombuds rotates into the 3-member arbitration panel convened within 72 ho
 
 *Protocol-level — Plenum vote required per §3.2 item 4.*
 
-Any party subject to a §4.2 Graduated Penalty may appeal to the Federation within 30 days of determination. The Plenum hears the appeal and decides under FC-091 (4 of 5 to overturn). If the Plenum overturns, the penalty is vacated; if remanded (3 of 5), the Enforcement Panel re-investigates; if affirmed (<3 affirmative for overturn), the penalty stands.
+Any party subject to a §4.2 Graduated Penalty may appeal to the Federation on the appeal spine ([ANNEX_L §L7](./ANNEX_L.md) — one filing rule, L7.1). The Plenum hears the appeal and decides under FC-091 (4 of 5 to overturn). If the Plenum overturns, the penalty is vacated; if remanded (3 of 5), the Enforcement Panel re-investigates; if affirmed (<3 affirmative for overturn), the penalty stands.
 
 Appeals are heard de novo on the evidentiary record. The Plenum may also issue binding interpretive guidance to the Enforcement Panel with each appeal decision.
 

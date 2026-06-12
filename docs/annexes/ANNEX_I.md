@@ -98,12 +98,11 @@ A humane system must also be capacity-honest. Regions may not promise settlement
 
 ### I8. Appeals, review, and privacy protections
 - Every adverse status decision must be provided in writing with reasons, evidence basis, review path, and timeline.
-- Emergency review must begin within 72 hours where shelter loss, family separation, medical interruption, or expulsion risk is involved.
-- Ordinary status appeals must be available within 14 days of filing, with a written determination within 30 days unless the claimant requests more time.
 - Residency and migration data may be used only for continuity, routing, anti-fraud, safety, and lawfully published planning purposes. Individual-level exposure on public dashboards is prohibited.
 - The capacity dashboards and any migrant or entrant datasets are governed by data minimization, retention limits, and access controls. Only data necessary for the stated purpose is collected; it is retained no longer than that purpose requires and then deleted or irreversibly aggregated; access is limited to authorized roles and every access is logged. Such data may never be repurposed for enforcement, expulsion, deterrence, or any use beyond the lawful purposes named in this annex.
 - Privacy, anti-publicity, and anti-discrimination protections cover not only a person's individual records but also their status-classification data — which status class they are in. Status-class membership may not be published, disclosed, or made discoverable at the individual level, and may not be used as a basis for differential treatment outside the lawful service-routing and due-process purposes defined in this annex, so that a status class cannot harden into a public mark or stigma.
 - Children and protected entrants receive heightened confidentiality, and their data may not be publicized for deterrence theater or political messaging.
+- Status appeals run on the appeal spine ([ANNEX_L §L7](./ANNEX_L.md)), which carries the clocks (72h emergency / 14-day docket / 30-day determination); escalation follows the spine ladder.
 
 ### I9. Absence, exit, reentry, and continuity preservation
 - Routine travel, temporary caregiving, education, service deployment, medical treatment, or family emergency absence does not by itself break Core Resident continuity.

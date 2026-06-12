@@ -136,7 +136,7 @@ Commons Return assessment data is a monitoring stream for purposes of [P-069](..
 
 **D6.2 Public formulas, private details.** Public dashboards show aggregate receipts and burden distribution. Individual household and business details remain protected unless disclosure is required for a specific adjudicated enforcement action.
 
-**D6.3 Appeal right.** Every assessment must include a plain-language basis, evidence source, appeal path, hardship route, and non-displacement protection where applicable.
+**D6.3 Appeal right.** Every assessment must include a plain-language basis, evidence source, appeal path, hardship route, and non-displacement protection where applicable. Appeals follow the appeal spine ([ANNEX_L §L7](./ANNEX_L.md)).
 
 **D6.4 Independent review.** Valuation methods, source-base definitions, and exemption decisions require recurring review by independent methodology classes under Annex AL-style independence rules.
 
