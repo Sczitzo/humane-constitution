@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-072 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-073 (P-071 reserved)**
 
 ---
 
@@ -89,6 +89,7 @@
 | P-069 | T-032 | **ACTIVE** | Critical | Monitoring Repurposing Gate: registers the risk that protective monitoring becomes surveillance or coercive control; requires purpose register, purpose-creep red team, linkability test, office-separation drill, individual-flag appeal drill, retention audit, and coercive-use scenario. |
 | P-070 | T-033 | **ACTIVE** | Critical | Founding Legitimacy Prerequisite Definition Gate: reconciles consent thresholds, defines admissible non-coercive consent evidence, defines independent civil-society reviewer qualification, and blocks Gate A until consent and review are independently evidenced. |
 | P-072 | T-025 | **PROPOSED** | High | Productive Status Register: one canonical "productive" determination shared by Flow issuance (ANNEX_X) and the Commons Return exemption (ANNEX_D §D3), with settle-forward escrow closing the temporal double-dip. Remains PROPOSED / pilot-gated until its evidence test passes; binds nothing until then. |
+| P-073 | structural — no threat row | **ACTIVE** | High | Framework-first intake (anti-accretion rule): FAP intake gate requiring any new mechanism to extend the most general existing instrument for its protective function or carry a published justification; published return record with adversarial-panel escalation; simplicity presumption bounded by independence count and protected-person path equivalence. Amends Acceptance_Protocol.md. |
 
 ---
 
@@ -697,7 +698,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-072. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-073. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -768,6 +769,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-032 | P-069 | **ACTIVE** | Monitoring Repurposing Evidence Test Package · Annex C · Capture Dashboard Specification |
 | T-033 | P-070 | **ACTIVE** | Founding Consent and Civil-Society Review Evidence Test Package · Founding Legitimacy Dossier |
 | P-072 | T-025 supplement | **PROPOSED** | Productive Status Register (operative T-025 control remains P-023 ACTIVE) |
+| structural — no threat row (anti-accretion intake gate) | P-073 | **ACTIVE** | Acceptance_Protocol.md Framework-First Intake |
 
 ---
 
@@ -1555,3 +1557,19 @@ The word "productive" unlocks two benefits on two separate tests: Flow issuance 
 - **Residual risk:** Settle-forward closes the modeled timing attack; it does not prove the published stewardship standard itself cannot be captured (that remains ANNEX_J / Article V territory under T-025), and no pilot evidence exists for adjudication throughput at scale.
 
 **Panel-revised before incorporation** (adversarial, Christ-centered, corpus-fit; source: `docs/superpowers/specs/2026-06-09-productive-register-recusal-redline.md`). The companion Fix 2 of that redline — the INV-006 economic-parameter-setting recusal extension — is already constitutional (applied with Session 23).
+
+---
+
+### P-073 — Framework-First Intake (Anti-Accretion Rule)
+
+**Threat addressed:** structural — no threat row (rule-count inflation as a systemic failure mode)
+**Status:** ACTIVE | **Priority:** High
+
+A full-corpus simplification audit (2026-06-12, three independent single-role reviews) found that the corpus's protective machinery grew by accretion: each threat received its own patch, and patches repeatedly reimplemented mechanisms the corpus had already designed elsewhere — at audit time, at least eight collusion-detection instances, eight appeal-path machineries, ten near-identical evidence test packages, seven restatements of the data-minimization rule, six overlapping status registries, and forty-seven standing institutions. Every duplicate mechanism is a new capture surface, a new audit obligation, and a new layer of illegibility between an ordinary person and the rules that govern them.
+
+- **Introduced design:** The Framework-First Intake gate in `Acceptance_Protocol.md`: a proposal introducing a mechanism whose protective function an existing mechanism already performs must extend the most general existing instrument or attach a published justification for why extension cannot serve. Returns are judgment calls, so they carry a published return record (void without it), a point-by-point resubmission ratchet, and escalation of contested duplication questions to the standing adversarial panel member. Extensions that add authority, personnel, data collection, or gatekeeping power receive full new-mechanism scrutiny at the higher applicable tier (no laundering). A simplicity presumption favors consolidation and deletion — bounded so it never blesses independence-reducing mergers (mechanism count, never independence count) and never costs a protected person their path to protection.
+- **Claim discipline:** This gate is process hygiene, not proof of simplicity. No document may claim the corpus is consolidated or minimal until the consolidation program (status spine, appeal spine, evidence framework, data stewardship standard, institutional mergers) actually lands and the rule shows fruit at real intakes.
+- **New risks introduced:** A captured intake could try to use "duplicate" as a veto on new protections (bounded by the return record, ratchet, and adversarial escalation); justification-writing could become ritual boilerplate (watched via the technical-review record requirement); the gate itself is one more rule (accepted: it is the rule that makes the next hundred unnecessary, and it creates no office, register, or new process step).
+- **Residual risk:** The gate stops *new* duplication; it does not remove the existing redundancy (that is the consolidation program's job). Its effectiveness is unproven until tested by real proposals; per its own corrigibility clause, evidence that it suppresses needed protections or relocates complexity into justification documents counts against it.
+
+**Panel process:** four independent single-role reviewers (adversarial systems designer, Christ-centered, corpus-fit, minimalist) reviewed the applied diff in parallel; all four returned APPROVE WITH FIXES and every required fix was incorporated (return-record discipline, anti-laundering tier rule, independence-count bound, protected-person clause, corrigibility clause, functional test replacing a closed family list, P-073 provenance). Christ-centered review recorded as Session 25 in `Christ_Centered_Evaluation.md`.

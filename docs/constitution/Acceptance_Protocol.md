@@ -1,10 +1,10 @@
 # The Humane Constitution
 
-**Formal Acceptance Protocol (Amended by P-013 / AG; Bootstrap resolved by P-014 / AH; Founding window extended by P-020 / AH2)**
+**Formal Acceptance Protocol (Amended by P-013 / AG; Bootstrap resolved by P-014 / AH; Founding window extended by P-020 / AH2; Structural precondition gate by P-034 / AV; Framework-first intake by P-073)**
 
 ---
 
-This document incorporates two amendments: (1) the P-020 founding window extension (Annex AH2), and (2) updated patch priority additions. All prior content is unchanged except as explicitly noted.
+This document incorporates the following amendments: (1) the P-020 founding window extension (Annex AH2); (2) updated patch priority additions; (3) the P-034 structural precondition gate (Annex AV); (4) the P-073 framework-first intake gate. All prior content is unchanged except as explicitly noted.
 
 Governing principle: acceptance is evidence-gated, not calendar-gated. Urgency is a reason to accelerate the pilot, not to skip it. [Tier 2 protected per P-013 AG4]
 
@@ -116,6 +116,24 @@ When evidence emerges that a founding-stage decision — a panel composition, a 
 Reversal is owed before harm scales. A founding-stage defect discovered before scale-up is corrected at the founding stage, where the affected population is smallest and the cost of correction lowest, rather than carried forward into wider deployment where reversal becomes harder and the harm already done is larger. Discovery of a credible defect pauses any pending scale-up that depends on the decision in question until the reversal question is resolved.
 
 Every reversal is accompanied by published reasons: the evidence of the defect, the state restored to, what was undone, who was affected, and what remedy or re-review follows. A reversal recorded without published reasons is not complete. Reversal is treated as faithful correction, not as failure — a protocol that cannot walk back its own founding errors cannot be trusted to make founding decisions at all.
+
+---
+
+### Framework-First Intake — The Anti-Accretion Rule (P-073)
+
+**Applies to every FAP intake. [Tier 2 protected per P-073]**
+
+Every additional register, detector, panel, or office is a new capture surface, a new body that must be audited, and a new layer of illegibility between people and the rules that govern them. This gate stops duplication at intake.
+
+**The rule.** A proposal introducing a mechanism whose protective function an existing corpus mechanism already performs — illustratively: coordinated-deviation detection, appeal and remedy paths, data minimization and purpose limitation, evidence testing and claim gating, status tracking, anti-capture structural separation, or the creation of any standing office, register, or panel — must either (1) **extend the most general existing instrument** for that function, or (2) attach a **published justification** stating why extension cannot serve the purpose and what was attempted. Failure to consult the existing framework, and institutional convenience, are not justifications. A proposal that does neither is returned at intake as incomplete; no technical review begins. Intake verifies only that a justification exists and addresses the named framework; its sufficiency is assessed during technical review, where it must be affirmatively addressed in the review record.
+
+**Return discipline — a judgment, not a checksum.** Every return under this gate is accompanied by a published return record naming the protective function invoked, the existing instrument and clause asserted to already perform it, and the deficiency found in any submitted justification; a return without this record is void. A resubmission that answers the return record point-by-point may not be returned a second time on the same ground by the same intake authority; a second same-ground return escalates the duplication question to the standing adversarial panel member (AH2.3 / AV3), whose determination binds intake. Where a proposal carries `modifies_tier1=True`, AV1 is assessed first; no duplication assessment is performed on an unattested proposal.
+
+**No laundering through extension.** An extension under path (1) that adds new authority, standing personnel, data collection, or coercive or gatekeeping power to an existing instrument receives the full scrutiny a new mechanism would receive, at the amendment tier of the instrument it extends or the tier its added powers would warrant standing alone, whichever is higher. Extension changes the footprint of a framework instrument; it never reduces the review that footprint requires.
+
+**The simplicity presumption.** The burden of proof rests on addition, never on deletion. A proposal that consolidates or deletes mechanisms while preserving the protected function may not be rejected solely because it reduces institutional count. Two limits bind the presumption: (a) it attaches to mechanism count, never to independence count — a consolidation that reduces the number of independent checks bearing on any single actor or body, including merging detection, audit, attestation, or appeal functions under one body's control, loses the presumption and is reviewed as a power-concentration proposal (INV-006 is the floor of this principle, not its ceiling); and (b) a consolidation must demonstrate, with the same specificity demanded of additions, that every protected person retains an equivalent or better path to the protection — especially the person on the survival floor, the person mid-appeal, and the person whose only remedy runs through the mechanism being merged. Simplicity that costs the most burdened person their protection is not simplicity; it is cost transferred downward. The standing intake question for every proposal: *which existing rule already covers this, and what could this proposal delete?*
+
+**Scope and corrigibility.** A function no existing mechanism performs is not a duplicate. Mechanisms already incorporated, and proposals already in the FAP queue at this rule's adoption, are not invalidated by it, but all are eligible for consolidation under it. This gate is subject to the same evidence discipline as everything else in this corpus: if in practice it suppresses needed protections or merely relocates complexity into justification documents, that is evidence against it, and it must be revised.
 
 ---
 
