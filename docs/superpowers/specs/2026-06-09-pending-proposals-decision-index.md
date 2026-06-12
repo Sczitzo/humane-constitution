@@ -1,6 +1,6 @@
 # Pending Proposals — Decision Index
 
-**Status:** Triage surface, not a proposal. A single map of everything awaiting a decision, so the backlog can be acted on rather than re-read. Nothing here is incorporated into the live constitution except where noted as a committed live edit.
+**Status:** Triage surface, not a proposal. **Updated 2026-06-09 after panel triage execution:** PR #78 merged (Session 22 live); status drift fixed (CI green); the three protective invariants APPLIED to INVARIANTS.md via PR #79 with Session 23 (INV-014 floor-precedes-distribution; INV-006 recusal extension; INV-008 closed list, §D2a sentence held pending P-071). Next per panel: the Scope + INV-015–020 block as its own PR with Session 24; then P-072 incorporated as Designed; then harvest design/phase2 (Five Walls card, retire stale demurrage items); P-071 and the three instrument redlines stay held as proposals. A single map of everything awaiting a decision, so the backlog can be acted on rather than re-read. Nothing here is incorporated into the live constitution except where noted as a committed live edit.
 
 **Where the work lives.** Two branches:
 - `review/commons-return-christ-centered` — the Session 22 review (a committed live edit) + three panel-revised redlines + this index. Based on current `main`; PR-ready.
