@@ -39,16 +39,7 @@ It does not ban monitoring. It requires proof that monitoring is bounded by purp
 
 ## Baseline Rule
 
-Monitoring is constitutional only when it satisfies all six conditions:
-
-1. **Purpose-bound:** the data is collected for a named control and cannot be reused for another purpose without explicit review.
-2. **Minimum necessary:** the monitoring uses the least personal, least durable, least linkable data that can do the job.
-3. **Aggregation-first:** population, route, office, provider, and category metrics are preferred over individual tracking.
-4. **Office-separated:** the body that operates a service may not be the sole body that interprets its monitoring performance.
-5. **Appealable:** any person affected by an individual-level flag receives notice, plain-language reasons, and a path to human review.
-6. **Deletion-bound:** raw monitoring data expires or is transformed into non-identifying aggregate records on a published schedule.
-
-If a monitoring tool cannot satisfy these conditions, the tool must be redesigned, narrowed, or explicitly recorded as a residual risk before it is used.
+The baseline rule under test is the Minimization and Purpose-Limitation Doctrine (P-075) in the [Monitoring Administrative Safety Packet](./Monitoring_Administrative_Safety_Packet.md), which carries this package's former six-condition statement verbatim. This package tests whether that doctrine survives repurposing pressure; it no longer restates it.
 
 ---
 

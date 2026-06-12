@@ -81,6 +81,25 @@ Every evidence packet should include:
 
 ---
 
+## Test Package Template (P-075)
+
+Every evidence test package in this corpus follows one structure. A package supplies domain substance; this template supplies the skeleton. The superseded Demurrage package tombstone is exempt.
+
+Required elements, in order of function (heading wording may vary; substance may not):
+
+1. **Claim under test / honest claim boundary** — the exact claim the package gates, its current status in the status vocabulary, and what may not be claimed until the package passes.
+2. **Abuse model or threat basis** — who attacks the mechanism, how, and which T-, P-, or ACL- identifiers the package serves.
+3. **Required tests with pre-stated failure criteria** — each test names its method, the actors or population modeled, and a failure criterion written in advance, concrete enough that an adverse result cannot be relabeled as success. The criteria bind the package author as much as the operator. A test without a published failure criterion is not a test; it is a demonstration.
+4. **Adverse-finding protocol** — an adverse finding triggers this ladder's downgrade rules: the affected claim moves down, residual risk is rewritten, and no retest quietly replaces a failed test without publishing the failure.
+5. **Affected-documents update order** — on any result, the package's own residual-risk statement updates first, then the remaining documents in the order prescribed by the Claims and Evidence Register's Evidence Update and Claim Downgrade Protocol; they move together.
+6. **Residual risk** — what the package cannot prove even when every test passes.
+
+Each test's evidence packet follows the Evidence Packet Minimum above; this template governs the package document, the packet minimum governs each packet.
+
+**Drift rule.** A package defines only its domain-specific claims, tests, thresholds, and residual risks, and cites this template for everything structural. Where a package restates a structural rule and the restatement diverges, this template governs. A new package may not introduce a new structural pattern without a framework-first justification under the Acceptance Protocol's anti-accretion rule (P-073). A package missing a required element, or whose failure criteria are too vague to be falsified, does not conform to this template and gates nothing: no claim may move up the ladder on the strength of a non-conforming package (see Forbidden Status Moves).
+
+---
+
 ## Forbidden Status Moves
 
 Do not move:

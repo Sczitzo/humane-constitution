@@ -247,7 +247,7 @@ The AED is Tier 2 once adopted. The decision rule in Section 4 (including the pr
 
 Any person may receive Essential Access at the Constitutional Survival Minimum (CSM) without providing or confirming real-world identity.
 
-**Non-duplication mechanism:** A Tier 0 allocation is keyed to a single-session pseudonymous token generated at point of access. The token is non-transferable, expires after use, and cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom.
+**Non-duplication mechanism:** A Tier 0 allocation is keyed to a single-session pseudonymous token generated at point of access. The token is non-transferable, expires after use, and cannot be aggregated across sessions. No persistent identifier is created. The issuing node records only that one CSM allocation was consumed from available capacity — not by whom. Tier 0 is recorded in the per-domain calibration table of the [Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md) (P-075) as the strictest regime in the corpus; nothing in that standard relaxes it.
 
 The token mechanism must be designed so that token-issuance infrastructure cannot reconstruct session linkage after the session closes. The constitutional framework for the Tier 0 token mechanism is defined in ANNEX_AZ §AZ1; technical implementation is delegated to the TSP designated for Tier 0 identity and access, as specified there. This mechanism is a pre-operational prerequisite under INV-LAUNCH-1.
 

@@ -4,7 +4,7 @@ This specification defines the public indicators needed to see elite formation, 
 
 It is not a surveillance mandate. It is a public accountability specification. Dashboards must use aggregation, small-cell suppression, delay, and privacy-preserving methods consistent with Article VII.
 
-All dashboard streams are governed by the [Monitoring Administrative Safety Packet](./Monitoring_Administrative_Safety_Packet.md). A dashboard metric that depends on monitoring data must cite a Monitoring Purpose Register row before publication and must follow the packet's data-lane, raw-access, retention, cleared-flag, and forbidden-use rules.
+All dashboard streams are governed by the [Monitoring Administrative Safety Packet](./Monitoring_Administrative_Safety_Packet.md). A dashboard metric that depends on monitoring data must cite a Monitoring Purpose Register row before publication and must follow the packet's data-lane, raw-access, retention, cleared-flag, and forbidden-use rules, including the Minimization and Purpose-Limitation Doctrine and cross-domain linkage rule (P-075).
 
 ---
 

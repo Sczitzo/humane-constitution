@@ -55,6 +55,8 @@ Attestation data, contribution evidence, Protected Pause records, and all civic-
 - **Access limited and logged:** access is restricted to those whose role requires it, and each access is logged and auditable.
 - **Never repurposed:** civic-recognition and attestation data may not be repurposed for enforcement, profiling, targeting, commercial use, or any end beyond the purpose for which it was collected.
 
+These bullets restate the master Minimization and Purpose-Limitation Doctrine ([Monitoring Administrative Safety Packet](../governance/Monitoring_Administrative_Safety_Packet.md), P-075), which governs; the stricter text prevails.
+
 ---
 
 ## K5 — Essential Basket, Vendor, and Pricing Protocol (merged from former Annex G §G5)
