@@ -120,7 +120,9 @@ Every person has inherent and equal worth that this system does not confer and c
 
 **No class is its own final auditor.** Every body holding verification, override, or governing authority — including the oracle nodes (INV-005) and the keyholder set (INV-007) — is subject to audit by a party structurally independent of it. No apex may sit unaudited.
 
-**Attack vectors that target this invariant:** T-008, T-016
+**Extension to economic-parameter-setting.** This separation extends beyond verification to governance and economic-parameter-setting: no person or body that sets, votes on, drafts, or adjudicates an economic parameter — Commons Return source-base definitions and rates, oracle district boundaries, the Shared Storehouse rationing formula, Flow issuance parameters, or the household savings floor S — may do so where the parameter's published distributional effect on their own holdings, source-base classification, oracle district, or a materially-beneficial entity is **disproportionate and individuated**: materially different from the effect on the median participant, above the de-minimis ordinary-household threshold (Annex AJ). A *universal* effect (a change to S that moves every below-floor household alike) does not trigger recusal; a change that *uniquely* exempts or advantages the setter's own asset class, district, or entity does — the general-law-versus-self-dealing line is the test. Whether an interest is disproportionate and individuated is determined by an independent methodology-class body (Annex AL independence rules; ANNEX_D §D6.4) and published *before* the vote, so recusal cannot be invoked selectively, late, or by manufactured interest to remove one reformer while similarly-situated members remain. Recusal removes a person from *setting* the parameter; it never removes their one-person-one-vote standing on it (INV-001, INV-004). A sortition body does not collapse on universal-effect parameters: members with a disproportionate individuated conflict recuse and are backfilled from the draw; if no conflict-free quorum can be seated, the parameter escalates to one-person-one-vote legitimacy rather than being decided by a rump.
+
+**Attack vectors that target this invariant:** T-008, T-016, the Service Record → office → own-bracket parameter-setting loop
 
 ---
 
@@ -161,7 +163,7 @@ For changes that would themselves alter the amendment mechanism (FC-110 or FC-11
 
 **Attack vectors that target this invariant:** T-001 (shadow convertibility), above-ledger bypass routes
 
-**Commons Return boundary:** Concentrated control over land/location value, natural resources, scarce licenses, public-infrastructure uplift, network/platform rents, large succession transfers, or external-capital use of protected commons may owe public return under [ANNEX_D](../annexes/ANNEX_D.md). This is not a tax on ordinary labor, survival access, basic household exchange, modest household continuity, or routine productive enterprise. No credit offset is permitted where a source-base obligation is valid; holdings through nominees, trusts, or shell structures are attributed to the ultimate beneficial owner.
+**Commons Return boundary:** Concentrated control over land/location value, natural resources, scarce licenses, public-infrastructure uplift, network/platform rents, large succession transfers, or external-capital use of protected commons may owe public return under [ANNEX_D](../annexes/ANNEX_D.md). This is not a tax on ordinary labor, survival access, basic household exchange, modest household continuity, or routine productive enterprise. No credit offset is permitted where a source-base obligation is valid; holdings through nominees, trusts, or shell structures are attributed to the ultimate beneficial owner. The enumerated source bases are a **closed list**: adding, broadening, or reinterpreting a source base so as to reach ordinary labor, survival access, basic household exchange, modest household continuity, the primary residence (including the land/location value beneath a primary residence), working tools, caregiving, or below-floor savings is a Tier-1 amendment, not a source-base administrative decision. Ambiguity resolves toward protection (ANNEX_D §D3.1).
 
 ---
 
@@ -269,6 +271,20 @@ Implementation drift counts as an invariant-warning event when deployed code, ge
 **Why this matters:** An unconditional floor with no remedy is unconditional only until the machinery makes a mistake. False fraud-flags, failed scans, and mismatched records *will* occur; without a fast human appeal that provides first and verifies second, the error itself becomes the new condition on survival. The remedy is what makes "unconditional" true in operation, not only on paper.
 
 **Attack vectors that target this invariant:** T-007 (definition drift), implementation drift turning provisional flags into de facto denials, fraud-control overreach.
+
+---
+
+## INV-014 — The Floor Precedes Distribution
+
+**Statement:** Essential Access provision and the resilience reserves that protect it are funded before any Universal Stake distribution. A Universal Stake distribution may not be authorized while the floor or its reserves are underfunded, and may never be funded by reducing, deferring, or deficit-financing the floor. An authorization made in violation is void; the authorizing officials bear INV-011 accountability. Universal Stake already issued in good faith to recipients is not clawed back (consistent with the anti-assignment and anti-garnishment protections of ANNEX_D §D4.2a).
+
+**Mechanical boundary:** In each settlement period, an authorized Universal Stake distribution ≤ net Commons Return receipts remaining after the CSM-level Essential Access provision required by INV-001 and the resilience reserve required by INV-LAUNCH-1 (FC-YT2) are fully funded. These protected magnitudes are the Tier-1 anchors (INV-001, INV-LAUNCH-1); they may not be reclassified into non-floor budget lines to free Stake headroom. No off-ledger borrowing, shell financing, or inflation/debasement beyond published tolerance may fund a distribution (ANNEX_D §D5.1, §D5.3).
+
+**Non-derogation:** This invariant never caps the Essential Access floor by available receipts. The floor is governed by INV-001 and INV-005 regardless of Commons Return adequacy; if receipts are inadequate, the floor is still provided and the *Stake* is what goes to zero — never the floor.
+
+**Why this matters:** A shared dividend is visible and popular; the survival floor is quiet. The standing temptation is to pay the dividend and let the floor be backfilled by debt or thinned by reclassification. This invariant subordinates the popular distribution to the unglamorous floor, so the Stake can never become a name-making machine paid for out of the survival of the poor — and it does so without punishing a poor recipient who already received and spent a distribution in good faith.
+
+**Attack vectors that target this invariant:** election-cycle dividend pressure (ANNEX_D §D4.4), hidden-deficit financing (§D5.1), fiscal-adequacy overstatement (§D5.3), floor-cost reclassification to free Stake headroom.
 
 ---
 

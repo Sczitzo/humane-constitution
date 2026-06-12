@@ -2039,6 +2039,22 @@ This session completes the annex corpus and corrects a prior overclaim of comple
 
 ---
 
+## Session 23 Christ-Centered Evaluation — Three Protective Invariants Applied (INV-014; INV-006 extension; INV-008 closed list)
+
+**What this session reviews.** The first application of the panel-revised redline backlog to the constitution itself: (1) **INV-014 — The Floor Precedes Distribution** (the survival floor and its reserves are funded before any Universal Stake distribution; ex-ante blocking, never clawback from good-faith recipients); (2) the **INV-006 extension to economic-parameter-setting** (no rule-maker may set a parameter whose distributional effect on their own holdings is disproportionate and individuated — the general-law-versus-self-dealing line, with a published-before-the-vote materiality judge, preserved one-person-one-vote standing, and sortition backfill); (3) the **INV-008 closed-list clause** (extending a Commons Return source base downward onto ordinary life is a Tier-1 amendment, never an administrative decision). Each was drafted against live text, adversarially panel-revised, and carries its full review in the source redlines (`docs/superpowers/specs/2026-06-09-commons-return-should-fixes-redline.md`, `2026-06-09-productive-register-recusal-redline.md`); this session records the application.
+
+**Christ-centered alignment.** INV-014 is the Magnificat as a funding rule — the hungry filled before the visible dividend is paid (Luke 1:52–53; Matt 6:33) — with the mercy carve-out that no poor recipient is made to repay a distribution received in good faith (Matt 18:23–35, the unmerciful-servant inversion refused). The INV-006 extension is authority as service, not self-dealing (Mark 10:42–45; Luke 16:10–12): the hand that writes the rule may not write its own enrichment — while the materiality line ensures the rule disciplines the rich man's self-dealing without silencing the widow reformer (the recusal weapon is itself disarmed). The INV-008 closed list is the gleaning-corner made constitutional: the boundary that keeps the public claim off ordinary labor, the home, the tools, caregiving, and below-floor savings can no longer be redrawn downward by an assessor's pen (Isa 10:1–2 — woe to those who decree unrighteous decrees).
+
+**Babel-risk warning.** All three *reduce* concentration risk. Residuals: INV-014's protected magnitudes depend on the INV-001/INV-LAUNCH-1 anchors staying honestly costed (a captured cost model is the remaining seam — watched by §D5.3); the INV-006 materiality judge is itself a body to audit (it inherits "no apex unaudited"); the INV-008 list protects only what it names — vigilance over new euphemisms for ordinary life remains.
+
+**Human dignity test.** Passes and strengthens: the poor recipient is never clawed back; the small honest holder keeps both their voice and their vote; the household below the floor cannot be reached by reclassification.
+
+**Fruit test.** Expected good fruit: a floor that cannot be quietly starved to fund a popular dividend; rule-makers who cannot feather their own nest; a protected boundary that holds under fiscal pressure. To watch: whether the materiality-judge process stays fast enough not to stall ordinary parameter business — bureaucratic delay would be the bad fruit of a good rule.
+
+**Net assessment.** All three are protective, narrow, and consistent with the document's own tier logic; applied with their reviews attached. The corpus's formal Tier-1 process (keyholders, timelock) does not yet exist as an institution — what does exist, and was honored, is the per-change public record, the adversarial panel revision, and this review. **Scores 9 / 10** as protective invariants; evidence status of the mechanisms they bind remains as stated in their home instruments.
+
+---
+
 ## Coverage Summary — Christ-Centered Evaluation of the Annex Corpus
 
 As of Session 21, the Christ-centered evaluation covers **every active annex (44 of 44)** — a prior summary claimed completeness at Session 16, but five annexes (AN, B, C, Q, J) had been missed; Session 21 closed that gap and this summary is corrected accordingly. Every active annex has received a direct Christ-centered evaluation (Sessions 5–21), and the design should-fixes surfaced in Sessions 7–21 have been closed in the corpus text. Standing scores after hardening:
