@@ -80,7 +80,7 @@ P-008 Annex AC3.5 (Cooling-Off Cohort Rule) is amended as follows. For the purpo
 | T-007 | P-004 | ACTIVE | AB | S1 |
 | T-005 | P-005 | ACTIVE | AC1 | S2 |
 | T-006 | P-006 | ACTIVE | AC2 | S2 |
-| T-008 | P-008 | see Patch Log | AC3; operative authority superseded by P-025 | S2 |
+| T-008 | P-008 | ACTIVE | AC3; operative authority superseded by P-025 | S2 |
 | T-011 | P-011 | ACTIVE | AD | S2 |
 | T-012 | P-012 | ACTIVE | AE2.1 | S3 |
 | T-013 | P-012 | ACTIVE | AE2.2 | S3 |

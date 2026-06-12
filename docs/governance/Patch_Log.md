@@ -705,14 +705,14 @@ This table is the single source of truth for threat→patch traceability. It cov
 | T-007 | P-004 | **ACTIVE** | Annex AB |
 | T-005 | P-005 | **ACTIVE** | Annex AC1 |
 | T-006 | P-006 | **ACTIVE** | Annex AC2 |
-| T-008 | P-008 | PROPOSED / superseded | Annex AC3 (operative authority superseded by P-025 ACTIVE) |
+| T-008 | P-008 | ACTIVE | Annex AC3 (operative authority superseded by P-025 ACTIVE) |
 | T-009 | P-009 | **ACTIVE** | Annex AF |
 | T-011 | P-011 | **ACTIVE** | Annex AD |
 | T-012–T-015 | P-012 | **ACTIVE** | Annex AE |
 | T-016 | P-013 | **ACTIVE** | Annex AG |
 | T-017 | P-014 | **ACTIVE** | Annex AH |
 | T-018 / T-019 | P-015 | **ACTIVE** | Annex AP · Annex AI |
-| T-002 | P-016 | pre-ratification design | Annex AK |
+| T-002 | P-016 | ACTIVE | Annex AK (P-016 is pre-ratification design) |
 | T-020 / T-021 | P-017 | **ACTIVE** | Annex AL · FC-030/031/032/033/100 |
 | P-018 | T-022 supplement | **PROPOSED** | Annex AM |
 | T-023 | P-019 | **ACTIVE** | Annex AN |
