@@ -148,7 +148,7 @@ Joining two domains' data is never an operational decision. Before use, a join r
 
 ## Drift Rule (P-075)
 
-Domains cite this standard; domain text keeps only domain-specific substance — its data, its thresholds, its reviewer, its purpose boundary. Where a domain restatement diverges from this doctrine, the stricter text governs and the divergence is recorded as drift. Patch-protected domain clauses (notably ANNEX_AJ's P-004-protected purpose-limitation clause) are recorded in the calibration table unmodified and may not be relaxed from here.
+This doctrine is the canonical home for data minimization and purpose limitation (P-073 canonical-home discipline); domains cite this standard and keep only domain-specific substance — their data, thresholds, reviewer, purpose boundary. The discipline's stricter-text exception is most load-bearing here, because a domain may always guard a person's data more tightly than the floor: notably ANNEX_AJ's P-004-protected purpose-limitation clause is recorded in the calibration table unmodified and never relaxed from here. Enforcement: a weaker domain data rule yields to the stricter, per the burden and appealability the discipline sets.
 
 ---
 

@@ -96,7 +96,7 @@ Required elements, in order of function (heading wording may vary; substance may
 
 Each test's evidence packet follows the Evidence Packet Minimum above; this template governs the package document, the packet minimum governs each packet.
 
-**Drift rule.** A package defines only its domain-specific claims, tests, thresholds, and residual risks, and cites this template for everything structural. Where a package restates a structural rule and the restatement diverges, this template governs. A new package may not introduce a new structural pattern without a framework-first justification under the Acceptance Protocol's anti-accretion rule (P-073). A package missing a required element, or whose failure criteria are too vague to be falsified, does not conform to this template and gates nothing: no claim may move up the ladder on the strength of a non-conforming package (see Forbidden Status Moves).
+**Drift rule.** This template is the canonical home for evidence-package structure (P-073 canonical-home discipline); a package keeps only its domain-specific claims, tests, thresholds, and residual risks and cites this template for everything structural. Enforcement: a package missing a required element, or whose failure criteria are too vague to be falsified, does not conform and gates nothing — no claim moves up the ladder on the strength of a non-conforming package (see Forbidden Status Moves).
 
 ---
 
