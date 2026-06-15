@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Ground Rules — a civic pilot for an unbuyable survival floor</title>
+<meta name="description" content="Project Ground Rules is a civic design pilot for an unbuyable survival floor — testing whether a society can keep money from quietly deciding who eats, who's heard, and who escapes consequences. A $350K–$860K, 18-month test of the design called the Humane Constitution." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eceae0;
+  --paper-2:#e2dfd2;
+  --paper-3:#d9d5c5;
+  --ink:#20261d;
+  --ink-soft:#4e564b;
+  --ink-faint:#868c7f;
+  --green:#4a6b54;
+  --green-deep:#38513f;
+  --green-night:#333f3a;
+  --brass:#a87c2d;
+  --brass-bright:#c5953c;
+  --brass-deep:#856120;
+  --mint:#c3d2c4;
+  --cream:#f0ece0;
+  --line:#d4d0c2;
+  --line-strong:#bbb6a4;
+  --w1:#2f7d76;
+  --w2:#1f6a4a;
+  --w3:#a87c2d;
+  --w4:#9a5a44;
+  --w5:#3f586b;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --maxw:1140px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 90% -12%, rgba(74,107,84,.10), transparent 60%),
+    radial-gradient(90% 60% at -5% 100%, rgba(51,63,58,.05), transparent 55%);}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.55;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.ambient span{position:absolute;border-radius:50%;filter:blur(74px);opacity:.5}
+.ambient .a1{width:44vw;height:44vw;background:rgba(74,107,84,.20);top:-14vw;right:-8vw;animation:amb1 26s ease-in-out infinite alternate}
+.ambient .a2{width:36vw;height:36vw;background:rgba(47,125,118,.16);bottom:-14vw;left:-7vw;animation:amb2 32s ease-in-out infinite alternate}
+.ambient .a3{width:28vw;height:28vw;background:rgba(168,124,45,.10);top:42%;left:48%;animation:amb3 38s ease-in-out infinite alternate}
+@keyframes amb1{to{transform:translate(-7vw,6vw) scale(1.15)}}
+@keyframes amb2{to{transform:translate(6vw,-5vw) scale(1.12)}}
+@keyframes amb3{to{transform:translate(-8vw,-4vw) scale(1.18)}}
+.wrap{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.015em}
+section[id],main [id]{scroll-margin-top:76px}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.1) blur(8px);background:rgba(236,234,224,.84);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:62px;gap:20px}
+.mark{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.mark .glyph{display:inline-flex;width:22px;height:22px}
+.mark .glyph svg{width:100%;height:100%}
+nav.links{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500}
+nav.links a{text-decoration:none;color:var(--ink-soft);transition:color .2s;position:relative}
+nav.links a:hover{color:var(--green)}
+nav.links a.detail{color:var(--green);display:inline-flex;align-items:center;gap:5px;font-weight:600}
+.menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:8px;padding:9px 12px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer}
+.mobile-menu{display:none;position:fixed;inset:62px 0 auto 0;z-index:49;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 18px 40px -20px rgba(0,0,0,.25)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:15px 28px;text-decoration:none;color:var(--ink);font-weight:500;border-top:1px solid var(--line)}
+.mobile-menu a:first-child{border-top:0}
+@media(max-width:840px){nav.links{display:none}.menu-btn{display:block}}
+
+/* hero */
+.hero{padding:72px 0 36px}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+.eyebrow::after{content:"";height:1px;flex:1;max-width:120px;background:var(--line-strong)}
+.hero h1{font-size:clamp(38px,6.3vw,76px);font-weight:500;max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero .lede{font-size:clamp(18px,2.1vw,22px);color:var(--ink-soft);max-width:54ch;margin-top:26px;line-height:1.55}
+.hero .lede b{color:var(--ink);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;font:inherit;font-weight:600;font-size:15.5px;text-decoration:none;padding:13px 22px;border-radius:100px;border:1.5px solid transparent;cursor:pointer;transition:transform .18s var(--ease),background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--green);color:#f3f7f0;border-color:var(--green)}
+.btn-primary:hover{background:var(--green-deep);border-color:var(--green-deep)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--ink);background:rgba(0,0,0,.02)}
+.status-pill{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:100px;padding:8px 15px;margin-top:30px}
+.status-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--w1);box-shadow:0 0 0 4px rgba(47,125,118,.16)}
+
+/* walls visual */
+.stage-shell{margin-top:54px;border-top:1px solid var(--line);padding-top:38px}
+.stage-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:20px}
+.stage{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(10px,2.2vw,26px);align-items:end;min-height:225px}
+.wall{position:relative;border-radius:7px 7px 0 0;padding:16px 14px 20px;color:#f3f7f0;display:flex;flex-direction:column;justify-content:flex-end;transform:translateY(28px);opacity:0;transition:transform .9s var(--ease),opacity .7s ease,filter .25s}
+.wall:hover{filter:brightness(1.07)}
+.wall .n{font-family:var(--serif);font-size:13px;opacity:.72;font-weight:600}
+.wall .t{font-family:var(--serif);font-size:clamp(15px,1.5vw,18px);font-weight:600;line-height:1.12;margin-top:8px}
+.wall .s{font-size:12.5px;line-height:1.35;opacity:.88;margin-top:7px}
+.wall:nth-child(1){background:var(--w1);min-height:150px}
+.wall:nth-child(2){background:var(--w2);min-height:215px}
+.wall:nth-child(3){background:var(--w3);min-height:175px}
+.wall:nth-child(4){background:var(--w4);min-height:150px}
+.wall:nth-child(5){background:var(--w5);min-height:195px}
+.stage.in .wall{transform:translateY(0);opacity:1}
+.stage.in .wall:nth-child(1){transition-delay:.05s}
+.stage.in .wall:nth-child(2){transition-delay:.16s}
+.stage.in .wall:nth-child(3){transition-delay:.27s}
+.stage.in .wall:nth-child(4){transition-delay:.38s}
+.stage.in .wall:nth-child(5){transition-delay:.49s}
+.floor-line{height:5px;background:linear-gradient(90deg,var(--green),var(--ink) 65%);border-radius:3px;transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease) .15s}
+.stage-shell.in .floor-line{transform:scaleX(1)}
+.floor-cap{display:flex;justify-content:space-between;align-items:baseline;margin-top:13px;gap:16px;flex-wrap:wrap}
+.floor-cap .big{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.9vw,21px);color:var(--ink)}
+.floor-cap .small{font-size:13px;color:var(--ink-faint);max-width:40ch}
+
+/* sections */
+section{padding:74px 0;position:relative}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+.sec-num{font-family:var(--serif);font-size:15px;color:var(--green);font-weight:600;font-variant-numeric:tabular-nums;padding-top:6px}
+.sec-head h2{font-size:clamp(28px,4vw,44px)}
+.sec-head .sub{color:var(--ink-soft);max-width:54ch;margin-top:10px;font-size:17px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ask */
+.ask{background:var(--green-night);color:var(--paper);border-radius:20px;padding:clamp(34px,5vw,58px);position:relative;overflow:hidden}
+.ask::before{content:"";position:absolute;inset:0;background:radial-gradient(85% 130% at 100% 0%,rgba(47,125,118,.4),transparent 55%);pointer-events:none}
+.ask .k{position:relative;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);font-weight:600;margin-bottom:20px}
+.ask .big{position:relative;font-family:var(--serif);font-size:clamp(30px,4.5vw,52px);font-weight:500;line-height:1.08;letter-spacing:-.02em}
+.ask .big b{color:var(--mint);font-weight:600}
+.ask .row{position:relative;display:flex;flex-wrap:wrap;gap:36px;margin-top:34px;padding-top:30px;border-top:1px solid rgba(242,241,231,.16)}
+.ask .row div{flex:1;min-width:180px}
+.ask .row .lab{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);font-weight:600;margin-bottom:7px}
+.ask .row .val{font-size:16px;color:var(--paper);line-height:1.45}
+.ask .compare{position:relative;margin-top:30px;font-size:15px;color:#d4ddd5;font-style:italic;font-family:var(--serif)}
+
+/* money allocation */
+.allocate{margin-top:34px}
+.allocate h3{font-size:20px;font-weight:600;margin-bottom:6px}
+.allocate .note{color:var(--ink-soft);font-size:15px;max-width:54ch;margin-bottom:22px}
+.bars{display:flex;flex-direction:column;gap:13px}
+.barrow{display:grid;grid-template-columns:minmax(160px,230px) 1fr 46px;gap:16px;align-items:center}
+.barrow .nm{font-size:14.5px;font-weight:500}
+.barrow .nm small{display:block;color:var(--ink-faint);font-size:12.5px;font-weight:400}
+.track{height:13px;background:var(--paper-2);border:1px solid #20261d;border-radius:100px;overflow:hidden}
+.fill{height:100%;border-radius:100px;width:0;transition:width 1.1s var(--ease)}
+.reveal.in .fill,.in .fill{width:var(--w)}
+.barrow .pct{font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink-soft);text-align:right;font-weight:600}
+.barrow:nth-child(1) .fill{background:var(--w2)}
+.barrow:nth-child(2) .fill{background:var(--w1)}
+.barrow:nth-child(3) .fill{background:var(--w5)}
+.barrow:nth-child(4) .fill{background:var(--w3)}
+.barrow:nth-child(5) .fill{background:var(--w4)}
+
+/* idea */
+.idea-lead{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:400;line-height:1.3;max-width:24ch;letter-spacing:-.01em}
+.idea-lead em{font-style:italic;color:var(--green)}
+.idea-body{color:var(--ink-soft);max-width:58ch;margin-top:20px;font-size:17px}
+.idea-body em{font-style:italic;color:var(--ink)}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:46px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.lane{background:var(--paper);padding:26px 24px 28px;transition:background .2s}
+.lane:hover{background:var(--paper-2)}
+.lane .ix{font-family:var(--serif);font-size:13px;color:#fff;font-weight:600;width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.lane:nth-child(1) .ix{background:var(--w1)}
+.lane:nth-child(2) .ix{background:var(--w2)}
+.lane:nth-child(3) .ix{background:var(--w3)}
+.lane:nth-child(4) .ix{background:var(--w4)}
+.lane:nth-child(5) .ix{background:var(--w5)}
+.lane h3{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.lane p{font-size:14.5px;color:var(--ink-soft);margin-top:9px;line-height:1.5}
+.lane .wall-tag{font-size:12px;color:var(--green);font-weight:600;margin-top:13px;display:inline-block}
+.lane.backstop-lane{background:var(--paper-2)}
+.lane:nth-child(6) .ix{background:var(--ink-soft)}
+@media(max-width:760px){.lanes{grid-template-columns:1fr 1fr}}@media(max-width:480px){.lanes{grid-template-columns:1fr}}
+.backstop{margin-top:22px;font-size:15px;color:var(--ink-soft);display:flex;gap:12px;align-items:flex-start}
+.backstop b{color:var(--ink)}
+
+/* pilot */
+.pilot-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+@media(max-width:860px){.pilot-grid{grid-template-columns:1fr;gap:34px}}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.fact{background:var(--paper);padding:22px 22px 24px}
+.fact .lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.fact .val{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);font-weight:600;margin-top:8px;line-height:1.04;letter-spacing:-.01em}
+.fact .val small{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink-soft);display:block;margin-top:6px;letter-spacing:0;line-height:1.45}
+.pilot-notes p{font-size:16px;color:var(--ink-soft);margin-bottom:18px;line-height:1.55}
+.pilot-notes p b{color:var(--ink)}
+.hardline{margin-top:8px;background:var(--paper-2);border-left:3px solid var(--green);border-radius:0 12px 12px 0;padding:20px 22px}
+.hardline .l{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:700}
+.hardline .b{font-family:var(--serif);font-size:19px;font-weight:500;margin-top:8px;line-height:1.3}
+
+/* timeline */
+.timeline{margin-top:6px}
+.tl{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.tl:last-child{border-bottom:1px solid var(--line)}
+.tl .when{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--green);letter-spacing:-.01em}
+.tl .what h3{font-size:19px;font-weight:600}
+.tl .what p{font-size:15px;color:var(--ink-soft);margin-top:6px;line-height:1.5;max-width:58ch}
+@media(max-width:620px){.tl{grid-template-columns:1fr;gap:6px}}
+
+/* why back it */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:6px}
+.why .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px 24px 28px}
+.why .card .ic{font-family:var(--serif);font-size:26px;color:var(--green);font-weight:600;line-height:1}
+.why .card h3{font-size:18px;font-weight:600;margin-top:14px}
+.why .card p{font-size:14.5px;color:var(--ink-soft);margin-top:9px;line-height:1.5}
+
+/* risks */
+.risks-intro{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);font-weight:400;line-height:1.32;max-width:26ch;margin-bottom:8px}
+.risks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:34px}
+.risk{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px}
+.risk .x{font-family:var(--serif);color:var(--green);font-size:22px;line-height:1;font-weight:600}
+.risk p{font-size:15px;color:var(--ink);margin-top:12px;line-height:1.5}
+.risk p b{font-weight:700}
+.pledge{margin-top:30px;background:var(--green-night);color:var(--paper);border-radius:16px;padding:28px 30px;font-family:var(--serif);font-size:clamp(18px,2.3vw,24px);font-weight:400;line-height:1.4}
+.pledge b{color:var(--mint);font-weight:600}
+
+/* one-pager */
+.onepager{background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:clamp(28px,4vw,44px)}
+.onepager .head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.onepager h2{font-size:clamp(24px,3vw,34px)}
+.onepager .tldr{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.onepager .tldr > div{border-top:1px solid var(--ink);padding-top:14px}
+.onepager .tldr .q{font-weight:700;font-size:14px;margin-bottom:6px}
+.onepager .tldr .a{font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:200px 1fr;gap:44px;align-items:start}
+@media(max-width:680px){.about-grid{grid-template-columns:1fr;gap:26px}}
+.portrait{aspect-ratio:1;border-radius:16px;background:linear-gradient(160deg,var(--paper-3),var(--paper-2));border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.portrait .ph{font-family:var(--serif);font-size:54px;color:var(--green);font-weight:600;opacity:.5}
+.portrait .cap{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.about-body h3{font-size:24px;font-weight:600}
+.about-body .role{color:var(--green);font-weight:600;font-size:14.5px;margin-top:4px;letter-spacing:.02em}
+.about-body p{font-size:17px;color:var(--ink-soft);margin-top:18px;line-height:1.6;max-width:60ch}
+.about-body p.q{font-family:var(--serif);font-style:italic;color:var(--ink);font-size:18px}
+.about-note{margin-top:18px;font-size:13.5px;color:var(--ink-faint);font-style:italic}
+
+/* contact */
+.contact{background:var(--green-night);color:var(--paper);border-radius:22px;padding:clamp(38px,6vw,72px);text-align:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 110% at 50% 0%,rgba(47,125,118,.32),transparent 55%);pointer-events:none}
+.contact .k{position:relative;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);font-weight:600;margin-bottom:18px}
+.contact h2{position:relative;font-size:clamp(28px,4.4vw,48px);color:var(--paper);max-width:18ch;margin:0 auto}
+.contact p{position:relative;color:#d4ddd5;max-width:46ch;margin:18px auto 0;font-size:17px}
+.contact .actions{position:relative;display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+.btn-on-dark{background:var(--cream);color:#2b352c;border-color:var(--cream)}
+.btn-on-dark:hover{background:#fbf7ec;border-color:#fbf7ec}
+.btn-line{background:transparent;color:var(--paper);border-color:rgba(242,241,231,.3)}
+.btn-line:hover{border-color:var(--paper);background:rgba(255,255,255,.05)}
+.contact .micro{position:relative;margin-top:26px;font-size:13.5px;color:#aeb6a8}
+.contact .micro a{color:var(--mint);text-decoration:none}
+
+/* footer */
+footer{padding:54px 0 60px;border-top:1px solid var(--line);margin-top:20px}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot-grid .note{max-width:46ch;font-size:14px;color:var(--ink-faint);line-height:1.55}
+.foot-grid .note b{color:var(--ink-soft)}
+.foot-links{display:flex;flex-direction:column;gap:9px;font-size:14px}
+.foot-links a{color:var(--ink-soft);text-decoration:none}
+.foot-links a:hover{color:var(--green)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .wall,.reveal{opacity:1!important;transform:none!important}
+  .floor-line{transform:scaleX(1)!important}.fill{width:var(--w)!important}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="ambient" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="mark" href="#top">
+      <span class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="9" width="3" height="11" rx="1" fill="#2f7d76"/>
+          <rect x="6.5" y="4" width="3" height="16" rx="1" fill="#1f6a4a"/>
+          <rect x="11" y="7" width="3" height="13" rx="1" fill="#a87c2d"/>
+          <rect x="15.5" y="10" width="3" height="10" rx="1" fill="#9a5a44"/>
+          <rect x="20" y="6" width="2" height="14" rx="1" fill="#3f586b"/>
+          <rect x="1" y="20.5" width="22" height="2.4" rx="1.2" fill="#16201a"/>
+        </svg>
+      </span>
+      Project Ground Rules
+    </a>
+    <nav class="links">
+      <a href="#idea">The idea</a>
+      <a href="#pilot">The pilot</a>
+      <a href="#risks">What could kill it</a>
+      <a href="#contact">Get involved</a>
+      <a class="detail" href="https://humane-constitution.vercel.app" target="_blank" rel="noopener">Full detail <span aria-hidden="true">↗</span></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#idea">The idea</a>
+  <a href="#pilot">The pilot</a>
+  <a href="#timeline">The timeline</a>
+  <a href="#risks">What could kill it</a>
+  <a href="#contact">Get involved</a>
+  <a href="https://humane-constitution.vercel.app" target="_blank" rel="noopener">Full detail ↗</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow reveal">A proposal, openly unproven</div>
+      <h1 class="reveal">A society where money can't quietly decide <em>who eats, who's heard, and who escapes consequences.</em></h1>
+      <p class="lede reveal">Most systems pile three jobs onto one thing — money: it buys what you need, it keeps you alive, and it decides who holds power. This design pulls those jobs apart and builds <b>walls</b> between them. Then it proposes the smallest honest test of whether the walls hold.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#contact">Back the pilot <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#pilot">See what we'd test</a>
+      </div>
+      <div class="status-pill reveal"><span class="dot"></span> Honest status: no pilot evidence yet — that is exactly what the pilot is for.</div>
+
+      <div class="stage-shell reveal" id="stage-shell">
+        <div class="stage-label">Five walls, one unbreakable floor</div>
+        <div class="stage" id="stage">
+          <div class="wall"><span class="n">01</span><span class="t">Ordinary money</span><span class="s">Markets, wages, business — they stay.</span></div>
+          <div class="wall"><span class="n">02</span><span class="t">A survival floor money can't buy</span><span class="s">Food, shelter, medicine, water — by right.</span></div>
+          <div class="wall"><span class="n">03</span><span class="t">Shared value, shared back</span><span class="s">Value no one made, returned to everyone.</span></div>
+          <div class="wall"><span class="n">04</span><span class="t">A fading, equal voice</span><span class="s">Civic priority you can't buy or hoard.</span></div>
+          <div class="wall"><span class="n">05</span><span class="t">Earned public roles</span><span class="s">Service qualifies you — not money.</span></div>
+        </div>
+        <div class="floor-line"></div>
+        <div class="floor-cap">
+          <span class="big">The floor is the line money may never cross.</span>
+          <span class="small">Punishment can take your freedom. It can never take your food, your voice, or your fair shot.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASK + allocation -->
+  <section id="ask">
+    <div class="wrap">
+      <div class="ask reveal">
+        <div class="k">The ask</div>
+        <div class="big"><b>$350,000–$860,000</b> to run an <b>18-month</b> pilot with <b>150–300 people</b> — testing the survival floor and the one wall the whole design rests on.</div>
+        <div class="row">
+          <div><div class="lab">Who</div><div class="val">150–300 volunteers, in one community. Their existing benefits are never touched.</div></div>
+          <div><div class="lab">What</div><div class="val">A guaranteed floor of food staples and basic medicines, delivered two ways at once.</div></div>
+          <div><div class="lab">The proof</div><div class="val">A planned scarcity test, and one hard line: zero breaches of the floor.</div></div>
+        </div>
+        <div class="compare">For comparison, Finland's UBI experiment cost roughly €20 million. This asks a small fraction to test a deeper question.</div>
+      </div>
+
+      <div class="allocate reveal" id="allocate">
+        <h3>Where the money goes</h3>
+        <p class="note">Roughly — full budgets need site-specific legal and clinical review. Notice that a real share pays for <em>outside scrutiny</em>: independent review is funded, not invited later.</p>
+        <div class="bars">
+          <div class="barrow"><div class="nm">Essential goods<small>food staples + basic medicines</small></div><div class="track"><div class="fill" style="--w:60%"></div></div><div class="pct">~60%</div></div>
+          <div class="barrow"><div class="nm">Independent review<small>monitoring + scarcity audit</small></div><div class="track"><div class="fill" style="--w:16%"></div></div><div class="pct">~16%</div></div>
+          <div class="barrow"><div class="nm">Administration<small>identity, appeals, exit rehearsal</small></div><div class="track"><div class="fill" style="--w:12%"></div></div><div class="pct">~12%</div></div>
+          <div class="barrow"><div class="nm">Credit infrastructure<small>the closed-loop cohort</small></div><div class="track"><div class="fill" style="--w:7%"></div></div><div class="pct">~7%</div></div>
+          <div class="barrow"><div class="nm">Data + public post-mortem<small>baseline, results, published findings</small></div><div class="track"><div class="fill" style="--w:5%"></div></div><div class="pct">~5%</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDEA -->
+  <section id="idea">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-num">01</div>
+        <div><h2>The idea, in one move</h2>
+        <div class="sub">When one thing does all three jobs, whoever has the most of it controls everything — including whether you eat. So split the jobs apart, and wall them off from each other.</div></div>
+      </div>
+      <div class="reveal">
+        <p class="idea-lead">Markets stay. Profit stays. What changes is that <em>none of them can be turned into power over another person's survival or vote.</em></p>
+        <p class="idea-body">Each wall protects one thing from being bought. The walls between them aren't a feature of the system — they <em>are</em> the system.</p>
+      </div>
+      <div class="lanes reveal">
+        <div class="lane"><div class="ix">1</div><h3>Ordinary money</h3><p>Everyday spending, saving, wages, and business. Yours to use freely — no one can secretly shrink it.</p><span class="wall-tag">Flow</span></div>
+        <div class="lane"><div class="ix">2</div><h3>An unbuyable floor</h3><p>Food, shelter, medicine, and water as a right, not a reward — no matter what's in your account.</p><span class="wall-tag">Essential Access</span></div>
+        <div class="lane"><div class="ix">3</div><h3>Shared value returned</h3><p>Value no one created — land windfalls, resource rents, monopolies — returned to everyone as a stake. Ordinary earnings, homes, and tools are left alone.</p><span class="wall-tag">Commons Return + Stake</span></div>
+        <div class="lane"><div class="ix">4</div><h3>A voice that fades</h3><p>An equal, expiring claim to put an issue on the table. It can't be bought, stockpiled, or turned into a status score.</p><span class="wall-tag">Voice</span></div>
+        <div class="lane"><div class="ix">5</div><h3>Earned public roles</h3><p>You qualify for public roles by contributing, then rotate through — not by wealth or connections.</p><span class="wall-tag">Service Record</span></div>
+        <div class="lane backstop-lane"><div class="ix">+</div><h3>A scarcity backstop</h3><p>When there genuinely isn't enough of something essential, it is rationed by need and a fixed rule set ahead of time. Never by who can pay the most.</p><span class="wall-tag">Shared Storehouse</span></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- PILOT -->
+  <section id="pilot">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-num">02</div>
+        <div><h2>The pilot — start with the foundation</h2>
+        <div class="sub">Four pilots are designed; this is the one to run first, because it tests the survival floor and the non-convertibility wall the entire design rests on. A pilot has one job: find out what we got wrong before anyone depends on it.</div></div>
+      </div>
+      <div class="pilot-grid">
+        <div class="reveal">
+          <div class="facts">
+            <div class="fact"><div class="lab">People</div><div class="val">150–300<small>Volunteers. The allocation is added on top of whatever support they already have — no one's real survival is on the line.</small></div></div>
+            <div class="fact"><div class="lab">Length</div><div class="val">18 months<small>Long enough to see the floor hold, get gamed, and face a stress event.</small></div></div>
+            <div class="fact"><div class="lab">Covers</div><div class="val">Food + medicine<small>The easiest survival goods first — named honestly. Shelter and water come in a later, larger test.</small></div></div>
+            <div class="fact"><div class="lab">Tested two ways</div><div class="val">In parallel<small>Direct goods vs. closed-loop credit — to learn whether the wall holds by design or only by friction.</small></div></div>
+          </div>
+        </div>
+        <div class="pilot-notes reveal">
+          <p><b>The question a skeptic actually cares about:</b> can a person quietly turn their survival floor back into spendable cash — and can a shortage be faked to cut people off? Most of the pilot points its instruments at those two failure modes, because that's where the design either earns trust or loses it.</p>
+          <p><b>The hard test (months 9–11):</b> one category of goods is deliberately cut by 30% for eight weeks. The shortage must be declared honestly enough to survive an outside reviewer trying to fake it — and the rationing must beat price without a black market forming.</p>
+          <div class="hardline">
+            <div class="l">The one line that can't be crossed</div>
+            <div class="b">Zero breaches of the survival floor. Every other result is a finding to learn from. This one is a full stop.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-num">03</div>
+        <div><h2>What 18 months looks like</h2>
+        <div class="sub">Honest by construction — exit is proven before anyone leans on the floor, and the result is published either way.</div></div>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl"><div class="when">Before month 1</div><div class="what"><h3>Exit is rehearsed, not assumed</h3><p>The pilot first proves a participant can walk away with no penalty and no loss of their existing support. You don't ask people to lean on a floor until you've shown they can step off it safely.</p></div></div>
+        <div class="tl"><div class="when">Months 1–18</div><div class="what"><h3>The floor runs — two cohorts at once</h3><p>A monthly allocation of food staples and basic medicines. One group gets physical goods; the other a closed-loop credit that's technically blocked from cash-out. The comparison is the experiment.</p></div></div>
+        <div class="tl"><div class="when">Months 9–11</div><div class="what"><h3>The controlled scarcity test</h3><p>A planned 30% shortfall in one good. Can the shortage be declared honestly? Does fair rationing beat price? Does the floor stay intact even when the measurement system is made to fail?</p></div></div>
+        <div class="tl"><div class="when">Month 18</div><div class="what"><h3>Results published — pass or fail</h3><p>An independent reviewer holds the data and signs off. A failed pilot is published as failed, with a public post-mortem written into the grant. No rebranding.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- WHY BACK IT -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-num">04</div>
+        <div><h2>What backing this actually buys</h2>
+        <div class="sub">Not a charity ask — a research bet. You're funding an answer to a question no one has tested, at a fraction of what these experiments usually cost.</div></div>
+      </div>
+      <div class="why">
+        <div class="card reveal"><div class="ic" aria-hidden="true">◆</div><h3>A genuinely new answer</h3><p>UBI trials test cash. None test whether a survival floor can stay <em>unbuyable</em> — that money can't quietly convert it back. That's the open question this pilot is built to answer.</p></div>
+        <div class="card reveal"><div class="ic" aria-hidden="true">◆</div><h3>Evidence you can trust</h3><p>An independent reviewer holds the data and can publish. Every finding is replicable from open data. You fund proof, not a press release.</p></div>
+        <div class="card reveal"><div class="ic" aria-hidden="true">◆</div><h3>A small bet on a big question</h3><p>$350K–$860K against a question about how a society protects its most vulnerable. Finland spent €20M to test a narrower one.</p></div>
+        <div class="card reveal"><div class="ic" aria-hidden="true">◆</div><h3>Honesty as the deliverable</h3><p>It's designed to fail informatively. If a wall doesn't hold, you'll know exactly which one — published — before anyone builds on it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- RISKS -->
+  <section id="risks">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-num">05</div>
+        <div><h2>What would kill it</h2>
+        <div class="sub">Serious money trusts a proposal that names its own failure conditions out loud. Here are ours — any one of them and we say, publicly, that the mechanism does not work as designed.</div></div>
+      </div>
+      <p class="risks-intro reveal">A failed pilot is information, not embarrassment. It tells us which wall doesn't hold — before anyone depends on it.</p>
+      <div class="risks">
+        <div class="risk reveal"><div class="x" aria-hidden="true">✕</div><p>More than <b>5%</b> of the floor's value leaks back into cash. The wall between survival and money is broken.</p></div>
+        <div class="risk reveal"><div class="x" aria-hidden="true">✕</div><p>A shortage <b>can be faked</b> to cut people off and survives the reviewer's audit anyway. A design-level failure, not a tuning problem.</p></div>
+        <div class="risk reveal"><div class="x" aria-hidden="true">✕</div><p>A black market covers more than <b>20%</b> of the shortage gap. Rationing lost to price.</p></div>
+        <div class="risk reveal"><div class="x" aria-hidden="true">✕</div><p><b>Any</b> breach of the survival floor. Not a metric to trade off — a hard stop.</p></div>
+      </div>
+      <div class="pledge reveal">We don't yet know if this is legal everywhere, what the right numbers are, or who will host it. We say so plainly. <b>The honesty is the point</b> — it's the only thing that makes the test worth trusting.</div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ONE-PAGER -->
+  <section id="onepager">
+    <div class="wrap">
+      <div class="onepager reveal">
+        <div class="head">
+          <h2>The two-minute version</h2>
+          <a class="btn btn-ghost" href="#contact">Get the full proposal <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="tldr">
+          <div><div class="q">What it is</div><div class="a">A design that walls survival, voice, and power off from money — so wealth can't buy them.</div></div>
+          <div><div class="q">What we're testing</div><div class="a">Whether a guaranteed survival floor can run for 18 months without being gamed, faked, or breached.</div></div>
+          <div><div class="q">The ask</div><div class="a">$350K–$860K, 150–300 people, one community. A fraction of a typical basic-income trial.</div></div>
+          <div><div class="q">Why trust it</div><div class="a">It names exactly what would prove it wrong, and commits to publishing a failure as a failure.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="sec-num">06</div><div><h2>Who's behind it</h2></div></div>
+      <div class="about-grid reveal">
+        <div class="portrait"><span class="ph">CL</span><span class="cap">Photo coming</span></div>
+        <div class="about-body">
+          <h3>Cameron Lames</h3>
+          <div class="role">U.S. Army veteran. Founder of Project Ground Rules.</div>
+          <p class="q">"A safety net caught me when I had nothing left to stand on. I couldn't stop thinking about everyone who doesn't have one. That could have been me."</p>
+          <p>I grew up inside systems that were supposed to help and didn't. I served in the U.S. Army, and I came home carrying service-connected PTSD. Things fell apart. After I survived an attempt on my life, what was left of my world came apart completely. What slowly put me back together was simple. I had a floor under me when I had nothing left, and the compensation I receive for my service is a safety net I am grateful for every single day.</p>
+          <p>That gratitude turned into a question I couldn't put down. What about the people who have no floor at all? No benefit, no catch, nothing. That could have been me. And right now, it is a lot of people.</p>
+          <p>I am not a politician or an economist, and I won't pretend to be. But something deep in me is certain there is a better way. I believe we can build systems that actually do what they say they do. The Humane Constitution is my attempt at that, and this pilot is how I find out, honestly, whether it holds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div class="k">Get involved</div>
+        <h2>If this is worth testing, let's talk.</h2>
+        <p>Whether you could fund a pilot, host one in your community, or tear the design apart as a skeptic — that's exactly the contact worth making.</p>
+        <div class="actions">
+          <a class="btn btn-on-dark" href="mailto:cameron.lames@icloud.com?subject=Project%20Ground%20Rules%20pilot">Email Cameron <span aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="project-ground-rules-pilot-proposal.pdf" target="_blank" rel="noopener">Read the full proposal (PDF) <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="https://humane-constitution.vercel.app" target="_blank" rel="noopener">For researchers: the full design ↗</a>
+        </div>
+        <div class="micro">Or reach out directly: <a href="mailto:cameron.lames@icloud.com">cameron.lames@icloud.com</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="note"><b>Project Ground Rules</b> is the pilot. <b>The Humane Constitution</b> is the design it tests — a design under development, not a running system. There is no pilot evidence yet; everything here is published so it can be pressure-tested, not believed. Built openly, with substantial AI assistance, owned honestly.</div>
+    <div class="foot-links">
+      <a href="#idea">The idea</a>
+      <a href="#pilot">The pilot</a>
+      <a href="#risks">What could kill it</a>
+      <a href="https://humane-constitution.vercel.app" target="_blank" rel="noopener">Full design detail ↗</a>
+      <a href="mailto:cameron.lames@icloud.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.14,rootMargin:'0px 0px -7% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // walls + floor + allocation bars rise
+  var shell=document.getElementById('stage-shell'), stage=document.getElementById('stage');
+  var sio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ shell.classList.add('in'); stage.classList.add('in'); sio.disconnect(); } });
+  },{threshold:.3});
+  if(shell) sio.observe(shell);
+
+  // mobile menu
+  var mb=document.getElementById('menuBtn'), mm=document.getElementById('mobileMenu');
+  function closeMenu(){mm.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu';}
+  mb.addEventListener('click',function(){var o=mm.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu';});
+
+  // robust in-page nav: smooth scroll + force-reveal the target so you never land on hidden content
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id.length<2) return;
+      var t=document.querySelector(id);
+      if(!t) return;
+      e.preventDefault();
+      t.classList.add('in');
+      t.querySelectorAll('.reveal').forEach(function(x){x.classList.add('in')});
+      if(t.id==='top'){ /* hero */ }
+      closeMenu();
+      t.scrollIntoView({behavior:'smooth',block:'start'});
+      history.replaceState(null,'',id);
+    });
+  });
+})();
+</script>
+</body>
+</html>

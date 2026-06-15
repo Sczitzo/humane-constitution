@@ -1,0 +1,102 @@
+@page {
+  size: Letter;
+  margin: 22mm 20mm 20mm 20mm;
+  @top-center {
+    content: "Project Ground Rules — Pilot Proposal";
+    font-family: Georgia, serif;
+    font-size: 8.5pt;
+    color: #868c7f;
+    letter-spacing: 0.3px;
+  }
+  @bottom-center {
+    content: counter(page);
+    font-family: Georgia, serif;
+    font-size: 9pt;
+    color: #868c7f;
+  }
+}
+@page :first { @top-center { content: none; } }
+
+html { font-size: 10.5pt; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #20261d;
+  line-height: 1.55;
+  max-width: none;
+}
+
+h1 {
+  font-size: 23pt;
+  line-height: 1.12;
+  color: #20261d;
+  margin: 0 0 6pt;
+  letter-spacing: -0.3px;
+}
+h1 + p em, h1 + p { color: #4e564b; }
+h2 {
+  font-size: 15pt;
+  color: #38513f;
+  margin: 22pt 0 6pt;
+  padding-bottom: 4pt;
+  border-bottom: 0.75pt solid #d4d0c2;
+  page-break-after: avoid;
+}
+h3 {
+  font-size: 12pt;
+  color: #4a6b54;
+  margin: 16pt 0 4pt;
+  page-break-after: avoid;
+}
+p { margin: 0 0 8pt; }
+strong, b { color: #20261d; }
+em { color: #4e564b; }
+
+a { color: #2f7d76; text-decoration: none; }
+
+hr {
+  border: none;
+  border-top: 0.75pt solid #d4d0c2;
+  margin: 16pt 0;
+}
+
+blockquote {
+  margin: 12pt 0;
+  padding: 10pt 14pt;
+  background: #f0ece0;
+  border-left: 3pt solid #4a6b54;
+  color: #2f352c;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+ul, ol { margin: 0 0 8pt; padding-left: 18pt; }
+li { margin: 0 0 3pt; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12pt 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+th {
+  background: #38513f;
+  color: #f0ece0;
+  text-align: left;
+  padding: 6pt 8pt;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+td {
+  padding: 5pt 8pt;
+  border-bottom: 0.5pt solid #d4d0c2;
+  vertical-align: top;
+}
+tr:nth-child(even) td { background: #f4f1e8; }
+
+code {
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 9pt;
+  background: #e2dfd2;
+  padding: 1pt 4pt;
+  border-radius: 3pt;
+}
