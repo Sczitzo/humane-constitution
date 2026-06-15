@@ -74,89 +74,116 @@ Underneath both sits a third claim that this pilot is really built to test — t
 
 ### The hypothesis
 
-> A small community (150–300 people, voluntary participants) can operate a guaranteed essential-goods floor for 18 months. Participants will not lose access due to administrative failure. The floor will not be gamed into extinction. When a controlled, minor scarcity event is introduced, the Shared Storehouse mechanism will distribute goods fairly, the scarcity declaration will survive independent audit, and a black market will not emerge at meaningful scale.
+> A small community (150–300 voluntary participants, enrolled and randomized by household across in-kind, closed-loop-credit, and cash-control arms) can operate a guaranteed essential-goods floor for 18 months. The wall holds — essential-goods value does not convert into spendable market money, and conversion is lower where the block is technical than where it is only friction. Participants do not lose access to administrative failure, and the floor is not gamed into extinction. When a scarcity is *simulated*, the declaration survives an independent attempt to falsify it and the Shared Storehouse rule governs the (paper) shortfall — with no real participant's supply reduced. Measured against the cash-control arm and baseline, the floor produces a detectable improvement in food security and felt economic stability.
 
 ### Non-negotiable pilot rules (inherited from the corpus)
 
 Per the [Pilot Evidence Roadmap](../governance/Pilot_Evidence_Roadmap.md), this pilot is bound by rules it cannot waive for convenience:
 
-- **No one's real survival is on the line.** The pilot allocation is *additive* — it sits on top of whatever benefits, income, or support a participant already has. No participant's existing food stamps, Medicaid, housing, or legal status is touched, reduced, or made contingent on the pilot. This is the line in [Annex Q](../annexes/ANNEX_Q.md): a pilot may not make a person depend on a floor that has not yet been proven.
+- **No one is made worse off.** The pilot allocation is *additive* — it sits on top of whatever benefits, income, or support a participant already has, and the line in [Annex Q](../annexes/ANNEX_Q.md) holds: a pilot may not make a person depend on a floor that has not yet been proven. But because benefit and tax treatment (SNAP, Medicaid, SSI in-kind support, housing recertification, imputed income) is set by program rules the pilot does **not** control, "we won't touch your benefits" is a *backed promise, not a bare guarantee*: the allocation is structured to be non-countable and confirmed per site where agencies will say so in writing, a **hold-harmless fund makes any participant whole** if enrollment costs them a benefit or creates a tax liability, and consent discloses that residual risk plainly. Anyone whose specific benefit mix the pilot cannot protect is advised not to enroll, or enrolled only in the safer cohort.
 - **Exit is rehearsed before anyone leans on it.** Before month 1, the pilot demonstrates that a participant can leave with no penalty and no loss of their pre-existing support. Exit is tested, not assumed.
-- **Independent review is built in, not invited later.** An outside reviewer with the power to publish holds the data and signs off on the failure call.
+- **The people who run it do not grade it.** The independent reviewer who holds the data and signs off on the failure call is **selected and paid by the funder, not the project**. All failure thresholds and the analysis plan are **pre-registered and locked before anyone enrolls** — the line cannot move after the data is seen. The substantial role of AI in designing this proposal is **disclosed up front**, not discovered.
+- **The control group is treated as participants, not instruments.** Anyone enrolled as a control is compensated for their time and data in proportion to the burden asked, is offered access to the floor at the trial's end (wait-list / phase-in), and is recruited with an honest script. Differential attrition is tracked and reported, not hidden.
+- **Measurement never costs you the floor.** Every survey, interview, and diary is **opt-in and fully severable from the allocation** — declining to be studied never reduces what a participant receives. Interview and diary participation is **paid as work**. The people who can affect a participant's allocation are **not** the people who ask how their life is going. A public **"what we will not collect"** list is published: no itemized purchase logs beyond the aggregate the wall test requires, no biometric or location data, no mining of participants' existing benefit records, no deservingness probes.
 - **A failed pilot is published as failed.** No rebranding. The public post-mortem is a precondition of funding, written into the grant.
 
 ### Smallest deployment
 
-**150–300 voluntary adult participants** drawn from an existing community — a rural town, a housing cooperative, a university residential community, or an intentional community. Participants opt in; no one's existing benefits are affected. The pilot runs alongside their normal lives.
+**150–300 voluntary adults from a single, dense community anchored by a partner that already holds the community's trust** — a housing cooperative, a parish or tribal housing authority, or a veterans' housing community (which also fits the project's origins). One geographic footprint with a reachable eligible pool of at least ~2.5× the enrollment target makes both delivery and retention tractable; a dispersed rural population is a harder, later pilot. Participants opt in and the pilot runs alongside their normal lives.
 
-The essential goods covered in this pilot are limited to **food staples and basic medicines**. Shelter and water are explicitly excluded from this round — they carry infrastructure cost and legal exposure (eviction law, utility regulation) that belong in a later, larger pilot. Naming that exclusion up front is itself part of the honesty: this pilot tests the *easiest* survival goods to deliver, and a skeptic should read the results as a floor on plausibility, not a ceiling.
+**Households — not individuals — are the unit of enrollment and random assignment** (a floor delivered to one adult leaks across a shared kitchen, contaminating any in-household control). Each enrolled household is **randomly assigned**, not self-selected, to one of three arms:
 
-Participants receive a monthly allocation of essential goods, delivered through one of two channels tested in parallel cohorts:
+- **Cohort 1 — direct goods.** Physical food staples and a **narrow formulary of common over-the-counter and maintenance-generic medicines** through one contracted pharmacy partner (full prescription coverage is its own program, out of scope here). Closest to the constitutional design; highest administrative cost.
+- **Cohort 2 — restricted-purpose credit.** A closed-loop balance redeemable only for qualifying food and medicine at participating vendors, technically blocked from cash-out, run on **existing restricted-authorization card rails** (the infrastructure already behind SNAP/WIC/FSA cards — configured, not built). This is the sharpest instrument in the pilot: it directly stress-tests the non-delegability wall ([Annex AB](../annexes/ANNEX_AB.md)) — if the wall is going to leak, this is where it leaks first.
+- **Cash control.** An arm receiving the **cash equivalent** of the allocation, with no walls at all. This is what separates *"the walls did something"* from *"free groceries help."* If the cash arm and the in-kind arms move wellbeing the same amount, the benefit is just the transfer; if the walled arms differ, the design is doing work. Without this arm a welfare result is uninterpretable.
 
-- **Cohort 1 — direct goods.** Physical staples and pharmacy-filled prescriptions, delivered or picked up. Closest to the constitutional design; highest administrative cost.
-- **Cohort 2 — restricted-purpose credit.** A closed-loop balance redeemable only for qualifying food and medicine at participating vendors, technically blocked from cash-out. Cheaper to run; directly stress-tests the non-delegability wall ([Annex AB](../annexes/ANNEX_AB.md)) — if the wall is going to leak, this is where it leaks first.
+Running all three is deliberate. Cohort 1 vs. Cohort 2 isolates how much of the wall is enforced by *design* (the technical block) versus by *friction* (physical goods); the cash control isolates how much of any welfare effect is the *walls* versus the *resources*.
 
-Running both is deliberate. The comparison tells us how much of the wall is enforced by *design* (Cohort 2's technical block) versus by *friction* (Cohort 1's physical goods), which is exactly the question scale-up depends on.
+The essential goods covered are limited to **food staples and basic medicines**. Shelter and water are excluded from this round — they carry infrastructure cost and legal exposure (eviction law, utility regulation) that belong in a later, larger pilot. Naming that exclusion is part of the honesty: this pilot tests the *easiest* survival goods to deliver, so a skeptic should read the results as a floor on plausibility, not a ceiling.
 
-### The scarcity test (months 9–11)
+Operationally, the closed-loop credit needs **at least two qualifying vendors per goods category** (so one vendor leaving cannot collapse the cohort) and a **same-day human override for declined transactions** — a card declined at the register is a dignity event, not just a data point, and is never left unresolved in public.
 
-This is the part of the pilot that no UBI study has run, and it is the reason Essential Access and Shared Storehouse are tested together rather than apart.
+### The scarcity exercise (simulated, around months 9–11)
 
-At month 9, **one category of goods** (e.g. a specific staple) has its delivered supply deliberately reduced by 30% for 8 weeks. Two things are tested at once:
+Testing the Shared Storehouse is the reason Essential Access and Shared Storehouse are piloted together. But the way to test it is **not** to deliberately cut real low-income people's food and medicine — that is ethically indefensible, fails research-ethics review, and (because the allocation is additive) would not even reproduce real survival pressure. So the scarcity test is run as a **simulation against a declared paper shortage, with no real participant's supply reduced.**
 
-1. **Can the shortage be declared honestly?** Before any rationing begins, the scarcity must be verified under the [Annex M](../annexes/ANNEX_M.md) standard — challengeable capacity data, not a single administrator's say-so — and the declaration is handed to the independent reviewer to attempt to *falsify*. The design's nightmare is a fake shortage used to justify cutting people off; this step tests whether the verification actually resists that.
-2. **Does rationing beat price?** Once declared, the Shared Storehouse protocol distributes the reduced supply by the published rule, not by who can pay. We measure whether distribution matches the protocol, whether a black market forms, and — critically — whether the floor itself ([Annex Y](../annexes/ANNEX_Y.md)) is ever breached. Per [Annex AQ](../annexes/ANNEX_AQ.md), if the measurement system itself fails mid-event, the default is continuity, not deprivation; the pilot deliberately injects a measurement fault to see if that default holds.
+Around months 9–11 a scarcity is *declared* for one goods category, and the full mechanism runs against it in two gated steps:
 
-Participants are told in advance the scarcity is a planned test. That weakens external realism — but a real involuntary shortage in a pilot would violate the no-survival-risk rule. We name this tradeoff rather than hiding it.
+1. **First gate — can the shortage be declared honestly?** Before any rationing logic runs, the declared scarcity must be verified under the [Annex M](../annexes/ANNEX_M.md) standard — challengeable capacity data, not one administrator's say-so — and handed to the independent reviewer to attempt to *falsify*. The design's nightmare is a fake shortage used to justify cutting people off. **If the declaration does not survive the falsification audit, the exercise stops here** — a fakeable shortage means the Shared Storehouse is a coercion tool no matter how well rationing works, and there is no point testing distribution on a broken declaration.
+2. **Second gate — does rationing follow the rule, not price?** Only if the declaration survives, the Shared Storehouse protocol allocates the (simulated) reduced supply by the published rule rather than by who can pay. Participants engage with the *allocation decisions* — who would receive what, in what order, by what rule — and we measure conformance to protocol, perceived fairness, and whether an informal market in the allocation *would* form, while every participant keeps receiving their full real allocation throughout. Per [Annex AQ](../annexes/ANNEX_AQ.md), a measurement fault is injected to confirm the system defaults to continuity, not deprivation — dry-run first, so an injected fault never compounds with a live change.
+
+What the simulation gives up is the behavioral signal of a real involuntary shortage; what it keeps — and what matters most — is whether the *declaration-and-distribution machinery resists fakery and obeys its own rule*. If a future, larger pilot ever imposes a real reduction, it must be confined to a non-essential category, **exclude medicine entirely**, require fresh consent at the point of impact, and run under an independent safety board with unilateral authority to stop it.
 
 ### Rough cost
 
 | Item | Estimate |
 |---|---|
-| Essential goods allocation (150–300 people × 18 months, both cohorts) | $180,000–$540,000 |
-| Independent review, monitoring, and scarcity-declaration audit | $70,000–$120,000 |
-| Administration, identity verification, appeals, exit rehearsal | $50,000–$90,000 |
-| Closed-loop credit infrastructure (Cohort 2) | $25,000–$60,000 |
-| Data collection, control-group baseline, public post-mortem | $25,000–$50,000 |
-| **Total** | **$350,000–$860,000** |
+| Essential goods allocation (in-kind cohorts, 18 months) | $150,000–$420,000 |
+| Cash-control arm (cash-equivalent transfers) | $60,000–$160,000 |
+| Pre-pilot legal & per-site benefits/tax review | $30,000–$60,000 |
+| Benefits hold-harmless reserve | $25,000–$75,000 |
+| Independent review, scarcity-declaration audit, pre-registration | $70,000–$120,000 |
+| Staffing (~4 FTE: program, operations, participant coordinator, M&E) across an ~27-month program | $300,000–$450,000 |
+| Closed-loop credit configuration (Cohort 2, existing rails) | $20,000–$50,000 |
+| Data collection, mixed-methods qualitative arm, retention, public post-mortem | $45,000–$90,000 |
+| **Total** | **~$700,000–$1,425,000** |
 
-*Figures assume food staples plus basic medicines. Medication adds health-data, liability, and pharmacy-licensing complexity that requires site-specific legal and clinical review before a real number can be quoted.*
+*This is an ~27-month program — roughly 6 months of pre-pilot legal, benefits, site, and vendor work, 18 months of participant exposure, and ~3 months of independent analysis and the public post-mortem. Figures assume food staples plus a narrow medicine formulary; broader prescription coverage adds health-data, liability, and pharmacy-licensing complexity requiring site-specific legal and clinical review. The earlier ~$350k floor assumed away the staffing, benefits protection, control arm, and pre/post months a real run requires.*
+
+### How this pilot is evaluated
+
+This pilot answers **two different questions that must not be conflated.** The first is *mechanism integrity* — did the walls hold? — which is near-deterministic, high-signal, and well-powered even at this size; it is the confirmatory spine and the claim a skeptic most cares about. The second is *welfare* — are people better off? — which at 150–300 people split across arms can credibly detect only a **moderate-or-larger effect (≈0.5 standard deviations)**. Welfare results are therefore reported as **estimates with confidence intervals, not pass/fail tests**, and any subgroup or demographic-disparity finding is treated as exploratory: the sample cannot support strong subgroup claims, and "no bias found" at this size would mostly mean "underpowered to find it."
+
+Two safeguards protect the wall measurement specifically:
+- **Spillover is measured, not assumed away.** Because treated and control households share, lend, and shop together in one community, the social network is mapped at baseline so cross-arm contamination — including the "buy your groceries, you hand me cash" indirect cash-out — can be modeled rather than mistaken for success or noise.
+- **Leakage detection is validated, not trusted.** The red-team seeds known cash-out attempts to confirm the instruments actually catch conversion; leakage is reported as *"at least the measured rate, at a detection sensitivity of X%,"* never as a point estimate to be believed. An undetected black market must not be allowed to read as success.
 
 ### What we measure
+
+*Mechanism integrity — the walls (the confirmatory spine):*
 
 | Question | Metric | Target |
 |---|---|---|
 | Does the floor stay continuous? | % of participant-months with full allocation delivered | > 95% |
 | Do process errors exclude people? | Admin-failure exclusion rate, and time-to-recovery | < 2%, recovered < 72h |
-| **Does the EA→Flow wall hold?** | % of allocated value converted to cash/market exchange (by cohort) | < 5% |
-| Can a shortage be declared honestly? | Independent reviewer's verdict on the scarcity declaration | Survives falsification audit |
-| Does rationing beat price under scarcity? | Distribution conformance to protocol; demographic disparity in shortfall | Conforms; no unexplained bias |
-| Does a black market form? | Estimated size of informal exchange vs. the shortage gap | < 20% of gap |
+| **Does the EA→Flow wall hold?** | % of allocated value converted to cash/market exchange, by cohort (detection-validated) | < 5%, and lower in Cohort 2 |
+| Can a shortage be declared honestly? | Independent reviewer's verdict on the simulated declaration | Survives falsification audit |
+| Does rationing follow the rule, not price? | Distribution conformance to protocol in the simulation | Conforms |
+| Would a black market form? | Estimated size of informal exchange vs. the shortage gap | < 20% of gap |
 | Is the survival floor ever breached? | Instances any participant drops below the Annex Y floor | **Zero** |
-| Does the floor change behavior? | Economic anxiety, food insecurity, healthcare avoidance vs. control/baseline | Measurable reduction |
 
-The **zero-floor-breach** row is the one hard line. A breach of the Annex Y minimum is not a metric that can be traded off against the others — it is a stop condition.
+*Welfare — how life is different (estimates vs. the cash-control arm and baseline; validated instruments, each with a pre-registered minimum meaningful change set before enrollment — not the unfalsifiable "measurable reduction"):*
+
+| Domain | Instrument |
+|---|---|
+| Food security | USDA Household Food Security Survey Module (18-item) |
+| Cost-driven healthcare / medication avoidance | NHIS / BRFSS cost-related access items |
+| Felt economic security (incl. the *unrevocable* dimension cash can't provide) | CFPB Financial Well-Being Scale |
+| Psychological distress and sense of agency | Kessler-6 + Pearlin Mastery Scale |
+
+A **mixed-methods qualitative arm** — repeated interviews, opt-in participant diaries, and a Most-Significant-Change process, collected on the control arm too — captures *how* life changes in participants' own words, reported alongside the numbers and flagged wherever the two disagree.
+
+Two conditions are not metrics but **stop/gate conditions, and they are asymmetric.** A **zero-floor-breach** violation, or a **design-enforced wall failure** (Cohort 2 conversion above 5%, or a fakeable shortage declaration), is a hard stop — these are design-level falsifications, not numbers to trade off. A *friction-only* leak (Cohort 1 alone) is a redesign signal ("build the block in"), not a stop. Welfare shortfalls never halt the pilot; they tune parameters.
 
 ### What failure looks like
 
 The pilot has failed — and we say so publicly — if any of the following occur:
 
 - More than 10% of participants lose access for more than one week due to administrative failure.
-- More than 5% of allocated value is converted into market exchange in **either** cohort — the wall between Essential Access and Flow is leaking. (If only Cohort 1 leaks, the lesson is "design the technical block in." If Cohort 2 leaks too, the lesson is far more serious.)
-- The scarcity declaration does not survive the reviewer's falsification audit — meaning a shortage *could* be manufactured to cut access. This is a design-level failure, not a tuning problem.
-- The scarcity event produces a black market covering more than 20% of the shortage gap.
-- Shared Storehouse distribution shows statistically significant demographic bias not explained by the protocol.
+- More than 5% of allocated value is converted into market exchange in **either** cohort — the wall between Essential Access and Flow is leaking. (If only Cohort 1 leaks, the lesson is "build the technical block in." If Cohort 2 — the code-enforced arm — leaks, the central claim is falsified and the **program** stops, not just the pilot.)
+- The simulated scarcity declaration does not survive the reviewer's falsification audit — meaning a shortage *could* be manufactured to cut access. This is a design-level failure that halts the exercise, not a tuning problem.
+- Under the simulated shortage, the modeled informal market would cover more than 20% of the gap, or distribution does not follow the protocol.
 - **Any** breach of the Annex Y survival floor.
 
-Failure is information. A failed pilot tells us which wall does not hold under real conditions. It is not a reason to stop — it is a reason to fix the specific mechanism before anyone is asked to depend on it.
+Failure is information. A *friction-enforced* leak is a reason to redesign the block; a *design-enforced* wall breach is a reason to stop and rethink before anyone is asked to depend on it.
 
 ### What success looks like
 
 - Access continuity above 95% with zero floor breaches.
 - Conversion below 5% in both cohorts — and meaningfully lower in Cohort 2, showing the technical block does work.
-- A scarcity declaration that an adversarial reviewer could not fake or break.
-- The shortage absorbed without a meaningful black market, with the floor intact throughout.
-- A measurable reduction in economic anxiety against the control group.
+- A simulated scarcity declaration that an adversarial reviewer could not fake or break, with distribution following the published rule.
+- On the validated welfare instruments, a meaningful improvement in food security and felt economic security in the walled arms relative to baseline — and a credible read, against the cash-control arm, of how much of that the *walls* contribute beyond the resources alone.
+- The qualitative arm showing recognizable, participant-described change — including honest accounts of what did *not* change.
 - Independent reviewers able to replicate every finding from the published data.
 
 Success at this scale justifies the next gate under [Annex AN](../annexes/ANNEX_AN.md): a 1,000+ participant pilot adding shelter, water, and an *unannounced* (genuinely involuntary, externally caused) scarcity event — the stress this pilot deliberately could not impose.
@@ -166,7 +193,7 @@ Success at this scale justifies the next gate under [Annex AN](../annexes/ANNEX_
 - Does Essential Access hold when the stakes are higher — housing and water, not just food and medicine?
 - Does the wall survive *organized, persistent* attack (a deliberate cash-out market run by motivated actors), not just opportunistic individual gaming?
 - Does the scarcity verification hold under a *real* shortage, where the people declaring it are under genuine pressure rather than running a planned test?
-- How does Essential Access interact with existing public benefits — does layering it on top create benefit-cliff or eligibility problems? This is a legal and political question, not a design question, and it varies by jurisdiction.
+- How does Essential Access interact with existing public benefits — does layering it on top create benefit-cliff or eligibility problems? The pilot protects participants with per-site review and a hold-harmless fund, but the underlying interaction is a legal and political question that varies by jurisdiction and is not resolved here.
 
 ---
 
@@ -207,6 +234,7 @@ The pilot runs **12 months** and has four moving parts:
 - **Protection screen.** Ordinary labor income, working balances, household tools, basic homes below protected thresholds, small-business operating reserves, and protected community, tribal, and church associations are excluded unless they are being used as avoidance shells.
 - **Distribution test.** A simulated or funded Universal Stake is issued through rails that cannot be sold, assigned, garnished, pledged as collateral, or exchanged for civic status.
 - **Red-team.** A paid adversarial team is given the rules and tasked with breaking them: hiding valuation, shifting ownership outside the jurisdiction, laundering value through protected associations, buying favor with the stake, manipulating eligibility, capturing appeals, or turning distribution into political patronage.
+- **Whole-system coherence tabletop.** Because no single-instrument pilot can reveal how the walls behave *together*, the red-team's mandate extends once into a tabletop: 30–80 role-players (or participants) run all five instruments live *on paper* while the adversarial team hunts for cross-wall conversion paths — turning a Universal Stake into Voice, Voice into queue priority, a Service Record into survival preference. This is the cheap way to surface emergent, cross-wall failure that the four lived pilots, each clean and isolated, structurally cannot — at a fraction of the cost and none of the human risk of bundling every instrument into one live community.
 
 Before any optional funded practice distribution, the pilot must publish the CRUS Simulation Protocol scenario table:
 
@@ -459,7 +487,9 @@ These are four separate pilots, not one. They can run independently, in differen
 - **Voice (Pilot C)** governs the foundation. Who decides how Essential Access is calibrated, what counts as a shortage, and how Shared Storehouse distributes? Without Voice, someone with power decides — and that power concentrates.
 - **Service Record (Pilot D)** determines who holds Voice-adjacent authority. Without rotation, the people who administer Essential Access and manage the Shared Storehouse tend to stay in place, and power concentrates again.
 
-The walls between the lanes are only testable when the lanes exist alongside each other. The integrated test — life access, market exchange, public return, scarcity response, Voice, and Service Record in one community — is the large-scale pilot that these four smaller pilots are designed to make possible.
+These pilots do not have to run in strict sequence. **Pilot A (the keystone) and Pilot C (Voice) can run in parallel** — they share no community and no confound, and Voice is cheap and fast. **Pilot D depends on Pilot C:** its firewall *is* the Voice↔Service-Record separation, so D's full run should wait on C's separation result, and the sealed ledger both need is built once. Pilot B's simulation and its whole-system tabletop overlap freely.
+
+The walls between the lanes are only fully testable when the lanes exist alongside each other — but you do not buy that insight by bundling five unproven instruments into one live community, where a leak in any wall is indistinguishable from a leak in any other and the one clean community is spent on an uninterpretable result. You buy it cheaply and first from the **whole-system tabletop** (run under Pilot B), and only later from a large-scale integrated live pilot that these four smaller pilots are designed to make possible.
 
 ---
 
@@ -493,7 +523,7 @@ We would not yet know whether the protected lanes work *together*, whether they 
 
 If you are a **researcher**, the open questions sections are the research agenda. Each one is a question the pilot cannot answer on its own.
 
-If you are a **funder**, the four pilot budgets total roughly **$790,000–$1,780,000** for an 18–24 month program (Pilot A $350k–860k; Pilot B $260k–570k; Pilot C $75k–145k; Pilot D $105k–205k). That is a small number for the question being asked. For comparison, the Finland UBI pilot (2017–2018) cost approximately €20 million. The single most important pilot, and the place to start, is **Pilot A** — it tests the survival floor and the non-convertibility wall that the entire design rests on.
+If you are a **funder**, the four pilot budgets total roughly **$1.14M–$2.35M** (Pilot A ~$700k–1.4M; Pilot B $260k–570k; Pilot C $75k–145k; Pilot D $105k–205k). That is still a small number for the question being asked — for comparison, the Finland UBI pilot (2017–2018) cost roughly €20 million — and the figure is higher than an earlier draft's precisely because it now funds the staffing, benefits protection, a cash-control arm, and the pre- and post-pilot months a real, credible run requires. The single most important pilot, and the place to start, is **Pilot A** — it tests the survival floor and the non-convertibility wall the entire design rests on. Whichever pilots run, the whole-system question is answered first and cheaply by the tabletop (under Pilot B), not by an expensive bundled flagship.
 
 If you are a **community**, the smallest useful starting point is Pilot A — Essential Access + Shared Storehouse — because it tests the most fundamental claim: that a guaranteed survival floor is possible without collapsing under real conditions.
 
@@ -501,4 +531,4 @@ If you are a **skeptic**, the failure criteria are listed explicitly in each sec
 
 ---
 
-*This document is a rough draft. It will be revised as the design is tested. Feedback, objections, and alternative framings are welcome. See [Start Here](00_start_here.md) for the full project overview and [Claims & Evidence](../governance/Claims_Evidence_Register.md) for the current status of each mechanism's evidence base.*
+*This document is a rough draft, revised after an external review by specialists in running cash-transfer, social-protection, and randomized pilots (which is why Pilot A now leads with the walls, simulates rather than imposes scarcity, adds a cash-control arm and validated welfare measures, and carries an honest budget). It will be revised further as the design is tested. Feedback, objections, and alternative framings are welcome. See [Start Here](00_start_here.md) for the full project overview and [Claims & Evidence](../governance/Claims_Evidence_Register.md) for the current status of each mechanism's evidence base.*
