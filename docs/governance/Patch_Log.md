@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-079 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-080 (P-071 reserved)**
 
 ---
 
@@ -96,6 +96,7 @@
 | P-077 | structural — no threat row | **ACTIVE** | Medium | Canonical-home (anti-drift) discipline: the four near-identical drift rules (status spine, appeal spine, evidence template, data doctrine) collapse into one doctrine in the P-073 gate (Acceptance_Protocol) — domains cite their canonical home and keep only domain substance; a divergent restatement yields to the home, except where domain text is strictly more protective of the person (never for uniform procedural rules). The four local rules shrink to home-declaration + specific enforcement + citation. Constitution change; Christ-centered Session 27. |
 | P-078 | structural — no threat row | **ACTIVE** | Medium | Data-retention gap closure (G-1..G-4 from P-075): the four "unspecified — gap" retention/stripping cells in the data-stewardship calibration table are specified as FC-211..214 — retention tied to appeal-spine window close, the corpus 30/90/180/365-day grid, protective hard caps, and pre-activation binding gates. Balanced posture (owner-approved): bypass-detection earns the longest band, the vulnerable-person datasets retain the least. Closes the confessed gaps; supplies the data doctrine's required deletion schedule (not a new mechanism). |
 | P-079 | T-008 · T-009 (re-disposition proposed); two draft threats introduced (numbered at intake) | **PROPOSED** | High | Retire the Service Record instrument; fill rotating public roles by sortition from a minimal, Tier-1-locked eligibility pool. Deletion under the P-073 simplicity presumption (origin: Minimum Viable Constitution Audit). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). Conflict with the held Voice/Service-Record hardening redline RESOLVED by owner decision 2026-07-13 in P-079's favor: the hardening redline is re-scoped to Voice-only and its Service Record portions withdrawn. Service Record remains in force as designed until P-079 clears its gates. |
+| P-080 | T-004 (participation floor); T-002 interaction noted | **PROPOSED** | High | Equal Voice base: every confirmed member receives an equal, unmeasured base Voice allocation per cycle; contribution-minted Voice adds above it, never below (ANNEX_Z Z2 amendment + required INV-004 participation clarification, with the panel's Sybil, Z5-counting, and non-trivial-floor guards). Formalizes Fix 1 of the re-scoped Voice hardening redline (2026-06-09). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). |
 
 ---
 
@@ -704,7 +705,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-079. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-080. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -781,6 +782,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | structural — no threat row (institution merger audit) | P-076 | **ACTIVE** | ANNEX_AQ · ANNEX_AL · ANNEX_AM · Capacity Measurement Evidence Test Package · SPECIFICATIONS |
 | structural — no threat row (canonical-home discipline) | P-077 | **ACTIVE** | Acceptance_Protocol.md P-073 gate · Claims_Evidence_Register · ANNEX_L §L7 · Evidence_Ladder · Monitoring Administrative Safety Packet |
 | structural — no threat row (data-retention gap closure) | P-078 | **ACTIVE** | Parameter_Calibration_Register FC-211..214 · Monitoring Administrative Safety Packet · ANNEX_AJ · ANNEX_AF · ANNEX_D · ANNEX_C |
+| T-004 · T-002 (interaction) | P-080 | **PROPOSED** | P-080 intake package (docs/superpowers/specs) · Voice hardening redline Fix 1 · Acceptance_Protocol AV1/AV3 hold |
 | T-008 · T-009 (re-disposition proposed); two draft threats, numbered at intake | P-079 | **PROPOSED** | P-079 intake package (docs/superpowers/specs) · Minimum_Viable_Constitution_Audit.md · Acceptance_Protocol AV1/AV3 hold |
 
 ---
@@ -1680,4 +1682,21 @@ Origin: the [Minimum Viable Constitution Audit](./Minimum_Viable_Constitution_Au
 - **Conflict record — RESOLVED (owner decision, 2026-07-13):** this patch conflicted in part with the held Voice/Service-Record hardening redline (2026-06-09), which presumed Service Record continues and extended AF3/AJ collusion detection to it. The owner resolved the conflict in P-079's favor: retirement is the Service Record direction of record; the hardening redline is re-scoped to Voice-only (its Fix 1 equal-Voice-base survives; its Fix 2 is withdrawn as scoped, with a narrow Voice-only Z4-enforcement residual noted in that redline). Service Record remains in force as designed until this patch clears its own gates — the decision selects direction, not activation.
 - **Intake status:** HELD at Acceptance Protocol AV1/AV3 — a `modifies_tier1=True` proposal may not enter the FAP queue without a standing adversarial panel member's attestation, and no panel member is seated (P-013 not ACTIVE). Queue position held open indefinitely. Christ-centered review completed and published in the intake package per the constitution-review protocol.
 
-**Numbering note:** the held Voice hardening redline (re-scoped to Voice-only, 2026-07-13) takes the next free patch number above P-079 at intake.
+---
+
+### P-080 — Equal Voice Base: The Participation Floor
+
+**Threat addressed:** T-004 (agenda standing tracks measured contribution toward zero; INV-003 worth-measurement tension); T-002 interaction bounded by the Sybil guard
+**Status:** PROPOSED | **Priority:** High | **`modifies_tier1=True`**
+
+**Full intake package:** [P-080 redline](../superpowers/specs/2026-07-13-p080-voice-equal-base-redline.md) · **Amendment text:** Fix 1 of the [Voice hardening redline](../superpowers/specs/2026-06-09-voice-service-record-hardening-redline.md) (panel-revised), adopted verbatim
+
+Formalizes Fix 1 of the re-scoped Voice-only hardening redline as its own patch, taking the number that redline held. A person whose contribution cannot be measured — the severely disabled, the full-time carer, the person in crisis, the late entrant — currently earns little or no agenda-Voice; the base makes presence sufficient for standing, mirroring the survival-floor logic in the civic lane.
+
+- **Introduced design:** equal per-confirmed-member base Voice each cycle, no contribution measurement; increment adds above, never reduces below; three binding guards — Sybil-gated (fast-decay caps a fake member's harvest at one cycle; any identity-confirmation weakening triggers re-review), Z5 category-neutral counting (the base enlarges the denominator a capturing class must beat), and a non-trivial floor (increment parameters may not shrink the base to ceremony).
+- **Claim discipline:** P-073 path (1) extension — no new register, office, or panel; reduces the contribution-measurement data surface at the margin. Tier assessed at INV-004 (Tier 1 clarification, panel-marked required) and ANNEX_Z Z2 (Tier 2).
+- **New risks introduced:** the base raises the prize for Sybil identities (T-002) — bounded by the one-cycle harvest cap and the re-review trigger; parameter-tuning capture of the base's relative weight — bounded by the non-trivial-floor guard and a reserved-FC binding required in the evidence gates.
+- **Open item carried:** the Fix 2 Voice-only residual (third parties requesting or inferring Voice balances) is recorded in the package (§6), not designed here.
+- **Intake status:** HELD at Acceptance Protocol AV1/AV3 — no standing adversarial panel member is seated (P-013 not ACTIVE). Christ-centered review completed and published in the intake package.
+
+**Numbering note:** resolved — the re-scoped Voice redline's Fix 1 has taken P-080 (this entry). No held proposal is awaiting a number.

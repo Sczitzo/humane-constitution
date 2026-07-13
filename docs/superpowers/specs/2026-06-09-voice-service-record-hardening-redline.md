@@ -8,6 +8,8 @@
 > - The "deliberately NOT changed" items concerning Service Record (Z3 slow decay + pause floor) are moot under the retirement direction.
 >
 > Nothing is retired today: Service Record remains in force as designed until P-079 clears its own gates (intake is held at Acceptance Protocol AV1/AV3 pending an adversarial panel that does not yet exist). This decision selects the direction and withdraws the competing path; it does not activate P-079.
+>
+> **Update 2026-07-13:** Fix 1 is now formalized as **[P-080 — Equal Voice Base](2026-07-13-p080-voice-equal-base-redline.md)** (PROPOSED, intake held at AV1/AV3). The Fix 1 text below, as panel-revised, is the text of that patch. The Fix 2 Voice-only residual is recorded as an open item in the P-080 package (§6).
 
 **Panel headline.** Fix 2 as first drafted would have **persecuted the very communities the corpus protects**: structural ring-detection (reciprocity density, cluster closure) is the signature of a faithful congregation or mutual-aid network, which ANNEX_D §D7.2 explicitly protects ("churches, worker cooperatives, family households, mutual aid... are not avoidance structures merely because they coordinate"). The fix the panel found is elegant: **the corpus already solved this** — ANNEX_AF §AF3 has structural collusion-detection *with* shared-hardship safe harbors, and ANNEX_AJ uses correlation as a *trigger* with a burden-shift and a data-purpose-limitation regime. Fix 2 is rebuilt below to *extend AF3/AJ to the civic layer*, not reinvent detection. Fix 1 gains three required patches (INV-004 clarification needed-not-optional; the Z5 counting rule; the Sybil note).
 
