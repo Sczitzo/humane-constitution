@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-078 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-079 (P-071 reserved)**
 
 ---
 
@@ -95,6 +95,7 @@
 | P-076 | structural — no threat row | **ACTIVE** | Medium | Institution merger audit: Conservative Hold declaring authority bound to the existing RCS accreditation body (dangling ANNEX_AL §3 pointer resolved); phantom "Measurement Oversight Body" deleted, escalation bound to the ANNEX_AL §4.1 methodology-review panel; "oracle council" unified to "oracle cohort" (FC-033's own unit). Two proposed mergers examined and REJECTED with reasons: register-adjudicator vs contribution verification are different functions protecting different people (merging would weaken INV-006), and the "Temporal Continuity Review Panel" exists nowhere in the corpus. No operating institution merged; no check removed. |
 | P-077 | structural — no threat row | **ACTIVE** | Medium | Canonical-home (anti-drift) discipline: the four near-identical drift rules (status spine, appeal spine, evidence template, data doctrine) collapse into one doctrine in the P-073 gate (Acceptance_Protocol) — domains cite their canonical home and keep only domain substance; a divergent restatement yields to the home, except where domain text is strictly more protective of the person (never for uniform procedural rules). The four local rules shrink to home-declaration + specific enforcement + citation. Constitution change; Christ-centered Session 27. |
 | P-078 | structural — no threat row | **ACTIVE** | Medium | Data-retention gap closure (G-1..G-4 from P-075): the four "unspecified — gap" retention/stripping cells in the data-stewardship calibration table are specified as FC-211..214 — retention tied to appeal-spine window close, the corpus 30/90/180/365-day grid, protective hard caps, and pre-activation binding gates. Balanced posture (owner-approved): bypass-detection earns the longest band, the vulnerable-person datasets retain the least. Closes the confessed gaps; supplies the data doctrine's required deletion schedule (not a new mechanism). |
+| P-079 | T-008 · T-009 (re-disposition proposed); two draft threats introduced (numbered at intake) | **PROPOSED** | High | Retire the Service Record instrument; fill rotating public roles by sortition from a minimal, Tier-1-locked eligibility pool. Deletion under the P-073 simplicity presumption (origin: Minimum Viable Constitution Audit). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). Conflicts in part with the held Voice/Service-Record hardening redline (2026-06-09), which presumes Service Record continues; conflict recorded per log rules and resolves at whichever intake opens first. |
 
 ---
 
@@ -703,7 +704,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-078. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-079. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -780,6 +781,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | structural — no threat row (institution merger audit) | P-076 | **ACTIVE** | ANNEX_AQ · ANNEX_AL · ANNEX_AM · Capacity Measurement Evidence Test Package · SPECIFICATIONS |
 | structural — no threat row (canonical-home discipline) | P-077 | **ACTIVE** | Acceptance_Protocol.md P-073 gate · Claims_Evidence_Register · ANNEX_L §L7 · Evidence_Ladder · Monitoring Administrative Safety Packet |
 | structural — no threat row (data-retention gap closure) | P-078 | **ACTIVE** | Parameter_Calibration_Register FC-211..214 · Monitoring Administrative Safety Packet · ANNEX_AJ · ANNEX_AF · ANNEX_D · ANNEX_C |
+| T-008 · T-009 (re-disposition proposed); two draft threats, numbered at intake | P-079 | **PROPOSED** | P-079 intake package (docs/superpowers/specs) · Minimum_Viable_Constitution_Audit.md · Acceptance_Protocol AV1/AV3 hold |
 
 ---
 
@@ -1661,4 +1663,21 @@ The P-075 data-stewardship consolidation confessed four unspecified retention/st
 - **New risks introduced:** Concrete anchors could be mistaken for bound values — bounded by the explicit RESERVED / bind-before-activation gate on every parameter. The longer bands (G-1's 90d/180d) are a detection-vs-surveillance tradeoff, capped hard at 365d per AJ's own anti-Babel clause; the vulnerable-person datasets (G-2 hardship graph, G-3 household-linkable assessment) retain the least, tied to appeal-window close rather than a standing clock.
 - **Residual risk:** Final values await founding binding by the named owners; the appeal-window-tie assumes the L7 spine's clocks hold.
 
-**Numbering note:** the held Voice/Service-Record redline takes the next free patch number above P-078 at intake.
+---
+
+### P-079 — Service Record Retirement: Sortition for Rotating Public Roles
+
+**Threat addressed:** T-008 · T-009 (re-disposition proposed); introduces two draft threats — sortition qualification-filter capture and seated-member capture (each takes a free T-number at intake)
+**Status:** PROPOSED | **Priority:** High | **`modifies_tier1=True`**
+
+**Full intake package:** [P-079 redline](../superpowers/specs/2026-07-12-p079-service-record-sortition-redline.md)
+
+Origin: the [Minimum Viable Constitution Audit](./Minimum_Viable_Constitution_Audit.md) found Service Record → sortition the clearest subtraction win: everything the Service Record machinery defends against (worth-scoring, accumulation, inheritance of standing, patronage pooling, grace-rule gaming), a lottery cannot suffer. Scope is Service Record only — Voice is untouched (the audit's N-4 finding blocks a Voice cut).
+
+- **Introduced design:** rotating public roles filled by public lottery from a minimal, published, Tier-1-locked eligibility pool; role-scoped appealable competence criteria; no-penalty declination; larger-than-seat draws with random backfill (generalizing the INV-006 sortition mechanics the invariants already contain). Retires the Service Record ledger, decay/grace parameters, sector ceilings, attestation-collusion detection, and the Service Record Misuse Evidence Test Package.
+- **Claim discipline:** deletion under the P-073 simplicity presumption, with the per-protected-person function coverage table required by the presumption's limit (b) in the intake package. P-009 becomes moot and T-008/T-009 re-disposition only if this patch is adopted; nothing is retired while PROPOSED.
+- **New risks introduced:** draft threat (qualification-filter capture) — the eligibility list becomes the gatekeeping surface (mitigation: Tier-1 lock on criteria expansion, facial-universality rule, disparate-impact voiding, appeal-spine challenges); draft threat (seated-member capture) — small temporary panels are cheap to influence (mitigation: overdraw + random backfill, published deliberation records, per-decision justification, consequence-based enforcement).
+- **Conflict record:** conflicts in part with the held Voice/Service-Record hardening redline (2026-06-09), which presumes Service Record continues and extends AF3/AJ collusion detection to it. Per log rules the conflict is recorded here and must be resolved explicitly at whichever proposal's intake opens first — they cannot both be adopted as written.
+- **Intake status:** HELD at Acceptance Protocol AV1/AV3 — a `modifies_tier1=True` proposal may not enter the FAP queue without a standing adversarial panel member's attestation, and no panel member is seated (P-013 not ACTIVE). Queue position held open indefinitely. Christ-centered review completed and published in the intake package per the constitution-review protocol.
+
+**Numbering note:** the held Voice/Service-Record redline takes the next free patch number above P-079 at intake.
