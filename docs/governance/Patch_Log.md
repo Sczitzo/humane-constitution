@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-081 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-082 (P-071 reserved)**
 
 ---
 
@@ -98,6 +98,7 @@
 | P-079 | T-008 · T-009 (re-disposition proposed); two draft threats introduced (numbered at intake) | **PROPOSED** | High | Retire the Service Record instrument; fill rotating public roles by sortition from a minimal, Tier-1-locked eligibility pool. Deletion under the P-073 simplicity presumption (origin: Minimum Viable Constitution Audit). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). Conflict with the held Voice/Service-Record hardening redline RESOLVED by owner decision 2026-07-13 in P-079's favor: the hardening redline is re-scoped to Voice-only and its Service Record portions withdrawn. Service Record remains in force as designed until P-079 clears its gates. |
 | P-080 | T-004 (participation floor); T-002 interaction noted | **PROPOSED** | High | Equal Voice base: every confirmed member receives an equal, unmeasured base Voice allocation per cycle; contribution-minted Voice adds above it, never below (ANNEX_Z Z2 amendment + required INV-004 participation clarification, with the panel's Sybil, Z5-counting, and non-trivial-floor guards). Formalizes Fix 1 of the re-scoped Voice hardening redline (2026-06-09). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). |
 | P-081 | T-028 · T-031 · T-032 · T-001 (delivery-side) | **PROPOSED** | High | Essential Access Delivery Standard (companion instrument, `Designed`): plural provision with no sole-provider chokepoint, optional no-authority recognition of community networks, provider-side settlement integrity with in-kind tier (polices the provider's books, never the person's purchases), public provider of last resort with throughput standard + funding non-derogation, and redemption data minimization (category, never item). ANNEX_Y untouched — the panel-flagged H-3 amendment ambiguity resolved via the companion-instrument path; header/§Y5 drift recorded for the hygiene queue. `modifies_tier1=False`; pilot-gated per the P-072 precedent. |
+| P-082 | T-024 · T-018 · T-014 (allocation rules) | **PROPOSED** | High | Rationing Allocation Standard (companion instrument, `Designed`): binds the manna rule's unbound sub-CSM case (pro-rata of each person's §Y1.1-adjusted individual CSM; need tiers defined in calm and frozen in crisis; surge batch-attestation with post-hoc audit; anti-inflation tripwire) and supplies the corpus's first indivisible-goods rule (intervention-success-only bands — never life expectancy, disability, or quality-of-life — then a committed transparent lottery). ANNEX_Y/ANNEX_AQ untouched; clinical-custodian dependency satisfied by P-081. `modifies_tier1=False`; pilot-gated. Completes the instrument-hardening pass. |
 
 ---
 
@@ -706,7 +707,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-081. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-082. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -783,6 +784,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | structural — no threat row (institution merger audit) | P-076 | **ACTIVE** | ANNEX_AQ · ANNEX_AL · ANNEX_AM · Capacity Measurement Evidence Test Package · SPECIFICATIONS |
 | structural — no threat row (canonical-home discipline) | P-077 | **ACTIVE** | Acceptance_Protocol.md P-073 gate · Claims_Evidence_Register · ANNEX_L §L7 · Evidence_Ladder · Monitoring Administrative Safety Packet |
 | structural — no threat row (data-retention gap closure) | P-078 | **ACTIVE** | Parameter_Calibration_Register FC-211..214 · Monitoring Administrative Safety Packet · ANNEX_AJ · ANNEX_AF · ANNEX_D · ANNEX_C |
+| T-024 · T-018 · T-014 (allocation rules) | P-082 | **PROPOSED** | Rationing_Allocation_Standard.md · P-082 intake package (docs/superpowers/specs) |
 | T-028 · T-031 · T-032 · T-001 (delivery-side) | P-081 | **PROPOSED** | Essential_Access_Delivery_Standard.md · P-081 intake package (docs/superpowers/specs) |
 | T-004 · T-002 (interaction) | P-080 | **PROPOSED** | P-080 intake package (docs/superpowers/specs) · Voice hardening redline Fix 1 · Acceptance_Protocol AV1/AV3 hold |
 | T-008 · T-009 (re-disposition proposed); two draft threats, numbered at intake | P-079 | **PROPOSED** | P-079 intake package (docs/superpowers/specs) · Minimum_Viable_Constitution_Audit.md · Acceptance_Protocol AV1/AV3 hold |
@@ -1718,3 +1720,19 @@ Binds the survival floor's delivery side without touching ANNEX_Y: EADS-1 plural
 - **Claim discipline:** P-073-conformant — recognition is a channel not an office; data rules cite the canonical home; the instrument deletes a data surface (item-level redemption recording) before it exists. Tier 2; pilot-gated; six evidence gates in the package including a phantom-redemption red team and an in-kind float test.
 - **New risks introduced:** recognition-tier capture (starving disfavored networks of settlement while formally permitting service) — bounded by appealable refusal, published-cause de-recognition, lawful unrecognized service, and a capture-dashboard statistic (recognition-refusal rates by community type); settlement caps as a soft chokepoint — bounded by the audited-history scaling rule.
 - **Intake status:** NOT held at AV1 (no Tier-1 touch) — activation blocked only by the ordinary founding and pilot gates all patches share. Christ-centered review completed in the package.
+
+---
+
+### P-082 — Rationing Allocation Standard (Companion Instrument)
+
+**Threat addressed:** T-024 (rationing-state allocation), T-018 (false-claim floods — surge protocol), T-014 (in-crisis discretionary triage as emergency-power capture)
+**Status:** PROPOSED (instrument incorporated as `Designed`) | **Priority:** High | **`modifies_tier1=False`**
+
+**Instrument:** [Rationing Allocation Standard](./Rationing_Allocation_Standard.md) · **Full intake package:** [P-082 redline](../superpowers/specs/2026-07-13-p082-rationing-allocation-standard.md) · **Source:** [Shared Storehouse hardening redline](../superpowers/specs/2026-06-09-shared-storehouse-hardening-redline.md) (panel-revised)
+
+Writes down, in calm, the two allocation rules the corpus left unwritten: RAS-1 binds INV-005's manna rule below aggregate CSM (each person's share pro-rata of their own §Y1.1-adjusted minimum, so the locked pregnancy/lactation/age/labor/pediatric adjustments carry through the cut automatically; clinical/disability tiers pre-defined as Tier-2 commitments and frozen during any active rationing state; crisis-created need served by custodian batch-attestation with mandatory post-hoc Ombuds audit and retroactive slashing; tier-prevalence anomaly tripwire), and RAS-2 supplies the first indivisible-goods rule anywhere in the corpus (calm-defined coarse bands assessable only on short-term intervention success for this person — the panel's QALY bar: never life expectancy, age as such, disability, quality-of-life, duration-of-use, civic standing, or wealth — then a committed, dual-source, logged lottery within each band).
+
+- **Claim discipline:** P-073-conformant — supplies functions no existing mechanism performs (corpus-fit confirmed twice: the sub-CSM mechanism is unbound; no indivisible rule exists); adds rules, not offices (custodian per P-081, Ombuds audits, dashboard publication, appeal spine cited); deletes in-crisis discretion at maximum stakes. INV-005's manna text untouched — this is the mechanism that text already requires.
+- **Dependency:** the clinical-custodian role is P-081's (EADS-2); per the source redline's contingency the definition moves here if P-081 is withdrawn; gates 2–4 cannot complete before the custodian exists in drill form.
+- **New risks introduced:** calm-time tier-list capture and tier-inflation — bounded by published categories/weights/caps, disability-representative review, the anomaly trigger, re-verification cadence, and the crisis freeze; custodian band-assignment bias — bounded by demographic-skew audits and commitment-before-randomness logging; surge under-attestation from audit chilling — named in the gates and measured in the drill, not assumed away.
+- **Intake status:** NOT held at AV1; pilot-gated. Six evidence gates including a full §Y4 allocation drill (the repo simulation harness is the named instrument — it already models capacity-gated shortfall and can replace its random rotation with RAS-1), a committed-lottery red team, and the surge drill. Christ-centered review completed in the package. **Completes the instrument-hardening pass.**
