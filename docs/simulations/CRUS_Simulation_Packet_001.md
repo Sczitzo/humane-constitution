@@ -4,7 +4,7 @@ title: CRUS Simulation Packet 001
 
 # CRUS Simulation Packet 001
 
-*First runnable packet under the [CRUS Simulation Protocol](../governance/CRUS_Simulation_Protocol.md). Model: `simulations/crus_model.py` (seeded Monte-Carlo, medians over 30 runs). Run date: 2026-07-12. Six of the fourteen required scenarios are simulable with this model; the other eight are reported as **not run** with reasons — this packet is explicitly partial and permits no claim upgrades on the untested scenarios.*
+*First runnable packet under the [CRUS Simulation Protocol](../governance/CRUS_Simulation_Protocol.md). Model: `simulations/crus_model.py` (seeded Monte-Carlo, medians over 30 runs). Run date: 2026-07-12. Seven of the fourteen required scenarios are simulable with this model; the other seven are reported as **not run** with reasons — this packet is explicitly partial and permits no claim upgrades on the untested scenarios.*
 
 ---
 
@@ -19,12 +19,13 @@ We built a small pretend economy — 500 ordinary households and 20 big holders 
 - **Dodging didn't pay.** We let a quarter of the big holders try to hide 30% of their value through shell tricks. With a 60% chance of getting caught and a 5× fine, hiding *lost* money on average and only 2% of value slipped through — below the warning line. Same lesson as our earlier tests: consequences matter more than perfect detection.
 - **Pass-through stayed within bounds** at the assumed shifting behavior, but read the caveat below — this one is only as good as its assumption.
 
-**The warnings (3 tests hit "watch" — the rules say these need redesign or narrower claims before any pilot):**
+**The warnings (4 tests hit "watch" — the rules say these need redesign or narrower claims before any pilot):**
 - **A small black market in Stake payments survived.** A couple of households a year successfully sold their Stake to brokers despite 60% detection. The rules say *any* repeatable market is a warning. Fix candidates: make Stake payments non-transferable at the payment rail itself, not just illegal to sell.
 - **Paperwork ate about 14% of everything collected** — above the 10% warning line. Small assessments on 20 holders don't cost much, but distributing tiny payments to 500 households does. At real scale this ratio could improve (fixed costs spread wider) or worsen (appeals multiply). It has to be measured, not assumed.
 - **A recession hit harder than the reserve could cover.** A 30% fall in asset values cut net receipts ~35% — *more* than proportionally, because paperwork costs don't shrink in a recession — and the 20% reserve didn't bridge the gap. If households ever depend on Stake payments, that gap becomes real hardship. Fix candidates: bigger reserve share, or explicit counter-cyclical rules.
+- **Small-scale favoritism can hide in the math.** We modeled corrupt insiders steering the system toward their friends, and an independent watchdog reading the published records for suspicious patterns — the design's actual defense. Here's the catch: favoritism toward *households* (delaying payments to the out-group) was caught essentially every time, because there are 500 households and the pattern jumps out. But favoritism toward the 20 *big holders* (quietly waiving their charges) was caught only 7% of the time at subtle levels — with so few holders, a rigged pattern looks like coincidence. A careful insider network sticking to the quiet lever diverted about 6.7% of everything collected while staying statistically invisible. The lesson: at pilot scale, the transparency dashboard cannot carry the anti-corruption load by itself — the "no discretionary exemptions, period" rule has to do the work, and per-decision published reasoning matters more than pattern statistics when the numbers are small.
 
-**What this doesn't say.** Eight of the fourteen required tests can't be run by this kind of model at all — including the ones about appraisal manipulation, who gets wrongly excluded from eligibility, political favoritism in distribution, and whether real people can understand the system. Nothing here says Commons Return can replace taxes or is ready for real money. It says: in a toy economy with stated assumptions, the core promise held and three specific weaknesses now have numbers attached.
+**What this doesn't say.** Seven of the fourteen required tests can't be run by this kind of model at all — including the ones about appraisal manipulation, who gets wrongly excluded from eligibility, and whether real people can understand the system. Nothing here says Commons Return can replace taxes or is ready for real money. It says: in a toy economy with stated assumptions, the core promise held and four specific weaknesses now have numbers attached.
 
 ---
 
@@ -40,7 +41,7 @@ We built a small pretend economy — 500 ordinary households and 20 big holders 
 | CRUS-SIM-06 | Universal Stake eligibility | **Not run** — needs human/institutional testing |
 | CRUS-SIM-07 | Direct non-convertibility | **Watch** — repeatable Stake market emerged |
 | CRUS-SIM-08 | Compound convertibility | **Not run** — needs institutional channel modeling |
-| CRUS-SIM-09 | Routing capture | **Not run** — needs an administrative-discretion model |
+| CRUS-SIM-09 | Routing capture | **Watch** — holder-side favoritism evades dashboard detection at pilot scale |
 | CRUS-SIM-10 | Administrative burden | **Watch** — 13.6% of gross receipts |
 | CRUS-SIM-11 | Downturn resilience | **Watch** — 34.7% receipt fall, reserve insufficient |
 | CRUS-SIM-12 | Work and stewardship | **Not run** — needs a production economy model |
@@ -71,6 +72,18 @@ At the base-case behavioral assumption (holders shift 10% of their charge into r
 
 With 5% of households approached by brokers per year and 60% detection of sales, a median of 2 successful Stake sales per year persisted — a repeatable market under the protocol's definition, which is an automatic watch. Plain-language failure: *a broker market in Universal Stake payments persists despite detection.* Design implication: prohibition-plus-detection is insufficient; non-transferability should be enforced at the payment rail itself (FC-206 design space).
 
+### CRUS-SIM-09 — Routing capture: WATCH
+
+A captured insider network works two discretionary levers: assessment exemptions for aligned holders (Lever A, n=20 holders) and delayed Stake payments for unaligned households (Lever B, n=500). An independent auditor recomputes the [Capture Dashboard's](../governance/Capture_Dashboard_Specification.md) concentration ratio from the published per-decision accounting and flags capture above the published threshold (2.0). Levers are gated independently — the protocol's own rule that aggregates cannot hide subgroup harm applies to detection metrics too, since a cautious network would use only its quietest lever.
+
+| Exemption bias on aligned holders | Holder-lever diversion | Holder-side detection | Household-side detection |
+|---|---|---|---|
+| Subtle (20%) | 2.1% of receipts | **6.7%** | 100% |
+| Moderate (50%) | 6.7% of receipts | 70% | 100% |
+| Blatant (80%) | 11.0% of receipts | 90% | 100% |
+
+**Maximum diversion below reliable detection: 6.7% of gross receipts.** The asymmetry is structural: concentration statistics have power at n=500 (household side — every run detected) and almost none at n=20 (holder side — a rigged pattern among twenty holders is statistically indistinguishable from coincidence at subtle bias). Under the FC-207 rule-bound regime the levers do not exist and the scenario passes by construction; the watch records that this pass rests entirely on the levers staying closed, because the dashboard cannot reliably see holder-side violations at pilot scale. Design implication: for small assessed populations, per-decision published justification (auditable individually) must carry the load that concentration statistics carry at scale. Not evaluated: audit shielding of aligned avoiders, public-message and arrears levers.
+
 ### CRUS-SIM-10 — Administrative burden: WATCH
 
 Median administrative cost — assessment, appeals, distribution, fixed overhead — is **13.6% of gross receipts**, above the 10% watch line. The dominant cost is distributing many small payments. Scale effects could move this either way; it is a genuine open number. Plain-language failure: *running the system eats the value it collects.*
@@ -90,6 +103,7 @@ All parameters are provisional simulation anchors (the Parameter Calibration Reg
 - Avoidance: hide 30% of value; 60% detection; 5× penalty on evaded charge.
 - Stake sales: 5% approached, 30% would accept, 60% detection, 2× penalty.
 - Admin: fixed 10 + 0.5/assessment + 2.0/appeal (15% appeal rate) + 0.02/distribution.
+- Routing capture: 30% of holders/households aligned with the insider network; exemptions waive 50% of an aligned holder's charge; delays cost 5% of a payment's value; dashboard flags concentration ratios above 2.0 when at least 3 decisions are observable.
 - Medians over 30 seeded runs; full machine-readable output via `python -m simulations.crus_model`.
 
 Key limitations: single jurisdiction; no price formation (pass-through is a behavioral parameter, not an emergent outcome); no protected-class modeling; no appraisal/valuation process; no political actors; one year of static behavior.

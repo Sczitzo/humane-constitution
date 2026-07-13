@@ -63,3 +63,45 @@ def test_gate_classification_flags_block_on_unprofitable_enforcement():
     sim05 = next(s for s in packet["scenarios"] if s["scenario_id"] == "CRUS-SIM-05")
     assert sim05["result"] == "block"
     assert "AVOIDANCE_PROFITABLE_AFTER_PENALTIES" in sim05["blocks"]
+
+
+# =============================================================================
+# CRUS-SIM-09 ROUTING CAPTURE TESTS
+# =============================================================================
+
+from simulations.crus_model import _capture_year, sim_09_routing_capture
+
+
+def test_no_capture_levers_divert_nothing():
+    """With zero exemption and delay probabilities, nothing is diverted."""
+    cfg = _cfg(capture_delay_prob=0.0)
+    r = _capture_year(cfg, seed=1, exemption_prob=0.0)
+    assert r["diverted_share"] == 0.0
+    assert r["any_detected"] is False
+
+
+def test_blatant_holder_capture_diverts_value():
+    """Near-certain exemptions for aligned holders divert a visible share."""
+    cfg = _cfg(capture_delay_prob=0.0)
+    r = _capture_year(cfg, seed=1, exemption_prob=1.0)
+    assert r["diverted_share"] > 0.0
+
+
+def test_household_side_detection_has_power_at_scale():
+    """The household lever (n=500) produces a detectable concentration ratio:
+    delays hit only unaligned households, so the published ratio is extreme."""
+    cfg = _cfg(capture_delay_prob=0.5)
+    detections = [
+        _capture_year(cfg, seed=s, exemption_prob=0.0)["household_detected"]
+        for s in range(10)
+    ]
+    assert sum(detections) >= 8  # reliable detection at n=500
+
+
+def test_sim09_reports_all_sweep_points():
+    out = sim_09_routing_capture(_cfg())
+    assert out["scenario_id"] == "CRUS-SIM-09"
+    assert set(out["metrics"]["discretionary_sweep"].keys()) == {
+        "exemption_prob_0.2", "exemption_prob_0.5", "exemption_prob_0.8"
+    }
+    assert out["result"] in ("pass", "watch", "block")

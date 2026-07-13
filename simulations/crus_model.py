@@ -11,15 +11,16 @@ can meaningfully address:
     CRUS-SIM-03  Pass-through shock
     CRUS-SIM-05  Avoidance and capital flight
     CRUS-SIM-07  Direct non-convertibility (Universal Stake sale attempts)
+    CRUS-SIM-09  Routing capture (discretionary levers vs dashboard detection)
     CRUS-SIM-10  Administrative burden
     CRUS-SIM-11  Downturn resilience
 
-The remaining eight scenarios (valuation hiding via appraisal capture,
-eligibility/dignity, compound convertibility, routing capture, work and
-stewardship, fiscal adequacy, public comprehension, base-case assessment
-review) require institutional modeling, legal red teams, or human testing,
-and are emitted as explicit "not_run" entries so this packet cannot be
-mistaken for a complete one.
+The remaining seven scenarios (valuation hiding via appraisal capture,
+eligibility/dignity, compound convertibility, work and stewardship, fiscal
+adequacy, public comprehension, base-case assessment review) require
+institutional modeling, legal red teams, or human testing, and are emitted
+as explicit "not_run" entries so this packet cannot be mistaken for a
+complete one.
 
 Design anchors:
     ANNEX_D           — source bases (D2), protected ordinary use (D3),
@@ -104,6 +105,23 @@ CRUS_CONFIG = {
 
     # Downturn (CRUS-SIM-11): asset-value decline applied to all source bases
     "downturn_value_decline": 0.30,
+
+    # Routing capture (CRUS-SIM-09): a captured insider network inside the
+    # administration steers two discretionary levers toward its own faction.
+    # FC-207 specifies NO patronage discretion; this scenario models what
+    # happens if the levers exist anyway, and whether the Capture Dashboard's
+    # concentration metrics (published thresholds over public accounting)
+    # would actually see it.
+    "aligned_holder_fraction": 0.30,     # holders aligned with the network
+    "aligned_household_fraction": 0.30,  # households aligned with the network
+    "capture_exemption_prob": 0.50,      # chance an aligned holder receives a
+                                         # discretionary assessment exemption
+    "capture_exemption_relief": 0.50,    # fraction of the charge waived
+    "capture_delay_prob": 0.30,          # chance an unaligned household's
+                                         # Stake payment is delayed
+    "capture_delay_cost": 0.05,          # effective value lost to delay
+    "dashboard_concentration_threshold": 2.0,  # published ratio that triggers
+                                               # a capture flag (dashboard rule)
 
     "n_runs": 30,                     # seeded Monte-Carlo runs per scenario
 }
@@ -424,12 +442,149 @@ def sim_11_downturn(config: dict) -> dict:
     }
 
 
+def _capture_year(config: dict, seed: int, exemption_prob: float) -> dict:
+    """
+    One assessment year with a captured insider network working two
+    discretionary levers, plus a dashboard auditor reading the public
+    source-by-source accounting.
+
+    Lever A (holder side, n=20): discretionary assessment exemptions for
+    aligned holders. Lever B (household side, n=500): delayed Stake payments
+    for unaligned households. Audit shielding of aligned avoiders is NOT
+    modeled (interaction with SIM-05 machinery deferred).
+
+    The auditor recomputes the dashboard's concentration ratio from the
+    published per-decision data and flags capture when the observed ratio
+    of favorable-treatment rates crosses the published threshold. Detection
+    power is therefore purely a function of sample size and effect size —
+    exactly the dashboard's real situation.
+    """
+    cfg = config
+    rng = np.random.default_rng(seed)
+    year = CrusYear(config, seed=seed)
+    base = year.run()
+
+    n_holders = cfg["n_concentrated_holders"]
+    n_households = cfg["n_households"]
+    holder_aligned = rng.random(n_holders) < cfg["aligned_holder_fraction"]
+    household_aligned = rng.random(n_households) < cfg["aligned_household_fraction"]
+
+    # Lever A: discretionary exemptions on aligned holders' charges
+    holder_charge = year.holder_assessed * cfg["assessment_rate_annual"]
+    exempted = holder_aligned & (rng.random(n_holders) < exemption_prob)
+    relief = np.where(exempted, holder_charge * cfg["capture_exemption_relief"], 0.0)
+    diverted_exemptions = relief.sum()
+
+    # Lever B: delayed Stake payments for unaligned households
+    delayed = ~household_aligned & (rng.random(n_households) < cfg["capture_delay_prob"])
+    stake = base["stake_per_household"]
+    diverted_timing = delayed.sum() * stake * cfg["capture_delay_cost"]
+
+    gross = max(base["gross_receipts"], 1e-9)
+    diverted_exemption_share = diverted_exemptions / gross
+    diverted_timing_share = diverted_timing / gross
+    diverted_share = diverted_exemption_share + diverted_timing_share
+
+    # Dashboard auditor: concentration ratios from published decisions.
+    def rate(favored, group):
+        n = group.sum()
+        return (favored & group).sum() / n if n > 0 else 0.0
+
+    eps = 1e-9
+    holder_ratio = (rate(exempted, holder_aligned) + eps) / (rate(exempted, ~holder_aligned) + eps)
+    household_ratio = (rate(delayed, ~household_aligned) + eps) / (rate(delayed, household_aligned) + eps)
+    threshold = cfg["dashboard_concentration_threshold"]
+    # A ratio is only assessable when both groups produced enough decisions
+    # to publish (dashboard rule: publish methods and thresholds, show
+    # concentration — but a ratio over 1-2 events is noise, not signal).
+    holder_assessable = exempted.sum() >= 3
+    household_assessable = delayed.sum() >= 3
+    holder_detected = bool(holder_assessable and holder_ratio > threshold)
+    household_detected = bool(household_assessable and household_ratio > threshold)
+
+    return {
+        "diverted_share": diverted_share,
+        "diverted_exemption_share": diverted_exemption_share,
+        "diverted_timing_share": diverted_timing_share,
+        "holder_detected": holder_detected,
+        "household_detected": household_detected,
+        "any_detected": holder_detected or household_detected,
+    }
+
+
+def sim_09_routing_capture(config: dict) -> dict:
+    """
+    CRUS-SIM-09 gate logic:
+
+    FC-207 specifies rule-bound allocation (no patronage discretion) — under
+    that regime this scenario passes by construction, because the levers do
+    not exist. The simulation therefore tests the counterfactual the gate
+    actually guards against: if the levers exist, is the diversion visible?
+    Watch whenever any modeled diversion evades reliable dashboard detection,
+    because then the pass rests entirely on the levers staying closed.
+
+    Levers are gated INDEPENDENTLY (the protocol's own rule: aggregates
+    cannot hide subgroup harm). A cautious network would use only its
+    lowest-visibility lever, so combined "any lever detected" rates would
+    overstate dashboard power: the household-side lever (n=500) is trivially
+    detectable and would mask the holder-side lever (n=20) hiding in noise.
+    """
+    warnings, blocks = [], []
+    sweep = {}
+    undetected_ceiling = 0.0
+    for exemption_prob in (0.2, 0.5, 0.8):
+        runs = [_capture_year(config, seed=4000 + i, exemption_prob=exemption_prob)
+                for i in range(config["n_runs"])]
+        diverted = float(np.median([r["diverted_share"] for r in runs]))
+        diverted_holder_only = float(np.median([r["diverted_exemption_share"] for r in runs]))
+        diverted_timing_only = float(np.median([r["diverted_timing_share"] for r in runs]))
+        det_holder = float(np.mean([r["holder_detected"] for r in runs]))
+        det_household = float(np.mean([r["household_detected"] for r in runs]))
+        sweep[f"exemption_prob_{exemption_prob:.1f}"] = {
+            "diverted_share_both_levers": round(diverted, 4),
+            "holder_lever_diverted_share": round(diverted_holder_only, 4),
+            "holder_side_detection_rate": round(det_holder, 3),
+            "household_lever_diverted_share": round(diverted_timing_only, 4),
+            "household_side_detection_rate": round(det_household, 3),
+        }
+        # Per-lever gating: a lever that diverts value while its own
+        # detection rate is unreliable is an evasion route.
+        if det_holder < 0.8 and diverted_holder_only > undetected_ceiling:
+            undetected_ceiling = diverted_holder_only
+        if det_household < 0.8 and diverted_timing_only > undetected_ceiling:
+            undetected_ceiling = diverted_timing_only
+    if undetected_ceiling > 0:
+        warnings.append("CAPTURE_EVADES_DASHBOARD_DETECTION")
+    return {
+        "scenario_id": "CRUS-SIM-09",
+        "result": _result(warnings, blocks),
+        "warnings": warnings,
+        "blocks": blocks,
+        "metrics": {
+            "rule_bound_regime": "passes by construction (no levers exist under FC-207)",
+            "discretionary_sweep": sweep,
+            "max_diversion_below_reliable_detection": round(undetected_ceiling, 4),
+            "dashboard_threshold": config["dashboard_concentration_threshold"],
+            "n_holders": config["n_concentrated_holders"],
+            "n_households": config["n_households"],
+        },
+        "not_evaluated": [
+            "audit shielding of aligned avoiders (SIM-05 interaction deferred)",
+            "public-message and arrears levers",
+        ],
+        "plain_language_failure": (
+            "at pilot scale, favoritism on the holder side hides inside "
+            "statistical noise; the anti-favoritism rule carries all the "
+            "weight because the dashboard cannot reliably see violations"
+            if warnings else ""),
+    }
+
+
 NOT_RUN = {
     "CRUS-SIM-01": "base-case source-base assessment needs real valuation ranges",
     "CRUS-SIM-04": "valuation hiding via appraisal/IP/estate structures needs a legal red team",
     "CRUS-SIM-06": "eligibility, false exclusion, and data exposure need human/institutional testing",
     "CRUS-SIM-08": "compound convertibility bundles need institutional channel modeling",
-    "CRUS-SIM-09": "routing capture needs an administrative-discretion model",
     "CRUS-SIM-12": "work and stewardship effects need a production economy model",
     "CRUS-SIM-13": "fiscal adequacy needs named obligations and real revenue scales",
     "CRUS-SIM-14": "public comprehension needs reader testing, not simulation",
@@ -443,6 +598,7 @@ def run_packet(config: dict = CRUS_CONFIG) -> dict:
         sim_03_pass_through(config),
         sim_05_avoidance(config),
         sim_07_non_convertibility(config),
+        sim_09_routing_capture(config),
         sim_10_admin_burden(config),
         sim_11_downturn(config),
     ]
