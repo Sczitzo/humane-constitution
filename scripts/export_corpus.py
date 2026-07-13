@@ -77,6 +77,7 @@ CORE_DOCS = (
     "docs/simulations/Adversarial_Narrative_Simulation.md",
     "docs/simulations/Annual_Compound_Simulation.md",
     "docs/simulations/Preliminary_ABM_Results.md",
+    "docs/simulations/CRUS_Simulation_Packet_001.md",
     "founding/commitments.md",
     "docs/annexes/INDEX.md",
 )
