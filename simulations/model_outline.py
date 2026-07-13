@@ -70,6 +70,9 @@ CONFIG = {
     "shadow_penalty_multiple": 0.0,       # Flow confiscated per detection (× extraction size);
                                           # 0 = detection only blocks the attempt (scaffold default)
     "shadow_lockout_days": 0,             # days a detected adversary cannot attempt again
+    "adaptive_adversaries": False,        # adversaries estimate detection risk from their
+                                          # own history and stop attempting when expected
+                                          # value turns negative (rational-actor variant)
 
     # Physical capacity (ground truth; oracle measures this with noise)
     "true_physical_capacity": 1000.0,     # arbitrary simulation units
@@ -537,6 +540,35 @@ class AdversarialAgent(CitizenAgent):
             self._attempt_escrow_gaming()
 
 
+class AdaptiveAdversarialAgent(AdversarialAgent):
+    """
+    Rational-actor variant of the shadow adversary (robustness check on the
+    deterrence finding). Instead of attempting mechanically every day, this
+    agent estimates the detection probability from its own attempt history
+    (Laplace-smoothed) and only attempts while expected value is positive:
+
+        EV = (1 - p_est) * gain - p_est * penalty,  gain = 1.0
+
+    With no penalty, EV is always positive and behavior matches the
+    mechanical adversary. With penalties, the agent self-deters once its
+    estimate crosses gain / (gain + penalty) — residual harm is limited to
+    the learning phase. The prior is optimistic (assumes ~10% detection
+    before any experience) so agents actually probe the wall rather than
+    quitting preemptively — a pessimistic prior would make deterrence
+    trivially perfect by construction. Not modeled: adversaries who evade
+    by changing tactics rather than by quitting.
+    """
+
+    def _attempt_shadow_conversion(self) -> bool:
+        penalty = self.model.config.get("shadow_penalty_multiple", 0.0)
+        detections = self.bypass_attempts - self.bypass_successes
+        p_est = (detections + 1) / (self.bypass_attempts + 10)  # optimistic prior (~0.1)
+        expected_value = (1 - p_est) * 1.0 - p_est * penalty
+        if expected_value <= 0:
+            return False  # rational self-deterrence: cheating no longer pays
+        return super()._attempt_shadow_conversion()
+
+
 # =============================================================================
 # MODEL
 # =============================================================================
@@ -587,9 +619,11 @@ class ProtocolModel(Model):
             self.schedule.add(agent)
 
         # Spawn adversarial agents
+        adversary_cls = (AdaptiveAdversarialAgent
+                         if config.get("adaptive_adversaries") else AdversarialAgent)
         for i in range(config["n_adversarial_actors"]):
             sector = np.random.choice(self.SECTORS)
-            agent = AdversarialAgent(
+            agent = adversary_cls(
                 config["n_agents"] + i, self, sector
             )
             self.schedule.add(agent)
@@ -856,7 +890,8 @@ def run_multi(scenario_fn, n_runs: int = 10, n_steps: int = 365) -> dict:
 def run_detection_sweep(probs=(0.50, 0.60, 0.70, 0.80, 0.85, 0.90, 0.95, 0.99),
                         n_runs: int = 5, n_steps: int = 365,
                         penalty_multiple: float = 0.0,
-                        lockout_days: int = 0) -> list[dict]:
+                        lockout_days: int = 0,
+                        adaptive: bool = False) -> list[dict]:
     """
     Sweep shadow-conversion detection probability at 10% adversarial density
     and measure adversary wealth share at year end.
@@ -876,6 +911,7 @@ def run_detection_sweep(probs=(0.50, 0.60, 0.70, 0.80, 0.85, 0.90, 0.95, 0.99),
         cfg["shadow_detection_prob"] = p
         cfg["shadow_penalty_multiple"] = penalty_multiple
         cfg["shadow_lockout_days"] = lockout_days
+        cfg["adaptive_adversaries"] = adaptive
         cfg["n_adversarial_actors"] = 50
         shares, bypasses = [], []
         for i in range(n_runs):
@@ -929,6 +965,9 @@ if __name__ == "__main__":
     for label, kwargs in (
         ("no penalty", {}),
         ("penalty 5x + 30-day lockout", {"penalty_multiple": 5.0, "lockout_days": 30}),
+        ("penalty 5x + lockout, ADAPTIVE adversaries",
+         {"penalty_multiple": 5.0, "lockout_days": 30, "adaptive": True}),
+        ("no penalty, ADAPTIVE adversaries", {"adaptive": True}),
     ):
         print(f"  -- {label} --")
         for row in run_detection_sweep(**kwargs):

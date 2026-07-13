@@ -10,6 +10,30 @@ title: Preliminary Agent-Based Simulation Results
 
 ---
 
+## In plain language
+
+We built a small computer world to test the rules. It has 500 pretend people who live through one full year, one day at a time. Some of them are cheaters who try to break the rules on purpose. We ran each test 10 times with different random luck, so one lucky or unlucky run can't fool us.
+
+Here is what happened, in plain words:
+
+**1. Everyone got their daily basics — even when the measuring tools kept glitching.**
+The system decides how much food and shelter it can hand out each day by measuring what's really available. We made the measuring tools fail ten times more often than normal. Nobody lost their basics. Why? There's a rule that says: *when you're not sure, trust the last good measurement instead of panicking.* In the model, that rule worked.
+
+**2. When there truly wasn't enough, the system shared what it had — but we found a missing rule.**
+We ran a year where there was only enough for 85 out of every 100 people. The system handed out exactly what existed — it didn't pretend there was more, and it didn't lose any on top. But here's the problem we found: our model picks *at random* who misses out each day. The real plan is supposed to have a fair way to decide that (the "Shared Storehouse" emergency rules), and we haven't built that part into the model yet. So we now know exactly which piece to build next.
+
+**3. Catching cheaters isn't enough. Punishing them is what works.**
+This was the big surprise. If getting caught only means "that one trick gets blocked," then even catching cheaters 99 times out of 100 doesn't stop them — they just keep trying, and they slowly get rich anyway. But if getting caught means a big fine plus a 30-day timeout, then catching them just *half* the time is plenty. The cheaters ended the year with *less* than they started with. The lesson: the system doesn't need cameras everywhere watching everyone. It needs real consequences for the cheaters it does catch. That's good news, because watching everyone all the time was one of the scariest risks of this whole design.
+
+We then tested this against *smart* cheaters — ones who pay attention to how often they get caught and stop cheating when it stops being worth it. The result got even better: smart cheaters tried a few times, learned that cheating costs more than it pays, and quit on their own. But here's the flip side: when there were no punishments, smart cheaters behaved exactly like dumb ones — they cheated constantly, because why not? Being smart didn't matter. Only consequences mattered. The one thing we haven't tested yet: cheaters who don't quit, but instead invent *new tricks* we don't know how to catch.
+
+**4. The "parked money fee" only hit big piles of idle money, not small savings.**
+The design charges a small fee on large amounts of money that sit unused, to keep money moving. In the model, ordinary people with small savings paid nothing at all — only the biggest holders paid. But be careful: that happened partly because we *built the rule that way* (small balances are exempt). Whether the cutoff line is drawn in the right place for real families needs real-world numbers we don't have yet.
+
+**One honest warning.** Pretend people are not real people. A test like this can *catch a broken rule* — that's genuinely useful, and it caught three broken pieces of our own testing code this round. But it can never *prove* a rule will work in the real world. Only real pilots with real people can do that.
+
+---
+
 ## What was run
 
 Five scenarios, each 10 seeded runs:
@@ -52,19 +76,25 @@ The important observation is not the number — it follows arithmetically from t
 
 The central preliminary result. Adversary wealth share after one year, at 10% adversarial density:
 
-| Detection probability | No penalty | 5× confiscation + 30-day lockout |
-|---|---|---|
-| 0.50 | 42.2% | 6.1% |
-| 0.70 | 32.2% | 6.0% |
-| 0.85 (P-001 assumption) | 22.1% | 6.0% |
-| 0.95 | 14.2% | 5.9% |
-| 0.99 | 10.8% | 6.0% |
+| Detection probability | No penalty | Penalty, mechanical adversaries | Penalty, rational adversaries |
+|---|---|---|---|
+| 0.50 | 42.2% | 6.1% | 8.3% |
+| 0.70 | 32.2% | 6.0% | 8.3% |
+| 0.85 (P-001 assumption) | 22.1% | 6.0% | 8.5% |
+| 0.95 | 14.2% | 5.9% | 8.5% |
+| 0.99 | 10.8% | 6.0% | 8.5% |
 
-Without consequences, even 99% detection leaves adversaries above their fair share — detection that merely blocks the single attempt lets the remainder compound. With a 5× confiscation and a 30-day lockout per detection, adversary wealth share falls **below** fair share at *every* detection level tested, including 50%.
+Penalty regime: 5× confiscation plus 30-day lockout per detection. "Rational adversaries" estimate their detection risk from their own attempt history (starting from an optimistic ~10% assumption) and quit permanently once cheating stops paying.
 
-**Design implication (conditional on model assumptions):** the shadow-convertibility wall does not need surveillance-grade detection if detected violations carry real consequences. A 50%-detection, high-consequence regime outperformed a 99%-detection, no-consequence regime by a wide margin. This directly softens the tension between wall enforcement and the data-minimization commitment: the design can prefer fewer, well-evidenced enforcement actions with meaningful penalties over pervasive monitoring.
+Without consequences, even 99% detection leaves adversaries above their fair share — detection that merely blocks the single attempt lets the remainder compound. With consequences, adversary wealth share falls to or below fair share at *every* detection level tested, including 50%, and this holds for **both** adversary types:
 
-**Caveat:** the modeled adversaries are mechanical — they attempt whenever not locked out. The deterrence effect here is incapacitation (lockout removes ~93% of attempt volume) plus confiscation, not behavioral deterrence. Rational adversaries who adapt (smaller extractions, longer gaps, proxy diversity) are not yet modeled and would weaken this result to an unknown degree.
+- Mechanical adversaries keep attempting and are ground down by confiscation and lockout (incapacitation).
+- Rational adversaries probe the wall a handful of times (median 0–27 successful bypasses per year across the whole 50-adversary cohort, versus ~3,000 without penalties), learn that cheating does not pay, and stop on their own (self-deterrence). They end the year at ~8.5% wealth share — just under fair share, the residual being learning-phase penalties paid.
+- Rational adversaries with **no** penalties behave identically to mechanical ones — when cheating always pays, intelligence doesn't change the outcome, only consequences do.
+
+**Design implication (conditional on model assumptions):** the shadow-convertibility wall does not need surveillance-grade detection if detected violations carry real consequences. A 50%-detection, high-consequence regime outperformed a 99%-detection, no-consequence regime by a wide margin, against both persistent and rational adversaries. This directly softens the tension between wall enforcement and the data-minimization commitment: the design can prefer fewer, well-evidenced enforcement actions with meaningful penalties over pervasive monitoring.
+
+**Remaining caveat:** the rational adversary adapts by *quitting*. Adversaries who adapt by *changing tactics* — smaller extractions, proxy diversity, timing games, structures the detector wasn't trained on — are not yet modeled. That is the strongest remaining attack on this finding.
 
 ## Finding 4 — The demurrage burden gate passes, but partly by construction
 
@@ -80,7 +110,7 @@ This confirms the *mechanism* — a balance-floor exemption makes the fee progre
 ## Assumptions that bound all of the above
 
 - Extraction size is fixed at 1.0 Flow per successful shadow conversion; no proxy-market price dynamics.
-- Adversaries attempt mechanically (daily when not locked out); no adaptive or rational behavior.
+- Adversaries are either mechanical (attempt daily when not locked out) or rational quit-or-continue learners; tactic-changing evasion is not modeled.
 - Scarcity is chronic, not a shock curve; no Shared Storehouse activation logic exists in the model.
 - Capacity headroom in adequate-capacity scenarios is large (~80% above demand); the near-boundary regime is only probed by SCARCITY_85PCT.
 - Idle-spell behavior (0.90–0.99 daily persistence) and the demurrage balance floor (15 units) are modeling choices, not calibrated values.

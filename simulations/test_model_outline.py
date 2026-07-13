@@ -329,3 +329,44 @@ def test_detection_penalty_confiscates_and_locks_out():
     assert adv._attempt_shadow_conversion() is False
     assert adv.bypass_attempts == attempts_before
     assert adv.flow_balance == 15.0
+
+
+# =============================================================================
+# ADAPTIVE ADVERSARY TESTS
+# =============================================================================
+
+from simulations.model_outline import AdaptiveAdversarialAgent
+
+
+def test_adaptive_adversary_self_deters_under_penalty():
+    """It probes the wall on an optimistic prior, learns, then stops for good."""
+    cfg = CONFIG.copy()
+    cfg["n_agents"] = 10
+    cfg["n_adversarial_actors"] = 0
+    cfg["shadow_detection_prob"] = 1.0  # every probe is caught
+    cfg["shadow_penalty_multiple"] = 5.0
+    model = ProtocolModel(cfg, seed=7)
+    adv = AdaptiveAdversarialAgent(999, model, "FOOD")
+    adv.flow_balance = 100.0
+
+    # EV threshold: quit once p_est >= 1/6. Prior p_est = 1/10 < 1/6, so the
+    # first probe happens; after one detection p_est = 2/11 > 1/6, so it quits.
+    for _ in range(5):
+        adv._attempt_shadow_conversion()
+    assert adv.bypass_attempts == 1          # one learning-phase probe only
+    assert adv.flow_balance == 95.0          # one 5x penalty paid
+
+
+def test_adaptive_adversary_attempts_when_no_penalty():
+    """With no penalty, expected value is always positive — behaves mechanically."""
+    cfg = CONFIG.copy()
+    cfg["n_agents"] = 10
+    cfg["n_adversarial_actors"] = 0
+    cfg["shadow_detection_prob"] = 1.0  # always caught, but attempt still costs nothing
+    cfg["shadow_penalty_multiple"] = 0.0
+    model = ProtocolModel(cfg, seed=7)
+    adv = AdaptiveAdversarialAgent(999, model, "FOOD")
+
+    for _ in range(5):
+        adv._attempt_shadow_conversion()
+    assert adv.bypass_attempts == 5
