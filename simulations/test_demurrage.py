@@ -51,8 +51,10 @@ def test_demurrage_decay_applied(agent):
     assert np.isclose(agent.flow_balance, expected_balance)
     assert agent.flow_state == FlowState.DECAYED
 
-def test_demurrage_retirement(agent):
+def test_demurrage_retirement(agent, monkeypatch):
     """Test that balance goes to 0 and state becomes RETIRED if balance drops below minimum."""
+    # Disable the balance floor so the sub-floor retirement path is exercised
+    monkeypatch.setitem(CONFIG, "demurrage_balance_floor", 0.0)
     agent.flow_state = FlowState.IDLE
     agent.days_idle = CONFIG["idle_threshold_days"]
 

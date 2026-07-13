@@ -254,3 +254,47 @@ def test_read_capacity_capped_at_zero():
 
     assert result == 0.0  # Cap at 0.0
     assert node.is_active is True
+
+
+# =============================================================================
+# ORACLE → ALLOCATION COUPLING TESTS
+# Previously confirmed_capacity was computed but never consumed; these verify
+# the coupling introduced to make measurement failure consequential.
+# =============================================================================
+
+from simulations.model_outline import ProtocolModel
+
+
+def test_adequate_capacity_yields_zero_csm_violations():
+    """With capacity above population demand, everyone redeems (INV-001 holds)."""
+    cfg = CONFIG.copy()
+    cfg["n_agents"] = 50
+    cfg["n_adversarial_actors"] = 0
+    model = ProtocolModel(cfg, seed=7)
+    model.oracle.get_consensus_capacity = lambda *a, **k: 100.0  # 50 agents need 50 units
+    model.step()
+    assert model._csm_violations() == 0
+
+
+def test_capacity_shortfall_produces_csm_violations():
+    """When confirmed capacity < demand, the shortfall surfaces as CSM violations."""
+    cfg = CONFIG.copy()
+    cfg["n_agents"] = 50
+    cfg["n_adversarial_actors"] = 0
+    model = ProtocolModel(cfg, seed=7)
+    model.oracle.get_consensus_capacity = lambda *a, **k: 30.0  # 20 units short
+    model.step()
+    assert model._csm_violations() == 20
+
+
+def test_oracle_failure_conservative_hold_keeps_last_capacity():
+    """P-022: consensus failure must hold the last confirmed value, not slash access."""
+    cfg = CONFIG.copy()
+    cfg["n_agents"] = 50
+    cfg["n_adversarial_actors"] = 0
+    model = ProtocolModel(cfg, seed=7)
+    model.confirmed_capacity = 80.0
+    model.oracle.get_consensus_capacity = lambda *a, **k: None  # measurement blackout
+    model.step()
+    assert model.confirmed_capacity == 80.0
+    assert model._csm_violations() == 0

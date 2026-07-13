@@ -71,6 +71,8 @@ def test_flow_demurrage_retires_balance_below_minimum(agent, monkeypatch):
     monkeypatch.setitem(CONFIG, "idle_threshold_days", 30)
     monkeypatch.setitem(CONFIG, "demurrage_rate_monthly", 0.03)
     monkeypatch.setitem(CONFIG, "min_flow_balance", 1.0)
+    # Disable the balance floor so the sub-floor retirement path is exercised
+    monkeypatch.setitem(CONFIG, "demurrage_balance_floor", 0.0)
 
     agent.flow_state = FlowState.IDLE
     agent.days_idle = 30
