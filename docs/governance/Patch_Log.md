@@ -1,6 +1,6 @@
 # Patch Log
 
-**Running change ledger aligned to the Humane Constitution · Current through P-080 (P-071 reserved)**
+**Running change ledger aligned to the Humane Constitution · Current through P-081 (P-071 reserved)**
 
 ---
 
@@ -97,6 +97,7 @@
 | P-078 | structural — no threat row | **ACTIVE** | Medium | Data-retention gap closure (G-1..G-4 from P-075): the four "unspecified — gap" retention/stripping cells in the data-stewardship calibration table are specified as FC-211..214 — retention tied to appeal-spine window close, the corpus 30/90/180/365-day grid, protective hard caps, and pre-activation binding gates. Balanced posture (owner-approved): bypass-detection earns the longest band, the vulnerable-person datasets retain the least. Closes the confessed gaps; supplies the data doctrine's required deletion schedule (not a new mechanism). |
 | P-079 | T-008 · T-009 (re-disposition proposed); two draft threats introduced (numbered at intake) | **PROPOSED** | High | Retire the Service Record instrument; fill rotating public roles by sortition from a minimal, Tier-1-locked eligibility pool. Deletion under the P-073 simplicity presumption (origin: Minimum Viable Constitution Audit). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). Conflict with the held Voice/Service-Record hardening redline RESOLVED by owner decision 2026-07-13 in P-079's favor: the hardening redline is re-scoped to Voice-only and its Service Record portions withdrawn. Service Record remains in force as designed until P-079 clears its gates. |
 | P-080 | T-004 (participation floor); T-002 interaction noted | **PROPOSED** | High | Equal Voice base: every confirmed member receives an equal, unmeasured base Voice allocation per cycle; contribution-minted Voice adds above it, never below (ANNEX_Z Z2 amendment + required INV-004 participation clarification, with the panel's Sybil, Z5-counting, and non-trivial-floor guards). Formalizes Fix 1 of the re-scoped Voice hardening redline (2026-06-09). `modifies_tier1=True` — intake HELD at AV1/AV3 (no adversarial panel member seated; P-013 not ACTIVE). |
+| P-081 | T-028 · T-031 · T-032 · T-001 (delivery-side) | **PROPOSED** | High | Essential Access Delivery Standard (companion instrument, `Designed`): plural provision with no sole-provider chokepoint, optional no-authority recognition of community networks, provider-side settlement integrity with in-kind tier (polices the provider's books, never the person's purchases), public provider of last resort with throughput standard + funding non-derogation, and redemption data minimization (category, never item). ANNEX_Y untouched — the panel-flagged H-3 amendment ambiguity resolved via the companion-instrument path; header/§Y5 drift recorded for the hygiene queue. `modifies_tier1=False`; pilot-gated per the P-072 precedent. |
 
 ---
 
@@ -705,7 +706,7 @@ The following terms are added to the P-004 protected vocabulary: *milestone*, *p
 
 ## Current Threat/Patch Linkage
 
-This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-080. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
+This table is the single source of truth for threat→patch traceability. It covers every patch in the current inventory through P-081. Reserved IDs (P-007, P-010, P-028, P-071) and the draft-only P-063 review packet are listed in the Reserved / Never-Assigned Patch IDs table above. "Multiple" has been replaced with enumerated threat (or PRD-/IC-/INV-/ACL-) references throughout; patches with no standalone threat row are marked "structural — no threat row."
 
 | Threat ID | Patch ID | Status | Master Reference |
 | :--- | :--- | :--- | :--- |
@@ -782,6 +783,7 @@ This table is the single source of truth for threat→patch traceability. It cov
 | structural — no threat row (institution merger audit) | P-076 | **ACTIVE** | ANNEX_AQ · ANNEX_AL · ANNEX_AM · Capacity Measurement Evidence Test Package · SPECIFICATIONS |
 | structural — no threat row (canonical-home discipline) | P-077 | **ACTIVE** | Acceptance_Protocol.md P-073 gate · Claims_Evidence_Register · ANNEX_L §L7 · Evidence_Ladder · Monitoring Administrative Safety Packet |
 | structural — no threat row (data-retention gap closure) | P-078 | **ACTIVE** | Parameter_Calibration_Register FC-211..214 · Monitoring Administrative Safety Packet · ANNEX_AJ · ANNEX_AF · ANNEX_D · ANNEX_C |
+| T-028 · T-031 · T-032 · T-001 (delivery-side) | P-081 | **PROPOSED** | Essential_Access_Delivery_Standard.md · P-081 intake package (docs/superpowers/specs) |
 | T-004 · T-002 (interaction) | P-080 | **PROPOSED** | P-080 intake package (docs/superpowers/specs) · Voice hardening redline Fix 1 · Acceptance_Protocol AV1/AV3 hold |
 | T-008 · T-009 (re-disposition proposed); two draft threats, numbered at intake | P-079 | **PROPOSED** | P-079 intake package (docs/superpowers/specs) · Minimum_Viable_Constitution_Audit.md · Acceptance_Protocol AV1/AV3 hold |
 
@@ -1700,3 +1702,19 @@ Formalizes Fix 1 of the re-scoped Voice-only hardening redline as its own patch,
 - **Intake status:** HELD at Acceptance Protocol AV1/AV3 — no standing adversarial panel member is seated (P-013 not ACTIVE). Christ-centered review completed and published in the intake package.
 
 **Numbering note:** resolved — the re-scoped Voice redline's Fix 1 has taken P-080 (this entry). No held proposal is awaiting a number.
+
+---
+
+### P-081 — Essential Access Delivery Standard (Companion Instrument)
+
+**Threat addressed:** T-028 (sole-provider chokepoint on the floor), T-031 (informal channels reach the unenrolled), T-032 (the redemption dossier), T-001 (phantom-redemption settlement channel)
+**Status:** PROPOSED (instrument incorporated as `Designed`) | **Priority:** High | **`modifies_tier1=False`**
+
+**Instrument:** [Essential Access Delivery Standard](./Essential_Access_Delivery_Standard.md) · **Full intake package:** [P-081 redline](../superpowers/specs/2026-07-13-p081-essential-access-delivery-standard.md) · **Source:** [EA hardening redline](../superpowers/specs/2026-06-09-essential-access-hardening-redline.md) (panel-revised)
+
+Binds the survival floor's delivery side without touching ANNEX_Y: EADS-1 plural provision (no sole provider per CSM category/region; optional, no-authority, appealable recognition of community networks; provider-side settlement audit with replenishment-in-kind default for informal networks; public provider of last resort with a throughput standard and funding non-derogation) and EADS-2 redemption data minimization (entitlement and category verified — never item or behavior; named clinical custodian; per-person retrospective queries forbidden outside adjudicated §Y4 incidents; data rules cite the Monitoring Administrative Safety Packet as canonical home; small-cell suppression before oracle feeds).
+
+- **Intake resolution:** the panel-flagged ANNEX_Y amendment-path ambiguity (header demands H-3 for any amendment; §Y5 body locks only §Y1 numbers) resolved by the panel's option (2): companion instrument, ANNEX_Y untouched, the standard self-subordinating to ANNEX_Y wherever a conflict could be read. The header/§Y5 divergence recorded as a P-077 canonical-home drift instance for the F-series hygiene queue (Tier-1 annex header; one-line fix; owner approval required).
+- **Claim discipline:** P-073-conformant — recognition is a channel not an office; data rules cite the canonical home; the instrument deletes a data surface (item-level redemption recording) before it exists. Tier 2; pilot-gated; six evidence gates in the package including a phantom-redemption red team and an in-kind float test.
+- **New risks introduced:** recognition-tier capture (starving disfavored networks of settlement while formally permitting service) — bounded by appealable refusal, published-cause de-recognition, lawful unrecognized service, and a capture-dashboard statistic (recognition-refusal rates by community type); settlement caps as a soft chokepoint — bounded by the audited-history scaling rule.
+- **Intake status:** NOT held at AV1 (no Tier-1 touch) — activation blocked only by the ordinary founding and pilot gates all patches share. Christ-centered review completed in the package.
