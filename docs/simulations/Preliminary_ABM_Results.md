@@ -8,6 +8,8 @@ title: Preliminary Agent-Based Simulation Results
 
 > **Evidence weight.** These are stylized-model results, not field evidence. In the Evidence Ladder they sit at the simulation rung: they can weaken a design claim by showing a parameter regime where it fails, and they can show a mechanism behaves as designed inside the model's assumptions. They cannot show the mechanism works in the real world. Every claim below is conditional on the assumptions listed at the end.
 
+> **Design-drift note.** After these runs were produced, the corpus replaced the demurrage instrument with the Commons Return and Universal Stake system (CRUS); demurrage parameters are retired. Finding 4 and the burden-gate results below therefore describe the *retired* instrument. Their transferable content is the method — burden-distribution measurement by wealth quintile with an exemption-floor mechanism — which is exactly what the [CRUS Simulation Protocol](../governance/CRUS_Simulation_Protocol.md) requires ("who actually pays, who actually receives, who can avoid it"). Re-targeting this model at CRUS is the natural next simulation step. Findings 1–3 (oracle-gated delivery, scarcity pass-through, detection-vs-consequences) do not depend on demurrage and are unaffected.
+
 ---
 
 ## In plain language
