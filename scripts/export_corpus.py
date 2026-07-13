@@ -81,6 +81,7 @@ CORE_DOCS = (
     "docs/simulations/Annual_Compound_Simulation.md",
     "docs/simulations/Preliminary_ABM_Results.md",
     "docs/simulations/CRUS_Simulation_Packet_001.md",
+    "docs/simulations/RAS_Allocation_Drill_001.md",
     "founding/commitments.md",
     "docs/annexes/INDEX.md",
 )
