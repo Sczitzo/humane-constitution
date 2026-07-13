@@ -92,9 +92,9 @@ const GATES = [
   },
 ]
 
-const SVG_W = 720
-const GATE_X = 330
-const GATE_W = 362
+const SVG_W = 880
+const GATE_X = 400
+const GATE_W = 456
 const GATE_H = 72
 
 export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
@@ -118,17 +118,17 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
           style={{ cursor: 'pointer', filter: activeNodeId === 'classify' ? `drop-shadow(0 0 7px ${THEME.neutral.accent})` : undefined }}
           onClick={() => handleNodeClick('classify')}
         >
-          <rect x={28} y={150} width={130} height={96} rx={9}
+          <rect x={24} y={150} width={110} height={96} rx={9}
             fill={activeNodeId === 'classify' ? THEME.neutral.accentBg : '#0d1117'}
             stroke={activeNodeId === 'classify' ? THEME.neutral.accent : THEME.border}
             strokeWidth={activeNodeId === 'classify' ? 2.5 : 1.5}
           />
-          <text x={93} y={184} textAnchor="middle" fontSize={16} fontWeight={700} fill="#dde1e7" fontFamily="monospace">proposed</text>
-          <text x={93} y={207} textAnchor="middle" fontSize={16} fontWeight={700} fill="#dde1e7" fontFamily="monospace">change</text>
-          <text x={93} y={229} textAnchor="middle" fontSize={11.5} fill={THEME.dim} fontFamily="monospace">classify first</text>
+          <text x={79} y={184} textAnchor="middle" fontSize={15} fontWeight={700} fill="#dde1e7" fontFamily="monospace">proposed</text>
+          <text x={79} y={207} textAnchor="middle" fontSize={15} fontWeight={700} fill="#dde1e7" fontFamily="monospace">change</text>
+          <text x={79} y={229} textAnchor="middle" fontSize={11} fill={THEME.dim} fontFamily="monospace">classify first</text>
         </motion.g>
 
-        <line x1={166} y1={198} x2={196} y2={198} stroke={THEME.dim} strokeWidth={1.5} markerEnd="url(#v4arrow)" />
+        <line x1={134} y1={198} x2={151} y2={198} stroke={THEME.dim} strokeWidth={1.5} markerEnd="url(#v4arrow)" />
 
         {/* Classification gate */}
         <motion.g
@@ -139,21 +139,21 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
           onClick={() => handleNodeClick('classify')}
         >
           <path
-            d="M250,112 L326,198 L250,284 L174,198 Z"
+            d="M240,112 L316,198 L240,284 L164,198 Z"
             fill={activeNodeId === 'classify' ? THEME.neutral.accentBg : '#111923'}
             stroke={activeNodeId === 'classify' ? THEME.neutral.accent : THEME.border}
             strokeWidth={activeNodeId === 'classify' ? 2.5 : 1.5}
           />
-          <text x={250} y={180} textAnchor="middle" fontSize={14.5} fontWeight={700} fill="#dde1e7" fontFamily="monospace">what does</text>
-          <text x={250} y={202} textAnchor="middle" fontSize={14.5} fontWeight={700} fill="#dde1e7" fontFamily="monospace">it touch?</text>
-          <text x={250} y={226} textAnchor="middle" fontSize={10.5} fill={THEME.dim} fontFamily="monospace">CRP / legality gate</text>
+          <text x={240} y={180} textAnchor="middle" fontSize={14.5} fontWeight={700} fill="#dde1e7" fontFamily="monospace">what does</text>
+          <text x={240} y={202} textAnchor="middle" fontSize={14.5} fontWeight={700} fill="#dde1e7" fontFamily="monospace">it touch?</text>
+          <text x={240} y={226} textAnchor="middle" fontSize={10.5} fill={THEME.dim} fontFamily="monospace">CRP / legality gate</text>
         </motion.g>
 
         {/* Route lines */}
         {GATES.map((gate, index) => (
           <motion.line
             key={gate.id}
-            x1={326}
+            x1={316}
             y1={198}
             x2={GATE_X - 10}
             y2={gate.y + GATE_H / 2}
@@ -186,8 +186,8 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
               />
               <text x={GATE_X + 18} y={gate.y + 20} fontSize={13.5} fill={THEME.subtext} fontFamily="monospace">{gate.touch}</text>
               <text x={GATE_X + 18} y={gate.y + 45} fontSize={18} fontWeight={700} fill={gate.accent} fontFamily="monospace">{gate.gate}</text>
-              <text x={GATE_X + 150} y={gate.y + 35} fontSize={12.5} fill="#dde1e7" fontFamily="monospace">{gate.path[0]}</text>
-              <text x={GATE_X + 150} y={gate.y + 51} fontSize={12.5} fill="#dde1e7" fontFamily="monospace">{gate.path[1]}</text>
+              <text x={GATE_X + 170} y={gate.y + 35} fontSize={12.5} fill="#dde1e7" fontFamily="monospace">{gate.path[0]}</text>
+              <text x={GATE_X + 170} y={gate.y + 51} fontSize={12.5} fill="#dde1e7" fontFamily="monospace">{gate.path[1]}</text>
               <text x={GATE_X + 18} y={gate.y + 64} fontSize={10.5} fill={THEME.dim} fontFamily="monospace">{gate.examples}</text>
             </motion.g>
           )
@@ -195,22 +195,22 @@ export function V004_AmendmentPyramid({ onInternalLink }: DiagramProps) {
 
         {/* Anti-bypass rule */}
         <g>
-          <rect x={30} y={398} width={654} height={34} rx={8}
+          <rect x={24} y={398} width={832} height={34} rx={8}
             fill="rgba(248,81,73,0.06)"
             stroke={THEME.ss.accent}
             strokeWidth={1.4}
             strokeDasharray="7,4"
           />
-          <text x={48} y={419} fontSize={13.5} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace">
+          <text x={42} y={419} fontSize={13.5} fontWeight={700} fill={THEME.ss.accent} fontFamily="monospace">
             NO LOWER-TIER BYPASS
           </text>
-          <text x={252} y={419} fontSize={12} fill="#dde1e7" fontFamily="monospace">
+          <text x={280} y={419} fontSize={12} fill="#dde1e7" fontFamily="monospace">
             Tier 3 cannot alter Tier 2/Tier 1 · Tier 2 cannot alter Tier 1
           </text>
         </g>
 
         {activeAccent && (
-          <rect x={20} y={18} width={680} height={420} rx={10}
+          <rect x={8} y={18} width={864} height={420} rx={10}
             fill="none" stroke={activeAccent} strokeWidth={1.5} opacity={0.28}
             pointerEvents="none"
           />

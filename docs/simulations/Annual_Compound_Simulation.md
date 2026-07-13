@@ -4,6 +4,8 @@
 
 This is not a prediction. It is a stress-test: running the system through a plausible operational year to expose timing conflicts, resource dependencies, and compound failure modes not visible in static design review.
 
+![Annual Compound Simulation Timeline](/images/V-015.png)
+
 ---
 
 ## Assumptions

@@ -142,7 +142,7 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 
 ### P-031 — Anti-Dynasty Ownership
 
-**Constitutional text:** [ANNEX_J.md § R1–R2](../annexes/ANNEX_J.md)
+**Constitutional text:** [ANNEX_D.md § D4](../annexes/ANNEX_D.md)
 
 - **Introduced design:** beneficial ownership always counts through to natural persons or mission-locked/community bodies. Perpetual trusts, shell chains, and equivalent structures may not preserve extractive control across generations.
 - **Clauses integrated:** family continuity protected in modest form, but dynastic landlordism, absentee succession structures, and perpetual extractive wrappers are prohibited.
@@ -151,7 +151,7 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 
 ### P-032 — Stewardship Ownership Standard
 
-**Constitutional text:** [ANNEX_J.md § R1–R2](../annexes/ANNEX_J.md)
+**Constitutional text:** [ANNEX_D.md § D6](../annexes/ANNEX_D.md)
 
 - **Introduced design:** ownership across land, housing, and enterprise is reframed as stewardship rather than a perpetual tribute right. Capital may be rewarded for risk and contribution, but not for endless passive extraction from necessity or labor.
 - **Clauses integrated:** bounded capital claims, anti-rent use-right logic, and judicially reviewable passive-extraction prohibitions.
@@ -160,7 +160,7 @@ These IDs do not appear in the inventory above. They are recorded here so a read
 
 ### P-033 — Worker-Owned and Mission-Locked Enterprise Preference
 
-**Constitutional text:** [ANNEX_J.md § R1](../annexes/ANNEX_J.md)
+**Constitutional text:** [ANNEX_D.md § D5–D6](../annexes/ANNEX_D.md)
 
 - **Introduced design:** worker-owned, cooperative, and mission-locked firms receive structural preference in PFCR-backed finance, procurement, retained-earnings treatment, worker buyout pathways, and founder-exit conversion rules.
 - **Clauses integrated:** natural monopolies moved to a separate regulated-utility track; outside capital claims must be capped, redeemable, sunset, or otherwise bounded.

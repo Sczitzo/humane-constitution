@@ -273,7 +273,7 @@ These patches are part of the active constitutional architecture but are not one
 > *These patches integrate public finance, money creation boundaries, ownership, stewardship, and enterprise preference into Article V and its supporting annexes.*
 
 - 🔩 **Patch:** [P-029 — Public Finance & Commons Revenue (PFCR)](../governance/Patch_Log.md), [P-030 — Protocol-Only Money Creation and Household Finance Boundaries](../governance/Patch_Log.md), [P-031 — Anti-Dynasty Ownership](../governance/Patch_Log.md), [P-032 — Stewardship Ownership Standard](../governance/Patch_Log.md), [P-033 — Worker-Owned and Mission-Locked Enterprise Preference](../governance/Patch_Log.md) · Status: **ACTIVE**
-- 📄 **Constitutional text:** [ANNEX_X.md § X8](../annexes/ANNEX_X.md) and [ANNEX_J.md § R1–R2](../annexes/ANNEX_J.md) — *These annex sections carry the public-finance, Flow discipline, protected-capital, anti-dynasty, and stewardship ownership architecture.*
+- 📄 **Constitutional text:** [ANNEX_X.md § X8](../annexes/ANNEX_X.md) and [ANNEX_D.md § D4–D6](../annexes/ANNEX_D.md) — *These annex sections carry the public-finance, Flow discipline, protected-capital, anti-dynasty, and stewardship ownership architecture.*
 
 ### P-034 — Two-Key Architectural Precondition
 
