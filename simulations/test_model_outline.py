@@ -298,3 +298,34 @@ def test_oracle_failure_conservative_hold_keeps_last_capacity():
     model.step()
     assert model.confirmed_capacity == 80.0
     assert model._csm_violations() == 0
+
+
+# =============================================================================
+# DETERRENCE MECHANICS TESTS
+# =============================================================================
+
+from simulations.model_outline import AdversarialAgent
+
+
+def test_detection_penalty_confiscates_and_locks_out():
+    """With penalties enabled, a detected shadow conversion costs Flow and bars retries."""
+    cfg = CONFIG.copy()
+    cfg["n_agents"] = 10
+    cfg["n_adversarial_actors"] = 0
+    cfg["shadow_detection_prob"] = 1.0  # deterministic detection
+    cfg["shadow_penalty_multiple"] = 5.0
+    cfg["shadow_lockout_days"] = 30
+    model = ProtocolModel(cfg, seed=7)
+    adv = AdversarialAgent(999, model, "FOOD")
+    adv.flow_balance = 20.0
+
+    result = adv._attempt_shadow_conversion()
+
+    assert result is False
+    assert adv.flow_balance == 15.0  # 5x extraction size confiscated
+    assert adv.lockout_until == model.schedule.steps + 30
+    # Locked out: next attempt is a no-op (no attempt counted, no penalty)
+    attempts_before = adv.bypass_attempts
+    assert adv._attempt_shadow_conversion() is False
+    assert adv.bypass_attempts == attempts_before
+    assert adv.flow_balance == 15.0

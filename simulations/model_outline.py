@@ -67,6 +67,12 @@ CONFIG = {
 
     # Enforcement parameters (T-001 / P-001)
     "shadow_detection_prob": 0.85,        # P-001 enforcement effectiveness assumption
+    "shadow_penalty_multiple": 0.0,       # Flow confiscated per detection (× extraction size);
+                                          # 0 = detection only blocks the attempt (scaffold default)
+    "shadow_lockout_days": 0,             # days a detected adversary cannot attempt again
+
+    # Physical capacity (ground truth; oracle measures this with noise)
+    "true_physical_capacity": 1000.0,     # arbitrary simulation units
 
     # Oracle parameters (SPECIFICATIONS.md Section 7 / P-024)
     "oracle_accuracy": 0.95,              # simulation-only oracle baseline
@@ -453,6 +459,7 @@ class AdversarialAgent(CitizenAgent):
         self.adversarial_type = np.random.choice(["SHADOW", "ELITE", "ESCROW"])
         self.bypass_successes = 0
         self.bypass_attempts = 0
+        self.lockout_until = 0  # step before which shadow attempts are barred
 
     def step(self):
         super().step()
@@ -463,7 +470,14 @@ class AdversarialAgent(CitizenAgent):
         T-001: Attempt off-ledger Essential Access-to-Flow conversion.
         P-001 mitigation: broker enforcement, cluster anomaly detection.
         Returns True if bypass succeeds (detection failed).
+
+        Deterrence (optional, off by default): on detection, confiscate
+        shadow_penalty_multiple x the extraction size from the adversary's
+        Flow balance and bar further attempts for shadow_lockout_days.
+        Tests whether punishment can substitute for higher detection rates.
         """
+        if self.model.schedule.steps < self.lockout_until:
+            return False  # locked out after a prior detection
         self.bypass_attempts += 1
         # Detection probability scales with enforcement intensity.
         # NOTE: original scaffold had this comparison inverted (random() >
@@ -472,6 +486,12 @@ class AdversarialAgent(CitizenAgent):
         detection_prob = self.model.config["shadow_detection_prob"]
         if np.random.random() < detection_prob:
             # Bypass detected — action blocked, flagged
+            penalty = self.model.config.get("shadow_penalty_multiple", 0.0) * 1.0
+            if penalty > 0:
+                self.flow_balance = max(0.0, self.flow_balance - penalty)
+            lockout = self.model.config.get("shadow_lockout_days", 0)
+            if lockout > 0:
+                self.lockout_until = self.model.schedule.steps + lockout
             self.model.enforcement_log.append({
                 "step": self.model.schedule.steps,
                 "agent": self.unique_id,
@@ -552,7 +572,7 @@ class ProtocolModel(Model):
         self.oracle_failure_log = []
 
         # True physical capacity (ground truth, unknown to agents)
-        self.true_physical_capacity = 1000.0  # arbitrary simulation units
+        self.true_physical_capacity = config.get("true_physical_capacity", 1000.0)
 
         # Oracle-confirmed capacity drives Essential Access delivery.
         # Starts at ground truth; updated each step by _update_oracle.
@@ -791,6 +811,26 @@ def run_adversarial_stress(n_steps: int = 365, seed: int | None = None) -> dict:
     return _format_results("ADVERSARIAL_STRESS", results, model)
 
 
+def run_scarcity(n_steps: int = 365, seed: int | None = None) -> dict:
+    """
+    Chronic scarcity: true physical capacity at 85% of population demand.
+    The first scenario in which the survival floor is actually contested —
+    tests oracle behavior at the capacity boundary and makes CSM violations
+    a real count of unserved people per day (T-024 territory).
+
+    NOTE: shortfall lands on randomly-ordered agents each day (Mesa
+    RandomActivation), i.e. rationing is a fair random rotation. The real
+    design needs an explicit fairness rule here; the model does not have one.
+    """
+    scarcity_config = CONFIG.copy()
+    demand = (scarcity_config["n_agents"] + scarcity_config["n_adversarial_actors"]) \
+        * scarcity_config["csm_daily_units"]
+    scarcity_config["true_physical_capacity"] = 0.85 * demand
+    model = ProtocolModel(scarcity_config, adversarial_intensity=0.01, seed=seed)
+    results = model.run(n_steps)
+    return _format_results("SCARCITY_85PCT", results, model)
+
+
 # =============================================================================
 # MULTI-RUN AND SWEEP EXPERIMENTS
 # =============================================================================
@@ -814,7 +854,9 @@ def run_multi(scenario_fn, n_runs: int = 10, n_steps: int = 365) -> dict:
 
 
 def run_detection_sweep(probs=(0.50, 0.60, 0.70, 0.80, 0.85, 0.90, 0.95, 0.99),
-                        n_runs: int = 5, n_steps: int = 365) -> list[dict]:
+                        n_runs: int = 5, n_steps: int = 365,
+                        penalty_multiple: float = 0.0,
+                        lockout_days: int = 0) -> list[dict]:
     """
     Sweep shadow-conversion detection probability at 10% adversarial density
     and measure adversary wealth share at year end.
@@ -823,11 +865,17 @@ def run_detection_sweep(probs=(0.50, 0.60, 0.70, 0.80, 0.85, 0.90, 0.95, 0.99),
     stays nuisance-level instead of compounding into a power structure?
     Reference: adversaries are ~9% of the population with the same initial
     wealth distribution, so ~0.09 wealth share means zero net extraction.
+
+    With penalty_multiple/lockout_days set, additionally tests whether
+    deterrence lets moderate detection rates achieve what high detection
+    rates achieve without it.
     """
     out = []
     for p in probs:
         cfg = CONFIG.copy()
         cfg["shadow_detection_prob"] = p
+        cfg["shadow_penalty_multiple"] = penalty_multiple
+        cfg["shadow_lockout_days"] = lockout_days
         cfg["n_adversarial_actors"] = 50
         shares, bypasses = [], []
         for i in range(n_runs):
@@ -861,6 +909,7 @@ if __name__ == "__main__":
         run_oracle_stress,
         run_high_demurrage,
         run_adversarial_stress,
+        run_scarcity,
     ]
 
     print("\n== Scenario results: median [p25-p75] over 10 seeded runs ==")
@@ -872,15 +921,21 @@ if __name__ == "__main__":
             s = agg[key]
             print(f"    {key}: {s['median']:.3f} [{s['p25']:.3f}-{s['p75']:.3f}]")
         s = agg["csm_violations"]
-        print(f"    csm_violations: {s['median']:.0f} [{s['p25']:.0f}-{s['p75']:.0f}]  (must be 0)")
+        print(f"    csm_violations: {s['median']:.0f} [{s['p25']:.0f}-{s['p75']:.0f}]"
+              "  (must be 0 when capacity >= demand)")
 
     print("\n== Detection-probability sweep (T-001, 10% adversarial density) ==")
     print("  no-extraction reference share: ~0.09")
-    for row in run_detection_sweep():
-        print(f"    detect={row['detection_prob']:.2f}  "
-              f"adversary wealth share={row['median_adversary_wealth_share']:.3f} "
-              f"[{row['p25_wealth_share']:.3f}-{row['p75_wealth_share']:.3f}]  "
-              f"bypasses={row['median_bypass_successes']:.0f}")
+    for label, kwargs in (
+        ("no penalty", {}),
+        ("penalty 5x + 30-day lockout", {"penalty_multiple": 5.0, "lockout_days": 30}),
+    ):
+        print(f"  -- {label} --")
+        for row in run_detection_sweep(**kwargs):
+            print(f"    detect={row['detection_prob']:.2f}  "
+                  f"adversary wealth share={row['median_adversary_wealth_share']:.3f} "
+                  f"[{row['p25_wealth_share']:.3f}-{row['p75_wealth_share']:.3f}]  "
+                  f"bypasses={row['median_bypass_successes']:.0f}")
 
     print("\n== Demurrage burden by initial-wealth quintile (evidence gate) ==")
     for label, rate in (("baseline 1%/mo", 0.01), ("high 2%/mo", 0.02)):

@@ -76,6 +76,7 @@ CORE_DOCS = (
     "docs/public/10_real_world_examples.md",
     "docs/simulations/Adversarial_Narrative_Simulation.md",
     "docs/simulations/Annual_Compound_Simulation.md",
+    "docs/simulations/Preliminary_ABM_Results.md",
     "founding/commitments.md",
     "docs/annexes/INDEX.md",
 )
