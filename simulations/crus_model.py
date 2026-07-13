@@ -4,23 +4,23 @@ CRUS Simulation Packet — Commons Return and Universal Stake
 
 First runnable packet under docs/governance/CRUS_Simulation_Protocol.md.
 
-Covers the six protocol scenarios that a stylized Monte-Carlo economic model
-can meaningfully address:
+Covers the eight protocol scenarios that a stylized Monte-Carlo economic
+model can meaningfully address:
 
     CRUS-SIM-02  Ordinary-life incidence
     CRUS-SIM-03  Pass-through shock
     CRUS-SIM-05  Avoidance and capital flight
     CRUS-SIM-07  Direct non-convertibility (Universal Stake sale attempts)
+    CRUS-SIM-08  Compound convertibility (economic bundles only)
     CRUS-SIM-09  Routing capture (discretionary levers vs dashboard detection)
     CRUS-SIM-10  Administrative burden
     CRUS-SIM-11  Downturn resilience
 
-The remaining seven scenarios (valuation hiding via appraisal capture,
-eligibility/dignity, compound convertibility, work and stewardship, fiscal
-adequacy, public comprehension, base-case assessment review) require
-institutional modeling, legal red teams, or human testing, and are emitted
-as explicit "not_run" entries so this packet cannot be mistaken for a
-complete one.
+The remaining six scenarios (valuation hiding via appraisal capture,
+eligibility/dignity, work and stewardship, fiscal adequacy, public
+comprehension, base-case assessment review) require institutional modeling,
+legal red teams, or human testing, and are emitted as explicit "not_run"
+entries so this packet cannot be mistaken for a complete one.
 
 Design anchors:
     ANNEX_D           — source bases (D2), protected ordinary use (D3),
@@ -95,6 +95,22 @@ CRUS_CONFIG = {
     "stake_sale_acceptance": 0.30,    # of approached who would accept
     "stake_sale_detection_prob": 0.60,
     "stake_sale_penalty_multiple": 2.0,  # of the stake amount, on detection
+
+    # Compound convertibility (CRUS-SIM-08): brokers bundle a protected-lane
+    # asset with an economic sweetener (housing, employment, lending, platform
+    # access, debt relief). Bundling both raises acceptance (the offer looks
+    # like ordinary life, not a sale) and lowers per-offer detectability (the
+    # protected asset hides inside a legitimate-looking transaction).
+    "bundle_offer_rate": 0.08,            # of households approached per year
+    "bundle_channels": ("housing", "employment", "lending",
+                        "platform_access", "debt_relief"),
+    "bundle_acceptance": 0.45,            # > stake_sale_acceptance: bundles are seductive
+    "bundle_detection_prob": 0.35,        # < stake_sale_detection_prob: bundles obfuscate
+    "bundle_penalty_multiple": 2.0,       # of bundled protected value, on detection
+    "bundle_protected_assets": ("universal_stake", "essential_access",
+                                "voice", "service_record"),
+    "bundle_asset_weights": (0.55, 0.25, 0.12, 0.08),  # which asset brokers target
+    "bundle_repeat_threshold": 1,        # >N successful bundles/yr = repeatable market
 
     # Administration (CRUS-SIM-10)
     "admin_cost_per_assessment": 0.5,    # per concentrated holder
@@ -243,6 +259,17 @@ class CrusYear:
         sale_detected = self.rng.random(n_would_accept) < cfg["stake_sale_detection_prob"]
         successful_sales = int((~sale_detected).sum())
 
+        # --- Compound convertibility (CRUS-SIM-08): bundled offers pair a
+        # protected asset with an economic channel; detection per offer.
+        n_bundle_offers = int(cfg["bundle_offer_rate"] * cfg["n_households"])
+        n_bundle_accepted = int(n_bundle_offers * cfg["bundle_acceptance"])
+        bundle_assets = self.rng.choice(cfg["bundle_protected_assets"],
+                                        size=n_bundle_accepted,
+                                        p=cfg["bundle_asset_weights"])
+        bundle_channels = self.rng.choice(cfg["bundle_channels"],
+                                          size=n_bundle_accepted)
+        bundle_detected = self.rng.random(n_bundle_accepted) < cfg["bundle_detection_prob"]
+
         return {
             "gross_receipts": gross_receipts,
             "net_receipts": net_receipts,
@@ -258,6 +285,14 @@ class CrusYear:
             "household_direct_charge_total": household_direct_charge.sum(),
             "stake_sale_attempts": n_would_accept,
             "stake_sales_successful": successful_sales,
+            "bundle_offers": n_bundle_offers,
+            "bundle_accepted": n_bundle_accepted,
+            "bundle_successes": int((~bundle_detected).sum()),
+            "bundle_successes_by_asset": [
+                int(((bundle_assets == a) & ~bundle_detected).sum())
+                for a in cfg["bundle_protected_assets"]],  # fixed order
+            "bundle_market_repeatable": bool(
+                (~bundle_detected).sum() > cfg["bundle_repeat_threshold"]),
         }
 
 
@@ -395,6 +430,47 @@ def sim_07_non_convertibility(config: dict) -> dict:
         "plain_language_failure": (
             "a broker market in Universal Stake payments persists despite "
             "detection" if warnings else ""),
+    }
+
+
+def sim_08_compound_convertibility(config: dict) -> dict:
+    m = _median_runs(config)
+    warnings, blocks = [], []
+    # Watch (protocol gate): any repeatable market or bundled offer emerges.
+    if m["bundle_market_repeatable"]:
+        warnings.append("REPEATABLE_BUNDLED_MARKET")
+    # Block gate (successful conversion INTO Voice/office/survival priority/
+    # membership/legal standing/public favor/enforcement leniency/housing/
+    # employment/platform access/debt relief) requires institutional channel
+    # modeling — NOT evaluable here; only economic broker bundles are modeled.
+    return {
+        "scenario_id": "CRUS-SIM-08",
+        "result": _result(warnings, blocks),
+        "warnings": warnings,
+        "blocks": blocks,
+        "metrics": {
+            "bundle_offers": m["bundle_offers"],
+            "bundle_accepted": m["bundle_accepted"],
+            "bundle_successes": m["bundle_successes"],
+            "bundle_successes_by_asset": dict(zip(
+                config["bundle_protected_assets"],
+                [int(x) for x in m["bundle_successes_by_asset"]])),
+            "bundle_detection_prob": config["bundle_detection_prob"],
+            "bundle_penalty_multiple": config["bundle_penalty_multiple"],
+        },
+        "not_evaluated": [
+            "conversion into Voice, office, survival priority, membership, "
+            "legal standing, public favor, or enforcement leniency "
+            "(institutional channels not modeled)",
+            "identity-recovery bundles (identity system not modeled)",
+            "detection/penalty interaction with SIM-07 broker market "
+            "(same brokers, separate draws here)",
+        ],
+        "plain_language_failure": (
+            "brokers can dress a sale of survival-floor or civic instruments "
+            "up as an ordinary housing, job, loan, or debt-relief offer, and "
+            "enough of those bundles slip past detection to sustain a market"
+            if warnings else ""),
     }
 
 
@@ -584,7 +660,6 @@ NOT_RUN = {
     "CRUS-SIM-01": "base-case source-base assessment needs real valuation ranges",
     "CRUS-SIM-04": "valuation hiding via appraisal/IP/estate structures needs a legal red team",
     "CRUS-SIM-06": "eligibility, false exclusion, and data exposure need human/institutional testing",
-    "CRUS-SIM-08": "compound convertibility bundles need institutional channel modeling",
     "CRUS-SIM-12": "work and stewardship effects need a production economy model",
     "CRUS-SIM-13": "fiscal adequacy needs named obligations and real revenue scales",
     "CRUS-SIM-14": "public comprehension needs reader testing, not simulation",
@@ -598,6 +673,7 @@ def run_packet(config: dict = CRUS_CONFIG) -> dict:
         sim_03_pass_through(config),
         sim_05_avoidance(config),
         sim_07_non_convertibility(config),
+        sim_08_compound_convertibility(config),
         sim_09_routing_capture(config),
         sim_10_admin_burden(config),
         sim_11_downturn(config),

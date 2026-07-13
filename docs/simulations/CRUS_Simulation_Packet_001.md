@@ -4,7 +4,7 @@ title: CRUS Simulation Packet 001
 
 # CRUS Simulation Packet 001
 
-*First runnable packet under the [CRUS Simulation Protocol](../governance/CRUS_Simulation_Protocol.md). Model: `simulations/crus_model.py` (seeded Monte-Carlo, medians over 30 runs). Run date: 2026-07-12. Seven of the fourteen required scenarios are simulable with this model; the other seven are reported as **not run** with reasons — this packet is explicitly partial and permits no claim upgrades on the untested scenarios.*
+*First runnable packet under the [CRUS Simulation Protocol](../governance/CRUS_Simulation_Protocol.md). Model: `simulations/crus_model.py` (seeded Monte-Carlo, medians over 30 runs). Run date: 2026-07-12. Eight of the fourteen required scenarios are now simulable with this model (CRUS-SIM-08's economic slice added 2026-07-13; see the addendum); the other six are reported as **not run** with reasons — this packet is explicitly partial and permits no claim upgrades on the untested scenarios.*
 
 ---
 
@@ -19,13 +19,15 @@ We built a small pretend economy — 500 ordinary households and 20 big holders 
 - **Dodging didn't pay.** We let a quarter of the big holders try to hide 30% of their value through shell tricks. With a 60% chance of getting caught and a 5× fine, hiding *lost* money on average and only 2% of value slipped through — below the warning line. Same lesson as our earlier tests: consequences matter more than perfect detection.
 - **Pass-through stayed within bounds** at the assumed shifting behavior, but read the caveat below — this one is only as good as its assumption.
 
-**The warnings (4 tests hit "watch" — the rules say these need redesign or narrower claims before any pilot):**
+**The warnings (5 tests hit "watch" — the rules say these need redesign or narrower claims before any pilot):**
 - **A small black market in Stake payments survived.** A couple of households a year successfully sold their Stake to brokers despite 60% detection. The rules say *any* repeatable market is a warning. Fix candidates: make Stake payments non-transferable at the payment rail itself, not just illegal to sell.
 - **Paperwork ate about 14% of everything collected** — above the 10% warning line. Small assessments on 20 holders don't cost much, but distributing tiny payments to 500 households does. At real scale this ratio could improve (fixed costs spread wider) or worsen (appeals multiply). It has to be measured, not assumed.
 - **A recession hit harder than the reserve could cover.** A 30% fall in asset values cut net receipts ~35% — *more* than proportionally, because paperwork costs don't shrink in a recession — and the 20% reserve didn't bridge the gap. If households ever depend on Stake payments, that gap becomes real hardship. Fix candidates: bigger reserve share, or explicit counter-cyclical rules.
 - **Small-scale favoritism can hide in the math.** We modeled corrupt insiders steering the system toward their friends, and an independent watchdog reading the published records for suspicious patterns — the design's actual defense. Here's the catch: favoritism toward *households* (delaying payments to the out-group) was caught essentially every time, because there are 500 households and the pattern jumps out. But favoritism toward the 20 *big holders* (quietly waiving their charges) was caught only 7% of the time at subtle levels — with so few holders, a rigged pattern looks like coincidence. A careful insider network sticking to the quiet lever diverted about 6.7% of everything collected while staying statistically invisible. The lesson: at pilot scale, the transparency dashboard cannot carry the anti-corruption load by itself — the "no discretionary exemptions, period" rule has to do the work, and per-decision published reasoning matters more than pattern statistics when the numbers are small.
 
-**What this doesn't say.** Seven of the fourteen required tests can't be run by this kind of model at all — including the ones about appraisal manipulation, who gets wrongly excluded from eligibility, and whether real people can understand the system. Nothing here says Commons Return can replace taxes or is ready for real money. It says: in a toy economy with stated assumptions, the core promise held and four specific weaknesses now have numbers attached.
+- **Disguised sales beat open sales** *(added 2026-07-13)*. We also tested the sneakier version of the black market: hiding a sale of protected assets inside an ordinary-looking housing, job, loan, or debt-relief deal. Bundles were accepted more often than open offers and caught less often — about 12 a year slipped through. Same fix direction as before: consequences for the *brokers*, not more surveillance of households. See the addendum below.
+
+**What this doesn't say.** Six of the fourteen required tests can't be run by this kind of model at all — including the ones about appraisal manipulation, who gets wrongly excluded from eligibility, and whether real people can understand the system. Nothing here says Commons Return can replace taxes or is ready for real money. It says: in a toy economy with stated assumptions, the core promise held and four specific weaknesses now have numbers attached.
 
 ---
 
@@ -40,7 +42,7 @@ We built a small pretend economy — 500 ordinary households and 20 big holders 
 | CRUS-SIM-05 | Avoidance and capital flight | **Pass** |
 | CRUS-SIM-06 | Universal Stake eligibility | **Not run** — needs human/institutional testing |
 | CRUS-SIM-07 | Direct non-convertibility | **Watch** — repeatable Stake market emerged |
-| CRUS-SIM-08 | Compound convertibility | **Not run** — needs institutional channel modeling |
+| CRUS-SIM-08 | Compound convertibility | **Watch** (economic slice, addendum 2026-07-13) — repeatable bundled-offer market; block gate still needs institutional modeling |
 | CRUS-SIM-09 | Routing capture | **Watch** — holder-side favoritism evades dashboard detection at pilot scale |
 | CRUS-SIM-10 | Administrative burden | **Watch** — 13.6% of gross receipts |
 | CRUS-SIM-11 | Downturn resilience | **Watch** — 34.7% receipt fall, reserve insufficient |
@@ -111,6 +113,10 @@ Key limitations: single jurisdiction; no price formation (pass-through is a beha
 ## No-claim rule compliance
 
 Per the protocol: these results move nothing past "designed mechanism" except the six tested scenarios, which may be described as *partly tested in simulation under stated assumptions*. This packet does **not** support claims that Commons Return can replace taxes, that Universal Stake is capture-proof, that ordinary life is protected in practice, that source bases fund named obligations, or that real-money collection is ready. The three watch outputs are redesign inputs, not failures to hide: the protocol exists precisely to surface them before anyone is harmed.
+
+## Addendum — CRUS-SIM-08 economic slice (2026-07-13)
+
+The compound-convertibility scenario's economic slice was run after this packet's original date: bundled broker offers (a protected asset hidden inside a housing, employment, lending, platform-access, or debt-relief deal) with per-offer detection. Result: **WATCH** — at the stated assumptions, disguised sales beat open sales (higher acceptance, lower detection), sustaining a repeatable bundled market of ~12 evaded bundles/year. The scenario's block gate (conversion into institutional standing) remains not evaluated. Full gate output, assumptions, and the named model gap (brokers face no consequences yet): [CRUS-SIM-08 Compound Convertibility — Economic Bundle Slice](CRUS_SIM08_Compound_Convertibility.md).
 
 ## Reproduction
 

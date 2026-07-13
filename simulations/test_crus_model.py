@@ -105,3 +105,43 @@ def test_sim09_reports_all_sweep_points():
         "exemption_prob_0.2", "exemption_prob_0.5", "exemption_prob_0.8"
     }
     assert out["result"] in ("pass", "watch", "block")
+
+
+# =============================================================================
+# CRUS-SIM-08 COMPOUND CONVERTIBILITY TESTS
+# =============================================================================
+
+from simulations.crus_model import sim_08_compound_convertibility
+
+
+def test_full_bundle_detection_kills_market():
+    """With 100% detection every bundled offer is caught: no market."""
+    out = sim_08_compound_convertibility(_cfg(bundle_detection_prob=1.0))
+    assert out["metrics"]["bundle_successes"] == 0
+    assert out["result"] == "pass"
+
+
+def test_low_detection_yields_repeatable_bundle_watch():
+    """With no detection, default offer/acceptance rates sustain a market."""
+    out = sim_08_compound_convertibility(_cfg(bundle_detection_prob=0.0))
+    assert "REPEATABLE_BUNDLED_MARKET" in out["warnings"]
+    assert out["result"] == "watch"
+
+
+def test_sim08_never_emits_block():
+    """The block gate (conversion into institutional standing) is not
+    evaluable in an economic model: blocks stay empty under any config,
+    and the institutional list is declared not_evaluated."""
+    for overrides in ({},
+                      {"bundle_detection_prob": 0.0,
+                       "bundle_acceptance": 1.0,
+                       "bundle_offer_rate": 1.0}):
+        out = sim_08_compound_convertibility(_cfg(**overrides))
+        assert out["blocks"] == []
+        assert any("institutional channels not modeled" in item
+                   for item in out["not_evaluated"])
+
+
+def test_bundle_asset_split_sums_to_successes():
+    m = CrusYear(_cfg(), seed=1).run()
+    assert sum(m["bundle_successes_by_asset"]) == m["bundle_successes"]
