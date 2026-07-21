@@ -71,6 +71,7 @@ CORE_DOCS = (
     "docs/governance/Jurisdiction_Interface_Clause.md",
     "docs/governance/Pilot_Site_Selection_Criteria.md",
     "docs/public/00_start_here.md",
+    "docs/public/01_elevator_pitch.md",
     "docs/public/02_faq.md",
     "docs/public/04_white_paper.md",
     "docs/public/05_life_and_rights.md",

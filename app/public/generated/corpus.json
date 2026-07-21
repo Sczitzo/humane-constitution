@@ -12,7 +12,7 @@
     "threatCount": 33,
     "patchCount": 82,
     "validatorStatus": "pass",
-    "buildStamp": "corpus-aee42ab278bb"
+    "buildStamp": "corpus-1245cbb5f5ee"
   },
   "docs": [
     {
@@ -6857,6 +6857,60 @@
       ],
       "wordCount": 2441,
       "headingCount": 9
+    },
+    {
+      "id": "docs__public__01_elevator_pitch_md",
+      "path": "docs/public/01_elevator_pitch.md",
+      "section": "constitution",
+      "title": "Elevator Pitch \u2014 Revised Direction (Plain Language)",
+      "status": "Status: Proposed",
+      "statusBucket": "proposed",
+      "summary": "The funding principle is simple: tax what people get without creating it, never what people make. Wages, businesses, and inventions are untouched. Three kinds of unearned windfall carry the system instead.",
+      "content": "# Elevator Pitch \u2014 Revised Direction (Plain Language)\n\n**Status:** Proposed\n\n> **Note on relationship to the corpus.** This pitch describes a *simplified, revised direction* that came out of stress-testing the five-instrument design. It keeps the diagnosis (money has too many jobs; survival and public power should not be for sale to the highest bidder) but proposes a different mechanism: instead of making survival goods *unbuyable* behind non-convertibility walls, it makes survival *unconditionally affordable* for everyone. It has not been adopted; it sits alongside the five-instrument design as a candidate correction to it.\n\n---\n\n## The pitch\n\n> Money shouldn't decide whether you eat or whether you count in public life \u2014 but you can't fix that with walls that need guards forever. So instead of making survival *unbuyable*, we make it *unconditionally affordable*: a constitutionally indexed cash floor, funded by taxing wealth people **get without creating it** \u2014 valuable locations, natural resources, big inheritances \u2014 instead of taxing work. And money is locked out of politics at its actual choke points: campaign finance, lobbying, revolving doors. Every piece can be piloted today inside existing law. No founding moment, no measurement bureaucracy, nothing to smuggle across a wall \u2014 a floor everyone can stand on instead of walls someone has to defend.\n\n**One-breath version:**\n\n> Don't make survival unbuyable \u2014 make it unconditionally affordable. A cash floor indexed to the survival basket, funded by taxing what people get without creating it, with money barred from politics at its choke points. Pilotable today, no wall-keepers required.\n\n---\n\n## What gets taxed \u2014 in plain language\n\nThe funding principle is simple: **tax what people *get* without creating it, never what people *make*.** Wages, businesses, and inventions are untouched. Three kinds of unearned windfall carry the system instead.\n\n### 1. Land \u2014 the location, not the building\n\nA downtown lot in a growing city becomes valuable because of everything *around* it: roads, schools, transit, businesses, people. The owner didn't create that value \u2014 the community did.\n\n- **Example:** Two identical houses. One sits in a small town and is worth $150,000. The other sits near a new subway stop downtown and is worth $900,000. The $750,000 difference wasn't built by the owner \u2014 it came from the city growing around the lot. That location value is what gets taxed. Anything the owner actually built or improved \u2014 the house, the renovation, the garden \u2014 is never taxed.\n\n### 2. Resource rents \u2014 the free profit from what nature made\n\nOil in the ground, minerals, timber, fishing waters, even the airwaves your phone signal travels on. Nobody made these. A company that pumps oil earns something real for the *work* of finding and pumping it \u2014 but the oil itself was just *there*.\n\n- **Example:** A company spends $20 to extract a barrel of oil and sells it for $80. The $20-plus-a-fair-profit part rewards real work and risk. The remaining windfall exists only because the company holds a license to something nature made and no one created. That windfall \u2014 the \"it was just there\" part \u2014 is what gets taxed, not the work.\n\n### 3. Inherited windfalls \u2014 big money for being born to the right parents\n\nNot the family home. Not a parent's workshop, tools, or working farm \u2014 those pass on freely. What's taxed is large fortunes passed down that the heir did nothing to earn.\n\n- **Example:** One person inherits their mother's house and her carpentry tools and keeps working \u2014 untouched. Another inherits a $50 million portfolio at 25 and never needs to work. The second is a windfall of birth, not of effort, and it's the kind of transfer that builds permanent dynasties. Above a generous household threshold, it contributes back.\n\n---\n\n## How this differs from how things are now\n\n| | **How things are now** | **Revised direction** |\n|---|---|---|\n| **Survival** | Food, housing, and medicine must be bought; lose your income and you can lose all three. Welfare exists but is conditional, means-tested, and can be withdrawn. | A cash floor, guaranteed to everyone unconditionally, indexed so it always covers the survival basket (food, shelter, care, transit). No forms, no conditions, no cutoff. |\n| **What's taxed** | Mostly work: income tax on wages, payroll taxes, sales taxes on everyday purchases. Land, resource windfalls, and inheritances are lightly taxed or full of loopholes. | Mostly windfalls: location value, natural-resource profits, large inheritances. Wages, ordinary purchases, and businesses people actually build go untaxed or lightly taxed. |\n| **Money and politics** | Money buys influence legally: campaign donations, lobbying, and the revolving door between regulators and the industries they regulate. | Hard structural blocks at those exact choke points \u2014 public campaign financing / democracy vouchers, lobbying limits, cooling-off rules \u2014 instead of trying to wall off all of civic life. |\n| **How change happens** | Big reforms require sweeping legislation or don't happen at all. | Every piece \u2014 cash-floor pilots, land-value tax, campaign-finance rules \u2014 can be trialed today, city by city, inside existing law. No founding moment required. |\n| **Enforcement** | Complex tax codes chased by armies of accountants; loopholes everywhere. | Land can't move offshore, oil can't hide, and large inheritances are visible events \u2014 the tax base is the hardest kind to dodge. A cash floor needs almost no policing at all. |\n\n---\n\n## Why this framing (one paragraph)\n\nEvery wall needs a wall-keeper, and wall-keepers are politics again. The five-instrument design guards survival with non-convertibility walls that must be enforced forever; this direction closes the same coercion channel from the other side \u2014 not by making survival goods unbuyable, but by making sure everyone can always buy them. A floor everyone can stand on doesn't need defending.\n",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Elevator Pitch \u2014 Revised Direction (Plain Language)",
+          "slug": "elevator-pitch-revised-direction-plain-language"
+        },
+        {
+          "level": 2,
+          "text": "The pitch",
+          "slug": "the-pitch"
+        },
+        {
+          "level": 2,
+          "text": "What gets taxed \u2014 in plain language",
+          "slug": "what-gets-taxed-in-plain-language"
+        },
+        {
+          "level": 3,
+          "text": "1. Land \u2014 the location, not the building",
+          "slug": "1-land-the-location-not-the-building"
+        },
+        {
+          "level": 3,
+          "text": "2. Resource rents \u2014 the free profit from what nature made",
+          "slug": "2-resource-rents-the-free-profit-from-what-nature-made"
+        },
+        {
+          "level": 3,
+          "text": "3. Inherited windfalls \u2014 big money for being born to the right parents",
+          "slug": "3-inherited-windfalls-big-money-for-being-born-to-the-right-parents"
+        },
+        {
+          "level": 2,
+          "text": "How this differs from how things are now",
+          "slug": "how-this-differs-from-how-things-are-now"
+        },
+        {
+          "level": 2,
+          "text": "Why this framing (one paragraph)",
+          "slug": "why-this-framing-one-paragraph"
+        }
+      ],
+      "wordCount": 928,
+      "headingCount": 8
     },
     {
       "id": "docs__public__02_faq_md",
